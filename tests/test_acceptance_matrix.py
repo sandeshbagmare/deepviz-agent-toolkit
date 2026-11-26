@@ -21,6 +21,7 @@ from typing import Any, get_args
 from xml.etree import ElementTree as ET
 
 import pytest
+
 from deepviz.models import Artifact, ChartKind, ChartSpec, NormalizedData
 
 FIXTURES = Path(__file__).parent / "fixtures" / "acceptance"
@@ -68,14 +69,22 @@ def chart_spec(kind: str, theme: str = "light", **overrides: Any) -> ChartSpec:
     return ChartSpec(**fields)
 
 
+def source_spec(spec: ChartSpec, **options: Any) -> ChartSpec:
+    """Apply the declared source adapter to the parent and each dashboard child."""
+    updates = dict(options)
+    if spec.kind == "dashboard":
+        updates["charts"] = [child.model_copy(update=options) for child in spec.charts]
+    return spec.model_copy(update=updates)
+
+
 def encode_input(
     form: str, rows: list[dict[str, Any]], spec: ChartSpec,
 ) -> tuple[Any, ChartSpec]:
     if form == "records":
         return copy.deepcopy(rows), spec
     if form == "nested_json":
-        return {"payload": {"measurements": copy.deepcopy(rows)}}, spec.model_copy(
-            update={"data_path": "payload.measurements"},
+        return {"payload": {"measurements": copy.deepcopy(rows)}}, source_spec(
+            spec, data_path="payload.measurements",
         )
     if form == "graphql":
         return {"data": {"measurements": {"edges": [{"node": row} for row in rows]}}}, spec
@@ -86,9 +95,9 @@ def encode_input(
         writer = csv.DictWriter(output, fieldnames=list(rows[0]), delimiter="," if form == "csv" else "\t")
         writer.writeheader()
         writer.writerows(rows)
-        return output.getvalue(), spec.model_copy(update={"format": form})
+        return output.getvalue(), source_spec(spec, format=form)
     if form == "jsonl":
-        return "\n".join(json.dumps(row) for row in rows), spec.model_copy(update={"format": "jsonl"})
+        return "\n".join(json.dumps(row) for row in rows), source_spec(spec, format="jsonl")
     if form == "generator":
         return (copy.deepcopy(row) for row in rows), spec
     raise AssertionError(f"Unknown fixture adapter: {form}")
@@ -236,12 +245,62 @@ def assert_browser_semantics(
     )
 
 
+def assert_svg_semantics(svg: str, engine: str, title: str) -> None:
+    root = ET.fromstring(svg)
+    assert root.tag == "{http://www.w3.org/2000/svg}svg"
+    assert not any(node.tag.rsplit("}", 1)[-1] in {"script", "foreignObject"} for node in root.iter())
+    assert not any(
+        attribute.rsplit("}", 1)[-1].lower().startswith("on")
+        for node in root.iter() for attribute in node.attrib
+    ), "SVG contains an executable event attribute"
+    parser = ET.XMLParser(target=ET.TreeBuilder(insert_comments=True))
+    full_root = ET.fromstring(svg, parser=parser)
+    assert title in "".join(full_root.itertext()), "SVG does not preserve the escaped chart title"
+    mark_tags = {"path", "rect", "circle", "polygon", "image", "text", "use"}
+    marks = [node for node in root.iter() if node.tag.rsplit("}", 1)[-1] in mark_tags]
+    assert len(marks) >= 4, "SVG contains no meaningful visual marks"
+    if engine == "vega":
+        # Vega's compiled data-mark group, not a hand-written metadata-only SVG.
+        data_groups = [node for node in root.iter() if "role-mark" in node.attrib.get("class", "").split()]
+        assert data_groups and any(
+            child.tag.rsplit("}", 1)[-1] in mark_tags for group in data_groups for child in group.iter()
+        ), "Vega SVG has no populated compiled data-mark group"
+
+
+def assert_vega_spec_semantics(candidates: list[Any], title: str) -> None:
+    vega_specs = [
+        item for candidate in candidates for item in walk(candidate)
+        if isinstance(item, dict) and "vega" in str(item.get("$schema", "")).lower()
+    ]
+    for payload in vega_specs:
+        assert has_values(payload), "Vega spec sidecar contains no data"
+        import vl_convert
+
+        if "vega-lite" in payload["$schema"]:
+            compiled = vl_convert.vegalite_to_svg(payload)
+        else:
+            compiled = vl_convert.vega_to_svg(payload)
+        assert_svg_semantics(compiled, "vega", title)
+
+
 def assert_artifact(artifact: Artifact, engine: str, spec: ChartSpec, directory: Path, count: int) -> None:
     assert isinstance(artifact, Artifact)
-    assert artifact.engine == engine, "An engine must not silently masquerade as another engine"
-    assert artifact.input_count == count
-    assert artifact.output_count == count, "Unreduced low-n input must not disappear or multiply"
     assert isinstance(artifact.warnings, list) and all(isinstance(w, str) for w in artifact.warnings)
+    actual_engine = artifact.engine
+    assert actual_engine in ENGINES, "Unknown actual renderer identity"
+    if actual_engine != engine:
+        assert any(
+            spec.kind in warning.lower() and actual_engine in warning.lower()
+            and "fallback" in warning.lower()
+            for warning in artifact.warnings
+        ), "A different backend requires explicit requested-kind and actual-backend fallback disclosure"
+    assert artifact.input_count == count, "Input count must describe source rows, not per-panel copies"
+    expected_output_counts = {count}
+    if spec.kind == "dashboard":
+        expected_output_counts.add(count * len(spec.charts))
+    assert artifact.output_count in expected_output_counts, (
+        "Unreduced output must account for source rows or all dashboard child row contributions"
+    )
     assert artifact.strategy and isinstance(artifact.strategy, str)
     assert artifact.paths and len(artifact.paths) <= 8
     paths = [Path(path).resolve() for path in artifact.paths]
@@ -249,21 +308,24 @@ def assert_artifact(artifact: Artifact, engine: str, spec: ChartSpec, directory:
     for path in paths:
         assert path.is_relative_to(directory.resolve()), "Artifact escaped its output directory"
         assert path.is_file() and 0 < path.stat().st_size < MAX_ARTIFACT_BYTES
-    if engine == "matplotlib":
-        svg_paths = [path for path in paths if path.suffix == ".svg"]
+    candidates: list[Any] = []
+    for path in paths:
+        if path.suffix == ".json":
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            candidates.append(payload)
+            if actual_engine == "vega" and (
+                "spec" in path.stem.lower() or path.name.endswith((".vl.json", ".vg.json"))
+            ):
+                assert any(
+                    isinstance(item, dict) and "vega" in str(item.get("$schema", "")).lower()
+                    for item in walk(payload)
+                ), "Vega spec sidecar is not a native Vega/Vega-Lite specification"
+    svg_paths = [path for path in paths if path.suffix == ".svg"]
+    if actual_engine == "matplotlib" or (actual_engine == "vega" and svg_paths):
         png_paths = [path for path in paths if path.suffix == ".png"]
-        assert svg_paths or png_paths, "Matplotlib must produce a native rendered image"
+        assert svg_paths or png_paths, "Static engine must produce a native rendered image"
         for path in svg_paths:
-            root = ET.fromstring(path.read_text(encoding="utf-8"))
-            assert root.tag.endswith("svg")
-            assert not any(node.tag.rsplit("}", 1)[-1] in {"script", "foreignObject"} for node in root.iter())
-            parser = ET.XMLParser(target=ET.TreeBuilder(insert_comments=True))
-            full_root = ET.fromstring(path.read_text(encoding="utf-8"), parser=parser)
-            assert TITLE in "".join(full_root.itertext()), "SVG does not preserve the chart title"
-            marks = [node for node in root.iter() if node.tag.rsplit("}", 1)[-1] in {
-                "path", "rect", "circle", "polygon", "image", "text", "use",
-            }]
-            assert len(marks) >= 4, "SVG contains no meaningful visual marks"
+            assert_svg_semantics(path.read_text(encoding="utf-8"), actual_engine, spec.title)
         for path in png_paths:
             from PIL import Image, ImageStat
 
@@ -274,13 +336,11 @@ def assert_artifact(artifact: Artifact, engine: str, spec: ChartSpec, directory:
     else:
         html_paths = [path for path in paths if path.suffix in {".html", ".htm"}]
         assert html_paths and artifact.mime_type == "text/html"
-        candidates: list[Any] = []
-        for path in paths:
-            if path.suffix == ".json":
-                candidates.append(json.loads(path.read_text(encoding="utf-8")))
         html = html_paths[0].read_text(encoding="utf-8")
         candidates.extend(json_candidates(html))
-        assert_browser_semantics(engine, html, candidates, spec, artifact.warnings)
+        assert_browser_semantics(actual_engine, html, candidates, spec, artifact.warnings)
+    if actual_engine == "vega":
+        assert_vega_spec_semantics(candidates, spec.title)
 
 
 @pytest.mark.parametrize("form", PRIMARY_FORMS)

@@ -57,6 +57,40 @@ is not execution. The initial import resolved the shared editable installation;
 candidate runs will explicitly set `PYTHONPATH=python/deepviz/src` to select the
 candidate worktree rather than accidentally testing a different checkout.
 
+## Seed review corrections (before candidate execution)
+
+- Native Vega SVG is accepted and checked for XML/title safety and populated
+  compiled `role-mark` groups. Any supplied native Vega/Vega-Lite spec sidecar
+  is independently compiled with real `vl_convert` and its result inspected;
+  metadata-only output is not accepted as a rendered Vega artifact.
+- A different actual backend is accepted only when a warning explicitly names
+  the requested kind, actual backend, and fallback. Artifact semantics are then
+  checked against that actual backend, never the requested engine's identity.
+- Dashboard source `input_count` remains exact. Until the renderer's output
+  accounting contract is finalized, `output_count` may report source rows once
+  or the exact sum of complete child contributions, not an arbitrary count.
+- Nested dashboard children retain explicit `data_path`; text-format children
+  retain the declared source format. Import grouping matches the parent's new
+  Ruff first-party declaration without editing this branch's project config.
+
+These are acceptance-harness contract corrections, not implementation fixes.
+No integrated candidate has been executed.
+
+Post-correction preparation evidence:
+
+```text
+python -m ruff check --config "lint.isort.known-first-party=['deepviz']" tests/test_acceptance_matrix.py
+All checks passed!
+python -m pytest tests/test_acceptance_matrix.py --collect-only -q
+1149 tests collected in 0.17s
+```
+
+A harness-only Python check also generated a real Vega-Lite SVG using
+`vl_convert`, accepted its SVG/native-spec artifact, accepted an explicitly
+named cross-backend fallback, rejected the same fallback without disclosure,
+and verified nested dashboard child paths. This validates the corrected
+inspector, **not** the toolkit's render implementation or any release candidate.
+
 ## Candidate verification
 
 Awaiting the parent's integrated release/candidate commit. No candidate pass,
