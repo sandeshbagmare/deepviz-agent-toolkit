@@ -80,3 +80,15 @@ for(const [engine,kinds] of Object.entries({vega:['box','violin','heatmap'],echa
     } finally {await page.close();}
   });
 }
+
+test('native SVG stays readable on narrow screens and dark text has explicit contrast',async()=>{
+  const page=await browser.newPage({viewport:{width:414,height:800}});
+  try {
+    html=render([{x:'Alpha',y:2},{x:'Beta',y:3}],{x:'x',y:'y',theme:'dark'},'svg').html;
+    await page.goto(base);
+    const state=await page.locator('#chart-0').evaluate(el=>({container:el.clientWidth,svg:el.querySelector('svg').getBoundingClientRect().width,text:getComputedStyle(el.querySelector('text')).fill}));
+    assert.ok(state.svg>=900,'Do not squeeze 12px axis labels into unreadable 4px glyphs');
+    assert.ok(state.container<state.svg,'Narrow containers should scroll rather than shrink the SVG');
+    assert.equal(state.text,'rgb(229, 231, 235)');
+  } finally {await page.close();}
+});

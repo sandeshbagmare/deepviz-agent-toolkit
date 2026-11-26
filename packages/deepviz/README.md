@@ -157,8 +157,12 @@ the leaf label and y as its weight; nested hierarchy arrays are not supported.
 Plotly geo uses x=longitude and y=latitude, with coordinate graticules but no
 external basemap/topology download. Table output is native, escaped HTML.
 Vega violin estimates a density of y across the selected data, not per-color
-distributions. ECharts size-field encoding and native SVG color-field encoding
-are explicitly unsupported. Native SVG is a small static engine with axes and
+distributions. ECharts scatter/bubble size fields map to per-point numeric marker
+sizes (clamped to 4–60 pixels) without executable callbacks. Native SVG color
+series share an x domain, have separate polylines, and use a color/dash-cued key.
+Long native axes use predictable tick thinning and ellipsis with full values in
+SVG titles; narrow containers scroll instead of shrinking text to illegibility.
+Native SVG is a small static engine with axes and
 an accessible data table, not a substitute for the browser libraries' full APIs.
 ECharts duplicate categories are retained unless color grouping makes alignment
 ambiguous, in which case explicit aggregation is required.
