@@ -1,7 +1,7 @@
 # DeepViz design
 
 ## Intent and authorization
-Build a Python-first, schema-driven visualization toolkit for Deep Agents, with npm interoperability, MCP hosting, five renderer alternatives, and verifiable output. The user explicitly authorized autonomous implementation and agent delegation. The builder chooses a private repository because publication visibility was unspecified.
+Build a Python-first, schema-driven visualization toolkit for Deep Agents, with npm interoperability, MCP hosting, five renderer alternatives, and verifiable output. The user explicitly authorized autonomous implementation and agent delegation. The repository was initially private by default; the user subsequently authorized public visibility and that change was applied and verified.
 
 ## Architecture decisions (builder defaults)
 Use a shared, versioned JSON schema and Pydantic models. Normalize bounded data and stream large inputs; aggregate before transporting data into any renderer. Do not claim to display all ten million independent marks in a browser. Preserve input counts, warnings, aggregation strategy, and sampled count in output metadata. Five renderer alternatives: Matplotlib, Plotly, Vega-Lite, ECharts, and AntV G2. Data processing is Python-first; the TypeScript package consumes the same schema and builds browser artifacts. No arbitrary Python/JavaScript or remote URL execution in model-authored schemas.
