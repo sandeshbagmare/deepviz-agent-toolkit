@@ -10,13 +10,18 @@ measure is available); other charts use deterministic reservoir sampling once
 ``max_points`` is exceeded. ``none`` also samples with a warning at that limit:
 the bounded output contract takes precedence over unbounded identity output.
 Explicit reductions group by x and color, or reduce globally without a category.
-Count includes every row and writes spec.y, or ``count`` when y is omitted.
+Heatmaps instead group by both x/y coordinates and reduce the color measure;
+without color, automatic heatmap aggregation counts rows into a ``count`` field.
+Count includes every row and writes the mapped measure field, or ``count``
+when that measure is omitted.
 Other reducers ignore null/non-numeric measures; an
 all-null group yields None. High cardinality retains the first max_points - 1
 groups and merges *all* remaining contributions into a warned other bucket.
 The other mean is weighted by valid raw observations, never by group means.
 The bucket label is ``__deepviz_other__``, with underscores appended if needed
 to distinguish it from retained category labels.
+Reservoir samples retain original source order, but are not temporal/extrema-aware
+and may miss peaks and short-lived events.
 """
 from __future__ import annotations
 
@@ -41,7 +46,7 @@ _MAX_FIELDS = 1024
 _MAX_DEPTH = 64
 _BATCH_SIZE = 4096
 _REDUCTIONS = {"sum", "mean", "count", "min", "max"}
-_CATEGORICAL = {"bar", "pie", "radar", "treemap", "sunburst", "funnel", "heatmap"}
+_CATEGORICAL = {"bar", "pie", "radar", "treemap", "sunburst", "funnel"}
 _METADATA = {"pageInfo", "totalCount", "count", "extensions", "errors", "meta", "pagination"}
 _WRAPPERS = ("data", "records", "rows", "items", "results")
 _PATH_FORMATS = {
@@ -412,23 +417,37 @@ def _records(data: Any, spec: ChartSpec, counts: Counter[str], schema: dict[str,
 def _plan(spec: ChartSpec, prefix: list[dict[str, Any]]) -> tuple[str, list[str], str]:
     numeric = [key for row in prefix for key, value in row.items() if type(value) in (int, float)]
     categorical = [key for row in prefix for key, value in row.items() if isinstance(value, (str, bool))]
-    scalar_rows = bool(prefix) and all(row.keys() == {"index", "value"} for row in prefix)
-    if scalar_rows and spec.x is None:
-        x = "value" if "value" in categorical and "value" not in numeric else None
-    else:
-        x = spec.x if spec.x is not None else next(iter(categorical), None)
-    inferred = next((key for key in numeric if key != x and not (scalar_rows and key == "index")), None)
-    y = spec.y if spec.y is not None else inferred
     strategy = spec.aggregation
-    if strategy == "auto":
-        if spec.kind in _CATEGORICAL and x in categorical:
-            strategy = "sum" if y is not None else "count"
+    if spec.kind == "heatmap":
+        coordinates = list(dict.fromkeys(key for row in prefix for key in row if key != spec.color))
+        x = spec.x if spec.x is not None else next((key for key in coordinates if key != spec.y), None)
+        y = spec.y if spec.y is not None else next((key for key in coordinates if key != x), None)
+        groups = list(dict.fromkeys(field for field in (x, y) if field is not None))
+        measure = spec.color or "count"
+        if strategy == "auto":
+            strategy = "sum" if spec.color is not None else "count"
+        if strategy in _REDUCTIONS:
+            if prefix and len(groups) != 2:
+                raise ValueError("Heatmaps require distinct x and y coordinate fields")
+            if strategy != "count" and spec.color is None:
+                raise ValueError("Numeric heatmap reductions require a color measure field")
+    else:
+        scalar_rows = bool(prefix) and all(row.keys() == {"index", "value"} for row in prefix)
+        if scalar_rows and spec.x is None:
+            x = "value" if "value" in categorical and "value" not in numeric else None
         else:
-            strategy = "none"
-    if strategy in _REDUCTIONS and y is None and strategy != "count":
-        raise ValueError(f"Aggregation {strategy!r} requires a numeric y field")
-    groups = list(dict.fromkeys(field for field in (x, spec.color) if field is not None))
-    measure = "count" if strategy == "count" and spec.y is None else y or "count"
+            x = spec.x if spec.x is not None else next(iter(categorical), None)
+        inferred = next((key for key in numeric if key != x and not (scalar_rows and key == "index")), None)
+        y = spec.y if spec.y is not None else inferred
+        if strategy == "auto":
+            if spec.kind in _CATEGORICAL and x in categorical:
+                strategy = "sum" if y is not None else "count"
+            else:
+                strategy = "none"
+        if strategy in _REDUCTIONS and y is None and strategy != "count":
+            raise ValueError(f"Aggregation {strategy!r} requires a numeric y field")
+        groups = list(dict.fromkeys(field for field in (x, spec.color) if field is not None))
+        measure = "count" if strategy == "count" and spec.y is None else y or "count"
     if strategy in _REDUCTIONS and measure in groups:
         raise ValueError("The reduction measure must differ from grouping fields")
     if strategy in _REDUCTIONS and spec.size is not None and spec.size not in [*groups, measure]:
@@ -544,7 +563,8 @@ def normalize(data: Any, spec: ChartSpec | dict[str, Any]) -> NormalizedData:
     if strategy == "sample" and input_count > spec.max_points:
         warnings.append(
             f"Deterministic reservoir sample: {len(records)} of {input_count} rows; "
-            f"max_points={spec.max_points} overrides aggregation={spec.aggregation!r}."
+            f"max_points={spec.max_points} overrides aggregation={spec.aggregation!r}. "
+            "Original source order is preserved, but sampling may miss peaks/extrema and short-lived events."
         )
     if counts["overflow"]:
         warnings.append(

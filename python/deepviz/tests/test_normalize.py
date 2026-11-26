@@ -435,3 +435,62 @@ def test_path_ending_at_graphql_edges_unwraps_each_node() -> None:
     data = {"data": {"users": {"edges": [{"cursor": "1", "node": {"id": 1}}]}}}
     result = normalize(data, {"data_path": "data.users.edges", "x": "id"})
     assert result.records == [{"id": 1}]
+
+
+@pytest.mark.parametrize("kind", ["line", "area"])
+def test_connected_samples_keep_source_order_and_warn_that_peaks_can_be_missed(kind: str) -> None:
+    result = normalize(
+        ({"source_position": i, "x": 10000 - i, "y": i % 13} for i in range(10000)),
+        {"kind": kind, "x": "x", "y": "y", "max_points": 10},
+    )
+    positions = [row["source_position"] for row in result.records]
+    assert positions == sorted(positions)
+    assert [row["x"] for row in result.records] == sorted((row["x"] for row in result.records), reverse=True)
+    assert len(result.records) == 10
+    assert result.input_count == 10000
+    assert any("peak" in warning.lower() for warning in result.warnings)
+
+
+def test_heatmap_reduction_preserves_both_coordinates_and_aggregates_color() -> None:
+    rows = [
+        {"day": "Mon", "region": "North", "temperature": 10},
+        {"day": "Mon", "region": "South", "temperature": 20},
+        {"day": "Tue", "region": "North", "temperature": 30},
+        {"day": "Tue", "region": "South", "temperature": 40},
+    ]
+    spec = {"kind": "heatmap", "x": "day", "y": "region", "color": "temperature"}
+    result = normalize(rows, spec)
+    assert result.records == rows
+    assert result.input_count == 4
+    assert result.strategy == "sum"
+    assert result.warnings == []
+    duplicated = normalize([*rows, {"day": "Mon", "region": "North", "temperature": 2}], spec)
+    assert duplicated.records == [dict(rows[0], temperature=12), *rows[1:]]
+    assert duplicated.input_count == 5
+
+
+def test_heatmap_without_color_counts_each_coordinate_pair() -> None:
+    rows = [{"day": "Mon", "region": "North"}] * 2 + [{"day": "Mon", "region": "South"}]
+    result = normalize(rows, {"kind": "heatmap", "x": "day", "y": "region"})
+    assert result.records == [
+        {"day": "Mon", "region": "North", "count": 2},
+        {"day": "Mon", "region": "South", "count": 1},
+    ]
+    assert result.strategy == "count"
+
+
+def test_heatmap_mean_uses_valid_color_observations_not_coordinate_values() -> None:
+    rows = [
+        {"day": "Mon", "region": "North", "temperature": 10},
+        {"day": "Mon", "region": "North", "temperature": None},
+        {"day": "Mon", "region": "North", "temperature": 20},
+    ]
+    result = normalize(rows, {
+        "kind": "heatmap", "x": "day", "y": "region", "color": "temperature", "aggregation": "mean",
+    })
+    assert result.records == [{"day": "Mon", "region": "North", "temperature": 15}]
+
+
+def test_heatmap_numeric_reduction_without_color_is_rejected_instead_of_summing_coordinates() -> None:
+    with pytest.raises(ValueError, match="color|measure"):
+        normalize([{"x": 1, "y": 2}], {"kind": "heatmap", "x": "x", "y": "y", "aggregation": "sum"})
