@@ -244,15 +244,15 @@ JSON Schema exports, runtime behavior, declarations, README and license.
 Large-input support means bounded **reduction**, not rendering millions of
 independent browser marks. `npm run benchmark:stream` reproduces an async-record
 sampling workload. Observed on Windows x64 / Node 26.13.1, production source
-commit `381be19`, max_points 2000:
+commit `363b926`, max_points 2000:
 
 | Input rows | Retained rows | Elapsed ms | Sampled peak heap MiB | Sampled peak RSS MiB |
 | ---: | ---: | ---: | ---: | ---: |
-| 10 | 10 | 1.89 | 4.99 | 38.38 |
-| 1,000 | 1,000 | 22.65 | 6.42 | 43.50 |
-| 100,000 | 2,000 | 462.75 | 14.23 | 61.09 |
-| 1,000,000 | 2,000 | 1,528.80 | 26.40 | 117.26 |
-| 10,000,000 | 2,000 | 25,658.19 | 38.35 | 117.42 |
+| 10 | 10 | 2.32 | 5.01 | 38.54 |
+| 1,000 | 1,000 | 10.79 | 5.27 | 40.81 |
+| 100,000 | 2,000 | 318.73 | 16.45 | 61.26 |
+| 1,000,000 | 2,000 | 3,891.94 | 46.56 | 117.68 |
+| 10,000,000 | 2,000 | 18,848.55 | 38.42 | 118.10 |
 
 One process, explicit GC before each scale, `process.memoryUsage()` sampled every
 10000 yielded records and at completion. These are **sampled**, not continuous

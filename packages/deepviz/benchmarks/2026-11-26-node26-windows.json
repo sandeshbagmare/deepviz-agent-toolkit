@@ -1,14 +1,14 @@
 {
-  "source_commit": "381be19b8fd6faaaa43b7ac04e019e55cb0a7fd5",
+  "source_commit": "363b9268cf330444e5fab80885b8331f7bd4747d",
   "node": "v26.13.1",
   "platform": "win32",
   "arch": "x64",
   "memory_methodology": "One Node process, explicit GC before each scale; process.memoryUsage sampled every 10,000 yielded records and after reduction. RSS includes runtime and prior-scale allocation; peaks are sampled, not continuous or isolated-process maxima. No rendering included; source is an async generator, never an input array.",
   "results": [
-    {"input_count":10,"output_count":10,"strategy":"sample","elapsed_ms":1.89,"baseline_heap_bytes":4915240,"sampled_peak_heap_bytes":5230216,"baseline_rss_bytes":39661568,"sampled_peak_rss_bytes":40239104},
-    {"input_count":1000,"output_count":1000,"strategy":"sample","elapsed_ms":22.65,"baseline_heap_bytes":5590016,"sampled_peak_heap_bytes":6730192,"baseline_rss_bytes":40435712,"sampled_peak_rss_bytes":45617152},
-    {"input_count":100000,"output_count":2000,"strategy":"sample","elapsed_ms":462.75,"baseline_heap_bytes":5327864,"sampled_peak_heap_bytes":14916640,"baseline_rss_bytes":45903872,"sampled_peak_rss_bytes":64057344},
-    {"input_count":1000000,"output_count":2000,"strategy":"sample","elapsed_ms":1528.8,"baseline_heap_bytes":5477344,"sampled_peak_heap_bytes":27678968,"baseline_rss_bytes":64094208,"sampled_peak_rss_bytes":122957824},
-    {"input_count":10000000,"output_count":2000,"strategy":"sample","elapsed_ms":25658.19,"baseline_heap_bytes":5355216,"sampled_peak_heap_bytes":40216600,"baseline_rss_bytes":123043840,"sampled_peak_rss_bytes":123125760}
+    {"input_count":10,"output_count":10,"strategy":"sample","elapsed_ms":2.32,"baseline_heap_bytes":4919912,"sampled_peak_heap_bytes":5255496,"baseline_rss_bytes":39849984,"sampled_peak_rss_bytes":40411136},
+    {"input_count":1000,"output_count":1000,"strategy":"sample","elapsed_ms":10.79,"baseline_heap_bytes":5124168,"sampled_peak_heap_bytes":5531184,"baseline_rss_bytes":40480768,"sampled_peak_rss_bytes":42790912},
+    {"input_count":100000,"output_count":2000,"strategy":"sample","elapsed_ms":318.73,"baseline_heap_bytes":5351032,"sampled_peak_heap_bytes":17244000,"baseline_rss_bytes":42938368,"sampled_peak_rss_bytes":64237568},
+    {"input_count":1000000,"output_count":2000,"strategy":"sample","elapsed_ms":3891.94,"baseline_heap_bytes":5378656,"sampled_peak_heap_bytes":48826648,"baseline_rss_bytes":64323584,"sampled_peak_rss_bytes":123396096},
+    {"input_count":10000000,"output_count":2000,"strategy":"sample","elapsed_ms":18848.55,"baseline_heap_bytes":5370640,"sampled_peak_heap_bytes":40286144,"baseline_rss_bytes":123551744,"sampled_peak_rss_bytes":123834368}
   ]
 }
