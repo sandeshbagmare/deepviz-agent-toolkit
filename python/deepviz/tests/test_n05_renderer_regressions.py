@@ -117,7 +117,7 @@ def test_missing_line_measure_is_a_gap_not_an_invented_zero(engine):
         if engine == "plotly":
             assert native["data"][0]["y"] == [7, None, 9]
         elif engine == "echarts":
-            assert native["series"][0]["data"] == [["0", 7], ["1", None], ["2", 9]]
+            assert native["series"][0]["data"] == [[0, 7], [1, None], [2, 9]]
         else:
             mapped = native["data"]["values"] if engine == "vega" else native["data"]
             assert [row["_y"] for row in mapped] == [7, None, 9]
@@ -222,3 +222,58 @@ def test_combined_child_payload_is_rejected_before_creating_render_artifacts(tmp
         render(iter(rows), {"kind": "dashboard", "charts": [{"kind": "table"}, {"kind": "table"}]},
                "echarts", tmp_path)
     assert list(tmp_path.iterdir()) == []
+
+
+@pytest.mark.parametrize("engine", ["matplotlib", "echarts", "antv"])
+def test_iso_time_coordinates_preserve_elapsed_spacing_in_remaining_engines(engine):
+    rows = [{"day": "2026-01-01", "value": 1}, {"day": "2026-01-02", "value": 3},
+            {"day": "2026-01-31", "value": 2}]
+    spec = ChartSpec(kind="line", x="day", y="value", aggregation="none")
+    if engine == "matplotlib":
+        fig, _ = matplotlib_figure([(rows, spec)])
+        try:
+            positions = fig.axes[0].lines[0].get_xdata(orig=False)
+            assert (positions[2] - positions[1]) / (positions[1] - positions[0]) == pytest.approx(29)
+            fig.canvas.draw()
+            bounds = [label.get_window_extent(fig.canvas.get_renderer())
+                      for label in fig.axes[0].get_xticklabels() if label.get_visible() and label.get_text()]
+            assert all(left.x1 < right.x0 for left, right in zip(bounds[:-1], bounds[1:], strict=True))
+        finally:
+            fig.clear()
+    else:
+        payload, _, _ = native_spec(engine, rows, spec)
+        if engine == "echarts":
+            assert payload["xAxis"]["type"] == "time"
+            assert payload["series"][0]["data"] == [[row["day"], row["value"]] for row in rows]
+        else:
+            assert payload["scale"]["x"]["type"] == "time"
+            positions = [row["_x"] for row in payload["data"]]
+            assert (positions[2] - positions[1]) / (positions[1] - positions[0]) == pytest.approx(29)
+    assert rows[0]["day"] == "2026-01-01", "Engine must not mutate original records"
+
+
+def test_echarts_numeric_lines_keep_numeric_coordinate_spacing():
+    payload, _, _ = native_spec("echarts", [{"t": 0, "value": 1}, {"t": 1, "value": 3},
+                                            {"t": 30, "value": 2}],
+                                ChartSpec(kind="line", x="t", y="value", aggregation="none"))
+    assert payload["xAxis"]["type"] == "value"
+    assert payload["series"][0]["data"] == [[0, 1], [1, 3], [30, 2]]
+
+
+def test_antv_uncolored_line_is_not_a_filled_polygon_and_has_singleton_points():
+    payload, _, _ = native_spec("antv", [{"t": 0, "value": 7}, {"t": 1, "value": None},
+                                         {"t": 2, "value": 9}, {"t": 3, "value": 8}],
+                                ChartSpec(kind="line", x="t", y="value", aggregation="none"))
+    children = payload.get("children", [payload])
+    lines = [child for child in children if child["type"] == "line"]
+    assert lines and all(child.get("style", {}).get("fill") in (None, "none") for child in lines)
+    points = [child for child in children if child["type"] == "point"]
+    assert points and [(row["_x"], row["_y"]) for child in points for row in child["data"]] == [(0, 7), (2, 9), (3, 8)]
+
+
+def test_antv_quantitative_heat_color_is_not_overridden_by_fixed_fill():
+    spec = ChartSpec(kind="heatmap", x="day", y="team")
+    rows = normalize([{"day": "Mon", "team": "West"}] * 3 + [{"day": "Tue", "team": "East"}], spec).records
+    payload, _, _ = native_spec("antv", rows, spec)
+    assert payload["encode"]["color"] == "_heat"
+    assert payload.get("style", {}).get("fill") in (None, "none")

@@ -11,7 +11,7 @@ import json
 import math
 import textwrap
 from collections import defaultdict
-from datetime import datetime
+from datetime import UTC, datetime
 from html import escape
 from typing import Any, overload
 
@@ -184,6 +184,7 @@ def _fallback(engine: str, kind: str) -> tuple[str, list[str]]:
 def matplotlib_figure(charts: list[tuple[list[dict], ChartSpec]], dashboard: ChartSpec | None = None):
     """Return an Agg figure: the same artists back both PNG and SVG."""
     from matplotlib.backends.backend_agg import FigureCanvasAgg
+    from matplotlib.dates import AutoDateLocator, ConciseDateFormatter
     from matplotlib.figure import Figure
 
     parent = dashboard or charts[0][1]
@@ -218,8 +219,11 @@ def matplotlib_figure(charts: list[tuple[list[dict], ChartSpec]], dashboard: Cha
         if kind in {"bar", "line", "area", "scatter", "bubble", "geo"}:
             categories = list(dict.fromkeys(str(v) for v in x))
             category_index = {value: j for j, value in enumerate(categories)}
+            temporal_x = kind in {"line", "area", "scatter", "bubble"} and _iso_dates(x)
             for j, (name, group) in enumerate(groups.items()):
                 gx, gy = [r["_x"] for r in group], [r["_y"] for r in group]
+                if temporal_x:
+                    gx = [datetime.fromisoformat(value) for value in gx]
                 color = PALETTE[j % len(PALETTE)]
                 if kind == "bar":
                     width = .8 / len(groups)
@@ -238,6 +242,11 @@ def matplotlib_figure(charts: list[tuple[list[dict], ChartSpec]], dashboard: Cha
                                marker=MARKERS[j % len(MARKERS)])
             if kind == "bar":
                 ax.set_xticks(range(len(categories)), categories)
+            if temporal_x:
+                locator = AutoDateLocator(minticks=3, maxticks=max(3, min(7, int(chart_width / 100))))
+                ax.xaxis.set_major_locator(locator)
+                ax.xaxis.set_major_formatter(ConciseDateFormatter(locator))
+                ax.xaxis.get_offset_text().set_color(outer_fg)
             if spec.color:
                 ax.legend(labelcolor=fg, facecolor=bg)
             if kind == "geo":
@@ -505,9 +514,13 @@ def _echarts(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) 
                     "yAxis": {"type": "value", "name": spec.y or ""}, "series": []}
     series = option["series"]
     if kind in {"bar", "line", "area"}:
+        temporal_x = kind != "bar" and _iso_dates([row["_x"] for row in data])
+        numeric_x = kind != "bar" and all(isinstance(row["_x"], (int, float)) for row in data)
+        if temporal_x or numeric_x:
+            option["xAxis"] = {"type": "time" if temporal_x else "value", "name": spec.x or ""}
         for j, (name, group) in enumerate(_groups(data).items()):
             item: dict = {"type": "bar" if kind == "bar" else "line", "name": name,
-                    "data": [[str(r["_x"]), r["_y"]] for r in group]}
+                    "data": [[r["_x"] if temporal_x or numeric_x else str(r["_x"]), r["_y"]] for r in group]}
             if kind == "area":
                 item["areaStyle"] = {}
             if kind != "bar":
@@ -567,6 +580,11 @@ def _echarts(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) 
 
 
 def _antv(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) -> dict:
+    temporal_x = kind in {"line", "area", "scatter", "bubble"} and _iso_dates([row["_x"] for row in data])
+    if temporal_x:
+        times = [datetime.fromisoformat(row["_x"]) for row in data]
+        data = [{**row, "_x": (value if value.tzinfo else value.replace(tzinfo=UTC)).timestamp() * 1000}
+                for row, value in zip(data, times, strict=True)]
     mark = {"bar": "interval", "line": "line", "area": "area", "scatter": "point", "bubble": "point",
             "pie": "interval", "heatmap": "cell", "histogram": "interval", "box": "box",
             "radar": "line", "treemap": "rect", "sunburst": "interval", "funnel": "interval",
@@ -581,20 +599,32 @@ def _antv(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) -> 
         result["scale"] = {"color": {"range": PALETTE}}
     else:
         result["style"] = {"fill": PALETTE[0], "stroke": PALETTE[0]}
-    if kind == "line" and spec.color:
+    if temporal_x:
+        result.setdefault("scale", {})["x"] = {"type": "time"}
+    if kind == "line":
         groups = _groups(data)
         result["type"] = "view"
         result.pop("encode")
-        result["scale"]["color"]["domain"] = list(groups)
+        result.pop("style", None)
         shapes = ["point", "square", "triangle", "diamond", "hexagon", "bowtie", "cross"]
-        result["scale"]["shape"] = {"domain": list(groups), "range": shapes}
+        if spec.color:
+            result["scale"]["color"]["domain"] = list(groups)
+            result["scale"]["shape"] = {"domain": list(groups), "range": shapes}
         children = []
         for j, group in enumerate(groups.values()):
-            encode = {"x": "_x", "y": "_y", "color": "_color"}
+            encode = {"x": "_x", "y": "_y"}
+            if spec.color:
+                encode["color"] = "_color"
+            line_style: dict = {"lineDash": DASHES[j % len(DASHES)], "lineWidth": 2}
+            point_style: dict = {"r": 3}
+            if not spec.color:
+                line_style["stroke"] = PALETTE[0]
+                point_style["fill"] = PALETTE[0]
             children.append({"type": "line", "data": group, "encode": encode,
-                             "style": {"lineDash": DASHES[j % len(DASHES)], "lineWidth": 2}, "animate": False})
-            children.append({"type": "point", "data": group, "encode": {**encode, "shape": "_color"},
-                             "style": {"r": 3}, "animate": False})
+                             "style": line_style, "animate": False})
+            children.append({"type": "point", "data": [row for row in group if row["_y"] is not None],
+                             "encode": {**encode, **({"shape": "_color"} if spec.color else {})},
+                             "style": point_style, "animate": False})
         result["children"] = children
     elif kind == "bar" and spec.color:
         result["transform"] = [{"type": "dodgeX"}]
@@ -614,6 +644,7 @@ def _antv(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) -> 
     elif kind == "heatmap":
         encode["color"] = "_heat"
         result.pop("scale", None)
+        result.pop("style", None)
     elif kind == "box":
         result["data"] = [{"_x": b["name"], "_y": b["stats"]} for b in _boxes(data)]
     elif kind == "treemap":
