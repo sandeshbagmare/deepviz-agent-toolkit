@@ -1,0 +1,566 @@
+"""Stream heterogeneous inputs into bounded, JSON-safe chart records.
+
+Scalar sequences become ``index``/``value`` records. Nested object keys and
+array indices are dotted. Strings are content; only ``Path`` opts into files.
+JSONL, delimited files, generators and Arrow batches stream; an already encoded
+JSON document is decoded as a whole by the standard library.
+
+``auto`` sums numeric measures for categorical charts (or counts rows when no
+measure is available); other charts use deterministic reservoir sampling once
+``max_points`` is exceeded. ``none`` also samples with a warning at that limit:
+the bounded output contract takes precedence over unbounded identity output.
+Explicit reductions group by x and color, or reduce globally without a category.
+Count includes every row and writes spec.y, or ``count`` when y is omitted.
+Other reducers ignore null/non-numeric measures; an
+all-null group yields None. High cardinality retains the first max_points - 1
+groups and merges *all* remaining contributions into a warned other bucket.
+The other mean is weighted by valid raw observations, never by group means.
+The bucket label is ``__deepviz_other__``, with underscores appended if needed
+to distinguish it from retained category labels.
+"""
+from __future__ import annotations
+
+import csv
+import io
+import json
+import math
+import random
+import re
+from collections import Counter
+from collections.abc import Iterable, Iterator, Mapping
+from datetime import date, datetime, time
+from decimal import Decimal
+from itertools import chain, islice, zip_longest
+from numbers import Integral, Real
+from pathlib import Path
+from typing import Any
+
+from .models import ChartSpec, NormalizedData
+
+_MAX_FIELDS = 1024
+_MAX_DEPTH = 64
+_BATCH_SIZE = 4096
+_REDUCTIONS = {"sum", "mean", "count", "min", "max"}
+_CATEGORICAL = {"bar", "pie", "radar", "treemap", "sunburst", "funnel", "heatmap"}
+_METADATA = {"pageInfo", "totalCount", "count", "extensions", "errors", "meta", "pagination"}
+_WRAPPERS = ("data", "records", "rows", "items", "results")
+_PATH_FORMATS = {
+    ".csv": "csv", ".tsv": "tsv", ".jsonl": "jsonl", ".ndjson": "jsonl",
+    ".parquet": "parquet", ".arrow": "arrow", ".feather": "arrow", ".ipc": "arrow",
+}
+_NUMBER = re.compile(r"-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?\Z")
+_ABSENT = object()
+_PRIMITIVES = (str, int, bool, float, type(None))
+
+
+def _iterable(value: Any) -> bool:
+    if type(value) in _PRIMITIVES:
+        return False
+    return isinstance(value, Iterable) and not isinstance(value, (str, bytes, bytearray, Mapping))
+
+
+def _json(text: str, location: str = "content") -> Any:
+    try:
+        return json.loads(text)
+    except (json.JSONDecodeError, RecursionError) as error:
+        raise ValueError(f"Invalid JSON {location}: {error}") from error
+
+
+def _jsonl(lines: Iterable[str]) -> Iterator[Any]:
+    for number, line in enumerate(lines, 1):
+        if line.strip():
+            yield _json(line, f"at line {number}")
+
+
+def _cell(value: str) -> Any:
+    stripped = value.strip()
+    if not stripped:
+        return None
+    if _NUMBER.fullmatch(stripped):
+        return float(stripped) if any(char in stripped for char in ".eE") else int(stripped)
+    if stripped.lower() in {"nan", "inf", "+inf", "-inf", "infinity", "+infinity", "-infinity"}:
+        return float(stripped)
+    return value
+
+
+def _delimited(lines: Iterable[str], delimiter: str) -> Iterator[dict[str, Any]]:
+    reader = csv.reader(lines, delimiter=delimiter, strict=True)
+    try:
+        header = next(reader, None)
+        if header is None:
+            return
+        if any(not name.strip() for name in header):
+            raise ValueError("Delimited content has an empty column name")
+        if len(set(header)) != len(header):
+            raise ValueError("Delimited content has duplicate column names")
+        if len(header) > _MAX_FIELDS:
+            raise ValueError(f"Input exceeds {_MAX_FIELDS} fields")
+        for values in reader:
+            if not values:
+                continue
+            if len(values) != len(header):
+                raise ValueError(f"Wrong column count at line {reader.line_num}")
+            yield dict(zip(header, map(_cell, values), strict=True))
+    except csv.Error as error:
+        raise ValueError(f"Invalid delimited content at line {reader.line_num}: {error}") from error
+
+
+def _text(text: str, format: str) -> Any:
+    text = text.lstrip("\ufeff")
+    if format == "jsonl":
+        return _jsonl(io.StringIO(text))
+    if format in {"csv", "tsv"}:
+        return _delimited(io.StringIO(text), "\t" if format == "tsv" else ",")
+    if format == "json":
+        return _json(text)
+    if format != "auto":
+        raise ValueError(f"Format {format!r} requires binary content or a Path")
+    if not text.strip():
+        return iter(())
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError as error:
+        if error.msg == "Extra data" and text.lstrip().startswith(("{", "[")):
+            return _jsonl(io.StringIO(text))
+        first = text.split("\n", 1)[0]
+        if not text.lstrip().startswith(("{", "[")) and ("," in first or "\t" in first):
+            return _delimited(io.StringIO(text), "\t" if "\t" in first else ",")
+        raise ValueError("Content is not valid JSON, JSONL or delimited content; specify format") from error
+    except RecursionError as error:
+        raise ValueError("JSON content is nested too deeply") from error
+
+
+def _arrow_module() -> Any:
+    try:
+        import pyarrow
+    except ImportError as error:
+        raise ImportError("Arrow/Parquet ingestion requires deepviz-agent-toolkit[columnar]") from error
+    return pyarrow
+
+
+def _arrow_rows(data: Any) -> Iterator[dict[str, Any]]:
+    arrow = _arrow_module()
+    if isinstance(data, arrow.Table):
+        batches = data.to_reader(max_chunksize=_BATCH_SIZE)
+    elif isinstance(data, arrow.RecordBatch):
+        batches = (data,)
+    elif isinstance(data, arrow.RecordBatchReader):
+        batches = data
+    else:
+        raise TypeError("Unsupported Arrow input; expected Table, RecordBatch or RecordBatchReader")
+    for batch in batches:
+        for offset in range(0, batch.num_rows, _BATCH_SIZE):
+            yield from batch.slice(offset, _BATCH_SIZE).to_pylist()
+
+
+def _binary_rows(data: Any, format: str) -> Iterator[dict[str, Any]]:
+    arrow = _arrow_module()
+    source = str(data) if isinstance(data, Path) else arrow.BufferReader(data)
+    if format == "parquet":
+        import pyarrow.parquet as parquet
+
+        with parquet.ParquetFile(source) as file:
+            for batch in file.iter_batches(batch_size=_BATCH_SIZE):
+                yield from batch.to_pylist()
+        return
+    # IPC file and IPC stream are separate Arrow encodings; both stay batch bounded.
+    with arrow.input_stream(source) if isinstance(source, str) else source as stream:
+        try:
+            reader = arrow.ipc.open_file(stream)
+        except arrow.ArrowInvalid:
+            stream.seek(0)
+            yield from _arrow_rows(arrow.ipc.open_stream(stream))
+        else:
+            for index in range(reader.num_record_batches):
+                yield from _arrow_rows(reader.get_batch(index))
+
+
+def _path_rows(path: Path, format: str) -> Iterator[Any]:
+    if format in {"arrow", "parquet"}:
+        yield from _binary_rows(path, format)
+        return
+    with path.open("r", encoding="utf-8-sig", newline="") as stream:
+        if format == "jsonl":
+            yield from _jsonl(stream)
+        else:
+            yield from _delimited(stream, "\t" if format == "tsv" else ",")
+
+
+def _source(data: Any, format: str) -> Any:
+    if isinstance(data, Path):
+        if format == "auto":
+            format = _PATH_FORMATS.get(data.suffix.lower(), "auto")
+        if format in {"auto", "json"}:
+            with data.open("r", encoding="utf-8-sig") as stream:
+                return _text(stream.read(), format)
+        return _path_rows(data, format)
+    if type(data).__module__.split(".", 1)[0] == "pyarrow":
+        return _arrow_rows(data)
+    if isinstance(data, (bytes, bytearray, memoryview)):
+        if format in {"arrow", "parquet"}:
+            return _binary_rows(data, format)
+        try:
+            data = bytes(data).decode("utf-8-sig")
+        except UnicodeDecodeError as error:
+            raise ValueError("Content must be UTF-8, or specify an Arrow/Parquet format") from error
+    if isinstance(data, str):
+        return _text(data, format)
+    if isinstance(data, io.TextIOBase):
+        if format == "jsonl":
+            return _jsonl(data)
+        if format in {"csv", "tsv"}:
+            return _delimited(data, "\t" if format == "tsv" else ",")
+        return _text(data.read(), format)
+    return data
+
+
+def _select_path(value: Any, tokens: list[str], counts: Counter[str], depth: int = 0) -> Iterator[Any]:
+    if depth > _MAX_DEPTH:
+        raise ValueError("data_path is nested too deeply")
+    if not tokens:
+        counts["path_matches"] += 1
+        if value is None:
+            counts["null_nodes"] += 1
+        else:
+            yield value
+    elif isinstance(value, Mapping):
+        if tokens[0] in value:
+            yield from _select_path(value[tokens[0]], tokens[1:], counts, depth + 1)
+        else:
+            counts["path_missing"] += 1
+    elif _iterable(value):
+        if tokens[0].isdecimal():
+            selected = next(islice(iter(value), int(tokens[0]), None), _ABSENT)
+            if selected is _ABSENT:
+                counts["path_missing"] += 1
+            else:
+                yield from _select_path(selected, tokens[1:], counts, depth + 1)
+        else:
+            had_items = False
+            for item in value:
+                had_items = True
+                yield from _select_path(item, tokens, counts, depth + 1)
+            if not had_items:
+                counts["path_empty"] += 1
+    else:
+        counts["path_missing"] += 1
+
+
+def _connection(value: Mapping[str, Any], depth: int = 0) -> Mapping[str, Any] | None:
+    if depth > _MAX_DEPTH:
+        raise ValueError("GraphQL response is nested too deeply")
+    if "edges" in value or "nodes" in value:
+        if "edges" in value and "nodes" in value:
+            raise ValueError("GraphQL connection has both edges and nodes; select one with data_path")
+        return value
+    children = [child for key, child in value.items() if key not in _METADATA]
+    if len(children) == 1 and isinstance(children[0], Mapping):
+        return _connection(children[0], depth + 1)
+    if len(children) > 1 and any(
+        _connection(child, depth + 1) is not None for child in children if isinstance(child, Mapping)
+    ):
+        raise ValueError("Multiple/ambiguous GraphQL fields require an explicit data_path")
+    return None
+
+
+def _expand(value: Any, counts: Counter[str], depth: int = 0) -> Iterator[Any]:
+    if depth > _MAX_DEPTH:
+        raise ValueError("Input is nested too deeply or cyclic")
+    if isinstance(value, dict) or isinstance(value, Mapping):
+        if not value:
+            if depth:
+                yield value
+            return
+        if len(value) > _MAX_FIELDS:
+            raise ValueError(f"Input exceeds {_MAX_FIELDS} fields")
+        first = next(iter(value.values()))
+        if value.get("errors") and ("data" in value or set(value).issubset(_METADATA)):
+            if not value.get("data"):
+                raise ValueError("GraphQL response contains errors and no data")
+            counts["graphql_errors"] += 1
+        if "node" in value and set(value).issubset({"node", "cursor"}):
+            if value["node"] is None:
+                counts["null_nodes"] += 1
+            else:
+                yield from _expand(value["node"], counts, depth + 1)
+            return
+        connection = _connection(value) if (
+            "data" in value or "edges" in value or "nodes" in value
+            or (type(first) not in _PRIMITIVES and isinstance(first, Mapping))
+        ) else None
+        if connection is not None:
+            key = "edges" if "edges" in connection else "nodes"
+            nodes = connection[key]
+            if not _iterable(nodes):
+                raise ValueError(f"GraphQL {key} must be an array")
+            for node in nodes:
+                if key == "edges":
+                    if not isinstance(node, Mapping) or "node" not in node:
+                        raise ValueError("Each GraphQL edge must contain a node")
+                    node = node["node"]
+                if node is None:
+                    counts["null_nodes"] += 1
+                else:
+                    yield from _expand(node, counts, depth + 1)
+            return
+        for wrapper in _WRAPPERS:
+            if wrapper in value and set(value).difference({wrapper}).issubset(_METADATA):
+                wrapped = value[wrapper]
+                if isinstance(wrapped, Mapping) or _iterable(wrapped):
+                    yield from _expand(wrapped, counts, depth + 1)
+                    return
+        if _iterable(first) and all(_iterable(column) for column in value.values()):
+            if len(value) > _MAX_FIELDS:
+                raise ValueError(f"Input exceeds {_MAX_FIELDS} fields")
+            for values in zip_longest(*(iter(column) for column in value.values()), fillvalue=_ABSENT):
+                if any(item is _ABSENT for item in values):
+                    raise ValueError("Column arrays must have equal length")
+                yield dict(zip(value, values, strict=True))
+            return
+        yield value
+    elif _iterable(value):
+        for item in value:
+            yield from _expand(item, counts, depth + 1)
+    else:
+        yield value
+
+
+def _scalar(value: Any, counts: Counter[str]) -> Any:
+    if value is None or type(value) in (str, int, bool):
+        return value
+    if isinstance(value, float):
+        if math.isfinite(value):
+            return float(value)
+        counts["nonfinite"] += 1
+        return None
+    if isinstance(value, Integral):
+        return int(value)
+    if isinstance(value, (Real, Decimal)):
+        return _scalar(float(value), counts)
+    if isinstance(value, (datetime, date, time)):
+        return value.isoformat()
+    if type(value).__module__.split(".", 1)[0] == "numpy" and hasattr(value, "item"):
+        return _scalar(value.item(), counts)
+    raise TypeError(f"Unsupported record value: {type(value).__name__}")
+
+
+def _flatten(value: Mapping[str, Any], counts: Counter[str]) -> dict[str, Any]:
+    output: dict[str, Any] = {}
+
+    def add(key: str, item: Any, depth: int) -> None:
+        if depth > _MAX_DEPTH:
+            raise ValueError("Record is nested too deeply or cyclic")
+        if type(item) in _PRIMITIVES:
+            pass
+        elif isinstance(item, Mapping):
+            for child, contents in item.items():
+                if not isinstance(child, str) or not child:
+                    raise ValueError("Record field names must be non-empty strings")
+                add(f"{key}.{child}" if key else child, contents, depth + 1)
+            return
+        elif isinstance(item, (list, tuple)):
+            for index, contents in enumerate(item):
+                add(f"{key}.{index}", contents, depth + 1)
+            return
+        if key in output:
+            raise ValueError(f"Flattened field collision: {key!r}")
+        if len(output) >= _MAX_FIELDS:
+            raise ValueError(f"Input exceeds {_MAX_FIELDS} fields")
+        output[key] = _scalar(item, counts)
+
+    for key, item in value.items():
+        if not isinstance(key, str) or not key:
+            raise ValueError("Record field names must be non-empty strings")
+        add(key, item, 0)
+    return output
+
+
+def _records(data: Any, spec: ChartSpec, counts: Counter[str], schema: dict[str, int]) -> Iterator[dict[str, Any]]:
+    source = _source(data, spec.format)
+    if spec.data_path is not None:
+        tokens = spec.data_path.split(".")
+        if any(not token for token in tokens):
+            raise ValueError("data_path must contain non-empty dot-separated components")
+        source = _select_path(source, tokens, counts)
+    requested = tuple(dict.fromkeys(field for field in (spec.x, spec.y, spec.color, spec.size) if field))
+    had_rows = False
+    for index, item in enumerate(_expand(source, counts)):
+        had_rows = True
+        row = _flatten(item, counts) if isinstance(item, dict) or isinstance(item, Mapping) else {
+            "index": index, "value": _scalar(item, counts),
+        }
+        for key, value in row.items():
+            mask = 1 if type(value) in (int, float) else 2 if isinstance(value, str) else 4 if value is not None else 0
+            schema[key] = schema.get(key, 0) | mask
+        if len(schema) > _MAX_FIELDS:
+            raise ValueError(f"Input schema exceeds {_MAX_FIELDS} fields")
+        for field in requested:
+            if field not in row:
+                counts["missing"] += 1
+                row[field] = None
+        yield row
+    if spec.data_path is not None and not counts["path_matches"] and (
+        not counts["path_empty"] or counts["path_missing"]
+    ):
+        raise ValueError(f"data_path {spec.data_path!r} did not match any input")
+    if counts["path_matches"] or spec.data_path is None:
+        missing = [field for field in requested if field not in schema]
+        if missing and had_rows:
+            raise ValueError(f"Requested fields are missing from input: {', '.join(missing)}")
+
+
+def _plan(spec: ChartSpec, prefix: list[dict[str, Any]]) -> tuple[str, list[str], str]:
+    numeric = [key for row in prefix for key, value in row.items() if type(value) in (int, float)]
+    categorical = [key for row in prefix for key, value in row.items() if isinstance(value, (str, bool))]
+    scalar_rows = bool(prefix) and all(row.keys() == {"index", "value"} for row in prefix)
+    if scalar_rows and spec.x is None:
+        x = "value" if "value" in categorical and "value" not in numeric else None
+    else:
+        x = spec.x if spec.x is not None else next(iter(categorical), None)
+    inferred = next((key for key in numeric if key != x and not (scalar_rows and key == "index")), None)
+    y = spec.y if spec.y is not None else inferred
+    strategy = spec.aggregation
+    if strategy == "auto":
+        if spec.kind in _CATEGORICAL and x in categorical:
+            strategy = "sum" if y is not None else "count"
+        else:
+            strategy = "none"
+    if strategy in _REDUCTIONS and y is None and strategy != "count":
+        raise ValueError(f"Aggregation {strategy!r} requires a numeric y field")
+    groups = list(dict.fromkeys(field for field in (x, spec.color) if field is not None))
+    measure = "count" if strategy == "count" and spec.y is None else y or "count"
+    if strategy in _REDUCTIONS and measure in groups:
+        raise ValueError("The reduction measure must differ from grouping fields")
+    if strategy in _REDUCTIONS and spec.size is not None and spec.size not in [*groups, measure]:
+        raise ValueError("Reduction would remove the mapped size field; use aggregation='sample' or 'none'")
+    return strategy, groups, measure
+
+
+class _Reducer:
+    """Keep at most limit group states; no set of overflow keys is retained."""
+
+    def __init__(self, strategy: str, fields: list[str], measure: str, limit: int, counts: Counter[str]):
+        self.strategy = strategy
+        self.fields = fields
+        self.measure = measure
+        self.limit = limit
+        self.counts = counts
+        self.groups: dict[tuple[Any, ...], list[Any]] = {}
+        self.other: list[Any] | None = None
+
+    def add(self, row: dict[str, Any]) -> None:
+        # Type-tag grouping values: Python otherwise conflates True, 1 and 1.0.
+        key = tuple((type(row.get(field)), row.get(field)) for field in self.fields)
+        state = self.groups.get(key)
+        if state is None:
+            if self.other is not None:
+                state = self.other
+            elif len(self.groups) < self.limit:
+                state = [0, None]
+                self.groups[key] = state
+            else:
+                last = next(reversed(self.groups))
+                self.other = self.groups.pop(last)
+                state = self.other
+                self.counts["overflow"] = 1
+        if self.strategy == "count":
+            state[0] += 1
+            state[1] = state[0]
+            return
+        value = row.get(self.measure)
+        if type(value) not in (int, float):
+            if value is not None:
+                self.counts["nonnumeric"] += 1
+            return
+        state[0] += 1
+        if state[1] is None:
+            state[1] = value
+        elif self.strategy == "sum":
+            state[1] += value
+        elif self.strategy == "mean":
+            state[1] = state[1] * ((state[0] - 1) / state[0]) + value / state[0]
+        elif self.strategy == "min":
+            state[1] = min(state[1], value)
+        else:
+            state[1] = max(state[1], value)
+
+    def finish(self) -> list[dict[str, Any]]:
+        records = [
+            dict(zip(self.fields, (part[1] for part in key), strict=True)) | {self.measure: _scalar(state[1], self.counts)}
+            for key, state in self.groups.items()
+        ]
+        if self.other is not None:
+            label = "__deepviz_other__"
+            labels = {part[1] for key in self.groups for part in key}
+            while label in labels:
+                label += "_"
+            records.append(dict.fromkeys(self.fields, label) | {self.measure: _scalar(self.other[1], self.counts)})
+        return records
+
+
+def normalize(data: Any, spec: ChartSpec | dict[str, Any]) -> NormalizedData:
+    """Normalize a finite input, consuming streams once with bounded retained state.
+
+    Raises ValueError/TypeError for malformed data, invalid field mappings or
+    unsupported cell values. File errors remain ordinary OSError subclasses.
+    Memory is O(max_points * bounded record width), plus a 32-row inference
+    prefix and, for columnar sources, a 4096-row conversion batch. Schema width
+    is capped at 1024 fields and nesting at 64 levels to bound adversarial data.
+    Automatic mappings and strategy are chosen from that prefix; use explicit
+    x/y/aggregation for heterogeneous streams whose early rows are unrepresentative.
+    """
+    if not isinstance(spec, (ChartSpec, dict)):
+        raise TypeError("spec must be a ChartSpec or dictionary")
+    spec = spec if isinstance(spec, ChartSpec) else ChartSpec.model_validate(spec)
+    if any(field is not None and not field.strip() for field in (spec.x, spec.y, spec.color, spec.size)):
+        raise ValueError("Mapped field names must not be empty")
+    counts: Counter[str] = Counter()
+    schema: dict[str, int] = {}
+    rows = _records(data, spec, counts, schema)
+    prefix = list(islice(rows, 32))
+    strategy, fields, measure = _plan(spec, prefix)
+    input_count = 0
+    if strategy in _REDUCTIONS:
+        reducer = _Reducer(strategy, fields, measure, spec.max_points, counts)
+        for row in chain(prefix, rows):
+            input_count += 1
+            reducer.add(row)
+        records = reducer.finish()
+    else:
+        rng = random.Random(0)
+        reservoir: list[tuple[int, dict[str, Any]]] = []
+        for row in chain(prefix, rows):
+            input_count += 1
+            if input_count <= spec.max_points:
+                reservoir.append((input_count, row))
+            else:
+                slot = rng.randrange(input_count)
+                if slot < spec.max_points:
+                    reservoir[slot] = (input_count, row)
+        records = [row for _, row in sorted(reservoir)]
+        if input_count > spec.max_points:
+            strategy = "sample"
+    warnings = []
+    if strategy == "sample" and input_count > spec.max_points:
+        warnings.append(
+            f"Deterministic reservoir sample: {len(records)} of {input_count} rows; "
+            f"max_points={spec.max_points} overrides aggregation={spec.aggregation!r}."
+        )
+    if counts["overflow"]:
+        warnings.append(
+            f"Group cardinality exceeded max_points={spec.max_points}; first {spec.max_points - 1} groups "
+            "are exact and all non-retained groups contribute to the final other bucket (including weighted mean)."
+        )
+    messages = {
+        "nonfinite": "non-finite numeric values replaced by null",
+        "missing": "missing mapped field values filled with null",
+        "nonnumeric": "non-numeric measure values excluded from reduction",
+        "null_nodes": "null GraphQL/path nodes skipped",
+        "path_missing": "data_path branches with missing components skipped",
+        "graphql_errors": "GraphQL responses contained errors alongside usable data",
+    }
+    warnings.extend(f"{counts[key]} {message}." for key, message in messages.items() if counts[key])
+    mixed = [key for key, mask in schema.items() if mask & 1 and mask & 6]
+    if mixed:
+        warnings.append(f"Fields contain mixed numeric/non-numeric values: {', '.join(mixed)}.")
+    return NormalizedData(records=records, input_count=input_count, warnings=warnings, strategy=strategy)
