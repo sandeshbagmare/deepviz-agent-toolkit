@@ -215,8 +215,29 @@ def inspect_artifact(path: Path) -> dict[str, Any]:
 
         parser = Tags()
         parser.feed(path.read_text(encoding="utf-8"))
-        assert {"html", "script"}.issubset(parser.tags), "HTML lacks document/scripts"
+        static_data = {"table", "tr", "th", "td"}.issubset(parser.tags)
+        assert "html" in parser.tags and ("script" in parser.tags or static_data), (
+            "HTML lacks document/scripts or an accessible data table"
+        )
         inspection = "html_structure_only_browser_execution_not_verified"
+    elif suffix == ".json" and path.name == "manifest.json":
+        def reject_constant(value: str) -> Any:
+            raise ValueError(f"Non-finite manifest number: {value}")
+
+        manifest = json.loads(path.read_text(encoding="utf-8"), parse_constant=reject_constant)
+        assert isinstance(manifest, dict) and manifest.get("engine") in ENGINES, "Invalid manifest engine"
+        charts = manifest.get("charts")
+        assert isinstance(charts, list) and charts, "Manifest has no charts"
+        for chart in charts:
+            assert isinstance(chart, dict), "Invalid manifest chart"
+            records = chart.get("records")
+            assert isinstance(records, list) and all(isinstance(row, dict) for row in records), (
+                "Invalid manifest records"
+            )
+            input_count, output_count = chart.get("input_count"), chart.get("output_count")
+            assert type(input_count) is int and type(output_count) is int, "Invalid manifest counts"
+            assert 0 <= output_count == len(records) <= input_count, "Inconsistent manifest counts"
+        inspection = "manifest_json_structure_and_counts_only_semantics_not_verified"
     else:
         raise AssertionError(f"Unsupported artifact inspection: {suffix}")
     return {"path": str(path), "bytes": path.stat().st_size, "inspection": inspection}
