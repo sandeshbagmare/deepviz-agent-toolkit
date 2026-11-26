@@ -22,6 +22,7 @@ ENGINES = ("matplotlib", "plotly", "vega", "echarts", "antv")
 PALETTE = ["#386cb0", "#b85c00", "#2a9d73", "#c44964", "#8861a9", "#a67c42"]
 MARKERS = ["o", "s", "^", "D", "v", "P", "X", "*"]
 LINESTYLES = ["-", "--", "-.", ":"]
+DASHES = [[], [6, 3], [2, 2], [6, 2, 2, 2], [10, 2], [2, 4], [8, 2, 2, 2, 2, 2], [10, 3, 1, 3]]
 ECHARTS_URL = "https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.min.js"
 ANTV_URL = "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js"
 
@@ -310,7 +311,9 @@ def _plotly(data: list[dict], records: list[dict], spec: ChartSpec) -> dict:
                      "x": [r["_x"] for r in group], "y": [r["_y"] for r in group],
                      "marker": {"color": PALETTE[j % len(PALETTE)]}}
             if kind != "bar":
-                trace["mode"] = "markers" if kind in {"scatter", "bubble"} else "lines"
+                trace["mode"] = "markers" if kind in {"scatter", "bubble"} else "lines+markers"
+                trace["marker"]["symbol"] = ["circle", "square", "diamond", "cross", "triangle-up", "star", "x"][j % 7]
+                trace["line"] = {"dash": ["solid", "dash", "dot", "dashdot", "longdash", "longdashdot", "dot"][j % 7]}
             if kind == "area":
                 trace["fill"] = "tozeroy"
             if kind == "bubble":
@@ -366,10 +369,18 @@ def _vega(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) -> 
     encoding: dict = {"x": {"field": "_x", "type": x_type, "title": spec.x or "Category"},
                       "y": {"field": "_y", "type": "quantitative", "title": spec.y or "Value"}}
     if spec.color:
-        encoding["color"] = {"field": "_color", "type": "nominal", "scale": {"range": PALETTE}}
+        encoding["color"] = {"field": "_color", "type": "nominal", "title": spec.color, "scale": {"range": PALETTE}}
+        if kind == "bar":
+            encoding["xOffset"] = {"field": "_color"}
+            encoding["y"]["stack"] = None
+        elif kind in {"line", "area"}:
+            encoding["strokeDash"] = {"field": "_color", "type": "nominal", "title": spec.color,
+                                      "scale": {"range": DASHES}}
     mark: Any = {"type": {"bar": "bar", "line": "line", "scatter": "point", "bubble": "point",
                          "area": "area", "box": "boxplot", "violin": "area", "geo": "point"}.get(kind, "bar"),
                  "color": PALETTE[0]}
+    if kind == "line":
+        mark["point"] = True
     transforms = []
     if kind == "bubble":
         encoding["size"] = {"field": "_size", "type": "quantitative"}
@@ -415,6 +426,8 @@ def _vega(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) -> 
                           "sort": ["Header"] + [str(i + 1) for i in range(len(records))]},
                     "text": {"field": "text"}}
     bg, fg = _colors(spec)
+    if kind == "table":
+        mark["color"] = fg
     result = {"$schema": "https://vega.github.io/schema/vega-lite/v5.json", "data": {"values": data},
               "mark": mark, "encoding": encoding, "width": max(100, spec.width - 100),
               "height": max(100, spec.height - 100), "title": spec.title,
@@ -432,16 +445,21 @@ def _echarts(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) 
     option: dict = {"animation": False, "backgroundColor": bg, "color": PALETTE,
                     "title": {"text": spec.title, "textStyle": {"color": fg}},
                     "textStyle": {"color": fg}, "tooltip": {"trigger": "item", "renderMode": "richText"},
+                    "legend": {"show": bool(spec.color), "top": 30, "textStyle": {"color": fg}},
                     "grid": {"containLabel": True, "left": 50, "right": 30, "top": 65, "bottom": 35},
                     "xAxis": {"type": "category", "data": xs, "name": spec.x or ""},
                     "yAxis": {"type": "value", "name": spec.y or ""}, "series": []}
     series = option["series"]
     if kind in {"bar", "line", "area"}:
-        for name, group in _groups(data).items():
+        for j, (name, group) in enumerate(_groups(data).items()):
             item: dict = {"type": "bar" if kind == "bar" else "line", "name": name,
                     "data": [[str(r["_x"]), r["_y"]] for r in group]}
             if kind == "area":
                 item["areaStyle"] = {}
+            if kind != "bar":
+                item.update(symbol=["circle", "rect", "triangle", "diamond", "pin", "roundRect", "arrow"][j % 7],
+                            symbolSize=7, showSymbol=True,
+                            lineStyle={"type": ["solid", "dashed", "dotted"][j % 3]})
             series.append(item)
     elif kind in {"scatter", "bubble", "geo"}:
         option["xAxis"] = {"type": "value", "name": spec.x or ""}
@@ -500,13 +518,33 @@ def _antv(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) -> 
             "radar": "line", "treemap": "rect", "sunburst": "interval", "funnel": "interval",
             "gauge": "interval", "geo": "point", "table": "text"}[kind]
     result: dict = {"type": mark, "data": data, "encode": {"x": "_x", "y": "_y"},
-                    "animate": False, "theme": spec.theme, "title": spec.title, "tooltip": False}
+                    "animate": False, "theme": spec.theme, "title": spec.title, "tooltip": False,
+                    "axis": {"x": {"title": spec.x or "Category", "labelFill": _colors(spec)[1], "titleFill": _colors(spec)[1]},
+                             "y": {"title": spec.y or "Value", "labelFill": _colors(spec)[1], "titleFill": _colors(spec)[1]}}}
     encode = result["encode"]
     if spec.color:
         encode["color"] = "_color"
+        result["scale"] = {"color": {"range": PALETTE}}
     else:
         result["style"] = {"fill": PALETTE[0], "stroke": PALETTE[0]}
-    if kind == "bubble":
+    if kind == "line" and spec.color:
+        groups = _groups(data)
+        result["type"] = "view"
+        result.pop("encode")
+        result["scale"]["color"]["domain"] = list(groups)
+        shapes = ["point", "square", "triangle", "diamond", "hexagon", "bowtie", "cross"]
+        result["scale"]["shape"] = {"domain": list(groups), "range": shapes}
+        children = []
+        for j, group in enumerate(groups.values()):
+            encode = {"x": "_x", "y": "_y", "color": "_color"}
+            children.append({"type": "line", "data": group, "encode": encode,
+                             "style": {"lineDash": DASHES[j % len(DASHES)], "lineWidth": 2}, "animate": False})
+            children.append({"type": "point", "data": group, "encode": {**encode, "shape": "_color"},
+                             "style": {"r": 3}, "animate": False})
+        result["children"] = children
+    elif kind == "bar" and spec.color:
+        result["transform"] = [{"type": "dodgeX"}]
+    elif kind == "bubble":
         encode["size"] = "_size"
     elif kind in {"pie", "sunburst"}:
         result["coordinate"] = {"type": "theta", "innerRadius": .45 if kind == "sunburst" else 0}
@@ -521,6 +559,7 @@ def _antv(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) -> 
         result["data"] = _histogram(data)
     elif kind == "heatmap":
         encode["color"] = "_heat"
+        result.pop("scale", None)
     elif kind == "box":
         result["data"] = [{"_x": b["name"], "_y": b["stats"]} for b in _boxes(data)]
     elif kind == "treemap":
@@ -547,6 +586,7 @@ def _antv(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) -> 
                           for key in columns]
         result["encode"] = {"x": "_x", "y": "_y", "text": "_text"}
         result["axis"] = False
+        result["style"] = {"fill": _colors(spec)[1], "stroke": _colors(spec)[1]}
     return result
 
 

@@ -9,7 +9,7 @@ from collections.abc import Iterator
 from pathlib import Path
 from typing import Any
 
-from .engines import ENGINES, _fallback, browser_html, matplotlib_figure, native_spec
+from .engines import ENGINES, _colors, _fallback, browser_html, matplotlib_figure, native_spec
 from .models import Artifact, ChartSpec
 
 
@@ -71,7 +71,10 @@ def render(
                        "output_count": len(result.records), "strategy": result.strategy,
                        "warnings": result.warnings + notes})
     if engine in {"echarts", "antv"}:
-        warnings.append("HTML requires network access to load its exact-version pinned browser library from jsDelivr.")
+        network_warning = "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        warnings.append(network_warning)
+        for info in charts:
+            info["warnings"].append(network_warning)
     root = Path(output_dir) if output_dir is not None else Path(tempfile.gettempdir()) / "deepviz"
     root.mkdir(parents=True, exist_ok=True)
     folder = Path(tempfile.mkdtemp(prefix="deepviz-", dir=root))
@@ -93,7 +96,10 @@ def render(
         payload = payloads[0]
         if chart.kind == "dashboard":
             payload = {"$schema": "https://vega.github.io/schema/vega-lite/v5.json", "concat": payloads,
-                       "columns": chart.columns, "title": chart.title,
+                       "columns": chart.columns, "title": chart.title, "background": _colors(chart)[0],
+                       "config": {"axis": {"labelColor": _colors(chart)[1], "titleColor": _colors(chart)[1]},
+                                  "title": {"color": _colors(chart)[1]},
+                                  "legend": {"labelColor": _colors(chart)[1], "titleColor": _colors(chart)[1]}},
                        "resolve": {"scale": {"color": "independent"}}}
             for child_payload in payloads:
                 child_payload.pop("$schema", None)
