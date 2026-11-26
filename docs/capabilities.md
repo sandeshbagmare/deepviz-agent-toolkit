@@ -6,6 +6,13 @@
 
 The inspected `python/deepviz/src/deepviz/models.py` declares schema version `1`, rejects extra fields, and names five engines: `matplotlib`, `plotly`, `vega`, `echarts`, `antv`. It defines a `ChartSpec`, `NormalizedData`, and `Artifact` metadata envelope. A model accepting a value is **not** proof its renderer or file adapter exists.
 
+Subsequent source inspection at main `cf27e85` confirms `728bbac` encodes the
+existing composition rules in the generated shared schema, not new chart kinds
+or runtime behavior. `65b3fc4` uses the same strict input models for MCP discovery
+and call validation and cleans only a failed call's fresh artifact subtree.
+These are source-observed updates; the example executions below remain on the
+explicit baseline, not an independent runtime signoff of those later commits.
+
 | Area | Contract / design intent | Evidence still required before claiming support |
 |---|---|---|
 | Chart kinds | bar, line, scatter, area, pie, heatmap, histogram, box, violin, bubble, radar, treemap, sunburst, funnel, gauge, geo, table, dashboard. | Per-engine semantic tests and real outputs for each claimed kind; explicit unsupported errors otherwise. |

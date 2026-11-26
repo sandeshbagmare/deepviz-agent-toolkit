@@ -71,9 +71,10 @@ import schema from '@deepviz/agent-toolkit/chart-spec.schema.json' with { type: 
 ```
 
 The shipped schema is copied from Python's `ChartSpec.model_json_schema()`.
-Like that generated schema, it is structural: `validateSpec` also checks that
+The generated schema now expresses the existing dashboard composition rules:
 only dashboards contain children, dashboards are non-empty, and no dashboard
-is nested. JavaScript validation intentionally does not coerce strings into
+is nested. `validateSpec` enforces these rules at runtime as well. JavaScript
+validation intentionally does not coerce strings into
 numbers. Model-authored schemas cannot supply code, renderer options, or URLs.
 
 ### Contract defaults

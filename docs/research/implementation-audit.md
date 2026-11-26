@@ -8,6 +8,14 @@ the inspected main checkpoint `40c67be`; prompt packaging was separately fixed i
 `f67afac`, as qualified below. Later implementation changes require a new audit;
 these observations are not automatically final-candidate signoff.
 
+**Final source-delta check:** main `cf27e85` additionally contains `728bbac`
+(existing dashboard rules encoded in shared JSON Schema) and `65b3fc4` (strict
+MCP discovery/call input models and cleanup of a failed call's fresh artifact
+subtree). The exact diffs were inspected; README/schema wording follows those
+committed features. No renderer/normalizer source changes appeared in that check,
+so C1-C3 observations below remain open. This docs lane did not import or run the
+newer main source and does not borrow another producer's test totals as its own.
+
 ## Evidence categories
 
 | Category | What supports it | What it does not establish |
