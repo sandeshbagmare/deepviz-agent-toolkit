@@ -11,6 +11,13 @@ const supported: Record<BrowserEngine,readonly string[]> = {
   plotly:['bar','line','scatter','area','pie','heatmap','histogram','box','violin','bubble','radar','treemap','sunburst','funnel','gauge','geo','table'],
   svg:['bar','line','scatter','area','pie','bubble','histogram','table'],
 };
+const unsupportedColor: Record<BrowserEngine,readonly string[]> = {
+  vega:['violin'],
+  echarts:['pie','treemap','sunburst','funnel','gauge','radar','histogram'],
+  antv:['histogram'],
+  plotly:['pie','treemap','sunburst','geo','gauge'],
+  svg:['pie','histogram'],
+};
 export function escapeHtml(value: unknown): string {
   return String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]!));
 }
@@ -26,6 +33,10 @@ export function mapping(data:NormalizedData,spec:ChartSpec,engine:BrowserEngine)
   const color=spec.color??(spec.kind==='heatmap'?'count':null);
   const x=spec.x??fields[0]??'x';
   const y=spec.y??(spec.kind==='heatmap'?fields.find(field=>field!==x && field!==color):spec.aggregation==='count'?'count':fields.find(field=>field!==x && data.records.some(row=>typeof row[field]==='number')))??x;
+  const intrinsicCategoryColor=engine==='vega' && spec.kind==='pie' || engine==='antv' && ['pie','treemap'].includes(spec.kind);
+  if(spec.color && (unsupportedColor[engine].includes(spec.kind) || intrinsicCategoryColor && color!==x)) {
+    throw new ValidationError(`Color mapping is unsupported for ${engine} ${spec.kind}; omit color or select a grouping-capable chart`);
+  }
   if(spec.kind!=='table') {
     for(const field of [x,y,color,spec.size].filter((field):field is string=>field!==null)) {
       if(data.records.length && !fields.includes(field)) throw new ValidationError(`Missing mapped field: ${field}`);
