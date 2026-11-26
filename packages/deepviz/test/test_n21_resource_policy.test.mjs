@@ -128,7 +128,10 @@ test('N21 policy: mapped null insertion cannot bypass the record ceiling',()=>{
   const fields=['a','b','c','d'].map(letter=>letter.repeat(65_536));
   assert.equal(jsonBytes(Object.fromEntries(fields.map(field=>[field,null]))),262_177);
   const [x,y,color,size]=fields;
-  assert.throws(()=>normalize([{}],{...none,x,y,color,size}),resourceError);
+  // Every mapping exists somewhere, so an unrelated globally-missing-field error cannot mask the byte violation.
+  const rows=fields.map(field=>({[field]:null}));
+  assert.equal(jsonBytes(rows[0]),65_545);
+  assert.throws(()=>normalize(rows,{...none,x,y,color,size}),resourceError);
 });
 
 test('N21 policy: cumulative input bytes do not reject a safe small reservoir',async()=>{
