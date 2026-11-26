@@ -72,13 +72,30 @@ def _iterable(value: Any) -> bool:
 
 def _json(text: str, location: str = "content") -> Any:
     try:
-        return json.loads(text)
-    except (json.JSONDecodeError, RecursionError) as error:
+        return json.loads(text, object_pairs_hook=_unique_json_object)
+    except (ValueError, RecursionError) as error:
         raise ValueError(f"Invalid JSON {location}: {error}") from error
 
 
+def _unique_json_object(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
+    record: dict[str, Any] = {}
+    for key, value in pairs:
+        if key in record:
+            raise ValueError("Duplicate JSON object key")
+        record[key] = value
+    return record
+
+
+def _without_bom(lines: Iterable[str]) -> Iterator[str]:
+    iterator = iter(lines)
+    first = next(iterator, None)
+    if first is not None:
+        yield first.removeprefix("\ufeff")
+    yield from iterator
+
+
 def _jsonl(lines: Iterable[str]) -> Iterator[Any]:
-    for number, line in enumerate(lines, 1):
+    for number, line in enumerate(_without_bom(lines), 1):
         if line.strip():
             yield _json(line, f"at line {number}")
 
@@ -95,7 +112,7 @@ def _cell(value: str) -> Any:
 
 
 def _delimited(lines: Iterable[str], delimiter: str) -> Iterator[dict[str, Any]]:
-    reader = csv.reader(lines, delimiter=delimiter, strict=True)
+    reader = csv.reader(_without_bom(lines), delimiter=delimiter, strict=True)
     try:
         header = next(reader, None)
         if header is None:
@@ -129,7 +146,7 @@ def _text(text: str, format: str) -> Any:
     if not text.strip():
         return iter(())
     try:
-        return json.loads(text)
+        return json.loads(text, object_pairs_hook=_unique_json_object)
     except json.JSONDecodeError as error:
         if error.msg == "Extra data" and text.lstrip().startswith(("{", "[")):
             return _jsonl(io.StringIO(text))
@@ -159,9 +176,27 @@ def _arrow_rows(data: Any) -> Iterator[dict[str, Any]]:
         batches = data
     else:
         raise TypeError("Unsupported Arrow input; expected Table, RecordBatch or RecordBatchReader")
+    _validate_arrow_fields(data.schema)
     for batch in batches:
         for offset in range(0, batch.num_rows, _BATCH_SIZE):
             yield from batch.slice(offset, _BATCH_SIZE).to_pylist()
+
+
+def _validate_arrow_fields(fields: Iterable[Any], depth: int = 0) -> None:
+    if depth > _MAX_DEPTH:
+        raise ValueError("Arrow schema is nested too deeply")
+    names = set()
+    for index, field in enumerate(fields):
+        if index >= _MAX_FIELDS:
+            raise ValueError(f"Arrow schema exceeds {_MAX_FIELDS} fields")
+        if field.name in names:
+            raise ValueError("Duplicate Arrow schema field name")
+        names.add(field.name)
+        _utf8_size(field.name, _MAX_FIELD_BYTES, "field name")
+        dtype = getattr(field.type, "storage_type", field.type)
+        if not dtype.num_fields and hasattr(dtype, "value_type"):
+            dtype = dtype.value_type
+        _validate_arrow_fields((dtype.field(i) for i in range(dtype.num_fields)), depth + 1)
 
 
 def _binary_rows(data: Any, format: str) -> Iterator[dict[str, Any]]:
@@ -171,6 +206,7 @@ def _binary_rows(data: Any, format: str) -> Iterator[dict[str, Any]]:
         import pyarrow.parquet as parquet
 
         with parquet.ParquetFile(source) as file:
+            _validate_arrow_fields(file.schema_arrow)
             for batch in file.iter_batches(batch_size=_BATCH_SIZE):
                 yield from batch.to_pylist()
         return
@@ -182,6 +218,7 @@ def _binary_rows(data: Any, format: str) -> Iterator[dict[str, Any]]:
             stream.seek(0)
             yield from _arrow_rows(arrow.ipc.open_stream(stream))
         else:
+            _validate_arrow_fields(reader.schema)
             for index in range(reader.num_record_batches):
                 yield from _arrow_rows(reader.get_batch(index))
 
@@ -264,6 +301,8 @@ def _connection(value: Mapping[str, Any], depth: int = 0) -> Mapping[str, Any] |
     if "edges" in value or "nodes" in value:
         if "edges" in value and "nodes" in value:
             raise ValueError("GraphQL connection has both edges and nodes; select one with data_path")
+        if set(value).difference({"edges", "nodes"}, _METADATA):
+            raise ValueError("Ambiguous GraphQL connection fields; select rows with data_path")
         return value
     children = [child for key, child in value.items() if key not in _METADATA]
     if len(children) == 1 and isinstance(children[0], Mapping):
