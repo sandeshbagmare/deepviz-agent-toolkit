@@ -53,6 +53,8 @@ reports. Never use a green bootstrap run as independent evidence. The workflow u
   `npm exec --no -- playwright install --with-deps chromium` and runs
   `npm run test:browser` against locked local renderer assets. Browser console/page
   errors must fail that suite; never add `--if-present` or continue-on-error.
+  The root browser command runs both the original eleven renderer checks and the
+  separate N17 five-engine injection/hover case, outside the non-browser `npm test`.
   This complements the separate strict real-image raster regression gate.
 - The distribution job installs the built wheel and dependencies into a fresh
   virtualenv, checks its import prefix, both versioned prompts, schema, `py.typed` and console
