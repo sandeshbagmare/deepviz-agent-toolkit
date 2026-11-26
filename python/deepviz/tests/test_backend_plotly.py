@@ -76,6 +76,13 @@ def _render_plotly(
     return payloads[0], page
 
 
+def _assert_line_trace(trace: dict[str, Any], expected: list[tuple[Any, float]]) -> None:
+    assert trace["type"] == "scatter"
+    modes = set(trace["mode"].split("+"))
+    assert "lines" in modes and modes <= {"lines", "markers"}
+    assert list(zip(trace["x"], trace["y"], strict=True)) == expected
+
+
 def test_scatter_uses_mapped_coordinates_instead_of_row_indices(tmp_path: Path) -> None:
     payload, _ = _render_plotly(
         [
@@ -116,11 +123,10 @@ def test_line_preserves_supplied_timestamp_order_and_value_pairing(tmp_path: Pat
     )
     assert len(payload["data"]) == 1
     trace = payload["data"][0]
-    assert (trace["type"], trace["mode"]) == ("scatter", "lines")
-    assert list(zip(trace["x"], trace["y"], strict=True)) == [
+    _assert_line_trace(trace, [
         ("2026-03-10T12:00:00Z", 4), ("2026-01-01T00:00:00Z", 90),
         ("2026-03-10T12:00:01Z", -3),
-    ]
+    ])
 
 
 def test_color_groups_partition_interleaved_points_without_repairing_by_index(tmp_path: Path) -> None:

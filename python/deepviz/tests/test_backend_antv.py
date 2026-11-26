@@ -64,6 +64,26 @@ def _embedded_payloads(document):
     return json.loads(scripts[0]["text"])
 
 
+def _assert_connected_series(payload, kind, expected):
+    marks = [mark for mark in payload.get("children", []) if mark.get("type") == kind]
+    if payload.get("type") == "view":
+        assert marks, "A layered view must contain the requested connected marks"
+    else:
+        assert payload["type"] == kind
+        marks = [payload]
+    grouped = {}
+    for mark in marks:
+        assert not {"sortX", "sortY", "stackY"}.intersection(
+            transform["type"] for transform in mark.get("transform", [])
+        )
+        for x, y, color in zip(_values(mark, "x"), _values(mark, "y"), _values(mark, "color"), strict=True):
+            grouped.setdefault(color, []).append((x, y))
+    assert grouped == expected
+    assert not {"sortX", "sortY", "stackY"}.intersection(
+        transform["type"] for transform in payload.get("transform", [])
+    )
+
+
 def test_scatter_encodes_explicit_fields_not_first_numeric_columns(tmp_path):
     rows = [
         {"decoy": 999, "longitude": 12.5, "latitude": -3, "segment": "east"},
@@ -124,17 +144,12 @@ def test_connected_marks_preserve_source_order_within_each_series(tmp_path, kind
     ]
     _, manifest, _ = _render(tmp_path, rows, kind=kind, x="phase", y="amount", color="series")
     payload = manifest["native_specs"][0]
-    assert payload["type"] == kind
-    grouped = {}
-    for x, y, color in zip(_values(payload, "x"), _values(payload, "y"), _values(payload, "color"), strict=True):
-        grouped.setdefault(color, []).append((x, y))
-    assert grouped == {
+    # Accessible lines use a view containing per-series line and marker layers.
+    # Check every connected layer's exact ordered coordinates, not its wrapper.
+    _assert_connected_series(payload, kind, {
         "B": [("third", 30), ("first", 10), ("second", 20)],
         "A": [("third", 3), ("first", 1), ("second", 2)],
-    }
-    assert not {"sortX", "sortY", "stackY"}.intersection(
-        transform["type"] for transform in payload.get("transform", [])
-    )
+    })
 
 
 def test_heatmap_color_is_numeric_measure_not_stringified_category(tmp_path):
@@ -198,7 +213,9 @@ def test_untrusted_titles_labels_field_names_and_table_cells_remain_inert(tmp_pa
     _, manifest, html = _render(tmp_path, rows, kind="dashboard", charts=children, title=malicious)
     document = _HTML(html)
     assert malicious not in html and field not in html
-    assert "\u2028" not in html and "\u2029" not in html
+    # These are valid inert HTML text characters; only script contexts need
+    # escaping so a JavaScript line separator cannot affect a script grammar.
+    assert all("\u2028" not in script["text"] and "\u2029" not in script["text"] for script in document.scripts)
     assert not {"svg", "img"}.intersection(tag for tag, _ in document.elements)
     assert not any(name.lower().startswith("on") for _, attrs in document.elements for name in attrs)
     payloads = _embedded_payloads(document)

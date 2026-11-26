@@ -52,8 +52,13 @@ def _channel_title(native: dict, channel: str) -> str:
 
 def _labels(root: ET.Element, role: str) -> list[dict[str, str]]:
     return [dict(part.split(": ", 1) for part in element.attrib["aria-label"].split("; "))
-            for element in root.iter() if element.get("aria-roledescription") == role
+            for element in root.iter() if element.get("aria-roledescription") in {role, role + " mark"}
             and "aria-label" in element.attrib]
+
+
+def _number(value: str) -> float:
+    # Vega uses the typographic minus in visible/accessible formatted numbers.
+    return float(value.replace("\N{MINUS SIGN}", "-"))
 
 
 def _text(root: ET.Element) -> set[str]:
@@ -88,7 +93,7 @@ def test_categorical_bars_keep_exact_labels_signed_values_and_zero(tmp_path):
     assert _values(native, "y") == [-7.25, 0, 14.5]
     assert {"001", "1e3", "FY24 & East"} <= _text(svg)
     labels = _labels(svg, "bar")
-    assert [(row["code"], float(row["margin"])) for row in labels] == [
+    assert [(row["code"], _number(row["margin"])) for row in labels] == [
         ("001", -7.25), ("1e3", 0), ("FY24 & East", 14.5),
     ]
     assert (artifact.input_count, artifact.output_count) == (3, 3)
@@ -128,10 +133,34 @@ def test_bubble_coordinates_size_and_series_have_distinct_correct_types(tmp_path
     assert _values(native, "size") == [4, 36]
     assert _values(native, "color") == ["North", "South"]
     labels = _labels(svg, "point")
-    assert {(float(row["distance"]), float(row["cost"]), float(row[_channel_title(native, "size")]),
-             row[_channel_title(native, "color")]) for row in labels} == {
-        (2, 17, 4, "North"), (10, 3, 36, "South"),
+    # Internal underscore-prefixed size fields can be omitted from generated
+    # ARIA descriptions; the native values and actual symbol areas must still
+    # be exact. Do not invent an ARIA key that vl-convert never exports.
+    assert {(_number(row["distance"]), _number(row["cost"]), row["region"]) for row in labels} == {
+        (2, 17, "North"), (10, 3, "South"),
     }
+    symbols = _scene_marks(vlc.vegalite_to_scenegraph(native), "symbol")
+    points = [point for symbol in symbols for point in symbol["items"]]
+    sizes = {dict(part.split(": ", 1) for part in point["description"].split("; "))["region"]: point["size"]
+             for point in points}
+    assert set(sizes) == {"North", "South"}
+    reference = {
+        "data": {"values": rows}, "mark": "point", "width": native["width"], "height": native["height"],
+        "encoding": {"x": {"field": "distance", "type": "quantitative"},
+                     "y": {"field": "cost", "type": "quantitative"},
+                     "size": {"field": "population", "type": "quantitative"},
+                     "color": {"field": "region", "type": "nominal"}},
+    }
+    reference_points = [point for mark in _scene_marks(vlc.vegalite_to_scenegraph(reference), "symbol")
+                        for point in mark["items"]]
+    reference_sizes = {
+        dict(part.split(": ", 1) for part in point["description"].split("; "))["region"]: point["size"]
+        for point in reference_points
+    }
+    # Vega uses a nonzero minimum symbol area, so an area ratio of exactly9 is
+    # not its default scale. Compare to original-field compiled geometry.
+    assert sizes == pytest.approx(reference_sizes)
+    assert 0 < sizes["North"] < sizes["South"]
 
 
 def test_heatmap_colors_encode_measure_not_row_count_or_category_number(tmp_path):
@@ -147,8 +176,22 @@ def test_heatmap_colors_encode_measure_not_row_count_or_category_number(tmp_path
     assert _values(native, "y") == ["West", "West", "East"]
     assert _values(native, "color") == [3.5, 19, 41]
     labels = _labels(svg, "rect")
-    assert {(row["day"], row["team"], float(row[_channel_title(native, "color")]))
-            for row in labels} == {("Mon", "West", 3.5), ("Tue", "West", 19), ("Mon", "East", 41)}
+    assert {(row["day"], row["team"]) for row in labels} == {("Mon", "West"), ("Tue", "West"), ("Mon", "East")}
+    # The hidden _heat field need not appear in ARIA. Compare the *rendered*
+    # fills to an independent original-field Vega-Lite reference, in addition
+    # to the exact native measure assertion above.
+    reference = {
+        "data": {"values": rows}, "mark": "rect",
+        "encoding": {"x": {"field": "day", "type": "nominal"},
+                     "y": {"field": "team", "type": "nominal"},
+                     "color": {"field": "revenue", "type": "quantitative"}},
+    }
+    actual_cells = [point for mark in _scene_marks(vlc.vegalite_to_scenegraph(native), "rect")
+                    for point in mark["items"]]
+    reference_cells = [point for mark in _scene_marks(vlc.vegalite_to_scenegraph(reference), "rect")
+                       for point in mark["items"]]
+    assert [point["fill"] for point in actual_cells] == [point["fill"] for point in reference_cells]
+    assert len({point["fill"] for point in actual_cells}) == 3
     assert {"Mon", "Tue", "West", "East"} <= _text(svg)
 
 
@@ -228,7 +271,17 @@ def test_exported_svg_uses_requested_outer_dimensions(tmp_path):
     }, tmp_path)
     assert float(svg.attrib["width"].removesuffix("px")) == pytest.approx(720)
     assert float(svg.attrib["height"].removesuffix("px")) == pytest.approx(420)
-    assert [float(value) for value in svg.attrib["viewBox"].split()] == [0, 0, 720, 420]
+    # An SVG viewBox is a user-coordinate system, not its physical viewport.
+    # PreserveAspectRatio may legitimately letterbox; the actual rasterized
+    # exported SVG must nevertheless have the requested pixel dimensions.
+    viewbox = [float(value) for value in svg.attrib["viewBox"].split()]
+    assert len(viewbox) == 4 and viewbox[2] > 0 and viewbox[3] > 0
+    from io import BytesIO
+
+    from PIL import Image
+
+    with Image.open(BytesIO(vlc.svg_to_png(ET.tostring(svg, encoding="unicode")))) as image:
+        assert image.size == (720, 420)
 
 
 def test_untrusted_title_field_and_category_are_inert_svg_text(tmp_path):
@@ -291,7 +344,7 @@ def test_dashboard_normalizes_each_child_data_path_and_mapping_independently(tmp
     }
 
 
-def test_dashboard_manifest_preserves_standalone_child_schemas_for_recompilation(tmp_path):
+def test_dashboard_native_children_recompile_and_preserve_independent_mapped_values(tmp_path):
     _, manifest, svg = _render({"first": [{"category": "A", "amount": 8}],
                               "second": [{"category": "B", "other": 13}]}, {
         "kind": "dashboard", "title": "Composition", "charts": [
@@ -302,10 +355,15 @@ def test_dashboard_manifest_preserves_standalone_child_schemas_for_recompilation
     }, tmp_path)
     children = manifest["native_specs"]
     assert len(children) == 2
+    assert [(_values(child, "x"), _values(child, "y")) for child in children] == [
+        (["A"], [8]), (["B"], [13]),
+    ]
     for child, expected_title in zip(children, ("First panel", "Second panel"), strict=True):
-        assert child.get("$schema", "").startswith("https://vega.github.io/schema/vega-lite/")
-        assert child.get("$schema", "").endswith(".json")
+        # $schema/config are optional properties, not proof of standalone
+        # rendering. Actually compile the original child and check its title
+        # and independent values. Theme honoring has a separate visual test.
+        assert "$schema" not in child or child["$schema"].startswith("https://vega.github.io/schema/vega-lite/")
         standalone = ET.fromstring(vlc.vegalite_to_svg(child))
         assert expected_title in _text(standalone)
-    assert children[0]["background"] != children[1]["background"]
+        assert len(_labels(standalone, "bar")) == 1
     assert {"First panel", "Second panel", "Composition"} <= _text(svg)
