@@ -1,5 +1,14 @@
 # DeepViz engineering rules
 
+## File-first coordination and restart recovery
+- Read `RESUME.md` and `docs/coordination/STATE.md` before starting or resuming work. Chat is a notification channel, not the project memory.
+- Every assignment and handoff lives under `docs/coordination/`. Before substantial work, record owner/session, branch, base SHA, allowed paths, acceptance checks, current action and next action in the assigned report. Update it after meaningful progress, a failed check, a blocker, a commit, and before returning.
+- Reports include exact commands, exit codes, test totals/skips, source identity, artifact locations, decisions and limitations. Do not record credentials, hidden reasoning, or invented success. Save a useful partial checkpoint even when interrupted.
+- C00 alone updates recovery `STATE.md`, `WORKLOG.md` and the historical `ROSTER.md`. C17 alone owns candidate integration/shared-branch Git/GitHub writes and the live reservation register `docs/coordination/C17-live-slots.md`. Producers may commit tested scoped work on their own feature branches; the explicit PM issue-management exception in `BRIEF.md` remains scoped to its assignment. Each worker writes only its assigned report/source paths. Preserve these records across session restarts; never delete handoffs as temporary scratch.
+- Latest user steering: fewer than 100 coordinator turns, no more than **22 concurrent agents total across all nesting levels**. Prefer resuming existing sessions over duplicate workers. The old launch pause is superseded by renewed autonomous delegation authorization, but six previously canceled sessions are not restarted. Only the explicitly budgeted coordination lane may launch nested workers; all other workers must not spawn.
+- Before dispatch, save the brief and reserve its slot in C17's live register `docs/coordination/C17-live-slots.md`; record the returned session ID there immediately. `ROSTER.md` is C00's historical ownership map, not the live launch register. C17 supersedes the unstarted C16 assignment. No independent nested launches outside C17's total budget. Unknown historical state is not proof of completion; reconcile actual active sessions and all returned worker IDs before adding workers.
+- On restart, inspect Git/worktrees and read saved reports, then resume the first unfinished action. Never reset, discard dirty worktrees, rerun completed integrations blindly, or count a historical report as current-candidate verification.
+
 ## Contract and ownership
 - Python is primary; `python/deepviz/src/deepviz/models.py` defines the versioned schema.
 - Regenerate `schemas/chart-spec.schema.json` after changing contracts; test Python/TypeScript agreement.

@@ -1,0 +1,3 @@
+# N05 Python renderer producer
+
+Follow C17-wave-common.md. Report `N05-python-render.md`. New worktree temp/opencode/deepviz-n05, branch fix/n05-python-render, base b6abc8d. Own `python/deepviz/src/deepviz/{render,engines}.py` and new `test_n05*.py` regressions. Run render and backend suites, address confirmed current failures with TDD, correct engine identity/mapped counts/series/heatmap/pie/dashboard/nonfinite/HTML safety and truthful unsupported capabilities. Do not edit ingestion/model/integrations. N09/N10/N18 are independent output verifiers; consume their saved findings if useful. Visually inspect actual artifacts for fixes, preserve unique artifacts, commit scoped changes. Do not weaken semantic tests to suit broken behavior.

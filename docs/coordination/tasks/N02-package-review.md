@@ -1,0 +1,7 @@
+# N02 independent package/claim review
+
+Owner: fresh nested child of C17, reserved N02 slot. Do not spawn. Read RESUME.md, AGENTS.md, docs/coordination/{STATE,ROSTER,BRIEF,REQUEST}.md and design/plan/dependency gates. Save report immediately at main checkout `docs/coordination/reports/N02-package-review.md`; only that report and your own untracked verification artifacts may be written. No production/Git/shared-candidate edits or commits.
+
+Candidate starts incomplete at 468b28c; C17 integrates committed feature branches. Independently inspect preserved TS, CI, integrations packaging/contracts and README/research claims, using Git and isolated read-only source. Do not mutate dirty sibling worktrees. Identify real packaging, published-entrypoint, Python/TS schema parity, MCP trust-boundary and unsupported-claim defects with exact repros. Read existing handoffs first; prove imports resolve to tested source.
+
+Acceptance: distinct non-author reviewer report with exact SHA/tree, severity/file/line/reproducer, commands/exit codes, observed artifacts and explicit limits. Old-source findings are preliminary, not candidate signoff. Read C17 report near completion; if complete candidate available, audit that exact commit and inspect real output; otherwise leave a useful ready-to-resume report. Save checkpoint after meaningful result/failure and next command. Final chat only report path plus urgent blocker.

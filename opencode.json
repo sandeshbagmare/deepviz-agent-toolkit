@@ -39,5 +39,6 @@
       "template": "Review the requested diff and connected code without editing. Verify mapped data and generated artifacts, stream memory, input/output safety, tests and README claims. Return prioritized findings with exact commit and file lines."
     }
   },
-  "watcher": {"ignore": [".venv/**", "node_modules/**", "dist/**", "artifacts/local/**"]}
+  "watcher": {"ignore": [".venv/**", "node_modules/**", "dist/**", "artifacts/local/**"]},
+  "experimental": {"subagent_depth": 2}
 }

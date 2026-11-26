@@ -1,0 +1,49 @@
+{
+  "engine": "matplotlib",
+  "charts": [
+    {
+      "engine": "matplotlib",
+      "requested_kind": "heatmap",
+      "rendered_kind": "heatmap",
+      "spec": {
+        "version": 1,
+        "kind": "heatmap",
+        "title": "Counts should be North=2, South=1",
+        "description": "",
+        "x": "day",
+        "y": "region",
+        "color": null,
+        "size": null,
+        "data_path": null,
+        "format": "auto",
+        "aggregation": "auto",
+        "max_points": 2000,
+        "width": 900,
+        "height": 520,
+        "theme": "light",
+        "charts": [],
+        "columns": 2
+      },
+      "records": [
+        {
+          "day": "Mon",
+          "region": "North",
+          "count": 2
+        },
+        {
+          "day": "Mon",
+          "region": "South",
+          "count": 1
+        }
+      ],
+      "input_count": 3,
+      "output_count": 2,
+      "strategy": "count",
+      "warnings": []
+    }
+  ],
+  "warnings": [],
+  "native_specs": [],
+  "strategy": "count",
+  "accessible_path": "chart.html"
+}

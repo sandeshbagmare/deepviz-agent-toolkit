@@ -1,0 +1,7 @@
+# N01 independent data/security review
+
+Owner: fresh nested child of C17, reserved N01 slot. Do not spawn. Read RESUME.md, AGENTS.md, docs/coordination/{STATE,ROSTER,BRIEF,REQUEST}.md and design/plan/dependency gates. Save report immediately at main checkout `docs/coordination/reports/N01-data-review.md`; only that report and your own untracked verification artifacts may be written. No production/Git/shared-candidate edits or commits.
+
+Current candidate is incomplete at 468b28c; C17 is integrating preserved branches. Begin independent read-only review of `feat/ingestion`, renderer and contract source via Git/preserved worktrees. Identify statistics, streaming memory, format parsing, security and loss-disclosure defects with exact reproductions; never mutate dirty sibling worktrees. Inspect existing reports to avoid repeating already-resolved findings. Check import identity before tests.
+
+Acceptance: produce a distinct non-author reviewer report with SHA/tree identity, severity, concrete file/line/reproducer, executed checks/exit codes, and explicit limits. Do not call old-source review final candidate signoff. If candidate becomes complete while working, read C17 report, verify exact candidate commit and review again. Otherwise finish a useful bounded report and return; C17 may resume you for candidate final review. Inspect actual SVG/PNG output if available; state when not inspected. Save every meaningful finding/failure and next executable action. Final chat only report path plus urgent blocker.
