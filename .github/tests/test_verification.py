@@ -3,6 +3,9 @@ from __future__ import annotations
 
 import copy
 import importlib.util
+import json
+import subprocess
+import sys
 from pathlib import Path
 from typing import Any
 
@@ -71,6 +74,37 @@ def test_evidence_policy_rejects_missing_or_stale_evidence(mutation: str) -> Non
     old, new = replacements[mutation]
     event["pull_request"]["body"] = body.replace(old, new)
     assert load_script("verify_evidence").validate_event(event)
+
+
+@pytest.mark.parametrize(("case", "exit_code"), [
+    ("complete", 0), ("bootstrap", 0), ("stale", 1), ("missing_reports", 1),
+])
+def test_evidence_cli_distinguishes_structure_from_approval(
+    case: str, exit_code: int, tmp_path: Path,
+) -> None:
+    event = evidence_event()
+    if case == "bootstrap":
+        event["pull_request"]["labels"] = []
+        event["pull_request"]["body"] = "Bootstrap CI"
+    elif case == "stale":
+        event["pull_request"]["body"] = event["pull_request"]["body"].replace("a" * 40, "b" * 40)
+    elif case == "missing_reports":
+        event["pull_request"]["body"] = event["pull_request"]["body"].split("## Independent evidence")[0]
+    path = tmp_path / "event.json"
+    path.write_text(json.dumps(event), encoding="utf-8")
+    result = subprocess.run(
+        [sys.executable, "-I", str(ROOT / "scripts" / "verify_evidence.py"), str(path)],
+        cwd=tmp_path, capture_output=True, text=True, check=False,
+    )
+    assert result.returncode == exit_code, result.stdout + result.stderr
+    output = result.stdout.lower()
+    if case == "complete":
+        assert "structur" in output and "not verified" in output, result.stdout
+        assert "no approval" in output and "human review still required" not in output, result.stdout
+    elif case == "bootstrap":
+        assert "bootstrap mode" in output and "no evidence approval is asserted" in output, result.stdout
+    else:
+        assert "evidence policy:" in output and "validated" not in output, result.stdout
 
 
 def bar_image(heights: tuple[int, int, int] = (20, 60, 40)) -> np.ndarray:

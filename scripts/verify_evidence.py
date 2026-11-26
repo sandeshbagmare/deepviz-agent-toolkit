@@ -66,7 +66,8 @@ def main() -> int:
         print(f"Evidence policy: {error}")
     if not errors:
         required = any(label["name"] == "evidence-required" for label in event["pull_request"]["labels"])
-        print("Declared evidence is complete; human review still required" if required else
+        print("Declared evidence structure validated; report truth and independence are not verified; "
+              "no approval is asserted" if required else
               "Bootstrap mode: evidence-required label absent; no evidence approval is asserted")
     return bool(errors)
 
