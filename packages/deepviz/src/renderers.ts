@@ -1,0 +1,209 @@
+import {ValidationError} from './models.js';
+import type {BrowserEngine, ChartSpec, DataRecord, NormalizedData, Scalar} from './models.js';
+
+export type RendererSpec = Record<string, unknown>;
+export interface ChartMapping {x:string;y:string;color:string|null;size:string|null}
+export const browserEngines: readonly BrowserEngine[]=['vega','echarts','antv','plotly','svg'];
+const supported: Record<BrowserEngine,readonly string[]> = {
+  vega:['bar','line','scatter','area','pie','heatmap','histogram','box','violin','bubble','table'],
+  echarts:['bar','line','scatter','area','pie','heatmap','histogram','bubble','radar','treemap','sunburst','funnel','gauge','table'],
+  antv:['bar','line','scatter','area','pie','heatmap','histogram','box','bubble','radar','treemap','table'],
+  plotly:['bar','line','scatter','area','pie','heatmap','histogram','box','violin','bubble','radar','treemap','sunburst','funnel','gauge','geo','table'],
+  svg:['bar','line','scatter','area','pie','bubble','histogram','table'],
+};
+export function escapeHtml(value: unknown): string {
+  return String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]!));
+}
+function requireNumeric(records:DataRecord[],field:string):void {
+  if(records.some(row=>typeof row[field]!=='number')) throw new ValidationError(`Field ${field} requires finite numeric values without null or missing measurements`);
+}
+export function mapping(data:NormalizedData,spec:ChartSpec,engine:BrowserEngine):ChartMapping {
+  if(!browserEngines.includes(engine)) throw new ValidationError(`Unsupported browser engine: ${engine}`);
+  if(!supported[engine].includes(spec.kind)) throw new ValidationError(`Unsupported kind ${spec.kind} for ${engine}`);
+  if(spec.kind==='gauge' && data.records.length!==1) throw new ValidationError('A gauge requires exactly one measurement; aggregate first');
+  if(engine==='svg' && spec.color && spec.kind!=='table') throw new ValidationError('Native SVG color field encoding is unsupported; use a browser engine');
+  const fields=[...new Set(data.records.flatMap(row=>Object.keys(row)))];
+  const x=spec.x??fields[0]??'x';
+  const y=spec.y??(spec.aggregation==='count'?'count':fields.find(field=>field!==x && data.records.some(row=>typeof row[field]==='number')))??x;
+  if(spec.kind!=='table') {
+    for(const field of [x,y,spec.color,spec.size].filter((field):field is string=>field!==null)) {
+      if(data.records.length && !fields.includes(field)) throw new ValidationError(`Missing mapped field: ${field}`);
+    }
+    if(!['histogram','geo','heatmap'].includes(spec.kind)) requireNumeric(data.records,y);
+    if(spec.kind==='histogram') requireNumeric(data.records,x);
+    if(spec.size) requireNumeric(data.records,spec.size);
+    if(spec.kind==='heatmap') {
+      if(!spec.color) throw new ValidationError('Heatmap requires a numeric color value field');
+      requireNumeric(data.records,spec.color);
+    }
+    if(['pie','treemap','sunburst','funnel','gauge','bubble'].includes(spec.kind) && data.records.some(row=>typeof row[y]==='number' && row[y]<0)) throw new ValidationError(`${spec.kind} requires non-negative values`);
+  }
+  return {x,y,color:spec.color,size:spec.size};
+}
+
+const literalField=(field:string)=>field.replace(/[.\[\]\\]/g,'\\$&');
+export function vegaSpec(data:NormalizedData,spec:ChartSpec,m:ChartMapping):RendererSpec {
+  const {x,y,color,size}=m;
+  const quantitative=(field:string)=>data.records.some(row=>typeof row[field]==='number');
+  const encoding:RendererSpec={
+    x:{field:literalField(x),type:quantitative(x)?'quantitative':'nominal'},
+    y:{field:literalField(y),type:'quantitative'},
+  };
+  if(color) encoding.color={field:literalField(color),type:spec.kind==='heatmap'?'quantitative':'nominal'};
+  if(size) encoding.size={field:literalField(size),type:'quantitative'};
+  const mark:RendererSpec={type:({scatter:'point',bubble:'circle',heatmap:'rect',histogram:'bar',box:'boxplot',pie:'arc',violin:'area'} as Record<string,string>)[spec.kind]??spec.kind,tooltip:false};
+  const result:RendererSpec={$schema:'https://vega.github.io/schema/vega-lite/v6.json',data:{values:data.records},mark,encoding,width:spec.width-120,height:spec.height-100,
+    config:{background:spec.theme==='dark'?'#111827':'white',axis:{labelColor:spec.theme==='dark'?'#e5e7eb':'#374151',titleColor:spec.theme==='dark'?'#e5e7eb':'#374151'}}};
+  if(spec.kind==='pie') { delete encoding.x;delete encoding.y;encoding.theta={field:literalField(y),type:'quantitative'};encoding.color={field:literalField(x),type:'nominal'}; }
+  if(spec.kind==='histogram') { encoding.x={field:literalField(x),type:'quantitative',bin:true};encoding.y={aggregate:'count',type:'quantitative'}; }
+  if(spec.kind==='violin') {
+    result.transform=[{density:literalField(y),as:['value','density']}];
+    encoding.x={field:'density',type:'quantitative',stack:'center',axis:null};
+    encoding.y={field:'value',type:'quantitative'};
+    delete encoding.color;delete encoding.size;
+    mark.orient='horizontal';
+  }
+  return result;
+}
+
+function bins(rows:DataRecord[],field:string):{x:number,y:number}[] {
+  const values=rows.map(row=>row[field]).filter((value):value is number=>typeof value==='number');
+  if(!values.length) return [];
+  let min=Infinity,max=-Infinity;
+  for(const value of values) { min=Math.min(min,value);max=Math.max(max,value); }
+  const count=Math.min(30,Math.max(1,Math.ceil(Math.sqrt(values.length))));
+  const step=(max-min||1)/count;
+  const output=Array.from({length:count},(_,i)=>({x:min+step*(i+0.5),y:0}));
+  for(const value of values) output[Math.min(count-1,Math.floor((value-min)/step))]!.y++;
+  return output;
+}
+
+export function echartsSpec(data:NormalizedData,spec:ChartSpec,m:ChartMapping):RendererSpec {
+  const {x,y,color,size}=m;
+  if(size) throw new ValidationError('ECharts size encoding is unsupported; use Vega, Plotly, AntV, or SVG');
+  const seriesType=({area:'line',bubble:'scatter',histogram:'bar'} as Record<string,string>)[spec.kind]??spec.kind;
+  const result:RendererSpec={animation:false,backgroundColor:spec.theme==='dark'?'#111827':'white',textStyle:{color:spec.theme==='dark'?'#e5e7eb':'#374151'},tooltip:{show:false},series:[]};
+  if(['pie','treemap','sunburst','funnel'].includes(spec.kind)) {
+    result.series=[{type:seriesType,data:data.records.map(row=>({name:String(row[x]??''),value:row[y]}))}];return result;
+  }
+  if(spec.kind==='gauge') { result.series=[{type:'gauge',min:0,max:Math.max(100,...data.records.map(row=>Number(row[y]))),data:data.records.slice(0,1).map(row=>({name:String(row[x]??''),value:row[y]}))}];return result; }
+  if(spec.kind==='radar') {
+    result.radar={indicator:data.records.map(row=>({name:String(row[x]??''),max:Math.max(1,Number(row[y]))*1.1}))};
+    result.series=[{type:'radar',data:[{value:data.records.map(row=>row[y])}]}];return result;
+  }
+  if(spec.kind==='heatmap') {
+    if(!color) throw new ValidationError('ECharts heatmap requires color as its numeric value field');
+    const xs=[...new Set(data.records.map(row=>row[x]))],ys=[...new Set(data.records.map(row=>row[y]))];
+    result.xAxis={type:'category',data:xs};result.yAxis={type:'category',data:ys};
+    result.visualMap={min:0,max:Math.max(1,...data.records.map(row=>Number(row[color]))),calculable:false};
+    result.series=[{type:'heatmap',data:data.records.map(row=>[xs.indexOf(row[x]),ys.indexOf(row[y]),row[color]])}];return result;
+  }
+  if(spec.kind==='histogram') {
+    const values=bins(data.records,x);
+    result.xAxis={type:'category',data:values.map(row=>row.x)};result.yAxis={type:'value'};
+    result.series=[{type:'bar',data:values.map(row=>row.y),barCategoryGap:'0%'}];return result;
+  }
+  const scatter=['scatter','bubble'].includes(spec.kind);
+  const categories=color?[...new Set(data.records.map(row=>row[x]))]:data.records.map(row=>row[x]);
+  result.xAxis=scatter?{type:'value'}:{type:'category',data:categories};result.yAxis={type:'value'};
+  if(scatter) requireNumeric(data.records,x);
+  const groups=color?[...new Set(data.records.map(row=>row[color]))]:[null];
+  result.series=groups.map(group=> {
+    const rows=color?data.records.filter(row=>row[color]===group):data.records;
+    if(color && !scatter && new Set(rows.map(row=>row[x])).size!==rows.length) throw new ValidationError('Duplicate category within a color group; select an aggregation');
+    const series:RendererSpec={name:group===null?'':String(group),type:seriesType,
+      data:scatter?rows.map(row=>[row[x],row[y]]):color?categories.map(category=>rows.find(row=>row[x]===category)?.[y]??null):rows.map(row=>row[y])};
+    if(spec.kind==='area') series.areaStyle={};
+    return series;
+  });
+  if(color) result.legend={};
+  return result;
+}
+
+export function antvSpec(data:NormalizedData,spec:ChartSpec,m:ChartMapping):RendererSpec {
+  const {x,y,color,size}=m;
+  const result:RendererSpec={type:({bar:'interval',scatter:'point',bubble:'point',pie:'interval',heatmap:'cell',histogram:'rect',box:'boxplot',treemap:'treemap'} as Record<string,string>)[spec.kind]??spec.kind,
+    data:data.records,encode:{x,y,...color?{color}: {},...size?{size}:{}},animate:false,interaction:{tooltip:false},theme:spec.theme,width:spec.width,height:spec.height};
+  if(spec.kind==='pie') { result.coordinate={type:'theta'};result.transform=[{type:'stackY'}];result.encode={y,color:x};result.legend={color:false}; }
+  if(spec.kind==='histogram') { result.encode={x,y:'count'};result.transform=[{type:'binX',y:'count'}]; }
+  if(spec.kind==='radar') { result.type='line';result.coordinate={type:'polar'};result.scale={x:{padding:0.5}}; }
+  if(spec.kind==='treemap') {
+    result.data={value:{name:'root',children:data.records.map(row=>({name:String(row[x]??''),value:row[y]}))}};
+    result.layout={value:'value'};result.encode={color:'name'};
+  }
+  return result;
+}
+
+export function plotlySpec(data:NormalizedData,spec:ChartSpec,m:ChartMapping):RendererSpec {
+  const {x,y,color,size}=m;
+  const text=(value:Scalar|undefined)=>typeof value==='string'?escapeHtml(value):value;
+  const groups=color && !['heatmap','pie','treemap','sunburst','geo'].includes(spec.kind)?[...new Set(data.records.map(row=>row[color]))]:[null];
+  const traces=groups.map(group=> {
+    const rows=color && group!==null?data.records.filter(row=>row[color]===group):data.records;
+    const trace:RendererSpec={type:({line:'scatter',area:'scatter',bubble:'scatter',radar:'scatterpolar',gauge:'indicator'} as Record<string,string>)[spec.kind]??spec.kind,
+      x:rows.map(row=>text(row[x])),y:rows.map(row=>row[y]),hoverinfo:'skip',...color?{name:text(group)}:{}};
+    if(['line','area'].includes(spec.kind)) trace.mode='lines';
+    if(['scatter','bubble'].includes(spec.kind)) trace.mode='markers';
+    if(spec.kind==='area') trace.fill='tozeroy';
+    if(size) trace.marker={size:rows.map(row=>Math.max(0,Number(row[size]??0))),sizemode:'area'};
+    if(['pie','treemap','sunburst'].includes(spec.kind)) {
+      delete trace.x;delete trace.y;trace.labels=rows.map(row=>text(row[x]));trace.values=rows.map(row=>row[y]);
+      if(spec.kind!=='pie') trace.parents=rows.map(()=> '');
+    }
+    if(spec.kind==='histogram') { delete trace.y;trace.nbinsx=30; }
+    if(spec.kind==='heatmap') {
+      if(!color) throw new ValidationError('Plotly heatmap requires color as its numeric value field');
+      const xs=[...new Set(rows.map(row=>row[x]))],ys=[...new Set(rows.map(row=>row[y]))];
+      trace.x=xs.map(text);trace.y=ys.map(text);trace.z=ys.map(yValue=>xs.map(xValue=>rows.find(row=>row[x]===xValue && row[y]===yValue)?.[color]??null));
+    }
+    if(spec.kind==='radar') { delete trace.x;delete trace.y;trace.theta=rows.map(row=>text(row[x]));trace.r=rows.map(row=>row[y]);trace.fill='toself'; }
+    if(spec.kind==='gauge') { delete trace.x;delete trace.y;trace.mode='gauge+number';trace.value=rows[0]?.[y]??0; }
+    if(spec.kind==='geo') {
+      requireNumeric(rows,x);requireNumeric(rows,y);trace.type='scattergeo';trace.lon=rows.map(row=>row[x]);trace.lat=rows.map(row=>row[y]);trace.mode='markers';delete trace.x;delete trace.y;
+    }
+    return trace;
+  });
+  return {data:traces,layout:{width:spec.width,height:spec.height,paper_bgcolor:spec.theme==='dark'?'#111827':'white',plot_bgcolor:spec.theme==='dark'?'#111827':'white',font:{color:spec.theme==='dark'?'#e5e7eb':'#374151'},margin:{l:65,r:25,t:25,b:65},showlegend:!!color,
+    ...(spec.kind==='geo'?{geo:{visible:false,projection:{type:'equirectangular'},lonaxis:{showgrid:true},lataxis:{showgrid:true}}}:{})},config:{responsive:true,displayModeBar:false,staticPlot:true}};
+}
+
+export function tableHtml(data:NormalizedData):string {
+  const columns=[...new Set(data.records.flatMap(row=>Object.keys(row)))];
+  return `<div class="table-scroll"><table><thead><tr>${columns.map(column=>`<th scope="col">${escapeHtml(column)}</th>`).join('')}</tr></thead><tbody>${data.records.map(row=>`<tr>${columns.map(column=>`<td>${escapeHtml(row[column])}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+}
+
+export function svgHtml(data:NormalizedData,spec:ChartSpec,m:ChartMapping):string {
+  let rows=data.records,x=m.x,y=m.y;
+  if(spec.kind==='histogram') { rows=bins(rows,x);x='x';y='y'; }
+  const width=spec.width,height=spec.height,pad=65,w=width-pad*2,h=height-pad*2;
+  const values=rows.map(row=>Number(row[y]??0));
+  let min=0,max=1;
+  for(const value of values) { min=Math.min(min,value);max=Math.max(max,value); }
+  const py=(value:number)=>pad+h-(value-min)/(max-min)*h;
+  const numericX=['scatter','bubble'].includes(spec.kind);
+  if(numericX) requireNumeric(rows,x);
+  const xv=rows.map(row=>Number(row[x]??0));
+  let xmin=Infinity,xmax=-Infinity;
+  for(const value of xv) { xmin=Math.min(xmin,value);xmax=Math.max(xmax,value); }
+  const px=(i:number)=>numericX?pad+(xv[i]!-xmin)/(xmax-xmin||1)*w:pad+(i+0.5)*w/Math.max(1,rows.length);
+  const accent='#2563eb';
+  let marks='';
+  if(spec.kind==='pie') {
+    const total=values.reduce((a,b)=>a+b,0),radius=Math.min(w,h)/2;
+    let angle=-Math.PI/2;
+    marks=values.map((value,i)=> {
+      const delta=total?value/total*Math.PI*2:0,end=angle+delta;
+      const cx=width/2,cy=height/2;
+      const path=delta>=Math.PI*2-1e-10?`<circle class="mark" cx="${cx}" cy="${cy}" r="${radius}" fill="${accent}"/>`:
+        `<path class="mark" d="M${cx},${cy} L${cx+Math.cos(angle)*radius},${cy+Math.sin(angle)*radius} A${radius},${radius} 0 ${delta>Math.PI?1:0},1 ${cx+Math.cos(end)*radius},${cy+Math.sin(end)*radius} Z" fill="hsl(${i*137.5%360} 65% 48%)"><title>${escapeHtml(rows[i]?.[x])}: ${value}</title></path>`;
+      angle=end;return delta?path:'';
+    }).join('');
+  } else if(['bar','histogram'].includes(spec.kind)) {
+    marks=rows.map((row,i)=>`<rect class="mark" x="${px(i)-w/Math.max(rows.length,1)*0.4}" y="${Math.min(py(0),py(values[i]!))}" width="${w/Math.max(rows.length,1)*0.8}" height="${Math.abs(py(0)-py(values[i]!))}" fill="${accent}"><title>${escapeHtml(row[x])}: ${values[i]}</title></rect>`).join('');
+  } else if(['line','area'].includes(spec.kind)) {
+    const points=rows.map((_,i)=>`${px(i)},${py(values[i]!)}`).join(' ');
+    if(rows.length) marks=`<polyline class="mark" points="${spec.kind==='area'?`${px(0)},${py(0)} `:''}${points}${spec.kind==='area'?` ${px(rows.length-1)},${py(0)}`:''}" fill="${spec.kind==='area'?'#93c5fd':'none'}" stroke="${accent}" stroke-width="2"/>`;
+  } else marks=rows.map((row,i)=>`<circle class="mark" cx="${px(i)}" cy="${py(values[i]!)}" r="${m.size?Math.min(30,Math.max(2,Math.sqrt(Number(row[m.size]??0)))):4}" fill="${accent}"><title>${escapeHtml(row[x])}: ${values[i]}</title></circle>`).join('');
+  const axis=spec.kind==='pie'?'':`<path d="M${pad},${pad} V${pad+h} H${pad+w}" fill="none" stroke="currentColor"/><text x="${pad-8}" y="${pad+8}" text-anchor="end">${escapeHtml(max.toPrecision(4))}</text><text x="${pad-8}" y="${pad+h}" text-anchor="end">${escapeHtml(min.toPrecision(4))}</text><text x="${width/2}" y="${height-12}" text-anchor="middle">${escapeHtml(x)}</text><text transform="translate(15 ${height/2}) rotate(-90)" text-anchor="middle">${escapeHtml(y)}</text>${rows.length<=20?rows.map((row,i)=>`<text x="${px(i)}" y="${pad+h+18}" text-anchor="middle" font-size="10">${escapeHtml(String(row[x]??'').slice(0,18))}</text>`).join(''):''}`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${escapeHtml(spec.title)}" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}"><title>${escapeHtml(spec.title)}</title>${axis}${marks}</svg>`;
+}
