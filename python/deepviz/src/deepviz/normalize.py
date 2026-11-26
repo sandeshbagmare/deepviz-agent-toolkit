@@ -10,6 +10,7 @@ measure is available); other charts use deterministic reservoir sampling once
 ``max_points`` is exceeded. ``none`` also samples with a warning at that limit:
 the bounded output contract takes precedence over unbounded identity output.
 Explicit reductions group by x and color, or reduce globally without a category.
+Sums/means retain a bounded compensation term for floating-point cancellation.
 Heatmaps instead group by both x/y coordinates and reduce the color measure;
 without color, automatic heatmap aggregation counts rows into a ``count`` field.
 Count includes every row and writes the mapped measure field, or ``count``
@@ -44,6 +45,10 @@ from .models import ChartSpec, NormalizedData
 
 _MAX_FIELDS = 1024
 _MAX_DEPTH = 64
+_MAX_CELL_BYTES = 64 * 1024
+_MAX_FIELD_BYTES = 4 * 1024
+_MAX_RECORD_BYTES = 256 * 1024
+_MAX_RETAINED_BYTES = 16 * 1024 * 1024
 _BATCH_SIZE = 4096
 _REDUCTIONS = {"sum", "mean", "count", "min", "max"}
 _CATEGORICAL = {"bar", "pie", "radar", "treemap", "sunburst", "funnel"}
@@ -54,6 +59,7 @@ _PATH_FORMATS = {
     ".parquet": "parquet", ".arrow": "arrow", ".feather": "arrow", ".ipc": "arrow",
 }
 _NUMBER = re.compile(r"-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?\Z")
+_JSON_ESCAPE = re.compile(r'["\\\x00-\x1f]')
 _ABSENT = object()
 _PRIMITIVES = (str, int, bool, float, type(None))
 
@@ -229,6 +235,7 @@ def _select_path(value: Any, tokens: list[str], counts: Counter[str], depth: int
         else:
             yield value
     elif isinstance(value, Mapping):
+        _graphql_errors(value, counts)
         if tokens[0] in value:
             yield from _select_path(value[tokens[0]], tokens[1:], counts, depth + 1)
         else:
@@ -268,6 +275,13 @@ def _connection(value: Mapping[str, Any], depth: int = 0) -> Mapping[str, Any] |
     return None
 
 
+def _graphql_errors(value: Mapping[str, Any], counts: Counter[str]) -> None:
+    if value.get("errors") and ("data" in value or set(value).issubset(_METADATA)):
+        if not value.get("data"):
+            raise ValueError("GraphQL response contains errors and no data")
+        counts["graphql_errors"] += 1
+
+
 def _expand(value: Any, counts: Counter[str], depth: int = 0) -> Iterator[Any]:
     if depth > _MAX_DEPTH:
         raise ValueError("Input is nested too deeply or cyclic")
@@ -279,10 +293,7 @@ def _expand(value: Any, counts: Counter[str], depth: int = 0) -> Iterator[Any]:
         if len(value) > _MAX_FIELDS:
             raise ValueError(f"Input exceeds {_MAX_FIELDS} fields")
         first = next(iter(value.values()))
-        if value.get("errors") and ("data" in value or set(value).issubset(_METADATA)):
-            if not value.get("data"):
-                raise ValueError("GraphQL response contains errors and no data")
-            counts["graphql_errors"] += 1
+        _graphql_errors(value, counts)
         if "node" in value and set(value).issubset({"node", "cursor"}):
             if value["node"] is None:
                 counts["null_nodes"] += 1
@@ -331,7 +342,10 @@ def _expand(value: Any, counts: Counter[str], depth: int = 0) -> Iterator[Any]:
 
 
 def _scalar(value: Any, counts: Counter[str]) -> Any:
-    if value is None or type(value) in (str, int, bool):
+    if isinstance(value, str):
+        _utf8_size(value, _MAX_CELL_BYTES, "cell")
+        return value
+    if value is None or type(value) in (int, bool):
         return value
     if isinstance(value, float):
         if math.isfinite(value):
@@ -349,10 +363,50 @@ def _scalar(value: Any, counts: Counter[str]) -> Any:
     raise TypeError(f"Unsupported record value: {type(value).__name__}")
 
 
+def _utf8_size(value: str, limit: int, label: str) -> int:
+    if len(value) > limit:
+        raise ValueError(f"Input {label} exceeds {limit} UTF-8 bytes")
+    size = len(value) if value.isascii() else len(value.encode("utf-8"))
+    if size > limit:
+        raise ValueError(f"Input {label} exceeds {limit} UTF-8 bytes")
+    return size
+
+
+def _string_bytes(value: str, limit: int, label: str) -> int:
+    size = _utf8_size(value, limit, label)
+    if _JSON_ESCAPE.search(value):
+        return len(json.dumps(value, ensure_ascii=False).encode("utf-8"))
+    return size + 2
+
+
+def _record_bytes(row: dict[str, Any]) -> int:
+    """Count compact UTF-8 JSON incrementally, never serialize a whole wide row."""
+    size = 2
+    for index, (key, value) in enumerate(row.items()):
+        size += _string_bytes(key, _MAX_FIELD_BYTES, "field name") + 1 + bool(index)
+        if isinstance(value, str):
+            size += _string_bytes(value, _MAX_CELL_BYTES, "cell")
+        elif value is None:
+            size += 4
+        elif isinstance(value, bool):
+            size += 4 if value else 5
+        else:
+            size += len(repr(value))
+        if size > _MAX_RECORD_BYTES:
+            raise ValueError(f"Input record exceeds {_MAX_RECORD_BYTES} compact UTF-8 JSON bytes")
+    return size
+
+
+def _check_retained_bytes(size: int) -> None:
+    if size > _MAX_RETAINED_BYTES:
+        raise ValueError(f"Normalized retained data exceeds {_MAX_RETAINED_BYTES} bytes")
+
+
 def _flatten(value: Mapping[str, Any], counts: Counter[str]) -> dict[str, Any]:
     output: dict[str, Any] = {}
 
     def add(key: str, item: Any, depth: int) -> None:
+        _utf8_size(key, _MAX_FIELD_BYTES, "field name")
         if depth > _MAX_DEPTH:
             raise ValueError("Record is nested too deeply or cyclic")
         if type(item) in _PRIMITIVES:
@@ -380,7 +434,9 @@ def _flatten(value: Mapping[str, Any], counts: Counter[str]) -> dict[str, Any]:
     return output
 
 
-def _records(data: Any, spec: ChartSpec, counts: Counter[str], schema: dict[str, int]) -> Iterator[dict[str, Any]]:
+def _records(
+    data: Any, spec: ChartSpec, counts: Counter[str], schema: dict[str, int],
+) -> Iterator[tuple[dict[str, Any], int]]:
     source = _source(data, spec.format)
     if spec.data_path is not None:
         tokens = spec.data_path.split(".")
@@ -403,7 +459,7 @@ def _records(data: Any, spec: ChartSpec, counts: Counter[str], schema: dict[str,
             if field not in row:
                 counts["missing"] += 1
                 row[field] = None
-        yield row
+        yield row, _record_bytes(row)
     if spec.data_path is not None and not counts["path_matches"] and (
         not counts["path_empty"] or counts["path_missing"]
     ):
@@ -466,6 +522,16 @@ class _Reducer:
         self.counts = counts
         self.groups: dict[tuple[Any, ...], list[Any]] = {}
         self.other: list[Any] | None = None
+        self.retained_bytes = 2
+
+    def _store(self, state: list[Any], value: Any, correction: Any = 0, exponent: int = 0) -> None:
+        size = 128
+        if any(isinstance(item, int) and item.bit_length() > 96 for item in (state[0], value, correction)):
+            size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+        retained = self.retained_bytes + size - state[4]
+        _check_retained_bytes(retained)
+        self.retained_bytes = retained
+        state[1:] = [value, correction, exponent, size]
 
     def add(self, row: dict[str, Any]) -> None:
         # Type-tag grouping values: Python otherwise conflates True, 1 and 1.0.
@@ -475,7 +541,12 @@ class _Reducer:
             if self.other is not None:
                 state = self.other
             elif len(self.groups) < self.limit:
-                state = [0, None]
+                # Reserve numeric-state overhead as well as retained category strings.
+                self.retained_bytes += _record_bytes(
+                    {field: row.get(field) for field in self.fields} | {self.measure: None}
+                ) + 129
+                _check_retained_bytes(self.retained_bytes)
+                state = [0, None, 0, 0, 128]
                 self.groups[key] = state
             else:
                 last = next(reversed(self.groups))
@@ -484,28 +555,55 @@ class _Reducer:
                 self.counts["overflow"] = 1
         if self.strategy == "count":
             state[0] += 1
-            state[1] = state[0]
+            self._store(state, state[0])
             return
         value = row.get(self.measure)
-        if type(value) not in (int, float):
+        if value is None or type(value) not in (int, float):
             if value is not None:
                 self.counts["nonnumeric"] += 1
             return
         state[0] += 1
-        if state[1] is None:
-            state[1] = value
-        elif self.strategy == "sum":
-            state[1] += value
-        elif self.strategy == "mean":
-            state[1] = state[1] * ((state[0] - 1) / state[0]) + value / state[0]
+        correction, exponent = state[2:4]
+        if self.strategy == "mean" and exponent:
+            value = math.ldexp(value, -exponent)
+        previous = state[1]
+        if previous is None:
+            total = value
+        elif self.strategy in {"sum", "mean"}:
+            total = previous + value
+            if self.strategy == "mean" and isinstance(total, float) and not math.isfinite(total):
+                # Scale the numerator by powers of two; the finite mean need not overflow.
+                previous = math.ldexp(previous, -1)
+                value = math.ldexp(value, -1)
+                correction = math.ldexp(correction, -1)
+                exponent += 1
+                total = previous + value
+            if not isinstance(total, float) or math.isfinite(total):
+                # Neumaier compensation also survives transfer into the other bucket.
+                correction += (
+                    (previous - total) + value if abs(previous) >= abs(value)
+                    else (value - total) + previous
+                )
         elif self.strategy == "min":
-            state[1] = min(state[1], value)
+            total = min(previous, value)
         else:
-            state[1] = max(state[1], value)
+            total = max(previous, value)
+        self._store(state, total, correction, exponent)
 
     def finish(self) -> list[dict[str, Any]]:
+        def result(state: list[Any]) -> Any:
+            value = state[1]
+            if self.strategy == "sum" and value is not None:
+                value += state[2]
+            elif self.strategy == "mean" and value is not None:
+                try:
+                    value = math.ldexp(value / state[0] + state[2] / state[0], state[3])
+                except OverflowError:
+                    value = math.inf
+            return _scalar(value, self.counts)
+
         records = [
-            dict(zip(self.fields, (part[1] for part in key), strict=True)) | {self.measure: _scalar(state[1], self.counts)}
+            dict(zip(self.fields, (part[1] for part in key), strict=True)) | {self.measure: result(state)}
             for key, state in self.groups.items()
         ]
         if self.other is not None:
@@ -513,7 +611,7 @@ class _Reducer:
             labels = {part[1] for key in self.groups for part in key}
             while label in labels:
                 label += "_"
-            records.append(dict.fromkeys(self.fields, label) | {self.measure: _scalar(self.other[1], self.counts)})
+            records.append(dict.fromkeys(self.fields, label) | {self.measure: result(self.other)})
         return records
 
 
@@ -522,9 +620,12 @@ def normalize(data: Any, spec: ChartSpec | dict[str, Any]) -> NormalizedData:
 
     Raises ValueError/TypeError for malformed data, invalid field mappings or
     unsupported cell values. File errors remain ordinary OSError subclasses.
-    Memory is O(max_points * bounded record width), plus a 32-row inference
-    prefix and, for columnar sources, a 4096-row conversion batch. Schema width
-    is capped at 1024 fields and nesting at 64 levels to bound adversarial data.
+    Retained compact UTF-8 JSON/state is capped at 16 MiB; string cells at
+    64 KiB, field names at 4 KiB and records at 256 KiB. Oversize data raises ValueError,
+    never silent truncation. These are payload budgets, not process RSS limits.
+    Additional memory includes a <=32-row inference prefix (stopped after
+    reaching 16 MiB), schema state, and a 4096-row columnar conversion batch.
+    Schema width is capped at 1024 fields and nesting at 64 levels.
     Automatic mappings and strategy are chosen from that prefix; use explicit
     x/y/aggregation for heterogeneous streams whose early rows are unrepresentative.
     """
@@ -536,29 +637,41 @@ def normalize(data: Any, spec: ChartSpec | dict[str, Any]) -> NormalizedData:
     counts: Counter[str] = Counter()
     schema: dict[str, int] = {}
     rows = _records(data, spec, counts, schema)
-    prefix = list(islice(rows, 32))
-    strategy, fields, measure = _plan(spec, prefix)
+    prefix = []
+    prefix_bytes = 0
+    for row, size in islice(rows, 32):
+        prefix.append((row, size))
+        prefix_bytes += size
+        if prefix_bytes >= _MAX_RETAINED_BYTES:
+            break
+    strategy, fields, measure = _plan(spec, [row for row, _ in prefix])
     input_count = 0
     if strategy in _REDUCTIONS:
         reducer = _Reducer(strategy, fields, measure, spec.max_points, counts)
-        for row in chain(prefix, rows):
+        for row, _ in chain(prefix, rows):
             input_count += 1
             reducer.add(row)
         records = reducer.finish()
     else:
         rng = random.Random(0)
-        reservoir: list[tuple[int, dict[str, Any]]] = []
-        for row in chain(prefix, rows):
+        reservoir: list[tuple[int, dict[str, Any], int]] = []
+        retained_bytes = 2
+        for row, size in chain(prefix, rows):
             input_count += 1
             if input_count <= spec.max_points:
-                reservoir.append((input_count, row))
+                retained_bytes += size + bool(reservoir)
+                _check_retained_bytes(retained_bytes)
+                reservoir.append((input_count, row, size))
             else:
                 slot = rng.randrange(input_count)
                 if slot < spec.max_points:
-                    reservoir[slot] = (input_count, row)
-        records = [row for _, row in sorted(reservoir)]
+                    retained_bytes += size - reservoir[slot][2]
+                    _check_retained_bytes(retained_bytes)
+                    reservoir[slot] = (input_count, row, size)
+        records = [row for _, row, _ in sorted(reservoir)]
         if input_count > spec.max_points:
             strategy = "sample"
+    _check_retained_bytes(2 + sum(_record_bytes(row) for row in records) + max(0, len(records) - 1))
     warnings = []
     if strategy == "sample" and input_count > spec.max_points:
         warnings.append(
