@@ -166,9 +166,40 @@ function* csvRows(text: string, delimiter: string): Generator<string[]> {
   if(field || closed || row.length) { row.push(field); yield row; }
 }
 
-function parseJson(text:string):unknown {
-  try {return JSON.parse(text);}
-  catch {throw new ValidationError('Content is not valid JSON or JSONL');}
+function checkJsonKeys(text:string):void {
+  const frames:{keys:Set<string>|null,expectKey:boolean,cost:number}[]=[];
+  let retained=0;
+  for(let i=0;i<text.length;i++) {
+    const ch=text[i]!;
+    if(ch==='"') {
+      const start=i++;
+      while(i<text.length && text[i]!=='"') {
+        if(i-start>MAX_CELL_BYTES*6+2)throw new ValidationError('String cell or field name exceeds 64 KiB UTF-8 limit');
+        if(text[i]==='\\')i++;
+        i++;
+      }
+      const decoded=JSON.parse(text.slice(start,i+1)) as string;
+      const cost=stringBytes(decoded),frame=frames.at(-1);
+      if(frame?.keys && frame.expectKey) {
+        if(frame.keys.has(decoded))throw new ValidationError(`Duplicate JSON object key: ${decoded}`);
+        if(frame.keys.size>=MAX_FIELDS)throw new ValidationError(`JSON object exceeds ${MAX_FIELDS} fields`);
+        if(retained+cost+16>MAX_RETAINED_BYTES)throw new ValidationError('Retained JSON key state exceeds 16 MiB UTF-8 JSON byte budget');
+        retained+=cost+16;frame.cost+=cost+16;frame.keys.add(decoded);frame.expectKey=false;
+      }
+    } else if(ch==='{' || ch==='[') {
+      if(frames.length>MAX_DEPTH)throw new ValidationError('JSON input exceeds maximum depth');
+      frames.push({keys:ch==='{'?new Set<string>():null,expectKey:ch==='{',cost:0});
+    } else if(ch==='}' || ch===']')retained-=frames.pop()?.cost??0;
+    else if(ch===',' && frames.at(-1)?.keys)frames.at(-1)!.expectKey=true;
+  }
+}
+
+function parseJson(text:string,auto=false):unknown {
+  try {checkJsonKeys(text);return JSON.parse(text);}
+  catch(error) {
+    if(error instanceof ValidationError || auto)throw error;
+    throw new ValidationError('Content is not valid JSON or JSONL');
+  }
 }
 
 function* parseText(text: string, spec: ChartSpec,warn:Notice,state:PathState): Generator<unknown> {
@@ -177,8 +208,9 @@ function* parseText(text: string, spec: ChartSpec,warn:Notice,state:PathState): 
   if(format==='auto') {
     if(!text.trim())return;
     let parsed:unknown;
-    try {parsed=JSON.parse(text);}
-    catch {
+    try {parsed=parseJson(text,true);}
+    catch(error) {
+      if(!(error instanceof SyntaxError))throw error;
       if(/^\s*[\[{]/.test(text))format='jsonl';
       else {
         const first=text.split('\n',1)[0]!;
