@@ -8,9 +8,10 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 
+from matplotlib.colors import to_rgb
+
 from deepviz.models import Artifact, ChartSpec
 from deepviz.render import render
-from matplotlib.colors import to_rgb
 
 
 @dataclass

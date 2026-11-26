@@ -10,8 +10,9 @@ from typing import Any
 
 import jsonschema
 import pytest
-from deepviz.models import ChartSpec
 from pydantic import ValidationError
+
+from deepviz.models import ChartSpec
 
 ROOT = Path(__file__).resolve().parents[1]
 

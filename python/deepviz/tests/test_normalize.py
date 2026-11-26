@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any
 
 import pytest
+
 from deepviz.models import ChartSpec, NormalizedData
 from deepviz.normalize import normalize as normalize_impl
 

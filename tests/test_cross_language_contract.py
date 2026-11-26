@@ -19,8 +19,9 @@ from pathlib import Path
 from typing import Any
 
 import pytest
-from deepviz.models import ChartSpec
 from pydantic import ValidationError
+
+from deepviz.models import ChartSpec
 
 ROOT = Path(__file__).resolve().parents[1]
 CORPUS = json.loads((Path(__file__).parent / "fixtures" / "schema-parity.json").read_text(encoding="utf-8"))

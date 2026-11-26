@@ -10,6 +10,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 import pytest
+
 from deepviz.models import ChartSpec
 from deepviz.render import render
 

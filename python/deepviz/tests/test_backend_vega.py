@@ -11,8 +11,9 @@ from typing import Any
 
 import pytest
 import vl_convert as vlc
-from deepviz.models import Artifact
 from matplotlib.colors import to_rgb
+
+from deepviz.models import Artifact
 
 
 def _render(data: Any, spec: dict[str, Any], tmp_path: Path) -> tuple[Artifact, dict, ET.Element]:

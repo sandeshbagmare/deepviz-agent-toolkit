@@ -12,6 +12,7 @@ from typing import get_args
 
 import numpy as np
 import pytest
+
 from deepviz.models import ChartKind, ChartSpec
 
 ENGINES = ["matplotlib", "plotly", "vega", "echarts", "antv"]

@@ -5,6 +5,7 @@ import statistics
 from collections import defaultdict
 
 import pytest
+
 from deepviz.models import ChartSpec
 from deepviz.normalize import normalize
 

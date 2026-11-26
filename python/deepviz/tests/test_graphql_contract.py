@@ -1,6 +1,7 @@
 """Public normalization contracts for GraphQL responses and connections."""
 
 import pytest
+
 from deepviz.models import ChartSpec, NormalizedData
 from deepviz.normalize import normalize
 
