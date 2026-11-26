@@ -179,6 +179,7 @@ jobs:
           for name in ("system", "request"):
               assert deepviz.read_prompt(name).strip()
           json.loads(files("deepviz").joinpath("resources/chart-spec.schema.json").read_text())
+          assert files("deepviz").joinpath("py.typed").is_file(), "Installed PEP 561 marker absent"
           print(f"Installed wheel source: {deepviz.__file__}")
           PY
           "$RUNNER_TEMP/deepviz-consumer/bin/deepviz" --help

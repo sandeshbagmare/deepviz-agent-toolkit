@@ -55,7 +55,7 @@ reports. Never use a green bootstrap run as independent evidence. The workflow u
   errors must fail that suite; never add `--if-present` or continue-on-error.
   This complements the separate strict real-image raster regression gate.
 - The distribution job installs the built wheel and dependencies into a fresh
-  virtualenv, checks its import prefix, both versioned prompts, schema and console
+  virtualenv, checks its import prefix, both versioned prompts, schema, `py.typed` and console
   entrypoints outside the checkout. `npm run package:check` packs and installs a
   real tarball and checks public runtime, JSON exports and TypeScript declarations;
   a successful metadata check or pack dry-run alone is insufficient.
