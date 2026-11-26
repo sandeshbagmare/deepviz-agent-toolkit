@@ -10,6 +10,7 @@
 - [OpenCode/OmO coordination](coordination.md): current names, version/configuration boundaries, least-privilege workflow; no global changes.
 - [Recommended architecture](../architecture.md) and [capability boundaries](../capabilities.md).
 - [Machine-readable source index](source-index.json): exact retrieved URLs and immutable repository revisions.
+- [Implementation and example audit](implementation-audit.md): 2026-11-27 source-specific adapter/tool/resource observations, distinct from the earlier upstream research inventory and from release acceptance.
 
 ## Method and honest scope
 
@@ -20,6 +21,15 @@ Repository inspection means targeted static reading, not a complete dependency a
 Only first-party vendor docs, official project docs, upstream source files, and publisher package metadata support factual claims. Search snippets, forks, badges, stars, uninspected linked projects, and inherited dependency lists do not inflate the count. A failed G2 source path and a rate-limited Observable hostname were not counted; the working upstream paths are indexed. The DuckDB stable URL served a client-side redirect; the substantive canonical 2.0 page was fetched and indexed instead.
 
 ## Evidence labels
+
+An independent official-source audit re-fetched all 100 indexed endpoints with
+HTTP 200 and checked selected load-bearing article/source excerpts. This validates
+reachability and corroborates selected claims, **not** 100 whole-repository reviews
+or runtime/security signoff. Its access clock was November 26, 2026 UTC (project
+work date November 27). See the [implementation audit](implementation-audit.md)
+for the source-specific C1-C8 corrections and their unresolved implementation
+boundaries. The inventory's original dated snapshots remain distinct from this
+later revalidation.
 
 - **Documented**: a public vendor/project describes the behavior.
 - **Source-observed**: the named public revision contains the implementation described; not a promise about every release or deployment.

@@ -10,12 +10,14 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--model", required=True, help="Installed LangChain provider:model identifier")
     parser.add_argument("--output-dir", default="artifacts/local/deep-agent")
+    parser.add_argument("--policy-file", type=Path, help="Explicit trusted policy file for a source checkout")
     args = parser.parse_args()
 
     from deepagents import create_deep_agent
+
     from deepviz import create_tools, read_prompt
 
-    policy = read_prompt("system")
+    policy = args.policy_file.read_text(encoding="utf-8") if args.policy_file else read_prompt("system")
     with tempfile.TemporaryDirectory(prefix="deepviz-input-") as data_dir:
         (Path(data_dir) / "sales.csv").write_text("month,revenue\nJan,12\nFeb,18\nMar,15\n", encoding="utf-8")
         agent = create_deep_agent(

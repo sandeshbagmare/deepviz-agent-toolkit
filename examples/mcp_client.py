@@ -5,6 +5,7 @@ import argparse
 import asyncio
 import base64
 import json
+import os
 import re
 import sys
 import tempfile
@@ -21,6 +22,9 @@ async def run(output_dir: str | Path) -> list[str]:
     params = StdioServerParameters(
         command=sys.executable,
         args=["-m", "deepviz.mcp_server", "--output-dir", str(root / "server")],
+        # The SDK's safe default environment does not inherit PYTHONPATH.
+        # Forward only this explicit checkout override, never the entire host environment.
+        env={"PYTHONPATH": os.environ["PYTHONPATH"]} if os.environ.get("PYTHONPATH") else None,
     )
     paths: list[str] = []
     async with stdio_client(params) as (read, write), ClientSession(read, write) as session:
@@ -34,12 +38,17 @@ async def run(output_dir: str | Path) -> list[str]:
             if result.isError:
                 raise RuntimeError(str(result.content))
             metadata = json.loads(next(block.text for block in result.content if block.type == "text"))
-            for index, item in enumerate(metadata["resources"]):
+            # Preserve sibling names: static chart.html references chart.svg.
+            destination_dir = saved / engine
+            destination_dir.mkdir()
+            for item in metadata["resources"]:
                 response = await session.read_resource(item["uri"])
                 for part in response.contents:
                     content = part.text.encode("utf-8") if hasattr(part, "text") else base64.b64decode(part.blob)
-                    name = re.sub(r"[^A-Za-z0-9._-]", "_", item["name"])
-                    destination = saved / f"{engine}-{index}-{name}"
+                    name = item["name"]
+                    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", name):
+                        raise ValueError("Resource name must be a plain safe basename")
+                    destination = destination_dir / name
                     with destination.open("xb") as handle:
                         handle.write(content)
                     paths.append(str(destination))

@@ -18,6 +18,13 @@
 
 The three Claude **execution/presentation families** to keep separate are inline visuals, persistent artifacts (including Data), and code/file creation. Query-backed Claude Data deserves its own row because refresh and source authorization are materially different from generic file generation. They may integrate in the product, but the public pages do not establish one identical pipeline behind all of them. (P02–P03, P34–P35.)
 
+The inspected P34 article gives conflicting statements about Team's default
+package-manager/network access. We therefore assert **plan/admin-controlled
+egress**, not one universal Team default. Disabling sandbox egress also does not
+establish that separately configured connectors/MCP cannot communicate. Query-backed
+refresh-on-open/when-due behavior is not an independently running schedule, and
+live sharing is a distinct authorization path, not generic artifact access. (P34–P35.)
+
 ## A reconstruction we can build, clearly labeled inference
 
 For DeepViz, a useful conceptual workflow is:

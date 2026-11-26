@@ -16,9 +16,11 @@ def run(output_dir: str | Path) -> dict:
     normalized = tools["normalize_data"].invoke({"data": DATA, "spec": SPEC})
     reference = {"dataset_id": normalized["dataset_id"]}
     advice = tools["recommend_chart"].invoke({"data": reference, "goal": "comparison"})
+    # Review/override inferred fields and retain the requested title and units.
+    render_spec = {**advice["spec"], **SPEC}
     outputs = {"normalize_data": normalized, "recommend_chart": advice}
     for engine in ("matplotlib", "plotly", "vega", "echarts", "antv"):
-        outputs[f"render_{engine}"] = tools[f"render_{engine}"].invoke({"data": reference, "spec": SPEC})
+        outputs[f"render_{engine}"] = tools[f"render_{engine}"].invoke({"data": reference, "spec": render_spec})
     return outputs
 
 

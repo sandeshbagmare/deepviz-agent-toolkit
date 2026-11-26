@@ -8,6 +8,14 @@ DeepViz is a Python-first normalization/reduction/compiler pipeline with five in
 
 An HTML artifact is interactive only when its scripts and browser environment are available. An MCP response containing its path does not automatically embed it inside ChatGPT, Claude, Gemini or OpenCode. Those products have host-specific presentation, permissions and lifecycle behavior. See [documented product boundaries](research/agent-pipelines.md).
 
+### Implemented snapshot versus the recommendations below
+
+On integrated source `b6abc8d9b80a8dd4e3813e5d4ef28f17f1788835` (inspected 2026-11-27), the public normalize/render/tools/CLI/MCP modules and separate npm implementation exist. The [capability matrix](capabilities.md) describes their actual adapter paths; the [example audit](research/implementation-audit.md) records the narrower executed flows. The remaining sections retain their original **design requirements**, not an assertion that every budget, sandbox, fingerprint, cache, or provenance field has been implemented.
+
+Current Python rendering normalizes on each render call. Tool handles cache original small inputs/file references and summaries, not a shared immutable normalized dataset or source snapshot; five alternative calls can therefore read/reduce five times. Dashboard iterator replay uses temporary JSONL and per-child normalization; it does not establish a total disk/byte/work quota. The returned dashboard count is max(child input counts) and sum(child output counts). These implementation facts differ from future shared-plan and total-budget recommendations below.
+
+`create_tools` returns in-process `StructuredTool` instances sharing one session. The stdio MCP server wraps the same `ToolSession`, returning metadata, PNG image content and registered artifact resource links. Resource access is not a native client chart widget. Inline JSON/file containment and per-artifact size checks exist, but a no-network render-worker sandbox, multi-tenant isolation, race-free filesystem access, credential filtering, and global retention quotas are **not guarantees of this API**. Deep Agents' other tools/backends are configured separately by the host.
+
 ## 2. Dataflow and ownership
 
 ```text

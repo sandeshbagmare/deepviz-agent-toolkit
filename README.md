@@ -33,7 +33,7 @@ integrations are lazily imported, so base rendering does not require either extr
 Node.js 22+ (from the same repository root):
 
 ```bash
-npm install
+npm ci
 npm run build
 npm test
 npm pack --workspace @deepviz/agent-toolkit
@@ -71,9 +71,26 @@ print(artifact.to_dict())  # paths, mime_type, engine, counts, strategy, warning
 Use `plotly`, `vega`, `echarts`, or `antv` for alternative adapters. ChartSpec v1 is
 validated by Pydantic and rejects extra executable options. The schema includes
 bar, line, scatter, area, pie, heatmap, histogram, box, violin, bubble, radar,
-treemap, sunburst, funnel, gauge, geo, table, and composed dashboard requests.
+treemap, sunburst, funnel, gauge, geo, table, and composed dashboard requests:
+**18 kinds including dashboard, 17 non-dashboard**, not 18 native layouts per engine.
 Not every request is native in every engine: inspect warnings and the output
 manifest for explicit fallbacks rather than assuming equivalent semantics.
+The [implementation capability matrix](docs/capabilities.md) names those fallbacks,
+one-level hierarchy/coordinate-only geographic layouts, and encoding limitations;
+it is not a claim that every upstream feature has been tested here.
+
+| Python request | Actual fallback in the inspected adapter |
+|---|---|
+| Vega-Lite radar | Line |
+| Vega-Lite sunburst | Pie |
+| Vega-Lite gauge | Ordinary bar, not the fixed-scale gauge contract |
+| ECharts violin | Box |
+| G2 violin | Box |
+
+Python Plotly heatmap currently uses a **colored-square scatter surrogate**, not a
+native heatmap grid, even though its manifest retains `heatmap` without a fallback
+warning. The [separate npm allowlist](docs/capabilities.md#npm-is-a-separate-browser-implementation)
+rejects unsupported combinations instead; Python warnings are not npm's contract.
 
 ### All seven agent tools
 
@@ -85,6 +102,9 @@ python examples/multi_tool_flow.py --output-dir artifacts/local/integrations
 
 Each row below links to runnable inputs and the corresponding output contract.
 The script prints actual output paths; it does not assume a fixed artifact name.
+It takes `advice["spec"]` and explicitly overrides it with the known original bar
+mapping/title, so the result compares the **reviewed original bar** across engines,
+not an unmodified recommendation or model-selected alternative chart.
 
 | Tool | Input example | Output |
 | --- | --- | --- |
@@ -106,8 +126,9 @@ for a flow. It is not a durable dataset store. CLI handles expire on process exi
 
 #### Recommendation output
 
-`recommend_chart` returns `dataset_id`, `spec`, `engine`, `rationale`, counts, and
-warnings. Goals are `comparison`, `trend`, `relationship`, `distribution`, and
+`recommend_chart` returns `dataset_id`, `spec`, `engine`, `rationale`, `input_count`,
+and warnings. It does **not** return `output_count`; use the profile/render result
+for that count. Goals are `comparison`, `trend`, `relationship`, `distribution`, and
 `composition`. Recommendations infer observed types, not business meaning: users
 must verify field mappings, units, ordering, pie-chart part/whole assumptions,
 and reduction semantics. Rare types/extremes may be absent from the profile.
@@ -121,8 +142,11 @@ does not reset `input_count` to its own sample size. Keep source files unchanged
 during a flow if the profile and chart must describe the same snapshot. Each tool
 call gets a fresh output subdirectory; it cannot choose a model-authored filename.
 
-Browser HTML may load renderer libraries from a CDN; it is not automatically an
-offline, self-contained report. Static PNG/SVG is preferable for offline reports.
+Python Plotly HTML embeds the installed Plotly JavaScript bundle. Python ECharts
+HTML loads ECharts **5.6.0**, and AntV HTML loads G2 **5.4.8**, from jsDelivr; those
+two outputs need network access. Matplotlib PNG/SVG and Vega-Lite SVG render locally.
+Their companion `chart.html` needs its sibling `chart.svg` kept beside it. These
+Python details do not describe the separate npm adapters' asset policy.
 The bounded records can appear in generated HTML/manifests, so treat artifacts as
 containing source-derived data when deciding where to share them.
 
@@ -131,13 +155,17 @@ containing source-derived data when deciding where to share them.
 The primary attachment point is `create_deep_agent(tools=create_tools(...))`:
 
 ```python
+from pathlib import Path
 from deepagents import create_deep_agent
-from deepviz import create_tools, read_prompt
+from deepviz import create_tools
+
+# Run this checkout example from the repository root; the policy is trusted code configuration.
+policy = Path("prompts/v1/system.md").read_text(encoding="utf-8")
 
 agent = create_deep_agent(
     model="provider:model-name",  # install/configure your chosen provider separately
     tools=create_tools("artifacts/local/agent", data_dir="/absolute/path/to/approved-data"),
-    system_prompt=read_prompt("system"),
+    system_prompt=policy,
 )
 result = agent.invoke({"messages": [{"role": "user", "content": (
     'Compare revenue in {"file":"sales.csv"}; month is categorical and revenue is USD. '
@@ -148,13 +176,25 @@ print(result["messages"][-1].content)
 
 `provider:model-name` is deliberately a placeholder, not a claimed model ID.
 [The executable agent example](examples/deep_agent.py) accepts `--model`, creates
-a tiny temporary CSV, and loads the [versioned policy](prompts/v1/system.md) from
-installed package resources with `read_prompt("system")`. Source installation
-builds a wheel that includes those resources; rebuild after editing prompts.
-Configure the provider package and credentials in your own environment. The
-integration test uses the real Deep Agents graph and a deterministic local
-`BaseChatModel` that requests a tool call; **live LLM-provider invocation is not
-exercised without supplied keys**.
+a tiny temporary CSV, and accepts `--policy-file prompts/v1/system.md` for a
+checkout policy. Without that option it calls `read_prompt("system")` from installed
+package resources. The build maps `prompts/v1/` into those resources; source-tree
+`PYTHONPATH` mode still needs the explicit trusted file. See the
+[packaging boundary and source-specific audit](docs/research/implementation-audit.md).
+Configure the provider package and credentials in your own environment.
+
+```bash
+# Real graph and tools, deterministic local decisions: no provider, key, or network needed.
+python examples/deep_agent_local.py --output-dir artifacts/local/deep-agent-local
+# Live model: supply your actual installed provider/model and credentials.
+python examples/deep_agent.py --model provider:model-name --policy-file prompts/v1/system.md
+```
+
+The [local example](examples/deep_agent_local.py) calls the real Deep Agents graph
+with a small scripted `BaseChatModel` and executes profile -> recommend -> render
+using a temporary CSV. It proves attachment/tool-result plumbing, **not** LLM chart
+selection, model quality, or live provider access. Its JSON output includes all
+three tool names and the actual artifact metadata.
 
 For large datasets, reference an approved local file. Do not paste millions of
 rows into messages, return full normalized data into context, or ask an agent to
@@ -170,6 +210,8 @@ deepviz-mcp --output-dir /absolute/path/to/artifacts --data-dir /absolute/path/t
 python -m deepviz.mcp_server --output-dir /absolute/path/to/artifacts
 ```
 
+Add the same `--data-dir /absolute/path/to/approved-data` to the module invocation
+if file inputs are needed; the abbreviated invocation above enables inline JSON only.
 No `--data-dir` means file inputs are disabled. Inline small JSON still works.
 The server reserves stdout for MCP messages. See the [client config](examples/mcp-config.json):
 replace every `/ABSOLUTE/PATH` placeholder. On Windows use your virtualenv's
@@ -219,6 +261,11 @@ directory. It does not rely on direct access to server-local paths:
 python examples/mcp_client.py --output-dir artifacts/local/mcp-demo
 ```
 
+Downloaded files retain server-provided safe basenames inside separate renderer
+directories, so `matplotlib/chart.html` can load `matplotlib/chart.svg`. Open the
+downloaded HTML, not the metadata manifest, to view the companion report. ECharts
+still needs its disclosed CDN connection after download.
+
 The server is a local stdio process, not a multi-tenant network service. Only
 artifacts created in its configured output directory are registered as resources.
 File references must stay inside the configured data directory after resolving
@@ -230,16 +277,18 @@ the operator removes them; plan retention/storage quotas for long-lived processe
 ## CLI
 
 ```bash
-deepviz render sales.csv --spec chart.json --engine matplotlib --output-dir artifacts/local/cli
-deepviz normalize sales.csv --spec chart.json
-deepviz recommend sales.csv --goal comparison
+deepviz render examples/data/sales.csv --spec examples/data/chart.json --engine matplotlib --output-dir artifacts/local/cli
+deepviz normalize examples/data/sales.csv --spec examples/data/chart.json
+deepviz recommend examples/data/sales.csv --goal comparison
 deepviz mcp --output-dir artifacts/local/mcp --data-dir /absolute/path/to/approved-data
 ```
 
-`chart.json` contains the declarative `spec` object above, not executable code.
+The supplied [chart.json](examples/data/chart.json) contains a declarative spec,
+not executable code; [sales.csv](examples/data/sales.csv) contains three known rows.
 Commands emit JSON on stdout and errors on stderr; invalid input exits nonzero.
 Direct CLI file arguments are operator-selected local paths. Agent/MCP tools use
 the stricter approved-relative-file boundary.
+See [the example guide](examples/README.md) for expected marks, tool flows and limits.
 
 ## TypeScript
 
@@ -261,6 +310,11 @@ safe file naming/storage. Browser engine support and format adapters differ from
 Python: inspect [the package source](packages/deepviz/src/) and tests rather than
 assuming identical ingestion or Matplotlib availability. Async stream APIs exist
 for bounded per-chart processing; a parsed in-memory JSON object is already resident.
+Its fifth engine is a small native `svg` adapter, not Matplotlib; unsupported
+engine/kind combinations are rejected rather than using Python's fallback table.
+Default npm Plotly/ECharts/G2/Vega HTML loads version-pinned CDN scripts; Python's
+bundled Plotly policy does not apply. `renderStream` rejects streaming dashboards.
+See [the separate npm capability/asset section](docs/capabilities.md#npm-is-a-separate-browser-implementation).
 
 ## Inputs, limits, and scaling semantics
 
@@ -277,12 +331,24 @@ for bounded per-chart processing; a parsed in-memory JSON object is already resi
 - Explicit sum/mean/count/min/max and sampling are different operations. Validate
   your mappings and denominator before drawing conclusions from a reduced chart.
   No benchmark or universal bounded-memory/performance claim is made here.
+- In Python, `aggregation="none"` still uses a warned deterministic reservoir
+  sample when the source exceeds `max_points`; it does not mean unbounded identity
+  output or strict failure on overflow. High-cardinality grouped reductions retain
+  the first `max_points - 1` groups and merge remaining contributions into a warned
+  `__deepviz_other__` bucket. A sample is not a temporal-extrema-preserving reducer.
 - Agent/MCP inline JSON is limited to **1 MB**; use approved file references for
   larger sources. Integration artifacts/resources are capped at **16 MiB per file**.
   Profile fields and cached dataset handles are bounded, not a database or durable
   ingestion service. Schema limits do not replace operating-system resource quotas.
-- Missing/mixed/non-finite values and unsupported chart capabilities must be
-  handled via validation or explicit warnings, not hidden semantic guesses.
+- Those integration caps are not demonstrated per-cell, retained-UTF-8-byte or
+  dashboard-spool quotas for Python direct/file rendering. JSON documents can be
+  read wholesale, strings can be large, and iterator dashboard replay can exhaust
+  temporary disk. Do not treat planned byte budgets as implemented protections.
+- **Current Python correctness limit:** null/non-numeric mapped y values can become
+  zero in adapter channels without warnings; a wholly absent mapped field is a
+  different validation case. npm instead rejects invalid numeric chart mappings.
+  Filter/validate measurements yourself and inspect actual output; the policy
+  goal of explicit errors/warnings is not proof every current path achieves it.
 - All model-authored requests use a fixed declarative schema; arbitrary callbacks,
   code strings, URL reads, and user-selected output paths are not tool features.
   Trusted renderer libraries naturally run their own code; this is not a promise
@@ -290,8 +356,15 @@ for bounded per-chart processing; a parsed in-memory JSON object is already resi
 
 ## Verification and scope
 
+The default Python suite includes cross-language parity tests, so build the local
+npm package first. This is a **development-test prerequisite**, not a requirement
+for Python-only rendering at runtime.
+
 ```bash
+npm ci
+npm run build
 python -m pytest
+python -m pytest examples/test_examples.py
 python -m ruff check python/deepviz/src python/deepviz/tests examples
 python -m mypy
 python -m build
@@ -306,6 +379,9 @@ access**. Run with the optional extras installed; a skipped optional-dependency
 test is not evidence of an integration passing. Browser visual checks, scale
 measurements, package publication, and live provider tests are separate evidence
 and must not be inferred from a unit-test pass.
+The example regression command is explicit because `examples/` is outside the
+default pytest `testpaths`; it checks the real MCP download's relative image link
+and the deterministic Deep Agent chain. It requires both `agents` and `mcp` extras.
 
 ## Official integration references
 

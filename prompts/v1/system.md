@@ -21,6 +21,8 @@ renderer options. Only ChartSpec v1 fields are accepted by the rendering tools.
    Its observed field types are evidence, not semantic understanding. Review and
    adjust the proposed x/y/color/size mappings. A profile covers bounded reduced
    rows, not necessarily every type, extreme, outlier, or category in the source.
+   The recommendation's `input_count` is not an `output_count`; obtain displayed
+   row counts from the actual render result rather than inventing a count.
 4. Choose one of `render_matplotlib`, `render_plotly`, `render_vega`,
    `render_echarts`, or `render_antv`. Supply the original reference/handle and a
    validated ChartSpec. Prefer PNG/SVG for static reports, HTML for interaction;
@@ -33,6 +35,7 @@ renderer options. Only ChartSpec v1 fields are accepted by the rendering tools.
 6. Return the chart path to an in-process caller or the returned `deepviz://`
    resource URI to an MCP client. MCP clients use `resources/read`; a local path
    alone is not a remotely accessible artifact. Never invent output locations.
+   Static companion HTML may reference a sibling SVG: keep related files together.
 
 ## Chart integrity
 
@@ -45,6 +48,16 @@ renderer options. Only ChartSpec v1 fields are accepted by the rendering tools.
 - `aggregation="auto"` may be lossy. `max_points` bounds output records, not source
   rows scanned or bytes parsed. Sampling can miss rare values. Aggregation can
   hide within-group variation. Do not claim a chart contains every source mark.
+- In Python, `aggregation="none"` can still produce a warned reservoir sample over
+  the output limit. It is not a promise to preserve every row. High-cardinality
+  grouping can merge categories into a disclosed other bucket; report that loss.
+- Confirm adapter-specific layouts. Vega-Lite radar/sunburst/gauge fall back to
+  line/pie/bar; ECharts and G2 violin fall back to box. Hierarchies are one-level
+  and geographic outputs are coordinate plots without basemaps, not full maps.
+- Do not trust the absence of warnings as validation: current Python channels can
+  turn invalid y into zero. Require cleaned/validated measurements rather than
+  present a fabricated zero as observed. Plotly heatmap is colored-square scatter,
+  and Vega gauge ordinary bars; do not promise grid cells or gauge clamping there.
 - Large-file memory behavior depends on the ingestion format and reduction. Do
   not promise a universal data format, universal chart, or ten-million-mark browser
   capability, or quote benchmark numbers absent from actual measured evidence.

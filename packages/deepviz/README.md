@@ -2,10 +2,24 @@
 
 Validated, bounded visualization artifacts for TypeScript and JavaScript agents.
 Version **0.1.0**, ESM + TypeScript declarations, Node.js **22+**, zero runtime
-dependencies. Import the public API from `@deepviz/agent-toolkit`.
+dependencies. Import the public API from `@deepviz/agent-toolkit` after a local
+install. Zero npm runtime dependencies does **not** mean every generated browser
+chart is offline or renderer-free.
+
+**Checkout/local tarball installation:** registry publication has not been
+verified; the package name below is not an assertion that a public install exists.
+From the repository root:
 
 ```sh
-npm install @deepviz/agent-toolkit
+npm ci
+npm run build
+npm pack --workspace @deepviz/agent-toolkit
+```
+
+Then, from a consuming project, replace the path with the actual local tarball:
+
+```sh
+npm install /absolute/path/to/deepviz-agent-toolkit-0.1.0.tgz
 ```
 
 ## Quick start
@@ -122,6 +136,9 @@ also include `output_count`, `mime_type`, `engine`, `paths`, `html`, and
 Non-finite values normalize to null; chart numeric mappings reject null/missing
 measurements rather than turn them into zero. Non-finite reduction results become
 null with a warning.
+This is the npm behavior, not proof of Python adapter parity: the separately
+inspected Python baseline can turn invalid y measurements into zero without a
+warning. Review [the runtime-specific capability matrix](../../docs/capabilities.md).
 
 Safety budgets: nesting depth 64; 1024 flattened fields per record/schema; text fields
 truncate at 10000 UTF-16 code units; normalized records have a 100000-character
@@ -130,6 +147,11 @@ budget, retained normalized data a 16-million-character budget, and HTML a
 Output rows and retained group states are bounded independently of input count.
 JSON strings must still be parsed in memory; true incremental input uses an
 async source of records/pages, not raw text chunks.
+These are the implemented **character-based** guards inspected at `b6abc8d`, not
+proof of newer UTF-8-byte budget policies, a total-process memory cap, a Python
+spool quota, or a combined dashboard budget. Do not infer encoded JSON duplicate-key
+rejection from duplicate CSV-header rejection; reject ambiguous repeated JSON keys
+upstream until the parser contract is independently verified.
 
 ```ts
 import { renderStream } from '@deepviz/agent-toolkit';
@@ -145,7 +167,9 @@ const artifact = await renderStream(rows(), {
 ## Rendering and dashboards
 
 All engines support bar, line, scatter, area, pie, histogram, bubble and table.
-Further support is explicit; unsupported combinations throw:
+The model has **18 kinds including dashboard, 17 non-dashboard**; this is not
+18 native layouts in each engine. Further support is explicit; unsupported
+combinations throw rather than matching Python's warned fallbacks:
 
 | Engine | Additional chart kinds |
 | --- | --- |
@@ -160,8 +184,12 @@ generated `count` field if omitted). Scatter
 and native SVG bubble charts require numeric x/y. Gauges require exactly one
 measurement. Hierarchy engines currently render a **single level** with x as
 the leaf label and y as its weight; nested hierarchy arrays are not supported.
-Plotly geo uses x=longitude and y=latitude, with coordinate graticules but no
-external basemap/topology download. Table output is native, escaped HTML.
+Plotly geo uses `scattergeo`, with x=longitude and y=latitude and configured
+graticules. A topology-free/no-additional-network guarantee is **not independently
+verified**; `connect-src 'none'` is a restriction, not proof that the runtime has
+everything it needs. This differs from Python's Cartesian coordinate-only plot.
+Check actual geo readiness, rendered geometry, console and requests before relying
+on offline operation. Table output is native, escaped HTML.
 Vega violin estimates a density of y across the selected data, not per-color
 distributions. ECharts scatter/bubble size fields map to per-point numeric marker
 sizes (clamped to 4–60 pixels) without executable callbacks. Native SVG color
@@ -193,6 +221,9 @@ if paths select unequal counts. Strategies are `dashboard` at the parent.
 Default HTML uses **pinned CDN assets** (Vega 6.4.0, Vega-Lite 6.5.0,
 Vega-Embed 7.4.0, ECharts 6.1.0, G2 5.4.8, Plotly 4.3.0). Opening these HTML
 files requires network access. Native SVG/table output needs no external assets.
+This is npm's policy: Python instead embeds installed Plotly JS, locally compiles
+Vega-Lite SVG, and uses ECharts 5.6.0 rather than npm's 6.1.0. A library's upstream
+capabilities or a successful HTML write do not certify this adapter's output.
 To work offline, serve the installed dev-dependency bundles yourself:
 
 ```ts
