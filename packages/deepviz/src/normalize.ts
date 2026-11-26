@@ -9,6 +9,10 @@ const MAX_RETAINED_BYTES = 16 * 1024 * 1024;
 const wrappers = ['edges','nodes','records','rows','results','items','pages','data'];
 const metadata = ['pageInfo','totalCount','count','extensions','errors','meta','pagination'];
 const numericText = /^-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?$/;
+// Python str.strip whitespace: FEFF is cell content, while NEL and the record separators are whitespace.
+function pythonStrip(text:string):string {
+  return text.replace(/^[\u0009-\u000d\u001c-\u0020\u0085\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000]+|[\u0009-\u000d\u001c-\u0020\u0085\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000]+$/g,'');
+}
 
 function stringBytes(text:string):number {
   if(text.length>MAX_CELL_BYTES)throw new ValidationError('String cell or field name exceeds 64 KiB UTF-8 limit');
@@ -229,7 +233,7 @@ function* parseText(text: string, spec: ChartSpec,warn:Notice,state:PathState): 
   text=text.replace(/^\uFEFF+/,'');
   let format=spec.format;
   if(format==='auto') {
-    if(!text.trim())return;
+    if(!pythonStrip(text))return;
     let parsed:unknown;
     try {parsed=parseJson(text,true);}
     catch(error) {
@@ -246,7 +250,7 @@ function* parseText(text: string, spec: ChartSpec,warn:Notice,state:PathState): 
   if(format==='json') { yield* selected(parseJson(text),spec,warn,state); return; }
   if(format==='jsonl') {
     // Match one line at a time rather than allocating an array of every line.
-    for(const match of text.matchAll(/[^\r\n]+/g)) if(match[0].trim()) yield* selected(parseJson(match[0]),spec,warn,state,true);
+    for(const match of text.matchAll(/[^\r\n]+/g)) if(pythonStrip(match[0])) yield* selected(parseJson(match[0]),spec,warn,state,true);
     return;
   }
   if(format!=='csv' && format!=='tsv') throw new ValidationError(`Unsupported ${format}; use an Arrow/Parquet adapter to supply records`);
@@ -254,14 +258,14 @@ function* parseText(text: string, spec: ChartSpec,warn:Notice,state:PathState): 
   for(const row of csvRows(text.replace(/^\uFEFF/,''),format==='tsv'?'\t':',')) {
     if(!header) {
       header=row;
-      if(header.length>MAX_FIELDS || header.some(key=>!key.trim()) || new Set(header).size!==header.length) throw new ValidationError('CSV header must have unique non-empty names');
+      if(header.length>MAX_FIELDS || header.some(key=>!pythonStrip(key)) || new Set(header).size!==header.length) throw new ValidationError('CSV header must have unique non-empty names');
       header.forEach(safeKey);
     } else {
       if(row.length!==header.length) throw new ValidationError('CSV column count does not match header');
       yield* selected(Object.fromEntries(header.map((key,i)=> {
         const value=row[i]!;
-        const stripped=value.trim();
-        return [key, !stripped?null:numericText.test(stripped)?Number(stripped):/^(?:nan|[+-]?inf(?:inity)?)$/i.test(stripped)?NaN:value];
+        const stripped=pythonStrip(value);
+        return [key, !stripped?null:numericText.test(stripped)?stripped==='-0'?0:Number(stripped):/^(?:nan|[+-]?inf(?:inity)?)$/i.test(stripped)?NaN:value];
       })),spec,warn,state,true);
     }
   }
@@ -325,8 +329,8 @@ function flatten(value: unknown, warn: Notice,index:number): {row:DataRecord,cos
 
 class Reducer {
   private records: {row:DataRecord,index:number,cost:number}[]=[];
-  private groups=new Map<string,{row:DataRecord,count:number,value:number|null,correction:number,cost:number}>();
-  private other:{row:DataRecord,count:number,value:number|null,correction:number,cost:number}|null=null;
+  private groups=new Map<string,{row:DataRecord,count:number,value:number|null,correction:number,exponent:number,cost:number}>();
+  private other:{row:DataRecord,count:number,value:number|null,correction:number,exponent:number,cost:number}|null=null;
   private warnings=new Set<string>();
   private count=0;
   private random=0x12345678;
@@ -343,7 +347,7 @@ class Reducer {
   constructor(private spec: ChartSpec) {
     for(const key of [spec.x,spec.y,spec.color,spec.size,spec.data_path]) if(key) {stringBytes(key);safeKey(key);}
     if(spec.data_path!==null && spec.data_path.split('.').some(part=>!part)) throw new ValidationError('data_path must contain non-empty dot-separated components');
-    if([spec.x,spec.y,spec.color,spec.size].some(key=>key!==null && !key.trim())) throw new ValidationError('Mapped field names must not be empty');
+    if([spec.x,spec.y,spec.color,spec.size].some(key=>key!==null && !pythonStrip(key))) throw new ValidationError('Mapped field names must not be empty');
   }
   add(value: unknown): void {
     const flattened=flatten(value,this.notice,this.count),row=flattened.row;
@@ -421,7 +425,7 @@ class Reducer {
           const keyCost=2+this.fields.reduce((bytes,field,i)=>bytes+scalarBytes(row[field]??null)+(i?1:0),0);
           const groupCost=recordBytes(record)+keyCost+stringBytes(this.measure)+26+128;
           this.reserve(groupCost);
-          group={row:record,count:0,value:null,correction:0,cost:groupCost};this.groups.set(key,group);
+          group={row:record,count:0,value:null,correction:0,exponent:0,cost:groupCost};this.groups.set(key,group);
         } else {
           const last=[...this.groups.keys()].at(-1)!;
           this.other=this.groups.get(last)!;this.groups.delete(last);group=this.other;
@@ -429,13 +433,18 @@ class Reducer {
         }
       }
       if(this.strategy==='count') {group.count++;group.value=group.count;return;}
-      const value=row[this.measure];
+      let value=row[this.measure];
       if(typeof value!=='number') {if(value!==null && value!==undefined)this.notice('Non-numeric measure values excluded from reduction');return;}
       group.count++;
+      if(this.strategy==='mean' && group.exponent)value*=2**-group.exponent;
       if(group.value===null) group.value=value;
-      else if(this.strategy==='mean') group.value=group.value*((group.count-1)/group.count)+value/group.count;
-      else if(this.strategy==='sum') {
-        const previous=group.value,total=previous+value;
+      else if(this.strategy==='sum' || this.strategy==='mean') {
+        let previous=group.value,total=previous+value;
+        if(this.strategy==='mean' && !Number.isFinite(total)) {
+          // A finite mean can have an overflowing numerator: scale every term together.
+          previous*=0.5;value*=0.5;group.correction*=0.5;group.exponent++;
+          total=previous+value;
+        }
         // Carry a bounded Neumaier correction with the group, including when it overflows into other.
         group.correction=Number.isFinite(total)?group.correction+(Math.abs(previous)>=Math.abs(value)?(previous-total)+value:(value-total)+previous):0;
         group.value=total;
@@ -477,7 +486,9 @@ class Reducer {
     if(grouped) {
       this.groups.clear();this.other=null;
       for(const group of states) {
-        const value=group.value===null?null:group.value+(this.strategy==='sum'?group.correction:0);
+        const value=group.value===null?null:this.strategy==='mean'?
+          (group.value/group.count+group.correction/group.count)*2**group.exponent:
+          group.value+(this.strategy==='sum'?group.correction:0);
         if(value!==null && !Number.isFinite(value))this.notice('Non-finite numeric values replaced with null');
         const row={...group.row,[this.measure]:value===null || !Number.isFinite(value)?null:value};
         this.reserve(recordBytes(row)+1-group.cost);records.push(row);
