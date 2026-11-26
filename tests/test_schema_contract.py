@@ -50,13 +50,16 @@ def test_json_schema_and_python_reject_invalid_structure(payload: dict[str, Any]
 
 
 @pytest.mark.parametrize("payload", [
+    {"kind": "dashboard"},
     {"kind": "dashboard", "charts": []},
+    {"charts": [{"kind": "line"}]},
     {"kind": "bar", "charts": [{"kind": "line"}]},
     {"kind": "dashboard", "charts": [{"kind": "dashboard", "charts": [{"kind": "bar"}]}]},
 ])
-def test_python_enforces_semantic_rules_not_expressible_by_generated_schema(payload: dict[str, Any]) -> None:
+def test_schema_and_runtime_reject_invalid_dashboard_composition(payload: dict[str, Any]) -> None:
     with pytest.raises(ValidationError):
         ChartSpec.model_validate(payload)
+    assert list(jsonschema.Draft202012Validator(exported_schema()).iter_errors(payload))
 
 
 def test_export_script_is_deterministic_and_check_never_rewrites(tmp_path: Path) -> None:

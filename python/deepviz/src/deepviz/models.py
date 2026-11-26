@@ -16,7 +16,19 @@ Engine = Literal["matplotlib", "plotly", "vega", "echarts", "antv"]
 class ChartSpec(BaseModel):
     """Map normalized record fields to a bounded chart or composed dashboard."""
 
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(
+        extra="forbid",
+        json_schema_extra={
+            "if": {"properties": {"kind": {"const": "dashboard"}}, "required": ["kind"]},
+            "then": {"required": ["charts"], "properties": {"charts": {"minItems": 1}}},
+            "else": {"properties": {"charts": {"maxItems": 0}}},
+            "allOf": [{
+                "properties": {"charts": {"items": {"not": {
+                    "properties": {"kind": {"const": "dashboard"}}, "required": ["kind"],
+                }}}},
+            }],
+        },
+    )
     version: Literal[1] = 1
     kind: ChartKind = "bar"
     title: str = Field(default="Visualization", max_length=500)

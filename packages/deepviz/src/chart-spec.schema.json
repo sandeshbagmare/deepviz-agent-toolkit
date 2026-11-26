@@ -2,7 +2,44 @@
   "$defs": {
     "ChartSpec": {
       "additionalProperties": false,
+      "allOf": [
+        {
+          "properties": {
+            "charts": {
+              "items": {
+                "not": {
+                  "properties": {
+                    "kind": {
+                      "const": "dashboard"
+                    }
+                  },
+                  "required": [
+                    "kind"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
       "description": "Map normalized record fields to a bounded chart or composed dashboard.",
+      "else": {
+        "properties": {
+          "charts": {
+            "maxItems": 0
+          }
+        }
+      },
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "dashboard"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
       "properties": {
         "aggregation": {
           "default": "auto",
@@ -181,6 +218,16 @@
           "default": null,
           "title": "Y"
         }
+      },
+      "then": {
+        "properties": {
+          "charts": {
+            "minItems": 1
+          }
+        },
+        "required": [
+          "charts"
+        ]
       },
       "title": "ChartSpec",
       "type": "object"
