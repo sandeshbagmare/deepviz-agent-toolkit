@@ -109,9 +109,10 @@ class ToolSession:
             "profile": profile(normalized),
         }
         # Keep original small sources/references, not copied full or reduced datasets.
-        original = data
-        if isinstance(data, dict) and set(data) == {"dataset_id"}:
-            original = self.datasets[str(data["dataset_id"])]["source"]
+        # Decode validated JSON references without caching the resolved file Path.
+        original = json.loads(data) if isinstance(data, str) else data
+        if isinstance(original, dict) and set(original) == {"dataset_id"}:
+            original = self.datasets[str(original["dataset_id"])]["source"]
         self.datasets[dataset_id] = {"source": original, "summary": result}
         if len(self.datasets) > 32:
             self.datasets.popitem(last=False)
