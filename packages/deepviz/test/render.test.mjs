@@ -104,8 +104,11 @@ test('ECharts never drops duplicate category rows and refuses ambiguous grouped 
   assert.throws(()=>toolkit.buildRendererSpec(input.map(row=>({...row,c:'one'})),{x:'x',y:'y',color:'c',aggregation:'none'},'echarts'),/duplicat|aggregat/i);
 });
 
-test('size encodings are represented or explicitly refused rather than ignored',()=>{
-  assert.throws(()=>toolkit.buildRendererSpec([{x:1,y:2,s:3}],{kind:'bubble',x:'x',y:'y',size:'s'},'echarts'),/size|unsupported/i);
+test('ECharts bubble sizes are encoded per datum without executable callbacks',()=>{
+  const result=toolkit.buildRendererSpec([{x:1,y:2,s:3},{x:2,y:4,s:30}],{kind:'bubble',x:'x',y:'y',size:'s'},'echarts');
+  assert.ok(result.spec.series[0].data[1].symbolSize>result.spec.series[0].data[0].symbolSize);
+  assert.deepEqual(result.spec.series[0].data[0].value,[1,2]);
+  assert.equal(typeof result.spec.series[0].data[0].symbolSize,'number');
 });
 
 test('untrusted numeric mappings reject null and missing measurements instead of inventing zeros',()=>{
@@ -119,6 +122,37 @@ test('a gauge refuses multiple rows instead of silently dropping measurements',(
   for(const engine of ['echarts','plotly']) assert.throws(()=>toolkit.render(rows,{...spec,kind:'gauge'},engine),/single|one/i);
 });
 
-test('native SVG explicitly refuses color mappings it cannot faithfully show',()=>{
-  assert.throws(()=>toolkit.render(rows,{...spec,color:'group'},'svg'),/color|unsupported/i);
+test('native SVG splits line series on a shared category domain and includes dash-cued legend',()=>{
+  const result=toolkit.render([{x:'Q1',y:10,region:'East'},{x:'Q2',y:20,region:'East'},{x:'Q1',y:25,region:'West'},{x:'Q2',y:5,region:'West'}],
+    {kind:'line',x:'x',y:'y',color:'region'},'svg');
+  assert.equal((result.html.match(/<polyline class="mark"/g)||[]).length,2);
+  assert.match(result.html,/stroke-dasharray="7 4"/);
+  assert.match(result.html,/East/);
+  assert.match(result.html,/West/);
+  const lines=[...result.html.matchAll(/<polyline class="mark"[^>]*points="([^"]+)"/g)].map(match=>match[1].split(' ').map(point=>Number(point.split(',')[0])));
+  assert.deepEqual(lines[0],lines[1]);
+});
+
+test('dark themes explicitly color SVG text and Vega legends for contrast',()=>{
+  const svg=toolkit.render(rows,{...spec,theme:'dark'},'svg').renderer_spec.spec.svg;
+  assert.match(svg,/fill="#e5e7eb"/);
+  const vega=toolkit.buildRendererSpec(rows,{...spec,color:'group',theme:'dark'},'vega');
+  assert.equal(vega.spec.config.legend.labelColor,'#e5e7eb');
+  assert.equal(vega.spec.config.legend.titleColor,'#e5e7eb');
+});
+
+test('native SVG thins long category axes and preserves full distinguishable labels',()=>{
+  const data=Array.from({length:40},(_,i)=>({x:`Common long category name ${i}`,y:i}));
+  const svg=toolkit.render(data,{kind:'bar',x:'x',y:'y'},'svg').renderer_spec.spec.svg;
+  const ticks=[...svg.matchAll(/class="category-tick"/g)];
+  assert.ok(ticks.length>=5 && ticks.length<=15);
+  assert.match(svg,/<title>Common long category name 0<\/title>/);
+  assert.match(svg,/<title>Common long category name 39<\/title>/);
+  assert.match(svg,/…/);
+});
+
+test('AntV pie has a visible category key when tooltips are disabled',()=>{
+  const result=toolkit.buildRendererSpec(rows,{...spec,kind:'pie'},'antv');
+  assert.notEqual(result.spec.legend?.color,false);
+  assert.equal(result.spec.encode.color,'category');
 });

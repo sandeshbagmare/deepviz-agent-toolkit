@@ -21,7 +21,6 @@ export function mapping(data:NormalizedData,spec:ChartSpec,engine:BrowserEngine)
   if(!browserEngines.includes(engine)) throw new ValidationError(`Unsupported browser engine: ${engine}`);
   if(!supported[engine].includes(spec.kind)) throw new ValidationError(`Unsupported kind ${spec.kind} for ${engine}`);
   if(spec.kind==='gauge' && data.records.length!==1) throw new ValidationError('A gauge requires exactly one measurement; aggregate first');
-  if(engine==='svg' && spec.color && spec.kind!=='table') throw new ValidationError('Native SVG color field encoding is unsupported; use a browser engine');
   const fields=[...new Set(data.records.flatMap(row=>Object.keys(row)))];
   const x=spec.x??fields[0]??'x';
   const y=spec.y??(spec.aggregation==='count'?'count':fields.find(field=>field!==x && data.records.some(row=>typeof row[field]==='number')))??x;
@@ -53,7 +52,7 @@ export function vegaSpec(data:NormalizedData,spec:ChartSpec,m:ChartMapping):Rend
   if(size) encoding.size={field:literalField(size),type:'quantitative'};
   const mark:RendererSpec={type:({scatter:'point',bubble:'circle',heatmap:'rect',histogram:'bar',box:'boxplot',pie:'arc',violin:'area'} as Record<string,string>)[spec.kind]??spec.kind,tooltip:false};
   const result:RendererSpec={$schema:'https://vega.github.io/schema/vega-lite/v6.json',data:{values:data.records},mark,encoding,width:spec.width-120,height:spec.height-100,
-    config:{background:spec.theme==='dark'?'#111827':'white',axis:{labelColor:spec.theme==='dark'?'#e5e7eb':'#374151',titleColor:spec.theme==='dark'?'#e5e7eb':'#374151'}}};
+    config:{background:spec.theme==='dark'?'#111827':'white',axis:{labelColor:spec.theme==='dark'?'#e5e7eb':'#374151',titleColor:spec.theme==='dark'?'#e5e7eb':'#374151'},legend:{labelColor:spec.theme==='dark'?'#e5e7eb':'#374151',titleColor:spec.theme==='dark'?'#e5e7eb':'#374151'}}};
   if(spec.kind==='pie') { delete encoding.x;delete encoding.y;encoding.theta={field:literalField(y),type:'quantitative'};encoding.color={field:literalField(x),type:'nominal'}; }
   if(spec.kind==='histogram') { encoding.x={field:literalField(x),type:'quantitative',bin:true};encoding.y={aggregate:'count',type:'quantitative'}; }
   if(spec.kind==='violin') {
@@ -80,7 +79,7 @@ function bins(rows:DataRecord[],field:string):{x:number,y:number}[] {
 
 export function echartsSpec(data:NormalizedData,spec:ChartSpec,m:ChartMapping):RendererSpec {
   const {x,y,color,size}=m;
-  if(size) throw new ValidationError('ECharts size encoding is unsupported; use Vega, Plotly, AntV, or SVG');
+  if(size && !['scatter','bubble'].includes(spec.kind)) throw new ValidationError('ECharts size fields require scatter or bubble charts');
   const seriesType=({area:'line',bubble:'scatter',histogram:'bar'} as Record<string,string>)[spec.kind]??spec.kind;
   const result:RendererSpec={animation:false,backgroundColor:spec.theme==='dark'?'#111827':'white',textStyle:{color:spec.theme==='dark'?'#e5e7eb':'#374151'},tooltip:{show:false},series:[]};
   if(['pie','treemap','sunburst','funnel'].includes(spec.kind)) {
@@ -112,7 +111,7 @@ export function echartsSpec(data:NormalizedData,spec:ChartSpec,m:ChartMapping):R
     const rows=color?data.records.filter(row=>row[color]===group):data.records;
     if(color && !scatter && new Set(rows.map(row=>row[x])).size!==rows.length) throw new ValidationError('Duplicate category within a color group; select an aggregation');
     const series:RendererSpec={name:group===null?'':String(group),type:seriesType,
-      data:scatter?rows.map(row=>[row[x],row[y]]):color?categories.map(category=>rows.find(row=>row[x]===category)?.[y]??null):rows.map(row=>row[y])};
+      data:scatter?rows.map(row=>size?{value:[row[x],row[y]],symbolSize:Math.max(4,Math.min(60,Math.sqrt(Math.max(0,Number(row[size])))*4))}:[row[x],row[y]]):color?categories.map(category=>rows.find(row=>row[x]===category)?.[y]??null):rows.map(row=>row[y])};
     if(spec.kind==='area') series.areaStyle={};
     return series;
   });
@@ -124,7 +123,7 @@ export function antvSpec(data:NormalizedData,spec:ChartSpec,m:ChartMapping):Rend
   const {x,y,color,size}=m;
   const result:RendererSpec={type:({bar:'interval',scatter:'point',bubble:'point',pie:'interval',heatmap:'cell',histogram:'rect',box:'boxplot',treemap:'treemap'} as Record<string,string>)[spec.kind]??spec.kind,
     data:data.records,encode:{x,y,...color?{color}: {},...size?{size}:{}},animate:false,interaction:{tooltip:false},theme:spec.theme,width:spec.width,height:spec.height};
-  if(spec.kind==='pie') { result.coordinate={type:'theta'};result.transform=[{type:'stackY'}];result.encode={y,color:x};result.legend={color:false}; }
+  if(spec.kind==='pie') { result.coordinate={type:'theta'};result.transform=[{type:'stackY'}];result.encode={y,color:x};result.legend={color:{position:'bottom'}}; }
   if(spec.kind==='histogram') { result.encode={x,y:'count'};result.transform=[{type:'binX',y:'count'}]; }
   if(spec.kind==='radar') { result.type='line';result.coordinate={type:'polar'};result.scale={x:{padding:0.5}}; }
   if(spec.kind==='treemap') {
@@ -185,8 +184,15 @@ export function svgHtml(data:NormalizedData,spec:ChartSpec,m:ChartMapping):strin
   const xv=rows.map(row=>Number(row[x]??0));
   let xmin=Infinity,xmax=-Infinity;
   for(const value of xv) { xmin=Math.min(xmin,value);xmax=Math.max(xmax,value); }
-  const px=(i:number)=>numericX?pad+(xv[i]!-xmin)/(xmax-xmin||1)*w:pad+(i+0.5)*w/Math.max(1,rows.length);
-  const accent='#2563eb';
+  const categories=m.color?[...new Set(rows.map(row=>row[x]))]:rows.map(row=>row[x]);
+  const px=(i:number)=>numericX?pad+(xv[i]!-xmin)/(xmax-xmin||1)*w:pad+((m.color?categories.indexOf(rows[i]?.[x]):i)+0.5)*w/Math.max(1,categories.length);
+  const palette=spec.theme==='dark'?['#60a5fa','#fbbf24','#34d399','#f472b6','#c4b5fd','#fb923c']:['#2563eb','#b45309','#047857','#be185d','#7c3aed','#c2410c'];
+  const groups=m.color?[...new Set(rows.map(row=>row[m.color!]))]:[null];
+  const groupIndex=(row:DataRecord)=>m.color?groups.indexOf(row[m.color]):0;
+  const accent=palette[0]!;
+  const colorFor=(i:number)=>palette[i%palette.length]!;
+  const dashFor=(i:number)=>['','7 4','2 3','9 3 2 3'][i%4]!;
+  const textColor=spec.theme==='dark'?'#e5e7eb':'#374151';
   let marks='';
   if(spec.kind==='pie') {
     const total=values.reduce((a,b)=>a+b,0),radius=Math.min(w,h)/2;
@@ -199,11 +205,23 @@ export function svgHtml(data:NormalizedData,spec:ChartSpec,m:ChartMapping):strin
       angle=end;return delta?path:'';
     }).join('');
   } else if(['bar','histogram'].includes(spec.kind)) {
-    marks=rows.map((row,i)=>`<rect class="mark" x="${px(i)-w/Math.max(rows.length,1)*0.4}" y="${Math.min(py(0),py(values[i]!))}" width="${w/Math.max(rows.length,1)*0.8}" height="${Math.abs(py(0)-py(values[i]!))}" fill="${accent}"><title>${escapeHtml(row[x])}: ${values[i]}</title></rect>`).join('');
+    const barWidth=w/Math.max(categories.length,1)*0.8/Math.max(groups.length,1);
+    marks=rows.map((row,i)=>`<rect class="mark" x="${px(i)-w/Math.max(categories.length,1)*0.4+barWidth*groupIndex(row)}" y="${Math.min(py(0),py(values[i]!))}" width="${barWidth}" height="${Math.abs(py(0)-py(values[i]!))}" fill="${colorFor(groupIndex(row))}"><title>${escapeHtml(row[x])}: ${values[i]}</title></rect>`).join('');
   } else if(['line','area'].includes(spec.kind)) {
-    const points=rows.map((_,i)=>`${px(i)},${py(values[i]!)}`).join(' ');
-    if(rows.length) marks=`<polyline class="mark" points="${spec.kind==='area'?`${px(0)},${py(0)} `:''}${points}${spec.kind==='area'?` ${px(rows.length-1)},${py(0)}`:''}" fill="${spec.kind==='area'?'#93c5fd':'none'}" stroke="${accent}" stroke-width="2"/>`;
-  } else marks=rows.map((row,i)=>`<circle class="mark" cx="${px(i)}" cy="${py(values[i]!)}" r="${m.size?Math.min(30,Math.max(2,Math.sqrt(Number(row[m.size]??0)))):4}" fill="${accent}"><title>${escapeHtml(row[x])}: ${values[i]}</title></circle>`).join('');
-  const axis=spec.kind==='pie'?'':`<path d="M${pad},${pad} V${pad+h} H${pad+w}" fill="none" stroke="currentColor"/><text x="${pad-8}" y="${pad+8}" text-anchor="end">${escapeHtml(max.toPrecision(4))}</text><text x="${pad-8}" y="${pad+h}" text-anchor="end">${escapeHtml(min.toPrecision(4))}</text><text x="${width/2}" y="${height-12}" text-anchor="middle">${escapeHtml(x)}</text><text transform="translate(15 ${height/2}) rotate(-90)" text-anchor="middle">${escapeHtml(y)}</text>${rows.length<=20?rows.map((row,i)=>`<text x="${px(i)}" y="${pad+h+18}" text-anchor="middle" font-size="10">${escapeHtml(String(row[x]??'').slice(0,18))}</text>`).join(''):''}`;
-  return `<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${escapeHtml(spec.title)}" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}"><title>${escapeHtml(spec.title)}</title>${axis}${marks}</svg>`;
+    marks=groups.map((_,g)=>{
+      const indices=rows.map((row,i)=>({row,i})).filter(({row})=>groupIndex(row)===g).map(({i})=>i);
+      if(!indices.length)return '';
+      const points=indices.map(i=>`${px(i)},${py(values[i]!)}`).join(' ');
+      return `<polyline class="mark" points="${spec.kind==='area'?`${px(indices[0]!)},${py(0)} `:''}${points}${spec.kind==='area'?` ${px(indices.at(-1)!)},${py(0)}`:''}" fill="${spec.kind==='area'?colorFor(g):'none'}" fill-opacity="0.25" stroke="${colorFor(g)}" stroke-dasharray="${dashFor(g)}" stroke-width="2"/>`;
+    }).join('');
+  } else marks=rows.map((row,i)=>`<circle class="mark" cx="${px(i)}" cy="${py(values[i]!)}" r="${m.size?Math.min(30,Math.max(2,Math.sqrt(Number(row[m.size]??0)))):4}" fill="${colorFor(groupIndex(row))}"><title>${escapeHtml(row[x])}: ${values[i]}</title></circle>`).join('');
+  const stride=Math.max(1,Math.ceil(categories.length/12));
+  const shortLabel=(value:unknown)=>{const text=String(value??'');return text.length>18?`${text.slice(0,9)}…${text.slice(-8)}`:text;};
+  const ticks=categories.map((value,i)=>({value,i})).filter(({i})=>i%stride===0 || i===categories.length-1).map(({value,i})=>{
+    const position=m.color?pad+(i+0.5)*w/Math.max(1,categories.length):px(i);
+    return `<text class="category-tick" x="${position}" y="${pad+h+18}" text-anchor="middle" font-size="12"><title>${escapeHtml(value)}</title>${escapeHtml(shortLabel(value))}</text>`;
+  }).join('');
+  const axis=spec.kind==='pie'?'':`<g fill="${textColor}"><path d="M${pad},${pad} V${pad+h} H${pad+w}" fill="none" stroke="${textColor}"/><text x="${pad-8}" y="${pad+8}" text-anchor="end">${escapeHtml(max.toPrecision(4))}</text><text x="${pad-8}" y="${pad+h}" text-anchor="end">${escapeHtml(min.toPrecision(4))}</text><text x="${width/2}" y="${height-12}" text-anchor="middle">${escapeHtml(x)}</text><text transform="translate(15 ${height/2}) rotate(-90)" text-anchor="middle">${escapeHtml(y)}</text>${ticks}</g>`;
+  const legend=m.color?`<ul aria-label="Series key">${groups.map((group,g)=>`<li><svg aria-hidden="true" width="36" height="12"><line x1="0" y1="6" x2="32" y2="6" stroke="${colorFor(g)}" stroke-dasharray="${dashFor(g)}" stroke-width="3"/></svg> ${escapeHtml(group)}</li>`).join('')}</ul>`:'';
+  return `<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${escapeHtml(spec.title)}" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" fill="${textColor}"><title>${escapeHtml(spec.title)}</title>${axis}${marks}</svg>${legend}`;
 }
