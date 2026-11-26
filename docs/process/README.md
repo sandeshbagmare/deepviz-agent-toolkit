@@ -48,7 +48,7 @@ All 29 seeded issues were remotely read back **OPEN**; **0** were closed by the 
 | [#26](https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/26) | REVIEW-GATE | Two reviewer reports plus two tester reports | Parent coordinator |
 | [#27](https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/27) | PROCESS | Traceable backlog, tracker and policy | Process |
 | [#28](https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/28) | BLOCKER-900 | Unmet legitimate 900 created/resolved requirement | Parent / user acceptance |
-| [#29](https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/29) | BLOCKER-APPROVALS | Distinct-account GitHub approvals if required | Repository owner |
+| [#29](https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/29) | REVIEW-PROVENANCE | Implement independent agent-report provenance; no GitHub human approval requirement | Parent coordinator |
 
 ## Milestones and taxonomy
 
@@ -61,16 +61,20 @@ No unapproved deadline was invented. Labels created: `type:epic`, `type:story`, 
 
 Epics link their children in issue bodies; children link their parent and predecessors. These are linked issues, **not a claim that native GitHub sub-issue relationships or a Project board were configured**.
 
+Correction following the parent's explicit clarification: #29 is an ordinary process task documenting and implementing the agent-report workaround, not an external/user-acceptance blocker. Its former key `BLOCKER-APPROVALS` is retained only as historical alias metadata; its issue number is unchanged. The current classification is four epics, one real unmet-target blocker (#28), and 24 child stories/tasks.
+
 ## Planning sequence and critical paths
 
 - Freeze and validate #5 before consumers rely on unreviewed interface assumptions. Core #6–#8, renderer #9–#13 and TypeScript #14 can then progress in their own worktrees with shared fixtures.
 - #14 precedes TypeScript browser composition #15. #16 enables the real MCP flow #17 and accurate examples #18.
 - #8 precedes measured streaming scale #22; #14/#15 precede clean npm consumer #25.
 - Security #21 and evidence #23/#26 are cross-cutting acceptance gates, not last-minute substitutes for per-feature tests.
-- #28 and #29 remain visible external/acceptance prerequisites. They must not be hidden by closing an epic with unchecked criteria.
+- #28 remains the honest unmet numerical requirement. #29 is satisfied by the implemented independent-agent report workflow; distinct GitHub human approvals are not required and are not a release prerequisite invented by this process.
 
 Ruling: keep the initial backlog to 29 genuine, coherent scopes rather than explode tests, chart names or input sizes into hundreds of artificial tickets. This preserves traceability but leaves the user's 900-issue numerical criterion unmet. Future issue creation requires distinct, discovered work with its own acceptance and evidence.
 
 ## Current parent handoff
 
-Use `Refs #N` while work is incomplete. Use an auto-closing keyword only after all acceptance evidence and the merge gate are satisfied. Multiple issues may share one PR only when each has independently mapped acceptance evidence; a one-line implementation must not close unrelated scopes. Do not close #27 merely because these documents exist; the process PR needs the same parent-supplied verification gate.
+Use `Refs #N` while work is incomplete. Use an auto-closing keyword only after all acceptance evidence and the merge gate are satisfied. Multiple issues may share one PR only when each has independently mapped acceptance evidence; a one-line implementation must not close unrelated scopes. Do not close #27 merely because these documents exist; the integrating PR needs the same parent-supplied verification gate.
+
+The parent plans **one integrated bootstrap release/candidate PR**, collecting feature-branch commits while preserving all original agent branches. Separate per-feature dependency PRs are not required. The merged candidate PR must contain the integrated test results, two genuine independent reviewer-agent reports, two genuine tester-agent reports, and an embedded committed actual gallery image. The process documentation can be part of that candidate; there need not be a separately merged process PR. Reports must cover the integrated candidate's actual SHA and scope. No new agents are launched by this process task; the parent's active-agent cap remains in force.

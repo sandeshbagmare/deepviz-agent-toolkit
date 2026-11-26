@@ -426,20 +426,20 @@
       "parent": null,
       "depends_on": []
     },
-    "BLOCKER-APPROVALS": {
+    "REVIEW-PROVENANCE": {
       "number": 29,
-      "title": "[Blocker] Agent reports under one account cannot provide independent GitHub author approvals",
+      "title": "[Constraint/workaround] Preserve independent agent-report provenance without GitHub self-approval",
       "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/29",
       "state": "open",
       "labels": [
-        "type:blocker",
+        "type:task",
         "area:process",
-        "priority:p0",
-        "status:blocked"
+        "priority:p1"
       ],
       "milestone": "M4 - Release evidence and hardening",
-      "parent": null,
-      "depends_on": []
+      "parent": "EPIC-DELIVERY",
+      "depends_on": [],
+      "previous_keys": ["BLOCKER-APPROVALS"]
     }
   }
 }

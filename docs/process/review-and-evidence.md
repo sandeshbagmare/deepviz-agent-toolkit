@@ -11,6 +11,10 @@ Every merged PR, including documentation/process PRs, needs:
 
 The parent coordinates agents and PRs. The process author does not create PRs, merge `main`, close seeded issues or attest to other agents' unobserved checks. A successful seed/read-back is only process evidence.
 
+The parent plans one integrated bootstrap release/candidate PR while preserving the original feature branches. Apply this gate to that integrated candidate and its actual tested/reviewed SHA; no separate merged PR is required per feature branch. The candidate must embed a committed actual gallery image. The documentation diagram below is supplementary, not a replacement for that gallery evidence.
+
+The user's requirement is independent **agents**, not distinct GitHub human approvals. Posting the four genuine reports through one coordinator account as GitHub comments and/or committed source evidence is valid when agent/session provenance and exact SHA/scope are retained. #29 tracks implementation of this workflow, not a missing human-approver prerequisite.
+
 ![Evidence gate for each proposed merge](review-gate.svg)
 
 The process author rendered this SVG with headless Microsoft Edge and opened the resulting [PNG screenshot](review-gate.png). The screenshot is documentation evidence only; this author self-check does not count as one of the independent reports.
@@ -92,7 +96,8 @@ future filename, decorative stand-in or an uncommitted temporary screenshot.>
 ## Platform review status
 Independent agent reports are evidence, not GitHub APPROVED reviews.
 Actual GitHub review states: <observed count/identities or not requested>.
-Any literal required-approval prerequisite: <actual state; refs #29 if relevant>.
+The user requires independent agent reports, not distinct GitHub human approvals.
+Agent-report provenance workflow: <four genuine report links; refs #29>.
 
 ## Verification and limitations
 - [ ] Remote workflow: <run URL, SHA, observed status or actual blocker>
@@ -123,5 +128,6 @@ Avoid auto-close keywords until the full gate is satisfied; use `Refs #N` during
 - [ ] Check actual remote Actions/build/package state rather than local intentions.
 - [ ] Verify no unsafe input/code/path behavior is silently permitted.
 - [ ] Report measured scales and reduction metadata; label unrun work honestly.
-- [ ] Keep #28/#29 open until their explicit acceptance is genuinely met or revised by the user.
+- [ ] Keep #28 visible as the unmet 900-issue requirement; do not allege an unobserved rate-limit failure.
+- [ ] Close #29 only when the independent-agent report workaround is genuinely implemented and evidenced; do not impose a human-approval prerequisite.
 - [ ] State every unmet user criterion, including 900 genuine created/resolved issues.
