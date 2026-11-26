@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "deepviz": {
+      "command": "/ABSOLUTE/PATH/TO/.venv/bin/python",
+      "args": [
+        "-m",
+        "deepviz.mcp_server",
+        "--output-dir",
+        "/ABSOLUTE/PATH/TO/deepviz-artifacts",
+        "--data-dir",
+        "/ABSOLUTE/PATH/TO/approved-data"
+      ]
+    }
+  }
+}
