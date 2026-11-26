@@ -1,8 +1,8 @@
 """Independent bounded adversarial probes on the integrated N17 candidate.
 
-The byte observations deliberately do not assert a made-up byte cap. Passing
-them demonstrates what is retained, not resource-envelope acceptance. The
-unmarked regression tests preserve actual failing behavior for source owners.
+Cell/field-name probes enforce the documented defensive UTF-8 ceilings.
+Remaining byte observations are not full resource-envelope acceptance. The
+unmarked semantic/cleanup regressions remain strict for source owners.
 """
 from __future__ import annotations
 
@@ -77,24 +77,35 @@ def test_n17_high_cardinality_preserves_all_contributions() -> None:
     assert any("cardinality" in warning for warning in result.warnings)
 
 
-def test_n17_normalized_byte_observation_is_not_safety_approval() -> None:
-    # <= 2 MiB of allocated payload, bounded independently of any product cap.
-    payload = "\U0001f642" * 131072
-    result = normalize([{"label": payload, "v": index} for index in range(3)], {
-        "kind": "table", "aggregation": "none", "max_points": 10,
-    })
-    retained = len(json.dumps(result.records, ensure_ascii=False).encode("utf-8"))
-    print(f"N17 byte observation: rows={len(result.records)}, utf8_bytes={retained}, warnings={result.warnings}")
-    assert retained > 1_500_000
-    assert result.records[0]["label"] == payload
-    assert not result.warnings
+def test_n17_oversized_utf8_cell_rejected_before_consuming_tail() -> None:
+    # Baseline O1 measured acceptance; the documented policy now rejects it.
+    payload = "\U0001f642" * 16385
+    assert len(payload) < 64 * 1024 < len(payload.encode("utf-8"))
+    visits: list[int] = []
+
+    def source():
+        for index in range(3):
+            visits.append(index)
+            yield {"label": payload, "v": index}
+
+    with pytest.raises(ValueError, match="cell exceeds 65536 UTF-8 bytes"):
+        normalize(source(), {"kind": "table", "aggregation": "none", "max_points": 10})
+    assert visits == [0]
 
 
-def test_n17_long_field_name_observation_is_not_safety_approval() -> None:
-    field = "k" * 131072
-    result = normalize([{field: 1}], {"kind": "table", "aggregation": "none"})
-    assert next(iter(result.records[0])) == field
-    print(f"N17 field-name byte observation: {len(field.encode('utf-8'))} bytes; warnings={result.warnings}")
+def test_n17_oversized_utf8_field_name_rejected_before_consuming_tail() -> None:
+    field = "\U0001f642" * 1025
+    assert len(field) < 4 * 1024 < len(field.encode("utf-8"))
+    visits: list[int] = []
+
+    def source():
+        for index in range(3):
+            visits.append(index)
+            yield {field: index}
+
+    with pytest.raises(ValueError, match="field name exceeds 4096 UTF-8 bytes"):
+        normalize(source(), {"kind": "table", "aggregation": "none"})
+    assert visits == [0]
 
 
 @pytest.mark.parametrize("name", [
