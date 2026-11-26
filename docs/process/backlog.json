@@ -1,0 +1,240 @@
+{
+  "repository": "sandeshbagmare/deepviz-agent-toolkit",
+  "snapshot_date": "2026-11-26",
+  "source_design": "docs/superpowers/specs/2026-11-26-deepviz-design.md",
+  "source_plan": "docs/superpowers/plans/2026-11-26-deepviz-plan.md",
+  "labels": [
+    {"name":"type:epic","color":"5319E7","description":"Outcome spanning linked stories and tasks"},
+    {"name":"type:story","color":"1D76DB","description":"User-visible capability with acceptance evidence"},
+    {"name":"type:task","color":"0E8A16","description":"Bounded engineering or validation deliverable"},
+    {"name":"type:blocker","color":"B60205","description":"Explicit unmet criterion or external prerequisite"},
+    {"name":"area:ingestion","color":"C5DEF5","description":"Contracts, normalization, streaming, aggregation"},
+    {"name":"area:renderers","color":"BFDADC","description":"Five renderer adapters and semantic parity"},
+    {"name":"area:typescript","color":"C2E0C6","description":"Shared-schema TypeScript browser SDK"},
+    {"name":"area:integrations","color":"D4C5F9","description":"Deep Agents, MCP, CLI and prompts"},
+    {"name":"area:research","color":"FEF2C0","description":"Official-source research and claim provenance"},
+    {"name":"area:ci","color":"BFD4F2","description":"Continuous integration and reproducible checks"},
+    {"name":"area:security","color":"F9D0C4","description":"Untrusted inputs, paths and dependency boundaries"},
+    {"name":"area:scale","color":"FAD8C7","description":"Bounded-memory performance and benchmark evidence"},
+    {"name":"area:qa","color":"FBCA04","description":"Independent tests, visual evidence and acceptance"},
+    {"name":"area:packaging","color":"D4C5F9","description":"Build, install and distribution verification"},
+    {"name":"area:process","color":"EDEDED","description":"Backlog integrity, review policy and completion audit"},
+    {"name":"priority:p0","color":"B60205","description":"Safety, shared contract or release gate"},
+    {"name":"priority:p1","color":"D93F0B","description":"Required implementation capability"},
+    {"name":"priority:p2","color":"FBCA04","description":"Important follow-through not blocking initial coding"},
+    {"name":"status:blocked","color":"B60205","description":"Cannot satisfy acceptance without named prerequisite"}
+  ],
+  "milestones": [
+    {"title":"M1 - Contracts and bounded ingestion","description":"Versioned schema, format adapters, deterministic normalization and streaming reduction. No due date promised."},
+    {"title":"M2 - Five engines and browser SDK","description":"Five real renderer adapters, shared TypeScript contract and inspected artifacts. No due date promised."},
+    {"title":"M3 - Agent and MCP interfaces","description":"Real Deep Agents tools, stdio MCP discovery/calls and versioned usage examples. No due date promised."},
+    {"title":"M4 - Release evidence and hardening","description":"Official-source research, CI, security, scale, independent QA, packaging and honest acceptance audit. No due date promised."}
+  ],
+  "issues": [
+    {
+      "key":"EPIC-FOUNDATION", "type":"epic", "area":"ingestion", "priority":"p0", "milestone":0,
+      "title":"[Epic] Shared contracts and loss-aware bounded ingestion", "owner_lane":"core agent",
+      "outcome":"Every engine receives the same validated, bounded records and truthful reduction metadata.",
+      "acceptance":["CONTRACT, INPUT-FORMATS, INPUT-GRAPHQL and STREAMING are independently verified and closed with evidence.","Versioned schema, Python public API and documented normalization semantics agree.","Raw streams are not fully materialized before reduction; lossy decisions are surfaced."],
+      "evidence":["Linked child PRs and schema/fixture test reports", "Scale and edge-case results at exact reviewed commits"]
+    },
+    {
+      "key":"EPIC-VISUALIZATION", "type":"epic", "area":"renderers", "priority":"p1", "milestone":1,
+      "title":"[Epic] Five renderer alternatives and interoperable browser artifacts", "owner_lane":"rendering and TypeScript agents",
+      "outcome":"Users can choose Matplotlib, Plotly, Vega-Lite, ECharts or AntV G2 against one mapped/reduced dataset.",
+      "acceptance":["All five renderer stories and both TypeScript stories have verified acceptance evidence.","Unsupported kind/engine combinations fail explicitly instead of silently changing meaning.","Committed SVG/PNG/screenshots demonstrate the actual generated artifacts and dashboard behavior."],
+      "evidence":["Cross-engine parity report", "Inspected output artifacts and browser test report"]
+    },
+    {
+      "key":"EPIC-INTEGRATIONS", "type":"epic", "area":"integrations", "priority":"p1", "milestone":2,
+      "title":"[Epic] Deep Agents and stdio MCP visualization workflows", "owner_lane":"integrations agent",
+      "outcome":"Agents discover safe tools, call them with structured inputs and receive bounded artifact metadata.",
+      "acceptance":["TOOLS, MCP and PROMPTS acceptance criteria are independently verified.","Integration uses real package APIs rather than mock-only compatibility claims.","Multi-tool flow, validation failures, artifact paths and dependency requirements are documented."],
+      "evidence":["Real integration transcripts with commands and versions", "Independent tester reports"]
+    },
+    {
+      "key":"EPIC-DELIVERY", "type":"epic", "area":"qa", "priority":"p0", "milestone":3,
+      "title":"[Epic] Secure, measurable and independently evidenced release readiness", "owner_lane":"parent coordinator with QA/research/process owners",
+      "outcome":"Release claims are backed by repeatable checks, inspected outputs and an honest unmet-criteria audit.",
+      "acceptance":["RESEARCH, CI, SECURITY, SCALE, VISUAL-QA, PY-PACKAGE, NPM-PACKAGE, REVIEW-GATE and PROCESS are verified.","Each proposed merge has two independent reviewer-agent reports, two tester-agent reports and committed visual evidence embedded in its PR body.","Unmet 900-issue and distinct-account approval requirements remain explicitly blocked rather than falsely satisfied."],
+      "evidence":["Remote workflow/build state and package-install reports", "Final open/closed issue and PR audit excluding PRs from issue counts"]
+    },
+    {
+      "key":"CONTRACT", "parent":"EPIC-FOUNDATION", "type":"task", "area":"ingestion", "priority":"p0", "milestone":0,
+      "title":"Version and validate the shared ChartSpec and artifact contracts", "owner_lane":"core agent",
+      "outcome":"Python, TypeScript and integrations share one explicit schema and metadata contract.",
+      "acceptance":["Commit schema version 1 and positive/negative fixtures for declared kinds, mappings, nested charts and bounds.","Pydantic models and JSON Schema agree on required fields, defaults and invalid values.","NormalizedData and Artifact expose input/output counts, strategy, warnings and safe filesystem paths.","Public names/signatures match the design or carry an explicit documented decision."],
+      "evidence":["Schema validation tests and exact test command", "Fixture parity report"]
+    },
+    {
+      "key":"INPUT-FORMATS", "parent":"EPIC-FOUNDATION", "depends_on":["CONTRACT"], "type":"story", "area":"ingestion", "priority":"p1", "milestone":0,
+      "title":"Normalize records, columns and delimited/line-oriented inputs deterministically", "owner_lane":"core agent",
+      "outcome":"A caller can normalize ordinary tabular and streaming file shapes without silent row loss.",
+      "acceptance":["Cover records, column-oriented inputs, CSV, TSV, JSONL and explicit path/mapping selection with fixtures.","Define deterministic treatment of nulls, missing keys, mixed values, NaN and infinity.","Malformed rows and missing mapping fields produce actionable errors or counted warnings, not silent omission.","Optional Arrow/Parquet behavior is tested or explicitly documented as unavailable with dependency guidance."],
+      "evidence":["Fixture-based normalization tests including malformed and empty inputs", "Input/output count assertions"]
+    },
+    {
+      "key":"INPUT-GRAPHQL", "parent":"EPIC-FOUNDATION", "depends_on":["CONTRACT"], "type":"story", "area":"ingestion", "priority":"p1", "milestone":0,
+      "title":"Normalize nested JSON and GraphQL edges/nodes without dropping pages", "owner_lane":"core agent",
+      "outcome":"Nested and paginated API results become explicit records using documented mapping rules.",
+      "acceptance":["Fixtures cover GraphQL edges/node, nodes arrays, multiple pages and nested array/path selection.","Flattening rules for colliding keys and nested arrays are deterministic and documented.","Hierarchy and geographic record adapters have explicit accepted shapes and mapping failures.","Tests prove all selected pages contribute to input counts and no arbitrary remote URL is fetched."],
+      "evidence":["Nested/pagination fixtures and assertions", "Documented mapping examples"]
+    },
+    {
+      "key":"STREAMING", "parent":"EPIC-FOUNDATION", "depends_on":["CONTRACT"], "type":"story", "area":"ingestion", "priority":"p0", "milestone":0,
+      "title":"Reduce large streams before bounded record materialization", "owner_lane":"core agent",
+      "outcome":"Large inputs have bounded renderer payloads with disclosed sampling and aggregation semantics.",
+      "acceptance":["An iterator/JSONL path reduces records before creating the bounded renderer list.","Requested aggregation and max_points are honored with deterministic strategy metadata.","Counts reflect original inputs and retained/reduced outputs; warnings disclose lossy choices.","Tests detect accidental list/materialization of an unbounded stream and cover empty/invalid bounds."],
+      "evidence":["Streaming regression tests", "Memory/time benchmark linked from SCALE"]
+    },
+    {
+      "key":"RENDER-MPL", "parent":"EPIC-VISUALIZATION", "depends_on":["CONTRACT"], "type":"story", "area":"renderers", "priority":"p1", "milestone":1,
+      "title":"Render real Matplotlib static artifacts from the shared contract", "owner_lane":"rendering agent",
+      "outcome":"Users obtain readable static images without browser runtime requirements.",
+      "acceptance":["Supported chart kinds produce actual nonempty PNG/SVG artifacts from bounded normalized records.","Mapped fields, titles, units, category ordering and reduction metadata remain truthful.","Themes and labels remain readable; unsupported kinds and missing fields fail explicitly.","At least one composed/example artifact is opened and inspected; dependencies are disclosed."],
+      "evidence":["Renderer unit/integration tests", "Committed inspected PNG/SVG and dimensions"]
+    },
+    {
+      "key":"RENDER-PLOTLY", "parent":"EPIC-VISUALIZATION", "depends_on":["CONTRACT"], "type":"story", "area":"renderers", "priority":"p1", "milestone":1,
+      "title":"Render interactive Plotly artifacts with explicit runtime requirements", "owner_lane":"rendering agent",
+      "outcome":"Users can inspect Plotly charts with the same mappings and reductions as other engines.",
+      "acceptance":["Supported kinds generate actual Plotly figures and usable HTML artifacts.","Shared fixtures assert series, axes and values, including category and missing-value handling.","Remote or bundled runtime dependencies and any static-export extras are documented.","Untrusted strings cannot execute in the output; an actual browser artifact is inspected."],
+      "evidence":["Plotly structure/security tests", "Committed browser screenshot and HTML fixture"]
+    },
+    {
+      "key":"RENDER-VEGA", "parent":"EPIC-VISUALIZATION", "depends_on":["CONTRACT"], "type":"story", "area":"renderers", "priority":"p1", "milestone":1,
+      "title":"Render validated Vega-Lite specifications and real artifacts", "owner_lane":"rendering agent",
+      "outcome":"A declarative Vega-Lite adapter preserves the shared schema semantics.",
+      "acceptance":["Supported kinds emit valid Vega-Lite encodings and actual renderable output.","Data values and types match shared fixtures; unsupported combinations fail explicitly.","Optional vl-convert/runtime requirements and offline behavior are documented.","Inspect and commit at least one real SVG/PNG or browser screenshot, not a hand-drawn stand-in."],
+      "evidence":["Spec validation/render tests", "Committed inspected render artifact"]
+    },
+    {
+      "key":"RENDER-ECHARTS", "parent":"EPIC-VISUALIZATION", "depends_on":["CONTRACT"], "type":"story", "area":"renderers", "priority":"p1", "milestone":1,
+      "title":"Render safe ECharts options and browser artifacts", "owner_lane":"rendering agent",
+      "outcome":"Users can choose ECharts without changing data normalization or mapping semantics.",
+      "acceptance":["Supported kinds emit actual ECharts options and executable browser artifacts using the legitimate runtime.","Fixture assertions verify series data, legends, axes and dashboard/composition behavior where supported.","No model-authored JavaScript callback/eval path is accepted; runtime loading is explicit.","Browser checks report console failures and include a committed inspected screenshot."],
+      "evidence":["Option parity/security tests", "Browser test report and screenshot"]
+    },
+    {
+      "key":"RENDER-ANTV", "parent":"EPIC-VISUALIZATION", "depends_on":["CONTRACT"], "type":"story", "area":"renderers", "priority":"p1", "milestone":1,
+      "title":"Render real AntV G2 specifications and browser artifacts", "owner_lane":"rendering agent",
+      "outcome":"AntV G2 is a genuine fifth renderer rather than a renamed fallback engine.",
+      "acceptance":["Supported kinds produce valid G2 specifications and load the actual G2 runtime.","Mappings, reduced values and metadata match shared fixtures and other adapters.","Unsupported kinds and unavailable runtime dependencies are explicit; no fake visual fallback is used.","An actual browser render is tested, inspected and committed as a screenshot."],
+      "evidence":["G2 spec/semantic tests", "Browser execution report and screenshot"]
+    },
+    {
+      "key":"TS-CONTRACT", "parent":"EPIC-VISUALIZATION", "depends_on":["CONTRACT"], "type":"task", "area":"typescript", "priority":"p0", "milestone":1,
+      "title":"Validate shared schema fixtures and bounded normalization in TypeScript", "owner_lane":"TypeScript agent",
+      "outcome":"The npm interface rejects invalid inputs consistently with the Python contract.",
+      "acceptance":["Use the same versioned schema and shared positive/negative fixtures as Python.","Implement and test documented bounded normalization with truthful counts/warnings/strategy.","Strict TypeScript checking and unit tests cover mapping, invalid kinds and unsupported values.","Differences from Python semantics are explicit and tested rather than accidental."],
+      "evidence":["Typecheck and unit-test commands", "Cross-language fixture parity report"]
+    },
+    {
+      "key":"TS-BROWSER", "parent":"EPIC-VISUALIZATION", "depends_on":["TS-CONTRACT"], "type":"story", "area":"typescript", "priority":"p1", "milestone":1,
+      "title":"Build safe browser engine artifacts and composed dashboards in TypeScript", "owner_lane":"TypeScript agent",
+      "outcome":"JavaScript callers can generate browser charts and dashboards from the shared spec.",
+      "acceptance":["Document and test actual engine support rather than implying all Python-only exports exist in the browser.","Dashboard composition preserves per-chart titles, mappings and bounded datasets.","HTML serialization escapes untrusted titles/data and rejects executable configuration.","An installed/built package generates an inspected browser artifact and committed screenshot."],
+      "evidence":["Browser/spec unit tests and HTML security tests", "Build smoke test and screenshot"]
+    },
+    {
+      "key":"TOOLS", "parent":"EPIC-INTEGRATIONS", "depends_on":["CONTRACT"], "type":"story", "area":"integrations", "priority":"p1", "milestone":2,
+      "title":"Expose five real Deep Agents visualization tools with safe artifacts", "owner_lane":"integrations agent",
+      "outcome":"A Deep Agent attaches actual structured tools and receives artifact metadata rather than arbitrary code execution.",
+      "acceptance":["create_tools(output_dir) returns five renderer tools using real compatible integration APIs.","Tool schemas validate ChartSpec inputs and surface render/normalization errors predictably.","Safe output directories, bounded metadata and renderer/dependency errors are tested.","A real attachment and multi-tool invocation flow is demonstrated; mocks alone do not satisfy acceptance."],
+      "evidence":["Integration command and package versions", "Tool discovery/invocation transcript"]
+    },
+    {
+      "key":"MCP", "parent":"EPIC-INTEGRATIONS", "depends_on":["TOOLS"], "type":"story", "area":"integrations", "priority":"p1", "milestone":2,
+      "title":"Serve visualization tools over a real stdio MCP session", "owner_lane":"integrations agent",
+      "outcome":"MCP clients discover and call the toolkit using a genuine protocol server.",
+      "acceptance":["A stdio client initializes, lists tools and successfully calls an actual renderer tool.","Protocol stdout remains valid; diagnostics are not mixed into the message stream.","Invalid requests, unsafe paths and missing optional dependencies return structured errors.","CLI/entrypoint and startup instructions work from a built/installed package."],
+      "evidence":["Real client/server discovery and call test", "Installed-entrypoint smoke transcript"]
+    },
+    {
+      "key":"PROMPTS", "parent":"EPIC-INTEGRATIONS", "depends_on":["TOOLS"], "type":"task", "area":"integrations", "priority":"p1", "milestone":2,
+      "title":"Version safe chart-selection prompts and runnable agent examples", "owner_lane":"integrations agent",
+      "outcome":"Users see reproducible workflows that choose charts, reduce inputs and explain limitations.",
+      "acceptance":["Commit prompts/v1 and runnable examples for normalization, chart selection and multi-tool workflow.","Prompts forbid arbitrary code/URL execution and require disclosure of lossy reduction.","Examples use the actual tool schemas and declare credentials, optional extras or network needs.","Document chart-choice rationale, artifact paths and a failure/recovery example."],
+      "evidence":["Executed examples or explicit unavailable-prerequisite notes", "Prompt/version documentation review"]
+    },
+    {
+      "key":"RESEARCH", "parent":"EPIC-DELIVERY", "type":"task", "area":"research", "priority":"p1", "milestone":3,
+      "title":"Ground architecture and competitor research in dated official sources", "owner_lane":"research agent",
+      "outcome":"Architecture choices and public comparisons are traceable without claiming access to proprietary internals.",
+      "acceptance":["Research cites primary documentation with access dates for five renderers, Deep Agents and MCP.","Separate observed public behavior, documentation facts, inferences and unknown proprietary internals.","Record runtime/dependency, licensing, scale and output-format trade-offs without invented benchmark claims.","Architecture and feature support claims agree with implemented/tested capabilities or are clearly future work."],
+      "evidence":["Committed source-linked research notes", "Claim-to-source and capability review"]
+    },
+    {
+      "key":"CI", "parent":"EPIC-DELIVERY", "type":"task", "area":"ci", "priority":"p0", "milestone":3,
+      "title":"Gate Python and TypeScript changes with real lint, type, test and build CI", "owner_lane":"parent/core and TypeScript owners",
+      "outcome":"Remote PR checks run the same meaningful verification documented locally.",
+      "acceptance":["Workflow runs Python lint/type/unit/integration and TypeScript type/test/build/package checks as applicable.","Visual/security/scale smoke checks are explicit; expensive full benchmarks have a documented invocation.","Use minimal workflow permissions and no committed secrets; optional dependency failures are visible.","A remote workflow run on the proposed commit is recorded, or its real blocker stays open."],
+      "evidence":["Workflow file and remote run URL/status", "Local-to-CI command mapping"]
+    },
+    {
+      "key":"SECURITY", "parent":"EPIC-DELIVERY", "type":"task", "area":"security", "priority":"p0", "milestone":3,
+      "title":"Prove untrusted specs, HTML values and filesystem paths stay within safe boundaries", "owner_lane":"parent with core/rendering/TypeScript/integrations owners",
+      "outcome":"Model-authored inputs cannot execute arbitrary code, escape output roots or overwrite unrelated files.",
+      "acceptance":["Negative tests cover script/title/cell injection, script-closing sequences and dangerous configuration values.","Reject traversal, absolute-path escape and arbitrary remote-URL/code execution pathways.","Artifact creation avoids unrelated-file overwrite and documents optional network-loaded runtimes.","Review dependencies, diagnostics and packaging for accidental credential disclosure."],
+      "evidence":["Named negative tests and results", "Independent security review with exact commit"]
+    },
+    {
+      "key":"SCALE", "parent":"EPIC-DELIVERY", "depends_on":["STREAMING"], "type":"task", "area":"scale", "priority":"p1", "milestone":3,
+      "title":"Measure 10 through 10M input rows on the bounded streaming path", "owner_lane":"parent/core owner with independent testers",
+      "outcome":"Scale claims describe measured processing and retained marks instead of promising ten million browser marks.",
+      "acceptance":["Run and record 10, 1K, 100K, 1M and 10M input scales using a generated/streamed source.","Report environment, command, wall time, memory measurement method and input/output counts.","Verify bounded renderer payloads and disclose aggregation/sampling at every scale.","Failures, unavailable memory metrics and unrun engines/scales are explicit, not extrapolated as passes."],
+      "evidence":["Machine-readable benchmark results and reproducible command", "Independent tester replication or explicit limitation"]
+    },
+    {
+      "key":"VISUAL-QA", "parent":"EPIC-DELIVERY", "type":"task", "area":"qa", "priority":"p0", "milestone":3,
+      "title":"Inspect real renderer outputs and commit reproducible visual evidence", "owner_lane":"parent coordinator and independent tester agents",
+      "outcome":"Chart correctness includes readable labels and actual browser/static renders, not just nonempty files.",
+      "acceptance":["Generate committed SVG/PNG/screenshots for representative outputs of all five engines and a dashboard.","Inspect clipping, labels, legends, axes/units, accessible contrast and semantic agreement with source fixtures.","Browser checks detect runtime/console errors and state whether network access was required.","Each PR embeds committed visual evidence and identifies which exact commit/output was inspected."],
+      "evidence":["Committed visual files and generation commands", "Two independent tester reports per PR"]
+    },
+    {
+      "key":"PY-PACKAGE", "parent":"EPIC-DELIVERY", "type":"task", "area":"packaging", "priority":"p1", "milestone":3,
+      "title":"Build and clean-install Python wheel/sdist with real entrypoint smoke tests", "owner_lane":"parent/core and integrations owners",
+      "outcome":"The Python distribution works outside the source checkout with honest optional-extra requirements.",
+      "acceptance":["Build wheel and sdist; inspect metadata, included schemas/prompts and declared extras.","Install from built artifacts in a clean environment and import the public API.","Smoke-test a real render and available CLI/MCP entrypoints from the installed package.","Record versions, commands and limitations; do not publish to a public registry without authorization."],
+      "evidence":["Build and clean-install logs", "Installed artifact/entrypoint smoke results"]
+    },
+    {
+      "key":"NPM-PACKAGE", "parent":"EPIC-DELIVERY", "depends_on":["TS-CONTRACT","TS-BROWSER"], "type":"task", "area":"packaging", "priority":"p1", "milestone":3,
+      "title":"Build and clean-install the npm tarball with usable types and exports", "owner_lane":"TypeScript agent and independent testers",
+      "outcome":"Consumers install a real tarball whose exports and declarations match documentation.",
+      "acceptance":["Build, typecheck, test and npm pack the package with no credentials or unrelated local files.","Inspect exports, declarations, runtime requirements and shared-schema inclusion.","Install the tarball in a clean consumer and compile/run a representative chart example.","Record commands and package contents; public npm publication is not authorized by this task."],
+      "evidence":["Pack file list and tarball checksum", "Clean-consumer compile/run report"]
+    },
+    {
+      "key":"REVIEW-GATE", "parent":"EPIC-DELIVERY", "type":"task", "area":"qa", "priority":"p0", "milestone":3,
+      "title":"Enforce evidence-bearing PRs with two reviewer and two tester reports", "owner_lane":"parent coordinator",
+      "outcome":"Every merge decision has genuine independent analysis and testing attached to the exact proposed commit.",
+      "acceptance":["Each PR has two distinct reviewer-agent reports and two distinct tester-agent reports, independently produced.","Reports record agent/session identity, scope, exact commit, findings/commands/results and limitations.","Fixes resolve material findings with retest evidence; changed commits identify stale reports and receive appropriate renewed verification.","Commit screenshots/SVG/PNG and embed their repository paths in the PR body before merge.","Do not equate reports or comments submitted through one account with two GitHub APPROVED reviews."],
+      "evidence":["Per-PR evidence checklist with four report links", "Committed visual embeds and remote PR head/merge state"]
+    },
+    {
+      "key":"PROCESS", "parent":"EPIC-DELIVERY", "type":"task", "area":"process", "priority":"p1", "milestone":3,
+      "title":"Publish a traceable backlog, evidence policy and honest completion tracker", "owner_lane":"PM/process agent",
+      "outcome":"The team can map the design to real issues and distinguish planned, implemented, verified and released work.",
+      "acceptance":["Create distinct scoped epics/stories/tasks with labels, milestones, dependencies and acceptance criteria.","Commit issue mapping and review/test/visual evidence policy under docs/process only.","Document GitHub secondary content limits and the single-author approval restriction from primary sources.","Leave every issue open until parent-supplied implementation and independent review/test evidence meets acceptance.","Record requested 900 created/resolved issues as unmet rather than padding, duplicating or inventing closures."],
+      "evidence":["Remote issue/milestone/label snapshot", "Process-doc commit and parent-provided verification before closure"]
+    },
+    {
+      "key":"BLOCKER-900", "type":"blocker", "area":"process", "priority":"p0", "milestone":3, "blocked":true,
+      "title":"[Blocker] 900 genuinely resolved issues are not presently evidenced; bulk API limits constrain seeding", "owner_lane":"parent coordinator / user acceptance",
+      "outcome":"Keep the numerical request visible without treating ticket volume as completed engineering.",
+      "acceptance":["Do not close until at least 900 distinct legitimate issues have verified deliverables, or the user explicitly revises the requirement.","Any future decomposition must identify unique scope, acceptance and evidence; no empty/duplicate tickets or automatic closure.","Plan API mutations against the account-wide content budget; do not evade limits with alternate accounts/tokens/interfaces.","Publish actual remote created/open/closed issue counts excluding pull requests and disclose what remains unmet."],
+      "evidence":["Primary GitHub rate-limit documentation accessed 2026-11-26", "Remote issue audit and linked completed deliverables"],
+      "notes":"Observed starting state was zero issues. This seed is 29 genuine issues, not 900 completions. At least 900 genuine creates plus 900 closes require at least 1,800 mutations before other process work. GitHub documents general secondary limits of 80 content-generating requests/minute and 500/hour, potentially lower or undisclosed endpoint limits, and no queryable secondary-budget status. 900 creates alone exceed a single documented 500/hour content window; issue updates/closures, labels, milestones, comments and other agents' writes require additional shared budget. This is a feasibility/planning blocker, not a claim that GitHub has actually returned 403/429. Source: https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api ."
+    },
+    {
+      "key":"BLOCKER-APPROVALS", "type":"blocker", "area":"process", "priority":"p0", "milestone":3, "blocked":true,
+      "title":"[Blocker] Agent reports under one account cannot provide independent GitHub author approvals", "owner_lane":"parent coordinator / repository owner",
+      "outcome":"Distinguish independent agent analysis from platform approval identities without misrepresenting review status.",
+      "acceptance":["Record two reviewer-agent and two tester-agent reports for each proposed merge regardless of platform approval availability.","If literal two GitHub approvals are required, obtain eligible distinct non-author reviewers with repository access.","If only independent agent reports are required, record that interpretation explicitly; never label comments as APPROVED reviews.","Do not disable or bypass protected-branch requirements merely to claim success; report the remaining prerequisite."],
+      "evidence":["Primary GitHub approval documentation accessed 2026-11-26", "Actual PR review-state audit and named non-author reviewer permissions if provided"],
+      "notes":"The currently verified automation identity is the repository owner account. Multiple agent sessions posting through that identity are not distinct GitHub reviewers. GitHub explicitly states pull request authors cannot approve their own pull requests. No self-approval attempt or repository-rule change is authorized by this issue. Source: https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/approving-a-pull-request-with-required-reviews ."
+    }
+  ]
+}

@@ -1,0 +1,445 @@
+{
+  "repository": "sandeshbagmare/deepviz-agent-toolkit",
+  "snapshot_date": "2026-11-26",
+  "issues": {
+    "EPIC-FOUNDATION": {
+      "number": 1,
+      "title": "[Epic] Shared contracts and loss-aware bounded ingestion",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/1",
+      "state": "open",
+      "labels": [
+        "type:epic",
+        "area:ingestion",
+        "priority:p0"
+      ],
+      "milestone": "M1 - Contracts and bounded ingestion",
+      "parent": null,
+      "depends_on": []
+    },
+    "EPIC-VISUALIZATION": {
+      "number": 2,
+      "title": "[Epic] Five renderer alternatives and interoperable browser artifacts",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/2",
+      "state": "open",
+      "labels": [
+        "type:epic",
+        "area:renderers",
+        "priority:p1"
+      ],
+      "milestone": "M2 - Five engines and browser SDK",
+      "parent": null,
+      "depends_on": []
+    },
+    "EPIC-INTEGRATIONS": {
+      "number": 3,
+      "title": "[Epic] Deep Agents and stdio MCP visualization workflows",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/3",
+      "state": "open",
+      "labels": [
+        "type:epic",
+        "area:integrations",
+        "priority:p1"
+      ],
+      "milestone": "M3 - Agent and MCP interfaces",
+      "parent": null,
+      "depends_on": []
+    },
+    "EPIC-DELIVERY": {
+      "number": 4,
+      "title": "[Epic] Secure, measurable and independently evidenced release readiness",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/4",
+      "state": "open",
+      "labels": [
+        "type:epic",
+        "area:qa",
+        "priority:p0"
+      ],
+      "milestone": "M4 - Release evidence and hardening",
+      "parent": null,
+      "depends_on": []
+    },
+    "CONTRACT": {
+      "number": 5,
+      "title": "Version and validate the shared ChartSpec and artifact contracts",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/5",
+      "state": "open",
+      "labels": [
+        "type:task",
+        "area:ingestion",
+        "priority:p0"
+      ],
+      "milestone": "M1 - Contracts and bounded ingestion",
+      "parent": "EPIC-FOUNDATION",
+      "depends_on": []
+    },
+    "INPUT-FORMATS": {
+      "number": 6,
+      "title": "Normalize records, columns and delimited/line-oriented inputs deterministically",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/6",
+      "state": "open",
+      "labels": [
+        "type:story",
+        "area:ingestion",
+        "priority:p1"
+      ],
+      "milestone": "M1 - Contracts and bounded ingestion",
+      "parent": "EPIC-FOUNDATION",
+      "depends_on": [
+        "CONTRACT"
+      ]
+    },
+    "INPUT-GRAPHQL": {
+      "number": 7,
+      "title": "Normalize nested JSON and GraphQL edges/nodes without dropping pages",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/7",
+      "state": "open",
+      "labels": [
+        "type:story",
+        "area:ingestion",
+        "priority:p1"
+      ],
+      "milestone": "M1 - Contracts and bounded ingestion",
+      "parent": "EPIC-FOUNDATION",
+      "depends_on": [
+        "CONTRACT"
+      ]
+    },
+    "STREAMING": {
+      "number": 8,
+      "title": "Reduce large streams before bounded record materialization",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/8",
+      "state": "open",
+      "labels": [
+        "type:story",
+        "area:ingestion",
+        "priority:p0"
+      ],
+      "milestone": "M1 - Contracts and bounded ingestion",
+      "parent": "EPIC-FOUNDATION",
+      "depends_on": [
+        "CONTRACT"
+      ]
+    },
+    "RENDER-MPL": {
+      "number": 9,
+      "title": "Render real Matplotlib static artifacts from the shared contract",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/9",
+      "state": "open",
+      "labels": [
+        "type:story",
+        "area:renderers",
+        "priority:p1"
+      ],
+      "milestone": "M2 - Five engines and browser SDK",
+      "parent": "EPIC-VISUALIZATION",
+      "depends_on": [
+        "CONTRACT"
+      ]
+    },
+    "RENDER-PLOTLY": {
+      "number": 10,
+      "title": "Render interactive Plotly artifacts with explicit runtime requirements",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/10",
+      "state": "open",
+      "labels": [
+        "type:story",
+        "area:renderers",
+        "priority:p1"
+      ],
+      "milestone": "M2 - Five engines and browser SDK",
+      "parent": "EPIC-VISUALIZATION",
+      "depends_on": [
+        "CONTRACT"
+      ]
+    },
+    "RENDER-VEGA": {
+      "number": 11,
+      "title": "Render validated Vega-Lite specifications and real artifacts",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/11",
+      "state": "open",
+      "labels": [
+        "type:story",
+        "area:renderers",
+        "priority:p1"
+      ],
+      "milestone": "M2 - Five engines and browser SDK",
+      "parent": "EPIC-VISUALIZATION",
+      "depends_on": [
+        "CONTRACT"
+      ]
+    },
+    "RENDER-ECHARTS": {
+      "number": 12,
+      "title": "Render safe ECharts options and browser artifacts",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/12",
+      "state": "open",
+      "labels": [
+        "type:story",
+        "area:renderers",
+        "priority:p1"
+      ],
+      "milestone": "M2 - Five engines and browser SDK",
+      "parent": "EPIC-VISUALIZATION",
+      "depends_on": [
+        "CONTRACT"
+      ]
+    },
+    "RENDER-ANTV": {
+      "number": 13,
+      "title": "Render real AntV G2 specifications and browser artifacts",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/13",
+      "state": "open",
+      "labels": [
+        "type:story",
+        "area:renderers",
+        "priority:p1"
+      ],
+      "milestone": "M2 - Five engines and browser SDK",
+      "parent": "EPIC-VISUALIZATION",
+      "depends_on": [
+        "CONTRACT"
+      ]
+    },
+    "TS-CONTRACT": {
+      "number": 14,
+      "title": "Validate shared schema fixtures and bounded normalization in TypeScript",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/14",
+      "state": "open",
+      "labels": [
+        "type:task",
+        "area:typescript",
+        "priority:p0"
+      ],
+      "milestone": "M2 - Five engines and browser SDK",
+      "parent": "EPIC-VISUALIZATION",
+      "depends_on": [
+        "CONTRACT"
+      ]
+    },
+    "TS-BROWSER": {
+      "number": 15,
+      "title": "Build safe browser engine artifacts and composed dashboards in TypeScript",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/15",
+      "state": "open",
+      "labels": [
+        "type:story",
+        "area:typescript",
+        "priority:p1"
+      ],
+      "milestone": "M2 - Five engines and browser SDK",
+      "parent": "EPIC-VISUALIZATION",
+      "depends_on": [
+        "TS-CONTRACT"
+      ]
+    },
+    "TOOLS": {
+      "number": 16,
+      "title": "Expose five real Deep Agents visualization tools with safe artifacts",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/16",
+      "state": "open",
+      "labels": [
+        "type:story",
+        "area:integrations",
+        "priority:p1"
+      ],
+      "milestone": "M3 - Agent and MCP interfaces",
+      "parent": "EPIC-INTEGRATIONS",
+      "depends_on": [
+        "CONTRACT"
+      ]
+    },
+    "MCP": {
+      "number": 17,
+      "title": "Serve visualization tools over a real stdio MCP session",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/17",
+      "state": "open",
+      "labels": [
+        "type:story",
+        "area:integrations",
+        "priority:p1"
+      ],
+      "milestone": "M3 - Agent and MCP interfaces",
+      "parent": "EPIC-INTEGRATIONS",
+      "depends_on": [
+        "TOOLS"
+      ]
+    },
+    "PROMPTS": {
+      "number": 18,
+      "title": "Version safe chart-selection prompts and runnable agent examples",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/18",
+      "state": "open",
+      "labels": [
+        "type:task",
+        "area:integrations",
+        "priority:p1"
+      ],
+      "milestone": "M3 - Agent and MCP interfaces",
+      "parent": "EPIC-INTEGRATIONS",
+      "depends_on": [
+        "TOOLS"
+      ]
+    },
+    "RESEARCH": {
+      "number": 19,
+      "title": "Ground architecture and competitor research in dated official sources",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/19",
+      "state": "open",
+      "labels": [
+        "type:task",
+        "area:research",
+        "priority:p1"
+      ],
+      "milestone": "M4 - Release evidence and hardening",
+      "parent": "EPIC-DELIVERY",
+      "depends_on": []
+    },
+    "CI": {
+      "number": 20,
+      "title": "Gate Python and TypeScript changes with real lint, type, test and build CI",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/20",
+      "state": "open",
+      "labels": [
+        "type:task",
+        "area:ci",
+        "priority:p0"
+      ],
+      "milestone": "M4 - Release evidence and hardening",
+      "parent": "EPIC-DELIVERY",
+      "depends_on": []
+    },
+    "SECURITY": {
+      "number": 21,
+      "title": "Prove untrusted specs, HTML values and filesystem paths stay within safe boundaries",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/21",
+      "state": "open",
+      "labels": [
+        "type:task",
+        "area:security",
+        "priority:p0"
+      ],
+      "milestone": "M4 - Release evidence and hardening",
+      "parent": "EPIC-DELIVERY",
+      "depends_on": []
+    },
+    "SCALE": {
+      "number": 22,
+      "title": "Measure 10 through 10M input rows on the bounded streaming path",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/22",
+      "state": "open",
+      "labels": [
+        "type:task",
+        "area:scale",
+        "priority:p1"
+      ],
+      "milestone": "M4 - Release evidence and hardening",
+      "parent": "EPIC-DELIVERY",
+      "depends_on": [
+        "STREAMING"
+      ]
+    },
+    "VISUAL-QA": {
+      "number": 23,
+      "title": "Inspect real renderer outputs and commit reproducible visual evidence",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/23",
+      "state": "open",
+      "labels": [
+        "type:task",
+        "area:qa",
+        "priority:p0"
+      ],
+      "milestone": "M4 - Release evidence and hardening",
+      "parent": "EPIC-DELIVERY",
+      "depends_on": []
+    },
+    "PY-PACKAGE": {
+      "number": 24,
+      "title": "Build and clean-install Python wheel/sdist with real entrypoint smoke tests",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/24",
+      "state": "open",
+      "labels": [
+        "type:task",
+        "area:packaging",
+        "priority:p1"
+      ],
+      "milestone": "M4 - Release evidence and hardening",
+      "parent": "EPIC-DELIVERY",
+      "depends_on": []
+    },
+    "NPM-PACKAGE": {
+      "number": 25,
+      "title": "Build and clean-install the npm tarball with usable types and exports",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/25",
+      "state": "open",
+      "labels": [
+        "type:task",
+        "area:packaging",
+        "priority:p1"
+      ],
+      "milestone": "M4 - Release evidence and hardening",
+      "parent": "EPIC-DELIVERY",
+      "depends_on": [
+        "TS-CONTRACT",
+        "TS-BROWSER"
+      ]
+    },
+    "REVIEW-GATE": {
+      "number": 26,
+      "title": "Enforce evidence-bearing PRs with two reviewer and two tester reports",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/26",
+      "state": "open",
+      "labels": [
+        "type:task",
+        "area:qa",
+        "priority:p0"
+      ],
+      "milestone": "M4 - Release evidence and hardening",
+      "parent": "EPIC-DELIVERY",
+      "depends_on": []
+    },
+    "PROCESS": {
+      "number": 27,
+      "title": "Publish a traceable backlog, evidence policy and honest completion tracker",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/27",
+      "state": "open",
+      "labels": [
+        "type:task",
+        "area:process",
+        "priority:p1"
+      ],
+      "milestone": "M4 - Release evidence and hardening",
+      "parent": "EPIC-DELIVERY",
+      "depends_on": []
+    },
+    "BLOCKER-900": {
+      "number": 28,
+      "title": "[Blocker] 900 genuinely resolved issues are not presently evidenced; bulk API limits constrain seeding",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/28",
+      "state": "open",
+      "labels": [
+        "type:blocker",
+        "area:process",
+        "priority:p0",
+        "status:blocked"
+      ],
+      "milestone": "M4 - Release evidence and hardening",
+      "parent": null,
+      "depends_on": []
+    },
+    "BLOCKER-APPROVALS": {
+      "number": 29,
+      "title": "[Blocker] Agent reports under one account cannot provide independent GitHub author approvals",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/29",
+      "state": "open",
+      "labels": [
+        "type:blocker",
+        "area:process",
+        "priority:p0",
+        "status:blocked"
+      ],
+      "milestone": "M4 - Release evidence and hardening",
+      "parent": null,
+      "depends_on": []
+    }
+  }
+}

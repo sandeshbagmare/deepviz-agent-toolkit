@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 510" width="1040" height="510" role="img" aria-labelledby="title desc">
+  <title id="title">Evidence required before each DeepViz merge</title>
+  <desc id="desc">A scoped issue and implementation proceed through two independent reviewer reports, two independent tester reports, and committed inspected visual evidence. The parent verifies fixes, evidence freshness and actual platform state before merging. Agent reports are not GitHub approvals.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#475569"/></marker>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #0f172a; }
+      .title { font-size: 26px; font-weight: 700; }
+      .heading { font-size: 19px; font-weight: 700; }
+      .body { font-size: 16px; }
+      .small { font-size: 15px; }
+      .box { fill: #f8fafc; stroke: #64748b; stroke-width: 1.5; }
+      .gate { fill: #ecfdf5; stroke: #047857; stroke-width: 2; }
+      .link { stroke: #475569; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1040" height="510" fill="#ffffff"/>
+  <text x="32" y="43" class="title">Evidence before every merge</text>
+  <text x="32" y="70" class="body">Documentation workflow diagram — not evidence that checks have passed</text>
+  <rect x="32" y="184" width="218" height="126" rx="10" class="box"/>
+  <text x="48" y="214" class="heading">Scoped issue + PR</text>
+  <text x="48" y="242" class="body">Acceptance criteria</text>
+  <text x="48" y="265" class="body">Exact proposed SHA</text>
+  <text x="48" y="288" class="body">No premature closure</text>
+  <path d="M250 247H280V151H308" class="link"/>
+  <path d="M250 247H308" class="link"/>
+  <path d="M250 247H280V349H308" class="link"/>
+  <rect x="310" y="103" width="346" height="96" rx="10" class="box"/>
+  <text x="328" y="132" class="heading">2 independent reviewer reports</text>
+  <text x="328" y="158" class="body">Distinct sessions; findings + limitations</text>
+  <text x="328" y="181" class="body">Reviewed SHA and scope recorded</text>
+  <rect x="310" y="215" width="346" height="96" rx="10" class="box"/>
+  <text x="328" y="244" class="heading">2 independent tester reports</text>
+  <text x="328" y="270" class="body">Actually run checks; observed results</text>
+  <text x="328" y="293" class="body">Tested SHA and environment recorded</text>
+  <rect x="310" y="327" width="346" height="96" rx="10" class="box"/>
+  <text x="328" y="356" class="heading">Committed visual evidence</text>
+  <text x="328" y="382" class="body">Inspected screenshots / SVG / PNG</text>
+  <text x="328" y="405" class="body">Embedded in PR; actual outputs for charts</text>
+  <path d="M656 151H687V247H716" class="link"/>
+  <path d="M656 263H716" class="link"/>
+  <path d="M656 375H687V279H716" class="link"/>
+  <rect x="718" y="169" width="290" height="190" rx="10" class="gate"/>
+  <text x="738" y="201" class="heading">Parent verifies merge gate</text>
+  <text x="738" y="231" class="body">Fixes + relevant retests</text>
+  <text x="738" y="258" class="body">Fresh evidence + remote checks</text>
+  <text x="738" y="285" class="body">Actual platform review status</text>
+  <text x="738" y="322" class="heading">Then merge — not before</text>
+  <text x="32" y="467" class="small">Agent reports/comments are not GitHub APPROVED reviews. A PR author cannot approve their own PR.</text>
+  <text x="32" y="490" class="small">Unmet requirements remain open; no fabricated tests, reviews, ticket counts or approvals.</text>
+</svg>
