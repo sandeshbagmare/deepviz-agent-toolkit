@@ -1,0 +1,164 @@
+name: Verification
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verification-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  MPLBACKEND: Agg
+  PYTHONHASHSEED: '0'
+  CI: 'true'
+
+jobs:
+  python:
+    name: Python ${{ matrix.python }} lint, types, unit and integration
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - name: Install all integration dependencies (no live service credentials)
+        run: python -m pip install -e '.[dev,agents,mcp,columnar]'
+      - name: Lint
+        run: python -m ruff check . .github/tests
+      - name: Typecheck package and verification scripts
+        run: |
+          python -m mypy
+          python -m mypy scripts/export_schema.py scripts/verify_evidence.py scripts/verify_visual.py scripts/verify_scale.py
+      - name: Check generated schema without changing files
+        run: python scripts/export_schema.py --check
+      - name: Test CI gate negative controls
+        run: python -m pytest .github/tests -q --strict-markers
+      - name: Unit and contract tests
+        run: python -m pytest -m 'not integration and not scale' --strict-markers --junitxml=artifacts/unit.xml
+      - name: Integration tests
+        run: python -m pytest -m 'integration and not scale' --strict-markers --junitxml=artifacts/integration.xml
+      - name: Preserve test reports for diagnosis, not as a substitute for success
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: python-${{ matrix.python }}-${{ github.run_attempt }}
+          path: artifacts/*.xml
+          if-no-files-found: warn
+          retention-days: 7
+
+  node:
+    name: npm build, types and tests (Node 24)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run typecheck
+      - run: npm test
+
+  visual:
+    name: Raster visual regression (semantic pixel comparison)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - run: python -m pip install -e '.[dev]'
+      - name: Compare actual Matplotlib PNG pixels to analytic silhouettes
+        run: python scripts/verify_visual.py --output artifacts/visual
+      - name: Preserve actual images and comparison report
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: raster-visual-${{ github.run_attempt }}
+          path: artifacts/visual
+          if-no-files-found: warn
+          retention-days: 7
+
+  scale:
+    name: One-pass scale ${{ matrix.count }} records
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        count: [10, 1000, 100000, 1000000, 10000000]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - run: python -m pip install -e '.[dev]'
+      - name: Assert full stream consumption, exact counts, bounded records and peak memory
+        run: >-
+          python scripts/verify_scale.py --count ${{ matrix.count }} --max-memory-mib 512
+          --output artifacts/scale-${{ matrix.count }}.json
+      - name: Preserve measured counts, elapsed time and memory methodology
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: scale-${{ matrix.count }}-${{ github.run_attempt }}
+          path: artifacts/scale-*.json
+          if-no-files-found: warn
+          retention-days: 7
+
+  distributions:
+    name: Python and npm distribution checks (no publishing)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: npm
+      - run: python -m pip install '.[dev]'
+      - run: python -m build
+      - run: python -m twine check --strict dist/*
+      - run: npm ci
+      - run: npm run build
+      - run: npm pack --dry-run --workspace @deepviz/agent-toolkit
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: python-distributions-${{ github.run_attempt }}
+          path: dist/*
+          if-no-files-found: error
+          retention-days: 7
