@@ -153,3 +153,18 @@ test('an empty GraphQL errors array is not a partial failure', () => {
   assert.deepEqual(result.records, [{v:2}]);
   assert.deepEqual(result.warnings, []);
 });
+
+test('wrapper-named record arrays do not discard sibling record identity', async () => {
+  for (const key of ['items','records','rows','results','data','pages']) {
+    const row = {id:1,[key]:['a','b']};
+    const expected = [{id:1,[`${key}.0`]:'a',[`${key}.1`]:'b'}];
+    assert.deepEqual(normalize([row],identity).records, expected, key);
+    assert.deepEqual((await normalizeStream([row],identity)).records, expected, key);
+  }
+});
+
+test('ambiguous GraphQL connection siblings require an explicit path', () => {
+  const source = {data:{team:{nodes:[{id:1}]},version:1}};
+  assert.throws(() => normalize(source,identity), /ambiguous|data_path/i);
+  assert.deepEqual(normalize(source,{...identity,data_path:'data.team.nodes'}).records,[{id:1}]);
+});

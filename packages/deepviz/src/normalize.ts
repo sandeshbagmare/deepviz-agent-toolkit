@@ -47,6 +47,15 @@ function hasCollection(value: unknown, depth = 0): boolean {
   return isObject(value) && Object.values(value).some(item => hasCollection(item, depth + 1));
 }
 
+function graphqlConnection(value:Record<string,unknown>,depth=0):boolean {
+  if(depth>MAX_DEPTH)throw new ValidationError('GraphQL response exceeds maximum depth');
+  if(Object.hasOwn(value,'edges') || Object.hasOwn(value,'nodes'))return true;
+  const children=Object.entries(value).filter(([key])=>!metadata.includes(key)).map(([,child])=>child);
+  if(children.length===1 && isObject(children[0]))return graphqlConnection(children[0],depth+1);
+  if(children.length>1 && children.some(child=>isObject(child) && graphqlConnection(child,depth+1)))throw new ValidationError('Ambiguous GraphQL fields require an explicit data_path');
+  return false;
+}
+
 function* unpack(value: unknown, warn:Notice, depth = 0): Generator<unknown> {
   if (depth > MAX_DEPTH) throw new ValidationError('Cyclic input or maximum nesting depth exceeded');
   if (Array.isArray(value)) {
@@ -68,6 +77,7 @@ function* unpack(value: unknown, warn:Notice, depth = 0): Generator<unknown> {
       return;
     }
     checkGraphql(value,warn);
+    if(Object.hasOwn(value,'data') || isObject(entries[0]?.[1]))graphqlConnection(value);
     if(Object.hasOwn(value,'edges') || Object.hasOwn(value,'nodes')) {
       if(Object.hasOwn(value,'edges') && Object.hasOwn(value,'nodes'))throw new ValidationError('GraphQL connection has both edges and nodes; choose data_path');
       const edges=Object.hasOwn(value,'edges');
@@ -90,7 +100,8 @@ function* unpack(value: unknown, warn:Notice, depth = 0): Generator<unknown> {
         return;
       }
     }
-    const preferred=entries.filter(([key,item])=>wrappers.includes(key) && hasCollection(item));
+    const preferred=entries.filter(([key,item])=>wrappers.includes(key) && hasCollection(item)
+      && entries.every(([sibling])=>sibling===key || metadata.includes(sibling)));
     const candidates=preferred.length ? preferred : entries.filter(([,item])=>hasCollection(item));
     if (candidates.length>1) throw new ValidationError('Ambiguous collections; set data_path');
     if (!preferred.length && candidates.length && entries.some(([,item])=>!isObject(item) && !Array.isArray(item))) {yield value;return;}
