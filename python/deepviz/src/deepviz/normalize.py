@@ -321,7 +321,7 @@ def _graphql_errors(value: Mapping[str, Any], counts: Counter[str]) -> None:
         counts["graphql_errors"] += 1
 
 
-def _expand(value: Any, counts: Counter[str], depth: int = 0) -> Iterator[Any]:
+def _expand(value: Any, counts: Counter[str], depth: int = 0, record: bool = False) -> Iterator[Any]:
     if depth > _MAX_DEPTH:
         raise ValueError("Input is nested too deeply or cyclic")
     if isinstance(value, dict) or isinstance(value, Mapping):
@@ -331,19 +331,19 @@ def _expand(value: Any, counts: Counter[str], depth: int = 0) -> Iterator[Any]:
             return
         if len(value) > _MAX_FIELDS:
             raise ValueError(f"Input exceeds {_MAX_FIELDS} fields")
-        first = next(iter(value.values()))
         _graphql_errors(value, counts)
         if "node" in value and set(value).issubset({"node", "cursor"}):
             if value["node"] is None:
                 counts["null_nodes"] += 1
             else:
-                yield from _expand(value["node"], counts, depth + 1)
+                yield from _expand(value["node"], counts, depth + 1, record=True)
             return
-        connection = _connection(value) if (
-            "data" in value or "edges" in value or "nodes" in value
-            or (type(first) not in _PRIMITIVES and isinstance(first, Mapping))
-        ) else None
+        protocol = "data" in value or "edges" in value or "nodes" in value
+        nested_wrapper = not record and all(isinstance(child, Mapping) for child in value.values())
+        connection = _connection(value) if protocol or nested_wrapper else None
         if connection is not None:
+            if not protocol and not any(wrapper in value for wrapper in _WRAPPERS):
+                raise ValueError("Custom GraphQL wrapper requires an explicit data_path")
             key = "edges" if "edges" in connection else "nodes"
             nodes = connection[key]
             if not _iterable(nodes):
@@ -356,7 +356,10 @@ def _expand(value: Any, counts: Counter[str], depth: int = 0) -> Iterator[Any]:
                 if node is None:
                     counts["null_nodes"] += 1
                 else:
-                    yield from _expand(node, counts, depth + 1)
+                    yield from _expand(node, counts, depth + 1, record=True)
+            return
+        if record:
+            yield value
             return
         for wrapper in _WRAPPERS:
             if wrapper in value and set(value).difference({wrapper}).issubset(_METADATA):
@@ -364,7 +367,7 @@ def _expand(value: Any, counts: Counter[str], depth: int = 0) -> Iterator[Any]:
                 if isinstance(wrapped, Mapping) or _iterable(wrapped):
                     yield from _expand(wrapped, counts, depth + 1)
                     return
-        if _iterable(first) and all(_iterable(column) for column in value.values()):
+        if all(_iterable(column) for column in value.values()):
             if len(value) > _MAX_FIELDS:
                 raise ValueError(f"Input exceeds {_MAX_FIELDS} fields")
             for values in zip_longest(*(iter(column) for column in value.values()), fillvalue=_ABSENT):
@@ -375,7 +378,7 @@ def _expand(value: Any, counts: Counter[str], depth: int = 0) -> Iterator[Any]:
         yield value
     elif _iterable(value):
         for item in value:
-            yield from _expand(item, counts, depth + 1)
+            yield from _expand(item, counts, depth + 1, record=True)
     else:
         yield value
 
@@ -573,8 +576,11 @@ class _Reducer:
         state[1:] = [value, correction, exponent, size]
 
     def add(self, row: dict[str, Any]) -> None:
-        # Type-tag grouping values: Python otherwise conflates True, 1 and 1.0.
-        key = tuple((type(row.get(field)), row.get(field)) for field in self.fields)
+        # JSON numbers share numeric equality; booleans/strings remain distinct.
+        key = tuple(
+            (float if type(row.get(field)) in (int, float) else type(row.get(field)), row.get(field))
+            for field in self.fields
+        )
         state = self.groups.get(key)
         if state is None:
             if self.other is not None:
@@ -667,6 +673,11 @@ def normalize(data: Any, spec: ChartSpec | dict[str, Any]) -> NormalizedData:
     Schema width is capped at 1024 fields and nesting at 64 levels.
     Automatic mappings and strategy are chosen from that prefix; use explicit
     x/y/aggregation for heterogeneous streams whose early rows are unrepresentative.
+    Record collections retain nested arrays as fields; column inference applies
+    to top-level mappings. Equal int/float categories share numeric identity,
+    separate from booleans/strings, preserving the first display representative.
+    Cross-language integer precision is only guaranteed in JavaScript's safe
+    integer range, even though Python's integer reductions remain exact beyond it.
     """
     if not isinstance(spec, (ChartSpec, dict)):
         raise TypeError("spec must be a ChartSpec or dictionary")
