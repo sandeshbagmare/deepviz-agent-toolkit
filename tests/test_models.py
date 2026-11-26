@@ -32,6 +32,19 @@ def test_defaults_are_bounded_and_serializable():
     assert ChartSpec.model_validate_json(spec.model_dump_json()) == spec
 
 
+@pytest.mark.parametrize("key,value", [
+    ("width", "900"), ("height", "520"), ("columns", "2"),
+    ("max_points", "2000"), ("version", True), ("columns", True),
+])
+def test_json_schema_numeric_types_do_not_coerce_strings_or_booleans(key, value):
+    with pytest.raises(ValidationError):
+        ChartSpec.model_validate({key: value})
+
+
+def test_json_integer_semantics_allow_integral_floats():
+    assert ChartSpec.model_validate({"width": 900.0}).width == 900
+
+
 def test_dashboard_requires_children_and_rejects_nesting():
     with pytest.raises(ValidationError, match="requires at least one"):
         ChartSpec(kind="dashboard")
