@@ -1,0 +1,18 @@
+{
+  "name": "@deepviz/agent-toolkit",
+  "version": "0.1.0",
+  "description": "Validated, bounded chart normalization and safe browser artifacts for agents",
+  "type": "module",
+  "license": "MIT",
+  "engines": {"node": ">=22"},
+  "exports": {
+    ".": {"types": "./dist/index.d.ts", "import": "./dist/index.js"},
+    "./chart-spec.schema.json": "./dist/chart-spec.schema.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist", "README.md", "LICENSE"],
+  "sideEffects": false,
+  "scripts": {"build": "tsc -p tsconfig.json", "prepack": "npm run build"},
+  "repository": {"type": "git", "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit.git", "directory": "packages/deepviz"}
+}
