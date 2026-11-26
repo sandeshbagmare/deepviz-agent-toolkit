@@ -156,3 +156,11 @@ test('AntV pie has a visible category key when tooltips are disabled',()=>{
   assert.notEqual(result.spec.legend?.color,false);
   assert.equal(result.spec.encode.color,'category');
 });
+
+test('categorical heatmaps map y as a coordinate and infer count as the default color measure',()=>{
+  const data=[{x:'Mon',y:'AM'},{x:'Mon',y:'AM'},{x:'Tue',y:'PM'}];
+  const result=toolkit.buildRendererSpec(data,{kind:'heatmap',x:'x',y:'y'},'vega');
+  assert.equal(result.spec.encoding.y.type,'nominal');
+  assert.equal(result.spec.encoding.color.field,'count');
+  assert.deepEqual(result.spec.data.values,[{x:'Mon',y:'AM',count:2},{x:'Tue',y:'PM',count:1}]);
+});

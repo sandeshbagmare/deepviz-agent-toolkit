@@ -22,22 +22,22 @@ export function mapping(data:NormalizedData,spec:ChartSpec,engine:BrowserEngine)
   if(!supported[engine].includes(spec.kind)) throw new ValidationError(`Unsupported kind ${spec.kind} for ${engine}`);
   if(spec.kind==='gauge' && data.records.length!==1) throw new ValidationError('A gauge requires exactly one measurement; aggregate first');
   const fields=[...new Set(data.records.flatMap(row=>Object.keys(row)))];
+  const color=spec.color??(spec.kind==='heatmap'?'count':null);
   const x=spec.x??fields[0]??'x';
-  const y=spec.y??(spec.aggregation==='count'?'count':fields.find(field=>field!==x && data.records.some(row=>typeof row[field]==='number')))??x;
+  const y=spec.y??(spec.kind==='heatmap'?fields.find(field=>field!==x && field!==color):spec.aggregation==='count'?'count':fields.find(field=>field!==x && data.records.some(row=>typeof row[field]==='number')))??x;
   if(spec.kind!=='table') {
-    for(const field of [x,y,spec.color,spec.size].filter((field):field is string=>field!==null)) {
+    for(const field of [x,y,color,spec.size].filter((field):field is string=>field!==null)) {
       if(data.records.length && !fields.includes(field)) throw new ValidationError(`Missing mapped field: ${field}`);
     }
     if(!['histogram','geo','heatmap'].includes(spec.kind)) requireNumeric(data.records,y);
     if(spec.kind==='histogram') requireNumeric(data.records,x);
     if(spec.size) requireNumeric(data.records,spec.size);
     if(spec.kind==='heatmap') {
-      if(!spec.color) throw new ValidationError('Heatmap requires a numeric color value field');
-      requireNumeric(data.records,spec.color);
+      requireNumeric(data.records,color!);
     }
     if(['pie','treemap','sunburst','funnel','gauge','bubble'].includes(spec.kind) && data.records.some(row=>typeof row[y]==='number' && row[y]<0)) throw new ValidationError(`${spec.kind} requires non-negative values`);
   }
-  return {x,y,color:spec.color,size:spec.size};
+  return {x,y,color,size:spec.size};
 }
 
 const literalField=(field:string)=>field.replace(/[.\[\]\\]/g,'\\$&');
@@ -50,6 +50,7 @@ export function vegaSpec(data:NormalizedData,spec:ChartSpec,m:ChartMapping):Rend
   };
   if(color) encoding.color={field:literalField(color),type:spec.kind==='heatmap'?'quantitative':'nominal'};
   if(size) encoding.size={field:literalField(size),type:'quantitative'};
+  if(spec.kind==='heatmap') encoding.y={field:literalField(y),type:quantitative(y)?'quantitative':'nominal'};
   const mark:RendererSpec={type:({scatter:'point',bubble:'circle',heatmap:'rect',histogram:'bar',box:'boxplot',pie:'arc',violin:'area'} as Record<string,string>)[spec.kind]??spec.kind,tooltip:false};
   const result:RendererSpec={$schema:'https://vega.github.io/schema/vega-lite/v6.json',data:{values:data.records},mark,encoding,width:spec.width-120,height:spec.height-100,
     config:{background:spec.theme==='dark'?'#111827':'white',axis:{labelColor:spec.theme==='dark'?'#e5e7eb':'#374151',titleColor:spec.theme==='dark'?'#e5e7eb':'#374151'},legend:{labelColor:spec.theme==='dark'?'#e5e7eb':'#374151',titleColor:spec.theme==='dark'?'#e5e7eb':'#374151'}}};
