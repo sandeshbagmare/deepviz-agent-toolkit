@@ -2,13 +2,43 @@ import {isObject, safeKey, validateSpec, ValidationError} from './models.js';
 import type {Aggregation, ChartSpec, DataRecord, NormalizedData, Scalar} from './models.js';
 
 const MAX_FIELDS = 1024;
-const MAX_TEXT = 10000;
 const MAX_DEPTH = 64;
-const MAX_RECORD_CHARS = 100_000;
-const MAX_RETAINED_CHARS = 16_000_000;
+const MAX_CELL_BYTES = 64 * 1024;
+const MAX_RECORD_BYTES = 256 * 1024;
+const MAX_RETAINED_BYTES = 16 * 1024 * 1024;
 const wrappers = ['edges','nodes','records','rows','results','items','pages','data'];
 const metadata = ['pageInfo','totalCount','count','extensions','errors','meta','pagination'];
 const numericText = /^-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?$/;
+
+function stringBytes(text:string):number {
+  if(text.length>MAX_CELL_BYTES)throw new ValidationError('String cell or field name exceeds 64 KiB UTF-8 limit');
+  let utf8=0,json=2;
+  for(let i=0;i<text.length;i++) {
+    const code=text.charCodeAt(i),next=text.charCodeAt(i+1);
+    let bytes=code<0x80?1:code<0x800?2:3;
+    if(code>=0xd800 && code<=0xdbff && next>=0xdc00 && next<=0xdfff) {bytes=4;i++;json+=4;}
+    else if(code===34 || code===92 || code===8 || code===9 || code===10 || code===12 || code===13)json+=2;
+    else if(code<32 || (code>=0xd800 && code<=0xdfff))json+=6;
+    else json+=bytes;
+    utf8+=bytes;
+    if(utf8>MAX_CELL_BYTES)throw new ValidationError('String cell or field name exceeds 64 KiB UTF-8 limit');
+  }
+  return json;
+}
+
+function scalarBytes(value:Scalar):number {return typeof value==='string'?stringBytes(value):String(value).length;}
+function fieldBytes(key:string,value:Scalar):number {return stringBytes(key)+1+scalarBytes(value);}
+function recordBytes(row:DataRecord):number {
+  let bytes=2,fields=0;
+  for(const [key,value] of Object.entries(row)) {
+    bytes+=fieldBytes(key,value)+(fields++?1:0);
+    checkRecordBytes(bytes);
+  }
+  return bytes;
+}
+function checkRecordBytes(bytes:number):void {
+  if(bytes>MAX_RECORD_BYTES)throw new ValidationError('Flattened record exceeds 256 KiB UTF-8 JSON byte budget');
+}
 
 type Notice=(message:string)=>void;
 function checkGraphql(value:Record<string,unknown>,warn:Notice):void {
@@ -69,7 +99,7 @@ function* unpack(value: unknown, warn:Notice, depth = 0): Generator<unknown> {
     return;
   }
   if (isObject(value)) {
-    for (const key of Object.keys(value)) safeKey(key);
+    for (const key of Object.keys(value)) {stringBytes(key);safeKey(key);}
     const entries=Object.entries(value);
     if(!entries.length && !depth)return;
     if(Object.hasOwn(value,'node') && entries.every(([key])=>['node','cursor'].includes(key))) {
@@ -199,12 +229,14 @@ function finishSelection(spec:ChartSpec,warn:Notice,state:PathState):void {
   if(state.missing)warn('Data path branches with missing components skipped');
 }
 
-function flatten(value: unknown, warn: Notice,index:number): DataRecord {
+function flatten(value: unknown, warn: Notice,index:number): {row:DataRecord,cost:number} {
   if(!isObject(value)) value={index,value};
   const result: DataRecord={};
+  let cost=2,fields=0;
   const seen=new Set<object>();
   const visit=(node: unknown, prefix: string, depth: number): void=> {
     if(depth>MAX_DEPTH) throw new ValidationError('Cyclic input or maximum nesting depth exceeded');
+    if(prefix)stringBytes(prefix);
     if(Array.isArray(node)) {
       if(seen.has(node))throw new ValidationError('Cyclic input is not supported');
       seen.add(node);node.forEach((item,i)=>visit(item,`${prefix}.${i}`,depth+1));seen.delete(node);return;
@@ -213,25 +245,26 @@ function flatten(value: unknown, warn: Notice,index:number): DataRecord {
       if(seen.has(node)) throw new ValidationError('Cyclic input is not supported');
       if(Object.getPrototypeOf(node)!==Object.prototype && Object.getPrototypeOf(node)!==null) throw new ValidationError('Only plain JSON objects are supported');
       seen.add(node);
-      for(const [key,item] of Object.entries(node)) { if(!key)throw new ValidationError('Record field names must be non-empty');safeKey(key); visit(item,prefix?`${prefix}.${key}`:key,depth+1); }
+      for(const [key,item] of Object.entries(node)) { if(!key)throw new ValidationError('Record field names must be non-empty');stringBytes(key);safeKey(key); visit(item,prefix?`${prefix}.${key}`:key,depth+1); }
       seen.delete(node);
       return;
     }
-    if(Object.keys(result).length>=MAX_FIELDS) throw new ValidationError(`Record exceeds ${MAX_FIELDS} fields`);
+    if(fields>=MAX_FIELDS) throw new ValidationError(`Record exceeds ${MAX_FIELDS} fields`);
     if(Object.hasOwn(result,prefix)) throw new ValidationError(`Colliding flattened field: ${prefix}`);
     let scalar: Scalar;
     if(typeof node==='number') {
       scalar=Number.isFinite(node)?node:null;
       if(scalar===null) warn('Non-finite numeric values replaced with null');
     } else if(typeof node==='string') {
-      scalar=node.slice(0,MAX_TEXT);
-      if(node.length>MAX_TEXT) warn(`Text fields truncated to ${MAX_TEXT} characters`);
+      scalar=node;
     } else if(node===null || typeof node==='boolean') scalar=node;
     else throw new ValidationError(`Non-JSON value in field ${prefix}`);
+    cost+=fieldBytes(prefix,scalar)+(fields++?1:0);
+    checkRecordBytes(cost);
     result[prefix]=scalar;
   };
   visit(value,'',0);
-  return result;
+  return {row:result,cost};
 }
 
 class Reducer {
@@ -241,34 +274,43 @@ class Reducer {
   private warnings=new Set<string>();
   private count=0;
   private random=0x12345678;
-  private retainedChars=0;
+  private retainedBytes=128;
   private prefix:{row:DataRecord,index:number,cost:number}[]=[];
   private strategy:Aggregation|null=null;
   private fields:string[]=[];
   private measure='count';
   private schema=new Map<string,number>();
   private missing=0;
-  notice=(message:string):void=>{this.warnings.add(message);};
+  notice=(message:string):void=>{
+    if(!this.warnings.has(message)) {this.reserve(stringBytes(message)+16);this.warnings.add(message);}
+  };
   constructor(private spec: ChartSpec) {
-    for(const key of [spec.x,spec.y,spec.color,spec.size,spec.data_path]) if(key) safeKey(key);
+    for(const key of [spec.x,spec.y,spec.color,spec.size,spec.data_path]) if(key) {stringBytes(key);safeKey(key);}
     if(spec.data_path!==null && spec.data_path.split('.').some(part=>!part)) throw new ValidationError('data_path must contain non-empty dot-separated components');
     if([spec.x,spec.y,spec.color,spec.size].some(key=>key!==null && !key.trim())) throw new ValidationError('Mapped field names must not be empty');
   }
   add(value: unknown): void {
-    const row=flatten(value,this.notice,this.count);
-    const cost=Object.entries(row).reduce((sum,[key,value])=>sum+key.length+String(value).length+8,0);
-    if(cost>MAX_RECORD_CHARS) throw new ValidationError('Record exceeds 100,000-character budget; reduce fields or text');
+    const flattened=flatten(value,this.notice,this.count),row=flattened.row;
+    let cost=flattened.cost;
     const index=this.count++;
     if(!Number.isSafeInteger(this.count)) throw new ValidationError('Input count exceeds safe integer range');
     for(const [key,value] of Object.entries(row)) {
       const type=typeof value==='number'?1:typeof value==='string'?2:value===null?0:4;
+      if(!this.schema.has(key)) {
+        if(this.schema.size>=MAX_FIELDS)throw new ValidationError(`Input schema exceeds ${MAX_FIELDS} fields`);
+        this.reserve(stringBytes(key)+16);
+      }
       this.schema.set(key,(this.schema.get(key)??0)|type);
     }
-    if(this.schema.size>MAX_FIELDS) throw new ValidationError(`Input schema exceeds ${MAX_FIELDS} fields`);
     for(const field of [this.spec.x,this.spec.y,this.spec.color,this.spec.size]) {
-      if(field!==null && !Object.hasOwn(row,field)) {row[field]=null;this.missing++;}
+      if(field!==null && !Object.hasOwn(row,field)) {
+        cost+=fieldBytes(field,null)+(Object.keys(row).length?1:0);checkRecordBytes(cost);
+        row[field]=null;this.missing++;
+      }
     }
+    cost+=64;
     if(this.strategy===null) {
+      this.reserve(cost);
       this.prefix.push({row,index,cost});
       if(this.prefix.length===32) this.initialize();
     } else this.reduce(row,index,cost);
@@ -304,8 +346,11 @@ class Reducer {
       if(this.fields.includes(this.measure)) throw new ValidationError('Reduction measure must differ from grouping fields');
       if(this.spec.size!==null && ![...this.fields,this.measure].includes(this.spec.size)) throw new ValidationError('Reduction would remove the size field; use aggregation sample or none');
     }
-    for(const {row,index,cost} of this.prefix) this.reduce(row,index,cost);
-    this.prefix=[];
+    while(this.prefix.length) {
+      const {row,index,cost}=this.prefix.shift()!;
+      this.retainedBytes-=cost;
+      this.reduce(row,index,cost);
+    }
   }
   private grouped():boolean {return this.strategy!==null && ['sum','mean','count','min','max'].includes(this.strategy);}
   private reduce(row:DataRecord,index:number,cost:number):void {
@@ -317,18 +362,19 @@ class Reducer {
         if(this.other) group=this.other;
         else if(this.groups.size<max_points) {
           const record=Object.fromEntries(this.fields.map(field=>[field,row[field]??null])) as DataRecord;
-          const groupCost=JSON.stringify(record).length+40;
+          const keyCost=2+this.fields.reduce((bytes,field,i)=>bytes+scalarBytes(row[field]??null)+(i?1:0),0);
+          const groupCost=recordBytes(record)+keyCost+stringBytes(this.measure)+26+128;
+          this.reserve(groupCost);
           group={row:record,count:0,value:null,correction:0,cost:groupCost};this.groups.set(key,group);
-          this.retainedChars+=groupCost;this.checkBudget();
         } else {
           const last=[...this.groups.keys()].at(-1)!;
           this.other=this.groups.get(last)!;this.groups.delete(last);group=this.other;
-          this.warnings.add(`Group cardinality exceeded max_points=${max_points}; first ${max_points-1} groups are exact and all remaining contributions form the final other bucket`);
+          this.notice(`Group cardinality exceeded max_points=${max_points}; first ${max_points-1} groups are exact and all remaining contributions form the final other bucket`);
         }
       }
       if(this.strategy==='count') {group.count++;group.value=group.count;return;}
       const value=row[this.measure];
-      if(typeof value!=='number') {if(value!==null && value!==undefined)this.warnings.add('Non-numeric measure values excluded from reduction');return;}
+      if(typeof value!=='number') {if(value!==null && value!==undefined)this.notice('Non-numeric measure values excluded from reduction');return;}
       group.count++;
       if(group.value===null) group.value=value;
       else if(this.strategy==='mean') group.value=group.value*((group.count-1)/group.count)+value/group.count;
@@ -339,29 +385,31 @@ class Reducer {
         group.value=total;
       }
       else group.value=this.strategy==='min'?Math.min(group.value,value):this.strategy==='max'?Math.max(group.value,value):group.value+value;
-      if(!Number.isFinite(group.value)) this.warnings.add('Non-finite numeric values replaced with null');
+      if(!Number.isFinite(group.value)) this.notice('Non-finite numeric values replaced with null');
       return;
     }
-    if(this.records.length<max_points) { this.records.push({row,index,cost});this.retainedChars+=cost; }
+    if(this.records.length<max_points) { this.reserve(cost);this.records.push({row,index,cost}); }
     else {
       this.random^=this.random<<13; this.random^=this.random>>>17; this.random^=this.random<<5;
       const target=Math.floor((this.random>>>0)/4294967296*(index+1));
-      if(target<max_points) { this.retainedChars+=cost-this.records[target]!.cost;this.records[target]={row,index,cost}; }
+      if(target<max_points) { this.reserve(cost-this.records[target]!.cost);this.records[target]={row,index,cost}; }
     }
-    this.checkBudget();
   }
-  private checkBudget():void {
-    if(this.retainedChars>MAX_RETAINED_CHARS) throw new ValidationError('Retained data exceeds 16 MB character budget; lower max_points or reduce fields');
+  private reserve(bytes:number):void {
+    if(this.retainedBytes+bytes>MAX_RETAINED_BYTES) throw new ValidationError('Retained normalized state exceeds 16 MiB UTF-8 JSON byte budget; lower max_points or reduce fields');
+    this.retainedBytes+=bytes;
   }
   finish(): NormalizedData {
     if(this.strategy===null) this.initialize();
     for(const field of [this.spec.x,this.spec.y,this.spec.color,this.spec.size]) if(field!==null && this.count && !this.schema.has(field)) throw new ValidationError(`Requested field missing from input: ${field}`);
-    if(this.missing) this.warnings.add(`${this.missing} missing mapped field values filled with null`);
+    if(this.missing) this.notice(`${this.missing} missing mapped field values filled with null`);
     const mixed=[...this.schema].filter(([,mask])=>(mask&1) && (mask&6)).map(([key])=>key);
-    if(mixed.length)this.warnings.add(`Fields contain mixed numeric/non-numeric values: ${mixed.join(', ')}.`);
+    if(mixed.length)this.notice(mixed.reduce((bytes,key)=>bytes+key.length,0)>4096?
+      `Fields contain mixed numeric/non-numeric values: ${mixed.length} fields (names omitted from byte-bounded metadata).`:
+      `Fields contain mixed numeric/non-numeric values: ${mixed.join(', ')}.`);
     const {max_points}=this.spec;
     const grouped=this.grouped();
-    if(!grouped && this.count>max_points) this.warnings.add(`Deterministic reservoir sample: ${max_points} of ${this.count} records; max_points overrides aggregation=${this.spec.aggregation}`);
+    if(!grouped && this.count>max_points) this.notice(`Deterministic reservoir sample: ${max_points} of ${this.count} records; max_points overrides aggregation=${this.spec.aggregation}`);
     const states=[...this.groups.values()];
     if(this.other) {
       let label='__deepviz_other__';
@@ -369,13 +417,18 @@ class Reducer {
       while(labels.has(label)) label+='_';
       states.push({...this.other,row:Object.fromEntries(this.fields.map(field=>[field,label]))});
     }
-    return {
-      records:grouped?states.map(group=>{
+    const records:DataRecord[]=[];
+    if(grouped) {
+      this.groups.clear();this.other=null;
+      for(const group of states) {
         const value=group.value===null?null:group.value+(this.strategy==='sum'?group.correction:0);
         if(value!==null && !Number.isFinite(value))this.notice('Non-finite numeric values replaced with null');
-        return {...group.row,[this.measure]:value===null || !Number.isFinite(value)?null:value};
-      }):
-        this.records.sort((a,b)=>a.index-b.index).map(item=>item.row),
+        const row={...group.row,[this.measure]:value===null || !Number.isFinite(value)?null:value};
+        this.reserve(recordBytes(row)+1-group.cost);records.push(row);
+      }
+    }
+    return {
+      records:grouped?records:this.records.sort((a,b)=>a.index-b.index).map(item=>item.row),
       input_count:this.count, warnings:[...this.warnings],
       strategy:grouped?this.strategy!:this.count>max_points?'sample':this.strategy==='sample'?'sample':'none',
     };
