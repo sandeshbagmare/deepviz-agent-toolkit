@@ -42,6 +42,8 @@ def _check_replay(value: Any, depth: int = 0) -> None:
     if depth > 64:
         raise ValueError("Dashboard replay record is nested too deeply or cyclic")
     if isinstance(value, Mapping):
+        if len(value) > 1024:
+            raise ValueError("Record exceeds 1024 fields")
         for key, child in value.items():
             if not isinstance(key, str) or not key:
                 raise ValueError("Record field names must be non-empty strings")
@@ -129,7 +131,12 @@ def render(
         normalized = []
         for child in specs:
             payload_bytes = _payload_budget(child.model_dump(), payload_bytes)
-            result = normalize(source, child.model_copy(update={"format": "jsonl"}) if spooled else child)
+            if spooled:
+                # Own the replay handle even when validation leaves a generator in its traceback.
+                with source.open(encoding="utf-8") as replay:
+                    result = normalize(replay, child.model_copy(update={"format": "jsonl"}))
+            else:
+                result = normalize(source, child)
             payload_bytes = _payload_budget(result.records, payload_bytes)
             normalized.append(result)
     warnings = [message for result in normalized for message in result.warnings]

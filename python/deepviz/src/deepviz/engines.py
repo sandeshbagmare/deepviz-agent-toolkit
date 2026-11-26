@@ -13,6 +13,7 @@ import textwrap
 from collections import defaultdict
 from datetime import UTC, datetime
 from html import escape
+from importlib.resources import files
 from typing import Any, overload
 
 import numpy as np
@@ -24,7 +25,7 @@ PALETTE = ["#386cb0", "#b85c00", "#2a9d73", "#c44964", "#8861a9", "#a67c42"]
 MARKERS = ["o", "s", "^", "D", "v", "P", "X", "*"]
 LINESTYLES = ["-", "--", "-.", ":"]
 DASHES = [[], [6, 3], [2, 2], [6, 2, 2, 2], [10, 2], [2, 4], [8, 2, 2, 2, 2, 2], [10, 3, 1, 3]]
-ECHARTS_URL = "https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.min.js"
+ECHARTS_URL = "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js"
 ANTV_URL = "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js"
 
 
@@ -575,7 +576,10 @@ def _echarts(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) 
         option["graphic"] = [{"type": "text", "left": 20 + j * (spec.width - 40) / max(1, len(columns)),
                                "top": 60 + i * 20, "style": {"text": str(value), "fill": fg, "fontSize": 12}}
                               for i, row in enumerate([dict(zip(columns, columns, strict=True)), *records])
-                              for j, value in enumerate(row.get(key, "") for key in columns)]
+                               for j, value in enumerate(row.get(key, "") for key in columns)]
+    if "xAxis" in option:
+        option["xAxis"].update(nameLocation="middle", nameGap=30)
+        option["grid"]["bottom"] = 55
     return option
 
 
@@ -710,7 +714,7 @@ def browser_html(
         info = metadata[i] if metadata else {}
         records = info.get("records", [])
         columns = list(dict.fromkeys(key for row in records for key in row))
-        summary = (f'{spec.kind} chart. {info.get("output_count", len(records))} retained records from '
+        summary = (f'{spec.kind} chart. {info.get("output_count", len(records))} displayed records from '
                    f'{info.get("input_count", len(records))} input records. '
                    f'Reduction strategy: {info.get("strategy", "none")}. {spec.description}')
         warnings = "".join(f'<li>{escape(str(w))}</li>' for w in info.get("warnings", []))
@@ -729,8 +733,10 @@ def browser_html(
     scripts = ""
     if not image:
         if engine == "plotly":
-            from plotly.offline import get_plotlyjs
-            dependency = f"<script>{get_plotlyjs()}</script>"
+            from plotly.offline import get_plotlyjs, get_plotlyjs_version
+            notice = files("deepviz").joinpath("resources/plotly-js-LICENSE.txt").read_text(encoding="utf-8")
+            dependency = (f"<!-- Plotly.js runtime v{get_plotlyjs_version()}; notice from upstream v3.7.0 LICENSE.\n"
+                          f"{notice}--><script>{get_plotlyjs()}</script>")
             bootstrap = "return Plotly.newPlot(el,p.data,p.layout,{responsive:true,displaylogo:false});"
         elif engine == "echarts":
             dependency = f'<script src="{ECHARTS_URL}"></script>'
