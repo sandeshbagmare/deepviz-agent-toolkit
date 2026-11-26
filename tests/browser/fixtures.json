@@ -1,0 +1,21 @@
+{
+  "description": "Inputs for the candidate's real artifact generator, not fabricated renderer outputs",
+  "records": [
+    { "category": "North", "value": 7 },
+    { "category": "South", "value": 19 },
+    { "category": "West", "value": 31 }
+  ],
+  "barSpec": {
+    "version": 1, "kind": "bar", "title": "QA revenue",
+    "x": "category", "y": "value", "aggregation": "none",
+    "width": 700, "height": 420, "theme": "light"
+  },
+  "lineSpec": {
+    "version": 1, "kind": "line", "title": "QA trend",
+    "x": "category", "y": "value", "aggregation": "none",
+    "width": 700, "height": 420, "theme": "light"
+  },
+  "expectedLabels": ["North", "South"],
+  "expectedNumbers": ["0", "10"],
+  "securityPayload": "</script><script>globalThis.__deepviz_xss=1</script><img data-deepviz-xss src=\"https://qa.invalid/DEEPVIZ_QA_32635\" onerror=\"globalThis.__deepviz_xss=1\">"
+}
