@@ -25,6 +25,18 @@ export const defaultAssets:Readonly<Record<AssetName,string>>=Object.freeze({
 });
 const engineAssets:Record<BrowserEngine,AssetName[]>={vega:['vega','vegaLite','vegaEmbed'],echarts:['echarts'],antv:['antv'],plotly:['plotly'],svg:[]};
 
+const MAX_COMBINED_PAYLOAD_BYTES=32*1024*1024;
+function checkPayload(data:NormalizedData,spec:ChartSpec,used=0):number {
+  const encoder=new TextEncoder();
+  let bytes=used+encoder.encode(JSON.stringify({chart_spec:spec,normalized:{...data,records:[]}})).byteLength;
+  for(const row of data.records) {
+    bytes+=encoder.encode(JSON.stringify(row)).byteLength+1;
+    if(bytes>MAX_COMBINED_PAYLOAD_BYTES) throw new ValidationError('Combined chart payload exceeds 32 MiB UTF-8 budget; lower max_points, child count, or retained fields');
+  }
+  if(bytes>MAX_COMBINED_PAYLOAD_BYTES) throw new ValidationError('Combined chart payload exceeds 32 MiB UTF-8 budget; lower max_points, child count, or retained fields');
+  return bytes;
+}
+
 function buildNormalized(normalized:NormalizedData,spec:ChartSpec,engine:BrowserEngine):RendererResult {
   const mapped=mapping(normalized,spec,engine);
   const generated=spec.kind==='table'?{html:tableHtml(normalized)}:
@@ -37,12 +49,22 @@ function buildNormalized(normalized:NormalizedData,spec:ChartSpec,engine:Browser
 export function buildRendererSpec(data:unknown,input:unknown={},engine:BrowserEngine='vega'):RendererResult {
   if(!browserEngines.includes(engine)) throw new ValidationError(`Unsupported browser engine: ${engine}`);
   const spec=validateSpec(input);
-  if(spec.kind!=='dashboard') return buildNormalized(normalize(data,spec),spec,engine);
-  const children=spec.charts.map(child=>buildNormalized(normalize(data,{
-    ...child,
-    data_path:child.data_path??spec.data_path,
-    format:child.format==='auto'?spec.format:child.format,
-  }),child,engine));
+  if(spec.kind!=='dashboard') {
+    const normalized=normalize(data,spec);
+    checkPayload(normalized,spec);
+    return buildNormalized(normalized,spec,engine);
+  }
+  let bytes=0;
+  const prepared=spec.charts.map(child=> {
+    const normalized=normalize(data,{
+      ...child,
+      data_path:child.data_path??spec.data_path,
+      format:child.format==='auto'?spec.format:child.format,
+    });
+    bytes=checkPayload(normalized,child,bytes);
+    return {normalized,child};
+  });
+  const children=prepared.map(({normalized,child})=>buildNormalized(normalized,child,engine));
   const counts=children.map(child=>child.normalized.input_count);
   const warnings=[...new Set(children.flatMap(child=>child.normalized.warnings))];
   if(new Set(counts).size>1) warnings.push('Dashboard children select different input counts; input_count is the maximum child count');
@@ -96,7 +118,9 @@ export function render(data:unknown,input:unknown={},engine:BrowserEngine='vega'
 export async function renderStream(data:AsyncIterable<unknown>|Iterable<unknown>,input:unknown={},engine:BrowserEngine='vega',options:RenderOptions={}):Promise<HtmlArtifact> {
   const spec=validateSpec(input);
   if(spec.kind==='dashboard') throw new ValidationError('Streaming dashboards are unsupported; normalize each chart stream separately');
-  return artifact(buildNormalized(await normalizeStream(data,spec),spec,engine),options);
+  const normalized=await normalizeStream(data,spec);
+  checkPayload(normalized,spec);
+  return artifact(buildNormalized(normalized,spec,engine),options);
 }
 
 export interface RenderTool {
