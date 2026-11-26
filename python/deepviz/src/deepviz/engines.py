@@ -11,8 +11,9 @@ import json
 import math
 import textwrap
 from collections import defaultdict
+from datetime import datetime
 from html import escape
-from typing import Any
+from typing import Any, overload
 
 import numpy as np
 
@@ -36,7 +37,15 @@ def safe_json(value: Any) -> str:
     return result
 
 
-def _number(value: Any, default: float = 0.0) -> float:
+@overload
+def _number(value: Any, default: float) -> float: ...
+
+
+@overload
+def _number(value: Any, default: None = None) -> float | None: ...
+
+
+def _number(value: Any, default: float | None = None) -> float | None:
     try:
         value = float(value)
         return value if math.isfinite(value) else default
@@ -52,11 +61,14 @@ def channels(records: list[dict], spec: ChartSpec) -> list[dict]:
     )]
     x = spec.x or next((key for key in fields if key not in numeric), fields[0] if fields else None)
     y = spec.y or next((key for key in numeric if key != x), numeric[0] if numeric else None)
+    if spec.kind == "histogram" and spec.x is None:
+        x = spec.y or next((key for key in numeric if key != "index"), x)
+    heat = spec.color or ("count" if spec.kind == "heatmap" else y)
     return [{"_x": row.get(x, i) if x else i,
-             "_y": row.get(y, "") if spec.kind == "heatmap" else _number(row.get(y, 1)) if y else 1,
+             "_y": row.get(y, "") if spec.kind == "heatmap" else _number(row.get(y)) if y else 1,
              "_color": str(row.get(spec.color, "Series")) if spec.color else "Series",
              "_size": max(0, _number(row.get(spec.size, 8), 8)) if spec.size else 8,
-             "_heat": _number(row.get(spec.color, row.get(y, 1))) if spec.color else _number(row.get(y, 1)),
+             "_heat": _number(row.get(heat, 1)),
              "_row": i} for i, row in enumerate(records)]
 
 
@@ -68,10 +80,28 @@ def _groups(data: list[dict]) -> dict[str, list[dict]]:
 
 
 def _geometry(data: list[dict], spec: ChartSpec) -> tuple[list[dict], list[str]]:
+    warnings = []
+    if spec.kind == "heatmap":
+        missing = sum(row["_heat"] is None for row in data)
+        if missing:
+            data = [row for row in data if row["_heat"] is not None]
+            warnings.append(f"{missing} heatmap records with missing/non-numeric color values omitted from geometry.")
+    elif spec.kind == "histogram":
+        missing = len(data) - len(_histogram_values(data))
+        if missing:
+            warnings.append(f"{missing} missing/non-numeric histogram observations omitted from geometry.")
+    elif spec.kind != "table":
+        missing = sum(row["_y"] is None for row in data)
+        if missing:
+            if spec.kind in {"line", "area", "radar"}:
+                warnings.append(f"{missing} missing/non-numeric y observations are shown as gaps, not zeros.")
+            else:
+                data = [row for row in data if row["_y"] is not None]
+                warnings.append(f"{missing} records with missing/non-numeric y observations omitted from geometry.")
     if spec.kind in {"pie", "treemap", "sunburst", "funnel"} and any(r["_y"] < 0 for r in data):
-        return [{**r, "_y": max(0, r["_y"])} for r in data], [
+        return [{**r, "_y": max(0, r["_y"])} for r in data], warnings + [
             f"{spec.kind} geometry displays negative weights as zero; original records remain in the manifest."]
-    return data, []
+    return data, warnings
 
 
 def _boxes(data: list[dict]) -> list[dict]:
@@ -83,10 +113,15 @@ def _boxes(data: list[dict]) -> list[dict]:
             for name, values in groups.items()]
 
 
+def _histogram_values(data: list[dict]) -> list[float]:
+    values = [_number(row["_x"]) for row in data]
+    if not any(value is not None for value in values):
+        values = [row["_y"] for row in data]
+    return [value for value in values if value is not None]
+
+
 def _histogram(data: list[dict]) -> list[dict]:
-    values = [r["_x"] for r in data]
-    if not all(isinstance(v, (float, int)) for v in values):
-        values = [r["_y"] for r in data]
+    values = _histogram_values(data)
     if not values:
         return []
     counts, edges = np.histogram(values, bins=min(20, max(1, math.ceil(math.sqrt(len(values))))))
@@ -152,7 +187,7 @@ def matplotlib_figure(charts: list[tuple[list[dict], ChartSpec]], dashboard: Cha
     from matplotlib.figure import Figure
 
     parent = dashboard or charts[0][1]
-    bg, fg = _colors(parent)
+    bg, outer_fg = _colors(parent)
     fig = Figure(figsize=(parent.width / 100, parent.height / 100), dpi=100, facecolor=bg)
     FigureCanvasAgg(fig)
     columns = min(parent.columns, len(charts)) if dashboard else 1
@@ -165,11 +200,11 @@ def matplotlib_figure(charts: list[tuple[list[dict], ChartSpec]], dashboard: Cha
         polar = spec.kind in {"radar", "gauge"}
         ax: Any = fig.add_subplot(rows, columns, i + 1, projection="polar" if polar else None)
         ax.set_facecolor(bg)
-        ax.tick_params(colors=fg)
+        ax.tick_params(colors=outer_fg)
         for spine in ax.spines.values():
             spine.set_color(fg)
         chart_width = parent.width / columns
-        ax.set_title(_wrap(spec.title, int(chart_width / 8)), color=fg, fontsize=11)
+        ax.set_title(_wrap(spec.title, int(chart_width / 8)), color=outer_fg, fontsize=11)
         data = channels(records, spec)
         data, notes = _geometry(data, spec)
         warnings.extend(notes)
@@ -193,6 +228,7 @@ def matplotlib_figure(charts: list[tuple[list[dict], ChartSpec]], dashboard: Cha
                            hatch=["", "//", "\\\\", "xx", "..", "++", "oo"][j % 7], edgecolor=fg,
                            linewidth=.5)
                 elif kind in {"line", "area"}:
+                    gy = [value if value is not None else math.nan for value in gy]
                     ax.plot(gx, gy, color=color, label=name, marker=MARKERS[j % len(MARKERS)],
                             linestyle=LINESTYLES[j % len(LINESTYLES)], markersize=4)
                     if kind == "area":
@@ -207,19 +243,19 @@ def matplotlib_figure(charts: list[tuple[list[dict], ChartSpec]], dashboard: Cha
             if kind == "geo":
                 ax.set(xlim=(-180, 180), ylim=(-90, 90), xlabel="Longitude", ylabel="Latitude")
             else:
-                ax.set_xlabel(spec.x or "Category", color=fg)
-                ax.set_ylabel(spec.y or "Value", color=fg)
+                ax.set_xlabel(spec.x or "Category", color=outer_fg)
+                ax.set_ylabel(spec.y or "Value", color=outer_fg)
         elif kind in {"pie", "sunburst"}:
             if sum(max(0, value) for value in y) == 0:
                 ax.text(.5, .5, "No positive values", ha="center", color=fg)
             else:
                 ax.pie([max(0, value) for value in y], labels=[str(v) for v in x], colors=PALETTE,
-                       textprops={"color": fg}, wedgeprops={"width": .55} if kind == "sunburst" else {})
+                       textprops={"color": outer_fg}, wedgeprops={"width": .55} if kind == "sunburst" else {})
         elif kind == "histogram":
             hist = _histogram(data)
             ax.bar([r["_x"] for r in hist], [r["_y"] for r in hist],
                    width=[r["_right"] - r["_left"] for r in hist], color=PALETTE[0], edgecolor=bg)
-            ax.set_ylabel("Count", color=fg)
+            ax.set_ylabel("Count", color=outer_fg)
         elif kind in {"box", "violin"}:
             boxes = _boxes(data)
             values = [b["values"] for b in boxes]
@@ -241,10 +277,11 @@ def matplotlib_figure(charts: list[tuple[list[dict], ChartSpec]], dashboard: Cha
             ax.set_xticks(range(len(xs)), xs)
             ax.set_yticks(range(len(ys)), ys)
             colorbar = fig.colorbar(image, ax=ax)
-            colorbar.ax.tick_params(colors=fg)
+            colorbar.ax.tick_params(colors=outer_fg)
             colorbar.ax.set_facecolor(bg)
             colorbar.outline.set_edgecolor(fg)
         elif kind == "radar":
+            y = [value if value is not None else math.nan for value in y]
             angles = np.linspace(0, 2 * math.pi, len(data), endpoint=False).tolist()
             ax.plot(angles + angles[:1], y + y[:1], color=PALETTE[0])
             ax.fill(angles + angles[:1], y + y[:1], color=PALETTE[0], alpha=.2)
@@ -272,9 +309,9 @@ def matplotlib_figure(charts: list[tuple[list[dict], ChartSpec]], dashboard: Cha
             ax.text(0, 0, f"{y[0]:g}", ha="center", color=fg, fontsize=20)
             ax.set_axis_off()
         elif kind == "table":
-            columns = list(dict.fromkeys(key for row in records for key in row))
-            table = ax.table(cellText=[[str(row.get(key, "")) for key in columns] for row in records],
-                             colLabels=columns, loc="center")
+            table_columns = list(dict.fromkeys(key for row in records for key in row))
+            table = ax.table(cellText=[[str(row.get(key, "")) for key in table_columns] for row in records],
+                             colLabels=table_columns, loc="center")
             table.auto_set_font_size(False)
             table.set_fontsize(8)
             for cell in table.get_celld().values():
@@ -354,7 +391,7 @@ def _plotly(data: list[dict], records: list[dict], spec: ChartSpec) -> dict:
         traces = [{"type": "table", "header": {"values": [escape(c) for c in columns]},
                    "cells": {"values": [[escape(str(row.get(key, ""))) for row in records] for key in columns]}}]
     bg, fg = _colors(spec)
-    layout = {"title": {"text": escape(spec.title)}, "width": spec.width, "height": spec.height,
+    layout: dict[str, Any] = {"title": {"text": escape(spec.title)}, "width": spec.width, "height": spec.height,
               "paper_bgcolor": bg, "plot_bgcolor": bg, "font": {"color": fg}, "showlegend": bool(spec.color),
               "xaxis": {"title": {"text": escape(spec.x or "Category")}},
               "yaxis": {"title": {"text": escape(spec.y or "Value")}}}
@@ -364,8 +401,23 @@ def _plotly(data: list[dict], records: list[dict], spec: ChartSpec) -> dict:
     return {"data": traces, "layout": layout}
 
 
+def _iso_dates(values: list[Any]) -> bool:
+    if not values:
+        return False
+    for value in values:
+        if not isinstance(value, str) or len(value) < 10 or value[4] != "-" or value[7] != "-":
+            return False
+        try:
+            datetime.fromisoformat(value)
+        except ValueError:
+            return False
+    return True
+
+
 def _vega(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) -> dict:
     x_type = "quantitative" if all(isinstance(r["_x"], (int, float)) for r in data) else "nominal"
+    if kind in {"line", "area", "scatter", "bubble"} and _iso_dates([r["_x"] for r in data]):
+        x_type = "temporal"
     encoding: dict = {"x": {"field": "_x", "type": x_type, "title": spec.x or "Category"},
                       "y": {"field": "_y", "type": "quantitative", "title": spec.y or "Value"}}
     if spec.color:
@@ -376,6 +428,8 @@ def _vega(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) -> 
         elif kind in {"line", "area"}:
             encoding["strokeDash"] = {"field": "_color", "type": "nominal", "title": spec.color,
                                       "scale": {"range": DASHES}}
+            if kind == "area":
+                encoding["y"]["stack"] = None
     mark: Any = {"type": {"bar": "bar", "line": "line", "scatter": "point", "bubble": "point",
                          "area": "area", "box": "boxplot", "violin": "area", "geo": "point"}.get(kind, "bar"),
                  "color": PALETTE[0]}
@@ -383,7 +437,7 @@ def _vega(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) -> 
         mark["point"] = True
     transforms = []
     if kind == "bubble":
-        encoding["size"] = {"field": "_size", "type": "quantitative"}
+        encoding["size"] = {"field": "_size", "type": "quantitative", "title": spec.size or "Size"}
     elif kind == "pie":
         mark = {"type": "arc", "tooltip": True}
         encoding = {"theta": {"field": "_y", "type": "quantitative"},
@@ -625,7 +679,7 @@ def browser_html(
         info = metadata[i] if metadata else {}
         records = info.get("records", [])
         columns = list(dict.fromkeys(key for row in records for key in row))
-        summary = (f'{spec.kind} chart. {info.get("output_count", len(records))} displayed records from '
+        summary = (f'{spec.kind} chart. {info.get("output_count", len(records))} retained records from '
                    f'{info.get("input_count", len(records))} input records. '
                    f'Reduction strategy: {info.get("strategy", "none")}. {spec.description}')
         warnings = "".join(f'<li>{escape(str(w))}</li>' for w in info.get("warnings", []))
