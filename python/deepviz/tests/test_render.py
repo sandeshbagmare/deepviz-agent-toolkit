@@ -137,6 +137,28 @@ def test_seven_series_use_redundant_marker_and_line_styles():
         fig.clear()
 
 
+@pytest.mark.parametrize("engine", ["plotly", "vega", "echarts", "antv"])
+def test_browser_seven_series_have_noncolor_distinctions(engine):
+    records = [{"x": i, "y": i + j, "series": f"Series {j}"} for j in range(7) for i in range(2)]
+    native, _, _ = module("engines").native_spec(
+        engine, records, ChartSpec(kind="line", x="x", y="y", color="series")
+    )
+    if engine == "plotly":
+        assert native["data"][0]["line"]["dash"] != native["data"][6]["line"]["dash"]
+        assert native["data"][0]["mode"] == "lines+markers"
+    elif engine == "echarts":
+        assert native["series"][0]["symbol"] != native["series"][6]["symbol"]
+        assert native["legend"]["show"] is True
+    elif engine == "vega":
+        styles = native["encoding"]["strokeDash"]["scale"]["range"]
+        assert styles[0] != styles[6]
+        assert native["mark"]["point"] is True
+    else:
+        lines = [child for child in native["children"] if child["type"] == "line"]
+        assert lines[0]["style"]["lineDash"] != lines[6]["style"]["lineDash"]
+        assert any(child["type"] == "point" for child in native["children"])
+
+
 def _contrast(a, b):
     from matplotlib.colors import to_rgb
 
@@ -189,6 +211,37 @@ def test_browser_data_alternatives_include_real_values_and_reduction_context():
     assert all(value in text for value in ["Alpha", "31", "100", "3", "sample", "Reduced <100> rows"])
     assert parser.descriptions == ["chart-summary-0"]
     assert "Revenue &lt;safe&gt;" in html
+
+
+def test_antv_grouped_bar_dodges_series_and_uses_mapped_axis_titles():
+    native, _, _ = module("engines").native_spec(
+        "antv", ROWS, ChartSpec(x="label", y="amount", color="group")
+    )
+    assert {"type": "dodgeX"} in native["transform"]
+    assert native["axis"]["x"]["title"] == "label"
+    assert native["axis"]["y"]["title"] == "amount"
+
+
+def test_vega_dashboard_dark_theme_survives_composition(tmp_path):
+    artifact = render(ROWS, {"kind": "dashboard", "theme": "dark", "charts": [
+        {"kind": "bar", "x": "label", "y": "amount"},
+    ]}, "vega", tmp_path)
+    svg = next(Path(p) for p in artifact.paths if p.endswith(".svg")).read_text(encoding="utf-8")
+    root = ET.fromstring(svg)
+    assert any(element.get("fill") == "#171b26" for element in root.iter())
+
+
+@pytest.mark.parametrize("engine", ENGINES)
+def test_every_engine_exposes_accessible_real_data_companion(engine, tmp_path):
+    artifact = render(ROWS, {"x": "label", "y": "amount", "aggregation": "none"}, engine, tmp_path)
+    html = next(Path(p) for p in artifact.paths if p.endswith(".html")).read_text(encoding="utf-8")
+    assert "<details>" in html and "<caption>" in html and '<th scope="col">amount</th>' in html
+    assert "<td>31</td>" in html and "Reduction strategy: none" in html
+    if engine in {"matplotlib", "vega"}:
+        assert 'src="chart.svg"' in html
+        assert 'src="C:' not in html
+    if engine in {"echarts", "antv"}:
+        assert "HTML requires network access" in html
 
 
 def test_literal_math_like_labels_never_invoke_matplotlib_math_parser():
@@ -389,6 +442,10 @@ def test_browser_executes_all_native_kinds(engine, tmp_path):
             spec = spec.model_copy(update={"size": "radius"})
         payloads.append(adapter.native_spec(engine, rows, spec)[0])
         specs.append(spec)
+    series_records = [{"x": i, "y": i + j, "series": f"Series {j}"} for j in range(7) for i in range(2)]
+    series_spec = ChartSpec(kind="line", x="x", y="y", color="series", width=480, height=320)
+    payloads.append(adapter.native_spec(engine, series_records, series_spec)[0])
+    specs.append(series_spec)
     html = adapter.browser_html(engine, payloads, specs, ChartSpec(kind="dashboard", charts=specs, columns=3))
     path = tmp_path / "native.html"
     path.write_text(html, encoding="utf-8")
@@ -400,7 +457,8 @@ def test_browser_executes_all_native_kinds(engine, tmp_path):
         page.goto(path.as_uri())
         page.evaluate("async () => await window.deepvizReady")
         assert not errors
-        for i, kind in enumerate(KINDS):
+        for i, spec in enumerate(specs):
+            kind = spec.kind
             if engine == "antv":
                 pixels = page.locator(f"#chart-{i} canvas").evaluate("""canvas => {
                   const data = canvas.getContext('2d').getImageData(0,0,canvas.width,canvas.height).data;
