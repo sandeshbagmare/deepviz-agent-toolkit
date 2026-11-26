@@ -1,0 +1,213 @@
+[
+  {
+    "id": "categorical-auto-sum",
+    "data": [{"g":"a","v":1},{"g":"a","v":2},{"g":"b","v":4}],
+    "spec": {"x":"g","y":"v"},
+    "expected": {"records":[{"g":"a","v":3},{"g":"b","v":4}],"input_count":3,"strategy":"sum"}
+  },
+  {
+    "id": "count-does-not-infer-measure-name",
+    "data": [{"g":"a","v":1},{"g":"a","v":null}],
+    "spec": {"x":"g","aggregation":"count"},
+    "expected": {"records":[{"g":"a","count":2}],"input_count":2,"strategy":"count"}
+  },
+  {
+    "id": "count-explicit-measure-includes-null-and-boolean",
+    "data": [{"g":"a","v":1},{"g":"a","v":null},{"g":"a","v":true}],
+    "spec": {"x":"g","y":"v","aggregation":"count"},
+    "expected": {"records":[{"g":"a","v":3}],"input_count":3,"strategy":"count"}
+  },
+  {
+    "id": "boolean-measure-not-numeric",
+    "data": [{"g":"a","v":true},{"g":"a","v":1}],
+    "spec": {"x":"g","y":"v","aggregation":"sum"},
+    "expected": {"records":[{"g":"a","v":1}],"input_count":2,"strategy":"sum"},
+    "warning_categories": ["nonnumeric","mixed"]
+  },
+  {
+    "id": "all-null-group-is-null-not-zero",
+    "data": [{"g":"a","v":null},{"g":"a","v":"not numeric"}],
+    "spec": {"x":"g","y":"v","aggregation":"mean"},
+    "expected": {"records":[{"g":"a","v":null}],"input_count":2,"strategy":"mean"},
+    "warning_categories": ["nonnumeric"]
+  },
+  {
+    "id": "missing-value-filled-with-null",
+    "data": [{"g":"a","v":2},{"g":"b"}],
+    "spec": {"x":"g","y":"v","aggregation":"sum"},
+    "expected": {"records":[{"g":"a","v":2},{"g":"b","v":null}],"input_count":2,"strategy":"sum"},
+    "warning_categories": ["missing"]
+  },
+  {
+    "id": "missing-entire-requested-field-rejected",
+    "data": [{"g":"a"}],
+    "spec": {"x":"g","y":"v","aggregation":"sum"},
+    "rejected": true
+  },
+  {
+    "id": "heatmap-groups-coordinate-pair",
+    "data": [{"x":"a","y":"b","v":1},{"x":"a","y":"b","v":4},{"x":"a","y":"c","v":2}],
+    "spec": {"kind":"heatmap","x":"x","y":"y","color":"v"},
+    "expected": {"records":[{"x":"a","y":"b","v":5},{"x":"a","y":"c","v":2}],"input_count":3,"strategy":"sum"}
+  },
+  {
+    "id": "heatmap-no-color-counts",
+    "data": [{"x":"a","y":"b"},{"x":"a","y":"b"}],
+    "spec": {"kind":"heatmap","x":"x","y":"y"},
+    "expected": {"records":[{"x":"a","y":"b","count":2}],"input_count":2,"strategy":"count"}
+  },
+  {
+    "id": "heatmap-identical-coordinates-rejected",
+    "data": [{"x":"a","v":1}],
+    "spec": {"kind":"heatmap","x":"x","y":"x","color":"v"},
+    "rejected": true
+  },
+  {
+    "id": "record-array-keeps-parent-id-and-items",
+    "data": [{"id":1,"items":["a","b"]}],
+    "spec": {"kind":"table","aggregation":"none"},
+    "expected": {"records":[{"id":1,"items.0":"a","items.1":"b"}],"input_count":1,"strategy":"none"}
+  },
+  {
+    "id": "record-nested-array-flattens",
+    "data": [{"id":1,"tags":["a","b"]}],
+    "spec": {"kind":"table","aggregation":"none"},
+    "expected": {"records":[{"id":1,"tags.0":"a","tags.1":"b"}],"input_count":1,"strategy":"none"}
+  },
+  {
+    "id": "graphql-error-empty-data-not-error-records",
+    "data": {"data":{},"errors":[{"message":"upstream failure"}]},
+    "spec": {"kind":"table","aggregation":"none"},
+    "rejected": true
+  },
+  {
+    "id": "graphql-errors-null-data-rejected",
+    "data": {"data":null,"errors":[{"message":"upstream failure"}]},
+    "spec": {"kind":"table","aggregation":"none"},
+    "rejected": true
+  },
+  {
+    "id": "graphql-partial-data-keeps-rows",
+    "data": {"data":{"team":{"nodes":[{"id":1}]}},"errors":[{"message":"sibling failure"}]},
+    "spec": {"kind":"table","aggregation":"none"},
+    "expected": {"records":[{"id":1}],"input_count":1,"strategy":"none"},
+    "warning_categories": ["graphql-errors"]
+  },
+  {
+    "id": "graphql-partial-errors-survive-explicit-data-path",
+    "data": {"data":{"team":{"nodes":[{"id":1}]}},"errors":[{"message":"sibling failure"}]},
+    "spec": {"kind":"table","aggregation":"none","data_path":"data.team.nodes"},
+    "expected": {"records":[{"id":1}],"input_count":1,"strategy":"none"},
+    "warning_categories": ["graphql-errors"]
+  },
+  {
+    "id": "nested-record-key-order-does-not-change-graphql-inference",
+    "data": [{"metadata":{"nodes":[{"n":1}]},"id":1},{"id":1,"metadata":{"nodes":[{"n":1}]}}],
+    "spec": {"kind":"table","aggregation":"none"},
+    "expected": {"records":[{"id":1,"metadata.nodes.0.n":1},{"id":1,"metadata.nodes.0.n":1}],"input_count":2,"strategy":"none"}
+  },
+  {
+    "id": "graphql-nested-pages-skip-null-no-server-total-count",
+    "data": [
+      {"data":{"team":{"edges":[{"node":null},{"cursor":"a","node":{"id":1}}],"totalCount":100}}},
+      {"data":{"team":{"nodes":[{"id":2}],"pageInfo":{"hasNextPage":false}}}}
+    ],
+    "spec": {"kind":"table","aggregation":"none"},
+    "expected": {"records":[{"id":1},{"id":2}],"input_count":2,"strategy":"none"},
+    "warning_categories": ["null-skipped"]
+  },
+  {
+    "id": "graphql-ambiguous-sibling-requires-path",
+    "data": {"data":{"team":{"nodes":[{"id":1}]},"version":1}},
+    "spec": {"kind":"table","aggregation":"none"},
+    "rejected": true
+  },
+  {
+    "id": "data-path-broadcast-missing-branch",
+    "data": {"data":[{"rows":[{"id":1}]},{},{"rows":[{"id":2}]}]},
+    "spec": {"kind":"table","aggregation":"none","data_path":"data.rows"},
+    "expected": {"records":[{"id":1},{"id":2}],"input_count":2,"strategy":"none"},
+    "warning_categories": ["path-missing"]
+  },
+  {
+    "id": "data-path-selects-array-index",
+    "data": {"data":[{"id":1},{"id":2}]},
+    "spec": {"kind":"table","aggregation":"none","data_path":"data.1"},
+    "expected": {"records":[{"id":2}],"input_count":1,"strategy":"none"}
+  },
+  {
+    "id": "data-path-empty-broadcast-is-empty",
+    "data": {"data":[]},
+    "spec": {"kind":"table","aggregation":"none","data_path":"data.rows"},
+    "expected": {"records":[],"input_count":0,"strategy":"none"}
+  },
+  {
+    "id": "data-path-missing-index-is-error",
+    "data": {"data":[]},
+    "spec": {"kind":"table","aggregation":"none","data_path":"data.0"},
+    "rejected": true
+  },
+  {
+    "id": "auto-jsonl-records",
+    "data": "{\"id\":1}\n{\"id\":2}",
+    "spec": {"kind":"table","aggregation":"none"},
+    "expected": {"records":[{"id":1},{"id":2}],"input_count":2,"strategy":"none"}
+  },
+  {
+    "id": "explicit-jsonl-with-path",
+    "data": "{\"data\":{\"id\":1}}\n{\"data\":{\"id\":2}}",
+    "spec": {"kind":"table","aggregation":"none","format":"jsonl","data_path":"data"},
+    "expected": {"records":[{"id":1},{"id":2}],"input_count":2,"strategy":"none"}
+  },
+  {
+    "id": "csv-whitespace-numeric-and-missing",
+    "data": "g,v\na, 2 \nb, \n",
+    "spec": {"kind":"table","aggregation":"none","format":"csv"},
+    "expected": {"records":[{"g":"a","v":2},{"g":"b","v":null}],"input_count":2,"strategy":"none"}
+  },
+  {
+    "id": "csv-nonfinite-values-null-and-disclosed",
+    "data": "g,v\na,NaN\nb,Infinity\nc,-inf\nd,1e999\n",
+    "spec": {"kind":"table","aggregation":"none","format":"csv"},
+    "expected": {"records":[{"g":"a","v":null},{"g":"b","v":null},{"g":"c","v":null},{"g":"d","v":null}],"input_count":4,"strategy":"none"},
+    "warning_categories": ["nonfinite"]
+  },
+  {
+    "id": "boolean-and-number-groups-stay-distinct",
+    "data": [{"g":true,"v":1},{"g":1,"v":2},{"g":"1","v":4}],
+    "spec": {"x":"g","y":"v","aggregation":"sum"},
+    "expected": {"records":[{"g":true,"v":1},{"g":1,"v":2},{"g":"1","v":4}],"input_count":3,"strategy":"sum"},
+    "warning_categories": ["mixed"]
+  },
+  {
+    "id": "finite-sum-overflow-null-and-disclosed",
+    "data": [{"g":"a","v":1e308},{"g":"a","v":1e308}],
+    "spec": {"x":"g","y":"v","aggregation":"sum"},
+    "expected": {"records":[{"g":"a","v":null}],"input_count":2,"strategy":"sum"},
+    "warning_categories": ["nonfinite"]
+  },
+  {
+    "id": "finite-mean-avoids-intermediate-overflow",
+    "data": [{"g":"a","v":1e308},{"g":"a","v":1e308}],
+    "spec": {"x":"g","y":"v","aggregation":"mean"},
+    "expected": {"records":[{"g":"a","v":1e308}],"input_count":2,"strategy":"mean"}
+  },
+  {
+    "id": "sum-preserves-small-cancellation-residual",
+    "data": [{"g":"a","v":1e16},{"g":"a","v":1.0},{"g":"a","v":-1e16}],
+    "spec": {"x":"g","y":"v","aggregation":"sum"},
+    "expected": {"records":[{"g":"a","v":1}],"input_count":3,"strategy":"sum"}
+  },
+  {
+    "id": "columns-explicit-raw",
+    "data": {"x":[1,2],"y":[3,4]},
+    "spec": {"kind":"table","aggregation":"none"},
+    "expected": {"records":[{"x":1,"y":3},{"x":2,"y":4}],"input_count":2,"strategy":"none"}
+  },
+  {
+    "id": "columns-unequal-length-rejected",
+    "data": {"x":[1],"y":[3,4]},
+    "spec": {"kind":"table","aggregation":"none"},
+    "rejected": true
+  }
+]
