@@ -77,13 +77,15 @@ All sizes/counts are integers. Optional fields accept strings or null.
 
 Supported directly:
 
-- Record arrays and scalar arrays (scalar values become `{ value: ... }`).
+- Record arrays and scalar arrays (scalar values become `{ index, value }`).
 - Equal-length column objects, e.g. `{ x: ['a', 'b'], y: [1, 2] }`.
-- Nested objects flattened to dotted field names; colliding dotted keys fail.
+- Nested objects/arrays flattened to dotted field names/indices; colliding keys fail.
 - GraphQL `edges[].node`, `nodes`, `data`, `items`, `results`, `records`,
   and `pages`; page arrays are traversed without truncating later pages.
-- Explicit dot-separated `data_path`, including traversal across page arrays,
-  e.g. `pages.data.users`. Ambiguous collections require an explicit path.
+- Explicit dot-separated `data_path`, including traversal across page arrays
+  and numeric indices, e.g. `pages.data.users` or `data.rows.1`. Missing branches
+  and null GraphQL nodes are skipped with warnings; wholly unmatched paths fail.
+  Ambiguous collections require an explicit path; malformed GraphQL edges fail.
 - JSON text; explicit `format: 'jsonl'`; CSV/TSV with quoted delimiters,
   escaped quotes, embedded newlines, BOM, and CRLF. Duplicate headers and
   inconsistent column counts are errors. CSV/TSV empty cells become null;
@@ -92,12 +94,13 @@ Supported directly:
 `auto` text detection chooses JSON for `[`/`{`, TSV for a tabbed first line,
 otherwise CSV. Use explicit `jsonl` for JSON Lines. Arrow/Parquet tokens remain
 in the shared contract, but binary ingestion requires an external adapter that
-yields ordinary records. Nested record arrays require `data_path`; they are not
-silently stringified. Dates and class instances must be converted to JSON first.
+yields ordinary records. Nested record arrays flatten to indexed fields; select
+a collection with `data_path` when each nested item should become a row instead.
+Dates and class instances must be converted to JSON first.
 
 `aggregation` accepts `auto`, `none`, `sample`, `sum`, `mean`, `count`, `min`, `max`.
 Like Python, `auto` infers mappings from at most 32 initial rows and sums a numeric
-measure for categorical bar/pie/radar/treemap/sunburst/funnel/heatmap charts (or
+measure for categorical bar/pie/radar/treemap/sunburst/funnel charts (or
 counts rows when no numeric measure exists). Other chart kinds remain unreduced
 up to the bound. `none` and `sample` also retain rows up to `max_points`, then use
 a deterministic seeded reservoir sample with a warning, preserving source order
@@ -110,6 +113,8 @@ group yields null. Too many distinct groups keeps the first `max_points - 1`
 groups exact and merges every other contribution into a warned final
 `__deepviz_other__` bucket (weighted by raw observations for mean). This matches
 Python's bounded reduction policy rather than dropping unseen categories.
+Heatmaps instead group by both x/y coordinates and sum the numeric `color`
+measure; without color, automatic reduction counts rows per cell into `count`.
 
 `NormalizedData` is `{ records, input_count, warnings, strategy }`. Render artifacts
 also include `output_count`, `mime_type`, `engine`, `paths`, `html`, and
@@ -118,7 +123,7 @@ Non-finite values normalize to null; chart numeric mappings reject null/missing
 measurements rather than turn them into zero. Non-finite reduction results become
 null with a warning.
 
-Safety budgets: nesting depth 32; 1000 flattened fields per record; text fields
+Safety budgets: nesting depth 64; 1024 flattened fields per record/schema; text fields
 truncate at 10000 UTF-16 code units; normalized records have a 100000-character
 budget, retained normalized data a 16-million-character budget, and HTML a
 20-million-character budget. Character budgets are not exact heap-byte limits.
@@ -150,7 +155,8 @@ Further support is explicit; unsupported combinations throw:
 | Plotly (`plotly`) | heatmap, box, violin, radar, treemap, sunburst, funnel, gauge, geo |
 | Native SVG (`svg`) | No extra kinds; dependency-free output |
 
-For heatmaps, x/y identify cells and `color` is the numeric measurement. Scatter
+For heatmaps, x/y identify cells and `color` is the numeric measurement (or the
+generated `count` field if omitted). Scatter
 and native SVG bubble charts require numeric x/y. Gauges require exactly one
 measurement. Hierarchy engines currently render a **single level** with x as
 the leaf label and y as its weight; nested hierarchy arrays are not supported.
@@ -236,5 +242,22 @@ a real tarball, installs it into an isolated temporary consumer, and checks ESM,
 JSON Schema exports, runtime behavior, declarations, README and license.
 
 Large-input support means bounded **reduction**, not rendering millions of
-independent browser marks. Only claim measured sizes from an actual benchmark;
-timing depends on hardware and input shape.
+independent browser marks. `npm run benchmark:stream` reproduces an async-record
+sampling workload. Observed on Windows x64 / Node 26.13.1, production source
+commit `381be19`, max_points 2000:
+
+| Input rows | Retained rows | Elapsed ms | Sampled peak heap MiB | Sampled peak RSS MiB |
+| ---: | ---: | ---: | ---: | ---: |
+| 10 | 10 | 1.89 | 4.99 | 38.38 |
+| 1,000 | 1,000 | 22.65 | 6.42 | 43.50 |
+| 100,000 | 2,000 | 462.75 | 14.23 | 61.09 |
+| 1,000,000 | 2,000 | 1,528.80 | 26.40 | 117.26 |
+| 10,000,000 | 2,000 | 25,658.19 | 38.35 | 117.42 |
+
+One process, explicit GC before each scale, `process.memoryUsage()` sampled every
+10000 yielded records and at completion. These are **sampled**, not continuous
+or isolated-process peaks; RSS includes runtime/prior-scale allocations. No
+rendering is included and no source array is materialized. The dev-only raw
+record is `benchmarks/2026-11-26-node26-windows.json` in the repository. Timing
+depends on hardware, input shape and concurrent load; it is not an SLA or a claim
+that the browser renders 10M independent marks.

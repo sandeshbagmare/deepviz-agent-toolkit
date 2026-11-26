@@ -1,24 +1,33 @@
 import {isObject, safeKey, validateSpec, ValidationError} from './models.js';
 import type {Aggregation, ChartSpec, DataRecord, NormalizedData, Scalar} from './models.js';
 
-const MAX_FIELDS = 1000;
+const MAX_FIELDS = 1024;
 const MAX_TEXT = 10000;
-const MAX_DEPTH = 32;
+const MAX_DEPTH = 64;
 const MAX_RECORD_CHARS = 100_000;
 const MAX_RETAINED_CHARS = 16_000_000;
-const wrappers = ['edges','nodes','records','results','items','pages','data'];
+const wrappers = ['edges','nodes','records','rows','results','items','pages','data'];
 const numericText = /^-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?$/;
 
-function* pathValues(value: unknown, parts: string[], depth = 0): Generator<unknown> {
+type Notice=(message:string)=>void;
+interface PathState {matches:number;missing:number;empty:number}
+function* pathValues(value: unknown, parts: string[], state:PathState, depth = 0): Generator<unknown> {
   if (depth > MAX_DEPTH) throw new ValidationError('Data path exceeds maximum depth');
-  if (!parts.length) { yield value; return; }
+  if (!parts.length) { state.matches++;yield value; return; }
   if (Array.isArray(value)) {
-    for (const item of value) yield* pathValues(item, parts, depth + 1);
+    if(/^\d+$/.test(parts[0]!)) {
+      const index=Number(parts[0]);
+      if(index>=value.length)state.missing++;
+      else yield* pathValues(value[index],parts.slice(1),state,depth+1);
+    } else {
+      if(!value.length)state.empty++;
+      for (const item of value) yield* pathValues(item, parts, state, depth + 1);
+    }
     return;
   }
   const [head, ...tail] = parts;
-  if (!isObject(value) || !head || !Object.hasOwn(value, head)) throw new ValidationError(`Missing data_path component: ${head}`);
-  yield* pathValues(value[head], tail, depth + 1);
+  if (!isObject(value) || !head || !Object.hasOwn(value, head)) {state.missing++;return;}
+  yield* pathValues(value[head], tail, state, depth + 1);
 }
 
 function hasCollection(value: unknown, depth = 0): boolean {
@@ -27,12 +36,14 @@ function hasCollection(value: unknown, depth = 0): boolean {
   return isObject(value) && Object.values(value).some(item => hasCollection(item, depth + 1));
 }
 
-function* unpack(value: unknown, depth = 0): Generator<unknown> {
+function* unpack(value: unknown, warn:Notice, depth = 0): Generator<unknown> {
   if (depth > MAX_DEPTH) throw new ValidationError('Cyclic input or maximum nesting depth exceeded');
   if (Array.isArray(value)) {
     for (const row of value) {
-      if (isObject(row) && Object.hasOwn(row,'node')) yield* unpack(row.node,depth+1);
-      else if (isObject(row) && wrappers.some(key=>Object.hasOwn(row,key) && hasCollection(row[key]))) yield* unpack(row,depth+1);
+      if (isObject(row) && Object.hasOwn(row,'node') && Object.keys(row).every(key=>['node','cursor'].includes(key))) {
+        if(row.node===null)warn('Null GraphQL/path nodes skipped');else yield* unpack(row.node,warn,depth+1);
+      }
+      else if (isObject(row) && wrappers.some(key=>Object.hasOwn(row,key) && hasCollection(row[key]))) yield* unpack(row,warn,depth+1);
       else yield row;
     }
     return;
@@ -40,6 +51,23 @@ function* unpack(value: unknown, depth = 0): Generator<unknown> {
   if (isObject(value)) {
     for (const key of Object.keys(value)) safeKey(key);
     const entries=Object.entries(value);
+    if(!entries.length && !depth)return;
+    if(value.errors && Object.hasOwn(value,'data')) {
+      if(value.data===null || value.data===undefined)throw new ValidationError('GraphQL response contains errors and no data');
+      warn('GraphQL responses contained errors alongside usable data');
+    }
+    if(Object.hasOwn(value,'edges') || Object.hasOwn(value,'nodes')) {
+      if(Object.hasOwn(value,'edges') && Object.hasOwn(value,'nodes'))throw new ValidationError('GraphQL connection has both edges and nodes; choose data_path');
+      const edges=Object.hasOwn(value,'edges');
+      const nodes=edges?value.edges:value.nodes;
+      if(!Array.isArray(nodes))throw new ValidationError('GraphQL edges/nodes must be arrays');
+      for(const item of nodes) {
+        if(edges && (!isObject(item) || !Object.hasOwn(item,'node')))throw new ValidationError('Each GraphQL edge must contain a node');
+        const node=edges?(item as Record<string,unknown>).node:item;
+        if(node===null)warn('Null GraphQL/path nodes skipped');else yield* unpack(node,warn,depth+1);
+      }
+      return;
+    }
     const arrays=entries.filter(([,item])=>Array.isArray(item));
     // A single array named "nodes" is a collection; other all-array objects are columns.
     if (entries.length && arrays.length===entries.length && !(entries.length===1 && wrappers.includes(entries[0]![0]))) {
@@ -53,12 +81,12 @@ function* unpack(value: unknown, depth = 0): Generator<unknown> {
     const preferred=entries.filter(([key,item])=>wrappers.includes(key) && hasCollection(item));
     const candidates=preferred.length ? preferred : entries.filter(([,item])=>hasCollection(item));
     if (candidates.length>1) throw new ValidationError('Ambiguous collections; set data_path');
-    if (!preferred.length && candidates.length && entries.some(([,item])=>!isObject(item) && !Array.isArray(item))) throw new ValidationError('Record contains a nested array; select a collection with data_path');
-    if (candidates.length===1) { yield* unpack(candidates[0]![1],depth+1); return; }
+    if (!preferred.length && candidates.length && entries.some(([,item])=>!isObject(item) && !Array.isArray(item))) {yield value;return;}
+    if (candidates.length===1) { yield* unpack(candidates[0]![1],warn,depth+1); return; }
     yield value;
     return;
   }
-  if (value===null || ['string','number','boolean'].includes(typeof value)) { yield {value}; return; }
+  if (value===null || ['string','number','boolean'].includes(typeof value)) { yield value; return; }
   throw new ValidationError('Expected JSON records, columns, or a supported text format');
 }
 
@@ -86,13 +114,13 @@ function* csvRows(text: string, delimiter: string): Generator<string[]> {
   if(field || closed || row.length) { row.push(field); yield row; }
 }
 
-function* parseText(text: string, spec: ChartSpec): Generator<unknown> {
+function* parseText(text: string, spec: ChartSpec,warn:Notice): Generator<unknown> {
   let format=spec.format;
   if(format==='auto') format=/^\s*[\[{]/.test(text) ? 'json' : text.split(/\r?\n/,1)[0]?.includes('\t') ? 'tsv' : 'csv';
-  if(format==='json') { yield* selected(JSON.parse(text),spec); return; }
+  if(format==='json') { yield* selected(JSON.parse(text),spec,warn); return; }
   if(format==='jsonl') {
     // Match one line at a time rather than allocating an array of every line.
-    for(const match of text.matchAll(/[^\r\n]+/g)) if(match[0].trim()) yield* selected(JSON.parse(match[0]),spec);
+    for(const match of text.matchAll(/[^\r\n]+/g)) if(match[0].trim()) yield* selected(JSON.parse(match[0]),spec,warn);
     return;
   }
   if(format!=='csv' && format!=='tsv') throw new ValidationError(`Unsupported ${format}; use an Arrow/Parquet adapter to supply records`);
@@ -112,31 +140,41 @@ function* parseText(text: string, spec: ChartSpec): Generator<unknown> {
   }
 }
 
-function* selected(data: unknown, spec: ChartSpec): Generator<unknown> {
-  if(spec.data_path) {
+function* selected(data: unknown, spec: ChartSpec,warn:Notice): Generator<unknown> {
+  if(spec.data_path!==null) {
     safeKey(spec.data_path);
-    for(const value of pathValues(data,spec.data_path.split('.'))) yield* unpack(value);
-  } else yield* unpack(data);
+    const parts=spec.data_path.split('.');
+    if(parts.some(part=>!part))throw new ValidationError('data_path must contain non-empty dot-separated components');
+    const state={matches:0,missing:0,empty:0};
+    for(const value of pathValues(data,parts,state)) {
+      if(value===null)warn('Null GraphQL/path nodes skipped');else yield* unpack(value,warn);
+    }
+    if(!state.matches && (!state.empty || state.missing))throw new ValidationError(`data_path ${spec.data_path} did not match any input`);
+    if(state.missing)warn('Data path branches with missing components skipped');
+  } else yield* unpack(data,warn);
 }
 
-function flatten(value: unknown, warn: (message: string)=>void): DataRecord {
-  if(!isObject(value)) value={value};
+function flatten(value: unknown, warn: Notice,index:number): DataRecord {
+  if(!isObject(value)) value={index,value};
   const result: DataRecord={};
   const seen=new Set<object>();
   const visit=(node: unknown, prefix: string, depth: number): void=> {
     if(depth>MAX_DEPTH) throw new ValidationError('Cyclic input or maximum nesting depth exceeded');
+    if(Array.isArray(node)) {
+      if(seen.has(node))throw new ValidationError('Cyclic input is not supported');
+      seen.add(node);node.forEach((item,i)=>visit(item,`${prefix}.${i}`,depth+1));seen.delete(node);return;
+    }
     if(isObject(node)) {
       if(seen.has(node)) throw new ValidationError('Cyclic input is not supported');
       if(Object.getPrototypeOf(node)!==Object.prototype && Object.getPrototypeOf(node)!==null) throw new ValidationError('Only plain JSON objects are supported');
       seen.add(node);
-      for(const [key,item] of Object.entries(node)) { safeKey(key); visit(item,prefix?`${prefix}.${key}`:key,depth+1); }
+      for(const [key,item] of Object.entries(node)) { if(!key)throw new ValidationError('Record field names must be non-empty');safeKey(key); visit(item,prefix?`${prefix}.${key}`:key,depth+1); }
       seen.delete(node);
       return;
     }
     if(Object.keys(result).length>=MAX_FIELDS) throw new ValidationError(`Record exceeds ${MAX_FIELDS} fields`);
     if(Object.hasOwn(result,prefix)) throw new ValidationError(`Colliding flattened field: ${prefix}`);
     let scalar: Scalar;
-    if(Array.isArray(node)) throw new ValidationError(`Nested array at ${prefix}; select a collection using data_path`);
     if(typeof node==='number') {
       scalar=Number.isFinite(node)?node:null;
       if(scalar===null) warn('Non-finite numeric values replaced with null');
@@ -165,12 +203,13 @@ class Reducer {
   private measure='count';
   private schema=new Set<string>();
   private missing=0;
+  notice=(message:string):void=>{this.warnings.add(message);};
   constructor(private spec: ChartSpec) {
     for(const key of [spec.x,spec.y,spec.color,spec.size,spec.data_path]) if(key) safeKey(key);
     if([spec.x,spec.y,spec.color,spec.size].some(key=>key!==null && !key.trim())) throw new ValidationError('Mapped field names must not be empty');
   }
   add(value: unknown): void {
-    const row=flatten(value,message=>this.warnings.add(message));
+    const row=flatten(value,this.notice,this.count);
     const cost=Object.entries(row).reduce((sum,[key,value])=>sum+key.length+String(value).length+8,0);
     if(cost>MAX_RECORD_CHARS) throw new ValidationError('Record exceeds 100,000-character budget; reduce fields or text');
     const index=this.count++;
@@ -191,14 +230,27 @@ class Reducer {
       if(typeof value==='number') numeric.push(key);
       else if(typeof value==='string' || typeof value==='boolean') categorical.push(key);
     }
-    const scalar=this.prefix.length>0 && this.prefix.every(({row})=>Object.keys(row).length===2 && Object.hasOwn(row,'index') && Object.hasOwn(row,'value'));
-    const x=this.spec.x??(scalar?(categorical.includes('value')&&!numeric.includes('value')?'value':null):categorical[0]??null);
-    const y=this.spec.y??numeric.find(key=>key!==x && !(scalar && key==='index'))??null;
     this.strategy=this.spec.aggregation;
-    if(this.strategy==='auto') this.strategy=['bar','pie','radar','treemap','sunburst','funnel','heatmap'].includes(this.spec.kind) && x!==null && categorical.includes(x)?y!==null?'sum':'count':'none';
-    this.fields=[...new Set([x,this.spec.color].filter((key):key is string=>key!==null))];
-    this.measure=this.strategy==='count' && this.spec.y===null?'count':y??'count';
-    if(['sum','mean','min','max'].includes(this.strategy) && y===null) throw new ValidationError(`${this.strategy} requires a numeric y field`);
+    if(this.spec.kind==='heatmap') {
+      const coordinates=[...new Set(this.prefix.flatMap(({row})=>Object.keys(row).filter(key=>key!==this.spec.color)))];
+      const x=this.spec.x??coordinates.find(key=>key!==this.spec.y)??null;
+      const y=this.spec.y??coordinates.find(key=>key!==x)??null;
+      this.fields=[...new Set([x,y].filter((field):field is string=>field!==null))];
+      this.measure=this.spec.color??'count';
+      if(this.strategy==='auto')this.strategy=this.spec.color!==null?'sum':'count';
+      if(this.grouped()) {
+        if(this.prefix.length && this.fields.length!==2)throw new ValidationError('Heatmaps require distinct x and y coordinate fields');
+        if(this.strategy!=='count' && this.spec.color===null)throw new ValidationError('Numeric heatmap reductions require a color measure field');
+      }
+    } else {
+      const scalar=this.prefix.length>0 && this.prefix.every(({row})=>Object.keys(row).length===2 && Object.hasOwn(row,'index') && Object.hasOwn(row,'value'));
+      const x=this.spec.x??(scalar?(categorical.includes('value')&&!numeric.includes('value')?'value':null):categorical[0]??null);
+      const y=this.spec.y??numeric.find(key=>key!==x && !(scalar && key==='index'))??null;
+      if(this.strategy==='auto') this.strategy=['bar','pie','radar','treemap','sunburst','funnel'].includes(this.spec.kind) && x!==null && categorical.includes(x)?y!==null?'sum':'count':'none';
+      this.fields=[...new Set([x,this.spec.color].filter((key):key is string=>key!==null))];
+      this.measure=this.strategy==='count' && this.spec.y===null?'count':y??'count';
+      if(['sum','mean','min','max'].includes(this.strategy) && y===null) throw new ValidationError(`${this.strategy} requires a numeric y field`);
+    }
     if(this.grouped()) {
       if(this.fields.includes(this.measure)) throw new ValidationError('Reduction measure must differ from grouping fields');
       if(this.spec.size!==null && ![...this.fields,this.measure].includes(this.spec.size)) throw new ValidationError('Reduction would remove the size field; use aggregation sample or none');
@@ -232,7 +284,7 @@ class Reducer {
       if(group.value===null) group.value=value;
       else if(this.strategy==='mean') group.value=group.value*((group.count-1)/group.count)+value/group.count;
       else group.value=this.strategy==='min'?Math.min(group.value,value):this.strategy==='max'?Math.max(group.value,value):group.value+value;
-      if(!Number.isFinite(group.value)) {group.value=null;this.warnings.add('Non-finite numeric values replaced with null');}
+      if(!Number.isFinite(group.value)) this.warnings.add('Non-finite numeric values replaced with null');
       return;
     }
     if(this.records.length<max_points) { this.records.push({row,index,cost});this.retainedChars+=cost; }
@@ -261,7 +313,7 @@ class Reducer {
       states.push({...this.other,row:Object.fromEntries(this.fields.map(field=>[field,label]))});
     }
     return {
-      records:grouped?states.map(group=>({...group.row,[this.measure]:group.value})):
+      records:grouped?states.map(group=>({...group.row,[this.measure]:group.value===null || !Number.isFinite(group.value)?null:group.value})):
         this.records.sort((a,b)=>a.index-b.index).map(item=>item.row),
       input_count:this.count, warnings:[...this.warnings],
       strategy:grouped?this.strategy!:this.count>max_points?'sample':this.strategy==='sample'?'sample':'none',
@@ -273,7 +325,7 @@ class Reducer {
 export function normalize(data: unknown, input: unknown = {}): NormalizedData {
   const spec=validateSpec(input);
   const reducer=new Reducer(spec);
-  for(const row of typeof data==='string'?parseText(data,spec):selected(data,spec)) reducer.add(row);
+  for(const row of typeof data==='string'?parseText(data,spec,reducer.notice):selected(data,spec,reducer.notice)) reducer.add(row);
   return reducer.finish();
 }
 
@@ -281,6 +333,6 @@ export function normalize(data: unknown, input: unknown = {}): NormalizedData {
 export async function normalizeStream(data: AsyncIterable<unknown> | Iterable<unknown>, input: unknown = {}): Promise<NormalizedData> {
   const spec=validateSpec(input);
   const reducer=new Reducer(spec);
-  for await(const page of data) for(const row of selected(page,spec)) reducer.add(row);
+  for await(const page of data) for(const row of selected(page,spec,reducer.notice)) reducer.add(row);
   return reducer.finish();
 }

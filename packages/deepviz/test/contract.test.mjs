@@ -19,8 +19,33 @@ test('spec defaults and dashboard validation match the Python contract', () => {
 
 test('a single nested record is flattened, never mistaken for a wrapper', () => {
   assert.deepEqual(normalize({id:1,profile:{name:'Ada'}}).records,[{id:1,'profile.name':'Ada'}]);
-  assert.throws(()=>normalize({id:1,tags:['admin','staff']}),/data_path|array/i);
+  assert.deepEqual(normalize({id:1,tags:['admin','staff']},{aggregation:'none'}).records,[{id:1,'tags.0':'admin','tags.1':'staff'}]);
   assert.throws(()=>normalize([{'a.b':1,a:{b:2}}]),/collid/i);
+});
+
+test('GraphQL null nodes are skipped, malformed edges fail, and GraphQL errors are not hidden',()=>{
+  const result=normalize({data:{users:{edges:[{node:null},{node:{x:'A',y:2}}]}}},{aggregation:'none'});
+  assert.deepEqual(result.records,[{x:'A',y:2}]);
+  assert.equal(result.input_count,1);
+  assert.ok(result.warnings.length);
+  assert.throws(()=>normalize({edges:[{cursor:'bad'}]}),/edge|node/i);
+  assert.throws(()=>normalize({data:null,errors:[{message:'failed'}]}),/GraphQL|errors/i);
+  assert.ok(normalize({data:{nodes:[{x:1}]},errors:[{message:'partial'}]}).warnings.length);
+});
+
+test('data_path supports numeric indices and warns for missing page branches like Python',()=>{
+  assert.deepEqual(normalize({data:{rows:[{x:1},{x:2}]}},{data_path:'data.rows.1',aggregation:'none'}).records,[{x:2}]);
+  const result=normalize({pages:[{data:{rows:[{x:1}]}},{data:{}},{data:{rows:[{x:2}]}}]},{data_path:'pages.data.rows',aggregation:'none'});
+  assert.deepEqual(result.records,[{x:1},{x:2}]);
+  assert.ok(result.warnings.length);
+  assert.throws(()=>normalize({data:{}},{data_path:'data.rows'}),/data_path/i);
+});
+
+test('scalar rows have index/value fields and overflow remains non-finite until final null conversion',()=>{
+  assert.deepEqual(normalize([1,2],{aggregation:'none'}).records,[{index:0,value:1},{index:1,value:2}]);
+  const result=normalize([{x:'A',y:1e308},{x:'A',y:1e308},{x:'A',y:1}],{x:'x',y:'y',aggregation:'sum'});
+  assert.deepEqual(result.records,[{x:'A',y:null}]);
+  assert.ok(result.warnings.length);
 });
 
 test('normalization retains a finite character budget rather than only a row limit', () => {
@@ -114,4 +139,11 @@ test('Python categorical auto semantics sum duplicates or count when there is no
   assert.ok(result.warnings.length);
   assert.throws(()=>normalize([{x:'A'}],{x:'x',y:'absent'}),/missing/i);
   assert.throws(()=>normalize([{x:1}],{x:'x',y:'x',aggregation:'sum'}),/group/i);
+});
+
+test('heatmap reductions match Python: coordinates group together and color is the measure',()=>{
+  const data=[{x:'Mon',y:'AM',value:1},{x:'Mon',y:'AM',value:2},{x:'Tue',y:'AM',value:4}];
+  assert.deepEqual(normalize(data,{kind:'heatmap',x:'x',y:'y',color:'value'}).records,[{x:'Mon',y:'AM',value:3},{x:'Tue',y:'AM',value:4}]);
+  assert.deepEqual(normalize(data,{kind:'heatmap',x:'x',y:'y'}).records,[{x:'Mon',y:'AM',count:2},{x:'Tue',y:'AM',count:1}]);
+  assert.throws(()=>normalize(data,{kind:'heatmap',x:'x',y:'y',aggregation:'sum'}),/color|measure/i);
 });
