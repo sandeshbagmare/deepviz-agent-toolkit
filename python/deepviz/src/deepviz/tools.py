@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import shutil
 import tempfile
 from collections import OrderedDict
 from pathlib import Path, PureWindowsPath
@@ -98,8 +99,9 @@ class ToolSession:
         from .normalize import normalize
 
         normalized = normalize(source, chart)
+        dataset_id = uuid4().hex
         result = {
-            "dataset_id": uuid4().hex,
+            "dataset_id": dataset_id,
             "input_count": normalized.input_count,
             "output_count": len(normalized.records),
             "strategy": normalized.strategy,
@@ -110,7 +112,7 @@ class ToolSession:
         original = data
         if isinstance(data, dict) and set(data) == {"dataset_id"}:
             original = self.datasets[str(data["dataset_id"])]["source"]
-        self.datasets[result["dataset_id"]] = {"source": original, "summary": result}
+        self.datasets[dataset_id] = {"source": original, "summary": result}
         if len(self.datasets) > 32:
             self.datasets.popitem(last=False)
         return result
@@ -139,15 +141,21 @@ class ToolSession:
 
         self.output_dir.mkdir(parents=True, exist_ok=True)
         destination = Path(tempfile.mkdtemp(prefix=f"{engine}-", dir=self.output_dir))
-        result = render(source, chart, engine=engine, output_dir=destination).to_dict()
-        if not result["paths"]:
-            raise ValueError("Renderer returned no artifacts")
-        for value in result["paths"]:
-            path = Path(value).resolve(strict=True)
-            if not path.is_relative_to(destination) or not path.is_file():
-                raise ValueError("Renderer output escaped the allowed output directory")
-            if path.stat().st_size > MAX_ARTIFACT_BYTES:
-                raise ValueError("Artifact exceeds the 16 MiB integration limit; reduce max_points or chart dimensions")
+        try:
+            result = render(source, chart, engine=engine, output_dir=destination).to_dict()
+            if not result["paths"]:
+                raise ValueError("Renderer returned no artifacts")
+            for value in result["paths"]:
+                path = Path(value).resolve(strict=True)
+                if not path.is_relative_to(destination) or not path.is_file():
+                    raise ValueError("Renderer output escaped the allowed output directory")
+                if path.stat().st_size > MAX_ARTIFACT_BYTES:
+                    raise ValueError("Artifact exceeds the 16 MiB integration limit; reduce max_points or chart dimensions")
+        except BaseException:
+            # Only this request's freshly-created subtree belongs to this call.
+            # Keep successful artifacts, but never accumulate failed/partial ones.
+            shutil.rmtree(destination, ignore_errors=True)
+            raise
         return result
 
     def renderer(self, engine: Engine):
