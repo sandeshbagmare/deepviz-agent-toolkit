@@ -37,25 +37,35 @@ reports. Never use a green bootstrap run as independent evidence. The workflow u
   artifact is the literal `ChartSpec.model_json_schema()` export; Python's
   dashboard validators remain additional semantic checks, not JSON Schema rules.
 - Supply root `package.json` and committed `package-lock.json`, workspace
-  `@deepviz/agent-toolkit`, and root scripts `build`, `typecheck`, `test`.
+  `@deepviz/agent-toolkit`, and root scripts `build`, `typecheck`, `test`,
+  `test:browser` and `package:check`.
   CI deliberately does not use `--if-present` or auto-create a lockfile.
 - Node 24 must be compatible with that lockfile and package engine constraints.
+  Every Python matrix job also builds the npm package before its required parity
+  tests; the separate Node job does not share its filesystem with Python jobs.
 - `normalize(iterable_of_records, spec)` must consume a generator once, report the
   entire input count, and sample to `min(input_count, max_points)` records with
   `aggregation='sample'`. Reduced results must explain their lossy strategy.
 - `render(data, ChartSpec(...), engine='matplotlib', output_dir=Path(...))`
   must return `Artifact`, including exactly one PNG per simple fixture. Its paths
   must be unique so the four fixtures do not overwrite one another.
-- After the QA/browser branch supplies a root `test:browser` script and a locked
-  Playwright dependency, add `npm exec --no -- playwright install --with-deps chromium`
-  and `npm run test:browser` to the Node job. Browser console/page errors must fail
-  that suite; never add `--if-present` or continue-on-error. The current raster job
-  is already a strict real-image regression gate; browser coverage is additional.
+- The Node job installs Chromium with
+  `npm exec --no -- playwright install --with-deps chromium` and runs
+  `npm run test:browser` against locked local renderer assets. Browser console/page
+  errors must fail that suite; never add `--if-present` or continue-on-error.
+  This complements the separate strict real-image raster regression gate.
+- The distribution job installs the built wheel and dependencies into a fresh
+  virtualenv, checks its import prefix, both versioned prompts, schema and console
+  entrypoints outside the checkout. `npm run package:check` packs and installs a
+  real tarball and checks public runtime, JSON exports and TypeScript declarations;
+  a successful metadata check or pack dry-run alone is insufficient.
 
 ## Local commands after integration
 
 ```text
 python -m pip install -e ".[dev,agents,mcp,columnar]"
+npm ci
+npm run build
 python scripts/export_schema.py --check
 python -m ruff check . .github/tests
 python -m mypy
@@ -71,11 +81,12 @@ python scripts/verify_scale.py --count 1000000 --output artifacts/scale-1000000.
 python scripts/verify_scale.py --count 10000000 --output artifacts/scale-10000000.json
 python -m build
 python -m twine check --strict dist/*
-npm ci
-npm run build
 npm run typecheck
 npm test
+npm exec --no -- playwright install --with-deps chromium
+npm run test:browser
 npm pack --dry-run --workspace @deepviz/agent-toolkit
+npm run package:check
 ```
 
 Use a fresh result filename per scale run; the script refuses to overwrite old

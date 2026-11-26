@@ -85,6 +85,9 @@ jobs:
       - run: npm run build
       - run: npm run typecheck
       - run: npm test
+      - name: Install Chromium for offline renderer acceptance
+        run: npm exec --no -- playwright install --with-deps chromium
+      - run: npm run test:browser
 
   visual:
     name: Raster visual regression (semantic pixel comparison)
