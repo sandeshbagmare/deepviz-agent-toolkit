@@ -1,0 +1,184 @@
+{
+  "accessed_on": "2026-11-26",
+  "scope": "Selected public primary-source evidence, not an exhaustive repository or security audit. All listed files and pages were retrieved. Failed fetches and search snippets are excluded.",
+  "counting_rule": "One source is one distinct URL in repositories[].sources or pages[].url. Repository count is distinct upstream repositories with README, license, and implementation inspection; branches of one repository count once. Metadata, repeated fetches, forks, and transitive dependencies do not add repositories.",
+  "repositories": [
+    {
+      "id": "R01", "repository": "antvis/G2", "commit": "3c36eefd2a15dd8b8603e8b545f1eb001c9ac0b5", "branch": "v5", "license_observed": "MIT",
+      "sources": [
+        "https://raw.githubusercontent.com/antvis/G2/3c36eefd2a15dd8b8603e8b545f1eb001c9ac0b5/README.md",
+        "https://raw.githubusercontent.com/antvis/G2/3c36eefd2a15dd8b8603e8b545f1eb001c9ac0b5/LICENSE",
+        "https://raw.githubusercontent.com/antvis/G2/3c36eefd2a15dd8b8603e8b545f1eb001c9ac0b5/src/spec/mark.ts",
+        "https://raw.githubusercontent.com/antvis/G2/3c36eefd2a15dd8b8603e8b545f1eb001c9ac0b5/src/api/runtime.ts"
+      ]
+    },
+    {
+      "id": "R02", "repository": "antvis/G2Plot", "commit": "eda7f0035a45a0ca90641106ca08d679c5ef0a63", "branch": "master", "license_observed": "MIT",
+      "sources": [
+        "https://raw.githubusercontent.com/antvis/G2Plot/eda7f0035a45a0ca90641106ca08d679c5ef0a63/README.en-US.md",
+        "https://raw.githubusercontent.com/antvis/G2Plot/eda7f0035a45a0ca90641106ca08d679c5ef0a63/LICENSE",
+        "https://raw.githubusercontent.com/antvis/G2Plot/eda7f0035a45a0ca90641106ca08d679c5ef0a63/src/core/plot.ts",
+        "https://raw.githubusercontent.com/antvis/G2Plot/eda7f0035a45a0ca90641106ca08d679c5ef0a63/package.json"
+      ]
+    },
+    {
+      "id": "R03", "repository": "antvis/AVA", "commit": "04fb5827ce8ea82eb27974dd20f89806b24fc213", "branch": "ai", "additional_commit": "41a168b8fbfa1544177d6bdc24be786b00a0d6f0", "additional_branch": "v3", "license_observed": "MIT",
+      "sources": [
+        "https://raw.githubusercontent.com/antvis/AVA/04fb5827ce8ea82eb27974dd20f89806b24fc213/README.md",
+        "https://raw.githubusercontent.com/antvis/AVA/04fb5827ce8ea82eb27974dd20f89806b24fc213/LICENSE",
+        "https://raw.githubusercontent.com/antvis/AVA/04fb5827ce8ea82eb27974dd20f89806b24fc213/src/visualization/advisor.ts",
+        "https://raw.githubusercontent.com/antvis/AVA/04fb5827ce8ea82eb27974dd20f89806b24fc213/src/visualization/generator.ts",
+        "https://raw.githubusercontent.com/antvis/AVA/04fb5827ce8ea82eb27974dd20f89806b24fc213/src/contracts/visualize.ts",
+        "https://raw.githubusercontent.com/antvis/AVA/41a168b8fbfa1544177d6bdc24be786b00a0d6f0/README.md",
+        "https://raw.githubusercontent.com/antvis/AVA/41a168b8fbfa1544177d6bdc24be786b00a0d6f0/packages/ava/src/advisor/advisor.ts",
+        "https://raw.githubusercontent.com/antvis/AVA/41a168b8fbfa1544177d6bdc24be786b00a0d6f0/packages/ava/src/advisor/advise-pipeline/advicesForChart.ts",
+        "https://raw.githubusercontent.com/antvis/AVA/41a168b8fbfa1544177d6bdc24be786b00a0d6f0/packages/ava/src/advisor/advise-pipeline/data-to-advices.ts"
+      ]
+    },
+    {
+      "id": "R04", "repository": "vega/vega", "commit": "1f8b73961d7b80fb36d4653b4396b7fba3a5deb5", "branch": "main", "license_observed": "BSD-3-Clause",
+      "sources": [
+        "https://raw.githubusercontent.com/vega/vega/1f8b73961d7b80fb36d4653b4396b7fba3a5deb5/README.md",
+        "https://raw.githubusercontent.com/vega/vega/1f8b73961d7b80fb36d4653b4396b7fba3a5deb5/LICENSE",
+        "https://raw.githubusercontent.com/vega/vega/1f8b73961d7b80fb36d4653b4396b7fba3a5deb5/packages/vega-runtime/src/context.js"
+      ]
+    },
+    {
+      "id": "R05", "repository": "vega/vega-lite", "commit": "2e892a15c227f72022c2d7c04135e375a1bdae04", "branch": "main", "license_observed": "BSD-3-Clause",
+      "sources": [
+        "https://raw.githubusercontent.com/vega/vega-lite/2e892a15c227f72022c2d7c04135e375a1bdae04/README.md",
+        "https://raw.githubusercontent.com/vega/vega-lite/2e892a15c227f72022c2d7c04135e375a1bdae04/LICENSE",
+        "https://raw.githubusercontent.com/vega/vega-lite/2e892a15c227f72022c2d7c04135e375a1bdae04/src/compile/compile.ts"
+      ]
+    },
+    {
+      "id": "R06", "repository": "apache/echarts", "commit": "34f4d927eafe251f26f63afd3aeefa30f2feba30", "branch": "master", "license_observed": "Apache-2.0",
+      "sources": [
+        "https://raw.githubusercontent.com/apache/echarts/34f4d927eafe251f26f63afd3aeefa30f2feba30/README.md",
+        "https://raw.githubusercontent.com/apache/echarts/34f4d927eafe251f26f63afd3aeefa30f2feba30/LICENSE",
+        "https://raw.githubusercontent.com/apache/echarts/34f4d927eafe251f26f63afd3aeefa30f2feba30/src/chart/scatter/ScatterView.ts"
+      ]
+    },
+    {
+      "id": "R07", "repository": "plotly/plotly.js", "commit": "cf771fa3a1423d7d9e6f5d4162c5b25189085156", "branch": "main", "license_observed": "MIT",
+      "sources": [
+        "https://raw.githubusercontent.com/plotly/plotly.js/cf771fa3a1423d7d9e6f5d4162c5b25189085156/README.md",
+        "https://raw.githubusercontent.com/plotly/plotly.js/cf771fa3a1423d7d9e6f5d4162c5b25189085156/LICENSE",
+        "https://raw.githubusercontent.com/plotly/plotly.js/cf771fa3a1423d7d9e6f5d4162c5b25189085156/src/traces/scattergl/base_index.js"
+      ]
+    },
+    {
+      "id": "R08", "repository": "d3/d3", "commit": "7b634fc81455388e8ac4c2f7fbf79b20e16b94a8", "branch": "main", "license_observed": "ISC",
+      "sources": [
+        "https://raw.githubusercontent.com/d3/d3/7b634fc81455388e8ac4c2f7fbf79b20e16b94a8/README.md",
+        "https://raw.githubusercontent.com/d3/d3/7b634fc81455388e8ac4c2f7fbf79b20e16b94a8/LICENSE",
+        "https://raw.githubusercontent.com/d3/d3/7b634fc81455388e8ac4c2f7fbf79b20e16b94a8/src/index.js"
+      ]
+    },
+    {
+      "id": "R09", "repository": "observablehq/plot", "commit": "2245188895e95ef2043f0ad12c2f900d6e48ef1a", "branch": "main", "license_observed": "ISC",
+      "sources": [
+        "https://raw.githubusercontent.com/observablehq/plot/2245188895e95ef2043f0ad12c2f900d6e48ef1a/README.md",
+        "https://raw.githubusercontent.com/observablehq/plot/2245188895e95ef2043f0ad12c2f900d6e48ef1a/LICENSE",
+        "https://raw.githubusercontent.com/observablehq/plot/2245188895e95ef2043f0ad12c2f900d6e48ef1a/src/plot.js"
+      ]
+    },
+    {
+      "id": "R10", "repository": "visgl/deck.gl", "commit": "101da54d5003c23b588a59f92dd99e13124f0521", "branch": "master", "license_observed": "MIT",
+      "sources": [
+        "https://raw.githubusercontent.com/visgl/deck.gl/101da54d5003c23b588a59f92dd99e13124f0521/README.md",
+        "https://raw.githubusercontent.com/visgl/deck.gl/101da54d5003c23b588a59f92dd99e13124f0521/LICENSE",
+        "https://raw.githubusercontent.com/visgl/deck.gl/101da54d5003c23b588a59f92dd99e13124f0521/modules/core/src/lib/layer.ts"
+      ]
+    },
+    {
+      "id": "R11", "repository": "leeoniya/uPlot", "commit": "c953186a75d30aca28547189320706bfe777130c", "branch": "master", "license_observed": "MIT",
+      "sources": [
+        "https://raw.githubusercontent.com/leeoniya/uPlot/c953186a75d30aca28547189320706bfe777130c/README.md",
+        "https://raw.githubusercontent.com/leeoniya/uPlot/c953186a75d30aca28547189320706bfe777130c/LICENSE",
+        "https://raw.githubusercontent.com/leeoniya/uPlot/c953186a75d30aca28547189320706bfe777130c/src/uPlot.js"
+      ]
+    },
+    {
+      "id": "R12", "repository": "holoviz/datashader", "commit": "a9ccea1444ff5e2c57f3fb6c85210deebc99d570", "branch": "main", "license_observed": "BSD-3-Clause",
+      "sources": [
+        "https://raw.githubusercontent.com/holoviz/datashader/a9ccea1444ff5e2c57f3fb6c85210deebc99d570/README.md",
+        "https://raw.githubusercontent.com/holoviz/datashader/a9ccea1444ff5e2c57f3fb6c85210deebc99d570/LICENSE.txt",
+        "https://raw.githubusercontent.com/holoviz/datashader/a9ccea1444ff5e2c57f3fb6c85210deebc99d570/datashader/core.py"
+      ]
+    },
+    {
+      "id": "R13", "repository": "bokeh/bokeh", "commit": "8e49a30c346f7f771df03dcfebf482ca50fa5494", "branch": "branch-4.0", "license_observed": "BSD-3-Clause",
+      "sources": [
+        "https://raw.githubusercontent.com/bokeh/bokeh/8e49a30c346f7f771df03dcfebf482ca50fa5494/README.md",
+        "https://raw.githubusercontent.com/bokeh/bokeh/8e49a30c346f7f771df03dcfebf482ca50fa5494/LICENSE.txt",
+        "https://raw.githubusercontent.com/bokeh/bokeh/8e49a30c346f7f771df03dcfebf482ca50fa5494/bokehjs/src/lib/models/sources/columnar_data_source.ts"
+      ]
+    },
+    {
+      "id": "R14", "repository": "vega/altair", "commit": "96393197fd039ae313d4ff772f5471a88c2b2a60", "branch": "main", "license_observed": "BSD-3-Clause",
+      "sources": [
+        "https://raw.githubusercontent.com/vega/altair/96393197fd039ae313d4ff772f5471a88c2b2a60/README.md",
+        "https://raw.githubusercontent.com/vega/altair/96393197fd039ae313d4ff772f5471a88c2b2a60/LICENSE",
+        "https://raw.githubusercontent.com/vega/altair/96393197fd039ae313d4ff772f5471a88c2b2a60/altair/utils/data.py"
+      ]
+    },
+    {
+      "id": "R15", "repository": "code-yeongyu/oh-my-openagent", "commit": "59b4ac1f67e83a6f2cd99a762aefda575df17ad7", "branch": "dev", "license_observed": "SUL-1.0; separate third-party component terms",
+      "sources": [
+        "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/59b4ac1f67e83a6f2cd99a762aefda575df17ad7/README.md",
+        "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/59b4ac1f67e83a6f2cd99a762aefda575df17ad7/LICENSE.md",
+        "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/59b4ac1f67e83a6f2cd99a762aefda575df17ad7/docs/reference/configuration.md",
+        "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/59b4ac1f67e83a6f2cd99a762aefda575df17ad7/docs/guide/installation.md",
+        "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/59b4ac1f67e83a6f2cd99a762aefda575df17ad7/docs/guide/team-mode.md",
+        "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/59b4ac1f67e83a6f2cd99a762aefda575df17ad7/docs/guide/orchestration.md",
+        "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/59b4ac1f67e83a6f2cd99a762aefda575df17ad7/package.json",
+        "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/59b4ac1f67e83a6f2cd99a762aefda575df17ad7/packages/team-core/src/config.ts"
+      ]
+    }
+  ],
+  "pages": [
+    {"id":"P01","url":"https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt","topic":"ChatGPT data analysis and chart UI"},
+    {"id":"P02","url":"https://support.claude.com/en/articles/13979539-custom-visuals-in-chat-and-cowork","topic":"Claude inline HTML visuals versus artifacts"},
+    {"id":"P03","url":"https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them","topic":"Current Claude artifact lifecycle and templates"},
+    {"id":"P04","url":"https://support.google.com/gemini/answer/14903178?hl=en","topic":"Gemini attachments and editable spreadsheet charts"},
+    {"id":"P05","url":"https://opencode.ai/docs/","topic":"Current OpenCode product and V2 installation"},
+    {"id":"P06","url":"https://opencode.ai/docs/config/","topic":"V2 project configuration and subagent depth"},
+    {"id":"P07","url":"https://opencode.ai/docs/tools/","topic":"Native tool catalog and MCP distinction"},
+    {"id":"P08","url":"https://opencode.ai/docs/agents/","topic":"Agent roles and permissions"},
+    {"id":"P09","url":"https://opencode.ai/docs/build/plugins/","topic":"Plugin capabilities and current plural plugins field"},
+    {"id":"P10","url":"https://vega.github.io/vega-lite/docs/spec.html","topic":"Unit and composed view specifications"},
+    {"id":"P11","url":"https://vega.github.io/vega-lite/docs/config.html","topic":"Themes and view configuration"},
+    {"id":"P12","url":"https://vega.github.io/vega/docs/api/view/","topic":"Runtime data changes and export"},
+    {"id":"P13","url":"https://vega.github.io/vega/docs/expressions/","topic":"Expression language surface"},
+    {"id":"P14","url":"https://echarts.apache.org/handbook/en/concepts/dataset/","topic":"Shared datasets and encoding"},
+    {"id":"P15","url":"https://echarts.apache.org/handbook/en/best-practices/canvas-vs-svg/","topic":"Renderer tradeoffs"},
+    {"id":"P16","url":"https://echarts.apache.org/handbook/en/concepts/style/","topic":"ECharts theme registration and style"},
+    {"id":"P17","url":"https://echarts.apache.org/handbook/en/best-practices/security/","topic":"HTML, URL, JavaScript callback, and regex hazards"},
+    {"id":"P18","url":"https://plotly.com/python/performance/","topic":"Typed arrays, WebGL limits, and Datashader"},
+    {"id":"P19","url":"https://plotly.com/python/templates/","topic":"Plotly theme templates"},
+    {"id":"P20","url":"https://deck.gl/docs/developer-guide/performance","topic":"Binary attributes, GPU overdraw, and updates"},
+    {"id":"P21","url":"https://datashader.org/getting_started/Pipeline.html","topic":"Projection, aggregation, transform, and shading"},
+    {"id":"P22","url":"https://docs.bokeh.org/en/latest/docs/user_guide/basic/data.html","topic":"Column sources, streaming, patching, and selection"},
+    {"id":"P23","url":"https://altair-viz.github.io/user_guide/large_datasets.html","topic":"VegaFusion and browser/client-server limits"},
+    {"id":"P24","url":"https://d3js.org/what-is-d3","topic":"Toolbox rather than high-level chart system"},
+    {"id":"P25","url":"https://observablehq.github.io/plot/features/transforms","topic":"Transforms versus screen-space initializers"},
+    {"id":"P26","url":"https://duckdb.org/docs/2.0/data/parquet/overview.html","topic":"Canonical target of stable docs; filter and projection pushdown"},
+    {"id":"P27","url":"https://arrow.apache.org/docs/format/Columnar.html","topic":"Columnar memory and IPC record batches"},
+    {"id":"P28","url":"https://datasketches.apache.org/docs/KLL/KLLSketch.html","topic":"Mergeable approximate quantiles and rank error"},
+    {"id":"P29","url":"https://api.github.com/repos/code-yeongyu/oh-my-opencode","topic":"Old repository identity resolves to code-yeongyu/oh-my-openagent"},
+    {"id":"P30","url":"https://api.github.com/repos/code-yeongyu/oh-my-openagent/releases/latest","topic":"Latest stable release observed: v5.1.84 at 2026-11-26T15:59:30Z"},
+    {"id":"P31","url":"https://registry.npmjs.org/oh-my-openagent/latest","topic":"OpenCode plugin package observed: 5.1.84, SUL-1.0"},
+    {"id":"P32","url":"https://registry.npmjs.org/omo-ai/latest","topic":"Native omo package observed: 5.1.84; not interchangeable with plugin"},
+    {"id":"P33","url":"https://help.openai.com/en/articles/9213685-extracting-insights-with-chatgpt-data-analysis","topic":"ChatGPT chart interactions and PNG downloads"},
+    {"id":"P34","url":"https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude","topic":"Claude Python/JavaScript computing environment and network controls"},
+    {"id":"P35","url":"https://support.claude.com/en/articles/17454700-get-started-with-claude-data","topic":"Query-backed artifacts, refresh, permissions and live sharing"},
+    {"id":"P36","url":"https://support.google.com/gemini/answer/16047321?hl=en","topic":"Gemini Canvas code/app preview and export"},
+    {"id":"P37","url":"https://support.google.com/gemini/answer/17094507?hl=en","topic":"Gemini task-generated code, files and browser workflows"},
+    {"id":"P38","url":"https://learn.microsoft.com/en-us/plugins/code-interpreter","topic":"Microsoft 365 declarative-agent Python analysis and temporary downloadable artifacts"},
+    {"id":"P39","url":"https://learn.microsoft.com/en-us/plugins/code-interpreter-security","topic":"Microsoft Azure VM isolation, denied network and resource quotas"},
+    {"id":"P40","url":"https://opencode.ai/docs/attachments/","topic":"Attachment admission does not guarantee model-visible contents"},
+    {"id":"P41","url":"https://opencode.ai/docs/permissions/","topic":"Host tool permissions and independent subagent permissions"},
+    {"id":"P42","url":"https://opencode.ai/docs/build/plugins/gui/","topic":"Explicit GUI code-block renderer extensions, not universal chart syntax"}
+  ]
+}
