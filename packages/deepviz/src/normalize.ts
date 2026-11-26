@@ -86,6 +86,11 @@ function graphqlConnection(value:Record<string,unknown>,depth=0):boolean {
   return false;
 }
 
+function sequenceEnvelope(value:Record<string,unknown>):boolean {
+  return (Object.hasOwn(value,'node') && Object.keys(value).every(key=>['node','cursor'].includes(key)))
+    || ['data','edges','nodes','pages'].some(key=>Object.hasOwn(value,key) && hasCollection(value[key]));
+}
+
 function* unpack(value: unknown, warn:Notice, depth = 0): Generator<unknown> {
   if (depth > MAX_DEPTH) throw new ValidationError('Cyclic input or maximum nesting depth exceeded');
   if (Array.isArray(value)) {
@@ -93,7 +98,7 @@ function* unpack(value: unknown, warn:Notice, depth = 0): Generator<unknown> {
       if (isObject(row) && Object.hasOwn(row,'node') && Object.keys(row).every(key=>['node','cursor'].includes(key))) {
         if(row.node===null)warn('Null GraphQL/path nodes skipped');else yield* unpack(row.node,warn,depth+1);
       }
-      else if (isObject(row) && wrappers.some(key=>Object.hasOwn(row,key) && hasCollection(row[key]))) yield* unpack(row,warn,depth+1);
+      else if (isObject(row) && sequenceEnvelope(row)) yield* unpack(row,warn,depth+1);
       else yield row;
     }
     return;
@@ -107,7 +112,18 @@ function* unpack(value: unknown, warn:Notice, depth = 0): Generator<unknown> {
       return;
     }
     checkGraphql(value,warn);
-    if(Object.hasOwn(value,'data') || isObject(entries[0]?.[1]))graphqlConnection(value);
+    const arrays=entries.filter(([,item])=>Array.isArray(item));
+    const scalarColumns=arrays.every(([,items])=>(items as unknown[]).every(item=>!isObject(item) && !Array.isArray(item)));
+    const nullConnection=entries.length===1 && ['nodes','edges'].includes(entries[0]![0])
+      && Array.isArray(entries[0]![1]) && entries[0]![1].every(item=>item===null);
+    if(entries.length && arrays.length===entries.length && !nullConnection && (entries.length>1 || !wrappers.includes(entries[0]![0]) || scalarColumns)) {
+      const length=(arrays[0]![1] as unknown[]).length;
+      if(arrays.some(([,item])=>(item as unknown[]).length!==length))throw new ValidationError('Column arrays must have equal length');
+      if(entries.length>1 && !scalarColumns)throw new ValidationError('Ambiguous nested column arrays; set an explicit data_path');
+      for(let i=0;i<length;i++)yield Object.fromEntries(arrays.map(([key,items])=>[key,(items as unknown[])[i]]));
+      return;
+    }
+    const connection=graphqlConnection(value);
     if(Object.hasOwn(value,'edges') || Object.hasOwn(value,'nodes')) {
       if(Object.hasOwn(value,'edges') && Object.hasOwn(value,'nodes'))throw new ValidationError('GraphQL connection has both edges and nodes; choose data_path');
       const edges=Object.hasOwn(value,'edges');
@@ -120,22 +136,15 @@ function* unpack(value: unknown, warn:Notice, depth = 0): Generator<unknown> {
       }
       return;
     }
-    const arrays=entries.filter(([,item])=>Array.isArray(item));
-    // A single array named "nodes" is a collection; other all-array objects are columns.
-    if (entries.length && arrays.length===entries.length && !(entries.length===1 && wrappers.includes(entries[0]![0]))) {
-      const length=(arrays[0]![1] as unknown[]).length;
-      if (arrays.some(([,item])=>(item as unknown[]).length!==length)) throw new ValidationError('Column arrays must have equal length');
-      if (arrays.every(([,items])=>(items as unknown[]).every(item=>!isObject(item) && !Array.isArray(item)))) {
-        for(let i=0;i<length;i++) yield Object.fromEntries(arrays.map(([key,items])=>[key,(items as unknown[])[i]]));
-        return;
-      }
-    }
     const preferred=entries.filter(([key,item])=>wrappers.includes(key) && hasCollection(item)
       && entries.every(([sibling])=>sibling===key || metadata.includes(sibling)));
     const candidates=preferred.length ? preferred : entries.filter(([,item])=>hasCollection(item));
     if (candidates.length>1) throw new ValidationError('Ambiguous collections; set data_path');
     if (!preferred.length && candidates.length && entries.some(([,item])=>!isObject(item) && !Array.isArray(item))) {yield value;return;}
-    if (candidates.length===1) { yield* unpack(candidates[0]![1],warn,depth+1); return; }
+    if (candidates.length===1) {
+      if(!preferred.length && !connection)throw new ValidationError('Ambiguous custom collection; set an explicit data_path');
+      yield* unpack(candidates[0]![1],warn,depth+1);return;
+    }
     yield value;
     return;
   }
@@ -223,7 +232,7 @@ function* parseText(text: string, spec: ChartSpec,warn:Notice,state:PathState): 
   if(format==='json') { yield* selected(parseJson(text),spec,warn,state); return; }
   if(format==='jsonl') {
     // Match one line at a time rather than allocating an array of every line.
-    for(const match of text.matchAll(/[^\r\n]+/g)) if(match[0].trim()) yield* selected(parseJson(match[0]),spec,warn,state);
+    for(const match of text.matchAll(/[^\r\n]+/g)) if(match[0].trim()) yield* selected(parseJson(match[0]),spec,warn,state,true);
     return;
   }
   if(format!=='csv' && format!=='tsv') throw new ValidationError(`Unsupported ${format}; use an Arrow/Parquet adapter to supply records`);
@@ -239,12 +248,12 @@ function* parseText(text: string, spec: ChartSpec,warn:Notice,state:PathState): 
         const value=row[i]!;
         const stripped=value.trim();
         return [key, !stripped?null:numericText.test(stripped)?Number(stripped):/^(?:nan|[+-]?inf(?:inity)?)$/i.test(stripped)?NaN:value];
-      })),spec,warn,state);
+      })),spec,warn,state,true);
     }
   }
 }
 
-function* selected(data: unknown, spec: ChartSpec,warn:Notice,state:PathState): Generator<unknown> {
+function* selected(data: unknown, spec: ChartSpec,warn:Notice,state:PathState,sequence=false): Generator<unknown> {
   if(spec.data_path!==null) {
     safeKey(spec.data_path);
     const parts=spec.data_path.split('.');
@@ -252,7 +261,8 @@ function* selected(data: unknown, spec: ChartSpec,warn:Notice,state:PathState): 
     for(const value of pathValues(data,parts,state,warn)) {
       if(value===null)warn('Null GraphQL/path nodes skipped');else yield* unpack(value,warn);
     }
-  } else yield* unpack(data,warn);
+  } else if(sequence && isObject(data) && !sequenceEnvelope(data)) {checkGraphql(data,warn);yield data;}
+  else yield* unpack(data,warn);
 }
 
 function finishSelection(spec:ChartSpec,warn:Notice,state:PathState):void {
@@ -482,7 +492,7 @@ export async function normalizeStream(data: AsyncIterable<unknown> | Iterable<un
   const spec=validateSpec(input);
   const reducer=new Reducer(spec);
   const state={matches:0,missing:0,empty:0};
-  for await(const page of data) for(const row of selected(page,spec,reducer.notice,state)) reducer.add(row);
+  for await(const page of data) for(const row of selected(page,spec,reducer.notice,state,true)) reducer.add(row);
   finishSelection(spec,reducer.notice,state);
   return reducer.finish();
 }
