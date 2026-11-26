@@ -1,13 +1,14 @@
 {
   "kind": "author self-check; not an independent reviewer/tester report",
   "date": "2026-11-26",
-  "observed_at_utc": "2026-11-26T18:04:42.355824+00:00",
+  "observed_at_utc": "2026-11-26T18:17:50.353980+00:00",
   "repository": "sandeshbagmare/deepviz-agent-toolkit",
   "branch": "docs/process",
   "base_commit": "0ae2cf2",
+  "supersedes": "Initial #29 approval-blocker interpretation corrected: user requires independent agents, not distinct GitHub human approvals.",
   "checks": [
     {
-      "check": "29 unique coherent issue keys and titles",
+      "check": "29 unique seed keys/titles; no padding issues",
       "result": "PASS"
     },
     {
@@ -15,35 +16,35 @@
       "result": "PASS"
     },
     {
-      "check": "4 epics, 2 blockers, 23 child stories/tasks",
+      "check": "4 epics, 1 actual blocker, 24 child stories/tasks",
       "result": "PASS"
     },
     {
-      "check": "Every issue has outcome, owner, >=3 acceptance criteria and >=2 evidence requirements",
+      "check": "Each seed issue has scope, owner, >=3 criteria and >=2 evidence requirements",
       "result": "PASS"
     },
     {
-      "check": "Every parent/dependency key exists",
+      "check": "Parent and dependency keys resolve",
       "result": "PASS"
     },
     {
-      "check": "Dependency graph is acyclic",
+      "check": "Dependency graph acyclic",
       "result": "PASS"
     },
     {
-      "check": "Mapping contains exactly the manifest keys",
+      "check": "Current mapping keys match manifest; #29 legacy key preserved only as alias",
       "result": "PASS"
     },
     {
-      "check": "Mapping numbers are unique 1 through 29",
+      "check": "Seed numbers remain unique 1 through 29",
       "result": "PASS"
     },
     {
-      "check": "Seed snapshot records all open, none closed",
+      "check": "Seed mapping records all open",
       "result": "PASS"
     },
     {
-      "check": "Mapped labels and milestones exist in manifest",
+      "check": "Mapped labels and milestones exist",
       "result": "PASS"
     },
     {
@@ -51,42 +52,63 @@
       "result": "PASS"
     },
     {
-      "check": "SVG is valid XML, accessible, and has no script/external resource",
+      "check": "SVG valid, accessible and free of script/external resources",
       "result": "PASS"
     },
     {
-      "check": "Edge PNG screenshot has valid signature and 1080x560 dimensions",
+      "check": "Previously inspected PNG retains valid 1080x560 dimensions",
       "result": "PASS"
     },
     {
-      "check": "No known credential/private-key patterns in process text files",
+      "check": "No known credential/private-key patterns in process source text",
       "result": "PASS"
     },
     {
-      "check": "Current remote visibility PUBLIC and default branch main",
+      "check": "Policy explicitly accepts integrated PR and actual agent reports, not human approvals",
       "result": "PASS"
     },
     {
-      "check": "All 29 remote issue titles, keys, acceptance criteria, labels, milestones and epic links match manifest",
+      "check": "Parent #30 RED/GREEN is reported without claiming reproduced or integrated pass",
       "result": "PASS"
     },
     {
-      "check": "Remote #28 accurately contains >=1,800 mutation constraint and no claimed rejection",
+      "check": "Current visibility PUBLIC, default branch main",
       "result": "PASS"
     },
     {
-      "check": "All seeded issues still open; none closed",
+      "check": "All 29 seed issue titles/keys/criteria/labels/milestones/epic links match corrected manifest",
+      "result": "PASS"
+    },
+    {
+      "check": "Remote #29 task is not blocked and accepts actual agent-report workaround without human gate",
+      "result": "PASS"
+    },
+    {
+      "check": "Remote #28 remains unmet, open and does not claim an observed rejection",
+      "result": "PASS"
+    },
+    {
+      "check": "All 29 seed issues remain open; process correction closes none",
+      "result": "PASS"
+    },
+    {
+      "check": "Parent real defect #30 exists separately from seed",
       "result": "PASS"
     }
+  ],
+  "diagnostic_history": [
+    "First correction check failed because policy said comments instead of explicitly GitHub comments. Wording clarified; full check rerun passed."
   ],
   "remote": {
     "visibility": "public",
     "default_branch": "main",
     "seed_open": 29,
     "seed_closed": 0,
-    "issue_api_page_size": 100,
-    "returned_issue_or_pr_items": 29,
-    "note": "Filtered pull_request objects; full seed present on the returned page. Not a future repository-wide pagination audit."
+    "returned_issue_or_pr_items": 30,
+    "non_pr_issues_on_page": 30,
+    "issue_29_type": "task",
+    "issue_29_blocked": false,
+    "note": "Filtered pull_request objects; all seed issues and parent #30 present. Not an audit of later pages/future state."
   },
   "visual": {
     "svg": "docs/process/review-gate.svg",
@@ -95,24 +117,25 @@
       1080,
       560
     ],
-    "inspection": "Author opened the Edge screenshot and checked readable labels/arrows and absence of clipping. Documentation diagram, not chart execution evidence."
+    "inspection": "Unchanged author-inspected Edge screenshot, documentation diagram only. Integrated candidate needs a committed actual gallery image."
   },
   "limitations": [
-    "No application test suite rerun by process agent.",
-    "Parent-reported 23 schema passes are not independently reproduced here.",
-    "No independent review/test reports or PR/merge/issue closure performed by process agent.",
-    "Known-pattern secret scan is not a complete security audit.",
-    "900 genuine resolved issues and any literal distinct-account approval requirement remain unmet."
+    "No application suite rerun by process agent.",
+    "Parent-reported #30 RED/GREEN and 30 schema passes not independently reproduced here.",
+    "No integrated-suite pass claimed.",
+    "No independent reviewer/tester reports, PR/merge/issue closures or new agents performed/launched by process agent.",
+    "Known-pattern secret scan is not a complete audit.",
+    "900 genuine resolutions remain unmet; human GitHub approvals are not a user requirement."
   ],
-  "hash_convention": "SHA-256 of UTF-8 text with CRLF normalized to LF; binary PNG bytes unchanged. Stable across Git core.autocrlf checkouts.",
+  "hash_convention": "SHA-256 of UTF-8 text with CRLF normalized to LF; binary PNG bytes unchanged.",
   "sha256_lf_normalized": {
-    "docs/process/backlog.json": "9f6a9aa966ba09c7b4795a22e178f4a296703d9c318270e5f944188ba679e690",
-    "docs/process/github-constraints.md": "abb95aef0cf4b09d7274f7b23513f46e623446917bc345b5337a37e0604491d9",
-    "docs/process/issues.json": "a36c7525823f901f0832c21501204a485c723ef1bccb2a4c199797dc2aa3645a",
-    "docs/process/README.md": "eee7d91ed2e1cfd42319ebf887fd60868420ec3905351697896620481a0ef7f0",
-    "docs/process/review-and-evidence.md": "a71a5dcca0e740d658aa0134458b325f2fba8f26f16e7bcbcb2b5d33395f5916",
+    "docs/process/backlog.json": "0ef8bb681911e2ad596c71e406cf898098158e27ca072e49d9831358358a9568",
+    "docs/process/github-constraints.md": "19748fb6bc140a75a4177f48d08dfbe1387c4cb502a772eefa9fae3213dd162e",
+    "docs/process/issues.json": "1bb471ca88bde2f8def4c3ea5a51e1614f9c404afd3f98b8d38427a55891624a",
+    "docs/process/README.md": "fe6844969958f7107d2f211f5639d52a7a6c4b30304da50fd1da6609a8f1d2f2",
+    "docs/process/review-and-evidence.md": "51d1e58fe507b360f2c572c1d6fd066f60d7e0db07189041763a304e74dbf7d5",
     "docs/process/review-gate.png": "89663f21097a3f1508f790e30e7d21d34cd73b7d7b48de448fc62a91afaa37c3",
     "docs/process/review-gate.svg": "3826ee1dd04bce0c85a5f4c8c6c1ac0b946d6f3c3dde7ef2dda59e798bfeddfb",
-    "docs/process/status.md": "781fee28202fb7aff735a8c4edcfa59d4770f6ae6fd6cfa3b41d4be175fb508d"
+    "docs/process/status.md": "15cc38c5e4685bf205d3c85116bec0627e3e558085a52527cde0a6781136e3b4"
   }
 }
