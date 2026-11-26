@@ -25,6 +25,19 @@ test('field names and flattened paths have the same UTF-8 cell ceiling', () => {
   assert.throws(() => normalize([{['k'.repeat(CELL)]:{nested:1}}],identity), /64.*KiB.*UTF-8/i);
 });
 
+test('CSV headers reject oversized field names even when the file has no data rows', () => {
+  assert.equal(normalize('k'.repeat(CELL),{...identity,format:'csv'}).input_count,0);
+  assert.throws(() => normalize('k'.repeat(CELL + 1),{...identity,format:'csv'}), /64.*KiB.*UTF-8/i);
+});
+
+test('CSV field decoding counts UTF-8 after unquoting and preserves accepted contents', () => {
+  const text = '😀'.repeat(CELL / 4);
+  assert.ok(normalize(`text\n"${text}"\n`,{...identity,format:'csv'}).records[0].text === text);
+  assert.throws(() => normalize(`text\n"${text}😀"\n`,{...identity,format:'csv'}), /64.*KiB.*UTF-8/i);
+  const quotes = '"'.repeat(CELL);
+  assert.ok(normalize(`text\n"${quotes.replaceAll('"','""')}"\n`,{...identity,format:'csv'}).records[0].text === quotes);
+});
+
 test('the 256 KiB flattened-record limit includes JSON field and punctuation bytes', () => {
   // Four empty string fields serialize to 29 ASCII bytes before their contents.
   const row = {a:'x'.repeat(CELL),b:'x'.repeat(CELL),c:'x'.repeat(CELL),d:'x'.repeat(CELL - 29)};

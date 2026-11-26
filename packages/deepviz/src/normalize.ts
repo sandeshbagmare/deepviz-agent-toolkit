@@ -154,25 +154,39 @@ function* unpack(value: unknown, warn:Notice, depth = 0): Generator<unknown> {
 
 function* csvRows(text: string, delimiter: string): Generator<string[]> {
   let row: string[]=[], field='', quoted=false, closed=false;
+  let cellBytes=0,rowBytes=2;
+  const append=(text:string):void=> {
+    const code=text.codePointAt(0)!;
+    const bytes=code<0x80?1:code<0x800?2:code<0x10000?3:4;
+    if(cellBytes+bytes>MAX_CELL_BYTES)throw new ValidationError('String cell or field name exceeds 64 KiB UTF-8 limit');
+    cellBytes+=bytes;field+=text;
+  };
+  const push=():void=> {
+    if(row.length>=MAX_FIELDS)throw new ValidationError(`CSV row exceeds ${MAX_FIELDS} fields`);
+    const cost=rowBytes+stringBytes(field)+(row.length?1:0);checkRecordBytes(cost);
+    rowBytes=cost;row.push(field);field='';cellBytes=0;
+  };
   for(let i=0;i<text.length;i++) {
-    const ch=text[i]!;
+    let ch=text[i]!;
+    const code=ch.charCodeAt(0),next=text.charCodeAt(i+1);
+    if(code>=0xd800 && code<=0xdbff && next>=0xdc00 && next<=0xdfff) {ch=text.slice(i,i+2);i++;}
     if(quoted) {
-      if(ch==='"' && text[i+1]==='"') { field+='"'; i++; }
+      if(ch==='"' && text[i+1]==='"') { append('"'); i++; }
       else if(ch==='"') { quoted=false; closed=true; }
-      else field+=ch;
+      else append(ch);
     } else if(ch==='"' && !field && !closed) quoted=true;
-    else if(ch===delimiter) { row.push(field); field=''; closed=false; }
+    else if(ch===delimiter) { push();closed=false; }
     else if(ch==='\n' || ch==='\r') {
       if(ch==='\r' && text[i+1]==='\n') i++;
-      if(field || closed || row.length) { row.push(field); yield row; }
-      row=[];field='';closed=false;
+      if(field || closed || row.length) { push();yield row; }
+      row=[];rowBytes=2;field='';cellBytes=0;closed=false;
     } else {
       if(closed || ch==='"') throw new ValidationError('Malformed CSV quote');
-      field+=ch;
+      append(ch);
     }
   }
   if(quoted) throw new ValidationError('Unclosed CSV quote');
-  if(field || closed || row.length) { row.push(field); yield row; }
+  if(field || closed || row.length) { push();yield row; }
 }
 
 function checkJsonKeys(text:string):void {
