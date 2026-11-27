@@ -1,5 +1,7 @@
 # File-first completion-wave assignment contract
 
+**Current2026-11-27precedence:** datedrouting/budgetsbelowarehistory. Bootstrap MAIN `C:\Users\bagma\deepviz-agent-toolkit\docs\PROJECT_STATE.md` +ownactualIDnote/currentAGENTS/RESUME/REQUEST/R04/R05/R07. R04soleproduct/Git/GitHub; rootsupportedownchilddispatch/pointofcontact.22activechartingsubagentsINCLUDINGR04 +mainroot. NOworkerspawning/nestedexception; oldROSTERreservationlanguageisNOTauthority. RootmayaddnarrowhistoricalredirectstoSTATE/ROSTER. ExactR07producerreleasesonly, no blanketall-agentedit/publication. Preservehistory/attestations.
+
 Date: 2026-11-26. Read `RESUME.md`, `AGENTS.md`, `STATE.md`, and `ROSTER.md` first. The role-specific dispatch supplies the task key and source boundaries; copy those into your report before substantive work. This file and the saved report, not a remembered chat, define the assignment.
 
 ## Report protocol
@@ -28,5 +30,5 @@ No credentials, fabricated source claims, fake tests, hidden reasoning, or anoth
 - Producers may commit scoped tested work on their own feature branch for integration; coordinator alone integrates candidate, writes shared branches, pushes/merges PRs or changes GitHub issues. Existing task-specific GitHub management authorization is honored only for the PM lane.
 - Save ready commits and exact source identities in the report. Workers do not edit the candidate's production files. QA owns its disjoint tests/reports; defects go to source owners.
 - Maximum global concurrency is 22, including nested agents and coordinator. No worker spawns unless explicitly assigned a reserved nested slot in `ROSTER.md`; never restart the six previously canceled sessions.
-- Work efficiently within the user's turn budget: batch independent reads/checks, avoid routine narration, and never silently skip a failed gate. If awaiting candidate integration, prepare the verifier and record the exact trigger/command rather than repeatedly polling.
+- Work efficiently with **no coordinator-turn cap** (the user revoked earlier90/100 limits): batch independent reads/checks, keep useful rolling worker slots active without waiting for a whole wave, avoid routine narration, and never silently skip a failed gate. If awaiting candidate integration, prepare the verifier and record the exact trigger/command rather than repeatedly polling.
 - Full release evidence requires two distinct non-author reviewer reports, two distinct tester reports, real visual inspection, scale and clean distribution checks. Do not label seed/preparation reports as candidate signoff.
