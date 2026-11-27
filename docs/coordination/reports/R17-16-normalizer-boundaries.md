@@ -1,5 +1,35 @@
 # R17-16: owned-adapter lifetime milestone
 
+## Completed scalar checkpoint / GP pre-work (not final signoff)
+
+Frozenpublishedmean/scalarchain c1b→a736→**7ab546251029df169604358448ecd462d8db5e6f**, OWNnonforcepush0/exactremote0after16:05:05safeGET. NEWselectedroot1RED1pass→minimal_recordsrootdiscriminator→223Pythonpass0skip12.08s; unchangedguardedpublishedR16now31Pythonpass0skip0.70s/31Nodepass0skip319.1603ms onexact7abcommittedbytes/ownJS. EarlierknownREDpreserved/fullP1/4policy/missinghatchlingunmet. Fullnpm339/build/types/schema/pack/Ruff/Mypy0atunchangedTSbytes. Compactm2-verification.json SHA f4fc0ebf96e3127360ef7adbe6f261862a04b2eb1fc422e54c04c6bffe72d735 records9Python/7Node/9othercommands/rawsource/build/testhashes; initial2collectorCRLF/glyphparseexit1correctedwithouttestreplay.
+
+NextGPonly: FULL96lineR15-03report/actualtest/verificationread, verify8publishedprobeGitbytes/hashes; smallliteralNEWcarrierRED+targetedunchanged73+73beforeminimalTSarrayexistingerrorcheck. UniqueportableartifactrootcopiedOWNcommittedPython/OWNbuiltJS+unchangedprobesforrelativeimportguard, everybytehashrecorded, nootherworkerwrites/no oldformats/scalereplays. Preservebusinesserrors/multiplicity/emptycontinuation/earlystop, no broadrecursion/semanticmerge. SeparateGPcommitthenOPENP2prefixSUMcost/design; no10M/currentfinalapproval.
+
+Localfidelity4pathcommit a7363be preserved, NOTyetpushed: guardedR16Node31pass0skip424.7273ms/Python1fail30pass0skip2.33s. KnownR16baseline`explicit-column-object-path` stillRED (FULLpriorreportconfirmsbaseline19thfailure); genericselectediteratorlosesroot-vs-recorddistinction. AddNEWpermanentrootcolumn/recordarraycontrolthenminimal_records selectedrootexpansion, separatefollowupcommit/nooldoracleedit. Stoppedbeforepushonfailure/remoteSTILLc1b. No fullgreen/finalclaim.
+
+M2 fidelity actual NEW RED on c1b source: Python28fail40pass0skip2.93s; Node13fail57pass0skip976.2621ms; both exit1, no harness error. Strict scalar-column identity and direct/custom GraphQL siblings only; metadata/known carriers/scalar sequence/mean/lifetimes positive. Next minimal scalar array discrimination/no iterator lookahead and TS sibling/custom-root validation; GP later separate after checkpoint. Raw logs/XML preserved.
+
+Afterminimalchange: selectedPython243pass4knownfieldpolicyfail0skip10.77s (NEW68allpass), unchanged01F1/F3external21pass12deselected0skip0.34s. Four exact64KiB-keyoracles conflictwithunchanged4096Bfieldpolicy, notwaived/hidden/greenfullclaim. Fullnpm339pass0skip6306.4887ms/build/types/schema/pack0/rootRuff0/Mypy10files0. Next4ownsource/newtestcommitthenR16guardedimmutable31+31oncleancommittedsourcebeforepublication; no oldformats/scale replay.
+
+## M2 mean milestone c1b0b29 (published, not final signoff)
+
+Separate4pathsource/newtests commit **c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19**, nonforceOWNpush0/exactremoteSHA0after15:47:40UTCexpectedidentitysafeGET/OWNremote792. P1source5baunchanged. Exactmeanfirstfinitevaluebudgetedintegernumerator/finalrationalroundonce, 512BJSextrareservationbeforefirststate+existingkey/count/base,<=2151JSbits; Python_storewideintegerdecimalpayload/count. No SUMprefix/cap/schema/originaloracle edit.
+
+ActualNEWRED11Python/11Node → Python26own+unchangedaggregation/R07 **82pass0skip3.04s**; Node21pass0skip147.2555ms; fullnpm290pass0skip5556.9702ms/build/types/schema/pack0/rootRuff0/Mypy10files0. PriorPythonexit4Zerotestswrongpathsretainedthenverifiedcorrection. npmci/installNOTRUN/shareddepsreadonly; P1fullPythonknownRED/missinghatchlingnotgreen.
+
+Freshsmallaffectedcost24processes0,1K/100K×one/tiny/max×before/after×Python/TS, all consumed/inputcount exact/output1/warnings0. `m2-mean-cost.json` SHA42f9f444...; 100KPython1.514/1.598/2.133→1.872/1.037/2.412s, inclusiveWindowspeak38.25–38.59MiB; TS0.378/0.229/0.338→0.209/0.183/0.207s, sampledRSS49.72–51.08MiB. Oneconstantfiniteworkloadtrial/notdistribution/speedclaim/not10M/fulltiers/native/renderer/exclusivememoryproof. Allsource/build/rawhashesmethodsinJSON. Meanmilestonefrozen/R04available, nextNEWscalar/GraphQLRED→separatefix; GPfullreport/read/probe/hashafter scalarcheckpoint, no poll/oldscale replay.
+
+## M2 pre-work (P1 source5ba frozen)
+
+InitialPythonGREENharness exit4/ZEROtests0.04s wrongguessedstatisticsfilenames; preservefailedlog/noPythonpass. Correctpathsverifiedvia glob next. OWNTSbuild0/NEWNode21pass0skip147.2555ms/rootRuff0/Mypy10files0actual, nofulloldformats/scale rerun.
+
+Actual NEWmeanstrictRED beforeproductedit: Python **11fail15pass0skip0.61s exit1** (includes P1fiveownership positives); Node **11fail10pass0skip163.0574ms exit1**. Finite subnormal/signed underflow/otherbucket values fail, not a missing dependency/harness. Raw runs preserved; next minimal exactmeanstate, no SUM/cap/oracle edit.
+
+OWN79232fbdoc/evidencepublished/nonforcepush0/exactSHA0afterfresh15:08:37UTCsafeGET. FULL01R03/R10/C17shape/R16tests/R17grant reread. MeanNEWstrictFraction/literalREDfirst; oneexactinteger2^-1074numeratorfromfirstvalue/finalrationalroundonce, no rows/partiallists. <=~2151bitsfinitebinary64+safeJScount, JS512Bextrareservebeforefirstmeanstateplusbase/key/count, Pythonexisting_storewideinteger/countpayload. NoSUM/cap/schema. Boundedfresh100Kaffectedmeanonlycostbeforeperformanceclaim/no10M.
+
+Scalar/GraphQLseparateaftermeanfreeze: namedscalararrays/nocolumniteratorlookahead, explicitpaths/metadata/nullnodes/booleanmeasures/listrecords/knowncarriers. RootqueuedGP-ERR-CARRIERAFTERcleanup/mean/scalar; FULLR15-03report/acb11/648f399probe/hashreadBEFORElaterseparatefix;6samecause+4knownF1dedupnot10bugs. No currentM2sourceedits/overlap/poll/oldformats-scalereplay/finalsignoff.
+
 Owner native session `ses_de567808bffdXko8hyKFRhPv77`. R04's FULL `tasks/R17-normalizer-producer-succession.md` read/accepted after completing and publishing R16 strict RED/proposal673d5f3; prework checkpoint saved in MAIN own report/note BEFORE source edits. New isolated OWN `fix/r17-normalizer-boundaries`, exact **ec9f669eff28cd5351da142765b7755e3b2f484f** parent, native SAME-ID move confirmed. Prior SUMbranch/source immutable. No spawned worker, dependency install, shared environment/Git/GitHub/issue/PR mutation or other producer edit.
 
 ## Source scope and exact implementation

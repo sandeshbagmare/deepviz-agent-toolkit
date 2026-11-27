@@ -1,0 +1,19 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {join,resolve} from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {createHash} from 'node:crypto';
+const [rootText,countText,pattern]=process.argv.slice(2),root=resolve(rootText),count=Number(countText);
+const modulePath=join(root,'packages/deepviz/dist/normalize.js');
+const {normalizeStream}=await import(pathToFileURL(join(root,'packages/deepviz/dist/index.js')).href);
+const value={one:1,tiny:Number.MIN_VALUE,max:Number.MAX_VALUE}[pattern];
+let consumed=0,peakRss=process.memoryUsage().rss,peakHeap=process.memoryUsage().heapUsed;
+const before=process.memoryUsage();
+const sample=()=>{const m=process.memoryUsage();peakRss=Math.max(peakRss,m.rss);peakHeap=Math.max(peakHeap,m.heapUsed);};
+async function* rows(){for(let i=0;i<count;i++){consumed++;if(i%10000===0)sample();yield {g:'one',v:value};}}
+const start=performance.now();
+const result=await normalizeStream(rows(),{x:'g',y:'v',aggregation:'mean',max_points:10});
+const elapsed=(performance.now()-start)/1000;sample();
+assert.equal(consumed,count);assert.equal(result.input_count,count);assert.equal(result.strategy,'mean');
+assert.deepEqual(result.warnings,[]);assert.deepEqual(result.records,[{g:'one',v:value}]);
+console.log(JSON.stringify({language:'typescript',root,built_sha256:createHash('sha256').update(readFileSync(modulePath)).digest('hex'),pattern,input_count:count,consumed,output_count:result.records.length,expected:value,result:result.records[0].v,elapsed_seconds:elapsed,before_bytes:before,sampled_peak_rss_bytes:peakRss,sampled_peak_heap_used_bytes:peakHeap,method:'fresh Node process; process.memoryUsage at baseline/every10000yield/finish; sampled not continuous peak and not exclusive allocations/native/browser cap'}));

@@ -1,0 +1,488 @@
+{
+  "source_commit": "7ab546251029df169604358448ecd462d8db5e6f",
+  "baseline": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+  "own_branch": "fix/r17-normalizer-boundaries",
+  "files": {
+    "python/deepviz/src/deepviz/normalize.py": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "bytes": 36091,
+      "sha256": "869be9c3c63f6d96f95d75bdbb5bcb00a41fe3dc86252cca5dc328915a1c095c",
+      "committed_git_blob_sha256": "869be9c3c63f6d96f95d75bdbb5bcb00a41fe3dc86252cca5dc328915a1c095c"
+    },
+    "packages/deepviz/src/normalize.ts": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\src\\normalize.ts",
+      "bytes": 30840,
+      "sha256": "9af827092c877b828d46859c430855cbf081d5a63fbdd8b58162bd7a8fd35d8d",
+      "committed_git_blob_sha256": "9af827092c877b828d46859c430855cbf081d5a63fbdd8b58162bd7a8fd35d8d"
+    },
+    "python/deepviz/src/deepviz/models.py": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\python\\deepviz\\src\\deepviz\\models.py",
+      "bytes": 3493,
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "committed_git_blob_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    "packages/deepviz/src/models.ts": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\src\\models.ts",
+      "bytes": 4737,
+      "sha256": "d43d5ae0bef1d43f251ed71899a9b507c6575562e4403bd2e2ac02bd7caa43e6",
+      "committed_git_blob_sha256": "d43d5ae0bef1d43f251ed71899a9b507c6575562e4403bd2e2ac02bd7caa43e6"
+    },
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\python\\deepviz\\tests\\test_r17_normalizer_boundaries.py",
+      "bytes": 10161,
+      "sha256": "dc675e38cccbdd38341f701716fd0fdff748730225589559684db4907ba74787",
+      "committed_git_blob_sha256": "dc675e38cccbdd38341f701716fd0fdff748730225589559684db4907ba74787"
+    },
+    "packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs",
+      "bytes": 5373,
+      "sha256": "c6016e5ea35b00ce8f644b5946800744c1b6b64e67d1dff3aa3204b2ed150645",
+      "committed_git_blob_sha256": "c6016e5ea35b00ce8f644b5946800744c1b6b64e67d1dff3aa3204b2ed150645"
+    },
+    "schemas/chart-spec.schema.json": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\schemas\\chart-spec.schema.json",
+      "bytes": 4975,
+      "sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+      "committed_git_blob_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71"
+    },
+    "packages/deepviz/dist/normalize.js": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\dist\\normalize.js",
+      "bytes": 36116,
+      "sha256": "b996f336256221c7be1d4a7f13c99d0d25fde727a12ab8d722057cd500407638"
+    },
+    "packages/deepviz/dist/index.js": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\dist\\index.js",
+      "bytes": 170,
+      "sha256": "887a0d361250e936d43f6b5f8cac4f65a024676520ad6bcfb49ab8042e355c39"
+    }
+  },
+  "python_runs": [
+    {
+      "tests": "26",
+      "errors": "0",
+      "failures": "11",
+      "skipped": "0",
+      "time": "0.575",
+      "failed_ids": [
+        "test_mean_rounds_exact_finite_rational_once[split-positive-records]",
+        "test_mean_rounds_exact_finite_rational_once[split-positive-one-pass]",
+        "test_mean_rounds_exact_finite_rational_once[split-negative-records]",
+        "test_mean_rounds_exact_finite_rational_once[split-negative-one-pass]",
+        "test_mean_rounds_exact_finite_rational_once[overflow-tiny-tail-records]",
+        "test_mean_rounds_exact_finite_rational_once[overflow-tiny-tail-one-pass]",
+        "test_mean_rounds_exact_finite_rational_once[late-overflow-records]",
+        "test_mean_rounds_exact_finite_rational_once[late-overflow-one-pass]",
+        "test_mean_rounds_exact_finite_rational_once[negative-half-zero-records]",
+        "test_mean_rounds_exact_finite_rational_once[negative-half-zero-one-pass]",
+        "test_other_mean_uses_all_numeric_contributions_not_boolean_or_null"
+      ],
+      "name": "m2-mean-red",
+      "exit": 1,
+      "command": "python -m pytest python/deepviz/tests/test_r17_normalizer_boundaries.py -q --tb=short -p no:cacheprovider --basetemp <ART>/pytest-<name> --junitxml <ART>/<name>.xml",
+      "junit_sha256": "c8efab76a8b965f80d8ed45434b08cd25635dd6e139229bd7b2c361d3de123df",
+      "raw_log_sha256": "5aa33c243c0c94d8e7973872213eb8a1f2399d912e415b3b91c2a59d8503b057"
+    },
+    {
+      "tests": "82",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "time": "2.908",
+      "failed_ids": [],
+      "name": "m2-mean-green-corrected",
+      "exit": 0,
+      "command": "python -m pytest python/deepviz/tests/test_r17_normalizer_boundaries.py python/deepviz/tests/test_aggregation_semantics.py python/deepviz/tests/test_r07_finite_overflow.py -q --tb=short -p no:cacheprovider --basetemp <ART>/pytest-<name> --junitxml <ART>/<name>.xml",
+      "junit_sha256": "7835cd2cde415eca8eb02bbc8a5c56dd33a63b7416df6143e6bba37ac79a0706",
+      "raw_log_sha256": "2110b0a7576171fd7e460c058171f28fe731d884154042c12c226e11e9117353"
+    },
+    {
+      "tests": "68",
+      "errors": "0",
+      "failures": "28",
+      "skipped": "0",
+      "time": "2.464",
+      "failed_ids": [
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-rows]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-records]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-items]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-results]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-data]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-nodes]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-edges]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-rows]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-records]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-items]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-results]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-data]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-nodes]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-edges]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-rows]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-records]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-items]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-results]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-data]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-nodes]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-edges]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-rows]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-records]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-items]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-results]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-data]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-nodes]",
+        "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-edges]"
+      ],
+      "name": "m2-fidelity-red",
+      "exit": 1,
+      "command": "python -m pytest python/deepviz/tests/test_r17_normalizer_boundaries.py -q --tb=short -p no:cacheprovider --basetemp <ART>/pytest-<name> --junitxml <ART>/<name>.xml",
+      "junit_sha256": "60fad11d013796435358e6e3c7339ccf41ae0120b325cfe0cfab496f88afda00",
+      "raw_log_sha256": "a83c40857d7b013c5a9767f74d4d2881ba9a1b451cd33817bff2032c1d7e862b"
+    },
+    {
+      "tests": "247",
+      "errors": "0",
+      "failures": "4",
+      "skipped": "0",
+      "time": "10.728",
+      "failed_ids": [
+        "test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii]",
+        "test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte]",
+        "test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte]",
+        "test_flattened_multibyte_key_at_64kib_is_preserved"
+      ],
+      "name": "m2-fidelity-green",
+      "exit": 1,
+      "command": "python -m pytest python/deepviz/tests/test_r17_normalizer_boundaries.py python/deepviz/tests/test_aggregation_semantics.py python/deepviz/tests/test_r07_finite_overflow.py python/deepviz/tests/test_n04_shape_policy.py python/deepviz/tests/test_normalize.py tests/test_n11_resource_policy.py -q --tb=short -p no:cacheprovider --basetemp <ART>/pytest-<name> --junitxml <ART>/<name>.xml",
+      "junit_sha256": "ba274bfce8f23e121ddb4e3639c8ed581994db87184c21e2ca9238ff4b82dce5",
+      "raw_log_sha256": "66f184c6be69d1975bb2a3910eebef19c82fa7d7e0baba6cd58f61205d63b20f"
+    },
+    {
+      "tests": "21",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "time": "0.305",
+      "failed_ids": [],
+      "name": "m2-fidelity-01-oracles",
+      "exit": 0,
+      "command": "python -m pytest <immutable-R10-01>/tests/r10_probes/role01/test_correctness_regressions.py -k 'f1 or f3' -q --tb=short --import-mode=importlib -p no:cacheprovider --basetemp <ART>/pytest-<name> --junitxml <ART>/<name>.xml",
+      "junit_sha256": "c2e9fb6eb8a50e4b2c3115a447928afc2918d0c344e68ebe7f7d7c4de1c3d1b6",
+      "raw_log_sha256": "0d907bdd0ba238183a1c8c32ad46919ed59827e0bad10a86d149c183b9fa5b96"
+    },
+    {
+      "tests": "31",
+      "errors": "0",
+      "failures": "1",
+      "skipped": "0",
+      "time": "2.201",
+      "failed_ids": [
+        "test_valid_explicit_paths_and_columns_remain_usable[explicit-column-object-path]"
+      ],
+      "name": "m2-fidelity-r16-immutable",
+      "exit": 1,
+      "command": "python -m pytest <immutable-R16>/tests/r16_probes/role16/test_mean_scalar_followups.py -q --tb=short -p no:cacheprovider; DEEPVIZ_R16_SOURCE=OWN/EXPECTED_COMMIT=a7363be273d7b3bbcb1b52ef79a58bb4e6d0e3be --basetemp <ART>/pytest-<name> --junitxml <ART>/<name>.xml",
+      "junit_sha256": "c186c8fadaab43324029ef760db96ddc4677c2c67aa282d5209c3f4614794a98",
+      "raw_log_sha256": "2681146106001cd0fa8ca77b5f8441406a0db2c598473f5538111cfb03a67bd3"
+    },
+    {
+      "tests": "2",
+      "errors": "0",
+      "failures": "1",
+      "skipped": "0",
+      "time": "0.630",
+      "failed_ids": [
+        "test_explicit_selected_column_object_keeps_root_boundary"
+      ],
+      "name": "m2-selected-root-red",
+      "exit": 1,
+      "command": "python -m pytest python/deepviz/tests/test_r17_normalizer_boundaries.py -k explicit_selected -q --tb=short -p no:cacheprovider --basetemp <ART>/pytest-<name> --junitxml <ART>/<name>.xml",
+      "junit_sha256": "8aa98fb32b7ea19f81a1afc23f7349b06e2e2ce3fdb90bfa697a9960d33af0b7",
+      "raw_log_sha256": "8999aa5e58017329096bd0b8a9bab584af37374bf0c0e009e66a03d0efb9949f"
+    },
+    {
+      "tests": "223",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "time": "12.051",
+      "failed_ids": [],
+      "name": "m2-selected-root-green",
+      "exit": 0,
+      "command": "python -m pytest python/deepviz/tests/test_r17_normalizer_boundaries.py python/deepviz/tests/test_n04_shape_policy.py python/deepviz/tests/test_normalize.py python/deepviz/tests/test_aggregation_semantics.py python/deepviz/tests/test_r07_finite_overflow.py -q --tb=short -p no:cacheprovider --basetemp <ART>/pytest-<name> --junitxml <ART>/<name>.xml",
+      "junit_sha256": "a2b8230c3405fad326b7614be25360ebc0c3e045e420cc23697a375b00653596",
+      "raw_log_sha256": "305258e853e34133e0849521cc3467fad816e6b391a7189064ff448a47554079"
+    },
+    {
+      "tests": "31",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "time": "0.638",
+      "failed_ids": [],
+      "name": "m2-selected-root-r16-immutable",
+      "exit": 0,
+      "command": "python -m pytest <immutable-R16>/tests/r16_probes/role16/test_mean_scalar_followups.py -q --tb=short -p no:cacheprovider; DEEPVIZ_R16_SOURCE=OWN/EXPECTED_COMMIT=7ab546251029df169604358448ecd462d8db5e6f --basetemp <ART>/pytest-<name> --junitxml <ART>/<name>.xml",
+      "junit_sha256": "92053bb932e80956d057fa7767bb29c18c87582f135f923202d1af4a19eda85b",
+      "raw_log_sha256": "91180e34703cd79d79255cc611eef98e5cce7470a9a772edba6ccc22157bfe35"
+    }
+  ],
+  "node_runs": [
+    {
+      "name": "m2-mean-node-red",
+      "exit": 1,
+      "command": "node --test --test-reporter=tap packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs",
+      "raw_log_sha256": "aa8b763bb7fb49e10473874f5d026918c3962ced9272e5f9ffe3350c700c7198",
+      "tests": 21,
+      "pass": 10,
+      "fail": 11,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "duration_ms": 163.0574,
+      "failed_ids": [
+        "mean rounds once split-positive records",
+        "mean rounds once split-positive async-one-pass",
+        "mean rounds once split-negative records",
+        "mean rounds once split-negative async-one-pass",
+        "mean rounds once overflow-tiny-tail records",
+        "mean rounds once overflow-tiny-tail async-one-pass",
+        "mean rounds once late-overflow records",
+        "mean rounds once late-overflow async-one-pass",
+        "mean rounds once negative-half-zero records",
+        "mean rounds once negative-half-zero async-one-pass",
+        "other mean preserves tiny values and excludes booleans/null/numeric strings"
+      ]
+    },
+    {
+      "name": "m2-mean-node-green",
+      "exit": 0,
+      "command": "node --test --test-reporter=tap packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs",
+      "raw_log_sha256": "56f1c07cf03610e191d583b01da3fc3aca43d56fe34515763050a4d0054cda58",
+      "tests": 21,
+      "pass": 21,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "duration_ms": 147.2555,
+      "failed_ids": []
+    },
+    {
+      "name": "m2-mean-npm-test",
+      "exit": 0,
+      "command": "npm run test",
+      "raw_log_sha256": "536fd32588f0118aafbb57edc36aa0ce6d378398fe914430bf0fc74ba0c31abc",
+      "tests": 290,
+      "pass": 290,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "duration_ms": 5556.9702,
+      "failed_ids": []
+    },
+    {
+      "name": "m2-fidelity-node-red",
+      "exit": 1,
+      "command": "node --test --test-reporter=tap packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs",
+      "raw_log_sha256": "06d5628ceea4f0b79b2a338b8592bdddb8ca003a3c92b5b592b39a8856aa47d7",
+      "tests": 70,
+      "pass": 57,
+      "fail": 13,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "duration_ms": 976.2621,
+      "failed_ids": [
+        "connection nodes rejects disappearing scalar sibling object",
+        "connection nodes rejects disappearing scalar sibling encoded-json",
+        "connection nodes rejects disappearing scalar sibling async-one-pass",
+        "connection nodes rejects disappearing object sibling object",
+        "connection nodes rejects disappearing object sibling encoded-json",
+        "connection nodes rejects disappearing object sibling async-one-pass",
+        "connection edges rejects disappearing scalar sibling object",
+        "connection edges rejects disappearing scalar sibling encoded-json",
+        "connection edges rejects disappearing scalar sibling async-one-pass",
+        "connection edges rejects disappearing object sibling object",
+        "connection edges rejects disappearing object sibling encoded-json",
+        "connection edges rejects disappearing object sibling async-one-pass",
+        "custom connection wrapper requires explicit selection"
+      ]
+    },
+    {
+      "name": "m2-fidelity-npm-test",
+      "exit": 0,
+      "command": "npm test",
+      "raw_log_sha256": "1b4e514ebc55544924aaa45fdc67c454e7a7c352c89d69a45b14d522b67e3429",
+      "tests": 339,
+      "pass": 339,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "duration_ms": 6306.4887,
+      "failed_ids": []
+    },
+    {
+      "name": "m2-fidelity-r16-immutable-node",
+      "exit": 0,
+      "command": "node --test --test-reporter=tap <immutable-R16>/tests/r16_probes/role16/mean-scalar-followups.test.mjs; SOURCE=OWN/EXPECTED_COMMIT=a7363be",
+      "raw_log_sha256": "9efd0d4e1f564c24e90613b9dc38a2fb4deb84c33aa0347af4c2483ffb1be2cb",
+      "tests": 31,
+      "pass": 31,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "duration_ms": 424.7273,
+      "failed_ids": []
+    },
+    {
+      "name": "m2-selected-root-r16-immutable-node",
+      "exit": 0,
+      "command": "node --test --test-reporter=tap <immutable-R16>/tests/r16_probes/role16/mean-scalar-followups.test.mjs; SOURCE=OWN/EXPECTED_COMMIT=7ab5462",
+      "raw_log_sha256": "2c7bf267f08236e0aa4130e38996f6656bdfd86ab8bbd3371e26401127f91540",
+      "tests": 31,
+      "pass": 31,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "duration_ms": 319.1603,
+      "failed_ids": []
+    }
+  ],
+  "other_commands": [
+    {
+      "command": "node C:/Users/bagma/deepviz-agent-toolkit/node_modules/typescript/bin/tsc -p packages/deepviz/tsconfig.json",
+      "exit": 0,
+      "raw_log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\m2-mean-ts-build.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "python -m ruff check .",
+      "exit": 0,
+      "raw_log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\m2-mean-ruff.log",
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    {
+      "command": "python -m mypy python/deepviz/src/deepviz python/deepviz/tests/test_r17_normalizer_boundaries.py --cache-dir <ART>/mypy-m2-mean",
+      "exit": 0,
+      "raw_log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\m2-mean-mypy.log",
+      "sha256": "f338801c86ba1cc9449bfc736adce1bdc79c2b319b89e3df10cc05c52940e450"
+    },
+    {
+      "command": "python -m ruff check .",
+      "exit": 0,
+      "raw_log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\m2-selected-root-ruff.log",
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    {
+      "command": "python -m mypy python/deepviz/src/deepviz python/deepviz/tests/test_r17_normalizer_boundaries.py --cache-dir <ART>/mypy-m2-selected-root",
+      "exit": 0,
+      "raw_log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\m2-selected-root-mypy.log",
+      "sha256": "f338801c86ba1cc9449bfc736adce1bdc79c2b319b89e3df10cc05c52940e450"
+    },
+    {
+      "command": "npm run build",
+      "exit": 0,
+      "raw_log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\m2-fidelity-npm-build.log",
+      "sha256": "54663bc0db3ea6b28614ed2ceb4972d5a7f39add82ae76ac81c7dc94d0f1210a"
+    },
+    {
+      "command": "npm run typecheck",
+      "exit": 0,
+      "raw_log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\m2-fidelity-npm-typecheck.log",
+      "sha256": "9d4faa42627cce5bfbf96de4e79491b65a667227c10f83c8c032b8776432e971"
+    },
+    {
+      "command": "npm run schema:check",
+      "exit": 0,
+      "raw_log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\m2-fidelity-npm-schema-check.log",
+      "sha256": "a56d2c024f92711d17f9b699a4ba9c10d952f2702a581b74ea60ec824b68c6b2"
+    },
+    {
+      "command": "npm pack --dry-run --workspace @deepviz/agent-toolkit",
+      "exit": 0,
+      "raw_log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\m2-fidelity-npm-pack-dry-run.log",
+      "sha256": "17cb42033722690aea9625f93d75c082e7a1f37a27b5eaf38c9c56c32916807f"
+    }
+  ],
+  "immutable_R16_probes": {
+    "tests/r16_probes/role16/test_mean_scalar_followups.py": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-16-finite-overflow-ses_de567808bffdXko8hyKFRhPv77\\tests\\r16_probes\\role16\\test_mean_scalar_followups.py",
+      "sha256": "cf793142b104f1c48f5ab1d7885c73d305bdb849fc00d3b0976fec9b4332fe84",
+      "unchanged_published_probe_commit": "673d5f3b0702274f37c77b64de5d2befb6191298"
+    },
+    "tests/r16_probes/role16/mean-scalar-followups.test.mjs": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-16-finite-overflow-ses_de567808bffdXko8hyKFRhPv77\\tests\\r16_probes\\role16\\mean-scalar-followups.test.mjs",
+      "sha256": "9d308809bfa7a0174f43cd91cea4707ef3d3bc670f24eec142c137bab8c8cb84",
+      "unchanged_published_probe_commit": "673d5f3b0702274f37c77b64de5d2befb6191298"
+    }
+  },
+  "publications": [
+    {
+      "identity": {
+        "at_utc": "2026-11-27T15:47:40.519364+00:00",
+        "branch_status": 200,
+        "login": "sandeshbagmare",
+        "owned_branch": "fix/r17-normalizer-boundaries",
+        "phase": "R17-M2-mean-pre-push",
+        "pr31_draft": true,
+        "pr31_head": "6c72cec40e3feb8d710ab55167453194f643d650",
+        "pr31_merged": false,
+        "pr31_state": "open",
+        "pr31_status": 200,
+        "push_permission": true,
+        "remote_branch_sha": "79232fb2f402bf21d455fbc021f1c238d19abe80",
+        "repo": "sandeshbagmare/deepviz-agent-toolkit",
+        "repo_status": 200,
+        "user_status": 200
+      },
+      "push_exit": 0,
+      "remote_readback_exit": 0,
+      "remote_readback": "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19\trefs/heads/fix/r17-normalizer-boundaries",
+      "push_raw_log_sha256": "8f9b57a0dcc166b5a829a8227642e1669e740d2abc644200af4450e838d40911",
+      "remote_raw_log_sha256": "aee54e3a4419bdaa028d423e8bf470c2e34bd6416249dbd20078d51b45dcab19"
+    },
+    {
+      "identity": {
+        "at_utc": "2026-11-27T16:05:05.465018+00:00",
+        "branch_status": 200,
+        "login": "sandeshbagmare",
+        "owned_branch": "fix/r17-normalizer-boundaries",
+        "phase": "R17-M2-fidelity-fixed-pre-push",
+        "pr31_draft": true,
+        "pr31_head": "3eab699b61850a20e91132e16caf8c589085f9ee",
+        "pr31_merged": false,
+        "pr31_state": "open",
+        "pr31_status": 200,
+        "push_permission": true,
+        "remote_branch_sha": "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19",
+        "repo": "sandeshbagmare/deepviz-agent-toolkit",
+        "repo_status": 200,
+        "user_status": 200
+      },
+      "push_exit": 0,
+      "remote_readback_exit": 0,
+      "remote_readback": "7ab546251029df169604358448ecd462d8db5e6f\trefs/heads/fix/r17-normalizer-boundaries",
+      "push_raw_log_sha256": "99a2003e5beb63bfa7f0e4d039e0dea1e529e9688d75b85d4652dcd176d3149b",
+      "remote_raw_log_sha256": "6b60e3759cf0216850639e8a0f615331931c1ed0410c7742cb8687d5ef2af09c"
+    }
+  ],
+  "prior_harness_error": {
+    "exit": 4,
+    "tests_run": 0,
+    "reason": "guessed nonexistent Python statistics test paths",
+    "raw_log_sha256": "0e7d79327a7e5a5a7a9ae547883a07ca491eb0132aa0105e8e7b549d529345b4"
+  },
+  "status": "Scoped mean/scalar/GraphQL-sibling milestone, not full candidate signoff",
+  "limits": [
+    "4 existing 64KiB field-name resource-policy cases RED vs unchanged4096B implementation; no cap/oracle edited",
+    "P1 full nonscale known failures remain recorded separately; not rerun for M2",
+    "No npm ci/installs/shared dependency writes",
+    "Missing hatchling/clean Python distribution remains unmet",
+    "No scale tier or renderer/browser replay, no10M/current-final-head scale claim",
+    "Exact-prefix SUM residual issue and GP-ERR-CARRIER remain open at this source",
+    "Own author reruns are not independent final reviews"
+  ]
+}

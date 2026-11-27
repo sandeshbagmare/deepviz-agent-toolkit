@@ -1,0 +1,111 @@
+"""Collect actual finite mean/fidelity receipts, not a full-release verdict."""
+import hashlib
+import json
+import re
+import subprocess
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+root = Path.cwd()
+art = Path(__file__).parent
+dest = root / "docs/coordination/evidence/R17-16"
+sha = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+assert sha == "7ab546251029df169604358448ecd462d8db5e6f"
+assert not subprocess.check_output(["git", "diff", "HEAD", "--", "python/deepviz/src", "packages/deepviz/src", "python/deepviz/tests", "packages/deepviz/test"])
+
+
+def digest(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def text(path):
+    data = path.read_bytes()
+    return data.decode("utf-16" if data.startswith((b"\xff\xfe", b"\xfe\xff")) else "utf-8-sig").replace("\r\n", "\n")
+
+
+files = {}
+for relative in ["python/deepviz/src/deepviz/normalize.py", "packages/deepviz/src/normalize.ts", "python/deepviz/src/deepviz/models.py", "packages/deepviz/src/models.ts", "python/deepviz/tests/test_r17_normalizer_boundaries.py", "packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs", "schemas/chart-spec.schema.json", "packages/deepviz/dist/normalize.js", "packages/deepviz/dist/index.js"]:
+    path = root / relative
+    item = {"path": str(path), "bytes": path.stat().st_size, "sha256": digest(path)}
+    if "/dist/" not in relative:
+        blob = subprocess.check_output(["git", "show", "HEAD:" + relative])
+        assert path.read_bytes() == blob
+        item["committed_git_blob_sha256"] = hashlib.sha256(blob).hexdigest()
+    files[relative] = item
+
+python_runs = []
+for name, code, command in [
+    ("m2-mean-red", 1, "python -m pytest python/deepviz/tests/test_r17_normalizer_boundaries.py -q --tb=short -p no:cacheprovider"),
+    ("m2-mean-green-corrected", 0, "python -m pytest python/deepviz/tests/test_r17_normalizer_boundaries.py python/deepviz/tests/test_aggregation_semantics.py python/deepviz/tests/test_r07_finite_overflow.py -q --tb=short -p no:cacheprovider"),
+    ("m2-fidelity-red", 1, "python -m pytest python/deepviz/tests/test_r17_normalizer_boundaries.py -q --tb=short -p no:cacheprovider"),
+    ("m2-fidelity-green", 1, "python -m pytest python/deepviz/tests/test_r17_normalizer_boundaries.py python/deepviz/tests/test_aggregation_semantics.py python/deepviz/tests/test_r07_finite_overflow.py python/deepviz/tests/test_n04_shape_policy.py python/deepviz/tests/test_normalize.py tests/test_n11_resource_policy.py -q --tb=short -p no:cacheprovider"),
+    ("m2-fidelity-01-oracles", 0, "python -m pytest <immutable-R10-01>/tests/r10_probes/role01/test_correctness_regressions.py -k 'f1 or f3' -q --tb=short --import-mode=importlib -p no:cacheprovider"),
+    ("m2-fidelity-r16-immutable", 1, "python -m pytest <immutable-R16>/tests/r16_probes/role16/test_mean_scalar_followups.py -q --tb=short -p no:cacheprovider; DEEPVIZ_R16_SOURCE=OWN/EXPECTED_COMMIT=a7363be273d7b3bbcb1b52ef79a58bb4e6d0e3be"),
+    ("m2-selected-root-red", 1, "python -m pytest python/deepviz/tests/test_r17_normalizer_boundaries.py -k explicit_selected -q --tb=short -p no:cacheprovider"),
+    ("m2-selected-root-green", 0, "python -m pytest python/deepviz/tests/test_r17_normalizer_boundaries.py python/deepviz/tests/test_n04_shape_policy.py python/deepviz/tests/test_normalize.py python/deepviz/tests/test_aggregation_semantics.py python/deepviz/tests/test_r07_finite_overflow.py -q --tb=short -p no:cacheprovider"),
+    ("m2-selected-root-r16-immutable", 0, "python -m pytest <immutable-R16>/tests/r16_probes/role16/test_mean_scalar_followups.py -q --tb=short -p no:cacheprovider; DEEPVIZ_R16_SOURCE=OWN/EXPECTED_COMMIT=7ab546251029df169604358448ecd462d8db5e6f"),
+]:
+    path = art / (name + ".xml")
+    suite = ET.parse(path).getroot().find("testsuite")
+    assert suite is not None
+    result = {key: suite.attrib[key] for key in ["tests", "errors", "failures", "skipped", "time"]}
+    result["failed_ids"] = [case.attrib["name"] for case in suite.findall("testcase") if case.find("failure") is not None or case.find("error") is not None]
+    result.update(name=name, exit=code, command=command + " --basetemp <ART>/pytest-<name> --junitxml <ART>/<name>.xml", junit_sha256=digest(path), raw_log_sha256=digest(art / (name + ".log")))
+    python_runs.append(result)
+
+node_runs = []
+for name, code, command in [
+    ("m2-mean-node-red", 1, "node --test --test-reporter=tap packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs"),
+    ("m2-mean-node-green", 0, "node --test --test-reporter=tap packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs"),
+    ("m2-mean-npm-test", 0, "npm run test"),
+    ("m2-fidelity-node-red", 1, "node --test --test-reporter=tap packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs"),
+    ("m2-fidelity-npm-test", 0, "npm test"),
+    ("m2-fidelity-r16-immutable-node", 0, "node --test --test-reporter=tap <immutable-R16>/tests/r16_probes/role16/mean-scalar-followups.test.mjs; SOURCE=OWN/EXPECTED_COMMIT=a7363be"),
+    ("m2-selected-root-r16-immutable-node", 0, "node --test --test-reporter=tap <immutable-R16>/tests/r16_probes/role16/mean-scalar-followups.test.mjs; SOURCE=OWN/EXPECTED_COMMIT=7ab5462"),
+]:
+    path = art / (name + ".log")
+    content = text(path)
+    item = {"name": name, "exit": code, "command": command, "raw_log_sha256": digest(path)}
+    for field in ["tests", "pass", "fail", "cancelled", "skipped", "todo", "duration_ms"]:
+        # Windows PowerShell preserves a mojibake rendering of Node's info glyph.
+        match = re.search(r"(?m)^\S+ " + field + r" ([\d.]+)$", content)
+        assert match, (name, field)
+        item[field] = float(match[1]) if field == "duration_ms" else int(match[1])
+    item["failed_ids"] = re.findall(r"(?m)^not ok \d+ - (.*)$", content)
+    node_runs.append(item)
+
+commands = []
+for name, command in [
+    ("m2-mean-ts-build", "node C:/Users/bagma/deepviz-agent-toolkit/node_modules/typescript/bin/tsc -p packages/deepviz/tsconfig.json"),
+    ("m2-mean-ruff", "python -m ruff check ."),
+    ("m2-mean-mypy", "python -m mypy python/deepviz/src/deepviz python/deepviz/tests/test_r17_normalizer_boundaries.py --cache-dir <ART>/mypy-m2-mean"),
+    ("m2-selected-root-ruff", "python -m ruff check ."),
+    ("m2-selected-root-mypy", "python -m mypy python/deepviz/src/deepviz python/deepviz/tests/test_r17_normalizer_boundaries.py --cache-dir <ART>/mypy-m2-selected-root"),
+    *[("m2-fidelity-npm-" + name.replace(":", "-"), "npm run " + name) for name in ["build", "typecheck", "schema:check"]],
+    ("m2-fidelity-npm-pack-dry-run", "npm pack --dry-run --workspace @deepviz/agent-toolkit"),
+]:
+    path = art / (name + ".log")
+    commands.append({"command": command, "exit": 0, "raw_log": str(path), "sha256": digest(path)})
+
+external = {}
+external_root = Path(r"C:\Users\bagma\AppData\Local\Temp\opencode\r10-16-finite-overflow-ses_de567808bffdXko8hyKFRhPv77")
+for name in ["test_mean_scalar_followups.py", "mean-scalar-followups.test.mjs"]:
+    relative = "tests/r16_probes/role16/" + name
+    path = external_root / relative
+    committed = subprocess.check_output(["git", "-C", str(external_root), "show", "673d5f3b0702274f37c77b64de5d2befb6191298:" + relative])
+    assert path.read_bytes() == committed
+    external[relative] = {"path": str(path), "sha256": digest(path), "unchanged_published_probe_commit": "673d5f3b0702274f37c77b64de5d2befb6191298"}
+
+for name in ["mean_cost_worker.py", "mean_cost_worker.mjs", "collect_mean_cost.py"]:
+    (dest / (name + ".txt")).write_bytes((art / name).read_bytes())
+publication = []
+for prefix in ["m2-mean", "m2-fidelity-fixed"]:
+    identity_path = art / (prefix + "-github-pre-push.json")
+    identity = json.loads(text(identity_path))
+    remote_path = art / (prefix + "-remote-readback.txt")
+    publication.append({"identity": identity, "push_exit": 0, "remote_readback_exit": 0, "remote_readback": text(remote_path).strip(), "push_raw_log_sha256": digest(art / (prefix + "-push.log")), "remote_raw_log_sha256": digest(remote_path)})
+
+summary = {"source_commit": sha, "baseline": "ec9f669eff28cd5351da142765b7755e3b2f484f", "own_branch": "fix/r17-normalizer-boundaries", "files": files, "python_runs": python_runs, "node_runs": node_runs, "other_commands": commands, "immutable_R16_probes": external, "publications": publication, "prior_harness_error": {"exit": 4, "tests_run": 0, "reason": "guessed nonexistent Python statistics test paths", "raw_log_sha256": digest(art / "m2-mean-green.log")}, "status": "Scoped mean/scalar/GraphQL-sibling milestone, not full candidate signoff", "limits": ["4 existing 64KiB field-name resource-policy cases RED vs unchanged4096B implementation; no cap/oracle edited", "P1 full nonscale known failures remain recorded separately; not rerun for M2", "No npm ci/installs/shared dependency writes", "Missing hatchling/clean Python distribution remains unmet", "No scale tier or renderer/browser replay, no10M/current-final-head scale claim", "Exact-prefix SUM residual issue and GP-ERR-CARRIER remain open at this source", "Own author reruns are not independent final reviews"]}
+path = dest / "m2-verification.json"
+path.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
+print(json.dumps({"path": str(path), "sha256": digest(path), "python_runs": len(python_runs), "node_runs": len(node_runs), "commands": len(commands), "source": sha, "exit": 0}))

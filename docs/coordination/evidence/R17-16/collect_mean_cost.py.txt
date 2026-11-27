@@ -1,0 +1,35 @@
+"""Run affected mean cost controls once on immutable own sources."""
+import hashlib
+import json
+import subprocess
+import sys
+from pathlib import Path
+
+art = Path(__file__).parent
+current = Path.cwd()
+baseline = Path(r"C:\Users\bagma\AppData\Local\Temp\opencode\r10-16-finite-overflow-ses_de567808bffdXko8hyKFRhPv77")
+sha = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+assert sha == "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19"
+assert not subprocess.check_output(["git", "diff", "HEAD", "--", "python/deepviz/src", "packages/deepviz/src", "python/deepviz/tests", "packages/deepviz/test"])
+results = []
+for label, root in [("before_mean_ec9_bytes", baseline), ("exact_mean_c1b", current)]:
+    for language in ["python", "typescript"]:
+        relative = "python/deepviz/src/deepviz/normalize.py" if language == "python" else "packages/deepviz/src/normalize.ts"
+        committed = subprocess.check_output(["git", "-C", str(root), "show", "HEAD:" + relative])
+        assert (root / relative).read_bytes() == committed
+        for count in [1000, 100000]:
+            for pattern in ["one", "tiny", "max"]:
+                argv = [sys.executable, str(art / "mean_cost_worker.py")] if language == "python" else ["node", str(art / "mean_cost_worker.mjs")]
+                argv += [str(root), str(count), pattern]
+                run = subprocess.run(argv, capture_output=True, text=True, timeout=90)
+                raw = f"mean-cost-{label}-{language}-{count}-{pattern}.log"
+                (art / raw).write_text(run.stdout + run.stderr, encoding="utf-8")
+                assert run.returncode == 0, (argv, run.returncode, raw)
+                result = json.loads(run.stdout)
+                result.update(label=label, argv=argv, exit=run.returncode, raw_log=raw, source_sha256=hashlib.sha256(committed).hexdigest())
+                results.append(result)
+                print(json.dumps({k: result[k] for k in ["label", "language", "input_count", "output_count", "pattern", "elapsed_seconds", "exit"]}), flush=True)
+dest = current / "docs/coordination/evidence/R17-16/m2-mean-cost.json"
+dest.write_text(json.dumps({"source_commit": sha, "trials": 1, "fresh_processes": len(results), "results": results, "limits": "Affected mean only at1K/100K; ordinary/tiny/max repeated constant values; not10M/not fullscale; one run not a latency distribution; platform memory methods differ; unbounded-input/renderer/Arrow overhead not measured"}, indent=2) + "\n", encoding="utf-8")
+assert len(results) == 24
+print(json.dumps({"verified": len(results), "dest": str(dest), "sha256": hashlib.sha256(dest.read_bytes()).hexdigest()}))
