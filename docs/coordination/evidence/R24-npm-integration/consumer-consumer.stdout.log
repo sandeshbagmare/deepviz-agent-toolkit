@@ -1,0 +1,64 @@
+TAP version 13
+# Subtest: materialized package is real, public ESM namespace has exactly the unchanged 13 exports
+ok 1 - materialized package is real, public ESM namespace has exactly the unchanged 13 exports
+  ---
+  duration_ms: 4.8163
+  type: 'test'
+  ...
+# Subtest: schema explicit export remains inside the materialized package and matches the public API
+ok 2 - schema explicit export remains inside the materialized package and matches the public API
+  ---
+  duration_ms: 0.8574
+  type: 'test'
+  ...
+# Subtest: raw README.md export resolves INSIDE the materialized package and equals fixed Git blob bytes
+ok 3 - raw README.md export resolves INSIDE the materialized package and equals fixed Git blob bytes
+  ---
+  duration_ms: 2.1303
+  type: 'test'
+  ...
+# Subtest: raw system.md export resolves INSIDE the materialized package and equals fixed Git blob bytes
+ok 4 - raw system.md export resolves INSIDE the materialized package and equals fixed Git blob bytes
+  ---
+  duration_ms: 1.358
+  type: 'test'
+  ...
+# Subtest: raw request.md export resolves INSIDE the materialized package and equals fixed Git blob bytes
+ok 5 - raw request.md export resolves INSIDE the materialized package and equals fixed Git blob bytes
+  ---
+  duration_ms: 1.5672
+  type: 'test'
+  ...
+# Subtest: canonical system/request keep v1 trust boundary, six-step workflow and request order
+ok 6 - canonical system/request keep v1 trust boundary, six-step workflow and request order
+  ---
+  duration_ms: 2.5972
+  type: 'test'
+  ...
+# Subtest: raw Markdown is not imported as executable ESM or exposed through a wildcard
+ok 7 - raw Markdown is not imported as executable ESM or exposed through a wildcard
+  ---
+  duration_ms: 1.4304
+  type: 'test'
+  ...
+# Subtest: public normalize and streaming API preserve independent literal counts/sums
+ok 8 - public normalize and streaming API preserve independent literal counts/sums
+  ---
+  duration_ms: 2.5849
+  type: 'test'
+  ...
+# Subtest: public native SVG/tool helper smoke creates real HTML but is not a browser visual signoff
+ok 9 - public native SVG/tool helper smoke creates real HTML but is not a browser visual signoff
+  ---
+  duration_ms: 9.3728
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 140.8981

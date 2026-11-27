@@ -1,0 +1,74 @@
+{
+  "source": "262b0da145e42c94c2908213272ec3be28771206",
+  "pack_argv": [
+    "C:/Program Files/nodejs/node.exe",
+    "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+    "pack",
+    "--json",
+    "--ignore-scripts",
+    "--offline",
+    "--workspace",
+    "@deepviz/agent-toolkit",
+    "--pack-destination",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r24-reviewed-npm-consumer-ses_de56ad930fferPKGibj5Mc304B\\packed"
+  ],
+  "pack_exit": 0,
+  "tar_bytes": 47082,
+  "tar_sha256": "e75ecd8c7df7c5c560a0e1b5344225e0d796caaed5d1201f1c355c6c737e7c0e",
+  "members": [
+    "package/LICENSE",
+    "package/dist/index.js",
+    "package/dist/models.js",
+    "package/dist/normalize.js",
+    "package/dist/render.js",
+    "package/dist/renderers.js",
+    "package/dist/schema.js",
+    "package/dist/chart-spec.schema.json",
+    "package/package.json",
+    "package/dist/index.js.map",
+    "package/dist/models.js.map",
+    "package/dist/normalize.js.map",
+    "package/dist/render.js.map",
+    "package/dist/renderers.js.map",
+    "package/dist/schema.js.map",
+    "package/dist/prompts/v1/README.md",
+    "package/README.md",
+    "package/dist/prompts/v1/request.md",
+    "package/dist/prompts/v1/system.md",
+    "package/dist/index.d.ts",
+    "package/dist/models.d.ts",
+    "package/dist/normalize.d.ts",
+    "package/dist/render.d.ts",
+    "package/dist/renderers.d.ts",
+    "package/dist/schema.d.ts"
+  ],
+  "consumer_method": "MANUAL guarded tar materialization, not npm install/ci or prepack lifecycle",
+  "unchanged_probe_source": "bd680ca092f42c4d07df39feafa9530464e87f72:tests/r18_probes/role10/consumer.test.mjs",
+  "probe_sha256": "84cf079fd9e2f683f0117fa0a4cd6dd9e39938e115aa9a8082b93ac94090db9a",
+  "consumer_argv": [
+    "C:/Program Files/nodejs/node.exe",
+    "--test",
+    "--test-reporter=tap",
+    "consumer.test.mjs"
+  ],
+  "consumer_exit": 0,
+  "stdout": "TAP version 13\n# Subtest: materialized package is real, public ESM namespace has exactly the unchanged 13 exports\nok 1 - materialized package is real, public ESM namespace has exactly the unchanged 13 exports\n  ---\n  duration_ms: 4.8163\n  type: 'test'\n  ...\n# Subtest: schema explicit export remains inside the materialized package and matches the public API\nok 2 - schema explicit export remains inside the materialized package and matches the public API\n  ---\n  duration_ms: 0.8574\n  type: 'test'\n  ...\n# Subtest: raw README.md export resolves INSIDE the materialized package and equals fixed Git blob bytes\nok 3 - raw README.md export resolves INSIDE the materialized package and equals fixed Git blob bytes\n  ---\n  duration_ms: 2.1303\n  type: 'test'\n  ...\n# Subtest: raw system.md export resolves INSIDE the materialized package and equals fixed Git blob bytes\nok 4 - raw system.md export resolves INSIDE the materialized package and equals fixed Git blob bytes\n  ---\n  duration_ms: 1.358\n  type: 'test'\n  ...\n# Subtest: raw request.md export resolves INSIDE the materialized package and equals fixed Git blob bytes\nok 5 - raw request.md export resolves INSIDE the materialized package and equals fixed Git blob bytes\n  ---\n  duration_ms: 1.5672\n  type: 'test'\n  ...\n# Subtest: canonical system/request keep v1 trust boundary, six-step workflow and request order\nok 6 - canonical system/request keep v1 trust boundary, six-step workflow and request order\n  ---\n  duration_ms: 2.5972\n  type: 'test'\n  ...\n# Subtest: raw Markdown is not imported as executable ESM or exposed through a wildcard\nok 7 - raw Markdown is not imported as executable ESM or exposed through a wildcard\n  ---\n  duration_ms: 1.4304\n  type: 'test'\n  ...\n# Subtest: public normalize and streaming API preserve independent literal counts/sums\nok 8 - public normalize and streaming API preserve independent literal counts/sums\n  ---\n  duration_ms: 2.5849\n  type: 'test'\n  ...\n# Subtest: public native SVG/tool helper smoke creates real HTML but is not a browser visual signoff\nok 9 - public native SVG/tool helper smoke creates real HTML but is not a browser visual signoff\n  ---\n  duration_ms: 9.3728\n  type: 'test'\n  ...\n1..9\n# tests 9\n# suites 0\n# pass 9\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 140.8981\n",
+  "stderr": "",
+  "canonical_prompts": [
+    {
+      "name": "README.md",
+      "bytes": 1787,
+      "sha256": "324cb7f88211424f577327268f36506c8c27d1793528441458e2caba83ee0bbd"
+    },
+    {
+      "name": "system.md",
+      "bytes": 4582,
+      "sha256": "b11e691e8f5d89bc2fd726d284702d6675c57c1a32ec0947ec5902040fdbaba0"
+    },
+    {
+      "name": "request.md",
+      "bytes": 761,
+      "sha256": "845be71cb3141d084f036472a1c5a19670be28c16bf73c4a599a3df9d534c6f2"
+    }
+  ]
+}
