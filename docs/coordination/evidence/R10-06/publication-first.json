@@ -1,0 +1,19 @@
+{
+  "observed_at": "2026-11-27T14:19:47.103349+00:00",
+  "source_sha": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "evidence_commit": "3c895f8302880b832d6c482d1aafa1105b95c258",
+  "own_branch": "agents/r10-06-native-kind-browser",
+  "commit_command": "git commit -m \"test: publish native browser semantic RED evidence\"",
+  "commit_exit": 0,
+  "push_command": "git push origin agents/r10-06-native-kind-browser:agents/r10-06-native-kind-browser",
+  "push_exit": 0,
+  "push_force": false,
+  "readback_command": "git ls-remote --heads origin refs/heads/agents/r10-06-native-kind-browser",
+  "readback_exit": 0,
+  "actual_remote_sha": "3c895f8302880b832d6c482d1aafa1105b95c258",
+  "matches_local": true,
+  "production_and_existing_oracles_changed": false,
+  "strict_semantic_status": "RED: 664pass6fail0skip across60cases; no final-source approval",
+  "test_limit": "MissingPythonPlaywright setup3fail is separate from actual NodeChromium runtime evidence",
+  "shared_branch_or_GitHub_issue_PR_changes": false
+}
