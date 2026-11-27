@@ -1,0 +1,38 @@
+{
+  "utc": "2026-11-27T18:11:36.001489+00:00",
+  "product": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "probe_runs": 1,
+  "bounded_decision_observations": [
+    {
+      "case": "4097-byte selector/root key discarded by explicit path",
+      "admission": "ACCEPT",
+      "input_count": 1,
+      "records": [
+        {
+          "v": 7
+        }
+      ],
+      "unchanged_input": true
+    },
+    {
+      "case": "4097-byte retained raw leaf key",
+      "admission": "REJECT",
+      "error": "Input field name exceeds 4096 UTF-8 bytes"
+    },
+    {
+      "case": "two 2048-byte segments, flattened name4097",
+      "admission": "REJECT",
+      "error": "Input field name exceeds 4096 UTF-8 bytes"
+    }
+  ],
+  "module_origins": {
+    "normalize": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r47-19-field-domains-ses_de5678052ffdJwVtlB6SX6LZrT\\python\\deepviz\\src\\deepviz\\normalize.py",
+    "models": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r47-19-field-domains-ses_de5678052ffdJwVtlB6SX6LZrT\\python\\deepviz\\src\\deepviz\\models.py"
+  },
+  "exact_source_before_after": {
+    "normalize.py": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+    "models.py": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+  },
+  "policy_acceptance": "NOT_CLEARED; four old64KiB-key RED not executed/waived",
+  "scope": "Public normalizer module function, exact source; namespace bootstrap only avoids unrelated package SDK/render imports, not a full-package consumer. Read-only Pydantic; no production/constant/oracle/environment edits."
+}

@@ -1,0 +1,76 @@
+{
+  "utc": "2026-11-27T18:13:45.116114+00:00",
+  "product": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "files": [
+    {
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+      "origin": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+      "exact_snapshot": true
+    },
+    {
+      "path": "packages/deepviz/src/normalize.ts",
+      "sha256": "7754126f9c90d7fc5b4d84d409400fa5d58ed0b2ab785df7fd666e2b1b90452e",
+      "origin": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+      "exact_snapshot": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "origin": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+      "exact_snapshot": true
+    },
+    {
+      "path": "packages/deepviz/src/models.ts",
+      "sha256": "d43d5ae0bef1d43f251ed71899a9b507c6575562e4403bd2e2ac02bd7caa43e6",
+      "origin": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+      "exact_snapshot": true
+    },
+    {
+      "path": "tests/test_n11_resource_policy.py",
+      "sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+      "origin": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+      "exact_snapshot": true
+    },
+    {
+      "path": "docs/coordination/tasks/C17-resource-policy.md",
+      "sha256": "43fffb5d042b12b809f6a216ff308c304e5550378436a5285c9e24ed346d068c",
+      "origin": "live MAIN contract read, not falsely attributed to source546"
+    },
+    {
+      "path": "docs/superpowers/specs/2026-11-26-deepviz-design.md",
+      "sha256": "65dcdd6d90f33a060e25f513ed90560f6d22a53e1592c14c4f951abbd6004cc0",
+      "origin": "live MAIN contract read, not falsely attributed to source546"
+    },
+    {
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+      "reviewed_caller_lines": [
+        267,
+        298
+      ],
+      "origin": "546c25ea75ee9d8a41b3832aa639664bc9a683b5"
+    },
+    {
+      "path": "python/deepviz/src/deepviz/engines.py",
+      "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+      "reviewed_caller_lines": [
+        37,
+        75
+      ],
+      "origin": "546c25ea75ee9d8a41b3832aa639664bc9a683b5"
+    },
+    {
+      "path": "packages/deepviz/src/renderers.ts",
+      "sha256": "180cb19d8bb01e5c2fe94db7e943e8430681cffadad2251d38a03fd1de5b19d0",
+      "reviewed_caller_lines": [
+        27,
+        64
+      ],
+      "origin": "546c25ea75ee9d8a41b3832aa639664bc9a683b5"
+    }
+  ],
+  "initial_reader_exit1": "Only Windows cp1252 stdout printing of N11 emoji failed; all five raw Git snapshots already complete. Full N11 read using native UTF8 read tool; corrected metadata collection only, no source/test/probe retry.",
+  "probe_runs": 1,
+  "source_oracle_model_TS_caps_modified": false
+}

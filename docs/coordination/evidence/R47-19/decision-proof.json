@@ -1,0 +1,28 @@
+{
+  "utc": "2026-11-27T18:18:29.733869+00:00",
+  "product": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "logical_proof": {
+    "required_by_unchanged_oracle_UTF8_key_bytes": 65536,
+    "preserved_actual_effective_max_field_bytes": 4096,
+    "same_exact_key_required": true,
+    "simultaneously_satisfiable": false,
+    "compact_row_65536_key_value7": 65542,
+    "one_row_result_bytes": 65544,
+    "record_cap": 262144,
+    "retained_cap": 16777216,
+    "NUL65536_decoded_key_JSON_row": 393222,
+    "schema_key_payload_old_bound": 4194304,
+    "hypothetical_relaxed_bound_not_applied": 67108864
+  },
+  "exact_guard_call_lines": [
+    197,
+    439,
+    462
+  ],
+  "actual_probe_count": 1,
+  "observations_not_independent_tests": 3,
+  "old_four_RED_replayed": 0,
+  "production_caps_oracles_policy_changed": false,
+  "decision_owner": "R04/user",
+  "outcome": "No compliant patch exists under unchanged4096-data-name ceiling + immutable65536-name exact acceptance. Cannot reinterpret as selector-only."
+}

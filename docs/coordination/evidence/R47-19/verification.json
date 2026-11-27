@@ -1,0 +1,169 @@
+{
+  "utc": "2026-11-27T18:18:29.738869+00:00",
+  "product": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "checks": [
+    {
+      "name": "SnapshotExact python/deepviz/src/deepviz/normalize.py",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact packages/deepviz/src/normalize.ts",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact python/deepviz/src/deepviz/models.py",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact packages/deepviz/src/models.ts",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact tests/test_n11_resource_policy.py",
+      "pass": true
+    },
+    {
+      "name": "AllThree4096GuardsAreActualDataDomains",
+      "pass": true
+    },
+    {
+      "name": "Public4KiBNameNotSecretSelectorPolicy",
+      "pass": true
+    },
+    {
+      "name": "No4096SelectorCheck _select_path",
+      "pass": true
+    },
+    {
+      "name": "No4096SelectorCheck _records",
+      "pass": true
+    },
+    {
+      "name": "TS64KiBNamesAndReservedSchema",
+      "pass": true
+    },
+    {
+      "name": "N11OriginalOracleExactUnchanged",
+      "pass": true
+    },
+    {
+      "name": "ONEProbeThreeCurrentDomainObservations",
+      "pass": true
+    },
+    {
+      "name": "ProbeOwnExactNormModelBeforeAfter",
+      "pass": true
+    },
+    {
+      "name": "NewProbeSyntaxValidNoSDKInstall",
+      "pass": true
+    },
+    {
+      "name": "LiteralContradictionAndAggregateBudgetProof",
+      "pass": true
+    },
+    {
+      "name": "ConcreteDecisionNotUnsafePatchOrClearance",
+      "pass": true
+    },
+    {
+      "name": "ActualMainDeliveryTargetsNamed",
+      "pass": true
+    },
+    {
+      "name": "OwnBaselineCorrectOnlyNewProbeDirty",
+      "pass": true
+    }
+  ],
+  "passed": 18,
+  "failed": 0,
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:packages/deepviz/src/normalize.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:packages/deepviz/src/models.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:tests/test_n11_resource_policy.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "ec9f669",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+        "--",
+        "tests/test_n11_resource_policy.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--name-only"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "--",
+        "python",
+        "packages",
+        "schemas",
+        "scripts",
+        ".github"
+      ],
+      "exit": 0
+    }
+  ],
+  "kind": "Staticcode/contract/probeidentitychecks;notadditionalruntimeacceptance",
+  "single_runtime_decision_probe_exit": 0,
+  "no_patch_under_constraints": true,
+  "known_four_RED": "OPENnotrerun/notwaived",
+  "limits": "No whole pytest/npm/build/lint/SDK/API/env/install/shared/default/spawn/poll/10M. Full C17/N11/canonical/caller read. Initial metadatareader cp1252 exit1 + longreportscanner reject retained in report, not hidden product failures."
+}
