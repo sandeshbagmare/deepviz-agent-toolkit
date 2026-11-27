@@ -1,0 +1,151 @@
+{
+  "started_utc": "2026-11-27T16:37:17.182234+00:00",
+  "branch": "agents/r10-21-recovery-git-bootstrap",
+  "base": "0305db8e6699d909e6e360a62dcf68274d6589ea",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "0305db8e6699d909e6e360a62dcf68274d6589ea",
+        "8d12f266ae8d5baed3743d53807347a761817449"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "0305db8e6699d909e6e360a62dcf68274d6589ea",
+        "8d12f266ae8d5baed3743d53807347a761817449"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "push",
+        "origin",
+        "HEAD:refs/heads/agents/r10-21-recovery-git-bootstrap"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--heads",
+        "origin",
+        "refs/heads/agents/r10-21-recovery-git-bootstrap"
+      ],
+      "exit": 0
+    }
+  ],
+  "API_used": false,
+  "product_tests_builds_installs_run": 0,
+  "independent_tiny_cases": 4,
+  "local_commit": "8d12f266ae8d5baed3743d53807347a761817449",
+  "owned_paths": [
+    "docs/agent-state/ses_de5678018ffezK8JGDUaSzvcWn.md",
+    "docs/coordination/evidence/R32-21/.gitattributes",
+    "docs/coordination/evidence/R32-21/.gitignore",
+    "docs/coordination/evidence/R32-21/case-index.json",
+    "docs/coordination/evidence/R32-21/cases/c0/commands.jsonl",
+    "docs/coordination/evidence/R32-21/cases/c0/dispatch.txt",
+    "docs/coordination/evidence/R32-21/cases/c0/evidence/result.json",
+    "docs/coordination/evidence/R32-21/cases/c0/evidence/source-before.json",
+    "docs/coordination/evidence/R32-21/cases/c0/fixture.json",
+    "docs/coordination/evidence/R32-21/cases/c0/tool-identity.json",
+    "docs/coordination/evidence/R32-21/cases/c1/commands.jsonl",
+    "docs/coordination/evidence/R32-21/cases/c1/fixture.json",
+    "docs/coordination/evidence/R32-21/cases/c1/tool-identity.json",
+    "docs/coordination/evidence/R32-21/cases/c2/child.json",
+    "docs/coordination/evidence/R32-21/cases/c2/commands.jsonl",
+    "docs/coordination/evidence/R32-21/cases/c2/dispatch.txt",
+    "docs/coordination/evidence/R32-21/cases/c2/evidence/core-parity.log",
+    "docs/coordination/evidence/R32-21/cases/c2/evidence/core-parity.xml",
+    "docs/coordination/evidence/R32-21/cases/c2/evidence/public-origin.log",
+    "docs/coordination/evidence/R32-21/cases/c2/evidence/python-origin.json",
+    "docs/coordination/evidence/R32-21/cases/c2/evidence/result.json",
+    "docs/coordination/evidence/R32-21/cases/c2/evidence/source-before.json",
+    "docs/coordination/evidence/R32-21/cases/c2/fixture.json",
+    "docs/coordination/evidence/R32-21/cases/c2/tool-identity.json",
+    "docs/coordination/evidence/R32-21/cases/c3/child.json",
+    "docs/coordination/evidence/R32-21/cases/c3/commands.jsonl",
+    "docs/coordination/evidence/R32-21/cases/c3/dispatch.txt",
+    "docs/coordination/evidence/R32-21/cases/c3/evidence/core-parity.log",
+    "docs/coordination/evidence/R32-21/cases/c3/evidence/core-parity.xml",
+    "docs/coordination/evidence/R32-21/cases/c3/evidence/public-origin.log",
+    "docs/coordination/evidence/R32-21/cases/c3/evidence/python-origin.json",
+    "docs/coordination/evidence/R32-21/cases/c3/evidence/result.json",
+    "docs/coordination/evidence/R32-21/cases/c3/evidence/source-before.json",
+    "docs/coordination/evidence/R32-21/cases/c3/fixture.json",
+    "docs/coordination/evidence/R32-21/cases/c3/tool-identity.json",
+    "docs/coordination/evidence/R32-21/final-run.json",
+    "docs/coordination/evidence/R32-21/final.log",
+    "docs/coordination/evidence/R32-21/final.xml",
+    "docs/coordination/evidence/R32-21/first-run.json",
+    "docs/coordination/evidence/R32-21/first.log",
+    "docs/coordination/evidence/R32-21/first.xml",
+    "docs/coordination/evidence/R32-21/inputs/role09/README.md",
+    "docs/coordination/evidence/R32-21/inputs/role09/public-origin.mjs",
+    "docs/coordination/evidence/R32-21/inputs/role09/recipe_guard.py",
+    "docs/coordination/evidence/R32-21/inputs/role09/retest-helper-null.ps1",
+    "docs/coordination/evidence/R32-21/inputs/role09/test_recipe_guards.py",
+    "docs/coordination/evidence/R32-21/new-code-diffstat.txt",
+    "docs/coordination/evidence/R32-21/own-cmd-argument-diagnostic.json",
+    "docs/coordination/evidence/R32-21/precommit-integrity.json",
+    "docs/coordination/evidence/R32-21/publish_owned.txt",
+    "docs/coordination/evidence/R32-21/quality.json",
+    "docs/coordination/evidence/R32-21/second-run.json",
+    "docs/coordination/evidence/R32-21/second.log",
+    "docs/coordination/evidence/R32-21/second.xml",
+    "docs/coordination/evidence/R32-21/source-manifest.json",
+    "docs/coordination/evidence/R32-21/stage-integrity.json",
+    "docs/coordination/evidence/R32-21/startup.json",
+    "docs/coordination/evidence/R32-21/verified-run.json",
+    "docs/coordination/evidence/R32-21/verified.log",
+    "docs/coordination/evidence/R32-21/verified.xml",
+    "docs/coordination/reports/R32-21-retest-replacement-review.md",
+    "tests/r32_probes/role21/README.md",
+    "tests/r32_probes/role21/test_replacement_expectations.py"
+  ],
+  "remote_sha_readback": "8d12f266ae8d5baed3743d53807347a761817449",
+  "status": "OWN_INDEPENDENT_RETEST_PUBLISHED_EXACT_SHA_NOT_PRODUCT_APPROVAL",
+  "finished_utc": "2026-11-27T16:37:26.686776+00:00"
+}

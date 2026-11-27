@@ -102,3 +102,10 @@ actual dependencies/build/output and frozen-head gates. Do not use the old recip
 **Next owner action:** R04/root record disposition/use NEW recipe for eligible05/R04
 product retests without borrowing these synthetic totals. No release/PR/issue closure
 or worker adoption is performed here. Own safe scoped publication/remote receipt next.
+
+## Actual own publication, not product approval
+C1 **8d12f266ae8d5baed3743d53807347a761817449** commit0/63OWNpaths;
+2026-11-27T16:37:17.182234Z-16:37:26.686776Z nonforcepush0/exactownremoteSHA0.
+Testedprobe57b046 unchanged;4PASS26.41s/Ruff0/mypy0 remain exactcode evidence.
+Precommit62payloads232987B+stage-integrity, no rawruntime/Gitlinks/otherowners staged;
+heuristicsecret0. TinySYNTHETICscope ONLY. Receipt-onlyC2next, no test/source changes.
