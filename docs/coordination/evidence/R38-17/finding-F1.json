@@ -1,0 +1,174 @@
+{
+  "id": "R38-17-F1",
+  "priority": "P2",
+  "status": "OPEN/material semantic acceptance blocker for full finite AntV heatmap claim",
+  "source": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+  "title": "Finite subnormal heatmap silently produces zero G2 cells although render readiness resolves",
+  "reproduction": {
+    "rows": [
+      {
+        "column": "West",
+        "row": "North",
+        "heat": -8e-310
+      },
+      {
+        "column": "East",
+        "row": "North",
+        "heat": -6e-310
+      },
+      {
+        "column": "West",
+        "row": "South",
+        "heat": -4e-310
+      },
+      {
+        "column": "East",
+        "row": "South",
+        "heat": -2e-310
+      }
+    ],
+    "spec": {
+      "aggregation": "none",
+      "width": 960,
+      "height": 520,
+      "title": "Independent R38-17 tiny-subnormal-grid",
+      "kind": "heatmap",
+      "x": "column",
+      "y": "row",
+      "color": "heat",
+      "theme": "light"
+    },
+    "native": {
+      "type": "cell",
+      "data": [
+        {
+          "_x": "West",
+          "_y": "North",
+          "_color": "-8e-310",
+          "_size": 8,
+          "_heat": -8e-310,
+          "_row": 0
+        },
+        {
+          "_x": "East",
+          "_y": "North",
+          "_color": "-6e-310",
+          "_size": 8,
+          "_heat": -6e-310,
+          "_row": 1
+        },
+        {
+          "_x": "West",
+          "_y": "South",
+          "_color": "-4e-310",
+          "_size": 8,
+          "_heat": -4e-310,
+          "_row": 2
+        },
+        {
+          "_x": "East",
+          "_y": "South",
+          "_color": "-2e-310",
+          "_size": 8,
+          "_heat": -2e-310,
+          "_row": 3
+        }
+      ],
+      "encode": {
+        "x": "_x",
+        "y": "_y",
+        "color": "_heat"
+      },
+      "animate": false,
+      "theme": "light",
+      "title": "Independent R38-17 tiny-subnormal-grid",
+      "tooltip": false,
+      "axis": {
+        "x": {
+          "title": "column",
+          "labelFill": "#202938",
+          "titleFill": "#202938"
+        },
+        "y": {
+          "title": "row",
+          "labelFill": "#202938",
+          "titleFill": "#202938"
+        }
+      },
+      "scale": {
+        "color": {
+          "type": "linear",
+          "domain": [
+            -8e-310,
+            -2e-310
+          ],
+          "range": [
+            "#ffffd9",
+            "#081d58"
+          ],
+          "nice": false
+        }
+      },
+      "legend": {
+        "color": {
+          "data": [
+            {
+              "value": -8e-310
+            },
+            {
+              "value": -2e-310
+            }
+          ],
+          "labelTextAlign": "start"
+        }
+      }
+    },
+    "public_original_HTML": "public-html/tiny-subnormal-grid.html",
+    "actual_public_PNG": "screenshots/tiny-subnormal-grid-public.png"
+  },
+  "expected": "Four real positive-area cells at the literal2x2grid, preserving4distincttruevalues/colors; full finite legend. No filtering of finite values.",
+  "actual": {
+    "marks": [],
+    "readiness": [
+      {
+        "status": "resolved"
+      },
+      {
+        "status": "resolved"
+      }
+    ],
+    "errors": 0,
+    "publicPNG_sha256": "7238f6ec012897369733d480597df6418f26caea3ea8d331f4927a151977e13a",
+    "observedPNG_same_SHA256": "7238f6ec012897369733d480597df6418f26caea3ea8d331f4927a151977e13a",
+    "four_RED_checks_one_defect": [
+      {
+        "id": "tiny-subnormal-grid",
+        "name": "native-cell-count-is-retained-literal-value-count",
+        "pass": false,
+        "actual": []
+      },
+      {
+        "id": "tiny-subnormal-grid",
+        "name": "actual-cell-colors-distinguish-distinct-literal-values",
+        "pass": false,
+        "actual": []
+      },
+      {
+        "id": "tiny-subnormal-grid",
+        "name": "native-ordered-grid-positions-preserve-literal-coordinates",
+        "pass": false,
+        "actual": []
+      },
+      {
+        "id": "tiny-subnormal-grid",
+        "name": "actual-painted-cell-centers-distinguish-distinct-values",
+        "pass": false,
+        "actual": []
+      }
+    ]
+  },
+  "visual_inspection": "Opened actual unmodified public PNG: empty plot, only legend plus overlapping top labels; summary says4displayedrecords. All13 publicPNGs opened individually, not just file-existence.",
+  "root_cause_scope": "Localized valid publicrows/nativepayload/domain to actualG2native0elements. Exact internal scale/layout numerical cause unconfirmed; no reciprocal-overflow claim or fix attempted.",
+  "owner_next_action": "R04 route preserved failingliteral to AntVsourceowner/reviewers18/21; fix/disposition under explicitgrant, preserve NEWstrictoracle and retest actualnewhead. No F1waiver or fullfiniteacceptance based on12otherpass/0consoleerrors.",
+  "limits": "ExactrealG25.4.8 asset/localroute/Chromium159; no directCDN-health or finalintegratedCI/defaultbranchclaim."
+}

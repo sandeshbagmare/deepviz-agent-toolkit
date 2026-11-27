@@ -1,0 +1,21 @@
+{
+  "category_rows": [{"sector":"North A","quantity":2},{"sector":"East & West","quantity":3},{"sector":"South Δ","quantity":5},{"sector":"Central / total","quantity":10}],
+  "category_expected": [["North A",2],["East & West",3],["South Δ",5],["Central / total",10]],
+  "category_ratios": [0.1,0.15,0.25,0.5],
+  "grid": [["West","North"],["East","North"],["West","South"],["East","South"]],
+  "cases": [
+    {"id":"four-pie","mode":"category","spec":{"kind":"pie","theme":"light"}},
+    {"id":"four-treemap","mode":"category","spec":{"kind":"treemap","theme":"dark"}},
+    {"id":"four-sunburst","mode":"category","spec":{"kind":"sunburst","theme":"dark"}},
+    {"id":"negative-grid","mode":"heat","values":[-16,-8,-4,-2],"expected_values":[-16,-8,-4,-2],"expected_domain":[-16,-2],"expected_grid_indices":[[0,0],[1,0],[0,1],[1,1]]},
+    {"id":"signed-grid","mode":"heat","values":[-12,-3,3,12],"expected_values":[-12,-3,3,12],"expected_domain":[-12,12],"expected_grid_indices":[[0,0],[1,0],[0,1],[1,1]]},
+    {"id":"constant-grid","mode":"heat","values":[-4,-4,-4,-4],"expected_values":[-4,-4,-4,-4],"expected_domain":[-4.2,-3.8],"expected_grid_indices":[[0,0],[1,0],[0,1],[1,1]]},
+    {"id":"zero-grid","mode":"heat","values":[0,0,0,0],"expected_values":[0,0,0,0],"expected_domain":[-1,1],"expected_grid_indices":[[0,0],[1,0],[0,1],[1,1]]},
+    {"id":"missing-corner","mode":"heat","values":[-16,null,-4,-2],"expected_values":[-16,-4,-2],"expected_domain":[-16,-2],"expected_grid_indices":[[0,0],[0,1],[1,1]]},
+    {"id":"tiny-subnormal-grid","mode":"heat","values":[-8e-310,-6e-310,-4e-310,-2e-310],"expected_values":[-8e-310,-6e-310,-4e-310,-2e-310],"expected_domain":[-8e-310,-2e-310],"expected_grid_indices":[[0,0],[1,0],[0,1],[1,1]]},
+    {"id":"all-missing-grid","mode":"heat","values":[null,null,null,null],"expected_values":[],"expected_domain":[0,1],"expected_grid_indices":[]},
+    {"id":"uneven-numeric-positions","mode":"position","rows":[{"x":-4,"y":2},{"x":-1,"y":5},{"x":5,"y":-1},{"x":14,"y":8}],"expected_xy":[[-4,2],[-1,5],[5,-1],[14,8]],"expected_spacing_ratios":[1,2,3]},
+    {"id":"dark-parent-light-child","mode":"dashboard","spec":{"kind":"dashboard","theme":"dark","columns":2,"charts":[{"kind":"pie","theme":"light","title":"Light four-category pie"},{"kind":"treemap","theme":"dark","title":"Dark four-category tiles"}]},"expected_child_themes":["light","dark"],"expected_body":"rgb(23, 27, 38)","expected_backgrounds":["rgb(255, 255, 255)","rgb(23, 27, 38)"]},
+    {"id":"light-parent-dark-child","mode":"dashboard","spec":{"kind":"dashboard","theme":"light","columns":2,"charts":[{"kind":"sunburst","theme":"dark","title":"Dark four-category ring"},{"kind":"pie","theme":"light","title":"Light four-category pie"}]},"expected_child_themes":["dark","light"],"expected_body":"rgb(255, 255, 255)","expected_backgrounds":["rgb(23, 27, 38)","rgb(255, 255, 255)"]}
+  ]
+}

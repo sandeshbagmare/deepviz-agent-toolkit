@@ -1,0 +1,4785 @@
+{
+  "identity": {
+    "source": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+    "parent": "1c721bb6497746641b897eb2eb938cfad52068d2",
+    "source_root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\source",
+    "Git_exact_source_files": [
+      {
+        "path": "python/deepviz/src/deepviz/__init__.py",
+        "bytes": 1133,
+        "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "Git_blob_oid": "0fed1772355f25da05329fda38bd29216ab4c75f"
+      },
+      {
+        "path": "python/deepviz/src/deepviz/cli.py",
+        "bytes": 2623,
+        "sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "Git_blob_oid": "54d0e8e3f75e8f064a112c0bf22e9b2dda18c8e9"
+      },
+      {
+        "path": "python/deepviz/src/deepviz/engines.py",
+        "bytes": 44787,
+        "sha256": "d519700c20007009ffffb6e8343696c30335949b0df798aa4a83ac8b0025fc29",
+        "Git_blob_oid": "d3e437ee1688e4bdff86274a8f4fc6504777246a"
+      },
+      {
+        "path": "python/deepviz/src/deepviz/mcp_server.py",
+        "bytes": 5395,
+        "sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "Git_blob_oid": "0688d2922dbdfd337cc2de6eff034e953a55e00a"
+      },
+      {
+        "path": "python/deepviz/src/deepviz/models.py",
+        "bytes": 3493,
+        "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "Git_blob_oid": "17877904985d496f645cd7c66305efc8305bcb5f"
+      },
+      {
+        "path": "python/deepviz/src/deepviz/normalize.py",
+        "bytes": 33895,
+        "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+        "Git_blob_oid": "04e15965934d37f4140f2dd6772b2e97747920ea"
+      },
+      {
+        "path": "python/deepviz/src/deepviz/py.typed",
+        "bytes": 46,
+        "sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "Git_blob_oid": "534be2bf62bbce9a10221b4a328930b9be4ac0b7"
+      },
+      {
+        "path": "python/deepviz/src/deepviz/recommend.py",
+        "bytes": 4875,
+        "sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "Git_blob_oid": "6b1540d5ef3e5782be677cb9bcf3bddec8774661"
+      },
+      {
+        "path": "python/deepviz/src/deepviz/render.py",
+        "bytes": 11637,
+        "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+        "Git_blob_oid": "64490a82f232e0c3c51a142bd898fd7f6c7c6dbf"
+      },
+      {
+        "path": "python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt",
+        "bytes": 1086,
+        "sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "Git_blob_oid": "13ffac3c942fd6f6e8af7d4e58860bb306db3e2f"
+      },
+      {
+        "path": "python/deepviz/src/deepviz/tools.py",
+        "bytes": 9383,
+        "sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "Git_blob_oid": "eafa9f0a5b9b324d5f0272c02b7a4f39915ad512"
+      },
+      {
+        "path": "python/deepviz/tests/test_r20_antv_color_scale.py",
+        "bytes": 9982,
+        "sha256": "a40317240262535b77530f416c90e23f66e2eaba6094309f3aaeb510e9e8a299",
+        "Git_blob_oid": "12f6618054af462fda772bb7ff42ab94d3e503f6"
+      },
+      {
+        "path": "tests/browser/r20-antv-color-scale.cjs",
+        "bytes": 14447,
+        "sha256": "7099808e852770137f3565a99e96bccf45962b2f042d41402ba4777dfea0f668",
+        "Git_blob_oid": "71d5f5929370f1a1950bc2a76618c151c0179017"
+      }
+    ],
+    "G2": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\N02-followup-cf27e85-r1\\source\\node_modules\\@antv\\g2\\dist\\g2.min.js",
+      "package_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\N02-followup-cf27e85-r1\\source\\node_modules\\@antv\\g2\\package.json",
+      "version": "5.4.8",
+      "bytes": 1083414,
+      "sha256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412",
+      "transport": "Willserveexistingread-onlyEXACTlibrarybytesatpinnedURLviabrowserroute; unmodifiedHTML/noCDNhealthclaim"
+    },
+    "consumer_tools_root": "C:/Users/bagma/deepviz-agent-toolkit",
+    "readonly_site_packages": "C:/Users/bagma/deepviz-agent-toolkit/.venv/Lib/site-packages",
+    "python_isolation": "python -S -B; explicit sys.path only, no env/config/install edits",
+    "own_probe_files": [
+      {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\tests\\r38_probes\\role17\\browser.cjs",
+        "relative_path": "tests/r38_probes/role17/browser.cjs",
+        "bytes": 15686,
+        "sha256": "e5ac8a18913e1866386a597477484d96759d7548463e8faaea37ccec90fca700",
+        "Git_content_oid_readonly": "a80b93cd61d3493c41cecdef695648ba1a294921"
+      },
+      {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\tests\\r38_probes\\role17\\emit.py",
+        "relative_path": "tests/r38_probes/role17/emit.py",
+        "bytes": 6152,
+        "sha256": "0f2f4798f2261560889bf3de89d68b81a45b03602500c39a1db32f44d30a38ac",
+        "Git_content_oid_readonly": "d557a0cf68a881e0141fc83bc7f2d1c1d23771cb"
+      },
+      {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\tests\\r38_probes\\role17\\fixtures.json",
+        "relative_path": "tests/r38_probes/role17/fixtures.json",
+        "bytes": 2896,
+        "sha256": "87f562d244f18e70ab0d9e5b134c888a55e617a75eceb009ad39385621c6e199",
+        "Git_content_oid_readonly": "e653f13d0578a12d9da6554f5a30f462c8544137"
+      }
+    ]
+  },
+  "actual_modules": [
+    {
+      "module": "deepviz",
+      "actual_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\source\\python\\deepviz\\src\\deepviz\\__init__.py",
+      "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+    },
+    {
+      "module": "deepviz.models",
+      "actual_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\source\\python\\deepviz\\src\\deepviz\\models.py",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    {
+      "module": "deepviz.engines",
+      "actual_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\source\\python\\deepviz\\src\\deepviz\\engines.py",
+      "sha256": "d519700c20007009ffffb6e8343696c30335949b0df798aa4a83ac8b0025fc29"
+    },
+    {
+      "module": "deepviz.render",
+      "actual_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\source\\python\\deepviz\\src\\deepviz\\render.py",
+      "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+    },
+    {
+      "module": "deepviz.normalize",
+      "actual_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\source\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+    }
+  ],
+  "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "sys_path": [
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\source\\python\\deepviz\\src",
+    "C:/Users/bagma/deepviz-agent-toolkit/.venv/Lib/site-packages",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\tests\\r38_probes\\role17",
+    "C:\\Users\\bagma\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\python312.zip",
+    "C:\\Users\\bagma\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\DLLs",
+    "C:\\Users\\bagma\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\Lib",
+    "C:\\Users\\bagma\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none"
+  ],
+  "fixtures_sha256": "87f562d244f18e70ab0d9e5b134c888a55e617a75eceb009ad39385621c6e199",
+  "category_expected": [
+    [
+      "North A",
+      2
+    ],
+    [
+      "East & West",
+      3
+    ],
+    [
+      "South \u0394",
+      5
+    ],
+    [
+      "Central / total",
+      10
+    ]
+  ],
+  "category_ratios": [
+    0.1,
+    0.15,
+    0.25,
+    0.5
+  ],
+  "checks": [
+    {
+      "id": "four-pie",
+      "name": "public-input-and-spec-not-mutated",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "id": "four-pie",
+      "name": "literal-input-and-record-count-preserved",
+      "pass": true,
+      "actual": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\four-pie\\deepviz-049jj_f7\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\four-pie\\deepviz-049jj_f7\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      }
+    },
+    {
+      "id": "four-pie",
+      "name": "literal-four-category-labels-true-values",
+      "pass": true,
+      "actual": [
+        {
+          "_x": "North A",
+          "_y": 2.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 2.0,
+          "_row": 0
+        },
+        {
+          "_x": "East & West",
+          "_y": 3.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 3.0,
+          "_row": 1
+        },
+        {
+          "_x": "South \u0394",
+          "_y": 5.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 5.0,
+          "_row": 2
+        },
+        {
+          "_x": "Central / total",
+          "_y": 10.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 10.0,
+          "_row": 3
+        }
+      ]
+    },
+    {
+      "id": "four-pie",
+      "name": "categorical-color-not-fixed-paint",
+      "pass": true,
+      "actual": {
+        "type": "interval",
+        "data": [
+          {
+            "_x": "North A",
+            "_y": 2.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 2.0,
+            "_row": 0
+          },
+          {
+            "_x": "East & West",
+            "_y": 3.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 3.0,
+            "_row": 1
+          },
+          {
+            "_x": "South \u0394",
+            "_y": 5.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 5.0,
+            "_row": 2
+          },
+          {
+            "_x": "Central / total",
+            "_y": 10.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 10.0,
+            "_row": 3
+          }
+        ],
+        "encode": {
+          "y": "_y",
+          "color": "_x"
+        },
+        "animate": false,
+        "theme": "light",
+        "title": "Independent R38-17 four-pie",
+        "tooltip": false,
+        "axis": {
+          "x": {
+            "title": "sector",
+            "labelFill": "#202938",
+            "titleFill": "#202938"
+          },
+          "y": {
+            "title": "quantity",
+            "labelFill": "#202938",
+            "titleFill": "#202938"
+          }
+        },
+        "coordinate": {
+          "type": "theta",
+          "innerRadius": 0
+        },
+        "transform": [
+          {
+            "type": "stackY"
+          }
+        ],
+        "legend": {
+          "color": {
+            "position": "right"
+          }
+        }
+      }
+    },
+    {
+      "id": "four-treemap",
+      "name": "public-input-and-spec-not-mutated",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "id": "four-treemap",
+      "name": "literal-input-and-record-count-preserved",
+      "pass": true,
+      "actual": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\four-treemap\\deepviz-2g7jsdq8\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\four-treemap\\deepviz-2g7jsdq8\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      }
+    },
+    {
+      "id": "four-treemap",
+      "name": "literal-four-category-labels-true-values",
+      "pass": true,
+      "actual": [
+        {
+          "_x": "North A",
+          "_y": 2.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 2.0,
+          "_row": 0,
+          "_left": 0.0,
+          "_right": 0.1,
+          "_bottom": 0,
+          "_top": 1
+        },
+        {
+          "_x": "East & West",
+          "_y": 3.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 3.0,
+          "_row": 1,
+          "_left": 0.1,
+          "_right": 0.25,
+          "_bottom": 0,
+          "_top": 1
+        },
+        {
+          "_x": "South \u0394",
+          "_y": 5.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 5.0,
+          "_row": 2,
+          "_left": 0.25,
+          "_right": 0.5,
+          "_bottom": 0,
+          "_top": 1
+        },
+        {
+          "_x": "Central / total",
+          "_y": 10.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 10.0,
+          "_row": 3,
+          "_left": 0.5,
+          "_right": 1.0,
+          "_bottom": 0,
+          "_top": 1
+        }
+      ]
+    },
+    {
+      "id": "four-treemap",
+      "name": "categorical-color-not-fixed-paint",
+      "pass": true,
+      "actual": {
+        "type": "rect",
+        "data": [
+          {
+            "_x": "North A",
+            "_y": 2.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 2.0,
+            "_row": 0,
+            "_left": 0.0,
+            "_right": 0.1,
+            "_bottom": 0,
+            "_top": 1
+          },
+          {
+            "_x": "East & West",
+            "_y": 3.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 3.0,
+            "_row": 1,
+            "_left": 0.1,
+            "_right": 0.25,
+            "_bottom": 0,
+            "_top": 1
+          },
+          {
+            "_x": "South \u0394",
+            "_y": 5.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 5.0,
+            "_row": 2,
+            "_left": 0.25,
+            "_right": 0.5,
+            "_bottom": 0,
+            "_top": 1
+          },
+          {
+            "_x": "Central / total",
+            "_y": 10.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 10.0,
+            "_row": 3,
+            "_left": 0.5,
+            "_right": 1.0,
+            "_bottom": 0,
+            "_top": 1
+          }
+        ],
+        "encode": {
+          "x": [
+            "_left",
+            "_right"
+          ],
+          "y": [
+            "_bottom",
+            "_top"
+          ],
+          "color": "_x"
+        },
+        "animate": false,
+        "theme": "dark",
+        "title": "Independent R38-17 four-treemap",
+        "tooltip": false,
+        "axis": false
+      }
+    },
+    {
+      "id": "four-sunburst",
+      "name": "public-input-and-spec-not-mutated",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "id": "four-sunburst",
+      "name": "literal-input-and-record-count-preserved",
+      "pass": true,
+      "actual": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\four-sunburst\\deepviz-92t4dzz8\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\four-sunburst\\deepviz-92t4dzz8\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      }
+    },
+    {
+      "id": "four-sunburst",
+      "name": "literal-four-category-labels-true-values",
+      "pass": true,
+      "actual": [
+        {
+          "_x": "North A",
+          "_y": 2.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 2.0,
+          "_row": 0
+        },
+        {
+          "_x": "East & West",
+          "_y": 3.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 3.0,
+          "_row": 1
+        },
+        {
+          "_x": "South \u0394",
+          "_y": 5.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 5.0,
+          "_row": 2
+        },
+        {
+          "_x": "Central / total",
+          "_y": 10.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 10.0,
+          "_row": 3
+        }
+      ]
+    },
+    {
+      "id": "four-sunburst",
+      "name": "categorical-color-not-fixed-paint",
+      "pass": true,
+      "actual": {
+        "type": "interval",
+        "data": [
+          {
+            "_x": "North A",
+            "_y": 2.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 2.0,
+            "_row": 0
+          },
+          {
+            "_x": "East & West",
+            "_y": 3.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 3.0,
+            "_row": 1
+          },
+          {
+            "_x": "South \u0394",
+            "_y": 5.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 5.0,
+            "_row": 2
+          },
+          {
+            "_x": "Central / total",
+            "_y": 10.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 10.0,
+            "_row": 3
+          }
+        ],
+        "encode": {
+          "y": "_y",
+          "color": "_x"
+        },
+        "animate": false,
+        "theme": "dark",
+        "title": "Independent R38-17 four-sunburst",
+        "tooltip": false,
+        "axis": {
+          "x": {
+            "title": "sector",
+            "labelFill": "#edf1f7",
+            "titleFill": "#edf1f7"
+          },
+          "y": {
+            "title": "quantity",
+            "labelFill": "#edf1f7",
+            "titleFill": "#edf1f7"
+          }
+        },
+        "coordinate": {
+          "type": "theta",
+          "innerRadius": 0.45
+        },
+        "transform": [
+          {
+            "type": "stackY"
+          }
+        ],
+        "legend": {
+          "color": {
+            "position": "right"
+          }
+        }
+      }
+    },
+    {
+      "id": "negative-grid",
+      "name": "public-input-and-spec-not-mutated",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "id": "negative-grid",
+      "name": "literal-input-and-record-count-preserved",
+      "pass": true,
+      "actual": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\negative-grid\\deepviz-qfgu38k3\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\negative-grid\\deepviz-qfgu38k3\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      }
+    },
+    {
+      "id": "negative-grid",
+      "name": "literal-heat-values",
+      "pass": true,
+      "actual": [
+        {
+          "_x": "West",
+          "_y": "North",
+          "_color": "-16",
+          "_size": 8,
+          "_heat": -16.0,
+          "_row": 0
+        },
+        {
+          "_x": "East",
+          "_y": "North",
+          "_color": "-8",
+          "_size": 8,
+          "_heat": -8.0,
+          "_row": 1
+        },
+        {
+          "_x": "West",
+          "_y": "South",
+          "_color": "-4",
+          "_size": 8,
+          "_heat": -4.0,
+          "_row": 2
+        },
+        {
+          "_x": "East",
+          "_y": "South",
+          "_color": "-2",
+          "_size": 8,
+          "_heat": -2.0,
+          "_row": 3
+        }
+      ]
+    },
+    {
+      "id": "negative-grid",
+      "name": "literal-finite-domain",
+      "pass": true,
+      "actual": {
+        "type": "linear",
+        "domain": [
+          -16.0,
+          -2.0
+        ],
+        "range": [
+          "#ffffd9",
+          "#081d58"
+        ],
+        "nice": false
+      }
+    },
+    {
+      "id": "negative-grid",
+      "name": "missing-is-omission-not-zero",
+      "pass": true,
+      "actual": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    },
+    {
+      "id": "signed-grid",
+      "name": "public-input-and-spec-not-mutated",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "id": "signed-grid",
+      "name": "literal-input-and-record-count-preserved",
+      "pass": true,
+      "actual": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\signed-grid\\deepviz-2w100i3z\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\signed-grid\\deepviz-2w100i3z\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      }
+    },
+    {
+      "id": "signed-grid",
+      "name": "literal-heat-values",
+      "pass": true,
+      "actual": [
+        {
+          "_x": "West",
+          "_y": "North",
+          "_color": "-12",
+          "_size": 8,
+          "_heat": -12.0,
+          "_row": 0
+        },
+        {
+          "_x": "East",
+          "_y": "North",
+          "_color": "-3",
+          "_size": 8,
+          "_heat": -3.0,
+          "_row": 1
+        },
+        {
+          "_x": "West",
+          "_y": "South",
+          "_color": "3",
+          "_size": 8,
+          "_heat": 3.0,
+          "_row": 2
+        },
+        {
+          "_x": "East",
+          "_y": "South",
+          "_color": "12",
+          "_size": 8,
+          "_heat": 12.0,
+          "_row": 3
+        }
+      ]
+    },
+    {
+      "id": "signed-grid",
+      "name": "literal-finite-domain",
+      "pass": true,
+      "actual": {
+        "type": "linear",
+        "domain": [
+          -12.0,
+          12.0
+        ],
+        "range": [
+          "#ffffd9",
+          "#081d58"
+        ],
+        "nice": false
+      }
+    },
+    {
+      "id": "signed-grid",
+      "name": "missing-is-omission-not-zero",
+      "pass": true,
+      "actual": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    },
+    {
+      "id": "constant-grid",
+      "name": "public-input-and-spec-not-mutated",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "id": "constant-grid",
+      "name": "literal-input-and-record-count-preserved",
+      "pass": true,
+      "actual": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\constant-grid\\deepviz-25ctzjtd\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\constant-grid\\deepviz-25ctzjtd\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      }
+    },
+    {
+      "id": "constant-grid",
+      "name": "literal-heat-values",
+      "pass": true,
+      "actual": [
+        {
+          "_x": "West",
+          "_y": "North",
+          "_color": "-4",
+          "_size": 8,
+          "_heat": -4.0,
+          "_row": 0
+        },
+        {
+          "_x": "East",
+          "_y": "North",
+          "_color": "-4",
+          "_size": 8,
+          "_heat": -4.0,
+          "_row": 1
+        },
+        {
+          "_x": "West",
+          "_y": "South",
+          "_color": "-4",
+          "_size": 8,
+          "_heat": -4.0,
+          "_row": 2
+        },
+        {
+          "_x": "East",
+          "_y": "South",
+          "_color": "-4",
+          "_size": 8,
+          "_heat": -4.0,
+          "_row": 3
+        }
+      ]
+    },
+    {
+      "id": "constant-grid",
+      "name": "literal-finite-domain",
+      "pass": true,
+      "actual": {
+        "type": "linear",
+        "domain": [
+          -4.2,
+          -3.8
+        ],
+        "range": [
+          "#ffffd9",
+          "#081d58"
+        ],
+        "nice": false
+      }
+    },
+    {
+      "id": "constant-grid",
+      "name": "missing-is-omission-not-zero",
+      "pass": true,
+      "actual": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    },
+    {
+      "id": "zero-grid",
+      "name": "public-input-and-spec-not-mutated",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "id": "zero-grid",
+      "name": "literal-input-and-record-count-preserved",
+      "pass": true,
+      "actual": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\zero-grid\\deepviz-i8dgjy70\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\zero-grid\\deepviz-i8dgjy70\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      }
+    },
+    {
+      "id": "zero-grid",
+      "name": "literal-heat-values",
+      "pass": true,
+      "actual": [
+        {
+          "_x": "West",
+          "_y": "North",
+          "_color": "0",
+          "_size": 8,
+          "_heat": 0.0,
+          "_row": 0
+        },
+        {
+          "_x": "East",
+          "_y": "North",
+          "_color": "0",
+          "_size": 8,
+          "_heat": 0.0,
+          "_row": 1
+        },
+        {
+          "_x": "West",
+          "_y": "South",
+          "_color": "0",
+          "_size": 8,
+          "_heat": 0.0,
+          "_row": 2
+        },
+        {
+          "_x": "East",
+          "_y": "South",
+          "_color": "0",
+          "_size": 8,
+          "_heat": 0.0,
+          "_row": 3
+        }
+      ]
+    },
+    {
+      "id": "zero-grid",
+      "name": "literal-finite-domain",
+      "pass": true,
+      "actual": {
+        "type": "linear",
+        "domain": [
+          -1.0,
+          1.0
+        ],
+        "range": [
+          "#ffffd9",
+          "#081d58"
+        ],
+        "nice": false
+      }
+    },
+    {
+      "id": "zero-grid",
+      "name": "missing-is-omission-not-zero",
+      "pass": true,
+      "actual": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    },
+    {
+      "id": "missing-corner",
+      "name": "public-input-and-spec-not-mutated",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "id": "missing-corner",
+      "name": "literal-input-and-record-count-preserved",
+      "pass": true,
+      "actual": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\missing-corner\\deepviz-at77w_33\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\missing-corner\\deepviz-at77w_33\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "1 heatmap records with missing/non-numeric color values omitted from geometry.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      }
+    },
+    {
+      "id": "missing-corner",
+      "name": "literal-heat-values",
+      "pass": true,
+      "actual": [
+        {
+          "_x": "West",
+          "_y": "North",
+          "_color": "-16",
+          "_size": 8,
+          "_heat": -16.0,
+          "_row": 0
+        },
+        {
+          "_x": "West",
+          "_y": "South",
+          "_color": "-4",
+          "_size": 8,
+          "_heat": -4.0,
+          "_row": 2
+        },
+        {
+          "_x": "East",
+          "_y": "South",
+          "_color": "-2",
+          "_size": 8,
+          "_heat": -2.0,
+          "_row": 3
+        }
+      ]
+    },
+    {
+      "id": "missing-corner",
+      "name": "literal-finite-domain",
+      "pass": true,
+      "actual": {
+        "type": "linear",
+        "domain": [
+          -16.0,
+          -2.0
+        ],
+        "range": [
+          "#ffffd9",
+          "#081d58"
+        ],
+        "nice": false
+      }
+    },
+    {
+      "id": "missing-corner",
+      "name": "missing-is-omission-not-zero",
+      "pass": true,
+      "actual": [
+        "1 heatmap records with missing/non-numeric color values omitted from geometry.",
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    },
+    {
+      "id": "tiny-subnormal-grid",
+      "name": "public-input-and-spec-not-mutated",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "id": "tiny-subnormal-grid",
+      "name": "literal-input-and-record-count-preserved",
+      "pass": true,
+      "actual": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\tiny-subnormal-grid\\deepviz-e4gtho6q\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\tiny-subnormal-grid\\deepviz-e4gtho6q\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      }
+    },
+    {
+      "id": "tiny-subnormal-grid",
+      "name": "literal-heat-values",
+      "pass": true,
+      "actual": [
+        {
+          "_x": "West",
+          "_y": "North",
+          "_color": "-8e-310",
+          "_size": 8,
+          "_heat": -8e-310,
+          "_row": 0
+        },
+        {
+          "_x": "East",
+          "_y": "North",
+          "_color": "-6e-310",
+          "_size": 8,
+          "_heat": -6e-310,
+          "_row": 1
+        },
+        {
+          "_x": "West",
+          "_y": "South",
+          "_color": "-4e-310",
+          "_size": 8,
+          "_heat": -4e-310,
+          "_row": 2
+        },
+        {
+          "_x": "East",
+          "_y": "South",
+          "_color": "-2e-310",
+          "_size": 8,
+          "_heat": -2e-310,
+          "_row": 3
+        }
+      ]
+    },
+    {
+      "id": "tiny-subnormal-grid",
+      "name": "literal-finite-domain",
+      "pass": true,
+      "actual": {
+        "type": "linear",
+        "domain": [
+          -8e-310,
+          -2e-310
+        ],
+        "range": [
+          "#ffffd9",
+          "#081d58"
+        ],
+        "nice": false
+      }
+    },
+    {
+      "id": "tiny-subnormal-grid",
+      "name": "missing-is-omission-not-zero",
+      "pass": true,
+      "actual": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    },
+    {
+      "id": "all-missing-grid",
+      "name": "public-input-and-spec-not-mutated",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "id": "all-missing-grid",
+      "name": "literal-input-and-record-count-preserved",
+      "pass": true,
+      "actual": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\all-missing-grid\\deepviz-_0tn4xj9\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\all-missing-grid\\deepviz-_0tn4xj9\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "4 heatmap records with missing/non-numeric color values omitted from geometry.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      }
+    },
+    {
+      "id": "all-missing-grid",
+      "name": "literal-heat-values",
+      "pass": true,
+      "actual": []
+    },
+    {
+      "id": "all-missing-grid",
+      "name": "literal-finite-domain",
+      "pass": true,
+      "actual": {
+        "type": "linear",
+        "domain": [
+          0,
+          1
+        ],
+        "range": [
+          "#ffffd9",
+          "#081d58"
+        ],
+        "nice": false
+      }
+    },
+    {
+      "id": "all-missing-grid",
+      "name": "missing-is-omission-not-zero",
+      "pass": true,
+      "actual": [
+        "4 heatmap records with missing/non-numeric color values omitted from geometry.",
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    },
+    {
+      "id": "uneven-numeric-positions",
+      "name": "public-input-and-spec-not-mutated",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "id": "uneven-numeric-positions",
+      "name": "literal-input-and-record-count-preserved",
+      "pass": true,
+      "actual": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\uneven-numeric-positions\\deepviz-fsqietdr\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\uneven-numeric-positions\\deepviz-fsqietdr\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      }
+    },
+    {
+      "id": "uneven-numeric-positions",
+      "name": "literal-numeric-x-y",
+      "pass": true,
+      "actual": [
+        {
+          "_x": -4,
+          "_y": 2.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 2.0,
+          "_row": 0
+        },
+        {
+          "_x": -1,
+          "_y": 5.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 5.0,
+          "_row": 1
+        },
+        {
+          "_x": 5,
+          "_y": -1.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": -1.0,
+          "_row": 2
+        },
+        {
+          "_x": 14,
+          "_y": 8.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 8.0,
+          "_row": 3
+        }
+      ]
+    },
+    {
+      "id": "dark-parent-light-child",
+      "name": "public-input-and-spec-not-mutated",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "id": "dark-parent-light-child",
+      "name": "literal-input-and-record-count-preserved",
+      "pass": true,
+      "actual": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\dark-parent-light-child\\deepviz-q775htc3\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\dark-parent-light-child\\deepviz-q775htc3\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 8,
+        "strategy": "dashboard:none,none",
+        "warnings": [
+          "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      }
+    },
+    {
+      "id": "dark-parent-light-child",
+      "name": "literal-four-category-labels-true-values",
+      "pass": true,
+      "actual": [
+        {
+          "_x": "North A",
+          "_y": 2.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 2.0,
+          "_row": 0
+        },
+        {
+          "_x": "East & West",
+          "_y": 3.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 3.0,
+          "_row": 1
+        },
+        {
+          "_x": "South \u0394",
+          "_y": 5.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 5.0,
+          "_row": 2
+        },
+        {
+          "_x": "Central / total",
+          "_y": 10.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 10.0,
+          "_row": 3
+        }
+      ]
+    },
+    {
+      "id": "dark-parent-light-child",
+      "name": "categorical-color-not-fixed-paint",
+      "pass": true,
+      "actual": {
+        "type": "interval",
+        "data": [
+          {
+            "_x": "North A",
+            "_y": 2.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 2.0,
+            "_row": 0
+          },
+          {
+            "_x": "East & West",
+            "_y": 3.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 3.0,
+            "_row": 1
+          },
+          {
+            "_x": "South \u0394",
+            "_y": 5.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 5.0,
+            "_row": 2
+          },
+          {
+            "_x": "Central / total",
+            "_y": 10.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 10.0,
+            "_row": 3
+          }
+        ],
+        "encode": {
+          "y": "_y",
+          "color": "_x"
+        },
+        "animate": false,
+        "theme": "light",
+        "title": "Light four-category pie",
+        "tooltip": false,
+        "axis": {
+          "x": {
+            "title": "sector",
+            "labelFill": "#202938",
+            "titleFill": "#202938"
+          },
+          "y": {
+            "title": "quantity",
+            "labelFill": "#202938",
+            "titleFill": "#202938"
+          }
+        },
+        "coordinate": {
+          "type": "theta",
+          "innerRadius": 0
+        },
+        "transform": [
+          {
+            "type": "stackY"
+          }
+        ],
+        "legend": {
+          "color": {
+            "position": "right"
+          }
+        }
+      }
+    },
+    {
+      "id": "dark-parent-light-child",
+      "name": "literal-four-category-labels-true-values",
+      "pass": true,
+      "actual": [
+        {
+          "_x": "North A",
+          "_y": 2.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 2.0,
+          "_row": 0,
+          "_left": 0.0,
+          "_right": 0.1,
+          "_bottom": 0,
+          "_top": 1
+        },
+        {
+          "_x": "East & West",
+          "_y": 3.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 3.0,
+          "_row": 1,
+          "_left": 0.1,
+          "_right": 0.25,
+          "_bottom": 0,
+          "_top": 1
+        },
+        {
+          "_x": "South \u0394",
+          "_y": 5.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 5.0,
+          "_row": 2,
+          "_left": 0.25,
+          "_right": 0.5,
+          "_bottom": 0,
+          "_top": 1
+        },
+        {
+          "_x": "Central / total",
+          "_y": 10.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 10.0,
+          "_row": 3,
+          "_left": 0.5,
+          "_right": 1.0,
+          "_bottom": 0,
+          "_top": 1
+        }
+      ]
+    },
+    {
+      "id": "dark-parent-light-child",
+      "name": "categorical-color-not-fixed-paint",
+      "pass": true,
+      "actual": {
+        "type": "rect",
+        "data": [
+          {
+            "_x": "North A",
+            "_y": 2.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 2.0,
+            "_row": 0,
+            "_left": 0.0,
+            "_right": 0.1,
+            "_bottom": 0,
+            "_top": 1
+          },
+          {
+            "_x": "East & West",
+            "_y": 3.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 3.0,
+            "_row": 1,
+            "_left": 0.1,
+            "_right": 0.25,
+            "_bottom": 0,
+            "_top": 1
+          },
+          {
+            "_x": "South \u0394",
+            "_y": 5.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 5.0,
+            "_row": 2,
+            "_left": 0.25,
+            "_right": 0.5,
+            "_bottom": 0,
+            "_top": 1
+          },
+          {
+            "_x": "Central / total",
+            "_y": 10.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 10.0,
+            "_row": 3,
+            "_left": 0.5,
+            "_right": 1.0,
+            "_bottom": 0,
+            "_top": 1
+          }
+        ],
+        "encode": {
+          "x": [
+            "_left",
+            "_right"
+          ],
+          "y": [
+            "_bottom",
+            "_top"
+          ],
+          "color": "_x"
+        },
+        "animate": false,
+        "theme": "dark",
+        "title": "Dark four-category tiles",
+        "tooltip": false,
+        "axis": false
+      }
+    },
+    {
+      "id": "dark-parent-light-child",
+      "name": "literal-child-native-themes",
+      "pass": true,
+      "actual": [
+        "light",
+        "dark"
+      ]
+    },
+    {
+      "id": "light-parent-dark-child",
+      "name": "public-input-and-spec-not-mutated",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "id": "light-parent-dark-child",
+      "name": "literal-input-and-record-count-preserved",
+      "pass": true,
+      "actual": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\light-parent-dark-child\\deepviz-pq17389a\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\light-parent-dark-child\\deepviz-pq17389a\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 8,
+        "strategy": "dashboard:none,none",
+        "warnings": [
+          "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      }
+    },
+    {
+      "id": "light-parent-dark-child",
+      "name": "literal-four-category-labels-true-values",
+      "pass": true,
+      "actual": [
+        {
+          "_x": "North A",
+          "_y": 2.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 2.0,
+          "_row": 0
+        },
+        {
+          "_x": "East & West",
+          "_y": 3.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 3.0,
+          "_row": 1
+        },
+        {
+          "_x": "South \u0394",
+          "_y": 5.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 5.0,
+          "_row": 2
+        },
+        {
+          "_x": "Central / total",
+          "_y": 10.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 10.0,
+          "_row": 3
+        }
+      ]
+    },
+    {
+      "id": "light-parent-dark-child",
+      "name": "categorical-color-not-fixed-paint",
+      "pass": true,
+      "actual": {
+        "type": "interval",
+        "data": [
+          {
+            "_x": "North A",
+            "_y": 2.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 2.0,
+            "_row": 0
+          },
+          {
+            "_x": "East & West",
+            "_y": 3.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 3.0,
+            "_row": 1
+          },
+          {
+            "_x": "South \u0394",
+            "_y": 5.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 5.0,
+            "_row": 2
+          },
+          {
+            "_x": "Central / total",
+            "_y": 10.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 10.0,
+            "_row": 3
+          }
+        ],
+        "encode": {
+          "y": "_y",
+          "color": "_x"
+        },
+        "animate": false,
+        "theme": "dark",
+        "title": "Dark four-category ring",
+        "tooltip": false,
+        "axis": {
+          "x": {
+            "title": "sector",
+            "labelFill": "#edf1f7",
+            "titleFill": "#edf1f7"
+          },
+          "y": {
+            "title": "quantity",
+            "labelFill": "#edf1f7",
+            "titleFill": "#edf1f7"
+          }
+        },
+        "coordinate": {
+          "type": "theta",
+          "innerRadius": 0.45
+        },
+        "transform": [
+          {
+            "type": "stackY"
+          }
+        ],
+        "legend": {
+          "color": {
+            "position": "right"
+          }
+        }
+      }
+    },
+    {
+      "id": "light-parent-dark-child",
+      "name": "literal-four-category-labels-true-values",
+      "pass": true,
+      "actual": [
+        {
+          "_x": "North A",
+          "_y": 2.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 2.0,
+          "_row": 0
+        },
+        {
+          "_x": "East & West",
+          "_y": 3.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 3.0,
+          "_row": 1
+        },
+        {
+          "_x": "South \u0394",
+          "_y": 5.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 5.0,
+          "_row": 2
+        },
+        {
+          "_x": "Central / total",
+          "_y": 10.0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 10.0,
+          "_row": 3
+        }
+      ]
+    },
+    {
+      "id": "light-parent-dark-child",
+      "name": "categorical-color-not-fixed-paint",
+      "pass": true,
+      "actual": {
+        "type": "interval",
+        "data": [
+          {
+            "_x": "North A",
+            "_y": 2.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 2.0,
+            "_row": 0
+          },
+          {
+            "_x": "East & West",
+            "_y": 3.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 3.0,
+            "_row": 1
+          },
+          {
+            "_x": "South \u0394",
+            "_y": 5.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 5.0,
+            "_row": 2
+          },
+          {
+            "_x": "Central / total",
+            "_y": 10.0,
+            "_color": "Series",
+            "_size": 8,
+            "_heat": 10.0,
+            "_row": 3
+          }
+        ],
+        "encode": {
+          "y": "_y",
+          "color": "_x"
+        },
+        "animate": false,
+        "theme": "light",
+        "title": "Light four-category pie",
+        "tooltip": false,
+        "axis": {
+          "x": {
+            "title": "sector",
+            "labelFill": "#202938",
+            "titleFill": "#202938"
+          },
+          "y": {
+            "title": "quantity",
+            "labelFill": "#202938",
+            "titleFill": "#202938"
+          }
+        },
+        "coordinate": {
+          "type": "theta",
+          "innerRadius": 0
+        },
+        "transform": [
+          {
+            "type": "stackY"
+          }
+        ],
+        "legend": {
+          "color": {
+            "position": "right"
+          }
+        }
+      }
+    },
+    {
+      "id": "light-parent-dark-child",
+      "name": "literal-child-native-themes",
+      "pass": true,
+      "actual": [
+        "dark",
+        "light"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "four-pie",
+      "mode": "category",
+      "spec": {
+        "aggregation": "none",
+        "width": 960,
+        "height": 520,
+        "title": "Independent R38-17 four-pie",
+        "kind": "pie",
+        "theme": "light",
+        "x": "sector",
+        "y": "quantity"
+      },
+      "rows": [
+        {
+          "sector": "North A",
+          "quantity": 2
+        },
+        {
+          "sector": "East & West",
+          "quantity": 3
+        },
+        {
+          "sector": "South \u0394",
+          "quantity": 5
+        },
+        {
+          "sector": "Central / total",
+          "quantity": 10
+        }
+      ],
+      "manifest": {
+        "engine": "antv",
+        "charts": [
+          {
+            "engine": "antv",
+            "requested_kind": "pie",
+            "rendered_kind": "pie",
+            "spec": {
+              "version": 1,
+              "kind": "pie",
+              "title": "Independent R38-17 four-pie",
+              "description": "",
+              "x": "sector",
+              "y": "quantity",
+              "color": null,
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "none",
+              "max_points": 2000,
+              "width": 960,
+              "height": 520,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "sector": "North A",
+                "quantity": 2
+              },
+              {
+                "sector": "East & West",
+                "quantity": 3
+              },
+              {
+                "sector": "South \u0394",
+                "quantity": 5
+              },
+              {
+                "sector": "Central / total",
+                "quantity": 10
+              }
+            ],
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          }
+        ],
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_specs": [
+          {
+            "type": "interval",
+            "data": [
+              {
+                "_x": "North A",
+                "_y": 2.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 2.0,
+                "_row": 0
+              },
+              {
+                "_x": "East & West",
+                "_y": 3.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 3.0,
+                "_row": 1
+              },
+              {
+                "_x": "South \u0394",
+                "_y": 5.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 5.0,
+                "_row": 2
+              },
+              {
+                "_x": "Central / total",
+                "_y": 10.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 10.0,
+                "_row": 3
+              }
+            ],
+            "encode": {
+              "y": "_y",
+              "color": "_x"
+            },
+            "animate": false,
+            "theme": "light",
+            "title": "Independent R38-17 four-pie",
+            "tooltip": false,
+            "axis": {
+              "x": {
+                "title": "sector",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              },
+              "y": {
+                "title": "quantity",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              }
+            },
+            "coordinate": {
+              "type": "theta",
+              "innerRadius": 0
+            },
+            "transform": [
+              {
+                "type": "stackY"
+              }
+            ],
+            "legend": {
+              "color": {
+                "position": "right"
+              }
+            }
+          }
+        ],
+        "strategy": "none",
+        "accessible_path": "chart.html"
+      },
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\four-pie\\deepviz-049jj_f7\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\four-pie\\deepviz-049jj_f7\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html": "four-pie\\deepviz-049jj_f7\\chart.html",
+      "html_sha256": "b8e9631e46db9490c46b3c8575e8104040c1d24e9a923458094c0bd2b080487d"
+    },
+    {
+      "id": "four-treemap",
+      "mode": "category",
+      "spec": {
+        "aggregation": "none",
+        "width": 960,
+        "height": 520,
+        "title": "Independent R38-17 four-treemap",
+        "kind": "treemap",
+        "theme": "dark",
+        "x": "sector",
+        "y": "quantity"
+      },
+      "rows": [
+        {
+          "sector": "North A",
+          "quantity": 2
+        },
+        {
+          "sector": "East & West",
+          "quantity": 3
+        },
+        {
+          "sector": "South \u0394",
+          "quantity": 5
+        },
+        {
+          "sector": "Central / total",
+          "quantity": 10
+        }
+      ],
+      "manifest": {
+        "engine": "antv",
+        "charts": [
+          {
+            "engine": "antv",
+            "requested_kind": "treemap",
+            "rendered_kind": "treemap",
+            "spec": {
+              "version": 1,
+              "kind": "treemap",
+              "title": "Independent R38-17 four-treemap",
+              "description": "",
+              "x": "sector",
+              "y": "quantity",
+              "color": null,
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "none",
+              "max_points": 2000,
+              "width": 960,
+              "height": 520,
+              "theme": "dark",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "sector": "North A",
+                "quantity": 2
+              },
+              {
+                "sector": "East & West",
+                "quantity": 3
+              },
+              {
+                "sector": "South \u0394",
+                "quantity": 5
+              },
+              {
+                "sector": "Central / total",
+                "quantity": 10
+              }
+            ],
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [
+              "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          }
+        ],
+        "warnings": [
+          "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_specs": [
+          {
+            "type": "rect",
+            "data": [
+              {
+                "_x": "North A",
+                "_y": 2.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 2.0,
+                "_row": 0,
+                "_left": 0.0,
+                "_right": 0.1,
+                "_bottom": 0,
+                "_top": 1
+              },
+              {
+                "_x": "East & West",
+                "_y": 3.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 3.0,
+                "_row": 1,
+                "_left": 0.1,
+                "_right": 0.25,
+                "_bottom": 0,
+                "_top": 1
+              },
+              {
+                "_x": "South \u0394",
+                "_y": 5.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 5.0,
+                "_row": 2,
+                "_left": 0.25,
+                "_right": 0.5,
+                "_bottom": 0,
+                "_top": 1
+              },
+              {
+                "_x": "Central / total",
+                "_y": 10.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 10.0,
+                "_row": 3,
+                "_left": 0.5,
+                "_right": 1.0,
+                "_bottom": 0,
+                "_top": 1
+              }
+            ],
+            "encode": {
+              "x": [
+                "_left",
+                "_right"
+              ],
+              "y": [
+                "_bottom",
+                "_top"
+              ],
+              "color": "_x"
+            },
+            "animate": false,
+            "theme": "dark",
+            "title": "Independent R38-17 four-treemap",
+            "tooltip": false,
+            "axis": false
+          }
+        ],
+        "strategy": "none",
+        "accessible_path": "chart.html"
+      },
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\four-treemap\\deepviz-2g7jsdq8\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\four-treemap\\deepviz-2g7jsdq8\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html": "four-treemap\\deepviz-2g7jsdq8\\chart.html",
+      "html_sha256": "28be425abedc600fee459ef20d643424c589e638fb00f2c91c70f53c271cc8ab"
+    },
+    {
+      "id": "four-sunburst",
+      "mode": "category",
+      "spec": {
+        "aggregation": "none",
+        "width": 960,
+        "height": 520,
+        "title": "Independent R38-17 four-sunburst",
+        "kind": "sunburst",
+        "theme": "dark",
+        "x": "sector",
+        "y": "quantity"
+      },
+      "rows": [
+        {
+          "sector": "North A",
+          "quantity": 2
+        },
+        {
+          "sector": "East & West",
+          "quantity": 3
+        },
+        {
+          "sector": "South \u0394",
+          "quantity": 5
+        },
+        {
+          "sector": "Central / total",
+          "quantity": 10
+        }
+      ],
+      "manifest": {
+        "engine": "antv",
+        "charts": [
+          {
+            "engine": "antv",
+            "requested_kind": "sunburst",
+            "rendered_kind": "sunburst",
+            "spec": {
+              "version": 1,
+              "kind": "sunburst",
+              "title": "Independent R38-17 four-sunburst",
+              "description": "",
+              "x": "sector",
+              "y": "quantity",
+              "color": null,
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "none",
+              "max_points": 2000,
+              "width": 960,
+              "height": 520,
+              "theme": "dark",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "sector": "North A",
+                "quantity": 2
+              },
+              {
+                "sector": "East & West",
+                "quantity": 3
+              },
+              {
+                "sector": "South \u0394",
+                "quantity": 5
+              },
+              {
+                "sector": "Central / total",
+                "quantity": 10
+              }
+            ],
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [
+              "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          }
+        ],
+        "warnings": [
+          "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_specs": [
+          {
+            "type": "interval",
+            "data": [
+              {
+                "_x": "North A",
+                "_y": 2.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 2.0,
+                "_row": 0
+              },
+              {
+                "_x": "East & West",
+                "_y": 3.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 3.0,
+                "_row": 1
+              },
+              {
+                "_x": "South \u0394",
+                "_y": 5.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 5.0,
+                "_row": 2
+              },
+              {
+                "_x": "Central / total",
+                "_y": 10.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 10.0,
+                "_row": 3
+              }
+            ],
+            "encode": {
+              "y": "_y",
+              "color": "_x"
+            },
+            "animate": false,
+            "theme": "dark",
+            "title": "Independent R38-17 four-sunburst",
+            "tooltip": false,
+            "axis": {
+              "x": {
+                "title": "sector",
+                "labelFill": "#edf1f7",
+                "titleFill": "#edf1f7"
+              },
+              "y": {
+                "title": "quantity",
+                "labelFill": "#edf1f7",
+                "titleFill": "#edf1f7"
+              }
+            },
+            "coordinate": {
+              "type": "theta",
+              "innerRadius": 0.45
+            },
+            "transform": [
+              {
+                "type": "stackY"
+              }
+            ],
+            "legend": {
+              "color": {
+                "position": "right"
+              }
+            }
+          }
+        ],
+        "strategy": "none",
+        "accessible_path": "chart.html"
+      },
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\four-sunburst\\deepviz-92t4dzz8\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\four-sunburst\\deepviz-92t4dzz8\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html": "four-sunburst\\deepviz-92t4dzz8\\chart.html",
+      "html_sha256": "ec165e3d95ee62753925120462c80eabfdb8c5248b30b40567a16906eda1755c"
+    },
+    {
+      "id": "negative-grid",
+      "mode": "heat",
+      "values": [
+        -16,
+        -8,
+        -4,
+        -2
+      ],
+      "expected_values": [
+        -16,
+        -8,
+        -4,
+        -2
+      ],
+      "expected_domain": [
+        -16,
+        -2
+      ],
+      "expected_grid_indices": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "spec": {
+        "aggregation": "none",
+        "width": 960,
+        "height": 520,
+        "title": "Independent R38-17 negative-grid",
+        "kind": "heatmap",
+        "x": "column",
+        "y": "row",
+        "color": "heat",
+        "theme": "light"
+      },
+      "rows": [
+        {
+          "column": "West",
+          "row": "North",
+          "heat": -16
+        },
+        {
+          "column": "East",
+          "row": "North",
+          "heat": -8
+        },
+        {
+          "column": "West",
+          "row": "South",
+          "heat": -4
+        },
+        {
+          "column": "East",
+          "row": "South",
+          "heat": -2
+        }
+      ],
+      "manifest": {
+        "engine": "antv",
+        "charts": [
+          {
+            "engine": "antv",
+            "requested_kind": "heatmap",
+            "rendered_kind": "heatmap",
+            "spec": {
+              "version": 1,
+              "kind": "heatmap",
+              "title": "Independent R38-17 negative-grid",
+              "description": "",
+              "x": "column",
+              "y": "row",
+              "color": "heat",
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "none",
+              "max_points": 2000,
+              "width": 960,
+              "height": 520,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "column": "West",
+                "row": "North",
+                "heat": -16
+              },
+              {
+                "column": "East",
+                "row": "North",
+                "heat": -8
+              },
+              {
+                "column": "West",
+                "row": "South",
+                "heat": -4
+              },
+              {
+                "column": "East",
+                "row": "South",
+                "heat": -2
+              }
+            ],
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          }
+        ],
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_specs": [
+          {
+            "type": "cell",
+            "data": [
+              {
+                "_x": "West",
+                "_y": "North",
+                "_color": "-16",
+                "_size": 8,
+                "_heat": -16.0,
+                "_row": 0
+              },
+              {
+                "_x": "East",
+                "_y": "North",
+                "_color": "-8",
+                "_size": 8,
+                "_heat": -8.0,
+                "_row": 1
+              },
+              {
+                "_x": "West",
+                "_y": "South",
+                "_color": "-4",
+                "_size": 8,
+                "_heat": -4.0,
+                "_row": 2
+              },
+              {
+                "_x": "East",
+                "_y": "South",
+                "_color": "-2",
+                "_size": 8,
+                "_heat": -2.0,
+                "_row": 3
+              }
+            ],
+            "encode": {
+              "x": "_x",
+              "y": "_y",
+              "color": "_heat"
+            },
+            "animate": false,
+            "theme": "light",
+            "title": "Independent R38-17 negative-grid",
+            "tooltip": false,
+            "axis": {
+              "x": {
+                "title": "column",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              },
+              "y": {
+                "title": "row",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              }
+            },
+            "scale": {
+              "color": {
+                "type": "linear",
+                "domain": [
+                  -16.0,
+                  -2.0
+                ],
+                "range": [
+                  "#ffffd9",
+                  "#081d58"
+                ],
+                "nice": false
+              }
+            },
+            "legend": {
+              "color": {
+                "data": [
+                  {
+                    "value": -16.0
+                  },
+                  {
+                    "value": -2.0
+                  }
+                ],
+                "labelTextAlign": "start"
+              }
+            }
+          }
+        ],
+        "strategy": "none",
+        "accessible_path": "chart.html"
+      },
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\negative-grid\\deepviz-qfgu38k3\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\negative-grid\\deepviz-qfgu38k3\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html": "negative-grid\\deepviz-qfgu38k3\\chart.html",
+      "html_sha256": "14968c22dc5534901fc2b027f5b083ba11776911c6b4f5ae6073d6d5b6df12b4"
+    },
+    {
+      "id": "signed-grid",
+      "mode": "heat",
+      "values": [
+        -12,
+        -3,
+        3,
+        12
+      ],
+      "expected_values": [
+        -12,
+        -3,
+        3,
+        12
+      ],
+      "expected_domain": [
+        -12,
+        12
+      ],
+      "expected_grid_indices": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "spec": {
+        "aggregation": "none",
+        "width": 960,
+        "height": 520,
+        "title": "Independent R38-17 signed-grid",
+        "kind": "heatmap",
+        "x": "column",
+        "y": "row",
+        "color": "heat",
+        "theme": "light"
+      },
+      "rows": [
+        {
+          "column": "West",
+          "row": "North",
+          "heat": -12
+        },
+        {
+          "column": "East",
+          "row": "North",
+          "heat": -3
+        },
+        {
+          "column": "West",
+          "row": "South",
+          "heat": 3
+        },
+        {
+          "column": "East",
+          "row": "South",
+          "heat": 12
+        }
+      ],
+      "manifest": {
+        "engine": "antv",
+        "charts": [
+          {
+            "engine": "antv",
+            "requested_kind": "heatmap",
+            "rendered_kind": "heatmap",
+            "spec": {
+              "version": 1,
+              "kind": "heatmap",
+              "title": "Independent R38-17 signed-grid",
+              "description": "",
+              "x": "column",
+              "y": "row",
+              "color": "heat",
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "none",
+              "max_points": 2000,
+              "width": 960,
+              "height": 520,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "column": "West",
+                "row": "North",
+                "heat": -12
+              },
+              {
+                "column": "East",
+                "row": "North",
+                "heat": -3
+              },
+              {
+                "column": "West",
+                "row": "South",
+                "heat": 3
+              },
+              {
+                "column": "East",
+                "row": "South",
+                "heat": 12
+              }
+            ],
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          }
+        ],
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_specs": [
+          {
+            "type": "cell",
+            "data": [
+              {
+                "_x": "West",
+                "_y": "North",
+                "_color": "-12",
+                "_size": 8,
+                "_heat": -12.0,
+                "_row": 0
+              },
+              {
+                "_x": "East",
+                "_y": "North",
+                "_color": "-3",
+                "_size": 8,
+                "_heat": -3.0,
+                "_row": 1
+              },
+              {
+                "_x": "West",
+                "_y": "South",
+                "_color": "3",
+                "_size": 8,
+                "_heat": 3.0,
+                "_row": 2
+              },
+              {
+                "_x": "East",
+                "_y": "South",
+                "_color": "12",
+                "_size": 8,
+                "_heat": 12.0,
+                "_row": 3
+              }
+            ],
+            "encode": {
+              "x": "_x",
+              "y": "_y",
+              "color": "_heat"
+            },
+            "animate": false,
+            "theme": "light",
+            "title": "Independent R38-17 signed-grid",
+            "tooltip": false,
+            "axis": {
+              "x": {
+                "title": "column",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              },
+              "y": {
+                "title": "row",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              }
+            },
+            "scale": {
+              "color": {
+                "type": "linear",
+                "domain": [
+                  -12.0,
+                  12.0
+                ],
+                "range": [
+                  "#ffffd9",
+                  "#081d58"
+                ],
+                "nice": false
+              }
+            },
+            "legend": {
+              "color": {
+                "data": [
+                  {
+                    "value": -12.0
+                  },
+                  {
+                    "value": 12.0
+                  }
+                ],
+                "labelTextAlign": "start"
+              }
+            }
+          }
+        ],
+        "strategy": "none",
+        "accessible_path": "chart.html"
+      },
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\signed-grid\\deepviz-2w100i3z\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\signed-grid\\deepviz-2w100i3z\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html": "signed-grid\\deepviz-2w100i3z\\chart.html",
+      "html_sha256": "93e33efe4f959aad8d891937d1b1f305c2a852e790abe539dcab51306f98b679"
+    },
+    {
+      "id": "constant-grid",
+      "mode": "heat",
+      "values": [
+        -4,
+        -4,
+        -4,
+        -4
+      ],
+      "expected_values": [
+        -4,
+        -4,
+        -4,
+        -4
+      ],
+      "expected_domain": [
+        -4.2,
+        -3.8
+      ],
+      "expected_grid_indices": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "spec": {
+        "aggregation": "none",
+        "width": 960,
+        "height": 520,
+        "title": "Independent R38-17 constant-grid",
+        "kind": "heatmap",
+        "x": "column",
+        "y": "row",
+        "color": "heat",
+        "theme": "light"
+      },
+      "rows": [
+        {
+          "column": "West",
+          "row": "North",
+          "heat": -4
+        },
+        {
+          "column": "East",
+          "row": "North",
+          "heat": -4
+        },
+        {
+          "column": "West",
+          "row": "South",
+          "heat": -4
+        },
+        {
+          "column": "East",
+          "row": "South",
+          "heat": -4
+        }
+      ],
+      "manifest": {
+        "engine": "antv",
+        "charts": [
+          {
+            "engine": "antv",
+            "requested_kind": "heatmap",
+            "rendered_kind": "heatmap",
+            "spec": {
+              "version": 1,
+              "kind": "heatmap",
+              "title": "Independent R38-17 constant-grid",
+              "description": "",
+              "x": "column",
+              "y": "row",
+              "color": "heat",
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "none",
+              "max_points": 2000,
+              "width": 960,
+              "height": 520,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "column": "West",
+                "row": "North",
+                "heat": -4
+              },
+              {
+                "column": "East",
+                "row": "North",
+                "heat": -4
+              },
+              {
+                "column": "West",
+                "row": "South",
+                "heat": -4
+              },
+              {
+                "column": "East",
+                "row": "South",
+                "heat": -4
+              }
+            ],
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          }
+        ],
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_specs": [
+          {
+            "type": "cell",
+            "data": [
+              {
+                "_x": "West",
+                "_y": "North",
+                "_color": "-4",
+                "_size": 8,
+                "_heat": -4.0,
+                "_row": 0
+              },
+              {
+                "_x": "East",
+                "_y": "North",
+                "_color": "-4",
+                "_size": 8,
+                "_heat": -4.0,
+                "_row": 1
+              },
+              {
+                "_x": "West",
+                "_y": "South",
+                "_color": "-4",
+                "_size": 8,
+                "_heat": -4.0,
+                "_row": 2
+              },
+              {
+                "_x": "East",
+                "_y": "South",
+                "_color": "-4",
+                "_size": 8,
+                "_heat": -4.0,
+                "_row": 3
+              }
+            ],
+            "encode": {
+              "x": "_x",
+              "y": "_y",
+              "color": "_heat"
+            },
+            "animate": false,
+            "theme": "light",
+            "title": "Independent R38-17 constant-grid",
+            "tooltip": false,
+            "axis": {
+              "x": {
+                "title": "column",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              },
+              "y": {
+                "title": "row",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              }
+            },
+            "scale": {
+              "color": {
+                "type": "linear",
+                "domain": [
+                  -4.2,
+                  -3.8
+                ],
+                "range": [
+                  "#ffffd9",
+                  "#081d58"
+                ],
+                "nice": false
+              }
+            },
+            "legend": {
+              "color": {
+                "data": [
+                  {
+                    "value": -4.2
+                  },
+                  {
+                    "value": -3.8
+                  }
+                ],
+                "labelTextAlign": "start"
+              }
+            }
+          }
+        ],
+        "strategy": "none",
+        "accessible_path": "chart.html"
+      },
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\constant-grid\\deepviz-25ctzjtd\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\constant-grid\\deepviz-25ctzjtd\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html": "constant-grid\\deepviz-25ctzjtd\\chart.html",
+      "html_sha256": "7b9ba87da068fb2d7d28de2428f61218f45a0e9fb9a4a78e9b9db0672d0921b5"
+    },
+    {
+      "id": "zero-grid",
+      "mode": "heat",
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_domain": [
+        -1,
+        1
+      ],
+      "expected_grid_indices": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "spec": {
+        "aggregation": "none",
+        "width": 960,
+        "height": 520,
+        "title": "Independent R38-17 zero-grid",
+        "kind": "heatmap",
+        "x": "column",
+        "y": "row",
+        "color": "heat",
+        "theme": "light"
+      },
+      "rows": [
+        {
+          "column": "West",
+          "row": "North",
+          "heat": 0
+        },
+        {
+          "column": "East",
+          "row": "North",
+          "heat": 0
+        },
+        {
+          "column": "West",
+          "row": "South",
+          "heat": 0
+        },
+        {
+          "column": "East",
+          "row": "South",
+          "heat": 0
+        }
+      ],
+      "manifest": {
+        "engine": "antv",
+        "charts": [
+          {
+            "engine": "antv",
+            "requested_kind": "heatmap",
+            "rendered_kind": "heatmap",
+            "spec": {
+              "version": 1,
+              "kind": "heatmap",
+              "title": "Independent R38-17 zero-grid",
+              "description": "",
+              "x": "column",
+              "y": "row",
+              "color": "heat",
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "none",
+              "max_points": 2000,
+              "width": 960,
+              "height": 520,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "column": "West",
+                "row": "North",
+                "heat": 0
+              },
+              {
+                "column": "East",
+                "row": "North",
+                "heat": 0
+              },
+              {
+                "column": "West",
+                "row": "South",
+                "heat": 0
+              },
+              {
+                "column": "East",
+                "row": "South",
+                "heat": 0
+              }
+            ],
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          }
+        ],
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_specs": [
+          {
+            "type": "cell",
+            "data": [
+              {
+                "_x": "West",
+                "_y": "North",
+                "_color": "0",
+                "_size": 8,
+                "_heat": 0.0,
+                "_row": 0
+              },
+              {
+                "_x": "East",
+                "_y": "North",
+                "_color": "0",
+                "_size": 8,
+                "_heat": 0.0,
+                "_row": 1
+              },
+              {
+                "_x": "West",
+                "_y": "South",
+                "_color": "0",
+                "_size": 8,
+                "_heat": 0.0,
+                "_row": 2
+              },
+              {
+                "_x": "East",
+                "_y": "South",
+                "_color": "0",
+                "_size": 8,
+                "_heat": 0.0,
+                "_row": 3
+              }
+            ],
+            "encode": {
+              "x": "_x",
+              "y": "_y",
+              "color": "_heat"
+            },
+            "animate": false,
+            "theme": "light",
+            "title": "Independent R38-17 zero-grid",
+            "tooltip": false,
+            "axis": {
+              "x": {
+                "title": "column",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              },
+              "y": {
+                "title": "row",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              }
+            },
+            "scale": {
+              "color": {
+                "type": "linear",
+                "domain": [
+                  -1.0,
+                  1.0
+                ],
+                "range": [
+                  "#ffffd9",
+                  "#081d58"
+                ],
+                "nice": false
+              }
+            },
+            "legend": {
+              "color": {
+                "data": [
+                  {
+                    "value": -1.0
+                  },
+                  {
+                    "value": 1.0
+                  }
+                ],
+                "labelTextAlign": "start"
+              }
+            }
+          }
+        ],
+        "strategy": "none",
+        "accessible_path": "chart.html"
+      },
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\zero-grid\\deepviz-i8dgjy70\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\zero-grid\\deepviz-i8dgjy70\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html": "zero-grid\\deepviz-i8dgjy70\\chart.html",
+      "html_sha256": "4bb545c60cb4de84621ec738450c890f0ef449fdc43b3f9655d75b562630cb0f"
+    },
+    {
+      "id": "missing-corner",
+      "mode": "heat",
+      "values": [
+        -16,
+        null,
+        -4,
+        -2
+      ],
+      "expected_values": [
+        -16,
+        -4,
+        -2
+      ],
+      "expected_domain": [
+        -16,
+        -2
+      ],
+      "expected_grid_indices": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "spec": {
+        "aggregation": "none",
+        "width": 960,
+        "height": 520,
+        "title": "Independent R38-17 missing-corner",
+        "kind": "heatmap",
+        "x": "column",
+        "y": "row",
+        "color": "heat",
+        "theme": "light"
+      },
+      "rows": [
+        {
+          "column": "West",
+          "row": "North",
+          "heat": -16
+        },
+        {
+          "column": "East",
+          "row": "North",
+          "heat": null
+        },
+        {
+          "column": "West",
+          "row": "South",
+          "heat": -4
+        },
+        {
+          "column": "East",
+          "row": "South",
+          "heat": -2
+        }
+      ],
+      "manifest": {
+        "engine": "antv",
+        "charts": [
+          {
+            "engine": "antv",
+            "requested_kind": "heatmap",
+            "rendered_kind": "heatmap",
+            "spec": {
+              "version": 1,
+              "kind": "heatmap",
+              "title": "Independent R38-17 missing-corner",
+              "description": "",
+              "x": "column",
+              "y": "row",
+              "color": "heat",
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "none",
+              "max_points": 2000,
+              "width": 960,
+              "height": 520,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "column": "West",
+                "row": "North",
+                "heat": -16
+              },
+              {
+                "column": "East",
+                "row": "North",
+                "heat": null
+              },
+              {
+                "column": "West",
+                "row": "South",
+                "heat": -4
+              },
+              {
+                "column": "East",
+                "row": "South",
+                "heat": -2
+              }
+            ],
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [
+              "1 heatmap records with missing/non-numeric color values omitted from geometry.",
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          }
+        ],
+        "warnings": [
+          "1 heatmap records with missing/non-numeric color values omitted from geometry.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_specs": [
+          {
+            "type": "cell",
+            "data": [
+              {
+                "_x": "West",
+                "_y": "North",
+                "_color": "-16",
+                "_size": 8,
+                "_heat": -16.0,
+                "_row": 0
+              },
+              {
+                "_x": "West",
+                "_y": "South",
+                "_color": "-4",
+                "_size": 8,
+                "_heat": -4.0,
+                "_row": 2
+              },
+              {
+                "_x": "East",
+                "_y": "South",
+                "_color": "-2",
+                "_size": 8,
+                "_heat": -2.0,
+                "_row": 3
+              }
+            ],
+            "encode": {
+              "x": "_x",
+              "y": "_y",
+              "color": "_heat"
+            },
+            "animate": false,
+            "theme": "light",
+            "title": "Independent R38-17 missing-corner",
+            "tooltip": false,
+            "axis": {
+              "x": {
+                "title": "column",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              },
+              "y": {
+                "title": "row",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              }
+            },
+            "scale": {
+              "color": {
+                "type": "linear",
+                "domain": [
+                  -16.0,
+                  -2.0
+                ],
+                "range": [
+                  "#ffffd9",
+                  "#081d58"
+                ],
+                "nice": false
+              }
+            },
+            "legend": {
+              "color": {
+                "data": [
+                  {
+                    "value": -16.0
+                  },
+                  {
+                    "value": -2.0
+                  }
+                ],
+                "labelTextAlign": "start"
+              }
+            }
+          }
+        ],
+        "strategy": "none",
+        "accessible_path": "chart.html"
+      },
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\missing-corner\\deepviz-at77w_33\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\missing-corner\\deepviz-at77w_33\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "1 heatmap records with missing/non-numeric color values omitted from geometry.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html": "missing-corner\\deepviz-at77w_33\\chart.html",
+      "html_sha256": "6c599e9e6fd5d537406bce1250d78e22a80d711015a01778489e6e5397a962b0"
+    },
+    {
+      "id": "tiny-subnormal-grid",
+      "mode": "heat",
+      "values": [
+        -8e-310,
+        -6e-310,
+        -4e-310,
+        -2e-310
+      ],
+      "expected_values": [
+        -8e-310,
+        -6e-310,
+        -4e-310,
+        -2e-310
+      ],
+      "expected_domain": [
+        -8e-310,
+        -2e-310
+      ],
+      "expected_grid_indices": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "spec": {
+        "aggregation": "none",
+        "width": 960,
+        "height": 520,
+        "title": "Independent R38-17 tiny-subnormal-grid",
+        "kind": "heatmap",
+        "x": "column",
+        "y": "row",
+        "color": "heat",
+        "theme": "light"
+      },
+      "rows": [
+        {
+          "column": "West",
+          "row": "North",
+          "heat": -8e-310
+        },
+        {
+          "column": "East",
+          "row": "North",
+          "heat": -6e-310
+        },
+        {
+          "column": "West",
+          "row": "South",
+          "heat": -4e-310
+        },
+        {
+          "column": "East",
+          "row": "South",
+          "heat": -2e-310
+        }
+      ],
+      "manifest": {
+        "engine": "antv",
+        "charts": [
+          {
+            "engine": "antv",
+            "requested_kind": "heatmap",
+            "rendered_kind": "heatmap",
+            "spec": {
+              "version": 1,
+              "kind": "heatmap",
+              "title": "Independent R38-17 tiny-subnormal-grid",
+              "description": "",
+              "x": "column",
+              "y": "row",
+              "color": "heat",
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "none",
+              "max_points": 2000,
+              "width": 960,
+              "height": 520,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "column": "West",
+                "row": "North",
+                "heat": -8e-310
+              },
+              {
+                "column": "East",
+                "row": "North",
+                "heat": -6e-310
+              },
+              {
+                "column": "West",
+                "row": "South",
+                "heat": -4e-310
+              },
+              {
+                "column": "East",
+                "row": "South",
+                "heat": -2e-310
+              }
+            ],
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          }
+        ],
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_specs": [
+          {
+            "type": "cell",
+            "data": [
+              {
+                "_x": "West",
+                "_y": "North",
+                "_color": "-8e-310",
+                "_size": 8,
+                "_heat": -8e-310,
+                "_row": 0
+              },
+              {
+                "_x": "East",
+                "_y": "North",
+                "_color": "-6e-310",
+                "_size": 8,
+                "_heat": -6e-310,
+                "_row": 1
+              },
+              {
+                "_x": "West",
+                "_y": "South",
+                "_color": "-4e-310",
+                "_size": 8,
+                "_heat": -4e-310,
+                "_row": 2
+              },
+              {
+                "_x": "East",
+                "_y": "South",
+                "_color": "-2e-310",
+                "_size": 8,
+                "_heat": -2e-310,
+                "_row": 3
+              }
+            ],
+            "encode": {
+              "x": "_x",
+              "y": "_y",
+              "color": "_heat"
+            },
+            "animate": false,
+            "theme": "light",
+            "title": "Independent R38-17 tiny-subnormal-grid",
+            "tooltip": false,
+            "axis": {
+              "x": {
+                "title": "column",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              },
+              "y": {
+                "title": "row",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              }
+            },
+            "scale": {
+              "color": {
+                "type": "linear",
+                "domain": [
+                  -8e-310,
+                  -2e-310
+                ],
+                "range": [
+                  "#ffffd9",
+                  "#081d58"
+                ],
+                "nice": false
+              }
+            },
+            "legend": {
+              "color": {
+                "data": [
+                  {
+                    "value": -8e-310
+                  },
+                  {
+                    "value": -2e-310
+                  }
+                ],
+                "labelTextAlign": "start"
+              }
+            }
+          }
+        ],
+        "strategy": "none",
+        "accessible_path": "chart.html"
+      },
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\tiny-subnormal-grid\\deepviz-e4gtho6q\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\tiny-subnormal-grid\\deepviz-e4gtho6q\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html": "tiny-subnormal-grid\\deepviz-e4gtho6q\\chart.html",
+      "html_sha256": "6d4718148963316b0c5a42eed6ca33960d68630e6b7b45e06b407f53f3657463"
+    },
+    {
+      "id": "all-missing-grid",
+      "mode": "heat",
+      "values": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "expected_values": [],
+      "expected_domain": [
+        0,
+        1
+      ],
+      "expected_grid_indices": [],
+      "spec": {
+        "aggregation": "none",
+        "width": 960,
+        "height": 520,
+        "title": "Independent R38-17 all-missing-grid",
+        "kind": "heatmap",
+        "x": "column",
+        "y": "row",
+        "color": "heat",
+        "theme": "light"
+      },
+      "rows": [
+        {
+          "column": "West",
+          "row": "North",
+          "heat": null
+        },
+        {
+          "column": "East",
+          "row": "North",
+          "heat": null
+        },
+        {
+          "column": "West",
+          "row": "South",
+          "heat": null
+        },
+        {
+          "column": "East",
+          "row": "South",
+          "heat": null
+        }
+      ],
+      "manifest": {
+        "engine": "antv",
+        "charts": [
+          {
+            "engine": "antv",
+            "requested_kind": "heatmap",
+            "rendered_kind": "heatmap",
+            "spec": {
+              "version": 1,
+              "kind": "heatmap",
+              "title": "Independent R38-17 all-missing-grid",
+              "description": "",
+              "x": "column",
+              "y": "row",
+              "color": "heat",
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "none",
+              "max_points": 2000,
+              "width": 960,
+              "height": 520,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "column": "West",
+                "row": "North",
+                "heat": null
+              },
+              {
+                "column": "East",
+                "row": "North",
+                "heat": null
+              },
+              {
+                "column": "West",
+                "row": "South",
+                "heat": null
+              },
+              {
+                "column": "East",
+                "row": "South",
+                "heat": null
+              }
+            ],
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [
+              "4 heatmap records with missing/non-numeric color values omitted from geometry.",
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          }
+        ],
+        "warnings": [
+          "4 heatmap records with missing/non-numeric color values omitted from geometry.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_specs": [
+          {
+            "type": "cell",
+            "data": [],
+            "encode": {
+              "x": "_x",
+              "y": "_y",
+              "color": "_heat"
+            },
+            "animate": false,
+            "theme": "light",
+            "title": "Independent R38-17 all-missing-grid",
+            "tooltip": false,
+            "axis": {
+              "x": {
+                "title": "column",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              },
+              "y": {
+                "title": "row",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              }
+            },
+            "scale": {
+              "color": {
+                "type": "linear",
+                "domain": [
+                  0,
+                  1
+                ],
+                "range": [
+                  "#ffffd9",
+                  "#081d58"
+                ],
+                "nice": false
+              }
+            },
+            "legend": {
+              "color": {
+                "data": [
+                  {
+                    "value": 0
+                  },
+                  {
+                    "value": 1
+                  }
+                ],
+                "labelTextAlign": "start"
+              }
+            }
+          }
+        ],
+        "strategy": "none",
+        "accessible_path": "chart.html"
+      },
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\all-missing-grid\\deepviz-_0tn4xj9\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\all-missing-grid\\deepviz-_0tn4xj9\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "4 heatmap records with missing/non-numeric color values omitted from geometry.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html": "all-missing-grid\\deepviz-_0tn4xj9\\chart.html",
+      "html_sha256": "5f404c6120818b0491993697871b0ecfe19fb48a5a98e448b7a70ddb9cf81aa1"
+    },
+    {
+      "id": "uneven-numeric-positions",
+      "mode": "position",
+      "rows": [
+        {
+          "x": -4,
+          "y": 2
+        },
+        {
+          "x": -1,
+          "y": 5
+        },
+        {
+          "x": 5,
+          "y": -1
+        },
+        {
+          "x": 14,
+          "y": 8
+        }
+      ],
+      "expected_xy": [
+        [
+          -4,
+          2
+        ],
+        [
+          -1,
+          5
+        ],
+        [
+          5,
+          -1
+        ],
+        [
+          14,
+          8
+        ]
+      ],
+      "expected_spacing_ratios": [
+        1,
+        2,
+        3
+      ],
+      "spec": {
+        "aggregation": "none",
+        "width": 960,
+        "height": 520,
+        "title": "Independent R38-17 uneven-numeric-positions",
+        "kind": "scatter",
+        "x": "x",
+        "y": "y",
+        "theme": "dark"
+      },
+      "manifest": {
+        "engine": "antv",
+        "charts": [
+          {
+            "engine": "antv",
+            "requested_kind": "scatter",
+            "rendered_kind": "scatter",
+            "spec": {
+              "version": 1,
+              "kind": "scatter",
+              "title": "Independent R38-17 uneven-numeric-positions",
+              "description": "",
+              "x": "x",
+              "y": "y",
+              "color": null,
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "none",
+              "max_points": 2000,
+              "width": 960,
+              "height": 520,
+              "theme": "dark",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "x": -4,
+                "y": 2
+              },
+              {
+                "x": -1,
+                "y": 5
+              },
+              {
+                "x": 5,
+                "y": -1
+              },
+              {
+                "x": 14,
+                "y": 8
+              }
+            ],
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          }
+        ],
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_specs": [
+          {
+            "type": "point",
+            "data": [
+              {
+                "_x": -4,
+                "_y": 2.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 2.0,
+                "_row": 0
+              },
+              {
+                "_x": -1,
+                "_y": 5.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 5.0,
+                "_row": 1
+              },
+              {
+                "_x": 5,
+                "_y": -1.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": -1.0,
+                "_row": 2
+              },
+              {
+                "_x": 14,
+                "_y": 8.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 8.0,
+                "_row": 3
+              }
+            ],
+            "encode": {
+              "x": "_x",
+              "y": "_y"
+            },
+            "animate": false,
+            "theme": "dark",
+            "title": "Independent R38-17 uneven-numeric-positions",
+            "tooltip": false,
+            "axis": {
+              "x": {
+                "title": "x",
+                "labelFill": "#edf1f7",
+                "titleFill": "#edf1f7"
+              },
+              "y": {
+                "title": "y",
+                "labelFill": "#edf1f7",
+                "titleFill": "#edf1f7"
+              }
+            },
+            "style": {
+              "fill": "#386cb0",
+              "stroke": "#386cb0"
+            }
+          }
+        ],
+        "strategy": "none",
+        "accessible_path": "chart.html"
+      },
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\uneven-numeric-positions\\deepviz-fsqietdr\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\uneven-numeric-positions\\deepviz-fsqietdr\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html": "uneven-numeric-positions\\deepviz-fsqietdr\\chart.html",
+      "html_sha256": "49b8e06bc543d6b0e72420691d0acfdb228e960fb278c72cf7f423344502414e"
+    },
+    {
+      "id": "dark-parent-light-child",
+      "mode": "dashboard",
+      "spec": {
+        "aggregation": "none",
+        "width": 1280,
+        "height": 520,
+        "title": "Independent R38-17 dark-parent-light-child",
+        "kind": "dashboard",
+        "theme": "dark",
+        "columns": 2,
+        "charts": [
+          {
+            "kind": "pie",
+            "theme": "light",
+            "title": "Light four-category pie"
+          },
+          {
+            "kind": "treemap",
+            "theme": "dark",
+            "title": "Dark four-category tiles"
+          }
+        ],
+        "x": "sector",
+        "y": "quantity"
+      },
+      "expected_child_themes": [
+        "light",
+        "dark"
+      ],
+      "expected_body": "rgb(23, 27, 38)",
+      "expected_backgrounds": [
+        "rgb(255, 255, 255)",
+        "rgb(23, 27, 38)"
+      ],
+      "rows": [
+        {
+          "sector": "North A",
+          "quantity": 2
+        },
+        {
+          "sector": "East & West",
+          "quantity": 3
+        },
+        {
+          "sector": "South \u0394",
+          "quantity": 5
+        },
+        {
+          "sector": "Central / total",
+          "quantity": 10
+        }
+      ],
+      "manifest": {
+        "engine": "antv",
+        "charts": [
+          {
+            "engine": "antv",
+            "requested_kind": "pie",
+            "rendered_kind": "pie",
+            "spec": {
+              "version": 1,
+              "kind": "pie",
+              "title": "Light four-category pie",
+              "description": "",
+              "x": "sector",
+              "y": "quantity",
+              "color": null,
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "none",
+              "max_points": 2000,
+              "width": 630,
+              "height": 460,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "sector": "North A",
+                "quantity": 2
+              },
+              {
+                "sector": "East & West",
+                "quantity": 3
+              },
+              {
+                "sector": "South \u0394",
+                "quantity": 5
+              },
+              {
+                "sector": "Central / total",
+                "quantity": 10
+              }
+            ],
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          },
+          {
+            "engine": "antv",
+            "requested_kind": "treemap",
+            "rendered_kind": "treemap",
+            "spec": {
+              "version": 1,
+              "kind": "treemap",
+              "title": "Dark four-category tiles",
+              "description": "",
+              "x": "sector",
+              "y": "quantity",
+              "color": null,
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "none",
+              "max_points": 2000,
+              "width": 630,
+              "height": 460,
+              "theme": "dark",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "sector": "North A",
+                "quantity": 2
+              },
+              {
+                "sector": "East & West",
+                "quantity": 3
+              },
+              {
+                "sector": "South \u0394",
+                "quantity": 5
+              },
+              {
+                "sector": "Central / total",
+                "quantity": 10
+              }
+            ],
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [
+              "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          }
+        ],
+        "warnings": [
+          "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_specs": [
+          {
+            "type": "interval",
+            "data": [
+              {
+                "_x": "North A",
+                "_y": 2.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 2.0,
+                "_row": 0
+              },
+              {
+                "_x": "East & West",
+                "_y": 3.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 3.0,
+                "_row": 1
+              },
+              {
+                "_x": "South \u0394",
+                "_y": 5.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 5.0,
+                "_row": 2
+              },
+              {
+                "_x": "Central / total",
+                "_y": 10.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 10.0,
+                "_row": 3
+              }
+            ],
+            "encode": {
+              "y": "_y",
+              "color": "_x"
+            },
+            "animate": false,
+            "theme": "light",
+            "title": "Light four-category pie",
+            "tooltip": false,
+            "axis": {
+              "x": {
+                "title": "sector",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              },
+              "y": {
+                "title": "quantity",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              }
+            },
+            "coordinate": {
+              "type": "theta",
+              "innerRadius": 0
+            },
+            "transform": [
+              {
+                "type": "stackY"
+              }
+            ],
+            "legend": {
+              "color": {
+                "position": "right"
+              }
+            }
+          },
+          {
+            "type": "rect",
+            "data": [
+              {
+                "_x": "North A",
+                "_y": 2.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 2.0,
+                "_row": 0,
+                "_left": 0.0,
+                "_right": 0.1,
+                "_bottom": 0,
+                "_top": 1
+              },
+              {
+                "_x": "East & West",
+                "_y": 3.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 3.0,
+                "_row": 1,
+                "_left": 0.1,
+                "_right": 0.25,
+                "_bottom": 0,
+                "_top": 1
+              },
+              {
+                "_x": "South \u0394",
+                "_y": 5.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 5.0,
+                "_row": 2,
+                "_left": 0.25,
+                "_right": 0.5,
+                "_bottom": 0,
+                "_top": 1
+              },
+              {
+                "_x": "Central / total",
+                "_y": 10.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 10.0,
+                "_row": 3,
+                "_left": 0.5,
+                "_right": 1.0,
+                "_bottom": 0,
+                "_top": 1
+              }
+            ],
+            "encode": {
+              "x": [
+                "_left",
+                "_right"
+              ],
+              "y": [
+                "_bottom",
+                "_top"
+              ],
+              "color": "_x"
+            },
+            "animate": false,
+            "theme": "dark",
+            "title": "Dark four-category tiles",
+            "tooltip": false,
+            "axis": false
+          }
+        ],
+        "strategy": "dashboard:none,none",
+        "accessible_path": "chart.html"
+      },
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\dark-parent-light-child\\deepviz-q775htc3\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\dark-parent-light-child\\deepviz-q775htc3\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 8,
+        "strategy": "dashboard:none,none",
+        "warnings": [
+          "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html": "dark-parent-light-child\\deepviz-q775htc3\\chart.html",
+      "html_sha256": "272f8e4af281d00268575b2dda802259086f84cf8d7745a167de470a679bbab9"
+    },
+    {
+      "id": "light-parent-dark-child",
+      "mode": "dashboard",
+      "spec": {
+        "aggregation": "none",
+        "width": 1280,
+        "height": 520,
+        "title": "Independent R38-17 light-parent-dark-child",
+        "kind": "dashboard",
+        "theme": "light",
+        "columns": 2,
+        "charts": [
+          {
+            "kind": "sunburst",
+            "theme": "dark",
+            "title": "Dark four-category ring"
+          },
+          {
+            "kind": "pie",
+            "theme": "light",
+            "title": "Light four-category pie"
+          }
+        ],
+        "x": "sector",
+        "y": "quantity"
+      },
+      "expected_child_themes": [
+        "dark",
+        "light"
+      ],
+      "expected_body": "rgb(255, 255, 255)",
+      "expected_backgrounds": [
+        "rgb(23, 27, 38)",
+        "rgb(255, 255, 255)"
+      ],
+      "rows": [
+        {
+          "sector": "North A",
+          "quantity": 2
+        },
+        {
+          "sector": "East & West",
+          "quantity": 3
+        },
+        {
+          "sector": "South \u0394",
+          "quantity": 5
+        },
+        {
+          "sector": "Central / total",
+          "quantity": 10
+        }
+      ],
+      "manifest": {
+        "engine": "antv",
+        "charts": [
+          {
+            "engine": "antv",
+            "requested_kind": "sunburst",
+            "rendered_kind": "sunburst",
+            "spec": {
+              "version": 1,
+              "kind": "sunburst",
+              "title": "Dark four-category ring",
+              "description": "",
+              "x": "sector",
+              "y": "quantity",
+              "color": null,
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "none",
+              "max_points": 2000,
+              "width": 630,
+              "height": 460,
+              "theme": "dark",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "sector": "North A",
+                "quantity": 2
+              },
+              {
+                "sector": "East & West",
+                "quantity": 3
+              },
+              {
+                "sector": "South \u0394",
+                "quantity": 5
+              },
+              {
+                "sector": "Central / total",
+                "quantity": 10
+              }
+            ],
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [
+              "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          },
+          {
+            "engine": "antv",
+            "requested_kind": "pie",
+            "rendered_kind": "pie",
+            "spec": {
+              "version": 1,
+              "kind": "pie",
+              "title": "Light four-category pie",
+              "description": "",
+              "x": "sector",
+              "y": "quantity",
+              "color": null,
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "none",
+              "max_points": 2000,
+              "width": 630,
+              "height": 460,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "sector": "North A",
+                "quantity": 2
+              },
+              {
+                "sector": "East & West",
+                "quantity": 3
+              },
+              {
+                "sector": "South \u0394",
+                "quantity": 5
+              },
+              {
+                "sector": "Central / total",
+                "quantity": 10
+              }
+            ],
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          }
+        ],
+        "warnings": [
+          "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_specs": [
+          {
+            "type": "interval",
+            "data": [
+              {
+                "_x": "North A",
+                "_y": 2.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 2.0,
+                "_row": 0
+              },
+              {
+                "_x": "East & West",
+                "_y": 3.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 3.0,
+                "_row": 1
+              },
+              {
+                "_x": "South \u0394",
+                "_y": 5.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 5.0,
+                "_row": 2
+              },
+              {
+                "_x": "Central / total",
+                "_y": 10.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 10.0,
+                "_row": 3
+              }
+            ],
+            "encode": {
+              "y": "_y",
+              "color": "_x"
+            },
+            "animate": false,
+            "theme": "dark",
+            "title": "Dark four-category ring",
+            "tooltip": false,
+            "axis": {
+              "x": {
+                "title": "sector",
+                "labelFill": "#edf1f7",
+                "titleFill": "#edf1f7"
+              },
+              "y": {
+                "title": "quantity",
+                "labelFill": "#edf1f7",
+                "titleFill": "#edf1f7"
+              }
+            },
+            "coordinate": {
+              "type": "theta",
+              "innerRadius": 0.45
+            },
+            "transform": [
+              {
+                "type": "stackY"
+              }
+            ],
+            "legend": {
+              "color": {
+                "position": "right"
+              }
+            }
+          },
+          {
+            "type": "interval",
+            "data": [
+              {
+                "_x": "North A",
+                "_y": 2.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 2.0,
+                "_row": 0
+              },
+              {
+                "_x": "East & West",
+                "_y": 3.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 3.0,
+                "_row": 1
+              },
+              {
+                "_x": "South \u0394",
+                "_y": 5.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 5.0,
+                "_row": 2
+              },
+              {
+                "_x": "Central / total",
+                "_y": 10.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 10.0,
+                "_row": 3
+              }
+            ],
+            "encode": {
+              "y": "_y",
+              "color": "_x"
+            },
+            "animate": false,
+            "theme": "light",
+            "title": "Light four-category pie",
+            "tooltip": false,
+            "axis": {
+              "x": {
+                "title": "sector",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              },
+              "y": {
+                "title": "quantity",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              }
+            },
+            "coordinate": {
+              "type": "theta",
+              "innerRadius": 0
+            },
+            "transform": [
+              {
+                "type": "stackY"
+              }
+            ],
+            "legend": {
+              "color": {
+                "position": "right"
+              }
+            }
+          }
+        ],
+        "strategy": "dashboard:none,none",
+        "accessible_path": "chart.html"
+      },
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\light-parent-dark-child\\deepviz-pq17389a\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R38-17\\public1\\light-parent-dark-child\\deepviz-pq17389a\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 4,
+        "output_count": 8,
+        "strategy": "dashboard:none,none",
+        "warnings": [
+          "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html": "light-parent-dark-child\\deepviz-pq17389a\\chart.html",
+      "html_sha256": "756100c8547547de27a484fcc2bde4a6819bf25d4936a86140c9e5961a62b9db"
+    }
+  ],
+  "source_and_probe_and_G2_before_after_exact": true
+}
