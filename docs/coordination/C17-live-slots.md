@@ -2,6 +2,8 @@
 
 ## Latest R10 and actual candidate push
 
+**Checkpoint nowpublishedca25af486bf443949125df789f5b5fd1fda8bba8**, nonforcepush/readback0; product3aa521a. **Mandatoryactualcompletion→review/decision→usefulreservation/admission→SAME-IDresume/actualreceipt/refill**, below18prioritybeforeordinarypublication/reporting; no knownidlefreedslotwithactionablequeue. Rootbounded02:22:33UTCactual22chartingsubagents+root23/all22parentlinks/0missingextraornested, `evidence/R10-root/post-dispatch-runtime.json`, historicalafterthisdate. R11savedexactproducerreleases12TSmargin/08canonicalnpmprompts/10strictJSON+resourcebudget; **afterrunningR10commandcompletes**, onlyrootalonevalidadmission/resume, noR04launchclaim. RetainedenginesP1dense/count/PlotlyanchorsR04; normalize16scope/dependentqueueunchanged. DoNOTstagefreshrootfilesduringowncoordinationbranchsnapshot.
+
 R04nonforcepush **340e5c5→3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab** exit0, immediate`git ls-remote`exit0exactSHA. Partialproductcheckpoint,publishedNOTgreen/release/merge; docscheckpointfollows. LatestR10rolling18–22activechartingsubagents/target22inclR04+rootseparate; rootadmission/actualresumes/returns in**R03-live-slots.md**, datedall21snapshotnotlivecount. Everyagentownscopedbranch/meaningfulcommits/nonforcepush/remoteSHAreadbackNOWauthorized; R04exclusivesharedcandidate/defaultintegration/issues/PRs. R10newprobes/reports/currentverification only exceptexplicitR07source09/16. Rootpointofcontact;fullproduction/900legitimatecreatedANDresolvedissuesunchanged. Nofiller/nospawning/no historicalbypass. R03-20Plotlyanchor/R03-12TSclippedtickretainedR04sourcefollowups; newnormalizer/cleanupfindingsqueueafter16handback.
 
 ## Latest product milestone and publication — 2026-11-27
