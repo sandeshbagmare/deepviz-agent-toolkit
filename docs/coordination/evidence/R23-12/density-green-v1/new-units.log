@@ -1,0 +1,112 @@
+TAP version 13
+# Subtest: R23 finite bar ±1e+308 keeps two 35px bars and zero
+ok 1 - R23 finite bar ±1e+308 keeps two 35px bars and zero
+  ---
+  duration_ms: 25.5184
+  type: 'test'
+  ...
+# Subtest: R23 finite bar ±1.7976931348623157e+308 keeps two 35px bars and zero
+ok 2 - R23 finite bar ±1.7976931348623157e+308 keeps two 35px bars and zero
+  ---
+  duration_ms: 1.0309
+  type: 'test'
+  ...
+# Subtest: R23 asymmetric finite MAX magnitudes preserve 1:2 signed heights
+ok 3 - R23 asymmetric finite MAX magnitudes preserve 1:2 signed heights
+  ---
+  duration_ms: 0.704
+  type: 'test'
+  ...
+# Subtest: R23 line shares stable signed finite Y coordinates
+ok 4 - R23 line shares stable signed finite Y coordinates
+  ---
+  duration_ms: 1.5571
+  type: 'test'
+  ...
+# Subtest: R23 area shares stable signed finite Y coordinates
+ok 5 - R23 area shares stable signed finite Y coordinates
+  ---
+  duration_ms: 1.7934
+  type: 'test'
+  ...
+# Subtest: R23 scatter shares stable signed finite Y coordinates
+ok 6 - R23 scatter shares stable signed finite Y coordinates
+  ---
+  duration_ms: 2.0341
+  type: 'test'
+  ...
+# Subtest: R23 bubble shares stable signed finite Y coordinates
+ok 7 - R23 bubble shares stable signed finite Y coordinates
+  ---
+  duration_ms: 1.664
+  type: 'test'
+  ...
+# Subtest: R23 numeric X marks and ticks share a finite extreme-range transform
+ok 8 - R23 numeric X marks and ticks share a finite extreme-range transform
+  ---
+  duration_ms: 2.1641
+  type: 'test'
+  ...
+# Subtest: R23 adjacent same-sign MAX X values retain equal spacing
+ok 9 - R23 adjacent same-sign MAX X values retain equal spacing
+  ---
+  duration_ms: 1.6919
+  type: 'test'
+  ...
+# Subtest: R23 subnormal X intervals retain the 1:3 ratio
+ok 10 - R23 subnormal X intervals retain the 1:3 ratio
+  ---
+  duration_ms: 1.2162
+  type: 'test'
+  ...
+# Subtest: R23 all-negative finite magnitudes retain sign, 2:1 heights and common zero
+ok 11 - R23 all-negative finite magnitudes retain sign, 2:1 heights and common zero
+  ---
+  duration_ms: 0.7949
+  type: 'test'
+  ...
+# Subtest: R23 empty, zero and constant domains remain valid without invented marks
+ok 12 - R23 empty, zero and constant domains remain valid without invented marks
+  ---
+  duration_ms: 1.5316
+  type: 'test'
+  ...
+# Subtest: R23 a nonzero Y that collapses onto emitted zero fails before successful artifact return
+ok 13 - R23 a nonzero Y that collapses onto emitted zero fails before successful artifact return
+  ---
+  duration_ms: 1.9086
+  type: 'test'
+  ...
+# Subtest: R23 ordinary eight 240px labels use readable separate rows without losing bars or text
+ok 14 - R23 ordinary eight 240px labels use readable separate rows without losing bars or text
+  ---
+  duration_ms: 2.927
+  type: 'test'
+  ...
+# Subtest: R23 infeasible eight full Unicode labels reject before returning an artifact at 240px
+ok 15 - R23 infeasible eight full Unicode labels reject before returning an artifact at 240px
+  ---
+  duration_ms: 2.2806
+  type: 'test'
+  ...
+# Subtest: R23 full Unicode labels and all fourteen categories are retained when wider space fits
+ok 16 - R23 full Unicode labels and all fourteen categories are retained when wider space fits
+  ---
+  duration_ms: 2.4383
+  type: 'test'
+  ...
+# Subtest: R23 complete labels longer than eighteen characters are never abbreviated
+ok 17 - R23 complete labels longer than eighteen characters are never abbreviated
+  ---
+  duration_ms: 0.5418
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 227.7519

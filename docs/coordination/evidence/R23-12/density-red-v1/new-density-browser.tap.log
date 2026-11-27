@@ -1,0 +1,96 @@
+TAP version 13
+# Subtest: R23 actual ordinary eight 240px svg: full text readable with all values
+not ok 1 - R23 actual ordinary eight 240px svg: full text readable with all values
+  ---
+  duration_ms: 2324.7363
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C\\tests\\browser\\r23-svg-finite-density.mjs:94:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    actual full label overlap: 0,1
+    
+    true !== false
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: false
+  actual: true
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C/tests/browser/r23-svg-finite-density.mjs:105:57)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: R23 actual ordinary eight 240px html: full text readable with all values
+not ok 2 - R23 actual ordinary eight 240px html: full text readable with all values
+  ---
+  duration_ms: 403.0639
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C\\tests\\browser\\r23-svg-finite-density.mjs:94:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    actual full label overlap: 0,1
+    
+    true !== false
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: false
+  actual: true
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C/tests/browser/r23-svg-finite-density.mjs:105:57)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: R23 actual ordinary eight 960px svg: full text readable with all values
+ok 3 - R23 actual ordinary eight 960px svg: full text readable with all values
+  ---
+  duration_ms: 253.8149
+  type: 'test'
+  ...
+# Subtest: R23 actual ordinary eight 960px html: full text readable with all values
+ok 4 - R23 actual ordinary eight 960px html: full text readable with all values
+  ---
+  duration_ms: 251.3859
+  type: 'test'
+  ...
+# Subtest: R23 actual unicode eight 960px svg: full text readable with all values
+ok 5 - R23 actual unicode eight 960px svg: full text readable with all values
+  ---
+  duration_ms: 229.8701
+  type: 'test'
+  ...
+# Subtest: R23 actual unicode eight 960px html: full text readable with all values
+ok 6 - R23 actual unicode eight 960px html: full text readable with all values
+  ---
+  duration_ms: 199.0787
+  type: 'test'
+  ...
+# Subtest: R23 actual Unicode 240px density is a clear pre-artifact rejection, not a chart pass
+not ok 7 - R23 actual Unicode 240px density is a clear pre-artifact rejection, not a chart pass
+  ---
+  duration_ms: 1.5396
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C\\tests\\browser\\r23-svg-finite-density.mjs:119:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C/tests/browser/r23-svg-finite-density.mjs:122:10)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 4
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4629.7369

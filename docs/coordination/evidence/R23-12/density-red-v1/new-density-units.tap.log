@@ -1,0 +1,162 @@
+TAP version 13
+# Subtest: R23 ordinary eight 240px labels use readable separate rows without losing bars or text
+not ok 1 - R23 ordinary eight 240px labels use readable separate rows without losing bars or text
+  ---
+  duration_ms: 34.1155
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C\\packages\\deepviz\\test\\test_r23_svg_finite_density.test.mjs:90:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        153,
+    -   169
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 153
+    1: 169
+  actual:
+    0: 153
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/test/test_r23_svg_finite_density.test.mjs:94:10)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.start (node:internal/test_runner/test:1262:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: R23 infeasible eight full Unicode labels reject before returning an artifact at 240px
+not ok 2 - R23 infeasible eight full Unicode labels reject before returning an artifact at 240px
+  ---
+  duration_ms: 4.7489
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C\\packages\\deepviz\\test\\test_r23_svg_finite_density.test.mjs:99:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/test/test_r23_svg_finite_density.test.mjs:102:10)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: R23 full Unicode labels and all fourteen categories are retained when wider space fits
+not ok 3 - R23 full Unicode labels and all fourteen categories are retained when wider space fits
+  ---
+  duration_ms: 6.9153
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C\\packages\\deepviz\\test\\test_r23_svg_finite_density.test.mjs:108:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        'g0',
+    -   'g1',
+        'g2',
+    -   'g3',
+        'g4',
+    -   'g5',
+        'g6',
+    -   'g7',
+        'g8',
+    -   'g9',
+        'g10',
+    -   'g11',
+        'g12',
+        'g13'
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 'g0'
+    1: 'g1'
+    2: 'g2'
+    3: 'g3'
+    4: 'g4'
+    5: 'g5'
+    6: 'g6'
+    7: 'g7'
+    8: 'g8'
+    9: 'g9'
+    10: 'g10'
+    11: 'g11'
+    12: 'g12'
+    13: 'g13'
+  actual:
+    0: 'g0'
+    1: 'g2'
+    2: 'g4'
+    3: 'g6'
+    4: 'g8'
+    5: 'g10'
+    6: 'g12'
+    7: 'g13'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/test/test_r23_svg_finite_density.test.mjs:112:12)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: R23 complete labels longer than eighteen characters are never abbreviated
+not ok 4 - R23 complete labels longer than eighteen characters are never abbreviated
+  ---
+  duration_ms: 3.6616
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C\\packages\\deepviz\\test\\test_r23_svg_finite_density.test.mjs:118:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+    +   'complete-…-name-01',
+    +   'complete-…-name-02'
+    -   'complete-branch-name-01',
+    -   'complete-branch-name-02'
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 'complete-branch-name-01'
+    1: 'complete-branch-name-02'
+  actual:
+    0: 'complete-…-name-01'
+    1: 'complete-…-name-02'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/test/test_r23_svg_finite_density.test.mjs:120:10)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 0
+# fail 4
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 283.5047

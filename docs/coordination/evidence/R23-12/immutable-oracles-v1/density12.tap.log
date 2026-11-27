@@ -1,0 +1,98 @@
+TAP version 13
+# Subtest: R17 pairwise oracle rejects overlap but not edge contact or separate rows
+ok 1 - R17 pairwise oracle rejects overlap but not edge contact or separate rows
+  ---
+  duration_ms: 1287.542
+  type: 'test'
+  ...
+# Subtest: R17 ordinary-eight 240x200 svg: complete category labels do not overlap
+ok 2 - R17 ordinary-eight 240x200 svg: complete category labels do not overlap
+  ---
+  duration_ms: 1351.5382
+  type: 'test'
+  ...
+# {"stem":"ordinary-eight-240-svg","plot_left":72,"plot_width":103,"category_slot_width":12.875,"adjacent_gaps":[-0.72265625,-0.72265625,-0.72265625,-0.72265625,-0.72265625,-0.72265625,-0.72265625],"min_adjacent_gap":-0.72265625,"overlapping_pairs":[],"clipped":0,"console_errors":0,"page_errors":0}
+# Subtest: R17 ordinary-eight 240x200 html: complete category labels do not overlap
+ok 3 - R17 ordinary-eight 240x200 html: complete category labels do not overlap
+  ---
+  duration_ms: 472.3094
+  type: 'test'
+  ...
+# {"stem":"ordinary-eight-240-html","plot_left":72,"plot_width":103,"category_slot_width":12.875,"adjacent_gaps":[-0.72265625,-0.72265625,-0.72265625,-0.72265625,-0.72265625,-0.72265625,-0.72265625],"min_adjacent_gap":-0.72265625,"overlapping_pairs":[],"clipped":0,"console_errors":0,"page_errors":0}
+# Subtest: R17 ordinary-eight 960x540 svg: complete category labels do not overlap
+ok 4 - R17 ordinary-eight 960x540 svg: complete category labels do not overlap
+  ---
+  duration_ms: 335.3196
+  type: 'test'
+  ...
+# {"stem":"ordinary-eight-960-svg","plot_left":72,"plot_width":823,"category_slot_width":102.875,"adjacent_gaps":[89.27734375,89.27734375,89.27734375,89.27734375,89.27734375,89.27734375,89.27734375],"min_adjacent_gap":89.27734375,"overlapping_pairs":[],"clipped":0,"console_errors":0,"page_errors":0}
+# Subtest: R17 ordinary-eight 960x540 html: complete category labels do not overlap
+ok 5 - R17 ordinary-eight 960x540 html: complete category labels do not overlap
+  ---
+  duration_ms: 325.6846
+  type: 'test'
+  ...
+# {"stem":"ordinary-eight-960-html","plot_left":72,"plot_width":823,"category_slot_width":102.875,"adjacent_gaps":[89.27734375,89.27734375,89.27734375,89.27734375,89.27734375,89.27734375,89.27734375],"min_adjacent_gap":89.27734375,"overlapping_pairs":[],"clipped":0,"console_errors":0,"page_errors":0}
+# Subtest: R17 unicode-eight 240x200 svg: complete category labels do not overlap
+not ok 6 - R17 unicode-eight 240x200 svg: complete category labels do not overlap
+  ---
+  duration_ms: 3.6204
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C\\artifacts\\local\\R23-12\\immutable-oracles-v1\\density12-setup-adapter.mjs:52:3'
+  failureType: 'testCodeFailure'
+  error: 'category density cannot fit at requested dimensions; request larger dimensions'
+  code: 'ERR_TEST_FAILURE'
+  name: 'ValidationError'
+  stack: |-
+    svgHtml (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/renderers.js:393:19)
+    buildNormalized (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/render.js:31:138)
+    buildRendererSpec (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/render.js:42:16)
+    render (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/render.js:105:21)
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C/artifacts/local/R23-12/immutable-oracles-v1/density12-setup-adapter.mjs:54:22)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: R17 unicode-eight 240x200 html: complete category labels do not overlap
+not ok 7 - R17 unicode-eight 240x200 html: complete category labels do not overlap
+  ---
+  duration_ms: 0.8796
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C\\artifacts\\local\\R23-12\\immutable-oracles-v1\\density12-setup-adapter.mjs:52:3'
+  failureType: 'testCodeFailure'
+  error: 'category density cannot fit at requested dimensions; request larger dimensions'
+  code: 'ERR_TEST_FAILURE'
+  name: 'ValidationError'
+  stack: |-
+    svgHtml (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/renderers.js:393:19)
+    buildNormalized (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/render.js:31:138)
+    buildRendererSpec (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/render.js:42:16)
+    render (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/render.js:105:21)
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r23-12-svg-finite-density-ses_de5678115ffewUEpZFi8faBW8C/artifacts/local/R23-12/immutable-oracles-v1/density12-setup-adapter.mjs:54:22)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: R17 unicode-eight 960x540 svg: complete category labels do not overlap
+ok 8 - R17 unicode-eight 960x540 svg: complete category labels do not overlap
+  ---
+  duration_ms: 305.8561
+  type: 'test'
+  ...
+# {"stem":"unicode-eight-960-svg","plot_left":72,"plot_width":823,"category_slot_width":102.875,"adjacent_gaps":[10.875,10.875,10.875,10.875,10.875,10.875,10.875],"min_adjacent_gap":10.875,"overlapping_pairs":[],"clipped":0,"console_errors":0,"page_errors":0}
+# Subtest: R17 unicode-eight 960x540 html: complete category labels do not overlap
+ok 9 - R17 unicode-eight 960x540 html: complete category labels do not overlap
+  ---
+  duration_ms: 315.4664
+  type: 'test'
+  ...
+# {"stem":"unicode-eight-960-html","plot_left":72,"plot_width":823,"category_slot_width":102.875,"adjacent_gaps":[10.875,10.875,10.875,10.875,10.875,10.875,10.875],"min_adjacent_gap":10.875,"overlapping_pairs":[],"clipped":0,"console_errors":0,"page_errors":0}
+1..9
+# tests 9
+# suites 0
+# pass 7
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5547.7599

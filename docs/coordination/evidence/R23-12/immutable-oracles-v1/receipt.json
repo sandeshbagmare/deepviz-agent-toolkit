@@ -1,0 +1,57 @@
+{
+  "head": "c3ee1edbfc65406cef7fd809f5a6887471d576a5",
+  "source_sha256": "09e7bff388fb51b4d53ba5e97d0e258af04a7c105fa8b7dff8ac0b687d91e449",
+  "dist_sha256": "f2b5369b73b0a7280c79db8b5260c90903a65cd190ecaf54a33ebbbfc6cf1b85",
+  "source_unchanged_after": true,
+  "original_probes_unmodified": true,
+  "results": [
+    {
+      "name": "bar13",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "--test-reporter=tap",
+        "artifacts/local/R23-12/immutable-oracles-v1/bar13-setup-adapter.mjs"
+      ],
+      "exit": 0,
+      "signal": null,
+      "original_sha256": "a731617b686d7d9b1bdedfdec70c45fea39e9d54f2be266d10be504a705a7202",
+      "adapter_sha256": "0c1b69d3f4a1c5c97d8e48b384934bb2a68475c0f0207f3ffdb50f4591848c92",
+      "setup_changes": [
+        "expected source HEAD setup only, all assertions unchanged"
+      ],
+      "totals": [
+        "# tests 2",
+        "# pass 2",
+        "# fail 0",
+        "# skipped 0",
+        "# duration_ms 360.7914"
+      ]
+    },
+    {
+      "name": "density12",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "--test-reporter=tap",
+        "artifacts/local/R23-12/immutable-oracles-v1/density12-setup-adapter.mjs"
+      ],
+      "exit": 1,
+      "signal": null,
+      "original_sha256": "453ffb2218dbee8b15336dd599e03629ebb66f0c773fcf84978bfb9f754c69b1",
+      "adapter_sha256": "2fbaa11f894e7bf1d6779192e24c3e1e8676e809c425ea271ab9b1ffe9246367",
+      "setup_changes": [
+        "absolute import setup only",
+        "root path setup only, all assertions unchanged"
+      ],
+      "totals": [
+        "# tests 9",
+        "# pass 7",
+        "# fail 2",
+        "# skipped 0",
+        "# duration_ms 5547.7599"
+      ]
+    }
+  ],
+  "author_retest_not_independent_review": true
+}

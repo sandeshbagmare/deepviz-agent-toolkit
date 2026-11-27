@@ -1,0 +1,109 @@
+{
+  "actual_session": "ses_de5678115ffewUEpZFi8faBW8C",
+  "source_base": "5e595a8f893955ce34a0e26553bb7bf257ea93ae",
+  "finite_commit": "c3ee1edbfc65406cef7fd809f5a6887471d576a5",
+  "density_commit": "342234891c1a34ce6cf4a0d722971c518628815b",
+  "source_sha256": "09e7bff388fb51b4d53ba5e97d0e258af04a7c105fa8b7dff8ac0b687d91e449",
+  "build_sha256": "f2b5369b73b0a7280c79db8b5260c90903a65cd190ecaf54a33ebbbfc6cf1b85",
+  "unit_sha256": "c1943b9f07817d7f9848ec854204e6fa3a9fa12238b08f90ec426444c12ceb05",
+  "browser_sha256": "e3bcd4f85651fc0366e76d39a96290df4ce7d9439f2de6b3cb595d47596c6e55",
+  "source_and_tests_equal_committed_bytes": true,
+  "finite": {
+    "red": {
+      "exit": 1,
+      "pass": 4,
+      "fail": 9,
+      "skip": 0
+    },
+    "green": {
+      "exit": 0,
+      "pass": 13,
+      "fail": 0,
+      "skip": 0
+    },
+    "full_npm": {
+      "exit": 0,
+      "pass": 270,
+      "fail": 0,
+      "skip": 0
+    },
+    "browser": {
+      "exit": 0,
+      "actual_charts": 10,
+      "pass": 10,
+      "fail": 0,
+      "skip": 0
+    }
+  },
+  "density": {
+    "red_unit": {
+      "exit": 1,
+      "pass": 0,
+      "fail": 4,
+      "skip": 0
+    },
+    "red_browser": {
+      "exit": 1,
+      "pass": 4,
+      "fail": 3,
+      "skip": 0
+    },
+    "new_unit": {
+      "exit": 0,
+      "pass": 17,
+      "fail": 0,
+      "skip": 0
+    },
+    "new_browser": {
+      "exit": 0,
+      "pass": 17,
+      "actual_charts": 16,
+      "explicit_preartifact_rejection_controls": 1,
+      "fail": 0,
+      "skip": 0
+    },
+    "full_npm": {
+      "exit": 1,
+      "pass": 269,
+      "fail": 5,
+      "skip": 0,
+      "total": 274
+    },
+    "typecheck": 0,
+    "schema_check": 0,
+    "pack_dry_run": 0
+  },
+  "immutable_oracles_author_retest": {
+    "bar13": {
+      "exit": 0,
+      "pass": 2,
+      "fail": 0,
+      "skip": 0
+    },
+    "density12": {
+      "exit": 1,
+      "pass": 7,
+      "fail": 2,
+      "skip": 0,
+      "red_cases": "Unicode240 SVG/HTML clear preartifact rejections; old oracle requires success; not chart passes"
+    },
+    "original_files_unmodified": true,
+    "setup_only_adapters": true
+  },
+  "merge_ready": false,
+  "independent_approval": false,
+  "issue32_closed": false,
+  "remote_ci_claim": false,
+  "installs": 0,
+  "scale_reruns": 0,
+  "api_mutations": 0,
+  "subagents_spawned": 0,
+  "limitations": [
+    "R04/test-owner policy disposition required for five old full-npm failures/two old strict-density rejections; no oracle edited/waived",
+    "Host-scoped font fallback checks, not universal glyph sizing",
+    "Finite machine-precision geometry, not arbitrary-precision visibility",
+    "No Python/full-toolkit/10M/installed-consumer/remote-CI verification"
+  ],
+  "evidence_file_count": 145,
+  "evidence_bytes": 874979
+}

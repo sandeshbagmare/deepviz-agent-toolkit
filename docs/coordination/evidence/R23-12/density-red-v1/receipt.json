@@ -1,0 +1,38 @@
+{
+  "source_head": "c3ee1edbfc65406cef7fd809f5a6887471d576a5",
+  "source_unmodified": true,
+  "source_sha256": "0538490fbf14a8ca4f1f39f7f880db5ea17d94c6873362243778e1160bc77b4a",
+  "dist_sha256": "c76b4c51c88dafcd125b06d352bb89575c2e8055a32f43f4fad764b10c5ab347",
+  "new_test_sha256": "c1943b9f07817d7f9848ec854204e6fa3a9fa12238b08f90ec426444c12ceb05",
+  "new_browser_sha256": "e3bcd4f85651fc0366e76d39a96290df4ce7d9439f2de6b3cb595d47596c6e55",
+  "commands": [
+    {
+      "name": "new-density-units",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "--test-reporter=tap",
+        "--test-name-pattern",
+        "R23 ordinary|R23 infeasible|R23 full Unicode|R23 complete labels",
+        "packages/deepviz/test/test_r23_svg_finite_density.test.mjs"
+      ],
+      "exit": 1,
+      "signal": null,
+      "log": "artifacts/local/R23-12/density-red-v1/new-density-units.tap.log"
+    },
+    {
+      "name": "new-density-browser",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "--test-reporter=tap",
+        "--test-name-pattern",
+        "R23 actual ordinary|R23 actual unicode|R23 actual Unicode",
+        "tests/browser/r23-svg-finite-density.mjs"
+      ],
+      "exit": 1,
+      "signal": null,
+      "log": "artifacts/local/R23-12/density-red-v1/new-density-browser.tap.log"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "source_sha256": "09e7bff388fb51b4d53ba5e97d0e258af04a7c105fa8b7dff8ac0b687d91e449",
+  "dist_sha256": "f2b5369b73b0a7280c79db8b5260c90903a65cd190ecaf54a33ebbbfc6cf1b85",
+  "new_unit_sha256": "c1943b9f07817d7f9848ec854204e6fa3a9fa12238b08f90ec426444c12ceb05",
+  "new_browser_sha256": "e3bcd4f85651fc0366e76d39a96290df4ce7d9439f2de6b3cb595d47596c6e55",
+  "commands": [
+    {
+      "name": "build",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:/Users/bagma/AppData/Local/Temp/opencode/deepviz-n21/node_modules/typescript/bin/tsc",
+        "-p",
+        "packages/deepviz/tsconfig.json"
+      ],
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "name": "new-units",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "--test-reporter=tap",
+        "packages/deepviz/test/test_r23_svg_finite_density.test.mjs"
+      ],
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "name": "new-browser",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "--test-reporter=tap",
+        "tests/browser/r23-svg-finite-density.mjs"
+      ],
+      "exit": 0,
+      "signal": null
+    }
+  ]
+}
