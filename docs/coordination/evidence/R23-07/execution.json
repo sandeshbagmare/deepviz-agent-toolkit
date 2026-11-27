@@ -1,0 +1,389 @@
+{
+  "observed_at": "2026-11-27T16:02:34.299152+00:00",
+  "sealed_source_commit": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+  "scope": "Authorized channels-only repair; author checks not independent/final acceptance",
+  "before_source": {
+    "phase": "red",
+    "observed_at": "2026-11-27T15:33:20.880485+00:00",
+    "base_sha": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+    "status": "EXPECTED_4RED_12PASS",
+    "modules": {
+      "python/deepviz/src/deepviz/models.py": {
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src\\python\\deepviz\\src\\deepviz\\models.py",
+        "bytes": 3493,
+        "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+      },
+      "python/deepviz/src/deepviz/normalize.py": {
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src\\python\\deepviz\\src\\deepviz\\normalize.py",
+        "bytes": 34886,
+        "sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2"
+      },
+      "python/deepviz/src/deepviz/engines.py": {
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src\\python\\deepviz\\src\\deepviz\\engines.py",
+        "bytes": 44039,
+        "sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225"
+      },
+      "python/deepviz/src/deepviz/render.py": {
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src\\python\\deepviz\\src\\deepviz\\render.py",
+        "bytes": 11637,
+        "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+      }
+    },
+    "commands": [
+      {
+        "label": "ruff-scoped",
+        "argv": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "ruff",
+          "check",
+          "--no-cache",
+          "python/deepviz/tests/test_r23_count_channel.py",
+          "python/deepviz/src/deepviz/engines.py"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 0.2189795000012964
+      },
+      {
+        "label": "permanent-new",
+        "argv": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "python/deepviz/tests/test_r23_count_channel.py",
+          "-p",
+          "no:cacheprovider",
+          "-q",
+          "--tb=short",
+          "--junitxml=C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-run\\red\\permanent-new.xml",
+          "--basetemp=C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-run\\red\\permanent-new-tmp"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src",
+        "exit": 1,
+        "expected_exit": 1,
+        "seconds": 1.159426500002155
+      }
+    ],
+    "test_identity": {
+      "bytes": 5812,
+      "sha256": "8270a4748ee5c5f20e9d7cce92674aefad43d7c151dd41709c702446a1b5c683"
+    },
+    "permanent-new": {
+      "cases": 16,
+      "pass": 12,
+      "fail": 4,
+      "errors": 0,
+      "skipped": 0,
+      "fail_names": [
+        "test_count_measure_is_not_numeric_color_or_retained_size[bar]",
+        "test_count_measure_is_not_numeric_color_or_retained_size[line]",
+        "test_count_measure_is_not_numeric_color_or_retained_size[bubble]",
+        "test_absent_generated_count_does_not_fall_back_to_numeric_color"
+      ]
+    }
+  },
+  "after_same_test_same_source_delta": {
+    "phase": "green",
+    "observed_at": "2026-11-27T15:51:37.461836+00:00",
+    "base_sha": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+    "status": "SCOPED_GREEN_NOT_FULL_PROJECT_APPROVAL",
+    "modules": {
+      "python/deepviz/src/deepviz/models.py": {
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src\\python\\deepviz\\src\\deepviz\\models.py",
+        "bytes": 3493,
+        "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+      },
+      "python/deepviz/src/deepviz/normalize.py": {
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src\\python\\deepviz\\src\\deepviz\\normalize.py",
+        "bytes": 34886,
+        "sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2"
+      },
+      "python/deepviz/src/deepviz/engines.py": {
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src\\python\\deepviz\\src\\deepviz\\engines.py",
+        "bytes": 44141,
+        "sha256": "54b9b6ced08b276b87c143334c8b54110ea7f15e52e0b283d65c911fdba6bb18"
+      },
+      "python/deepviz/src/deepviz/render.py": {
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src\\python\\deepviz\\src\\deepviz\\render.py",
+        "bytes": 11637,
+        "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+      }
+    },
+    "commands": [
+      {
+        "label": "ruff-scoped",
+        "argv": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "ruff",
+          "check",
+          "--no-cache",
+          "python/deepviz/tests/test_r23_count_channel.py",
+          "python/deepviz/src/deepviz/engines.py"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 0.15190890000667423
+      },
+      {
+        "label": "permanent-new",
+        "argv": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "python/deepviz/tests/test_r23_count_channel.py",
+          "-p",
+          "no:cacheprovider",
+          "-q",
+          "--tb=short",
+          "--junitxml=C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-run\\green\\permanent-new.xml",
+          "--basetemp=C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-run\\green\\permanent-new-tmp"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 1.0989560000016354
+      },
+      {
+        "label": "immutable17-semantic",
+        "argv": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-run\\immutable17\\test_count_measure.py",
+          "-p",
+          "no:cacheprovider",
+          "-q",
+          "--tb=short",
+          "--junitxml=C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-run\\green\\immutable17-semantic.xml",
+          "--basetemp=C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-run\\green\\immutable17-semantic-tmp",
+          "-k",
+          "not loaded_modules_match_pinned_source_identity"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 9.875622600011411
+      },
+      {
+        "label": "connected",
+        "argv": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "python/deepviz/tests/test_aggregation_semantics.py",
+          "python/deepviz/tests/test_n05_renderer_regressions.py",
+          "python/deepviz/tests/test_render.py",
+          "-p",
+          "no:cacheprovider",
+          "-q",
+          "--tb=short",
+          "--junitxml=C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-run\\green\\connected.xml",
+          "--basetemp=C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-run\\green\\connected-tmp",
+          "-k",
+          "not entire_standard_set_has_real_render_path"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 15.402029899996705
+      },
+      {
+        "label": "mypy-project",
+        "argv": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "mypy",
+          "--cache-dir",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-run\\green\\mypy-cache",
+          "python/deepviz/src/deepviz"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 20.851457600001595
+      },
+      {
+        "label": "diff-check",
+        "argv": [
+          "git",
+          "diff",
+          "--check"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 0.13586280000163242
+      }
+    ],
+    "test_identity": {
+      "bytes": 5812,
+      "sha256": "8270a4748ee5c5f20e9d7cce92674aefad43d7c151dd41709c702446a1b5c683"
+    },
+    "function_only_delta": "Exactly two inserted lines in channels; all other AST, globals/imports unchanged",
+    "permanent-new": {
+      "cases": 16,
+      "pass": 16,
+      "fail": 0,
+      "errors": 0,
+      "skipped": 0,
+      "fail_names": []
+    },
+    "immutable17_files": {
+      "tests/r15_probes/role17/count_contract.py": {
+        "bytes": 4281,
+        "sha256": "0e0d468a5d70a3f36f8dda088ffa09e73da031952168e0ecd0cd6918b1940cd1"
+      },
+      "tests/r15_probes/role17/test_count_measure.py": {
+        "bytes": 4841,
+        "sha256": "c09f6a052afb4822e3bf06e6877d2e061810fd71d423049152c2b098f9325d54"
+      },
+      "tests/r15_probes/role17/collect_visuals.py": {
+        "bytes": 2737,
+        "sha256": "afd8a6c65809dfa858ac61d1b9ed2406ba41f709cec253d7bf0e7b9ac893c929"
+      },
+      "tests/r15_probes/role17/browser-count.cjs": {
+        "bytes": 5936,
+        "sha256": "84ca2c022efdb08624f8e082fd0d6dc8d8a22cc8ce1097f91f843aff52159eee"
+      }
+    },
+    "immutable17-semantic": {
+      "cases": 55,
+      "pass": 55,
+      "fail": 0,
+      "errors": 0,
+      "skipped": 0,
+      "fail_names": []
+    },
+    "immutable17_identity_deselected": 1,
+    "provenance_replacement": "Four actual loaded corrected-source module bytes verified above; old identity hardcodes5340, never edited",
+    "connected": {
+      "cases": 170,
+      "pass": 167,
+      "fail": 0,
+      "errors": 0,
+      "skipped": 3,
+      "fail_names": []
+    }
+  },
+  "clean_commit_output": {
+    "source_sha": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+    "observed_at": "2026-11-27T15:57:29.653635+00:00",
+    "commands": [
+      {
+        "label": "ruff-output-probe",
+        "argv": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "ruff",
+          "check",
+          "--no-cache",
+          "tests/r23_probes/role07/outputs.py"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src",
+        "exit": 0,
+        "seconds": 0.16605450000497513
+      },
+      {
+        "label": "genuine-output",
+        "argv": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "tests/r23_probes/role07/outputs.py",
+          "--source",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src",
+          "--expected-sha",
+          "85796dbe3360fb88686f2e7188122e2da80d54c2",
+          "--oracle-dir",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-run\\immutable17",
+          "--output",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-run\\output-run-v2\\visuals"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src",
+        "exit": 0,
+        "seconds": 4.436573099999805
+      },
+      {
+        "label": "immutable17-browser",
+        "argv": [
+          "node",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-run\\immutable17\\browser-count.cjs",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-run\\output-run-v2\\visuals",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-run\\output-run-v2\\browser"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src",
+        "exit": 0,
+        "seconds": 9.11050900000555
+      }
+    ],
+    "status": "SIX_ARTIFACTS_FIVE_NATIVE_VALUES_TWO_REAL_PLOTLY_BROWSER_CASES_GREEN",
+    "immutable_browser_sha256": "84ca2c022efdb08624f8e082fd0d6dc8d8a22cc8ce1097f91f843aff52159eee",
+    "browser": {
+      "cases": 2,
+      "strict_passes": 2,
+      "console_errors": 0,
+      "external_requests": 0,
+      "version": "158.0.4370.45",
+      "engine": "Plotly bundled self-contained JavaScript; genuine interactive SVG; no fallback"
+    }
+  },
+  "preserved_own_harness_lint_failure_before_render": {
+    "source_sha": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+    "observed_at": "2026-11-27T15:56:13.347697+00:00",
+    "commands": [
+      {
+        "label": "ruff-output-probe",
+        "argv": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "ruff",
+          "check",
+          "--no-cache",
+          "tests/r23_probes/role07/outputs.py"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src",
+        "exit": 1,
+        "seconds": 0.2474528000020655
+      }
+    ],
+    "status": "INCOMPLETE"
+  },
+  "connected_skips": [
+    {
+      "name": "test_browser_executes_all_native_kinds[plotly]",
+      "class": "python.deepviz.tests.test_render",
+      "reason": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+    },
+    {
+      "name": "test_browser_executes_all_native_kinds[echarts]",
+      "class": "python.deepviz.tests.test_render",
+      "reason": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+    },
+    {
+      "name": "test_browser_executes_all_native_kinds[antv]",
+      "class": "python.deepviz.tests.test_render",
+      "reason": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+    }
+  ],
+  "not_run": [
+    "Full Python suite",
+    "Scale/10M",
+    "npm/build/distributions",
+    "Remote CI",
+    "ECharts/G2 browser runtime/CDN health",
+    "Independent reviewer/tester signoff"
+  ],
+  "git_source_delta": " python/deepviz/src/deepviz/engines.py          |   2 +\n python/deepviz/tests/test_r23_count_channel.py | 118 +++++++++++++++++++++++++\n 2 files changed, 120 insertions(+)\n"
+}

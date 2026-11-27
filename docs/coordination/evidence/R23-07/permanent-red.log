@@ -1,0 +1,36 @@
+FFF............F                                                         [100%]
+================================== FAILURES ===================================
+________ test_count_measure_is_not_numeric_color_or_retained_size[bar] ________
+python\deepviz\tests\test_r23_count_channel.py:42: in test_count_measure_is_not_numeric_color_or_retained_size
+    assert [row["_y"] for row in mapped] == [2, 3, 1]
+E   assert [90.0, 80.0, 70.0] == [2, 3, 1]
+E     
+E     At index 0 diff: 90.0 != 2
+E     Use -v to get more diff
+_______ test_count_measure_is_not_numeric_color_or_retained_size[line] ________
+python\deepviz\tests\test_r23_count_channel.py:42: in test_count_measure_is_not_numeric_color_or_retained_size
+    assert [row["_y"] for row in mapped] == [2, 3, 1]
+E   assert [90.0, 80.0, 70.0] == [2, 3, 1]
+E     
+E     At index 0 diff: 90.0 != 2
+E     Use -v to get more diff
+______ test_count_measure_is_not_numeric_color_or_retained_size[bubble] _______
+python\deepviz\tests\test_r23_count_channel.py:42: in test_count_measure_is_not_numeric_color_or_retained_size
+    assert [row["_y"] for row in mapped] == [2, 3, 1]
+E   assert [90.0, 80.0, 70.0] == [2, 3, 1]
+E     
+E     At index 0 diff: 90.0 != 2
+E     Use -v to get more diff
+_______ test_absent_generated_count_does_not_fall_back_to_numeric_color _______
+python\deepviz\tests\test_r23_count_channel.py:118: in test_absent_generated_count_does_not_fall_back_to_numeric_color
+    assert [row["_y"] for row in mapped] == [0, None, None]
+E   assert [90.0, 80.0, 70.0] == [0, None, None]
+E     
+E     At index 0 diff: 90.0 != 0
+E     Use -v to get more diff
+=========================== short test summary info ===========================
+FAILED python/deepviz/tests/test_r23_count_channel.py::test_count_measure_is_not_numeric_color_or_retained_size[bar]
+FAILED python/deepviz/tests/test_r23_count_channel.py::test_count_measure_is_not_numeric_color_or_retained_size[line]
+FAILED python/deepviz/tests/test_r23_count_channel.py::test_count_measure_is_not_numeric_color_or_retained_size[bubble]
+FAILED python/deepviz/tests/test_r23_count_channel.py::test_absent_generated_count_does_not_fall_back_to_numeric_color
+4 failed, 12 passed in 0.63s

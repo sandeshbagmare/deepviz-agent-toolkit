@@ -1,0 +1,31 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> tests\r23_probes\role07\outputs.py:2:1
+   |
+ 1 |   """Collect exact-commit COUNT output; assertions, not collector exits, prove values."""
+ 2 | / from __future__ import annotations
+ 3 | |
+ 4 | | import argparse
+ 5 | | import copy
+ 6 | | import hashlib
+ 7 | | import importlib
+ 8 | | import json
+ 9 | | from pathlib import Path
+10 | | import subprocess
+11 | | import sys
+12 | |
+13 | | import vl_convert as vlc
+14 | |
+15 | | from deepviz.render import render
+   | |_________________________________^
+help: Organize imports
+   |
+8  | import json
+   - from pathlib import Path
+9  | import subprocess
+10 | import sys
+11 + from pathlib import Path
+12 |
+   |
+
+Found 1 error.
+[*] 1 fixable with `--fix`.

@@ -1,0 +1,190 @@
+{
+  "source_sha": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+  "source_modules": {
+    "models": {
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src\\python\\deepviz\\src\\deepviz\\models.py",
+      "bytes": 3493,
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    "normalize": {
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "bytes": 34886,
+      "sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2"
+    },
+    "engines": {
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src\\python\\deepviz\\src\\deepviz\\engines.py",
+      "bytes": 44141,
+      "sha256": "54b9b6ced08b276b87c143334c8b54110ea7f15e52e0b283d65c911fdba6bb18"
+    },
+    "render": {
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r23p07-src\\python\\deepviz\\src\\deepviz\\render.py",
+      "bytes": 11637,
+      "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+    }
+  },
+  "expected_from_caller": [
+    [
+      "A",
+      2
+    ],
+    [
+      "B",
+      3
+    ],
+    [
+      "C",
+      1
+    ]
+  ],
+  "observed_native_measures": {
+    "matplotlib": [
+      [
+        "A",
+        2.0
+      ],
+      [
+        "B",
+        3.0
+      ],
+      [
+        "C",
+        1.0
+      ]
+    ],
+    "plotly": [
+      [
+        "A",
+        2.0
+      ],
+      [
+        "B",
+        3.0
+      ],
+      [
+        "C",
+        1.0
+      ]
+    ],
+    "vega": [
+      [
+        "A",
+        2.0
+      ],
+      [
+        "B",
+        3.0
+      ],
+      [
+        "C",
+        1.0
+      ]
+    ],
+    "echarts": [
+      [
+        "A",
+        2.0
+      ],
+      [
+        "B",
+        3.0
+      ],
+      [
+        "C",
+        1.0
+      ]
+    ],
+    "antv": [
+      [
+        "A",
+        2.0
+      ],
+      [
+        "B",
+        3.0
+      ],
+      [
+        "C",
+        1.0
+      ]
+    ]
+  },
+  "count_fidelity": {
+    "matplotlib": true,
+    "plotly": true,
+    "vega": true,
+    "echarts": true,
+    "antv": true
+  },
+  "collection_not_verification": false,
+  "oracle_commit": "76cac9d05b0b4abc94e5ff316e3de4d3bc835b79",
+  "artifacts": {
+    "matplotlib": {
+      "engine": "matplotlib",
+      "files": {
+        "png": "matplotlib/deepviz-vugjz5y6/chart.png",
+        "svg": "matplotlib/deepviz-vugjz5y6/chart.svg",
+        "html": "matplotlib/deepviz-vugjz5y6/chart.html"
+      },
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "warnings": []
+    },
+    "plotly": {
+      "engine": "plotly",
+      "files": {
+        "html": "plotly/deepviz-sjeyd0os/chart.html"
+      },
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "warnings": []
+    },
+    "vega": {
+      "engine": "vega",
+      "files": {
+        "svg": "vega/deepviz-w1hvwmpl/chart.svg",
+        "html": "vega/deepviz-w1hvwmpl/chart.html",
+        "png": "vega/deepviz-w1hvwmpl/chart.png"
+      },
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "warnings": []
+    },
+    "echarts": {
+      "engine": "echarts",
+      "files": {
+        "html": "echarts/deepviz-orqpxcxl/chart.html"
+      },
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    },
+    "antv": {
+      "engine": "antv",
+      "files": {
+        "html": "antv/deepviz-qtdegtx5/chart.html"
+      },
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    },
+    "plotly-explicit-y-control": {
+      "engine": "plotly",
+      "files": {
+        "html": "plotly-explicit-y-control/deepviz-yr4jjwl5/chart.html"
+      },
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "warnings": []
+    }
+  }
+}

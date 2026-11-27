@@ -1,0 +1,146 @@
+{
+  "source_sha": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+  "node": "v26.13.1",
+  "playwright": "1.65.1",
+  "browser": "158.0.4370.45",
+  "actualEngine": "Plotly bundled self-contained JavaScript; genuine interactive SVG; no fallback",
+  "favicon": "Harness-only HTTP204",
+  "results": [
+    {
+      "name": "plotly",
+      "status": 200,
+      "expectedCounts": [
+        2,
+        3,
+        1
+      ],
+      "valuesCorrect": true,
+      "geometryCorrect": true,
+      "infrastructureCorrect": true,
+      "strictPass": true,
+      "hoverText": "90(A, 2)",
+      "errors": [],
+      "warnings": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "externalRequests": [],
+      "state": {
+        "values": [
+          2,
+          3,
+          1
+        ],
+        "groups": [
+          "A",
+          "B",
+          "C"
+        ],
+        "svgCount": 3,
+        "marks": [
+          {
+            "path": "M18.53,260V95.33H166.8V260Z",
+            "y": 95.33000183105469,
+            "height": 164.6699981689453,
+            "expectedTopFromLiteralCount": 95.33,
+            "expectedHeightFromLiteralCount": 164.67000000000002
+          },
+          {
+            "path": "M203.87,260V13H352.13V260Z",
+            "y": 13,
+            "height": 247,
+            "expectedTopFromLiteralCount": 13,
+            "expectedHeightFromLiteralCount": 247
+          },
+          {
+            "path": "M389.2,260V177.67H537.47V260Z",
+            "y": 177.6699981689453,
+            "height": 82.33000183105469,
+            "expectedTopFromLiteralCount": 177.67,
+            "expectedHeightFromLiteralCount": 82.33000000000001
+          }
+        ],
+        "baseline": 260,
+        "normalizedTableCells": [
+          "A",
+          "90",
+          "2",
+          "B",
+          "80",
+          "3",
+          "C",
+          "70",
+          "1"
+        ],
+        "ready": true
+      }
+    },
+    {
+      "name": "plotly-explicit-y-control",
+      "status": 200,
+      "expectedCounts": [
+        2,
+        3,
+        1
+      ],
+      "valuesCorrect": true,
+      "geometryCorrect": true,
+      "infrastructureCorrect": true,
+      "strictPass": true,
+      "hoverText": "90(A, 2)",
+      "errors": [],
+      "warnings": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "externalRequests": [],
+      "state": {
+        "values": [
+          2,
+          3,
+          1
+        ],
+        "groups": [
+          "A",
+          "B",
+          "C"
+        ],
+        "svgCount": 3,
+        "marks": [
+          {
+            "path": "M18.53,260V95.33H166.8V260Z",
+            "y": 95.33000183105469,
+            "height": 164.6699981689453,
+            "expectedTopFromLiteralCount": 95.33,
+            "expectedHeightFromLiteralCount": 164.67000000000002
+          },
+          {
+            "path": "M203.87,260V13H352.13V260Z",
+            "y": 13,
+            "height": 247,
+            "expectedTopFromLiteralCount": 13,
+            "expectedHeightFromLiteralCount": 247
+          },
+          {
+            "path": "M389.2,260V177.67H537.47V260Z",
+            "y": 177.6699981689453,
+            "height": 82.33000183105469,
+            "expectedTopFromLiteralCount": 177.67,
+            "expectedHeightFromLiteralCount": 82.33000000000001
+          }
+        ],
+        "baseline": 260,
+        "normalizedTableCells": [
+          "A",
+          "90",
+          "2",
+          "B",
+          "80",
+          "3",
+          "C",
+          "70",
+          "1"
+        ],
+        "ready": true
+      }
+    }
+  ]
+}
