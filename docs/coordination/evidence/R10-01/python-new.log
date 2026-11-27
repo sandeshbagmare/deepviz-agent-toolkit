@@ -1,0 +1,117 @@
+...........FFFFF.......FFFFFFF...                                        [100%]
+================================== FAILURES ===================================
+_________ test_f3_named_scalar_columns_survive_explicit_mapping[rows] _________
+tests\r10_probes\role01\test_correctness_regressions.py:65: in test_f3_named_scalar_columns_survive_explicit_mapping
+    result = normalize({key: [1, 2]}, IDENTITY | {"y": key})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:692: in normalize
+    for row, size in islice(rows, 32):
+                     ^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:512: in _records
+    raise ValueError(f"Requested fields are missing from input: {', '.join(missing)}")
+E   ValueError: Requested fields are missing from input: rows
+_______ test_f3_named_scalar_columns_survive_explicit_mapping[records] ________
+tests\r10_probes\role01\test_correctness_regressions.py:65: in test_f3_named_scalar_columns_survive_explicit_mapping
+    result = normalize({key: [1, 2]}, IDENTITY | {"y": key})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:692: in normalize
+    for row, size in islice(rows, 32):
+                     ^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:512: in _records
+    raise ValueError(f"Requested fields are missing from input: {', '.join(missing)}")
+E   ValueError: Requested fields are missing from input: records
+________ test_f3_named_scalar_columns_survive_explicit_mapping[items] _________
+tests\r10_probes\role01\test_correctness_regressions.py:65: in test_f3_named_scalar_columns_survive_explicit_mapping
+    result = normalize({key: [1, 2]}, IDENTITY | {"y": key})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:692: in normalize
+    for row, size in islice(rows, 32):
+                     ^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:512: in _records
+    raise ValueError(f"Requested fields are missing from input: {', '.join(missing)}")
+E   ValueError: Requested fields are missing from input: items
+_______ test_f3_named_scalar_columns_survive_explicit_mapping[results] ________
+tests\r10_probes\role01\test_correctness_regressions.py:65: in test_f3_named_scalar_columns_survive_explicit_mapping
+    result = normalize({key: [1, 2]}, IDENTITY | {"y": key})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:692: in normalize
+    for row, size in islice(rows, 32):
+                     ^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:512: in _records
+    raise ValueError(f"Requested fields are missing from input: {', '.join(missing)}")
+E   ValueError: Requested fields are missing from input: results
+_________ test_f3_named_scalar_columns_survive_explicit_mapping[data] _________
+tests\r10_probes\role01\test_correctness_regressions.py:65: in test_f3_named_scalar_columns_survive_explicit_mapping
+    result = normalize({key: [1, 2]}, IDENTITY | {"y": key})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:692: in normalize
+    for row, size in islice(rows, 32):
+                     ^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:512: in _records
+    raise ValueError(f"Requested fields are missing from input: {', '.join(missing)}")
+E   ValueError: Requested fields are missing from input: data
+___________ test_f2_count_channels_use_count_not_numeric_series[0] ____________
+tests\r10_probes\role01\test_correctness_regressions.py:93: in test_f2_count_channels_use_count_not_numeric_series
+    assert [row["_y"] for row in mapped] == [2]
+E   assert [0.0] == [2]
+E     
+E     At index 0 diff: 0.0 != 2
+E     Use -v to get more diff
+__________ test_f2_count_channels_use_count_not_numeric_series[100] ___________
+tests\r10_probes\role01\test_correctness_regressions.py:93: in test_f2_count_channels_use_count_not_numeric_series
+    assert [row["_y"] for row in mapped] == [2]
+E   assert [100.0] == [2]
+E     
+E     At index 0 diff: 100.0 != 2
+E     Use -v to get more diff
+___________ test_f2_count_channels_use_count_not_numeric_series[-4] ___________
+tests\r10_probes\role01\test_correctness_regressions.py:93: in test_f2_count_channels_use_count_not_numeric_series
+    assert [row["_y"] for row in mapped] == [2]
+E   assert [-4.0] == [2]
+E     
+E     At index 0 diff: -4.0 != 2
+E     Use -v to get more diff
+_______ test_f2_native_count_values_match_the_reduced_measure[echarts] ________
+tests\r10_probes\role01\test_correctness_regressions.py:107: in test_f2_native_count_values_match_the_reduced_measure
+    assert actual == [2]
+E   assert [100.0] == [2]
+E     
+E     At index 0 diff: 100.0 != 2
+E     Use -v to get more diff
+________ test_f2_native_count_values_match_the_reduced_measure[plotly] ________
+tests\r10_probes\role01\test_correctness_regressions.py:107: in test_f2_native_count_values_match_the_reduced_measure
+    assert actual == [2]
+E   assert [100.0] == [2]
+E     
+E     At index 0 diff: 100.0 != 2
+E     Use -v to get more diff
+_________ test_f2_native_count_values_match_the_reduced_measure[antv] _________
+tests\r10_probes\role01\test_correctness_regressions.py:107: in test_f2_native_count_values_match_the_reduced_measure
+    assert actual == [2]
+E   assert [100.0] == [2]
+E     
+E     At index 0 diff: 100.0 != 2
+E     Use -v to get more diff
+_________ test_f2_native_count_values_match_the_reduced_measure[vega] _________
+tests\r10_probes\role01\test_correctness_regressions.py:107: in test_f2_native_count_values_match_the_reduced_measure
+    assert actual == [2]
+E   assert [100.0] == [2]
+E     
+E     At index 0 diff: 100.0 != 2
+E     Use -v to get more diff
+=========================== short test summary info ===========================
+FAILED tests/r10_probes/role01/test_correctness_regressions.py::test_f3_named_scalar_columns_survive_explicit_mapping[rows]
+FAILED tests/r10_probes/role01/test_correctness_regressions.py::test_f3_named_scalar_columns_survive_explicit_mapping[records]
+FAILED tests/r10_probes/role01/test_correctness_regressions.py::test_f3_named_scalar_columns_survive_explicit_mapping[items]
+FAILED tests/r10_probes/role01/test_correctness_regressions.py::test_f3_named_scalar_columns_survive_explicit_mapping[results]
+FAILED tests/r10_probes/role01/test_correctness_regressions.py::test_f3_named_scalar_columns_survive_explicit_mapping[data]
+FAILED tests/r10_probes/role01/test_correctness_regressions.py::test_f2_count_channels_use_count_not_numeric_series[0]
+FAILED tests/r10_probes/role01/test_correctness_regressions.py::test_f2_count_channels_use_count_not_numeric_series[100]
+FAILED tests/r10_probes/role01/test_correctness_regressions.py::test_f2_count_channels_use_count_not_numeric_series[-4]
+FAILED tests/r10_probes/role01/test_correctness_regressions.py::test_f2_native_count_values_match_the_reduced_measure[echarts]
+FAILED tests/r10_probes/role01/test_correctness_regressions.py::test_f2_native_count_values_match_the_reduced_measure[plotly]
+FAILED tests/r10_probes/role01/test_correctness_regressions.py::test_f2_native_count_values_match_the_reduced_measure[antv]
+FAILED tests/r10_probes/role01/test_correctness_regressions.py::test_f2_native_count_values_match_the_reduced_measure[vega]
+12 failed, 21 passed in 0.96s
+
+--- stderr ---

@@ -1,0 +1,212 @@
+{
+  "utc": "2026-11-27T02:35:32.535289+00:00",
+  "reviewer_session": "ses_de5678335ffeI7xJrod5l25Q0Q",
+  "branch": "agents/r10-01-correctness-regressions",
+  "source_checkpoint": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q",
+  "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "commands": [
+    {
+      "label": "build",
+      "argv": [
+        "node",
+        "C:/Users/bagma/deepviz-agent-toolkit/node_modules/typescript/bin/tsc",
+        "-p",
+        "packages/deepviz/tsconfig.json"
+      ],
+      "exit_code": 0,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R10-01\\run-v1\\build.log",
+      "sha256": "d448e3b890b40222bf1a2664e01804cac0eab529f56432f164378e4175878fd1"
+    },
+    {
+      "label": "python-new",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "tests/r10_probes/role01/test_correctness_regressions.py",
+        "-q",
+        "--tb=short",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R10-01\\run-v1\\python-new.xml"
+      ],
+      "exit_code": 1,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R10-01\\run-v1\\python-new.log",
+      "sha256": "5a8dd255a71ac80fbf9437bf163119e9fc3537d01a0401eae61079daa025be09",
+      "tests": {
+        "total": 33,
+        "failed": 12,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 21
+      },
+      "failure_ids": [
+        "test_f3_named_scalar_columns_survive_explicit_mapping[rows]",
+        "test_f3_named_scalar_columns_survive_explicit_mapping[records]",
+        "test_f3_named_scalar_columns_survive_explicit_mapping[items]",
+        "test_f3_named_scalar_columns_survive_explicit_mapping[results]",
+        "test_f3_named_scalar_columns_survive_explicit_mapping[data]",
+        "test_f2_count_channels_use_count_not_numeric_series[0]",
+        "test_f2_count_channels_use_count_not_numeric_series[100]",
+        "test_f2_count_channels_use_count_not_numeric_series[-4]",
+        "test_f2_native_count_values_match_the_reduced_measure[echarts]",
+        "test_f2_native_count_values_match_the_reduced_measure[plotly]",
+        "test_f2_native_count_values_match_the_reduced_measure[antv]",
+        "test_f2_native_count_values_match_the_reduced_measure[vega]"
+      ]
+    },
+    {
+      "label": "node-new",
+      "argv": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "tests/r10_probes/role01/correctness-regressions.test.mjs"
+      ],
+      "exit_code": 1,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R10-01\\run-v1\\node-new.log",
+      "sha256": "5975d56a86e368f2016712b9cd7af1f8b0cd03653161ca08ec8f8fa2cca648fc",
+      "tests": {
+        "tests": 30,
+        "pass": 19,
+        "fail": 11,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "failure_ids": [
+        "F1 sync nodes rejects unexpected scalar sibling",
+        "F1 async nodes rejects unexpected scalar sibling",
+        "F1 sync nodes rejects unexpected object sibling",
+        "F1 async nodes rejects unexpected object sibling",
+        "F1 encoded nodes also rejects an ambiguous sibling",
+        "F1 sync edges rejects unexpected scalar sibling",
+        "F1 async edges rejects unexpected scalar sibling",
+        "F1 sync edges rejects unexpected object sibling",
+        "F1 async edges rejects unexpected object sibling",
+        "F1 encoded edges also rejects an ambiguous sibling",
+        "F1 custom GraphQL wrapper requires explicit selection"
+      ]
+    },
+    {
+      "label": "python-existing",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "python/deepviz/tests/test_normalize.py",
+        "python/deepviz/tests/test_aggregation_semantics.py",
+        "tests/test_models.py",
+        "-q",
+        "--tb=short",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R10-01\\run-v1\\python-existing.xml"
+      ],
+      "exit_code": 0,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R10-01\\run-v1\\python-existing.log",
+      "sha256": "0e28c0944c436f59208075e588d0c18e39e8b69fdf029e7d2b941d6fcca8ffae",
+      "tests": {
+        "total": 145,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 145
+      },
+      "failure_ids": []
+    },
+    {
+      "label": "node-existing",
+      "argv": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "packages/deepviz/test"
+      ],
+      "exit_code": 0,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R10-01\\run-v1\\node-existing.log",
+      "sha256": "fa1756bef3fa6340de5a36634cd31d4db1b9c92b353cb41ce63cf963da76c7ba",
+      "tests": {
+        "tests": 246,
+        "pass": 246,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "failure_ids": []
+    },
+    {
+      "label": "ruff-new",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "tests/r10_probes/role01/test_correctness_regressions.py"
+      ],
+      "exit_code": 0,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R10-01\\run-v1\\ruff-new.log",
+      "sha256": "39464a63c7ef2ff5ba86e3164110fe68ddc0afe66c2b6a7d5c01f78b9c855598"
+    },
+    {
+      "label": "production-diff",
+      "argv": [
+        "git",
+        "diff",
+        "--exit-code",
+        "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+        "--",
+        "python/deepviz/src/deepviz",
+        "packages/deepviz/src",
+        "schemas"
+      ],
+      "exit_code": 0,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R10-01\\run-v1\\production-diff.log",
+      "sha256": "d448e3b890b40222bf1a2664e01804cac0eab529f56432f164378e4175878fd1"
+    }
+  ],
+  "source_and_test_hashes": {
+    "tests/r10_probes/role01/correctness-regressions.test.mjs": "1c864fa8677fd924cfb71d7c795d87e45942005f012183934c529f82d7a8ff25",
+    "tests/r10_probes/role01/test_correctness_regressions.py": "aadd94225decbcc3997264ae88508c08633e929595f9eefd817faf598cb0cf2b",
+    "python/deepviz/src/deepviz/normalize.py": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+    "python/deepviz/src/deepviz/models.py": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+    "python/deepviz/src/deepviz/engines.py": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+    "packages/deepviz/src/normalize.ts": "d1b45d2a55dfd05361184a57da952a0da735e9b6d72c2491f908ef27bda22371",
+    "packages/deepviz/src/models.ts": "d43d5ae0bef1d43f251ed71899a9b507c6575562e4403bd2e2ac02bd7caa43e6",
+    "packages/deepviz/dist/index.js": "887a0d361250e936d43f6b5f8cac4f65a024676520ad6bcfb49ab8042e355c39",
+    "packages/deepviz/dist/normalize.js": "adb0493123fd478567212e76e2c6e52c828aeaa9eb5425c219b5b1a576689612",
+    "packages/deepviz/dist/models.js": "936bcf189c647a45ab0063dbdff5158ca5711a374e6eae7f4a00d160d91d265e",
+    "packages/deepviz/dist/render.js": "39bcd415d119e39ef3107dee4b455778541776f3901c4ae5facbb1447fcc5388",
+    "packages/deepviz/dist/renderers.js": "d0a10b871c8768c386bddebb971610e8b770902f29d3d0780008b8af658bf905",
+    "tests/r10_probes/role01/README.md": "8dffcca2046ed2309028522d7fb1f175b0d3fbe4fe899ca52acb1a5b722e944b"
+  },
+  "loaded_identity": [
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import importlib,json; print(json.dumps({name:importlib.import_module('deepviz.'+name).__file__ for name in ['normalize','models','engines']}))"
+      ],
+      "exit_code": 0,
+      "identity": {
+        "normalize": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\python\\deepviz\\src\\deepviz\\normalize.py",
+        "models": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\python\\deepviz\\src\\deepviz\\models.py",
+        "engines": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\python\\deepviz\\src\\deepviz\\engines.py"
+      }
+    },
+    {
+      "argv": [
+        "node",
+        "--input-type=module",
+        "-e",
+        "console.log(JSON.stringify({node:process.version,module:import.meta.resolve('./packages/deepviz/dist/index.js')}))"
+      ],
+      "exit_code": 0,
+      "identity": {
+        "node": "v26.13.1",
+        "module": "file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q/packages/deepviz/dist/index.js"
+      }
+    }
+  ],
+  "overall_status": "RED"
+}
