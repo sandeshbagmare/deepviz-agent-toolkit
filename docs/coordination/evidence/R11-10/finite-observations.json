@@ -1,0 +1,339 @@
+{
+  "capacity_policy": "PROPOSED128 slots/server lifetime, not existing API guarantee",
+  "observations": {
+    "strict-final-tmp": [
+      {
+        "test_directory": "test_r11_actual_sdk_capacity_r0",
+        "proposed_cap": 128,
+        "peer_requests": 4,
+        "successful": 4,
+        "errors": 0,
+        "registered": 132,
+        "prior_files_preserved": true,
+        "schema_valid_failure_did_not_allocate": true
+      },
+      {
+        "test_directory": "test_r11_actual_sdk_resource_c0",
+        "proposed_cap": 128,
+        "registered_after": 130,
+        "overcap_rejected": false,
+        "files_before": 129,
+        "files_after": 131,
+        "earliest_readable_unchanged": true,
+        "host_file_preserved": true,
+        "normalization_recovery": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra0",
+        "case": "record-key",
+        "operation": "normalize_data",
+        "raw_utf8_bytes": 55,
+        "is_error": false,
+        "error_utf8_bytes": 495,
+        "files_after_bad": [],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra1",
+        "case": "record-key",
+        "operation": "recommend_chart",
+        "raw_utf8_bytes": 55,
+        "is_error": false,
+        "error_utf8_bytes": 639,
+        "files_after_bad": [],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra10",
+        "case": "escaped-equivalent-key",
+        "operation": "recommend_chart",
+        "raw_utf8_bytes": 20,
+        "is_error": false,
+        "error_utf8_bytes": 625,
+        "files_after_bad": [],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra11",
+        "case": "escaped-equivalent-key",
+        "operation": "render_echarts",
+        "raw_utf8_bytes": 20,
+        "is_error": false,
+        "error_utf8_bytes": 458,
+        "files_after_bad": [
+          "output\\echarts-a18ksrk_",
+          "output\\echarts-a18ksrk_\\deepviz-_4omc_ar",
+          "output\\echarts-a18ksrk_\\deepviz-_4omc_ar\\chart.html",
+          "output\\echarts-a18ksrk_\\deepviz-_4omc_ar\\manifest.json"
+        ],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra12",
+        "case": "recursion",
+        "operation": "normalize_data",
+        "raw_utf8_bytes": 20000,
+        "is_error": true,
+        "error_utf8_bytes": 119,
+        "files_after_bad": [],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra13",
+        "case": "recursion",
+        "operation": "recommend_chart",
+        "raw_utf8_bytes": 20000,
+        "is_error": true,
+        "error_utf8_bytes": 120,
+        "files_after_bad": [],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra14",
+        "case": "recursion",
+        "operation": "render_echarts",
+        "raw_utf8_bytes": 20000,
+        "is_error": true,
+        "error_utf8_bytes": 119,
+        "files_after_bad": [],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra15",
+        "case": "raw-inline-bytes",
+        "operation": "normalize_data",
+        "raw_utf8_bytes": 1000082,
+        "is_error": false,
+        "error_utf8_bytes": 455,
+        "files_after_bad": [],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra16",
+        "case": "raw-inline-bytes",
+        "operation": "recommend_chart",
+        "raw_utf8_bytes": 1000082,
+        "is_error": false,
+        "error_utf8_bytes": 639,
+        "files_after_bad": [],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra17",
+        "case": "raw-inline-bytes",
+        "operation": "render_echarts",
+        "raw_utf8_bytes": 1000082,
+        "is_error": false,
+        "error_utf8_bytes": 458,
+        "files_after_bad": [
+          "output\\echarts-lkcn0uql",
+          "output\\echarts-lkcn0uql\\deepviz-eusnyeft",
+          "output\\echarts-lkcn0uql\\deepviz-eusnyeft\\chart.html",
+          "output\\echarts-lkcn0uql\\deepviz-eusnyeft\\manifest.json"
+        ],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra18",
+        "case": "raw-file-bytes",
+        "operation": "normalize_data",
+        "raw_utf8_bytes": 1000022,
+        "is_error": false,
+        "error_utf8_bytes": 455,
+        "files_after_bad": [],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra19",
+        "case": "raw-file-bytes",
+        "operation": "recommend_chart",
+        "raw_utf8_bytes": 1000022,
+        "is_error": false,
+        "error_utf8_bytes": 639,
+        "files_after_bad": [],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra2",
+        "case": "record-key",
+        "operation": "render_echarts",
+        "raw_utf8_bytes": 55,
+        "is_error": false,
+        "error_utf8_bytes": 458,
+        "files_after_bad": [
+          "output\\echarts-62p7v5v2",
+          "output\\echarts-62p7v5v2\\deepviz-cml8wpq3",
+          "output\\echarts-62p7v5v2\\deepviz-cml8wpq3\\chart.html",
+          "output\\echarts-62p7v5v2\\deepviz-cml8wpq3\\manifest.json"
+        ],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra20",
+        "case": "raw-file-bytes",
+        "operation": "render_echarts",
+        "raw_utf8_bytes": 1000022,
+        "is_error": false,
+        "error_utf8_bytes": 458,
+        "files_after_bad": [
+          "output\\echarts-tyv44v47",
+          "output\\echarts-tyv44v47\\deepviz-4g_76jf7",
+          "output\\echarts-tyv44v47\\deepviz-4g_76jf7\\chart.html",
+          "output\\echarts-tyv44v47\\deepviz-4g_76jf7\\manifest.json"
+        ],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra3",
+        "case": "nested-key",
+        "operation": "normalize_data",
+        "raw_utf8_bytes": 62,
+        "is_error": false,
+        "error_utf8_bytes": 507,
+        "files_after_bad": [],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra4",
+        "case": "nested-key",
+        "operation": "recommend_chart",
+        "raw_utf8_bytes": 62,
+        "is_error": false,
+        "error_utf8_bytes": 645,
+        "files_after_bad": [],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra5",
+        "case": "nested-key",
+        "operation": "render_echarts",
+        "raw_utf8_bytes": 62,
+        "is_error": false,
+        "error_utf8_bytes": 458,
+        "files_after_bad": [
+          "output\\echarts-qmkwtzad",
+          "output\\echarts-qmkwtzad\\deepviz-hzwniwfi",
+          "output\\echarts-qmkwtzad\\deepviz-hzwniwfi\\chart.html",
+          "output\\echarts-qmkwtzad\\deepviz-hzwniwfi\\manifest.json"
+        ],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra6",
+        "case": "control-key",
+        "operation": "normalize_data",
+        "raw_utf8_bytes": 40,
+        "is_error": false,
+        "error_utf8_bytes": 455,
+        "files_after_bad": [],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra7",
+        "case": "control-key",
+        "operation": "recommend_chart",
+        "raw_utf8_bytes": 40,
+        "is_error": false,
+        "error_utf8_bytes": 639,
+        "files_after_bad": [],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra8",
+        "case": "control-key",
+        "operation": "render_echarts",
+        "raw_utf8_bytes": 40,
+        "is_error": false,
+        "error_utf8_bytes": 458,
+        "files_after_bad": [
+          "output\\echarts-d68l059y",
+          "output\\echarts-d68l059y\\deepviz-65ogbhrz",
+          "output\\echarts-d68l059y\\deepviz-65ogbhrz\\chart.html",
+          "output\\echarts-d68l059y\\deepviz-65ogbhrz\\manifest.json"
+        ],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_rejects_ra9",
+        "case": "escaped-equivalent-key",
+        "operation": "normalize_data",
+        "raw_utf8_bytes": 20,
+        "is_error": false,
+        "error_utf8_bytes": 435,
+        "files_after_bad": [],
+        "recovery_unicode_and_copied_handle": true,
+        "authorized_file_resource_read": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_resource_c0",
+        "proposed_cap": 128,
+        "registered_after": 130,
+        "overcap_is_error": false,
+        "files_before": 129,
+        "files_after": 131,
+        "earliest_resource_read": true,
+        "unissued_file_uri_rejected": true,
+        "normalize_and_discovery_recovery": true
+      }
+    ],
+    "resource-final-tmp": [
+      {
+        "test_directory": "test_r11_actual_sdk_capacity_r0",
+        "proposed_cap": 128,
+        "peer_requests": 4,
+        "successful": 4,
+        "errors": 0,
+        "registered": 132,
+        "prior_files_preserved": true,
+        "schema_valid_failure_did_not_allocate": true
+      },
+      {
+        "test_directory": "test_r11_actual_sdk_resource_c0",
+        "proposed_cap": 128,
+        "registered_after": 130,
+        "overcap_rejected": false,
+        "files_before": 129,
+        "files_after": 131,
+        "generation_calls_after_full": 1,
+        "earliest_readable_unchanged": true,
+        "host_file_preserved": true,
+        "normalization_recovery": true
+      },
+      {
+        "test_directory": "test_r11_real_stdio_resource_c0",
+        "proposed_cap": 128,
+        "registered_after": 130,
+        "overcap_is_error": false,
+        "files_before": 129,
+        "files_after": 131,
+        "earliest_resource_read": true,
+        "unissued_file_uri_rejected": true,
+        "normalize_and_discovery_recovery": true
+      }
+    ]
+  },
+  "registry_private_mutation": false,
+  "renderers": "actual ECharts native/HTML generation; overcap SDK render method observed and delegated",
+  "concurrency_limit": "Concurrent asyncio SDK requests may serialize current synchronous functions; not native-thread race proof",
+  "memory_or_exhaustion_benchmark": false
+}

@@ -1,0 +1,1386 @@
+{
+  "red": {
+    "totals": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "47",
+      "skipped": "0",
+      "tests": "61",
+      "time": "46.346",
+      "timestamp": "2026-11-27T19:33:55.726328+05:30",
+      "hostname": "SandeshAcer"
+    },
+    "xml_sha256": "d88eab41af98d9ecdce28592a0813da9a2625dd4128edee63f204b0b7d5006a9",
+    "xml_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-10-mcp-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\red.xml",
+    "log_sha256": "922cab1b4b82aeb71603cd0dd4dfa8234998f2f5416d51799dbbc52a56fc57e2",
+    "cases": [
+      {
+        "name": "test_r11_core_normalizer_rejects_duplicate_json_control[record-key]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.002
+      },
+      {
+        "name": "test_r11_core_normalizer_rejects_duplicate_json_control[nested-key]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.001
+      },
+      {
+        "name": "test_r11_core_normalizer_rejects_duplicate_json_control[control-key]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.001
+      },
+      {
+        "name": "test_r11_core_normalizer_rejects_duplicate_json_control[escaped-equivalent-key]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.001
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[record-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.009,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[record-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.007,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[record-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.015,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[nested-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.007,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[nested-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.007,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[nested-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.015,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[control-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.007,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[control-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.007,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[control-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.015,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[escaped-equivalent-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.007,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[escaped-equivalent-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.008,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[escaped-equivalent-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.015,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[record-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.731,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[record-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.016,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[record-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.035,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[nested-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.015,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[nested-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.013,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[nested-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.03,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[control-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.017,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[control-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.019,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[control-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.026,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[escaped-equivalent-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.011,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[escaped-equivalent-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.012,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[escaped-equivalent-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.021,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_recursive_encoded_json_is_declared_value_error[core]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.007
+      },
+      {
+        "name": "test_r11_recursive_encoded_json_is_declared_value_error[session]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.006,
+        "failure_first_line": "RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string"
+      },
+      {
+        "name": "test_r11_recursive_encoded_json_is_declared_value_error[structured]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.006,
+        "failure_first_line": "RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string"
+      },
+      {
+        "name": "test_r11_valid_unicode_file_and_copied_handle_remain_authorized[session]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.033
+      },
+      {
+        "name": "test_r11_valid_unicode_file_and_copied_handle_remain_authorized[structured]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.049
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[record-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 3.243,
+        "failure_first_line": "AssertionError('Raw record-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'record-key\\', \\'operation\\': \\'normalize_data\\', \\'raw_utf8_bytes\\': 55, \\'is_error\\': False, \\'error_utf8_bytes\\': 495, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, content=[TextC"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[record-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 2.24,
+        "failure_first_line": "AssertionError('Raw record-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'record-key\\', \\'operation\\': \\'recommend_chart\\', \\'raw_utf8_bytes\\': 55, \\'is_error\\': False, \\'error_utf8_bytes\\': 639, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, content=[Text"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[record-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.596,
+        "failure_first_line": "AssertionError('Raw record-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'record-key\\', \\'operation\\': \\'render_echarts\\', \\'raw_utf8_bytes\\': 55, \\'is_error\\': False, \\'error_utf8_bytes\\': 458, \\'files_after_bad\\': [\\'output\\\\\\\\echarts-ut2imy92\\', \\'output\\\\\\\\echarts-ut2imy92\\\\\\\\deepviz-g0oyjjk0\\', \\'output\\\\\\\\echarts-ut2imy92\\\\\\\\deepviz-g0oyjjk0\\\\\\\\chart.html\\', \\'output\\\\\\\\e"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[nested-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.497,
+        "failure_first_line": "AssertionError('Raw nested-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'nested-key\\', \\'operation\\': \\'normalize_data\\', \\'raw_utf8_bytes\\': 62, \\'is_error\\': False, \\'error_utf8_bytes\\': 507, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, content=[TextC"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[nested-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.485,
+        "failure_first_line": "AssertionError('Raw nested-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'nested-key\\', \\'operation\\': \\'recommend_chart\\', \\'raw_utf8_bytes\\': 62, \\'is_error\\': False, \\'error_utf8_bytes\\': 645, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, content=[Text"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[nested-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.691,
+        "failure_first_line": "AssertionError('Raw nested-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'nested-key\\', \\'operation\\': \\'render_echarts\\', \\'raw_utf8_bytes\\': 62, \\'is_error\\': False, \\'error_utf8_bytes\\': 458, \\'files_after_bad\\': [\\'output\\\\\\\\echarts-x2_5kxtl\\', \\'output\\\\\\\\echarts-x2_5kxtl\\\\\\\\deepviz-cc6n2gi0\\', \\'output\\\\\\\\echarts-x2_5kxtl\\\\\\\\deepviz-cc6n2gi0\\\\\\\\chart.html\\', \\'output\\\\\\\\e"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[control-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.636,
+        "failure_first_line": "AssertionError('Raw control-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'control-key\\', \\'operation\\': \\'normalize_data\\', \\'raw_utf8_bytes\\': 40, \\'is_error\\': False, \\'error_utf8_bytes\\': 455, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, content=[Tex"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[control-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.676,
+        "failure_first_line": "AssertionError('Raw control-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'control-key\\', \\'operation\\': \\'recommend_chart\\', \\'raw_utf8_bytes\\': 40, \\'is_error\\': False, \\'error_utf8_bytes\\': 639, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, content=[Te"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[control-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.615,
+        "failure_first_line": "AssertionError('Raw control-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'control-key\\', \\'operation\\': \\'render_echarts\\', \\'raw_utf8_bytes\\': 40, \\'is_error\\': False, \\'error_utf8_bytes\\': 458, \\'files_after_bad\\': [\\'output\\\\\\\\echarts-umr6699e\\', \\'output\\\\\\\\echarts-umr6699e\\\\\\\\deepviz-nmfh_fzb\\', \\'output\\\\\\\\echarts-umr6699e\\\\\\\\deepviz-nmfh_fzb\\\\\\\\chart.html\\', \\'output\\\\\\"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[escaped-equivalent-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.626,
+        "failure_first_line": "AssertionError('Raw escaped-equivalent-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'escaped-equivalent-key\\', \\'operation\\': \\'normalize_data\\', \\'raw_utf8_bytes\\': 20, \\'is_error\\': False, \\'error_utf8_bytes\\': 435, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(m"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[escaped-equivalent-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.95,
+        "failure_first_line": "AssertionError('Raw escaped-equivalent-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'escaped-equivalent-key\\', \\'operation\\': \\'recommend_chart\\', \\'raw_utf8_bytes\\': 20, \\'is_error\\': False, \\'error_utf8_bytes\\': 625, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult("
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[escaped-equivalent-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.679,
+        "failure_first_line": "AssertionError('Raw escaped-equivalent-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'escaped-equivalent-key\\', \\'operation\\': \\'render_echarts\\', \\'raw_utf8_bytes\\': 20, \\'is_error\\': False, \\'error_utf8_bytes\\': 458, \\'files_after_bad\\': [\\'output\\\\\\\\echarts-f3by1n2a\\', \\'output\\\\\\\\echarts-f3by1n2a\\\\\\\\deepviz-siymdc05\\', \\'output\\\\\\\\echarts-f3by1n2a\\\\\\\\deepviz-siymdc05\\\\\\\\cha"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[recursion-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 1.958
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[recursion-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 2.53
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[recursion-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 2.077
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[raw-inline-bytes-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.698,
+        "failure_first_line": "AssertionError('Raw raw-inline-bytes accepted by real MCP before SDK canonicalization: {\\'case\\': \\'raw-inline-bytes\\', \\'operation\\': \\'normalize_data\\', \\'raw_utf8_bytes\\': 1000082, \\'is_error\\': False, \\'error_utf8_bytes\\': 455, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=Non"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[raw-inline-bytes-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 2.028,
+        "failure_first_line": "AssertionError('Raw raw-inline-bytes accepted by real MCP before SDK canonicalization: {\\'case\\': \\'raw-inline-bytes\\', \\'operation\\': \\'recommend_chart\\', \\'raw_utf8_bytes\\': 1000082, \\'is_error\\': False, \\'error_utf8_bytes\\': 639, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=No"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[raw-inline-bytes-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.698,
+        "failure_first_line": "AssertionError('Raw raw-inline-bytes accepted by real MCP before SDK canonicalization: {\\'case\\': \\'raw-inline-bytes\\', \\'operation\\': \\'render_echarts\\', \\'raw_utf8_bytes\\': 1000082, \\'is_error\\': False, \\'error_utf8_bytes\\': 458, \\'files_after_bad\\': [\\'output\\\\\\\\echarts-0mbrl6dp\\', \\'output\\\\\\\\echarts-0mbrl6dp\\\\\\\\deepviz-pr_brejg\\', \\'output\\\\\\\\echarts-0mbrl6dp\\\\\\\\deepviz-pr_brejg\\\\\\\\chart.html"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[raw-file-bytes-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.798,
+        "failure_first_line": "AssertionError('Raw raw-file-bytes accepted by real MCP before SDK canonicalization: {\\'case\\': \\'raw-file-bytes\\', \\'operation\\': \\'normalize_data\\', \\'raw_utf8_bytes\\': 1000022, \\'is_error\\': False, \\'error_utf8_bytes\\': 455, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, c"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[raw-file-bytes-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.979,
+        "failure_first_line": "AssertionError('Raw raw-file-bytes accepted by real MCP before SDK canonicalization: {\\'case\\': \\'raw-file-bytes\\', \\'operation\\': \\'recommend_chart\\', \\'raw_utf8_bytes\\': 1000022, \\'is_error\\': False, \\'error_utf8_bytes\\': 639, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, "
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[raw-file-bytes-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.589,
+        "failure_first_line": "AssertionError('Raw raw-file-bytes accepted by real MCP before SDK canonicalization: {\\'case\\': \\'raw-file-bytes\\', \\'operation\\': \\'render_echarts\\', \\'raw_utf8_bytes\\': 1000022, \\'is_error\\': False, \\'error_utf8_bytes\\': 458, \\'files_after_bad\\': [\\'output\\\\\\\\echarts-mwg96hvu\\', \\'output\\\\\\\\echarts-mwg96hvu\\\\\\\\deepviz-na1q_rmx\\', \\'output\\\\\\\\echarts-mwg96hvu\\\\\\\\deepviz-na1q_rmx\\\\\\\\chart.html\\', "
+      },
+      {
+        "name": "test_r11_raw_utf8_byte_limit_direct_controls[inline-session]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.01
+      },
+      {
+        "name": "test_r11_raw_utf8_byte_limit_direct_controls[inline-structured]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.014
+      },
+      {
+        "name": "test_r11_raw_utf8_byte_limit_direct_controls[authorized-file-session]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.006
+      },
+      {
+        "name": "test_r11_raw_utf8_byte_limit_direct_controls[authorized-file-structured]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.01
+      },
+      {
+        "name": "test_r11_actual_sdk_resource_capacity_preflights_without_deleting_earliest",
+        "class": "python.deepviz.tests.test_r11_mcp_resource_budget",
+        "status": "failure",
+        "seconds": 0.863,
+        "failure_first_line": "AssertionError: Real SDK issued resources beyond proposed lifetime cap: {'proposed_cap': 128, 'registered_after': 130, 'overcap_rejected': False, 'files_before': 129, 'files_after': 131, 'earliest_readable_unchanged': True, 'host_file_preserved': True, 'normalization_recovery': True}"
+      },
+      {
+        "name": "test_r11_actual_sdk_capacity_reservation_is_atomic_for_concurrent_peers",
+        "class": "python.deepviz.tests.test_r11_mcp_resource_budget",
+        "status": "failure",
+        "seconds": 0.688,
+        "failure_first_line": "mcp.server.fastmcp.exceptions.ToolError: Error executing tool render_echarts: File inputs require the host to configure data_dir"
+      },
+      {
+        "name": "test_r11_real_stdio_resource_capacity_list_read_and_error_recovery",
+        "class": "python.deepviz.tests.test_r11_mcp_resource_budget",
+        "status": "failure",
+        "seconds": 2.797,
+        "failure_first_line": "AssertionError('Real stdio capacity policy absent: {\\'proposed_cap\\': 128, \\'registered_after\\': 130, \\'overcap_is_error\\': False, \\'files_before\\': 129, \\'files_after\\': 131, \\'earliest_resource_read\\': True, \\'unissued_file_uri_rejected\\': True, \\'normalize_and_discovery_recovery\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, content=[TextContent(type=\\'text\\', text=\\'{\"mime"
+      }
+    ]
+  },
+  "strict-final": {
+    "totals": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "47",
+      "skipped": "0",
+      "tests": "61",
+      "time": "29.699",
+      "timestamp": "2026-11-27T19:40:19.171712+05:30",
+      "hostname": "SandeshAcer"
+    },
+    "xml_sha256": "049eb23ed49b697a12513ff31abad5f47668bda19214aa04cc7c937381aaa1aa",
+    "xml_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-10-mcp-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\strict-final.xml",
+    "log_sha256": "b506ad2088fc9e7f54c76796cd355aa1d2f4f83691553c726a7c4333f71cc4d8",
+    "cases": [
+      {
+        "name": "test_r11_core_normalizer_rejects_duplicate_json_control[record-key]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.001
+      },
+      {
+        "name": "test_r11_core_normalizer_rejects_duplicate_json_control[nested-key]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.001
+      },
+      {
+        "name": "test_r11_core_normalizer_rejects_duplicate_json_control[control-key]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.001
+      },
+      {
+        "name": "test_r11_core_normalizer_rejects_duplicate_json_control[escaped-equivalent-key]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.001
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[record-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.01,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[record-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.008,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[record-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.01,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[nested-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.005,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[nested-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.005,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[nested-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.011,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[control-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.006,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[control-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.007,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[control-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.012,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[escaped-equivalent-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.005,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[escaped-equivalent-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.005,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_tool_session_rejects_duplicate_json_before_cache_or_output[escaped-equivalent-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.011,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[record-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.22,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[record-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.006,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[record-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.013,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[nested-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.007,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[nested-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.006,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[nested-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.012,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[control-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.007,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[control-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.007,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[control-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.013,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[escaped-equivalent-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.007,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[escaped-equivalent-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.006,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_structured_tools_reject_duplicate_json[escaped-equivalent-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.013,
+        "failure_first_line": "Failed: DID NOT RAISE ValueError"
+      },
+      {
+        "name": "test_r11_recursive_encoded_json_is_declared_value_error[core]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.003
+      },
+      {
+        "name": "test_r11_recursive_encoded_json_is_declared_value_error[session]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.002,
+        "failure_first_line": "RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string"
+      },
+      {
+        "name": "test_r11_recursive_encoded_json_is_declared_value_error[structured]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 0.004,
+        "failure_first_line": "RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string"
+      },
+      {
+        "name": "test_r11_valid_unicode_file_and_copied_handle_remain_authorized[session]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.02
+      },
+      {
+        "name": "test_r11_valid_unicode_file_and_copied_handle_remain_authorized[structured]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.024
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[record-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.852,
+        "failure_first_line": "AssertionError('Raw record-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'record-key\\', \\'operation\\': \\'normalize_data\\', \\'raw_utf8_bytes\\': 55, \\'is_error\\': False, \\'error_utf8_bytes\\': 495, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, content=[TextC"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[record-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.344,
+        "failure_first_line": "AssertionError('Raw record-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'record-key\\', \\'operation\\': \\'recommend_chart\\', \\'raw_utf8_bytes\\': 55, \\'is_error\\': False, \\'error_utf8_bytes\\': 639, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, content=[Text"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[record-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.168,
+        "failure_first_line": "AssertionError('Raw record-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'record-key\\', \\'operation\\': \\'render_echarts\\', \\'raw_utf8_bytes\\': 55, \\'is_error\\': False, \\'error_utf8_bytes\\': 458, \\'files_after_bad\\': [\\'output\\\\\\\\echarts-62p7v5v2\\', \\'output\\\\\\\\echarts-62p7v5v2\\\\\\\\deepviz-cml8wpq3\\', \\'output\\\\\\\\echarts-62p7v5v2\\\\\\\\deepviz-cml8wpq3\\\\\\\\chart.html\\', \\'output\\\\\\\\e"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[nested-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.191,
+        "failure_first_line": "AssertionError('Raw nested-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'nested-key\\', \\'operation\\': \\'normalize_data\\', \\'raw_utf8_bytes\\': 62, \\'is_error\\': False, \\'error_utf8_bytes\\': 507, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, content=[TextC"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[nested-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.035,
+        "failure_first_line": "AssertionError('Raw nested-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'nested-key\\', \\'operation\\': \\'recommend_chart\\', \\'raw_utf8_bytes\\': 62, \\'is_error\\': False, \\'error_utf8_bytes\\': 645, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, content=[Text"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[nested-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.09,
+        "failure_first_line": "AssertionError('Raw nested-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'nested-key\\', \\'operation\\': \\'render_echarts\\', \\'raw_utf8_bytes\\': 62, \\'is_error\\': False, \\'error_utf8_bytes\\': 458, \\'files_after_bad\\': [\\'output\\\\\\\\echarts-qmkwtzad\\', \\'output\\\\\\\\echarts-qmkwtzad\\\\\\\\deepviz-hzwniwfi\\', \\'output\\\\\\\\echarts-qmkwtzad\\\\\\\\deepviz-hzwniwfi\\\\\\\\chart.html\\', \\'output\\\\\\\\e"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[control-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.037,
+        "failure_first_line": "AssertionError('Raw control-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'control-key\\', \\'operation\\': \\'normalize_data\\', \\'raw_utf8_bytes\\': 40, \\'is_error\\': False, \\'error_utf8_bytes\\': 455, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, content=[Tex"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[control-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.142,
+        "failure_first_line": "AssertionError('Raw control-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'control-key\\', \\'operation\\': \\'recommend_chart\\', \\'raw_utf8_bytes\\': 40, \\'is_error\\': False, \\'error_utf8_bytes\\': 639, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, content=[Te"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[control-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.146,
+        "failure_first_line": "AssertionError('Raw control-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'control-key\\', \\'operation\\': \\'render_echarts\\', \\'raw_utf8_bytes\\': 40, \\'is_error\\': False, \\'error_utf8_bytes\\': 458, \\'files_after_bad\\': [\\'output\\\\\\\\echarts-d68l059y\\', \\'output\\\\\\\\echarts-d68l059y\\\\\\\\deepviz-65ogbhrz\\', \\'output\\\\\\\\echarts-d68l059y\\\\\\\\deepviz-65ogbhrz\\\\\\\\chart.html\\', \\'output\\\\\\"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[escaped-equivalent-key-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.038,
+        "failure_first_line": "AssertionError('Raw escaped-equivalent-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'escaped-equivalent-key\\', \\'operation\\': \\'normalize_data\\', \\'raw_utf8_bytes\\': 20, \\'is_error\\': False, \\'error_utf8_bytes\\': 435, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(m"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[escaped-equivalent-key-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.15,
+        "failure_first_line": "AssertionError('Raw escaped-equivalent-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'escaped-equivalent-key\\', \\'operation\\': \\'recommend_chart\\', \\'raw_utf8_bytes\\': 20, \\'is_error\\': False, \\'error_utf8_bytes\\': 625, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult("
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[escaped-equivalent-key-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.225,
+        "failure_first_line": "AssertionError('Raw escaped-equivalent-key accepted by real MCP before SDK canonicalization: {\\'case\\': \\'escaped-equivalent-key\\', \\'operation\\': \\'render_echarts\\', \\'raw_utf8_bytes\\': 20, \\'is_error\\': False, \\'error_utf8_bytes\\': 458, \\'files_after_bad\\': [\\'output\\\\\\\\echarts-a18ksrk_\\', \\'output\\\\\\\\echarts-a18ksrk_\\\\\\\\deepviz-_4omc_ar\\', \\'output\\\\\\\\echarts-a18ksrk_\\\\\\\\deepviz-_4omc_ar\\\\\\\\cha"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[recursion-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 1.162
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[recursion-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 1.252
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[recursion-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 1.454
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[raw-inline-bytes-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.277,
+        "failure_first_line": "AssertionError('Raw raw-inline-bytes accepted by real MCP before SDK canonicalization: {\\'case\\': \\'raw-inline-bytes\\', \\'operation\\': \\'normalize_data\\', \\'raw_utf8_bytes\\': 1000082, \\'is_error\\': False, \\'error_utf8_bytes\\': 455, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=Non"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[raw-inline-bytes-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.142,
+        "failure_first_line": "AssertionError('Raw raw-inline-bytes accepted by real MCP before SDK canonicalization: {\\'case\\': \\'raw-inline-bytes\\', \\'operation\\': \\'recommend_chart\\', \\'raw_utf8_bytes\\': 1000082, \\'is_error\\': False, \\'error_utf8_bytes\\': 639, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=No"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[raw-inline-bytes-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.237,
+        "failure_first_line": "AssertionError('Raw raw-inline-bytes accepted by real MCP before SDK canonicalization: {\\'case\\': \\'raw-inline-bytes\\', \\'operation\\': \\'render_echarts\\', \\'raw_utf8_bytes\\': 1000082, \\'is_error\\': False, \\'error_utf8_bytes\\': 458, \\'files_after_bad\\': [\\'output\\\\\\\\echarts-lkcn0uql\\', \\'output\\\\\\\\echarts-lkcn0uql\\\\\\\\deepviz-eusnyeft\\', \\'output\\\\\\\\echarts-lkcn0uql\\\\\\\\deepviz-eusnyeft\\\\\\\\chart.html"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[raw-file-bytes-normalize_data]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.057,
+        "failure_first_line": "AssertionError('Raw raw-file-bytes accepted by real MCP before SDK canonicalization: {\\'case\\': \\'raw-file-bytes\\', \\'operation\\': \\'normalize_data\\', \\'raw_utf8_bytes\\': 1000022, \\'is_error\\': False, \\'error_utf8_bytes\\': 455, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, c"
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[raw-file-bytes-recommend_chart]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.041,
+        "failure_first_line": "AssertionError('Raw raw-file-bytes accepted by real MCP before SDK canonicalization: {\\'case\\': \\'raw-file-bytes\\', \\'operation\\': \\'recommend_chart\\', \\'raw_utf8_bytes\\': 1000022, \\'is_error\\': False, \\'error_utf8_bytes\\': 639, \\'files_after_bad\\': [], \\'recovery_unicode_and_copied_handle\\': True, \\'authorized_file_resource_read\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, "
+      },
+      {
+        "name": "test_r11_real_stdio_rejects_raw_admission_then_reads_recovered_resource[raw-file-bytes-render_echarts]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "failure",
+        "seconds": 1.166,
+        "failure_first_line": "AssertionError('Raw raw-file-bytes accepted by real MCP before SDK canonicalization: {\\'case\\': \\'raw-file-bytes\\', \\'operation\\': \\'render_echarts\\', \\'raw_utf8_bytes\\': 1000022, \\'is_error\\': False, \\'error_utf8_bytes\\': 458, \\'files_after_bad\\': [\\'output\\\\\\\\echarts-tyv44v47\\', \\'output\\\\\\\\echarts-tyv44v47\\\\\\\\deepviz-4g_76jf7\\', \\'output\\\\\\\\echarts-tyv44v47\\\\\\\\deepviz-4g_76jf7\\\\\\\\chart.html\\', "
+      },
+      {
+        "name": "test_r11_raw_utf8_byte_limit_direct_controls[inline-session]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.008
+      },
+      {
+        "name": "test_r11_raw_utf8_byte_limit_direct_controls[inline-structured]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.012
+      },
+      {
+        "name": "test_r11_raw_utf8_byte_limit_direct_controls[authorized-file-session]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.005
+      },
+      {
+        "name": "test_r11_raw_utf8_byte_limit_direct_controls[authorized-file-structured]",
+        "class": "python.deepviz.tests.test_r11_tool_duplicate_json",
+        "status": "passed",
+        "seconds": 0.02
+      },
+      {
+        "name": "test_r11_actual_sdk_resource_capacity_preflights_without_deleting_earliest",
+        "class": "python.deepviz.tests.test_r11_mcp_resource_budget",
+        "status": "failure",
+        "seconds": 0.747,
+        "failure_first_line": "AssertionError: Real SDK issued resources beyond proposed lifetime cap: {'proposed_cap': 128, 'registered_after': 130, 'overcap_rejected': False, 'files_before': 129, 'files_after': 131, 'earliest_readable_unchanged': True, 'host_file_preserved': True, 'normalization_recovery': True}"
+      },
+      {
+        "name": "test_r11_actual_sdk_capacity_reservation_is_atomic_for_concurrent_peers",
+        "class": "python.deepviz.tests.test_r11_mcp_resource_budget",
+        "status": "failure",
+        "seconds": 0.807,
+        "failure_first_line": "AssertionError: Non-atomic/absent issuance admission: {'proposed_cap': 128, 'peer_requests': 4, 'successful': 4, 'errors': 0, 'registered': 132, 'prior_files_preserved': True, 'schema_valid_failure_did_not_allocate': True}"
+      },
+      {
+        "name": "test_r11_real_stdio_resource_capacity_list_read_and_error_recovery",
+        "class": "python.deepviz.tests.test_r11_mcp_resource_budget",
+        "status": "failure",
+        "seconds": 2.019,
+        "failure_first_line": "AssertionError('Real stdio capacity policy absent: {\\'proposed_cap\\': 128, \\'registered_after\\': 130, \\'overcap_is_error\\': False, \\'files_before\\': 129, \\'files_after\\': 131, \\'earliest_resource_read\\': True, \\'unissued_file_uri_rejected\\': True, \\'normalize_and_discovery_recovery\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, content=[TextContent(type=\\'text\\', text=\\'{\"mime"
+      }
+    ]
+  },
+  "resource-final": {
+    "totals": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "3",
+      "skipped": "0",
+      "tests": "3",
+      "time": "4.671",
+      "timestamp": "2026-11-27T19:47:17.345335+05:30",
+      "hostname": "SandeshAcer"
+    },
+    "xml_sha256": "63017ab9be0e20043c5d9068af124c2d5d951b7fe5f0a6fd90e6132ec3b933c3",
+    "xml_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-10-mcp-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\resource-final.xml",
+    "log_sha256": "04655f3e4c4b162c5aefbdbbfb399e3969a3824962b33953aec47ae1858cf219",
+    "cases": [
+      {
+        "name": "test_r11_actual_sdk_resource_capacity_preflights_without_deleting_earliest",
+        "class": "python.deepviz.tests.test_r11_mcp_resource_budget",
+        "status": "failure",
+        "seconds": 1.49,
+        "failure_first_line": "AssertionError: Real SDK issued resources beyond proposed lifetime cap: {'proposed_cap': 128, 'registered_after': 130, 'overcap_rejected': False, 'files_before': 129, 'files_after': 131, 'generation_calls_after_full': 1, 'earliest_readable_unchanged': True, 'host_file_preserved': True, 'normalization_recovery': True}"
+      },
+      {
+        "name": "test_r11_actual_sdk_capacity_reservation_is_atomic_for_concurrent_peers",
+        "class": "python.deepviz.tests.test_r11_mcp_resource_budget",
+        "status": "failure",
+        "seconds": 0.869,
+        "failure_first_line": "AssertionError: Non-atomic/absent issuance admission: {'proposed_cap': 128, 'peer_requests': 4, 'successful': 4, 'errors': 0, 'registered': 132, 'prior_files_preserved': True, 'schema_valid_failure_did_not_allocate': True}"
+      },
+      {
+        "name": "test_r11_real_stdio_resource_capacity_list_read_and_error_recovery",
+        "class": "python.deepviz.tests.test_r11_mcp_resource_budget",
+        "status": "failure",
+        "seconds": 2.044,
+        "failure_first_line": "AssertionError('Real stdio capacity policy absent: {\\'proposed_cap\\': 128, \\'registered_after\\': 130, \\'overcap_is_error\\': False, \\'files_before\\': 129, \\'files_after\\': 131, \\'earliest_resource_read\\': True, \\'unissued_file_uri_rejected\\': True, \\'normalize_and_discovery_recovery\\': True}\\nassert False\\n +  where False = CallToolResult(meta=None, content=[TextContent(type=\\'text\\', text=\\'{\"mime"
+      }
+    ]
+  },
+  "existing": {
+    "totals": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "1",
+      "tests": "78",
+      "time": "26.287",
+      "timestamp": "2026-11-27T19:45:25.966148+05:30",
+      "hostname": "SandeshAcer"
+    },
+    "xml_sha256": "a8f76253d68fe65ebd2b993264eeef5d467dee3910a6aadd5544a3389d972bcf",
+    "xml_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-10-mcp-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\existing.xml",
+    "log_sha256": "2596dbbab1551f73aceee4bc26bf1c087c270d53e71161c3f86b871a7186ebe8",
+    "cases": [
+      {
+        "name": "test_stdio_initialize_and_discover_five_renderer_schemas",
+        "class": "python.deepviz.tests.test_mcp_transport",
+        "status": "passed",
+        "seconds": 1.239
+      },
+      {
+        "name": "test_stdio_renderer_returns_retrievable_mcp_content_not_only_local_paths[matplotlib]",
+        "class": "python.deepviz.tests.test_mcp_transport",
+        "status": "passed",
+        "seconds": 1.975
+      },
+      {
+        "name": "test_stdio_renderer_returns_retrievable_mcp_content_not_only_local_paths[plotly]",
+        "class": "python.deepviz.tests.test_mcp_transport",
+        "status": "passed",
+        "seconds": 1.439
+      },
+      {
+        "name": "test_stdio_renderer_returns_retrievable_mcp_content_not_only_local_paths[vega]",
+        "class": "python.deepviz.tests.test_mcp_transport",
+        "status": "passed",
+        "seconds": 2.228
+      },
+      {
+        "name": "test_stdio_renderer_returns_retrievable_mcp_content_not_only_local_paths[echarts]",
+        "class": "python.deepviz.tests.test_mcp_transport",
+        "status": "passed",
+        "seconds": 1.083
+      },
+      {
+        "name": "test_stdio_renderer_returns_retrievable_mcp_content_not_only_local_paths[antv]",
+        "class": "python.deepviz.tests.test_mcp_transport",
+        "status": "passed",
+        "seconds": 1.11
+      },
+      {
+        "name": "test_stdio_schema_invalid_tool_calls_are_mcp_errors_without_artifacts",
+        "class": "python.deepviz.tests.test_mcp_transport",
+        "status": "passed",
+        "seconds": 0.972
+      },
+      {
+        "name": "test_stdio_artifact_reads_reject_traversal_and_arbitrary_file_uris",
+        "class": "python.deepviz.tests.test_mcp_transport",
+        "status": "passed",
+        "seconds": 1.038
+      },
+      {
+        "name": "test_stdio_registered_artifact_symlink_swap_cannot_read_outside_output_root",
+        "class": "python.deepviz.tests.test_mcp_transport",
+        "status": "skipped",
+        "seconds": 0.004,
+        "skip_reason": "Host does not permit symlink creation: [WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r11-10-mcp-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\\\existing-tmp\\\\test_stdio_registered_artifact0\\\\secret.html' -> 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r11-10-mcp-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\\\existing-tmp\\\\test_stdio_registered_artifact0\\\\symlink-probe'"
+      },
+      {
+        "name": "test_stdio_unicode_roundtrip_protocol_only_stdout_and_graceful_exit",
+        "class": "python.deepviz.tests.test_mcp_transport",
+        "status": "passed",
+        "seconds": 1.107
+      },
+      {
+        "name": "test_mcp_unknown_arguments_fail_without_artifacts",
+        "class": "python.deepviz.tests.test_n06_mcp_validation",
+        "status": "passed",
+        "seconds": 0.98
+      },
+      {
+        "name": "test_failed_render_removes_only_its_new_destination",
+        "class": "python.deepviz.tests.test_n06_tool_lifecycle",
+        "status": "passed",
+        "seconds": 0.018
+      },
+      {
+        "name": "test_rejected_artifact_size_cleans_partial_render",
+        "class": "python.deepviz.tests.test_n06_tool_lifecycle",
+        "status": "passed",
+        "seconds": 0.02
+      },
+      {
+        "name": "test_overdeep_inline_json_has_actionable_validation_error[python-json]",
+        "class": "python.deepviz.tests.test_n06_tool_lifecycle",
+        "status": "passed",
+        "seconds": 0.003
+      },
+      {
+        "name": "test_overdeep_inline_json_has_actionable_validation_error[json-text]",
+        "class": "python.deepviz.tests.test_n06_tool_lifecycle",
+        "status": "passed",
+        "seconds": 0.004
+      },
+      {
+        "name": "test_valid_render_keeps_downloadable_artifacts",
+        "class": "python.deepviz.tests.test_n06_tool_lifecycle",
+        "status": "passed",
+        "seconds": 0.008
+      },
+      {
+        "name": "test_handle_copy_survives_original_eviction_but_not_a_new_tool_session",
+        "class": "python.deepviz.tests.test_n06_tool_lifecycle",
+        "status": "passed",
+        "seconds": 0.273
+      },
+      {
+        "name": "test_cli_failed_mapping_is_json_stdout_clean_and_leaves_no_artifacts",
+        "class": "python.deepviz.tests.test_n06_tool_lifecycle",
+        "status": "passed",
+        "seconds": 0.414
+      },
+      {
+        "name": "test_public_copied_handle_chains_survive_original_eviction[inline]",
+        "class": "python.deepviz.tests.test_n06_encoded_handles",
+        "status": "passed",
+        "seconds": 0.056
+      },
+      {
+        "name": "test_public_copied_handle_chains_survive_original_eviction[rooted-file]",
+        "class": "python.deepviz.tests.test_n06_encoded_handles",
+        "status": "passed",
+        "seconds": 0.056
+      },
+      {
+        "name": "test_public_copied_handle_chains_survive_original_eviction[encoded-rooted-file]",
+        "class": "python.deepviz.tests.test_n06_encoded_handles",
+        "status": "passed",
+        "seconds": 0.061
+      },
+      {
+        "name": "test_encoded_reference_canonicalization_does_not_grant_file_authority[False]",
+        "class": "python.deepviz.tests.test_n06_encoded_handles",
+        "status": "passed",
+        "seconds": 0.009
+      },
+      {
+        "name": "test_encoded_reference_canonicalization_does_not_grant_file_authority[True]",
+        "class": "python.deepviz.tests.test_n06_encoded_handles",
+        "status": "passed",
+        "seconds": 0.009
+      },
+      {
+        "name": "test_actual_mcp_encoded_copy_control_keeps_working_after_eviction",
+        "class": "python.deepviz.tests.test_n06_encoded_handles",
+        "status": "passed",
+        "seconds": 1.301
+      },
+      {
+        "name": "test_public_integration_entrypoints_exist",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.001
+      },
+      {
+        "name": "test_normalization_returns_bounded_profile_and_reusable_handle",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.005
+      },
+      {
+        "name": "test_every_structured_tool_creates_real_artifacts[matplotlib]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.734
+      },
+      {
+        "name": "test_every_structured_tool_creates_real_artifacts[plotly]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.046
+      },
+      {
+        "name": "test_every_structured_tool_creates_real_artifacts[vega]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.533
+      },
+      {
+        "name": "test_every_structured_tool_creates_real_artifacts[echarts]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.009
+      },
+      {
+        "name": "test_every_structured_tool_creates_real_artifacts[antv]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.009
+      },
+      {
+        "name": "test_flow_preserves_original_input_count_after_bounded_profile",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.163
+      },
+      {
+        "name": "test_file_inputs_cannot_escape_the_explicit_data_root[source0]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.004
+      },
+      {
+        "name": "test_file_inputs_cannot_escape_the_explicit_data_root[source1]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.004
+      },
+      {
+        "name": "test_file_inputs_disabled_without_data_root",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.004
+      },
+      {
+        "name": "test_file_input_and_recommendation_do_not_return_raw_rows",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.007
+      },
+      {
+        "name": "test_invalid_references_are_not_evaluated_or_treated_as_paths[../../secret.csv]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.003
+      },
+      {
+        "name": "test_invalid_references_are_not_evaluated_or_treated_as_paths[__import__('os').system('echo unsafe')]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.003
+      },
+      {
+        "name": "test_invalid_references_are_not_evaluated_or_treated_as_paths[data2]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.003
+      },
+      {
+        "name": "test_inline_payload_limit_points_to_file_workflow",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.01
+      },
+      {
+        "name": "test_profile_bounds_field_names_and_does_not_leak_values",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.0
+      },
+      {
+        "name": "test_prompt_loader_rejects_nonversioned_or_traversal_names[../system]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.001
+      },
+      {
+        "name": "test_prompt_loader_rejects_nonversioned_or_traversal_names[/system]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.001
+      },
+      {
+        "name": "test_prompt_loader_rejects_nonversioned_or_traversal_names[v2/system]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.001
+      },
+      {
+        "name": "test_mcp_can_be_created_without_langchain",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 1.391
+      },
+      {
+        "name": "test_extra_executable_spec_fields_are_rejected",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.007
+      },
+      {
+        "name": "test_model_cannot_choose_output_directory",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.018
+      },
+      {
+        "name": "test_recommendation_uses_observed_types_and_goal[trend-rows0-line]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.01
+      },
+      {
+        "name": "test_recommendation_uses_observed_types_and_goal[relationship-rows1-scatter]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.008
+      },
+      {
+        "name": "test_recommendation_uses_observed_types_and_goal[distribution-rows2-histogram]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.01
+      },
+      {
+        "name": "test_recommendation_uses_observed_types_and_goal[composition-rows3-pie]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.007
+      },
+      {
+        "name": "test_recommendation_uses_observed_types_and_goal[composition-rows4-bar]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.008
+      },
+      {
+        "name": "test_recommendation_uses_observed_types_and_goal[composition-rows5-bar]",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.009
+      },
+      {
+        "name": "test_import_does_not_require_optional_agent_or_mcp_packages",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.603
+      },
+      {
+        "name": "test_public_normalize_export_remains_callable_after_first_use",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.002
+      },
+      {
+        "name": "test_cli_render_outputs_machine_readable_metadata",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 1.705
+      },
+      {
+        "name": "test_cli_bad_spec_has_nonzero_exit_and_no_artifact",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 0.565
+      },
+      {
+        "name": "test_real_deep_agent_attach_and_tool_execution",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 1.589
+      },
+      {
+        "name": "test_real_stdio_mcp_discovery_render_and_resource_access",
+        "class": "python.deepviz.tests.test_integrations",
+        "status": "passed",
+        "seconds": 1.775
+      },
+      {
+        "name": "test_partial_request_cleanup_never_deletes_peer_or_host[survivor-exception-shared-session]",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.022
+      },
+      {
+        "name": "test_partial_request_cleanup_never_deletes_peer_or_host[survivor-exception-separate-sessions]",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.018
+      },
+      {
+        "name": "test_partial_request_cleanup_never_deletes_peer_or_host[survivor-exception-structured-tool]",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.029
+      },
+      {
+        "name": "test_partial_request_cleanup_never_deletes_peer_or_host[survivor-cancelled-error-shared-session]",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.024
+      },
+      {
+        "name": "test_partial_request_cleanup_never_deletes_peer_or_host[survivor-cancelled-error-separate-sessions]",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.021
+      },
+      {
+        "name": "test_partial_request_cleanup_never_deletes_peer_or_host[survivor-cancelled-error-structured-tool]",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.024
+      },
+      {
+        "name": "test_partial_request_cleanup_never_deletes_peer_or_host[survivor-escaped-peer-path-shared-session]",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.022
+      },
+      {
+        "name": "test_partial_request_cleanup_never_deletes_peer_or_host[survivor-escaped-peer-path-separate-sessions]",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.02
+      },
+      {
+        "name": "test_partial_request_cleanup_never_deletes_peer_or_host[survivor-escaped-peer-path-structured-tool]",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.095
+      },
+      {
+        "name": "test_partial_request_cleanup_never_deletes_peer_or_host[interrupted-exception-shared-session]",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.016
+      },
+      {
+        "name": "test_partial_request_cleanup_never_deletes_peer_or_host[interrupted-exception-separate-sessions]",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.018
+      },
+      {
+        "name": "test_partial_request_cleanup_never_deletes_peer_or_host[interrupted-exception-structured-tool]",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.021
+      },
+      {
+        "name": "test_partial_request_cleanup_never_deletes_peer_or_host[interrupted-cancelled-error-shared-session]",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.018
+      },
+      {
+        "name": "test_partial_request_cleanup_never_deletes_peer_or_host[interrupted-cancelled-error-separate-sessions]",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.018
+      },
+      {
+        "name": "test_partial_request_cleanup_never_deletes_peer_or_host[interrupted-cancelled-error-structured-tool]",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.022
+      },
+      {
+        "name": "test_partial_request_cleanup_never_deletes_peer_or_host[interrupted-escaped-peer-path-shared-session]",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.02
+      },
+      {
+        "name": "test_partial_request_cleanup_never_deletes_peer_or_host[interrupted-escaped-peer-path-separate-sessions]",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.018
+      },
+      {
+        "name": "test_partial_request_cleanup_never_deletes_peer_or_host[interrupted-escaped-peer-path-structured-tool]",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.02
+      },
+      {
+        "name": "test_distinct_real_structured_tools_share_root_without_cross_contamination",
+        "class": "tests.test_n13_concurrency",
+        "status": "passed",
+        "seconds": 0.129
+      }
+    ]
+  }
+}

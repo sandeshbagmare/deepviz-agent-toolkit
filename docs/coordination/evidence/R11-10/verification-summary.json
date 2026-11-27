@@ -1,0 +1,59 @@
+{
+  "source_base": "ca25af486bf443949125df789f5b5fd1fda8bba8",
+  "strict_combined": {
+    "passed": 14,
+    "failed": 47,
+    "skipped": 0,
+    "exit": 1,
+    "seconds": 29.76
+  },
+  "final_resource_recheck": {
+    "passed": 0,
+    "failed": 3,
+    "skipped": 0,
+    "exit": 1,
+    "seconds": 4.7,
+    "overlaps_strict_combined": true
+  },
+  "existing_focused": {
+    "passed": 77,
+    "failed": 0,
+    "skipped": 1,
+    "exit": 0,
+    "seconds": 26.32
+  },
+  "initial_harness_failures": {
+    "ruff_exit": 1,
+    "ruff_errors": "5 E731 lambda assignments, corrected only own tests",
+    "own_test_mypy_exit": 1,
+    "own_test_mypy_errors": "TextResourceContents union guard and AnyUrl conversion, corrected only own tests",
+    "sdk_exception_expectation": "Initial concurrent peer test expected ValueError but SDK wraps as ToolError; corrected own test, then real capacity oracle RED"
+  },
+  "final_checks": {
+    "own_test_ruff_exit": 0,
+    "own_test_mypy_exit": 0,
+    "own_test_mypy_files": 2,
+    "production_mypy_exit": 0,
+    "production_mypy_files": 9,
+    "source_diff_exit": 0,
+    "diff_check_exit": 0
+  },
+  "test_files": [
+    {
+      "path": "python\\deepviz\\tests\\test_r11_mcp_resource_budget.py",
+      "bytes": 10298,
+      "sha256": "37899ba2933e1d76d5dd972f5d19efc38a3e6cb1defbb52551e5193ab5c57fc4"
+    },
+    {
+      "path": "python\\deepviz\\tests\\test_r11_tool_duplicate_json.py",
+      "bytes": 10566,
+      "sha256": "0a2345958213d123365b179c29c0fd09e1e0077f0c1c8d17d069d5122f71585f"
+    }
+  ],
+  "limitations": [
+    "WinError1314 symlink test skipped/unverified",
+    "No source fix authorized for this tester",
+    "No package build, clean consumer, full scale, native browser, provider, CI or release signoff"
+  ],
+  "producer_transfer_owner": "R04; tools.py/mcp_server.py production ownership needs eligible producer release"
+}
