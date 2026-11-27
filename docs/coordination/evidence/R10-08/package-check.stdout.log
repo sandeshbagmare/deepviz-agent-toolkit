@@ -1,0 +1,22 @@
+
+> package:check
+> npm run build && npm pack --dry-run --workspace @deepviz/agent-toolkit && node packages/deepviz/scripts/check-package.mjs
+
+
+> build
+> npm run build --workspace @deepviz/agent-toolkit
+
+
+> @deepviz/agent-toolkit@0.1.0 build
+> tsc -p tsconfig.json
+
+
+> @deepviz/agent-toolkit@0.1.0 prepack
+> npm run build
+
+
+> @deepviz/agent-toolkit@0.1.0 build
+> tsc -p tsconfig.json
+
+deepviz-agent-toolkit-0.1.0.tgz
+Packed consumer passed: ESM, JSON schema, runtime, and TypeScript declarations (22 packed files, 43022 bytes).

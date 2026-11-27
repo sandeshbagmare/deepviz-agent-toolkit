@@ -1,0 +1,55 @@
+✔ the installed entry is local, materialized, and not a workspace fallback (50.393ms)
+✔ documented runtime exports are callable from the packed public entry (0.6931ms)
+✔ the public JSON subpath and schema export equal the canonical source schema (1.0143ms)
+✔ records, columns, delimited text and streaming preserve exact consumer values (24.9554ms)
+✔ packed streaming render emits two exact native SVG marks (30.602ms)
+✔ all five packed agent helper APIs execute without workspace runtime dependencies (4.0377ms)
+✔ unexported internal paths are not mistaken for a supported package entry (0.846ms)
+✖ canonical versioned system prompt is present in the installed tarball (12.5053ms)
+✖ canonical versioned request prompt is present in the installed tarball (0.4856ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 7
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 547.0505
+
+✖ failing tests:
+
+test at consumer.test.mjs:88:3
+✖ canonical versioned system prompt is present in the installed tarball (12.5053ms)
+  AssertionError [ERR_ASSERTION]: Missing canonical prompts/v1/system.md from actual installed tarball
+      at TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts/current-run1/consumer/consumer.test.mjs:90:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at consumer.test.mjs:88:3
+✖ canonical versioned request prompt is present in the installed tarball (0.4856ms)
+  AssertionError [ERR_ASSERTION]: Missing canonical prompts/v1/request.md from actual installed tarball
+      at TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts/current-run1/consumer/consumer.test.mjs:90:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

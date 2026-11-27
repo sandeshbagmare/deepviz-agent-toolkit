@@ -1,0 +1,614 @@
+{
+  "started": "2026-11-27T02:38:26.623Z",
+  "sourceDirectory": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt",
+  "outputDirectory": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\current-run1",
+  "node": "v26.13.1",
+  "commands": [
+    {
+      "label": "source-head",
+      "executable": "git",
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T02:38:26.633Z",
+      "exit": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "product-source",
+      "executable": "git",
+      "args": [
+        "rev-parse",
+        "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab^{commit}"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T02:38:26.733Z",
+      "exit": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "source-ancestor",
+      "executable": "git",
+      "args": [
+        "merge-base",
+        "--is-ancestor",
+        "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+        "HEAD"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T02:38:26.831Z",
+      "exit": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "product-diff-before",
+      "executable": "git",
+      "args": [
+        "diff",
+        "--exit-code",
+        "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+        "--",
+        "package.json",
+        "package-lock.json",
+        "packages/deepviz",
+        "schemas",
+        "prompts"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T02:38:26.923Z",
+      "exit": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "npm-version",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "--version"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T02:38:27.071Z",
+      "exit": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "npm-ci",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T02:38:27.507Z",
+      "exit": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "build",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "build"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T02:39:05.417Z",
+      "exit": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "typecheck",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "typecheck"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T02:39:08.836Z",
+      "exit": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "tests",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "test"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T02:39:10.106Z",
+      "exit": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "schema",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "schema:check"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T02:39:24.221Z",
+      "exit": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "package-check",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "package:check"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T02:39:27.504Z",
+      "exit": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "dry-run",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "pack",
+        "--dry-run",
+        "--workspace",
+        "@deepviz/agent-toolkit"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T02:39:38.479Z",
+      "exit": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "actual-pack",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "pack",
+        "--workspace",
+        "@deepviz/agent-toolkit",
+        "--pack-destination",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\current-run1\\pack"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T02:39:41.064Z",
+      "exit": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "tarball-list",
+      "executable": "tar",
+      "args": [
+        "-tzf",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\current-run1\\pack\\deepviz-agent-toolkit-0.1.0.tgz"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T02:39:43.073Z",
+      "exit": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "consumer-git-isolation",
+      "executable": "git",
+      "args": [
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\current-run1\\consumer",
+      "started": "2026-11-27T02:39:43.318Z",
+      "exit": 128,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "consumer-install",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "install",
+        "--offline",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "--workspaces=false",
+        "--package-lock=false",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\current-run1\\pack\\deepviz-agent-toolkit-0.1.0.tgz"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\current-run1\\consumer",
+      "started": "2026-11-27T02:39:43.470Z",
+      "exit": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "consumer-tests",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--test",
+        "consumer.test.mjs"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\current-run1\\consumer",
+      "started": "2026-11-27T02:39:45.823Z",
+      "exit": 1,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "consumer-types",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt\\node_modules\\typescript\\bin\\tsc",
+        "--project",
+        "tsconfig.json"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\current-run1\\consumer",
+      "started": "2026-11-27T02:39:46.838Z",
+      "exit": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "consumer-browser",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt\\tests\\r10_probes\\role08\\browser.mjs",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\current-run1\\consumer",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\current-run1"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\current-run1\\consumer",
+      "started": "2026-11-27T02:39:47.700Z",
+      "exit": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "label": "product-diff-after",
+      "executable": "git",
+      "args": [
+        "diff",
+        "--exit-code",
+        "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+        "--",
+        "package.json",
+        "package-lock.json",
+        "packages/deepviz",
+        "schemas",
+        "prompts"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T02:39:55.006Z",
+      "exit": 0,
+      "signal": null,
+      "error": null
+    }
+  ],
+  "checks": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "tests": "PASS",
+    "schema": "PASS",
+    "package-check": "PASS",
+    "dry-run": "PASS",
+    "consumer": "FAIL",
+    "types": "PASS",
+    "browser": "PASS"
+  },
+  "limitations": [
+    "Not a final source freeze, release, CI or independent multi-reviewer signoff",
+    "Browser dependencies are installed development bundles served locally, not vendor assets bundled inside the tarball",
+    "Only the installed Node/Chromium versions and bounded two-row light-theme charts are exercised"
+  ],
+  "checkout": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "productSource": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "sourceFiles": [
+    {
+      "name": "package.json",
+      "bytes": 1130,
+      "sha256": "9afef0ede1cc8d66e6495f33a5d5b4bcdb8472c7dd749721b48056cf73894cc5"
+    },
+    {
+      "name": "package-lock.json",
+      "bytes": 81533,
+      "sha256": "1401922876f8b7d37e675ce044400fe5335682742dd9b30a1292243ad771d4c9"
+    },
+    {
+      "name": "packages/deepviz/package.json",
+      "bytes": 725,
+      "sha256": "7623921eb04ce66eb07771f47d02abcdfb71f6e43f94b729934de847f3256909"
+    },
+    {
+      "name": "packages/deepviz/tsconfig.json",
+      "bytes": 574,
+      "sha256": "2a202b15cdb9443825daff1589036b1dcc09f2cdb01c6274dbbcd97f7651781d"
+    },
+    {
+      "name": "schemas/chart-spec.schema.json",
+      "bytes": 4975,
+      "sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71"
+    },
+    {
+      "name": "prompts/v1/system.md",
+      "bytes": 4582,
+      "sha256": "b11e691e8f5d89bc2fd726d284702d6675c57c1a32ec0947ec5902040fdbaba0"
+    },
+    {
+      "name": "prompts/v1/request.md",
+      "bytes": 761,
+      "sha256": "845be71cb3141d084f036472a1c5a19670be28c16bf73c4a599a3df9d534c6f2"
+    },
+    {
+      "name": "packages/deepviz/src/chart-spec.schema.json",
+      "bytes": 4975,
+      "sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71"
+    },
+    {
+      "name": "packages/deepviz/src/index.ts",
+      "bytes": 135,
+      "sha256": "a4c1ebd22dfdc100e28eef28b11030d5f08bb09db0da9649c22848d3ef9a8aac"
+    },
+    {
+      "name": "packages/deepviz/src/models.ts",
+      "bytes": 4737,
+      "sha256": "d43d5ae0bef1d43f251ed71899a9b507c6575562e4403bd2e2ac02bd7caa43e6"
+    },
+    {
+      "name": "packages/deepviz/src/normalize.ts",
+      "bytes": 28916,
+      "sha256": "d1b45d2a55dfd05361184a57da952a0da735e9b6d72c2491f908ef27bda22371"
+    },
+    {
+      "name": "packages/deepviz/src/render.ts",
+      "bytes": 11312,
+      "sha256": "7f0a69004d570e05b45b8c6ce10c73263652d2874362960af27baed82b3996e9"
+    },
+    {
+      "name": "packages/deepviz/src/renderers.ts",
+      "bytes": 21334,
+      "sha256": "180cb19d8bb01e5c2fe94db7e943e8430681cffadad2251d38a03fd1de5b19d0"
+    },
+    {
+      "name": "packages/deepviz/src/schema.ts",
+      "bytes": 187,
+      "sha256": "8150ef7a9f4e1376818c38ec0b3a76e4c1fa92a7dec8e361e24195f6e38d0537"
+    }
+  ],
+  "npm": {
+    "path": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+    "sha256": "3ce7cba6f5128dd5f54c98b6a5036b0f850496878cc2e21044b675fe3c594e3e",
+    "version": "11.20.0"
+  },
+  "installScriptsDisabled": true,
+  "tarball": {
+    "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\current-run1\\pack\\deepviz-agent-toolkit-0.1.0.tgz",
+    "bytes": 43022,
+    "sha256": "d448f453b95d0a9456d088629d2c60d3598fd53602740e49654b32b645c9d321",
+    "members": [
+      "package/LICENSE",
+      "package/README.md",
+      "package/dist/chart-spec.schema.json",
+      "package/dist/index.d.ts",
+      "package/dist/index.js",
+      "package/dist/index.js.map",
+      "package/dist/models.d.ts",
+      "package/dist/models.js",
+      "package/dist/models.js.map",
+      "package/dist/normalize.d.ts",
+      "package/dist/normalize.js",
+      "package/dist/normalize.js.map",
+      "package/dist/render.d.ts",
+      "package/dist/render.js",
+      "package/dist/render.js.map",
+      "package/dist/renderers.d.ts",
+      "package/dist/renderers.js",
+      "package/dist/renderers.js.map",
+      "package/dist/schema.d.ts",
+      "package/dist/schema.js",
+      "package/dist/schema.js.map",
+      "package/package.json"
+    ],
+    "prompts": []
+  },
+  "consumer": {
+    "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\current-run1\\consumer",
+    "installedPackage": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-08-npm-packed-consumer-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\current-run1\\consumer\\node_modules\\@deepviz\\agent-toolkit",
+    "distFiles": [
+      {
+        "name": "dist/chart-spec.schema.json",
+        "bytes": 7397,
+        "sha256": "b995523b04fde40735946aade2769187b1b3b65296c85f03f764d5c6c752e651"
+      },
+      {
+        "name": "dist/index.d.ts",
+        "bytes": 137,
+        "sha256": "ad7078508477928bf544b23c37a28abc778c85470aecfae8cc91e6929a4c97f2"
+      },
+      {
+        "name": "dist/index.js",
+        "bytes": 170,
+        "sha256": "887a0d361250e936d43f6b5f8cac4f65a024676520ad6bcfb49ab8042e355c39"
+      },
+      {
+        "name": "dist/index.js.map",
+        "bytes": 206,
+        "sha256": "c8ae153be21ed11e0585f86a83791061a927fd0960064329b50d1b7bb00e9354"
+      },
+      {
+        "name": "dist/models.d.ts",
+        "bytes": 2010,
+        "sha256": "0aa4657b8204cc353c1aea1a829e1991632602e0b24d414569163e3467bb3deb"
+      },
+      {
+        "name": "dist/models.js",
+        "bytes": 3538,
+        "sha256": "936bcf189c647a45ab0063dbdff5158ca5711a374e6eae7f4a00d160d91d265e"
+      },
+      {
+        "name": "dist/models.js.map",
+        "bytes": 3992,
+        "sha256": "e236172f498faaa29fa05b6bd9ffff2fbf95affa0a782470ee63abf81865f4ce"
+      },
+      {
+        "name": "dist/normalize.d.ts",
+        "bytes": 447,
+        "sha256": "c403eea0ed6ec3fc8ec0315efc2e77c9e2a0f0698e666cb31b64a4d62f3e1ecd"
+      },
+      {
+        "name": "dist/normalize.js",
+        "bytes": 33924,
+        "sha256": "adb0493123fd478567212e76e2c6e52c828aeaa9eb5425c219b5b1a576689612"
+      },
+      {
+        "name": "dist/normalize.js.map",
+        "bytes": 37852,
+        "sha256": "b86142f9cc3eeea60f03532bd0a88750dd57783d47c3e0981e689badcc8bb412"
+      },
+      {
+        "name": "dist/render.d.ts",
+        "bytes": 1661,
+        "sha256": "976edd604d1afdf41209d9531ba1926607a3428b12d245b8dc51d9b2e4ae8d14"
+      },
+      {
+        "name": "dist/render.js",
+        "bytes": 10905,
+        "sha256": "39bcd415d119e39ef3107dee4b455778541776f3901c4ae5facbb1447fcc5388"
+      },
+      {
+        "name": "dist/render.js.map",
+        "bytes": 9716,
+        "sha256": "613426368f3f9f7aabff50f5067f79f60a868d27ec6b7c60bd1eceec69ef9ada"
+      },
+      {
+        "name": "dist/renderers.d.ts",
+        "bytes": 1059,
+        "sha256": "2cba7af7884f327bef8cc2f6a15b7f8fdf4ee5743fab365997d124e24caaee07"
+      },
+      {
+        "name": "dist/renderers.js",
+        "bytes": 24040,
+        "sha256": "d0a10b871c8768c386bddebb971610e8b770902f29d3d0780008b8af658bf905"
+      },
+      {
+        "name": "dist/renderers.js.map",
+        "bytes": 33797,
+        "sha256": "c63beeff474ed6e72c3f84035004001f24da6cf5ccbee9130dedbe936c72e7c0"
+      },
+      {
+        "name": "dist/schema.d.ts",
+        "bytes": 4914,
+        "sha256": "47fff70ef4342bc31170d8b4504bb28f2a1a3ba4c0a7c9071695a0969deeb0e1"
+      },
+      {
+        "name": "dist/schema.js",
+        "bytes": 224,
+        "sha256": "a48b8860a9bfb63d757c49fbf9ebecdc1596e3bef40dfdadaf6203351b626482"
+      },
+      {
+        "name": "dist/schema.js.map",
+        "bytes": 219,
+        "sha256": "4dac40a1bdb0ca8afe5476415dc559b6da8f3c7ad45ff9760c0e03409b02344d"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "key": "vega",
+      "package": "vega",
+      "version": "6.4.0",
+      "bytes": 521123,
+      "sha256": "8f6a3587cf8d4f42c7e08120e3eb05d067e746d554e39d2dcf52acc0bd5ba28f",
+      "url": "https://cdn.jsdelivr.net/npm/vega@6.4.0/build/vega.min.js"
+    },
+    {
+      "key": "vegaLite",
+      "package": "vega-lite",
+      "version": "6.5.0",
+      "bytes": 257954,
+      "sha256": "83e215e84e308ee8688fa6503ba0f1cf8a3c05c0d61df2841a0b92bf86809e00",
+      "url": "https://cdn.jsdelivr.net/npm/vega-lite@6.5.0/build/vega-lite.min.js"
+    },
+    {
+      "key": "vegaEmbed",
+      "package": "vega-embed",
+      "version": "7.4.0",
+      "bytes": 61258,
+      "sha256": "ce2af3455101e8c854181c62547064904b4c1f2ad5350c1dee9d7aff8119c4de",
+      "url": "https://cdn.jsdelivr.net/npm/vega-embed@7.4.0/build/vega-embed.min.js"
+    },
+    {
+      "key": "echarts",
+      "package": "echarts",
+      "version": "6.1.0",
+      "bytes": 1121883,
+      "sha256": "b66b25aeb4df84e33199dc21694014d336d222cbd9deb0e5a7c14bd6aa0d0fd0",
+      "url": "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js"
+    },
+    {
+      "key": "antv",
+      "package": "@antv/g2",
+      "version": "5.4.8",
+      "bytes": 1083414,
+      "sha256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412",
+      "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js"
+    },
+    {
+      "key": "plotly",
+      "package": "plotly.js-dist-min",
+      "version": "4.3.0",
+      "bytes": 4842992,
+      "sha256": "aae4d8a38474c54013bdf0050847cf3835de7eccbf4c8779fcd26e250dadb9bb",
+      "url": "https://cdn.jsdelivr.net/npm/plotly.js-dist-min@4.3.0/plotly.min.js"
+    }
+  ],
+  "probes": [
+    {
+      "name": "browser.mjs",
+      "bytes": 5368,
+      "sha256": "126ed5998d108fd142a27afea6bcab8526a259bee5cecda7271d24005f4810f0"
+    },
+    {
+      "name": "consumer.test.mjs",
+      "bytes": 4659,
+      "sha256": "354591eafe649e60d93d87067f076885c8312bb93c65e518d91cd3e820069852"
+    },
+    {
+      "name": "README.md",
+      "bytes": 2905,
+      "sha256": "7139268fcfd38d00b9b2e23c98fb3bc1997d251efb7e2a01279f91a39ef74aa9"
+    },
+    {
+      "name": "types.mts",
+      "bytes": 912,
+      "sha256": "588e5a54fa81223295ddf6b819b5ce6f0eb306ec111da4b72c89dbc74dc13f35"
+    },
+    {
+      "name": "verify-packed-consumer.mjs",
+      "bytes": 10744,
+      "sha256": "7ea9b7bdc205fb556fb6f37d972e0c80003effa7bfe6c32632a4713df9f21d32"
+    }
+  ],
+  "finished": "2026-11-27T02:39:55.114Z",
+  "status": "FAIL"
+}
