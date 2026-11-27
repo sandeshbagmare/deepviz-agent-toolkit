@@ -1,0 +1,39 @@
+{
+  "session": "ses_de567801cffeGZFlt50oYv0Dnt",
+  "authority": "R22-managed-incremental-delivery common + role20; MAIN AGENTS latest R22 top line",
+  "discovery_observed_utc": "2026-11-27T15:00:43.749512+00:00",
+  "complete_open_issue_count": 30,
+  "open_prs_excluded": 1,
+  "pages_complete": true,
+  "required_issue_reads": [10, 21, 23],
+  "specific_existing_bug_matches": [],
+  "reviewed_nonduplicate_comments": [
+    {
+      "issue": 27,
+      "comment_id": 7221698876,
+      "body_utf8_sha256": "d787ebdf2712dea5af8b153d3b9c7fcdc4eee56b1018cf5a3c57a805326836c2",
+      "reason": "Read full R22 managed incremental delivery triage. Explicitly says QA20 exclusively files/reuses the demonstrated Plotly bug, and 'This manager comment creates neither'; contains no bug repro/DOM/output. Broad planning pointer, not specific same-bug ticket."
+    },
+    {
+      "issue": 20,
+      "comment_id": 7221697848,
+      "body_utf8_sha256": "d9c03d729bd6b625d7e3fca5609461e14b93cc2abea3de269f4d22e784654955",
+      "reason": "Read full R22 CI triage. Seven unrelated CI disposition groups; footer explicitly leaves QA20 Plotly literal-text filing exclusive and says 'this comment creates neither'. Not the F20 bug report."
+    }
+  ],
+  "decision": "create-one",
+  "reason": "All open titles/bodies inspected. #10 is broad RENDER-PLOTLY, #21 broad SECURITY, #23 broad VISUAL-QA; none describes the actual F20 category/legend/hover anchors or title quote repro. Existing explicit Bug #30 concerns independent numeric-schema coercion. Two subsequently posted #27/#20 triage comments were conservatively flagged, read in full and classified as nonduplicate planning pointers; exact content hashes allow only those reviewed versions, not new or edited matching comments.",
+  "related_role02": "R03-02 security-review section3 category/series live anchors is the same F20 issue; no separate duplicate issue",
+  "title": "Bug: Plotly data labels, legend and hover become active links instead of literal text",
+  "bug_key": "F20-PLOTLY-LITERAL-TEXT",
+  "source_fix_owner": "R04 Python engines.py::_plotly, not role08::_antv",
+  "tested_source": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "r10_probe_commit": "c1bf91c5439d585e2ff157752f380cfa4fe85c6d",
+  "r13_probe_commit": "f9087d0518e74378e810b9efe6d6630a12044399",
+  "r10_recorded_result": "exit1, 2 failed / 4 passed / 0 skipped, 0 console/page errors",
+  "r13_recorded_result": "exit1, 3 failed / 0 passed / 0 skipped, 0 console/page errors",
+  "new_browser_or_build_or_scale_runs": 0,
+  "post_mutations_so_far": 0,
+  "maximum_authorized_post_mutations": 1,
+  "stop_policy": "403/429 or transport ambiguity: STOP without retry or alternate identity. Before any POST, unexpected potentially specific matches require read/classification; never automatically write. No POST was attempted at the prior conservative classification stop; exact two broad triage comments above are now individually reviewed, not an API retry or duplicate-report bypass."
+}

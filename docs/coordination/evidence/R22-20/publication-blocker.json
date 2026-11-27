@@ -1,0 +1,58 @@
+{
+  "kind": "new-specific-duplicate-stop",
+  "http_status": null,
+  "mutation_attempted_this_run": false,
+  "calls": [
+    {
+      "method": "GET",
+      "path": "/user",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues?state=open&per_page=100&page=1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/10",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/21",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/23",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/27/comments?per_page=100&page=1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/22/comments?per_page=100&page=1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/21/comments?per_page=100&page=1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/20/comments?per_page=100&page=1",
+      "status": 200
+    }
+  ],
+  "disposition": "STOP, no retries/alternate identity/interface; handoff R04"
+}

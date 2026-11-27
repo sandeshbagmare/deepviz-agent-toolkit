@@ -1,0 +1,51 @@
+# R22-20 — QA Plotly literal-text bug, narrowly authorized
+
+## Before work: authority / source / scope
+
+- Actual owner `ses_de567801cffeGZFlt50oYv0Dnt`, SAMEIDnativeconfirmed2026-11-27. FULLMAINR22common+20/currentAGENTStopline/canonical/RESUME/STATE/ownnote/actualR03/R10/R13reports+probes read. R13actualfilefoundbyglob. Rootreportsfreshcapacityadmission/reservation; no worker spawning/headcount claim.
+- LatestR22directsteeringauthorizes **ONEdeduplicatedrealF20PlotlybugCREATEorcommentonexistingSPECIFICsamebug**. Narrowexceptionoverridesoldertaskblanketissuewritebans, NOTsource/default/PR/closureauthority. No higherpriorityagentAPIbanidentified. Defaultmainunchanged; R04solemanager/fixowner`_plotly`,08`_antv`notours. Related02sameanchorobservationmustbededuped.
+- ExistingOWNbranch `agents/r10-20-plotly-literal-labels`, HEAD **ffea4d74ece9a02864eae404eb0596d660172ba9**, clean/tracking. InitialGitstatus/log/remotes/stat/source+existingoracle-diffreadexit0, authorizedHTTPSoriginverified. Source/probesremainunchanged. Production testedsourceexact **3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab** for R10/R13 (R03baseline0c5); **notcurrentfixed/finalhead**. R16SUM18passdoesNOTfixPlotly.
+- AllowedwritesONLYthisNEWreport,`evidence/R22-20/`,ownactual-IDnote/OWNbranchpublication; exactlyoneauthorizedGitHubPOSTissueorcommentaftersafeexpectedidentity/repo+completeopenissueenumeration/dedupreview. No production/oracle/source/deps/PR/closure/sharedcandidate/default/othersnotes/spawningwrites; no completedtest/browser/build/SUM/count/10Mreplay.
+
+## Acceptance / current action
+
+1. Freshsafein-memoryGCMexpectedGET/user/repo; enumerateALLopenissuesandread#10/#21/#23plusactualspecificsamebugmatches. Broadseedfeaturesarenotautomaticallyspecificbugreports; recordactualdedupdecisionbeforewrite.
+2. Prepareprecisetraceableone-causebugfromalreadyexecutedstrictREDonimmutable3aa: R10**2failed/4passed/0skip**, R13**3failed/0skip**. Categoricalchart/dashboard+isolatedlegend/hovernativeanchors; titlequoteentitycorrectnessisnotXSS. Source/probeSHAs/reprocommands/full literalexpectedactualDOM/PNGpermalinks/0console/no click/noJSexploitclaim.
+3. OnePOST201+GETnumberURL/bodyreadbackorhonest403/429STOPblocker(no retry/alternateidentity). Token/helperoutput/header/signedURLneverpersist. No blanketAPIwritegrant.
+4. Saveexactcommands/results/limits/bugURL/owner+nextaction and meaningfulOWNcommit/nonforcepush/exactremoteSHA; nofinalsignoff/issueclosure/900padding.
+
+- Currentaction: preworkcheckpointonly, noAPIdiscovery/writeyet.
+- Next executable action: implementNEWownsafeAPI-discoveryhelperinsideallowedR22evidence, runread-onlyexpectedidentity/repo/allopenissues/#10/#21/#23, inspectactualbodiesandsaveonededupdecisionBEFOREauthorizedPOST.
+
+## Fresh live discovery and dedup decision (before mutation)
+
+- `python docs/coordination/evidence/R22-20/github_discovery.py` **exit0**, actual2026-11-27T15:00:43UTC: expectedGET/user200`sandeshbagmare`; exactpublicrepositoryGET200/default`main`/issuesenabled/notarchived. Completeopenissuepaginationonepage31items(**30issues,1PRexcluded**); alltitles/bodiescapturedaswhitelistedpublicfields andread. ExplicitrequiredGET#10/#21/#23all200/comments0. SixGETs/no mutations; `discovery.json`hasexactpaths/statuses/bodies/paginationreceipt, noheaders/token/helperoutput.
+- **Decision saved BEFORE POST: CREATE ONE new F20 Plotly literal-text bug.** #10isgeneralRENDER-PLOTLYstory, #21generalSECURITYstory, #23generalVISUAL-QAstory; nonecontainsactualanchor/legend/hover/quote repro or F20finding. No specificsamebugamongall30openissues; only existingexplicitBug#30isindependentschema-coercion. Broadstorylinksremainrelated/dependencies, not used as automatic dedupmatches.
+- Relatedrole02actualR03securityreportsection3confirmssamePlotlycategory/seriesliveanchors, not a secondbug. Oneguessed02reportreadreturnednotfound; actualglob/grepcorrectedlookup, no test/productfailure. R13actualownfilenamealreadyglobbed/read. Novellegend/hoverextendF20-1, inerttitlequoteentitymismatchisassociatedliteral-textcorrectnessnotXSS. Do notsplitonecausebycases/screenshots.
+- Currentaction: draftoneissuewithimmutable3aasource/c1bfR10/f908R13permalinks/reprocommand/actualDOM+PNGs/strictRED+literalacceptance; auditbytes/linksandone-shotPOST+GET. Mutationsstill0; no browser/build/SUM/count/scale replays or sourceedits.
+- Ownhelperprewritechecks: Ruffexit0, scopedmypyexit1twoempty-listannotationrequirementsin`github_discovery.py`line84(issues/prs), notproductfailure. Explicit`list[dict]`annotationsonlyadded; no APIwrite or source/oraclechange. Auditnotyetexecutedbecausecommandstoppedontypeerror; nextrunscopedlint/types/audit, thenexactonePOSTonlyifevidencevalid.
+- FinalprePOSTRuffexit0/mypyexit0(3ownedhelperfiles); `audit_evidence.py`exit0 verifies13immutableGitpermalinks/5actualPNGhashmatches/R10XML2fail4pass/R13XML3fail/0errors0skips,9recordedbrowsercases0console/requesterrors, source+alloriginalprobesunchanged. Readbackauditnotnewtest/signoff. Finalbodycontainspreciseliteralexpected/actualDOM/5imagepermalinks/source+probeSHA/repro/owner/acceptance/noclick/noJSexploitclaim; bodyUTF8hashin`evidence-audit.json`mustmatchbeforePOST. Nextcommandone-shotcreationhelper, freshidentity+deduprefreshwithstopifnewmatch; durableattemptmarkerpersistedBEFOREsolePOST; noPOSTattemptyet.
+- One-shotcreationhelper attempted **exit1 STOP before mutation**: fresh GET/user/repo/open-issue pagination/required #10/#21/#23/comments all200; no POST, no retry/alternate identity. Conservative detector found possible specific Plotly strings in comments on #27 (`#issuecomment-7221698876`) and #20 (`#issuecomment-7221697848`), wrote `new-specific-match-blocker.json` + `publication-blocker.json`. This is not yet classified as a same-bug dedup: detector may overmatch broad process/CI comments. Next action is read exact two comment bodies via safe read-only API; only append to an actually matching specific issue, or stop/handoff R04 if broad/unrelated. No browser/build/source/oracle replay.
+
+## Conservative dedup stop resolved by full comment read (no POST retry)
+
+- `inspect_match_comments.py`exit0: exacttwoGETcomments200, `match-comment-readback.json`whitelistpublicbodies/URLs. Fullbodyreadfoundbotharegeneraltriage/planningpointers, notspecificF20reports: #27explicitly“QA20 exclusively files/reuses”and“This manager comment creates neither”; #20footerexplicitlyleavesQA20filingexclusiveand“this comment creates neither”. TheycontainnoF20literalfixture/anchorDOM/PNGbugrepro. This confirmsR22existingexclusivefilingauthority, **notnewmanagerapproval**. Related#10/#21/#23remainbroadparents.
+- Dispositionunderalready-authorizeddedupreview: keepCREATEONEdecision. Saveexactreviewedcommenthashesd787ebdf.../d9c03d72...in`dedup-decision.json`; creationhelperallowsONLYthoseexactreadversions, anynew/editedpotentiallymatchingcommentstillstops. No weakenedproductoracles/noAPIidentitychange/HTTP403/429ortransportfailure; **zeroPOSTs attempted and no post-attemptmarkerexists**. ContinuingafterclassificationisfirstsolePOST, notretryinganHTTPmutation.
+- OneconsoleprintfailedwithWindowsCP1252UnicodeEncodeErrorwhileprintingpubliccommenttext(exit1); ASCII-escapedline-by-lineprintthenexit0readbothFULLbodies. No secrets/producttestfailure. Nextscopedlint/type/audit, freshsafeGETdedupthenfirstauthorizedPOSTwithpermanentattemptmarker/201+GETorstop.
+- NextscopedRuffexit1singleOWNnewcommentreaderimportorderI001; commandstoppedbeforemypy/audit/API. Fixedimportsortonly; mutationsstill0/noPOSTmarker. No producttestresultchanged. Nextsamefinalscopedchecks/firstPOST.
+
+## Actual one-bug creation and readback
+
+**Created https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/36** — `Bug: Plotly data labels, legend and hover become active links instead of literal text`.
+
+- FinalOWNhelperRuffexit0/mypyexit0(4files), localimmutableevidenceauditexit0(13Gitpermalinks/5PNGhashes/recordedstrictRED/no productreplay). Creationcommandexit0 at**2026-11-27T15:29:31UTC**.
+- ImmediatelyfreshsafeGET/user200expected`sandeshbagmare`/repo200exactpublic/defaultmain,completeopenissues+#10/#21/#23+allactualcommentpagesGET200. OnlyexactreviewedtwoCI/processpointerbodiesexcludedbySHA; anyunreviewedpotentialmatchwouldstop.
+- **Exactly ONE POST** `/repos/sandeshbagmare/deepviz-agent-toolkit/issues` → **HTTP201**, returnedactual#36/URL/title/openstate. Then **GET `/issues/36`HTTP200**, verifiednumberURL/body/title/stateexact; bodyUTF8SHA256 **e92b28d940ee7fb2e6cf936e0a977bfa95c40aa1d115afa8570a4312a0a4c971**. Onecreate/zerocomments/zeroclosures/zeroPR/sourcewrites; no alternateidentity/authchange/403/429/retry. Thepriorconservativededupstophad**zeroPOSTattempts**, notafailedmutationretried.
+- `issue-receipt.json`whitelistsactualHTTPpaths/statuses/number/URL/bodyhash; `post-response.json`onlypublicissuefields; `post-attempt.json`persistedBEFOREsolePOSTandpermanentlyblocksreexecution. Nohelper/token/header/signedURL/rawcredentiallogsprintedorsaved; GCMcapturedinmemoryonly.
+- Issuecontainsimmutabletestedsource3aa/probecommitsc1bf/f908/fullsource/blobproof/oldstrictrealRED/0console/5actualPNG+DOMpermalinks/preciseliteralexpectedactual/reprocommands/no-click/no-JSexploitclaim/acceptanceacrosschart+dashboard+nativehover+title+numeric/time/geo preservation. Independentrole02samecausefoldedintothisonebug; broader#10/#21/#23linked, notclosed. ProposedP2notanexecutionclaim.
+
+## Scope / handoff / pending publication
+
+- **No production/source/oracle edits or test/browser/build/SUM/count/10M replays.** R10sixcasesandR13threecasesremainunchangedactualbaselineRED; R16SUM18passremainsseparateandnottextfix. No newtestcounts/fix/finalcandidate/greenCI/900claim.
+- SourcefixownerR04`_plotly`; eligible08`_antv`scopeunrelated. NextengineeringactionR04implementsminimalconsistentliteraldisplayboundaryandroutesunchanged9caseindependentretestagainstcleanfrozenfixedSHA/newoutputs, exactvalues/coordinates/0anchors/handlers/0console; no issueclosureuntilindependentacceptance/managergates.
+- Currentworkeraction: durableOWNR22report/note/evidencecopy/scopedallowlist/whitespace/credentialandbodyhashreadbackaudit, meaningfulOWNcommit/nonforcepush/exactremoteSHA. No APIwritepermissionleftinthisassignment (onebugused); neverreruncreationhelper.
