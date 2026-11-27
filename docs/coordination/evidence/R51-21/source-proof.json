@@ -1,0 +1,63 @@
+{
+  "parent": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "target": "96b819aee5b01ba88b5a609b587331a528aaa070",
+  "diff_name_status": [
+    "M\tpython/deepviz/src/deepviz/normalize.py",
+    "A\tpython/deepviz/tests/test_r45_numeric_state_accounting.py"
+  ],
+  "functional_file_sha256": {
+    "python/deepviz/src/deepviz/normalize.py": "b64814a6406857d9c9a1078fb759725a65a4a91d0db033c765d015df018dc6fd",
+    "python/deepviz/tests/test_r45_numeric_state_accounting.py": "34604385d55a252a722626547f956e403ef7cb4bb7e136e68b14af64379cc633"
+  },
+  "functional_file_bytes": {
+    "python/deepviz/src/deepviz/normalize.py": 36076,
+    "python/deepviz/tests/test_r45_numeric_state_accounting.py": 5043
+  },
+  "python_ast": {
+    "unchanged_functions_methods": [
+      "_Reducer.__init__",
+      "_Reducer.add",
+      "_Reducer.finish",
+      "_arrow_module",
+      "_arrow_rows",
+      "_binary_rows",
+      "_cell",
+      "_check_retained_bytes",
+      "_connection",
+      "_delimited",
+      "_expand",
+      "_flatten",
+      "_graphql_errors",
+      "_iterable",
+      "_json",
+      "_jsonl",
+      "_path_rows",
+      "_plan",
+      "_record_bytes",
+      "_records",
+      "_scalar",
+      "_select_path",
+      "_source",
+      "_string_bytes",
+      "_sum_units",
+      "_text",
+      "_unique_json_object",
+      "_utf8_size",
+      "_validate_arrow_fields",
+      "_without_bom",
+      "normalize"
+    ],
+    "changed_units": [
+      {
+        "name": "_Reducer._store",
+        "reason": "only helper call substitution"
+      }
+    ],
+    "added_top_level": [
+      "_state_number_bytes"
+    ],
+    "new_test_functions": 5,
+    "parse_success": true
+  },
+  "scope_conclusion": "reviewed production delta is helper+_store call site only; new permanent test file is separate second functional path"
+}

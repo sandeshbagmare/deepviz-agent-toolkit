@@ -1,0 +1,196 @@
+{
+  "target": "96b819aee5b01ba88b5a609b587331a528aaa070",
+  "parent": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "module_origins": {
+    "deepviz": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R51-21\\source-96b819\\python\\deepviz\\src\\deepviz\\__init__.py",
+    "normalize": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R51-21\\source-96b819\\python\\deepviz\\src\\deepviz\\normalize.py"
+  },
+  "source_identity": [
+    {
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "blob": "7b3b2422fbad0f7809796a3bf891a82c3c4e661f",
+      "sha256": "b64814a6406857d9c9a1078fb759725a65a4a91d0db033c765d015df018dc6fd",
+      "bytes": 36076
+    },
+    {
+      "path": "python/deepviz/tests/test_r45_numeric_state_accounting.py",
+      "blob": "91a091218dd2cb557a91e5e65f57e51793c9e9fc",
+      "sha256": "34604385d55a252a722626547f956e403ef7cb4bb7e136e68b14af64379cc633",
+      "bytes": 5043
+    }
+  ],
+  "cases": [
+    {
+      "name": "wide_integer_mean_cancellation",
+      "status": "PASS",
+      "detail": {
+        "records": [
+          {
+            "g": "one",
+            "v": 0.0
+          }
+        ],
+        "input_count": 2
+      }
+    },
+    {
+      "name": "wide_integer_sum_float_cancellation",
+      "status": "PASS",
+      "detail": {
+        "records": [
+          {
+            "g": "one",
+            "v": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "finite_large_float_sum",
+      "status": "PASS",
+      "detail": {
+        "records": [
+          {
+            "g": "one",
+            "v": 1e+308
+          }
+        ]
+      }
+    },
+    {
+      "name": "one_pass_input",
+      "status": "PASS",
+      "detail": {
+        "calls": 1,
+        "records": [
+          {
+            "g": "one",
+            "v": 3.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "bool_count_path",
+      "status": "PASS",
+      "detail": {
+        "records": [
+          {
+            "g": "one",
+            "v": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "ordinary_float_state",
+      "status": "PASS",
+      "detail": {
+        "records": [
+          {
+            "g": "one",
+            "v": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "unsupported_private_input_rejection",
+      "status": "PASS",
+      "detail": {
+        "error": "Unsupported record value: object"
+      }
+    },
+    {
+      "name": "independent_small_decimal_upper_bound",
+      "status": "PASS",
+      "detail": {
+        "checks": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            7,
+            2,
+            1
+          ],
+          [
+            8,
+            2,
+            1
+          ],
+          [
+            9,
+            2,
+            1
+          ],
+          [
+            10,
+            2,
+            2
+          ],
+          [
+            99,
+            3,
+            2
+          ],
+          [
+            100,
+            3,
+            3
+          ],
+          [
+            "positive",
+            112,
+            101
+          ],
+          [
+            -1,
+            2,
+            2
+          ],
+          [
+            -10,
+            3,
+            3
+          ],
+          [
+            "negative",
+            113,
+            102
+          ]
+        ]
+      }
+    },
+    {
+      "name": "wide_private_charge_release",
+      "status": "PASS",
+      "detail": {
+        "base": 151,
+        "charged": 4707,
+        "released": 151
+      }
+    }
+  ],
+  "counts": {
+    "cases": 9,
+    "passed": 9,
+    "failed": 0,
+    "skipped": 0
+  },
+  "digit_limit_before_after": {
+    "before": 4300,
+    "after": 4300
+  },
+  "notes": [
+    "Independent bounded probe; no author test imported or executed.",
+    "No production source or original oracle changed."
+  ]
+}
