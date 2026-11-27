@@ -1,0 +1,47 @@
+{
+  "date_utc": "2026-11-27",
+  "source": "One functions.glob reports/R25-*.md followed by functions.read of the three present final-lane reports; no repeated status check or polling",
+  "immutable_target_head": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+  "scope_limit": "Observed saved report content only. Workers may make later progress; a planned test count or old-head readiness is not final result. No product tests or independent approvals supplied by PM.",
+  "required_final_reports": [
+    {
+      "role": "reviewer11",
+      "actual_session": "ses_de567811cffdTBwcb8pF5nDi9v",
+      "observation": "No reviewer11 R25 final report in the single scoped glob result",
+      "final_report_evidenced": false,
+      "historical_not_final": "R22 readiness 30+13; 18d7121 is not all-eight-path actual998 review"
+    },
+    {
+      "role": "reviewer01",
+      "actual_session": "ses_de5678335ffeI7xJrod5l25Q0Q",
+      "report": "docs/coordination/reports/R25-01-pr33-final-review.md",
+      "lines_read": 10,
+      "observation": "PRE-WORK. Actual998 eight-path inspection and supplied40+own7 planned; no executed998 results or final judgement in read report",
+      "final_report_evidenced": false
+    },
+    {
+      "role": "tester17",
+      "actual_session": "ses_de5678086ffeNido4phnXCJ8J4",
+      "report": "docs/coordination/reports/R25-17-pr33-final-test.md",
+      "lines_read": 10,
+      "observation": "PRE-WORK. Explicit No actual998 tests run yet. Supplied40+unchanged79 planned",
+      "historical_not_final": "e44 79PASS explicitly readiness only",
+      "final_report_evidenced": false
+    },
+    {
+      "role": "tester15",
+      "actual_session": "ses_de56780c8ffe7LgwvwdfR5qFQD",
+      "report": "docs/coordination/reports/R25-15-pr33-final-wire-test.md",
+      "lines_read": 14,
+      "observation": "PRE-WORK. Actual998 source identity/planned supplied40+unchanged74; execution not started and no actual998 pass claim",
+      "historical_not_final": "R22 wire74/2b62fbb is preflight only",
+      "final_report_evidenced": false
+    }
+  ],
+  "final_reports_evidenced_at_observation": 0,
+  "required_final_reports_total": 4,
+  "decision": "HOLD merge pending genuine four final exact-head reports and material-finding disposition; green focused CI alone insufficient",
+  "human_GitHub_approvals_claimed": 0,
+  "additional_API_writes": 0,
+  "product_tests_run_by_PM": 0
+}

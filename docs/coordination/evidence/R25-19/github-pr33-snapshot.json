@@ -1,0 +1,350 @@
+{
+  "started_utc": "2026-11-27T15:39:06.673226+00:00",
+  "owner": "ses_de5678052ffdJwVtlB6SX6LZrT",
+  "scope": "OneboundedGET-onlyactualPR33/head/files/checks/reviews/issue30/defaultsnapshot. No census/logs/testreplay/APIwrites/polling.",
+  "query_ledger": [
+    {
+      "started_utc": "2026-11-27T15:39:07.152340+00:00",
+      "method": "GET",
+      "api_path": "/user",
+      "http_status": 200,
+      "ended_utc": "2026-11-27T15:39:07.573167+00:00",
+      "response_bytes": 1464,
+      "response_sha256": "88b4c45773e9eb99e50d7fe236750747ebbd6e1d700f337eaed617798778c6f1"
+    },
+    {
+      "started_utc": "2026-11-27T15:39:07.574672+00:00",
+      "method": "GET",
+      "api_path": "/repos/sandeshbagmare/deepviz-agent-toolkit",
+      "http_status": 200,
+      "ended_utc": "2026-11-27T15:39:08.197251+00:00",
+      "response_bytes": 6802,
+      "response_sha256": "8bd10ee05114a73490ac04807f1e64a5e481a1ef0ada22f3aab67496b44afdb7"
+    },
+    {
+      "started_utc": "2026-11-27T15:39:08.199252+00:00",
+      "method": "GET",
+      "api_path": "/repos/sandeshbagmare/deepviz-agent-toolkit/pulls/33",
+      "http_status": 200,
+      "ended_utc": "2026-11-27T15:39:08.972220+00:00",
+      "response_bytes": 21033,
+      "response_sha256": "28ea5b4b4f01c1ef4405bedd7c23fa4828f36141f2c06a756df297a2ac7b628a"
+    },
+    {
+      "started_utc": "2026-11-27T15:39:08.976918+00:00",
+      "method": "GET",
+      "api_path": "/repos/sandeshbagmare/deepviz-agent-toolkit/pulls/33/files?per_page=100&page=1",
+      "http_status": 200,
+      "ended_utc": "2026-11-27T15:39:09.792745+00:00",
+      "response_bytes": 31942,
+      "response_sha256": "e1180371d743672d056d968518e9b8e2af2dc27ca591284f904f7c97c86a8c76"
+    },
+    {
+      "started_utc": "2026-11-27T15:39:09.806754+00:00",
+      "method": "GET",
+      "api_path": "/repos/sandeshbagmare/deepviz-agent-toolkit/commits/99841ffb80e0f2ea90c753c1bf0ceff718e0e180/check-runs?per_page=100&filter=all&page=1",
+      "http_status": 200,
+      "ended_utc": "2026-11-27T15:39:10.472395+00:00",
+      "response_bytes": 22148,
+      "response_sha256": "8b0385d4b017a60b8aaaa6daa0aa991d0979154aefa79146166b99db2ddd7553"
+    },
+    {
+      "started_utc": "2026-11-27T15:39:10.476913+00:00",
+      "method": "GET",
+      "api_path": "/repos/sandeshbagmare/deepviz-agent-toolkit/commits/99841ffb80e0f2ea90c753c1bf0ceff718e0e180/status",
+      "http_status": 200,
+      "ended_utc": "2026-11-27T15:39:11.040448+00:00",
+      "response_bytes": 5313,
+      "response_sha256": "71941b16807a96cc00a11755254ff619e464af409ad2be6b31870b56bb7b2241"
+    },
+    {
+      "started_utc": "2026-11-27T15:39:11.043445+00:00",
+      "method": "GET",
+      "api_path": "/repos/sandeshbagmare/deepviz-agent-toolkit/pulls/33/reviews?per_page=100&page=1",
+      "http_status": 200,
+      "ended_utc": "2026-11-27T15:39:11.628231+00:00",
+      "response_bytes": 2,
+      "response_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "started_utc": "2026-11-27T15:39:11.632240+00:00",
+      "method": "GET",
+      "api_path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/30",
+      "http_status": 200,
+      "ended_utc": "2026-11-27T15:39:12.167457+00:00",
+      "response_bytes": 6103,
+      "response_sha256": "6cd907117d0ea3022ec24572e6b5df5b1a1a2c8f7b8a4ec5115e638400976900"
+    },
+    {
+      "started_utc": "2026-11-27T15:39:12.176979+00:00",
+      "method": "GET",
+      "api_path": "/repos/sandeshbagmare/deepviz-agent-toolkit/git/ref/heads/main",
+      "http_status": 200,
+      "ended_utc": "2026-11-27T15:39:12.712088+00:00",
+      "response_bytes": 370,
+      "response_sha256": "21265b94131ef21ce464f4be0410b3b62d80464f3ea2b851a6c51290c203f96c"
+    }
+  ],
+  "API_writes": 0,
+  "new_issue_census_requests": 0,
+  "CI_log_downloads": 0,
+  "product_tests": 0,
+  "authenticated_login": "sandeshbagmare",
+  "repository": {
+    "id": 1473492568,
+    "full_name": "sandeshbagmare/deepviz-agent-toolkit",
+    "default_branch": "main",
+    "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit",
+    "private": false
+  },
+  "pull_request": {
+    "number": 33,
+    "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/pull/33",
+    "state": "open",
+    "draft": false,
+    "merged": false,
+    "merged_at": null,
+    "merge_commit_sha": "2110446935aa51642687f1b5915a4b3bf5a49b7d",
+    "mergeable": true,
+    "mergeable_state": "clean",
+    "created_at": "2026-11-27T15:25:49Z",
+    "updated_at": "2026-11-27T15:25:49Z",
+    "commits": 1,
+    "changed_files": 8,
+    "additions": 727,
+    "deletions": 0,
+    "review_comments": 0,
+    "comments": 0,
+    "head": {
+      "sha": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "ref": "fix/r22-strict-numeric-contract",
+      "label": "sandeshbagmare:fix/r22-strict-numeric-contract"
+    },
+    "base": {
+      "sha": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+      "ref": "main",
+      "label": "sandeshbagmare:main"
+    },
+    "author_login": "sandeshbagmare",
+    "title": "fix: reject numeric string and boolean coercion in ChartSpec (#30)",
+    "body_sanitized": "## Focused fix for #30 — first independently usable default-branch slice\n\n**Proposed head:** `99841ffb80e0f2ea90c753c1bf0ceff718e0e180`; **base:** actual `main` `0ae2cf26426822135fc10d337fcacf580b7ed833`. Related #30; no automatic closure until reviewed acceptance, merge and default-SHA verification. Broad draft #31 is separate and remains failing/unmerged.\n\n### Narrow behavior / dependency boundary\n\nThe only runtime change is11 lines in `models.py`: reject string and boolean values for version/max_points/width/height/columns before Pydantic coercion. Integral JSON numbers such as900.0 remain valid, with existing defaults/bounds/child/dashboard behavior. The source blob is exact historicale44, transplanted onto the seven-file foundation rather than blindly cherry-picking an absent test hunk. Complete original30-test prerequisite plus10schema/import/JSON controls, generated contract, and clearly named **contract-only** Python3.11/3.12/3.13 CI are included. No renderer, normalizer, SDK, dependencies/pyproject or later toolkit code is pulled in.\n\n### Executed tests and actual outputs\n\n- Original source/oracle: **6 failed /24 passed /0 skipped**.\n- Expanded controls before validator: **12 failed /28 passed /0 skipped**.\n- Full focused checkout: **40 passed /0 failed /0 skipped**,0.35s; full-branch Ruff exit0; mypy exit0/one model source.\n- Regenerated schema is unchanged from the unfixed declaration: SHA256`ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d`.\n- [Actual accepted/rejected public model JSON output](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/99841ffb80e0f2ea90c753c1bf0ceff718e0e180/docs/verification/r22-contract/validation-output.json): four real accepted/serialized/Schema-valid fixtures and six real rejections/errors, including children.\n- [Reproduction, source/test/workflow hashes, all RED names and limits](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/99841ffb80e0f2ea90c753c1bf0ceff718e0e180/docs/verification/r22-contract/README.md). Model-only change: chart rendering is not applicable and no screenshot/full-toolkit integration claim is invented. Existing main does not yet have CLI/rendering implementations; this PR does not claim a complete runnable toolkit.\n\n### Required pre-merge gates — pending, not fabricated signoff\n\n- [ ] Reviewer11: independent readiness/source review of this exact head.\n- [ ] Reviewer01: second independent source review of this exact head.\n- [ ] Tester17: independent literal numeric/schema controls on this exact head.\n- [ ] Tester15: independent JSON/wire/model-boundary controls on this exact head.\n- [ ] Resolve any material findings; observe all three real focused CI jobs green.\n- [ ] Verify merge/default ancestry before manually closing #30.\n\nRoot dispatches the four actual existing agent lanes; agent reports are not human GitHub approvals. Author results are not counted as independent reviews. The commit label does not approve merging before these gates. No force-push/default rename/all-branch merge or900issue padding. Subsequent fully tested toolkit slices continue independently.\n",
+    "body_sha256": "02b9bb9ec66cc30492ef0999c4b939e8976648d1e9f2e34f61b55a0b0f06db90"
+  },
+  "files_pagination_complete": true,
+  "files": [
+    {
+      "filename": ".github/workflows/chart-contract.yml",
+      "status": "added",
+      "additions": 34,
+      "deletions": 0,
+      "changes": 34,
+      "sha": "337f3c587eeacd4fd10003fc5776a7329909f0b5"
+    },
+    {
+      "filename": "docs/verification/r22-contract/README.md",
+      "status": "added",
+      "additions": 28,
+      "deletions": 0,
+      "changes": 28,
+      "sha": "7487b19005294423411b726e62451eda642fa192"
+    },
+    {
+      "filename": "docs/verification/r22-contract/red-green-summary.json",
+      "status": "added",
+      "additions": 114,
+      "deletions": 0,
+      "changes": 114,
+      "sha": "3ebb04f7a69c2468dfd7d5d9a0c4b68d5ce4f176"
+    },
+    {
+      "filename": "docs/verification/r22-contract/validation-output.json",
+      "status": "added",
+      "additions": 225,
+      "deletions": 0,
+      "changes": 225,
+      "sha": "81dab1a88ce0b43b02eba05db8b65c91b9626f62"
+    },
+    {
+      "filename": "python/deepviz/src/deepviz/models.py",
+      "status": "modified",
+      "additions": 11,
+      "deletions": 0,
+      "changes": 11,
+      "sha": "e6e681837e8e701918f388e86cb4331767041572"
+    },
+    {
+      "filename": "schemas/chart-spec.schema.json",
+      "status": "added",
+      "additions": 190,
+      "deletions": 0,
+      "changes": 190,
+      "sha": "00a524503774822832c686c7be8e266e9e5d39bc"
+    },
+    {
+      "filename": "tests/test_models.py",
+      "status": "added",
+      "additions": 66,
+      "deletions": 0,
+      "changes": 66,
+      "sha": "77441bcb9a10f80f7c24ca42e3bfc8c4ada45a30"
+    },
+    {
+      "filename": "tests/test_numeric_schema.py",
+      "status": "added",
+      "additions": 59,
+      "deletions": 0,
+      "changes": 59,
+      "sha": "1485a1685d1cc87b9b902e3df7a67472681039bf"
+    }
+  ],
+  "checks_pagination_complete": true,
+  "checks": {
+    "total_count": 6,
+    "returned": 6,
+    "conclusion_counts": {
+      "success": 6
+    },
+    "runs": [
+      {
+        "id": 140593455356,
+        "name": "Numeric contract / Python 3.13",
+        "head_sha": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-27T15:25:55Z",
+        "completed_at": "2026-11-27T15:26:12Z",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024845339/job/140593455356",
+        "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024845339/job/140593455356",
+        "check_suite": {
+          "id": 124513903498
+        },
+        "app": {
+          "id": 15368,
+          "slug": "github-actions"
+        }
+      },
+      {
+        "id": 140593455231,
+        "name": "Numeric contract / Python 3.11",
+        "head_sha": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-27T15:25:56Z",
+        "completed_at": "2026-11-27T15:26:10Z",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024845339/job/140593455231",
+        "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024845339/job/140593455231",
+        "check_suite": {
+          "id": 124513903498
+        },
+        "app": {
+          "id": 15368,
+          "slug": "github-actions"
+        }
+      },
+      {
+        "id": 140593454841,
+        "name": "Numeric contract / Python 3.12",
+        "head_sha": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-27T15:25:55Z",
+        "completed_at": "2026-11-27T15:26:09Z",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024845339/job/140593454841",
+        "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024845339/job/140593454841",
+        "check_suite": {
+          "id": 124513903498
+        },
+        "app": {
+          "id": 15368,
+          "slug": "github-actions"
+        }
+      },
+      {
+        "id": 140593420462,
+        "name": "Numeric contract / Python 3.13",
+        "head_sha": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-27T15:25:52Z",
+        "completed_at": "2026-11-27T15:26:12Z",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024835646/job/140593420462",
+        "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024835646/job/140593420462",
+        "check_suite": {
+          "id": 124513877316
+        },
+        "app": {
+          "id": 15368,
+          "slug": "github-actions"
+        }
+      },
+      {
+        "id": 140593420306,
+        "name": "Numeric contract / Python 3.12",
+        "head_sha": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-27T15:25:52Z",
+        "completed_at": "2026-11-27T15:26:07Z",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024835646/job/140593420306",
+        "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024835646/job/140593420306",
+        "check_suite": {
+          "id": 124513877316
+        },
+        "app": {
+          "id": 15368,
+          "slug": "github-actions"
+        }
+      },
+      {
+        "id": 140593420061,
+        "name": "Numeric contract / Python 3.11",
+        "head_sha": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-27T15:25:52Z",
+        "completed_at": "2026-11-27T15:26:05Z",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024835646/job/140593420061",
+        "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024835646/job/140593420061",
+        "check_suite": {
+          "id": 124513877316
+        },
+        "app": {
+          "id": 15368,
+          "slug": "github-actions"
+        }
+      }
+    ]
+  },
+  "combined_status": {
+    "state": "pending",
+    "total_count": 0,
+    "sha": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+    "statuses": []
+  },
+  "reviews_pagination_complete": true,
+  "github_reviews": [],
+  "issue30": {
+    "number": 30,
+    "title": "Bug: Python chart schema coerces strings and booleans unlike JSON Schema",
+    "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/30",
+    "state": "open",
+    "state_reason": null,
+    "closed_at": null,
+    "comments": 0,
+    "updated_at": "2026-11-26T18:12:31Z",
+    "body_sanitized": "## Reproduction\n\nThe generated JSON Schema declares numeric fields, but the Python runtime accepted numeric strings and JSON booleans through Pydantic coercion:\n\n```python\nChartSpec.model_validate({\"width\": \"900\"})\nChartSpec.model_validate({\"version\": True})\nChartSpec.model_validate({\"columns\": True})\n```\n\nThis diverges from JSON Schema and a schema-validating TypeScript consumer.\n\n## Acceptance criteria\n\n- Reject string values for numeric schema fields and booleans for version/columns.\n- Continue to accept mathematically integral JSON numeric values, such as `900.0`, consistent with JSON Schema integer semantics.\n- Preserve valid defaults and all existing bounds.\n- Add regression tests and run lint/type checks.\n\n## Observed test evidence\n\nBefore fix: `python -m pytest tests/test_models.py -q`: **6 failed, 24 passed** (all six failures were unexpected acceptance).\n\nAfter adding a before-validator: full current checkout suite `python -m pytest -q`: **30 passed**; Ruff and mypy passed for the changed implementation/tests. This evidence concerns the schema-only branch, not the unfinished integrated product.\n\nLeave open until the reviewed release PR merges the fix.\n",
+    "body_sha256": "78d37b1ad250ab6d63bdb5e5273c72bbb06d045298d6b0bbdf5dc9b699151528",
+    "assignees": [],
+    "labels": [
+      "area:ingestion",
+      "priority:p0"
+    ]
+  },
+  "remote_default": {
+    "ref": "refs/heads/main",
+    "sha": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+    "object_type": "commit"
+  },
+  "completed_utc": "2026-11-27T15:39:12.715091+00:00",
+  "collector_exit": 0
+}

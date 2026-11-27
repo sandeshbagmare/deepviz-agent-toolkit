@@ -1,0 +1,146 @@
+{
+  "verified_utc": "2026-11-27T15:48:22.654563+00:00",
+  "scope": "OfflinePMledger/evidence consistency, no model import/producttests/APIcalls/mutations/reruns/logs. Live/filestateclaims are bounded observations, not future gates.",
+  "passed": 32,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "onebounded9GETsnapshot_all200_noAPImutations",
+      "pass": true
+    },
+    {
+      "name": "expectedaccountrepo_defaultmain",
+      "pass": true
+    },
+    {
+      "name": "PR33actualhead998_base0ae2_open_nondraft_unmerged",
+      "pass": true
+    },
+    {
+      "name": "8paths727add0delete_completefiles",
+      "pass": true
+    },
+    {
+      "name": "sixChecksExact998_completedSuccess_2perPython",
+      "pass": true
+    },
+    {
+      "name": "twoActualActionRunURLs_notEventInference",
+      "pass": true
+    },
+    {
+      "name": "legacyPendingZeroContexts_notFalseRunningJob",
+      "pass": true
+    },
+    {
+      "name": "githubReviews0_complete_notHumanApproval",
+      "pass": true
+    },
+    {
+      "name": "issue30stillOpen_notDeliveredorClosed",
+      "pass": true
+    },
+    {
+      "name": "potentialMergeSHAnotActualMergeClaim",
+      "pass": true
+    },
+    {
+      "name": "fourDistinctFinalReportsNeeded_noneCarriedForward",
+      "pass": true
+    },
+    {
+      "name": "threeFullPREWORKReportReads_oneAbsent11",
+      "pass": true
+    },
+    {
+      "name": "author40_e44Readiness_not4independentReports",
+      "pass": true
+    },
+    {
+      "name": "source20Gitcommands0_noModelImportTests",
+      "pass": true
+    },
+    {
+      "name": "all8officialPRblobOIDs_matchactualLocalGit",
+      "pass": true
+    },
+    {
+      "name": "model94824_schemaecd85_actualruntime11add",
+      "pass": true
+    },
+    {
+      "name": "original30OracleASTnotImportsSame_bytesnotClaimed",
+      "pass": true
+    },
+    {
+      "name": "outputs4accept6reject_savedflagsNOTrecomputed",
+      "pass": true
+    },
+    {
+      "name": "appropriateRealModelOutputs_notFakeScreenshots",
+      "pass": true
+    },
+    {
+      "name": "historicalCaptureFlags_notcurrentNoCommitCIpending",
+      "pass": true
+    },
+    {
+      "name": "all5issue30AcceptanceRowsPresent",
+      "pass": true
+    },
+    {
+      "name": "R26managerQueueAuthority_mainQA13_afterCheckpoint",
+      "pass": true
+    },
+    {
+      "name": "exactFutureMergeDefaultAncestry_stepsNotClaimedDone",
+      "pass": true
+    },
+    {
+      "name": "noBranchProtectionAssumption_noREDOverride",
+      "pass": true
+    },
+    {
+      "name": "USEDcommentAuthority_NoFurtherWrites",
+      "pass": true
+    },
+    {
+      "name": "sanitized docs/coordination/reports/R25-19-pr33-gate-ledger.md",
+      "pass": true
+    },
+    {
+      "name": "Markdownwhitespace/fences docs/coordination/reports/R25-19-pr33-gate-ledger.md",
+      "pass": true
+    },
+    {
+      "name": "sanitized docs/agent-state/ses_de5678052ffdJwVtlB6SX6LZrT.md",
+      "pass": true
+    },
+    {
+      "name": "Markdownwhitespace/fences docs/agent-state/ses_de5678052ffdJwVtlB6SX6LZrT.md",
+      "pass": true
+    },
+    {
+      "name": "sanitized docs/coordination/evidence/R25-19/final-report-observation.json",
+      "pass": true
+    },
+    {
+      "name": "sanitized docs/coordination/evidence/R25-19/github-pr33-snapshot.json",
+      "pass": true
+    },
+    {
+      "name": "sanitized docs/coordination/evidence/R25-19/source-output-provenance.json",
+      "pass": true
+    }
+  ],
+  "prepublication_file_hashes": {
+    "docs/coordination/reports/R25-19-pr33-gate-ledger.md": "a20652bda7b6d7271e7424a9833fbbf9eadc8a16176c25b075826835e70db727",
+    "docs/agent-state/ses_de5678052ffdJwVtlB6SX6LZrT.md": "94dbab2e9f87e1e224dc551b1955b36738f353485cbcae2055de7f853fd1482d",
+    "docs/coordination/evidence/R25-19/final-report-observation.json": "146ea467e10dcb5e01c4870bb3fcfe7f0ad7ad723b80054c1b34634929923a15",
+    "docs/coordination/evidence/R25-19/github-pr33-snapshot.json": "36f319d88cdf178d151e80be31a4bb088e9fd5bafb9a3e947d9d364d6f4a3b77",
+    "docs/coordination/evidence/R25-19/source-output-provenance.json": "dac54f53b4d0fa513dc27b3821347e48f6c098a5274b820e1913bc813082e23e"
+  },
+  "source_head": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+  "remote_snapshot_end": "2026-11-27T15:39:12.715091+00:00",
+  "observed_decision": "HOLD merging PR33 at observation:6scopedCIgreen,0of4actualfinalreports evidenced,mainstill0ae2/#30OPEN. R04receivesfuturecompletionswithoutPMpolling."
+}

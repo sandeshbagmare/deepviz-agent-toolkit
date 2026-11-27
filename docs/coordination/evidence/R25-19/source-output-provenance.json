@@ -1,0 +1,546 @@
+{
+  "observed_utc": "2026-11-27T15:42:27.234864+00:00",
+  "frozen_PR": 33,
+  "head": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+  "base": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "source": "gitshow/revparse/diffandJSON/ASTparsingONLY; no model imports/producttestsexecuted",
+  "all_8_local_Git_blob_oids_match_official_PR_files": true,
+  "exact_changed_paths": [
+    ".github/workflows/chart-contract.yml",
+    "docs/verification/r22-contract/README.md",
+    "docs/verification/r22-contract/red-green-summary.json",
+    "docs/verification/r22-contract/validation-output.json",
+    "python/deepviz/src/deepviz/models.py",
+    "schemas/chart-spec.schema.json",
+    "tests/test_models.py",
+    "tests/test_numeric_schema.py"
+  ],
+  "files": [
+    {
+      "path": ".github/workflows/chart-contract.yml",
+      "Git_blob_oid": "337f3c587eeacd4fd10003fc5776a7329909f0b5",
+      "matches_official_PR_file_oid": true,
+      "Git_LF_sha256": "ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227",
+      "Git_blob_bytes": 1051,
+      "status": "added",
+      "additions": 34,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/r22-contract/README.md",
+      "Git_blob_oid": "7487b19005294423411b726e62451eda642fa192",
+      "matches_official_PR_file_oid": true,
+      "Git_LF_sha256": "f83f3e84a78d9a88c4a96d7df489f19e7fb4a6739c9e662d781f10f06670b3a6",
+      "Git_blob_bytes": 2893,
+      "status": "added",
+      "additions": 28,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/r22-contract/red-green-summary.json",
+      "Git_blob_oid": "3ebb04f7a69c2468dfd7d5d9a0c4b68d5ce4f176",
+      "matches_official_PR_file_oid": true,
+      "Git_LF_sha256": "e3db9381970aa74f9a9f9ede2c87712dcd47636c34520fb3984ee39107bf1937",
+      "Git_blob_bytes": 5057,
+      "status": "added",
+      "additions": 114,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/r22-contract/validation-output.json",
+      "Git_blob_oid": "81dab1a88ce0b43b02eba05db8b65c91b9626f62",
+      "matches_official_PR_file_oid": true,
+      "Git_LF_sha256": "3896de0d87545af60fc63bdee608b202055ea55d84dc7f49d1334ab729d02a0b",
+      "Git_blob_bytes": 4915,
+      "status": "added",
+      "additions": 225,
+      "deletions": 0
+    },
+    {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "Git_blob_oid": "e6e681837e8e701918f388e86cb4331767041572",
+      "matches_official_PR_file_oid": true,
+      "Git_LF_sha256": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+      "Git_blob_bytes": 2982,
+      "status": "modified",
+      "additions": 11,
+      "deletions": 0
+    },
+    {
+      "path": "schemas/chart-spec.schema.json",
+      "Git_blob_oid": "00a524503774822832c686c7be8e266e9e5d39bc",
+      "matches_official_PR_file_oid": true,
+      "Git_LF_sha256": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d",
+      "Git_blob_bytes": 4078,
+      "status": "added",
+      "additions": 190,
+      "deletions": 0
+    },
+    {
+      "path": "tests/test_models.py",
+      "Git_blob_oid": "77441bcb9a10f80f7c24ca42e3bfc8c4ada45a30",
+      "matches_official_PR_file_oid": true,
+      "Git_LF_sha256": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32",
+      "Git_blob_bytes": 2684,
+      "status": "added",
+      "additions": 66,
+      "deletions": 0
+    },
+    {
+      "path": "tests/test_numeric_schema.py",
+      "Git_blob_oid": "1485a1685d1cc87b9b902e3df7a67472681039bf",
+      "matches_official_PR_file_oid": true,
+      "Git_LF_sha256": "b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3",
+      "Git_blob_bytes": 2343,
+      "status": "added",
+      "additions": 59,
+      "deletions": 0
+    }
+  ],
+  "runtime_change": {
+    "file": "python/deepviz/src/deepviz/models.py",
+    "added_lines": 11,
+    "deleted_lines": 0,
+    "exact_e44_model_bytes": true,
+    "new_before_validator_fields": [
+      "version",
+      "max_points",
+      "width",
+      "height",
+      "columns"
+    ],
+    "rule_read": "if dict, reject bool or non int/float BEFORE Pydantic; retain original bound fields/after-dashboardvalidator",
+    "unchanged_defaults_bounds": "Read originaldefinitionbeforeandafter; JSONSchema+publicoutputinspected, not reexecuted"
+  },
+  "original30tests_nonimport_AST_unchanged": true,
+  "tests_are_not_byte_identical_e44": true,
+  "schema_declared_numeric_contract": {
+    "version": {
+      "type": "integer",
+      "const": 1,
+      "default": 1
+    },
+    "max_points": {
+      "type": "integer",
+      "minimum": 10,
+      "maximum": 100000,
+      "default": 2000
+    },
+    "width": {
+      "type": "integer",
+      "minimum": 240,
+      "maximum": 4096,
+      "default": 900
+    },
+    "height": {
+      "type": "integer",
+      "minimum": 200,
+      "maximum": 4096,
+      "default": 520
+    },
+    "columns": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6,
+      "default": 2
+    }
+  },
+  "committed_output": {
+    "applicable": "modelJSON/schema/rejectionerrors; no rendererchanged so chartimageN/A",
+    "accepted_count": 4,
+    "rejected_count": 6,
+    "accepted": [
+      {
+        "input": {},
+        "saved_schema_valid_flag": true,
+        "saved_numeric_output": {
+          "version": 1,
+          "max_points": 2000,
+          "width": 900,
+          "height": 520,
+          "columns": 2
+        },
+        "saved_child_widths": []
+      },
+      {
+        "input": {
+          "width": 900.0
+        },
+        "saved_schema_valid_flag": true,
+        "saved_numeric_output": {
+          "version": 1,
+          "max_points": 2000,
+          "width": 900,
+          "height": 520,
+          "columns": 2
+        },
+        "saved_child_widths": []
+      },
+      {
+        "input": {
+          "version": 1.0,
+          "max_points": 10.0,
+          "width": 240.0,
+          "height": 200.0,
+          "columns": 1.0
+        },
+        "saved_schema_valid_flag": true,
+        "saved_numeric_output": {
+          "version": 1,
+          "max_points": 10,
+          "width": 240,
+          "height": 200,
+          "columns": 1
+        },
+        "saved_child_widths": []
+      },
+      {
+        "input": {
+          "kind": "dashboard",
+          "charts": [
+            {
+              "kind": "bar",
+              "width": 900.0
+            }
+          ]
+        },
+        "saved_schema_valid_flag": true,
+        "saved_numeric_output": {
+          "version": 1,
+          "max_points": 2000,
+          "width": 900,
+          "height": 520,
+          "columns": 2
+        },
+        "saved_child_widths": [
+          900
+        ]
+      }
+    ],
+    "rejected": [
+      {
+        "input": {
+          "width": "900"
+        },
+        "saved_schema_valid_flag": false,
+        "saved_errors": [
+          {
+            "type": "value_error",
+            "loc": [],
+            "msg": "Value error, width must be a JSON number, not a string or boolean"
+          }
+        ]
+      },
+      {
+        "input": {
+          "version": true
+        },
+        "saved_schema_valid_flag": false,
+        "saved_errors": [
+          {
+            "type": "value_error",
+            "loc": [],
+            "msg": "Value error, version must be a JSON number, not a string or boolean"
+          }
+        ]
+      },
+      {
+        "input": {
+          "columns": true
+        },
+        "saved_schema_valid_flag": false,
+        "saved_errors": [
+          {
+            "type": "value_error",
+            "loc": [],
+            "msg": "Value error, columns must be a JSON number, not a string or boolean"
+          }
+        ]
+      },
+      {
+        "input": {
+          "height": 520.5
+        },
+        "saved_schema_valid_flag": false,
+        "saved_errors": [
+          {
+            "type": "int_from_float",
+            "loc": [
+              "height"
+            ],
+            "msg": "Input should be a valid integer, got a number with a fractional part"
+          }
+        ]
+      },
+      {
+        "input": {
+          "max_points": 9
+        },
+        "saved_schema_valid_flag": false,
+        "saved_errors": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "max_points"
+            ],
+            "msg": "Input should be greater than or equal to 10"
+          }
+        ]
+      },
+      {
+        "input": {
+          "kind": "dashboard",
+          "charts": [
+            {
+              "width": "900"
+            }
+          ]
+        },
+        "saved_schema_valid_flag": false,
+        "saved_errors": [
+          {
+            "type": "value_error",
+            "loc": [
+              "charts",
+              0
+            ],
+            "msg": "Value error, width must be a JSON number, not a string or boolean"
+          }
+        ]
+      }
+    ],
+    "important_limit": "Saved author-produced actual outputs inspected; schema_valid flags not independently recomputed by this PM"
+  },
+  "author_reported_checks": {
+    "pytest_exit": 0,
+    "tests": 40,
+    "failures": 0,
+    "skips": 0,
+    "ruff_exit": 0,
+    "mypy_exit": 0,
+    "mypy_files": 1
+  },
+  "author_red_green": [
+    {
+      "name": "R22-contract-red",
+      "tests": 30,
+      "failures": 6,
+      "skips": 0,
+      "errors": 0,
+      "xml_sha256": "3a3dc5ba3a05a35ada95ba7f7b59aba6851ce71b1dbd185aa98869939aca6b16"
+    },
+    {
+      "name": "R22-contract-expanded-red",
+      "tests": 40,
+      "failures": 12,
+      "skips": 0,
+      "errors": 0,
+      "xml_sha256": "f1850ddaf21780e1603c329e98d31238ddb71a428484d489aa6d3d57977e2efe"
+    },
+    {
+      "name": "R22-contract-green2",
+      "tests": 40,
+      "failures": 0,
+      "skips": 0,
+      "errors": 0,
+      "xml_sha256": "dd91e8a37fcf3f782c10ddc6d136dbef6b667c110a9b5ea78e9808eb3b2d429f"
+    }
+  ],
+  "workflow_read": {
+    "focused_name": "ChartSpec contract (focused slice)",
+    "python_matrix": [
+      "3.11",
+      "3.12",
+      "3.13"
+    ],
+    "permissions_contents_read_only": true,
+    "tests_full_present_focused_suite": true,
+    "ruff_full_focus": true,
+    "mypy_model_config": true,
+    "PYTHONPATH": "python/deepviz/src",
+    "uses": [
+      "actions/checkout@v4",
+      "actions/setup-python@v5"
+    ],
+    "dependency_lock_limit": "contract-only dependency ranges are not exact locked versions; actual remote runs observed, no supply-chain/reproducibility guarantee",
+    "not_full_toolkit_CI": true
+  },
+  "historical_metadata_caveat": {
+    "summary_not_yet_a_commit": true,
+    "summary_scope_limits": [
+      "No rendered chart applicable: only model numeric trust boundary; real serialized validation output supplied",
+      "Foundation main has no renderer/CLI/package modules; no claim full pip/SDK/toolkit operational",
+      "CI and four exact-head independent reports pending",
+      "Original e44 oracle has import-order-only normalization, all assertions preserved",
+      "Two pre-test identity guard failures and two initial Ruff import-group findings are preserved in manager report, not hidden passes"
+    ],
+    "disposition": "Capture-time labels are stale once immutable998 and actualCIexist; not evidence that PR33 is nonexistent or CIpendingnow. R04 may clarify PR evidence narrative without touchingfrozenproducthead; four finalreportsstillpending."
+  },
+  "exact_readonly_commands": [
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:.github/workflows/chart-contract.yml"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:.github/workflows/chart-contract.yml"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:docs/verification/r22-contract/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:docs/verification/r22-contract/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:docs/verification/r22-contract/red-green-summary.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:docs/verification/r22-contract/red-green-summary.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:docs/verification/r22-contract/validation-output.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:docs/verification/r22-contract/validation-output.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:schemas/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:schemas/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:tests/test_models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:tests/test_models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:tests/test_numeric_schema.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:tests/test_numeric_schema.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "0ae2cf26426822135fc10d337fcacf580b7ed833",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "0ae2cf26426822135fc10d337fcacf580b7ed833:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "e44f667ed494fa272f97792ef99942a364ebca24:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "e44f667ed494fa272f97792ef99942a364ebca24:tests/test_models.py"
+      ],
+      "exit": 0
+    }
+  ],
+  "API_writes": 0,
+  "product_tests_run_by_PM": 0,
+  "schema_regeneration_or_model_import": false
+}
