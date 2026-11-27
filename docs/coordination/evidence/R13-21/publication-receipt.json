@@ -1,0 +1,122 @@
+{
+  "owner": "ses_de5678018ffezK8JGDUaSzvcWn",
+  "branch": "agents/r10-21-recovery-git-bootstrap",
+  "source_base": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "observed_utc": "2026-11-27T14:09:51.025546+00:00",
+  "scope": "owned branch only; no sibling re-query; checkpoint not project acceptance",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+        "d4d45c6443abee2bed94ba04caa1ad3c99891084"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+        "d4d45c6443abee2bed94ba04caa1ad3c99891084"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--exit-code"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "push",
+        "origin",
+        "HEAD:refs/heads/agents/r10-21-recovery-git-bootstrap"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--heads",
+        "origin",
+        "refs/heads/agents/r10-21-recovery-git-bootstrap"
+      ],
+      "exit": 0
+    }
+  ],
+  "local_commit": "d4d45c6443abee2bed94ba04caa1ad3c99891084",
+  "owned_commit_paths": [
+    "docs/agent-state/ses_de5678018ffezK8JGDUaSzvcWn.md",
+    "docs/coordination/evidence/R10-21/capture_once.txt",
+    "docs/coordination/evidence/R10-21/publication-receipt.json",
+    "docs/coordination/evidence/R10-21/publish_owned.txt",
+    "docs/coordination/evidence/R10-21/quality-checks.json",
+    "docs/coordination/evidence/R10-21/quality_runner.txt",
+    "docs/coordination/evidence/R10-21/recovery-snapshot.json",
+    "docs/coordination/evidence/R10-21/stage-envelope.json",
+    "docs/coordination/evidence/R13-21/capture_pre_recovery_once.txt",
+    "docs/coordination/evidence/R13-21/disk-recovery-verification.json",
+    "docs/coordination/evidence/R13-21/pre-recovery-snapshot.json",
+    "docs/coordination/evidence/R13-21/publish_owned.txt",
+    "docs/coordination/evidence/R13-21/quality-checks.json",
+    "docs/coordination/evidence/R13-21/quality_runner.txt",
+    "docs/coordination/evidence/R13-21/recovered-C2-publication.json",
+    "docs/coordination/evidence/R13-21/stage-envelope.json",
+    "docs/coordination/evidence/R13-21/verify_saved_disk.txt",
+    "docs/coordination/reports/R10-21-recovery-git-bootstrap.md",
+    "docs/coordination/reports/R13-21-interruption-recovery-audit.md",
+    "tests/r10_probes/role21/test_publication_receipts.py",
+    "tests/r13_probes/role21/test_recovery_semantics.py"
+  ],
+  "identity": {
+    "http": 200,
+    "login": "sandeshbagmare"
+  },
+  "push_exit": 0,
+  "remote_sha_readback": "d4d45c6443abee2bed94ba04caa1ad3c99891084",
+  "remote_readback_exit": 0,
+  "committed_own_report": {
+    "http": 200,
+    "git_blob_matches": true,
+    "sha256": "80e920cec838c9ff5e1cd821cc82d1913f68f6441917241616941e668323e149",
+    "owner_and_source_present": true,
+    "bootstrap_proposal_present": true
+  },
+  "status": "published-own-branch-and-remote-verified-not-signoff",
+  "finished_utc": "2026-11-27T14:09:58.580060+00:00"
+}
