@@ -1,0 +1,328 @@
+FFFFFFFFF..                                                              [100%]
+================================== FAILURES ===================================
+______ test_public_antv_color_preserves_values_and_native_semantics[pie] ______
+
+fixture = {'id': 'pie', 'mode': 'category', 'rows': [{'category': 'Alpha', 'value': 12}, {'category': 'Beta', 'value': 31}, {'category': 'Gamma', 'value': 7}], 'expected': [['Alpha', 12], ['Beta', 31], ['Gamma', 7]], ...}
+tmp_path = WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts/red1/pytest-temp/test_public_antv_color_preserv0')
+
+    @pytest.mark.parametrize("fixture", cases(), ids=lambda fixture: fixture["id"])
+    def test_public_antv_color_preserves_values_and_native_semantics(
+        fixture: dict[str, Any], tmp_path: Path,
+    ) -> None:
+        """A fixed categorical fill, implicit heatmap domain, or lost point fails."""
+        artifact = render(fixture["rows"], fixture["spec"], "antv", tmp_path)
+        manifest_path = next(Path(name) for name in artifact.paths if name.endswith("manifest.json"))
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        native = manifest["native_specs"][0]
+        assert manifest["charts"][0]["records"] == fixture["rows"]
+        assert artifact.input_count == artifact.output_count == len(fixture["rows"])
+        if fixture["mode"] == "category":
+            assert native["encode"]["color"] == "_x"
+            assert [[row["_x"], row["_y"]] for row in native["data"]] == fixture["expected"]
+            assert native.get("legend") is not False, "A hidden legend is not a categorical color fix"
+>           assert not {"fill", "stroke"}.intersection(native.get("style", {})), (
+                "Literal mark colors override encoded categories and disagree with the visible legend"
+E               AssertionError: Literal mark colors override encoded categories and disagree with the visible legend
+E               assert not {'fill', 'stroke'}
+E                +  where {'fill', 'stroke'} = <built-in method intersection of set object at 0x000001E5FFD8FCA0>({'fill': '#386cb0', 'stroke': '#386cb0'})
+E                +    where <built-in method intersection of set object at 0x000001E5FFD8FCA0> = {'fill', 'stroke'}.intersection
+E                +    and   {'fill': '#386cb0', 'stroke': '#386cb0'} = <built-in method get of dict object at 0x000001E5FFDF0100>('style', {})
+E                +      where <built-in method get of dict object at 0x000001E5FFDF0100> = {'type': 'interval', 'data': [{'_x': 'Alpha', '_y': 12.0, '_color': 'Series', '_size': 8, ...}, {'_x': 'Beta', '_y': 3...'Gamma', '_y': 7.0, '_color': 'Series', '_size': 8, ...}], 'encode': {'y': '_y', 'color': '_x'}, 'animate': False, ...}.get
+
+tests\r18_probes\role08\test_antv_color.py:31: AssertionError
+___ test_public_antv_color_preserves_values_and_native_semantics[sunburst] ____
+
+fixture = {'id': 'sunburst', 'mode': 'category', 'rows': [{'category': 'Alpha', 'value': 12}, {'category': 'Beta', 'value': 31}, {'category': 'Gamma', 'value': 7}], 'expected': [['Alpha', 12], ['Beta', 31], ['Gamma', 7]], ...}
+tmp_path = WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts/red1/pytest-temp/test_public_antv_color_preserv1')
+
+    @pytest.mark.parametrize("fixture", cases(), ids=lambda fixture: fixture["id"])
+    def test_public_antv_color_preserves_values_and_native_semantics(
+        fixture: dict[str, Any], tmp_path: Path,
+    ) -> None:
+        """A fixed categorical fill, implicit heatmap domain, or lost point fails."""
+        artifact = render(fixture["rows"], fixture["spec"], "antv", tmp_path)
+        manifest_path = next(Path(name) for name in artifact.paths if name.endswith("manifest.json"))
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        native = manifest["native_specs"][0]
+        assert manifest["charts"][0]["records"] == fixture["rows"]
+        assert artifact.input_count == artifact.output_count == len(fixture["rows"])
+        if fixture["mode"] == "category":
+            assert native["encode"]["color"] == "_x"
+            assert [[row["_x"], row["_y"]] for row in native["data"]] == fixture["expected"]
+            assert native.get("legend") is not False, "A hidden legend is not a categorical color fix"
+>           assert not {"fill", "stroke"}.intersection(native.get("style", {})), (
+                "Literal mark colors override encoded categories and disagree with the visible legend"
+E               AssertionError: Literal mark colors override encoded categories and disagree with the visible legend
+E               assert not {'fill', 'stroke'}
+E                +  where {'fill', 'stroke'} = <built-in method intersection of set object at 0x000001E5FFE00D60>({'fill': '#386cb0', 'stroke': '#386cb0'})
+E                +    where <built-in method intersection of set object at 0x000001E5FFE00D60> = {'fill', 'stroke'}.intersection
+E                +    and   {'fill': '#386cb0', 'stroke': '#386cb0'} = <built-in method get of dict object at 0x000001E5FFE48340>('style', {})
+E                +      where <built-in method get of dict object at 0x000001E5FFE48340> = {'type': 'interval', 'data': [{'_x': 'Alpha', '_y': 12.0, '_color': 'Series', '_size': 8, ...}, {'_x': 'Beta', '_y': 3...'Gamma', '_y': 7.0, '_color': 'Series', '_size': 8, ...}], 'encode': {'y': '_y', 'color': '_x'}, 'animate': False, ...}.get
+
+tests\r18_probes\role08\test_antv_color.py:31: AssertionError
+____ test_public_antv_color_preserves_values_and_native_semantics[treemap] ____
+
+fixture = {'id': 'treemap', 'mode': 'category', 'rows': [{'category': 'Alpha', 'value': 12}, {'category': 'Beta', 'value': 31}, {'category': 'Gamma', 'value': 7}], 'expected': [['Alpha', 12], ['Beta', 31], ['Gamma', 7]], ...}
+tmp_path = WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts/red1/pytest-temp/test_public_antv_color_preserv2')
+
+    @pytest.mark.parametrize("fixture", cases(), ids=lambda fixture: fixture["id"])
+    def test_public_antv_color_preserves_values_and_native_semantics(
+        fixture: dict[str, Any], tmp_path: Path,
+    ) -> None:
+        """A fixed categorical fill, implicit heatmap domain, or lost point fails."""
+        artifact = render(fixture["rows"], fixture["spec"], "antv", tmp_path)
+        manifest_path = next(Path(name) for name in artifact.paths if name.endswith("manifest.json"))
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        native = manifest["native_specs"][0]
+        assert manifest["charts"][0]["records"] == fixture["rows"]
+        assert artifact.input_count == artifact.output_count == len(fixture["rows"])
+        if fixture["mode"] == "category":
+            assert native["encode"]["color"] == "_x"
+            assert [[row["_x"], row["_y"]] for row in native["data"]] == fixture["expected"]
+            assert native.get("legend") is not False, "A hidden legend is not a categorical color fix"
+>           assert not {"fill", "stroke"}.intersection(native.get("style", {})), (
+                "Literal mark colors override encoded categories and disagree with the visible legend"
+E               AssertionError: Literal mark colors override encoded categories and disagree with the visible legend
+E               assert not {'fill', 'stroke'}
+E                +  where {'fill', 'stroke'} = <built-in method intersection of set object at 0x000001E5FFE01B60>({'fill': '#386cb0', 'stroke': '#386cb0'})
+E                +    where <built-in method intersection of set object at 0x000001E5FFE01B60> = {'fill', 'stroke'}.intersection
+E                +    and   {'fill': '#386cb0', 'stroke': '#386cb0'} = <built-in method get of dict object at 0x000001E5FFE6D780>('style', {})
+E                +      where <built-in method get of dict object at 0x000001E5FFE6D780> = {'type': 'rect', 'data': [{'_x': 'Alpha', '_y': 12.0, '_color': 'Series', '_size': 8, ...}, {'_x': 'Beta', '_y': 31.0,..._size': 8, ...}], 'encode': {'x': ['_left', '_right'], 'y': ['_bottom', '_top'], 'color': '_x'}, 'animate': False, ...}.get
+
+tests\r18_probes\role08\test_antv_color.py:31: AssertionError
+_____ test_public_antv_color_preserves_values_and_native_semantics[gauge] _____
+
+fixture = {'id': 'gauge', 'mode': 'category', 'rows': [{'category': 'Load', 'value': 37}], 'expected': [['Value', 37], ['Remaining', 63]], ...}
+tmp_path = WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts/red1/pytest-temp/test_public_antv_color_preserv3')
+
+    @pytest.mark.parametrize("fixture", cases(), ids=lambda fixture: fixture["id"])
+    def test_public_antv_color_preserves_values_and_native_semantics(
+        fixture: dict[str, Any], tmp_path: Path,
+    ) -> None:
+        """A fixed categorical fill, implicit heatmap domain, or lost point fails."""
+        artifact = render(fixture["rows"], fixture["spec"], "antv", tmp_path)
+        manifest_path = next(Path(name) for name in artifact.paths if name.endswith("manifest.json"))
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        native = manifest["native_specs"][0]
+        assert manifest["charts"][0]["records"] == fixture["rows"]
+        assert artifact.input_count == artifact.output_count == len(fixture["rows"])
+        if fixture["mode"] == "category":
+            assert native["encode"]["color"] == "_x"
+            assert [[row["_x"], row["_y"]] for row in native["data"]] == fixture["expected"]
+            assert native.get("legend") is not False, "A hidden legend is not a categorical color fix"
+>           assert not {"fill", "stroke"}.intersection(native.get("style", {})), (
+                "Literal mark colors override encoded categories and disagree with the visible legend"
+E               AssertionError: Literal mark colors override encoded categories and disagree with the visible legend
+E               assert not {'fill', 'stroke'}
+E                +  where {'fill', 'stroke'} = <built-in method intersection of set object at 0x000001E5FFE02960>({'fill': '#386cb0', 'stroke': '#386cb0'})
+E                +    where <built-in method intersection of set object at 0x000001E5FFE02960> = {'fill', 'stroke'}.intersection
+E                +    and   {'fill': '#386cb0', 'stroke': '#386cb0'} = <built-in method get of dict object at 0x000001E5FFE78D40>('style', {})
+E                +      where <built-in method get of dict object at 0x000001E5FFE78D40> = {'type': 'interval', 'data': [{'_x': 'Value', '_y': 37.0}, {'_x': 'Remaining', '_y': 63.0}], 'encode': {'y': '_y', 'color': '_x'}, 'animate': False, ...}.get
+
+tests\r18_probes\role08\test_antv_color.py:31: AssertionError
+_ test_public_antv_color_preserves_values_and_native_semantics[heatmap-negative] _
+
+fixture = {'id': 'heatmap-negative', 'mode': 'heatmap', 'expected': [-7, -2], 'rows': [{'day': 'Mon', 'slot': 'AM', 'heat': -7}, {'day': 'Tue', 'slot': 'PM', 'heat': -2}], ...}
+tmp_path = WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts/red1/pytest-temp/test_public_antv_color_preserv4')
+
+    @pytest.mark.parametrize("fixture", cases(), ids=lambda fixture: fixture["id"])
+    def test_public_antv_color_preserves_values_and_native_semantics(
+        fixture: dict[str, Any], tmp_path: Path,
+    ) -> None:
+        """A fixed categorical fill, implicit heatmap domain, or lost point fails."""
+        artifact = render(fixture["rows"], fixture["spec"], "antv", tmp_path)
+        manifest_path = next(Path(name) for name in artifact.paths if name.endswith("manifest.json"))
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        native = manifest["native_specs"][0]
+        assert manifest["charts"][0]["records"] == fixture["rows"]
+        assert artifact.input_count == artifact.output_count == len(fixture["rows"])
+        if fixture["mode"] == "category":
+            assert native["encode"]["color"] == "_x"
+            assert [[row["_x"], row["_y"]] for row in native["data"]] == fixture["expected"]
+            assert native.get("legend") is not False, "A hidden legend is not a categorical color fix"
+            assert not {"fill", "stroke"}.intersection(native.get("style", {})), (
+                "Literal mark colors override encoded categories and disagree with the visible legend"
+            )
+        elif fixture["mode"] == "heatmap":
+            assert native["encode"]["color"] == "_heat"
+            assert [row["_heat"] for row in native["data"]] == fixture["expected"]
+            assert [[row["_x"], row["_y"]] for row in native["data"]] == [["Mon", "AM"], ["Tue", "PM"]]
+            assert not {"fill", "stroke"}.intersection(native.get("style", {}))
+            assert native.get("legend") is not False, "Legend-off is only a diagnostic, not a fix"
+            scale = native.get("scale", {}).get("color", {})
+>           assert scale.get("type") in {"linear", "sequential"}, (
+                "Negative heatmaps need an explicit continuous color scale, not G2's implicit inference"
+            )
+E           AssertionError: Negative heatmaps need an explicit continuous color scale, not G2's implicit inference
+E           assert None in {'linear', 'sequential'}
+E            +  where None = <built-in method get of dict object at 0x000001E5FFE51B80>('type')
+E            +    where <built-in method get of dict object at 0x000001E5FFE51B80> = {}.get
+
+tests\r18_probes\role08\test_antv_color.py:41: AssertionError
+_ test_public_antv_color_preserves_values_and_native_semantics[heatmap-positive] _
+
+fixture = {'id': 'heatmap-positive', 'mode': 'heatmap', 'expected': [2, 7], 'rows': [{'day': 'Mon', 'slot': 'AM', 'heat': 2}, {'day': 'Tue', 'slot': 'PM', 'heat': 7}], ...}
+tmp_path = WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts/red1/pytest-temp/test_public_antv_color_preserv5')
+
+    @pytest.mark.parametrize("fixture", cases(), ids=lambda fixture: fixture["id"])
+    def test_public_antv_color_preserves_values_and_native_semantics(
+        fixture: dict[str, Any], tmp_path: Path,
+    ) -> None:
+        """A fixed categorical fill, implicit heatmap domain, or lost point fails."""
+        artifact = render(fixture["rows"], fixture["spec"], "antv", tmp_path)
+        manifest_path = next(Path(name) for name in artifact.paths if name.endswith("manifest.json"))
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        native = manifest["native_specs"][0]
+        assert manifest["charts"][0]["records"] == fixture["rows"]
+        assert artifact.input_count == artifact.output_count == len(fixture["rows"])
+        if fixture["mode"] == "category":
+            assert native["encode"]["color"] == "_x"
+            assert [[row["_x"], row["_y"]] for row in native["data"]] == fixture["expected"]
+            assert native.get("legend") is not False, "A hidden legend is not a categorical color fix"
+            assert not {"fill", "stroke"}.intersection(native.get("style", {})), (
+                "Literal mark colors override encoded categories and disagree with the visible legend"
+            )
+        elif fixture["mode"] == "heatmap":
+            assert native["encode"]["color"] == "_heat"
+            assert [row["_heat"] for row in native["data"]] == fixture["expected"]
+            assert [[row["_x"], row["_y"]] for row in native["data"]] == [["Mon", "AM"], ["Tue", "PM"]]
+            assert not {"fill", "stroke"}.intersection(native.get("style", {}))
+            assert native.get("legend") is not False, "Legend-off is only a diagnostic, not a fix"
+            scale = native.get("scale", {}).get("color", {})
+>           assert scale.get("type") in {"linear", "sequential"}, (
+                "Negative heatmaps need an explicit continuous color scale, not G2's implicit inference"
+            )
+E           AssertionError: Negative heatmaps need an explicit continuous color scale, not G2's implicit inference
+E           assert None in {'linear', 'sequential'}
+E            +  where None = <built-in method get of dict object at 0x000001E5FFE6C040>('type')
+E            +    where <built-in method get of dict object at 0x000001E5FFE6C040> = {}.get
+
+tests\r18_probes\role08\test_antv_color.py:41: AssertionError
+_ test_public_antv_color_preserves_values_and_native_semantics[heatmap-signed] _
+
+fixture = {'id': 'heatmap-signed', 'mode': 'heatmap', 'expected': [-7, 2], 'rows': [{'day': 'Mon', 'slot': 'AM', 'heat': -7}, {'day': 'Tue', 'slot': 'PM', 'heat': 2}], ...}
+tmp_path = WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts/red1/pytest-temp/test_public_antv_color_preserv6')
+
+    @pytest.mark.parametrize("fixture", cases(), ids=lambda fixture: fixture["id"])
+    def test_public_antv_color_preserves_values_and_native_semantics(
+        fixture: dict[str, Any], tmp_path: Path,
+    ) -> None:
+        """A fixed categorical fill, implicit heatmap domain, or lost point fails."""
+        artifact = render(fixture["rows"], fixture["spec"], "antv", tmp_path)
+        manifest_path = next(Path(name) for name in artifact.paths if name.endswith("manifest.json"))
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        native = manifest["native_specs"][0]
+        assert manifest["charts"][0]["records"] == fixture["rows"]
+        assert artifact.input_count == artifact.output_count == len(fixture["rows"])
+        if fixture["mode"] == "category":
+            assert native["encode"]["color"] == "_x"
+            assert [[row["_x"], row["_y"]] for row in native["data"]] == fixture["expected"]
+            assert native.get("legend") is not False, "A hidden legend is not a categorical color fix"
+            assert not {"fill", "stroke"}.intersection(native.get("style", {})), (
+                "Literal mark colors override encoded categories and disagree with the visible legend"
+            )
+        elif fixture["mode"] == "heatmap":
+            assert native["encode"]["color"] == "_heat"
+            assert [row["_heat"] for row in native["data"]] == fixture["expected"]
+            assert [[row["_x"], row["_y"]] for row in native["data"]] == [["Mon", "AM"], ["Tue", "PM"]]
+            assert not {"fill", "stroke"}.intersection(native.get("style", {}))
+            assert native.get("legend") is not False, "Legend-off is only a diagnostic, not a fix"
+            scale = native.get("scale", {}).get("color", {})
+>           assert scale.get("type") in {"linear", "sequential"}, (
+                "Negative heatmaps need an explicit continuous color scale, not G2's implicit inference"
+            )
+E           AssertionError: Negative heatmaps need an explicit continuous color scale, not G2's implicit inference
+E           assert None in {'linear', 'sequential'}
+E            +  where None = <built-in method get of dict object at 0x000001E5FFE64F40>('type')
+E            +    where <built-in method get of dict object at 0x000001E5FFE64F40> = {}.get
+
+tests\r18_probes\role08\test_antv_color.py:41: AssertionError
+_ test_public_antv_color_preserves_values_and_native_semantics[heatmap-constant] _
+
+fixture = {'id': 'heatmap-constant', 'mode': 'heatmap', 'expected': [1, 1], 'rows': [{'day': 'Mon', 'slot': 'AM', 'heat': 1}, {'day': 'Tue', 'slot': 'PM', 'heat': 1}], ...}
+tmp_path = WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts/red1/pytest-temp/test_public_antv_color_preserv7')
+
+    @pytest.mark.parametrize("fixture", cases(), ids=lambda fixture: fixture["id"])
+    def test_public_antv_color_preserves_values_and_native_semantics(
+        fixture: dict[str, Any], tmp_path: Path,
+    ) -> None:
+        """A fixed categorical fill, implicit heatmap domain, or lost point fails."""
+        artifact = render(fixture["rows"], fixture["spec"], "antv", tmp_path)
+        manifest_path = next(Path(name) for name in artifact.paths if name.endswith("manifest.json"))
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        native = manifest["native_specs"][0]
+        assert manifest["charts"][0]["records"] == fixture["rows"]
+        assert artifact.input_count == artifact.output_count == len(fixture["rows"])
+        if fixture["mode"] == "category":
+            assert native["encode"]["color"] == "_x"
+            assert [[row["_x"], row["_y"]] for row in native["data"]] == fixture["expected"]
+            assert native.get("legend") is not False, "A hidden legend is not a categorical color fix"
+            assert not {"fill", "stroke"}.intersection(native.get("style", {})), (
+                "Literal mark colors override encoded categories and disagree with the visible legend"
+            )
+        elif fixture["mode"] == "heatmap":
+            assert native["encode"]["color"] == "_heat"
+            assert [row["_heat"] for row in native["data"]] == fixture["expected"]
+            assert [[row["_x"], row["_y"]] for row in native["data"]] == [["Mon", "AM"], ["Tue", "PM"]]
+            assert not {"fill", "stroke"}.intersection(native.get("style", {}))
+            assert native.get("legend") is not False, "Legend-off is only a diagnostic, not a fix"
+            scale = native.get("scale", {}).get("color", {})
+>           assert scale.get("type") in {"linear", "sequential"}, (
+                "Negative heatmaps need an explicit continuous color scale, not G2's implicit inference"
+            )
+E           AssertionError: Negative heatmaps need an explicit continuous color scale, not G2's implicit inference
+E           assert None in {'linear', 'sequential'}
+E            +  where None = <built-in method get of dict object at 0x000001E5FFE78C40>('type')
+E            +    where <built-in method get of dict object at 0x000001E5FFE78C40> = {}.get
+
+tests\r18_probes\role08\test_antv_color.py:41: AssertionError
+_ test_public_antv_color_preserves_values_and_native_semantics[heatmap-zero] __
+
+fixture = {'id': 'heatmap-zero', 'mode': 'heatmap', 'expected': [0, 0], 'rows': [{'day': 'Mon', 'slot': 'AM', 'heat': 0}, {'day': 'Tue', 'slot': 'PM', 'heat': 0}], ...}
+tmp_path = WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts/red1/pytest-temp/test_public_antv_color_preserv8')
+
+    @pytest.mark.parametrize("fixture", cases(), ids=lambda fixture: fixture["id"])
+    def test_public_antv_color_preserves_values_and_native_semantics(
+        fixture: dict[str, Any], tmp_path: Path,
+    ) -> None:
+        """A fixed categorical fill, implicit heatmap domain, or lost point fails."""
+        artifact = render(fixture["rows"], fixture["spec"], "antv", tmp_path)
+        manifest_path = next(Path(name) for name in artifact.paths if name.endswith("manifest.json"))
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        native = manifest["native_specs"][0]
+        assert manifest["charts"][0]["records"] == fixture["rows"]
+        assert artifact.input_count == artifact.output_count == len(fixture["rows"])
+        if fixture["mode"] == "category":
+            assert native["encode"]["color"] == "_x"
+            assert [[row["_x"], row["_y"]] for row in native["data"]] == fixture["expected"]
+            assert native.get("legend") is not False, "A hidden legend is not a categorical color fix"
+            assert not {"fill", "stroke"}.intersection(native.get("style", {})), (
+                "Literal mark colors override encoded categories and disagree with the visible legend"
+            )
+        elif fixture["mode"] == "heatmap":
+            assert native["encode"]["color"] == "_heat"
+            assert [row["_heat"] for row in native["data"]] == fixture["expected"]
+            assert [[row["_x"], row["_y"]] for row in native["data"]] == [["Mon", "AM"], ["Tue", "PM"]]
+            assert not {"fill", "stroke"}.intersection(native.get("style", {}))
+            assert native.get("legend") is not False, "Legend-off is only a diagnostic, not a fix"
+            scale = native.get("scale", {}).get("color", {})
+>           assert scale.get("type") in {"linear", "sequential"}, (
+                "Negative heatmaps need an explicit continuous color scale, not G2's implicit inference"
+            )
+E           AssertionError: Negative heatmaps need an explicit continuous color scale, not G2's implicit inference
+E           assert None in {'linear', 'sequential'}
+E            +  where None = <built-in method get of dict object at 0x000001E5FFE94500>('type')
+E            +    where <built-in method get of dict object at 0x000001E5FFE94500> = {}.get
+
+tests\r18_probes\role08\test_antv_color.py:41: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/r18_probes/role08/test_antv_color.py::test_public_antv_color_preserves_values_and_native_semantics[pie]
+FAILED tests/r18_probes/role08/test_antv_color.py::test_public_antv_color_preserves_values_and_native_semantics[sunburst]
+FAILED tests/r18_probes/role08/test_antv_color.py::test_public_antv_color_preserves_values_and_native_semantics[treemap]
+FAILED tests/r18_probes/role08/test_antv_color.py::test_public_antv_color_preserves_values_and_native_semantics[gauge]
+FAILED tests/r18_probes/role08/test_antv_color.py::test_public_antv_color_preserves_values_and_native_semantics[heatmap-negative]
+FAILED tests/r18_probes/role08/test_antv_color.py::test_public_antv_color_preserves_values_and_native_semantics[heatmap-positive]
+FAILED tests/r18_probes/role08/test_antv_color.py::test_public_antv_color_preserves_values_and_native_semantics[heatmap-signed]
+FAILED tests/r18_probes/role08/test_antv_color.py::test_public_antv_color_preserves_values_and_native_semantics[heatmap-constant]
+FAILED tests/r18_probes/role08/test_antv_color.py::test_public_antv_color_preserves_values_and_native_semantics[heatmap-zero]
+9 failed, 2 passed in 1.12s

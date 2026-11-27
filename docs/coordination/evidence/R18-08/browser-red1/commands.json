@@ -1,0 +1,80 @@
+[
+  {
+    "label": "ruff",
+    "exe": "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+    "args": [
+      "-m",
+      "ruff",
+      "check",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt\\tests\\r18_probes\\role08"
+    ],
+    "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt",
+    "started": "2026-11-27T14:55:53.120Z",
+    "finished": "2026-11-27T14:55:53.353Z",
+    "exit": 0,
+    "error": null
+  },
+  {
+    "label": "mypy",
+    "exe": "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+    "args": [
+      "-m",
+      "mypy",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt\\tests\\r18_probes\\role08"
+    ],
+    "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt",
+    "started": "2026-11-27T14:55:53.358Z",
+    "finished": "2026-11-27T14:56:02.898Z",
+    "exit": 0,
+    "error": null
+  },
+  {
+    "label": "generate",
+    "exe": "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+    "args": [
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt\\tests\\r18_probes\\role08\\generate.py",
+      "--source",
+      "C:/Users/bagma/AppData/Local/Temp/opencode/r18-08-antv-source-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "--commit",
+      "1c721bb6497746641b897eb2eb938cfad52068d2",
+      "--output",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated"
+    ],
+    "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt",
+    "started": "2026-11-27T14:56:02.900Z",
+    "finished": "2026-11-27T14:56:04.476Z",
+    "exit": 0,
+    "error": null
+  },
+  {
+    "label": "browser",
+    "exe": "C:\\Program Files\\nodejs\\node.exe",
+    "args": [
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt\\tests\\r18_probes\\role08\\browser.mjs",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated",
+      "C:/Users/bagma/AppData/Local/Temp/opencode/r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt"
+    ],
+    "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt",
+    "started": "2026-11-27T14:56:04.476Z",
+    "finished": "2026-11-27T14:56:28.674Z",
+    "exit": 1,
+    "error": null
+  },
+  {
+    "label": "source-clean",
+    "exe": "git",
+    "args": [
+      "diff",
+      "--exit-code",
+      "1c721bb6497746641b897eb2eb938cfad52068d2",
+      "--",
+      "python/deepviz/src",
+      "schemas"
+    ],
+    "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r18-08-antv-source-ses_de56782e6ffeVWDIuY3v01kkBt",
+    "started": "2026-11-27T14:56:28.675Z",
+    "finished": "2026-11-27T14:56:28.748Z",
+    "exit": 0,
+    "error": null
+  }
+]

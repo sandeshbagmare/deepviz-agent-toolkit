@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\bagma\AppData\Local\Temp\opencode\r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt\tests\r18_probes\role08\generate.py", line 67, in <module>
+    main()
+  File "C:\Users\bagma\AppData\Local\Temp\opencode\r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt\tests\r18_probes\role08\generate.py", line 57, in main
+    "manifest": manifest.relative_to(output).as_posix(), "artifact": artifact.model_dump(),
+                                                                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Artifact' object has no attribute 'model_dump'

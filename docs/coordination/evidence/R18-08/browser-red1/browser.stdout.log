@@ -1,0 +1,12 @@
+pie: production resolved, strict failures 3
+sunburst: production resolved, strict failures 3
+treemap: production resolved, strict failures 3
+gauge: production resolved, strict failures 3
+heatmap-negative: production rejected, strict failures 6
+heatmap-positive: production resolved, strict failures 0
+heatmap-signed: production resolved, strict failures 1
+heatmap-constant: production resolved, strict failures 0
+heatmap-zero: production resolved, strict failures 0
+line: production resolved, strict failures 0
+scatter: production resolved, strict failures 0
+{"commit":"1c721bb6497746641b897eb2eb938cfad52068d2","cases":11,"checks":130,"passed":111,"failed":19,"skipped":0,"failures":[{"id":"pie","name":"categorical-data-colors-distinct"},{"id":"pie","name":"visible-legend-labels-and-distinct-keys"},{"id":"pie","name":"actual-native-colors-agree-with-visible-legend"},{"id":"sunburst","name":"categorical-data-colors-distinct"},{"id":"sunburst","name":"visible-legend-labels-and-distinct-keys"},{"id":"sunburst","name":"actual-native-colors-agree-with-visible-legend"},{"id":"treemap","name":"categorical-data-colors-distinct"},{"id":"treemap","name":"visible-legend-labels-and-distinct-keys"},{"id":"treemap","name":"actual-native-colors-agree-with-visible-legend"},{"id":"gauge","name":"categorical-data-colors-distinct"},{"id":"gauge","name":"visible-legend-labels-and-distinct-keys"},{"id":"gauge","name":"actual-native-colors-agree-with-visible-legend"},{"id":"heatmap-negative","name":"unmodified-production-ready"},{"id":"heatmap-negative","name":"unmodified-production-zero-errors"},{"id":"heatmap-negative","name":"two-cell-marks"},{"id":"heatmap-negative","name":"quantitative-cell-colors-distinct-iff-values-differ"},{"id":"heatmap-negative","name":"visible-finite-quantitative-legend"},{"id":"heatmap-negative","name":"literal-grid-cell-order"},{"id":"heatmap-signed","name":"visible-finite-quantitative-legend"}]}

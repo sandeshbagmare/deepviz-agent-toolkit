@@ -1,0 +1,2900 @@
+{
+  "identity": {
+    "source": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-source-ses_de56782e6ffeVWDIuY3v01kkBt",
+    "commit": "1c721bb6497746641b897eb2eb938cfad52068d2",
+    "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+    "python_executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+    "modules": [
+      {
+        "name": "deepviz",
+        "path": "python/deepviz/src/deepviz/__init__.py",
+        "git_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "working_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "newline_rule": "CRLF-to-LF only"
+      },
+      {
+        "name": "deepviz.models",
+        "path": "python/deepviz/src/deepviz/models.py",
+        "git_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "working_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "newline_rule": "CRLF-to-LF only"
+      },
+      {
+        "name": "deepviz.engines",
+        "path": "python/deepviz/src/deepviz/engines.py",
+        "git_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225",
+        "working_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225",
+        "newline_rule": "CRLF-to-LF only"
+      },
+      {
+        "name": "deepviz.render",
+        "path": "python/deepviz/src/deepviz/render.py",
+        "git_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+        "working_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+        "newline_rule": "CRLF-to-LF only"
+      },
+      {
+        "name": "deepviz.normalize",
+        "path": "python/deepviz/src/deepviz/normalize.py",
+        "git_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+        "working_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+        "newline_rule": "CRLF-to-LF only"
+      }
+    ],
+    "antv_function_sha256": "0a20b95a5c51ad1463a9e9777a8d7ff77b9d6ae280f52af9e454114f869745ee"
+  },
+  "totals": {
+    "cases": 11,
+    "checks": 130,
+    "passed": 115,
+    "failed": 15,
+    "skipped": 0
+  },
+  "checks": [
+    {
+      "id": "pie",
+      "name": "unmodified-production-ready",
+      "pass": true,
+      "observed": {
+        "status": "resolved"
+      }
+    },
+    {
+      "id": "pie",
+      "name": "unmodified-production-zero-errors",
+      "pass": true,
+      "observed": []
+    },
+    {
+      "id": "pie",
+      "name": "real-pinned-CDN-loads",
+      "pass": true,
+      "observed": {
+        "failed": [],
+        "responses": [
+          {
+            "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "id": "pie",
+      "name": "literal-input-records-preserved",
+      "pass": true,
+      "observed": [
+        {
+          "category": "Alpha",
+          "value": 12
+        },
+        {
+          "category": "Beta",
+          "value": 31
+        },
+        {
+          "category": "Gamma",
+          "value": 7
+        }
+      ]
+    },
+    {
+      "id": "pie",
+      "name": "unmodified-production-paints",
+      "pass": true,
+      "observed": 133916
+    },
+    {
+      "id": "pie",
+      "name": "observation-does-not-change-readiness",
+      "pass": true,
+      "observed": {
+        "production": {
+          "status": "resolved"
+        },
+        "observed": {
+          "status": "resolved"
+        },
+        "observerErrors": []
+      }
+    },
+    {
+      "id": "pie",
+      "name": "embedded-native-equals-public-manifest",
+      "pass": true,
+      "observed": [
+        {
+          "type": "interval",
+          "data": [
+            {
+              "_x": "Alpha",
+              "_y": 12,
+              "_color": "Series",
+              "_size": 8,
+              "_heat": 12,
+              "_row": 0
+            },
+            {
+              "_x": "Beta",
+              "_y": 31,
+              "_color": "Series",
+              "_size": 8,
+              "_heat": 31,
+              "_row": 1
+            },
+            {
+              "_x": "Gamma",
+              "_y": 7,
+              "_color": "Series",
+              "_size": 8,
+              "_heat": 7,
+              "_row": 2
+            }
+          ],
+          "encode": {
+            "y": "_y",
+            "color": "_x"
+          },
+          "animate": false,
+          "theme": "light",
+          "title": "R18 AntV pie",
+          "tooltip": false,
+          "axis": {
+            "x": {
+              "title": "category",
+              "labelFill": "#202938",
+              "titleFill": "#202938"
+            },
+            "y": {
+              "title": "value",
+              "labelFill": "#202938",
+              "titleFill": "#202938"
+            }
+          },
+          "style": {
+            "fill": "#386cb0",
+            "stroke": "#386cb0"
+          },
+          "coordinate": {
+            "type": "theta",
+            "innerRadius": 0
+          },
+          "transform": [
+            {
+              "type": "stackY"
+            }
+          ],
+          "legend": {
+            "color": {
+              "position": "right"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "pie",
+      "name": "literal-categorical-labels-values",
+      "pass": true,
+      "observed": [
+        {
+          "_x": "Alpha",
+          "_y": 12,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 12,
+          "_row": 0
+        },
+        {
+          "_x": "Beta",
+          "_y": 31,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 31,
+          "_row": 1
+        },
+        {
+          "_x": "Gamma",
+          "_y": 7,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 7,
+          "_row": 2
+        }
+      ]
+    },
+    {
+      "id": "pie",
+      "name": "one-native-mark-per-literal-category",
+      "pass": true,
+      "observed": [
+        {
+          "node": "path",
+          "className": "element",
+          "fill": "#386cb0",
+          "stroke": "#386cb0",
+          "box": {
+            "x": 408.1630859375,
+            "y": 55,
+            "width": 204.09500000000003,
+            "height": 204.5
+          },
+          "attributes": {
+            "d": "M0.02,-204.5A204.5,204.5,0,0,1,204.095,-12.861L0,0Z",
+            "transform": "translate(392.1630859375, 204.5)",
+            "radius": 0,
+            "inset": 0,
+            "fillOpacity": 0.95,
+            "fill": "#386cb0",
+            "lineWidth": 1,
+            "stroke": "#386cb0",
+            "class": "element"
+          }
+        },
+        {
+          "node": "path",
+          "className": "element",
+          "fill": "#386cb0",
+          "stroke": "#386cb0",
+          "box": {
+            "x": 203.66333018040143,
+            "y": 129.163,
+            "width": 409,
+            "height": 334.837144106667
+          },
+          "attributes": {
+            "d": "M204.098,-12.82A204.5,204.5,0,1,1,-157.583,-130.337L0,0Z",
+            "transform": "translate(392.1630859375, 204.5)",
+            "radius": 0,
+            "inset": 0,
+            "fillOpacity": 0.95,
+            "fill": "#386cb0",
+            "lineWidth": 1,
+            "stroke": "#386cb0",
+            "class": "element"
+          }
+        },
+        {
+          "node": "path",
+          "className": "element",
+          "fill": "#386cb0",
+          "stroke": "#386cb0",
+          "box": {
+            "x": 250.60608593749998,
+            "y": 55,
+            "width": 157.55700000000002,
+            "height": 204.5
+          },
+          "attributes": {
+            "d": "M-157.557,-130.369A204.5,204.5,0,0,1,-0.02,-204.5L0,0Z",
+            "transform": "translate(392.1630859375, 204.5)",
+            "radius": 0,
+            "inset": 0,
+            "fillOpacity": 0.95,
+            "fill": "#386cb0",
+            "lineWidth": 1,
+            "stroke": "#386cb0",
+            "class": "element"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pie",
+      "name": "categorical-data-colors-distinct",
+      "pass": false,
+      "observed": [
+        "#386cb0",
+        "#386cb0",
+        "#386cb0"
+      ]
+    },
+    {
+      "id": "pie",
+      "name": "visible-legend-labels-and-distinct-keys",
+      "pass": true,
+      "observed": [
+        {
+          "label": "Alpha",
+          "fill": "#1783FF"
+        },
+        {
+          "label": "Beta",
+          "fill": "#00C9C9"
+        },
+        {
+          "label": "Gamma",
+          "fill": "#F0884D"
+        }
+      ]
+    },
+    {
+      "id": "pie",
+      "name": "actual-native-colors-agree-with-visible-legend",
+      "pass": false,
+      "observed": {
+        "legend": [
+          {
+            "label": "Alpha",
+            "fill": "#1783FF"
+          },
+          {
+            "label": "Beta",
+            "fill": "#00C9C9"
+          },
+          {
+            "label": "Gamma",
+            "fill": "#F0884D"
+          }
+        ],
+        "markFills": [
+          "#386cb0",
+          "#386cb0",
+          "#386cb0"
+        ]
+      }
+    },
+    {
+      "id": "sunburst",
+      "name": "unmodified-production-ready",
+      "pass": true,
+      "observed": {
+        "status": "resolved"
+      }
+    },
+    {
+      "id": "sunburst",
+      "name": "unmodified-production-zero-errors",
+      "pass": true,
+      "observed": []
+    },
+    {
+      "id": "sunburst",
+      "name": "real-pinned-CDN-loads",
+      "pass": true,
+      "observed": {
+        "failed": [],
+        "responses": [
+          {
+            "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "id": "sunburst",
+      "name": "literal-input-records-preserved",
+      "pass": true,
+      "observed": [
+        {
+          "category": "Alpha",
+          "value": 12
+        },
+        {
+          "category": "Beta",
+          "value": 31
+        },
+        {
+          "category": "Gamma",
+          "value": 7
+        }
+      ]
+    },
+    {
+      "id": "sunburst",
+      "name": "unmodified-production-paints",
+      "pass": true,
+      "observed": 108182
+    },
+    {
+      "id": "sunburst",
+      "name": "observation-does-not-change-readiness",
+      "pass": true,
+      "observed": {
+        "production": {
+          "status": "resolved"
+        },
+        "observed": {
+          "status": "resolved"
+        },
+        "observerErrors": []
+      }
+    },
+    {
+      "id": "sunburst",
+      "name": "embedded-native-equals-public-manifest",
+      "pass": true,
+      "observed": [
+        {
+          "type": "interval",
+          "data": [
+            {
+              "_x": "Alpha",
+              "_y": 12,
+              "_color": "Series",
+              "_size": 8,
+              "_heat": 12,
+              "_row": 0
+            },
+            {
+              "_x": "Beta",
+              "_y": 31,
+              "_color": "Series",
+              "_size": 8,
+              "_heat": 31,
+              "_row": 1
+            },
+            {
+              "_x": "Gamma",
+              "_y": 7,
+              "_color": "Series",
+              "_size": 8,
+              "_heat": 7,
+              "_row": 2
+            }
+          ],
+          "encode": {
+            "y": "_y",
+            "color": "_x"
+          },
+          "animate": false,
+          "theme": "light",
+          "title": "R18 AntV sunburst",
+          "tooltip": false,
+          "axis": {
+            "x": {
+              "title": "category",
+              "labelFill": "#202938",
+              "titleFill": "#202938"
+            },
+            "y": {
+              "title": "value",
+              "labelFill": "#202938",
+              "titleFill": "#202938"
+            }
+          },
+          "style": {
+            "fill": "#386cb0",
+            "stroke": "#386cb0"
+          },
+          "coordinate": {
+            "type": "theta",
+            "innerRadius": 0.45
+          },
+          "transform": [
+            {
+              "type": "stackY"
+            }
+          ],
+          "legend": {
+            "color": {
+              "position": "right"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "sunburst",
+      "name": "literal-categorical-labels-values",
+      "pass": true,
+      "observed": [
+        {
+          "_x": "Alpha",
+          "_y": 12,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 12,
+          "_row": 0
+        },
+        {
+          "_x": "Beta",
+          "_y": 31,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 31,
+          "_row": 1
+        },
+        {
+          "_x": "Gamma",
+          "_y": 7,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 7,
+          "_row": 2
+        }
+      ]
+    },
+    {
+      "id": "sunburst",
+      "name": "one-native-mark-per-literal-category",
+      "pass": true,
+      "observed": [
+        {
+          "node": "path",
+          "className": "element",
+          "fill": "#386cb0",
+          "stroke": "#386cb0",
+          "box": {
+            "x": 408.1720859375,
+            "y": 55,
+            "width": 204.086,
+            "height": 198.71300000000002
+          },
+          "attributes": {
+            "d": "M0.02,-204.5A204.5,204.5,0,0,1,204.095,-12.861L91.843,-5.787A92.025,92.025,0,0,0,0.009,-92.025Z",
+            "transform": "translate(392.1630859375, 204.5)",
+            "radius": 0,
+            "inset": 0,
+            "fillOpacity": 0.95,
+            "fill": "#386cb0",
+            "lineWidth": 1,
+            "stroke": "#386cb0",
+            "class": "element"
+          }
+        },
+        {
+          "node": "path",
+          "className": "element",
+          "fill": "#386cb0",
+          "stroke": "#386cb0",
+          "box": {
+            "x": 203.66333018040143,
+            "y": 129.163,
+            "width": 409,
+            "height": 334.837144106667
+          },
+          "attributes": {
+            "d": "M204.098,-12.82A204.5,204.5,0,1,1,-157.583,-130.337L-70.912,-58.652A92.025,92.025,0,1,0,91.844,-5.769Z",
+            "transform": "translate(392.1630859375, 204.5)",
+            "radius": 0,
+            "inset": 0,
+            "fillOpacity": 0.95,
+            "fill": "#386cb0",
+            "lineWidth": 1,
+            "stroke": "#386cb0",
+            "class": "element"
+          }
+        },
+        {
+          "node": "path",
+          "className": "element",
+          "fill": "#386cb0",
+          "stroke": "#386cb0",
+          "box": {
+            "x": 250.60608593749998,
+            "y": 55,
+            "width": 157.548,
+            "height": 145.834
+          },
+          "attributes": {
+            "d": "M-157.557,-130.369A204.5,204.5,0,0,1,-0.02,-204.5L-0.009,-92.025A92.025,92.025,0,0,0,-70.901,-58.666Z",
+            "transform": "translate(392.1630859375, 204.5)",
+            "radius": 0,
+            "inset": 0,
+            "fillOpacity": 0.95,
+            "fill": "#386cb0",
+            "lineWidth": 1,
+            "stroke": "#386cb0",
+            "class": "element"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sunburst",
+      "name": "categorical-data-colors-distinct",
+      "pass": false,
+      "observed": [
+        "#386cb0",
+        "#386cb0",
+        "#386cb0"
+      ]
+    },
+    {
+      "id": "sunburst",
+      "name": "visible-legend-labels-and-distinct-keys",
+      "pass": true,
+      "observed": [
+        {
+          "label": "Alpha",
+          "fill": "#1783FF"
+        },
+        {
+          "label": "Beta",
+          "fill": "#00C9C9"
+        },
+        {
+          "label": "Gamma",
+          "fill": "#F0884D"
+        }
+      ]
+    },
+    {
+      "id": "sunburst",
+      "name": "actual-native-colors-agree-with-visible-legend",
+      "pass": false,
+      "observed": {
+        "legend": [
+          {
+            "label": "Alpha",
+            "fill": "#1783FF"
+          },
+          {
+            "label": "Beta",
+            "fill": "#00C9C9"
+          },
+          {
+            "label": "Gamma",
+            "fill": "#F0884D"
+          }
+        ],
+        "markFills": [
+          "#386cb0",
+          "#386cb0",
+          "#386cb0"
+        ]
+      }
+    },
+    {
+      "id": "treemap",
+      "name": "unmodified-production-ready",
+      "pass": true,
+      "observed": {
+        "status": "resolved"
+      }
+    },
+    {
+      "id": "treemap",
+      "name": "unmodified-production-zero-errors",
+      "pass": true,
+      "observed": []
+    },
+    {
+      "id": "treemap",
+      "name": "real-pinned-CDN-loads",
+      "pass": true,
+      "observed": {
+        "failed": [],
+        "responses": [
+          {
+            "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "id": "treemap",
+      "name": "literal-input-records-preserved",
+      "pass": true,
+      "observed": [
+        {
+          "category": "Alpha",
+          "value": 12
+        },
+        {
+          "category": "Beta",
+          "value": 31
+        },
+        {
+          "category": "Gamma",
+          "value": 7
+        }
+      ]
+    },
+    {
+      "id": "treemap",
+      "name": "unmodified-production-paints",
+      "pass": true,
+      "observed": 335893
+    },
+    {
+      "id": "treemap",
+      "name": "observation-does-not-change-readiness",
+      "pass": true,
+      "observed": {
+        "production": {
+          "status": "resolved"
+        },
+        "observed": {
+          "status": "resolved"
+        },
+        "observerErrors": []
+      }
+    },
+    {
+      "id": "treemap",
+      "name": "embedded-native-equals-public-manifest",
+      "pass": true,
+      "observed": [
+        {
+          "type": "rect",
+          "data": [
+            {
+              "_x": "Alpha",
+              "_y": 12,
+              "_color": "Series",
+              "_size": 8,
+              "_heat": 12,
+              "_row": 0,
+              "_left": 0,
+              "_right": 0.24,
+              "_bottom": 0,
+              "_top": 1
+            },
+            {
+              "_x": "Beta",
+              "_y": 31,
+              "_color": "Series",
+              "_size": 8,
+              "_heat": 31,
+              "_row": 1,
+              "_left": 0.24,
+              "_right": 0.86,
+              "_bottom": 0,
+              "_top": 1
+            },
+            {
+              "_x": "Gamma",
+              "_y": 7,
+              "_color": "Series",
+              "_size": 8,
+              "_heat": 7,
+              "_row": 2,
+              "_left": 0.86,
+              "_right": 1,
+              "_bottom": 0,
+              "_top": 1
+            }
+          ],
+          "encode": {
+            "x": [
+              "_left",
+              "_right"
+            ],
+            "y": [
+              "_bottom",
+              "_top"
+            ],
+            "color": "_x"
+          },
+          "animate": false,
+          "theme": "light",
+          "title": "R18 AntV treemap",
+          "tooltip": false,
+          "axis": false,
+          "style": {
+            "fill": "#386cb0",
+            "stroke": "#386cb0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "treemap",
+      "name": "literal-categorical-labels-values",
+      "pass": true,
+      "observed": [
+        {
+          "_x": "Alpha",
+          "_y": 12,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 12,
+          "_row": 0,
+          "_left": 0,
+          "_right": 0.24,
+          "_bottom": 0,
+          "_top": 1
+        },
+        {
+          "_x": "Beta",
+          "_y": 31,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 31,
+          "_row": 1,
+          "_left": 0.24,
+          "_right": 0.86,
+          "_bottom": 0,
+          "_top": 1
+        },
+        {
+          "_x": "Gamma",
+          "_y": 7,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 7,
+          "_row": 2,
+          "_left": 0.86,
+          "_right": 1,
+          "_bottom": 0,
+          "_top": 1
+        }
+      ]
+    },
+    {
+      "id": "treemap",
+      "name": "one-native-mark-per-literal-category",
+      "pass": true,
+      "observed": [
+        {
+          "node": "rect",
+          "className": "element",
+          "fill": "#386cb0",
+          "stroke": "#386cb0",
+          "box": {
+            "x": 16,
+            "y": 82,
+            "width": 208.32,
+            "height": 382
+          },
+          "attributes": {
+            "x": 0,
+            "y": 0,
+            "width": 208.32,
+            "height": 382,
+            "fillOpacity": 0.95,
+            "fill": "#386cb0",
+            "lineWidth": 1,
+            "stroke": "#386cb0",
+            "class": "element"
+          }
+        },
+        {
+          "node": "rect",
+          "className": "element",
+          "fill": "#386cb0",
+          "stroke": "#386cb0",
+          "box": {
+            "x": 224.32,
+            "y": 82,
+            "width": 538.1600000000001,
+            "height": 382
+          },
+          "attributes": {
+            "x": 208.32,
+            "y": 0,
+            "width": 538.1600000000001,
+            "height": 382,
+            "fillOpacity": 0.95,
+            "fill": "#386cb0",
+            "lineWidth": 1,
+            "stroke": "#386cb0",
+            "class": "element"
+          }
+        },
+        {
+          "node": "rect",
+          "className": "element",
+          "fill": "#386cb0",
+          "stroke": "#386cb0",
+          "box": {
+            "x": 762.48,
+            "y": 82,
+            "width": 121.51999999999998,
+            "height": 382
+          },
+          "attributes": {
+            "x": 746.48,
+            "y": 0,
+            "width": 121.51999999999998,
+            "height": 382,
+            "fillOpacity": 0.95,
+            "fill": "#386cb0",
+            "lineWidth": 1,
+            "stroke": "#386cb0",
+            "class": "element"
+          }
+        }
+      ]
+    },
+    {
+      "id": "treemap",
+      "name": "categorical-data-colors-distinct",
+      "pass": false,
+      "observed": [
+        "#386cb0",
+        "#386cb0",
+        "#386cb0"
+      ]
+    },
+    {
+      "id": "treemap",
+      "name": "visible-legend-labels-and-distinct-keys",
+      "pass": true,
+      "observed": [
+        {
+          "label": "Alpha",
+          "fill": "#1783FF"
+        },
+        {
+          "label": "Beta",
+          "fill": "#00C9C9"
+        },
+        {
+          "label": "Gamma",
+          "fill": "#F0884D"
+        }
+      ]
+    },
+    {
+      "id": "treemap",
+      "name": "actual-native-colors-agree-with-visible-legend",
+      "pass": false,
+      "observed": {
+        "legend": [
+          {
+            "label": "Alpha",
+            "fill": "#1783FF"
+          },
+          {
+            "label": "Beta",
+            "fill": "#00C9C9"
+          },
+          {
+            "label": "Gamma",
+            "fill": "#F0884D"
+          }
+        ],
+        "markFills": [
+          "#386cb0",
+          "#386cb0",
+          "#386cb0"
+        ]
+      }
+    },
+    {
+      "id": "gauge",
+      "name": "unmodified-production-ready",
+      "pass": true,
+      "observed": {
+        "status": "resolved"
+      }
+    },
+    {
+      "id": "gauge",
+      "name": "unmodified-production-zero-errors",
+      "pass": true,
+      "observed": []
+    },
+    {
+      "id": "gauge",
+      "name": "real-pinned-CDN-loads",
+      "pass": true,
+      "observed": {
+        "failed": [],
+        "responses": [
+          {
+            "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "id": "gauge",
+      "name": "literal-input-records-preserved",
+      "pass": true,
+      "observed": [
+        {
+          "category": "Load",
+          "value": 37
+        }
+      ]
+    },
+    {
+      "id": "gauge",
+      "name": "unmodified-production-paints",
+      "pass": true,
+      "observed": 27719
+    },
+    {
+      "id": "gauge",
+      "name": "observation-does-not-change-readiness",
+      "pass": true,
+      "observed": {
+        "production": {
+          "status": "resolved"
+        },
+        "observed": {
+          "status": "resolved"
+        },
+        "observerErrors": []
+      }
+    },
+    {
+      "id": "gauge",
+      "name": "embedded-native-equals-public-manifest",
+      "pass": true,
+      "observed": [
+        {
+          "type": "interval",
+          "data": [
+            {
+              "_x": "Value",
+              "_y": 37
+            },
+            {
+              "_x": "Remaining",
+              "_y": 63
+            }
+          ],
+          "encode": {
+            "y": "_y",
+            "color": "_x"
+          },
+          "animate": false,
+          "theme": "light",
+          "title": "R18 AntV gauge",
+          "tooltip": false,
+          "axis": false,
+          "style": {
+            "fill": "#386cb0",
+            "stroke": "#386cb0"
+          },
+          "coordinate": {
+            "type": "theta",
+            "innerRadius": 0.75,
+            "startAngle": -3.141592653589793,
+            "endAngle": 0
+          },
+          "transform": [
+            {
+              "type": "stackY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gauge",
+      "name": "literal-categorical-labels-values",
+      "pass": true,
+      "observed": [
+        {
+          "_x": "Value",
+          "_y": 37
+        },
+        {
+          "_x": "Remaining",
+          "_y": 63
+        }
+      ]
+    },
+    {
+      "id": "gauge",
+      "name": "one-native-mark-per-literal-category",
+      "pass": true,
+      "observed": [
+        {
+          "node": "path",
+          "className": "element",
+          "fill": "#386cb0",
+          "stroke": "#386cb0",
+          "box": {
+            "x": 259,
+            "y": 97.71600000011478,
+            "width": 134.09500000000003,
+            "height": 175.26999999988521
+          },
+          "attributes": {
+            "d": "M-191,-0.019A191,191,0,0,1,-75.873,-175.284L-56.905,-131.463A143.25,143.25,0,0,0,-143.25,-0.014Z",
+            "transform": "translate(434, 191)",
+            "radius": 0,
+            "inset": 0,
+            "fillOpacity": 0.95,
+            "fill": "#386cb0",
+            "lineWidth": 1,
+            "stroke": "#386cb0",
+            "class": "element"
+          }
+        },
+        {
+          "node": "path",
+          "className": "element",
+          "fill": "#386cb0",
+          "stroke": "#386cb0",
+          "box": {
+            "x": 374.16200000000003,
+            "y": 81.99959559819341,
+            "width": 266.83799999999997,
+            "height": 190.98640440184772
+          },
+          "attributes": {
+            "d": "M-75.838,-175.299A191,191,0,0,1,191,-0.019L143.25,-0.014A143.25,143.25,0,0,0,-56.878,-131.474Z",
+            "transform": "translate(434, 191)",
+            "radius": 0,
+            "inset": 0,
+            "fillOpacity": 0.95,
+            "fill": "#386cb0",
+            "lineWidth": 1,
+            "stroke": "#386cb0",
+            "class": "element"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gauge",
+      "name": "categorical-data-colors-distinct",
+      "pass": false,
+      "observed": [
+        "#386cb0",
+        "#386cb0"
+      ]
+    },
+    {
+      "id": "gauge",
+      "name": "visible-legend-labels-and-distinct-keys",
+      "pass": true,
+      "observed": [
+        {
+          "label": "Value",
+          "fill": "#1783FF"
+        },
+        {
+          "label": "Remaining",
+          "fill": "#00C9C9"
+        }
+      ]
+    },
+    {
+      "id": "gauge",
+      "name": "actual-native-colors-agree-with-visible-legend",
+      "pass": false,
+      "observed": {
+        "legend": [
+          {
+            "label": "Value",
+            "fill": "#1783FF"
+          },
+          {
+            "label": "Remaining",
+            "fill": "#00C9C9"
+          }
+        ],
+        "markFills": [
+          "#386cb0",
+          "#386cb0"
+        ]
+      }
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "unmodified-production-ready",
+      "pass": false,
+      "observed": {
+        "status": "rejected",
+        "error": "TypeError: Cannot read properties of null (reading 'ownerDocument')"
+      }
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "unmodified-production-zero-errors",
+      "pass": false,
+      "observed": [
+        {
+          "kind": "page",
+          "text": "Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'getBBox')"
+        },
+        {
+          "kind": "page",
+          "text": "Uncaught (in promise) TypeError: Cannot read properties of null (reading 'ownerDocument')"
+        }
+      ]
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "real-pinned-CDN-loads",
+      "pass": true,
+      "observed": {
+        "failed": [],
+        "responses": [
+          {
+            "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "literal-input-records-preserved",
+      "pass": true,
+      "observed": [
+        {
+          "day": "Mon",
+          "slot": "AM",
+          "heat": -7
+        },
+        {
+          "day": "Tue",
+          "slot": "PM",
+          "heat": -2
+        }
+      ]
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "unmodified-production-paints",
+      "pass": true,
+      "observed": 1656
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "observation-does-not-change-readiness",
+      "pass": true,
+      "observed": {
+        "production": {
+          "status": "rejected",
+          "error": "TypeError: Cannot read properties of null (reading 'ownerDocument')"
+        },
+        "observed": {
+          "status": "rejected",
+          "error": "TypeError: Cannot read properties of null (reading 'ownerDocument')"
+        },
+        "observerErrors": [
+          {
+            "kind": "page",
+            "text": "Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'getBBox')"
+          },
+          {
+            "kind": "page",
+            "text": "Uncaught (in promise) TypeError: Cannot read properties of null (reading 'ownerDocument')"
+          }
+        ]
+      }
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "embedded-native-equals-public-manifest",
+      "pass": true,
+      "observed": [
+        {
+          "type": "cell",
+          "data": [
+            {
+              "_x": "Mon",
+              "_y": "AM",
+              "_color": "-7",
+              "_size": 8,
+              "_heat": -7,
+              "_row": 0
+            },
+            {
+              "_x": "Tue",
+              "_y": "PM",
+              "_color": "-2",
+              "_size": 8,
+              "_heat": -2,
+              "_row": 1
+            }
+          ],
+          "encode": {
+            "x": "_x",
+            "y": "_y",
+            "color": "_heat"
+          },
+          "animate": false,
+          "theme": "light",
+          "title": "R18 AntV heatmap-negative",
+          "tooltip": false,
+          "axis": {
+            "x": {
+              "title": "day",
+              "labelFill": "#202938",
+              "titleFill": "#202938"
+            },
+            "y": {
+              "title": "slot",
+              "labelFill": "#202938",
+              "titleFill": "#202938"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "literal-negative-or-control-values",
+      "pass": true,
+      "observed": [
+        {
+          "_x": "Mon",
+          "_y": "AM",
+          "_color": "-7",
+          "_size": 8,
+          "_heat": -7,
+          "_row": 0
+        },
+        {
+          "_x": "Tue",
+          "_y": "PM",
+          "_color": "-2",
+          "_size": 8,
+          "_heat": -2,
+          "_row": 1
+        }
+      ]
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "two-cell-marks",
+      "pass": false,
+      "observed": []
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "quantitative-cell-colors-distinct-iff-values-differ",
+      "pass": false,
+      "observed": []
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "visible-finite-quantitative-legend",
+      "pass": false,
+      "observed": {
+        "legendTexts": [
+          "_heat"
+        ],
+        "numericTicks": []
+      }
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "literal-grid-cell-order",
+      "pass": false,
+      "observed": []
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "unmodified-production-ready",
+      "pass": true,
+      "observed": {
+        "status": "resolved"
+      }
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "unmodified-production-zero-errors",
+      "pass": true,
+      "observed": []
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "real-pinned-CDN-loads",
+      "pass": true,
+      "observed": {
+        "failed": [],
+        "responses": [
+          {
+            "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "literal-input-records-preserved",
+      "pass": true,
+      "observed": [
+        {
+          "day": "Mon",
+          "slot": "AM",
+          "heat": 2
+        },
+        {
+          "day": "Tue",
+          "slot": "PM",
+          "heat": 7
+        }
+      ]
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "unmodified-production-paints",
+      "pass": true,
+      "observed": 64473
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "observation-does-not-change-readiness",
+      "pass": true,
+      "observed": {
+        "production": {
+          "status": "resolved"
+        },
+        "observed": {
+          "status": "resolved"
+        },
+        "observerErrors": []
+      }
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "embedded-native-equals-public-manifest",
+      "pass": true,
+      "observed": [
+        {
+          "type": "cell",
+          "data": [
+            {
+              "_x": "Mon",
+              "_y": "AM",
+              "_color": "2",
+              "_size": 8,
+              "_heat": 2,
+              "_row": 0
+            },
+            {
+              "_x": "Tue",
+              "_y": "PM",
+              "_color": "7",
+              "_size": 8,
+              "_heat": 7,
+              "_row": 1
+            }
+          ],
+          "encode": {
+            "x": "_x",
+            "y": "_y",
+            "color": "_heat"
+          },
+          "animate": false,
+          "theme": "light",
+          "title": "R18 AntV heatmap-positive",
+          "tooltip": false,
+          "axis": {
+            "x": {
+              "title": "day",
+              "labelFill": "#202938",
+              "titleFill": "#202938"
+            },
+            "y": {
+              "title": "slot",
+              "labelFill": "#202938",
+              "titleFill": "#202938"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "literal-negative-or-control-values",
+      "pass": true,
+      "observed": [
+        {
+          "_x": "Mon",
+          "_y": "AM",
+          "_color": "2",
+          "_size": 8,
+          "_heat": 2,
+          "_row": 0
+        },
+        {
+          "_x": "Tue",
+          "_y": "PM",
+          "_color": "7",
+          "_size": 8,
+          "_heat": 7,
+          "_row": 1
+        }
+      ]
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "two-cell-marks",
+      "pass": true,
+      "observed": [
+        {
+          "node": "rect",
+          "className": "element",
+          "fill": "rgb(255, 255, 217)",
+          "stroke": "rgb(255, 255, 217)",
+          "box": {
+            "x": 70,
+            "y": 120,
+            "width": 406.99999992001085,
+            "height": 147
+          },
+          "attributes": {
+            "x": 0,
+            "y": 0,
+            "width": 406.99999992001085,
+            "height": 147,
+            "fillOpacity": 0.95,
+            "fill": "rgb(255, 255, 217)",
+            "lineWidth": 0,
+            "stroke": "rgb(255, 255, 217)",
+            "class": "element"
+          }
+        },
+        {
+          "node": "rect",
+          "className": "element",
+          "fill": "rgb(8, 29, 88)",
+          "stroke": "rgb(8, 29, 88)",
+          "box": {
+            "x": 476.99999992001085,
+            "y": 267,
+            "width": 406.99999992001085,
+            "height": 147
+          },
+          "attributes": {
+            "x": 406.99999992001085,
+            "y": 147,
+            "width": 406.99999992001085,
+            "height": 147,
+            "fillOpacity": 0.95,
+            "fill": "rgb(8, 29, 88)",
+            "lineWidth": 0,
+            "stroke": "rgb(8, 29, 88)",
+            "class": "element"
+          }
+        }
+      ]
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "quantitative-cell-colors-distinct-iff-values-differ",
+      "pass": true,
+      "observed": [
+        "rgb(255, 255, 217)",
+        "rgb(8, 29, 88)"
+      ]
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "visible-finite-quantitative-legend",
+      "pass": true,
+      "observed": {
+        "legendTexts": [
+          "_heat",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "numericTicks": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      }
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "literal-grid-cell-order",
+      "pass": true,
+      "observed": [
+        {
+          "x": 70,
+          "y": 120,
+          "width": 406.99999992001085,
+          "height": 147
+        },
+        {
+          "x": 476.99999992001085,
+          "y": 267,
+          "width": 406.99999992001085,
+          "height": 147
+        }
+      ]
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "unmodified-production-ready",
+      "pass": true,
+      "observed": {
+        "status": "resolved"
+      }
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "unmodified-production-zero-errors",
+      "pass": true,
+      "observed": []
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "real-pinned-CDN-loads",
+      "pass": true,
+      "observed": {
+        "failed": [],
+        "responses": [
+          {
+            "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "literal-input-records-preserved",
+      "pass": true,
+      "observed": [
+        {
+          "day": "Mon",
+          "slot": "AM",
+          "heat": -7
+        },
+        {
+          "day": "Tue",
+          "slot": "PM",
+          "heat": 2
+        }
+      ]
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "unmodified-production-paints",
+      "pass": true,
+      "observed": 64389
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "observation-does-not-change-readiness",
+      "pass": true,
+      "observed": {
+        "production": {
+          "status": "resolved"
+        },
+        "observed": {
+          "status": "resolved"
+        },
+        "observerErrors": []
+      }
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "embedded-native-equals-public-manifest",
+      "pass": true,
+      "observed": [
+        {
+          "type": "cell",
+          "data": [
+            {
+              "_x": "Mon",
+              "_y": "AM",
+              "_color": "-7",
+              "_size": 8,
+              "_heat": -7,
+              "_row": 0
+            },
+            {
+              "_x": "Tue",
+              "_y": "PM",
+              "_color": "2",
+              "_size": 8,
+              "_heat": 2,
+              "_row": 1
+            }
+          ],
+          "encode": {
+            "x": "_x",
+            "y": "_y",
+            "color": "_heat"
+          },
+          "animate": false,
+          "theme": "light",
+          "title": "R18 AntV heatmap-signed",
+          "tooltip": false,
+          "axis": {
+            "x": {
+              "title": "day",
+              "labelFill": "#202938",
+              "titleFill": "#202938"
+            },
+            "y": {
+              "title": "slot",
+              "labelFill": "#202938",
+              "titleFill": "#202938"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "literal-negative-or-control-values",
+      "pass": true,
+      "observed": [
+        {
+          "_x": "Mon",
+          "_y": "AM",
+          "_color": "-7",
+          "_size": 8,
+          "_heat": -7,
+          "_row": 0
+        },
+        {
+          "_x": "Tue",
+          "_y": "PM",
+          "_color": "2",
+          "_size": 8,
+          "_heat": 2,
+          "_row": 1
+        }
+      ]
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "two-cell-marks",
+      "pass": true,
+      "observed": [
+        {
+          "node": "rect",
+          "className": "element",
+          "fill": "rgb(255, 255, 217)",
+          "stroke": "rgb(255, 255, 217)",
+          "box": {
+            "x": 70,
+            "y": 120,
+            "width": 406.99999992001085,
+            "height": 147
+          },
+          "attributes": {
+            "x": 0,
+            "y": 0,
+            "width": 406.99999992001085,
+            "height": 147,
+            "fillOpacity": 0.95,
+            "fill": "rgb(255, 255, 217)",
+            "lineWidth": 0,
+            "stroke": "rgb(255, 255, 217)",
+            "class": "element"
+          }
+        },
+        {
+          "node": "rect",
+          "className": "element",
+          "fill": "rgb(8, 29, 88)",
+          "stroke": "rgb(8, 29, 88)",
+          "box": {
+            "x": 476.99999992001085,
+            "y": 267,
+            "width": 406.99999992001085,
+            "height": 147
+          },
+          "attributes": {
+            "x": 406.99999992001085,
+            "y": 147,
+            "width": 406.99999992001085,
+            "height": 147,
+            "fillOpacity": 0.95,
+            "fill": "rgb(8, 29, 88)",
+            "lineWidth": 0,
+            "stroke": "rgb(8, 29, 88)",
+            "class": "element"
+          }
+        }
+      ]
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "quantitative-cell-colors-distinct-iff-values-differ",
+      "pass": true,
+      "observed": [
+        "rgb(255, 255, 217)",
+        "rgb(8, 29, 88)"
+      ]
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "visible-finite-quantitative-legend",
+      "pass": false,
+      "observed": {
+        "legendTexts": [
+          "_heat",
+          "-2",
+          "-1",
+          "0",
+          "1",
+          "2"
+        ],
+        "numericTicks": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "literal-grid-cell-order",
+      "pass": true,
+      "observed": [
+        {
+          "x": 70,
+          "y": 120,
+          "width": 406.99999992001085,
+          "height": 147
+        },
+        {
+          "x": 476.99999992001085,
+          "y": 267,
+          "width": 406.99999992001085,
+          "height": 147
+        }
+      ]
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "unmodified-production-ready",
+      "pass": true,
+      "observed": {
+        "status": "resolved"
+      }
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "unmodified-production-zero-errors",
+      "pass": true,
+      "observed": []
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "real-pinned-CDN-loads",
+      "pass": true,
+      "observed": {
+        "failed": [],
+        "responses": [
+          {
+            "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "literal-input-records-preserved",
+      "pass": true,
+      "observed": [
+        {
+          "day": "Mon",
+          "slot": "AM",
+          "heat": 1
+        },
+        {
+          "day": "Tue",
+          "slot": "PM",
+          "heat": 1
+        }
+      ]
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "unmodified-production-paints",
+      "pass": true,
+      "observed": 122196
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "observation-does-not-change-readiness",
+      "pass": true,
+      "observed": {
+        "production": {
+          "status": "resolved"
+        },
+        "observed": {
+          "status": "resolved"
+        },
+        "observerErrors": []
+      }
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "embedded-native-equals-public-manifest",
+      "pass": true,
+      "observed": [
+        {
+          "type": "cell",
+          "data": [
+            {
+              "_x": "Mon",
+              "_y": "AM",
+              "_color": "1",
+              "_size": 8,
+              "_heat": 1,
+              "_row": 0
+            },
+            {
+              "_x": "Tue",
+              "_y": "PM",
+              "_color": "1",
+              "_size": 8,
+              "_heat": 1,
+              "_row": 1
+            }
+          ],
+          "encode": {
+            "x": "_x",
+            "y": "_y",
+            "color": "_heat"
+          },
+          "animate": false,
+          "theme": "light",
+          "title": "R18 AntV heatmap-constant",
+          "tooltip": false,
+          "axis": {
+            "x": {
+              "title": "day",
+              "labelFill": "#202938",
+              "titleFill": "#202938"
+            },
+            "y": {
+              "title": "slot",
+              "labelFill": "#202938",
+              "titleFill": "#202938"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "literal-negative-or-control-values",
+      "pass": true,
+      "observed": [
+        {
+          "_x": "Mon",
+          "_y": "AM",
+          "_color": "1",
+          "_size": 8,
+          "_heat": 1,
+          "_row": 0
+        },
+        {
+          "_x": "Tue",
+          "_y": "PM",
+          "_color": "1",
+          "_size": 8,
+          "_heat": 1,
+          "_row": 1
+        }
+      ]
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "two-cell-marks",
+      "pass": true,
+      "observed": [
+        {
+          "node": "rect",
+          "className": "element",
+          "fill": "rgb(69, 180, 194)",
+          "stroke": "rgb(69, 180, 194)",
+          "box": {
+            "x": 70,
+            "y": 120,
+            "width": 406.99999992001085,
+            "height": 147
+          },
+          "attributes": {
+            "x": 0,
+            "y": 0,
+            "width": 406.99999992001085,
+            "height": 147,
+            "fillOpacity": 0.95,
+            "fill": "rgb(69, 180, 194)",
+            "lineWidth": 0,
+            "stroke": "rgb(69, 180, 194)",
+            "class": "element"
+          }
+        },
+        {
+          "node": "rect",
+          "className": "element",
+          "fill": "rgb(69, 180, 194)",
+          "stroke": "rgb(69, 180, 194)",
+          "box": {
+            "x": 476.99999992001085,
+            "y": 267,
+            "width": 406.99999992001085,
+            "height": 147
+          },
+          "attributes": {
+            "x": 406.99999992001085,
+            "y": 147,
+            "width": 406.99999992001085,
+            "height": 147,
+            "fillOpacity": 0.95,
+            "fill": "rgb(69, 180, 194)",
+            "lineWidth": 0,
+            "stroke": "rgb(69, 180, 194)",
+            "class": "element"
+          }
+        }
+      ]
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "quantitative-cell-colors-distinct-iff-values-differ",
+      "pass": true,
+      "observed": [
+        "rgb(69, 180, 194)",
+        "rgb(69, 180, 194)"
+      ]
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "visible-finite-quantitative-legend",
+      "pass": true,
+      "observed": {
+        "legendTexts": [
+          "_heat",
+          "1"
+        ],
+        "numericTicks": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "literal-grid-cell-order",
+      "pass": true,
+      "observed": [
+        {
+          "x": 70,
+          "y": 120,
+          "width": 406.99999992001085,
+          "height": 147
+        },
+        {
+          "x": 476.99999992001085,
+          "y": 267,
+          "width": 406.99999992001085,
+          "height": 147
+        }
+      ]
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "unmodified-production-ready",
+      "pass": true,
+      "observed": {
+        "status": "resolved"
+      }
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "unmodified-production-zero-errors",
+      "pass": true,
+      "observed": []
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "real-pinned-CDN-loads",
+      "pass": true,
+      "observed": {
+        "failed": [],
+        "responses": [
+          {
+            "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "literal-input-records-preserved",
+      "pass": true,
+      "observed": [
+        {
+          "day": "Mon",
+          "slot": "AM",
+          "heat": 0
+        },
+        {
+          "day": "Tue",
+          "slot": "PM",
+          "heat": 0
+        }
+      ]
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "unmodified-production-paints",
+      "pass": true,
+      "observed": 121957
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "observation-does-not-change-readiness",
+      "pass": true,
+      "observed": {
+        "production": {
+          "status": "resolved"
+        },
+        "observed": {
+          "status": "resolved"
+        },
+        "observerErrors": []
+      }
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "embedded-native-equals-public-manifest",
+      "pass": true,
+      "observed": [
+        {
+          "type": "cell",
+          "data": [
+            {
+              "_x": "Mon",
+              "_y": "AM",
+              "_color": "0",
+              "_size": 8,
+              "_heat": 0,
+              "_row": 0
+            },
+            {
+              "_x": "Tue",
+              "_y": "PM",
+              "_color": "0",
+              "_size": 8,
+              "_heat": 0,
+              "_row": 1
+            }
+          ],
+          "encode": {
+            "x": "_x",
+            "y": "_y",
+            "color": "_heat"
+          },
+          "animate": false,
+          "theme": "light",
+          "title": "R18 AntV heatmap-zero",
+          "tooltip": false,
+          "axis": {
+            "x": {
+              "title": "day",
+              "labelFill": "#202938",
+              "titleFill": "#202938"
+            },
+            "y": {
+              "title": "slot",
+              "labelFill": "#202938",
+              "titleFill": "#202938"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "literal-negative-or-control-values",
+      "pass": true,
+      "observed": [
+        {
+          "_x": "Mon",
+          "_y": "AM",
+          "_color": "0",
+          "_size": 8,
+          "_heat": 0,
+          "_row": 0
+        },
+        {
+          "_x": "Tue",
+          "_y": "PM",
+          "_color": "0",
+          "_size": 8,
+          "_heat": 0,
+          "_row": 1
+        }
+      ]
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "two-cell-marks",
+      "pass": true,
+      "observed": [
+        {
+          "node": "rect",
+          "className": "element",
+          "fill": "rgb(69, 180, 194)",
+          "stroke": "rgb(69, 180, 194)",
+          "box": {
+            "x": 70,
+            "y": 120,
+            "width": 406.99999992001085,
+            "height": 147
+          },
+          "attributes": {
+            "x": 0,
+            "y": 0,
+            "width": 406.99999992001085,
+            "height": 147,
+            "fillOpacity": 0.95,
+            "fill": "rgb(69, 180, 194)",
+            "lineWidth": 0,
+            "stroke": "rgb(69, 180, 194)",
+            "class": "element"
+          }
+        },
+        {
+          "node": "rect",
+          "className": "element",
+          "fill": "rgb(69, 180, 194)",
+          "stroke": "rgb(69, 180, 194)",
+          "box": {
+            "x": 476.99999992001085,
+            "y": 267,
+            "width": 406.99999992001085,
+            "height": 147
+          },
+          "attributes": {
+            "x": 406.99999992001085,
+            "y": 147,
+            "width": 406.99999992001085,
+            "height": 147,
+            "fillOpacity": 0.95,
+            "fill": "rgb(69, 180, 194)",
+            "lineWidth": 0,
+            "stroke": "rgb(69, 180, 194)",
+            "class": "element"
+          }
+        }
+      ]
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "quantitative-cell-colors-distinct-iff-values-differ",
+      "pass": true,
+      "observed": [
+        "rgb(69, 180, 194)",
+        "rgb(69, 180, 194)"
+      ]
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "visible-finite-quantitative-legend",
+      "pass": true,
+      "observed": {
+        "legendTexts": [
+          "_heat",
+          "0"
+        ],
+        "numericTicks": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "literal-grid-cell-order",
+      "pass": true,
+      "observed": [
+        {
+          "x": 70,
+          "y": 120,
+          "width": 406.99999992001085,
+          "height": 147
+        },
+        {
+          "x": 476.99999992001085,
+          "y": 267,
+          "width": 406.99999992001085,
+          "height": 147
+        }
+      ]
+    },
+    {
+      "id": "line",
+      "name": "unmodified-production-ready",
+      "pass": true,
+      "observed": {
+        "status": "resolved"
+      }
+    },
+    {
+      "id": "line",
+      "name": "unmodified-production-zero-errors",
+      "pass": true,
+      "observed": []
+    },
+    {
+      "id": "line",
+      "name": "real-pinned-CDN-loads",
+      "pass": true,
+      "observed": {
+        "failed": [],
+        "responses": [
+          {
+            "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "id": "line",
+      "name": "literal-input-records-preserved",
+      "pass": true,
+      "observed": [
+        {
+          "x": 1,
+          "y": 2
+        },
+        {
+          "x": 2,
+          "y": 8
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ]
+    },
+    {
+      "id": "line",
+      "name": "unmodified-production-paints",
+      "pass": true,
+      "observed": 12720
+    },
+    {
+      "id": "line",
+      "name": "observation-does-not-change-readiness",
+      "pass": true,
+      "observed": {
+        "production": {
+          "status": "resolved"
+        },
+        "observed": {
+          "status": "resolved"
+        },
+        "observerErrors": []
+      }
+    },
+    {
+      "id": "line",
+      "name": "embedded-native-equals-public-manifest",
+      "pass": true,
+      "observed": [
+        {
+          "type": "view",
+          "data": [
+            {
+              "_x": 1,
+              "_y": 2,
+              "_color": "Series",
+              "_size": 8,
+              "_heat": 2,
+              "_row": 0
+            },
+            {
+              "_x": 2,
+              "_y": 8,
+              "_color": "Series",
+              "_size": 8,
+              "_heat": 8,
+              "_row": 1
+            },
+            {
+              "_x": 4,
+              "_y": 5,
+              "_color": "Series",
+              "_size": 8,
+              "_heat": 5,
+              "_row": 2
+            }
+          ],
+          "animate": false,
+          "theme": "light",
+          "title": "R18 AntV line",
+          "tooltip": false,
+          "axis": {
+            "x": {
+              "title": "x",
+              "labelFill": "#202938",
+              "titleFill": "#202938"
+            },
+            "y": {
+              "title": "y",
+              "labelFill": "#202938",
+              "titleFill": "#202938"
+            }
+          },
+          "children": [
+            {
+              "type": "line",
+              "data": [
+                {
+                  "_x": 1,
+                  "_y": 2,
+                  "_color": "Series",
+                  "_size": 8,
+                  "_heat": 2,
+                  "_row": 0
+                },
+                {
+                  "_x": 2,
+                  "_y": 8,
+                  "_color": "Series",
+                  "_size": 8,
+                  "_heat": 8,
+                  "_row": 1
+                },
+                {
+                  "_x": 4,
+                  "_y": 5,
+                  "_color": "Series",
+                  "_size": 8,
+                  "_heat": 5,
+                  "_row": 2
+                }
+              ],
+              "encode": {
+                "x": "_x",
+                "y": "_y"
+              },
+              "style": {
+                "lineDash": [],
+                "lineWidth": 2,
+                "stroke": "#386cb0"
+              },
+              "animate": false
+            },
+            {
+              "type": "point",
+              "data": [
+                {
+                  "_x": 1,
+                  "_y": 2,
+                  "_color": "Series",
+                  "_size": 8,
+                  "_heat": 2,
+                  "_row": 0
+                },
+                {
+                  "_x": 2,
+                  "_y": 8,
+                  "_color": "Series",
+                  "_size": 8,
+                  "_heat": 8,
+                  "_row": 1
+                },
+                {
+                  "_x": 4,
+                  "_y": 5,
+                  "_color": "Series",
+                  "_size": 8,
+                  "_heat": 5,
+                  "_row": 2
+                }
+              ],
+              "encode": {
+                "x": "_x",
+                "y": "_y"
+              },
+              "style": {
+                "r": 3,
+                "fill": "#386cb0"
+              },
+              "animate": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "line",
+      "name": "literal-fixed-control-values",
+      "pass": true,
+      "observed": [
+        {
+          "_x": 1,
+          "_y": 2,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 2,
+          "_row": 0
+        },
+        {
+          "_x": 2,
+          "_y": 8,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 8,
+          "_row": 1
+        },
+        {
+          "_x": 4,
+          "_y": 5,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 5,
+          "_row": 2
+        }
+      ]
+    },
+    {
+      "id": "line",
+      "name": "fixed-control-three-points",
+      "pass": true,
+      "observed": [
+        {
+          "node": "path",
+          "className": "element",
+          "fill": "#386cb0",
+          "stroke": "#1783FF",
+          "box": {
+            "x": 55.673828125,
+            "y": 411,
+            "width": 6,
+            "height": 6
+          },
+          "attributes": {
+            "color": "#1783FF",
+            "r": 3,
+            "strokeOpacity": 0.95,
+            "lineWidth": 1,
+            "fill": "#386cb0",
+            "transformOrigin": "-3 356",
+            "stroke": "#1783FF",
+            "class": "element"
+          }
+        },
+        {
+          "node": "path",
+          "className": "element",
+          "fill": "#386cb0",
+          "stroke": "#1783FF",
+          "box": {
+            "x": 330.78255217460946,
+            "y": 52,
+            "width": 6,
+            "height": 6
+          },
+          "attributes": {
+            "color": "#1783FF",
+            "r": 3,
+            "strokeOpacity": 0.95,
+            "lineWidth": 1,
+            "fill": "#386cb0",
+            "transformOrigin": "272.10872404960946 -3",
+            "stroke": "#1783FF",
+            "class": "element"
+          }
+        },
+        {
+          "node": "path",
+          "className": "element",
+          "fill": "#386cb0",
+          "stroke": "#1783FF",
+          "box": {
+            "x": 881.0000002738284,
+            "y": 231.5,
+            "width": 6,
+            "height": 6
+          },
+          "attributes": {
+            "color": "#1783FF",
+            "r": 3,
+            "strokeOpacity": 0.95,
+            "lineWidth": 1,
+            "fill": "#386cb0",
+            "transformOrigin": "822.3261721488284 176.5",
+            "stroke": "#1783FF",
+            "class": "element"
+          }
+        }
+      ]
+    },
+    {
+      "id": "line",
+      "name": "fixed-control-original-fill",
+      "pass": true,
+      "observed": [
+        "#386cb0",
+        "#386cb0",
+        "#386cb0"
+      ]
+    },
+    {
+      "id": "line",
+      "name": "fixed-control-unequal-x-spacing",
+      "pass": true,
+      "observed": {
+        "xs": [
+          58.673828125,
+          333.78255217460946,
+          884.0000002738284
+        ],
+        "ratio": 2
+      }
+    },
+    {
+      "id": "scatter",
+      "name": "unmodified-production-ready",
+      "pass": true,
+      "observed": {
+        "status": "resolved"
+      }
+    },
+    {
+      "id": "scatter",
+      "name": "unmodified-production-zero-errors",
+      "pass": true,
+      "observed": []
+    },
+    {
+      "id": "scatter",
+      "name": "real-pinned-CDN-loads",
+      "pass": true,
+      "observed": {
+        "failed": [],
+        "responses": [
+          {
+            "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "id": "scatter",
+      "name": "literal-input-records-preserved",
+      "pass": true,
+      "observed": [
+        {
+          "x": 1,
+          "y": 2
+        },
+        {
+          "x": 2,
+          "y": 8
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ]
+    },
+    {
+      "id": "scatter",
+      "name": "unmodified-production-paints",
+      "pass": true,
+      "observed": 9669
+    },
+    {
+      "id": "scatter",
+      "name": "observation-does-not-change-readiness",
+      "pass": true,
+      "observed": {
+        "production": {
+          "status": "resolved"
+        },
+        "observed": {
+          "status": "resolved"
+        },
+        "observerErrors": []
+      }
+    },
+    {
+      "id": "scatter",
+      "name": "embedded-native-equals-public-manifest",
+      "pass": true,
+      "observed": [
+        {
+          "type": "point",
+          "data": [
+            {
+              "_x": 1,
+              "_y": 2,
+              "_color": "Series",
+              "_size": 8,
+              "_heat": 2,
+              "_row": 0
+            },
+            {
+              "_x": 2,
+              "_y": 8,
+              "_color": "Series",
+              "_size": 8,
+              "_heat": 8,
+              "_row": 1
+            },
+            {
+              "_x": 4,
+              "_y": 5,
+              "_color": "Series",
+              "_size": 8,
+              "_heat": 5,
+              "_row": 2
+            }
+          ],
+          "encode": {
+            "x": "_x",
+            "y": "_y"
+          },
+          "animate": false,
+          "theme": "light",
+          "title": "R18 AntV scatter",
+          "tooltip": false,
+          "axis": {
+            "x": {
+              "title": "x",
+              "labelFill": "#202938",
+              "titleFill": "#202938"
+            },
+            "y": {
+              "title": "y",
+              "labelFill": "#202938",
+              "titleFill": "#202938"
+            }
+          },
+          "style": {
+            "fill": "#386cb0",
+            "stroke": "#386cb0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scatter",
+      "name": "literal-fixed-control-values",
+      "pass": true,
+      "observed": [
+        {
+          "_x": 1,
+          "_y": 2,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 2,
+          "_row": 0
+        },
+        {
+          "_x": 2,
+          "_y": 8,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 8,
+          "_row": 1
+        },
+        {
+          "_x": 4,
+          "_y": 5,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 5,
+          "_row": 2
+        }
+      ]
+    },
+    {
+      "id": "scatter",
+      "name": "fixed-control-three-points",
+      "pass": true,
+      "observed": [
+        {
+          "node": "path",
+          "className": "element",
+          "fill": "#386cb0",
+          "stroke": "#386cb0",
+          "box": {
+            "x": 55.673828125,
+            "y": 411,
+            "width": 6,
+            "height": 6
+          },
+          "attributes": {
+            "color": "#1783FF",
+            "r": 3,
+            "strokeOpacity": 0.95,
+            "lineWidth": 1,
+            "fill": "#386cb0",
+            "transformOrigin": "-3 356",
+            "stroke": "#386cb0",
+            "class": "element"
+          }
+        },
+        {
+          "node": "path",
+          "className": "element",
+          "fill": "#386cb0",
+          "stroke": "#386cb0",
+          "box": {
+            "x": 330.78255217460946,
+            "y": 52,
+            "width": 6,
+            "height": 6
+          },
+          "attributes": {
+            "color": "#1783FF",
+            "r": 3,
+            "strokeOpacity": 0.95,
+            "lineWidth": 1,
+            "fill": "#386cb0",
+            "transformOrigin": "272.10872404960946 -3",
+            "stroke": "#386cb0",
+            "class": "element"
+          }
+        },
+        {
+          "node": "path",
+          "className": "element",
+          "fill": "#386cb0",
+          "stroke": "#386cb0",
+          "box": {
+            "x": 881.0000002738284,
+            "y": 231.5,
+            "width": 6,
+            "height": 6
+          },
+          "attributes": {
+            "color": "#1783FF",
+            "r": 3,
+            "strokeOpacity": 0.95,
+            "lineWidth": 1,
+            "fill": "#386cb0",
+            "transformOrigin": "822.3261721488284 176.5",
+            "stroke": "#386cb0",
+            "class": "element"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scatter",
+      "name": "fixed-control-original-fill",
+      "pass": true,
+      "observed": [
+        "#386cb0",
+        "#386cb0",
+        "#386cb0"
+      ]
+    },
+    {
+      "id": "scatter",
+      "name": "fixed-control-unequal-x-spacing",
+      "pass": true,
+      "observed": {
+        "xs": [
+          58.673828125,
+          333.78255217460946,
+          884.0000002738284
+        ],
+        "ratio": 2
+      }
+    }
+  ],
+  "postCaptureHarnessErratum": "Original class-name ancestor matching confused sibling legend items, yielding four false legend-distinctness failures. Corrected ONLY from original preorder scenegraph (each real g2-legend-item subtree); no browser replay, source/image/data change. Original 111/130 (19 failures) retained. Corrected 115/130 (15 failures) keeps all four actual mark/legend disagreements, four uniform mark sets, negative readiness/two pageerrors/missing cells/legend, and signed legend extent [-2,2] omitting literal -7.",
+  "originalBrowserResultsSha256": "637dc923814bd0bf8285384d10cddf045769808ac6dd808768c2600fb326b4e0"
+}

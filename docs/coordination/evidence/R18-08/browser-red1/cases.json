@@ -1,0 +1,635 @@
+{
+  "identity": {
+    "source": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-source-ses_de56782e6ffeVWDIuY3v01kkBt",
+    "commit": "1c721bb6497746641b897eb2eb938cfad52068d2",
+    "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+    "python_executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+    "modules": [
+      {
+        "name": "deepviz",
+        "path": "python/deepviz/src/deepviz/__init__.py",
+        "git_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "working_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "newline_rule": "CRLF-to-LF only"
+      },
+      {
+        "name": "deepviz.models",
+        "path": "python/deepviz/src/deepviz/models.py",
+        "git_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "working_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "newline_rule": "CRLF-to-LF only"
+      },
+      {
+        "name": "deepviz.engines",
+        "path": "python/deepviz/src/deepviz/engines.py",
+        "git_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225",
+        "working_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225",
+        "newline_rule": "CRLF-to-LF only"
+      },
+      {
+        "name": "deepviz.render",
+        "path": "python/deepviz/src/deepviz/render.py",
+        "git_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+        "working_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+        "newline_rule": "CRLF-to-LF only"
+      },
+      {
+        "name": "deepviz.normalize",
+        "path": "python/deepviz/src/deepviz/normalize.py",
+        "git_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+        "working_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+        "newline_rule": "CRLF-to-LF only"
+      }
+    ],
+    "antv_function_sha256": "0a20b95a5c51ad1463a9e9777a8d7ff77b9d6ae280f52af9e454114f869745ee"
+  },
+  "cases": [
+    {
+      "id": "pie",
+      "mode": "category",
+      "rows": [
+        {
+          "category": "Alpha",
+          "value": 12
+        },
+        {
+          "category": "Beta",
+          "value": 31
+        },
+        {
+          "category": "Gamma",
+          "value": 7
+        }
+      ],
+      "expected": [
+        [
+          "Alpha",
+          12
+        ],
+        [
+          "Beta",
+          31
+        ],
+        [
+          "Gamma",
+          7
+        ]
+      ],
+      "spec": {
+        "kind": "pie",
+        "x": "category",
+        "y": "value",
+        "aggregation": "none",
+        "width": 900,
+        "height": 480,
+        "title": "R18 AntV pie"
+      },
+      "html": "pie/deepviz-97rop2c6/chart.html",
+      "manifest": "pie/deepviz-97rop2c6/manifest.json",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\pie\\deepviz-97rop2c6\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\pie\\deepviz-97rop2c6\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 3,
+        "output_count": 3,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html_sha256": "a54cacf9a85c37c25bf212793b180d6204610030647587c2c42982a53f92c144",
+      "manifest_sha256": "0e29ad36e40fce823fe7a2365eca4cde5716239747ad014ae0601bdaa16de317"
+    },
+    {
+      "id": "sunburst",
+      "mode": "category",
+      "rows": [
+        {
+          "category": "Alpha",
+          "value": 12
+        },
+        {
+          "category": "Beta",
+          "value": 31
+        },
+        {
+          "category": "Gamma",
+          "value": 7
+        }
+      ],
+      "expected": [
+        [
+          "Alpha",
+          12
+        ],
+        [
+          "Beta",
+          31
+        ],
+        [
+          "Gamma",
+          7
+        ]
+      ],
+      "spec": {
+        "kind": "sunburst",
+        "x": "category",
+        "y": "value",
+        "aggregation": "none",
+        "width": 900,
+        "height": 480,
+        "title": "R18 AntV sunburst"
+      },
+      "html": "sunburst/deepviz-uz6_wqf1/chart.html",
+      "manifest": "sunburst/deepviz-uz6_wqf1/manifest.json",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\sunburst\\deepviz-uz6_wqf1\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\sunburst\\deepviz-uz6_wqf1\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 3,
+        "output_count": 3,
+        "strategy": "none",
+        "warnings": [
+          "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html_sha256": "4ab51f081fa61cbcf7f7a4c3af8cb0dbd86be81ee666da13dfa2c2eb165fac3f",
+      "manifest_sha256": "7dbb176f6042b68ae566b0e328928efea8409c56419ab5ad3873cdee3934e4e0"
+    },
+    {
+      "id": "treemap",
+      "mode": "category",
+      "rows": [
+        {
+          "category": "Alpha",
+          "value": 12
+        },
+        {
+          "category": "Beta",
+          "value": 31
+        },
+        {
+          "category": "Gamma",
+          "value": 7
+        }
+      ],
+      "expected": [
+        [
+          "Alpha",
+          12
+        ],
+        [
+          "Beta",
+          31
+        ],
+        [
+          "Gamma",
+          7
+        ]
+      ],
+      "spec": {
+        "kind": "treemap",
+        "x": "category",
+        "y": "value",
+        "aggregation": "none",
+        "width": 900,
+        "height": 480,
+        "title": "R18 AntV treemap"
+      },
+      "html": "treemap/deepviz-849vqk3a/chart.html",
+      "manifest": "treemap/deepviz-849vqk3a/manifest.json",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\treemap\\deepviz-849vqk3a\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\treemap\\deepviz-849vqk3a\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 3,
+        "output_count": 3,
+        "strategy": "none",
+        "warnings": [
+          "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html_sha256": "af86b1d91844a7785c25a4bf0bce6867435eec91c8388d88da6b1c9a77687225",
+      "manifest_sha256": "38361265d8922a27bcb8360eb5883a9c5ad92cf76074b6c6289f120bd3a42cc4"
+    },
+    {
+      "id": "gauge",
+      "mode": "category",
+      "rows": [
+        {
+          "category": "Load",
+          "value": 37
+        }
+      ],
+      "expected": [
+        [
+          "Value",
+          37
+        ],
+        [
+          "Remaining",
+          63
+        ]
+      ],
+      "spec": {
+        "kind": "gauge",
+        "x": "category",
+        "y": "value",
+        "aggregation": "none",
+        "width": 900,
+        "height": 480,
+        "title": "R18 AntV gauge"
+      },
+      "html": "gauge/deepviz-0xaw58tr/chart.html",
+      "manifest": "gauge/deepviz-0xaw58tr/manifest.json",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\gauge\\deepviz-0xaw58tr\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\gauge\\deepviz-0xaw58tr\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 1,
+        "output_count": 1,
+        "strategy": "none",
+        "warnings": [
+          "Gauge uses the first mapped y value on a fixed 0\u2013100 scale; displayed fill is clamped.",
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html_sha256": "4a5885122ba3849c82970892c1e1ee9dd9d62d88446028f7a6a7070744120325",
+      "manifest_sha256": "7c5f14904abb0dc4b182c504b5528a5ec3d2853cf9559c89b2f1714282d84eb0"
+    },
+    {
+      "id": "heatmap-negative",
+      "mode": "heatmap",
+      "expected": [
+        -7,
+        -2
+      ],
+      "rows": [
+        {
+          "day": "Mon",
+          "slot": "AM",
+          "heat": -7
+        },
+        {
+          "day": "Tue",
+          "slot": "PM",
+          "heat": -2
+        }
+      ],
+      "spec": {
+        "kind": "heatmap",
+        "x": "day",
+        "y": "slot",
+        "color": "heat",
+        "aggregation": "none",
+        "width": 900,
+        "height": 480,
+        "title": "R18 AntV heatmap-negative"
+      },
+      "html": "heatmap-negative/deepviz-171f2u7f/chart.html",
+      "manifest": "heatmap-negative/deepviz-171f2u7f/manifest.json",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\heatmap-negative\\deepviz-171f2u7f\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\heatmap-negative\\deepviz-171f2u7f\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 2,
+        "output_count": 2,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html_sha256": "a04fe5625c54721b0fd42d922d4c869fec4c10d50d293c5a7323dac40fcf5d5a",
+      "manifest_sha256": "3004fe316d8095d88fa61c985363023f6b3805b5898cfc27eaf03ee25a19d04c"
+    },
+    {
+      "id": "heatmap-positive",
+      "mode": "heatmap",
+      "expected": [
+        2,
+        7
+      ],
+      "rows": [
+        {
+          "day": "Mon",
+          "slot": "AM",
+          "heat": 2
+        },
+        {
+          "day": "Tue",
+          "slot": "PM",
+          "heat": 7
+        }
+      ],
+      "spec": {
+        "kind": "heatmap",
+        "x": "day",
+        "y": "slot",
+        "color": "heat",
+        "aggregation": "none",
+        "width": 900,
+        "height": 480,
+        "title": "R18 AntV heatmap-positive"
+      },
+      "html": "heatmap-positive/deepviz-52o12m9x/chart.html",
+      "manifest": "heatmap-positive/deepviz-52o12m9x/manifest.json",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\heatmap-positive\\deepviz-52o12m9x\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\heatmap-positive\\deepviz-52o12m9x\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 2,
+        "output_count": 2,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html_sha256": "88ff9a4396adff436d01abc71fce8fe203f48309a7071661d37fd3b9f5639650",
+      "manifest_sha256": "769ee9e72ed9b1a0a7c141bbf7bbccc6b8e9b9474ad5b4bf1e1005525ebd6226"
+    },
+    {
+      "id": "heatmap-signed",
+      "mode": "heatmap",
+      "expected": [
+        -7,
+        2
+      ],
+      "rows": [
+        {
+          "day": "Mon",
+          "slot": "AM",
+          "heat": -7
+        },
+        {
+          "day": "Tue",
+          "slot": "PM",
+          "heat": 2
+        }
+      ],
+      "spec": {
+        "kind": "heatmap",
+        "x": "day",
+        "y": "slot",
+        "color": "heat",
+        "aggregation": "none",
+        "width": 900,
+        "height": 480,
+        "title": "R18 AntV heatmap-signed"
+      },
+      "html": "heatmap-signed/deepviz-fcj7fgwp/chart.html",
+      "manifest": "heatmap-signed/deepviz-fcj7fgwp/manifest.json",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\heatmap-signed\\deepviz-fcj7fgwp\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\heatmap-signed\\deepviz-fcj7fgwp\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 2,
+        "output_count": 2,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html_sha256": "ff577cb0246a750f03d81ac765b2569d0c43abaf2590992b6a1f654504790424",
+      "manifest_sha256": "df61d9ad234980dbe00dc8e8ba1f5b5cad8adf7ae48dea8313cf4a23d6b5f2a1"
+    },
+    {
+      "id": "heatmap-constant",
+      "mode": "heatmap",
+      "expected": [
+        1,
+        1
+      ],
+      "rows": [
+        {
+          "day": "Mon",
+          "slot": "AM",
+          "heat": 1
+        },
+        {
+          "day": "Tue",
+          "slot": "PM",
+          "heat": 1
+        }
+      ],
+      "spec": {
+        "kind": "heatmap",
+        "x": "day",
+        "y": "slot",
+        "color": "heat",
+        "aggregation": "none",
+        "width": 900,
+        "height": 480,
+        "title": "R18 AntV heatmap-constant"
+      },
+      "html": "heatmap-constant/deepviz-t23d1csq/chart.html",
+      "manifest": "heatmap-constant/deepviz-t23d1csq/manifest.json",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\heatmap-constant\\deepviz-t23d1csq\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\heatmap-constant\\deepviz-t23d1csq\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 2,
+        "output_count": 2,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html_sha256": "92518f226ecc4f5d3611857616fe1139fd49251d82a4a7a03bb3963b94de87fd",
+      "manifest_sha256": "114349f8717cbd30b74b41e33a0f00c405a51372b6d13736902a3ef789963c89"
+    },
+    {
+      "id": "heatmap-zero",
+      "mode": "heatmap",
+      "expected": [
+        0,
+        0
+      ],
+      "rows": [
+        {
+          "day": "Mon",
+          "slot": "AM",
+          "heat": 0
+        },
+        {
+          "day": "Tue",
+          "slot": "PM",
+          "heat": 0
+        }
+      ],
+      "spec": {
+        "kind": "heatmap",
+        "x": "day",
+        "y": "slot",
+        "color": "heat",
+        "aggregation": "none",
+        "width": 900,
+        "height": 480,
+        "title": "R18 AntV heatmap-zero"
+      },
+      "html": "heatmap-zero/deepviz-7xgtfnal/chart.html",
+      "manifest": "heatmap-zero/deepviz-7xgtfnal/manifest.json",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\heatmap-zero\\deepviz-7xgtfnal\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\heatmap-zero\\deepviz-7xgtfnal\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 2,
+        "output_count": 2,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html_sha256": "095e1033d1f57babf9ef3f177aec8781d296044b2fe398bb1ffbd98b9952d03e",
+      "manifest_sha256": "4b9090cf9ea36fa0bbe5080e4fa73b9ffe1ad3321f90df88fa7124bd20575519"
+    },
+    {
+      "id": "line",
+      "mode": "fixed",
+      "expected": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "rows": [
+        {
+          "x": 1,
+          "y": 2
+        },
+        {
+          "x": 2,
+          "y": 8
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ],
+      "spec": {
+        "kind": "line",
+        "x": "x",
+        "y": "y",
+        "aggregation": "none",
+        "width": 900,
+        "height": 480,
+        "title": "R18 AntV line"
+      },
+      "html": "line/deepviz-ad88l07v/chart.html",
+      "manifest": "line/deepviz-ad88l07v/manifest.json",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\line\\deepviz-ad88l07v\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\line\\deepviz-ad88l07v\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 3,
+        "output_count": 3,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html_sha256": "bc53ac1e1040bd85a37eb175b64b6a39af51c7a6d72a33a6f2ae15488e6265f1",
+      "manifest_sha256": "ec8c49e65614c003e8adb9a8fa638072e53ee9481ea76a63f4003f35a8e0cb29"
+    },
+    {
+      "id": "scatter",
+      "mode": "fixed",
+      "expected": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "rows": [
+        {
+          "x": 1,
+          "y": 2
+        },
+        {
+          "x": 2,
+          "y": 8
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ],
+      "spec": {
+        "kind": "scatter",
+        "x": "x",
+        "y": "y",
+        "aggregation": "none",
+        "width": 900,
+        "height": 480,
+        "title": "R18 AntV scatter"
+      },
+      "html": "scatter/deepviz-2qpl6yin/chart.html",
+      "manifest": "scatter/deepviz-2qpl6yin/manifest.json",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\scatter\\deepviz-2qpl6yin\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\browser-red1\\generated\\scatter\\deepviz-2qpl6yin\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 3,
+        "output_count": 3,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html_sha256": "64cd9f619fbca039fc79aa9950ca819696a3e718f86a7d0126e8ddf0992e600c",
+      "manifest_sha256": "97a00279e0d1819b745e692c04eddf8183d2137fe355dcbf153631b3301d2a80"
+    }
+  ],
+  "unmodified_production_html": true,
+  "limits": "New R18 execution, not final candidate or independent author approval"
+}
