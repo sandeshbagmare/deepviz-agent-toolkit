@@ -1,0 +1,84 @@
+diff --git a/python/deepviz/src/deepviz/engines.py b/python/deepviz/src/deepviz/engines.py
+index d3e437e..05d2fc4 100644
+--- a/python/deepviz/src/deepviz/engines.py
++++ b/python/deepviz/src/deepviz/engines.py
+@@ -664,60 +664,79 @@ def _antv(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) ->
+                              "style": point_style, "animate": False})
+         result["children"] = children
+     elif kind == "bar" and spec.color:
+         result["transform"] = [{"type": "dodgeX"}]
+     elif kind == "bubble":
+         encode["size"] = "_size"
+     elif kind in {"pie", "sunburst"}:
+         result["coordinate"] = {"type": "theta", "innerRadius": .45 if kind == "sunburst" else 0}
+         result["transform"] = [{"type": "stackY"}]
+         encode.pop("x")
+         encode["color"] = "_x"
+         result["legend"] = {"color": {"position": "right"}}
+     elif kind == "radar":
+         result["coordinate"] = {"type": "polar"}
+         result["data"] = data + data[:1]
+     elif kind == "histogram":
+         result["data"] = _histogram(data)
+     elif kind == "heatmap":
+         encode["color"] = "_heat"
+         low = min((row["_heat"] for row in data), default=0)
+         high = max((row["_heat"] for row in data), default=1)
+         if low == high:
+             padding = abs(low) * .05 or 1
+             low = low - padding if math.isfinite(low - padding) else low
+             high = high + padding if math.isfinite(high + padding) else high
+         # Avoid G2's inferred sequential domain, which loses negative extents.
+         result["scale"] = {"color": {"type": "linear", "domain": [low, high],
+                                      "range": ["#ffffd9", "#081d58"], "nice": False}}
+         result["legend"] = {"color": {"data": [{"value": low}, {"value": high}],
+                                        "labelTextAlign": "start"}}
++        span = high - low
++        if not math.isfinite(span):
++            # Keep raw values, but never interpolate across an infinite segment.
++            result["scale"]["color"].update(
++                domain=[low, low / 2 + high / 2, high],
++                range=["#ffffd9", "#848e99", "#081d58"],
++            )
++        if not math.isfinite(span) or not math.isfinite(1 / span):
++            # G2's legend layout/sampling needs a well-conditioned coordinate.
++            # Labels/domainValue remain the actual numeric domain endpoints.
++            # Its auto-size measurement has no ticks here; reserve the default size.
++            result["legend"]["color"].update(
++                domain=[0, 1], color=["#ffffd9", "#081d58"], size=60,
++                data=[{"value": 0, "label": str(low), "domainValue": low},
++                      {"value": 1, "label": str(high), "domainValue": high}],
++            )
++        label_length = 14 * max(len(str(low)), len(str(high))) + 20
++        if label_length > 200:
++            result["legend"]["color"]["length"] = min(spec.width - 32, label_length)
+         result.pop("style", None)
+     elif kind == "box":
+         result["data"] = [{"_x": b["name"], "_y": b["stats"]} for b in _boxes(data)]
+     elif kind == "treemap":
+         result["data"] = _tiles(data)
+         result["encode"] = {"x": ["_left", "_right"], "y": ["_bottom", "_top"], "color": "_x"}
+         result["axis"] = False
+     elif kind == "funnel":
+         result["coordinate"] = {"transform": [{"type": "transpose"}]}
+         result["transform"] = [{"type": "symmetryY"}]
+     elif kind == "gauge":
+         value = min(100, max(0, data[0]["_y"])) if data else 0
+         result["data"] = [{"_x": "Value", "_y": value}, {"_x": "Remaining", "_y": 100 - value}]
+         result["coordinate"] = {"type": "theta", "innerRadius": .75, "startAngle": -math.pi,
+                                  "endAngle": 0}
+         result["encode"] = {"y": "_y", "color": "_x"}
+         result["transform"] = [{"type": "stackY"}]
+         result["axis"] = False
+     elif kind == "geo":
+         result["scale"] = {"x": {"domain": [-180, 180]}, "y": {"domain": [-90, 90]}}
+     elif kind == "table":
+         columns = list(dict.fromkeys(key for row in records for key in row))
+         result["data"] = [{"_x": key, "_y": str(i), "_text": str(row.get(key, ""))}
+                           for i, row in enumerate([dict(zip(columns, columns, strict=True)), *records])
+                           for key in columns]
+         result["encode"] = {"x": "_x", "y": "_y", "text": "_text"}
+         result["axis"] = False
+         result["style"] = {"fill": _colors(spec)[1], "stroke": _colors(spec)[1]}
+     return result
+ 
