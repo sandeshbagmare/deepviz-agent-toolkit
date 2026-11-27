@@ -1,0 +1,36 @@
+{
+  "product_source_sha": "e44f667ed494fa272f97792ef99942a364ebca24",
+  "archive_exit": 0,
+  "source_files": [
+    {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "bytes": 2982,
+      "sha256": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+      "git_blob_oid": "e6e681837e8e701918f388e86cb4331767041572",
+      "byte_matches_git_show": true
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1441,
+      "sha256": "8f3270bc16f4b14a0024c7e2bfb293d263265880a23830c1da8c3f2f4e290169",
+      "git_blob_oid": "f39a9b0bc8dc35b1e62e613870ec440f94ece8df",
+      "byte_matches_git_show": true
+    },
+    {
+      "path": "schemas/chart-spec.schema.json",
+      "bytes": 4078,
+      "sha256": "f5f0316b592f78f5dc058fce123cd9a7c683d2259685f56524724af27880135a",
+      "git_blob_oid": "5eca9f1b73aab0747b72151e111f66211d34f4b4",
+      "byte_matches_git_show": true
+    }
+  ],
+  "actual_model_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R22-17\\e44-source\\python\\deepviz\\src\\deepviz\\models.py",
+  "python_executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+  "dependencies": {
+    "pydantic": "2.14.4",
+    "jsonschema": "4.26.0",
+    "pytest": "9.2.0",
+    "ruff": "0.17.6"
+  },
+  "context": "Exact old model, not current MAIN/dashboard-schema contract. No __init__.py in e44; explicit file loading required to avoid installed modern package shadowing."
+}

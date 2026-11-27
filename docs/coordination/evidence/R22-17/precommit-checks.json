@@ -1,0 +1,85 @@
+{
+  "observed_utc": "2026-11-27T15:11:30.289641+00:00",
+  "scope": "Scoped OWN precommit boundary/hash/whitespace/credential-pattern audit, not independent general security review",
+  "audited_staged_paths_before_this_ledger": 12,
+  "staged_bytes": 73917,
+  "source_base": "6df1aab0edc3fefc96196bb66f41b6cd2e0d1618",
+  "source_workflow_schema_original_oracle_diff_exit": 0,
+  "staged_whitespace_exit": 0,
+  "credential_pattern_labels": [
+    "github_token",
+    "aws_key",
+    "private_key",
+    "auth_value",
+    "credential_url"
+  ],
+  "credential_pattern_findings": 0,
+  "json_and_python_AST_parse": "PASS",
+  "evidence_hash_entries_verified": 7,
+  "working_bytes_equal_staged_bytes": true,
+  "own_scoped_ruff_exit": 0,
+  "test_code_changed_since_actual_79case_command": false,
+  "files": [
+    {
+      "path": "docs/agent-state/ses_de5678086ffeNido4phnXCJ8J4.md",
+      "bytes": 31082,
+      "sha256": "627477f9a701e27b9c7475ba43e0bcfc4eb0c716feec4fbd68dcd1d50eae7ac3"
+    },
+    {
+      "path": "docs/coordination/evidence/R22-17/default-model.json",
+      "bytes": 316,
+      "sha256": "316cd429c4ad9a2e8e8939d55e32b2b95028a21121a158d73b38d35b5d4c3e14"
+    },
+    {
+      "path": "docs/coordination/evidence/R22-17/e44-contract.log",
+      "bytes": 179,
+      "sha256": "3dc1a8319000714edd2208e17ed15d31a583223883c41bd1617663f05640aa1b"
+    },
+    {
+      "path": "docs/coordination/evidence/R22-17/generated-schema.json",
+      "bytes": 4077,
+      "sha256": "671cd573a0c0089c592c98323d74b0a07962c62c55bf682e40262d19eff3cd49"
+    },
+    {
+      "path": "docs/coordination/evidence/R22-17/github-prewrite.json",
+      "bytes": 838,
+      "sha256": "690ba83800bfaae2fa0174acbdee331082b9861ae25a0aaf3f40dde0a07b213e"
+    },
+    {
+      "path": "docs/coordination/evidence/R22-17/index.json",
+      "bytes": 1638,
+      "sha256": "b7a334f727a4d23a4b4d4f2780c42b6f05b369904c9cc447e014299d57f40ee6"
+    },
+    {
+      "path": "docs/coordination/evidence/R22-17/loaded-provenance.json",
+      "bytes": 1093,
+      "sha256": "8709b81e6c1b2e3c35b4c76659f7df93d7a8382d99d43cebe070fc8a61a5be2c"
+    },
+    {
+      "path": "docs/coordination/evidence/R22-17/runs.json",
+      "bytes": 10952,
+      "sha256": "d4dc690961c1180a8c799a4cf7ff18dd71deac18be1d1b56112eb4f6538dffc2"
+    },
+    {
+      "path": "docs/coordination/evidence/R22-17/source-identity.json",
+      "bytes": 1515,
+      "sha256": "79ffe746f5a53762aadb8c3647233a0c8acd9ba71dd33f94549e9abcb4847cfa"
+    },
+    {
+      "path": "docs/coordination/reports/R22-17-contract-slice-test.md",
+      "bytes": 10568,
+      "sha256": "33279c2eec9eb961d165a53596739b0c3e0756e49a0457fdbb0e5d104389b0fa"
+    },
+    {
+      "path": "tests/r22_probes/role17/README.md",
+      "bytes": 3018,
+      "sha256": "d2c36d06a7c08be24f843dbe1b29ca44a74c901ee63e595f371807e597d325c1"
+    },
+    {
+      "path": "tests/r22_probes/role17/test_contract_slice.py",
+      "bytes": 8641,
+      "sha256": "2deed774456d78996af068b003b43bd558fa5ef4eb9e81ca92ef289bae825a31"
+    }
+  ],
+  "limitations": "Actual focused PR head not supplied; e44 79-pass preflight is not CI/default merge or focused-head approval. No renderer for schema-only slice; no old test/scale replay."
+}
