@@ -1,0 +1,195 @@
+{
+  "source": "3eab699b61850a20e91132e16caf8c589085f9ee",
+  "tests_run": 2,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "entry_calls": 3,
+  "distinct_literal_inputs": 2,
+  "findings_not_test_count": true,
+  "observations": {
+    "ordinary": {
+      "literal_rows": [
+        {
+          "t": 0,
+          "v": -1.0
+        },
+        {
+          "t": 1,
+          "v": 1.0
+        }
+      ],
+      "expected_public_success": true,
+      "expected_counts": [
+        2,
+        2
+      ],
+      "expected_strategy": "none",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R48-01\\native-axis-run\\ordinary\\deepviz-g2sthoqi\\chart.png",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R48-01\\native-axis-run\\ordinary\\deepviz-g2sthoqi\\chart.svg",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R48-01\\native-axis-run\\ordinary\\deepviz-g2sthoqi\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R48-01\\native-axis-run\\ordinary\\deepviz-g2sthoqi\\manifest.json"
+        ],
+        "mime_type": "image/png",
+        "engine": "matplotlib",
+        "input_count": 2,
+        "output_count": 2,
+        "strategy": "none",
+        "warnings": []
+      },
+      "manifest_records": [
+        {
+          "t": 0,
+          "v": -1.0
+        },
+        {
+          "t": 1,
+          "v": 1.0
+        }
+      ],
+      "files": {
+        "chart.png": {
+          "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R48-01\\native-axis-run\\ordinary\\deepviz-g2sthoqi\\chart.png",
+          "sha256": "abc8b2d2a57290eb12a08701be6f6cddc53ff4485a89b1d3cdfa743f94771374"
+        },
+        "chart.svg": {
+          "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R48-01\\native-axis-run\\ordinary\\deepviz-g2sthoqi\\chart.svg",
+          "sha256": "03687490ce35fd2899e4e1615e92564aa2ac3d76576a0a0a73b3a6b51ae6e5b3"
+        },
+        "chart.html": {
+          "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R48-01\\native-axis-run\\ordinary\\deepviz-g2sthoqi\\chart.html",
+          "sha256": "3e9c46e73f1ec9065b68e827e2d2ac9a2d297ef00dfe9d78e851b84bcab23b58"
+        },
+        "manifest.json": {
+          "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R48-01\\native-axis-run\\ordinary\\deepviz-g2sthoqi\\manifest.json",
+          "sha256": "ed06144607a7baebd40b86f0067269d57d3dc364ca5d4b0765bfcadb350a597e"
+        }
+      },
+      "native_y": [
+        -1.0,
+        1.0
+      ],
+      "native_warnings": [],
+      "axis_limits": [
+        [
+          -0.05,
+          1.05
+        ],
+        [
+          -1.1,
+          1.1
+        ]
+      ],
+      "display_points": [
+        [
+          123.229797979798,
+          83.6264253866793
+        ],
+        [
+          588.9368686868686,
+          339.4882664535985
+        ]
+      ],
+      "runtime_warnings": [],
+      "elapsed_seconds": 2.1090896999958204,
+      "remaining_root_entries": [
+        "chart.svg",
+        "deepviz-g2sthoqi"
+      ],
+      "caller_sentinel_intact": true,
+      "caller_rows_unchanged": true
+    },
+    "finite-extrema": {
+      "literal_rows": [
+        {
+          "t": 0,
+          "v": -1e+308
+        },
+        {
+          "t": 1,
+          "v": 1e+308
+        }
+      ],
+      "expected_public_success": true,
+      "expected_counts": [
+        2,
+        2
+      ],
+      "expected_strategy": "none",
+      "exception_type": "ValueError",
+      "exception": "arange: cannot compute length",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\tests\\r48_probes\\role01\\native_finite_axis.py\", line 79, in check_case\n    artifact = render(rows, spec, \"matplotlib\", root)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R48-01\\source-3eab\\python\\deepviz\\src\\deepviz\\render.py\", line 178, in render\n    fig, notes = matplotlib_figure([(n.records, child) for n, child in zip(normalized, specs, strict=True)],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R48-01\\source-3eab\\python\\deepviz\\src\\deepviz\\engines.py\", line 366, in matplotlib_figure\n    labels = axis.get_ticklabels()\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\matplotlib\\axis.py\", line 1612, in get_ticklabels\n    return self.get_majorticklabels()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\matplotlib\\axis.py\", line 1549, in get_majorticklabels\n    self._update_ticks()\n  File \"C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\matplotlib\\axis.py\", line 1344, in _update_ticks\n    major_locs = self.get_majorticklocs()\n                 ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\matplotlib\\axis.py\", line 1673, in get_majorticklocs\n    return self.major.locator()\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\matplotlib\\ticker.py\", line 2299, in __call__\n    return self.tick_values(vmin, vmax)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\matplotlib\\ticker.py\", line 2307, in tick_values\n    locs = self._raw_ticks(vmin, vmax)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\matplotlib\\ticker.py\", line 2290, in _raw_ticks\n    ticks = np.arange(low, high + 1) * step + best_vmin\n            ^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: arange: cannot compute length\n",
+      "exception_traceback_retains_native_axes": 1,
+      "exception_retained_lines_y": [
+        [
+          -1e+308,
+          1e+308
+        ]
+      ],
+      "frames": [
+        {
+          "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\tests\\r48_probes\\role01\\native_finite_axis.py",
+          "function": "check_case",
+          "line": 79
+        },
+        {
+          "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R48-01\\source-3eab\\python\\deepviz\\src\\deepviz\\render.py",
+          "function": "render",
+          "line": 178
+        },
+        {
+          "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R48-01\\source-3eab\\python\\deepviz\\src\\deepviz\\engines.py",
+          "function": "matplotlib_figure",
+          "line": 366
+        },
+        {
+          "file": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\matplotlib\\axis.py",
+          "function": "get_ticklabels",
+          "line": 1612
+        },
+        {
+          "file": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\matplotlib\\axis.py",
+          "function": "get_majorticklabels",
+          "line": 1549
+        },
+        {
+          "file": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\matplotlib\\axis.py",
+          "function": "_update_ticks",
+          "line": 1344
+        },
+        {
+          "file": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\matplotlib\\axis.py",
+          "function": "get_majorticklocs",
+          "line": 1673
+        },
+        {
+          "file": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\matplotlib\\ticker.py",
+          "function": "__call__",
+          "line": 2299
+        },
+        {
+          "file": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\matplotlib\\ticker.py",
+          "function": "tick_values",
+          "line": 2307
+        },
+        {
+          "file": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\matplotlib\\ticker.py",
+          "function": "_raw_ticks",
+          "line": 2290
+        }
+      ],
+      "runtime_warnings": [
+        "overflow encountered in scalar subtract"
+      ],
+      "elapsed_seconds": 0.03936339999199845,
+      "remaining_root_entries": [
+        "chart.svg",
+        "deepviz-mnp4jq46"
+      ],
+      "caller_sentinel_intact": true,
+      "caller_rows_unchanged": true
+    }
+  }
+}

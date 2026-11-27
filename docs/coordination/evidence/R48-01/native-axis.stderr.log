@@ -1,0 +1,51 @@
+test_01_ordinary_positive_control (__main__.FiniteNativeAxis.test_01_ordinary_positive_control) ... ok
+test_02_finite_opposite_extrema (__main__.FiniteNativeAxis.test_02_finite_opposite_extrema) ... FAIL
+
+======================================================================
+FAIL: test_02_finite_opposite_extrema (__main__.FiniteNativeAxis.test_02_finite_opposite_extrema)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\bagma\AppData\Local\Temp\opencode\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\tests\r48_probes\role01\native_finite_axis.py", line 79, in check_case
+    artifact = render(rows, spec, "matplotlib", root)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bagma\AppData\Local\Temp\opencode\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\artifacts\local\R48-01\source-3eab\python\deepviz\src\deepviz\render.py", line 178, in render
+    fig, notes = matplotlib_figure([(n.records, child) for n, child in zip(normalized, specs, strict=True)],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bagma\AppData\Local\Temp\opencode\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\artifacts\local\R48-01\source-3eab\python\deepviz\src\deepviz\engines.py", line 366, in matplotlib_figure
+    labels = axis.get_ticklabels()
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\matplotlib\axis.py", line 1612, in get_ticklabels
+    return self.get_majorticklabels()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\matplotlib\axis.py", line 1549, in get_majorticklabels
+    self._update_ticks()
+  File "C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\matplotlib\axis.py", line 1344, in _update_ticks
+    major_locs = self.get_majorticklocs()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\matplotlib\axis.py", line 1673, in get_majorticklocs
+    return self.major.locator()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\matplotlib\ticker.py", line 2299, in __call__
+    return self.tick_values(vmin, vmax)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\matplotlib\ticker.py", line 2307, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\matplotlib\ticker.py", line 2290, in _raw_ticks
+    ticks = np.arange(low, high + 1) * step + best_vmin
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: arange: cannot compute length
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagma\AppData\Local\Temp\opencode\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\tests\r48_probes\role01\native_finite_axis.py", line 132, in test_02_finite_opposite_extrema
+    self.check_case("finite-extrema", [-1e308, 1e308])
+  File "C:\Users\bagma\AppData\Local\Temp\opencode\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\tests\r48_probes\role01\native_finite_axis.py", line 120, in check_case
+    self.fail("Literal finite source must render a finite, distinct line without backend exception: " + repr(error))
+AssertionError: Literal finite source must render a finite, distinct line without backend exception: ValueError('arange: cannot compute length')
+
+----------------------------------------------------------------------
+Ran 2 tests in 2.171s
+
+FAILED (failures=1)
