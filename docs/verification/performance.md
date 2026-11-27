@@ -153,7 +153,8 @@ sizes, repetitions, checks and failures. Preserve the JSON and matching sources.
 Dirty paths are disclosed; a dirty-source run is not a clean-release benchmark.
 
 Artifact checks go beyond existence but are deliberately limited: SVG must parse
-and contain drawable geometry; PNG must decode and contain nonuniform pixels;
+and contain a supported geometry element; its attributes, drawability and visible
+paint are not validated. PNG must decode and contain nonuniform pixels;
 HTML must have document and script structure. These are **not** a human visual
 review or browser execution. HTML reports explicitly say browser execution is
 unverified. Separate browser/visual verification must inspect actual output,

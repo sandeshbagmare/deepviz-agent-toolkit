@@ -188,8 +188,8 @@ def inspect_artifact(path: Path) -> dict[str, Any]:
         assert root.tag.rsplit("}", 1)[-1] == "svg", "Invalid SVG root"
         marks = sum(node.tag.rsplit("}", 1)[-1] in {"path", "rect", "circle", "polyline", "polygon"}
                     for node in root.iter())
-        assert marks > 0, "SVG has no drawable geometry"
-        inspection = "svg_xml_and_drawable_geometry_not_visual_review"
+        assert marks > 0, "SVG has no supported geometry element"
+        inspection = "svg_xml_structure_only_not_visual_review"
     elif suffix == ".png":
         from PIL import Image
 
