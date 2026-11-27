@@ -1,0 +1,674 @@
+{
+  "source": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "branch": "agents/r10-20-plotly-literal-labels",
+  "pytest_exit": 1,
+  "tests": 6,
+  "failed": 2,
+  "passed": 4,
+  "skipped": 0,
+  "elapsed_s": 20.29,
+  "cases": [
+    {
+      "family": "categorical",
+      "dashboard": false,
+      "html_bytes": 4859094,
+      "payload_json_bytes": 571,
+      "observed": {
+        "charts": [
+          {
+            "x": [
+              "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+              "<img src=\"R10-inert:\" onerror=\"\">",
+              "<b>R10 literal label</b>"
+            ],
+            "y": [
+              3,
+              7,
+              11
+            ],
+            "text": [
+              "R10 safe link",
+              "<img src=\"R10-inert:\" onerror=\"\">",
+              "R10 literal label",
+              "0",
+              "2",
+              "4",
+              "6",
+              "8",
+              "10",
+              "R10 literal series",
+              "R10 categorical literal-label control",
+              "x",
+              "value"
+            ],
+            "anchors": [
+              "<a xlink:show=\"new\" target=\"_blank\" xlink:href=\"https://example.invalid/r10-20\" style=\"cursor:pointer\">R10 safe link</a>"
+            ],
+            "handlers": [],
+            "missing_literal_strings": [
+              "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+              "<b>R10 literal label</b>",
+              "<b>R10 literal series</b>"
+            ],
+            "mark_count": 3,
+            "mark_centers": [
+              {
+                "x": 205.66500091552734,
+                "y": 447.5037536621094
+              },
+              {
+                "x": 417,
+                "y": 406.0487518310547
+              },
+              {
+                "x": 628.3349914550781,
+                "y": 364.59375
+              }
+            ]
+          }
+        ],
+        "table_cells": [
+          "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+          "3",
+          "<b>R10 literal series</b>",
+          "<img src=\"R10-inert:\" onerror=\"\">",
+          "7",
+          "<b>R10 literal series</b>",
+          "<b>R10 literal label</b>",
+          "11",
+          "<b>R10 literal series</b>"
+        ],
+        "payload_json_bytes": 571,
+        "errors": [],
+        "blocked": [],
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "html_bytes": 4859094
+      },
+      "image_local_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-20-browser-red-ses_de567801cffeGZFlt50oYv0Dnt\\test_plotly_literal_labels_and0\\browser.png",
+      "image": {
+        "bytes": 26601,
+        "sha256": "7c2a46b51729e6da4b4b1a523c0d87920f73b949dedea504d0de251bd39aaf69"
+      },
+      "html_local_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-20-browser-red-ses_de567801cffeGZFlt50oYv0Dnt\\test_plotly_literal_labels_and0\\artifacts\\deepviz-zq5a_h2m\\chart.html",
+      "html": {
+        "bytes": 4859094,
+        "sha256": "281783bdb3c6ecbb83b84113fed24b04b36db9bce5fddd2eb9d85a20da08f809"
+      }
+    },
+    {
+      "family": "categorical",
+      "dashboard": true,
+      "html_bytes": 4860679,
+      "payload_json_bytes": 1141,
+      "observed": {
+        "charts": [
+          {
+            "x": [
+              "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+              "<img src=\"R10-inert:\" onerror=\"\">",
+              "<b>R10 literal label</b>"
+            ],
+            "y": [
+              3,
+              7,
+              11
+            ],
+            "text": [
+              "R10 safe link",
+              "<img src=\"R10-inert:\" onerror=\"\">",
+              "R10 literal label",
+              "0",
+              "2",
+              "4",
+              "6",
+              "8",
+              "10",
+              "R10 literal series",
+              "R10 categorical literal-label control",
+              "x",
+              "value"
+            ],
+            "anchors": [
+              "<a xlink:show=\"new\" target=\"_blank\" xlink:href=\"https://example.invalid/r10-20\" style=\"cursor:pointer\">R10 safe link</a>"
+            ],
+            "handlers": [],
+            "missing_literal_strings": [
+              "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+              "<b>R10 literal label</b>",
+              "<b>R10 literal series</b>"
+            ],
+            "mark_count": 3,
+            "mark_centers": [
+              {
+                "x": 138.6650047302246,
+                "y": 447.5037536621094
+              },
+              {
+                "x": 216,
+                "y": 406.0487518310547
+              },
+              {
+                "x": 293.3350067138672,
+                "y": 364.59375
+              }
+            ]
+          },
+          {
+            "x": [
+              "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+              "<img src=\"R10-inert:\" onerror=\"\">",
+              "<b>R10 literal label</b>"
+            ],
+            "y": [
+              3,
+              7,
+              11
+            ],
+            "text": [
+              "R10 safe link",
+              "<img src=\"R10-inert:\" onerror=\"\">",
+              "R10 literal label",
+              "0",
+              "2",
+              "4",
+              "6",
+              "8",
+              "10",
+              "R10 literal series",
+              "R10 categorical literal-label control",
+              "x",
+              "value"
+            ],
+            "anchors": [
+              "<a xlink:show=\"new\" target=\"_blank\" xlink:href=\"https://example.invalid/r10-20\" style=\"cursor:pointer\">R10 safe link</a>"
+            ],
+            "handlers": [],
+            "missing_literal_strings": [
+              "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+              "<b>R10 literal label</b>",
+              "<b>R10 literal series</b>"
+            ],
+            "mark_count": 3,
+            "mark_centers": [
+              {
+                "x": 648.6649780273438,
+                "y": 447.5037536621094
+              },
+              {
+                "x": 726,
+                "y": 406.0487518310547
+              },
+              {
+                "x": 803.3350219726562,
+                "y": 364.59375
+              }
+            ]
+          }
+        ],
+        "table_cells": [
+          "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+          "3",
+          "<b>R10 literal series</b>",
+          "<img src=\"R10-inert:\" onerror=\"\">",
+          "7",
+          "<b>R10 literal series</b>",
+          "<b>R10 literal label</b>",
+          "11",
+          "<b>R10 literal series</b>",
+          "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+          "3",
+          "<b>R10 literal series</b>",
+          "<img src=\"R10-inert:\" onerror=\"\">",
+          "7",
+          "<b>R10 literal series</b>",
+          "<b>R10 literal label</b>",
+          "11",
+          "<b>R10 literal series</b>"
+        ],
+        "payload_json_bytes": 1141,
+        "errors": [],
+        "blocked": [],
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "html_bytes": 4860679
+      },
+      "image_local_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-20-browser-red-ses_de567801cffeGZFlt50oYv0Dnt\\test_plotly_literal_labels_and1\\browser.png",
+      "image": {
+        "bytes": 32196,
+        "sha256": "872b9e215be84ad2a3e2e482a4a19f3756f01a89277b1f60b02002f431c1e73f"
+      },
+      "html_local_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-20-browser-red-ses_de567801cffeGZFlt50oYv0Dnt\\test_plotly_literal_labels_and1\\artifacts\\deepviz-xtqm41y8\\chart.html",
+      "html": {
+        "bytes": 4860679,
+        "sha256": "8700dbe3548a4577100d3d90f50eccc0a86139851840033f6708827f6a051ae9"
+      }
+    },
+    {
+      "family": "numeric",
+      "dashboard": false,
+      "html_bytes": 4858591,
+      "payload_json_bytes": 424,
+      "observed": {
+        "charts": [
+          {
+            "x": [
+              1,
+              2,
+              4
+            ],
+            "y": [
+              3,
+              7,
+              11
+            ],
+            "text": [
+              "1",
+              "1.5",
+              "2",
+              "2.5",
+              "3",
+              "3.5",
+              "4",
+              "4",
+              "6",
+              "8",
+              "10",
+              "R10 numeric literal-label control",
+              "x",
+              "value"
+            ],
+            "anchors": [],
+            "handlers": [],
+            "missing_literal_strings": [],
+            "mark_count": 3,
+            "mark_centers": [
+              {
+                "x": 140.75,
+                "y": 462.84375
+              },
+              {
+                "x": 360.25,
+                "y": 358.59375
+              },
+              {
+                "x": 799.25,
+                "y": 254.34375
+              }
+            ]
+          }
+        ],
+        "table_cells": [
+          "1",
+          "3",
+          "2",
+          "7",
+          "4",
+          "11"
+        ],
+        "payload_json_bytes": 424,
+        "errors": [],
+        "blocked": [],
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "html_bytes": 4858591
+      },
+      "image_local_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-20-browser-red-ses_de567801cffeGZFlt50oYv0Dnt\\test_plotly_literal_labels_and2\\browser.png",
+      "image": {
+        "bytes": 28658,
+        "sha256": "a835e19446abef66322aad889b57d76d5314a4d67f33282bd892e115b734c5cc"
+      },
+      "html_local_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-20-browser-red-ses_de567801cffeGZFlt50oYv0Dnt\\test_plotly_literal_labels_and2\\artifacts\\deepviz-ge4rlmlo\\chart.html",
+      "html": {
+        "bytes": 4858591,
+        "sha256": "b85f4f0180a911f42d1498762df01cc4c045a2f232634f7b2114b0181ee3654a"
+      }
+    },
+    {
+      "family": "numeric",
+      "dashboard": true,
+      "html_bytes": 4859689,
+      "payload_json_bytes": 847,
+      "observed": {
+        "charts": [
+          {
+            "x": [
+              1,
+              2,
+              4
+            ],
+            "y": [
+              3,
+              7,
+              11
+            ],
+            "text": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "4",
+              "6",
+              "8",
+              "10",
+              "R10 numeric literal-label control",
+              "x",
+              "value"
+            ],
+            "anchors": [],
+            "handlers": [],
+            "missing_literal_strings": [],
+            "mark_count": 3,
+            "mark_centers": [
+              {
+                "x": 120.25,
+                "y": 462.84375
+              },
+              {
+                "x": 216.75,
+                "y": 358.59375
+              },
+              {
+                "x": 409.75,
+                "y": 254.34375
+              }
+            ]
+          },
+          {
+            "x": [
+              1,
+              2,
+              4
+            ],
+            "y": [
+              3,
+              7,
+              11
+            ],
+            "text": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "4",
+              "6",
+              "8",
+              "10",
+              "R10 numeric literal-label control",
+              "x",
+              "value"
+            ],
+            "anchors": [],
+            "handlers": [],
+            "missing_literal_strings": [],
+            "mark_count": 3,
+            "mark_centers": [
+              {
+                "x": 630.25,
+                "y": 462.84375
+              },
+              {
+                "x": 726.75,
+                "y": 358.59375
+              },
+              {
+                "x": 919.75,
+                "y": 254.34375
+              }
+            ]
+          }
+        ],
+        "table_cells": [
+          "1",
+          "3",
+          "2",
+          "7",
+          "4",
+          "11",
+          "1",
+          "3",
+          "2",
+          "7",
+          "4",
+          "11"
+        ],
+        "payload_json_bytes": 847,
+        "errors": [],
+        "blocked": [],
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "html_bytes": 4859689
+      },
+      "image_local_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-20-browser-red-ses_de567801cffeGZFlt50oYv0Dnt\\test_plotly_literal_labels_and3\\browser.png",
+      "image": {
+        "bytes": 30388,
+        "sha256": "ebf50baa8b2252f51667f7e33502a32d91f1e4599b3acd9cbd398db448c8bac9"
+      },
+      "html_local_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-20-browser-red-ses_de567801cffeGZFlt50oYv0Dnt\\test_plotly_literal_labels_and3\\artifacts\\deepviz-lbh1fsx6\\chart.html",
+      "html": {
+        "bytes": 4859689,
+        "sha256": "d45f3cc0c246e9a26cdd800ff412ad2993647490d11f63f9a40f0df4a7056959"
+      }
+    },
+    {
+      "family": "time",
+      "dashboard": false,
+      "html_bytes": 4858633,
+      "payload_json_bytes": 454,
+      "observed": {
+        "charts": [
+          {
+            "x": [
+              "2026-01-01",
+              "2026-01-02",
+              "2026-01-04"
+            ],
+            "y": [
+              3,
+              7,
+              11
+            ],
+            "text": [
+              "00:00Jan 1, 2026",
+              "12:00",
+              "00:00Jan 2, 2026",
+              "12:00",
+              "00:00Jan 3, 2026",
+              "12:00",
+              "00:00Jan 4, 2026",
+              "4",
+              "6",
+              "8",
+              "10",
+              "R10 time literal-label control",
+              "x",
+              "value"
+            ],
+            "anchors": [],
+            "handlers": [],
+            "missing_literal_strings": [],
+            "mark_count": 3,
+            "mark_centers": [
+              {
+                "x": 140.75,
+                "y": 462.84375
+              },
+              {
+                "x": 360.25,
+                "y": 358.59375
+              },
+              {
+                "x": 799.25,
+                "y": 254.34375
+              }
+            ]
+          }
+        ],
+        "table_cells": [
+          "2026-01-01",
+          "3",
+          "2026-01-02",
+          "7",
+          "2026-01-04",
+          "11"
+        ],
+        "payload_json_bytes": 454,
+        "errors": [],
+        "blocked": [],
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "html_bytes": 4858633
+      },
+      "image_local_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-20-browser-red-ses_de567801cffeGZFlt50oYv0Dnt\\test_plotly_literal_labels_and4\\browser.png",
+      "image": {
+        "bytes": 29791,
+        "sha256": "939931d27005197f8aded4cfd3fc770526788e8a4ab74562656b5679a26c57ba"
+      },
+      "html_local_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-20-browser-red-ses_de567801cffeGZFlt50oYv0Dnt\\test_plotly_literal_labels_and4\\artifacts\\deepviz-13mxv9ku\\chart.html",
+      "html": {
+        "bytes": 4858633,
+        "sha256": "977104602101b224fbeeeb5889150686f9f2e52b8e6d374297dc1a403f1c636f"
+      }
+    },
+    {
+      "family": "time",
+      "dashboard": true,
+      "html_bytes": 4859785,
+      "payload_json_bytes": 907,
+      "observed": {
+        "charts": [
+          {
+            "x": [
+              "2026-01-01",
+              "2026-01-02",
+              "2026-01-04"
+            ],
+            "y": [
+              3,
+              7,
+              11
+            ],
+            "text": [
+              "Jan 12026",
+              "Jan 2",
+              "Jan 3",
+              "Jan 4",
+              "4",
+              "6",
+              "8",
+              "10",
+              "R10 time literal-label control",
+              "x",
+              "value"
+            ],
+            "anchors": [],
+            "handlers": [],
+            "missing_literal_strings": [],
+            "mark_count": 3,
+            "mark_centers": [
+              {
+                "x": 120.25,
+                "y": 462.84375
+              },
+              {
+                "x": 216.75,
+                "y": 358.59375
+              },
+              {
+                "x": 409.75,
+                "y": 254.34375
+              }
+            ]
+          },
+          {
+            "x": [
+              "2026-01-01",
+              "2026-01-02",
+              "2026-01-04"
+            ],
+            "y": [
+              3,
+              7,
+              11
+            ],
+            "text": [
+              "Jan 12026",
+              "Jan 2",
+              "Jan 3",
+              "Jan 4",
+              "4",
+              "6",
+              "8",
+              "10",
+              "R10 time literal-label control",
+              "x",
+              "value"
+            ],
+            "anchors": [],
+            "handlers": [],
+            "missing_literal_strings": [],
+            "mark_count": 3,
+            "mark_centers": [
+              {
+                "x": 630.25,
+                "y": 462.84375
+              },
+              {
+                "x": 726.75,
+                "y": 358.59375
+              },
+              {
+                "x": 919.75,
+                "y": 254.34375
+              }
+            ]
+          }
+        ],
+        "table_cells": [
+          "2026-01-01",
+          "3",
+          "2026-01-02",
+          "7",
+          "2026-01-04",
+          "11",
+          "2026-01-01",
+          "3",
+          "2026-01-02",
+          "7",
+          "2026-01-04",
+          "11"
+        ],
+        "payload_json_bytes": 907,
+        "errors": [],
+        "blocked": [],
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "html_bytes": 4859785
+      },
+      "image_local_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-20-browser-red-ses_de567801cffeGZFlt50oYv0Dnt\\test_plotly_literal_labels_and5\\browser.png",
+      "image": {
+        "bytes": 30675,
+        "sha256": "3ac847f3cb3245cbae1b65e9ef2327f82a5840eb08fc52a65827a65ad48de380"
+      },
+      "html_local_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-20-browser-red-ses_de567801cffeGZFlt50oYv0Dnt\\test_plotly_literal_labels_and5\\artifacts\\deepviz-v9xu1gym\\chart.html",
+      "html": {
+        "bytes": 4859785,
+        "sha256": "6c5d0f4c11f2a6d06c31a38016e0a8b6fa8736098336d39d451442ad4375e8b1"
+      }
+    }
+  ],
+  "full_matrix_redo": false,
+  "scope": "F20-1 strict categorical-label chart/dashboard RED plus numeric/time positive controls; no source fix",
+  "limits": [
+    "No clicks or dataset-code execution",
+    "Existing Plotly self-contained runtime; external network denied",
+    "Small-fixture <6MB HTML/<50KB native JSON checks, not a general final-file cap",
+    "Previous 60MB HTML measurement remains documented escaping overhead, not an unbounded bug"
+  ]
+}

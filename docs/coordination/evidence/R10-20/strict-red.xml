@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="6" time="20.240" timestamp="2026-11-27T08:05:23.982785+05:30"><testcase classname="tests.r10_probes.role20.test_plotly_literal_labels" name="test_plotly_literal_labels_and_coordinate_controls[categorical-chart]" time="3.581"><failure message="AssertionError: F20-1 data created active anchors: ['&lt;a xlink:show=&quot;new&quot; target=&quot;_blank&quot; xlink:href=&quot;https://example.invalid/r10-20&quot; style=&quot;cursor:pointer&quot;&gt;R10 safe link&lt;/a&gt;']&#10;assert ['&lt;a xlink:sh...afe link&lt;/a&gt;'] == []&#10;  &#10;  Left contains one more item: '&lt;a xlink:show=&quot;new&quot; target=&quot;_blank&quot; xlink:href=&quot;https://example.invalid/r10-20&quot; style=&quot;cursor:pointer&quot;&gt;R10 safe link&lt;/a&gt;'&#10;  Use -v to get more diff">family = 'categorical', dashboard = False
+tmp_path = WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r10-20-browser-red-ses_de567801cffeGZFlt50oYv0Dnt/test_plotly_literal_labels_and0')
+
+    @pytest.mark.parametrize('dashboard', [False, True], ids=['chart', 'dashboard'])
+    @pytest.mark.parametrize('family', ['categorical', 'numeric', 'time'])
+    def test_plotly_literal_labels_and_coordinate_controls(
+        family: str, dashboard: bool, tmp_path: Path,
+    ) -&gt; None:
+        node = shutil.which('node')
+        modules = Path(os.environ.get('R10_20_NODE_MODULES', 'node_modules')).resolve()
+        if node is None or not (modules / 'playwright/package.json').is_file():
+            pytest.skip('Requires already-installed Node/Playwright; no automatic install')
+        x_values = {
+            'categorical': [LINK, HANDLER, LITERAL],
+            'numeric': [1, 2, 4],
+            'time': ['2026-01-01', '2026-01-02', '2026-01-04'],
+        }[family]
+        records = [{'x': x, 'value': value, **({'series': SERIES} if family == 'categorical' else {})}
+                   for x, value in zip(x_values, VALUES, strict=True)]
+        child = ChartSpec(kind='bar' if family == 'categorical' else 'line',
+                          title=f'R10 {family} literal-label control', x='x', y='value',
+                          color='series' if family == 'categorical' else None,
+                          aggregation='none', height=420, max_points=10)
+        spec = (ChartSpec(kind='dashboard', title='R10 two-child literal labels',
+                          charts=[child, child], columns=2, width=1000, height=520)
+                if dashboard else child)
+        artifact = render(records, spec, engine='plotly', output_dir=tmp_path / 'artifacts')
+        html = next(Path(p) for p in artifact.paths if p.endswith('chart.html'))
+        manifest = json.loads(next(Path(p) for p in artifact.paths if p.endswith('manifest.json'))
+                              .read_text(encoding='utf-8'))
+        child_count = 2 if dashboard else 1
+        assert artifact.input_count == 3 and artifact.output_count == 3 * child_count
+        assert all(chart['records'] == records for chart in manifest['charts'])
+        assert html.stat().st_size &lt; 6_000_000, 'Small fixture HTML unexpectedly grew'
+        request = {
+            'html': str(html), 'family': family, 'child_count': child_count,
+            'x_values': x_values, 'values': VALUES,
+            'literal_strings': [LINK, HANDLER, LITERAL, SERIES] if family == 'categorical' else [],
+            'result': str(tmp_path / 'browser.json'), 'screenshot': str(tmp_path / 'browser.png'),
+        }
+        request_file = tmp_path / 'request.json'
+        request_file.write_text(json.dumps(request), encoding='utf-8')
+        proc = subprocess.run(
+            [node, str(Path(__file__).with_name('browser_assertions.cjs')), str(request_file), str(modules)],
+            capture_output=True, text=True, timeout=90, check=False,
+        )
+        assert proc.returncode == 0, f'Browser harness failed: {proc.stderr[-2000:]}'
+        observed = json.loads((tmp_path / 'browser.json').read_text(encoding='utf-8'))
+        observed['html_bytes'] = html.stat().st_size
+        observed['source_modules'] = {
+            name: str(Path(importlib.import_module(name).__file__).resolve())
+            for name in ('deepviz.engines', 'deepviz.render', 'deepviz.normalize')
+        }
+        (tmp_path / 'browser.json').write_text(json.dumps(observed, indent=2), encoding='utf-8')
+        assert observed['errors'] == [] and observed['blocked'] == [], observed
+        assert len(observed['charts']) == child_count
+        for chart in observed['charts']:
+            assert chart['y'] == VALUES
+            assert chart['mark_count'] == 3
+&gt;           assert chart['anchors'] == [], f'F20-1 data created active anchors: {chart["anchors"]}'
+E           AssertionError: F20-1 data created active anchors: ['&lt;a xlink:show="new" target="_blank" xlink:href="https://example.invalid/r10-20" style="cursor:pointer"&gt;R10 safe link&lt;/a&gt;']
+E           assert ['&lt;a xlink:sh...afe link&lt;/a&gt;'] == []
+E             
+E             Left contains one more item: '&lt;a xlink:show="new" target="_blank" xlink:href="https://example.invalid/r10-20" style="cursor:pointer"&gt;R10 safe link&lt;/a&gt;'
+E             Use -v to get more diff
+
+tests\r10_probes\role20\test_plotly_literal_labels.py:84: AssertionError</failure></testcase><testcase classname="tests.r10_probes.role20.test_plotly_literal_labels" name="test_plotly_literal_labels_and_coordinate_controls[categorical-dashboard]" time="2.980"><failure message="AssertionError: F20-1 data created active anchors: ['&lt;a xlink:show=&quot;new&quot; target=&quot;_blank&quot; xlink:href=&quot;https://example.invalid/r10-20&quot; style=&quot;cursor:pointer&quot;&gt;R10 safe link&lt;/a&gt;']&#10;assert ['&lt;a xlink:sh...afe link&lt;/a&gt;'] == []&#10;  &#10;  Left contains one more item: '&lt;a xlink:show=&quot;new&quot; target=&quot;_blank&quot; xlink:href=&quot;https://example.invalid/r10-20&quot; style=&quot;cursor:pointer&quot;&gt;R10 safe link&lt;/a&gt;'&#10;  Use -v to get more diff">family = 'categorical', dashboard = True
+tmp_path = WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r10-20-browser-red-ses_de567801cffeGZFlt50oYv0Dnt/test_plotly_literal_labels_and1')
+
+    @pytest.mark.parametrize('dashboard', [False, True], ids=['chart', 'dashboard'])
+    @pytest.mark.parametrize('family', ['categorical', 'numeric', 'time'])
+    def test_plotly_literal_labels_and_coordinate_controls(
+        family: str, dashboard: bool, tmp_path: Path,
+    ) -&gt; None:
+        node = shutil.which('node')
+        modules = Path(os.environ.get('R10_20_NODE_MODULES', 'node_modules')).resolve()
+        if node is None or not (modules / 'playwright/package.json').is_file():
+            pytest.skip('Requires already-installed Node/Playwright; no automatic install')
+        x_values = {
+            'categorical': [LINK, HANDLER, LITERAL],
+            'numeric': [1, 2, 4],
+            'time': ['2026-01-01', '2026-01-02', '2026-01-04'],
+        }[family]
+        records = [{'x': x, 'value': value, **({'series': SERIES} if family == 'categorical' else {})}
+                   for x, value in zip(x_values, VALUES, strict=True)]
+        child = ChartSpec(kind='bar' if family == 'categorical' else 'line',
+                          title=f'R10 {family} literal-label control', x='x', y='value',
+                          color='series' if family == 'categorical' else None,
+                          aggregation='none', height=420, max_points=10)
+        spec = (ChartSpec(kind='dashboard', title='R10 two-child literal labels',
+                          charts=[child, child], columns=2, width=1000, height=520)
+                if dashboard else child)
+        artifact = render(records, spec, engine='plotly', output_dir=tmp_path / 'artifacts')
+        html = next(Path(p) for p in artifact.paths if p.endswith('chart.html'))
+        manifest = json.loads(next(Path(p) for p in artifact.paths if p.endswith('manifest.json'))
+                              .read_text(encoding='utf-8'))
+        child_count = 2 if dashboard else 1
+        assert artifact.input_count == 3 and artifact.output_count == 3 * child_count
+        assert all(chart['records'] == records for chart in manifest['charts'])
+        assert html.stat().st_size &lt; 6_000_000, 'Small fixture HTML unexpectedly grew'
+        request = {
+            'html': str(html), 'family': family, 'child_count': child_count,
+            'x_values': x_values, 'values': VALUES,
+            'literal_strings': [LINK, HANDLER, LITERAL, SERIES] if family == 'categorical' else [],
+            'result': str(tmp_path / 'browser.json'), 'screenshot': str(tmp_path / 'browser.png'),
+        }
+        request_file = tmp_path / 'request.json'
+        request_file.write_text(json.dumps(request), encoding='utf-8')
+        proc = subprocess.run(
+            [node, str(Path(__file__).with_name('browser_assertions.cjs')), str(request_file), str(modules)],
+            capture_output=True, text=True, timeout=90, check=False,
+        )
+        assert proc.returncode == 0, f'Browser harness failed: {proc.stderr[-2000:]}'
+        observed = json.loads((tmp_path / 'browser.json').read_text(encoding='utf-8'))
+        observed['html_bytes'] = html.stat().st_size
+        observed['source_modules'] = {
+            name: str(Path(importlib.import_module(name).__file__).resolve())
+            for name in ('deepviz.engines', 'deepviz.render', 'deepviz.normalize')
+        }
+        (tmp_path / 'browser.json').write_text(json.dumps(observed, indent=2), encoding='utf-8')
+        assert observed['errors'] == [] and observed['blocked'] == [], observed
+        assert len(observed['charts']) == child_count
+        for chart in observed['charts']:
+            assert chart['y'] == VALUES
+            assert chart['mark_count'] == 3
+&gt;           assert chart['anchors'] == [], f'F20-1 data created active anchors: {chart["anchors"]}'
+E           AssertionError: F20-1 data created active anchors: ['&lt;a xlink:show="new" target="_blank" xlink:href="https://example.invalid/r10-20" style="cursor:pointer"&gt;R10 safe link&lt;/a&gt;']
+E           assert ['&lt;a xlink:sh...afe link&lt;/a&gt;'] == []
+E             
+E             Left contains one more item: '&lt;a xlink:show="new" target="_blank" xlink:href="https://example.invalid/r10-20" style="cursor:pointer"&gt;R10 safe link&lt;/a&gt;'
+E             Use -v to get more diff
+
+tests\r10_probes\role20\test_plotly_literal_labels.py:84: AssertionError</failure></testcase><testcase classname="tests.r10_probes.role20.test_plotly_literal_labels" name="test_plotly_literal_labels_and_coordinate_controls[numeric-chart]" time="3.143" /><testcase classname="tests.r10_probes.role20.test_plotly_literal_labels" name="test_plotly_literal_labels_and_coordinate_controls[numeric-dashboard]" time="3.613" /><testcase classname="tests.r10_probes.role20.test_plotly_literal_labels" name="test_plotly_literal_labels_and_coordinate_controls[time-chart]" time="3.207" /><testcase classname="tests.r10_probes.role20.test_plotly_literal_labels" name="test_plotly_literal_labels_and_coordinate_controls[time-dashboard]" time="3.288" /></testsuite></testsuites>
