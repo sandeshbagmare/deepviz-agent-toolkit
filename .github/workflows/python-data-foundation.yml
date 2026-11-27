@@ -1,0 +1,54 @@
+name: Python data foundation
+
+on:
+  pull_request:
+    paths:
+      - "python/**"
+      - "prompts/**"
+      - "schemas/**"
+      - "tests/**"
+      - "scripts/export_schema.py"
+      - "scripts/benchmark_scale.py"
+      - "pyproject.toml"
+      - ".github/workflows/python-data-foundation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  data-foundation:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install declared package and test prerequisites
+        run: python -m pip install ".[dev,columnar]"
+      - name: Check shipped source and new consumers
+        run: |
+          python -m ruff check python/deepviz/src/deepviz tests/test_r34_data_foundation.py
+          python -m mypy
+          python scripts/export_schema.py --check
+      - name: Run full shipped data and focused-contract oracles
+        run: python -m pytest python/deepviz/tests tests -m "not integration and not scale" -q --junitxml=data-tests.xml
+      - name: Run unchanged distribution and installed-type regressions
+        run: python -m pytest tests/test_packaging_regressions.py -q --junitxml=packaging-tests.xml
+      - name: Build wheel through sdist and check metadata
+        run: |
+          python -m build
+          python -m twine check dist/*
+      - name: Preserve actual test results, including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: data-foundation-${{ matrix.python }}
+          path: |
+            *-tests.xml
+            dist/
+          if-no-files-found: ignore
