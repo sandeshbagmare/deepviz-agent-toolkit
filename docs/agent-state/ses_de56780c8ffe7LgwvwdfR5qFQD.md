@@ -95,3 +95,29 @@
   No source/originaloracle/API/install/spawn/SUM/Fraction/cleanup/formatsreplay.
   NextR04fourgenuineactual998reports/materialdisposition+freshgreenCI→ownedmerge/
   defaultancestry/#30decision. Ownmeaningfulscopedpublication/receiptMAINpending.
+
+## R32 actual repaired PR33 native Mapping/wire — final scoped PASS
+
+- FULLMAINR32common+15/canonical/ownnote/AGENTS read/SAMEIDnativeconfirmed,
+  preworkMAINsaved. ActualNEW **bff9384d1ebe5c8f6f8f0f994300264b32bb98d8**,
+  parent998/mainbase0ae2. Ownparenta244922/branchr10-15. No old114carry.
+- Git-onlyactualremoteproof0/NEWcleanLFDETACHEDconsumer/all15rawGitbeforeafter/
+  publicsameprocessownmodelonly+separate74fileloader/no editablehooks. Actual
+  publishedGitLFmodel8532ec73.../NEWpermanenttest4f06bc1.../schemaunchanged7597canonical.
+- Freshprovided82+OWNnative40 **122PASS0error0skip0.87s0**; freshunchangedOWN74
+  **74PASS0error0skip5.02s0**; ownannotationonlycorrected/finalnative40 **40PASS
+  0error0skip0.51s0**, NOTdoublecounted.196distinctactualbfftestsPASS. Focused
+  Ruff/mypy0onefile; finalOWNRuff/mypy0threefiles/collector0.
+- RealUserDict+MappingProxyroot+dashboardchild10literal×4=40(12accept28reject),
+  actualnative/decoder/wire+dumps/schema/roundtrip/no inputbackingmutation,
+  all5nativeintfields/minmax/defaults. Actual9JSONsamples+full40rawJUnit/hash.
+  Original40/82/74oraclesunchanged;74schema/corruptioncasesreallyexecutedbff.
+- Ownhashguard1/uniformCRLFdiagnostic1preserved; **M1RESOLVED/P3draftwithdrawn**
+  readonlyactualauthorHEADbffworking93d1472...has81LF63CRLF(mixed), normalized
+  exactlyGitLF8532. Bothhashesexplicitlylabeled/no productbug/testapprovalborrow.
+- **GenuinefinaltesterbffPASS/MappingF1clearsboundedtestscope/no materialfinding**,
+  no production/schema/workflow/oracle/API/install/spawn/CIpoll/oldSUM/formats/
+  scale/build/render/toolkitclaims. NEWr32threehelpers/threeevidence/fullreport+
+  ownnoteonly; meaningfulOWNpublication/remoteSHAreceiptMAINaftercommands.
+- NextR04fouractualbffreports/materialresolution/freshgreenCI→OWNmerge/default
+  ancestry/QA13/#30decision; ROOTpromptcompletion/refill, no wholewavewait.

@@ -1,0 +1,99 @@
+{
+  "source_commit": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+  "owner_session": "ses_de56780c8ffe7LgwvwdfR5qFQD",
+  "own_branch": "agents/r10-15-owned-input-cleanup",
+  "own_parent": "a2449226618f48e2fa4a023a92605733c745196e",
+  "result": "PASS actual bff numeric Mapping/wire contract; no material finding; M1 hash encoding clarified",
+  "genuine_independent_tester": 2,
+  "no_old114_carryforward": true,
+  "actual_tests": {
+    "public82-native40/provided82-plus-native40.xml": {
+      "passed": 122,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "class_counts": {
+        "tests.test_models": 30,
+        "tests.test_native_mapping": 42,
+        "tests.test_numeric_schema": 10,
+        "": 40
+      }
+    },
+    "independent74.xml": {
+      "passed": 74,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "class_counts": {
+        "tests.r22_probes.role15.test_schema_wire": 74
+      }
+    },
+    "native40-final.xml": {
+      "passed": 40,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "class_counts": {
+        "tests.r32_probes.role15.test_native_wire": 40
+      }
+    },
+    "distinct_tests": {
+      "provided_original40": 40,
+      "provided_new_mapping42": 42,
+      "unchanged_independent_wire74": 74,
+      "independent_native40": 40,
+      "total_passed": 196,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "annotation_only_native40_rerun_not_double_counted": true
+    }
+  },
+  "native_outputs": {
+    "total": 40,
+    "accepted": 12,
+    "rejected": 28,
+    "native_containers": 2,
+    "positions": 2,
+    "literal_cases": 10,
+    "all_nonmutating": true,
+    "three_actual_paths_agree": true
+  },
+  "timing_seconds": {
+    "fresh_provided82_plus_native40": 0.87,
+    "fresh_unchanged74": 5.02,
+    "final_native40_after_annotation_only": 0.51
+  },
+  "focused_Ruff_exit": 0,
+  "focused_mypy_exit": 0,
+  "focused_mypy_files": 1,
+  "own_Ruff_exit": 0,
+  "own_mypy_exit": 0,
+  "raw_artifact_sha256": {
+    "independent74.log": "7f484d9e6bc4d1edaa3bf176d4aae8d4b206c0e3d8b59e518447188a4c913d1d",
+    "independent74.xml": "f5a69e5e3eb012c110dfaca2e7f11c702ec1a293cc73437aee6ce688e5a28f57",
+    "native40-final.log": "1a74c21bf39a6a738c8b049a0c3c81a66be714a686e6f67c7360d89e89600711",
+    "native40-final.xml": "5aae76b639e77a957c02ca9243fdfebc34bd671a6d622c44e12065539743a70e",
+    "own-mypy-final.log": "07a5ca23e5d39b2565c0c1361f0556b8c3c75484bba05841f400436d190bb660",
+    "own-ruff-final.log": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+    "postrun-gate.json": "f60ca2ffa2f797493d0727e4ce0603f02389695a63fed205b3f203a3c478e30d",
+    "provided82-native40.log": "13c6a86db661844923e1dceac2bff196f3d79c36689847bb4a64dd6a7873ad71",
+    "public82-native40/provided82-plus-native40.xml": "8b352a83d9df3bb6fe084fafc08b36fd649558fe8e28679be9eb3dfd727594b9",
+    "public82-native40/source-import-identity.json": "3da3f1adad00a30f5511d6c64149235d11865a9d55979681ea1de4d558631402",
+    "pytest-independent74/r22-source-proof0/identity.json": "3526703aae88c04caa3309e8aea6ac311de0f6a228b2c681e086c5314ffdc9f9",
+    "pytest-independent74/r22-source-proof0/same-model-generated-schema.json": "dfa78116e6531e892e505f2290d5b2d6a93c2e01942edf3e9873a451b1ef3e1d",
+    "postrun-gate-corrected.json": "f548871a9646c1dc5fff6782acba11159375760153ad170fe837de149a17ef5b",
+    "packet-working-vs-Git-hash-diagnostic.json": "63f85fc0abf066ccecd87298c03a8d24fed0a225c41932449df029b0d344c510"
+  },
+  "hash_clarification_M1_resolved": true,
+  "preserved_nonproduct_failures": [
+    "Own CASES variable typing annotation initially missing; fixed only annotation, final40 rerun not double-counted",
+    "Own postrun guard initially used packet working hash for Git bytes; uniform CRLF hypothesis false, mixed EOL provenance then actually proved"
+  ],
+  "limits": [
+    "Local Python3.12, existing read-only dependencies, no installs/API/spawn/CI polling",
+    "No production/schema/workflow/original oracle edits, no full67 output collector replay",
+    "No SUM/formats/scale/build/render/MCP/DeepAgent/npm/full-toolkit claim; model-only actual JSON evidence",
+    "R04 owns four actual-bff gates plus fresh CI and merge/default ancestry, not this tester"
+  ]
+}

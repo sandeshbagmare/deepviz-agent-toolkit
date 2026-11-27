@@ -1,0 +1,55 @@
+{
+  "source_commit": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+  "source_Git_raw_equal_sha256": {
+    ".github/workflows/chart-contract.yml": "ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227",
+    ".gitignore": "3bebcceee3a15392de8f9a36815347d9a999e21fe58efe576ef28b9664b00e77",
+    "LICENSE": "afbb59a0c0fccdea7ecc9140e4e762455dc06abea4f02d9cf5324c8fb23b42fd",
+    "README.md": "2497e600ecd5a35af571f0f3e6f2550ce3a49b9322a607e02e6b97aa8c41d40d",
+    "docs/superpowers/plans/2026-11-26-deepviz-plan.md": "9d941cd545a8a37ddbf6d9395d882ba25360318b35ff93d36ed1556f3668d834",
+    "docs/superpowers/specs/2026-11-26-deepviz-design.md": "715ef120ba4700ea28ef5dbd1d975cd80cf3cc5b659e64fc9e6cd231c664a973",
+    "docs/verification/r22-contract/README.md": "f83f3e84a78d9a88c4a96d7df489f19e7fb4a6739c9e662d781f10f06670b3a6",
+    "docs/verification/r22-contract/red-green-summary.json": "e3db9381970aa74f9a9f9ede2c87712dcd47636c34520fb3984ee39107bf1937",
+    "docs/verification/r22-contract/validation-output.json": "3896de0d87545af60fc63bdee608b202055ea55d84dc7f49d1334ab729d02a0b",
+    "pyproject.toml": "c80640f3f3049b9734360abd7bb1b5699449d7bad31f3fcde77c3e2b38a53053",
+    "python/deepviz/src/deepviz/models.py": "8532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d",
+    "schemas/chart-spec.schema.json": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d",
+    "tests/test_models.py": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32",
+    "tests/test_native_mapping.py": "4f06bc1ad9cdc021f5081f5c59b10081783439e2fa95b69287d079e5dc82bb94",
+    "tests/test_numeric_schema.py": "b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3"
+  },
+  "tracked_clean_before_after": true,
+  "same_process_model_relative_file": "python/deepviz/src/deepviz/models.py",
+  "loaded_deepviz_modules_own_checkout_only": true,
+  "python_S_no_editable_hooks": true,
+  "unused_resources_only_namespace_no_py_files": 1,
+  "generated_equals_committed_schema": true,
+  "schema_canonical_sha256": "75972780be039e8dbbbf78a93d0611d9e6a5c9ed6e57a7ecf4239c2af20d6670",
+  "versions": {
+    "pydantic": "2.14.4",
+    "pytest": "9.2.0",
+    "jsonschema": "4.26.0",
+    "referencing": "0.37.0"
+  },
+  "pytest_exit": 0,
+  "parent_commit": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+  "PR": 33,
+  "wire_loader_same_source_commit_no_deepviz_package_import": true,
+  "all15rawGit_before_after": true,
+  "original40tests_schema_workflow_unchanged": true,
+  "probe_sha256": {
+    "tests/r22_probes/role15/test_schema_wire.py": "c949ec8e267c2b2734a004a9db1e6230e36a225bd1688ab37703a4177793d7c9",
+    "tests/r22_probes/role15/wire_cases.py": "ac72c495bc3398742db479ea5770185e2fb1ddd713766249813eb51990a4c956",
+    "tests/r32_probes/role15/run_frozen.py": "2c15e5f5ff276199b1e08d4a11955df9f1d3866b7873a555b2a3e31ffe0a1edc",
+    "tests/r32_probes/role15/test_native_wire.py": "431d6508d18db329ae6f368f13ac4c924bc4b065b0495bb03ed59758788018c6",
+    "tests/r32_probes/role15/collect_result.py": "fef54f2056c02fd42d5c434e99a2e105edd23d7552a6f294e8cba23f10c8b9d4"
+  },
+  "hash_clarification_M1": {
+    "resolved_not_a_product_finding": true,
+    "Git_LF_tested_model_sha256": "8532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d",
+    "packet_author_working_mixed_EOL_model_sha256": "93d1472b168feb9f1a12fa47f81e0296228459ebe006c14a4daba2637d3616ba",
+    "author_working_total_LF": 81,
+    "author_working_CRLF": 63,
+    "CRLF_to_LF_equals_actual_published_Git": true,
+    "not_author_test_approval_borrowing": true
+  }
+}

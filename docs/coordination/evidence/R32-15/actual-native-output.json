@@ -1,0 +1,282 @@
+{
+  "source_commit": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+  "scope": "Nine actual native Mapping output/error representatives from forty",
+  "native40_final_XML_sha256": "5aae76b639e77a957c02ca9243fdfebc34bd671a6d622c44e12065539743a70e",
+  "all40_outputs_checked": {
+    "total": 40,
+    "accepted": 12,
+    "rejected": 28,
+    "native_containers": 2,
+    "positions": 2,
+    "literal_cases": 10,
+    "all_nonmutating": true,
+    "three_actual_paths_agree": true
+  },
+  "actual_three_paths": [
+    "native Mapping -> model_validate",
+    "JSON decoder -> model_validate",
+    "model_validate_json -> model_dump_json -> schema -> roundtrip"
+  ],
+  "representatives": [
+    {
+      "factory": "mappingproxy",
+      "site": "root",
+      "literal_case": "defaults",
+      "expected_accept": true,
+      "literal_json": "{}",
+      "input_and_backing_not_mutated": true,
+      "all_three_paths_agree": true,
+      "accepted": true,
+      "actual_json": {
+        "aggregation": "auto",
+        "charts": [],
+        "color": null,
+        "columns": 2,
+        "data_path": null,
+        "description": "",
+        "format": "auto",
+        "height": 520,
+        "kind": "bar",
+        "max_points": 2000,
+        "size": null,
+        "theme": "light",
+        "title": "Visualization",
+        "version": 1,
+        "width": 900,
+        "x": null,
+        "y": null
+      },
+      "actual_json_wire": "{\"version\":1,\"kind\":\"bar\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":2000,\"width\":900,\"height\":520,\"theme\":\"light\",\"charts\":[],\"columns\":2}",
+      "roundtrip_equal": true,
+      "schema_valid": true
+    },
+    {
+      "factory": "UserDict",
+      "site": "dashboard-child",
+      "literal_case": "defaults",
+      "expected_accept": true,
+      "literal_json": "{\"kind\":\"dashboard\",\"charts\":[{}]}",
+      "input_and_backing_not_mutated": true,
+      "all_three_paths_agree": true,
+      "accepted": true,
+      "actual_json": {
+        "aggregation": "auto",
+        "charts": [
+          {
+            "aggregation": "auto",
+            "charts": [],
+            "color": null,
+            "columns": 2,
+            "data_path": null,
+            "description": "",
+            "format": "auto",
+            "height": 520,
+            "kind": "bar",
+            "max_points": 2000,
+            "size": null,
+            "theme": "light",
+            "title": "Visualization",
+            "version": 1,
+            "width": 900,
+            "x": null,
+            "y": null
+          }
+        ],
+        "color": null,
+        "columns": 2,
+        "data_path": null,
+        "description": "",
+        "format": "auto",
+        "height": 520,
+        "kind": "dashboard",
+        "max_points": 2000,
+        "size": null,
+        "theme": "light",
+        "title": "Visualization",
+        "version": 1,
+        "width": 900,
+        "x": null,
+        "y": null
+      },
+      "actual_json_wire": "{\"version\":1,\"kind\":\"dashboard\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":2000,\"width\":900,\"height\":520,\"theme\":\"light\",\"charts\":[{\"version\":1,\"kind\":\"bar\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":2000,\"width\":900,\"height\":520,\"theme\":\"light\",\"charts\":[],\"columns\":2}],\"columns\":2}",
+      "roundtrip_equal": true,
+      "schema_valid": true
+    },
+    {
+      "factory": "UserDict",
+      "site": "root",
+      "literal_case": "native-integral-minima",
+      "expected_accept": true,
+      "literal_json": "{\"version\":1.0,\"max_points\":10.0,\"width\":240.0,\"height\":200.0,\"columns\":1.0}",
+      "input_and_backing_not_mutated": true,
+      "all_three_paths_agree": true,
+      "accepted": true,
+      "actual_json": {
+        "aggregation": "auto",
+        "charts": [],
+        "color": null,
+        "columns": 1,
+        "data_path": null,
+        "description": "",
+        "format": "auto",
+        "height": 200,
+        "kind": "bar",
+        "max_points": 10,
+        "size": null,
+        "theme": "light",
+        "title": "Visualization",
+        "version": 1,
+        "width": 240,
+        "x": null,
+        "y": null
+      },
+      "actual_json_wire": "{\"version\":1,\"kind\":\"bar\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":10,\"width\":240,\"height\":200,\"theme\":\"light\",\"charts\":[],\"columns\":1}",
+      "roundtrip_equal": true,
+      "schema_valid": true
+    },
+    {
+      "factory": "mappingproxy",
+      "site": "dashboard-child",
+      "literal_case": "native-upper-bounds",
+      "expected_accept": true,
+      "literal_json": "{\"kind\":\"dashboard\",\"charts\":[{\"version\":1,\"max_points\":100000,\"width\":4096,\"height\":4096,\"columns\":6}]}",
+      "input_and_backing_not_mutated": true,
+      "all_three_paths_agree": true,
+      "accepted": true,
+      "actual_json": {
+        "aggregation": "auto",
+        "charts": [
+          {
+            "aggregation": "auto",
+            "charts": [],
+            "color": null,
+            "columns": 6,
+            "data_path": null,
+            "description": "",
+            "format": "auto",
+            "height": 4096,
+            "kind": "bar",
+            "max_points": 100000,
+            "size": null,
+            "theme": "light",
+            "title": "Visualization",
+            "version": 1,
+            "width": 4096,
+            "x": null,
+            "y": null
+          }
+        ],
+        "color": null,
+        "columns": 2,
+        "data_path": null,
+        "description": "",
+        "format": "auto",
+        "height": 520,
+        "kind": "dashboard",
+        "max_points": 2000,
+        "size": null,
+        "theme": "light",
+        "title": "Visualization",
+        "version": 1,
+        "width": 900,
+        "x": null,
+        "y": null
+      },
+      "actual_json_wire": "{\"version\":1,\"kind\":\"dashboard\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":2000,\"width\":900,\"height\":520,\"theme\":\"light\",\"charts\":[{\"version\":1,\"kind\":\"bar\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":100000,\"width\":4096,\"height\":4096,\"theme\":\"light\",\"charts\":[],\"columns\":6}],\"columns\":2}",
+      "roundtrip_equal": true,
+      "schema_valid": true
+    },
+    {
+      "factory": "UserDict",
+      "site": "root",
+      "literal_case": "version-bool",
+      "expected_accept": false,
+      "literal_json": "{\"version\":true}",
+      "input_and_backing_not_mutated": true,
+      "all_three_paths_agree": true,
+      "accepted": false,
+      "actual_errors": [
+        {
+          "loc": [],
+          "msg": "Value error, version must be a JSON number, not a string or boolean",
+          "type": "value_error"
+        }
+      ]
+    },
+    {
+      "factory": "mappingproxy",
+      "site": "root",
+      "literal_case": "max-points-string",
+      "expected_accept": false,
+      "literal_json": "{\"max_points\":\"10\"}",
+      "input_and_backing_not_mutated": true,
+      "all_three_paths_agree": true,
+      "accepted": false,
+      "actual_errors": [
+        {
+          "loc": [],
+          "msg": "Value error, max_points must be a JSON number, not a string or boolean",
+          "type": "value_error"
+        }
+      ]
+    },
+    {
+      "factory": "mappingproxy",
+      "site": "root",
+      "literal_case": "width-string",
+      "expected_accept": false,
+      "literal_json": "{\"width\":\"240\"}",
+      "input_and_backing_not_mutated": true,
+      "all_three_paths_agree": true,
+      "accepted": false,
+      "actual_errors": [
+        {
+          "loc": [],
+          "msg": "Value error, width must be a JSON number, not a string or boolean",
+          "type": "value_error"
+        }
+      ]
+    },
+    {
+      "factory": "UserDict",
+      "site": "dashboard-child",
+      "literal_case": "height-bool",
+      "expected_accept": false,
+      "literal_json": "{\"kind\":\"dashboard\",\"charts\":[{\"height\":false}]}",
+      "input_and_backing_not_mutated": true,
+      "all_three_paths_agree": true,
+      "accepted": false,
+      "actual_errors": [
+        {
+          "loc": [
+            "charts",
+            0
+          ],
+          "msg": "Value error, height must be a JSON number, not a string or boolean",
+          "type": "value_error"
+        }
+      ]
+    },
+    {
+      "factory": "mappingproxy",
+      "site": "dashboard-child",
+      "literal_case": "columns-string",
+      "expected_accept": false,
+      "literal_json": "{\"kind\":\"dashboard\",\"charts\":[{\"columns\":\"1\"}]}",
+      "input_and_backing_not_mutated": true,
+      "all_three_paths_agree": true,
+      "accepted": false,
+      "actual_errors": [
+        {
+          "loc": [
+            "charts",
+            0
+          ],
+          "msg": "Value error, columns must be a JSON number, not a string or boolean",
+          "type": "value_error"
+        }
+      ]
+    }
+  ],
+  "chart": "N/A model-only slice; actual serialized model JSON evidence applies"
+}
