@@ -89,3 +89,22 @@ replayed or double-counted. Four expected corruption exits are not product failu
   R18 paths + own note, commit on existing ONE own branch, non-force push and exact
   remote-SHA readback, then save actual publication receipt for R04 integration/review.
   No R18 commit/push success is claimed before that receipt.
+
+## Actual owned publication / handoff
+
+- Payload commit **`8504122fe924f9b3e5d7daa6af9c156b0ae4331f`**, parent existing
+  f8115eb6, 18 explicit owned paths / 1,861 lines. Staged path/diff/credential-pattern
+  and whitespace review completed. `git commit` exit 0; non-force
+  `git push origin agents/r11-10-strict-mcp-boundaries` exit 0; actual
+  `git ls-remote --heads origin refs/heads/agents/r11-10-strict-mcp-boundaries`
+  exit 0 returned that **exact SHA**. Own worktree clean/tracking remote after push;
+  production diff vs f811 empty. No shared candidate, issues or PR writes.
+- This is an independent, non-author **source-specific materialized consumer**
+  handoff for f9, not final-candidate approval or npm-install validation. All
+  failure/skip/limited-scope distinctions above remain. No source author 13-case
+  consumer or 6-browser result borrowed. No MCP replay or production edit.
+- R04 next: inspect these owned evidence files alongside reviewer01's distinct
+  source review; integrate the **R18-only payload commit**, not an unreviewed merge
+  of this branch's earlier permanent R11 RED regressions; freeze a final candidate
+  and require independent final-head/package-install/CI gates separately. No
+  requested 900-issue completion, review count or release result is manufactured.
