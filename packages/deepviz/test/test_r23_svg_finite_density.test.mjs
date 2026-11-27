@@ -84,3 +84,38 @@ test('R23 a nonzero Y that collapses onto emitted zero fails before successful a
   }
   assert.deepEqual(rows, [{group: 'tiny', value: Number.MIN_VALUE}]);
 });
+
+const categoryTicks = svg => [...svg.matchAll(/<text class="category-tick"([^>]*)><title>([^<]*)<\/title>([^<]*)<\/text>/g)]
+  .map(m => ({...attrs(m[1]), title: m[2], text: m[3]}));
+test('R23 ordinary eight 240px labels use readable separate rows without losing bars or text', () => {
+  const rows = Array.from({length: 8}, (_, i) => ({group: `g${i}`, value: i + 1}));
+  const svg = chart(rows), ticks = categoryTicks(svg);
+  assert.deepEqual(ticks.map(t => t.text), rows.map(row => row.group));
+  assert.deepEqual([...new Set(ticks.map(t => +t.y))].sort(), [153, 169]);
+  assert.equal(marks(svg, 'rect').length, 8);
+  assert.ok(ticks.every(t => +t['font-size'] === 12));
+});
+
+test('R23 infeasible eight full Unicode labels reject before returning an artifact at 240px', () => {
+  const rows = Array.from({length: 8}, (_, i) => ({group: `東京都東部支店${i + 1}`, value: i + 1}));
+  let artifact;
+  assert.throws(() => {artifact = render(rows, {kind: 'bar', x: 'group', y: 'value', aggregation: 'none', width: 240, height: 200}, 'svg');},
+    /category density cannot fit at requested dimensions.*larger dimensions/);
+  assert.equal(artifact, undefined, 'rejection is not a successful chart');
+  assert.equal(rows[7].group, '東京都東部支店8');
+});
+
+test('R23 full Unicode labels and all fourteen categories are retained when wider space fits', () => {
+  for (const rows of [Array.from({length: 8}, (_, i) => ({group: `東京都東部支店${i + 1}`, value: i + 1})),
+    Array.from({length: 14}, (_, i) => ({group: `g${i}`, value: i + 1}))]) {
+    const svg = chart(rows, 'bar', {width: 960, height: 540}), ticks = categoryTicks(svg);
+    assert.deepEqual(ticks.map(t => t.text), rows.map(row => row.group));
+    assert.deepEqual(ticks.map(t => t.title), rows.map(row => row.group));
+    assert.equal(marks(svg, 'rect').length, rows.length);
+  }
+});
+
+test('R23 complete labels longer than eighteen characters are never abbreviated', () => {
+  const rows = [{group: 'complete-branch-name-01', value: 1}, {group: 'complete-branch-name-02', value: 2}];
+  assert.deepEqual(categoryTicks(chart(rows, 'bar', {width: 960, height: 540})).map(t => t.text), rows.map(row => row.group));
+});

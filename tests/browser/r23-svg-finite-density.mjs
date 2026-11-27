@@ -89,3 +89,37 @@ for (const kind of ['bar', 'line', 'area', 'scatter', 'bubble']) for (const carr
     }
   });
 }
+
+for (const [fixture, width] of [['ordinary', 240], ['ordinary', 960], ['unicode', 960]]) for (const carrier of ['svg', 'html']) {
+  test(`R23 actual ${fixture} eight ${width}px ${carrier}: full text readable with all values`, {timeout: 15000}, async () => {
+    const rows = Array.from({length: 8}, (_, i) => ({group: fixture === 'ordinary' ? `g${i}` : `東京都東部支店${i + 1}`, value: i + 1}));
+    const artifact = render(rows, {kind: 'bar', x: 'group', y: 'value', aggregation: 'none', width,
+      height: width === 240 ? 200 : 540}, 'svg');
+    assert.deepEqual(artifact.renderer_spec.normalized.records, rows);
+    assert.deepEqual([artifact.input_count, artifact.output_count], [8, 8]);
+    const geometry = await observe(`density-${fixture}-${width}-${carrier}`, artifact, carrier);
+    const ticks = geometry.texts.filter(text => text.category), other = geometry.texts.filter(text => !text.category);
+    assert.deepEqual(ticks.map(text => text.text), rows.map(row => row.group));
+    const overlaps = (a, b) => Math.min(a.right, b.right) - Math.max(a.x, b.x) > 0.05 && Math.min(a.bottom, b.bottom) - Math.max(a.y, b.y) > 0.05;
+    for (let i = 0; i < ticks.length; i++) {
+      for (let j = i + 1; j < ticks.length; j++) assert.equal(overlaps(ticks[i], ticks[j]), false, `actual full label overlap: ${i},${j}`);
+      for (const axis of other) assert.equal(overlaps(ticks[i], axis), false, 'category label overlaps numeric or axis-title text');
+    }
+    assert.equal(geometry.marks.length, 8);
+    for (let i = 0; i < 8; i++) {
+      const bar = geometry.marks[i];
+      assert.equal(bar.title, `${rows[i].group}: ${rows[i].value}`);
+      assert.ok(+bar.attrs.width > 0 && +bar.attrs.height > 0);
+      assert.ok(Math.abs(+bar.attrs.height / +geometry.marks[0].attrs.height - (i + 1)) < 1e-9);
+      assert.ok(Math.abs(+bar.attrs.y + +bar.attrs.height - (width === 240 ? 135 : 475)) < 1e-9);
+    }
+  });
+}
+
+test('R23 actual Unicode 240px density is a clear pre-artifact rejection, not a chart pass', () => {
+  const rows = Array.from({length: 8}, (_, i) => ({group: `東京都東部支店${i + 1}`, value: i + 1}));
+  let artifact;
+  assert.throws(() => {artifact = render(rows, {kind: 'bar', x: 'group', y: 'value', aggregation: 'none', width: 240, height: 200}, 'svg');},
+    /category density cannot fit at requested dimensions.*larger dimensions/);
+  assert.equal(artifact, undefined);
+});

@@ -272,11 +272,23 @@ export function svgHtml(data:NormalizedData,spec:ChartSpec,m:ChartMapping):strin
       return `<polyline class="mark" points="${spec.kind==='area'?`${px(indices[0]!)},${py(0)} `:''}${points}${spec.kind==='area'?` ${px(indices.at(-1)!)},${py(0)}`:''}" fill="${spec.kind==='area'?colorFor(g):'none'}" fill-opacity="0.25" stroke="${colorFor(g)}" stroke-dasharray="${dashFor(g)}" stroke-width="2"/>`;
     }).join('');
   } else marks=rows.map((row,i)=>`<circle class="mark" cx="${px(i)}" cy="${py(values[i]!)}" r="${m.size?Math.sqrt(Number(row[m.size])/maxSize)*30:4}" fill="${colorFor(groupIndex(row))}"><title>${escapeHtml(row[x])}: ${values[i]}</title></circle>`).join('');
-  const stride=Math.max(1,Math.ceil(categories.length/12));
-  const shortLabel=(value:unknown)=>{const text=String(value??'');return text.length>18?`${text.slice(0,9)}…${text.slice(-8)}`:text;};
-  const ticks=categories.map((value,i)=>({value,i})).filter(({i})=>i%stride===0 || i===categories.length-1).map(({value,i})=>{
+  const tickLabels=spec.kind==='pie'?[]:categories.map((value,i)=> {
     const position=numericX?left+fraction(Number(value),xmin,xmax)*w:m.color?left+(i+0.5)*w/Math.max(1,categories.length):px(i);
-    return `<text class="category-tick" x="${position}" y="${pad+h+18}" text-anchor="middle" font-size="12"><title>${escapeHtml(value)}</title>${escapeHtml(shortLabel(value))}</text>`;
+    const text=String(value??'');
+    // Conservative 12px monospace/fallback bounds; unsupported density fails, never abbreviates.
+    const labelWidth=[...text].reduce((sum,ch)=>sum+(ch>=' ' && ch<='~'?8:16),0);
+    const anchor=position-labelWidth/2<0?'start':position+labelWidth/2>width?'end':'middle';
+    const start=anchor==='start'?position:anchor==='end'?position-labelWidth:position-labelWidth/2;
+    return {value,text,position,anchor,start,end:start+labelWidth,row:0};
+  });
+  const rowEnds=[-Infinity,-Infinity];
+  for(const label of [...tickLabels].sort((a,b)=>a.start-b.start)) {
+    const row=rowEnds.findIndex(end=>label.start>=end+2);
+    if(row<0 || label.start<0 || label.end>width)throw new ValidationError('category density cannot fit at requested dimensions; request larger dimensions');
+    label.row=row;rowEnds[row]=label.end;
+  }
+  const ticks=tickLabels.map(label=> {
+    return `<text class="category-tick" x="${label.position}" y="${pad+h+18+label.row*16}" text-anchor="${label.anchor}" font-size="12"><title>${escapeHtml(label.value)}</title>${escapeHtml(label.text)}</text>`;
   }).join('');
   const axis=spec.kind==='pie'?'':`<g fill="${textColor}" font-family="monospace" font-size="12"><path d="M${left},${pad} V${pad+h} H${left+w}" fill="none" stroke="${textColor}"/><text x="${left-8}" y="${pad+8}" text-anchor="end">${escapeHtml(maxTick)}</text><text x="${left-8}" y="${pad+h}" text-anchor="end">${escapeHtml(minTick)}</text><text x="${width/2}" y="${height-12}" text-anchor="middle">${escapeHtml(x)}</text><text transform="translate(15 ${height/2}) rotate(-90)" text-anchor="middle">${escapeHtml(y)}</text>${ticks}</g>`;
   const legend=spec.kind==='pie'?`<ul aria-label="Category key">${rows.map((row,i)=>`<li><svg aria-hidden="true" width="20" height="12"><circle cx="6" cy="6" r="5" fill="${colorFor(i)}"/></svg> ${escapeHtml(row[x])}</li>`).join('')}</ul>`:
