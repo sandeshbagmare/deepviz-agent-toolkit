@@ -1,0 +1,1826 @@
+{
+  "source": {
+    "source": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+    "source_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-ec9-source-ses_de567801cffeGZFlt50oYv0Dnt",
+    "source_status": "",
+    "modules": {
+      "deepviz.normalize": {
+        "relative": "python/deepviz/src/deepviz/normalize.py",
+        "git_blob": "7028f7a24e92a8995859b3818f0938b4276a0726",
+        "sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2"
+      },
+      "deepviz.render": {
+        "relative": "python/deepviz/src/deepviz/render.py",
+        "git_blob": "c0608d8762d6f37bdb4e902205bed3b2e2bd98ba",
+        "sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+      },
+      "deepviz.engines": {
+        "relative": "python/deepviz/src/deepviz/engines.py",
+        "git_blob": "22fb9dcfb9076d3b9a608ef557a5dd6768281985",
+        "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de"
+      },
+      "deepviz.models": {
+        "relative": "python/deepviz/src/deepviz/models.py",
+        "git_blob": "17877904985d496f645cd7c66305efc8305bcb5f",
+        "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+      }
+    }
+  },
+  "test_exit": 0,
+  "passed": 18,
+  "failed": 0,
+  "skipped": 0,
+  "suite_elapsed_s": 15.319,
+  "pretest_dependencies": {
+    "matplotlib": "3.11.2",
+    "plotly": "6.9.0",
+    "vl-convert-python": "1.9.0.post1",
+    "numpy": "2.5.5",
+    "pydantic": "2.14.4"
+  },
+  "cases": [
+    {
+      "fixture": "ordinary",
+      "engine": "antv",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\ordinary\\antv\\artifacts\\deepviz-g6b639bg\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\ordinary\\antv\\artifacts\\deepviz-g6b639bg\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 18,
+        "output_count": 3,
+        "strategy": "sum",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "manifest": {
+        "engine": "antv",
+        "charts": [
+          {
+            "engine": "antv",
+            "requested_kind": "bar",
+            "rendered_kind": "bar",
+            "spec": {
+              "version": 1,
+              "kind": "bar",
+              "title": "R16 finite SUM fidelity",
+              "description": "18 source rows: A=5, B=6, C=7; exact grouped totals shown.",
+              "x": "group",
+              "y": "total",
+              "color": null,
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "sum",
+              "max_points": 10,
+              "width": 900,
+              "height": 420,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "group": "A",
+                "total": 1.0
+              },
+              {
+                "group": "B",
+                "total": 0.5
+              },
+              {
+                "group": "C",
+                "total": 3.0
+              }
+            ],
+            "input_count": 18,
+            "output_count": 3,
+            "strategy": "sum",
+            "warnings": [
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          }
+        ],
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_specs": [
+          {
+            "type": "interval",
+            "data": [
+              {
+                "_x": "A",
+                "_y": 1.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 1.0,
+                "_row": 0
+              },
+              {
+                "_x": "B",
+                "_y": 0.5,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 0.5,
+                "_row": 1
+              },
+              {
+                "_x": "C",
+                "_y": 3.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 3.0,
+                "_row": 2
+              }
+            ],
+            "encode": {
+              "x": "_x",
+              "y": "_y"
+            },
+            "animate": false,
+            "theme": "light",
+            "title": "R16 finite SUM fidelity",
+            "tooltip": false,
+            "axis": {
+              "x": {
+                "title": "group",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              },
+              "y": {
+                "title": "total",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              }
+            },
+            "style": {
+              "fill": "#386cb0",
+              "stroke": "#386cb0"
+            }
+          }
+        ],
+        "strategy": "sum",
+        "accessible_path": "chart.html"
+      },
+      "assertions": {
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_final_values": [
+          1.0,
+          0.5,
+          3.0
+        ]
+      },
+      "files": {
+        "chart.html": {
+          "bytes": 2703,
+          "sha256": "d071023ef8866d82503c09e31ff33744c25c632cd19d9f9c172bbd35d6109901"
+        },
+        "manifest.json": {
+          "bytes": 2458,
+          "sha256": "cc997e74894d04fa402364b8d393780e41fa403318979e74f874d029356f7caf"
+        }
+      },
+      "browser": {
+        "render_error": null,
+        "table_cells": [
+          "A",
+          "1.0",
+          "B",
+          "0.5",
+          "C",
+          "3.0"
+        ],
+        "svg_count": 0,
+        "canvas_count": 1,
+        "native_values": [
+          1,
+          0.5,
+          3
+        ],
+        "canvas_color_runs": [
+          {
+            "left": 95,
+            "right": 330,
+            "min": 254,
+            "max": 353
+          },
+          {
+            "left": 358,
+            "right": 593,
+            "min": 305,
+            "max": 353
+          },
+          {
+            "left": 621,
+            "right": 856,
+            "min": 55,
+            "max": 353
+          }
+        ],
+        "bar_heights": [
+          100,
+          49,
+          299
+        ],
+        "native_ready": true,
+        "errors": [],
+        "blocked": [],
+        "fulfilled": [
+          "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js"
+        ],
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "assets": {
+          "echarts": {
+            "version": "6.1.0",
+            "sha256": "b66b25aeb4df84e33199dc21694014d336d222cbd9deb0e5a7c14bd6aa0d0fd0",
+            "url": "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js"
+          },
+          "antv": {
+            "version": "5.4.8",
+            "sha256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412",
+            "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "ordinary",
+      "engine": "echarts",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\ordinary\\echarts\\artifacts\\deepviz-4sjybzyx\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\ordinary\\echarts\\artifacts\\deepviz-4sjybzyx\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "echarts",
+        "input_count": 18,
+        "output_count": 3,
+        "strategy": "sum",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "manifest": {
+        "engine": "echarts",
+        "charts": [
+          {
+            "engine": "echarts",
+            "requested_kind": "bar",
+            "rendered_kind": "bar",
+            "spec": {
+              "version": 1,
+              "kind": "bar",
+              "title": "R16 finite SUM fidelity",
+              "description": "18 source rows: A=5, B=6, C=7; exact grouped totals shown.",
+              "x": "group",
+              "y": "total",
+              "color": null,
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "sum",
+              "max_points": 10,
+              "width": 900,
+              "height": 420,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "group": "A",
+                "total": 1.0
+              },
+              {
+                "group": "B",
+                "total": 0.5
+              },
+              {
+                "group": "C",
+                "total": 3.0
+              }
+            ],
+            "input_count": 18,
+            "output_count": 3,
+            "strategy": "sum",
+            "warnings": [
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          }
+        ],
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_specs": [
+          {
+            "animation": false,
+            "backgroundColor": "#ffffff",
+            "color": [
+              "#386cb0",
+              "#b85c00",
+              "#2a9d73",
+              "#c44964",
+              "#8861a9",
+              "#a67c42"
+            ],
+            "title": {
+              "text": "R16 finite SUM fidelity",
+              "textStyle": {
+                "color": "#202938"
+              }
+            },
+            "textStyle": {
+              "color": "#202938"
+            },
+            "tooltip": {
+              "trigger": "item",
+              "renderMode": "richText"
+            },
+            "legend": {
+              "show": false,
+              "top": 30,
+              "textStyle": {
+                "color": "#202938"
+              }
+            },
+            "grid": {
+              "containLabel": true,
+              "left": 50,
+              "right": 30,
+              "top": 65,
+              "bottom": 55
+            },
+            "xAxis": {
+              "type": "category",
+              "data": [
+                "A",
+                "B",
+                "C"
+              ],
+              "name": "group",
+              "nameLocation": "middle",
+              "nameGap": 30
+            },
+            "yAxis": {
+              "type": "value",
+              "name": "total"
+            },
+            "series": [
+              {
+                "type": "bar",
+                "name": "Series",
+                "data": [
+                  [
+                    "A",
+                    1.0
+                  ],
+                  [
+                    "B",
+                    0.5
+                  ],
+                  [
+                    "C",
+                    3.0
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "strategy": "sum",
+        "accessible_path": "chart.html"
+      },
+      "assertions": {
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_final_values": [
+          1.0,
+          0.5,
+          3.0
+        ]
+      },
+      "files": {
+        "chart.html": {
+          "bytes": 2785,
+          "sha256": "6e16b95575cbf2b8efceaa0ce307c6358c616fec3e3fbad3e47935791b39aae3"
+        },
+        "manifest.json": {
+          "bytes": 2789,
+          "sha256": "baf024a01218e1d4a57e44d76f009eec1174a5b4e29230d814900cd90587570c"
+        }
+      },
+      "browser": {
+        "render_error": null,
+        "table_cells": [
+          "A",
+          "1.0",
+          "B",
+          "0.5",
+          "C",
+          "3.0"
+        ],
+        "svg_count": 1,
+        "canvas_count": 0,
+        "native_values": [
+          1,
+          0.5,
+          3
+        ],
+        "bar_heights": [
+          93.33331298828125,
+          46.66668701171875,
+          280
+        ],
+        "native_ready": true,
+        "errors": [],
+        "blocked": [],
+        "fulfilled": [
+          "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js"
+        ],
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "assets": {
+          "echarts": {
+            "version": "6.1.0",
+            "sha256": "b66b25aeb4df84e33199dc21694014d336d222cbd9deb0e5a7c14bd6aa0d0fd0",
+            "url": "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js"
+          },
+          "antv": {
+            "version": "5.4.8",
+            "sha256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412",
+            "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "ordinary",
+      "engine": "matplotlib",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\ordinary\\matplotlib\\artifacts\\deepviz-zr3_5907\\chart.png",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\ordinary\\matplotlib\\artifacts\\deepviz-zr3_5907\\chart.svg",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\ordinary\\matplotlib\\artifacts\\deepviz-zr3_5907\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\ordinary\\matplotlib\\artifacts\\deepviz-zr3_5907\\manifest.json"
+        ],
+        "mime_type": "image/png",
+        "engine": "matplotlib",
+        "input_count": 18,
+        "output_count": 3,
+        "strategy": "sum",
+        "warnings": []
+      },
+      "manifest": {
+        "engine": "matplotlib",
+        "charts": [
+          {
+            "engine": "matplotlib",
+            "requested_kind": "bar",
+            "rendered_kind": "bar",
+            "spec": {
+              "version": 1,
+              "kind": "bar",
+              "title": "R16 finite SUM fidelity",
+              "description": "18 source rows: A=5, B=6, C=7; exact grouped totals shown.",
+              "x": "group",
+              "y": "total",
+              "color": null,
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "sum",
+              "max_points": 10,
+              "width": 900,
+              "height": 420,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "group": "A",
+                "total": 1.0
+              },
+              {
+                "group": "B",
+                "total": 0.5
+              },
+              {
+                "group": "C",
+                "total": 3.0
+              }
+            ],
+            "input_count": 18,
+            "output_count": 3,
+            "strategy": "sum",
+            "warnings": []
+          }
+        ],
+        "warnings": [],
+        "native_specs": [],
+        "strategy": "sum",
+        "accessible_path": "chart.html"
+      },
+      "assertions": {
+        "warnings": [],
+        "native_final_values": [
+          1.0,
+          0.5,
+          3.0
+        ],
+        "static_svg_heights": [
+          68.90240600000001,
+          34.45120299999999,
+          206.707217
+        ]
+      },
+      "files": {
+        "chart.png": {
+          "bytes": 12647,
+          "sha256": "6d7fa5d684a2fb7c2df856bbc80c6c28627d866562538afcb30c6ad2be9ffa4b"
+        },
+        "chart.svg": {
+          "bytes": 24072,
+          "sha256": "6992805324b9d7bfc8d9ddef3f9d6b22e4edb7b2ba53ac788d74ce9ec5bf4717"
+        },
+        "chart.html": {
+          "bytes": 1529,
+          "sha256": "4975f6d0fa77d8003834ba95f729f24d88a2c51953c9523999aa1b5763b29964"
+        },
+        "manifest.json": {
+          "bytes": 1134,
+          "sha256": "e8e804b0464b4158fe5af703bdc4c4e2896045a1838c704556fb775a900085d1"
+        }
+      }
+    },
+    {
+      "fixture": "ordinary",
+      "engine": "plotly",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\ordinary\\plotly\\artifacts\\deepviz-aft4sqam\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\ordinary\\plotly\\artifacts\\deepviz-aft4sqam\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "plotly",
+        "input_count": 18,
+        "output_count": 3,
+        "strategy": "sum",
+        "warnings": []
+      },
+      "manifest": {
+        "engine": "plotly",
+        "charts": [
+          {
+            "engine": "plotly",
+            "requested_kind": "bar",
+            "rendered_kind": "bar",
+            "spec": {
+              "version": 1,
+              "kind": "bar",
+              "title": "R16 finite SUM fidelity",
+              "description": "18 source rows: A=5, B=6, C=7; exact grouped totals shown.",
+              "x": "group",
+              "y": "total",
+              "color": null,
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "sum",
+              "max_points": 10,
+              "width": 900,
+              "height": 420,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "group": "A",
+                "total": 1.0
+              },
+              {
+                "group": "B",
+                "total": 0.5
+              },
+              {
+                "group": "C",
+                "total": 3.0
+              }
+            ],
+            "input_count": 18,
+            "output_count": 3,
+            "strategy": "sum",
+            "warnings": []
+          }
+        ],
+        "warnings": [],
+        "native_specs": [
+          {
+            "data": [
+              {
+                "type": "bar",
+                "name": "Series",
+                "x": [
+                  "A",
+                  "B",
+                  "C"
+                ],
+                "y": [
+                  1.0,
+                  0.5,
+                  3.0
+                ],
+                "marker": {
+                  "color": "#386cb0"
+                }
+              }
+            ],
+            "layout": {
+              "title": {
+                "text": "R16 finite SUM fidelity"
+              },
+              "width": 900,
+              "height": 420,
+              "paper_bgcolor": "#ffffff",
+              "plot_bgcolor": "#ffffff",
+              "font": {
+                "color": "#202938"
+              },
+              "showlegend": false,
+              "xaxis": {
+                "title": {
+                  "text": "group"
+                }
+              },
+              "yaxis": {
+                "title": {
+                  "text": "total"
+                }
+              }
+            }
+          }
+        ],
+        "strategy": "sum",
+        "accessible_path": "chart.html"
+      },
+      "assertions": {
+        "warnings": [],
+        "native_final_values": [
+          1.0,
+          0.5,
+          3.0
+        ]
+      },
+      "files": {
+        "chart.html": {
+          "bytes": 4858537,
+          "sha256": "4ba84b5fef476014acab59fd3ff2d2e19f22ce884346b70a9bb4e4503370be02"
+        },
+        "manifest.json": {
+          "bytes": 1993,
+          "sha256": "d14b51581528e700463f18704f35a5419ff088886b4945180ffa1f4d3e9613f1"
+        }
+      },
+      "browser": {
+        "render_error": null,
+        "table_cells": [
+          "A",
+          "1.0",
+          "B",
+          "0.5",
+          "C",
+          "3.0"
+        ],
+        "svg_count": 12,
+        "canvas_count": 0,
+        "native_values": [
+          1,
+          0.5,
+          3
+        ],
+        "bar_heights": [
+          76,
+          38,
+          228
+        ],
+        "native_ready": true,
+        "errors": [],
+        "blocked": [],
+        "fulfilled": [],
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "assets": {
+          "echarts": {
+            "version": "6.1.0",
+            "sha256": "b66b25aeb4df84e33199dc21694014d336d222cbd9deb0e5a7c14bd6aa0d0fd0",
+            "url": "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js"
+          },
+          "antv": {
+            "version": "5.4.8",
+            "sha256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412",
+            "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "ordinary",
+      "engine": "vega",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\ordinary\\vega\\artifacts\\deepviz-5srmu20s\\chart.svg",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\ordinary\\vega\\artifacts\\deepviz-5srmu20s\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\ordinary\\vega\\artifacts\\deepviz-5srmu20s\\manifest.json"
+        ],
+        "mime_type": "image/svg+xml",
+        "engine": "vega",
+        "input_count": 18,
+        "output_count": 3,
+        "strategy": "sum",
+        "warnings": []
+      },
+      "manifest": {
+        "engine": "vega",
+        "charts": [
+          {
+            "engine": "vega",
+            "requested_kind": "bar",
+            "rendered_kind": "bar",
+            "spec": {
+              "version": 1,
+              "kind": "bar",
+              "title": "R16 finite SUM fidelity",
+              "description": "18 source rows: A=5, B=6, C=7; exact grouped totals shown.",
+              "x": "group",
+              "y": "total",
+              "color": null,
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "sum",
+              "max_points": 10,
+              "width": 900,
+              "height": 420,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "group": "A",
+                "total": 1.0
+              },
+              {
+                "group": "B",
+                "total": 0.5
+              },
+              {
+                "group": "C",
+                "total": 3.0
+              }
+            ],
+            "input_count": 18,
+            "output_count": 3,
+            "strategy": "sum",
+            "warnings": []
+          }
+        ],
+        "warnings": [],
+        "native_specs": [
+          {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "data": {
+              "values": [
+                {
+                  "_x": "A",
+                  "_y": 1.0,
+                  "_color": "Series",
+                  "_size": 8,
+                  "_heat": 1.0,
+                  "_row": 0
+                },
+                {
+                  "_x": "B",
+                  "_y": 0.5,
+                  "_color": "Series",
+                  "_size": 8,
+                  "_heat": 0.5,
+                  "_row": 1
+                },
+                {
+                  "_x": "C",
+                  "_y": 3.0,
+                  "_color": "Series",
+                  "_size": 8,
+                  "_heat": 3.0,
+                  "_row": 2
+                }
+              ]
+            },
+            "mark": {
+              "type": "bar",
+              "color": "#386cb0"
+            },
+            "encoding": {
+              "x": {
+                "field": "_x",
+                "type": "nominal",
+                "title": "group"
+              },
+              "y": {
+                "field": "_y",
+                "type": "quantitative",
+                "title": "total"
+              }
+            },
+            "width": 800,
+            "height": 320,
+            "title": "R16 finite SUM fidelity",
+            "background": "#ffffff",
+            "config": {
+              "axis": {
+                "labelColor": "#202938",
+                "titleColor": "#202938"
+              },
+              "title": {
+                "color": "#202938"
+              },
+              "text": {
+                "color": "#202938"
+              },
+              "legend": {
+                "labelColor": "#202938",
+                "titleColor": "#202938"
+              }
+            }
+          }
+        ],
+        "strategy": "sum",
+        "accessible_path": "chart.html"
+      },
+      "assertions": {
+        "warnings": [],
+        "native_final_values": [
+          1.0,
+          0.5,
+          3.0
+        ],
+        "static_svg_marks": [
+          {
+            "aria-label": "group: A; total: 1",
+            "role": "graphics-symbol",
+            "aria-roledescription": "bar",
+            "d": "M13.333333333333314,213.33333333333337h240.00000000000003v106.66666666666663h-240.00000000000003Z",
+            "fill": "#386cb0"
+          },
+          {
+            "aria-label": "group: B; total: 0.5",
+            "role": "graphics-symbol",
+            "aria-roledescription": "bar",
+            "d": "M280,266.6666666666667h240.00000000000003v53.333333333333314h-240.00000000000003Z",
+            "fill": "#386cb0"
+          },
+          {
+            "aria-label": "group: C; total: 3",
+            "role": "graphics-symbol",
+            "aria-roledescription": "bar",
+            "d": "M546.6666666666667,0h240.00000000000003v320h-240.00000000000003Z",
+            "fill": "#386cb0"
+          }
+        ]
+      },
+      "files": {
+        "chart.svg": {
+          "bytes": 7083,
+          "sha256": "7498e74a34b36f9af584ef475f8911645b26b3474f83cbf180f722b03f6f9924"
+        },
+        "chart.html": {
+          "bytes": 1529,
+          "sha256": "4975f6d0fa77d8003834ba95f729f24d88a2c51953c9523999aa1b5763b29964"
+        },
+        "manifest.json": {
+          "bytes": 2628,
+          "sha256": "8c446e71711fbe329c380a2a85d1efe971bf19e32be48e64244405c97a6bd3ff"
+        }
+      }
+    },
+    {
+      "fixture": "promoted",
+      "engine": "antv",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\promoted\\antv\\artifacts\\deepviz-od_4abyd\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\promoted\\antv\\artifacts\\deepviz-od_4abyd\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 18,
+        "output_count": 3,
+        "strategy": "sum",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "manifest": {
+        "engine": "antv",
+        "charts": [
+          {
+            "engine": "antv",
+            "requested_kind": "bar",
+            "rendered_kind": "bar",
+            "spec": {
+              "version": 1,
+              "kind": "bar",
+              "title": "R16 finite SUM fidelity",
+              "description": "18 source rows: A=5, B=6, C=7; exact grouped totals shown.",
+              "x": "group",
+              "y": "total",
+              "color": null,
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "sum",
+              "max_points": 10,
+              "width": 900,
+              "height": 420,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "group": "A",
+                "total": 1.0
+              },
+              {
+                "group": "B",
+                "total": 0.5
+              },
+              {
+                "group": "C",
+                "total": 3.0
+              }
+            ],
+            "input_count": 18,
+            "output_count": 3,
+            "strategy": "sum",
+            "warnings": [
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          }
+        ],
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_specs": [
+          {
+            "type": "interval",
+            "data": [
+              {
+                "_x": "A",
+                "_y": 1.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 1.0,
+                "_row": 0
+              },
+              {
+                "_x": "B",
+                "_y": 0.5,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 0.5,
+                "_row": 1
+              },
+              {
+                "_x": "C",
+                "_y": 3.0,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 3.0,
+                "_row": 2
+              }
+            ],
+            "encode": {
+              "x": "_x",
+              "y": "_y"
+            },
+            "animate": false,
+            "theme": "light",
+            "title": "R16 finite SUM fidelity",
+            "tooltip": false,
+            "axis": {
+              "x": {
+                "title": "group",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              },
+              "y": {
+                "title": "total",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              }
+            },
+            "style": {
+              "fill": "#386cb0",
+              "stroke": "#386cb0"
+            }
+          }
+        ],
+        "strategy": "sum",
+        "accessible_path": "chart.html"
+      },
+      "assertions": {
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_final_values": [
+          1.0,
+          0.5,
+          3.0
+        ]
+      },
+      "files": {
+        "chart.html": {
+          "bytes": 2703,
+          "sha256": "d071023ef8866d82503c09e31ff33744c25c632cd19d9f9c172bbd35d6109901"
+        },
+        "manifest.json": {
+          "bytes": 2458,
+          "sha256": "cc997e74894d04fa402364b8d393780e41fa403318979e74f874d029356f7caf"
+        }
+      },
+      "browser": {
+        "render_error": null,
+        "table_cells": [
+          "A",
+          "1.0",
+          "B",
+          "0.5",
+          "C",
+          "3.0"
+        ],
+        "svg_count": 0,
+        "canvas_count": 1,
+        "native_values": [
+          1,
+          0.5,
+          3
+        ],
+        "canvas_color_runs": [
+          {
+            "left": 95,
+            "right": 330,
+            "min": 254,
+            "max": 353
+          },
+          {
+            "left": 358,
+            "right": 593,
+            "min": 305,
+            "max": 353
+          },
+          {
+            "left": 621,
+            "right": 856,
+            "min": 55,
+            "max": 353
+          }
+        ],
+        "bar_heights": [
+          100,
+          49,
+          299
+        ],
+        "native_ready": true,
+        "errors": [],
+        "blocked": [],
+        "fulfilled": [
+          "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js"
+        ],
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "assets": {
+          "echarts": {
+            "version": "6.1.0",
+            "sha256": "b66b25aeb4df84e33199dc21694014d336d222cbd9deb0e5a7c14bd6aa0d0fd0",
+            "url": "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js"
+          },
+          "antv": {
+            "version": "5.4.8",
+            "sha256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412",
+            "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js"
+          }
+        }
+      },
+      "inspected_image": {
+        "bytes": 27516,
+        "sha256": "cb3221c372bc4b489e628239f10caea6ad8f20b4570cc8bfa3087fb9aaea8935"
+      }
+    },
+    {
+      "fixture": "promoted",
+      "engine": "echarts",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\promoted\\echarts\\artifacts\\deepviz-hj0sdwt_\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\promoted\\echarts\\artifacts\\deepviz-hj0sdwt_\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "echarts",
+        "input_count": 18,
+        "output_count": 3,
+        "strategy": "sum",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "manifest": {
+        "engine": "echarts",
+        "charts": [
+          {
+            "engine": "echarts",
+            "requested_kind": "bar",
+            "rendered_kind": "bar",
+            "spec": {
+              "version": 1,
+              "kind": "bar",
+              "title": "R16 finite SUM fidelity",
+              "description": "18 source rows: A=5, B=6, C=7; exact grouped totals shown.",
+              "x": "group",
+              "y": "total",
+              "color": null,
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "sum",
+              "max_points": 10,
+              "width": 900,
+              "height": 420,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "group": "A",
+                "total": 1.0
+              },
+              {
+                "group": "B",
+                "total": 0.5
+              },
+              {
+                "group": "C",
+                "total": 3.0
+              }
+            ],
+            "input_count": 18,
+            "output_count": 3,
+            "strategy": "sum",
+            "warnings": [
+              "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+            ]
+          }
+        ],
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_specs": [
+          {
+            "animation": false,
+            "backgroundColor": "#ffffff",
+            "color": [
+              "#386cb0",
+              "#b85c00",
+              "#2a9d73",
+              "#c44964",
+              "#8861a9",
+              "#a67c42"
+            ],
+            "title": {
+              "text": "R16 finite SUM fidelity",
+              "textStyle": {
+                "color": "#202938"
+              }
+            },
+            "textStyle": {
+              "color": "#202938"
+            },
+            "tooltip": {
+              "trigger": "item",
+              "renderMode": "richText"
+            },
+            "legend": {
+              "show": false,
+              "top": 30,
+              "textStyle": {
+                "color": "#202938"
+              }
+            },
+            "grid": {
+              "containLabel": true,
+              "left": 50,
+              "right": 30,
+              "top": 65,
+              "bottom": 55
+            },
+            "xAxis": {
+              "type": "category",
+              "data": [
+                "A",
+                "B",
+                "C"
+              ],
+              "name": "group",
+              "nameLocation": "middle",
+              "nameGap": 30
+            },
+            "yAxis": {
+              "type": "value",
+              "name": "total"
+            },
+            "series": [
+              {
+                "type": "bar",
+                "name": "Series",
+                "data": [
+                  [
+                    "A",
+                    1.0
+                  ],
+                  [
+                    "B",
+                    0.5
+                  ],
+                  [
+                    "C",
+                    3.0
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "strategy": "sum",
+        "accessible_path": "chart.html"
+      },
+      "assertions": {
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ],
+        "native_final_values": [
+          1.0,
+          0.5,
+          3.0
+        ]
+      },
+      "files": {
+        "chart.html": {
+          "bytes": 2785,
+          "sha256": "6e16b95575cbf2b8efceaa0ce307c6358c616fec3e3fbad3e47935791b39aae3"
+        },
+        "manifest.json": {
+          "bytes": 2789,
+          "sha256": "baf024a01218e1d4a57e44d76f009eec1174a5b4e29230d814900cd90587570c"
+        }
+      },
+      "browser": {
+        "render_error": null,
+        "table_cells": [
+          "A",
+          "1.0",
+          "B",
+          "0.5",
+          "C",
+          "3.0"
+        ],
+        "svg_count": 1,
+        "canvas_count": 0,
+        "native_values": [
+          1,
+          0.5,
+          3
+        ],
+        "bar_heights": [
+          93.33331298828125,
+          46.66668701171875,
+          280
+        ],
+        "native_ready": true,
+        "errors": [],
+        "blocked": [],
+        "fulfilled": [
+          "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js"
+        ],
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "assets": {
+          "echarts": {
+            "version": "6.1.0",
+            "sha256": "b66b25aeb4df84e33199dc21694014d336d222cbd9deb0e5a7c14bd6aa0d0fd0",
+            "url": "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js"
+          },
+          "antv": {
+            "version": "5.4.8",
+            "sha256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412",
+            "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js"
+          }
+        }
+      },
+      "inspected_image": {
+        "bytes": 28162,
+        "sha256": "b9768dd2445033da2bcaabc5f94f30a6fc0ad1709fd8f59ed1faa74e70a85377"
+      }
+    },
+    {
+      "fixture": "promoted",
+      "engine": "matplotlib",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\promoted\\matplotlib\\artifacts\\deepviz-xz0xmy98\\chart.png",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\promoted\\matplotlib\\artifacts\\deepviz-xz0xmy98\\chart.svg",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\promoted\\matplotlib\\artifacts\\deepviz-xz0xmy98\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\promoted\\matplotlib\\artifacts\\deepviz-xz0xmy98\\manifest.json"
+        ],
+        "mime_type": "image/png",
+        "engine": "matplotlib",
+        "input_count": 18,
+        "output_count": 3,
+        "strategy": "sum",
+        "warnings": []
+      },
+      "manifest": {
+        "engine": "matplotlib",
+        "charts": [
+          {
+            "engine": "matplotlib",
+            "requested_kind": "bar",
+            "rendered_kind": "bar",
+            "spec": {
+              "version": 1,
+              "kind": "bar",
+              "title": "R16 finite SUM fidelity",
+              "description": "18 source rows: A=5, B=6, C=7; exact grouped totals shown.",
+              "x": "group",
+              "y": "total",
+              "color": null,
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "sum",
+              "max_points": 10,
+              "width": 900,
+              "height": 420,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "group": "A",
+                "total": 1.0
+              },
+              {
+                "group": "B",
+                "total": 0.5
+              },
+              {
+                "group": "C",
+                "total": 3.0
+              }
+            ],
+            "input_count": 18,
+            "output_count": 3,
+            "strategy": "sum",
+            "warnings": []
+          }
+        ],
+        "warnings": [],
+        "native_specs": [],
+        "strategy": "sum",
+        "accessible_path": "chart.html"
+      },
+      "assertions": {
+        "warnings": [],
+        "native_final_values": [
+          1.0,
+          0.5,
+          3.0
+        ],
+        "static_svg_heights": [
+          68.90240600000001,
+          34.45120299999999,
+          206.707217
+        ]
+      },
+      "files": {
+        "chart.png": {
+          "bytes": 12647,
+          "sha256": "6d7fa5d684a2fb7c2df856bbc80c6c28627d866562538afcb30c6ad2be9ffa4b"
+        },
+        "chart.svg": {
+          "bytes": 24072,
+          "sha256": "775fd8272853bcdb3f523902dab3e4cef9b1af93c0d2e48409584203254c6b01"
+        },
+        "chart.html": {
+          "bytes": 1529,
+          "sha256": "4975f6d0fa77d8003834ba95f729f24d88a2c51953c9523999aa1b5763b29964"
+        },
+        "manifest.json": {
+          "bytes": 1134,
+          "sha256": "e8e804b0464b4158fe5af703bdc4c4e2896045a1838c704556fb775a900085d1"
+        }
+      },
+      "inspected_image": {
+        "bytes": 12647,
+        "sha256": "6d7fa5d684a2fb7c2df856bbc80c6c28627d866562538afcb30c6ad2be9ffa4b"
+      }
+    },
+    {
+      "fixture": "promoted",
+      "engine": "plotly",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\promoted\\plotly\\artifacts\\deepviz-1lzj5gvh\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\promoted\\plotly\\artifacts\\deepviz-1lzj5gvh\\manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "plotly",
+        "input_count": 18,
+        "output_count": 3,
+        "strategy": "sum",
+        "warnings": []
+      },
+      "manifest": {
+        "engine": "plotly",
+        "charts": [
+          {
+            "engine": "plotly",
+            "requested_kind": "bar",
+            "rendered_kind": "bar",
+            "spec": {
+              "version": 1,
+              "kind": "bar",
+              "title": "R16 finite SUM fidelity",
+              "description": "18 source rows: A=5, B=6, C=7; exact grouped totals shown.",
+              "x": "group",
+              "y": "total",
+              "color": null,
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "sum",
+              "max_points": 10,
+              "width": 900,
+              "height": 420,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "group": "A",
+                "total": 1.0
+              },
+              {
+                "group": "B",
+                "total": 0.5
+              },
+              {
+                "group": "C",
+                "total": 3.0
+              }
+            ],
+            "input_count": 18,
+            "output_count": 3,
+            "strategy": "sum",
+            "warnings": []
+          }
+        ],
+        "warnings": [],
+        "native_specs": [
+          {
+            "data": [
+              {
+                "type": "bar",
+                "name": "Series",
+                "x": [
+                  "A",
+                  "B",
+                  "C"
+                ],
+                "y": [
+                  1.0,
+                  0.5,
+                  3.0
+                ],
+                "marker": {
+                  "color": "#386cb0"
+                }
+              }
+            ],
+            "layout": {
+              "title": {
+                "text": "R16 finite SUM fidelity"
+              },
+              "width": 900,
+              "height": 420,
+              "paper_bgcolor": "#ffffff",
+              "plot_bgcolor": "#ffffff",
+              "font": {
+                "color": "#202938"
+              },
+              "showlegend": false,
+              "xaxis": {
+                "title": {
+                  "text": "group"
+                }
+              },
+              "yaxis": {
+                "title": {
+                  "text": "total"
+                }
+              }
+            }
+          }
+        ],
+        "strategy": "sum",
+        "accessible_path": "chart.html"
+      },
+      "assertions": {
+        "warnings": [],
+        "native_final_values": [
+          1.0,
+          0.5,
+          3.0
+        ]
+      },
+      "files": {
+        "chart.html": {
+          "bytes": 4858537,
+          "sha256": "4ba84b5fef476014acab59fd3ff2d2e19f22ce884346b70a9bb4e4503370be02"
+        },
+        "manifest.json": {
+          "bytes": 1993,
+          "sha256": "d14b51581528e700463f18704f35a5419ff088886b4945180ffa1f4d3e9613f1"
+        }
+      },
+      "browser": {
+        "render_error": null,
+        "table_cells": [
+          "A",
+          "1.0",
+          "B",
+          "0.5",
+          "C",
+          "3.0"
+        ],
+        "svg_count": 12,
+        "canvas_count": 0,
+        "native_values": [
+          1,
+          0.5,
+          3
+        ],
+        "bar_heights": [
+          76,
+          38,
+          228
+        ],
+        "native_ready": true,
+        "errors": [],
+        "blocked": [],
+        "fulfilled": [],
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "assets": {
+          "echarts": {
+            "version": "6.1.0",
+            "sha256": "b66b25aeb4df84e33199dc21694014d336d222cbd9deb0e5a7c14bd6aa0d0fd0",
+            "url": "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js"
+          },
+          "antv": {
+            "version": "5.4.8",
+            "sha256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412",
+            "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js"
+          }
+        }
+      },
+      "inspected_image": {
+        "bytes": 22428,
+        "sha256": "6af5c3b7ee6ddcdcfefe291f033a564253f8a67ee73ae807f45a2046175009bd"
+      }
+    },
+    {
+      "fixture": "promoted",
+      "engine": "vega",
+      "artifact": {
+        "paths": [
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\promoted\\vega\\artifacts\\deepviz-tdcbi0ye\\chart.svg",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\promoted\\vega\\artifacts\\deepviz-tdcbi0ye\\chart.html",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-20-artifacts-ses_de567801cffeGZFlt50oYv0Dnt\\actual\\promoted\\vega\\artifacts\\deepviz-tdcbi0ye\\manifest.json"
+        ],
+        "mime_type": "image/svg+xml",
+        "engine": "vega",
+        "input_count": 18,
+        "output_count": 3,
+        "strategy": "sum",
+        "warnings": []
+      },
+      "manifest": {
+        "engine": "vega",
+        "charts": [
+          {
+            "engine": "vega",
+            "requested_kind": "bar",
+            "rendered_kind": "bar",
+            "spec": {
+              "version": 1,
+              "kind": "bar",
+              "title": "R16 finite SUM fidelity",
+              "description": "18 source rows: A=5, B=6, C=7; exact grouped totals shown.",
+              "x": "group",
+              "y": "total",
+              "color": null,
+              "size": null,
+              "data_path": null,
+              "format": "auto",
+              "aggregation": "sum",
+              "max_points": 10,
+              "width": 900,
+              "height": 420,
+              "theme": "light",
+              "charts": [],
+              "columns": 2
+            },
+            "records": [
+              {
+                "group": "A",
+                "total": 1.0
+              },
+              {
+                "group": "B",
+                "total": 0.5
+              },
+              {
+                "group": "C",
+                "total": 3.0
+              }
+            ],
+            "input_count": 18,
+            "output_count": 3,
+            "strategy": "sum",
+            "warnings": []
+          }
+        ],
+        "warnings": [],
+        "native_specs": [
+          {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "data": {
+              "values": [
+                {
+                  "_x": "A",
+                  "_y": 1.0,
+                  "_color": "Series",
+                  "_size": 8,
+                  "_heat": 1.0,
+                  "_row": 0
+                },
+                {
+                  "_x": "B",
+                  "_y": 0.5,
+                  "_color": "Series",
+                  "_size": 8,
+                  "_heat": 0.5,
+                  "_row": 1
+                },
+                {
+                  "_x": "C",
+                  "_y": 3.0,
+                  "_color": "Series",
+                  "_size": 8,
+                  "_heat": 3.0,
+                  "_row": 2
+                }
+              ]
+            },
+            "mark": {
+              "type": "bar",
+              "color": "#386cb0"
+            },
+            "encoding": {
+              "x": {
+                "field": "_x",
+                "type": "nominal",
+                "title": "group"
+              },
+              "y": {
+                "field": "_y",
+                "type": "quantitative",
+                "title": "total"
+              }
+            },
+            "width": 800,
+            "height": 320,
+            "title": "R16 finite SUM fidelity",
+            "background": "#ffffff",
+            "config": {
+              "axis": {
+                "labelColor": "#202938",
+                "titleColor": "#202938"
+              },
+              "title": {
+                "color": "#202938"
+              },
+              "text": {
+                "color": "#202938"
+              },
+              "legend": {
+                "labelColor": "#202938",
+                "titleColor": "#202938"
+              }
+            }
+          }
+        ],
+        "strategy": "sum",
+        "accessible_path": "chart.html"
+      },
+      "assertions": {
+        "warnings": [],
+        "native_final_values": [
+          1.0,
+          0.5,
+          3.0
+        ],
+        "static_svg_marks": [
+          {
+            "aria-label": "group: A; total: 1",
+            "role": "graphics-symbol",
+            "aria-roledescription": "bar",
+            "d": "M13.333333333333314,213.33333333333337h240.00000000000003v106.66666666666663h-240.00000000000003Z",
+            "fill": "#386cb0"
+          },
+          {
+            "aria-label": "group: B; total: 0.5",
+            "role": "graphics-symbol",
+            "aria-roledescription": "bar",
+            "d": "M280,266.6666666666667h240.00000000000003v53.333333333333314h-240.00000000000003Z",
+            "fill": "#386cb0"
+          },
+          {
+            "aria-label": "group: C; total: 3",
+            "role": "graphics-symbol",
+            "aria-roledescription": "bar",
+            "d": "M546.6666666666667,0h240.00000000000003v320h-240.00000000000003Z",
+            "fill": "#386cb0"
+          }
+        ]
+      },
+      "files": {
+        "chart.svg": {
+          "bytes": 7083,
+          "sha256": "7498e74a34b36f9af584ef475f8911645b26b3474f83cbf180f722b03f6f9924"
+        },
+        "chart.html": {
+          "bytes": 1529,
+          "sha256": "4975f6d0fa77d8003834ba95f729f24d88a2c51953c9523999aa1b5763b29964"
+        },
+        "manifest.json": {
+          "bytes": 2628,
+          "sha256": "8c446e71711fbe329c380a2a85d1efe971bf19e32be48e64244405c97a6bd3ff"
+        }
+      }
+    }
+  ],
+  "published_probes": {
+    "capture_evidence.py": {
+      "bytes": 4120,
+      "sha256": "cb146302ff602a7e0024de2e66b61e69301da5c9f4d0700a2838a1e0acf56ee2"
+    },
+    "sum_browser.cjs": {
+      "bytes": 5203,
+      "sha256": "54f2054325a2bcdf4cd784879d6dfbb2c974e7933528d153f8916efb05d305af"
+    },
+    "test_sum_artifact_fidelity.py": {
+      "bytes": 11629,
+      "sha256": "b0c4377c4e8be68273c950b639b7f485ef8c4034e355e38d4e99a1e2df0be7f8"
+    }
+  },
+  "execution_caveat": "18 tests executed before nullable module.__file__ guard only. Executed hashes stored separately; postguard source identity/lint/mypy checked, no browser replay. Source and numerical/browser assertions unchanged."
+}
