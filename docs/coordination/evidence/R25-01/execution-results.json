@@ -1,0 +1,55 @@
+[
+  {
+    "label": "actual998-47",
+    "source": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+    "argv": [
+      "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+      "-S",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R25-01\\execute_actual.py"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R25-01\\actual-998",
+    "exit_code": 0,
+    "log_sha256": "8a47e94453ed2732d5c75937b95b83fad78aaf744e3677c676bcefe4159e02a1",
+    "totals": {
+      "tests": 47,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 47
+    },
+    "provided_actual998_tests": 40,
+    "unchanged_own_nested_probes": 7,
+    "own_probe_sha256": "54a9bbdfb773d7c81e0179483f763d06bf2dd76949abdd867f7004f75c29db0f"
+  },
+  {
+    "label": "actual998-ruff",
+    "source": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+    "argv": [
+      "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+      "-S",
+      "-m",
+      "ruff",
+      "check",
+      ".",
+      "--no-cache"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R25-01\\actual-998",
+    "exit_code": 0,
+    "log_sha256": "86c6a4e03a772515f99191dda4d70020b3b1e0679438b0e0889c9bbb93db0413"
+  },
+  {
+    "label": "actual998-mypy",
+    "source": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+    "argv": [
+      "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+      "-S",
+      "-m",
+      "mypy",
+      "--cache-dir",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R25-01\\mypy-cache"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R25-01\\actual-998",
+    "exit_code": 0,
+    "log_sha256": "48a39d99948f2562a22b7819baaa3fe06e9369167bf0b3a6e8abae9c43ada23b"
+  }
+]

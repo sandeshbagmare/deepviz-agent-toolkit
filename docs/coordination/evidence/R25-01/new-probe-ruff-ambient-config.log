@@ -1,0 +1,25 @@
+I001 [*] Import block is un-sorted or un-formatted
+ --> C:\Users\bagma\AppData\Local\Temp\opencode\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\tests\r25_probes\role01\test_mapping_numeric_boundary.py:2:1
+  |
+1 |   """One missing native Mapping input boundary for the strict-numeric repair."""
+2 | / from collections import UserDict
+3 | |
+4 | | import pytest
+5 | | from deepviz.models import ChartSpec
+6 | | from pydantic import ValidationError
+  | |____________________________________^
+help: Organize imports
+  |
+4 | import pytest
+  - from deepviz.models import ChartSpec
+5 | from pydantic import ValidationError
+6 |
+7 + from deepviz.models import ChartSpec
+8 +
+9 |
+  |
+
+Found 1 error.
+[*] 1 fixable with `--fix`.
+
+--- stderr ---

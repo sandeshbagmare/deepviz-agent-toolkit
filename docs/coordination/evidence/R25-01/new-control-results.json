@@ -1,0 +1,55 @@
+{
+  "source": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+  "new_probe_sha256": "308c62bcf763965ca166e7939a5e79aabda7194bec258b276b4ed9f01657d6e4",
+  "strict_control": {
+    "argv": [
+      "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+      "-S",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R25-01\\execute_mapping.py"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R25-01\\actual-998",
+    "exit_code": 1,
+    "totals": {
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    "raw_log_sha256": "9c4624378f81ae6586567a7e23af8d5e45899602dd5c33b8bda7649fa0642b3d"
+  },
+  "own_probe_lint_attempts": [
+    {
+      "argv": [
+        "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+        "-S",
+        "-m",
+        "ruff",
+        "check",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\tests\\r25_probes\\role01\\test_mapping_numeric_boundary.py",
+        "--no-cache"
+      ],
+      "exit_code": 1,
+      "diagnostic": "I001 because absoluteownfile selected surroundingOWNbranch config, notactualfocusedcontext",
+      "raw_log": "new-probe-ruff-ambient-config.log"
+    },
+    {
+      "argv": [
+        "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+        "-S",
+        "-m",
+        "ruff",
+        "check",
+        "--config",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R25-01\\actual-998\\pyproject.toml",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\tests\\r25_probes\\role01\\test_mapping_numeric_boundary.py",
+        "--no-cache"
+      ],
+      "exit_code": 0,
+      "raw_log": "new-probe-ruff-actual-config.log"
+    }
+  ],
+  "production_context_lint_exit": 0,
+  "source_or_probe_changed": false,
+  "runtime_RED_rerun_for_lint": false,
+  "finding": "R25-01-F1 native Mapping bypass of dict-only beforevalidator"
+}

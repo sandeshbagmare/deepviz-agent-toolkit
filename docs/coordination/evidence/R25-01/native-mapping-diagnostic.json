@@ -1,0 +1,86 @@
+{
+  "source": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+  "actual_import": {
+    "source": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+    "base": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+    "actual_model_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R25-01\\actual-998\\python\\deepviz\\src\\deepviz\\models.py",
+    "actual_model_sha256": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+    "all14Gitblobs_exact": true,
+    "same_process_pytest": true,
+    "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+    "versions": {
+      "pydantic": "2.14.4",
+      "pytest": "9.2.0",
+      "jsonschema": "4.26.0",
+      "ruff": "0.17.6",
+      "mypy": "2.4.1"
+    },
+    "path": [
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\tests\\r22_probes\\role01",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R25-01\\actual-998\\tests",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R25-01",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R25-01\\actual-998\\python\\deepviz\\src",
+      "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages",
+      "C:\\Users\\bagma\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\python312.zip",
+      "C:\\Users\\bagma\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\DLLs",
+      "C:\\Users\\bagma\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\Lib",
+      "C:\\Users\\bagma\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none"
+    ]
+  },
+  "diagnostics": [
+    {
+      "field": "width",
+      "value": "900",
+      "native_input_type": "dict",
+      "accepted": false
+    },
+    {
+      "field": "width",
+      "value": "900",
+      "native_input_type": "UserDict",
+      "accepted": true,
+      "coerced_actual": 900
+    },
+    {
+      "field": "version",
+      "value": true,
+      "native_input_type": "dict",
+      "accepted": false
+    },
+    {
+      "field": "version",
+      "value": true,
+      "native_input_type": "UserDict",
+      "accepted": true,
+      "coerced_actual": 1
+    },
+    {
+      "field": "columns",
+      "value": true,
+      "native_input_type": "dict",
+      "accepted": false
+    },
+    {
+      "field": "columns",
+      "value": true,
+      "native_input_type": "UserDict",
+      "accepted": true,
+      "coerced_actual": 1
+    },
+    {
+      "field": "width",
+      "value": 900,
+      "native_input_type": "dict",
+      "accepted": true,
+      "coerced_actual": 900
+    },
+    {
+      "field": "width",
+      "value": 900,
+      "native_input_type": "UserDict",
+      "accepted": true,
+      "coerced_actual": 900
+    }
+  ],
+  "classification": "observational counterexample investigation, not pytest pass or policy disposition"
+}

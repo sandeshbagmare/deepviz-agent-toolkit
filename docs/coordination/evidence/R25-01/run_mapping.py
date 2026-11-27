@@ -1,0 +1,10 @@
+from pathlib import Path
+import hashlib,json,os,subprocess,xml.etree.ElementTree as ET
+ROOT=Path.cwd();OUT=ROOT/'artifacts/local/R25-01';SNAP=OUT/'actual-998';PY='C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe';probe=ROOT/'tests/r25_probes/role01/test_mapping_numeric_boundary.py';env={**os.environ,'PYTHONPATH':str(SNAP/'python/deepviz/src')+os.pathsep+'C:/Users/bagma/deepviz-agent-toolkit/.venv/Lib/site-packages','PYTHONDONTWRITEBYTECODE':'1','PYTEST_DISABLE_PLUGIN_AUTOLOAD':'1','R25_OUT':str(OUT),'R25_NEW_PROBE':str(probe)};records=[]
+for label,argv in [('new-mapping-boundary',[PY,'-S',str(OUT/'execute_mapping.py')]),('new-probe-ruff',[PY,'-S','-m','ruff','check',str(probe),'--no-cache'])]:
+    run=subprocess.run(argv,cwd=SNAP,env=env,capture_output=True,text=True,encoding='utf-8',timeout=120,check=False);log=OUT/(label+'.log');log.write_text(run.stdout+'\n--- stderr ---\n'+run.stderr,encoding='utf-8',newline='\n');record={'label':label,'source':'99841ffb80e0f2ea90c753c1bf0ceff718e0e180','argv':argv,'cwd':str(SNAP),'exit_code':run.returncode,'probe_sha256':hashlib.sha256(probe.read_bytes()).hexdigest(),'log_sha256':hashlib.sha256(log.read_bytes()).hexdigest()}
+    if label=='new-mapping-boundary':
+        suite=ET.parse(OUT/'new-mapping-boundary.xml').getroot().find('testsuite');assert suite is not None;record['totals']={key:int(suite.attrib.get(key,'0')) for key in ['tests','failures','errors','skipped']};assert run.returncode==1 and record['totals']=={'tests':1,'failures':1,'errors':0,'skipped':0}
+    else:assert run.returncode==0
+    records.append(record);print(json.dumps(record));print(run.stdout)
+(OUT/'new-control-results.json').write_text(json.dumps(records,indent=2)+'\n',encoding='utf-8',newline='\n');print('New strict counterexample genuinely RED1 on immutable actual998; 47 prior supplied+JSON guards remain separately GREEN, not approval')
