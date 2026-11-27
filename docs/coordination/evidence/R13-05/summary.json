@@ -1,0 +1,296 @@
+{
+  "source_checkpoint": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "own_head": "a439d4d463a51115cc9139dbd5561eeab592f553",
+  "source": {
+    "python/deepviz/src/deepviz/render.py": {
+      "working_bytes_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+      "pinned_git_blob_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+    },
+    "python/deepviz/src/deepviz/engines.py": {
+      "working_bytes_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+      "pinned_git_blob_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de"
+    },
+    "python/deepviz/src/deepviz/normalize.py": {
+      "working_bytes_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+      "pinned_git_blob_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+    },
+    "python/deepviz/src/deepviz/models.py": {
+      "working_bytes_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "pinned_git_blob_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    }
+  },
+  "actual_public_oversize": [
+    {
+      "scope": "table",
+      "engine": "echarts",
+      "returned_artifact_instead_of_rejecting": true,
+      "source_rows": 128,
+      "input_count": 128,
+      "output_count": 128,
+      "strategy": "none",
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "native_graphics": 16512,
+      "seconds": null,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "note": "Completed artifacts reused after collector failure; first-run in-memory metrics were not persisted.",
+      "created_new_artifact_directory": true,
+      "caller_files_preserved": true,
+      "artifact_bytes": {
+        "chart.html": 1701344,
+        "manifest.json": 3684662
+      },
+      "limit": "This is a bounded missing-preflight reproduction, NOT a permitted oversized-render pass; browser not executed."
+    },
+    {
+      "scope": "dashboard",
+      "engine": "echarts",
+      "returned_artifact_instead_of_rejecting": true,
+      "source_rows": 80,
+      "input_count": 80,
+      "output_count": 160,
+      "strategy": "dashboard:none,none",
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "native_graphics": 12960,
+      "seconds": null,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "note": "Completed artifacts reused after collector failure; first-run in-memory metrics were not persisted.",
+      "created_new_artifact_directory": true,
+      "caller_files_preserved": true,
+      "artifact_bytes": {
+        "chart.html": 1295087,
+        "manifest.json": 2853376
+      },
+      "limit": "This is a bounded missing-preflight reproduction, NOT a permitted oversized-render pass; browser not executed."
+    }
+  ],
+  "small_renders": [
+    {
+      "engine": "matplotlib",
+      "scope": "table",
+      "charts": 1,
+      "input_counts": [
+        3
+      ],
+      "output_counts": [
+        3
+      ],
+      "warnings": [],
+      "strategy": "none",
+      "png_size": [
+        900,
+        520
+      ]
+    },
+    {
+      "engine": "matplotlib",
+      "scope": "dashboard",
+      "charts": 2,
+      "input_counts": [
+        3,
+        3
+      ],
+      "output_counts": [
+        3,
+        3
+      ],
+      "warnings": [],
+      "strategy": "dashboard:none,none",
+      "png_size": [
+        900,
+        520
+      ]
+    },
+    {
+      "engine": "plotly",
+      "scope": "table",
+      "charts": 1,
+      "input_counts": [
+        3
+      ],
+      "output_counts": [
+        3
+      ],
+      "warnings": [],
+      "strategy": "none"
+    },
+    {
+      "engine": "plotly",
+      "scope": "dashboard",
+      "charts": 2,
+      "input_counts": [
+        3,
+        3
+      ],
+      "output_counts": [
+        3,
+        3
+      ],
+      "warnings": [],
+      "strategy": "dashboard:none,none"
+    },
+    {
+      "engine": "vega",
+      "scope": "table",
+      "charts": 1,
+      "input_counts": [
+        3
+      ],
+      "output_counts": [
+        3
+      ],
+      "warnings": [],
+      "strategy": "none"
+    },
+    {
+      "engine": "vega",
+      "scope": "dashboard",
+      "charts": 2,
+      "input_counts": [
+        3,
+        3
+      ],
+      "output_counts": [
+        3,
+        3
+      ],
+      "warnings": [],
+      "strategy": "dashboard:none,none"
+    },
+    {
+      "engine": "echarts",
+      "scope": "table",
+      "charts": 1,
+      "input_counts": [
+        3
+      ],
+      "output_counts": [
+        3
+      ],
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "strategy": "none"
+    },
+    {
+      "engine": "echarts",
+      "scope": "dashboard",
+      "charts": 2,
+      "input_counts": [
+        3,
+        3
+      ],
+      "output_counts": [
+        3,
+        3
+      ],
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "strategy": "dashboard:none,none"
+    },
+    {
+      "engine": "antv",
+      "scope": "table",
+      "charts": 1,
+      "input_counts": [
+        3
+      ],
+      "output_counts": [
+        3
+      ],
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "strategy": "none"
+    },
+    {
+      "engine": "antv",
+      "scope": "dashboard",
+      "charts": 2,
+      "input_counts": [
+        3,
+        3
+      ],
+      "output_counts": [
+        3,
+        3
+      ],
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "strategy": "dashboard:none,none"
+    }
+  ],
+  "memory_method": "tracemalloc started/reset immediately before each render; Python allocations only, NOT RSS/native/process peak",
+  "owner_session": "ses_de567830effe0E5yIwQgDACLMD",
+  "checks": {
+    "pytest": {
+      "exit": 1,
+      "passed": 10,
+      "failed": 20,
+      "skipped": 0,
+      "seconds": 3.97,
+      "failed_names": [
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-matplotlib-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-matplotlib-dashboard]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-plotly-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-plotly-dashboard]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-vega-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-vega-dashboard]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-echarts-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-echarts-dashboard]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-antv-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-antv-dashboard]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-matplotlib-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-matplotlib-dashboard]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-plotly-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-plotly-dashboard]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-vega-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-vega-dashboard]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-echarts-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-echarts-dashboard]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-antv-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-antv-dashboard]"
+      ]
+    },
+    "ruff": {
+      "exit": 0,
+      "scope": "tests/r13_probes/role05"
+    },
+    "mypy": {
+      "exit": 0,
+      "files": 3
+    },
+    "node_syntax": {
+      "exit": 0
+    },
+    "source_diff_5340": {
+      "exit": 0
+    },
+    "resumed_collector": {
+      "exit": 0
+    },
+    "small_static_browser": {
+      "exit": 0
+    }
+  },
+  "event_totals": {
+    "native_boundary_only_cases": 16,
+    "matplotlib_output_allocation_before_boundary_cases": 4,
+    "actual_budget_value_errors": 0,
+    "caller_files_changed": 0
+  },
+  "limitations": [
+    "Tests are strict REDs, not xfails/green rejection claims.",
+    "The two actual oversized ECharts outputs are missing-guard evidence, not approved artifacts.",
+    "No first-run elapsed or traced-allocation numbers persisted; nulls retained, no RSS claim.",
+    "Small static images/browser only; no five-engine CDN/browser/full release gate claim.",
+    "Await actual R04 committed fix; no dirty source copied or future GREEN claimed."
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "at": "2026-11-27T13:54:27.520071+00:00",
+  "login": "sandeshbagmare",
+  "user_http": 200,
+  "repository": "sandeshbagmare/deepviz-agent-toolkit",
+  "repo_http": 200,
+  "release_candidate": {
+    "http": 200,
+    "sha": "5340bc69b7203ad7a9166543062482d819f9b705"
+  },
+  "pr31": {
+    "http": 200,
+    "draft": true,
+    "state": "open",
+    "merged": false,
+    "head": "5340bc69b7203ad7a9166543062482d819f9b705"
+  },
+  "checks_http": 200,
+  "checks": [
+    {
+      "name": "One-pass scale 1000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "One-pass scale 1000000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Python 3.11 lint, types, unit and integration",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "name": "Python 3.12 lint, types, unit and integration",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "name": "One-pass scale 10000000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "One-pass scale 10 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Python 3.13 lint, types, unit and integration",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "name": "One-pass scale 100000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Python and npm distribution checks (no publishing)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "npm build, types and tests (Node 24)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Raster visual regression (semantic pixel comparison)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "evidence",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "issues": [
+    {
+      "number": 21,
+      "http": 200,
+      "title": "Prove untrusted specs, HTML values and filesystem paths stay within safe boundaries",
+      "state": "open"
+    },
+    {
+      "number": 22,
+      "http": 200,
+      "title": "Measure 10 through 10M input rows on the bounded streaming path",
+      "state": "open"
+    },
+    {
+      "number": 23,
+      "http": 200,
+      "title": "Inspect real renderer outputs and commit reproducible visual evidence",
+      "state": "open"
+    }
+  ],
+  "scope": "Read-only bounded startup snapshot; no issue/PR mutations or CI green/signoff claim."
+}
