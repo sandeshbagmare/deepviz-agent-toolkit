@@ -1,0 +1,430 @@
+{
+  "owner_session": "ses_de567808bffdXko8hyKFRhPv77",
+  "collected_utc": "2026-11-27T14:03:26.044864+00:00",
+  "scope": "R07/R10 bounded finite-overflow SUM producer; R13 recovery, NOT final integration/signoff/scale proof",
+  "base": "6d0e72ebef4b622f8dec2bce2bd07cc23e7a81ce",
+  "source_commit": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+  "branch": "agents/r10-16-finite-overflow-fix",
+  "worktree": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-16-finite-overflow-ses_de567808bffdXko8hyKFRhPv77",
+  "artifact_directory_local_only": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-16-finite-overflow-ses_de567808bffdXko8hyKFRhPv77-artifacts",
+  "source_scope": [
+    "python/deepviz/src/deepviz/normalize.py",
+    "packages/deepviz/src/normalize.ts",
+    "python/deepviz/tests/test_r07_finite_overflow.py",
+    "packages/deepviz/test/test_r07_finite_overflow.test.mjs"
+  ],
+  "files": {
+    "python/deepviz/src/deepviz/normalize.py": {
+      "working_sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+      "git_blob_sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2"
+    },
+    "packages/deepviz/src/normalize.ts": {
+      "working_sha256": "2c730b13f6360fa2e75c66d03ea051ffdb5c253d4922546f51cd8fd60e742c7f",
+      "git_blob_sha256": "2c730b13f6360fa2e75c66d03ea051ffdb5c253d4922546f51cd8fd60e742c7f"
+    },
+    "python/deepviz/tests/test_r07_finite_overflow.py": {
+      "working_sha256": "cbb18b1ab0107ab4cfd4dfff1515b6c6afc5f4495b4a9b56be090dfb2bce610f",
+      "git_blob_sha256": "cbb18b1ab0107ab4cfd4dfff1515b6c6afc5f4495b4a9b56be090dfb2bce610f"
+    },
+    "packages/deepviz/test/test_r07_finite_overflow.test.mjs": {
+      "working_sha256": "72c909dfe855c107e6205683b7a3c36de269c56a39f4e999c4ad055118a93fcc",
+      "git_blob_sha256": "72c909dfe855c107e6205683b7a3c36de269c56a39f4e999c4ad055118a93fcc"
+    }
+  },
+  "loaded_python_normalize": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-16-finite-overflow-ses_de567808bffdXko8hyKFRhPv77\\python\\deepviz\\src\\deepviz\\normalize.py",
+  "ts_build_normalize_sha256": "52d718460e6501ca84a3ef8c9a5b9da92eb4c2b71109bd73a3b9351db85501e5",
+  "tool_versions": {
+    "python": "3.12.16",
+    "node": "v26.13.1",
+    "typescript": "Version 7.0.2"
+  },
+  "execution_environment": {
+    "python_executable_readonly": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+    "PYTHONPATH": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-16-finite-overflow-ses_de567808bffdXko8hyKFRhPv77\\python\\deepviz\\src",
+    "npm_tools_path_readonly": "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\.bin",
+    "dependency_installs": "NONE; npm ci intentionally NOT RUN under no-installs release"
+  },
+  "python_initial_collection": {
+    "exit": 2,
+    "reason": "own NEW test decorator missing closing parenthesis; corrected before actual RED, not a product failure"
+  },
+  "python_exact_red_base": {
+    "exit": 1,
+    "tests": 18,
+    "failures": 11,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 7,
+    "xml_elapsed_seconds": 10.378
+  },
+  "typescript_exact_red_base": {
+    "exit": 1,
+    "passed": 7,
+    "failed": 11,
+    "skipped": 0,
+    "elapsed_ms": 2971.0724
+  },
+  "python_first_green": {
+    "exit": 0,
+    "tests": 18,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 18,
+    "xml_elapsed_seconds": 2.362
+  },
+  "typescript_first_green": {
+    "exit": 0,
+    "passed": 18,
+    "failed": 0,
+    "skipped": 0,
+    "elapsed_ms": 1162.0587
+  },
+  "python_final_exact_controls": {
+    "passed": 23,
+    "failed": 0,
+    "skipped": 0,
+    "evidence": "included in numeric/resource/format and once-started full non-scale suite XML; not an invented separate run"
+  },
+  "python_broad_numerical_resource_format": {
+    "exit": 1,
+    "tests": 1221,
+    "failures": 4,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 1217,
+    "xml_elapsed_seconds": 19.491
+  },
+  "python_unchanged_baseline_field_policy": {
+    "exit": 1,
+    "tests": 7,
+    "failures": 4,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 3,
+    "xml_elapsed_seconds": 0.52,
+    "module_pin": "0c5fa825f7058f8c5a4ab6ec9597b9fd5fd4ca43",
+    "equivalence": "normalizer/models/init/N11 oracle byte-identical to released6d0; unchanged-policy four failures reproduced"
+  },
+  "python_full_nonscale_once_started": {
+    "exit": 1,
+    "tests": 3059,
+    "failures": 45,
+    "errors": 3,
+    "skipped": 5,
+    "passed": 3006,
+    "xml_elapsed_seconds": 261.732,
+    "deselected_scale": 9,
+    "pytest_elapsed_seconds": 262.02,
+    "shell": "sh_21aebdc52001ZQphATFYpVKGG7",
+    "recovery": "automatic completion observed; one absent original PID10080 check; no duplicate command or progress polling"
+  },
+  "python_full_failure_nodes": [
+    "python.deepviz.tests.test_backend_antv::test_dashboard_duplicate_titles_get_unique_containers_and_independent_options",
+    "python.deepviz.tests.test_n17_boundaries::test_n17_dashboard_serialization_order_observation",
+    "tests.gallery.test_generate_gallery::test_cli_other_known_cases_use_actual_public_render[line-numeric-counts0]",
+    "tests.gallery.test_generate_gallery::test_cli_other_known_cases_use_actual_public_render[dashboard-mixed-counts1]",
+    "tests.gallery.test_generate_gallery::test_invalid_engine_keeps_honest_partial_manifest",
+    "tests.gallery.test_generate_gallery::test_missing_installed_dependency_is_not_reported_as_success",
+    "tests.gallery.test_generate_gallery::test_default_cli_attempts_all_fifteen_combinations_without_skipping_missing_backends",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-light-records]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-light-nested_json]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-light-graphql]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-light-columns]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-light-csv]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-records]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-nested_json]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-graphql]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-columns]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-csv]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-light-records]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-light-nested_json]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-light-graphql]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-light-columns]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-light-csv]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-dark-records]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-dark-nested_json]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-dark-graphql]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-dark-columns]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-dark-csv]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-light-records]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-light-nested_json]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-light-graphql]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-light-columns]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-light-csv]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-dark-records]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-dark-nested_json]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-dark-graphql]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-dark-columns]",
+    "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-dark-csv]",
+    "tests.test_n09_performance_inspector::test_declared_drawable_geometry_must_not_accept_nondrawable_tags[empty-path]",
+    "tests.test_n09_performance_inspector::test_declared_drawable_geometry_must_not_accept_nondrawable_tags[nonnumeric-rectangle]",
+    "tests.test_n09_performance_inspector::test_declared_drawable_geometry_must_not_accept_nondrawable_tags[negative-radius]",
+    "tests.test_n09_performance_inspector::test_declared_drawable_geometry_must_not_accept_nondrawable_tags[invalid-points]",
+    "tests.test_n11_resource_policy::test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii]",
+    "tests.test_n11_resource_policy::test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte]",
+    "tests.test_n11_resource_policy::test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte]",
+    "tests.test_n11_resource_policy::test_flattened_multibyte_key_at_64kib_is_preserved"
+  ],
+  "python_full_error_nodes": [
+    "tests.gallery.test_generate_gallery::test_cli_produces_real_native_bar_and_v1_manifest",
+    "tests.gallery.test_generate_gallery::test_source_commit_and_portable_snapshots_match_actual_checkout",
+    "tests.gallery.test_generate_gallery::test_existing_output_is_never_reused_or_changed"
+  ],
+  "python_full_skipped_nodes": [
+    {
+      "node": "python.deepviz.tests.test_mcp_transport::test_stdio_registered_artifact_symlink_swap_cannot_read_outside_output_root",
+      "reason": "Windows symlink privilege unavailable"
+    },
+    {
+      "node": "python.deepviz.tests.test_n17_boundaries::test_n17_symlink_outside_data_directory_is_rejected",
+      "reason": "Windows symlink privilege unavailable"
+    },
+    {
+      "node": "python.deepviz.tests.test_render::test_browser_executes_all_native_kinds[plotly]",
+      "reason": "opt-in installed-browser suite not enabled"
+    },
+    {
+      "node": "python.deepviz.tests.test_render::test_browser_executes_all_native_kinds[echarts]",
+      "reason": "opt-in installed-browser suite not enabled"
+    },
+    {
+      "node": "python.deepviz.tests.test_render::test_browser_executes_all_native_kinds[antv]",
+      "reason": "opt-in installed-browser suite not enabled"
+    }
+  ],
+  "non_scale_performance_contracts": {
+    "passed": 30,
+    "failed": 0,
+    "skipped": 0,
+    "outcomes": [
+      {
+        "name": "test_generator_is_lazy_and_observer_counts_only_consumed_rows",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_counted_source_confirms_exhaustion_without_reiterating",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_invalid_stream_count_is_rejected[0]",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_invalid_stream_count_is_rejected[-1]",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_invalid_stream_count_is_rejected[True]",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_invalid_stream_count_is_rejected[1.5]",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_category_expected_totals_use_all_rows_and_unequal_group_sizes",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_os_peak_memory_is_positive_and_labels_its_scope",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_result_validator_rejects_wrong_count_bound_and_aggregates",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_peak_growth_gate_rejects_input_scaled_memory",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_result_validator_rejects_altered_sample_and_undisclosed_loss",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_missing_source_cannot_report_a_successful_worker",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_changed_source_cannot_be_combined_into_one_benchmark",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_artifact_structure_inspection_is_not_reported_as_browser_execution[.svg-<svg xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0L2 2\"/></svg>]",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_artifact_structure_inspection_is_not_reported_as_browser_execution[.html-<html><script type=\"application/json\">{\"x\": 1}</script></html>]",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_png_inspection_rejects_a_decodable_but_blank_image",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_real_normalization_preserves_counts_and_expected_reductions[10-numeric_sample]",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_real_normalization_preserves_counts_and_expected_reductions[10-category_sum]",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_real_normalization_preserves_counts_and_expected_reductions[10-category_mean]",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_real_normalization_preserves_counts_and_expected_reductions[1000-numeric_sample]",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_real_normalization_preserves_counts_and_expected_reductions[1000-category_sum]",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_real_normalization_preserves_counts_and_expected_reductions[1000-category_mean]",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_reservoir_is_repeatable_but_not_a_truncated_prefix",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_high_cardinality_mean_other_bucket_is_weighted",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_all_renderers_receive_bounded_records[matplotlib]",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_all_renderers_receive_bounded_records[plotly]",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_all_renderers_receive_bounded_records[vega]",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_all_renderers_receive_bounded_records[echarts]",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_all_renderers_receive_bounded_records[antv]",
+        "outcome": "passed"
+      },
+      {
+        "name": "test_fresh_worker_reports_exact_input_and_source_provenance",
+        "outcome": "passed"
+      }
+    ],
+    "limits": "10/1K controls, count/source exhaustion, metadata/byte-bound/resource methodology; NOT 10M or actual geometry/paint signoff"
+  },
+  "committed_source_gallery": {
+    "exit": 0,
+    "tests": 11,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 11,
+    "xml_elapsed_seconds": 10.339,
+    "pytest_elapsed_seconds": 10.4,
+    "meaning": "purposeful committed-source provenance rerun resolves prior five gallery failures/three sharedfixture errors; original full suite remains recorded RED"
+  },
+  "npm_full": {
+    "exit": 0,
+    "passed": 269,
+    "failed": 0,
+    "skipped": 0,
+    "elapsed_ms": 3325.7339,
+    "existing": 246,
+    "new": 23
+  },
+  "gates": {
+    "ts_base_build": 0,
+    "npm_build": 0,
+    "npm_typecheck": 0,
+    "npm_schema_check": 0,
+    "npm_pack_dry_run": 0,
+    "ruff_changed_paths": 0,
+    "mypy_changed_source": 0,
+    "ruff_root": 0,
+    "mypy_package_9_source_files": 0,
+    "git_whitespace": 0,
+    "staged_secret_pattern_matches": 0
+  },
+  "python_distribution": {
+    "exit": 1,
+    "first_attempt": "wrong source argument python/deepviz (own command-path error)",
+    "corrected_attempt": "python -m build --no-isolation . --outdir <own>/python-dist-corrected",
+    "blocker": "hatchling.build unavailable / ModuleNotFoundError hatchling; no dependency installation permitted, no build/consumer pass claimed"
+  },
+  "published_source": {
+    "git_nonforce_push_exit": 0,
+    "ls_remote_exit": 0,
+    "exact_remote_sha": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+    "safe_authenticated_post_push_receipt": {
+      "at_utc": "2026-11-27T13:58:43.823501+00:00",
+      "branch_get_status": 200,
+      "login": "sandeshbagmare",
+      "owned_branch": "agents/r10-16-finite-overflow-fix",
+      "phase": "source-post-push",
+      "pr31_draft": true,
+      "pr31_get_status": 200,
+      "pr31_head": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "pr31_merged": false,
+      "pr31_state": "open",
+      "push_permission": true,
+      "remote_branch_sha": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+      "repo": "sandeshbagmare/deepviz-agent-toolkit",
+      "repo_get_status": 200,
+      "user_get_status": 200
+    }
+  },
+  "ownership_handback": "R04 owns both normalizers again after immutable source handback; role16 will write only own note/report/evidence, no further source/test edits under this release",
+  "boundedness": {
+    "ts": "finite binary64 in2^-1074 units <2098bits; safe-integer input_count implies <=2151bits retained;512B reserve before one BigInt promotion, fixed8Bdecoder, bounded binary-string/rounding temporaries; no inputs/partials list",
+    "python": "one promoted integer in existing state slot; unchanged dynamic _store counts/serialized-size/state16MiB checks before retained replacement; Python exact-int fastpath retained; not a constant finite-float-only bound for arbitraryPythonintegers",
+    "evidence": "one-pass10000row strict subnormal-residual conservation and incremental state-budget early abort in permanent tests; no OS-memory or 10M remeasurement"
+  },
+  "oracles": "independent Fraction.from_float for exact Python finite sum and rounding, literal binary64 TS cancellations/permutations/residual/tie-to-even/max/subnormal controls, exact count/null/warning/group/other-bucket/mean controls; true nonrepresentable final sums remain warned JSON-safe null",
+  "limitations": [
+    "No full-suite green: original 45failures/3errors/5skips retained; 40 nongallery baseline failures unresolved on released6d0 pin",
+    "No final-candidate integration, independent reviewer/tester signoff, issue closure, remote greenCI, render semantic/paint signoff or 900issue completion",
+    "No 100K/1M/10M rerun: nine scale cases expressly deselected; final frozen source needs affected-scale remeasurement",
+    "Normal fast compensated summation is preserved, not a new universal correctly-rounded-sum guarantee for every pre-promotion sequence",
+    "Signedzero/cross-language sample-membership policy unchanged/out-of-scope",
+    "No npmci/install; npm pack is dry-run only; Python distribution blocked by missing backend"
+  ],
+  "logs_local_sha256": {
+    "mypy-package.log": "78f4eddeecec3ff5f4e648b8876206c11c8e0de446e84cf14aa1e97fd122d67c",
+    "mypy-scoped.log": "94594db09076fe305d51b50210d0bc5e9d275fb814f8b42c1ed4cf3368392f9a",
+    "npm-build.log": "54663bc0db3ea6b28614ed2ceb4972d5a7f39add82ae76ac81c7dc94d0f1210a",
+    "npm-full-test.log": "698b14c13e4943ee662d5ff00b0294fe65701d9acef06013303358c935b5e337",
+    "npm-pack-dry-run.log": "2fedb0602a3c072f74f28b51999be98b06aee254a309637397955ec6e5c2b0e1",
+    "npm-schema-check.log": "a56d2c024f92711d17f9b699a4ba9c10d952f2702a581b74ea60ec824b68c6b2",
+    "npm-typecheck.log": "9d4faa42627cce5bfbf96de4e79491b65a667227c10f83c8c032b8776432e971",
+    "python-distribution-build-corrected.log": "320c84d276c286988f1cd2f01cd695fe85bfc37a09b4f72d7474c6a44cf7f76e",
+    "python-distribution-build.log": "7489c1e33ad94d162aa2719179de7dada5a2dd343e10cdfe1130f7d0b07aa98a",
+    "python-full-nonscale.log": "164a6c09dfeaf29f9eb4b3607cc2e3897ecedc7ae40adfa24949e034929db129",
+    "python-full-nonscale.xml": "669b8b17aac14a15a685047f51c5ee08b39717ff5458b930a7b7263cbb56ca97",
+    "python-gallery-committed.log": "081d5f0e9db165afcd1ba00576baa4c35ceaf55189b46809cae162416d4d80ec",
+    "python-gallery-committed.xml": "8fd38f53f5f6bf3460023895bacbe00eebb9c177a786168a20b7c17e4a4d3a00",
+    "python-green.log": "a58c4dd283c08f3fe029df11033e4216168eb05838a5fb790ca587bc9977d320",
+    "python-green.xml": "dcb64f0cb87ecdf44c7a72626787d648e0c569bc42a5e6ef5aab56d528d23c69",
+    "python-numeric-resource-format.log": "60b790e9a341aa833d44e88bcd669c8443fdd72f49b702df974807eed97dad3b",
+    "python-numeric-resource-format.xml": "0eaf08573597bb545fb0bfeefc31ca3106419a1c82a6d62ac622578b451c7bac",
+    "python-red-corrected.log": "18f5a4b833e574e29efc29ac34c4bbe8ed4bc162263eda3c7c5bf8b304b8fb5a",
+    "python-red-corrected.xml": "f455f1855ecb9b55b42cceeda548b0331c6835961466e45db4bb6d456b1bfbde",
+    "python-red.log": "233327dd725ca7368d6d45ea5c017b854c8fa53b276cc95445c0a9ebcabd3cf1",
+    "python-red.xml": "94eb7490bc72b41d39f83092440a61c1617ef6a1b6430f66120d95fc18656e65",
+    "python-unchanged-baseline-field-policy.log": "d2b527560d66e13c00b928010a05f8c263b1399e0d8476747dbe15dd465dc482",
+    "python-unchanged-baseline-field-policy.xml": "2d3a097d77c5c1eb1ce120eff6f3e50ae2e084648d3d5177db56c33c3a280e99",
+    "ruff-root.log": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+    "ruff-scoped.log": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+    "source-push.log": "4f9d78ae00d27b761ec0b45e5c81632d8160fc0353993dd6c7330864eab738e2",
+    "typescript-green.log": "0c646ac7294c433a882665a64523809dd6260d51dfd642d68efb0c9205700b56",
+    "typescript-red.log": "e322496b06ca7ed7a0e8f096332bb9a775964f013e46949f8d3286026380d7d8"
+  }
+}
