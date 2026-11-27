@@ -1,0 +1,223 @@
+{
+  "started": "2026-11-27T17:52:56.690Z",
+  "cleanInstalled": false,
+  "commands": [
+    {
+      "name": "archive-list",
+      "exe": "tar",
+      "args": [
+        "-tzf",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\joined-dd1\\pack\\deepviz-agent-toolkit-0.1.0.tgz"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\joined-dd1\\consumer",
+      "started": "2026-11-27T17:52:56.692Z",
+      "finished": "2026-11-27T17:52:56.715Z",
+      "exit": 0,
+      "error": null
+    },
+    {
+      "name": "archive-types",
+      "exe": "tar",
+      "args": [
+        "-tvzf",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\joined-dd1\\pack\\deepviz-agent-toolkit-0.1.0.tgz"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\joined-dd1\\consumer",
+      "started": "2026-11-27T17:52:56.716Z",
+      "finished": "2026-11-27T17:52:56.730Z",
+      "exit": 0,
+      "error": null
+    },
+    {
+      "name": "extract",
+      "exe": "tar",
+      "args": [
+        "-xzf",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\joined-dd1\\pack\\deepviz-agent-toolkit-0.1.0.tgz",
+        "-C",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\joined-dd1\\consumer\\node_modules\\@deepviz\\agent-toolkit",
+        "--strip-components=1"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\joined-dd1\\consumer",
+      "started": "2026-11-27T17:52:56.733Z",
+      "finished": "2026-11-27T17:52:56.768Z",
+      "exit": 0,
+      "error": null
+    },
+    {
+      "name": "public-consumer",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--test",
+        "consumer.test.mjs"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\joined-dd1\\consumer",
+      "started": "2026-11-27T17:52:56.778Z",
+      "finished": "2026-11-27T17:52:56.956Z",
+      "exit": 0,
+      "error": null
+    },
+    {
+      "name": "public-types",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt\\node_modules\\typescript\\bin\\tsc",
+        "--noEmit",
+        "--strict",
+        "--skipLibCheck",
+        "false",
+        "--module",
+        "NodeNext",
+        "--moduleResolution",
+        "NodeNext",
+        "--target",
+        "ES2022",
+        "--lib",
+        "ES2022,DOM",
+        "types.mts"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\joined-dd1\\consumer",
+      "started": "2026-11-27T17:52:56.958Z",
+      "finished": "2026-11-27T17:52:57.453Z",
+      "exit": 0,
+      "error": null
+    }
+  ],
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1077,
+      "sha256": "afbb59a0c0fccdea7ecc9140e4e762455dc06abea4f02d9cf5324c8fb23b42fd"
+    },
+    {
+      "path": "README.md",
+      "bytes": 16953,
+      "sha256": "8c3eefcca5e5b490267d57e3957425862b53fdd145e6f5c4b2d6339dc1a6a0a1"
+    },
+    {
+      "path": "dist/chart-spec.schema.json",
+      "bytes": 7397,
+      "sha256": "d799fc6b99ae9117396f384725879ae90d288d3297ad5980f8e30ea9a46c14a5"
+    },
+    {
+      "path": "dist/index.d.ts",
+      "bytes": 137,
+      "sha256": "ad7078508477928bf544b23c37a28abc778c85470aecfae8cc91e6929a4c97f2"
+    },
+    {
+      "path": "dist/index.js",
+      "bytes": 170,
+      "sha256": "887a0d361250e936d43f6b5f8cac4f65a024676520ad6bcfb49ab8042e355c39"
+    },
+    {
+      "path": "dist/index.js.map",
+      "bytes": 206,
+      "sha256": "c8ae153be21ed11e0585f86a83791061a927fd0960064329b50d1b7bb00e9354"
+    },
+    {
+      "path": "dist/models.d.ts",
+      "bytes": 2010,
+      "sha256": "0aa4657b8204cc353c1aea1a829e1991632602e0b24d414569163e3467bb3deb"
+    },
+    {
+      "path": "dist/models.js",
+      "bytes": 3538,
+      "sha256": "936bcf189c647a45ab0063dbdff5158ca5711a374e6eae7f4a00d160d91d265e"
+    },
+    {
+      "path": "dist/models.js.map",
+      "bytes": 3992,
+      "sha256": "e236172f498faaa29fa05b6bd9ffff2fbf95affa0a782470ee63abf81865f4ce"
+    },
+    {
+      "path": "dist/normalize.d.ts",
+      "bytes": 447,
+      "sha256": "c403eea0ed6ec3fc8ec0315efc2e77c9e2a0f0698e666cb31b64a4d62f3e1ecd"
+    },
+    {
+      "path": "dist/normalize.js",
+      "bytes": 35990,
+      "sha256": "5d41fefef79777061e3dd42c711a67c348693382811e79a08d197315d6207eff"
+    },
+    {
+      "path": "dist/normalize.js.map",
+      "bytes": 40451,
+      "sha256": "60aecd537754b885cb5ad355a5781232066cd8591edcb8246d73dcf575680066"
+    },
+    {
+      "path": "dist/prompts/v1/README.md",
+      "bytes": 1787,
+      "sha256": "324cb7f88211424f577327268f36506c8c27d1793528441458e2caba83ee0bbd"
+    },
+    {
+      "path": "dist/prompts/v1/request.md",
+      "bytes": 761,
+      "sha256": "845be71cb3141d084f036472a1c5a19670be28c16bf73c4a599a3df9d534c6f2"
+    },
+    {
+      "path": "dist/prompts/v1/system.md",
+      "bytes": 4582,
+      "sha256": "b11e691e8f5d89bc2fd726d284702d6675c57c1a32ec0947ec5902040fdbaba0"
+    },
+    {
+      "path": "dist/render.d.ts",
+      "bytes": 1661,
+      "sha256": "976edd604d1afdf41209d9531ba1926607a3428b12d245b8dc51d9b2e4ae8d14"
+    },
+    {
+      "path": "dist/render.js",
+      "bytes": 10931,
+      "sha256": "bc43ad42f0d731db59eb51a3adef78477450689b2a4e39ec5b7a5acedd2e638c"
+    },
+    {
+      "path": "dist/render.js.map",
+      "bytes": 9766,
+      "sha256": "ec2eb81276c9b87183307fbc6a36c1867c12561b530c57959a2a82c2cd9d2f2a"
+    },
+    {
+      "path": "dist/renderers.d.ts",
+      "bytes": 1059,
+      "sha256": "2cba7af7884f327bef8cc2f6a15b7f8fdf4ee5743fab365997d124e24caaee07"
+    },
+    {
+      "path": "dist/renderers.js",
+      "bytes": 25181,
+      "sha256": "c76b4c51c88dafcd125b06d352bb89575c2e8055a32f43f4fad764b10c5ab347"
+    },
+    {
+      "path": "dist/renderers.js.map",
+      "bytes": 34801,
+      "sha256": "fbbe2080b1d83461a1e2a56a6ccc2d40665d6b341ad900c34a5b182c92dc6024"
+    },
+    {
+      "path": "dist/schema.d.ts",
+      "bytes": 4914,
+      "sha256": "18840f42c0f6fb2dc7a6eed8101bb53073c5815c6cf3092ea142d88a9ff1656d"
+    },
+    {
+      "path": "dist/schema.js",
+      "bytes": 224,
+      "sha256": "a48b8860a9bfb63d757c49fbf9ebecdc1596e3bef40dfdadaf6203351b626482"
+    },
+    {
+      "path": "dist/schema.js.map",
+      "bytes": 219,
+      "sha256": "4dac40a1bdb0ca8afe5476415dc559b6da8f3c7ad45ff9760c0e03409b02344d"
+    },
+    {
+      "path": "package.json",
+      "bytes": 943,
+      "sha256": "f8ce42fc3643693effd1e39e44f3b0379d203b1d5208705d7eb154239664c3fc"
+    }
+  ],
+  "archive": {
+    "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\joined-dd1\\pack\\deepviz-agent-toolkit-0.1.0.tgz",
+    "sha256": "0804cf7f55b4037f9ff95b9f870b8781aff319d6fa7602580326d31170e55b3b"
+  },
+  "compiler": {
+    "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt\\node_modules\\typescript\\bin\\tsc",
+    "sha256": "2219f428a7e55aaf1f7ad85b9b0f0cf5078aeb76ccc9a7c6036c92d48f492ffd"
+  },
+  "passed": true,
+  "finished": "2026-11-27T17:52:57.467Z"
+}

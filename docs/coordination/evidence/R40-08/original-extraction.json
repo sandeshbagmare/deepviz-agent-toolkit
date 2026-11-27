@@ -1,0 +1,1078 @@
+{
+  "at": "2026-11-27T17:14:34.920Z",
+  "head": "31cff73ab057c3fed69bd400ac005f2f11609027",
+  "manifest": [
+    {
+      "path": "packages/deepviz/.gitignore",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "cb2cddd10217ea939da10df452c59f2249ba181b",
+      "sha256": "07f6a9505c1cc3abd34c7727aca904715e62fc3f8322d648a98e31787046bd1b",
+      "bytes": 9
+    },
+    {
+      "path": "packages/deepviz/LICENSE",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "07f747d81c0eebd11b13400c2fe5676ad67d36a6",
+      "sha256": "afbb59a0c0fccdea7ecc9140e4e762455dc06abea4f02d9cf5324c8fb23b42fd",
+      "bytes": 1077
+    },
+    {
+      "path": "packages/deepviz/README.md",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "2b3e1af50c95dc22791ca1367b3c747f556c3112",
+      "sha256": "3ae10b8d7fa27aaff60fe15e1664886ecdda4edeb5eba8d260480d81c2139a80",
+      "bytes": 16616
+    },
+    {
+      "path": "packages/deepviz/package.json",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "5a0bfa5e52ed0abad750d0f9751603a5836208bf",
+      "sha256": "f8ce42fc3643693effd1e39e44f3b0379d203b1d5208705d7eb154239664c3fc",
+      "bytes": 943
+    },
+    {
+      "path": "packages/deepviz/scripts/benchmark-stream.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "3218adf5eea67497d60eed0d8091211d8c24ad20",
+      "sha256": "cf9d3cc04f2ce8b8a351070391a8ec1b531f4f2608d0cfeaa479f88fd8ca5cf4",
+      "bytes": 1738
+    },
+    {
+      "path": "packages/deepviz/scripts/check-package.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "fb98c8f8ea14f23e136a73ed3ed7955f49130b61",
+      "sha256": "1f7e436182ccb6debf9a7f980c6a67c7aa27fa80bf23259cd6b527c08d27fd80",
+      "bytes": 3250
+    },
+    {
+      "path": "packages/deepviz/scripts/check-schema.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "b1857cc1482fcb0c53a02b8c479949e8a4b0eb77",
+      "sha256": "9a417cc301087503a2eb2c6088d887085336868751284bb050f75187cdff6834",
+      "bytes": 993
+    },
+    {
+      "path": "packages/deepviz/scripts/copy-prompts.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "194b6184d5227946f46a06ed9dbca8218f314334",
+      "sha256": "2e29160390a79c62b13c20992ef88c639126a8bad9bee80b327d5b81e6aa06bd",
+      "bytes": 362
+    },
+    {
+      "path": "packages/deepviz/scripts/verify-streaming-scale.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "4ad80b59011e67f74679d5b5771a18c13a314b50",
+      "sha256": "704079fd512abeae5b0aca04c73e5664ef69a28c71c07f2464af8490663c09f4",
+      "bytes": 14487
+    },
+    {
+      "path": "packages/deepviz/test/browser.browser.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "dc354e7c183910cd797dcf9c60f8b45fba386ad7",
+      "sha256": "2e0cfef8b23edb2d9f0ce64bd9f761fc6f0d4aec62821d7a44ff340bc4c88c0d",
+      "bytes": 5738
+    },
+    {
+      "path": "packages/deepviz/test/contract.test.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "1fc60d5da43dfc391b6245e9052f136b7ed27b4e",
+      "sha256": "2b9dc3fa3d41c7758b4cb38d9fa1a473ae3505d5eba919f6095c6d745f24fa03",
+      "bytes": 9392
+    },
+    {
+      "path": "packages/deepviz/test/mapping-layout-n18.test.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "da84fbc715e3b2e7c21dfb149243ba93bad0ba8c",
+      "sha256": "ea67104f80853eba6ef9ad4cfee526e1dd07ead458d942ebf221beb20c45cf80",
+      "bytes": 3328
+    },
+    {
+      "path": "packages/deepviz/test/n21-streaming-scale.test.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "8b9114fc830880a9659d4b0bb1a3ffdd6a7618ca",
+      "sha256": "87d42f58ec709cdf9624692a15aae317414efef7e2fe606de0875ed9442fb1f5",
+      "bytes": 6513
+    },
+    {
+      "path": "packages/deepviz/test/native-semantics-n18.browser.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "b0228076da598f051c2af452cf1f8a85ab157fc6",
+      "sha256": "1ca85803089fec5af87da4f0ca02c4a6d17fb0eae87ee1aae7fcae1d5cdd157b",
+      "bytes": 11029
+    },
+    {
+      "path": "packages/deepviz/test/native-semantics-n18.test.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "bb3bc717775d4c28e3badf3d02a703b1ac19cb9f",
+      "sha256": "7de1c62589971b3e2a438e9cb82b2a7df1c674de68b9cabae749c3dc59e00870",
+      "bytes": 4780
+    },
+    {
+      "path": "packages/deepviz/test/normalization-bytes.test.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "f5821d241f016533e4216f41a87e20612a085a41",
+      "sha256": "cf42b62ce837678a5cec7001a8fdd0ccee2ced499002bd2db7eaa998b3e4fdfd",
+      "bytes": 4568
+    },
+    {
+      "path": "packages/deepviz/test/normalization-means.test.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "b8a4540363229effc06eca44746cbde6d0758845",
+      "sha256": "0bdcd1c7fbc27d922c2777a2becce020a06690e881117c6470a8356b02824696",
+      "bytes": 3564
+    },
+    {
+      "path": "packages/deepviz/test/normalization-policy.test.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "6f9cd3e474295b43d9fb737b3fb00b4faa22def8",
+      "sha256": "dfaffd6583e856813734dacdcad21a7dba407ce3083749327257aef9b0951e88",
+      "bytes": 3892
+    },
+    {
+      "path": "packages/deepviz/test/normalization-regressions.test.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "0c3c8861d137396441039a32ead2a909e2b85afa",
+      "sha256": "0cb6ce5014900011b2945bb31e57122d7dea5b8ffe09c5b873fb00584f60b42f",
+      "bytes": 7980
+    },
+    {
+      "path": "packages/deepviz/test/normalization-unicode-coercion.test.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "dda404241492d4952a39a65cf1f5a4731461913c",
+      "sha256": "4cdff9e7183a1b0c19ed42bd1c827e81ff5bed8a1a990e784408d83ded61d658",
+      "bytes": 1073
+    },
+    {
+      "path": "packages/deepviz/test/render-budget-n18.test.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "bff3f83db6ae1cd7a3b0aadcc816291b196a9af5",
+      "sha256": "117d1d14629acad2beb9660baf03fbd25b2cf9202f7b81ff5e374fac47179b1f",
+      "bytes": 2168
+    },
+    {
+      "path": "packages/deepviz/test/render.test.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "12309f92ccc38e6580d00999530f48ccdb0903bf",
+      "sha256": "76db94c33522ced682becbb280149aa87035a5c02564ae5b45a7045d41ff4236",
+      "bytes": 8840
+    },
+    {
+      "path": "packages/deepviz/test/test_n17_boundaries.browser.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "ff0b2f6e68f7530417d4889db8986b3c7df537a1",
+      "sha256": "daca269a161a503bbbf4dbd787b71a2661be289bffe543b54b289a1667441972",
+      "bytes": 4357
+    },
+    {
+      "path": "packages/deepviz/test/test_n17_boundaries.test.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "b8016dc990114306ef5888290b54568100831051",
+      "sha256": "94aa1def799c710e6a9c412005a1d4509f4fe7200bd3c2e841156f52f0690236",
+      "bytes": 3909
+    },
+    {
+      "path": "packages/deepviz/test/test_n19_text_formats.test.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "fd90b5d6b93240e9eacd0185449df7e1a03c32b4",
+      "sha256": "51fdc0e78cd9fa3c87f23a0524ee3e049d2ae3027ac8ccc37d577f494ce26da8",
+      "bytes": 12241
+    },
+    {
+      "path": "packages/deepviz/test/test_n19_unicode_cells.test.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "00665fe426ff9cc8ba759b2e3a38216aae249951",
+      "sha256": "ab270bef44e66c6be89f9ba6246c6ed6f37b74d834ab6529167a9460d0fddbd4",
+      "bytes": 4989
+    },
+    {
+      "path": "packages/deepviz/test/test_n21_resource_policy.test.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "07a76a6325ac2bd1cc6977785f9a7cfb2bc4dfa5",
+      "sha256": "6f3bd337ef825fe86922e5fdf1070f8eabb0c113af1d3a9732422e9cd72a7c17",
+      "bytes": 9815
+    },
+    {
+      "path": "packages/deepviz/test/test_r07_finite_overflow.test.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "4d8c8c2df4f950b6f53362eb3d354407e5f5aa44",
+      "sha256": "72c909dfe855c107e6205683b7a3c36de269c56a39f4e999c4ad055118a93fcc",
+      "bytes": 4706
+    },
+    {
+      "path": "packages/deepviz/test/test_r11_packaged_prompts.test.mjs",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "d327edaecc7868c81173969358d20b7aa2b2bc1d",
+      "sha256": "ec5fb98f80fc2adfe8b3a40fecc82007d4b90f173cc6d2343328d7ce57abb234",
+      "bytes": 2000
+    },
+    {
+      "path": "packages/deepviz/tsconfig.json",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "43b19b487a862108c8b99fa27307f9de01fbe234",
+      "sha256": "2a202b15cdb9443825daff1589036b1dcc09f2cdb01c6274dbbcd97f7651781d",
+      "bytes": 574
+    },
+    {
+      "path": "prompts/v1/README.md",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "d6be785ac34dd423c59148a02a77067b3d7616c4",
+      "sha256": "324cb7f88211424f577327268f36506c8c27d1793528441458e2caba83ee0bbd",
+      "bytes": 1787
+    },
+    {
+      "path": "prompts/v1/request.md",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "cd61df2fe697009b36b03b872c949b0bef859b10",
+      "sha256": "845be71cb3141d084f036472a1c5a19670be28c16bf73c4a599a3df9d534c6f2",
+      "bytes": 761
+    },
+    {
+      "path": "prompts/v1/system.md",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "8e0a1b4b0ce2115d23b5cb2f3d69c0deb113839b",
+      "sha256": "b11e691e8f5d89bc2fd726d284702d6675c57c1a32ec0947ec5902040fdbaba0",
+      "bytes": 4582
+    },
+    {
+      "path": "package.json",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "8f6fec44a698e5d9bf7bc644102d3d7dbb8d57d4",
+      "sha256": "9afef0ede1cc8d66e6495f33a5d5b4bcdb8472c7dd749721b48056cf73894cc5",
+      "bytes": 1130
+    },
+    {
+      "path": "package-lock.json",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "2a6175c207b0ed61272bf295813b2966d4c83c97",
+      "sha256": "1401922876f8b7d37e675ce044400fe5335682742dd9b30a1292243ad771d4c9",
+      "bytes": 81533
+    },
+    {
+      "path": "scripts/export_schema.py",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "17276da70b78d33e60603c9284070d4b99f0ecc9",
+      "sha256": "a6dad0617fd34b06933490e8ba1711de0d1ba2982fe2675bd932f5ca2eb49491",
+      "bytes": 1235
+    },
+    {
+      "path": "packages/deepviz/src/index.ts",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "2c0f4ed5b75fa3bfccc9714b55f565ccec747ac3",
+      "sha256": "a4c1ebd22dfdc100e28eef28b11030d5f08bb09db0da9649c22848d3ef9a8aac",
+      "bytes": 135
+    },
+    {
+      "path": "packages/deepviz/src/models.ts",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "58b11ee38240db20974d5ede07a320a8c5ce4740",
+      "sha256": "d43d5ae0bef1d43f251ed71899a9b507c6575562e4403bd2e2ac02bd7caa43e6",
+      "bytes": 4737
+    },
+    {
+      "path": "packages/deepviz/src/schema.ts",
+      "pin": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "b99e2013dd6607f3949469d4b3ba47bbd112f038",
+      "sha256": "8150ef7a9f4e1376818c38ec0b3a76e4c1fa92a7dec8e361e24195f6e38d0537",
+      "bytes": 187
+    },
+    {
+      "path": "packages/deepviz/src/normalize.ts",
+      "pin": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+      "blob": "44424792b5697e284f6e9e45c93bc3539009aafc",
+      "sha256": "7754126f9c90d7fc5b4d84d409400fa5d58ed0b2ab785df7fd666e2b1b90452e",
+      "bytes": 30684
+    },
+    {
+      "path": "packages/deepviz/src/render.ts",
+      "pin": "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57",
+      "blob": "8f9bd16ee3df74088e8020e03ea25a2a2678d127",
+      "sha256": "71ab2701ef63fbc37999447a62a5a06a04404d690bd0fb3e0ea5f765433efa4b",
+      "bytes": 11340
+    },
+    {
+      "path": "packages/deepviz/src/renderers.ts",
+      "pin": "c3ee1edbfc65406cef7fd809f5a6887471d576a5",
+      "blob": "7d0b0caa1d4f44bfd26bb1b18ed01337b3581142",
+      "sha256": "0538490fbf14a8ca4f1f39f7f880db5ea17d94c6873362243778e1160bc77b4a",
+      "bytes": 22357
+    },
+    {
+      "path": "packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs",
+      "pin": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+      "blob": "97b007247a051dd349df7218966ce5ba0834a4b4",
+      "sha256": "d2940db8a00fca5ccbaa8b4d5cb9f57b135ccddd3620932131e022d9c4ba1260",
+      "bytes": 7894
+    },
+    {
+      "path": "packages/deepviz/test/test_r07_tool_spec_null.test.mjs",
+      "pin": "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57",
+      "blob": "adbaf60e171eecac73e99b3354df72ae82fa2451",
+      "sha256": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227",
+      "bytes": 4129
+    },
+    {
+      "path": "packages/deepviz/test/test_r11_svg_tick_margin.test.mjs",
+      "pin": "c3ee1edbfc65406cef7fd809f5a6887471d576a5",
+      "blob": "fa354f589c42403deccdd96c65f9a018d77cbdc5",
+      "sha256": "5e17c10d824b612c56cd4e50880b1463a2d7560cdbbad68fd9041623a24cf18c",
+      "bytes": 3576
+    },
+    {
+      "path": "packages/deepviz/test/test_r23_svg_finite_density.test.mjs",
+      "pin": "c3ee1edbfc65406cef7fd809f5a6887471d576a5",
+      "blob": "92f824ebf3a04c38287a4ab394fc7d4e03173999",
+      "sha256": "5a4b8beb80f1032baf15cd2e0fdafb3f14c3a2359101e50f69fe300a4fbd8feb",
+      "bytes": 5056
+    },
+    {
+      "path": "packages/deepviz/src/chart-spec.schema.json",
+      "pin": "31cff73ab057c3fed69bd400ac005f2f11609027",
+      "derivedFrom": "schemas/chart-spec.schema.json",
+      "blob": "00a524503774822832c686c7be8e266e9e5d39bc",
+      "sha256": "cf316116251e52a121a74d24f35f99b15794ee0997278010d97181c8c1908b81",
+      "bytes": 4268
+    }
+  ],
+  "imports": [
+    {
+      "from": "packages/deepviz/src/index.ts",
+      "to": "packages/deepviz/src/models.ts"
+    },
+    {
+      "from": "packages/deepviz/src/index.ts",
+      "to": "packages/deepviz/src/normalize.ts"
+    },
+    {
+      "from": "packages/deepviz/src/index.ts",
+      "to": "packages/deepviz/src/render.ts"
+    },
+    {
+      "from": "packages/deepviz/src/index.ts",
+      "to": "packages/deepviz/src/schema.ts"
+    },
+    {
+      "from": "packages/deepviz/src/schema.ts",
+      "to": "packages/deepviz/src/chart-spec.schema.json"
+    },
+    {
+      "from": "packages/deepviz/src/normalize.ts",
+      "to": "packages/deepviz/src/models.ts"
+    },
+    {
+      "from": "packages/deepviz/src/normalize.ts",
+      "to": "packages/deepviz/src/models.ts"
+    },
+    {
+      "from": "packages/deepviz/src/render.ts",
+      "to": "packages/deepviz/src/models.ts"
+    },
+    {
+      "from": "packages/deepviz/src/render.ts",
+      "to": "packages/deepviz/src/models.ts"
+    },
+    {
+      "from": "packages/deepviz/src/render.ts",
+      "to": "packages/deepviz/src/normalize.ts"
+    },
+    {
+      "from": "packages/deepviz/src/render.ts",
+      "to": "packages/deepviz/src/renderers.ts"
+    },
+    {
+      "from": "packages/deepviz/src/render.ts",
+      "to": "packages/deepviz/src/renderers.ts"
+    },
+    {
+      "from": "packages/deepviz/src/render.ts",
+      "to": "packages/deepviz/src/schema.ts"
+    },
+    {
+      "from": "packages/deepviz/src/renderers.ts",
+      "to": "packages/deepviz/src/models.ts"
+    },
+    {
+      "from": "packages/deepviz/src/renderers.ts",
+      "to": "packages/deepviz/src/models.ts"
+    }
+  ],
+  "geometry": "No geometry.ts at supplied3eab and no runtime import of one. Six TS modules + schema JSON = seven runtime paths; no stub/helper authored.",
+  "commands": [
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "status",
+        "--porcelain"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "3eab699b61850a20e91132e16caf8c589085f9ee",
+        "--",
+        "packages/deepviz",
+        "prompts/v1"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/.gitignore"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/.gitignore"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/LICENSE"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/LICENSE"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/package.json"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/package.json"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/scripts/benchmark-stream.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/scripts/benchmark-stream.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/scripts/check-package.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/scripts/check-package.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/scripts/check-schema.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/scripts/check-schema.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/scripts/copy-prompts.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/scripts/copy-prompts.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/scripts/verify-streaming-scale.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/scripts/verify-streaming-scale.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/browser.browser.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/browser.browser.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/contract.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/contract.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/mapping-layout-n18.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/mapping-layout-n18.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/n21-streaming-scale.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/n21-streaming-scale.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/native-semantics-n18.browser.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/native-semantics-n18.browser.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/native-semantics-n18.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/native-semantics-n18.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/normalization-bytes.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/normalization-bytes.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/normalization-means.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/normalization-means.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/normalization-policy.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/normalization-policy.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/normalization-regressions.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/normalization-regressions.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/normalization-unicode-coercion.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/normalization-unicode-coercion.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/render-budget-n18.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/render-budget-n18.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/render.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/render.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/test_n17_boundaries.browser.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/test_n17_boundaries.browser.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/test_n17_boundaries.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/test_n17_boundaries.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/test_n19_text_formats.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/test_n19_text_formats.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/test_n19_unicode_cells.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/test_n19_unicode_cells.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/test_n21_resource_policy.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/test_n21_resource_policy.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/test_r07_finite_overflow.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/test_r07_finite_overflow.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/test_r11_packaged_prompts.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/test_r11_packaged_prompts.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/tsconfig.json"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/tsconfig.json"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:prompts/v1/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:prompts/v1/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:prompts/v1/request.md"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:prompts/v1/request.md"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:prompts/v1/system.md"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:prompts/v1/system.md"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:package.json"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:package.json"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:package-lock.json"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:package-lock.json"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:scripts/export_schema.py"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:scripts/export_schema.py"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/src/index.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/src/index.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/src/models.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/src/models.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/src/schema.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/src/schema.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:packages/deepviz/src/normalize.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:packages/deepviz/src/normalize.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57:packages/deepviz/src/render.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57:packages/deepviz/src/render.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "c3ee1edbfc65406cef7fd809f5a6887471d576a5:packages/deepviz/src/renderers.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "c3ee1edbfc65406cef7fd809f5a6887471d576a5:packages/deepviz/src/renderers.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57:packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57:packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "c3ee1edbfc65406cef7fd809f5a6887471d576a5:packages/deepviz/test/test_r11_svg_tick_margin.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "c3ee1edbfc65406cef7fd809f5a6887471d576a5:packages/deepviz/test/test_r11_svg_tick_margin.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "show",
+        "c3ee1edbfc65406cef7fd809f5a6887471d576a5:packages/deepviz/test/test_r23_svg_finite_density.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "c3ee1edbfc65406cef7fd809f5a6887471d576a5:packages/deepviz/test/test_r23_svg_finite_density.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD:schemas/chart-spec.schema.json"
+      ],
+      "exit": 0
+    }
+  ]
+}

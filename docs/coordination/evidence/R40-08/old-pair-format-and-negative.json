@@ -1,0 +1,123 @@
+{
+  "started": "2026-11-27T17:26:04.099Z",
+  "commands": [
+    {
+      "name": "model-semantic-diagnostic",
+      "exe": "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+      "args": [
+        "-S",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\model-diagnostic.py",
+        "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:26:04.100Z",
+      "finished": "2026-11-27T17:26:04.511Z",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "original-export-check",
+      "exe": "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+      "args": [
+        "-S",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\model-diagnostic.py",
+        "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+        "--export-check"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:26:04.513Z",
+      "finished": "2026-11-27T17:26:04.929Z",
+      "exit": 1,
+      "expected": 1
+    },
+    {
+      "name": "make-negative-archive",
+      "exe": "tar",
+      "args": [
+        "-czf",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\followup\\missing-assets.tgz",
+        "-C",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\followup\\bad-input",
+        "package/package.json"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:26:04.931Z",
+      "finished": "2026-11-27T17:26:04.964Z",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "missing-assets-rejected",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "packages/deepviz/scripts/check-materialized-package.mjs",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\followup\\missing-assets.tgz",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\followup\\rejected-consumer"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:26:04.965Z",
+      "finished": "2026-11-27T17:26:05.069Z",
+      "exit": 1,
+      "expected": 1
+    },
+    {
+      "name": "protected-paths",
+      "exe": "git",
+      "args": [
+        "diff",
+        "--name-only",
+        "HEAD",
+        "--",
+        "README.md",
+        "pyproject.toml",
+        "python",
+        "schemas",
+        ".github/workflows/chart-contract.yml"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:26:05.071Z",
+      "finished": "2026-11-27T17:26:05.161Z",
+      "exit": 0,
+      "expected": 0
+    }
+  ],
+  "model": {
+    "module": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt\\python\\deepviz\\src\\deepviz\\models.py",
+    "origin_correct": true,
+    "module_sha256": "e4c86a977a7003d3d4e5d557a3bdfb25ccee155608d36207f3af24da2e3981d3",
+    "semantic_model_equals_canonical": true,
+    "canonical_equals_package_bytes": true,
+    "sorted_export_equals_canonical_text": false,
+    "insertion_order_export_equals_canonical_text": true
+  },
+  "negative": {
+    "started": "2026-11-27T17:26:05.032Z",
+    "cleanInstalled": false,
+    "commands": [
+      {
+        "name": "archive-list",
+        "exe": "tar",
+        "args": [
+          "-tzf",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\followup\\missing-assets.tgz"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\followup\\rejected-consumer",
+        "started": "2026-11-27T17:26:05.035Z",
+        "finished": "2026-11-27T17:26:05.052Z",
+        "exit": 0,
+        "error": null
+      }
+    ],
+    "files": [],
+    "archive": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\followup\\missing-assets.tgz",
+      "sha256": "4dbababdf67a29b38f9241f38682bf174d459c1b7c8d43defb7b2f0d8772ad6a"
+    },
+    "passed": false,
+    "failure": "AssertionError [ERR_ASSERTION]: Exact published allowlist: no missing runtime/resources or source/dependency leaks\n+ actual - expected\n\n  [\n-   'package/LICENSE',\n-   'package/README.md',\n-   'package/dist/chart-spec.schema.json',\n-   'package/dist/index.d.ts',\n-   'package/dist/index.js',\n-   'package/dist/index.js.map',\n-   'package/dist/models.d.ts',\n-   'package/dist/models.js',\n-   'package/dist/models.js.map',\n-   'package/dist/normalize.d.ts',\n-   'package/dist/normalize.js',\n-   'package/dist/normalize.js.map',\n-   'package/dist/prompts/v1/README.md',\n-   'package/dist/prompts/v1/request.md',\n-   'package/dist/prompts/v1/system.md',\n-   'package/dist/render.d.ts',\n-   'package/dist/render.js',\n-   'package/dist/render.js.map',\n-   'package/dist/renderers.d.ts',\n-   'package/dist/renderers.js',\n-   'package/dist/renderers.js.map',\n-   'package/dist/schema.d.ts',\n-   'package/dist/schema.js',\n-   'package/dist/schema.js.map',\n    'package/package.json'\n  ]\n",
+    "finished": "2026-11-27T17:26:05.055Z"
+  },
+  "protectedDiff": "",
+  "syntaxChecked": true,
+  "finished": "2026-11-27T17:26:05.162Z"
+}

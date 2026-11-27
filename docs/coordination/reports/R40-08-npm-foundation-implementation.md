@@ -1,0 +1,95 @@
+# R40 role08 — complete npm foundation implementation
+
+## Prework / approved scope
+
+- Actual owner SAME session `ses_de56782e6ffeVWDIuY3v01kkBt`. Latest root steering explicitly switches this already-active session after R38 coherent setup checkpoint; no extra slot/spawn. R38 stopped with ZERO product execution;15 now owns TS mean independence. FULL MAIN R39/R40(27lines), AGENTS/canonical/own note, RESUME/STATE,04 R28 plan(152lines) and14 R26 helper closure(59lines) read.
+- NEW OWN branch/worktree `feat/r40-npm-foundation`, exact actual-main base `31cff73ab057c3fed69bd400ac005f2f11609027`. Native session move/current branch/SHA/clean checks pending, not assumed. Goal is a usable complete npm package assembly, not a helper-only or report-only PR and not fullv1.
+- Owned authoring: root npm workspace/lock/config; package metadata/assets/build glue/README/license/scripts/prompts; NEW npm-only CI and strict portable public packed-consumer tests; own report/evidence/note. NO root README/pyproject/Python07 package edits, no original-oracle edits, no installed dependencies/shared environment/network/API/PR/default writes/spawn/poll.
+- Immutable extraction: models/geometry/index/workspace/build assets/baseline tests/prompts from `3eab699b61850a20e91132e16caf8c589085f9ee`; normalize EXACT `c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19`; render EXACT `7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57`; renderers EXACT `c3ee1edbfc65406cef7fd809f5a6887471d576a5`. Full original npm tests + unchanged successor helper/finite/margin/P1/mean tests retained. No16/12/helper function edits. Later546 NOT accepted by this lane.
+- Canonical model/schema are actualmain31cff/bff pair, read-only. Package JSON copy/schema.ts only derived from that accepted pair; no728 overwrite of Mapping guard. Root export helper may be extracted byte-exact3eab if necessary. R04 owns later paired schema prerequisite.
+
+## Execution plan / acceptance
+
+1. Verify Git sources/actualmain/current own worktree; create own pinned assembly and native move. Read actual package/workspace/build/schema/test assets; save Git blob/SHA manifest BEFORE product execution.
+2. Extract exact complete closure and add NEW strict portable packed-public consumer. Execute genuine metadata/glue RED before necessary authorized glue/metadata fixes; retain every original assertion.
+3. Implement only minimum assembly/glue/README/NEW npm-foundation workflow. If any read-only runtime needs a delta, STOP before changing it and ask R04 for a scoped decision.
+4. Existing read-only compiler/tooling only; actual build/types/fullnpm/schema/dry-run/realpack/archive allowlist/public MANUALLY MATERIALIZED consumer/type checks/bounded nativeSVG+HTML/image inspection. No npmci/install/network/dependency copy; package:check invokes install, so do not run it unadapted. No clean-installed-consumer or observedCI claim.
+5. Preserve all known728/normalizer/density/other RED; draft/not merge-ready if blocked. Scope/hash/secret/diff review, meaningful OWN production commit(s), non-force push/exactremoteSHA and prompt single R04 handoff with concrete gates/blockers.
+
+Current action: save prework and inspect exact sources/build closure. Tests/builds/imports/installs: ZERO so far. Next executable action: create NEW OWN worktree at31cff and verify native actualID/base; then inspect/extract allowlisted immutable assets and write the strict consumer before glue fixes. No source delta or approval claimed yet.
+
+## Coherent assembly checkpoint / R41 dependency steering
+
+Actual worktreeadd0 + native `session_move` confirms SAME actual08 ID at NEW feat/r40-npm-foundation / clean31cff. Static inspection0 read exact workspace/package/build/publicindex/schema/assets/README and successor file lists; no product imports/builds/tests yet. Actual closure is six TS modules + schemaJSON (seven runtime paths): **no geometry.ts exists at supplied3eab and no module imports one**, so no invented stub/helper. Existing package checker invokes npm install and will remain unchanged/unrun; NEW materialized-public-consumer checker is required.
+
+FULL R41(24lines),R42(23lines),updatedAGENTS52 read at coherent pre-extraction checkpoint. R04 explicitly authorizes normalizer pin update **c1b→sealed546c25ea75ee9d8a41b3832aa639664bc9a683b5**, including exact updated `test_r17_normalizer_boundaries.test.mjs`. `git diff --name-status c1b..546 -- packages/deepviz` exit0 confirms ONLY those two paths changed. Extraction script updated BEFORE it has ever run: no runtime changed under a running consumer. Both normalizers now R04-owned; no edits to either.03/19/10 independent gates pending/not borrowed author367. Other pins unchanged; schema728/fourfield-policy/density/build/CI limits explicit. Next run immutable assembly once, record hash/import closure BEFORE execution, then NEW strict portable consumer/glue RED. Remaining effort UNKNOWN until combined build/full original oracles; no release/date claim.
+
+## Actual complete assembly and TDD (2026-11-27T17:26:05.162Z)
+
+**Usable complete package is now assembled, not a one-line helper or static plan.**47 immutable extracted paths: root workspace+matching lock; real public six-module runtime+JSON; package/build/copy/schema/scale test dependencies;3canonical prompts; package README/license; ALL20original npm test files +4exact successor oracle files. NEW source is only two portable dev checker scripts,4glue regressions, root script wiring and npm-only workflow, plus narrowly corrected packageREADME. No stubs, hidden export deletion, package runtime dependency, dependency version change, renderer swap or16/12/helper/model/rootcanonical edits.
+
+**Exact runtime blobs BEFORE execution** (same after every command): index`2c0f4ed5b75fa3bfccc9714b55f565ccec747ac3`; models`58b11ee38240db20974d5ede07a320a8c5ce4740`; schema wrapper`b99e2013dd6607f3949469d4b3ba47bbd112f038`; normalize546`44424792b5697e284f6e9e45c93bc3539009aafc`; render7d8`8f9bd16ee3df74088e8020e03ea25a2a2678d127`; renderersc3ee`7d0b0caa1d4f44bfd26bb1b18ed01337b3581142`; canonical31cffJSON`00a524503774822832c686c7be8e266e9e5d39bc`. Manifest records all47 original paths/SHA256/pins,96 actual Git command exits and15 resolved local import edges.45 read-only paths rehashed before/after EVERY gate; only root script metadata and packageREADME differ intentionally from their extracted baselines.
+
+### Executed gates — author evidence, not independent approval
+
+| Command/check | Actual result |
+|---|---|
+| NEW `node --test .../test_r40_foundation.test.mjs` before metadata/CI/README fixes | **1PASS/3RED/0skip**, exit1: missing materialized npm script, missing NEWworkflow, stale installed README. Original oracles untouched. |
+| Same4 NEW tests after authorized glue fixes | **4PASS/0fail/0skip**, exit0. |
+| Fresh own `npm run build`, `npm run typecheck` | **0/0**; initial dist absent, compiler read-only TypeScript**7.0.2**/exactSHA recorded; Node**26.13.1** actualprocess. No stale/siblingdist. |
+| Full unfiltered `npm test` on this combined assembly | **436PASS/0fail/0skip**, exit0,4564.5327ms. Includes ALL24 unchanged original/successor test files + NEW4gluecases. Not a rerun of old producer367 nor independent approval. |
+| `npm run schema:check` | **0**; exact canonicalJSON/kinds/fields/defaults. Does not test missing dashboard JSON constraints. |
+| Actual `npm pack --dry-run --json --workspace @deepviz/agent-toolkit`, then real `npm pack` with prepack/build | **0/0**, actual25member archive; exact file allowlist/types/resource/public-byte gates0. |
+| `npm run package:materialized -- ACTUAL_TARBALL NEW_CONSUMER EXISTING_COMPILER` | **0**; public self-reference resolves NEW extracted package,13runtime exports, **9PASS/0fail/0skip**, literal reductions/one-pass/no input mutation/helper-null/mean/subnormal/MAX/nativeHTML +3prompt bytes/schema + **all16TS types** and negative type constraints. NOinstall. |
+| `npm run test:packed-native -- CONSUMER EXISTING_TOOL_ROOT` | **0**;2real Chromium pages: literal bars2/5/−3, exact independent y/heights, escaped table payload;0console/page errors/0external requests. Both PNGs actually opened: readable unclipped sparse chart and literal escaped table. Not dense-label or four-CDN-engine acceptance. |
+| Missing-resource tarball negative | Checker **exit1 as expected**, rejected at exact archive allowlist BEFORE extraction/import/compiler; parent negative assertion0. No source/test oracle changed. |
+| Exact own Python-model/canonical verification | Initial sorted-text comparison **exit1**; semantic/identity diagnostic **exit0**, shows model JSON object==canonical and package rawbytes==rootcanonical; sorted-key formatting differs, insertion-order formatting matches. **Unchanged3eab `scripts/export_schema.py --check` really executed, still exit1**. Preserve RED; R04 owns canonical regeneration/728 prerequisite. |
+| Protected rootREADME/pyproject/Python/canonical/existingcontractCI diff | **empty/exit0**. No installed/shared env changed; only processlocal PATH/npmcache/offline flags. |
+
+Actual archive SHA256 **`1150779e7d6352b6352f3288e5a6bd4e1990162af0fc20cd61e050d6eaf42925`**. All22 packeddist resources byte-match this fresh own build, not just matching filenames. Public checker explicitly marks `cleanInstalled:false`; it uses systemtar + standardNode only, existing read-only compiler; zero dependency copying or installs.
+
+### Known unmet gates / manager handback
+
+- **DRAFT, NOT merge-ready/v1.** R04 dashboard728 paired source is still pending; do not overwrite Mapping guard/currentmodel. Strict sorted exporter RED remains concrete, not relabeled as passed just because semantic JSON matches. Npm schema:check0 is narrower.
+- Normalizer546 is immutable consumer staging under R41, not03/19/10 independent approval. Their4published field-policy RED remain OPEN/unretested here; full npm436doesnot prove those separate original semantic oracles pass. Both normalizers R04-owned; no scalar/GraphQL/SUM/mean/runtime delta authored by08.
+- c3ee finite+margin preserved, not density342/d017; sparse3bar browser success is NOT dense-input readability proof.12/R04 own density. Existing helper independent reviews/tests remain their own reports, not this author's gates.
+- No npmci/install/package:check (which installs), clean installed consumer, Node22/24 execution, observed remoteCI, full Python/tool/MCP/multi-engine/10M/scale or final2reviews+2testers. NEWCI ships honest component gates and does NOT waive known failures/claim fulltoolkit.
+- NEW scripts' actual failure history: first model-pair formatting assertion1; original exporter1 retained; intentional invalidtarchecker1. No runtime patches to turn any of these green. Source-module/original-oracle hashes still exact.
+
+**Current action:** self-review/scope/sanitized evidence and meaningful OWN complete-package production commit/nonforcepublish/exactSHA, then immediately give R04 the actual dependency-complete draft head for required PR/genuine gates. No more fullnpm/browser matrix replay. Conditional remaining effort: implementation/gates above complete; publication bounded by Git availability, release integration **UNKNOWN** until schema, independent normalizer/density/CI gates. Author cannot approve/merge its own foundation.
+
+## Next coherent checkpoint — R45 authorized published schema pair
+
+NEW artifact-overwrite guard TDD **4PASS1RED→5PASS0fail**, no oldoracle edit; own native devscript now refuses existing PNG/receipt BEFORE optional browser imports. Final precommit actual **npm437PASS0fail0skip/lint0/immutableexporterRuff0/publicconsumer9PASS+types0/native2pages0**. No product/runtime change, previous archive remains22dist-byte-identical. **Commit NOT yet made**: `git diff --cached --check` exit2 flags old31cff copied canonicalJSON CRLF as trailing whitespace; rawstdout retained. All51 intended production paths staged, protected-pathdiffempty; no blind retry/reset/normalization.
+
+Latest SAME-job user steer/FULL MAINR45(36lines)+R42(23lines) read. At THIS non-running checkpoint **R04 explicitly authorizes published dd1c4080095c7e739582dc5c631bc419047c48d2 model+canonicalJSON PAIR**, then derive own packageJSON/schema.ts exact. Plan: preserve all old source+TDD/gate/formatting/whitespaceRED records, verify dd1 exact Git/public head, extract ONLY two authorized actual source files (not old728/346/dirty worktree), derive packageJSON bytes and retain unchanged generated import-wrapper; prove all prior runtime validators/Mapping AST identical + exact new source blobs. Then fresh build/types/fulloriginalnpm/schema/realpack/manualconsumer/native output on this NEW input pin. No unprovided12density/04mean runtime adopted;546/7d8/c3ee/source-glue grant unchanged. PR38CI3green/notmerged is ROOT-reported, NOT this worker's independent approval or observed CI.
+
+## Actual complete production SOURCE published — 2026-11-27T17:53:05.349Z gate completion
+
+**R04 immediate required-PR handoff: OWN production commit `656f4f35e5e72d16cdb5ebf557b7d64607eaaa43`, `feat/r40-npm-foundation`.** Actual nonforce nativeGit push0 followed by `git ls-remote --heads origin refs/heads/feat/r40-npm-foundation`0 returns EXACT656f. This is **53 real production paths**, not helper-only/report-only: usable workspace/lockedbuild/runtime6TS+canonicalJSON/publicindex/prompts/license/packagefiles/ALL24original successor-test files+NEW5regressions/portablepublicconsumergates/NEWnpmcomponentCI. No PR/API/default mutation; R04 alone opens required dependency-completePR after dispositions/genuine review/test.
+
+### New paired-source identity, not a recycled old green
+
+- OWN nativeGit `ls-remote origin refs/heads/fix/r42-dashboard-schema-parity`0 returned exact **dd1c4080095c7e739582dc5c631bc419047c48d2**. At17:47:33Z adopted ONLY rootmodel blob`d827fb36a996cd281c9004bf79deaa6bf2cc75c2`/SHA256`be2cb15f6f91f2de4b9ebd4e283ea677e9e39490932db3ecd9934f2d6c1e4a1f` and canonical blob`1a805052a8f97a40827a727b278dd3ce22295f37`/SHA256`35b5a2786db65051ff8f0289901424d74a7b2a9df87fc6c59342ced5834cd18d`; packageJSON byte-identical, schema.ts exact unchanged direct-import wrapper. No old728/346/dirty copy/source invention.
+- Actual own-source AST/runtime probe0: **ALL3pre-existing validator-function ASTs identical**, including `preserve_json_numeric_types` nativeMappingguard; six fixed rawJSON/default/dashboard/nesting accept/reject fixtures match actualgenerated+canonical+packagederivedschema AND ownruntime, two nativeMapping/UserDict positives + strictwidthboolnegative, borrowedinputs unchanged. Same six cases also exercised through packedpublicnpm runtime, not12distinctclaims. Ownmodulepath/hash checked BEFORE runtime use; no siblingmodule shadow.
+- New immutable manifest49sourcepaths, **47read-only paths hash-checked before/after every gate and all47 stagedGitblobs EXACT**. normalize546,render7d8,renderersc3ee unchanged; no mean04/density12/futurehead imported. RootREADME/pyproject/existingcontractCI unmodified; ONLYR04-published model+canonical trackedrootdiff authorized. Secret scan53productionfiles0; whitespace now **0** on exact dd1 bytes. Old CRLFcheck2 remains in `final/` proof, not normalized/erased.
+
+### Final NEW-pair execution
+
+`joined-dd1/commands.json` records exact executable/argv/cwd/UTC/exit/source proof:
+
+- Actual `npm run build`, `typecheck`, `schema:check`, `lint`: **0each**; real compiler7.0.2/Node26.13.1, no localinstall/copieddeps/shared-envwrites/networkassets. NEW5gluetests**5PASS0fail0skip**; **full unfiltered npm437PASS0fail0skip**, ALLoldoraclesbytepreserved, not producer367borrow.
+- Actual drypack+realpack/prepack/build **0each**. Exact25members, currentREADME/license/schema +3canonicalprompts, all22distresources byte-match this own rebuilt output. NEW archive SHA256 **`0804cf7f55b4037f9ff95b9f870b8781aff319d6fa7602580326d31170e55b3b`**.
+- NEW manual-materializedisolatedconsumer **10PASS0fail0skip**, exact13publicexports/origin/6rawcompositioncases/helpers/defaults/literalmean+MAX+subnormal/onepass+immutability/nativeHTML/data/assets +3prompt bytes/canonicalJSON. All16publicTStypes/negative type constraints compile0 against materialized package using existing readonlycompiler. `cleanInstalled:false`; do NOT call this cleaninstall.
+- Two NEW realnativeChromium pages0:3bars2/5/−3 exact independent geometry, escaped literal table/noimageexecution/0console+pageerrors/0externalrequests. Both NEWPNGs actually **OPENED** after freshpin; no label clipping in this sparse fixture. NOT four-CDN/dense-label/12acceptance.
+- **Unchanged strict `scripts/export_schema.py --check` still RED1 on dd1**, despite exactsemantic ownmodel/canonical +rawpackagebyteequivalence0. Actualrootcause remains sorted-property-key text vs canonical insertion-order. No helper/runtime/oracle rewrite. R04 owns canonical-format decision / possible explicitgluegrant;07has same immutablehelper. This one formalcheck is OPEN, not hidden behind narrower npm-schema green.
+
+### Manager disposition / limits / executable next action
+
+**DRAFT/NOT merge-ready/v1/independentapproval.** R04 must disposition strict exporter-formatRED, integrate PR38 pairedsource with its own genuine final-head schema gates (ROOT-reported3CIgreen is not08-observed); disposition546independent/fourfield-policygates and12density; arrange genuine2reviews+2testers/currentCI/cleaninstalledconsumer under actual installpolicy.08did NOT run Pythonfullsuite/118/517/10M/optionalengine/CDN/MCP or approve14/20/03/19/10 findings. No source repairs beyond ownassembly/glue.
+
+**Next executable action:** R04 inspect/cherry-pick production656f (all53paths complete) or open required OWNbranch PR with explicit upstream schema38 dependency/DRAFT blockers; route exporterformatdecision and realindependent package gates.08now saves OWNbranch sanitized evidence/currentstatus/note in a separate scoped checkpoint commit, nonforcepublishes/exactSHA, without changing/replaying tested production. Fullintegrationdelivery estimate **UNKNOWN**, not a calendar promise; package preparation/publication above is actual DONE.
+
+### R48 main-first handoff (same job, no new work slot)
+
+FULL LIVE MAIN`status.md`97lines, R48-18lines, and owncentralrole08 actually READ at safe checkpoint after sourcepublication. **Main delivery target**: complete usable npm slice SOURCE656f above, not an invented PR or delivered-main claim. **Blocker removed**: missing workspace/buildablepublicruntime/export/resource/type/realconsumer closure, backed by437npm+10consumer+2realopenedpages. **Next owner/action**: R04 NOW requiredPR/disposition strict export-formatRED1/schema38 dependency and genuine independent gates/observedCI/promptdefaultmerge when green; do not wait for every branch/fulltoolkit/900issues. This author freezes production656f and concludes ONE evidence/note handoff; no further generic inventory/reporting/receipt loop or test-input change. Actualmain merge/date remain UNKNOWN. Root/manager acknowledgement is NOT fabricated.

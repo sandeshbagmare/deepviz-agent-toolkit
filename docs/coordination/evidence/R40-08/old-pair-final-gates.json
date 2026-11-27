@@ -1,0 +1,278 @@
+{
+  "started": "2026-11-27T17:38:31.552Z",
+  "source": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+  "commands": [
+    {
+      "name": "syntax-native",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--check",
+        "packages/deepviz/scripts/check-native-output.mjs"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:38:31.584Z",
+      "finished": "2026-11-27T17:38:31.645Z",
+      "exit": 0
+    },
+    {
+      "name": "new-final-green",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--test",
+        "packages/deepviz/test/test_r40_foundation.test.mjs"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:38:31.660Z",
+      "finished": "2026-11-27T17:38:32.006Z",
+      "exit": 0
+    },
+    {
+      "name": "full-final-npm",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "test"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:38:32.020Z",
+      "finished": "2026-11-27T17:38:40.033Z",
+      "exit": 0
+    },
+    {
+      "name": "lint",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "lint"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:38:40.052Z",
+      "finished": "2026-11-27T17:38:41.009Z",
+      "exit": 0
+    },
+    {
+      "name": "readonly-export-ruff",
+      "exe": "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+      "args": [
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "scripts/export_schema.py"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:38:41.031Z",
+      "finished": "2026-11-27T17:38:41.210Z",
+      "exit": 0
+    },
+    {
+      "name": "public-final-materialized",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "package:materialized",
+        "--",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\first\\pack\\deepviz-agent-toolkit-0.1.0.tgz",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\final\\consumer",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt\\node_modules\\typescript\\bin\\tsc"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:38:41.228Z",
+      "finished": "2026-11-27T17:38:44.821Z",
+      "exit": 0
+    },
+    {
+      "name": "native-final-browser",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "test:packed-native",
+        "--",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\final\\consumer",
+        "C:/Users/bagma/AppData/Local/Temp/opencode/r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:38:44.843Z",
+      "finished": "2026-11-27T17:38:49.371Z",
+      "exit": 0
+    },
+    {
+      "name": "origin",
+      "exe": "git",
+      "args": [
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:38:49.398Z",
+      "finished": "2026-11-27T17:38:49.510Z",
+      "exit": 0
+    },
+    {
+      "name": "protected-paths",
+      "exe": "git",
+      "args": [
+        "diff",
+        "--name-only",
+        "HEAD",
+        "--",
+        "README.md",
+        "pyproject.toml",
+        "python",
+        "schemas",
+        ".github/workflows/chart-contract.yml"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:38:49.531Z",
+      "finished": "2026-11-27T17:38:49.631Z",
+      "exit": 0
+    },
+    {
+      "name": "stage-production",
+      "exe": "git",
+      "args": [
+        "add",
+        "--",
+        "packages/deepviz/.gitignore",
+        "packages/deepviz/LICENSE",
+        "packages/deepviz/README.md",
+        "packages/deepviz/package.json",
+        "packages/deepviz/scripts/benchmark-stream.mjs",
+        "packages/deepviz/scripts/check-package.mjs",
+        "packages/deepviz/scripts/check-schema.mjs",
+        "packages/deepviz/scripts/copy-prompts.mjs",
+        "packages/deepviz/scripts/verify-streaming-scale.mjs",
+        "packages/deepviz/test/browser.browser.mjs",
+        "packages/deepviz/test/contract.test.mjs",
+        "packages/deepviz/test/mapping-layout-n18.test.mjs",
+        "packages/deepviz/test/n21-streaming-scale.test.mjs",
+        "packages/deepviz/test/native-semantics-n18.browser.mjs",
+        "packages/deepviz/test/native-semantics-n18.test.mjs",
+        "packages/deepviz/test/normalization-bytes.test.mjs",
+        "packages/deepviz/test/normalization-means.test.mjs",
+        "packages/deepviz/test/normalization-policy.test.mjs",
+        "packages/deepviz/test/normalization-regressions.test.mjs",
+        "packages/deepviz/test/normalization-unicode-coercion.test.mjs",
+        "packages/deepviz/test/render-budget-n18.test.mjs",
+        "packages/deepviz/test/render.test.mjs",
+        "packages/deepviz/test/test_n17_boundaries.browser.mjs",
+        "packages/deepviz/test/test_n17_boundaries.test.mjs",
+        "packages/deepviz/test/test_n19_text_formats.test.mjs",
+        "packages/deepviz/test/test_n19_unicode_cells.test.mjs",
+        "packages/deepviz/test/test_n21_resource_policy.test.mjs",
+        "packages/deepviz/test/test_r07_finite_overflow.test.mjs",
+        "packages/deepviz/test/test_r11_packaged_prompts.test.mjs",
+        "packages/deepviz/tsconfig.json",
+        "prompts/v1/README.md",
+        "prompts/v1/request.md",
+        "prompts/v1/system.md",
+        "package.json",
+        "package-lock.json",
+        "scripts/export_schema.py",
+        "packages/deepviz/src/index.ts",
+        "packages/deepviz/src/models.ts",
+        "packages/deepviz/src/schema.ts",
+        "packages/deepviz/src/normalize.ts",
+        "packages/deepviz/src/render.ts",
+        "packages/deepviz/src/renderers.ts",
+        "packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs",
+        "packages/deepviz/test/test_r07_tool_spec_null.test.mjs",
+        "packages/deepviz/test/test_r11_svg_tick_margin.test.mjs",
+        "packages/deepviz/test/test_r23_svg_finite_density.test.mjs",
+        "packages/deepviz/src/chart-spec.schema.json",
+        ".github/workflows/npm-foundation.yml",
+        "packages/deepviz/scripts/check-materialized-package.mjs",
+        "packages/deepviz/scripts/check-native-output.mjs",
+        "packages/deepviz/test/test_r40_foundation.test.mjs"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:38:49.647Z",
+      "finished": "2026-11-27T17:38:49.781Z",
+      "exit": 0
+    },
+    {
+      "name": "staged-paths",
+      "exe": "git",
+      "args": [
+        "diff",
+        "--cached",
+        "--name-only"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:38:49.794Z",
+      "finished": "2026-11-27T17:38:49.878Z",
+      "exit": 0
+    },
+    {
+      "name": "staged-whitespace",
+      "exe": "git",
+      "args": [
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:38:49.891Z",
+      "finished": "2026-11-27T17:38:49.979Z",
+      "exit": 2
+    }
+  ],
+  "packedDistStillByteIdentical": true,
+  "productionPaths": [
+    "packages/deepviz/.gitignore",
+    "packages/deepviz/LICENSE",
+    "packages/deepviz/README.md",
+    "packages/deepviz/package.json",
+    "packages/deepviz/scripts/benchmark-stream.mjs",
+    "packages/deepviz/scripts/check-package.mjs",
+    "packages/deepviz/scripts/check-schema.mjs",
+    "packages/deepviz/scripts/copy-prompts.mjs",
+    "packages/deepviz/scripts/verify-streaming-scale.mjs",
+    "packages/deepviz/test/browser.browser.mjs",
+    "packages/deepviz/test/contract.test.mjs",
+    "packages/deepviz/test/mapping-layout-n18.test.mjs",
+    "packages/deepviz/test/n21-streaming-scale.test.mjs",
+    "packages/deepviz/test/native-semantics-n18.browser.mjs",
+    "packages/deepviz/test/native-semantics-n18.test.mjs",
+    "packages/deepviz/test/normalization-bytes.test.mjs",
+    "packages/deepviz/test/normalization-means.test.mjs",
+    "packages/deepviz/test/normalization-policy.test.mjs",
+    "packages/deepviz/test/normalization-regressions.test.mjs",
+    "packages/deepviz/test/normalization-unicode-coercion.test.mjs",
+    "packages/deepviz/test/render-budget-n18.test.mjs",
+    "packages/deepviz/test/render.test.mjs",
+    "packages/deepviz/test/test_n17_boundaries.browser.mjs",
+    "packages/deepviz/test/test_n17_boundaries.test.mjs",
+    "packages/deepviz/test/test_n19_text_formats.test.mjs",
+    "packages/deepviz/test/test_n19_unicode_cells.test.mjs",
+    "packages/deepviz/test/test_n21_resource_policy.test.mjs",
+    "packages/deepviz/test/test_r07_finite_overflow.test.mjs",
+    "packages/deepviz/test/test_r11_packaged_prompts.test.mjs",
+    "packages/deepviz/tsconfig.json",
+    "prompts/v1/README.md",
+    "prompts/v1/request.md",
+    "prompts/v1/system.md",
+    "package.json",
+    "package-lock.json",
+    "scripts/export_schema.py",
+    "packages/deepviz/src/index.ts",
+    "packages/deepviz/src/models.ts",
+    "packages/deepviz/src/schema.ts",
+    "packages/deepviz/src/normalize.ts",
+    "packages/deepviz/src/render.ts",
+    "packages/deepviz/src/renderers.ts",
+    "packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs",
+    "packages/deepviz/test/test_r07_tool_spec_null.test.mjs",
+    "packages/deepviz/test/test_r11_svg_tick_margin.test.mjs",
+    "packages/deepviz/test/test_r23_svg_finite_density.test.mjs",
+    "packages/deepviz/src/chart-spec.schema.json",
+    ".github/workflows/npm-foundation.yml",
+    "packages/deepviz/scripts/check-materialized-package.mjs",
+    "packages/deepviz/scripts/check-native-output.mjs",
+    "packages/deepviz/test/test_r40_foundation.test.mjs"
+  ]
+}

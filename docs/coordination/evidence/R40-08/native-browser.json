@@ -1,0 +1,59 @@
+{
+  "started": "2026-11-27T17:52:58.552Z",
+  "scope": "native SVG and escaped table only; no CDN acceptance",
+  "cases": [
+    {
+      "name": "native-svg",
+      "actual": {
+        "title": "Packed native",
+        "marks": [
+          {
+            "title": "Alpha: 2",
+            "y": 211.25,
+            "height": 97.5
+          },
+          {
+            "title": "Beta: 5",
+            "y": 65,
+            "height": 243.75
+          },
+          {
+            "title": "Gamma: -3",
+            "y": 308.75,
+            "height": 146.25
+          }
+        ],
+        "cells": [
+          "Alpha",
+          "2",
+          "Beta",
+          "5",
+          "Gamma",
+          "-3"
+        ],
+        "images": 0
+      },
+      "errors": [],
+      "unexpectedRequests": [],
+      "screenshot": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\joined-dd1\\consumer\\native-svg.png"
+    },
+    {
+      "name": "native-table",
+      "actual": {
+        "title": "Visualization",
+        "marks": [],
+        "cells": [
+          "<img src=x onerror=alert(1)>",
+          "2"
+        ],
+        "images": 0
+      },
+      "errors": [],
+      "unexpectedRequests": [],
+      "screenshot": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\joined-dd1\\consumer\\native-table.png"
+    }
+  ],
+  "browser": "159.0.8154.6",
+  "passed": true,
+  "finished": "2026-11-27T17:53:00.552Z"
+}

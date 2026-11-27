@@ -1,0 +1,127 @@
+{
+  "recordedUTC": "2026-11-27T18:14:27.090Z",
+  "production": "656f4f35e5e72d16cdb5ebf557b7d64607eaaa43",
+  "branch": "feat/r40-npm-foundation",
+  "commands": [
+    {
+      "name": "initial-head",
+      "exe": "git",
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "exit": 0,
+      "stdout": "656f4f35e5e72d16cdb5ebf557b7d64607eaaa43\n",
+      "stderr": ""
+    },
+    {
+      "name": "production-dirty-check",
+      "exe": "git",
+      "args": [
+        "diff",
+        "--name-only",
+        "HEAD"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "empty-staging",
+      "exe": "git",
+      "args": [
+        "diff",
+        "--cached",
+        "--name-only"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "source-log",
+      "exe": "git",
+      "args": [
+        "log",
+        "-4",
+        "--oneline",
+        "--decorate"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "exit": 0,
+      "stdout": "656f4f3 (HEAD -> feat/r40-npm-foundation, origin/feat/r40-npm-foundation) feat: assemble public npm foundation with paired-schema consumer gates\n31cff73 (origin/main, origin/HEAD) Merge PR #33: strict numeric ChartSpec contract\nbff9384 (origin/fix/r22-strict-numeric-contract, fix/r22-strict-numeric-contract) fix: validate numeric types in supported Mapping inputs\n99841ff fix: merge-ready strict numeric ChartSpec contract slice\n",
+      "stderr": ""
+    }
+  ],
+  "gitLog": "656f4f3 (HEAD -> feat/r40-npm-foundation, origin/feat/r40-npm-foundation) feat: assemble public npm foundation with paired-schema consumer gates\n31cff73 (origin/main, origin/HEAD) Merge PR #33: strict numeric ChartSpec contract\nbff9384 (origin/fix/r22-strict-numeric-contract, fix/r22-strict-numeric-contract) fix: validate numeric types in supported Mapping inputs\n99841ff fix: merge-ready strict numeric ChartSpec contract slice\n",
+  "sourcePaths": 53,
+  "readonlyStagedBlobs": 47,
+  "schemaPair": "dd1c4080095c7e739582dc5c631bc419047c48d2",
+  "normalizer": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "render": "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57",
+  "renderers": "c3ee1edbfc65406cef7fd809f5a6887471d576a5",
+  "archive": {
+    "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\joined-dd1\\pack\\deepviz-agent-toolkit-0.1.0.tgz",
+    "sha256": "0804cf7f55b4037f9ff95b9f870b8781aff319d6fa7602580326d31170e55b3b"
+  },
+  "packedDistByteIdentical": true,
+  "npm": {
+    "tests": 437,
+    "pass": 437,
+    "fail": 0,
+    "skipped": 0
+  },
+  "publicConsumer": {
+    "tests": 10,
+    "pass": 10,
+    "fail": 0,
+    "skipped": 0
+  },
+  "publicExports": 13,
+  "publicTypes": 16,
+  "prompts": 3,
+  "archiveMembers": 25,
+  "nativePages": 2,
+  "imagesActuallyOpened": true,
+  "cleanInstalled": false,
+  "sortedExporterStillRed": 1,
+  "whitespaceNow": 0,
+  "independentApproval": false,
+  "mergeReady": false,
+  "fullForecast": "UNKNOWN",
+  "mainBoundSlice": "complete usable npm workspace/runtime/build/assets/types/real pack/public consumer at frozen source656f",
+  "blockerRemoved": "actual-main missing usable npm/public consumer closure",
+  "nextOwnerAction": "R04 required dependency PR, export-order decision, schema38 dependency, genuine independent gates/observedCI/prompt green main merge",
+  "sourcePublication": {
+    "command": [
+      "git",
+      "-c",
+      "credential.interactive=false",
+      "push",
+      "-u",
+      "origin",
+      "feat/r40-npm-foundation"
+    ],
+    "exit": 0,
+    "readbackCommand": [
+      "git",
+      "ls-remote",
+      "--heads",
+      "origin",
+      "refs/heads/feat/r40-npm-foundation"
+    ],
+    "exitReadback": 0,
+    "remoteExact": "656f4f35e5e72d16cdb5ebf557b7d64607eaaa43",
+    "observed": "actual immediately prior native tool results, not replayed"
+  },
+  "limits": [
+    "No PR/API/default writes",
+    "No installs/dependency copying/shared env writes",
+    "No Node22/24/local clean installed consumer/observed remote CI",
+    "No full Python/118/517/10M/CDN acceptance",
+    "No author self-approval or waived field-policy/density/export RED"
+  ]
+}

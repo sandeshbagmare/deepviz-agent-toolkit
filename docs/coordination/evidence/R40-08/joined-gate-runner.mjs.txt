@@ -1,0 +1,34 @@
+import {spawnSync} from 'node:child_process';
+import {mkdirSync,writeFileSync,readFileSync} from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+const root=path.dirname(fileURLToPath(import.meta.url)),source='C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt',tools='C:/Users/bagma/AppData/Local/Temp/opencode/r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt';
+const output=path.join(root,'joined-dd1');mkdirSync(output);mkdirSync(path.join(output,'tmp'));mkdirSync(path.join(output,'pack'));
+const npm=path.join(path.dirname(process.execPath),'node_modules/npm/bin/npm-cli.js'),compiler=path.join(tools,'node_modules/typescript/bin/tsc'),python='C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe';
+const manifest=JSON.parse(readFileSync(path.join(root,'schema-dd1/adoption.json'),'utf8')).sourceManifest,authored=new Set(['package.json','packages/deepviz/README.md']);
+const env={...process.env,PATH:path.join(tools,'node_modules/.bin')+path.delimiter+process.env.PATH,npm_config_cache:path.join(output,'npm-cache'),npm_config_offline:'true',npm_config_update_notifier:'false',npm_config_audit:'false',npm_config_fund:'false',TEMP:path.join(output,'tmp'),TMP:path.join(output,'tmp'),PYTHONDONTWRITEBYTECODE:'1'};
+const record={started:new Date().toISOString(),source,base:'31cff73ab057c3fed69bd400ac005f2f11609027',schemaPin:'dd1c4080095c7e739582dc5c631bc419047c48d2',runtimePins:Object.fromEntries(['normalize','render','renderers'].map(name=>[name,manifest.find(file=>file.path===`packages/deepviz/src/${name}.ts`).pin])),compiler,compilerSha256:createHash('sha256').update(readFileSync(compiler)).digest('hex'),node:process.version,commands:[]};const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
+function proof(){for(const f of manifest)if(!authored.has(f.path))assert.equal(hash(readFileSync(path.join(source,f.path))),f.sha256,f.path);}
+function run(name,exe,args,accepted=[0]){proof();const started=new Date().toISOString();const r=spawnSync(exe,args,{cwd:source,env,encoding:'utf8',timeout:600000,maxBuffer:16e6});writeFileSync(path.join(output,name+'.stdout.log'),r.stdout??'');writeFileSync(path.join(output,name+'.stderr.log'),r.stderr??'');record.commands.push({name,exe,args,cwd:source,started,finished:new Date().toISOString(),exit:r.status,readonlyFiles:manifest.length-authored.size});writeFileSync(path.join(output,'commands.json'),JSON.stringify(record,null,2));console.log(name+': '+r.status);assert.ok(accepted.includes(r.status),`${name}: ${r.stdout}\n${r.stderr}`);proof();return {exit:r.status,stdout:r.stdout};}
+run('paired-schema-literals-and-AST',python,['-S',path.join(root,'schema-pair-probe.py'),source]);
+run('model-JSON-semantic-byte-diagnostic',python,['-S',path.join(root,'model-diagnostic.py'),source]);
+record.sortedExporter=run('strict-original-export-check',python,['-S',path.join(root,'model-diagnostic.py'),source,'--export-check'],[0,1]).exit;
+run('build',process.execPath,[npm,'run','build']);run('typecheck',process.execPath,[npm,'run','typecheck']);run('schema-check',process.execPath,[npm,'run','schema:check']);
+run('new-glue-five',process.execPath,['--test','packages/deepviz/test/test_r40_foundation.test.mjs']);run('full-npm',process.execPath,[npm,'test']);run('lint',process.execPath,[npm,'run','lint']);
+run('pack-dry',process.execPath,[npm,'pack','--dry-run','--json','--workspace','@deepviz/agent-toolkit']);run('pack-real',process.execPath,[npm,'pack','--json','--workspace','@deepviz/agent-toolkit','--pack-destination',path.join(output,'pack')]);
+const archive=path.join(output,'pack/deepviz-agent-toolkit-0.1.0.tgz'),consumer=path.join(output,'consumer');record.archive={path:archive,sha256:hash(readFileSync(archive))};
+run('public-consumer',process.execPath,[npm,'run','package:materialized','--',archive,consumer,compiler]);run('native-browser',process.execPath,[npm,'run','test:packed-native','--',consumer,tools]);
+const receipt=JSON.parse(readFileSync(path.join(consumer,'receipt.json'),'utf8'));for(const f of receipt.files.filter(f=>f.path.startsWith('dist/')))assert.equal(f.sha256,hash(readFileSync(path.join(source,'packages/deepviz',f.path))),f.path);record.packedDistByteIdentical=true;
+const paths=[...manifest.map(f=>f.path),'.github/workflows/npm-foundation.yml','packages/deepviz/scripts/check-materialized-package.mjs','packages/deepviz/scripts/check-native-output.mjs','packages/deepviz/test/test_r40_foundation.test.mjs'];record.productionPaths=paths;
+for(const name of paths)assert.ok(!/(?:gh[pousr]_[A-Za-z0-9]{25,}|github_pat_[A-Za-z0-9_]{25,}|sk-[A-Za-z0-9]{30,}|AKIA[0-9A-Z]{16})/.test(readFileSync(path.join(source,name),'utf8')),'Possible secret: '+name);
+assert.equal(run('origin','git',['remote','get-url','origin']).stdout.trim(),'https://github.com/sandeshbagmare/deepviz-agent-toolkit.git');
+assert.deepEqual(run('protected-diff','git',['diff','--name-only','HEAD','--','README.md','pyproject.toml','python','schemas','.github/workflows/chart-contract.yml']).stdout.trim().split('\n').sort(),['python/deepviz/src/deepviz/models.py','schemas/chart-spec.schema.json'].sort());
+run('stage-production','git',['add','--',...paths]);assert.deepEqual(run('staged-paths','git',['diff','--cached','--name-only']).stdout.trim().split('\n').sort(),paths.slice().sort());
+record.whitespace=run('staged-whitespace','git',['diff','--cached','--check'],[0,2]).exit;
+assert.equal(record.whitespace,0,'No whitespace waiver; inspect exact staged source before commit');
+for(const f of manifest.filter(f=>!authored.has(f.path))){const r=spawnSync('git',['rev-parse',':'+f.path],{cwd:source,encoding:'utf8'});assert.equal(r.status,0);assert.equal(r.stdout.trim(),f.blob,f.path);}
+record.stagedReadonlyBlobProof={count:manifest.length-authored.size,exact:true};
+run('commit-production','git',['commit','-m','feat: assemble public npm foundation with paired-schema consumer gates']);record.productionCommit=run('production-head','git',['rev-parse','HEAD']).stdout.trim();
+record.finished=new Date().toISOString();writeFileSync(path.join(output,'commands.json'),JSON.stringify(record,null,2));console.log(JSON.stringify({at:record.finished,productionCommit:record.productionCommit,paths:paths.length,schemaPin:record.schemaPin,sortedExporter:record.sortedExporter,whitespace:record.whitespace,archive:record.archive,packedDistByteIdentical:record.packedDistByteIdentical,stagedReadonlyBlobProof:record.stagedReadonlyBlobProof}));

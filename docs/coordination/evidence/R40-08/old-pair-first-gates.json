@@ -1,0 +1,404 @@
+{
+  "started": "2026-11-27T17:21:50.061Z",
+  "source": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+  "base": "31cff73ab057c3fed69bd400ac005f2f11609027",
+  "normalizer": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "tools": "C:/Users/bagma/AppData/Local/Temp/opencode/r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt",
+  "commands": [
+    {
+      "name": "node-syntax-materialized",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--check",
+        "packages/deepviz/scripts/check-materialized-package.mjs"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:21:50.095Z",
+      "finished": "2026-11-27T17:21:50.161Z",
+      "exit": 0,
+      "error": null,
+      "before": {
+        "at": "2026-11-27T17:21:50.095Z",
+        "exactReadonlyFiles": 45
+      },
+      "after": {
+        "at": "2026-11-27T17:21:50.166Z",
+        "exactReadonlyFiles": 45
+      }
+    },
+    {
+      "name": "node-syntax-native",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--check",
+        "packages/deepviz/scripts/check-native-output.mjs"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:21:50.174Z",
+      "finished": "2026-11-27T17:21:50.228Z",
+      "exit": 0,
+      "error": null,
+      "before": {
+        "at": "2026-11-27T17:21:50.174Z",
+        "exactReadonlyFiles": 45
+      },
+      "after": {
+        "at": "2026-11-27T17:21:50.233Z",
+        "exactReadonlyFiles": 45
+      }
+    },
+    {
+      "name": "compiler-version",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt\\node_modules\\typescript\\bin\\tsc",
+        "--version"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:21:50.239Z",
+      "finished": "2026-11-27T17:21:50.408Z",
+      "exit": 0,
+      "error": null,
+      "before": {
+        "at": "2026-11-27T17:21:50.239Z",
+        "exactReadonlyFiles": 45
+      },
+      "after": {
+        "at": "2026-11-27T17:21:50.417Z",
+        "exactReadonlyFiles": 45
+      }
+    },
+    {
+      "name": "model-pair",
+      "exe": "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+      "args": [
+        "-S",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\verify-model.py",
+        "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:21:50.426Z",
+      "finished": "2026-11-27T17:21:50.978Z",
+      "exit": 1,
+      "error": null,
+      "before": {
+        "at": "2026-11-27T17:21:50.426Z",
+        "exactReadonlyFiles": 45
+      },
+      "after": {
+        "at": "2026-11-27T17:21:50.987Z",
+        "exactReadonlyFiles": 45
+      }
+    },
+    {
+      "name": "new-glue-green",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--test",
+        "packages/deepviz/test/test_r40_foundation.test.mjs"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:21:50.999Z",
+      "finished": "2026-11-27T17:21:51.309Z",
+      "exit": 0,
+      "error": null,
+      "before": {
+        "at": "2026-11-27T17:21:50.999Z",
+        "exactReadonlyFiles": 45
+      },
+      "after": {
+        "at": "2026-11-27T17:21:51.316Z",
+        "exactReadonlyFiles": 45
+      }
+    },
+    {
+      "name": "build",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "build"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:21:51.325Z",
+      "finished": "2026-11-27T17:21:52.240Z",
+      "exit": 0,
+      "error": null,
+      "before": {
+        "at": "2026-11-27T17:21:51.325Z",
+        "exactReadonlyFiles": 45
+      },
+      "after": {
+        "at": "2026-11-27T17:21:52.246Z",
+        "exactReadonlyFiles": 45
+      }
+    },
+    {
+      "name": "typecheck",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "typecheck"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:21:52.259Z",
+      "finished": "2026-11-27T17:21:52.669Z",
+      "exit": 0,
+      "error": null,
+      "before": {
+        "at": "2026-11-27T17:21:52.259Z",
+        "exactReadonlyFiles": 45
+      },
+      "after": {
+        "at": "2026-11-27T17:21:52.674Z",
+        "exactReadonlyFiles": 45
+      }
+    },
+    {
+      "name": "full-npm",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "test"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:21:52.680Z",
+      "finished": "2026-11-27T17:21:58.451Z",
+      "exit": 0,
+      "error": null,
+      "before": {
+        "at": "2026-11-27T17:21:52.680Z",
+        "exactReadonlyFiles": 45
+      },
+      "after": {
+        "at": "2026-11-27T17:21:58.457Z",
+        "exactReadonlyFiles": 45
+      }
+    },
+    {
+      "name": "schema-check",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "schema:check"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:21:58.462Z",
+      "finished": "2026-11-27T17:21:59.675Z",
+      "exit": 0,
+      "error": null,
+      "before": {
+        "at": "2026-11-27T17:21:58.462Z",
+        "exactReadonlyFiles": 45
+      },
+      "after": {
+        "at": "2026-11-27T17:21:59.681Z",
+        "exactReadonlyFiles": 45
+      }
+    },
+    {
+      "name": "pack-dry",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "pack",
+        "--dry-run",
+        "--json",
+        "--workspace",
+        "@deepviz/agent-toolkit"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:21:59.686Z",
+      "finished": "2026-11-27T17:22:01.548Z",
+      "exit": 0,
+      "error": null,
+      "before": {
+        "at": "2026-11-27T17:21:59.686Z",
+        "exactReadonlyFiles": 45
+      },
+      "after": {
+        "at": "2026-11-27T17:22:01.553Z",
+        "exactReadonlyFiles": 45
+      }
+    },
+    {
+      "name": "pack",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "pack",
+        "--json",
+        "--workspace",
+        "@deepviz/agent-toolkit",
+        "--pack-destination",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\first\\pack"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:22:01.559Z",
+      "finished": "2026-11-27T17:22:02.955Z",
+      "exit": 0,
+      "error": null,
+      "before": {
+        "at": "2026-11-27T17:22:01.559Z",
+        "exactReadonlyFiles": 45
+      },
+      "after": {
+        "at": "2026-11-27T17:22:02.963Z",
+        "exactReadonlyFiles": 45
+      }
+    },
+    {
+      "name": "public-materialized",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "package:materialized",
+        "--",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\first\\pack\\deepviz-agent-toolkit-0.1.0.tgz",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\first\\consumer",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt\\node_modules\\typescript\\bin\\tsc"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:22:02.971Z",
+      "finished": "2026-11-27T17:22:04.146Z",
+      "exit": 0,
+      "error": null,
+      "before": {
+        "at": "2026-11-27T17:22:02.971Z",
+        "exactReadonlyFiles": 45
+      },
+      "after": {
+        "at": "2026-11-27T17:22:04.152Z",
+        "exactReadonlyFiles": 45
+      }
+    },
+    {
+      "name": "native-browser",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "test:packed-native",
+        "--",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\first\\consumer",
+        "C:/Users/bagma/AppData/Local/Temp/opencode/r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "started": "2026-11-27T17:22:04.159Z",
+      "finished": "2026-11-27T17:22:07.626Z",
+      "exit": 0,
+      "error": null,
+      "before": {
+        "at": "2026-11-27T17:22:04.159Z",
+        "exactReadonlyFiles": 45
+      },
+      "after": {
+        "at": "2026-11-27T17:22:07.632Z",
+        "exactReadonlyFiles": 45
+      }
+    }
+  ],
+  "preflight": {
+    "compiler": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt\\node_modules\\typescript\\bin\\tsc",
+    "compiler_sha256": "2219f428a7e55aaf1f7ad85b9b0f0cf5078aeb76ccc9a7c6036c92d48f492ffd",
+    "compiler_package": "7.0.2",
+    "node": "v26.13.1",
+    "npm": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+    "distExisted": false,
+    "proof": {
+      "at": "2026-11-27T17:21:50.088Z",
+      "exactReadonlyFiles": 45
+    }
+  },
+  "dist": [
+    {
+      "name": "chart-spec.schema.json",
+      "sha256": "ec07f25e89597c73aaec9032b278ee5b1ef8d3242499da1f317e5f65ec251e2e"
+    },
+    {
+      "name": "index.d.ts",
+      "sha256": "ad7078508477928bf544b23c37a28abc778c85470aecfae8cc91e6929a4c97f2"
+    },
+    {
+      "name": "index.js",
+      "sha256": "887a0d361250e936d43f6b5f8cac4f65a024676520ad6bcfb49ab8042e355c39"
+    },
+    {
+      "name": "index.js.map",
+      "sha256": "c8ae153be21ed11e0585f86a83791061a927fd0960064329b50d1b7bb00e9354"
+    },
+    {
+      "name": "models.d.ts",
+      "sha256": "0aa4657b8204cc353c1aea1a829e1991632602e0b24d414569163e3467bb3deb"
+    },
+    {
+      "name": "models.js",
+      "sha256": "936bcf189c647a45ab0063dbdff5158ca5711a374e6eae7f4a00d160d91d265e"
+    },
+    {
+      "name": "models.js.map",
+      "sha256": "e236172f498faaa29fa05b6bd9ffff2fbf95affa0a782470ee63abf81865f4ce"
+    },
+    {
+      "name": "normalize.d.ts",
+      "sha256": "c403eea0ed6ec3fc8ec0315efc2e77c9e2a0f0698e666cb31b64a4d62f3e1ecd"
+    },
+    {
+      "name": "normalize.js",
+      "sha256": "5d41fefef79777061e3dd42c711a67c348693382811e79a08d197315d6207eff"
+    },
+    {
+      "name": "normalize.js.map",
+      "sha256": "60aecd537754b885cb5ad355a5781232066cd8591edcb8246d73dcf575680066"
+    },
+    {
+      "name": "prompts",
+      "directory": true
+    },
+    {
+      "name": "render.d.ts",
+      "sha256": "976edd604d1afdf41209d9531ba1926607a3428b12d245b8dc51d9b2e4ae8d14"
+    },
+    {
+      "name": "render.js",
+      "sha256": "bc43ad42f0d731db59eb51a3adef78477450689b2a4e39ec5b7a5acedd2e638c"
+    },
+    {
+      "name": "render.js.map",
+      "sha256": "ec2eb81276c9b87183307fbc6a36c1867c12561b530c57959a2a82c2cd9d2f2a"
+    },
+    {
+      "name": "renderers.d.ts",
+      "sha256": "2cba7af7884f327bef8cc2f6a15b7f8fdf4ee5743fab365997d124e24caaee07"
+    },
+    {
+      "name": "renderers.js",
+      "sha256": "c76b4c51c88dafcd125b06d352bb89575c2e8055a32f43f4fad764b10c5ab347"
+    },
+    {
+      "name": "renderers.js.map",
+      "sha256": "fbbe2080b1d83461a1e2a56a6ccc2d40665d6b341ad900c34a5b182c92dc6024"
+    },
+    {
+      "name": "schema.d.ts",
+      "sha256": "ee40641c9768dd46fd57955a13e523b965c2d32cfd71e83365ca2266b5e793fe"
+    },
+    {
+      "name": "schema.js",
+      "sha256": "a48b8860a9bfb63d757c49fbf9ebecdc1596e3bef40dfdadaf6203351b626482"
+    },
+    {
+      "name": "schema.js.map",
+      "sha256": "4dac40a1bdb0ca8afe5476415dc559b6da8f3c7ad45ff9760c0e03409b02344d"
+    }
+  ],
+  "archive": {
+    "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\first\\pack\\deepviz-agent-toolkit-0.1.0.tgz",
+    "sha256": "1150779e7d6352b6352f3288e5a6bd4e1990162af0fc20cd61e050d6eaf42925"
+  },
+  "packedDistByteIdentical": true,
+  "finished": "2026-11-27T17:22:07.636Z"
+}

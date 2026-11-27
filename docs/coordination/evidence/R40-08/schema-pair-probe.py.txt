@@ -1,0 +1,50 @@
+import ast
+from collections import UserDict
+import hashlib
+import json
+from pathlib import Path
+import sys
+from types import MappingProxyType
+
+sys.dont_write_bytecode = True
+root = Path(sys.argv[1]).resolve()
+artifacts = Path(__file__).resolve().parent
+old = ast.parse((artifacts / "schema-dd1/before-model.py").read_text(encoding="utf-8"))
+current = ast.parse((root / "python/deepviz/src/deepviz/models.py").read_text(encoding="utf-8"))
+before = {node.name: ast.dump(node, include_attributes=False) for node in ast.walk(old) if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef))}
+after = {node.name: ast.dump(node, include_attributes=False) for node in ast.walk(current) if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef))}
+assert all(after.get(name) == body for name, body in before.items()), "A pre-existing runtime validator changed"
+mapping = [node.name for node in ast.walk(old) if isinstance(node, ast.FunctionDef) and any(isinstance(part, ast.Name) and part.id == "Mapping" for part in ast.walk(node))]
+assert mapping, "Original native Mapping guard was not identified"
+sys.path[:0] = [str(root / "python/deepviz/src"), r"C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages"]
+import deepviz.models as model
+from jsonschema import Draft202012Validator
+
+assert Path(model.__file__).resolve() == root / "python/deepviz/src/deepviz/models.py"
+canonical = json.loads((root / "schemas/chart-spec.schema.json").read_text(encoding="utf-8"))
+assert model.ChartSpec.model_json_schema() == canonical
+assert (root / "schemas/chart-spec.schema.json").read_bytes() == (root / "packages/deepviz/src/chart-spec.schema.json").read_bytes()
+Draft202012Validator.check_schema(canonical)
+validator = Draft202012Validator(canonical)
+cases = [({"charts": [{}]}, False), ({"kind": "dashboard"}, False), ({"kind": "dashboard", "charts": []}, False), ({"kind": "bar", "charts": []}, True), ({"kind": "dashboard", "charts": [{}]}, True), ({"kind": "dashboard", "charts": [{"kind": "dashboard", "charts": [{}]}]}, False)]
+for value, valid in cases:
+    original = json.dumps(value, sort_keys=True)
+    assert validator.is_valid(value) is valid, value
+    try:
+        model.ChartSpec.model_validate(value)
+        runtime_valid = True
+    except ValueError:
+        runtime_valid = False
+    assert runtime_valid is valid, value
+    assert json.dumps(value, sort_keys=True) == original
+for factory in [MappingProxyType, UserDict]:
+    data = {"width": 901}
+    assert model.ChartSpec.model_validate(factory(data)).width == 901
+    assert data == {"width": 901}
+try:
+    model.ChartSpec.model_validate({"width": True})
+except ValueError:
+    pass
+else:
+    raise AssertionError("Strict bool-as-integer guard lost")
+print(json.dumps({"module": str(Path(model.__file__).resolve()), "module_sha256": hashlib.sha256(Path(model.__file__).read_bytes()).hexdigest(), "all_existing_function_AST_equal": len(before), "mapping_guard_functions": mapping, "raw_literal_schema_runtime_cases": len(cases), "native_mapping_controls": 2, "strict_bool_control": 1, "schema_bytes_equal": True, "input_immutable": True, "passed": True}))
