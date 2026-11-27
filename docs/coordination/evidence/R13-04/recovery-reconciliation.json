@@ -1,0 +1,104 @@
+{
+  "role": "R13-04-utf8-field-envelope",
+  "owner_session": "ses_de5678314ffeuDXtC7RfGsbD6V",
+  "observed_utc": "2026-11-27T13:54:46.783785+00:00",
+  "kind": "one bounded recovery reconciliation; prior saved tests not rerun",
+  "source_checkpoint": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "branch": "agents/r10-04-utf8-field-envelope",
+  "local_head_at_recovery": "b2739ad38f544c1bfefe4ee2c687e24a476e05e3",
+  "github_get": {
+    "user_http": 200,
+    "login": "sandeshbagmare",
+    "ref_http": 200,
+    "own_remote_sha": "b2739ad38f544c1bfefe4ee2c687e24a476e05e3",
+    "local_remote_match": true,
+    "issue22_http": 200,
+    "issue22_state": "open",
+    "api_writes": 0,
+    "credential_handling": "GCM output captured; memory-only token; redirects blocked; credential output suppressed"
+  },
+  "saved_source_fixture_module_hashes": {
+    "packages/deepviz/src/normalize.ts": "d1b45d2a55dfd05361184a57da952a0da735e9b6d72c2491f908ef27bda22371",
+    "packages/deepviz/src/models.ts": "d43d5ae0bef1d43f251ed71899a9b507c6575562e4403bd2e2ac02bd7caa43e6",
+    "packages/deepviz/dist/normalize.js": "adb0493123fd478567212e76e2c6e52c828aeaa9eb5425c219b5b1a576689612",
+    "tests/r10_probes/role04/utf8-envelope-cases.json": "423356d34b26ba1a548659774553ae77c1b152252cf27374b6b051fa99287307",
+    "tests/r10_probes/role04/test_utf8_field_envelope.py": "f137e00c6a69f6035b4911b9a275dcc924179bc910cc5379f640a2fbf4515a61",
+    "tests/r10_probes/role04/utf8-field-envelope.test.mjs": "08a7d5b915336df03eb8ff049ce41075dbcdc576e982946abbcffda45bc0aa4c",
+    "tests/r10_probes/role04/README.md": "90309d03a668fd8a5a385ac90f2d1e8d39f3031e624cca90c610f4e949e6cc36",
+    "python/deepviz/src/deepviz/normalize.py": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+    "python/deepviz/src/deepviz/models.py": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+  },
+  "saved_raw_artifact_hashes_matched": 10,
+  "mismatches": [],
+  "saved_python_new_junit": {
+    "tests": 104,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "passed": 104,
+    "failure_names": []
+  },
+  "saved_python_original_n11_junit": {
+    "tests": 26,
+    "errors": 0,
+    "failures": 4,
+    "skipped": 0,
+    "passed": 22,
+    "failure_names": [
+      "test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii]",
+      "test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte]",
+      "test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte]",
+      "test_flattened_multibyte_key_at_64kib_is_preserved"
+    ]
+  },
+  "saved_ts_new": {
+    "tests": 105,
+    "passed": 105,
+    "failed": 0,
+    "skipped": 0
+  },
+  "saved_ts_original_n21": {
+    "tests": 23,
+    "passed": 23,
+    "failed": 0,
+    "skipped": 0
+  },
+  "saved_exits": [
+    {
+      "check": "new Python regressions",
+      "exit": 0
+    },
+    {
+      "check": "new Python scoped Ruff",
+      "exit": 0
+    },
+    {
+      "check": "new Python scoped mypy",
+      "exit": 0
+    },
+    {
+      "check": "isolated TypeScript build",
+      "exit": 0
+    },
+    {
+      "check": "TypeScript noEmit typecheck",
+      "exit": 0
+    },
+    {
+      "check": "new TypeScript regressions",
+      "exit": 0
+    },
+    {
+      "check": "unchanged original N11 policy",
+      "exit": 1
+    },
+    {
+      "check": "unchanged original N21 policy",
+      "exit": 0
+    }
+  ],
+  "prior_command_reconciliation": "Last foreground receipt commit/push/readback saved exit0; no prior background command was recorded; no build/test/matrix/scale command restarted or polled",
+  "production_schema_existing_oracle_diff_exit": 0,
+  "limits": "Saved checkpoint-specific results only; no new current-MAIN test pass, full suite, product fix, CI acceptance, independent signoff,10M or RSS claim",
+  "next_action": "Publish own small recovery/disposition packet then R04 decide four-existing-policy-failure disposition and independent candidate retests after16handback; no new issue inflation"
+}
