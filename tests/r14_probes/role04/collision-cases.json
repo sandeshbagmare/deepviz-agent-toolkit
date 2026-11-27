@@ -1,0 +1,91 @@
+{
+  "target": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "collisions": [
+    {"id": "literal-dot", "field": "part.leaf", "row": {"id": 1, "part.leaf": 11, "part": {"leaf": 29}}},
+    {"id": "literal-index", "field": "part.0", "row": {"id": 1, "part.0": 11, "part": [29]}},
+    {"id": "deep-array-index", "field": "part.1.value", "row": {"id": 1, "part.1.value": 11, "part": [{"value": 3}, {"value": 29}]}},
+    {"id": "dotted-child", "field": "part.branch.leaf", "row": {"id": 1, "part": {"branch.leaf": 11, "branch": {"leaf": 29}}}},
+    {"id": "numeric-dictionary", "field": "part.0", "row": {"id": 1, "part": {"0": 11}, "part.0": 29}},
+    {"id": "null-is-still-a-contribution", "field": "part.leaf", "row": {"id": 1, "part.leaf": null, "part": {"leaf": 29}}}
+  ],
+  "preservations": [
+    {
+      "id": "bracket-leading-zero-fullwidth-dot",
+      "spec": {"x": "part[0]", "y": "part.0"},
+      "rows": [{"id": 1, "part[0]": 11, "part.00": 13, "part": [17], "part．0": 19}],
+      "expected": [{"id": 1, "part[0]": 11, "part.00": 13, "part.0": 17, "part．0": 19}]
+    },
+    {
+      "id": "array-path-versus-bracket-and-zero-prefix",
+      "spec": {"x": "items[0].v", "y": "items.0.v"},
+      "rows": [{"id": 1, "items": [{"v": 2}, {"v": 3}], "items[0].v": 11, "items.00.v": 13}],
+      "expected": [{"id": 1, "items.0.v": 2, "items.1.v": 3, "items[0].v": 11, "items.00.v": 13}]
+    },
+    {
+      "id": "byte-distinct-unicode-no-normalization",
+      "spec": {"x": "café", "y": "café"},
+      "rows": [{"id": 1, "café": 11, "café": 29, "a.b": 31, "a．b": 37, "a": {"c": 41}, "а.b": 43}],
+      "expected": [{"id": 1, "café": 11, "café": 29, "a.b": 31, "a．b": 37, "a.c": 41, "а.b": 43}]
+    },
+    {
+      "id": "numeric-dictionary-keys-remain-distinct",
+      "spec": {"x": "nested.0", "y": "nested.٠"},
+      "rows": [{"id": 1, "nested": {"0": 11, "00": 13, "٠": 17, "０": 19}, "seq": [23], "seq[0]": 29}],
+      "expected": [{"id": 1, "nested.0": 11, "nested.00": 13, "nested.٠": 17, "nested.０": 19, "seq.0": 23, "seq[0]": 29}]
+    },
+    {
+      "id": "different-origin-same-output-name-across-rows",
+      "spec": {"x": "id", "y": "part.leaf"},
+      "rows": [{"id": 1, "part.leaf": 11}, {"id": 2, "part": {"leaf": 29}}],
+      "expected": [{"id": 1, "part.leaf": 11}, {"id": 2, "part.leaf": 29}]
+    }
+  ],
+  "columns": [
+    {
+      "id": "scalar-columns-with-path-looking-names",
+      "spec": {"x": "a.b", "y": "a[0]"},
+      "data": {"a.b": [11, 12], "a[0]": [29, 30], "a．b": [41, 42]},
+      "expected": [{"a.b": 11, "a[0]": 29, "a．b": 41}, {"a.b": 12, "a[0]": 30, "a．b": 42}],
+      "ambiguity_allowed": false
+    },
+    {
+      "id": "mixed-scalar-and-nested-columns-noncollision",
+      "spec": {"x": "literal[0]", "y": "literal.0"},
+      "data": {"literal[0]": [11, 12], "literal": [[29], [30]], "id": [1, 2]},
+      "expected": [{"literal[0]": 11, "literal.0": 29, "id": 1}, {"literal[0]": 12, "literal.0": 30, "id": 2}],
+      "ambiguity_allowed": true
+    },
+    {
+      "id": "mixed-scalar-and-nested-columns-collision",
+      "spec": {"x": "id", "y": "part.leaf"},
+      "data": {"part.leaf": [11, 12], "part": [{"leaf": 29}, {"leaf": 30}], "id": [1, 2]},
+      "reject": true
+    }
+  ],
+  "selected": [
+    {
+      "id": "explicit-path-selects-nested-not-literal-dot-sibling",
+      "spec": {"x": "id", "y": "value", "data_path": "bundle.rows"},
+      "data": {"bundle.rows": [{"id": 9, "value": 99}], "bundle": {"rows": [{"id": 1, "value": 11}, {"id": 2, "value": 29}]}},
+      "expected": [{"id": 1, "value": 11}, {"id": 2, "value": 29}]
+    },
+    {
+      "id": "explicit-ascii-index-selects-only-requested-page",
+      "spec": {"x": "id", "y": "value", "data_path": "groups.1.rows"},
+      "data": {"groups": [{"rows": [{"id": 9, "value": 99}]}, {"rows": [{"id": 1, "value": 11}, {"id": 2, "value": 29}]}]},
+      "expected": [{"id": 1, "value": 11}, {"id": 2, "value": 29}]
+    },
+    {
+      "id": "explicit-object-numeric-key-is-not-array-index",
+      "spec": {"x": "id", "y": "value", "data_path": "groups.00"},
+      "data": {"groups": {"00": [{"id": 1, "value": 11}], "0": [{"id": 9, "value": 99}]}},
+      "expected": [{"id": 1, "value": 11}]
+    }
+  ],
+  "observations": [
+    {"id": "unicode-decimal-array-index", "classification": "non-ASCII index grammar is not specified by the public contract", "data": {"groups": [{"value": 11}, {"value": 29}]}, "path": "groups.١"},
+    {"id": "zero-prefixed-array-index", "classification": "leading-zero index grammar is not specified", "data": {"groups": [{"value": 11}, {"value": 29}]}, "path": "groups.01"},
+    {"id": "literal-bracket-component", "classification": "bracket syntax versus literal field names is not specified", "data": {"groups[0]": [{"value": 11}], "groups": [{"value": 29}]}, "path": "groups[0]"},
+    {"id": "bracket-index-without-literal-key", "classification": "bracket indexing is not promised by dot-separated data_path", "data": {"groups": [{"value": 11}, {"value": 29}]}, "path": "groups[1]"}
+  ]
+}

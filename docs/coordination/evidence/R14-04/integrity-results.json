@@ -1,0 +1,360 @@
+{
+  "role": "R14-04-path-collision-integrity",
+  "owner_session": "ses_de5678314ffeuDXtC7RfGsbD6V",
+  "observed_utc": "2026-11-27T14:28:23.787587+00:00",
+  "target_published_commit": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "execution_branch": "agents/r10-04-utf8-field-envelope",
+  "execution_branch_head_before_new_tests_commit": "ee5cf1971bc22acaf046dd25d92b5164497f4837",
+  "production_schema_target_diff_exit": 0,
+  "source_identity": {
+    "python/deepviz/src/deepviz/normalize.py": {
+      "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+      "target_blob": "04e15965934d37f4140f2dd6772b2e97747920ea",
+      "target_bytes_equal": true
+    },
+    "python/deepviz/src/deepviz/models.py": {
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "target_blob": "17877904985d496f645cd7c66305efc8305bcb5f",
+      "target_bytes_equal": true
+    },
+    "python/deepviz/src/deepviz/__init__.py": {
+      "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+      "target_blob": "0fed1772355f25da05329fda38bd29216ab4c75f",
+      "target_bytes_equal": true
+    },
+    "packages/deepviz/src/normalize.ts": {
+      "sha256": "d1b45d2a55dfd05361184a57da952a0da735e9b6d72c2491f908ef27bda22371",
+      "target_blob": "298b036646aed9af4a88080f881f84390b5c0b06",
+      "target_bytes_equal": true
+    },
+    "packages/deepviz/src/models.ts": {
+      "sha256": "d43d5ae0bef1d43f251ed71899a9b507c6575562e4403bd2e2ac02bd7caa43e6",
+      "target_blob": "58b11ee38240db20974d5ede07a320a8c5ce4740",
+      "target_bytes_equal": true
+    },
+    "packages/deepviz/src/index.ts": {
+      "sha256": "a4c1ebd22dfdc100e28eef28b11030d5f08bb09db0da9649c22848d3ef9a8aac",
+      "target_blob": "2c0f4ed5b75fa3bfccc9714b55f565ccec747ac3",
+      "target_bytes_equal": true
+    }
+  },
+  "loaded_python_normalizer": "python/deepviz/src/deepviz/normalize.py",
+  "compiled_typescript_normalizer": {
+    "path": "packages/deepviz/dist/normalize.js",
+    "sha256": "adb0493123fd478567212e76e2c6e52c828aeaa9eb5425c219b5b1a576689612",
+    "build_reused": true,
+    "provenance": "Same own compiled module/source bytes verified by R10/R13; no fresh build claim"
+  },
+  "test_fixture_sha256": {
+    "tests/r14_probes/role04/README.md": "602690c5fb319fed273af1b72d08f58e46bcdbf20f80879828c683625bde04a4",
+    "tests/r14_probes/role04/collision-cases.json": "f0d5d3568e23f925e76de6e2cd2fbcaf9dadb75b6d6c24e69c87ecaef1d6aa7d",
+    "tests/r14_probes/role04/observe-path-grammar.mjs": "ae70420613fb2aa0c58ffaff85510fd16ba2edd6bc0fbedde624e74b6f623f76",
+    "tests/r14_probes/role04/observe_path_grammar.py": "93e0b468bc7d7ad5e82109cfd36d9031f6b4e066d4f9dd3af1707abee9501062",
+    "tests/r14_probes/role04/path-collision-integrity.test.mjs": "455f66da23195dfc80842977fe8cb9683b6a5e309721deb21ece27a0c2f44143",
+    "tests/r14_probes/role04/test_path_collision_integrity.py": "3940fef04e2c93a82c305152dca2579c8831ff2ccff84a63e8ac26dd2d716c26"
+  },
+  "actual_new_checks": {
+    "python": {
+      "exit": 0,
+      "passed": 69,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 0.52
+    },
+    "typescript": {
+      "exit": 0,
+      "passed": 69,
+      "failed": 0,
+      "skipped": 0,
+      "milliseconds": 332.5602
+    },
+    "ruff": {
+      "exit": 0
+    },
+    "mypy": {
+      "exit": 0,
+      "source_files": 2
+    },
+    "node_syntax": {
+      "exit": 0
+    }
+  },
+  "per_language_case_breakdown": {
+    "collision_rejections": 36,
+    "exact_noncollision_records_jsonl": 10,
+    "column_integrity": 3,
+    "explicit_path_positives": 3,
+    "early_collision_errors": 12,
+    "ordinary_stream_exhaustion": 1,
+    "corrupt_success_oracle_negative_controls": 3,
+    "unicode_fixture_integrity": 1
+  },
+  "early_consumption": {
+    "offered_rows": 60,
+    "bad_row_1based": [
+      1,
+      41
+    ],
+    "actual_consumption_equals_first_bad_row": true,
+    "ordinary_safe_stream_input_output_count": 60,
+    "caller_closure_not_asserted": true
+  },
+  "normative_integrity_failures_observed": 0,
+  "new_findings_or_tickets_created": 0,
+  "cross_language_column_outcomes": {
+    "python": [
+      {
+        "id": "scalar-columns-with-path-looking-names",
+        "outcome": {
+          "records": [
+            {
+              "a.b": 11,
+              "a[0]": 29,
+              "a\uff0eb": 41
+            },
+            {
+              "a.b": 12,
+              "a[0]": 30,
+              "a\uff0eb": 42
+            }
+          ],
+          "input_count": 2,
+          "warnings": [],
+          "strategy": "none"
+        }
+      },
+      {
+        "id": "mixed-scalar-and-nested-columns-noncollision",
+        "outcome": {
+          "records": [
+            {
+              "literal[0]": 11,
+              "literal.0": 29,
+              "id": 1
+            },
+            {
+              "literal[0]": 12,
+              "literal.0": 30,
+              "id": 2
+            }
+          ],
+          "input_count": 2,
+          "warnings": [],
+          "strategy": "none"
+        }
+      },
+      {
+        "id": "mixed-scalar-and-nested-columns-collision",
+        "outcome": {
+          "error_type": "ValueError",
+          "message": "Flattened field collision: 'part.leaf'"
+        }
+      }
+    ],
+    "typescript": [
+      {
+        "id": "scalar-columns-with-path-looking-names",
+        "outcome": {
+          "records": [
+            {
+              "a.b": 11,
+              "a[0]": 29,
+              "a\uff0eb": 41
+            },
+            {
+              "a.b": 12,
+              "a[0]": 30,
+              "a\uff0eb": 42
+            }
+          ],
+          "input_count": 2,
+          "warnings": [],
+          "strategy": "none"
+        }
+      },
+      {
+        "id": "mixed-scalar-and-nested-columns-noncollision",
+        "outcome": {
+          "error_type": "ValidationError",
+          "message": "Ambiguous nested column arrays; set an explicit data_path"
+        }
+      },
+      {
+        "id": "mixed-scalar-and-nested-columns-collision",
+        "outcome": {
+          "error_type": "ValidationError",
+          "message": "Ambiguous nested column arrays; set an explicit data_path"
+        }
+      }
+    ]
+  },
+  "nonnormative_grammar_observations": {
+    "python": {
+      "language": "python",
+      "normative": false,
+      "observations": [
+        {
+          "id": "unicode-decimal-array-index",
+          "classification": "non-ASCII index grammar is not specified by the public contract",
+          "path": "groups.\u0661",
+          "outcome": {
+            "records": [
+              {
+                "value": 29
+              }
+            ],
+            "input_count": 1,
+            "strategy": "none",
+            "warnings": []
+          }
+        },
+        {
+          "id": "zero-prefixed-array-index",
+          "classification": "leading-zero index grammar is not specified",
+          "path": "groups.01",
+          "outcome": {
+            "records": [
+              {
+                "value": 29
+              }
+            ],
+            "input_count": 1,
+            "strategy": "none",
+            "warnings": []
+          }
+        },
+        {
+          "id": "literal-bracket-component",
+          "classification": "bracket syntax versus literal field names is not specified",
+          "path": "groups[0]",
+          "outcome": {
+            "records": [
+              {
+                "value": 11
+              }
+            ],
+            "input_count": 1,
+            "strategy": "none",
+            "warnings": []
+          }
+        },
+        {
+          "id": "bracket-index-without-literal-key",
+          "classification": "bracket indexing is not promised by dot-separated data_path",
+          "path": "groups[1]",
+          "outcome": {
+            "error_type": "ValueError",
+            "message": "data_path 'groups[1]' did not match any input"
+          }
+        }
+      ]
+    },
+    "typescript": {
+      "language": "typescript",
+      "normative": false,
+      "observations": [
+        {
+          "id": "unicode-decimal-array-index",
+          "classification": "non-ASCII index grammar is not specified by the public contract",
+          "path": "groups.\u2518\u00ed",
+          "outcome": {
+            "error_type": "ValidationError",
+            "message": "data_path groups.\u2518\u00ed did not match any input"
+          }
+        },
+        {
+          "id": "zero-prefixed-array-index",
+          "classification": "leading-zero index grammar is not specified",
+          "path": "groups.01",
+          "outcome": {
+            "records": [
+              {
+                "value": 29
+              }
+            ],
+            "input_count": 1,
+            "warnings": [],
+            "strategy": "none"
+          }
+        },
+        {
+          "id": "literal-bracket-component",
+          "classification": "bracket syntax versus literal field names is not specified",
+          "path": "groups[0]",
+          "outcome": {
+            "records": [
+              {
+                "value": 11
+              }
+            ],
+            "input_count": 1,
+            "warnings": [],
+            "strategy": "none"
+          }
+        },
+        {
+          "id": "bracket-index-without-literal-key",
+          "classification": "bracket indexing is not promised by dot-separated data_path",
+          "path": "groups[1]",
+          "outcome": {
+            "error_type": "ValidationError",
+            "message": "data_path groups[1] did not match any input"
+          }
+        }
+      ]
+    },
+    "difference": "Arabic-Indic digit1 in groups.\u0661 selects value29 in Python, while TypeScript rejects unmatched path; public index alphabet is unspecified, not declared loss/defect",
+    "collectors_exit": 0,
+    "not_test_pass_counts": true
+  },
+  "github_get": {
+    "user_http": 200,
+    "login": "sandeshbagmare",
+    "repo_http": 200,
+    "repo_push_permission": true,
+    "prior_own_ref_http": 200,
+    "prior_own_remote_sha": "ee5cf1971bc22acaf046dd25d92b5164497f4837",
+    "target_commit_http": 200,
+    "target_commit_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+    "issue6_http": 200,
+    "issue6_title": "Normalize records, columns and delimited/line-oriented inputs deterministically",
+    "issue6_state": "open",
+    "api_writes": 0,
+    "credential_handling": "Captured GCM output; token in memory only; no redirects/credential output or subprocess arguments"
+  },
+  "raw_local_artifacts_root": "artifacts/local/R14-04/",
+  "raw_local_artifact_sha256": {
+    "python-collision-final.log": "0580f4cff51b23f545d305bdffad87fc9d08c80ea28fa59c527d5cd6f4d9c60b",
+    "python-collision-final.xml": "c58f26c827e9c1e12669b18dcc252d3e03efce7f4aa84b1ccc631e81bbd5a16b",
+    "ruff-final.log": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+    "mypy-final.log": "07a5ca23e5d39b2565c0c1361f0556b8c3c75484bba05841f400436d190bb660",
+    "ts-collision-final.log": "81aeb9ac7b64ebf6de0b96de2a61b042eaf880a2b29333d321edbec71d71da1c",
+    "python-grammar-observations.json": "9c4c95e9a51a0440aa9d31e3545ebe0b4c62c8b4816e5b8f4c9187751215bcdd",
+    "ts-grammar-observations.json": "f2a60435a7affa7d0247c176631124a643bc15a76c7023db764fe1d248f64a66",
+    "python-final-exits.json": "6196bea2682c2bc355416be95704272b08d2f410c7091945dd07b73c332f451f",
+    "ts-final-exits.json": "adf5855b0c0439a5f2a52441e18fe42ab11de4e43d2e5143d36e062a59f250e4",
+    "python-observation-exit.json": "b687744a346ce5193e09a830ed9f88aa2e72d2653847672ee178005ca0ee646f",
+    "ts-command-exits.json": "1fd739fbf039659cb350a6b462e11910dbefc6f34c231085514eb0d3fca5ba68"
+  },
+  "collector_harness_failure": {
+    "initial_exit": 1,
+    "cause": "PowerShell native argument conversion truncates embedded Python triple quotes; minimal native argument quote repro exit1 vs stdin exit0; before-execution parse failure",
+    "corrected_stdin_exit": 0,
+    "product_failure": false
+  },
+  "limits": [
+    "finite source5340 normalization corpus only",
+    "no renderer or arbitrary-format promise",
+    "no source-owner16 changes tested",
+    "no full suites/build/distribution/browser gates",
+    "no originalN11 rerun or four-policy-failure fix",
+    "no10M/process-memory/finalCI or final reviewer signoff"
+  ],
+  "next_action": "Scoped meaningful own test/evidence commit, nonforce own push/exactSHAreadback; R04 preserve current collision checks, decide index grammar only if parity is required and arrange independent candidate retest after16handback",
+  "typescript_loaded_module_sha256": {
+    "packages/deepviz/dist/normalize.js": "adb0493123fd478567212e76e2c6e52c828aeaa9eb5425c219b5b1a576689612",
+    "packages/deepviz/dist/models.js": "936bcf189c647a45ab0063dbdff5158ca5711a374e6eae7f4a00d160d91d265e",
+    "packages/deepviz/dist/index.js": "887a0d361250e936d43f6b5f8cac4f65a024676520ad6bcfb49ab8042e355c39"
+  }
+}
