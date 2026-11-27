@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="3" time="0.641" timestamp="2026-11-27T07:57:53.371483+05:30" hostname="SandeshAcer"><testcase classname="python.deepviz.tests.test_render" name="test_browser_executes_all_native_kinds[plotly]" time="0.008"><failure message="ModuleNotFoundError: No module named 'playwright'">engine = 'plotly'
+tmp_path = WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4/artifacts/local/R10-06/setup/python-optin-tmp/test_browser_executes_all_nati0')
+
+    @pytest.mark.integration
+    @pytest.mark.parametrize("engine", ["plotly", "echarts", "antv"])
+    def test_browser_executes_all_native_kinds(engine, tmp_path):
+        if not os.getenv("DEEPVIZ_BROWSER_TESTS"):
+            pytest.skip("Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks")
+&gt;       from playwright.sync_api import sync_playwright
+E       ModuleNotFoundError: No module named 'playwright'
+
+python\deepviz\tests\test_render.py:434: ModuleNotFoundError</failure></testcase><testcase classname="python.deepviz.tests.test_render" name="test_browser_executes_all_native_kinds[echarts]" time="0.003"><failure message="ModuleNotFoundError: No module named 'playwright'">engine = 'echarts'
+tmp_path = WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4/artifacts/local/R10-06/setup/python-optin-tmp/test_browser_executes_all_nati1')
+
+    @pytest.mark.integration
+    @pytest.mark.parametrize("engine", ["plotly", "echarts", "antv"])
+    def test_browser_executes_all_native_kinds(engine, tmp_path):
+        if not os.getenv("DEEPVIZ_BROWSER_TESTS"):
+            pytest.skip("Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks")
+&gt;       from playwright.sync_api import sync_playwright
+E       ModuleNotFoundError: No module named 'playwright'
+
+python\deepviz\tests\test_render.py:434: ModuleNotFoundError</failure></testcase><testcase classname="python.deepviz.tests.test_render" name="test_browser_executes_all_native_kinds[antv]" time="0.003"><failure message="ModuleNotFoundError: No module named 'playwright'">engine = 'antv'
+tmp_path = WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4/artifacts/local/R10-06/setup/python-optin-tmp/test_browser_executes_all_nati2')
+
+    @pytest.mark.integration
+    @pytest.mark.parametrize("engine", ["plotly", "echarts", "antv"])
+    def test_browser_executes_all_native_kinds(engine, tmp_path):
+        if not os.getenv("DEEPVIZ_BROWSER_TESTS"):
+            pytest.skip("Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks")
+&gt;       from playwright.sync_api import sync_playwright
+E       ModuleNotFoundError: No module named 'playwright'
+
+python\deepviz\tests\test_render.py:434: ModuleNotFoundError</failure></testcase></testsuite></testsuites>
