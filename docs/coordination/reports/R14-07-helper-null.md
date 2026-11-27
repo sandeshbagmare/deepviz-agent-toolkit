@@ -1,5 +1,7 @@
 # R14-07: undefined-only npm helper spec default
 
+**Published actualsourcefix:** `7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57`, ownnonforcepush0/exactremoteSHAreadback0. Genuine31pass5nullRED→36pass0fail; fullnpm282pass0fail; core689pass; originalwrapper35/40→40/40. No sourceblocker; R04integration + genuinelyindependentretest/review remain. CompletedR10distributionevidenceisNOTacceptanceofthislatersource.
+
 ## Pre-work ownership / eligibility checkpoint — 2026-11-27
 
 - Owner/session: general producer07 `ses_de56782e8ffentAvzUUfMncFRA`, same nativeID confirmed. Read FULL MAIN R14common+07, R13common+07, canonical/RESUME/STATE, ownnote/completedR10report, full R10-09/R13-09 reports and immutable regression/future retest recipe. One initially guessed report path did not exist; glob located and full reads used actual R10-09/R13-09 paths, not missing evidence.
@@ -23,7 +25,7 @@
 - [x] Run `npm run build`, `npm run typecheck`, then unchanged36cases against unmodifiedsource. Require **31pass/5nullRED**, not harness/importfailure; original40wrapper should show same5nullmismatches. Save exact exits/totals/source/build/testhashes before edit.
 - [x] Minimal sourcechange only: `input.spec === undefined ? {} : input.spec`. No schema/normalizer/renderer/oldoracle changes.
 - [x] Rebuild/typecheck/new36/fullnpm/schemacheck/exporter/core689/original40wrapper/npm-packdryrun using own builtsource. Require36/36new and40/40agreement; report any genuine otherfailures byname, do not hideorweaken. No mandatorybrowser/CDNacceptance inferred.
-- [ ] Save compactevidence/exactcommands/actualsource+build/schemahashes; inspectstage/credentialscan; ownscopedcommit/nonforcepush aftermemorysafeGET/userexpectedidentity, readbackremoteexactSHA. R04aloneintegrates; independenttester09canretestcleanproducercommit with immutableoracle; authornotfinalreview.
+- [x] Save compactevidence/exactcommands/actualsource+build/schemahashes; inspectstage/credentialscan; ownscopedcommit/nonforcepush aftermemorysafeGET/userexpectedidentity, readbackremoteexactSHA. R04aloneintegrates; independenttester09canretestcleanproducercommit with immutableoracle; authornotfinalreview.
 
 Current action: preworkcheckpoint saved, no source/test/build changes yet. Blocker: none established; availability/dependency checks pending. **Next executable action:** create clean ownworktree `fix/r14-helper-null` at5340, move native session there, verify status/hashes/callers and copy immutableNEWregression.
 
@@ -78,3 +80,19 @@ Wideviewportprobeactually0/same2fixturesPASS/noerrors/noexternal; openedactual20
 Readfullhelperpipeline/callers/schema/dependenttests andexactone-linesourcediff+immutable36test. No Critical/Important/minorproductfindings found inthisscopedauthorreview; notindependentapproval. No schemafallback/any-coercion/newbranch/complexity introduced. Nullfailsbeforedata/rendergeneration; omittedandundefined31controls retained. Exactproductiondiffonefile/one-line; locks/source12/16/08/Pythonuntouched. Scopeexclusionofall-enginebrowser/fullPython/scale/MCP/finalCI is recorded, not an implicitpass. Existing1500dashboardscrollingpolicy preserved andwideimageprovided; no unrelatedlayoutfix justifiedbythislane.
 
 Next executableaction: copy/stage ONLYoneproductionline+NEWimmutabletest+ownMAINnote/report/5compactevidencefiles; exact9pathallowlist/credentialscan/JSON+imagehash/sourcebytecheck; meaningfulOWNcommit; memorysafeGET/userthenNONFORCEownbranchpush/exactremoteSHAreceipt. No test/consumer/buildreplayneededafterdoc-onlycheckpoints. R04mustrouteindependenttester09/reviewers afteractualsourcecommit; authorcannotassertmerge/finalGREEN.
+
+## Actual meaningful source commit
+
+`git commit -m "fix: reject explicit null specs at npm helper boundaries"` exit0 → **7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57**,9explicitownedpaths. Ownbranchtracked+untrackedclean. Exactapprovedone-lineproductiondelta/byte-identical09test/JSONparse+counters60rawpins/imagebytes/credentialpatternscan0matches/whitespace0 allindependentlycheckedfromINDEXbeforecommit. Source7d8commitblobstill71ab2701..., compiledbc43ad42... testedasexactdirtydelta on5340 andnowsealedunchanged; no testreplaytoinflatecounts.
+
+GitnormalizedTWOJSONCRLF→LF; logicaldataunchangedbutrawcollectorbyteidentityNOTclaimedforGitblob: stagedcommands4,860B **e0727e316fb76478dfc1fe6d7dfbfc81a12badaf9a239290878d059ce41bf117**, summary24,188B **337ca788370d871fef517f8e8a95166a256aacc1e1fc85b910b9235d6c5ca150**. Images/source/immutabletestexactrawbytes; publishedJSONcounters andpinsrevalidated. NextmemorysafeGET/userexpectedbeforeNONFORCEownbranchpush+actualremoteSHAreceipt; no publishedclaimuntilreceipt.
+
+## Actual source publication / R04 handback
+
+At **2026-11-27T14:52:28.076080+00:00**, memorycapturedGCM→freshauthenticatedGET`/user`HTTP200verifiedexpected`sandeshbagmare`; nonforce `git push origin fix/r14-helper-null:fix/r14-helper-null` **exit0**, immediate `git ls-remote --heads origin refs/heads/fix/r14-helper-null` **exit0** actualremote **7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57**, exactlocalHEAD. Ownremotebranchpreviouslyabsent. Actualsavedreceipt `docs/coordination/evidence/R14-07/publication.json`; credentialmemoryonly/notpersisted. No force/sharedcandidate/issues/PRmutations.
+
+**Eligibilityconfirmed/allowedsourceimplemented/checkpointed/published; blocker:noneinthisscope.** Meaningfulfix [7d8ccdce](https://github.com/sandeshbagmare/deepviz-agent-toolkit/commit/7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57); ownbranch [fix/r14-helper-null](https://github.com/sandeshbagmare/deepviz-agent-toolkit/tree/fix/r14-helper-null). R04alonecanintegrate; strict09oraclecopiedunchanged, sourceauthornotindependentreviewer. Existing09future-retestrecipe8f8a21fcanrunonexactclean7d8withfullpath/hashcontrols (NEWonthisbaseoriginalR07pathdeliberatelyretained). Rootmayresumesameeligible09asactualslotpermits; no workerdispatchfrom07.
+
+Remainingacceptance: trulyindependentcleanproducerretest/reviews, R04candidateintegration/rebuild/finalCI/fullprojectgates/900legitimateissues remainunmet, no merge/release/closure claim. CompletedPythonwheel/sdistconsumerartifactsstayR10branchd78eaaf/raw3aa; no historicalresulttransfer. No needtoreplayfinishedconsumer/build/testjobs.
+
+Next executableaction: oneOWN3pathreceipt/report/notecheckpointcommit+nonforcepush/readback; savefinalMAINreceiptwithoutcircularSCMloop; returnactualfix+receiptSHA/evidence/rootdecision. No newsourceassignmentassumed.
