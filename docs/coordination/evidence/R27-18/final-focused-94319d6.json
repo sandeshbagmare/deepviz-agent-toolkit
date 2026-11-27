@@ -1,0 +1,1297 @@
+{
+  "source_commit": "94319d679661a169856fb0a0ec0e9de5cbd6986f",
+  "base": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "only_changed_function": "_plotly",
+  "outside_function_bytes_exact": true,
+  "engines_sha256": "bbf19726873cb7fc5dd62ceea8983aa4377408228ef3f26cf0969fb1531e5642",
+  "native_source_modules": {
+    "engines": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r27-18-ses_de567805bffdER1GlVd0ngLgKg\\python\\deepviz\\src\\deepviz\\engines.py",
+      "sha256": "bbf19726873cb7fc5dd62ceea8983aa4377408228ef3f26cf0969fb1531e5642"
+    },
+    "models": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r27-18-ses_de567805bffdER1GlVd0ngLgKg\\python\\deepviz\\src\\deepviz\\models.py",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    "normalize": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r27-18-ses_de567805bffdER1GlVd0ngLgKg\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2"
+    },
+    "render": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r27-18-ses_de567805bffdER1GlVd0ngLgKg\\python\\deepviz\\src\\deepviz\\render.py",
+      "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+    },
+    "tools": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r27-18-ses_de567805bffdER1GlVd0ngLgKg\\python\\deepviz\\src\\deepviz\\tools.py",
+      "sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb"
+    },
+    "mcp_server": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r27-18-ses_de567805bffdER1GlVd0ngLgKg\\python\\deepviz\\src\\deepviz\\mcp_server.py",
+      "sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95"
+    }
+  },
+  "completed_phases": {
+    "geo-axis-red": {
+      "exit": 1,
+      "totals": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "2",
+        "skipped": "0",
+        "tests": "2",
+        "time": "4.665",
+        "timestamp": "2026-11-27T21:48:05.657902+05:30"
+      },
+      "nonpassing": [
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_every_category_sink_encodes_literal_strings_once[geo-x]",
+          "kind": "failure",
+          "message": "assert ['<a href=\"ht...\" & \\' Ω</b>'] == ['&lt;a href=... Ω&lt;/b&gt;']\n  \n  At index 0 diff: '<a href=\"https://example.invalid/r27\">A</a>' != '&lt;a href=\"https://example.invalid/r27\"&gt;A&lt;/a&gt;'\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_public_render_native_dom_is_exact_literal_and_inert[geo-axis]",
+          "kind": "failure",
+          "message": "AssertionError: [{'titles': ['R27 \"Ω\" & <b>Title</b>'], 'text': ['A', '−50', '0', '50', 'R27 \"Ω\" & <b>Title</b>', 'Longitude', ...], '...': ['<a xlink:show=\"new\" target=\"_blank\" xlink:href=\"https://example.invalid/r27\" style=\"cursor:pointer\">A</a>'], ...}]\nassert [{'titles': [...A</a>'], ...}] == []\n  \n[+2 more lines; full report in element text]"
+        }
+      ],
+      "xml_sha256": "0773fbce0eb13004aa5ecd9971671a1dca009a4ad44ecdcaf7c3b10b48c3bbc1",
+      "log_sha256": "cd6d81f722fb8c44154fc8cd0517c1ece005f00862f6cb2b5aaea9e5fb23b69e"
+    },
+    "final-focused": {
+      "exit": 1,
+      "totals": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "2",
+        "skipped": "3",
+        "tests": "208",
+        "time": "57.449",
+        "timestamp": "2026-11-27T21:49:26.920865+05:30"
+      },
+      "nonpassing": [
+        {
+          "id": "python.deepviz.tests.test_backend_plotly::test_table_cells_and_headers_are_escaped_without_transposing_rows",
+          "kind": "failure",
+          "message": "assert [['&lt;img sr...], ['12', '']] == [['&lt;img sr...], ['12', '']]\n  \n  At index 0 diff: ['&lt;img src=x onerror=\"alert(1)\"&gt; &amp; \"quoted\"', 'plain &amp; simple'] != ['&lt;img src=x onerror=&quot;alert(1)&quot;&gt; &amp; &quot;quoted&quot;', 'plain &amp; simple']\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_render::test_untrusted_strings_cannot_end_json_script_or_html_title[plotly]",
+          "kind": "failure",
+          "message": "assert '</script><img src=x onerror=\"alert(1)\">&\\u2028\\u2029' in <generator object test_untrusted_strings_cannot_end_json_script_or_html_title.<locals>.strings at 0x000002530A6CBA00>\n[+3 more lines; full report in element text]"
+        },
+        {
+          "id": "python.deepviz.tests.test_render::test_browser_executes_all_native_kinds[plotly]",
+          "kind": "skipped",
+          "message": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+        },
+        {
+          "id": "python.deepviz.tests.test_render::test_browser_executes_all_native_kinds[echarts]",
+          "kind": "skipped",
+          "message": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+        },
+        {
+          "id": "python.deepviz.tests.test_render::test_browser_executes_all_native_kinds[antv]",
+          "kind": "skipped",
+          "message": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+        }
+      ],
+      "xml_sha256": "2b4bccc42e0a753b812580fad4bcc755c25b9e834030cd0fbd64dfb06507d191",
+      "log_sha256": "9b1fd740401cdef9c3662cc9dda01f7dbbd150aee7a45d4749efad85f55b46c5"
+    }
+  },
+  "browser": [
+    {
+      "case": "test_plotly_isolated_sink_lite0",
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "errors": [],
+      "blocked": [],
+      "snapshots": [
+        {
+          "x": [
+            1,
+            2,
+            4
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "trace_name": "&lt;a href=\"https://example.invalid/r13-legend\"&gt;R13 legend&lt;/a&gt;",
+          "legend_text": [
+            "<a href=\"https://example.invalid/r13-legend\">R13 legend</a>"
+          ],
+          "native_title": [
+            "R13 isolated legend"
+          ],
+          "hover_text": [],
+          "anchors": [],
+          "handlers": [],
+          "mark_centers": [
+            {
+              "x": 126.94999694824219,
+              "y": 519.84375
+            },
+            {
+              "x": 263.6499938964844,
+              "y": 388.59375
+            },
+            {
+              "x": 537.0499877929688,
+              "y": 257.34375
+            }
+          ]
+        }
+      ],
+      "json_sha256": "aa417de0bccbfa418e28f5523ebbdc6453e6b1b3066ec099b7912d8988ff5986"
+    },
+    {
+      "case": "test_plotly_isolated_sink_lite1",
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "errors": [],
+      "blocked": [],
+      "snapshots": [
+        {
+          "x": [
+            -120,
+            -60,
+            120
+          ],
+          "y": [
+            10,
+            20,
+            35
+          ],
+          "trace_text": [
+            "&lt;a href=\"https://example.invalid/r13-hover\"&gt;R13 hover&lt;/a&gt;",
+            "&lt;b&gt;R13 \"hover\" &amp; text&lt;/b&gt;",
+            "&lt;img src=\"R13-inert:\" onerror=\"\"&gt;"
+          ],
+          "legend_text": [
+            "trace 0"
+          ],
+          "native_title": [
+            "R13 isolated hover"
+          ],
+          "hover_text": [],
+          "anchors": [],
+          "handlers": [],
+          "mark_centers": [
+            {
+              "x": 234,
+              "y": 371.92376708984375
+            },
+            {
+              "x": 368,
+              "y": 355.26373291015625
+            },
+            {
+              "x": 770,
+              "y": 330.26373291015625
+            }
+          ]
+        },
+        {
+          "x": [
+            -120,
+            -60,
+            120
+          ],
+          "y": [
+            10,
+            20,
+            35
+          ],
+          "trace_text": [
+            "&lt;a href=\"https://example.invalid/r13-hover\"&gt;R13 hover&lt;/a&gt;",
+            "&lt;b&gt;R13 \"hover\" &amp; text&lt;/b&gt;",
+            "&lt;img src=\"R13-inert:\" onerror=\"\"&gt;"
+          ],
+          "legend_text": [
+            "trace 0"
+          ],
+          "native_title": [
+            "R13 isolated hover"
+          ],
+          "hover_text": [
+            "(−120, 10)<a href=\"https://example.invalid/r13-hover\">R13 hover</a>"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "mark_centers": [
+            {
+              "x": 234,
+              "y": 371.92376708984375
+            },
+            {
+              "x": 368,
+              "y": 355.26373291015625
+            },
+            {
+              "x": 770,
+              "y": 330.26373291015625
+            }
+          ]
+        },
+        {
+          "x": [
+            -120,
+            -60,
+            120
+          ],
+          "y": [
+            10,
+            20,
+            35
+          ],
+          "trace_text": [
+            "&lt;a href=\"https://example.invalid/r13-hover\"&gt;R13 hover&lt;/a&gt;",
+            "&lt;b&gt;R13 \"hover\" &amp; text&lt;/b&gt;",
+            "&lt;img src=\"R13-inert:\" onerror=\"\"&gt;"
+          ],
+          "legend_text": [
+            "trace 0"
+          ],
+          "native_title": [
+            "R13 isolated hover"
+          ],
+          "hover_text": [
+            "(−60, 20)<b>R13 \"hover\" & text</b>"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "mark_centers": [
+            {
+              "x": 234,
+              "y": 371.92376708984375
+            },
+            {
+              "x": 368,
+              "y": 355.26373291015625
+            },
+            {
+              "x": 770,
+              "y": 330.26373291015625
+            }
+          ]
+        },
+        {
+          "x": [
+            -120,
+            -60,
+            120
+          ],
+          "y": [
+            10,
+            20,
+            35
+          ],
+          "trace_text": [
+            "&lt;a href=\"https://example.invalid/r13-hover\"&gt;R13 hover&lt;/a&gt;",
+            "&lt;b&gt;R13 \"hover\" &amp; text&lt;/b&gt;",
+            "&lt;img src=\"R13-inert:\" onerror=\"\"&gt;"
+          ],
+          "legend_text": [
+            "trace 0"
+          ],
+          "native_title": [
+            "R13 isolated hover"
+          ],
+          "hover_text": [
+            "(120, 35)<img src=\"R13-inert:\" onerror=\"\">"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "mark_centers": [
+            {
+              "x": 234,
+              "y": 371.92376708984375
+            },
+            {
+              "x": 368,
+              "y": 355.26373291015625
+            },
+            {
+              "x": 770,
+              "y": 330.26373291015625
+            }
+          ]
+        }
+      ],
+      "json_sha256": "e15a603adc4d86d0181c96ab67450b6aad234729072eaccea21d35a554c7d6e3"
+    },
+    {
+      "case": "test_plotly_isolated_sink_lite2",
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "errors": [],
+      "blocked": [],
+      "snapshots": [
+        {
+          "x": [
+            "2026-02-01",
+            "2026-02-02",
+            "2026-02-04"
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "trace_name": "Series",
+          "legend_text": [],
+          "native_title": [
+            "<a href=\"https://example.invalid/r13-title\">R13 \"title\" & 'quote'</a>"
+          ],
+          "hover_text": [],
+          "anchors": [],
+          "handlers": [],
+          "mark_centers": [
+            {
+              "x": 145.75,
+              "y": 519.84375
+            },
+            {
+              "x": 395.25,
+              "y": 388.59375
+            },
+            {
+              "x": 894.25,
+              "y": 257.34375
+            }
+          ]
+        }
+      ],
+      "json_sha256": "ed29b170b4ae3a925f9bde33290526c2859827b840753792715152fb02114212"
+    },
+    {
+      "case": "test_plotly_literal_labels_and0",
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "errors": [],
+      "blocked": [],
+      "snapshots": [
+        {
+          "x": [
+            "&lt;a href=\"https://example.invalid/r10-20\"&gt;R10 safe link&lt;/a&gt;",
+            "&lt;img src=\"R10-inert:\" onerror=\"\"&gt;",
+            "&lt;b&gt;R10 literal label&lt;/b&gt;"
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "text": [
+            "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+            "<img src=\"R10-inert:\" onerror=\"\">",
+            "<b>R10 literal label</b>",
+            "0",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "<b>R10 literal series</b>",
+            "R10 categorical literal-label control",
+            "x",
+            "value"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "missing_literal_strings": [],
+          "mark_count": 3,
+          "mark_centers": [
+            {
+              "x": 198.33499908447266,
+              "y": 447.5037536621094
+            },
+            {
+              "x": 395.00001525878906,
+              "y": 406.0487518310547
+            },
+            {
+              "x": 591.6650085449219,
+              "y": 364.59375
+            }
+          ]
+        }
+      ],
+      "json_sha256": "9916723ebdedf5e61d452c6897d270ffc4d8dac925667244bd997529ad7f234b"
+    },
+    {
+      "case": "test_plotly_literal_labels_and1",
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "errors": [],
+      "blocked": [],
+      "snapshots": [
+        {
+          "x": [
+            "&lt;a href=\"https://example.invalid/r10-20\"&gt;R10 safe link&lt;/a&gt;",
+            "&lt;img src=\"R10-inert:\" onerror=\"\"&gt;",
+            "&lt;b&gt;R10 literal label&lt;/b&gt;"
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "text": [
+            "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+            "<img src=\"R10-inert:\" onerror=\"\">",
+            "<b>R10 literal label</b>",
+            "0",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "<b>R10 literal series</b>",
+            "R10 categorical literal-label control",
+            "x",
+            "value"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "missing_literal_strings": [],
+          "mark_count": 3,
+          "mark_centers": [
+            {
+              "x": 131.3349952697754,
+              "y": 447.5037536621094
+            },
+            {
+              "x": 194,
+              "y": 406.0487518310547
+            },
+            {
+              "x": 256.6649932861328,
+              "y": 364.59375
+            }
+          ]
+        },
+        {
+          "x": [
+            "&lt;a href=\"https://example.invalid/r10-20\"&gt;R10 safe link&lt;/a&gt;",
+            "&lt;img src=\"R10-inert:\" onerror=\"\"&gt;",
+            "&lt;b&gt;R10 literal label&lt;/b&gt;"
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "text": [
+            "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+            "<img src=\"R10-inert:\" onerror=\"\">",
+            "<b>R10 literal label</b>",
+            "0",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "<b>R10 literal series</b>",
+            "R10 categorical literal-label control",
+            "x",
+            "value"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "missing_literal_strings": [],
+          "mark_count": 3,
+          "mark_centers": [
+            {
+              "x": 641.3350219726562,
+              "y": 447.5037536621094
+            },
+            {
+              "x": 704,
+              "y": 406.0487518310547
+            },
+            {
+              "x": 766.6649780273438,
+              "y": 364.59375
+            }
+          ]
+        }
+      ],
+      "json_sha256": "1818c227922301efd370092deccd851dfa9b784130db99087a7e4ae5ca55183e"
+    },
+    {
+      "case": "test_plotly_literal_labels_and2",
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "errors": [],
+      "blocked": [],
+      "snapshots": [
+        {
+          "x": [
+            1,
+            2,
+            4
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "text": [
+            "1",
+            "1.5",
+            "2",
+            "2.5",
+            "3",
+            "3.5",
+            "4",
+            "4",
+            "6",
+            "8",
+            "10",
+            "R10 numeric literal-label control",
+            "x",
+            "value"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "missing_literal_strings": [],
+          "mark_count": 3,
+          "mark_centers": [
+            {
+              "x": 140.75,
+              "y": 462.84375
+            },
+            {
+              "x": 360.25,
+              "y": 358.59375
+            },
+            {
+              "x": 799.25,
+              "y": 254.34375
+            }
+          ]
+        }
+      ],
+      "json_sha256": "099a9a8b2bc08d41a25470c05771e68a86680190a2fef88f49e415b10f91853d"
+    },
+    {
+      "case": "test_plotly_literal_labels_and3",
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "errors": [],
+      "blocked": [],
+      "snapshots": [
+        {
+          "x": [
+            1,
+            2,
+            4
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "text": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "4",
+            "6",
+            "8",
+            "10",
+            "R10 numeric literal-label control",
+            "x",
+            "value"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "missing_literal_strings": [],
+          "mark_count": 3,
+          "mark_centers": [
+            {
+              "x": 120.25,
+              "y": 462.84375
+            },
+            {
+              "x": 216.75,
+              "y": 358.59375
+            },
+            {
+              "x": 409.75,
+              "y": 254.34375
+            }
+          ]
+        },
+        {
+          "x": [
+            1,
+            2,
+            4
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "text": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "4",
+            "6",
+            "8",
+            "10",
+            "R10 numeric literal-label control",
+            "x",
+            "value"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "missing_literal_strings": [],
+          "mark_count": 3,
+          "mark_centers": [
+            {
+              "x": 630.25,
+              "y": 462.84375
+            },
+            {
+              "x": 726.75,
+              "y": 358.59375
+            },
+            {
+              "x": 919.75,
+              "y": 254.34375
+            }
+          ]
+        }
+      ],
+      "json_sha256": "7a0d6d907ceeb0d5a55d345f45ec80b7f52efbb12daacab6af3ff903312a0b08"
+    },
+    {
+      "case": "test_plotly_literal_labels_and4",
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "errors": [],
+      "blocked": [],
+      "snapshots": [
+        {
+          "x": [
+            "2026-01-01",
+            "2026-01-02",
+            "2026-01-04"
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "text": [
+            "00:00Jan 1, 2026",
+            "12:00",
+            "00:00Jan 2, 2026",
+            "12:00",
+            "00:00Jan 3, 2026",
+            "12:00",
+            "00:00Jan 4, 2026",
+            "4",
+            "6",
+            "8",
+            "10",
+            "R10 time literal-label control",
+            "x",
+            "value"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "missing_literal_strings": [],
+          "mark_count": 3,
+          "mark_centers": [
+            {
+              "x": 140.75,
+              "y": 462.84375
+            },
+            {
+              "x": 360.25,
+              "y": 358.59375
+            },
+            {
+              "x": 799.25,
+              "y": 254.34375
+            }
+          ]
+        }
+      ],
+      "json_sha256": "df331a0299082be8e0aeaf33f208858f2aeab5ef7033cf2ac2a2facad4550b04"
+    },
+    {
+      "case": "test_plotly_literal_labels_and5",
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "errors": [],
+      "blocked": [],
+      "snapshots": [
+        {
+          "x": [
+            "2026-01-01",
+            "2026-01-02",
+            "2026-01-04"
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "text": [
+            "Jan 12026",
+            "Jan 2",
+            "Jan 3",
+            "Jan 4",
+            "4",
+            "6",
+            "8",
+            "10",
+            "R10 time literal-label control",
+            "x",
+            "value"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "missing_literal_strings": [],
+          "mark_count": 3,
+          "mark_centers": [
+            {
+              "x": 120.25,
+              "y": 462.84375
+            },
+            {
+              "x": 216.75,
+              "y": 358.59375
+            },
+            {
+              "x": 409.75,
+              "y": 254.34375
+            }
+          ]
+        },
+        {
+          "x": [
+            "2026-01-01",
+            "2026-01-02",
+            "2026-01-04"
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "text": [
+            "Jan 12026",
+            "Jan 2",
+            "Jan 3",
+            "Jan 4",
+            "4",
+            "6",
+            "8",
+            "10",
+            "R10 time literal-label control",
+            "x",
+            "value"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "missing_literal_strings": [],
+          "mark_count": 3,
+          "mark_centers": [
+            {
+              "x": 630.25,
+              "y": 462.84375
+            },
+            {
+              "x": 726.75,
+              "y": 358.59375
+            },
+            {
+              "x": 919.75,
+              "y": 254.34375
+            }
+          ]
+        }
+      ],
+      "json_sha256": "d9fa3c304bc46e1d504cc63d0d4b645b87748978cfe751ca31163240ca274da3"
+    },
+    {
+      "case": "test_public_render_native_dom_0",
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "errors": [],
+      "blocked": [],
+      "snapshots": [
+        {
+          "titles": [
+            "R27 \"Ω\" & <b>Title</b>"
+          ],
+          "text": [
+            "<a href=\"https://example.invalid/r27\">A</a>",
+            "&lt;b&gt; B &amp; C",
+            "<b>Q\" & ' Ω</b>",
+            "0",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "<b>Group\" & Ω</b>",
+            "R27 \"Ω\" & <b>Title</b>",
+            "axis \"Ω\" & <i>X</i>",
+            "value \"Ω\" & <b>Y</b>"
+          ],
+          "missing": [],
+          "anchors": [],
+          "handlers": [],
+          "x": [
+            "&lt;a href=\"https://example.invalid/r27\"&gt;A&lt;/a&gt;",
+            "&amp;lt;b&amp;gt; B &amp;amp; C",
+            "&lt;b&gt;Q\" &amp; ' Ω&lt;/b&gt;"
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "hover_text": [],
+          "centers": []
+        }
+      ],
+      "json_sha256": "96b88d2b78422da10c8bb8f559b94ba17d49ad6e3c9b8d14647dcf39c25cfa62"
+    },
+    {
+      "case": "test_public_render_native_dom_1",
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "errors": [],
+      "blocked": [],
+      "snapshots": [
+        {
+          "titles": [
+            "R27 \"Ω\" & <b>Title</b>"
+          ],
+          "text": [
+            "<a href=\"https://example.invalid/r27\">A</a>",
+            "&lt;b&gt; B &amp; C",
+            "<b>Q\" & ' Ω</b>",
+            "0",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "<b>Group\" & Ω</b>",
+            "R27 \"Ω\" & <b>Title</b>",
+            "axis \"Ω\" & <i>X</i>",
+            "value \"Ω\" & <b>Y</b>"
+          ],
+          "missing": [],
+          "anchors": [],
+          "handlers": [],
+          "x": [
+            "&lt;a href=\"https://example.invalid/r27\"&gt;A&lt;/a&gt;",
+            "&amp;lt;b&amp;gt; B &amp;amp; C",
+            "&lt;b&gt;Q\" &amp; ' Ω&lt;/b&gt;"
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "hover_text": [],
+          "centers": []
+        },
+        {
+          "titles": [
+            "R27 \"Ω\" & <b>Title</b>"
+          ],
+          "text": [
+            "<a href=\"https://example.invalid/r27\">A</a>",
+            "&lt;b&gt; B &amp; C",
+            "<b>Q\" & ' Ω</b>",
+            "0",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "<b>Group\" & Ω</b>",
+            "R27 \"Ω\" & <b>Title</b>",
+            "axis \"Ω\" & <i>X</i>",
+            "value \"Ω\" & <b>Y</b>"
+          ],
+          "missing": [],
+          "anchors": [],
+          "handlers": [],
+          "x": [
+            "&lt;a href=\"https://example.invalid/r27\"&gt;A&lt;/a&gt;",
+            "&amp;lt;b&amp;gt; B &amp;amp; C",
+            "&lt;b&gt;Q\" &amp; ' Ω&lt;/b&gt;"
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "hover_text": [],
+          "centers": []
+        }
+      ],
+      "json_sha256": "af4d06965ac564a66f85e458bc35c22228d077f75d09fb22c939a2d295551572"
+    },
+    {
+      "case": "test_public_render_native_dom_2",
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "errors": [],
+      "blocked": [],
+      "snapshots": [
+        {
+          "titles": [
+            "R27 \"Ω\" & <b>Title</b>"
+          ],
+          "text": [
+            "<b>Q\" & ' Ω</b>",
+            "axis \"Ω\" & <i>X</i>",
+            "7",
+            "value \"Ω\" & <b>Y</b>",
+            "&lt;b&gt; B &amp; C",
+            "entity",
+            "R27 \"Ω\" & <b>Title</b>"
+          ],
+          "missing": [],
+          "anchors": [],
+          "handlers": [],
+          "hover_text": [],
+          "centers": []
+        }
+      ],
+      "json_sha256": "01650f0b207b22420b93e2125a88d64b1b5258c0ed8ea2e1e4001e67ae744ba1"
+    },
+    {
+      "case": "test_public_render_native_dom_3",
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "errors": [],
+      "blocked": [],
+      "snapshots": [
+        {
+          "titles": [
+            "R27 \"Ω\" & <b>Title</b>"
+          ],
+          "text": [
+            "−150",
+            "−100",
+            "−50",
+            "0",
+            "50",
+            "100",
+            "150",
+            "−50",
+            "0",
+            "50",
+            "trace 0",
+            "R27 \"Ω\" & <b>Title</b>",
+            "Longitude",
+            "Latitude"
+          ],
+          "missing": [],
+          "anchors": [],
+          "handlers": [],
+          "x": [
+            -120,
+            -60,
+            120
+          ],
+          "y": [
+            10,
+            20,
+            35
+          ],
+          "hover_text": [],
+          "centers": [
+            {
+              "x": 299.33001708984375,
+              "y": 380.8137512207031
+            },
+            {
+              "x": 498.6700134277344,
+              "y": 363.03375244140625
+            },
+            {
+              "x": 1096.669921875,
+              "y": 336.3737487792969
+            }
+          ]
+        },
+        {
+          "titles": [
+            "R27 \"Ω\" & <b>Title</b>"
+          ],
+          "text": [
+            "−150",
+            "−100",
+            "−50",
+            "0",
+            "50",
+            "100",
+            "150",
+            "−50",
+            "0",
+            "50",
+            "trace 0",
+            "R27 \"Ω\" & <b>Title</b>",
+            "Longitude",
+            "Latitude",
+            "(−120, 10)<a href=\"https://example.invalid/r27\">A</a>"
+          ],
+          "missing": [],
+          "anchors": [],
+          "handlers": [],
+          "x": [
+            -120,
+            -60,
+            120
+          ],
+          "y": [
+            10,
+            20,
+            35
+          ],
+          "hover_text": [
+            "(−120, 10)<a href=\"https://example.invalid/r27\">A</a>"
+          ],
+          "centers": [
+            {
+              "x": 299.33001708984375,
+              "y": 380.8137512207031
+            },
+            {
+              "x": 498.6700134277344,
+              "y": 363.03375244140625
+            },
+            {
+              "x": 1096.669921875,
+              "y": 336.3737487792969
+            }
+          ]
+        },
+        {
+          "titles": [
+            "R27 \"Ω\" & <b>Title</b>"
+          ],
+          "text": [
+            "−150",
+            "−100",
+            "−50",
+            "0",
+            "50",
+            "100",
+            "150",
+            "−50",
+            "0",
+            "50",
+            "trace 0",
+            "R27 \"Ω\" & <b>Title</b>",
+            "Longitude",
+            "Latitude",
+            "(−60, 20)&lt;b&gt; B &amp; C"
+          ],
+          "missing": [],
+          "anchors": [],
+          "handlers": [],
+          "x": [
+            -120,
+            -60,
+            120
+          ],
+          "y": [
+            10,
+            20,
+            35
+          ],
+          "hover_text": [
+            "(−60, 20)&lt;b&gt; B &amp; C"
+          ],
+          "centers": [
+            {
+              "x": 299.33001708984375,
+              "y": 380.8137512207031
+            },
+            {
+              "x": 498.6700134277344,
+              "y": 363.03375244140625
+            },
+            {
+              "x": 1096.669921875,
+              "y": 336.3737487792969
+            }
+          ]
+        },
+        {
+          "titles": [
+            "R27 \"Ω\" & <b>Title</b>"
+          ],
+          "text": [
+            "−150",
+            "−100",
+            "−50",
+            "0",
+            "50",
+            "100",
+            "150",
+            "−50",
+            "0",
+            "50",
+            "trace 0",
+            "R27 \"Ω\" & <b>Title</b>",
+            "Longitude",
+            "Latitude",
+            "(120, 35)<b>Q\" & ' Ω</b>"
+          ],
+          "missing": [],
+          "anchors": [],
+          "handlers": [],
+          "x": [
+            -120,
+            -60,
+            120
+          ],
+          "y": [
+            10,
+            20,
+            35
+          ],
+          "hover_text": [
+            "(120, 35)<b>Q\" & ' Ω</b>"
+          ],
+          "centers": [
+            {
+              "x": 299.33001708984375,
+              "y": 380.8137512207031
+            },
+            {
+              "x": 498.6700134277344,
+              "y": 363.03375244140625
+            },
+            {
+              "x": 1096.669921875,
+              "y": 336.3737487792969
+            }
+          ]
+        }
+      ],
+      "json_sha256": "52baaed54206f50b243a9687cec5fc59d9ae510e68fb64a270164bbe97a4fccb"
+    },
+    {
+      "case": "test_public_render_native_dom_4",
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "errors": [],
+      "blocked": [],
+      "snapshots": [
+        {
+          "titles": [
+            "R27 \"Ω\" & <b>Title</b>"
+          ],
+          "text": [
+            "<a href=\"https://example.invalid/r27\">A</a>",
+            "−50",
+            "0",
+            "50",
+            "R27 \"Ω\" & <b>Title</b>",
+            "Longitude",
+            "Latitude"
+          ],
+          "missing": [],
+          "anchors": [],
+          "handlers": [],
+          "x": [
+            "&lt;a href=\"https://example.invalid/r27\"&gt;A&lt;/a&gt;"
+          ],
+          "y": [
+            7
+          ],
+          "hover_text": [],
+          "centers": [
+            {
+              "x": 720,
+              "y": 386.15374755859375
+            }
+          ]
+        }
+      ],
+      "json_sha256": "0a7cadbc8b7ad3bdaa1a4c1280025118f63a25376484603b1e8b2cb670c2be54"
+    }
+  ],
+  "actual_opened_pngs": [
+    {
+      "file": "94319d6-chart.png",
+      "sha256": "e7c3acf2a5be1f40d6f96ac4d0930b03b66be1b4145174d6279d8bdf59186f12",
+      "visually_opened": true
+    },
+    {
+      "file": "94319d6-dashboard.png",
+      "sha256": "8107d358f3cbfd6e1596ee1897081dd81e2bbd377bb39ba0d916bb87967b59f1",
+      "visually_opened": true
+    },
+    {
+      "file": "94319d6-table.png",
+      "sha256": "9abff89c95026f3b29c923d0e12ed29ebc028c220f23148526ea19519fc8500f",
+      "visually_opened": true
+    },
+    {
+      "file": "94319d6-geo-hover.png",
+      "sha256": "aa49dbe5033013e1fb3cccb6d6a4d5214cd8b2d21b41e7ad6675e5b3fd471c41",
+      "visually_opened": true
+    },
+    {
+      "file": "94319d6-geo-axis.png",
+      "sha256": "1ac4cbcf37b2b159110191147df39389dba96172fe3f96ba4616b38830594489",
+      "visually_opened": true
+    }
+  ],
+  "limits": [
+    "Author execution, not independent20/02 approval",
+    "Two original representation oracles fail; unchanged and not waived",
+    "No installs/scale/CDN/paid calls/issues/PR writes",
+    "All existing source/tests outside released scope unchanged"
+  ],
+  "final_full_gate": {
+    "exit": 1,
+    "totals": {
+      "failed": 38,
+      "passed": 2547,
+      "skipped": 5,
+      "deselected_scale": 9,
+      "errors": 517,
+      "seconds": 327.01
+    },
+    "all_nonpassing_ids_file": "final-full-not-scale-94319d6.json"
+  }
+}

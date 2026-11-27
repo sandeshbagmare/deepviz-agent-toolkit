@@ -1,0 +1,656 @@
+{
+  "owner": "ses_de567805bffdER1GlVd0ngLgKg",
+  "base": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "source_commit": "72244399d3606046621afd6b11aaf19894d1460b",
+  "status": "focused GREEN; full gate running; known residual geo-x sink RED",
+  "source_modules": {
+    "engines": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r27-18-ses_de567805bffdER1GlVd0ngLgKg\\python\\deepviz\\src\\deepviz\\engines.py",
+      "sha256": "ce2fff82afce144bf35a051dbec6129c9833dbd9ab4534932de96a1c2ac285e5"
+    },
+    "models": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r27-18-ses_de567805bffdER1GlVd0ngLgKg\\python\\deepviz\\src\\deepviz\\models.py",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    "normalize": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r27-18-ses_de567805bffdER1GlVd0ngLgKg\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2"
+    },
+    "render": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r27-18-ses_de567805bffdER1GlVd0ngLgKg\\python\\deepviz\\src\\deepviz\\render.py",
+      "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+    },
+    "tools": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r27-18-ses_de567805bffdER1GlVd0ngLgKg\\python\\deepviz\\src\\deepviz\\tools.py",
+      "sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb"
+    },
+    "mcp_server": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r27-18-ses_de567805bffdER1GlVd0ngLgKg\\python\\deepviz\\src\\deepviz\\mcp_server.py",
+      "sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95"
+    }
+  },
+  "completed_phases": {
+    "new-red": {
+      "exit": 1,
+      "totals": {
+        "tests": "21",
+        "failures": "21",
+        "errors": "0",
+        "skipped": "0",
+        "time": "18.317"
+      },
+      "nonpassing": [
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_every_category_sink_encodes_literal_strings_once[bar-x]",
+          "kind": "failure",
+          "message": "assert ['<a href=\"ht...\" & \\' Ω</b>'] == ['&lt;a href=... Ω&lt;/b&gt;']\n  \n  At index 0 diff: '<a href=\"https://example.invalid/r27\">A</a>' != '&lt;a href=\"https://example.invalid/r27\"&gt;A&lt;/a&gt;'\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_every_category_sink_encodes_literal_strings_once[line-x]",
+          "kind": "failure",
+          "message": "assert ['<a href=\"ht...\" & \\' Ω</b>'] == ['&lt;a href=... Ω&lt;/b&gt;']\n  \n  At index 0 diff: '<a href=\"https://example.invalid/r27\">A</a>' != '&lt;a href=\"https://example.invalid/r27\"&gt;A&lt;/a&gt;'\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_every_category_sink_encodes_literal_strings_once[area-x]",
+          "kind": "failure",
+          "message": "assert ['<a href=\"ht...\" & \\' Ω</b>'] == ['&lt;a href=... Ω&lt;/b&gt;']\n  \n  At index 0 diff: '<a href=\"https://example.invalid/r27\">A</a>' != '&lt;a href=\"https://example.invalid/r27\"&gt;A&lt;/a&gt;'\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_every_category_sink_encodes_literal_strings_once[scatter-x]",
+          "kind": "failure",
+          "message": "assert ['<a href=\"ht...\" & \\' Ω</b>'] == ['&lt;a href=... Ω&lt;/b&gt;']\n  \n  At index 0 diff: '<a href=\"https://example.invalid/r27\">A</a>' != '&lt;a href=\"https://example.invalid/r27\"&gt;A&lt;/a&gt;'\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_every_category_sink_encodes_literal_strings_once[bubble-x]",
+          "kind": "failure",
+          "message": "assert ['<a href=\"ht...\" & \\' Ω</b>'] == ['&lt;a href=... Ω&lt;/b&gt;']\n  \n  At index 0 diff: '<a href=\"https://example.invalid/r27\">A</a>' != '&lt;a href=\"https://example.invalid/r27\"&gt;A&lt;/a&gt;'\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_every_category_sink_encodes_literal_strings_once[box-x]",
+          "kind": "failure",
+          "message": "assert ['<a href=\"ht...\" & \\' Ω</b>'] == ['&lt;a href=... Ω&lt;/b&gt;']\n  \n  At index 0 diff: '<a href=\"https://example.invalid/r27\">A</a>' != '&lt;a href=\"https://example.invalid/r27\"&gt;A&lt;/a&gt;'\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_every_category_sink_encodes_literal_strings_once[violin-x]",
+          "kind": "failure",
+          "message": "assert ['<a href=\"ht...\" & \\' Ω</b>'] == ['&lt;a href=... Ω&lt;/b&gt;']\n  \n  At index 0 diff: '<a href=\"https://example.invalid/r27\">A</a>' != '&lt;a href=\"https://example.invalid/r27\"&gt;A&lt;/a&gt;'\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_every_category_sink_encodes_literal_strings_once[pie-labels]",
+          "kind": "failure",
+          "message": "assert ['<a href=\"ht...\" & \\' Ω</b>'] == ['&lt;a href=... Ω&lt;/b&gt;']\n  \n  At index 0 diff: '<a href=\"https://example.invalid/r27\">A</a>' != '&lt;a href=\"https://example.invalid/r27\"&gt;A&lt;/a&gt;'\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_every_category_sink_encodes_literal_strings_once[treemap-labels]",
+          "kind": "failure",
+          "message": "assert ['<a href=\"ht...\" & \\' Ω</b>'] == ['&lt;a href=... Ω&lt;/b&gt;']\n  \n  At index 0 diff: '<a href=\"https://example.invalid/r27\">A</a>' != '&lt;a href=\"https://example.invalid/r27\"&gt;A&lt;/a&gt;'\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_every_category_sink_encodes_literal_strings_once[sunburst-labels]",
+          "kind": "failure",
+          "message": "assert ['<a href=\"ht...\" & \\' Ω</b>'] == ['&lt;a href=... Ω&lt;/b&gt;']\n  \n  At index 0 diff: '<a href=\"https://example.invalid/r27\">A</a>' != '&lt;a href=\"https://example.invalid/r27\"&gt;A&lt;/a&gt;'\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_every_category_sink_encodes_literal_strings_once[funnel-y]",
+          "kind": "failure",
+          "message": "assert ['<a href=\"ht...\" & \\' Ω</b>'] == ['&lt;a href=... Ω&lt;/b&gt;']\n  \n  At index 0 diff: '<a href=\"https://example.invalid/r27\">A</a>' != '&lt;a href=\"https://example.invalid/r27\"&gt;A&lt;/a&gt;'\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_every_category_sink_encodes_literal_strings_once[radar-theta]",
+          "kind": "failure",
+          "message": "assert ['<a href=\"ht...d/r27\">A</a>'] == ['&lt;a href=...;A&lt;/a&gt;']\n  \n  At index 0 diff: '<a href=\"https://example.invalid/r27\">A</a>' != '&lt;a href=\"https://example.invalid/r27\"&gt;A&lt;/a&gt;'\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_coordinate_types_order_values_and_records_are_unchanged[xs0]",
+          "kind": "failure",
+          "message": "assert '<b>Group\" & Ω</b>' == '&lt;b&gt;Gro...; Ω&lt;/b&gt;'\n  \n  - &lt;b&gt;Group\" &amp; Ω&lt;/b&gt;\n  + <b>Group\" & Ω</b>"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_coordinate_types_order_values_and_records_are_unchanged[xs1]",
+          "kind": "failure",
+          "message": "assert '<b>Group\" & Ω</b>' == '&lt;b&gt;Gro...; Ω&lt;/b&gt;'\n  \n  - &lt;b&gt;Group\" &amp; Ω&lt;/b&gt;\n  + <b>Group\" & Ω</b>"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_coordinate_types_order_values_and_records_are_unchanged[xs2]",
+          "kind": "failure",
+          "message": "assert '<b>Group\" & Ω</b>' == '&lt;b&gt;Gro...; Ω&lt;/b&gt;'\n  \n  - &lt;b&gt;Group\" &amp; Ω&lt;/b&gt;\n  + <b>Group\" & Ω</b>"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_heatmap_text_axes_and_geo_hover_are_literal_with_numeric_values_intact",
+          "kind": "failure",
+          "message": "assert ['<b>Q\" & \\' Ω</b>'] == ['&lt;b&gt;Q\"... Ω&lt;/b&gt;']\n  \n  At index 0 diff: '<b>Q\" & \\' Ω</b>' != '&lt;b&gt;Q\" &amp; \\' Ω&lt;/b&gt;'\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_title_fields_table_quotes_and_entities_have_text_not_attribute_encoding",
+          "kind": "failure",
+          "message": "assert ['axis &quot;...;Y&lt;/b&gt;'] == ['axis \"Ω\" &a...;Y&lt;/b&gt;']\n  \n  At index 0 diff: 'axis &quot;Ω&quot; &amp; &lt;i&gt;X&lt;/i&gt;' != 'axis \"Ω\" &amp; &lt;i&gt;X&lt;/i&gt;'\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_public_render_native_dom_is_exact_literal_and_inert[chart]",
+          "kind": "failure",
+          "message": "assert ['R27 &quot;Ω...<b>Title</b>'] == ['R27 \"Ω\" & <b>Title</b>']\n  \n  At index 0 diff: 'R27 &quot;Ω&quot; & <b>Title</b>' != 'R27 \"Ω\" & <b>Title</b>'\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_public_render_native_dom_is_exact_literal_and_inert[dashboard]",
+          "kind": "failure",
+          "message": "assert ['R27 &quot;Ω...<b>Title</b>'] == ['R27 \"Ω\" & <b>Title</b>']\n  \n  At index 0 diff: 'R27 &quot;Ω&quot; & <b>Title</b>' != 'R27 \"Ω\" & <b>Title</b>'\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_public_render_native_dom_is_exact_literal_and_inert[table]",
+          "kind": "failure",
+          "message": "assert ['R27 &quot;Ω...<b>Title</b>'] == ['R27 \"Ω\" & <b>Title</b>']\n  \n  At index 0 diff: 'R27 &quot;Ω&quot; & <b>Title</b>' != 'R27 \"Ω\" & <b>Title</b>'\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_r27_plotly_literal::test_public_render_native_dom_is_exact_literal_and_inert[geo]",
+          "kind": "failure",
+          "message": "assert ['R27 &quot;Ω...<b>Title</b>'] == ['R27 \"Ω\" & <b>Title</b>']\n  \n  At index 0 diff: 'R27 &quot;Ω&quot; & <b>Title</b>' != 'R27 \"Ω\" & <b>Title</b>'\n  Use -v to get more diff"
+        }
+      ],
+      "xml_sha256": "b951257e5b632ea1d73c11595b095e5103ca6ddb25b6d5221bd1035928bc1a07",
+      "log_sha256": "11a3f4cdd3f2c30da40da8a80054c51105d1f8476d39f2b3f2908b1445adb9c3"
+    },
+    "new-green": {
+      "exit": 0,
+      "totals": {
+        "tests": "21",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "20.393"
+      },
+      "nonpassing": [],
+      "xml_sha256": "f8e0dc9283cf1400645834689715cb950dc0f9dd7c7b400d170748da4e6bdb98",
+      "log_sha256": "8bf25eeebb5c3627c9b2495589c7bb730154cbe001646942ff7b8fc13c8ecf67"
+    },
+    "unchanged-qa20-fixed": {
+      "exit": 0,
+      "totals": {
+        "tests": "9",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "43.905"
+      },
+      "nonpassing": [],
+      "xml_sha256": "f5bfbda8857d3f922abd3abf5a7f3cf324af9100b8e20d3995f525f09814f484",
+      "log_sha256": "965532105694e9c10534706f0e17eff81bbf5ba4cfeef4dd79ca2848d8a5b2cc"
+    },
+    "connected": {
+      "exit": 1,
+      "totals": {
+        "tests": "176",
+        "failures": "2",
+        "errors": "0",
+        "skipped": "3",
+        "time": "29.214"
+      },
+      "nonpassing": [
+        {
+          "id": "python.deepviz.tests.test_backend_plotly::test_table_cells_and_headers_are_escaped_without_transposing_rows",
+          "kind": "failure",
+          "message": "assert [['&lt;img sr...], ['12', '']] == [['&lt;img sr...], ['12', '']]\n  \n  At index 0 diff: ['&lt;img src=x onerror=\"alert(1)\"&gt; &amp; \"quoted\"', 'plain &amp; simple'] != ['&lt;img src=x onerror=&quot;alert(1)&quot;&gt; &amp; &quot;quoted&quot;', 'plain &amp; simple']\n  Use -v to get more diff"
+        },
+        {
+          "id": "python.deepviz.tests.test_render::test_untrusted_strings_cannot_end_json_script_or_html_title[plotly]",
+          "kind": "failure",
+          "message": "assert '</script><img src=x onerror=\"alert(1)\">&\\u2028\\u2029' in <generator object test_untrusted_strings_cannot_end_json_script_or_html_title.<locals>.strings at 0x0000026B06634900>\n[+3 more lines; full report in element text]"
+        },
+        {
+          "id": "python.deepviz.tests.test_render::test_browser_executes_all_native_kinds[plotly]",
+          "kind": "skipped",
+          "message": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+        },
+        {
+          "id": "python.deepviz.tests.test_render::test_browser_executes_all_native_kinds[echarts]",
+          "kind": "skipped",
+          "message": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+        },
+        {
+          "id": "python.deepviz.tests.test_render::test_browser_executes_all_native_kinds[antv]",
+          "kind": "skipped",
+          "message": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+        }
+      ],
+      "xml_sha256": "90eaea3455e24c5e05a04e25ab3742e1927eb49cd7e02fc50314135f7ebe750f",
+      "log_sha256": "0e9573dc33ab0bb2c32211217aca007a461dec4ceca6b4f849859b794e938a35"
+    }
+  },
+  "browser": {
+    "new-red": [
+      {
+        "case": "test_public_render_native_dom_0",
+        "sha256": "a77aa6cfcfdcc1c8c31cf5e319f9fbf11318830e536cbbb70ab93ba3f46e75c0",
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "errors": [],
+        "blocked": [],
+        "anchor_counts": [
+          1
+        ],
+        "handler_counts": [
+          0
+        ],
+        "missing": [
+          [
+            "<a href=\"https://example.invalid/r27\">A</a>",
+            "&lt;b&gt; B &amp; C",
+            "<b>Q\" & ' Ω</b>",
+            "<b>Group\" & Ω</b>",
+            "axis \"Ω\" & <i>X</i>",
+            "value \"Ω\" & <b>Y</b>"
+          ]
+        ]
+      },
+      {
+        "case": "test_public_render_native_dom_1",
+        "sha256": "29c909d448dab9fb7ba90f67df842ff534093716ee01b651b3fc12aed64b43f4",
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "errors": [],
+        "blocked": [],
+        "anchor_counts": [
+          1,
+          1
+        ],
+        "handler_counts": [
+          0,
+          0
+        ],
+        "missing": [
+          [
+            "<a href=\"https://example.invalid/r27\">A</a>",
+            "&lt;b&gt; B &amp; C",
+            "<b>Q\" & ' Ω</b>",
+            "<b>Group\" & Ω</b>",
+            "axis \"Ω\" & <i>X</i>",
+            "value \"Ω\" & <b>Y</b>"
+          ],
+          [
+            "<a href=\"https://example.invalid/r27\">A</a>",
+            "&lt;b&gt; B &amp; C",
+            "<b>Q\" & ' Ω</b>",
+            "<b>Group\" & Ω</b>",
+            "axis \"Ω\" & <i>X</i>",
+            "value \"Ω\" & <b>Y</b>"
+          ]
+        ]
+      },
+      {
+        "case": "test_public_render_native_dom_2",
+        "sha256": "d19a5aa58becd5fea50c93952434bc2132c24659d90fcb78e1673e4f4c9ec0cb",
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "errors": [],
+        "blocked": [],
+        "anchor_counts": [
+          0
+        ],
+        "handler_counts": [
+          0
+        ],
+        "missing": [
+          [
+            "axis \"Ω\" & <i>X</i>",
+            "value \"Ω\" & <b>Y</b>",
+            "<b>Q\" & ' Ω</b>"
+          ]
+        ]
+      },
+      {
+        "case": "test_public_render_native_dom_3",
+        "sha256": "91651186d0c070506b7692db4213ae4f1e6f40bb4c4d62e65dab1f4227c3a20f",
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "errors": [],
+        "blocked": [],
+        "anchor_counts": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "handler_counts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "missing": [
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "new-green": [
+      {
+        "case": "test_public_render_native_dom_0",
+        "sha256": "96b88d2b78422da10c8bb8f559b94ba17d49ad6e3c9b8d14647dcf39c25cfa62",
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "errors": [],
+        "blocked": [],
+        "anchor_counts": [
+          0
+        ],
+        "handler_counts": [
+          0
+        ],
+        "missing": [
+          []
+        ]
+      },
+      {
+        "case": "test_public_render_native_dom_1",
+        "sha256": "af4d06965ac564a66f85e458bc35c22228d077f75d09fb22c939a2d295551572",
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "errors": [],
+        "blocked": [],
+        "anchor_counts": [
+          0,
+          0
+        ],
+        "handler_counts": [
+          0,
+          0
+        ],
+        "missing": [
+          [],
+          []
+        ]
+      },
+      {
+        "case": "test_public_render_native_dom_2",
+        "sha256": "01650f0b207b22420b93e2125a88d64b1b5258c0ed8ea2e1e4001e67ae744ba1",
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "errors": [],
+        "blocked": [],
+        "anchor_counts": [
+          0
+        ],
+        "handler_counts": [
+          0
+        ],
+        "missing": [
+          []
+        ]
+      },
+      {
+        "case": "test_public_render_native_dom_3",
+        "sha256": "52baaed54206f50b243a9687cec5fc59d9ae510e68fb64a270164bbe97a4fccb",
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "errors": [],
+        "blocked": [],
+        "anchor_counts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "handler_counts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "missing": [
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "unchanged-qa20-fixed": [
+      {
+        "case": "test_plotly_isolated_sink_lite0",
+        "sha256": "aa417de0bccbfa418e28f5523ebbdc6453e6b1b3066ec099b7912d8988ff5986",
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "errors": [],
+        "blocked": [],
+        "anchor_counts": [
+          0
+        ],
+        "handler_counts": [
+          0
+        ],
+        "missing": [
+          []
+        ]
+      },
+      {
+        "case": "test_plotly_isolated_sink_lite1",
+        "sha256": "e15a603adc4d86d0181c96ab67450b6aad234729072eaccea21d35a554c7d6e3",
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "errors": [],
+        "blocked": [],
+        "anchor_counts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "handler_counts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "missing": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "case": "test_plotly_isolated_sink_lite2",
+        "sha256": "ed29b170b4ae3a925f9bde33290526c2859827b840753792715152fb02114212",
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "errors": [],
+        "blocked": [],
+        "anchor_counts": [
+          0
+        ],
+        "handler_counts": [
+          0
+        ],
+        "missing": [
+          []
+        ]
+      },
+      {
+        "case": "test_plotly_literal_labels_and0",
+        "sha256": "9916723ebdedf5e61d452c6897d270ffc4d8dac925667244bd997529ad7f234b",
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "errors": [],
+        "blocked": [],
+        "anchor_counts": [
+          0
+        ],
+        "handler_counts": [
+          0
+        ],
+        "missing": [
+          []
+        ]
+      },
+      {
+        "case": "test_plotly_literal_labels_and1",
+        "sha256": "1818c227922301efd370092deccd851dfa9b784130db99087a7e4ae5ca55183e",
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "errors": [],
+        "blocked": [],
+        "anchor_counts": [
+          0,
+          0
+        ],
+        "handler_counts": [
+          0,
+          0
+        ],
+        "missing": [
+          [],
+          []
+        ]
+      },
+      {
+        "case": "test_plotly_literal_labels_and2",
+        "sha256": "099a9a8b2bc08d41a25470c05771e68a86680190a2fef88f49e415b10f91853d",
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "errors": [],
+        "blocked": [],
+        "anchor_counts": [
+          0
+        ],
+        "handler_counts": [
+          0
+        ],
+        "missing": [
+          []
+        ]
+      },
+      {
+        "case": "test_plotly_literal_labels_and3",
+        "sha256": "7a0d6d907ceeb0d5a55d345f45ec80b7f52efbb12daacab6af3ff903312a0b08",
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "errors": [],
+        "blocked": [],
+        "anchor_counts": [
+          0,
+          0
+        ],
+        "handler_counts": [
+          0,
+          0
+        ],
+        "missing": [
+          [],
+          []
+        ]
+      },
+      {
+        "case": "test_plotly_literal_labels_and4",
+        "sha256": "df331a0299082be8e0aeaf33f208858f2aeab5ef7033cf2ac2a2facad4550b04",
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "errors": [],
+        "blocked": [],
+        "anchor_counts": [
+          0
+        ],
+        "handler_counts": [
+          0
+        ],
+        "missing": [
+          []
+        ]
+      },
+      {
+        "case": "test_plotly_literal_labels_and5",
+        "sha256": "d9fa3c304bc46e1d504cc63d0d4b645b87748978cfe751ca31163240ca274da3",
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1",
+        "errors": [],
+        "blocked": [],
+        "anchor_counts": [
+          0,
+          0
+        ],
+        "handler_counts": [
+          0,
+          0
+        ],
+        "missing": [
+          [],
+          []
+        ]
+      }
+    ],
+    "connected": []
+  },
+  "original_qa20_files": {
+    "tests/r10_probes/role20/test_plotly_literal_labels.py": "a0f506b5d91408e18f0935d7deef010c685f976ccb4a298a8a7f3e1dc503580e",
+    "tests/r10_probes/role20/browser_assertions.cjs": "27b2ade313bcb0bb3d73ec47497f2c2ff2e359fb9c4bca947946b0922f4daa0b",
+    "tests/r13_probes/role20/test_plotly_sink_discrimination.py": "a3d6851f0d6f43cd0fb79ac1f4e8b2db0e3d1e63e932844a11cb0bc5ebf5f99d",
+    "tests/r13_probes/role20/sink_browser.cjs": "d437736de487d7f372b25d0d41355543f7c8333e9d6a0096d0532cece21c1a62"
+  },
+  "opened_pngs": [
+    {
+      "case": "chart",
+      "file": "7224439-chart.png",
+      "sha256": "e7c3acf2a5be1f40d6f96ac4d0930b03b66be1b4145174d6279d8bdf59186f12",
+      "visually_opened": true
+    },
+    {
+      "case": "dashboard",
+      "file": "7224439-dashboard.png",
+      "sha256": "8107d358f3cbfd6e1596ee1897081dd81e2bbd377bb39ba0d916bb87967b59f1",
+      "visually_opened": true
+    },
+    {
+      "case": "table",
+      "file": "7224439-table.png",
+      "sha256": "9abff89c95026f3b29c923d0e12ed29ebc028c220f23148526ea19519fc8500f",
+      "visually_opened": true
+    },
+    {
+      "case": "geo",
+      "file": "7224439-geo.png",
+      "sha256": "9dc3c311e50c7d8b70ccfce57c43435f68d50dc6639ac52016f98f2e14e7c538",
+      "visually_opened": true
+    }
+  ],
+  "checks": {
+    "scoped_ruff": 0,
+    "scoped_mypy": 0,
+    "node_check": 0,
+    "full_ruff": 0,
+    "full_mypy": 0,
+    "offline_build": 1,
+    "reason_build": "missing hatchling.build; no installs"
+  },
+  "dependencies": {
+    "plotly": "6.9.0",
+    "pydantic": "2.14.4",
+    "numpy": "2.5.5",
+    "pytest": "9.2.0",
+    "mcp": "1.30.0"
+  },
+  "limits": [
+    "Author execution, not independent reviewer approval",
+    "No full-suite GREEN claim; full job still running and not polled",
+    "Known unencoded geo-x same-cause sink found after focused checks; final repair still pending full job completion",
+    "Two original-oracle representation conflicts retained without edits",
+    "No installs/10M/provider/CDN requests/GitHub issue or PR writes",
+    "No source changes while full job runs"
+  ]
+}

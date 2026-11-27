@@ -1,0 +1,32 @@
+{
+  "base": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "source_head": "94319d679661a169856fb0a0ec0e9de5cbd6986f",
+  "commits": [
+    "94319d679661a169856fb0a0ec0e9de5cbd6986f fix: encode Plotly geo values that become categorical text ticks",
+    "72244399d3606046621afd6b11aaf19894d1460b fix: render Plotly data and spec text literally at native sinks"
+  ],
+  "changed_paths": [
+    "python/deepviz/src/deepviz/engines.py",
+    "python/deepviz/tests/test_r27_plotly_literal.py",
+    "tests/browser/r27_plotly_literal.mjs"
+  ],
+  "existing_oracles_byte_unchanged": {
+    "python/deepviz/tests/test_backend_plotly.py": "a36c75526fbaade06750eb03ba83dce8019840e9baefc0cca0d8eb3d194d40f5",
+    "python/deepviz/tests/test_render.py": "385b6938046b6264f43d07b03085936f299b66fc4bd1ddb07aadbb25b8fdb452"
+  },
+  "source_function_diff_sha256": "e314d9678d6d67d6adc49960b66fae65e64bb6f8a3c039c1f8a72cc01d4f0ccf",
+  "no_new_source_imports": true,
+  "no_other_source_functions_changed": true,
+  "tracked_source_tests_clean": true,
+  "final_full_gate_pending": false,
+  "author_review_not_independent": true,
+  "final_full_gate_exit": 1,
+  "final_full_gate_totals": {
+    "failed": 38,
+    "passed": 2547,
+    "skipped": 5,
+    "deselected_scale": 9,
+    "errors": 517,
+    "seconds": 327.01
+  }
+}
