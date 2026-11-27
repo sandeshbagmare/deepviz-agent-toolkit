@@ -22,6 +22,7 @@ test('R40: a no-install materialized packed-consumer gate is publicly runnable',
   const checker=await readFile(new URL('packages/deepviz/scripts/check-materialized-package.mjs',root),'utf8');
   assert.ok(checker.includes('cleanInstalled: false'));
   assert.ok(!checker.includes("'install'"),'The materialized gate must not install dependencies');
+  assert.ok(checker.includes("import.meta.resolve('typescript/package.json')"),'Resolve the installed compiler package root through its exported metadata, not its unexported CLI subpath');
 });
 test('R40: npm-only CI retains full tests, schema and actual public tarball gate',async()=>{
   const workflow=await readFile(new URL('.github/workflows/npm-foundation.yml',root),'utf8');

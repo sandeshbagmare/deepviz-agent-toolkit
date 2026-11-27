@@ -98,7 +98,8 @@ const unsafe:ChartSpecInput={assets:{vega:'https://invalid.example'}};void unsaf
 // @ts-expect-error Unknown engines are not a supported browser API.
 render([row],spec,'matplotlib');
 `);
-  const compiler=compilerArg?path.resolve(compilerArg):fileURLToPath(import.meta.resolve('typescript/bin/tsc'));
+  // Node's package exports can hide an installed compiler CLI; resolve its package root first.
+  const compiler=compilerArg?path.resolve(compilerArg):path.join(path.dirname(fileURLToPath(import.meta.resolve('typescript/package.json'))),'bin','tsc');
   record.compiler={path:compiler,sha256:hash(await readFile(compiler))};
   await run('public-types',process.execPath,[compiler,'--noEmit','--strict','--skipLibCheck','false','--module','NodeNext','--moduleResolution','NodeNext','--target','ES2022','--lib','ES2022,DOM','types.mts']);
   record.passed=true;console.log('PASS: manually materialized tarball; 25-file allowlist, public ESM/schema/prompts/runtime/types. NOT a clean install.');
