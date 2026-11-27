@@ -58,3 +58,22 @@ npm run typecheck
 npm run schema:check
 npm pack --dry-run --workspace @deepviz/agent-toolkit
 ```
+
+## Actual source commit / publication next
+
+- Meaningfulscopedfixcommit`5e595a8f893955ce34a0e26553bb7bf257ea93ae`createdexit0onOWN`agents/r11-12-svg-tick-margin`fromexactca25. Explicit12ownreleased/evidencepaths staged, stageddiff/statread, whitespace0, credentialpatternscanNOmatches, unstagedtrackedempty. Ownworktreecleanpostcommit; rendererhashstill`be34bcb2be9e44459cb30d145386c3606933bcbdea389ba2fd3fca8d738fac80`.
+- This sourcecommitcontains2NEWtests, scopedrendererfix, ownreport/note/compactJSON+4openedPNGsonly; noexistingoracles/dependencies/helpers/normalizers/schemachanges. NextnonforcepushownbranchandactualremoteSHAreadback. LocalcommitdoesNOTprovepublication/integration/review/finalacceptance.
+
+### Publication failure preserved
+
+- First`git push -u origin agents/r11-12-svg-tick-margin`exit1:remoteprintedPRhintthen`[remote rejected] ... (failed)`. ThisisNOTpublishedsuccessandnotaproducttestfailure; causeunknown. Scriptstoppedbeforels-remote, soactualremoteSHAunknown. Localtestedsourcecommit5e595a8isretained/cleanishbeforepush. No reset/force/globalcredential/providerchange orunboundedretry.
+- NextFIRSTaction: ONEbounded`git ls-remote --heads origin refs/heads/agents/r11-12-svg-tick-margin`readbacktoclassifyabsent/equal/differentbeforeanypublicationretry. Preservefailureinownnote/report; source/evidenceunchanged.
+
+- Boundedreconciliation`git ls-remote --heads origin refs/heads/agents/r11-12-svg-tick-margin`exit0returnedempty: remotescopeABSENT. Localbranchremainscleanat5e595a8; no competingremoteSHA. One boundednonforce retry is now safe/authorized; if rejected again stop/report exactfailure.
+
+## Actual publication / source handback
+
+- Oneboundednonforce retry`git push -u origin HEAD:refs/heads/agents/r11-12-svg-tick-margin` **exit0**,newbranchpublished. Immediate`git ls-remote --heads origin refs/heads/agents/r11-12-svg-tick-margin` **exit0**,exactremoteSHA **`5e595a8f893955ce34a0e26553bb7bf257ea93ae`**. Owntrackingbranchclean. Firstremoteerrorremainsrecorded; itscauseunknown, nothiddenorrecastsuccess. NoGitHubissue/PR/sharedbranchmutation.
+- SourceauthorshipandexclusiveeditingworknowhandedbacktoR04/rootforintegration/reviewassignment. Thislane willnotmakefurther`renderers.ts`editsunlessnewexplicitrelease. R04caninspect`git diff ca25af486bf443949125df789f5b5fd1fda8bba8 5e595a8f893955ce34a0e26553bb7bf257ea93ae -- packages/deepviz/src/renderers.ts`andthetwoNEWregressions; onlyreleasedsourcechangepaths. Copy/cherry-pickonlytestedscopedcommit/resolveownnoteasappropriate, notdirtysiblingfiles.
+- **Readyfornon-authorreview/retest, NOTfinalsignoff.** Askexistingindependentreviewer/testerlaneviaROOT(no worker spawning)torerunexactNEWtestsplusfullnpmontheactualintegratedcommit; retainminimumwidthcategoryoverlapasexplicitremainingvisualfinding. No10Mrepeatrequested/claimeduntiltruefinalsourcefreeze/measurementownerdecision.
+- Currentaction: sourcefix/test/evidencepublishedandownershiphandbackrecorded. NextONEexecutablecoordinatoraction:`git show 5e595a8f893955ce34a0e26553bb7bf257ea93ae -- packages/deepviz/src/renderers.ts packages/deepviz/test/test_r11_svg_tick_margin.test.mjs tests/browser/r11-svg-tick-margin.mjs`,thenreservegenuineindependentreview/retestbeforerelease. Ownnextpublicationisreceipt-only,nochanges/replays toverifiedsource.
