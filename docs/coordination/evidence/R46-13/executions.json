@@ -1,0 +1,90 @@
+{
+  "actual_source_sha": "31cff73ab057c3fed69bd400ac005f2f11609027",
+  "probe_raw_sha256_before": "c107441157dbc5b77210942e0429f954f66c15f3177af29cb048f7fbbd69fd7d",
+  "probe_raw_sha256_after": "c107441157dbc5b77210942e0429f954f66c15f3177af29cb048f7fbbd69fd7d",
+  "source_all15_raw_hashes_after_exact": true,
+  "source_clean_after": true,
+  "backend_all183_hashes_after_exact": true,
+  "no_product_unit_tests_or_replays": true,
+  "direct_declared_PEP517_hooks_NOT_isolated_frontend": true,
+  "manual_unpack_NOT_install": true,
+  "API_mutations_installs_downloads_environment_mutations": 0,
+  "probe_pre_execution_Ruff": {
+    "exit": 0,
+    "command": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\ruff.exe check --no-cache tests/r46_probes/role13/distribution_probe.py",
+    "evidence": "preceding actual native tool result; not replayed"
+  },
+  "commands": [
+    {
+      "phase": "build",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-S",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\\tests\\r46_probes\\role13\\distribution_probe.py",
+        "build",
+        "--evidence",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\\docs\\coordination\\evidence\\R46-13",
+        "--run",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46p13-run-ses_de56780caffekQ9gdZ58EgQwb5"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46p13-empty-ses_de56780caffekQ9gdZ58EgQwb5",
+      "started_utc": "2026-11-27T18:07:48.051632+00:00",
+      "elapsed_seconds": 3.731456599998637,
+      "exit": 0,
+      "stdout_bytes": 2319,
+      "stderr_bytes": 0,
+      "stdout_raw_sha256": "e45942d2f66ad0d938680e9bf4b9734d1e513a4cec5f33fa385628dd4977d774",
+      "stderr_raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "phase": "inspect",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-S",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\\tests\\r46_probes\\role13\\distribution_probe.py",
+        "inspect",
+        "--evidence",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\\docs\\coordination\\evidence\\R46-13",
+        "--run",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46p13-run-ses_de56780caffekQ9gdZ58EgQwb5"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46p13-empty-ses_de56780caffekQ9gdZ58EgQwb5",
+      "started_utc": "2026-11-27T18:07:51.785956+00:00",
+      "elapsed_seconds": 0.9788999000011245,
+      "exit": 0,
+      "stdout_bytes": 3007,
+      "stderr_bytes": 0,
+      "stdout_raw_sha256": "2e689a7408d1a2277162e20dbb3c1dd75022854837cea0fea1fc79907c2921bb",
+      "stderr_raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "phase": "consume",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-S",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\\tests\\r46_probes\\role13\\distribution_probe.py",
+        "consume",
+        "--evidence",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\\docs\\coordination\\evidence\\R46-13",
+        "--run",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46p13-run-ses_de56780caffekQ9gdZ58EgQwb5",
+        "--site-packages",
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46p13-empty-ses_de56780caffekQ9gdZ58EgQwb5",
+      "started_utc": "2026-11-27T18:07:52.799697+00:00",
+      "elapsed_seconds": 0.51714159999392,
+      "exit": 1,
+      "stdout_bytes": 2825,
+      "stderr_bytes": 0,
+      "stdout_raw_sha256": "53304647f07198a018679c2a0c333e08bac2b7a87be7e1b6f01a52dd61f7d1e3",
+      "stderr_raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

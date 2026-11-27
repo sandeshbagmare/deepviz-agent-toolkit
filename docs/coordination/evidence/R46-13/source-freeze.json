@@ -1,0 +1,362 @@
+{
+  "observed_utc": "2026-11-27T17:55:54.975707+00:00",
+  "default_ref": "refs/heads/main",
+  "actual_default_sha": "31cff73ab057c3fed69bd400ac005f2f11609027",
+  "trigger_sha": "31cff73ab057c3fed69bd400ac005f2f11609027",
+  "new_default_before_start": false,
+  "actual_new_PR38_merge_proof": null,
+  "source": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+  "source_clean": true,
+  "source_files": [
+    {
+      "path": ".github/workflows/chart-contract.yml",
+      "raw_bytes": 1051,
+      "raw_sha256": "ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227",
+      "Git_LF_sha256": "ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227"
+    },
+    {
+      "path": ".gitignore",
+      "raw_bytes": 205,
+      "raw_sha256": "3bebcceee3a15392de8f9a36815347d9a999e21fe58efe576ef28b9664b00e77",
+      "Git_LF_sha256": "3bebcceee3a15392de8f9a36815347d9a999e21fe58efe576ef28b9664b00e77"
+    },
+    {
+      "path": "LICENSE",
+      "raw_bytes": 1077,
+      "raw_sha256": "afbb59a0c0fccdea7ecc9140e4e762455dc06abea4f02d9cf5324c8fb23b42fd",
+      "Git_LF_sha256": "afbb59a0c0fccdea7ecc9140e4e762455dc06abea4f02d9cf5324c8fb23b42fd"
+    },
+    {
+      "path": "README.md",
+      "raw_bytes": 199,
+      "raw_sha256": "2497e600ecd5a35af571f0f3e6f2550ce3a49b9322a607e02e6b97aa8c41d40d",
+      "Git_LF_sha256": "2497e600ecd5a35af571f0f3e6f2550ce3a49b9322a607e02e6b97aa8c41d40d"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-11-26-deepviz-plan.md",
+      "raw_bytes": 3191,
+      "raw_sha256": "9d941cd545a8a37ddbf6d9395d882ba25360318b35ff93d36ed1556f3668d834",
+      "Git_LF_sha256": "9d941cd545a8a37ddbf6d9395d882ba25360318b35ff93d36ed1556f3668d834"
+    },
+    {
+      "path": "docs/superpowers/specs/2026-11-26-deepviz-design.md",
+      "raw_bytes": 3206,
+      "raw_sha256": "715ef120ba4700ea28ef5dbd1d975cd80cf3cc5b659e64fc9e6cd231c664a973",
+      "Git_LF_sha256": "715ef120ba4700ea28ef5dbd1d975cd80cf3cc5b659e64fc9e6cd231c664a973"
+    },
+    {
+      "path": "docs/verification/r22-contract/README.md",
+      "raw_bytes": 2893,
+      "raw_sha256": "f83f3e84a78d9a88c4a96d7df489f19e7fb4a6739c9e662d781f10f06670b3a6",
+      "Git_LF_sha256": "f83f3e84a78d9a88c4a96d7df489f19e7fb4a6739c9e662d781f10f06670b3a6"
+    },
+    {
+      "path": "docs/verification/r22-contract/red-green-summary.json",
+      "raw_bytes": 5057,
+      "raw_sha256": "e3db9381970aa74f9a9f9ede2c87712dcd47636c34520fb3984ee39107bf1937",
+      "Git_LF_sha256": "e3db9381970aa74f9a9f9ede2c87712dcd47636c34520fb3984ee39107bf1937"
+    },
+    {
+      "path": "docs/verification/r22-contract/validation-output.json",
+      "raw_bytes": 4915,
+      "raw_sha256": "3896de0d87545af60fc63bdee608b202055ea55d84dc7f49d1334ab729d02a0b",
+      "Git_LF_sha256": "3896de0d87545af60fc63bdee608b202055ea55d84dc7f49d1334ab729d02a0b"
+    },
+    {
+      "path": "pyproject.toml",
+      "raw_bytes": 1259,
+      "raw_sha256": "c80640f3f3049b9734360abd7bb1b5699449d7bad31f3fcde77c3e2b38a53053",
+      "Git_LF_sha256": "c80640f3f3049b9734360abd7bb1b5699449d7bad31f3fcde77c3e2b38a53053"
+    },
+    {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "raw_bytes": 3021,
+      "raw_sha256": "8532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d",
+      "Git_LF_sha256": "8532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d"
+    },
+    {
+      "path": "schemas/chart-spec.schema.json",
+      "raw_bytes": 4078,
+      "raw_sha256": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d",
+      "Git_LF_sha256": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d"
+    },
+    {
+      "path": "tests/test_models.py",
+      "raw_bytes": 2684,
+      "raw_sha256": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32",
+      "Git_LF_sha256": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32"
+    },
+    {
+      "path": "tests/test_native_mapping.py",
+      "raw_bytes": 2012,
+      "raw_sha256": "4f06bc1ad9cdc021f5081f5c59b10081783439e2fa95b69287d079e5dc82bb94",
+      "Git_LF_sha256": "4f06bc1ad9cdc021f5081f5c59b10081783439e2fa95b69287d079e5dc82bb94"
+    },
+    {
+      "path": "tests/test_numeric_schema.py",
+      "raw_bytes": 2343,
+      "raw_sha256": "b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3",
+      "Git_LF_sha256": "b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3"
+    }
+  ],
+  "source_count": 15,
+  "source_downloads": 0,
+  "no_fetch_required_objects_already_present": true,
+  "one_default_query_only": true,
+  "no_product_test_or_build_yet": true,
+  "API_mutations": 0,
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--heads",
+        "origin",
+        "refs/heads/main"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "31cff73ab057c3fed69bd400ac005f2f11609027\trefs/heads/main\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-e",
+        "31cff73ab057c3fed69bd400ac005f2f11609027^{commit}"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "worktree",
+        "add",
+        "--detach",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+        "31cff73ab057c3fed69bd400ac005f2f11609027"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "HEAD is now at 31cff73 Merge PR #33: strict numeric ChartSpec contract\n",
+      "stderr": "Preparing worktree (detached HEAD 31cff73)\n"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "31cff73ab057c3fed69bd400ac005f2f11609027\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "31cff73ab057c3fed69bd400ac005f2f11609027",
+        "31cff73ab057c3fed69bd400ac005f2f11609027"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "31cff73ab057c3fed69bd400ac005f2f11609027"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": ".github/workflows/chart-contract.yml\n.gitignore\nLICENSE\nREADME.md\ndocs/superpowers/plans/2026-11-26-deepviz-plan.md\ndocs/superpowers/specs/2026-11-26-deepviz-design.md\ndocs/verification/r22-contract/README.md\ndocs/verification/r22-contract/red-green-summary.json\ndocs/verification/r22-contract/validation-output.json\npyproject.toml\npython/deepviz/src/deepviz/models.py\nschemas/chart-spec.schema.json\ntests/test_models.py\ntests/test_native_mapping.py\ntests/test_numeric_schema.py\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:.github/workflows/chart-contract.yml"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "<binary/text Git blob verified; SHA256 ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:.gitignore"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "<binary/text Git blob verified; SHA256 3bebcceee3a15392de8f9a36815347d9a999e21fe58efe576ef28b9664b00e77>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:LICENSE"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "<binary/text Git blob verified; SHA256 afbb59a0c0fccdea7ecc9140e4e762455dc06abea4f02d9cf5324c8fb23b42fd>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:README.md"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "<binary/text Git blob verified; SHA256 2497e600ecd5a35af571f0f3e6f2550ce3a49b9322a607e02e6b97aa8c41d40d>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:docs/superpowers/plans/2026-11-26-deepviz-plan.md"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "<binary/text Git blob verified; SHA256 9d941cd545a8a37ddbf6d9395d882ba25360318b35ff93d36ed1556f3668d834>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:docs/superpowers/specs/2026-11-26-deepviz-design.md"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "<binary/text Git blob verified; SHA256 715ef120ba4700ea28ef5dbd1d975cd80cf3cc5b659e64fc9e6cd231c664a973>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:docs/verification/r22-contract/README.md"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "<binary/text Git blob verified; SHA256 f83f3e84a78d9a88c4a96d7df489f19e7fb4a6739c9e662d781f10f06670b3a6>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:docs/verification/r22-contract/red-green-summary.json"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "<binary/text Git blob verified; SHA256 e3db9381970aa74f9a9f9ede2c87712dcd47636c34520fb3984ee39107bf1937>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:docs/verification/r22-contract/validation-output.json"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "<binary/text Git blob verified; SHA256 3896de0d87545af60fc63bdee608b202055ea55d84dc7f49d1334ab729d02a0b>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:pyproject.toml"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "<binary/text Git blob verified; SHA256 c80640f3f3049b9734360abd7bb1b5699449d7bad31f3fcde77c3e2b38a53053>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:python/deepviz/src/deepviz/models.py"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "<binary/text Git blob verified; SHA256 8532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:schemas/chart-spec.schema.json"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "<binary/text Git blob verified; SHA256 ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:tests/test_models.py"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "<binary/text Git blob verified; SHA256 90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:tests/test_native_mapping.py"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "<binary/text Git blob verified; SHA256 4f06bc1ad9cdc021f5081f5c59b10081783439e2fa95b69287d079e5dc82bb94>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:tests/test_numeric_schema.py"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "<binary/text Git blob verified; SHA256 b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3>",
+      "stderr": ""
+    }
+  ]
+}

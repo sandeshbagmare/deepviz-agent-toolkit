@@ -1,0 +1,48 @@
+# R46-13 — actual-default distribution and model consumer
+
+Status: ACTUAL31cff ARCHIVES/MODEL SUBSET VERIFIED; DECLARED ENTRYPOINT GATE STRICT RED (KNOWN #24/#5), 2026-11-27. OWN publication/handoff next. NOT full toolkit/clean-install acceptance.
+
+**Prepublication checkpoint:** actual binary wheel/sdist preserved under `evidence/R46-13/artifacts/` with exact recorded hashes; real wheel METADATA/WHEEL/entrypoints/RECORD and sdist PKG-INFO saved verbatim. Sdist16regularfiles = ALL15source files +PKG-INFO; wheel6unique files. Saved-artifact validation0/16existingJSON valid before self-excluding integrity manifest; ALL3stdout JSON objects equal their receipts/log hashes, ALLstderr empty/source15+backend183+executed probe unchanged. Fresh expected GCM identity/repo200/pushpermission and OWNremote5617 verified, no credential values/auth changes/APIwrites. Next explicit OWN scope/staged-byte/whitespace/fullcode+reportreview→ONEmeaningfulpublication, not another build/consumer/default loop. Hook `exit:0` entries mean normal hook completion, not extra spawned build processes; actual enclosing commands are0/0/1 as recorded.
+
+## Actual result / main-delivery decision
+
+- **Main delivery target:** usable, truthfully declared Python distribution on actual `main`; this gate measures current **31cff73ab057c3fed69bd400ac005f2f11609027**, informing role07's next dependency-complete data-package slice under #24/#5 (new package PR UNKNOWN). Future PR38/default changes are not silently adopted or counted here.
+- **Blocker removed:** cached-backend availability is proven, and real actual-default archives/model imports are now measured—not an inherited missing-hatchling or source-import-as-build claim. All183cached files/current six module origins/hatchling1.33.0 and active requirements match before/after; no installs/downloads/env changes.
+- **Remaining strict delivery blocker:** metadata advertises `deepviz=deepviz.cli:main` and `deepviz-mcp=deepviz.mcp_server:main`, but BOTH modules are absent/unresolvable from the wheel. Consumer **exit1** preserves this known #24/#5 model-only capability limitation, NOT a new issue/regression or backend failure. No CLI/MCP/toolkit success claimed.
+- **Next owner/action:** R04 use the exact artifact/consumer evidence to route role07's existing accurate data-only initializer/export/typing/resource/script metadata implementation through actual independent gates/PR/main. QA13 does not repair source or close issues; finish this ONE publication/handoff and STOP until new actual manager grant/merge notification. Full-delivery date **UNKNOWN**.
+
+| Distinct phase, ONCE each | Actual result |
+|---|---|
+| `-B -I -S` direct declared PEP517 hooks, sdist then wheel FROM that safely unpacked sdist |**exit0**, outer3.7314566s; hooks0.0644618s +0.0175911s |
+| Actual archive/source/metadata/requirements/entrypoint declaration/RECORD comparisons + manual wheel materialization |**exit0**, outer0.9788999s; wheel6unique files/modelbytes exact; ALL15source files present/exact in sdist;0omissions |
+| External fresh manual-wheel-only model/Artifact JSON/origin consumer + strict declared-target resolution |**exit1**, outer0.5171416s, **ONLY2known dangling targets**; model-submodule subset PASS, stderr0/no exception |
+| NEW OWN probe pre-execution Ruff |**exit0**; no runtime file edits or reruns |
+
+Actual new artifacts (not07's older wheel):
+- Wheel **3818B**, SHA256 **9e376f50a90fb4091f460b0cf16a4b4681ed50e5107493731aecd87d1d28d13a**.
+- Sdist **12378B**, SHA256 **b73e4b268b565769205aa80f678add4ee193693719afbf1a7e0ab143fb6f8c7a**.
+- Model member **3021B/SHA2568532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d**, exact NEW checkout raw/GitLF bytes. No R38 CRLF rawhash assumed for this separate checkout.
+- Actual wheel is namespace/model-only: `deepviz.__file__=None`, root ChartSpec/Artifact exports absent, `py.typed` absent, no packaged schema resource. `deepviz.models.ChartSpec` JSON roundtrip and `Artifact.to_dict` actual JSON metadata PASS; module is ONLY unpacked-wheel `deepviz.models`, exact archive hash. Read-only runtime Pydantic2.14.4 origin recorded. No installed candidate product/source/cache path fallback.
+- Real commands start18:07:48.051632Z,18:07:51.785956Z,18:07:52.799697Z. All3stderr empty; source15/183backend/probe hashes unchanged/sourceclean. `executions.json` + three commandJSON/rawlogs bind exact argv/CWD/times/exits; build/archives/consumerJSON preserve actual objects. Zero unit tests/82+30+4/schema3replays/APIwrites/newissues/comments/installs/downloads/environment mutations.
+- Scope limits: direct declared-backend hooks are NOT an isolated frontend invocation. Manual unpack is NOT pip/clean install/dependency resolution or installed PEP561 acceptance. No current remote CI/new merge, browser/render/CLI/MCP/DeepAgents/npm/scale/10M or fulltoolkit/900 signoff. Model JSON is not a chart render. R48 FULL live status97/task18/OWNrecord read at safe checkpoint; SAME R46job/source preserved, R47 not second call.
+
+Next executable action: archive/hash/raw-log/JSON/secret/protected-source integrity and explicit OWN staging/diff review; meaningful ONE code/evidence commit/nonforcepush/exactSHA/ONE strict handoff. No further product/default query or artifact rebuilding for count.
+
+**Source/cache checkpoint17:55:54.975707Z:** ONEactual`git ls-remote --heads origin refs/heads/main`0 confirms **31cff73ab057c3fed69bd400ac005f2f11609027**, no new merged-default proof; no PR/API query/fetch/download needed. Unique clean detached `r46-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5` created0; all15tracked raw/GitLF hashes matched; actual metadata/model/README read. Rehashed EXACT07cached183files/sixroots: all match, not missing hatchling. Saved `source-freeze.json`/`backend-files-current.json`. Next direct unchanged declared PEP517 backend hooks (sdist→wheel from safely unpacked sdist) in `-B -I -S`, explicit cached paths only, no environment mutation/installation/frontend substitution; label this honestly as hook-level build, NOT standard isolated frontend or clean-install acceptance. No builds/consumers/unit reruns yet.
+
+## Owner / authority / source selection
+
+- SAME native ID `ses_de56780caffekQ9gdZ58EgQwb5` reconfirmed by supported session_move. Existing OWN branch `agents/r10-13-ci-negative-controls` clean at **5617d7d776298df877581738c51b557a9cd5e224**; status/HEAD/log0. Root reported actual17:42:17 capacity reservation; worker does not spawn, poll runtime or infer headcounts.
+- FIRST FULL reads: R46 task ALL19lines/common/role13+line17, MAIN AGENTS52/R42protocol23/OWNnote104, canonical current/RESUME/recoverySTATE, FULL role07 current15line record+99line R34implementation report+50line normalizer546 README+EXACT982line cached-backend receipt. Role07's real older wheel/sdist success is acknowledged, not borrowed as this default gate.
+- Actual-default trigger is **31cff73ab057c3fed69bd400ac005f2f11609027**; root's17:36 proof says PR38dd1 OPEN/notmerged/threeCI success. Before build take ONE default Git ref freeze; if genuinely new actual merged proof is already present, verify/freeze it instead. Otherwise execute only31cff. No queryloop/wait/both snapshots for count; no old82+30+4/known3schemaRED execution.
+- Owned writes ONLY this NEW report, `evidence/R46-13/`, NEW `tests/r46_probes/role13/` if needed, OWN actual-ID note, ONLY central `status/role13.md`, OWN branch publication. R04 owns fixes/closures/PR/default; no additional issue/API-write authority. No product/config/originaloracle/caps/SDK/dependency edits, installs/downloads/shared env/cache changes/spawn/shared indexes.
+
+## Original finite artifact gate (executed; historical scope)
+
+1. Freeze one actual default into unique clean OWN immutable source; inspect real model/metadata and source tree. Rehash all183 files in role07's exact existing six cache roots and declared hatchling>=1.27/backend origins/version. If unavailable or changed, STOP with actual blocker, no install/fabricated archives.
+2. Build actual wheel+sdist using the unchanged declared backend and existing tools, process-local paths only, no dependency resolution/network/install. Fresh OWN output paths, source/backend before-after proof and exact command/hook/exits/times. Distinguish direct PEP517 backend-hook builds from isolated frontend/clean-install acceptance.
+3. Compare actual archive membership/uniqueness/safe paths, model bytes, source/metadata/version/requirements, declared entrypoint targets. Manually unpack the actual wheel to fresh OWN target; external `-B -I -S` child imports ONLY that artifact's declared `deepviz.models.ChartSpec/Artifact`, emits actual JSON and proves module/archive origins. Do not borrow unshipped APIs/installed candidate. Manual unpack is NOT clean installation or dependency-resolution/installed-typing evidence.
+4. Namespace/top-level exports/dangling CLI/MCP/py.typed/resource omissions are truthful known model-only capability limits under #24/#5, NOT new fake issues or a toolkit/CLI pass. No old unit/schema matrix, browser/MCP/npm/scale/10M run.
+5. Save actual artifacts/digests/commands/outputs/limitations, scoped code+evidence integrity, ONE meaningful OWN commit/nonforcepush/exact remote SHA, coherent handoff/STOP. R04 decides subsequent actual-default QA. Conditional full-delivery estimate **UNKNOWN**, not a promised date; backend availability/build results unverified at this checkpoint.
+
+Initial pre-work action (completed above): one default ref/source/cache freeze followed by the three distinct artifact phases. No build/consumer had run AT THAT initial checkpoint; all actual results and the current R04 handoff are recorded above. Do not repeat this plan as another job.

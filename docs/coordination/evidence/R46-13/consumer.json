@@ -1,0 +1,79 @@
+{
+  "actual_source_sha": "31cff73ab057c3fed69bd400ac005f2f11609027",
+  "argv": [
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\\tests\\r46_probes\\role13\\distribution_probe.py",
+    "consume",
+    "--evidence",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\\docs\\coordination\\evidence\\R46-13",
+    "--run",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46p13-run-ses_de56780caffekQ9gdZ58EgQwb5",
+    "--site-packages",
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages"
+  ],
+  "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "isolated_no_site_no_bytecode": true,
+  "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46p13-empty-ses_de56780caffekQ9gdZ58EgQwb5",
+  "manual_unpacked_model_subset_passed": true,
+  "actual_model_json": {
+    "version": 1,
+    "kind": "line",
+    "title": "R46 actual wheel model",
+    "description": "",
+    "x": "day",
+    "y": "value",
+    "color": null,
+    "size": null,
+    "data_path": null,
+    "format": "auto",
+    "aggregation": "auto",
+    "max_points": 10,
+    "width": 900,
+    "height": 520,
+    "theme": "light",
+    "charts": [],
+    "columns": 2
+  },
+  "actual_Artifact_metadata": {
+    "paths": [
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\\docs\\coordination\\evidence\\R46-13\\actual-model-output.json"
+    ],
+    "mime_type": "application/json",
+    "engine": "model-contract-only",
+    "input_count": 1,
+    "output_count": 1,
+    "strategy": "none",
+    "warnings": []
+  },
+  "namespace_initial_paths": [
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46p13-run-ses_de56780caffekQ9gdZ58EgQwb5\\wheel-consumer\\deepviz"
+  ],
+  "namespace_file": null,
+  "top_level_ChartSpec_available": false,
+  "top_level_Artifact_available": false,
+  "loaded_product_modules": {
+    "deepviz.models": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46p13-run-ses_de56780caffekQ9gdZ58EgQwb5\\wheel-consumer\\deepviz\\models.py"
+  },
+  "model_raw_sha256": "8532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d",
+  "readonly_pydantic_origin": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\pydantic\\__init__.py",
+  "readonly_pydantic_version": "2.14.4",
+  "entrypoints": [
+    {
+      "name": "deepviz",
+      "target": "deepviz.cli:main",
+      "module_present": false,
+      "actual_confined_module_resolves": false
+    },
+    {
+      "name": "deepviz-mcp",
+      "target": "deepviz.mcp_server:main",
+      "module_present": false,
+      "actual_confined_module_resolves": false
+    }
+  ],
+  "known_dangling_entrypoints": 2,
+  "overall_declared_distribution_gate_exit": 1,
+  "issue_scope": "Existing #24/#5 model-only capability limits, not new bugs or numeric regressions",
+  "clean_install_dependency_resolution_installed_typing": "NOT RUN / NOT CLAIMED",
+  "environment_unchanged": true,
+  "API_writes_installs_downloads_test_replays": 0
+}

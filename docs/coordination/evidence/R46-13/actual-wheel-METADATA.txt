@@ -1,0 +1,34 @@
+Metadata-Version: 2.5
+Name: deepviz-agent-toolkit
+Version: 0.1.0
+Summary: Bounded, schema-driven visualization tools for Deep Agents and MCP
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.11
+Requires-Dist: matplotlib>=3.9
+Requires-Dist: numpy>=1.26
+Requires-Dist: plotly<7,>=6
+Requires-Dist: pydantic<3,>=2.10
+Requires-Dist: vl-convert-python>=1.7
+Provides-Extra: agents
+Requires-Dist: deepagents>=0.3; extra == 'agents'
+Requires-Dist: langchain-core<2,>=1; extra == 'agents'
+Provides-Extra: columnar
+Requires-Dist: pyarrow>=19; extra == 'columnar'
+Provides-Extra: dev
+Requires-Dist: build>=1.2; extra == 'dev'
+Requires-Dist: httpx>=0.28; extra == 'dev'
+Requires-Dist: jsonschema>=4.23; extra == 'dev'
+Requires-Dist: mypy>=1.15; extra == 'dev'
+Requires-Dist: pillow>=11; extra == 'dev'
+Requires-Dist: pytest-cov>=6; extra == 'dev'
+Requires-Dist: pytest>=8; extra == 'dev'
+Requires-Dist: ruff>=0.11; extra == 'dev'
+Requires-Dist: twine>=6; extra == 'dev'
+Provides-Extra: mcp
+Requires-Dist: mcp<2,>=1.12; extra == 'mcp'
+Description-Content-Type: text/markdown
+
+# DeepViz Agent Toolkit
+
+Python-first, schema-driven visualization tools for Deep Agents and MCP. Under active construction; see the implementation plan and verified test reports for current status.
