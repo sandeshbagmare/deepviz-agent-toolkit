@@ -1,6 +1,7 @@
-﻿# Role05 - AntV exact-head independent review
-Main-bound slice: R04-owned five-renderer/dashboard code; PR UNKNOWN. Exact product: 4429f0521612b97eee3790f0d8d0fbc3cad3f8be.
-Real-G2 strict suite: 10 PASS, 0 fail, 0 skip; original four subnormal inputs/assertions unchanged, all ten PNGs opened. Old 21-case/254-check author suite not rerun.
-R51-05-F1 P2 at python/deepviz/src/deepviz/engines.py:710-712: width240 signed MAX labels overlap 98.98px and extend to x299.746; two marks ready, zero browser errors. Screenshot/bounds saved under evidence/R51-05/minimum-width-max-label/. Distinct from role18/21 finite-MAX scale arithmetic. No issue/API write.
-Source verdict REQUEST CHANGES. R04 next owner for disposition/repair grant and new-head independent gates, CI, PR/default merge. No production edits, install, PR, CI or main write by role05. Remaining forecast UNKNOWN.
-Full report reports/R51-05-antv-source-review.md; evidence evidence/R51-05/.
+﻿# Role05 AntV independent source review
+Own branch agents/r10-05-inspector-claim-retest published at d38083c51cf75033d3d85a6a9bfa120822b03749; remote SHA readback verified in evidence/R51-05/remote-publication.json.
+Main-bound slice: R04-owned five-engine/dashboard renderer; PR UNKNOWN. Exact product reviewed 4429f0521612b97eee3790f0d8d0fbc3cad3f8be.
+Strict real-G2 10-case suite: 10 passed, 0 failed, 0 skipped; original four subnormal controls unchanged, all ten actual PNGs opened. The separate 21-case/254-check author suite was not rerun.
+Finding F1 P2 at python/deepviz/src/deepviz/engines.py:710-712: valid width240 signed finite-MAX heatmap paints two cells without browser errors, but labels overlap 98.98px and extend to x299.746. Screenshot and bounds are under evidence/R51-05/minimum-width-max-label/. Distinct from the existing finite-MAX scale issue. No issue/API write.
+Disposition REQUEST CHANGES, not ready PR. R04 next owner for source disposition/repair, fresh independent gates, CI, PR and main. These were not performed by role05. Estimate UNKNOWN.
+Full report reports/R51-05-antv-source-review.md; test/output/source proof evidence/R51-05/.

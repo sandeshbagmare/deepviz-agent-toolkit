@@ -56,3 +56,9 @@ Exact source proof: `source-review.json` and `source-diff.patch`; 3 paths change
 First static scan failed only because it included the allowed probe's `subprocess`; corrected scan restricted to production additions and passed. First browser-launch wrapper referenced a missing node shim and failed before execution; corrected run used existing node.exe. Both setup outcomes are preserved, not product failures.
 
 PR, CI, current main/merge, issue state, package and five-engine integration are not verified. Product review is pinned to exact detached4429. R04 is next owner; remaining effort UNKNOWN.
+
+## Own-branch publication readback
+
+- Explicit-path commit `d38083c51cf75033d3d85a6a9bfa120822b03749` (`test: independently gate AntV extreme heatmap output`) contains only the actual-session note, role05 central status, this review, and new R51-05 source/test/output evidence; product source and original tests are excluded.
+- `git diff HEAD^ HEAD --check` exited0. Non-force `git push origin agents/r10-05-inspector-claim-retest:agents/r10-05-inspector-claim-retest` exited0. Immediate `git ls-remote --heads origin refs/heads/agents/r10-05-inspector-claim-retest` exited0 and read back exactly `d38083c51cf75033d3d85a6a9bfa120822b03749`. Receipt `evidence/R51-05/remote-publication.json`; no PR/CI/merge was performed by this reviewer.
+- A subsequent three-path owner-doc/evidence receipt-only follow-up will record that readback; current owned evidence is preserved. Unrelated pre-existing untracked R47 report/test paths remain untouched.
