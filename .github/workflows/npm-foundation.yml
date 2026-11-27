@@ -1,0 +1,48 @@
+name: npm foundation (component gates, not full toolkit)
+
+on:
+  push:
+    branches: [main, feat/r40-npm-foundation]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  npm-foundation:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['22', '24']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run typecheck
+      - run: npm run schema:check
+      - run: npm test
+      - name: Pack actual published allowlist
+        run: |
+          mkdir "$RUNNER_TEMP/packed"
+          npm pack --dry-run --workspace @deepviz/agent-toolkit
+          npm pack --workspace @deepviz/agent-toolkit --pack-destination "$RUNNER_TEMP/packed"
+      - name: Materialized public package, resources and declarations (not a clean install)
+        run: npm run package:materialized -- "$RUNNER_TEMP/packed/deepviz-agent-toolkit-0.1.0.tgz" "$RUNNER_TEMP/consumer"
+      - name: Dependency-free native output in a real browser
+        run: |
+          npx playwright install --with-deps chromium
+          npm run test:packed-native -- "$RUNNER_TEMP/consumer"
+      - name: Preserve component evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-foundation-node-${{ matrix.node }}
+          path: |
+            ${{ runner.temp }}/consumer
+            ${{ runner.temp }}/packed

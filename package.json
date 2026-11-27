@@ -1,0 +1,29 @@
+{
+  "name": "deepviz-workspace",
+  "private": true,
+  "type": "module",
+  "workspaces": ["packages/deepviz"],
+  "scripts": {
+    "build": "npm run build --workspace @deepviz/agent-toolkit",
+    "test": "npm run build && node --test packages/deepviz/test/*.test.mjs",
+    "lint": "npm run typecheck",
+    "typecheck": "tsc --noEmit -p packages/deepviz/tsconfig.json",
+    "package:check": "npm run build && npm pack --dry-run --workspace @deepviz/agent-toolkit && node packages/deepviz/scripts/check-package.mjs",
+    "package:materialized": "node packages/deepviz/scripts/check-materialized-package.mjs",
+    "test:packed-native": "node packages/deepviz/scripts/check-native-output.mjs",
+    "test:browser": "npm run build && node --test packages/deepviz/test/browser.browser.mjs packages/deepviz/test/test_n17_boundaries.browser.mjs",
+    "benchmark:stream": "npm run build && node --expose-gc packages/deepviz/scripts/benchmark-stream.mjs",
+    "schema:check": "npm run build && node packages/deepviz/scripts/check-schema.mjs"
+  },
+  "devDependencies": {
+    "@antv/g2": "5.4.8",
+    "@types/node": "26.6.11",
+    "echarts": "6.1.0",
+    "playwright": "1.65.1",
+    "plotly.js-dist-min": "4.3.0",
+    "typescript": "7.0.2",
+    "vega": "6.4.0",
+    "vega-embed": "7.4.0",
+    "vega-lite": "6.5.0"
+  }
+}
