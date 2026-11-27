@@ -1,4 +1,12 @@
-# Role16 — main-bound DeepAgents/MCP callback CODE: BLOCKED
+# Role16 — main-bound DeepAgents/MCP callback CODE: R50 producer candidate complete; integration pending
+
+## R50 SAME-ID callback liveness repair — candidate checkpoint
+
+- **Target / source:** PR6 callback-admission slice. Own branch `fix/r41-callback-admission`, base HEAD `86b0bbff8818514b9dc27c41103f92184dec7244`, f48 tested source parent `f48c72e26000560b48f3dfd137696fa9acf17637`, e47 parent `e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23`. Exact R50 work remains dirty/uncommitted at this checkpoint; inspect current status before staging. Local branch upstream and actual remote result still need verification after the commit.
+- **Blocker disposition:** prior four-entrypoint stale file-handle regression now has a narrow candidate repair in `tools.py`; live file reread, current two-row histogram/new field and fresh handle restored for bare JSON recommendations. Explicit dictionary handles keep cached-summary behavior. No `ToolSession`, registry/cache, MCP/SDK, schema or other product source modified.
+- **Evidence:** exact e47 NEW liveness **4/4 pass**, exact f48 pre-fix NEW liveness **4/4 fail** (`input_count 1 != 2`), exact f48 invalid-before-callback/recovery controls **12/12 pass**. Candidate NEW suite **16 pass**, unchanged existing R41 suite **78 pass**, preserved R22 boundary suite **8 pass**, and final combined guarded run of all three **102 passed** (`docs/coordination/evidence/R50-16/probe-r50-combined.{json,xml}`). `ruff` targeted exit0; `mypy` on `tools.py` exit0. Full command details `docs/coordination/reports/R50-16-callback-liveness-repair.md`.
+- **Decision/next owner:** author verification only, **not** independent review/tester signoff. Explicitly stage only own R50 `tools.py`, permanent regression test, R50 evidence/report, this own central role16 record, and own actual-session note; commit and non-force push only this owned branch, then read back exact remote SHA. Hand off pinned candidate/evidence to **R04**, who owns independent gates, PR6/CI and main integration. No API/PR/issue/default/shared branch write here.
+- **Blocker / estimate:** PR/CI/merge and actual `main` head not verified by this worker; conditional schedule/confidence **UNKNOWN**, R04 decision owner. User-reported `main@484ff08...` is not live-verified in this producer worktree.
 
 ## R48 substantive main-delivery handoff
 

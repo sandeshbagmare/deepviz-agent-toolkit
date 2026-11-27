@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="4" time="2.619" timestamp="2026-11-28T00:55:50.497183+05:30" hostname="SandeshAcer"><testcase classname="python.deepviz.tests.test_r50_callback_liveness" name="test_bare_registered_file_handle_rereads_mutated_file_per_call[run]" time="0.461"><failure message="assert 1 == 2">python\deepviz\tests\test_r50_callback_liveness.py:70: in test_bare_registered_file_handle_rereads_mutated_file_per_call
+    assert live["input_count"] == 2
+E   assert 1 == 2</failure></testcase><testcase classname="python.deepviz.tests.test_r50_callback_liveness" name="test_bare_registered_file_handle_rereads_mutated_file_per_call[arun]" time="0.196"><failure message="assert 1 == 2">python\deepviz\tests\test_r50_callback_liveness.py:70: in test_bare_registered_file_handle_rereads_mutated_file_per_call
+    assert live["input_count"] == 2
+E   assert 1 == 2</failure></testcase><testcase classname="python.deepviz.tests.test_r50_callback_liveness" name="test_bare_registered_file_handle_rereads_mutated_file_per_call[invoke]" time="0.037"><failure message="assert 1 == 2">python\deepviz\tests\test_r50_callback_liveness.py:70: in test_bare_registered_file_handle_rereads_mutated_file_per_call
+    assert live["input_count"] == 2
+E   assert 1 == 2</failure></testcase><testcase classname="python.deepviz.tests.test_r50_callback_liveness" name="test_bare_registered_file_handle_rereads_mutated_file_per_call[ainvoke]" time="0.196"><failure message="assert 1 == 2">python\deepviz\tests\test_r50_callback_liveness.py:70: in test_bare_registered_file_handle_rereads_mutated_file_per_call
+    assert live["input_count"] == 2
+E   assert 1 == 2</failure></testcase></testsuite></testsuites>

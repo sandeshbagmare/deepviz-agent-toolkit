@@ -1,0 +1,75 @@
+{
+  "utc": "2026-11-27T19:53:55.039880+00:00",
+  "label": "f48",
+  "source": "f48c72e26000560b48f3dfd137696fa9acf17637",
+  "source_mode": "candidate",
+  "head": "86b0bbff8818514b9dc27c41103f92184dec7244",
+  "branch": "fix/r41-callback-admission",
+  "production_status": " M python/deepviz/src/deepviz/tools.py\n",
+  "test_sha256": "45aeda0d0b8644aaa9366a766c5fd6cabf47c54fd2692afbf1e85122bf7a5369",
+  "product_module_origins": {
+    "tools": {
+      "path": "python/deepviz/src/deepviz/tools.py",
+      "pinned_sha256": "463ee6feb88d90ac8e19e143d3cb019501ce60d0a22435fe03814464c00d5cbb",
+      "working_sha256": "12ae39245ef9aca6b5e31cc285ece89961e0887364a4e7f4b6e557f7c037d664"
+    },
+    "models": {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "pinned_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "working_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    "normalize": {
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "pinned_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+      "working_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+    },
+    "mcp_server": {
+      "path": "python/deepviz/src/deepviz/mcp_server.py",
+      "pinned_sha256": "9f1628e04749c3c3d2357607ac4cc0021f74e1119c6237aa36077a0fd67bf480",
+      "working_sha256": "9f1628e04749c3c3d2357607ac4cc0021f74e1119c6237aa36077a0fd67bf480"
+    },
+    "recommend": {
+      "path": "python/deepviz/src/deepviz/recommend.py",
+      "pinned_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+      "working_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999"
+    },
+    "render": {
+      "path": "python/deepviz/src/deepviz/render.py",
+      "pinned_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+      "working_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+    }
+  },
+  "installed_sdk_origins": {
+    "langchain_core.tools.base": {
+      "path": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py",
+      "sha256": "239c77d07a9283ced902fb161ca0fcdb5e532a9824caaa169ab014ac41c899d4"
+    },
+    "langchain_core.tools.structured": {
+      "path": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\langchain_core\\tools\\structured.py",
+      "sha256": "f51689a1707c1ee31a173b8d8c9aaea33d994f4d95a79e6d51fe7369b2247142"
+    },
+    "pydantic.main": {
+      "path": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\pydantic\\main.py",
+      "sha256": "a18a2ea6fe02abd1035dd56b35006fd29b0c90227f71d77e45fa0e52aed5aee7"
+    }
+  },
+  "versions": {
+    "langchain-core": "1.8.5",
+    "pydantic": "2.14.4",
+    "pytest": "9.2.0"
+  },
+  "test_args": [
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r41-16-callback-admission-ses_de567808bffdXko8hyKFRhPv77\\python\\deepviz\\tests\\test_r50_callback_liveness.py",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r41-16-callback-admission-ses_de567808bffdXko8hyKFRhPv77\\python\\deepviz\\tests\\test_r41_callback_admission.py",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r41-16-callback-admission-ses_de567808bffdXko8hyKFRhPv77\\docs\\coordination\\evidence\\R50-16\\test_p1_security.py",
+    "-q",
+    "--tb=short",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r41-16-callback-admission-ses_de567808bffdXko8hyKFRhPv77-artifacts\\pytest-r50-combined",
+    "--junitxml",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r41-16-callback-admission-ses_de567808bffdXko8hyKFRhPv77-artifacts\\probe-r50-combined.xml"
+  ],
+  "pytest_exit": 0
+}

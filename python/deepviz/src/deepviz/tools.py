@@ -185,19 +185,38 @@ def create_tools(output_dir: str | Path | None = None, *, data_dir: str | Path |
 
     class ValidatedTool(StructuredTool):
         # LangChain formats inputs for callbacks before invoking our function.
-        def run(self, tool_input: str | dict[str, Any], *args: Any, **kwargs: Any) -> Any:
+        def _admit(self, tool_input: str | dict[str, Any]) -> tuple[Any, str | dict[str, Any]]:
             if isinstance(tool_input, str):
-                tool_input = {"data": tool_input}
+                data = _inline_data(tool_input)
+                if (
+                    self.name == "recommend_chart"
+                    and isinstance(data, dict)
+                    and set(data) == {"dataset_id"}
+                    and self.func is not None
+                ):
+                    original = self.func
+                    session = getattr(original, "__self__", None)
+                    normalize_data = getattr(session, "normalize_data", None)
+                    if callable(normalize_data):
+                        def recommend_live(data: Any, goal: Goal = "comparison") -> dict[str, Any]:
+                            fresh = normalize_data(data)
+                            return original({"dataset_id": fresh["dataset_id"]}, goal)
+
+                        # Keep callback payloads canonical without changing the
+                        # registered tool function shared by concurrent calls.
+                        return self.model_copy(update={"func": recommend_live}), {"data": data}
+                return self, {"data": data}
             if isinstance(tool_input, dict) and "data" in tool_input:
-                tool_input = {**tool_input, "data": _inline_data(tool_input["data"])}
-            return super().run(tool_input, *args, **kwargs)
+                return self, {**tool_input, "data": _inline_data(tool_input["data"])}
+            return self, tool_input
+
+        def run(self, tool_input: str | dict[str, Any], *args: Any, **kwargs: Any) -> Any:
+            invocation, admitted = self._admit(tool_input)
+            return super(ValidatedTool, invocation).run(admitted, *args, **kwargs)
 
         async def arun(self, tool_input: str | dict[str, Any], *args: Any, **kwargs: Any) -> Any:
-            if isinstance(tool_input, str):
-                tool_input = {"data": tool_input}
-            if isinstance(tool_input, dict) and "data" in tool_input:
-                tool_input = {**tool_input, "data": _inline_data(tool_input["data"])}
-            return await super().arun(tool_input, *args, **kwargs)
+            invocation, admitted = self._admit(tool_input)
+            return await super(ValidatedTool, invocation).arun(admitted, *args, **kwargs)
 
     session = ToolSession(output_dir, data_dir=data_dir)
     tools = [
