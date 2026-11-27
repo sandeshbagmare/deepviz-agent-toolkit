@@ -1,0 +1,333 @@
+{
+  "sealed": "fb0d22e13b89a26eb7df0f6ed008770ecb9e1c35",
+  "runtime": "94319d679661a169856fb0a0ec0e9de5cbd6986f",
+  "first_fix": "72244399d3606046621afd6b11aaf19894d1460b",
+  "base": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "runtime_sealed_engines_bytes_equal": true,
+  "product_paths": [
+    "M\tpython/deepviz/src/deepviz/engines.py",
+    "A\tpython/deepviz/tests/test_r27_plotly_literal.py",
+    "A\ttests/browser/r27_plotly_literal.mjs"
+  ],
+  "four_modules": [
+    {
+      "file": "python/deepviz/src/deepviz/models.py",
+      "bytes": 3493,
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "base_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "equal_base": true
+    },
+    {
+      "file": "python/deepviz/src/deepviz/normalize.py",
+      "bytes": 34886,
+      "sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+      "base_sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+      "equal_base": true
+    },
+    {
+      "file": "python/deepviz/src/deepviz/engines.py",
+      "bytes": 44241,
+      "sha256": "bbf19726873cb7fc5dd62ceea8983aa4377408228ef3f26cf0969fb1531e5642",
+      "base_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225",
+      "equal_base": false
+    },
+    {
+      "file": "python/deepviz/src/deepviz/render.py",
+      "bytes": 11637,
+      "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+      "base_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+      "equal_base": true
+    }
+  ],
+  "protected_top_level_functions": [
+    {
+      "name": "_table_budget",
+      "base_range": [
+        34,
+        61
+      ],
+      "target_range": [
+        34,
+        61
+      ],
+      "bytes_equal": true,
+      "sha256": "e6f59a5abe92b56c7358bb5c6eb6755a6933fd3269e327f12a5a31cab2216f8e"
+    },
+    {
+      "name": "safe_json",
+      "base_range": [
+        64,
+        70
+      ],
+      "target_range": [
+        64,
+        70
+      ],
+      "bytes_equal": true,
+      "sha256": "bb4aa61b9355b47d9cf1b04f5550c6c3fb9ea53e09e927ff06ac36957d814a69"
+    },
+    {
+      "name": "_number",
+      "base_range": [
+        81,
+        86
+      ],
+      "target_range": [
+        81,
+        86
+      ],
+      "bytes_equal": true,
+      "sha256": "99ea212a112afd304ed0ae4a8cff604c0b181499f23a69366d27b5d4919b1dbd"
+    },
+    {
+      "name": "channels",
+      "base_range": [
+        89,
+        105
+      ],
+      "target_range": [
+        89,
+        105
+      ],
+      "bytes_equal": true,
+      "sha256": "cceaee527c8f96b9675b3800e586dc49d5c121b3efb021116317d1e391c387dc"
+    },
+    {
+      "name": "_groups",
+      "base_range": [
+        108,
+        112
+      ],
+      "target_range": [
+        108,
+        112
+      ],
+      "bytes_equal": true,
+      "sha256": "2c545d6d9f55b61ae1596097982764aba7bcedf27342da18b4e27858c92bc60e"
+    },
+    {
+      "name": "_geometry",
+      "base_range": [
+        115,
+        137
+      ],
+      "target_range": [
+        115,
+        137
+      ],
+      "bytes_equal": true,
+      "sha256": "aca17ffbc1a0dc94fdcabb9e78e278738bd3e6d2a698bafae04ef9a7f100115b"
+    },
+    {
+      "name": "_boxes",
+      "base_range": [
+        140,
+        146
+      ],
+      "target_range": [
+        140,
+        146
+      ],
+      "bytes_equal": true,
+      "sha256": "c198ac709c6ba3dd6a74bc010f5c5de700551d8c0ff5a82500861740416ae57d"
+    },
+    {
+      "name": "_histogram_values",
+      "base_range": [
+        149,
+        153
+      ],
+      "target_range": [
+        149,
+        153
+      ],
+      "bytes_equal": true,
+      "sha256": "245cc859bcc6cc81e68c4361dc4672eb62478c495d3967b0e331bffe139ee05e"
+    },
+    {
+      "name": "_histogram",
+      "base_range": [
+        156,
+        163
+      ],
+      "target_range": [
+        156,
+        163
+      ],
+      "bytes_equal": true,
+      "sha256": "f363c050c7ac0422b4ad1a7eee1422d26e5e4eaeaea69c4881947f366593fdcd"
+    },
+    {
+      "name": "_tiles",
+      "base_range": [
+        166,
+        175
+      ],
+      "target_range": [
+        166,
+        175
+      ],
+      "bytes_equal": true,
+      "sha256": "6b4385bc6529464e877e105ff9d19eb411c0419bec46d35f2b1629116736f5d1"
+    },
+    {
+      "name": "_heatmap",
+      "base_range": [
+        178,
+        183
+      ],
+      "target_range": [
+        178,
+        183
+      ],
+      "bytes_equal": true,
+      "sha256": "d6626e70999d5d2102c1bcb87a0c4bc936d3b869821950afd1383f3830ba3528"
+    },
+    {
+      "name": "_colors",
+      "base_range": [
+        186,
+        187
+      ],
+      "target_range": [
+        186,
+        187
+      ],
+      "bytes_equal": true,
+      "sha256": "c4cfe975327330db218d08e5509876640bc0e6044258d2d05cef94f52cf571f4"
+    },
+    {
+      "name": "_label_color",
+      "base_range": [
+        190,
+        194
+      ],
+      "target_range": [
+        190,
+        194
+      ],
+      "bytes_equal": true,
+      "sha256": "0dcca46cf58a700c1f8cdbdace5576565fcd68b6dd43da19253a10224aa91fb8"
+    },
+    {
+      "name": "_wrap",
+      "base_range": [
+        197,
+        198
+      ],
+      "target_range": [
+        197,
+        198
+      ],
+      "bytes_equal": true,
+      "sha256": "1c75a84368394af2d5c94ccb09d6bc343692c6f3bd232e91a2ecd2a93fc19195"
+    },
+    {
+      "name": "_fallback",
+      "base_range": [
+        201,
+        214
+      ],
+      "target_range": [
+        201,
+        214
+      ],
+      "bytes_equal": true,
+      "sha256": "ec66453d3c89f8efce4f4a85b300ec0209b9d9dacc888992f55797f6933eb571"
+    },
+    {
+      "name": "matplotlib_figure",
+      "base_range": [
+        217,
+        382
+      ],
+      "target_range": [
+        217,
+        382
+      ],
+      "bytes_equal": true,
+      "sha256": "7a0e6d9013655e321326afc5bf7dd88c876a4660aad676a39c78f8a445381ddd"
+    },
+    {
+      "name": "_iso_dates",
+      "base_range": [
+        447,
+        457
+      ],
+      "target_range": [
+        450,
+        460
+      ],
+      "bytes_equal": true,
+      "sha256": "a5ac965d7e9beab7981051e1e68055ba54785e79886ef041712c272b3f69cf6b"
+    },
+    {
+      "name": "_vega",
+      "base_range": [
+        460,
+        536
+      ],
+      "target_range": [
+        463,
+        539
+      ],
+      "bytes_equal": true,
+      "sha256": "00c5b54050a54581d8c05e92b0dc10419f016a643577995f95dd5565e7df5320"
+    },
+    {
+      "name": "_echarts",
+      "base_range": [
+        539,
+        616
+      ],
+      "target_range": [
+        542,
+        619
+      ],
+      "bytes_equal": true,
+      "sha256": "3ba859c0dd8122138ba7f1aac322d012590801b31bf22c558c33ba61334abaad"
+    },
+    {
+      "name": "_antv",
+      "base_range": [
+        619,
+        712
+      ],
+      "target_range": [
+        622,
+        715
+      ],
+      "bytes_equal": true,
+      "sha256": "0a20b95a5c51ad1463a9e9777a8d7ff77b9d6ae280f52af9e454114f869745ee"
+    },
+    {
+      "name": "native_spec",
+      "base_range": [
+        715,
+        734
+      ],
+      "target_range": [
+        718,
+        737
+      ],
+      "bytes_equal": true,
+      "sha256": "f785b592e35ef2e33f681f9f75c99d4a1fba5937458a8fb94dbdcedaa76d07b8"
+    },
+    {
+      "name": "browser_html",
+      "base_range": [
+        737,
+        803
+      ],
+      "target_range": [
+        740,
+        806
+      ],
+      "bytes_equal": true,
+      "sha256": "609b9db6f323a47f3022dae53c9f0e296be0a4cf4f5d506767f90823670f4ed3"
+    }
+  ],
+  "outside_plotly_entire_prefix_suffix_bytes_equal": true,
+  "literal_helper": "Nestedpureliteralinside_plotly,stringonlyescapequoteFalse/no globalhelperimports",
+  "product_imports_executed": 0
+}

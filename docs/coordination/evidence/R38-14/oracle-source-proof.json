@@ -1,0 +1,47 @@
+{
+  "source": "fb0d22e13b89a26eb7df0f6ed008770ecb9e1c35",
+  "read_files": [
+    {
+      "file": "python/deepviz/tests/test_backend_plotly.py",
+      "sha256": "a36c75526fbaade06750eb03ba83dce8019840e9baefc0cca0d8eb3d194d40f5",
+      "bytes": 11018,
+      "lines": 250,
+      "original_bytes_equal_base": true
+    },
+    {
+      "file": "python/deepviz/tests/test_render.py",
+      "sha256": "385b6938046b6264f43d07b03085936f299b66fc4bd1ddb07aadbb25b8fdb452",
+      "bytes": 21736,
+      "lines": 478,
+      "original_bytes_equal_base": true
+    },
+    {
+      "file": "python/deepviz/tests/test_r27_plotly_literal.py",
+      "sha256": "d12b0f93b331d4a3040833e660e25e2faacb948f0cda1679e37e64d36f4d69d3",
+      "bytes": 7762,
+      "lines": 143,
+      "test_functions": [
+        "test_every_category_sink_encodes_literal_strings_once",
+        "test_coordinate_types_order_values_and_records_are_unchanged",
+        "test_heatmap_text_axes_and_geo_hover_are_literal_with_numeric_values_intact",
+        "test_title_fields_table_quotes_and_entities_have_text_not_attribute_encoding",
+        "test_public_render_native_dom_is_exact_literal_and_inert"
+      ]
+    },
+    {
+      "file": "tests/browser/r27_plotly_literal.mjs",
+      "sha256": "d2bf2e42808552bdc64c203131b74114dc09d87e0293ff14c43cc3235732205c",
+      "bytes": 3367,
+      "lines": 56
+    }
+  ],
+  "native_author_cases_static": 18,
+  "browser_author_cases_static": 5,
+  "total_new_author_cases_static": 23,
+  "executed_here": 0,
+  "known_original_failures_preserved": [
+    "python/deepviz/tests/test_backend_plotly.py::test_table_cells_and_headers_are_escaped_without_transposing_rows",
+    "python/deepviz/tests/test_render.py::test_untrusted_strings_cannot_end_json_script_or_html_title[plotly]"
+  ],
+  "note": "ActualfunctionIDconfirmedfromsource192;initialmetadataassumednamecorrectedBEFOREpublication, notproduct/testexecution. No originaloracleorassertionchange."
+}

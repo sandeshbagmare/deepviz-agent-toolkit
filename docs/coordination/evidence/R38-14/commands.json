@@ -1,0 +1,92 @@
+{
+  "source": "fb0d22e13b89a26eb7df0f6ed008770ecb9e1c35",
+  "runtime": "94319d679661a169856fb0a0ec0e9de5cbd6986f",
+  "base": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "executed": [
+    {
+      "argv": [
+        "git",
+        "log",
+        "-4",
+        "--format=%H %P %s",
+        "fb0d22e13b89a26eb7df0f6ed008770ecb9e1c35"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+        "fb0d22e13b89a26eb7df0f6ed008770ecb9e1c35",
+        "--",
+        "python/deepviz/src/deepviz/engines.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "fb0d22e13b89a26eb7df0f6ed008770ecb9e1c35:python/deepviz/tests/test_r27_plotly_literal.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "PY",
+        "-B",
+        "-I",
+        "OUT/inspect_source.py"
+      ],
+      "exit": 0,
+      "result": "actual943/fb0runtimeequal/4Gitmodules/protected22/exactoutsidebytes"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "fb0d22e13b89a26eb7df0f6ed008770ecb9e1c35:tests/browser/r27_plotly_literal.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "grep",
+        "-n",
+        "-E",
+        "_plotly\\(|native_spec\\(|browser_html\\(",
+        "fb0d22e13b89a26eb7df0f6ed008770ecb9e1c35",
+        "--",
+        "python/deepviz/src/deepviz"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "PY",
+        "-B",
+        "-I",
+        "OUT/read_oracles.py"
+      ],
+      "exit": 0,
+      "result": "original2strictrepresentationassertions+NEW23sourceonly"
+    },
+    {
+      "argv": [
+        "PY",
+        "-B",
+        "-I",
+        "OUT/decision.py"
+      ],
+      "exit": 0,
+      "result": "no sourceintroducedmustfix/known2REDsnotwaived/COUNT857dependencyretained"
+    }
+  ],
+  "paths": "PYexistingMAINvenv/OUTuniqueOWNexternalr38-plotly-review; no install/env/configchange",
+  "product_imports_tests_browser_runs": 0,
+  "API_calls_current_request": 0,
+  "counterexamples": "Nonejustified/no duplicatebaseline",
+  "limits": "Noauthor23/nine/203/full-green/security02/20resultadopted; finalintegratedCI/main/v1notapproved."
+}

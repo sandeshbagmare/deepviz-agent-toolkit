@@ -1,0 +1,58 @@
+{
+  "source": "fb0d22e13b89a26eb7df0f6ed008770ecb9e1c35",
+  "runtime": "94319d679661a169856fb0a0ec0e9de5cbd6986f",
+  "first_runtime": "72244399d3606046621afd6b11aaf19894d1460b",
+  "introduced_must_fix_findings": [],
+  "verdict": "No source-level blocker found for the narrow literal-text repair; scope-source-clear ONLY, not integrated/CI/main/paint approval. Known two representation oracles remain RED/not waived.",
+  "literal_sink_review": [
+    {
+      "sinks": "helper; title/axis titles",
+      "lines": "engines385-387,440-443",
+      "trace": "str-only html.escape quote=False encodes &<> at text nodes; quotes left literal by design; no attribute context; numeric/nonstrings returned unchanged"
+    },
+    {
+      "sinks": "category ticks/series legends/implicit hovers",
+      "lines": "391-404,414-415",
+      "trace": "group raw _color first then encode name and string _x; distinct original groups/order preserved; numeric and ISO date x unchanged; _y/size/modes/dashes untouched"
+    },
+    {
+      "sinks": "pie/tree/sunburst/funnel labels/radar theta",
+      "lines": "405-413,424-427",
+      "trace": "only pre-existing string-label channels encoded; numeric weights/ids/parents/thetavalues/closure unchanged; existing negative-weight clamp is separate baselinepolicy not newlycertified"
+    },
+    {
+      "sinks": "heatmap x/y+geo tick/hover",
+      "lines": "420-423,431-446",
+      "trace": "heatmap pre-existing str coordinates encoded; color numbers unchanged. Geo accepted string x now encoded943; numericlon/lat unchanged and color text encoded, y numeric from channels"
+    },
+    {
+      "sinks": "native table header/cells",
+      "lines": "435-438",
+      "trace": "only native text sink uses quoteFalse; original normalizedrecords remainraw; no tabletranspose/droppedrows"
+    },
+    {
+      "sinks": "outerHTML/attribute/scriptJSON/accessibletable/dashboard",
+      "lines": "browser_html749-792;safe_json64-70;render98-111,135-167,217-234",
+      "trace": "unchanged separate context escaping:attributequoteTrue, outertable/textescape, JSONscript &<> U2028/U2029encoding;fixed Plotly.newPlot bootstrap;childnativepayloadsseparate/rawrecordsmanifest/countmetadata retained"
+    }
+  ],
+  "safety_cost": "Onlyoneexistingfunction/nestedpurehelper changed;no imports/config/deps/eval/URL/path authority/newunboundedcontainers. New string copies linear bounded by existing retained data; payload budget checked after native creation, not total RSS/peak claim. No measured memory claim.",
+  "COUNT_dependency": "Thissealedbranchchannels==7bcanddoesNOTinclude857explicitCOUNTrepair. Knownnumericseries/countmis-mappingremainsabasedependency, not introducedliteralregression/notfixedhere. WholeenginescopymustNOTrollback857/08AntV/latestmodels;integratefunction/scopedcommitsandaffectedretetest.",
+  "original_representation_gates": [
+    {
+      "file": "python/deepviz/tests/test_backend_plotly.py",
+      "lines": "192-206",
+      "issue": "202-204expectsquoteentitiesinside nativecells; helper now preservesordinaryquotetext. Originalassertionsremainbyte-identicalbase and reportedRED;manager authorization/disposition+strictretetestsneeded, not blanketwaiver."
+    },
+    {
+      "file": "python/deepviz/tests/test_render.py",
+      "lines": "288-310",
+      "issue": "310demandsrawattacknativeJSONstring;displaystringsnowencoded.295-299script/HTMLbreakoutassertionsstillmaterialandmustremain. Originaltestunmodified/knownRED, no new pass claimed."
+    }
+  ],
+  "author_oracle_limits": "23staticcases=18native+5browser;readallsource+trustedcollector.Collectorstrictconsole/page/network/anchors/handlers/title/literaltext+geohover/assertions. BrowsercasesmayexplicitlyskipmissingNode/Playwright;noenvironment/23PASSclaimhere. Native string testsalonecannotprovebrowserinterpretation;02securityand20nineactualtestsareindependentgatesnotadopted.",
+  "new_counterexample": "None justified: all changed text-capable sinks traced and late geo-string-x repair present. No old test matrix rerun/newduplicateprobe.",
+  "product_imports_tests_browser_build_install_APIwrites": 0,
+  "R33_untouched": "oracle935c unchangedmanager728input;no rerun/Mappingblocker/newissuequota.",
+  "next_manager_action": "Preserve two known strict REDs; obtain actual02/20 exactfb0 gates, minimally disposition representation expectations without weakening safety/raw-record/count/value assertions, integrate722+943function/newtests only on real dependency-completehead; affectedintegratedindependentrevalidation+CI before main/36closure."
+}
