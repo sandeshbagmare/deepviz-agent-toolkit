@@ -1,0 +1,45 @@
+{
+  "checked_commit": "ccb0bf0856cde5c6a866b9418a7b6fca66f2c7cf",
+  "definition": "Windows generation wrote CRLF; Git stores LF. Hash the exact byte form named here. JSON values and all original measurements are unchanged.",
+  "files": {
+    "authentication-preflight.json": {
+      "worktree_bytes": 345,
+      "worktree_sha256": "b5f3c425df809068a3679cb58cf826e5e6edc2dbbb31a46b45fe34a5f8bfae80",
+      "canonical_git_lf_bytes": 335,
+      "canonical_git_lf_sha256": "79abbca4a505e5ebb8072e8137f3c1d4275e0348d3e708f4567c633416d71219",
+      "json_semantically_equal": true
+    },
+    "baseline-0c5fa82.json": {
+      "worktree_bytes": 23716,
+      "worktree_sha256": "98fbf13a16a5ff7464321527fd51dd9893444985fdbff93c6153ed454af7ad8f",
+      "canonical_git_lf_bytes": 23102,
+      "canonical_git_lf_sha256": "68fd193ec367c8a424cac91ffef578233071bebbff7f2c978d626a7d1fbc9f32",
+      "json_semantically_equal": true
+    },
+    "check-results.json": {
+      "worktree_bytes": 3079,
+      "worktree_sha256": "24951349ad68bacda308750e3d73ed1c6c1967ffb1f29a46bad3b0666cbc7e35",
+      "canonical_git_lf_bytes": 3019,
+      "canonical_git_lf_sha256": "6c31b7a8a81e45746647034140dfb382ecdacbfbd1e5a1102e02f1f7bef46646",
+      "json_semantically_equal": true
+    },
+    "source-impact.json": {
+      "worktree_bytes": 1668,
+      "worktree_sha256": "9f8947d11dbf33f31445722080822ae9e08c43f2e93e25ccc0415924e8f21571",
+      "canonical_git_lf_bytes": 1635,
+      "canonical_git_lf_sha256": "aad8a1d39e5b165abb31af7696f8c8293ce37e7bd719b884211f97ae66853a2d",
+      "json_semantically_equal": true
+    }
+  },
+  "postcommit_checks": {
+    "pytest_exit": 0,
+    "passed": 55,
+    "deselected": 9,
+    "skipped": 0,
+    "elapsed_seconds": 3.58,
+    "junit_sha256": "39d0e2151de235b25913ec1e264d7d96466cb911f40ff535baf622b89d40dc9c",
+    "log_sha256": "fa36041c6924171867cf67572ed8fc830a13340209f2d6e332633f1dc247c0bc",
+    "original_full_matrix_cli_exit": 0
+  },
+  "new_scale_experiments": 0
+}

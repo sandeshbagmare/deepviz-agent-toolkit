@@ -10,7 +10,7 @@
 |Seven-group sum|7|119.459617|42,463,232|
 |Seven-group mean|7|105.485824|42,246,144|
 
-All20 preserved workers at10/1K/100K/1M/10M exhausted their sources with exact input/consumed counts; total44,404,040 rows. Sample hash pairs matched at all five tiers. Aggregates match exact arithmetic-progression oracles. Full worker timings/counts/warnings/OS-memory fields are preserved in `baseline-0c5fa82.json` (23,716bytes), SHA256`98fbf13a16a5ff7464321527fd51dd9893444985fdbff93c6153ed454af7ad8f`.
+All20 preserved workers at10/1K/100K/1M/10M exhausted their sources with exact input/consumed counts; total44,404,040 rows. Sample hash pairs matched at all five tiers. Aggregates match exact arithmetic-progression oracles. Full worker timings/counts/warnings/OS-memory fields are preserved in `baseline-0c5fa82.json`: Windows CRLF capture23,716bytes/SHA256`98fbf13a16a5ff7464321527fd51dd9893444985fdbff93c6153ed454af7ad8f`; **published canonical LF Git bytes23,102/SHA256`68fd193ec367c8a424cac91ffef578233071bebbff7f2c978d626a7d1fbc9f32`**. The JSON data are identical; do not compare a LF download to a CRLF worktree byte hash.
 
 ## Scope / source / authority
 
@@ -100,3 +100,25 @@ Windowsmeasurementsusefreshworkersand`GetProcessMemoryInfo.PeakWorkingSetSize`:i
 Backlog mapping: existing scale acceptance issue#22, recorded by the shared checkpoint; supporting output-count/loss metadata belongs to#23. No issue creation/closure or PR mutation is authorized here. R04 must disposition these controls, arrange non-author review/testing, integrate the finite-overflow/source fixes, then execute the frozen-source recipe and remote gates. A pushed branch is not a release, independent signoff or closure;900 legitimate completed issues remains unmet.
 
 At this commit checkpoint, publication is the next action, not yet claimed. The own MAIN report/actual-ID note will receive the actual local commit, non-force push exit and remote-SHA readback; no self-referential commit hash is fabricated in the committed snapshot.
+
+### Own MAIN commit receipt
+
+Actual local commit **`ccb0bf0856cde5c6a866b9418a7b6fca66f2c7cf`** on`agents/r10-11-python-scale-envelope`,base3aa521a5; commitexit0,cleanownworktree. Explicit9ownedpaths only; stageddiff/whitespace/credential-patternscanexit0 andsource/evidence reviewed. No production/existing oracle/environment changes. This is not yet a push. Next: reauthenticate expectedGET/user, non-force ownbranchpush, exactremoteSHAreadback and save finalreceipt here.
+
+### Actual own MAIN publication receipt
+
+At**2026-11-27T02:47:52UTC**, authenticatedGET`/user`200 confirmed expected`sandeshbagmare`. Non-force`git push -u origin agents/r10-11-python-scale-envelope:agents/r10-11-python-scale-envelope`**exit0**. `git ls-remote --heads origin refs/heads/agents/r10-11-python-scale-envelope`**exit0**, plus authenticatedGitHubGETref**200**, both confirm exactremote**`ccb0bf0856cde5c6a866b9418a7b6fca66f2c7cf`**. Sanitizedreceipt: MAIN`docs/coordination/evidence/R10-11/publication.json`.
+
+ActualGETissue**#22**returned200/open, title**“Measure 10 through 10M input rows on the bounded streaming path”**, grounding the scale backlog mapping without a newcensusorissuewrite. No sharedcandidate/defaultbranch/issue/PRmutation, auth/config change or credential output. Published onlyowned9paths. This receipt is new MAINlive state; the committed note/report intentionally snapshot the pre-push step.
+
+Next: final portable published-byte/hash readback and postcommitfocused verification, then R04handoff for review/integration/finalfrozenrerun. No final scale approval.
+
+### Post-publication portable byte verification
+
+Postcommit `ccb0bf0` focused tests freshly passed again: **55passed/9deselected/0skipped in3.58s**, exit0, own unique`postcommit.xml/log`. The portable CLI also verified the **original full raw matrix** (not only the compact receipt), exit0 with the same20workers/44,404,040rows/5samplepairs/3memorygates. Own published worktree remained clean.
+
+Compared actual `git show HEAD:<evidence path>` bytes against Windows worktree captures for allfour JSON receipts. Git canonicalizes CRLF to LF, so byte hashes differ, but parsed JSON equality is true for every file. The top baseline checksum now explicitly distinguishes local CRLF capture from canonical published LF bytes. New `portable-artifacts.json` records both methods/checksums and the actual postcommit checks; no measurement value changed. This is a portability/provenance documentation correction, not a scale rerun.
+
+A small own documentation/evidence follow-up will publish this checksum distinction and the verified first publication receipt; no source/oracle changes. MAIN will then record the final exact remote tip. Original baseline remains unchanged.
+
+Follow-up manifest command initially exited1 before writes/staging because its `git show HEAD:<path>` argument incorrectly used an absolute Windows path (Git128), not a repository-relative path. Correct only this owned utility invocation to `path.relative_to(root).as_posix()`; no source/test/result change or lost publication.
