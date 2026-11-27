@@ -1,0 +1,36 @@
+{
+  "observed_utc": "2026-11-27T16:09:42.647617+00:00",
+  "pr": 33,
+  "previous_head": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+  "head": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+  "source_paths": [
+    "python/deepviz/src/deepviz/models.py",
+    "tests/test_native_mapping.py"
+  ],
+  "nonforce_push_exit": 0,
+  "remote_exact_sha": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+  "focused_tests": {
+    "passed": 82,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 0.41
+  },
+  "new_permanent_red": {
+    "failed": 36,
+    "passed": 6,
+    "skipped": 0,
+    "seconds": 0.93,
+    "limit": "Some failures assert same guard message for previously bounds-rejected booleans, not36 new acceptance bugs"
+  },
+  "ruff_exit": 0,
+  "mypy_exit": 0,
+  "schema_unchanged": true,
+  "model_sha256": "93d1472b168feb9f1a12fa47f81e0296228459ebe006c14a4daba2637d3616ba",
+  "test_sha256": "4f06bc1ad9cdc021f5081f5c59b10081783439e2fa95b69287d079e5dc82bb94",
+  "four_new_head_independent_gates": "pending11+01review/17+15test; old998 results NOT approval",
+  "new_head_CI": "pending observation",
+  "merged": false,
+  "pr_patch_http": 200,
+  "pr_readback_http": 200,
+  "pr_head_exact": true
+}

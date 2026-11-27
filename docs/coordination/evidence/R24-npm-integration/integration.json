@@ -1,0 +1,46 @@
+{
+  "source": "262b0da145e42c94c2908213272ec3be28771206",
+  "ff_exit": 0,
+  "only_source_paths": [
+    "packages/deepviz/package.json",
+    "packages/deepviz/README.md",
+    "packages/deepviz/scripts/copy-prompts.mjs",
+    "packages/deepviz/test/test_r11_packaged_prompts.test.mjs"
+  ],
+  "unrelated_dirty_status_byte_equal_before_after": true,
+  "npm_passed": 274,
+  "npm_failures": 0,
+  "npm_skips": 0,
+  "manual_consumer_passed": 9,
+  "consumer_failures": 0,
+  "consumer_skips": 0,
+  "independent_source_review": "R18-01 exact f9c4372; not final shared-head approval",
+  "independent_materialized_consumer": "R18-10 exact f9c4372; manager reran unchanged9 on actual integrated262",
+  "limitations": [
+    "Existing full Python36fail baseline remains open, not rerun",
+    "No default merge/no focused33 source change/no issue closure",
+    "No install or prepack-lifecycle acceptance inferred"
+  ],
+  "artifacts": [
+    {
+      "path": "consumer-consumer.stdout.log",
+      "bytes": 2361,
+      "sha256": "c5fd1da149df016b095199591da7169a058dd7d363ac40394be37124718ce552"
+    },
+    {
+      "path": "consumer-receipt.json",
+      "bytes": 4805,
+      "sha256": "705718b1bcbabaca4473bae952286ac72abb13af2ce056f48ce442bd725549a8"
+    },
+    {
+      "path": "gates-commands.json",
+      "bytes": 4386,
+      "sha256": "57134e3c4150542b0109669fb4d01e0a9c71bcc0d1c75fea78b2b60229571a2b"
+    },
+    {
+      "path": "gates-npm-test.stdout.log",
+      "bytes": 25737,
+      "sha256": "ce0185ca45ae94f9570b6e6673acfac7d1ec4c1e3085c4c69d886cf91b5660be"
+    }
+  ]
+}

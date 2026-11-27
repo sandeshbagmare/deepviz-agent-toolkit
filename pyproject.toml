@@ -24,6 +24,10 @@ deepviz-mcp = "deepviz.mcp_server:main"
 [tool.hatch.build.targets.wheel]
 packages = ["python/deepviz/src/deepviz"]
 
+[tool.hatch.build.targets.wheel.force-include]
+"schemas/chart-spec.schema.json" = "deepviz/resources/chart-spec.schema.json"
+"prompts/v1" = "deepviz/resources/prompts/v1"
+
 [tool.pytest.ini_options]
 testpaths = ["python/deepviz/tests", "tests"]
 markers = ["scale: large dataset benchmark", "integration: external adapter integrations"]
@@ -34,6 +38,9 @@ line-length = 110
 
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F", "I", "B", "UP"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["deepviz"]
 
 [tool.mypy]
 python_version = "3.11"

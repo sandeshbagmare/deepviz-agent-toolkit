@@ -1,0 +1,3 @@
+# N04 Python ingestion producer
+
+Follow C17-wave-common.md. Report `N04-python-data.md`. New worktree temp/opencode/deepviz-n04, branch fix/n04-python-data, base b6abc8d. Own `python/deepviz/src/deepviz/normalize.py` and new `test_n04*.py` normalization regressions. Run existing normalize/statistics/GraphQL/format tests, inspect failures and fix real row loss/reduction/nonfinite/bounds defects with RED→GREEN. No models/renderer/tool/schema/root edits. Keep Python behavior authoritative and disclose sampling/loss/counts; report resolved semantics for N03/N12. Commit tested scoped changes and report exact hash. Do not duplicate full scale benchmarking assigned N11.

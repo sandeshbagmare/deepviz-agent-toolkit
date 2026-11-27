@@ -1,0 +1,32 @@
+name: Reproducible defect
+description: Report an observed failure with reproducible input and actual output.
+title: '[Bug] '
+body:
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed versus expected behavior
+      description: Describe the real defect and why the result is incorrect; do not invent a failure.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction and environment
+      description: Include the source commit, Python/Node/OS versions, engine, input/spec and exact commands. Remove secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: rendered
+    attributes:
+      label: Rendered image and correctness explanation
+      description: Attach the actual image/artifact and explain the incorrect marks or labels. For nonvisual defects, state why an image is not applicable and supply the observed log.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Acceptance and verification evidence
+      description: Name the test that will prove the fix. Link related real issues/PRs and any independent reviewer/tester reports; leave unavailable evidence explicitly pending.
+    validations:
+      required: true

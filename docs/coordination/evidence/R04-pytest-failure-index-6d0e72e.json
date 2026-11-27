@@ -1,0 +1,250 @@
+{
+  "source_commit": "6d0e72ebef4b622f8dec2bce2bd07cc23e7a81ce",
+  "tests": 3045,
+  "failed": 40,
+  "errors": 0,
+  "skipped": 5,
+  "passed": 3000,
+  "exit_code": 1,
+  "failures": [
+    {
+      "classname": "python.deepviz.tests.test_backend_antv",
+      "name": "test_dashboard_duplicate_titles_get_unique_containers_and_independent_options",
+      "failure": "AssertionError: assert ['interval', ...', 'interval'] == ['interval', ...', 'interval']\n  \n  At index 1 diff: 'view' != 'line'\n  Use -v to get more diff"
+    },
+    {
+      "classname": "python.deepviz.tests.test_n17_boundaries",
+      "name": "test_n17_dashboard_serialization_order_observation",
+      "failure": "assert ([])"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-records]",
+      "failure": "AssertionError: SVG does not preserve the escaped chart title\nassert 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' in 'AlphaBetaDeltaEpsilonGammaZetacategory0246810yCategories'\n +  where 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' = <function sub at 0x0000023184B70720>('\\\\s+', '', 'Acceptance \u03a9 & <img src=x onerror=\"bad()\"> </title></script><script>window.__DV_XSS__=1</script>')\n[+1 more line; full report in element text]"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-nested_json]",
+      "failure": "AssertionError: SVG does not preserve the escaped chart title\nassert 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' in 'AlphaBetaDeltaEpsilonGammaZetacategory0246810yCategories'\n +  where 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' = <function sub at 0x0000023184B70720>('\\\\s+', '', 'Acceptance \u03a9 & <img src=x onerror=\"bad()\"> </title></script><script>window.__DV_XSS__=1</script>')\n[+1 more line; full report in element text]"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-graphql]",
+      "failure": "AssertionError: SVG does not preserve the escaped chart title\nassert 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' in 'AlphaBetaDeltaEpsilonGammaZetacategory0246810yCategories'\n +  where 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' = <function sub at 0x0000023184B70720>('\\\\s+', '', 'Acceptance \u03a9 & <img src=x onerror=\"bad()\"> </title></script><script>window.__DV_XSS__=1</script>')\n[+1 more line; full report in element text]"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-columns]",
+      "failure": "AssertionError: SVG does not preserve the escaped chart title\nassert 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' in 'AlphaBetaDeltaEpsilonGammaZetacategory0246810yCategories'\n +  where 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' = <function sub at 0x0000023184B70720>('\\\\s+', '', 'Acceptance \u03a9 & <img src=x onerror=\"bad()\"> </title></script><script>window.__DV_XSS__=1</script>')\n[+1 more line; full report in element text]"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-csv]",
+      "failure": "AssertionError: SVG does not preserve the escaped chart title\nassert 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' in 'AlphaBetaDeltaEpsilonGammaZetacategory0246810yCategories'\n +  where 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' = <function sub at 0x0000023184B70720>('\\\\s+', '', 'Acceptance \u03a9 & <img src=x onerror=\"bad()\"> </title></script><script>window.__DV_XSS__=1</script>')\n[+1 more line; full report in element text]"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-records]",
+      "failure": "AssertionError: SVG does not preserve the escaped chart title\nassert 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' in 'AlphaBetaDeltaEpsilonGammaZetacategory0246810yCategories'\n +  where 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' = <function sub at 0x0000023184B70720>('\\\\s+', '', 'Acceptance \u03a9 & <img src=x onerror=\"bad()\"> </title></script><script>window.__DV_XSS__=1</script>')\n[+1 more line; full report in element text]"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-nested_json]",
+      "failure": "AssertionError: SVG does not preserve the escaped chart title\nassert 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' in 'AlphaBetaDeltaEpsilonGammaZetacategory0246810yCategories'\n +  where 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' = <function sub at 0x0000023184B70720>('\\\\s+', '', 'Acceptance \u03a9 & <img src=x onerror=\"bad()\"> </title></script><script>window.__DV_XSS__=1</script>')\n[+1 more line; full report in element text]"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-graphql]",
+      "failure": "AssertionError: SVG does not preserve the escaped chart title\nassert 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' in 'AlphaBetaDeltaEpsilonGammaZetacategory0246810yCategories'\n +  where 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' = <function sub at 0x0000023184B70720>('\\\\s+', '', 'Acceptance \u03a9 & <img src=x onerror=\"bad()\"> </title></script><script>window.__DV_XSS__=1</script>')\n[+1 more line; full report in element text]"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-columns]",
+      "failure": "AssertionError: SVG does not preserve the escaped chart title\nassert 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' in 'AlphaBetaDeltaEpsilonGammaZetacategory0246810yCategories'\n +  where 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' = <function sub at 0x0000023184B70720>('\\\\s+', '', 'Acceptance \u03a9 & <img src=x onerror=\"bad()\"> </title></script><script>window.__DV_XSS__=1</script>')\n[+1 more line; full report in element text]"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-csv]",
+      "failure": "AssertionError: SVG does not preserve the escaped chart title\nassert 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' in 'AlphaBetaDeltaEpsilonGammaZetacategory0246810yCategories'\n +  where 'Acceptance\u03a9&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' = <function sub at 0x0000023184B70720>('\\\\s+', '', 'Acceptance \u03a9 & <img src=x onerror=\"bad()\"> </title></script><script>window.__DV_XSS__=1</script>')\n[+1 more line; full report in element text]"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-records]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-nested_json]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-graphql]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-columns]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-csv]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-records]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-nested_json]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-graphql]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-columns]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-csv]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-records]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-nested_json]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-graphql]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-columns]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-csv]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-records]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-nested_json]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-graphql]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-columns]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_acceptance_matrix",
+      "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-csv]",
+      "failure": "AssertionError: Native visible coordinates changed a mapped observation\nassert Counter({(1, ...6, 9.875): 1}) == Counter({('1'...', 9.875): 1})\n  \n  Left contains 6 more items:\n  {(1, 3.125): 1,\n   (2, 8.5): 1,\n   (3, 2.25): 1,\n   (4, 7.75): 1,\n   (5, 5.5): 1,...\n  \n  ...Full output truncated, use '-vv' to show"
+    },
+    {
+      "classname": "tests.test_n09_performance_inspector",
+      "name": "test_declared_drawable_geometry_must_not_accept_nondrawable_tags[empty-path]",
+      "failure": "AssertionError: A tag name alone does not prove drawable geometry\nassert 'drawable' not in 'svg_xml_and...isual_review'\n  \n  'drawable' is contained here:\n    svg_xml_and_drawable_geometry_not_visual_review\n  ?             ++++++++"
+    },
+    {
+      "classname": "tests.test_n09_performance_inspector",
+      "name": "test_declared_drawable_geometry_must_not_accept_nondrawable_tags[nonnumeric-rectangle]",
+      "failure": "AssertionError: A tag name alone does not prove drawable geometry\nassert 'drawable' not in 'svg_xml_and...isual_review'\n  \n  'drawable' is contained here:\n    svg_xml_and_drawable_geometry_not_visual_review\n  ?             ++++++++"
+    },
+    {
+      "classname": "tests.test_n09_performance_inspector",
+      "name": "test_declared_drawable_geometry_must_not_accept_nondrawable_tags[negative-radius]",
+      "failure": "AssertionError: A tag name alone does not prove drawable geometry\nassert 'drawable' not in 'svg_xml_and...isual_review'\n  \n  'drawable' is contained here:\n    svg_xml_and_drawable_geometry_not_visual_review\n  ?             ++++++++"
+    },
+    {
+      "classname": "tests.test_n09_performance_inspector",
+      "name": "test_declared_drawable_geometry_must_not_accept_nondrawable_tags[invalid-points]",
+      "failure": "AssertionError: A tag name alone does not prove drawable geometry\nassert 'drawable' not in 'svg_xml_and...isual_review'\n  \n  'drawable' is contained here:\n    svg_xml_and_drawable_geometry_not_visual_review\n  ?             ++++++++"
+    },
+    {
+      "classname": "tests.test_n11_resource_policy",
+      "name": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii]",
+      "failure": "ValueError: Input field name exceeds 4096 UTF-8 bytes"
+    },
+    {
+      "classname": "tests.test_n11_resource_policy",
+      "name": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte]",
+      "failure": "ValueError: Input field name exceeds 4096 UTF-8 bytes"
+    },
+    {
+      "classname": "tests.test_n11_resource_policy",
+      "name": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte]",
+      "failure": "ValueError: Input field name exceeds 4096 UTF-8 bytes"
+    },
+    {
+      "classname": "tests.test_n11_resource_policy",
+      "name": "test_flattened_multibyte_key_at_64kib_is_preserved",
+      "failure": "ValueError: Input field name exceeds 4096 UTF-8 bytes"
+    }
+  ],
+  "skips": [
+    {
+      "classname": "python.deepviz.tests.test_mcp_transport",
+      "name": "test_stdio_registered_artifact_symlink_swap_cannot_read_outside_output_root",
+      "skip": "Host does not permit symlink creation: [WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-bagma\\\\pytest-1895\\\\test_stdio_registered_artifact0\\\\secret.html' -> 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-bagma\\\\pytest-1895\\\\test_stdio_registered_artifact0\\\\symlink-probe'"
+    },
+    {
+      "classname": "python.deepviz.tests.test_n17_boundaries",
+      "name": "test_n17_symlink_outside_data_directory_is_rejected",
+      "skip": "Host cannot create symlinks: [WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-bagma\\\\pytest-1895\\\\test_n17_symlink_outside_data_0\\\\outside.json' -> 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-bagma\\\\pytest-1895\\\\test_n17_symlink_outside_data_0\\\\allowed\\\\escape.json'"
+    },
+    {
+      "classname": "python.deepviz.tests.test_render",
+      "name": "test_browser_executes_all_native_kinds[plotly]",
+      "skip": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+    },
+    {
+      "classname": "python.deepviz.tests.test_render",
+      "name": "test_browser_executes_all_native_kinds[echarts]",
+      "skip": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+    },
+    {
+      "classname": "python.deepviz.tests.test_render",
+      "name": "test_browser_executes_all_native_kinds[antv]",
+      "skip": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+    }
+  ],
+  "source_sha256": {
+    "python\\deepviz\\src\\deepviz\\__init__.py": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+    "python\\deepviz\\src\\deepviz\\cli.py": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+    "python\\deepviz\\src\\deepviz\\engines.py": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+    "python\\deepviz\\src\\deepviz\\mcp_server.py": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+    "python\\deepviz\\src\\deepviz\\models.py": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+    "python\\deepviz\\src\\deepviz\\normalize.py": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+    "python\\deepviz\\src\\deepviz\\recommend.py": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+    "python\\deepviz\\src\\deepviz\\render.py": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+    "python\\deepviz\\src\\deepviz\\tools.py": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb"
+  },
+  "xml_sha256": "eb28807e477f615b4db540ec8b5dfdc56815d81f324582158cbd09b45320143e"
+}

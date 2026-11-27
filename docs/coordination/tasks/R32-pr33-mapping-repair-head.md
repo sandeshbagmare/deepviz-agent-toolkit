@@ -1,0 +1,13 @@
+# R32 ACTUAL repaired PR33 frozen head — recheck immediately
+
+R04 actualmanager ses_de56ad930fferPKGibj5Mc304B, 2026-11-27T16:09:42.647617+00:00. Existing PR https://github.com/sandeshbagmare/deepviz-agent-toolkit/pull/33 actual NEWhead **bff9384d1ebe5c8f6f8f0f994300264b32bb98d8**, parent99841ffb80e0f2ea90c753c1bf0ceff718e0e180, baseactualmain0ae2. Normal2pathcommit/NONFORCEpush0/actualremoteSHAexact0/cleanfocusedworktree. No source/coordinator/candidate/default merges. This is REALsourcehead, not projected.
+
+## Repair and author proof
+
+R25-01-F1 / independent11 sameP2 accepted MUSTFIX; no nativeMappingcontractexception. Exactlyone Mapping import + isinstance(dict→Mapping), existingguard/error/defaults/bounds/dashboard/schema unchanged. NEW permanent42 UserDict/MappingProxy root+childtests (invalidall5fieldstrings+bools, validdefaults/integralnumbers/no mutation). Sourceunchanged998NEW42 **36RED6positive0skip0.93s1** then actualfixedFULL **82PASS0FAIL0SKIP0.41s0**, rootRuff0/mypy0onefile/actualschemaexportexactcommittedecd85be. SomeREDguard-messageconsistencyonpreviousbounds-rejectedbools—not36newbugs. Original40testbytesunchanged. ActualmodelSHA256 **93d1472b168feb9f1a12fa47f81e0296228459ebe006c14a4daba2637d3616ba**, NEWtestSHA256 **4f06bc1ad9cdc021f5081f5c59b10081783439e2fa95b69287d079e5dc82bb94**. AuthorNOTindependentapproval; newheadCIpending.
+
+## Root immediate existing SAME-ID affected gates
+
+Aftercurrentcommand/checkpoint/admission, **01+11** independentreviewactualnewhead/allnow9diffpaths/minimal2pathdelta/root+childMappingfix/nocontractwaiver. **17+15** independenttestactualnewhead/allprovided82 plus their unchanged79/74strictcontrols/nativeMappingpublicpositives+negatives/schema/wire/JSON/sourceorigins. Finding01unchangedpublishedstrict1case and11unchanged8RED2positivecontrolsshouldexecuteonREALnewhead, not998/e44. Preserveoriginaloraclebytes/failures/optionalerrors. Scopefix, no fulltoolkit/scale/renderer/build/no fakechartrequirement(contractactualmodelJSONoutputapplies). BothreviewersmustresolveMappingfindingexplicitly; old998reportsareprovenanceNOTnewheadapproval. No tests beforeexactnewheadGitoriginproof/no install/source/APIwrites/polling/spawn. OwnNEW R31reports/evidence (or correspondingNEW R32ownpaths), meaningfulOWNpublication/nonforce/readback.
+
+Rootrecordsactualacceptedreturnswithin22includingmanager; noR04launch/headcountclaim. R04observesnewhead3-versionCI/actual4reports thenMERGESusablefullygatedsliceimmediately/provesdefaultancestry/notifiesQA13; inventory/900/wholewaveNOTdelayexcuses. Untilthenmainremains0ae2/no #30closure/releaseclaim. R29inventoryalreadycompleted103local/53remote, not maincode; managerconcreteplan/nextfoundationPRpreparationcontinuewhilegatesrun.

@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.png binary
+*.parquet binary
+*.arrow binary
+*.woff2 binary
+# Preserve generated evidence byte-for-byte, including native SVG path whitespace.
+docs/coordination/evidence/** -whitespace
+docs/verification/artifacts/** -whitespace

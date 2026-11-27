@@ -1,0 +1,3 @@
+# N06 agent/MCP/CLI producer
+
+Follow C17-wave-common.md. Report `N06-agent-tools.md`. New worktree temp/opencode/deepviz-n06, branch fix/n06-agent-tools, base b6abc8d. Own `python/deepviz/src/deepviz/{tools,mcp_server,cli,recommend,__init__}.py` and NEW `test_n06*.py`. Run integrations and real MCP transport tests and reproduce failures; fix actual safe resource lifecycle, handles, validation, argv/stdio, Deep Agent attachment/chained tools issues with TDD. No pyproject/schema/renderer changes. N13 independent integration QA, N17 boundary review. Commit scoped fixes; print source identity and exact optional-dependency coverage. No credential/API model calls required for local Deep Agent construction.

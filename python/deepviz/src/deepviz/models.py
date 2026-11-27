@@ -16,7 +16,19 @@ Engine = Literal["matplotlib", "plotly", "vega", "echarts", "antv"]
 class ChartSpec(BaseModel):
     """Map normalized record fields to a bounded chart or composed dashboard."""
 
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(
+        extra="forbid",
+        json_schema_extra={
+            "if": {"properties": {"kind": {"const": "dashboard"}}, "required": ["kind"]},
+            "then": {"required": ["charts"], "properties": {"charts": {"minItems": 1}}},
+            "else": {"properties": {"charts": {"maxItems": 0}}},
+            "allOf": [{
+                "properties": {"charts": {"items": {"not": {
+                    "properties": {"kind": {"const": "dashboard"}}, "required": ["kind"],
+                }}}},
+            }],
+        },
+    )
     version: Literal[1] = 1
     kind: ChartKind = "bar"
     title: str = Field(default="Visualization", max_length=500)
@@ -34,6 +46,17 @@ class ChartSpec(BaseModel):
     theme: Literal["light", "dark"] = "light"
     charts: list[ChartSpec] = Field(default_factory=list, max_length=24)
     columns: int = Field(default=2, ge=1, le=6)
+
+    @model_validator(mode="before")
+    @classmethod
+    def preserve_json_numeric_types(cls, value: Any) -> Any:
+        if isinstance(value, dict):
+            for key in ("version", "max_points", "width", "height", "columns"):
+                if key in value and (
+                    isinstance(value[key], bool) or not isinstance(value[key], (int, float))
+                ):
+                    raise ValueError(f"{key} must be a JSON number, not a string or boolean")
+        return value
 
     @model_validator(mode="after")
     def check_dashboard(self) -> ChartSpec:

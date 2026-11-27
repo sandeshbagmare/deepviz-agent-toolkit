@@ -1,0 +1,114 @@
+{
+  "source": "262b0da145e42c94c2908213272ec3be28771206",
+  "started_utc": "2026-11-27T15:42:43.676004+00:00",
+  "dependency_method": "Existing MAIN node_modules read-only junction; no npm ci/install/environment mutation",
+  "commands": [
+    {
+      "label": "build",
+      "argv": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+        "run",
+        "build"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r24-reviewed-npm-ses_de56ad930fferPKGibj5Mc304B",
+      "exit": 0,
+      "seconds": 1.2500170999992406,
+      "stdout_sha256": "45b152c60645a100e68e40d7ec1d8671c4fd6d4492dee6e81e3c7cab63221e47",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "typecheck",
+      "argv": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+        "run",
+        "typecheck"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r24-reviewed-npm-ses_de56ad930fferPKGibj5Mc304B",
+      "exit": 0,
+      "seconds": 0.4913149999920279,
+      "stdout_sha256": "cf1dc8706090b0b12cd55b819fead5906b284e56f78b95de0562c437e817c4e3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "npm-test",
+      "argv": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+        "test"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r24-reviewed-npm-ses_de56ad930fferPKGibj5Mc304B",
+      "exit": 0,
+      "seconds": 5.4407329999958165,
+      "stdout_sha256": "0c3fe74598567493cd048e2232f23391cccb887335de5f455e48c368b4e79e0a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "schema",
+      "argv": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+        "run",
+        "schema:check"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r24-reviewed-npm-ses_de56ad930fferPKGibj5Mc304B",
+      "exit": 0,
+      "seconds": 1.6264569999912055,
+      "stdout_sha256": "f8ad00ec57f70708c8987210394d6560e95e7278e150b055bd6c15515b8be1dc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "package",
+      "argv": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+        "run",
+        "package:check"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r24-reviewed-npm-ses_de56ad930fferPKGibj5Mc304B",
+      "exit": 0,
+      "seconds": 4.68400439999823,
+      "stdout_sha256": "966b4d3eb25bb1f022e0d96922d6fc49bd0fe30c2239c2ea7e4748cc8c099b88",
+      "stderr_sha256": "66b126878c5de4f06ec0005dd7be937d4eb378b81bfcabf0e24af2c8a8831cf8"
+    },
+    {
+      "label": "pack-dry-run",
+      "argv": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+        "pack",
+        "--dry-run",
+        "--workspace",
+        "@deepviz/agent-toolkit"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r24-reviewed-npm-ses_de56ad930fferPKGibj5Mc304B",
+      "exit": 0,
+      "seconds": 1.4554251000081422,
+      "stdout_sha256": "10061667fdb02bce1cbf2380948959d325de16fcea5bfaff9ed7ce3f1ba1916f",
+      "stderr_sha256": "66b126878c5de4f06ec0005dd7be937d4eb378b81bfcabf0e24af2c8a8831cf8"
+    }
+  ],
+  "status_after": "",
+  "finished_utc": "2026-11-27T15:42:58.741955+00:00",
+  "canonical_prompts": [
+    {
+      "name": "README.md",
+      "bytes": 1787,
+      "sha256": "324cb7f88211424f577327268f36506c8c27d1793528441458e2caba83ee0bbd",
+      "exact_Git_bytes": true
+    },
+    {
+      "name": "system.md",
+      "bytes": 4582,
+      "sha256": "b11e691e8f5d89bc2fd726d284702d6675c57c1a32ec0947ec5902040fdbaba0",
+      "exact_Git_bytes": true
+    },
+    {
+      "name": "request.md",
+      "bytes": 761,
+      "sha256": "845be71cb3141d084f036472a1c5a19670be28c16bf73c4a599a3df9d534c6f2",
+      "exact_Git_bytes": true
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+name: Bounded change request
+description: Define a concrete capability and evidence-based acceptance criteria.
+title: '[Change] '
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: User need and scope
+      description: Describe the actual use case, related issue/PR links, and explicit non-goals.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Observable acceptance criteria
+      description: Specify inputs, expected output, security and bounded-memory requirements. Avoid unverifiable completion claims.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Rendering and independent verification plan
+      description: Identify the actual rendered image and explanation required at delivery, tests to run, and two independent reviewer plus two independent tester reports needed before closure. Do not prefill signoffs.
+    validations:
+      required: true

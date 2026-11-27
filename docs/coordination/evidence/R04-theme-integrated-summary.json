@@ -1,0 +1,103 @@
+{
+  "source": {
+    "commit": "6d0e72ebef4b622f8dec2bce2bd07cc23e7a81ce",
+    "module_files": [
+      {
+        "path": "source/python/deepviz/src/deepviz/__init__.py",
+        "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+      },
+      {
+        "path": "source/python/deepviz/src/deepviz/cli.py",
+        "sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf"
+      },
+      {
+        "path": "source/python/deepviz/src/deepviz/engines.py",
+        "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de"
+      },
+      {
+        "path": "source/python/deepviz/src/deepviz/mcp_server.py",
+        "sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95"
+      },
+      {
+        "path": "source/python/deepviz/src/deepviz/models.py",
+        "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+      },
+      {
+        "path": "source/python/deepviz/src/deepviz/normalize.py",
+        "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+      },
+      {
+        "path": "source/python/deepviz/src/deepviz/recommend.py",
+        "sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999"
+      },
+      {
+        "path": "source/python/deepviz/src/deepviz/render.py",
+        "sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+      },
+      {
+        "path": "source/python/deepviz/src/deepviz/tools.py",
+        "sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb"
+      }
+    ],
+    "python_version": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "browser": {
+    "name": "Chromium",
+    "version": "159.0.8154.6"
+  },
+  "playwright_version": "1.65.1",
+  "total": 3,
+  "attempted": 3,
+  "captured": 3,
+  "failed": 0,
+  "errors": [],
+  "items": [
+    {
+      "id": "dashboard-mixed-antv",
+      "input_count": 2,
+      "output_count": 4,
+      "errors": [],
+      "console_errors": [],
+      "page_errors": [],
+      "screenshot": {
+        "path": "dashboard-mixed-antv.png",
+        "bytes": 38734,
+        "sha256": "a9aa2db2cf1ba9dde0ac231c31568157b607ae295d1335a545c712f7cc331735",
+        "mode": "full-page"
+      },
+      "resource_mode": "real-external-resources-no-routing"
+    },
+    {
+      "id": "dashboard-mixed-echarts",
+      "input_count": 2,
+      "output_count": 4,
+      "errors": [],
+      "console_errors": [],
+      "page_errors": [],
+      "screenshot": {
+        "path": "dashboard-mixed-echarts.png",
+        "bytes": 38947,
+        "sha256": "40df02ab4976d6cf7c53275be9b07dd0e33196402b844d84fb26d4d5a286c426",
+        "mode": "full-page"
+      },
+      "resource_mode": "real-external-resources-no-routing"
+    },
+    {
+      "id": "dashboard-mixed-plotly",
+      "input_count": 2,
+      "output_count": 4,
+      "errors": [],
+      "console_errors": [],
+      "page_errors": [],
+      "screenshot": {
+        "path": "dashboard-mixed-plotly.png",
+        "bytes": 30574,
+        "sha256": "6afc0a70cd2518202892acdfd04031a7fbd840bb50868b143756fa4b1e80e25d",
+        "mode": "full-page"
+      },
+      "resource_mode": "embedded-or-static-native-no-external-requests-observed"
+    }
+  ],
+  "opened_image": "docs/verification/artifacts/r04-dashboard-theme/antv-dashboard-mixed.png",
+  "visual_observation": "Light and dark child backdrops preserved; A=3/B=7 on both. Bounded fixture, not all-kind or final independent signoff."
+}

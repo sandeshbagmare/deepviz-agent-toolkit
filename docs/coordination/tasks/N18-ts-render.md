@@ -1,0 +1,3 @@
+# N18 TypeScript engine producer and semantic verification
+
+Follow C17-wave-common.md. Report `N18-ts-render.md`. New worktree temp/opencode/deepviz-n18 branch fix/n18-ts-render base b6abc8d. Own `packages/deepviz/src/{render,renderers}.ts` and NEW TS renderer test files only. Run current TS render/browser suites, inspect actual mapped series/heatmap axes/size/color/pie/dashboard/fallbacks/injection. Fix confirmed TS renderer defects with RED→GREEN and actual visual/native-spec evidence; no normalize/models/schema/root package changes (N03/N07 own those). Independent N10 browser tester validates outcomes. Commit scoped fixes, report exact hashes/artifacts/commands/network dependencies and unresolved limits.

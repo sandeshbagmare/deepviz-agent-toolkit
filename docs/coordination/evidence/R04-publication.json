@@ -1,0 +1,53 @@
+{
+  "observed_utc": "2026-11-27T02:19:04.626989+00:00",
+  "identity": "sandeshbagmare",
+  "push_command": "git push origin release/candidate:release/candidate",
+  "push_exit": 0,
+  "non_force": true,
+  "published_product_source": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "ls_remote_exit": 0,
+  "actual_remote_sha": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "pr": {
+    "number": 31,
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "head": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+    "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/pull/31"
+  },
+  "actions": [
+    {
+      "id": 45927353529,
+      "head_sha": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+      "name": "PR evidence policy",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45927353529"
+    },
+    {
+      "id": 45927353552,
+      "head_sha": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+      "name": "Verification",
+      "status": "in_progress",
+      "conclusion": null,
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45927353552"
+    },
+    {
+      "id": 45881106713,
+      "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+      "name": "Verification",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713"
+    },
+    {
+      "id": 45881106730,
+      "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+      "name": "PR evidence policy",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106730"
+    }
+  ],
+  "scope": "Partial checkpoint, not release/merge/CI success or final-candidate acceptance"
+}
