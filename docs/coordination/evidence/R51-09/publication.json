@@ -1,0 +1,48 @@
+{
+  "recorded_utc": "2026-11-27T19:54:00.607640+00:00",
+  "owner": "ses_de56782e5ffe3H1lUAoxrBtEhx",
+  "branch": "agents/r10-09-helper-null-fix",
+  "base": "3a48c09a93b2b32da8e4d7d010ece7aaebbc5e4a",
+  "commit": "e8549749c24ef0f6a8e2db4d194f474247c29488",
+  "commit_subject": "test: independently verify bounded numeric accounting on 96",
+  "commit_paths": 13,
+  "commit_scope": "NEW role09 probes, reports, evidence, own agent note and central role09 status; no production/schema/oracle changes",
+  "push": {
+    "command": "git push origin agents/r10-09-helper-null-fix:agents/r10-09-helper-null-fix",
+    "exit": 0
+  },
+  "remote_readback": {
+    "command": "git ls-remote --heads origin refs/heads/agents/r10-09-helper-null-fix",
+    "exit": 0,
+    "stdout": "e8549749c24ef0f6a8e2db4d194f474247c29488\trefs/heads/agents/r10-09-helper-null-fix",
+    "local_equals_remote": true
+  },
+  "tested_product": "96b819aee5b01ba88b5a609b587331a528aaa070",
+  "normalizer_sha256": "b64814a6406857d9c9a1078fb759725a65a4a91d0db033c765d015df018dc6fd",
+  "test_sha256": "fb56b9d865691dc1bbab39f1c51de241928e4ac69b5d60479fcc7b503269575b",
+  "test_totals": {
+    "passed": 19,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "deselected": 0,
+    "pytest_exit": 0,
+    "seconds": 1.06,
+    "ruff_exit": 0,
+    "mypy_exit": 0
+  },
+  "role11_comparison": {
+    "branch_head": "8aadc163d72c6e258a657eab54fd6060e936cbd0",
+    "report_sha256": "1057d90a2826dd3c3a2fc8ea644ba54f37fc2390fc75687eb8a93e5dc3e3435e",
+    "tests": "17/17 pass,0 failed/error/skipped/deselected",
+    "disposition": "same exact96 principal outcomes/source hash/default limit; distinct gates retained; no producer/source/package signoff"
+  },
+  "remaining": "R04 compares role09/11 TEST1/TEST2 and source roles14/21 then decides role07 exact96 integration/PR2; package/CI/default status not verified here",
+  "estimate": "UNKNOWN",
+  "limitations": [
+    "no full Python suite/package build/install",
+    "no 10M/RSS/browser/MCP/DeepAgents check",
+    "no PR/default/CI/API/issue writes"
+  ],
+  "worktree_after_push": "tracked clean; only pre-existing untracked artifacts/ preserved"
+}
