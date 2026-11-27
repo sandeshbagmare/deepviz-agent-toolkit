@@ -1,0 +1,25 @@
+import hashlib
+import json
+import os
+import subprocess
+from pathlib import Path
+
+root = Path.cwd()
+out = root / "docs/coordination/evidence/R10-21"
+probe = "tests/r10_probes/role21/test_publication_receipts.py"
+python = r"C:\Users\bagma\deepviz-agent-toolkit\.venv\Scripts\python.exe"
+owned = [probe, "docs/coordination/reports/R10-21-recovery-git-bootstrap.md", "docs/agent-state/ses_de5678018ffezK8JGDUaSzvcWn.md", "docs/coordination/evidence/R10-21/capture_once.txt", "docs/coordination/evidence/R10-21/recovery-snapshot.json", "docs/coordination/evidence/R10-21/quality_runner.txt"]
+for name in owned:
+    path = root / name
+    path.write_text(path.read_text(encoding="utf-8-sig"), encoding="utf-8", newline=chr(10))
+commands = [[python, "-m", "pytest", probe, "-q", "--tb=short", "-p", "no:cacheprovider"], [python, "-m", "ruff", "check", probe], [python, "-m", "mypy", probe]]
+env = os.environ.copy()
+env["PYTHONDONTWRITEBYTECODE"] = "1"
+results = []
+for argv in commands:
+    done = subprocess.run(argv, cwd=root, env=env, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=180)
+    results.append({"argv": argv, "exit": done.returncode, "stdout": done.stdout, "stderr": done.stderr})
+data = {"branch": "agents/r10-21-recovery-git-bootstrap", "source_base": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab", "scope": "owned offline audit probes, not product/recovery signoff", "probe_sha256": hashlib.sha256((root / probe).read_bytes()).hexdigest(), "commands": results, "failed_commands": sum(item["exit"] != 0 for item in results)}
+(out / "quality-checks.json").write_text(json.dumps(data, indent=2) + chr(10), encoding="utf-8")
+print(json.dumps(data, indent=2))
+raise SystemExit(1 if data["failed_commands"] else 0)

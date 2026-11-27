@@ -1,0 +1,171 @@
+import base64
+import datetime as dt
+import hashlib
+import json
+import re
+import subprocess
+import urllib.error
+import urllib.parse
+import urllib.request
+from pathlib import Path
+
+MAIN = Path(r"C:\Users\bagma\deepviz-agent-toolkit")
+OUT = MAIN / "docs/coordination/evidence/R10-21"
+PIN = "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab"
+OWNER = "ses_de5678018ffezK8JGDUaSzvcWn"
+REPO = "sandeshbagmare/deepviz-agent-toolkit"
+START = dt.datetime.now(dt.timezone.utc).isoformat()
+TEMP = Path(r"C:\Users\bagma\AppData\Local\Temp\opencode") / ("r10-21-" + OWNER + "-" + dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%S%fZ"))
+TEMP.mkdir(exist_ok=False)
+result = {"owner": OWNER, "started_utc": START, "source_pin": PIN, "snapshot_dir": str(TEMP), "no_runtime_query": True, "no_progress_polling": True, "files": [], "commands": [], "remote_bootstrap": {}, "checks": []}
+
+def git(args):
+    done = subprocess.run(["git", *args], cwd=MAIN, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=60)
+    return done.returncode, done.stdout.strip()
+
+def check(name, ok, evidence):
+    result["checks"].append({"name": name, "status": "pass" if ok else "fail", "evidence": evidence})
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+try:
+    origin_exit, origin = git(["remote", "get-url", "origin"])
+    url = urllib.parse.urlsplit(origin)
+    if origin_exit or url.scheme != "https" or url.hostname != "github.com" or url.username or url.password or url.path.rstrip("/") not in ["/" + REPO, "/" + REPO + ".git"]:
+        raise RuntimeError("origin_validation_failed")
+    helper_exit, helper = git(["config", "--get-all", "credential.helper"])
+    author_name_exit, author_name = git(["config", "--get", "user.name"])
+    author_email_exit, author_email = git(["config", "--get", "user.email"])
+    result["git_preflight"] = {"origin_expected_https": True, "credential_helper_exit": helper_exit, "manager_present": "manager" in helper, "author_configured": author_name_exit == 0 and author_email_exit == 0 and bool(author_name) and bool(author_email)}
+    credential = subprocess.run(["git", "-c", "credential.interactive=false", "credential", "fill"], input="protocol=https" + chr(10) + "host=github.com" + chr(10) * 2, cwd=MAIN, capture_output=True, text=True, timeout=20)
+    if credential.returncode:
+        raise RuntimeError("captured_credential_unavailable")
+    fields = dict(line.split("=", 1) for line in credential.stdout.splitlines() if "=" in line)
+    token = fields.get("password")
+    if not token:
+        raise RuntimeError("captured_credential_empty")
+    opener = urllib.request.build_opener(NoRedirect())
+    def api(path):
+        if not path.startswith("/") or path.startswith("//"):
+            raise RuntimeError("fixed_api_path_required")
+        request = urllib.request.Request("https://api.github.com" + path, headers={"Authorization": "Bearer " + token, "Accept": "application/vnd.github+json", "User-Agent": "DeepViz-R10-21-recovery-audit"})
+        try:
+            with opener.open(request, timeout=45) as response:
+                payload = response.read(2097153)
+                if len(payload) > 2097152:
+                    raise RuntimeError("api_response_bound_exceeded")
+                return response.status, json.loads(payload)
+        except urllib.error.HTTPError as error:
+            return error.code, {}
+    identity_code, identity = api("/user")
+    result["identity"] = {"status": identity_code, "login": identity.get("login"), "expected": "sandeshbagmare"}
+    if identity_code != 200 or identity.get("login") != "sandeshbagmare":
+        raise RuntimeError("authenticated_identity_mismatch")
+    check("expected_authenticated_user_before_writes", True, result["identity"])
+    branch_exit, branch = git(["branch", "--show-current"])
+    head_exit, head = git(["rev-parse", "HEAD"])
+    result["main"] = {"branch": branch, "head": head, "branch_exit": branch_exit, "head_exit": head_exit}
+    fixed = ["AGENTS.md", "RESUME.md", "docs/PROJECT_STATE.md", "docs/coordination/REQUEST.md", "docs/coordination/BRIEF.md", "docs/coordination/STATE.md", "docs/coordination/ROSTER.md", "docs/coordination/R03-live-slots.md", "docs/coordination/C17-live-slots.md", "docs/coordination/tasks/R10-rolling-agile-sdlc.md", "docs/coordination/tasks/R04-coordinator-rotation.md", "docs/coordination/tasks/R05-22-subagents.md", "docs/coordination/tasks/R08-point-of-contact-checkpoints.md", "docs/agent-state/ses_de58eb849ffeOMwi2kb0VSqy3B.md", "docs/agent-state/ses_de56ad930fferPKGibj5Mc304B.md", "docs/coordination/evidence/R04-publication.json"]
+    task = (MAIN / "docs/coordination/tasks/R10-rolling-agile-sdlc.md").read_text(encoding="utf-8-sig")
+    baseline = json.loads((MAIN / "docs/coordination/evidence/R03-21/verification-results.json").read_text(encoding="utf-8"))
+    baseline_rows = next(c["evidence"] for c in baseline["checks"] if c["name"] == "exact_21_unique_roles_and_worker_ids")
+    ids = {r["number"]: r["id"] for r in baseline_rows}
+    rows = []
+    for line in task.splitlines():
+        columns = [part.strip() for part in line.split("|")]
+        if len(columns) > 3 and columns[1].isdigit():
+            number = int(columns[1])
+            suffix = columns[2]
+            if number not in ids:
+                raise RuntimeError("role_mapping_not_in_baseline")
+            rows.append({"role": number, "session": ids[number], "branch": "agents/r10-" + str(number).zfill(2) + "-" + suffix, "report": "docs/coordination/reports/R10-" + str(number).zfill(2) + "-" + suffix + ".md", "note": "docs/agent-state/" + ids[number] + ".md"})
+    if len(rows) != 21:
+        raise RuntimeError("expected_exactly_21_roles")
+    selected = set(fixed + [p for row in rows for p in [row["report"], row["note"]]])
+    extra = list(MAIN.glob("docs/coordination/evidence/R10-root/*.json"))
+    if len(extra) > 20:
+        raise RuntimeError("root_evidence_file_bound")
+    selected.update(p.relative_to(MAIN).as_posix() for p in extra)
+    total = 0
+    texts = {}
+    for name in sorted(selected):
+        path = MAIN / name
+        if not path.is_file():
+            result["files"].append({"path": name, "exists": False, "status": "pending-unverified"})
+            continue
+        before = path.stat()
+        if before.st_size > 524288:
+            raise RuntimeError("single_file_bound")
+        data = path.read_bytes()
+        after = path.stat()
+        total += len(data)
+        if total > 8388608:
+            raise RuntimeError("snapshot_total_byte_bound")
+        destination = TEMP / name
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_bytes(data)
+        texts[name] = data.decode("utf-8-sig")
+        result["files"].append({"path": name, "exists": True, "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest(), "stable_during_read": (before.st_size, before.st_mtime_ns) == (after.st_size, after.st_mtime_ns)})
+    result["snapshot_bytes"] = total
+    result["snapshot_file_count"] = len(selected)
+    refs_exit, refs_text = git(["ls-remote", "--heads", "origin", "refs/heads/agents/r10-*", "refs/heads/release/candidate", "refs/heads/main"])
+    refs = {}
+    for line in refs_text.splitlines():
+        pieces = line.split()
+        if len(pieces) == 2 and re.fullmatch("[0-9a-f]{40}", pieces[0]) and pieces[1].startswith("refs/heads/"):
+            refs[pieces[1][11:]] = pieces[0]
+    result["remote_refs"] = {"exit": refs_exit, "observed_once_utc": dt.datetime.now(dt.timezone.utc).isoformat(), "heads": refs}
+    result["commands"].append({"argv": ["git", "ls-remote", "--heads", "origin", "refs/heads/agents/r10-*", "refs/heads/release/candidate", "refs/heads/main"], "exit": refs_exit})
+    check("single_bounded_remote_ref_query_succeeded", refs_exit == 0, "one query, not progress polling")
+    for row in rows:
+        note = texts.get(row["note"], "")
+        report = texts.get(row["report"], "")
+        remote = refs.get(row["branch"])
+        row["note_exists"] = bool(note)
+        row["report_exists"] = bool(report)
+        row["remote_sha"] = remote
+        row["authored_receipt_matches_observed_ref"] = bool(remote and row["branch"] in report and remote in report and row["session"] in report)
+        row["publication_state"] = "receipt-ref-linked-not-product-signoff" if row["authored_receipt_matches_observed_ref"] else "remote-present-receipt-unverified" if remote else "pending-unverified"
+    result["roles"] = rows
+    check("pending_receipts_never_counted_finished", all(row["publication_state"] != "finished" for row in rows), {"pending": sum(row["publication_state"] == "pending-unverified" for row in rows), "remote_present": sum(bool(row["remote_sha"]) for row in rows), "receipt_ref_linked": sum(row["authored_receipt_matches_observed_ref"] for row in rows)})
+    for label, source in [("own_isolated_base", PIN), ("main_committed_at_snapshot", head)]:
+        entry = {}
+        for name in ["AGENTS.md", "RESUME.md", "docs/PROJECT_STATE.md", "docs/coordination/tasks/R10-rolling-agile-sdlc.md"]:
+            code, value = git(["show", source + ":" + name])
+            entry[name] = {"exit": code, "present": code == 0, "sha256": hashlib.sha256(value.encode()).hexdigest() if code == 0 else None, "mentions_R10": "R10-rolling-agile-sdlc.md" in value, "mentions_MAIN_bootstrap": "C:\\Users\\bagma\\deepviz-agent-toolkit" in value or "C:/Users/bagma/deepviz-agent-toolkit" in value}
+        result[label] = {"commit": source, "entries": entry}
+    for remote_branch in ["release/candidate", "agents/r10-root-coordination"]:
+        sha = refs.get(remote_branch)
+        if not sha:
+            result["remote_bootstrap"][remote_branch] = {"status": "not_observed-pending-unverified"}
+            continue
+        entries = {}
+        for name in ["AGENTS.md", "RESUME.md", "docs/PROJECT_STATE.md", "docs/coordination/tasks/R10-rolling-agile-sdlc.md"]:
+            code, payload = api("/repos/" + REPO + "/contents/" + name + "?ref=" + sha)
+            data = base64.b64decode(payload.get("content", "")) if code == 200 and payload.get("encoding") == "base64" else b""
+            value = data.decode("utf-8-sig") if data else ""
+            git_blob = hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest() if data else None
+            entries[name] = {"http": code, "git_blob_sha": payload.get("sha"), "content_matches_git_blob": git_blob == payload.get("sha") if data else False, "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest() if data else None, "mentions_R10": "R10-rolling-agile-sdlc.md" in value, "mentions_MAIN_bootstrap": "C:\\Users\\bagma\\deepviz-agent-toolkit" in value or "C:/Users/bagma/deepviz-agent-toolkit" in value}
+        result["remote_bootstrap"][remote_branch] = {"commit": sha, "entries": entries, "status": "observed-immutable-committed-content"}
+    for name in ["AGENTS.md", "RESUME.md", "docs/PROJECT_STATE.md", "docs/coordination/REQUEST.md"]:
+        compact = re.sub(r"[\s*]", "", texts.get(name, "").lower()).replace("\u2013", "-")
+        check("MAIN_latest_R10_precedence:" + name, "r10-rolling-agile-sdlc.md" in compact and "18" in compact and "22" in compact and "pointofcontact" in compact and "900" in compact, name)
+    check("MAIN_resume_bootstrap_explicit", "C:\\Users\\bagma\\deepviz-agent-toolkit\\docs\\PROJECT_STATE.md" in texts.get("RESUME.md", ""), "RESUME.md")
+    for name in ["docs/coordination/STATE.md", "docs/coordination/ROSTER.md"]:
+        first = chr(10).join(texts.get(name, "").splitlines()[:12])
+        check("legacy_entry_redirect_current:" + name, "R10-rolling-agile-sdlc.md" in first or "R04-coordinator-rotation.md" in first, name + ":1-12")
+    check("old_isolated_pin_has_current_bootstrap", all(item["present"] and item["mentions_R10"] for item in result["own_isolated_base"]["entries"].values()), "immutable base, do not modify old source/oracles")
+    result["status"] = "bounded-snapshot-submitted-not-signoff"
+except Exception as error:
+    result["status"] = "blocked"
+    result["sanitized_error_type"] = type(error).__name__
+    result["error_message"] = str(error) if isinstance(error, RuntimeError) else "sanitized_external_or_harness_error"
+finally:
+    result["finished_utc"] = dt.datetime.now(dt.timezone.utc).isoformat()
+    result["assertions"] = {s: sum(c["status"] == s for c in result["checks"]) for s in ["pass", "fail"]}
+    (OUT / "recovery-snapshot.json").write_text(json.dumps(result, indent=2) + chr(10), encoding="utf-8")
+    print(json.dumps({k: result.get(k) for k in ["status", "started_utc", "finished_utc", "identity", "main", "snapshot_dir", "snapshot_file_count", "snapshot_bytes", "assertions", "sanitized_error_type", "error_message"]}, indent=2))
+    print(json.dumps({"remote_refs": result.get("remote_refs"), "role_publication": [{k: row[k] for k in ["role", "remote_sha", "publication_state"]} for row in result.get("roles", [])]}, indent=2))
+raise SystemExit(2 if result["status"] == "blocked" else 1 if result["assertions"]["fail"] else 0)

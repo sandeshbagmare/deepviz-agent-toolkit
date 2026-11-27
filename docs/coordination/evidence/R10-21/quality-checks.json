@@ -1,0 +1,47 @@
+{
+  "branch": "agents/r10-21-recovery-git-bootstrap",
+  "source_base": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "scope": "owned offline audit probes, not product/recovery signoff",
+  "probe_sha256": "872565fc421e01898771dffa940e940904a7d30f755284092d66d86e2e2e7e0b",
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "tests/r10_probes/role21/test_publication_receipts.py",
+        "-q",
+        "--tb=short",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "exit": 0,
+      "stdout": "...............                                                          [100%]\n15 passed in 0.06s\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "tests/r10_probes/role21/test_publication_receipts.py"
+      ],
+      "exit": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "tests/r10_probes/role21/test_publication_receipts.py"
+      ],
+      "exit": 0,
+      "stdout": "Success: no issues found in 1 source file\n",
+      "stderr": ""
+    }
+  ],
+  "failed_commands": 0
+}
