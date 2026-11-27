@@ -1,0 +1,44 @@
+{
+  "source": "3eab699b61850a20e91132e16caf8c589085f9ee",
+  "parent": "262b0da145e42c94c2908213272ec3be28771206",
+  "owner": "ses_de5678315ffeDxQVEpE9V9WSTE",
+  "decision": "REQUEST_CHANGES",
+  "whole_connected_native_source_review_complete": true,
+  "entire_render": 234,
+  "entire_matplotlib_figure_lines": [
+    217,
+    382
+  ],
+  "required_engine_helper_units": 17,
+  "original_source_control_lines_read": [
+    478,
+    279,
+    78
+  ],
+  "finding": "R47-03-F1",
+  "severity": "P2",
+  "strict_cases": 1,
+  "failed": 1,
+  "passed": 0,
+  "skipped": 0,
+  "actual_case_exit": 1,
+  "collector_exit_not_product_pass": 0,
+  "elapsed_seconds": 2.1705833000014536,
+  "expected_literal_legend": [
+    "_north",
+    "South"
+  ],
+  "observed_native_and_public_svg": [
+    "South"
+  ],
+  "actual_png_opened": true,
+  "loaded_own_git_modules_verified": 5,
+  "normalizer_old_matrix_replay": false,
+  "source_or_original_oracle_changes": false,
+  "not_allkinds_CLI_package_browser_scale_CI_main_or_future_PR_approval": true,
+  "main_delivery_target": "nextusablefirstnativeMatplotlibAPI/CLI slice, nativePR unknown/notcreated atassignment",
+  "blocker_removed": "completed unfilled connected-source gate, transformed unexecutedrisk into real strict reproduction; release gate withheld",
+  "next_owner": "R04 -> authorizednativeproducer -> exactnewhead independent unaffected+strictcase gates",
+  "minimal_fix_recommendation": "preserve literal series via explicitlegend handling, not auto underscore filter; no data rename or weakenedexpectation",
+  "conditional_product_estimate": "UNKNOWN"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "R47-03-F1",
+  "severity": "P2",
+  "source": "3eab699b61850a20e91132e16caf8c589085f9ee",
+  "decision": "REQUEST_CHANGES first-native literal series identity",
+  "file": "python/deepviz/src/deepviz/engines.py",
+  "lines": [
+    265,
+    285
+  ],
+  "root_cause": "Raw data labels passed as artist labels; automatic ax.legend filters leading underscores",
+  "expected": [
+    "_north",
+    "South"
+  ],
+  "observed_native": [
+    "South"
+  ],
+  "observed_public_svg": [
+    "South"
+  ],
+  "actual_probe_exit": 1,
+  "strict_cases": 1,
+  "failed": 1,
+  "passed": 0,
+  "skipped": 0,
+  "native_heights": [
+    2,
+    4,
+    3,
+    6
+  ],
+  "valid_controls": "five loaded modules exact ownGit bytes; four records/counts/no mutation; all four files/PNG640x400; finiteaxes and rectangles; sentinel preservation; no warnings; no pyplot figure registration",
+  "png_opened": true,
+  "png_visual": "blue and orange bars visible; only orange South key; blue series unidentified",
+  "png_sha256": "8fa155ddd975b4d0cfb9aa47d8897836ea3b148a4e5e3eab0cf0284552438956",
+  "prior02": "previous unexecuted hypothesis now independently reproduced once, not a second bug count",
+  "owner": "R04 routes authorized first-native producer",
+  "minimal_recommendation": "Do not rely on automatic legend discovery for untrusted series names; use retained explicit handles and preserve exact literal legend texts, test supported Matplotlib versions; no rename/prefix hack or weakened oracle",
+  "not_tested": "other kinds/extremeaxes/dashboard/CLI/package/newextractedPR",
+  "main_delivery_target": "next usable first-native API/CLI slice; actual native PR unknown/not created at assignment"
+}
