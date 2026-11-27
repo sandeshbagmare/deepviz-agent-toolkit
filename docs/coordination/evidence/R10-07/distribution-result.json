@@ -1,0 +1,1711 @@
+{
+  "session": "ses_de56782e8ffentAvzUUfMncFRA",
+  "role": "R10-07-python-clean-distribution",
+  "issue": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/24",
+  "scope": "Independent exact-checkpoint distribution evidence, not final-source or release acceptance",
+  "source_sha": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "source_tree": "cdb78b93e44b0e959702cfd13a88dc4e547fc1ef",
+  "source_archive": {
+    "path": "<OWN_RUN>\\checkpoint.tar",
+    "bytes": 2222080,
+    "sha256": "397dfada07935dad756b9820159ba7905705d9ca56c00edad1d7a463e185c356"
+  },
+  "artifacts": [
+    {
+      "path": "<OWN_RUN>\\dist\\deepviz_agent_toolkit-0.1.0-py3-none-any.whl",
+      "bytes": 52845,
+      "sha256": "b99c5ec2836e9fed5dd794600ce228993e8c923a5972709a314f380449239f22"
+    },
+    {
+      "path": "<OWN_RUN>\\dist\\deepviz_agent_toolkit-0.1.0.tar.gz",
+      "bytes": 666560,
+      "sha256": "8e69e21cb2f39d4556be84bb2e4fafe078dc46f848631acc42917d88bf88c89f"
+    }
+  ],
+  "archive_assertions": {
+    "passed": 26,
+    "failed": 0,
+    "skipped": 0,
+    "checks": [
+      "unique wheel members",
+      "wheel exact source deepviz/__init__.py",
+      "wheel exact source deepviz/cli.py",
+      "wheel exact source deepviz/engines.py",
+      "wheel exact source deepviz/mcp_server.py",
+      "wheel exact source deepviz/models.py",
+      "wheel exact source deepviz/normalize.py",
+      "wheel exact source deepviz/py.typed",
+      "wheel exact source deepviz/recommend.py",
+      "wheel exact source deepviz/render.py",
+      "wheel exact source deepviz/resources/plotly-js-LICENSE.txt",
+      "wheel exact source deepviz/tools.py",
+      "wheel exact prompt README.md",
+      "wheel exact prompt request.md",
+      "wheel exact prompt system.md",
+      "wheel exact schema",
+      "two exact console entrypoints",
+      "wheel exact LICENSE",
+      "all wheel RECORD hashes/sizes",
+      "sdist source inclusion pyproject.toml",
+      "sdist source inclusion schemas/chart-spec.schema.json",
+      "sdist source inclusion prompts/v1/system.md",
+      "sdist source inclusion prompts/v1/request.md",
+      "sdist source inclusion python/deepviz/src/deepviz/py.typed",
+      "all sdist files equal exact checkpoint snapshot, except generated PKG-INFO",
+      "new dirty harness excluded from sdist"
+    ],
+    "wheel_members": 20,
+    "sdist_files": 252
+  },
+  "build_tools": {
+    "python": "<OWN_RUN>\\build-env\\Scripts\\python.exe",
+    "prefix": "<OWN_RUN>\\build-env",
+    "modules": [
+      {
+        "name": "hatchling.build",
+        "distribution": "hatchling",
+        "version": "1.33.0",
+        "origin": "<OWN_RUN>\\build-env\\Lib\\site-packages\\hatchling\\build.py",
+        "bytes": 5577,
+        "sha256": "8bdc5f386de529d512e8807b1bf47843010b142f3e61fc2d5e75f13634d7e583"
+      },
+      {
+        "name": "build",
+        "distribution": "build",
+        "version": "1.6.1",
+        "origin": "<OWN_RUN>\\build-env\\Lib\\site-packages\\build\\__init__.py",
+        "bytes": 1000,
+        "sha256": "e2509f5428e076bccd14ff80070dcebf763aa38675cd96789d422b1dab4aa4b0"
+      },
+      {
+        "name": "twine",
+        "distribution": "twine",
+        "version": "7.0.0",
+        "origin": "<OWN_RUN>\\build-env\\Lib\\site-packages\\twine\\__init__.py",
+        "bytes": 1516,
+        "sha256": "578894978e7c1b77105a8eb76c69267fa39fa8408f494655eadf682ccb31b906"
+      },
+      {
+        "name": "mypy.version",
+        "distribution": "mypy",
+        "version": "2.4.1",
+        "origin": "<OWN_RUN>\\build-env\\Lib\\site-packages\\mypy\\version.py",
+        "bytes": 23,
+        "sha256": "e335bf7c9bd25aa91430ea668456f72c4b15f8a8b71487ba91fd7252c094858e"
+      }
+    ]
+  },
+  "build_environment": {
+    "python": "<OWN_RUN>\\build-env\\Scripts\\python.exe",
+    "python_version": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+    "prefix": "<OWN_RUN>\\build-env",
+    "base_prefix": "<BASE_INTERPRETER>\\cpython-3.12.16-windows-x86_64-none",
+    "sys_path": [
+      "<BASE_INTERPRETER>\\cpython-3.12.16-windows-x86_64-none\\python312.zip",
+      "<BASE_INTERPRETER>\\cpython-3.12.16-windows-x86_64-none\\DLLs",
+      "<BASE_INTERPRETER>\\cpython-3.12.16-windows-x86_64-none\\Lib",
+      "<BASE_INTERPRETER>\\cpython-3.12.16-windows-x86_64-none",
+      "<OWN_RUN>\\build-env",
+      "<OWN_RUN>\\build-env\\Lib\\site-packages"
+    ],
+    "user_site": false,
+    "distributions": [
+      {
+        "name": "ast_serialize",
+        "version": "0.13.1",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "f6005532f49c7c552572bfab83625c00b7d6fb886067d416da0601c28111acf7"
+      },
+      {
+        "name": "build",
+        "version": "1.6.1",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "f3623590844a25dcf308a71a988c73e293b7ef779a1f43acb83ad1be218d61a0"
+      },
+      {
+        "name": "certifi",
+        "version": "2026.11.20",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "940f90089b8c6f2bbd0fa6e93a66634289853a5bc1453e9f9b88ae53859a2553"
+      },
+      {
+        "name": "charset-normalizer",
+        "version": "3.5.3",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "e2670ffc491022ebfae4daab957be0b54fdde29dabbdfea1e104c58d664f98e3"
+      },
+      {
+        "name": "colorama",
+        "version": "0.4.6",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "7baed29eb50c3b29bdb33ff84e3177bf1bc05784f7685ecdcaa4471c7dd810cc"
+      },
+      {
+        "name": "docutils",
+        "version": "0.23",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "35c0857d0f40af076ae5aad8f9c31d0cc9494118a98e07693c040042132ced92"
+      },
+      {
+        "name": "hatchling",
+        "version": "1.33.0",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "482be6d989f36d3c7a31ceefb69ea757f1b603daa9dc598f8626fd0d81d1ca4a"
+      },
+      {
+        "name": "id",
+        "version": "1.6.1",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "5df85d87132487ef5ec3f6e7484595df23c6b088b97eb7eff35447d56c7cba24"
+      },
+      {
+        "name": "idna",
+        "version": "3.20",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "dbd8c14c1e4ca1e0c9824a6dbc7cbbf78884f38eb52d91148cd3025f671e4b85"
+      },
+      {
+        "name": "jaraco.classes",
+        "version": "3.4.0",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "2e6b102232edd45ae1bb8a6b4091fd40cf3201a6bb6fd4bc97c5e8cd765a44b8"
+      },
+      {
+        "name": "jaraco.context",
+        "version": "6.1.2",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "f1b65b60aea229af54e09b17ae0036cf048fe4a6161fa2e7966a8ea5c2321491"
+      },
+      {
+        "name": "jaraco.functools",
+        "version": "4.6.0",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "6ed3cae5b8eef084c3c7b2385a0a8ac4c8155ab7c729212bea099bee69d5bd6c"
+      },
+      {
+        "name": "keyring",
+        "version": "25.7.0",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "bd54de98fede6dc3e1f3cd89b4e37c95d8842a523bdbb9e52ab40edff1837163"
+      },
+      {
+        "name": "librt",
+        "version": "0.17.0",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "b4b1746db150f34ffdc85a88b43e6dc64e5cc77189e4c8cbffbeecb73a36ad77"
+      },
+      {
+        "name": "markdown-it-py",
+        "version": "4.3.0",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "d681c81bdf30501ff38f4ada3902d04c447c0949058eea47011308e301e9ef3e"
+      },
+      {
+        "name": "mdurl",
+        "version": "0.1.2",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "b53b29d48f499367053fda3c81e7ce27d2558380ebbf83e66023b02eb7ddd25d"
+      },
+      {
+        "name": "more-itertools",
+        "version": "11.2.1",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "8c558bfab61818450e78db4018281f8f7b22115e681cd53ae1d9d4931be54f15"
+      },
+      {
+        "name": "mypy",
+        "version": "2.4.1",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "31b8ffc60b1280a909871b810697a3dd069f1dac7d93e0faf87948aec167e6cf"
+      },
+      {
+        "name": "mypy_extensions",
+        "version": "1.2.0",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "491d57350e1e7ee6b8afea5e3f7df616b9e8ed224331fb002f7ce377b80e5e10"
+      },
+      {
+        "name": "nh3",
+        "version": "0.3.8",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "3b1e5277772e882114852fdb8463e83aa6a19abd6099e14ec0674e0ed0ded5c9"
+      },
+      {
+        "name": "packaging",
+        "version": "26.4",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "f2fe7a3440ed0e67f703ec9cf0275c9f9b27be0eae3844258606caa7b0c56d62"
+      },
+      {
+        "name": "pathspec",
+        "version": "1.1.1",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "68de3f158b6592f086e78754c962092f32a761944ab66a660c0d62ad79c4b69b"
+      },
+      {
+        "name": "pip",
+        "version": "26.3",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "ad63a8564cd158c8de9e6a912e92776b4abc56cfa2d8286ef4c35bfb9cb9e439"
+      },
+      {
+        "name": "pluggy",
+        "version": "1.7.0",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "20ac8237e37f1d6e7e75500cd663015177ba80c1a1a595ff6bae18a539ff8a2c"
+      },
+      {
+        "name": "Pygments",
+        "version": "2.21.0",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "1dde075570136774c706bf0009183a793fe0ee262e4a5590cc6eff8453eedd43"
+      },
+      {
+        "name": "pyproject_hooks",
+        "version": "1.3.3",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "844e375bb28dcbe42a0502fbd9428d9ba4669db25028ee7a7afaa8dd7ada2e00"
+      },
+      {
+        "name": "pywin32-ctypes",
+        "version": "0.2.3",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "1e3767d3faff4d5b9c347160883831098d1f25acf4306b02c9acdcc6bfb5883b"
+      },
+      {
+        "name": "readme_renderer",
+        "version": "46.0",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "608ed2989e73adfc5c2d65c3eacab027c4b13ab13830e42b8f9bcfd69315a689"
+      },
+      {
+        "name": "requests",
+        "version": "2.34.2",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "8c384ba3e979480faae2859d3c5e6c1276dd2c3616e322e124d52c8cfc556f27"
+      },
+      {
+        "name": "requests-toolbelt",
+        "version": "1.0.0",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "fa52f26237cc8d148d25c5746fdca499a56d0e765e69095cc3564a07cce23967"
+      },
+      {
+        "name": "rfc3986",
+        "version": "2.0.0",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "f22029d298cf2eaea524e697d06a55f38d099cc40fb0f175ed79037effe3a8ce"
+      },
+      {
+        "name": "rich",
+        "version": "15.0.0",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "fad34fc603fac4481bf81f8dd629492fc302c0ec31909c86644751512afb2e3b"
+      },
+      {
+        "name": "tomlkit",
+        "version": "0.15.3",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "e140cb7ec3b37111d8bcf4628b75e6eaa12b6a414f5ecda2c142d29945a35567"
+      },
+      {
+        "name": "trove-classifiers",
+        "version": "2026.9.21.13",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "ca7e96493232b21f92aeccf456b2e01f1d4dbcaa8e17a9e1b5e6f03c6eb7461f"
+      },
+      {
+        "name": "twine",
+        "version": "7.0.0",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "5668eb61a9b49d6869598af191e708c38960d403c1f2d66401817dc2978677e9"
+      },
+      {
+        "name": "typing_extensions",
+        "version": "4.16.0",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "b05084ca1d50879865178d9fff9fabeab61bdfb1f361bfbde95421ffc8f9be46"
+      },
+      {
+        "name": "urllib3",
+        "version": "2.8.0",
+        "metadata_root": "<OWN_RUN>\\build-env\\Lib\\site-packages",
+        "metadata_sha256": "10898c620e8007c030e07fa5622b68358a43010025dfbd78a1cb797699de2bb4"
+      }
+    ]
+  },
+  "preserved_initial_consumer": {
+    "passed": 26,
+    "failed": 1,
+    "failure": "Own oracle assumed Vega PNG; actual installed CLI returned correct SVG MIME/counts and no warnings",
+    "skipped": [
+      "MCP transport in wheel base-only environment"
+    ]
+  },
+  "consumers": {
+    "wheel": {
+      "environment": {
+        "python": "<OWN_RUN>\\wheel-env\\Scripts\\python.exe",
+        "python_version": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+        "prefix": "<OWN_RUN>\\wheel-env",
+        "base_prefix": "<BASE_INTERPRETER>\\cpython-3.12.16-windows-x86_64-none",
+        "sys_path": [
+          "<BASE_INTERPRETER>\\cpython-3.12.16-windows-x86_64-none\\python312.zip",
+          "<BASE_INTERPRETER>\\cpython-3.12.16-windows-x86_64-none\\DLLs",
+          "<BASE_INTERPRETER>\\cpython-3.12.16-windows-x86_64-none\\Lib",
+          "<BASE_INTERPRETER>\\cpython-3.12.16-windows-x86_64-none",
+          "<OWN_RUN>\\wheel-env",
+          "<OWN_RUN>\\wheel-env\\Lib\\site-packages"
+        ],
+        "user_site": false,
+        "distributions": [
+          {
+            "name": "annotated-types",
+            "version": "0.8.0",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "614985b278f601b8ef863f82783b991cc3ada4b89f592eb71c7c48c5f2ef2298"
+          },
+          {
+            "name": "contourpy",
+            "version": "1.4.0",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "40450acd747b288a5db999c435e1e921ffee0a38c7884a80cd46934c8004568f"
+          },
+          {
+            "name": "cycler",
+            "version": "0.12.1",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "23289e19b76f1e01394227696e6af2b6cd1ce79e89731209bf9195148b18ed36"
+          },
+          {
+            "name": "deepviz-agent-toolkit",
+            "version": "0.1.0",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "c1990e3e4e3811156204f53482367bbfa5a60aca633bac22235a2685af12a9f3"
+          },
+          {
+            "name": "fonttools",
+            "version": "4.69.1",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "8f1968d56f7981aa66954ed34e8164f88f460ebe999db89ccffa38f3c143279d"
+          },
+          {
+            "name": "kiwisolver",
+            "version": "1.5.1",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "f07b7b6c0c9c2a624c8a31f931e16712f2cf3490e7dfd51643d68e9d42d4b2c9"
+          },
+          {
+            "name": "matplotlib",
+            "version": "3.11.2",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "e5f532226d1025af2dd15ff951df27391f66d46403b8244ea61e6b8eb3e4d806"
+          },
+          {
+            "name": "narwhals",
+            "version": "2.29.0",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "10f6c4c5a017640f6c8406f5833adea64a4929f93fd737e877ca6c08f5f851c2"
+          },
+          {
+            "name": "numpy",
+            "version": "2.5.5",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "b184c8d5951f32a8b8b080ff80744e0b80523783061402446a5dcaf52dc40bff"
+          },
+          {
+            "name": "packaging",
+            "version": "26.4",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "f2fe7a3440ed0e67f703ec9cf0275c9f9b27be0eae3844258606caa7b0c56d62"
+          },
+          {
+            "name": "pillow",
+            "version": "13.0.0",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "dba7fdfe24e302f46bae562f55d66cc367c0618abae9894a1ebec93dc8f0e511"
+          },
+          {
+            "name": "pip",
+            "version": "26.3",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "ad63a8564cd158c8de9e6a912e92776b4abc56cfa2d8286ef4c35bfb9cb9e439"
+          },
+          {
+            "name": "plotly",
+            "version": "6.9.0",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "754241a0fbec9813c0f170b760680a17f552a0bfe0f66b61d3664c2dc5b03168"
+          },
+          {
+            "name": "pydantic",
+            "version": "2.14.4",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "8f5e54d1880bfcdd9a002ae23f584484f73347b8e67b9c0697fd2a450dc2baae"
+          },
+          {
+            "name": "pydantic_core",
+            "version": "2.50.5",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "e2974df53f117ed0aa9af6b0ca3de6ee75ec50e774cf8a7499c8f80eaca07b75"
+          },
+          {
+            "name": "pyparsing",
+            "version": "3.3.3",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "f2ca34052d720622d300023472ef8ae94fe5b57d69acbb28a8667f6dd0e13497"
+          },
+          {
+            "name": "python-dateutil",
+            "version": "4.0.0",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "39adffb0c736bb6b6839f89fd158bb9b9ad54a3a795e0ea2ea53e79e1f821907"
+          },
+          {
+            "name": "typing-inspection",
+            "version": "0.4.5",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "7306933907768b0098784e56dfd678242f52383ff3e35c10a4c150539393d6ec"
+          },
+          {
+            "name": "typing_extensions",
+            "version": "4.16.0",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "b05084ca1d50879865178d9fff9fabeab61bdfb1f361bfbde95421ffc8f9be46"
+          },
+          {
+            "name": "tzdata",
+            "version": "2026.6",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "8173da8700dd125e60c9caf7663d02ee3318851ee60d387b2b080f23a74a86a8"
+          },
+          {
+            "name": "vl-convert-python",
+            "version": "1.9.0.post1",
+            "metadata_root": "<OWN_RUN>\\wheel-env\\Lib\\site-packages",
+            "metadata_sha256": "be4b463ffc76ae8915638babe362d535ae98ab81d703f97df90632ff208156c2"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "name": "deepviz installed in own venv",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\wheel-env\\Lib\\site-packages\\deepviz\\__init__.py",
+            "bytes": 1133,
+            "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+          }
+        },
+        {
+          "name": "installed module deepviz",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\wheel-env\\Lib\\site-packages\\deepviz\\__init__.py",
+            "bytes": 1133,
+            "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+          }
+        },
+        {
+          "name": "installed module deepviz.cli",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\wheel-env\\Lib\\site-packages\\deepviz\\cli.py",
+            "bytes": 2623,
+            "sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf"
+          }
+        },
+        {
+          "name": "installed module deepviz.engines",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\wheel-env\\Lib\\site-packages\\deepviz\\engines.py",
+            "bytes": 42230,
+            "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de"
+          }
+        },
+        {
+          "name": "installed module deepviz.mcp_server",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\wheel-env\\Lib\\site-packages\\deepviz\\mcp_server.py",
+            "bytes": 5395,
+            "sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95"
+          }
+        },
+        {
+          "name": "installed module deepviz.models",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\wheel-env\\Lib\\site-packages\\deepviz\\models.py",
+            "bytes": 3493,
+            "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+          }
+        },
+        {
+          "name": "installed module deepviz.normalize",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\wheel-env\\Lib\\site-packages\\deepviz\\normalize.py",
+            "bytes": 33895,
+            "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+          }
+        },
+        {
+          "name": "installed module deepviz.recommend",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\wheel-env\\Lib\\site-packages\\deepviz\\recommend.py",
+            "bytes": 4875,
+            "sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999"
+          }
+        },
+        {
+          "name": "installed module deepviz.render",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\wheel-env\\Lib\\site-packages\\deepviz\\render.py",
+            "bytes": 11313,
+            "sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+          }
+        },
+        {
+          "name": "installed module deepviz.tools",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\wheel-env\\Lib\\site-packages\\deepviz\\tools.py",
+            "bytes": 9383,
+            "sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb"
+          }
+        },
+        {
+          "name": "public prompt system",
+          "status": "pass",
+          "detail": "exact source bytes"
+        },
+        {
+          "name": "public prompt request",
+          "status": "pass",
+          "detail": "exact source bytes"
+        },
+        {
+          "name": "resource py.typed",
+          "status": "pass",
+          "detail": "exact source bytes"
+        },
+        {
+          "name": "resource resources/chart-spec.schema.json",
+          "status": "pass",
+          "detail": "exact source bytes"
+        },
+        {
+          "name": "resource resources/plotly-js-LICENSE.txt",
+          "status": "pass",
+          "detail": "exact source bytes"
+        },
+        {
+          "name": "installed provenance matches current archive",
+          "status": "pass",
+          "detail": {
+            "version": "0.1.0",
+            "archive_sha256": "b99c5ec2836e9fed5dd794600ce228993e8c923a5972709a314f380449239f22",
+            "direct_url": {
+              "archive_info": {
+                "hash": "sha256=b99c5ec2836e9fed5dd794600ce228993e8c923a5972709a314f380449239f22",
+                "hashes": {
+                  "sha256": "b99c5ec2836e9fed5dd794600ce228993e8c923a5972709a314f380449239f22"
+                }
+              },
+              "url": "file:///<OWN_RUN>/dist/deepviz_agent_toolkit-0.1.0-py3-none-any.whl"
+            }
+          }
+        },
+        {
+          "name": "runtime origin pydantic",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\wheel-env\\Lib\\site-packages\\pydantic\\__init__.py",
+            "bytes": 15951,
+            "sha256": "e5248cb9bbe293b3536dbed7fea54326dcdf3c03370ae5f03d794c58496ec01b"
+          }
+        },
+        {
+          "name": "runtime origin numpy",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\wheel-env\\Lib\\site-packages\\numpy\\__init__.py",
+            "bytes": 26470,
+            "sha256": "a6958cb364663b7acce81ccfd58eeb65a2b34d5376157f924777b97211a73be4"
+          }
+        },
+        {
+          "name": "runtime origin matplotlib",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\wheel-env\\Lib\\site-packages\\matplotlib\\__init__.py",
+            "bytes": 56239,
+            "sha256": "37abb78e74e9e0085a4e306a919606ffa8ff3c263def80ae2f4d938cfa79cd32"
+          }
+        },
+        {
+          "name": "runtime origin plotly",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\wheel-env\\Lib\\site-packages\\plotly\\__init__.py",
+            "bytes": 5697,
+            "sha256": "5e6c208c2f968fc9e67d5770e70f5e5ac76dfd0f9d70168205ae5898cc41af5e"
+          }
+        },
+        {
+          "name": "runtime origin vl_convert",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\wheel-env\\Lib\\site-packages\\vl_convert\\__init__.py",
+            "bytes": 123,
+            "sha256": "b1fa184acaa30675d078048f8aec4ff648ac42b6282b423859330d9f6193826f"
+          }
+        },
+        {
+          "name": "prompt traversal rejected",
+          "status": "pass",
+          "detail": "ValueError as expected"
+        },
+        {
+          "name": "actual console help deepviz",
+          "status": "pass",
+          "detail": 0
+        },
+        {
+          "name": "actual console help deepviz-mcp",
+          "status": "pass",
+          "detail": 0
+        },
+        {
+          "name": "installed CLI static matplotlib",
+          "status": "pass",
+          "detail": {
+            "input_count": 2,
+            "output_count": 2,
+            "files": 4
+          }
+        },
+        {
+          "name": "installed CLI static vega",
+          "status": "pass",
+          "detail": {
+            "input_count": 2,
+            "output_count": 2,
+            "files": 3
+          }
+        },
+        {
+          "name": "base install has no undeclared optional MCP/agents",
+          "status": "pass",
+          "detail": "all optional packages absent, no inherited sites"
+        }
+      ],
+      "commands": [
+        {
+          "argv": [
+            "<OWN_RUN>\\wheel-env\\Scripts\\deepviz.exe",
+            "--help"
+          ],
+          "exit": 0,
+          "stdout": "usage: deepviz [-h] {render,normalize,recommend,mcp} ...\n\nRender, profile, or recommend charts from local files; stdout is JSON.\n\npositional arguments:\n  {render,normalize,recommend,mcp}\n    mcp                 Start the local stdio MCP server\n\noptions:\n  -h, --help            show this help message and exit\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "<OWN_RUN>\\wheel-env\\Scripts\\deepviz-mcp.exe",
+            "--help"
+          ],
+          "exit": 0,
+          "stdout": "usage: deepviz-mcp [-h] [--output-dir OUTPUT_DIR] [--data-dir DATA_DIR]\n\nLocal stdio MCP server with readable chart resources and inline PNG previews.\n\noptions:\n  -h, --help            show this help message and exit\n  --output-dir OUTPUT_DIR\n  --data-dir DATA_DIR   Allow file inputs only inside this directory; disabled\n                        by default\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "<OWN_RUN>\\wheel-env\\Scripts\\deepviz.exe",
+            "render",
+            "<OWN_RUN>\\v2-continuation\\wheel-consumer\\data.json",
+            "--spec",
+            "<OWN_RUN>\\v2-continuation\\wheel-consumer\\spec.json",
+            "--engine",
+            "matplotlib",
+            "--output-dir",
+            "<OWN_RUN>\\v2-continuation\\wheel-consumer\\render-matplotlib"
+          ],
+          "exit": 0,
+          "stdout": "{\"paths\": [\"C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r10p07-v1\\\\v2-continuation\\\\wheel-consumer\\\\render-matplotlib\\\\matplotlib-w6wgb4t4\\\\deepviz-3x_n3rjg\\\\chart.png\", \"C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r10p07-v1\\\\v2-continuation\\\\wheel-consumer\\\\render-matplotlib\\\\matplotlib-w6wgb4t4\\\\deepviz-3x_n3rjg\\\\chart.svg\", \"C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r10p07-v1\\\\v2-continuation\\\\wheel-consumer\\\\render-matplotlib\\\\matplotlib-w6wgb4t4\\\\deepviz-3x_n3rjg\\\\chart.html\", \"C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r10p07-v1\\\\v2-continuation\\\\wheel-consumer\\\\render-matplotlib\\\\matplotlib-w6wgb4t4\\\\deepviz-3x_n3rjg\\\\manifest.json\"], \"mime_type\": \"image/png\", \"engine\": \"matplotlib\", \"input_count\": 2, \"output_count\": 2, \"strategy\": \"sum\", \"warnings\": []}\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "<OWN_RUN>\\wheel-env\\Scripts\\deepviz.exe",
+            "render",
+            "<OWN_RUN>\\v2-continuation\\wheel-consumer\\data.json",
+            "--spec",
+            "<OWN_RUN>\\v2-continuation\\wheel-consumer\\spec.json",
+            "--engine",
+            "vega",
+            "--output-dir",
+            "<OWN_RUN>\\v2-continuation\\wheel-consumer\\render-vega"
+          ],
+          "exit": 0,
+          "stdout": "{\"paths\": [\"C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r10p07-v1\\\\v2-continuation\\\\wheel-consumer\\\\render-vega\\\\vega-xr7z6puh\\\\deepviz-djjwzv_4\\\\chart.svg\", \"C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r10p07-v1\\\\v2-continuation\\\\wheel-consumer\\\\render-vega\\\\vega-xr7z6puh\\\\deepviz-djjwzv_4\\\\chart.html\", \"C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r10p07-v1\\\\v2-continuation\\\\wheel-consumer\\\\render-vega\\\\vega-xr7z6puh\\\\deepviz-djjwzv_4\\\\manifest.json\"], \"mime_type\": \"image/svg+xml\", \"engine\": \"vega\", \"input_count\": 2, \"output_count\": 2, \"strategy\": \"sum\", \"warnings\": []}\n",
+          "stderr": ""
+        }
+      ],
+      "artifacts": [
+        {
+          "engine": "matplotlib",
+          "metadata": {
+            "paths": [
+              "<OWN_RUN>\\v2-continuation\\wheel-consumer\\render-matplotlib\\matplotlib-w6wgb4t4\\deepviz-3x_n3rjg\\chart.png",
+              "<OWN_RUN>\\v2-continuation\\wheel-consumer\\render-matplotlib\\matplotlib-w6wgb4t4\\deepviz-3x_n3rjg\\chart.svg",
+              "<OWN_RUN>\\v2-continuation\\wheel-consumer\\render-matplotlib\\matplotlib-w6wgb4t4\\deepviz-3x_n3rjg\\chart.html",
+              "<OWN_RUN>\\v2-continuation\\wheel-consumer\\render-matplotlib\\matplotlib-w6wgb4t4\\deepviz-3x_n3rjg\\manifest.json"
+            ],
+            "mime_type": "image/png",
+            "engine": "matplotlib",
+            "input_count": 2,
+            "output_count": 2,
+            "strategy": "sum",
+            "warnings": []
+          },
+          "files": [
+            {
+              "path": "<OWN_RUN>\\v2-continuation\\wheel-consumer\\render-matplotlib\\matplotlib-w6wgb4t4\\deepviz-3x_n3rjg\\chart.png",
+              "bytes": 10729,
+              "sha256": "a6e73e95f4561291e5865bb16a309a6f56c002cc878cfa227cc6f6eb6ed7edc7"
+            },
+            {
+              "path": "<OWN_RUN>\\v2-continuation\\wheel-consumer\\render-matplotlib\\matplotlib-w6wgb4t4\\deepviz-3x_n3rjg\\chart.svg",
+              "bytes": 18650,
+              "sha256": "abd2bd4653872e925831bd7d4ff98e042ae79067b2e788443e8a55f35497d772"
+            },
+            {
+              "path": "<OWN_RUN>\\v2-continuation\\wheel-consumer\\render-matplotlib\\matplotlib-w6wgb4t4\\deepviz-3x_n3rjg\\chart.html",
+              "bytes": 1430,
+              "sha256": "96a667b314ee08dd841f2eff16310cdef8e2c89f53df44002708c7e9f5f2204d"
+            },
+            {
+              "path": "<OWN_RUN>\\v2-continuation\\wheel-consumer\\render-matplotlib\\matplotlib-w6wgb4t4\\deepviz-3x_n3rjg\\manifest.json",
+              "bytes": 1001,
+              "sha256": "ab4dceae7dce8b27ddadc2f381217f006c794121a390446b38fead6eb8ee456e"
+            }
+          ]
+        },
+        {
+          "engine": "vega",
+          "metadata": {
+            "paths": [
+              "<OWN_RUN>\\v2-continuation\\wheel-consumer\\render-vega\\vega-xr7z6puh\\deepviz-djjwzv_4\\chart.svg",
+              "<OWN_RUN>\\v2-continuation\\wheel-consumer\\render-vega\\vega-xr7z6puh\\deepviz-djjwzv_4\\chart.html",
+              "<OWN_RUN>\\v2-continuation\\wheel-consumer\\render-vega\\vega-xr7z6puh\\deepviz-djjwzv_4\\manifest.json"
+            ],
+            "mime_type": "image/svg+xml",
+            "engine": "vega",
+            "input_count": 2,
+            "output_count": 2,
+            "strategy": "sum",
+            "warnings": []
+          },
+          "files": [
+            {
+              "path": "<OWN_RUN>\\v2-continuation\\wheel-consumer\\render-vega\\vega-xr7z6puh\\deepviz-djjwzv_4\\chart.svg",
+              "bytes": 7746,
+              "sha256": "7c2c5b179c4237f9cb2725bc14ab0a534f7edbd1e073531c04858536633c0745"
+            },
+            {
+              "path": "<OWN_RUN>\\v2-continuation\\wheel-consumer\\render-vega\\vega-xr7z6puh\\deepviz-djjwzv_4\\chart.html",
+              "bytes": 1430,
+              "sha256": "96a667b314ee08dd841f2eff16310cdef8e2c89f53df44002708c7e9f5f2204d"
+            },
+            {
+              "path": "<OWN_RUN>\\v2-continuation\\wheel-consumer\\render-vega\\vega-xr7z6puh\\deepviz-djjwzv_4\\manifest.json",
+              "bytes": 2311,
+              "sha256": "58af0b971a35090bd9ff9b22eb7d763b94e8d7538412c7a331cd445f844437d3"
+            }
+          ],
+          "svg_raster_preview": {
+            "path": "<OWN_RUN>\\v2-continuation\\wheel-consumer\\vega-preview.png",
+            "bytes": 46941,
+            "sha256": "2bb6fd8b03ddc3e0c505138b8ec7075bf3dd82a78cdc8e5782ed9474355cf54a"
+          }
+        }
+      ],
+      "skipped": [
+        "Actual MCP transport in base-only wheel consumer; exercised in independent sdist[mcp] consumer"
+      ],
+      "passed": 27,
+      "failed": 0
+    },
+    "sdist": {
+      "environment": {
+        "python": "<OWN_RUN>\\sdist-env\\Scripts\\python.exe",
+        "python_version": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+        "prefix": "<OWN_RUN>\\sdist-env",
+        "base_prefix": "<BASE_INTERPRETER>\\cpython-3.12.16-windows-x86_64-none",
+        "sys_path": [
+          "<BASE_INTERPRETER>\\cpython-3.12.16-windows-x86_64-none\\python312.zip",
+          "<BASE_INTERPRETER>\\cpython-3.12.16-windows-x86_64-none\\DLLs",
+          "<BASE_INTERPRETER>\\cpython-3.12.16-windows-x86_64-none\\Lib",
+          "<BASE_INTERPRETER>\\cpython-3.12.16-windows-x86_64-none",
+          "<OWN_RUN>\\sdist-env",
+          "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+          "<OWN_RUN>\\sdist-env\\Lib\\site-packages\\win32",
+          "<OWN_RUN>\\sdist-env\\Lib\\site-packages\\win32\\lib",
+          "<OWN_RUN>\\sdist-env\\Lib\\site-packages\\pythonwin"
+        ],
+        "user_site": false,
+        "distributions": [
+          {
+            "name": "annotated-types",
+            "version": "0.8.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "614985b278f601b8ef863f82783b991cc3ada4b89f592eb71c7c48c5f2ef2298"
+          },
+          {
+            "name": "anyio",
+            "version": "4.16.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "b184ac9cd097e2bb7f90d42799346cc91c276095d000d95d7f7ddd407d0c887e"
+          },
+          {
+            "name": "attrs",
+            "version": "26.1.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "4cd40e690f23bf37cbcad34efd6758e062df1df07c86833f7e3ce95bf1fa38cc"
+          },
+          {
+            "name": "certifi",
+            "version": "2026.11.20",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "940f90089b8c6f2bbd0fa6e93a66634289853a5bc1453e9f9b88ae53859a2553"
+          },
+          {
+            "name": "cffi",
+            "version": "2.1.1",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "558bafb9093a8e790175d9ecff9688382981d744877dad86fd6770db0f4dc918"
+          },
+          {
+            "name": "click",
+            "version": "8.5.1",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "63d23e734a4c63191d956c85a399291729141377c9af847dcd2b4b450e0b81cc"
+          },
+          {
+            "name": "contourpy",
+            "version": "1.4.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "40450acd747b288a5db999c435e1e921ffee0a38c7884a80cd46934c8004568f"
+          },
+          {
+            "name": "cryptography",
+            "version": "50.0.2",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "047cfc71226409de4318b360aef15c63a2adf609731e3dcf7fe932f14ea042ee"
+          },
+          {
+            "name": "cycler",
+            "version": "0.12.1",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "23289e19b76f1e01394227696e6af2b6cd1ce79e89731209bf9195148b18ed36"
+          },
+          {
+            "name": "deepviz-agent-toolkit",
+            "version": "0.1.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "c1990e3e4e3811156204f53482367bbfa5a60aca633bac22235a2685af12a9f3"
+          },
+          {
+            "name": "fonttools",
+            "version": "4.69.1",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "8f1968d56f7981aa66954ed34e8164f88f460ebe999db89ccffa38f3c143279d"
+          },
+          {
+            "name": "h11",
+            "version": "0.16.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "28f326098ac09fcba79b8f180f96087c841fe2456215cb7b872a9c7d5cd19d64"
+          },
+          {
+            "name": "hatchling",
+            "version": "1.33.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "482be6d989f36d3c7a31ceefb69ea757f1b603daa9dc598f8626fd0d81d1ca4a"
+          },
+          {
+            "name": "httpcore",
+            "version": "1.0.9",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "fe2d4fda6199128978779e0cf27f3c045c531863fcdd987eacc74f3a18d41c21"
+          },
+          {
+            "name": "httpx",
+            "version": "0.29.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "913e53018d89da3a9fd45ff4184940fc975902054997cc11768c2cb23f6da783"
+          },
+          {
+            "name": "httpx-sse",
+            "version": "0.4.3",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "d4c6d804ee5ac46e9b3b6595c27ab8ae2ba7cfb5f692c78b16ff463e4bd1a81e"
+          },
+          {
+            "name": "idna",
+            "version": "3.20",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "dbd8c14c1e4ca1e0c9824a6dbc7cbbf78884f38eb52d91148cd3025f671e4b85"
+          },
+          {
+            "name": "jsonschema",
+            "version": "4.26.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "05b189866ca98a96da3934bf6b83687ced3ff85325273b77e16b705f6d8b26d2"
+          },
+          {
+            "name": "jsonschema-specifications",
+            "version": "2025.9.1",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "35abd41757f32b4ea24756920ded47b70173d77cbc052a5a6d3ab583b2e8d89d"
+          },
+          {
+            "name": "kiwisolver",
+            "version": "1.5.1",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "f07b7b6c0c9c2a624c8a31f931e16712f2cf3490e7dfd51643d68e9d42d4b2c9"
+          },
+          {
+            "name": "matplotlib",
+            "version": "3.11.2",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "e5f532226d1025af2dd15ff951df27391f66d46403b8244ea61e6b8eb3e4d806"
+          },
+          {
+            "name": "mcp",
+            "version": "1.30.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "3880c29896149862971af57942e3e5c0ad2a909696a66b9811c62f6e47e65111"
+          },
+          {
+            "name": "narwhals",
+            "version": "2.29.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "10f6c4c5a017640f6c8406f5833adea64a4929f93fd737e877ca6c08f5f851c2"
+          },
+          {
+            "name": "numpy",
+            "version": "2.5.5",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "b184c8d5951f32a8b8b080ff80744e0b80523783061402446a5dcaf52dc40bff"
+          },
+          {
+            "name": "packaging",
+            "version": "26.4",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "f2fe7a3440ed0e67f703ec9cf0275c9f9b27be0eae3844258606caa7b0c56d62"
+          },
+          {
+            "name": "pathspec",
+            "version": "1.1.1",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "68de3f158b6592f086e78754c962092f32a761944ab66a660c0d62ad79c4b69b"
+          },
+          {
+            "name": "pillow",
+            "version": "13.0.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "dba7fdfe24e302f46bae562f55d66cc367c0618abae9894a1ebec93dc8f0e511"
+          },
+          {
+            "name": "pip",
+            "version": "26.3",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "ad63a8564cd158c8de9e6a912e92776b4abc56cfa2d8286ef4c35bfb9cb9e439"
+          },
+          {
+            "name": "plotly",
+            "version": "6.9.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "754241a0fbec9813c0f170b760680a17f552a0bfe0f66b61d3664c2dc5b03168"
+          },
+          {
+            "name": "pluggy",
+            "version": "1.7.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "20ac8237e37f1d6e7e75500cd663015177ba80c1a1a595ff6bae18a539ff8a2c"
+          },
+          {
+            "name": "pycparser",
+            "version": "3.12",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "ad8db5fe2b0e0a3b0e8419fe5041b80be92470a40b06bd9c1462a0a8bb637c92"
+          },
+          {
+            "name": "pydantic",
+            "version": "2.14.4",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "8f5e54d1880bfcdd9a002ae23f584484f73347b8e67b9c0697fd2a450dc2baae"
+          },
+          {
+            "name": "pydantic-settings",
+            "version": "2.16.3",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "d35cd62ac68ac300f233b9c523286768516ce126c4e23bc5102144bbb6f8b202"
+          },
+          {
+            "name": "pydantic_core",
+            "version": "2.50.5",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "e2974df53f117ed0aa9af6b0ca3de6ee75ec50e774cf8a7499c8f80eaca07b75"
+          },
+          {
+            "name": "PyJWT",
+            "version": "2.15.1",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "1ea0c9f139b8c928276b3628af165955f6f764491448a6ad8f103cdcbb382da3"
+          },
+          {
+            "name": "pyparsing",
+            "version": "3.3.3",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "f2ca34052d720622d300023472ef8ae94fe5b57d69acbb28a8667f6dd0e13497"
+          },
+          {
+            "name": "python-dateutil",
+            "version": "4.0.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "39adffb0c736bb6b6839f89fd158bb9b9ad54a3a795e0ea2ea53e79e1f821907"
+          },
+          {
+            "name": "python-dotenv",
+            "version": "1.2.4",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "87cfee6042412d48df1100ea7822684988c3f2b79de7a250f4717f4df3026d6f"
+          },
+          {
+            "name": "python-multipart",
+            "version": "0.0.34",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "7ae5098b90f36f21872617324c84a25d7d8b44426810d0e3edcd16bea35bff31"
+          },
+          {
+            "name": "pywin32",
+            "version": "312",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "7b0ffc7aaed4258c6b2a0ef67d984d55a9169d9bbd1a0a8ace2a35542a75a519"
+          },
+          {
+            "name": "referencing",
+            "version": "0.37.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "c93b00e6ab1524fd60848376604c189a114374776475c25a31d57be47b29de6a"
+          },
+          {
+            "name": "rpds-py",
+            "version": "2026.9.1",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "5d72dca2e387c8d2b4180b68ee87c15b64751e059100a6db58891ec9995445c3"
+          },
+          {
+            "name": "sse-starlette",
+            "version": "3.7.1",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "18f50cd90cbcf4380d2d62d7c8fdb5a769d7a947ec039df0eb8d465c39c8bfdb"
+          },
+          {
+            "name": "starlette",
+            "version": "1.10.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "82f72dde2c5c3c55d45d9461adce5e30973481f7f3e10b59e497bbc5b8abf598"
+          },
+          {
+            "name": "tomlkit",
+            "version": "0.15.3",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "e140cb7ec3b37111d8bcf4628b75e6eaa12b6a414f5ecda2c142d29945a35567"
+          },
+          {
+            "name": "trove-classifiers",
+            "version": "2026.9.21.13",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "ca7e96493232b21f92aeccf456b2e01f1d4dbcaa8e17a9e1b5e6f03c6eb7461f"
+          },
+          {
+            "name": "typing-inspection",
+            "version": "0.4.5",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "7306933907768b0098784e56dfd678242f52383ff3e35c10a4c150539393d6ec"
+          },
+          {
+            "name": "typing_extensions",
+            "version": "4.16.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "b05084ca1d50879865178d9fff9fabeab61bdfb1f361bfbde95421ffc8f9be46"
+          },
+          {
+            "name": "tzdata",
+            "version": "2026.6",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "8173da8700dd125e60c9caf7663d02ee3318851ee60d387b2b080f23a74a86a8"
+          },
+          {
+            "name": "uvicorn",
+            "version": "0.54.0",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "9399e5ddda3d26e842d6fb5420c38b0857aac568d53badbdc224b3a21339efa8"
+          },
+          {
+            "name": "vl-convert-python",
+            "version": "1.9.0.post1",
+            "metadata_root": "<OWN_RUN>\\sdist-env\\Lib\\site-packages",
+            "metadata_sha256": "be4b463ffc76ae8915638babe362d535ae98ab81d703f97df90632ff208156c2"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "name": "deepviz installed in own venv",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\sdist-env\\Lib\\site-packages\\deepviz\\__init__.py",
+            "bytes": 1133,
+            "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+          }
+        },
+        {
+          "name": "installed module deepviz",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\sdist-env\\Lib\\site-packages\\deepviz\\__init__.py",
+            "bytes": 1133,
+            "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+          }
+        },
+        {
+          "name": "installed module deepviz.cli",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\sdist-env\\Lib\\site-packages\\deepviz\\cli.py",
+            "bytes": 2623,
+            "sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf"
+          }
+        },
+        {
+          "name": "installed module deepviz.engines",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\sdist-env\\Lib\\site-packages\\deepviz\\engines.py",
+            "bytes": 42230,
+            "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de"
+          }
+        },
+        {
+          "name": "installed module deepviz.mcp_server",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\sdist-env\\Lib\\site-packages\\deepviz\\mcp_server.py",
+            "bytes": 5395,
+            "sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95"
+          }
+        },
+        {
+          "name": "installed module deepviz.models",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\sdist-env\\Lib\\site-packages\\deepviz\\models.py",
+            "bytes": 3493,
+            "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+          }
+        },
+        {
+          "name": "installed module deepviz.normalize",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\sdist-env\\Lib\\site-packages\\deepviz\\normalize.py",
+            "bytes": 33895,
+            "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+          }
+        },
+        {
+          "name": "installed module deepviz.recommend",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\sdist-env\\Lib\\site-packages\\deepviz\\recommend.py",
+            "bytes": 4875,
+            "sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999"
+          }
+        },
+        {
+          "name": "installed module deepviz.render",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\sdist-env\\Lib\\site-packages\\deepviz\\render.py",
+            "bytes": 11313,
+            "sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+          }
+        },
+        {
+          "name": "installed module deepviz.tools",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\sdist-env\\Lib\\site-packages\\deepviz\\tools.py",
+            "bytes": 9383,
+            "sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb"
+          }
+        },
+        {
+          "name": "public prompt system",
+          "status": "pass",
+          "detail": "exact source bytes"
+        },
+        {
+          "name": "public prompt request",
+          "status": "pass",
+          "detail": "exact source bytes"
+        },
+        {
+          "name": "resource py.typed",
+          "status": "pass",
+          "detail": "exact source bytes"
+        },
+        {
+          "name": "resource resources/chart-spec.schema.json",
+          "status": "pass",
+          "detail": "exact source bytes"
+        },
+        {
+          "name": "resource resources/plotly-js-LICENSE.txt",
+          "status": "pass",
+          "detail": "exact source bytes"
+        },
+        {
+          "name": "installed provenance matches current archive",
+          "status": "pass",
+          "detail": {
+            "version": "0.1.0",
+            "archive_sha256": "8e69e21cb2f39d4556be84bb2e4fafe078dc46f848631acc42917d88bf88c89f",
+            "direct_url": {
+              "archive_info": {
+                "hash": "sha256=8e69e21cb2f39d4556be84bb2e4fafe078dc46f848631acc42917d88bf88c89f",
+                "hashes": {
+                  "sha256": "8e69e21cb2f39d4556be84bb2e4fafe078dc46f848631acc42917d88bf88c89f"
+                }
+              },
+              "url": "file:///<OWN_RUN>/dist/deepviz_agent_toolkit-0.1.0.tar.gz"
+            }
+          }
+        },
+        {
+          "name": "runtime origin pydantic",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\sdist-env\\Lib\\site-packages\\pydantic\\__init__.py",
+            "bytes": 15951,
+            "sha256": "e5248cb9bbe293b3536dbed7fea54326dcdf3c03370ae5f03d794c58496ec01b"
+          }
+        },
+        {
+          "name": "runtime origin numpy",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\sdist-env\\Lib\\site-packages\\numpy\\__init__.py",
+            "bytes": 26470,
+            "sha256": "a6958cb364663b7acce81ccfd58eeb65a2b34d5376157f924777b97211a73be4"
+          }
+        },
+        {
+          "name": "runtime origin matplotlib",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\sdist-env\\Lib\\site-packages\\matplotlib\\__init__.py",
+            "bytes": 56239,
+            "sha256": "37abb78e74e9e0085a4e306a919606ffa8ff3c263def80ae2f4d938cfa79cd32"
+          }
+        },
+        {
+          "name": "runtime origin plotly",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\sdist-env\\Lib\\site-packages\\plotly\\__init__.py",
+            "bytes": 5697,
+            "sha256": "5e6c208c2f968fc9e67d5770e70f5e5ac76dfd0f9d70168205ae5898cc41af5e"
+          }
+        },
+        {
+          "name": "runtime origin vl_convert",
+          "status": "pass",
+          "detail": {
+            "path": "<OWN_RUN>\\sdist-env\\Lib\\site-packages\\vl_convert\\__init__.py",
+            "bytes": 123,
+            "sha256": "b1fa184acaa30675d078048f8aec4ff648ac42b6282b423859330d9f6193826f"
+          }
+        },
+        {
+          "name": "prompt traversal rejected",
+          "status": "pass",
+          "detail": "ValueError as expected"
+        },
+        {
+          "name": "actual console help deepviz",
+          "status": "pass",
+          "detail": 0
+        },
+        {
+          "name": "actual console help deepviz-mcp",
+          "status": "pass",
+          "detail": 0
+        },
+        {
+          "name": "installed CLI static matplotlib",
+          "status": "pass",
+          "detail": {
+            "input_count": 2,
+            "output_count": 2,
+            "files": 4
+          }
+        },
+        {
+          "name": "installed CLI static vega",
+          "status": "pass",
+          "detail": {
+            "input_count": 2,
+            "output_count": 2,
+            "files": 3
+          }
+        },
+        {
+          "name": "installed real stdio MCP initialize/list/chain/resource/deny/shutdown",
+          "status": "pass",
+          "detail": {
+            "methods": [
+              "initialize",
+              "tools/list",
+              "tools/call normalize_data",
+              "tools/call recommend_chart",
+              "tools/call render_matplotlib",
+              "resources/read PNG equals inline PNG",
+              "tools/call unauthorized-file denied",
+              "stdio context shutdown"
+            ],
+            "server": {
+              "name": "DeepViz",
+              "title": null,
+              "version": "1.30.0",
+              "websiteUrl": null,
+              "icons": null
+            },
+            "tool_count": 7,
+            "input_count": 2,
+            "output_count": 2,
+            "png_sha256": "a6e73e95f4561291e5865bb16a309a6f56c002cc878cfa227cc6f6eb6ed7edc7"
+          }
+        }
+      ],
+      "commands": [
+        {
+          "argv": [
+            "<OWN_RUN>\\sdist-env\\Scripts\\deepviz.exe",
+            "--help"
+          ],
+          "exit": 0,
+          "stdout": "usage: deepviz [-h] {render,normalize,recommend,mcp} ...\n\nRender, profile, or recommend charts from local files; stdout is JSON.\n\npositional arguments:\n  {render,normalize,recommend,mcp}\n    mcp                 Start the local stdio MCP server\n\noptions:\n  -h, --help            show this help message and exit\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "<OWN_RUN>\\sdist-env\\Scripts\\deepviz-mcp.exe",
+            "--help"
+          ],
+          "exit": 0,
+          "stdout": "usage: deepviz-mcp [-h] [--output-dir OUTPUT_DIR] [--data-dir DATA_DIR]\n\nLocal stdio MCP server with readable chart resources and inline PNG previews.\n\noptions:\n  -h, --help            show this help message and exit\n  --output-dir OUTPUT_DIR\n  --data-dir DATA_DIR   Allow file inputs only inside this directory; disabled\n                        by default\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "<OWN_RUN>\\sdist-env\\Scripts\\deepviz.exe",
+            "render",
+            "<OWN_RUN>\\v2-continuation\\sdist-consumer\\data.json",
+            "--spec",
+            "<OWN_RUN>\\v2-continuation\\sdist-consumer\\spec.json",
+            "--engine",
+            "matplotlib",
+            "--output-dir",
+            "<OWN_RUN>\\v2-continuation\\sdist-consumer\\render-matplotlib"
+          ],
+          "exit": 0,
+          "stdout": "{\"paths\": [\"C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r10p07-v1\\\\v2-continuation\\\\sdist-consumer\\\\render-matplotlib\\\\matplotlib-shv7wbds\\\\deepviz-gy6s0x4i\\\\chart.png\", \"C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r10p07-v1\\\\v2-continuation\\\\sdist-consumer\\\\render-matplotlib\\\\matplotlib-shv7wbds\\\\deepviz-gy6s0x4i\\\\chart.svg\", \"C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r10p07-v1\\\\v2-continuation\\\\sdist-consumer\\\\render-matplotlib\\\\matplotlib-shv7wbds\\\\deepviz-gy6s0x4i\\\\chart.html\", \"C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r10p07-v1\\\\v2-continuation\\\\sdist-consumer\\\\render-matplotlib\\\\matplotlib-shv7wbds\\\\deepviz-gy6s0x4i\\\\manifest.json\"], \"mime_type\": \"image/png\", \"engine\": \"matplotlib\", \"input_count\": 2, \"output_count\": 2, \"strategy\": \"sum\", \"warnings\": []}\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "<OWN_RUN>\\sdist-env\\Scripts\\deepviz.exe",
+            "render",
+            "<OWN_RUN>\\v2-continuation\\sdist-consumer\\data.json",
+            "--spec",
+            "<OWN_RUN>\\v2-continuation\\sdist-consumer\\spec.json",
+            "--engine",
+            "vega",
+            "--output-dir",
+            "<OWN_RUN>\\v2-continuation\\sdist-consumer\\render-vega"
+          ],
+          "exit": 0,
+          "stdout": "{\"paths\": [\"C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r10p07-v1\\\\v2-continuation\\\\sdist-consumer\\\\render-vega\\\\vega-x9w3m7q0\\\\deepviz-fobbls3p\\\\chart.svg\", \"C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r10p07-v1\\\\v2-continuation\\\\sdist-consumer\\\\render-vega\\\\vega-x9w3m7q0\\\\deepviz-fobbls3p\\\\chart.html\", \"C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r10p07-v1\\\\v2-continuation\\\\sdist-consumer\\\\render-vega\\\\vega-x9w3m7q0\\\\deepviz-fobbls3p\\\\manifest.json\"], \"mime_type\": \"image/svg+xml\", \"engine\": \"vega\", \"input_count\": 2, \"output_count\": 2, \"strategy\": \"sum\", \"warnings\": []}\n",
+          "stderr": ""
+        }
+      ],
+      "artifacts": [
+        {
+          "engine": "matplotlib",
+          "metadata": {
+            "paths": [
+              "<OWN_RUN>\\v2-continuation\\sdist-consumer\\render-matplotlib\\matplotlib-shv7wbds\\deepviz-gy6s0x4i\\chart.png",
+              "<OWN_RUN>\\v2-continuation\\sdist-consumer\\render-matplotlib\\matplotlib-shv7wbds\\deepviz-gy6s0x4i\\chart.svg",
+              "<OWN_RUN>\\v2-continuation\\sdist-consumer\\render-matplotlib\\matplotlib-shv7wbds\\deepviz-gy6s0x4i\\chart.html",
+              "<OWN_RUN>\\v2-continuation\\sdist-consumer\\render-matplotlib\\matplotlib-shv7wbds\\deepviz-gy6s0x4i\\manifest.json"
+            ],
+            "mime_type": "image/png",
+            "engine": "matplotlib",
+            "input_count": 2,
+            "output_count": 2,
+            "strategy": "sum",
+            "warnings": []
+          },
+          "files": [
+            {
+              "path": "<OWN_RUN>\\v2-continuation\\sdist-consumer\\render-matplotlib\\matplotlib-shv7wbds\\deepviz-gy6s0x4i\\chart.png",
+              "bytes": 10729,
+              "sha256": "a6e73e95f4561291e5865bb16a309a6f56c002cc878cfa227cc6f6eb6ed7edc7"
+            },
+            {
+              "path": "<OWN_RUN>\\v2-continuation\\sdist-consumer\\render-matplotlib\\matplotlib-shv7wbds\\deepviz-gy6s0x4i\\chart.svg",
+              "bytes": 18650,
+              "sha256": "dab9381bcd00961b4cebb4f1fbae6b91ff936ea9ed387971ca993f307e1a2edf"
+            },
+            {
+              "path": "<OWN_RUN>\\v2-continuation\\sdist-consumer\\render-matplotlib\\matplotlib-shv7wbds\\deepviz-gy6s0x4i\\chart.html",
+              "bytes": 1430,
+              "sha256": "96a667b314ee08dd841f2eff16310cdef8e2c89f53df44002708c7e9f5f2204d"
+            },
+            {
+              "path": "<OWN_RUN>\\v2-continuation\\sdist-consumer\\render-matplotlib\\matplotlib-shv7wbds\\deepviz-gy6s0x4i\\manifest.json",
+              "bytes": 1001,
+              "sha256": "ab4dceae7dce8b27ddadc2f381217f006c794121a390446b38fead6eb8ee456e"
+            }
+          ]
+        },
+        {
+          "engine": "vega",
+          "metadata": {
+            "paths": [
+              "<OWN_RUN>\\v2-continuation\\sdist-consumer\\render-vega\\vega-x9w3m7q0\\deepviz-fobbls3p\\chart.svg",
+              "<OWN_RUN>\\v2-continuation\\sdist-consumer\\render-vega\\vega-x9w3m7q0\\deepviz-fobbls3p\\chart.html",
+              "<OWN_RUN>\\v2-continuation\\sdist-consumer\\render-vega\\vega-x9w3m7q0\\deepviz-fobbls3p\\manifest.json"
+            ],
+            "mime_type": "image/svg+xml",
+            "engine": "vega",
+            "input_count": 2,
+            "output_count": 2,
+            "strategy": "sum",
+            "warnings": []
+          },
+          "files": [
+            {
+              "path": "<OWN_RUN>\\v2-continuation\\sdist-consumer\\render-vega\\vega-x9w3m7q0\\deepviz-fobbls3p\\chart.svg",
+              "bytes": 7746,
+              "sha256": "7c2c5b179c4237f9cb2725bc14ab0a534f7edbd1e073531c04858536633c0745"
+            },
+            {
+              "path": "<OWN_RUN>\\v2-continuation\\sdist-consumer\\render-vega\\vega-x9w3m7q0\\deepviz-fobbls3p\\chart.html",
+              "bytes": 1430,
+              "sha256": "96a667b314ee08dd841f2eff16310cdef8e2c89f53df44002708c7e9f5f2204d"
+            },
+            {
+              "path": "<OWN_RUN>\\v2-continuation\\sdist-consumer\\render-vega\\vega-x9w3m7q0\\deepviz-fobbls3p\\manifest.json",
+              "bytes": 2311,
+              "sha256": "58af0b971a35090bd9ff9b22eb7d763b94e8d7538412c7a331cd445f844437d3"
+            }
+          ],
+          "svg_raster_preview": {
+            "path": "<OWN_RUN>\\v2-continuation\\sdist-consumer\\vega-preview.png",
+            "bytes": 46941,
+            "sha256": "2bb6fd8b03ddc3e0c505138b8ec7075bf3dd82a78cdc8e5782ed9474355cf54a"
+          }
+        }
+      ],
+      "skipped": [],
+      "passed": 27,
+      "failed": 0
+    }
+  },
+  "typing": {
+    "wheel_positive_exit": 0,
+    "wheel_negative_expected_exit": 1,
+    "sdist_positive_exit": 0,
+    "sdist_negative_expected_exit": 1,
+    "negative_requires": "expression has type str, variable has type int; assignment; not missing py.typed"
+  },
+  "harness": {
+    "initial_red": "4failed0passed: missing owned harness",
+    "mime_red": "3failed4passed: missing MIME oracle",
+    "latest_unit_tests": "7passed0failed0skipped",
+    "ruff_exit": 0,
+    "mypy_exit": 0,
+    "mypy_files": 3
+  },
+  "isolated_provisioning": {
+    "index": "https://pypi.org/simple",
+    "no_cache_dir": true,
+    "own_venvs_only": true,
+    "include_system_site_packages": false,
+    "consumer_python_isolated_flag": true,
+    "inherited_pythonpath_private_pip_uv_config": "removed",
+    "shared_environment_installs": false,
+    "requirements": {
+      "declared_build_requirements": [
+        "hatchling>=1.27",
+        "build>=1.2",
+        "twine>=6"
+      ],
+      "declared_runtime_requirements": [
+        "pydantic>=2.10,<3",
+        "numpy>=1.26",
+        "matplotlib>=3.9",
+        "plotly>=6,<7",
+        "vl-convert-python>=1.7"
+      ],
+      "declared_mcp_requirements": [
+        "mcp>=1.12,<2"
+      ]
+    }
+  },
+  "raw_evidence_identities": [
+    {
+      "path": "<OWN_RUN>\\result.json",
+      "bytes": 7706,
+      "sha256": "a3be629cc7f3c83abd3c7935ab6b05f7e9fc3326796eb0ea61428018b3ca9f50"
+    },
+    {
+      "path": "<OWN_RUN>\\archive-result.json",
+      "bytes": 65277,
+      "sha256": "532e842f7164304a1ee1b04fec075a17b923b77a83418580b5d849f0d4848ddd"
+    },
+    {
+      "path": "<OWN_RUN>\\build-inventory\\result.json",
+      "bytes": 10600,
+      "sha256": "391781a35bdca63761cb50e14ab8d0b51cdc35e2eb6212b73bee32f3660e7649"
+    },
+    {
+      "path": "<OWN_RUN>\\wheel-consumer\\result.json",
+      "bytes": 22076,
+      "sha256": "1526947ccc43d731f9077065423339e8dc44fb192c95d21429f411d48229113d"
+    },
+    {
+      "path": "<OWN_RUN>\\v2-continuation\\result.json",
+      "bytes": 10602,
+      "sha256": "9ddec63b822edbab467bb33e9b1bba2599f655aa7ed0e6cc4c0bdfdcfaaae180"
+    },
+    {
+      "path": "<OWN_RUN>\\v2-continuation\\build-inventory\\result.json",
+      "bytes": 12077,
+      "sha256": "1c36055407a96aebec690aefb9fdb4b49878f0284ea2dc3bb993c03bd11e56ae"
+    },
+    {
+      "path": "<OWN_RUN>\\v2-continuation\\wheel-consumer\\result.json",
+      "bytes": 23515,
+      "sha256": "ee79f9e13c435dc261f29329f007504ab48ea498f66e1215743d6456259f8514"
+    },
+    {
+      "path": "<OWN_RUN>\\v2-continuation\\sdist-consumer\\result.json",
+      "bytes": 33219,
+      "sha256": "72eb166d5350b7769a8b28a3df6f2c2fa5b5f0cb4c8b8907bb7261bdf823d717"
+    },
+    {
+      "path": "<OWN_RUN>\\loaded-tool-origins.json",
+      "bytes": 1579,
+      "sha256": "5faf7b8691ad42dbd268680fff882897d53d4a0ddb70e6dd30ecbe8fa1ac2282"
+    },
+    {
+      "path": "<OWN_RUN>\\finish-v2.py",
+      "bytes": 5623,
+      "sha256": "a1834b4155a12837ad35fdc425a33d3c413b37a6f6d4b80a2fb371856299c018"
+    },
+    {
+      "path": "<OWN_RUN>\\collect-sanitized-evidence.py",
+      "bytes": 6600,
+      "sha256": "5502ba25bccbad3de225da491372c8d16de09b20ee6c77cc8ec6acbec561d011"
+    },
+    {
+      "path": "<OWN_RUN>\\executed-harness-v1\\consumer_smoke.py",
+      "bytes": 11791,
+      "sha256": "1681f46b97beee73def1ebb85656277fd487507faddf11de68570339e348f2f3"
+    },
+    {
+      "path": "<OWN_RUN>\\executed-harness-v1\\inspect_archives.py",
+      "bytes": 4340,
+      "sha256": "36bee4cdf95774e75a5e65c4b418fe0bc734802e670e396013155e0c725a96af"
+    },
+    {
+      "path": "<OWN_RUN>\\executed-harness-v1\\run_clean_distribution.py",
+      "bytes": 7919,
+      "sha256": "23b9659083382a8278f6526349bcccdba5c57de506dbc3dbda35de97d8cf8993"
+    },
+    {
+      "path": "<OWN_RUN>\\executed-harness-v1\\test_clean_distribution.py",
+      "bytes": 2370,
+      "sha256": "118ff38d2742f3f1d22abd6110a99cd3f2b92c5bf95803e81607702d51494e6d"
+    },
+    {
+      "path": "<OWN_CHECKOUT>\\tests\\r10_probes\\role07\\consumer_smoke.py",
+      "bytes": 12904,
+      "sha256": "d3431ad38ac2884ce125de47c6c4c139040d96fc0cfd3727cede3dd148cd66c1"
+    },
+    {
+      "path": "<OWN_CHECKOUT>\\tests\\r10_probes\\role07\\inspect_archives.py",
+      "bytes": 4359,
+      "sha256": "b66dce346b9ec6e06a98355034dae21a4995fc9b505986fe78ae765a3d623134"
+    },
+    {
+      "path": "<OWN_CHECKOUT>\\tests\\r10_probes\\role07\\run_clean_distribution.py",
+      "bytes": 9374,
+      "sha256": "ead23c719fbfc4743f2a5e1fe607475a7fd239931b14830697c46842ea313f03"
+    },
+    {
+      "path": "<OWN_CHECKOUT>\\tests\\r10_probes\\role07\\test_clean_distribution.py",
+      "bytes": 3461,
+      "sha256": "bdcf9879dd278fcefc20e11a39ad004fccb16263eaeeb4d1cf4cc326172ca1b2"
+    },
+    {
+      "path": "<OWN_CHECKOUT>\\tests\\r10_probes\\role07\\typing_accept.py",
+      "bytes": 364,
+      "sha256": "f4d8b26372c3157e5fd96b944c75051a995c5835f4ebb827aaf571c676ba02c6"
+    },
+    {
+      "path": "<OWN_CHECKOUT>\\tests\\r10_probes\\role07\\typing_reject.py",
+      "bytes": 142,
+      "sha256": "1fede18dd78a7e754d93f873e5d766f587dcfaf2528cc6c5c896aea62e1305c2"
+    },
+    {
+      "path": "<OWN_RUN>\\dist\\deepviz_agent_toolkit-0.1.0-py3-none-any.whl",
+      "bytes": 52845,
+      "sha256": "b99c5ec2836e9fed5dd794600ce228993e8c923a5972709a314f380449239f22"
+    },
+    {
+      "path": "<OWN_RUN>\\dist\\deepviz_agent_toolkit-0.1.0.tar.gz",
+      "bytes": 666560,
+      "sha256": "8e69e21cb2f39d4556be84bb2e4fafe078dc46f848631acc42917d88bf88c89f"
+    }
+  ],
+  "limits": [
+    "Windows/Python3.12.16 only; one public-PyPI resolver snapshot, not min/max dependency matrix",
+    "Wheel base consumer deliberately did not run optional MCP; separate direct sdist[mcp] consumer did",
+    "No Deep Agent optional install/provider call/browser/CDN/scale/full project suite/remoteCI/finalfrozen-source acceptance",
+    "R03/R06 historical wheels/builds remain separate, not current passes",
+    "Only own harness/reports/evidence published; no product source or issues/PR writes"
+  ]
+}

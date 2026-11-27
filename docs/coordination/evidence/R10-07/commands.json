@@ -1,0 +1,394 @@
+{
+  "initial_commands": [
+    {
+      "label": "build-env-create",
+      "argv": [
+        "<MAIN_READONLY>\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-m",
+        "venv",
+        "<OWN_RUN>\\build-env"
+      ],
+      "cwd": "<OWN_RUN>",
+      "exit": 0,
+      "seconds": 14.382689899997786
+    },
+    {
+      "label": "build-dependencies",
+      "argv": [
+        "<OWN_RUN>\\build-env\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "--no-cache-dir",
+        "hatchling>=1.27",
+        "build>=1.2",
+        "twine>=6"
+      ],
+      "cwd": "<OWN_RUN>",
+      "exit": 0,
+      "seconds": 134.70694589999766
+    },
+    {
+      "label": "build",
+      "argv": [
+        "<OWN_RUN>\\build-env\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-m",
+        "build",
+        "--no-isolation",
+        "--outdir",
+        "<OWN_RUN>\\dist",
+        "--sdist-extract-dir",
+        "<OWN_RUN>\\sdist-source",
+        "<OWN_RUN>\\src"
+      ],
+      "cwd": "<OWN_RUN>",
+      "exit": 0,
+      "seconds": 3.045542799998657
+    },
+    {
+      "label": "twine",
+      "argv": [
+        "<OWN_RUN>\\build-env\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-m",
+        "twine",
+        "check",
+        "--strict",
+        "<OWN_RUN>\\dist\\deepviz_agent_toolkit-0.1.0-py3-none-any.whl",
+        "<OWN_RUN>\\dist\\deepviz_agent_toolkit-0.1.0.tar.gz"
+      ],
+      "cwd": "<OWN_RUN>",
+      "exit": 0,
+      "seconds": 0.6835687999991933
+    },
+    {
+      "label": "archive",
+      "argv": [
+        "<MAIN_READONLY>\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "<OWN_CHECKOUT>\\tests\\r10_probes\\role07\\inspect_archives.py",
+        "<OWN_RUN>\\src",
+        "<OWN_RUN>\\dist\\deepviz_agent_toolkit-0.1.0-py3-none-any.whl",
+        "<OWN_RUN>\\dist\\deepviz_agent_toolkit-0.1.0.tar.gz",
+        "<OWN_RUN>\\archive-result.json"
+      ],
+      "cwd": "<OWN_RUN>",
+      "exit": 0,
+      "seconds": 0.2759645000041928
+    },
+    {
+      "label": "build-inventory",
+      "argv": [
+        "<OWN_RUN>\\build-env\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "<OWN_CHECKOUT>\\tests\\r10_probes\\role07\\consumer_smoke.py",
+        "--inventory-only",
+        "--output",
+        "<OWN_RUN>\\build-inventory"
+      ],
+      "cwd": "<OWN_RUN>",
+      "exit": 0,
+      "seconds": 0.31377490000159014
+    },
+    {
+      "label": "wheel-env-create",
+      "argv": [
+        "<MAIN_READONLY>\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-m",
+        "venv",
+        "<OWN_RUN>\\wheel-env"
+      ],
+      "cwd": "<OWN_RUN>",
+      "exit": 0,
+      "seconds": 5.963149399998656
+    },
+    {
+      "label": "wheel-install",
+      "argv": [
+        "<OWN_RUN>\\wheel-env\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "--no-cache-dir",
+        "--no-build-isolation",
+        "<OWN_RUN>\\dist\\deepviz_agent_toolkit-0.1.0-py3-none-any.whl"
+      ],
+      "cwd": "<OWN_RUN>",
+      "exit": 0,
+      "seconds": 116.42199650000111
+    },
+    {
+      "label": "wheel-pip-check",
+      "argv": [
+        "<OWN_RUN>\\wheel-env\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "<OWN_RUN>",
+      "exit": 0,
+      "seconds": 0.6911519999994198
+    },
+    {
+      "label": "wheel-consumer",
+      "argv": [
+        "<OWN_RUN>\\wheel-env\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "<OWN_CHECKOUT>\\tests\\r10_probes\\role07\\consumer_smoke.py",
+        "--source",
+        "<OWN_RUN>\\src",
+        "--artifact",
+        "<OWN_RUN>\\dist\\deepviz_agent_toolkit-0.1.0-py3-none-any.whl",
+        "--output",
+        "<OWN_RUN>\\wheel-consumer"
+      ],
+      "cwd": "<OWN_RUN>",
+      "exit": 1,
+      "seconds": 5.028827899994212
+    }
+  ],
+  "continuation_commands": [
+    {
+      "label": "wheel-consumer-corrected",
+      "argv": [
+        "<OWN_RUN>\\wheel-env\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "<OWN_CHECKOUT>\\tests\\r10_probes\\role07\\consumer_smoke.py",
+        "--source",
+        "<OWN_RUN>\\src",
+        "--artifact",
+        "<OWN_RUN>\\dist\\deepviz_agent_toolkit-0.1.0-py3-none-any.whl",
+        "--output",
+        "<OWN_RUN>\\v2-continuation\\wheel-consumer"
+      ],
+      "cwd": "<OWN_RUN>\\v2-continuation",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 10.24789279999095
+    },
+    {
+      "label": "sdist-env-create",
+      "argv": [
+        "<MAIN_READONLY>\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-m",
+        "venv",
+        "<OWN_RUN>\\sdist-env"
+      ],
+      "cwd": "<OWN_RUN>\\v2-continuation",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 5.495093500008807
+    },
+    {
+      "label": "sdist-backend",
+      "argv": [
+        "<OWN_RUN>\\sdist-env\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "--no-cache-dir",
+        "hatchling>=1.27"
+      ],
+      "cwd": "<OWN_RUN>\\v2-continuation",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 3.226067499999772
+    },
+    {
+      "label": "sdist-install",
+      "argv": [
+        "<OWN_RUN>\\sdist-env\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "--no-cache-dir",
+        "--no-build-isolation",
+        "<OWN_RUN>\\dist\\deepviz_agent_toolkit-0.1.0.tar.gz[mcp]"
+      ],
+      "cwd": "<OWN_RUN>\\v2-continuation",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 73.57435889999033
+    },
+    {
+      "label": "sdist-pip-check",
+      "argv": [
+        "<OWN_RUN>\\sdist-env\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "<OWN_RUN>\\v2-continuation",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 0.8380837000004249
+    },
+    {
+      "label": "sdist-consumer",
+      "argv": [
+        "<OWN_RUN>\\sdist-env\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "<OWN_CHECKOUT>\\tests\\r10_probes\\role07\\consumer_smoke.py",
+        "--source",
+        "<OWN_RUN>\\src",
+        "--artifact",
+        "<OWN_RUN>\\dist\\deepviz_agent_toolkit-0.1.0.tar.gz",
+        "--output",
+        "<OWN_RUN>\\v2-continuation\\sdist-consumer",
+        "--mcp"
+      ],
+      "cwd": "<OWN_RUN>\\v2-continuation",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 11.05123939999612
+    },
+    {
+      "label": "declared-typing-tool",
+      "argv": [
+        "<OWN_RUN>\\build-env\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "--no-cache-dir",
+        "mypy>=1.15"
+      ],
+      "cwd": "<OWN_RUN>\\v2-continuation",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 16.060819000005722
+    },
+    {
+      "label": "wheel-typing-positive",
+      "argv": [
+        "<OWN_RUN>\\build-env\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-m",
+        "mypy",
+        "--strict",
+        "--follow-imports=silent",
+        "--no-incremental",
+        "--python-executable",
+        "<OWN_RUN>\\wheel-env\\Scripts\\python.exe",
+        "--cache-dir",
+        "<OWN_RUN>\\v2-continuation\\temp\\mypy-wheel",
+        "<OWN_CHECKOUT>\\tests\\r10_probes\\role07\\typing_accept.py"
+      ],
+      "cwd": "<OWN_RUN>\\v2-continuation",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 7.5459751000016695
+    },
+    {
+      "label": "wheel-typing-negative",
+      "argv": [
+        "<OWN_RUN>\\build-env\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-m",
+        "mypy",
+        "--strict",
+        "--follow-imports=silent",
+        "--no-incremental",
+        "--python-executable",
+        "<OWN_RUN>\\wheel-env\\Scripts\\python.exe",
+        "--cache-dir",
+        "<OWN_RUN>\\v2-continuation\\temp\\mypy-wheel",
+        "<OWN_CHECKOUT>\\tests\\r10_probes\\role07\\typing_reject.py"
+      ],
+      "cwd": "<OWN_RUN>\\v2-continuation",
+      "exit": 1,
+      "expected_exit": 1,
+      "seconds": 7.144963900005678
+    },
+    {
+      "label": "sdist-typing-positive",
+      "argv": [
+        "<OWN_RUN>\\build-env\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-m",
+        "mypy",
+        "--strict",
+        "--follow-imports=silent",
+        "--no-incremental",
+        "--python-executable",
+        "<OWN_RUN>\\sdist-env\\Scripts\\python.exe",
+        "--cache-dir",
+        "<OWN_RUN>\\v2-continuation\\temp\\mypy-sdist",
+        "<OWN_CHECKOUT>\\tests\\r10_probes\\role07\\typing_accept.py"
+      ],
+      "cwd": "<OWN_RUN>\\v2-continuation",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 5.706270599999698
+    },
+    {
+      "label": "sdist-typing-negative",
+      "argv": [
+        "<OWN_RUN>\\build-env\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-m",
+        "mypy",
+        "--strict",
+        "--follow-imports=silent",
+        "--no-incremental",
+        "--python-executable",
+        "<OWN_RUN>\\sdist-env\\Scripts\\python.exe",
+        "--cache-dir",
+        "<OWN_RUN>\\v2-continuation\\temp\\mypy-sdist",
+        "<OWN_CHECKOUT>\\tests\\r10_probes\\role07\\typing_reject.py"
+      ],
+      "cwd": "<OWN_RUN>\\v2-continuation",
+      "exit": 1,
+      "expected_exit": 1,
+      "seconds": 6.249119000000064
+    },
+    {
+      "label": "build-inventory-after-typing",
+      "argv": [
+        "<OWN_RUN>\\build-env\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "<OWN_CHECKOUT>\\tests\\r10_probes\\role07\\consumer_smoke.py",
+        "--inventory-only",
+        "--output",
+        "<OWN_RUN>\\v2-continuation\\build-inventory"
+      ],
+      "cwd": "<OWN_RUN>\\v2-continuation",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 0.2780120999959763
+    }
+  ],
+  "format": "Exact argv with portable owned-path placeholders; raw local results SHA256 pinned in distribution-result"
+}
