@@ -1,0 +1,53 @@
+{
+  "session": "ses_de56780caffekQ9gdZ58EgQwb5",
+  "verified_source_commit": "5e595a8f893955ce34a0e26553bb7bf257ea93ae",
+  "review_publication_commit": "38ce71e50ce59e58dc647417de26e547d5e42d5a",
+  "review_branch_tip": "f4c6a8a06b863491e3623273163e9110e8c27ecf",
+  "source_files": [
+    {
+      "path": "packages/deepviz/src/renderers.ts",
+      "sha256": "be34bcb2be9e44459cb30d145386c3606933bcbdea389ba2fd3fca8d738fac80",
+      "bytes": 21621
+    },
+    {
+      "path": "packages/deepviz/dist/renderers.js",
+      "sha256": "7640f5147a11e795f3f78564409adae0fb21421bf59f2b95c2d4a9b83c28c4b1",
+      "bytes": 24352
+    },
+    {
+      "path": "tests/r17_probes/role13/finite-range-regression.mjs",
+      "sha256": "a731617b686d7d9b1bdedfdec70c45fea39e9d54f2be266d10be504a705a7202",
+      "bytes": 1585
+    }
+  ],
+  "parent_expression_sha256": "c28119dfcd153e69fd2cd383db356b9af6b7bc52a2aa9540b7e16c2cae2e700d",
+  "parent_current_expression_byte_equal": true,
+  "strict_probe_result": {
+    "command": "node --test --test-reporter=tap tests/r17_probes/role13/finite-range-regression.mjs",
+    "exit": 1,
+    "passed": 1,
+    "failed": 1,
+    "skipped": 0,
+    "duration_ms": 201.4248,
+    "not_rerun": true
+  },
+  "reproduction": {
+    "data": [
+      {
+        "group": "negative",
+        "value": -1e+308
+      },
+      {
+        "group": "positive",
+        "value": 1e+308
+      }
+    ],
+    "observed": "accepted normalized records; negative height 0; positive y/height NaN",
+    "control": {
+      "magnitude": 1e+200,
+      "observed": "two finite 35px bars with common zero"
+    }
+  },
+  "classification": "Inherited vertical range overflow; not introduced by 11-line tick-margin repair and not a second tick issue. R04 owns stable-scale production policy.",
+  "saved_at": "R22-13 pre-GitHub-write immutable evidence checkpoint"
+}
