@@ -1,0 +1,152 @@
+{
+  "started_utc": "2026-11-27T16:11:51.762918+00:00",
+  "branch": "agents/r10-21-recovery-git-bootstrap",
+  "base": "e2df3e0e42a8094aaebb62ebd0fb878fd128c2ee",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "e2df3e0e42a8094aaebb62ebd0fb878fd128c2ee",
+        "4839c0d026a7deec247b41c57af8a9da7435e6b4"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "e2df3e0e42a8094aaebb62ebd0fb878fd128c2ee",
+        "4839c0d026a7deec247b41c57af8a9da7435e6b4"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "push",
+        "origin",
+        "HEAD:refs/heads/agents/r10-21-recovery-git-bootstrap"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--heads",
+        "origin",
+        "refs/heads/agents/r10-21-recovery-git-bootstrap"
+      ],
+      "exit": 0
+    }
+  ],
+  "API_used": false,
+  "product_tests_builds_installs_run": 0,
+  "local_commit": "4839c0d026a7deec247b41c57af8a9da7435e6b4",
+  "owned_paths": [
+    "docs/agent-state/ses_de5678018ffezK8JGDUaSzvcWn.md",
+    "docs/coordination/evidence/R29-21/asset-fix.txt",
+    "docs/coordination/evidence/R29-21/assets.txt",
+    "docs/coordination/evidence/R29-21/candidate-tip.txt",
+    "docs/coordination/evidence/R29-21/candidate-tree.txt",
+    "docs/coordination/evidence/R29-21/dependency-edges.json",
+    "docs/coordination/evidence/R29-21/first-model-foundation.txt",
+    "docs/coordination/evidence/R29-21/first-normalizer.txt",
+    "docs/coordination/evidence/R29-21/focused-contract-model.txt",
+    "docs/coordination/evidence/R29-21/followup-static-commands.json",
+    "docs/coordination/evidence/R29-21/foundation-history.txt",
+    "docs/coordination/evidence/R29-21/frozen-input-manifest.json",
+    "docs/coordination/evidence/R29-21/inputs/candidate/.gitignore",
+    "docs/coordination/evidence/R29-21/inputs/candidate/LICENSE",
+    "docs/coordination/evidence/R29-21/inputs/candidate/README.md",
+    "docs/coordination/evidence/R29-21/inputs/candidate/docs/superpowers/specs/2026-11-26-deepviz-design.md",
+    "docs/coordination/evidence/R29-21/inputs/candidate/prompts/v1/request.md",
+    "docs/coordination/evidence/R29-21/inputs/candidate/prompts/v1/system.md",
+    "docs/coordination/evidence/R29-21/inputs/candidate/pyproject.toml",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/src/deepviz/__init__.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/src/deepviz/cli.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/src/deepviz/engines.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/src/deepviz/mcp_server.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/src/deepviz/models.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/src/deepviz/normalize.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/src/deepviz/py.typed",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/src/deepviz/recommend.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/src/deepviz/render.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/src/deepviz/tools.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/tests/test_aggregation_semantics.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/tests/test_graphql_contract.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/tests/test_n04_format_guards.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/tests/test_n04_normalize_regressions.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/tests/test_n04_shape_policy.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/tests/test_n19_format_regressions.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/tests/test_n19_formats.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/tests/test_normalize.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/python/deepviz/tests/test_r07_finite_overflow.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/schemas/chart-spec.schema.json",
+    "docs/coordination/evidence/R29-21/inputs/candidate/scripts/benchmark_scale.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/scripts/export_schema.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/tests/test_models.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/tests/test_packaging_regressions.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/tests/test_portability.py",
+    "docs/coordination/evidence/R29-21/inputs/candidate/tests/test_schema_contract.py",
+    "docs/coordination/evidence/R29-21/inputs/main/README.md",
+    "docs/coordination/evidence/R29-21/inputs/main/pyproject.toml",
+    "docs/coordination/evidence/R29-21/inputs/main/python/deepviz/src/deepviz/models.py",
+    "docs/coordination/evidence/R29-21/inputs/mcp-sealed/docs/coordination/reports/R14-18-mcp-json-budget.md",
+    "docs/coordination/evidence/R29-21/inputs/mcp-sealed/python/deepviz/src/deepviz/mcp_server.py",
+    "docs/coordination/evidence/R29-21/inputs/mcp-sealed/python/deepviz/src/deepviz/tools.py",
+    "docs/coordination/evidence/R29-21/integration-foundation.txt",
+    "docs/coordination/evidence/R29-21/main-tree.txt",
+    "docs/coordination/evidence/R29-21/metadata-history.txt",
+    "docs/coordination/evidence/R29-21/models-main-candidate.txt",
+    "docs/coordination/evidence/R29-21/normalization-test-prerequisites.json",
+    "docs/coordination/evidence/R29-21/publish_owned.txt",
+    "docs/coordination/evidence/R29-21/renderer-foundation.txt",
+    "docs/coordination/evidence/R29-21/source-path-provenance.json",
+    "docs/coordination/evidence/R29-21/stage-integrity.json",
+    "docs/coordination/evidence/R29-21/startup.json",
+    "docs/coordination/evidence/R29-21/static-assertions.json",
+    "docs/coordination/evidence/R29-21/static-inputs.json",
+    "docs/coordination/reports/R29-21-python-foundation-plan.md"
+  ],
+  "remote_sha_readback": "4839c0d026a7deec247b41c57af8a9da7435e6b4",
+  "status": "OWN_STATIC_PLAN_PUBLISHED_EXACT_SHA_NOT_PACKAGE_APPROVAL",
+  "finished_utc": "2026-11-27T16:11:58.034135+00:00"
+}

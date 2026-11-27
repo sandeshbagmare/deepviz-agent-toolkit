@@ -235,3 +235,12 @@ all bytes rechecked by exact Git-show(exit0),20 full commit objects present
 (cat-file batch exit0),14 structural assertions true/0false, heuristic secret0.
 These are static integrity observations, NOT unit/package/consumer pass counts.
 Source/query commands and hashes remain in frozen-input-manifest/startup/evidence.
+
+## Actual OWN publication (not package approval)
+C1 **4839c0d026a7deec247b41c57af8a9da7435e6b4** committed65ownedpaths;
+2026-11-27T16:11:51.762918Z-16:11:58.034135Z nonforcepush0/ownremoteSHA0exactC1.
+Only plan/note/evidence (raw immutable source snapshots are evidence, not product).
+Precommit64payloadfiles449431B+stageintegrity, staticAST/sourcebytes/scopechecks0,
+heuristicsecret0. No productimport/test/build/install/browser/scale/envelope/API.
+This small receipt checkpoint will embed actual C1 receipt; final C2 receipt remains
+MAIN-only rather than pretending a commit can contain its own future publication.
