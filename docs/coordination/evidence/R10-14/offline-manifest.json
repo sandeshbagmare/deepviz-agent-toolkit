@@ -1,0 +1,512 @@
+{
+  "source_commit": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "npm_distribution": {
+    "name": "@deepviz/agent-toolkit",
+    "version": "0.1.0",
+    "tarball_bytes": 43022,
+    "tarball_sha256": "d448f453b95d0a9456d088629d2c60d3598fd53602740e49654b32b645c9d321",
+    "installed_files": [
+      {
+        "file": "dist/index.js",
+        "bytes": 170,
+        "sha256": "887a0d361250e936d43f6b5f8cac4f65a024676520ad6bcfb49ab8042e355c39"
+      },
+      {
+        "file": "dist/models.js",
+        "bytes": 3538,
+        "sha256": "936bcf189c647a45ab0063dbdff5158ca5711a374e6eae7f4a00d160d91d265e"
+      },
+      {
+        "file": "dist/normalize.js",
+        "bytes": 33924,
+        "sha256": "adb0493123fd478567212e76e2c6e52c828aeaa9eb5425c219b5b1a576689612"
+      },
+      {
+        "file": "dist/render.js",
+        "bytes": 10905,
+        "sha256": "39bcd415d119e39ef3107dee4b455778541776f3901c4ae5facbb1447fcc5388"
+      },
+      {
+        "file": "dist/renderers.js",
+        "bytes": 24040,
+        "sha256": "d0a10b871c8768c386bddebb971610e8b770902f29d3d0780008b8af658bf905"
+      },
+      {
+        "file": "dist/schema.js",
+        "bytes": 224,
+        "sha256": "a48b8860a9bfb63d757c49fbf9ebecdc1596e3bef40dfdadaf6203351b626482"
+      },
+      {
+        "file": "dist/chart-spec.schema.json",
+        "bytes": 7397,
+        "sha256": "b995523b04fde40735946aade2769187b1b3b65296c85f03f764d5c6c752e651"
+      }
+    ],
+    "dependencies": {},
+    "bundled": []
+  },
+  "defaultAssets": {
+    "vega": "https://cdn.jsdelivr.net/npm/vega@6.4.0/build/vega.min.js",
+    "vegaLite": "https://cdn.jsdelivr.net/npm/vega-lite@6.5.0/build/vega-lite.min.js",
+    "vegaEmbed": "https://cdn.jsdelivr.net/npm/vega-embed@7.4.0/build/vega-embed.min.js",
+    "echarts": "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js",
+    "antv": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+    "plotly": "https://cdn.jsdelivr.net/npm/plotly.js-dist-min@4.3.0/plotly.min.js"
+  },
+  "installed_runtime_assets": [
+    {
+      "name": "vega",
+      "package": "vega",
+      "version": "6.4.0",
+      "declared_license": "BSD-3-Clause",
+      "asset": "build/vega.min.js",
+      "bytes": 521123,
+      "sha256": "8f6a3587cf8d4f42c7e08120e3eb05d067e746d554e39d2dcf52acc0bd5ba28f",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "bytes": 1533,
+          "sha256": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8"
+        }
+      ],
+      "executed": false
+    },
+    {
+      "name": "vegaLite",
+      "package": "vega-lite",
+      "version": "6.5.0",
+      "declared_license": "BSD-3-Clause",
+      "asset": "build/vega-lite.min.js",
+      "bytes": 257954,
+      "sha256": "83e215e84e308ee8688fa6503ba0f1cf8a3c05c0d61df2841a0b92bf86809e00",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "bytes": 1529,
+          "sha256": "f618900fd0d64046963b29f40590cdd1e341a2f41449f99110d82fd81fea808c"
+        }
+      ],
+      "executed": false
+    },
+    {
+      "name": "vegaEmbed",
+      "package": "vega-embed",
+      "version": "7.4.0",
+      "declared_license": "BSD-3-Clause",
+      "asset": "build/vega-embed.min.js",
+      "bytes": 61258,
+      "sha256": "ce2af3455101e8c854181c62547064904b4c1f2ad5350c1dee9d7aff8119c4de",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "bytes": 1528,
+          "sha256": "32df67148f0fc3db0eb9e263a7b75d07f1eb14c61955005a4a39c6918d10d137"
+        }
+      ],
+      "executed": false
+    },
+    {
+      "name": "echarts",
+      "package": "echarts",
+      "version": "6.1.0",
+      "declared_license": "Apache-2.0",
+      "asset": "dist/echarts.min.js",
+      "bytes": 1121883,
+      "sha256": "b66b25aeb4df84e33199dc21694014d336d222cbd9deb0e5a7c14bd6aa0d0fd0",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "bytes": 11990,
+          "sha256": "634293835b43a6dd2094fa39182a3d9a6b9ca43b7fdb9ac354e8037af2a3093a"
+        },
+        {
+          "file": "NOTICE",
+          "bytes": 168,
+          "sha256": "d491d358344f842685c1b1585970999db65fe30ecf7ef3867af8814f4016c016"
+        }
+      ],
+      "executed": false
+    },
+    {
+      "name": "antv",
+      "package": "@antv/g2",
+      "version": "5.4.8",
+      "declared_license": "MIT",
+      "asset": "dist/g2.min.js",
+      "bytes": 1083414,
+      "sha256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "bytes": 1070,
+          "sha256": "98edde832138822906fb3f365b59a9a54b3abf6e85e52de0f5f1fd804ff83ab7"
+        }
+      ],
+      "executed": false
+    },
+    {
+      "name": "plotly",
+      "package": "plotly.js-dist-min",
+      "version": "4.3.0",
+      "declared_license": "MIT",
+      "asset": "plotly.min.js",
+      "bytes": 4842992,
+      "sha256": "aae4d8a38474c54013bdf0050847cf3835de7eccbf4c8779fcd26e250dadb9bb",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "bytes": 1086,
+          "sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7"
+        }
+      ],
+      "executed": false
+    }
+  ],
+  "cases": [
+    {
+      "id": "python-matplotlib",
+      "offline_expected": true,
+      "classification": "rendered-control",
+      "html_sha256": "2ae62ccc08b5f55003473a3a57fe791fcfa47870a0415e50b96864a1b04cc452",
+      "state": {
+        "plotlyBars": 0,
+        "svgMarks": 0,
+        "images": [
+          true
+        ],
+        "tableCells": 4,
+        "deepvizErrors": [],
+        "deepvizReady": null
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "blocked": []
+    },
+    {
+      "id": "python-plotly",
+      "offline_expected": true,
+      "classification": "rendered-control",
+      "html_sha256": "7378cce622ad8b86499c14f2b266dd3eed42d2fee6105b82f796ecefa32a7e9a",
+      "state": {
+        "plotlyBars": 2,
+        "svgMarks": 0,
+        "images": [],
+        "tableCells": 4,
+        "deepvizErrors": [],
+        "deepvizReady": null,
+        "chartText": "AlphaBeta0123456789Installed asset controllabelvalue"
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "blocked": []
+    },
+    {
+      "id": "python-vega",
+      "offline_expected": true,
+      "classification": "rendered-control",
+      "html_sha256": "2ae62ccc08b5f55003473a3a57fe791fcfa47870a0415e50b96864a1b04cc452",
+      "state": {
+        "plotlyBars": 0,
+        "svgMarks": 0,
+        "images": [
+          true
+        ],
+        "tableCells": 4,
+        "deepvizErrors": [],
+        "deepvizReady": null
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "blocked": []
+    },
+    {
+      "id": "python-echarts",
+      "offline_expected": false,
+      "classification": "EXPECTED-CHART-FAILURE-CDN-BLOCKED",
+      "html_sha256": "d802193361de6690f0f9fb1e31744876b464bb1cf1c6d965ed80547f967c80d4",
+      "state": {
+        "plotlyBars": 0,
+        "svgMarks": 0,
+        "images": [],
+        "tableCells": 4,
+        "deepvizErrors": [],
+        "deepvizReady": null,
+        "chartText": ""
+      },
+      "console_errors": [
+        "Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+      ],
+      "page_errors": [
+        "ReferenceError: echarts is not defined"
+      ],
+      "blocked": [
+        "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js"
+      ]
+    },
+    {
+      "id": "python-antv",
+      "offline_expected": false,
+      "classification": "EXPECTED-CHART-FAILURE-CDN-BLOCKED",
+      "html_sha256": "d995b9d4eb26c6db684406b32d42c4c43a9642177668be8d920afb7235276c70",
+      "state": {
+        "plotlyBars": 0,
+        "svgMarks": 0,
+        "images": [],
+        "tableCells": 4,
+        "deepvizErrors": [],
+        "deepvizReady": null,
+        "chartText": ""
+      },
+      "console_errors": [
+        "Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+      ],
+      "page_errors": [
+        "ReferenceError: G2 is not defined"
+      ],
+      "blocked": [
+        "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js"
+      ]
+    },
+    {
+      "id": "python-plotly-dashboard",
+      "offline_expected": true,
+      "classification": "rendered-control",
+      "html_sha256": "09aa5d2d8e4f28c4575fada02823e4f2b87c79b150a442411c4964c4c9287f5c",
+      "state": {
+        "plotlyBars": 4,
+        "svgMarks": 0,
+        "images": [],
+        "tableCells": 8,
+        "deepvizErrors": [],
+        "deepvizReady": null,
+        "chartText": "AlphaBeta02468Installed asset controllabelvalue"
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "blocked": [],
+      "screenshot": "python-plotly-dashboard.png"
+    },
+    {
+      "id": "npm-vega-bar",
+      "offline_expected": false,
+      "classification": "EXPECTED-CHART-FAILURE-CDN-BLOCKED",
+      "html_sha256": "33a1219fca8637abdab1e90486c6b7cb86135e9727d05da7a2adf6586a9ae0fa",
+      "state": {
+        "plotlyBars": 0,
+        "svgMarks": 0,
+        "images": [],
+        "tableCells": 4,
+        "deepvizErrors": [
+          "ReferenceError: vegaEmbed is not defined"
+        ],
+        "deepvizReady": true,
+        "chartText": "Chart failed: ReferenceError: vegaEmbed is not defined"
+      },
+      "console_errors": [
+        "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+        "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+        "Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+      ],
+      "page_errors": [],
+      "blocked": [
+        "https://cdn.jsdelivr.net/npm/vega@6.4.0/build/vega.min.js",
+        "https://cdn.jsdelivr.net/npm/vega-lite@6.5.0/build/vega-lite.min.js",
+        "https://cdn.jsdelivr.net/npm/vega-embed@7.4.0/build/vega-embed.min.js"
+      ]
+    },
+    {
+      "id": "npm-vega-table",
+      "offline_expected": true,
+      "classification": "rendered-control",
+      "html_sha256": "b42bb6fa8aea8cea6bf6c1a565a965a13c385aab33020188ae7b121a88bb27e3",
+      "state": {
+        "plotlyBars": 0,
+        "svgMarks": 0,
+        "images": [],
+        "tableCells": 4,
+        "deepvizErrors": [],
+        "deepvizReady": true,
+        "chartText": "labelvalueAlpha3Beta9"
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "blocked": []
+    },
+    {
+      "id": "npm-echarts-bar",
+      "offline_expected": false,
+      "classification": "EXPECTED-CHART-FAILURE-CDN-BLOCKED",
+      "html_sha256": "30272897cd9179aca6f21d773c050d33107d6d88a749fbdae8d9327f37dd43a1",
+      "state": {
+        "plotlyBars": 0,
+        "svgMarks": 0,
+        "images": [],
+        "tableCells": 4,
+        "deepvizErrors": [
+          "ReferenceError: echarts is not defined"
+        ],
+        "deepvizReady": true,
+        "chartText": "Chart failed: ReferenceError: echarts is not defined"
+      },
+      "console_errors": [
+        "Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+      ],
+      "page_errors": [],
+      "blocked": [
+        "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js"
+      ],
+      "screenshot": "npm-echarts-bar.png"
+    },
+    {
+      "id": "npm-echarts-table",
+      "offline_expected": true,
+      "classification": "rendered-control",
+      "html_sha256": "85d64c047ef5c9730875162c7ec6d25acb6eba3d774b9a5456481e4cf878b616",
+      "state": {
+        "plotlyBars": 0,
+        "svgMarks": 0,
+        "images": [],
+        "tableCells": 4,
+        "deepvizErrors": [],
+        "deepvizReady": true,
+        "chartText": "labelvalueAlpha3Beta9"
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "blocked": []
+    },
+    {
+      "id": "npm-antv-bar",
+      "offline_expected": false,
+      "classification": "EXPECTED-CHART-FAILURE-CDN-BLOCKED",
+      "html_sha256": "31dd98e62c7201d653d6a3454f7270046260d0f2e71f459ade6b9c4b70483211",
+      "state": {
+        "plotlyBars": 0,
+        "svgMarks": 0,
+        "images": [],
+        "tableCells": 4,
+        "deepvizErrors": [
+          "ReferenceError: G2 is not defined"
+        ],
+        "deepvizReady": true,
+        "chartText": "Chart failed: ReferenceError: G2 is not defined"
+      },
+      "console_errors": [
+        "Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+      ],
+      "page_errors": [],
+      "blocked": [
+        "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js"
+      ]
+    },
+    {
+      "id": "npm-antv-table",
+      "offline_expected": true,
+      "classification": "rendered-control",
+      "html_sha256": "75950d5cbd957eead91c20e0adfe8b7d0d4b15e153e1e50f640b3372a4b0596a",
+      "state": {
+        "plotlyBars": 0,
+        "svgMarks": 0,
+        "images": [],
+        "tableCells": 4,
+        "deepvizErrors": [],
+        "deepvizReady": true,
+        "chartText": "labelvalueAlpha3Beta9"
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "blocked": []
+    },
+    {
+      "id": "npm-plotly-bar",
+      "offline_expected": false,
+      "classification": "EXPECTED-CHART-FAILURE-CDN-BLOCKED",
+      "html_sha256": "bfab352ae5cc6bcd852dc0e723d3a9f5d5fec6eedba39b64d98d9a22b261092c",
+      "state": {
+        "plotlyBars": 0,
+        "svgMarks": 0,
+        "images": [],
+        "tableCells": 4,
+        "deepvizErrors": [
+          "ReferenceError: Plotly is not defined"
+        ],
+        "deepvizReady": true,
+        "chartText": "Chart failed: ReferenceError: Plotly is not defined"
+      },
+      "console_errors": [
+        "Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+      ],
+      "page_errors": [],
+      "blocked": [
+        "https://cdn.jsdelivr.net/npm/plotly.js-dist-min@4.3.0/plotly.min.js"
+      ]
+    },
+    {
+      "id": "npm-plotly-table",
+      "offline_expected": true,
+      "classification": "rendered-control",
+      "html_sha256": "0edf8bc56b3a9238bd1497744dfe2f0e898194c0614450a28dae9e5dd0035041",
+      "state": {
+        "plotlyBars": 0,
+        "svgMarks": 0,
+        "images": [],
+        "tableCells": 4,
+        "deepvizErrors": [],
+        "deepvizReady": true,
+        "chartText": "labelvalueAlpha3Beta9"
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "blocked": []
+    },
+    {
+      "id": "npm-svg-bar",
+      "offline_expected": true,
+      "classification": "rendered-control",
+      "html_sha256": "c3dffbde9420f3b9a171ff22319a7772d929a651cf7ca01255fe448fe1df8b8a",
+      "state": {
+        "plotlyBars": 0,
+        "svgMarks": 2,
+        "images": [],
+        "tableCells": 4,
+        "deepvizErrors": [],
+        "deepvizReady": true,
+        "chartText": "Installed asset control9.0000.000labelvalueAlphaAlphaBetaBetaAlpha: 3Beta: 9"
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "blocked": [],
+      "screenshot": "npm-svg-bar.png"
+    },
+    {
+      "id": "npm-svg-table",
+      "offline_expected": true,
+      "classification": "rendered-control",
+      "html_sha256": "e9e5267acd801b27a9561302d737b237e2351cea30eaf2c709f6374d3f7b3dba",
+      "state": {
+        "plotlyBars": 0,
+        "svgMarks": 0,
+        "images": [],
+        "tableCells": 4,
+        "deepvizErrors": [],
+        "deepvizReady": true,
+        "chartText": "labelvalueAlpha3Beta9"
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "blocked": []
+    }
+  ],
+  "limits": [
+    "Local toolkit tarball installed alone, not third-party dependency resolution.",
+    "No downloaded script executes; all non-artifact requests denied.",
+    "No full engine, geography, transitive-license or security certification."
+  ],
+  "browser": {
+    "version": "159.0.8154.6",
+    "playwright": "1.65.1",
+    "offline": true,
+    "serviceWorkers": "block",
+    "CDN_substitution": false
+  }
+}

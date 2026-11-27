@@ -1,0 +1,38 @@
+{
+  "source_commit": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "command": [
+    "PYTHON",
+    "-B",
+    "-m",
+    "build",
+    "--no-isolation",
+    "--outdir",
+    "OWN_DIST",
+    "--sdist-extract-dir",
+    "OWN_SHORT_EXTRACT"
+  ],
+  "exit_code": 0,
+  "backend_versions": {
+    "hatchling": "1.33.0",
+    "packaging": "26.3",
+    "pathspec": "1.1.1",
+    "pluggy": "1.7.0",
+    "trove-classifiers": "2026.9.21.13",
+    "tomlkit": "0.15.2"
+  },
+  "backend_files_verified_unchanged": 183,
+  "changed_backend_files": [],
+  "artifacts": [
+    {
+      "name": "deepviz_agent_toolkit-0.1.0-py3-none-any.whl",
+      "bytes": 52845,
+      "sha256": "b99c5ec2836e9fed5dd794600ce228993e8c923a5972709a314f380449239f22"
+    },
+    {
+      "name": "deepviz_agent_toolkit-0.1.0.tar.gz",
+      "bytes": 666560,
+      "sha256": "8e69e21cb2f39d4556be84bb2e4fafe078dc46f848631acc42917d88bf88c89f"
+    }
+  ],
+  "limits": "Existing extracted cache context reused read-only in child build process only; no install/download. Fresh source-clean sdist-to-wheel build; not independent runtime dependency resolution."
+}

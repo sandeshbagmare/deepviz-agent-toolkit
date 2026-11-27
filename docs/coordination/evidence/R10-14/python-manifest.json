@@ -1,0 +1,184 @@
+{
+  "source_commit": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "mode": "Fresh local wheel target; preinstalled runtime dependencies reused read-only; no dependency resolution.",
+  "python": "3.12.16",
+  "distributions": [
+    {
+      "name": "deepviz_agent_toolkit-0.1.0-py3-none-any.whl",
+      "bytes": 52845,
+      "sha256": "b99c5ec2836e9fed5dd794600ce228993e8c923a5972709a314f380449239f22"
+    },
+    {
+      "name": "deepviz_agent_toolkit-0.1.0.tar.gz",
+      "bytes": 666560,
+      "sha256": "8e69e21cb2f39d4556be84bb2e4fafe078dc46f848631acc42917d88bf88c89f"
+    }
+  ],
+  "installed_files": [
+    {
+      "file": "deepviz/__init__.py",
+      "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+      "wheel_sdist_installed_match": true
+    },
+    {
+      "file": "deepviz/cli.py",
+      "sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+      "wheel_sdist_installed_match": true
+    },
+    {
+      "file": "deepviz/engines.py",
+      "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+      "wheel_sdist_installed_match": true
+    },
+    {
+      "file": "deepviz/mcp_server.py",
+      "sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+      "wheel_sdist_installed_match": true
+    },
+    {
+      "file": "deepviz/models.py",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "wheel_sdist_installed_match": true
+    },
+    {
+      "file": "deepviz/normalize.py",
+      "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+      "wheel_sdist_installed_match": true
+    },
+    {
+      "file": "deepviz/recommend.py",
+      "sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+      "wheel_sdist_installed_match": true
+    },
+    {
+      "file": "deepviz/render.py",
+      "sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+      "wheel_sdist_installed_match": true
+    },
+    {
+      "file": "deepviz/tools.py",
+      "sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+      "wheel_sdist_installed_match": true
+    },
+    {
+      "file": "deepviz/resources/plotly-js-LICENSE.txt",
+      "sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+      "wheel_installed_match": true
+    },
+    {
+      "file": "deepviz/resources/chart-spec.schema.json",
+      "sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+      "wheel_installed_match": true
+    },
+    {
+      "file": "deepviz/py.typed",
+      "sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+      "wheel_installed_match": true
+    },
+    {
+      "file": "deepviz/resources/prompts/v1/README.md",
+      "sha256": "324cb7f88211424f577327268f36506c8c27d1793528441458e2caba83ee0bbd",
+      "wheel_installed_match": true
+    },
+    {
+      "file": "deepviz/resources/prompts/v1/request.md",
+      "sha256": "845be71cb3141d084f036472a1c5a19670be28c16bf73c4a599a3df9d534c6f2",
+      "wheel_installed_match": true
+    },
+    {
+      "file": "deepviz/resources/prompts/v1/system.md",
+      "sha256": "b11e691e8f5d89bc2fd726d284702d6675c57c1a32ec0947ec5902040fdbaba0",
+      "wheel_installed_match": true
+    }
+  ],
+  "plotly": {
+    "python_version": "6.9.0",
+    "js_version": "3.7.0",
+    "js_bytes": 4851164,
+    "js_sha256": "8ef4c6ab1369f0019611cbcd2d5b8aafef23e5d19ef58c39d4b4249831fe2180",
+    "notice_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+    "audited_notice_tag": "3.7.0",
+    "runtime_matches_audited_notice_tag": true
+  },
+  "outputs": [
+    {
+      "id": "python-matplotlib",
+      "engine": "matplotlib",
+      "html": "renders/matplotlib/deepviz-dsp7r3y6/chart.html",
+      "html_sha256": "2ae62ccc08b5f55003473a3a57fe791fcfa47870a0415e50b96864a1b04cc452",
+      "scripts": [],
+      "offline_expected": true,
+      "input_count": 2,
+      "output_count": 2,
+      "warnings": []
+    },
+    {
+      "id": "python-plotly",
+      "engine": "plotly",
+      "html": "renders/plotly/deepviz-ye9b16_b/chart.html",
+      "html_sha256": "7378cce622ad8b86499c14f2b266dd3eed42d2fee6105b82f796ecefa32a7e9a",
+      "scripts": [],
+      "offline_expected": true,
+      "input_count": 2,
+      "output_count": 2,
+      "warnings": []
+    },
+    {
+      "id": "python-vega",
+      "engine": "vega",
+      "html": "renders/vega/deepviz-1mqhadq_/chart.html",
+      "html_sha256": "2ae62ccc08b5f55003473a3a57fe791fcfa47870a0415e50b96864a1b04cc452",
+      "scripts": [],
+      "offline_expected": true,
+      "input_count": 2,
+      "output_count": 2,
+      "warnings": []
+    },
+    {
+      "id": "python-echarts",
+      "engine": "echarts",
+      "html": "renders/echarts/deepviz-at84lt8n/chart.html",
+      "html_sha256": "d802193361de6690f0f9fb1e31744876b464bb1cf1c6d965ed80547f967c80d4",
+      "scripts": [
+        "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js"
+      ],
+      "offline_expected": false,
+      "input_count": 2,
+      "output_count": 2,
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    },
+    {
+      "id": "python-antv",
+      "engine": "antv",
+      "html": "renders/antv/deepviz-_ljwfc9e/chart.html",
+      "html_sha256": "d995b9d4eb26c6db684406b32d42c4c43a9642177668be8d920afb7235276c70",
+      "scripts": [
+        "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js"
+      ],
+      "offline_expected": false,
+      "input_count": 2,
+      "output_count": 2,
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    },
+    {
+      "id": "python-plotly-dashboard",
+      "engine": "plotly",
+      "html": "renders/plotly-dashboard/deepviz-3ity1tmh/chart.html",
+      "html_sha256": "09aa5d2d8e4f28c4575fada02823e4f2b87c79b150a442411c4964c4c9287f5c",
+      "scripts": [],
+      "offline_expected": true,
+      "input_count": 2,
+      "output_count": 4,
+      "warnings": []
+    }
+  ],
+  "limits": [
+    "Not a fresh dependency-resolved environment.",
+    "No comprehensive advisory or transitive license certification.",
+    "External URLs are inventory only; this script never fetches them."
+  ]
+}
