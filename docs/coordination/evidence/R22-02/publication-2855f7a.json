@@ -1,0 +1,25 @@
+{
+  "observed_at": "2026-11-27T15:40:15.427237+00:00",
+  "branch": "agents/r10-02-security-boundaries",
+  "published_commit": "2855f7a4d051297e1d9e1246fd3051d35e2a11f0",
+  "reviewed_source_commit": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+  "push_command": [
+    "git",
+    "push",
+    "origin",
+    "agents/r10-02-security-boundaries:refs/heads/agents/r10-02-security-boundaries"
+  ],
+  "push_exit": 0,
+  "readback_command": [
+    "git",
+    "ls-remote",
+    "--heads",
+    "origin",
+    "refs/heads/agents/r10-02-security-boundaries"
+  ],
+  "readback_exit": 0,
+  "remote_head": "2855f7a4d051297e1d9e1246fd3051d35e2a11f0",
+  "exact_match": true,
+  "force": false,
+  "scope": "Own report/probes/evidence/note only. No source/integration/shared branch/issues/PR writes; no final approval"
+}

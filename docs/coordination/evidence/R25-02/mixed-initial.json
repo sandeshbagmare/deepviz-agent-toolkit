@@ -1,0 +1,62 @@
+{
+  "prefill_resources": 124,
+  "outcomes": [
+    {
+      "engine": "matplotlib",
+      "accepted": true,
+      "resources": [
+        {
+          "uri": "deepviz://artifacts/deepviz-0_1m5zjg/chart.png",
+          "mime_type": "image/png",
+          "name": "chart.png"
+        },
+        {
+          "uri": "deepviz://artifacts/deepviz-0_1m5zjg/chart.svg",
+          "mime_type": "image/svg+xml",
+          "name": "chart.svg"
+        },
+        {
+          "uri": "deepviz://artifacts/deepviz-0_1m5zjg/chart.html",
+          "mime_type": "text/html",
+          "name": "chart.html"
+        },
+        {
+          "uri": "deepviz://artifacts/deepviz-0_1m5zjg/manifest.json",
+          "mime_type": "application/json",
+          "name": "manifest.json"
+        }
+      ]
+    },
+    {
+      "engine": "vega",
+      "accepted": false,
+      "error": "Error executing tool render_vega: MCP resource capacity limit (128 per server lifetime); start a new server",
+      "resources": []
+    },
+    {
+      "engine": "echarts",
+      "accepted": false,
+      "error": "Error executing tool render_echarts: MCP resource capacity limit (128 per server lifetime); start a new server",
+      "resources": []
+    },
+    {
+      "engine": "echarts",
+      "accepted": false,
+      "error": "Error executing tool render_echarts: MCP resource capacity limit (128 per server lifetime); start a new server",
+      "resources": []
+    }
+  ],
+  "actual_render_entries": [
+    "matplotlib"
+  ],
+  "added_resources": 4,
+  "final_resources": 128,
+  "prior_files_hash_preserved": 125,
+  "earliest_resource_preserved": true,
+  "host_outside_sentinels_preserved": true,
+  "new_output_files": 4,
+  "rejected_after_capacity_no_new_output": true,
+  "ordinary_normalization_recovers": true,
+  "png_sha256": "1149288c93627d0e4ea4d4874a9ff122cc8003d8565454c7e1e48659fc28ab62",
+  "observation": "Four real SDK worker calls; read-only per-thread code-entry profile; no patch/cap change"
+}

@@ -1,0 +1,156 @@
+{
+  "observed_at": "2026-11-27T15:57:45.290633+00:00",
+  "reviewed_source": "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23",
+  "source_commit": "cd75c459ddba9f3d6bc0a5185b570af369fb4980",
+  "source_import_sdk_bytes_equal_before_after": true,
+  "initial": {
+    "tests": 1,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "passed": 1,
+    "exit": 0,
+    "elapsed_seconds": 3.72
+  },
+  "final": {
+    "tests": 1,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "passed": 1,
+    "exit": 0,
+    "elapsed_seconds": 3.16
+  },
+  "same_one_case_two_executions_not_two_independent_tests": true,
+  "ruff_exit": 0,
+  "mypy_exit": 0,
+  "mypy_own_python_files": 2,
+  "new_p2_blockers_established": 0,
+  "unresolved_p1_finding": "R22-02-F1 bare-string callback guard; unchanged tools/SDK bytes, not new P1 run",
+  "actual_final_mixed": {
+    "prefill_resources": 124,
+    "outcomes": [
+      {
+        "engine": "matplotlib",
+        "accepted": false,
+        "error": "Error executing tool render_matplotlib: MCP resource capacity limit (128 per server lifetime); start a new server",
+        "resources": []
+      },
+      {
+        "engine": "vega",
+        "accepted": false,
+        "error": "Error executing tool render_vega: MCP resource capacity limit (128 per server lifetime); start a new server",
+        "resources": []
+      },
+      {
+        "engine": "echarts",
+        "accepted": true,
+        "resources": [
+          {
+            "uri": "deepviz://artifacts/deepviz-sb3u4p96/chart.html",
+            "mime_type": "text/html",
+            "name": "chart.html"
+          },
+          {
+            "uri": "deepviz://artifacts/deepviz-sb3u4p96/manifest.json",
+            "mime_type": "application/json",
+            "name": "manifest.json"
+          }
+        ]
+      },
+      {
+        "engine": "echarts",
+        "accepted": true,
+        "resources": [
+          {
+            "uri": "deepviz://artifacts/deepviz-krhl6i5i/chart.html",
+            "mime_type": "text/html",
+            "name": "chart.html"
+          },
+          {
+            "uri": "deepviz://artifacts/deepviz-krhl6i5i/manifest.json",
+            "mime_type": "application/json",
+            "name": "manifest.json"
+          }
+        ]
+      }
+    ],
+    "actual_render_entries": [
+      "echarts",
+      "echarts"
+    ],
+    "added_resources": 4,
+    "final_resources": 128,
+    "prior_files_hash_preserved": 125,
+    "earliest_resource_preserved": true,
+    "host_outside_sentinels_preserved": true,
+    "new_output_files": 4,
+    "rejected_after_capacity_no_new_output": true,
+    "ordinary_normalization_recovers": true,
+    "png_sha256": "1149288c93627d0e4ea4d4874a9ff122cc8003d8565454c7e1e48659fc28ab62",
+    "observation": "Four real SDK worker calls; read-only per-thread code-entry profile; no patch/cap change"
+  },
+  "opened_png": {
+    "bytes": 13960,
+    "sha256": "1149288c93627d0e4ea4d4874a9ff122cc8003d8565454c7e1e48659fc28ab62",
+    "visually_inspected": true,
+    "observed": "Alpha3/Beta7/zero baseline/3:7 heights/full title and labels; not browser paint"
+  },
+  "probe_working_and_gitlf_hashes": {
+    "tests/r25_probes/role02/README.md": {
+      "sha256": "2b419145a50e36a7d9d3358944c4709f57ec20b0b581ce2c885a636c4dc60a07",
+      "bytes": 3434,
+      "git_lf_sha256": "dc96524bad65bdad1f9a5815e846645efcb7c1ee6fa40c421db52936bd96b76e"
+    },
+    "tests/r25_probes/role02/source_identity.py": {
+      "sha256": "c82d6b4ace06aab99590da992e1c3611f96882060fa3507364da995cd0252b42",
+      "bytes": 2919,
+      "git_lf_sha256": "0ede28dbbf9182faf98190a33bafb33814be8786dad50bdf8668ea3987596c52"
+    },
+    "tests/r25_probes/role02/test_mixed_reservations.py": {
+      "sha256": "c4db9113fa8cc864a1b2d6d319e16e0a41bba4a71da20520bbbb4c572aa6fc8c",
+      "bytes": 6142,
+      "git_lf_sha256": "a78973ef3d8c97ce6db81d65932dc7866d2106d8c8cb5c6b663e120d61209dc5"
+    }
+  },
+  "local_raw_log_hashes": {
+    "mixed-reservation.xml": {
+      "sha256": "e8aaa84060cdef4315c5cfdc907173fc600fb80d96b043ae3bd5f32d06b987fd",
+      "bytes": 417
+    },
+    "mixed-reservation.log": {
+      "sha256": "d8169124848f9bb9a71ce5579fede90c2d991ec791592545c1950fa30d86af20",
+      "bytes": 202
+    },
+    "final/mixed-reservation.xml": {
+      "sha256": "2baabce0aa551ccb70358251a424a5432d4eb023db0379136b92530c1f29b662",
+      "bytes": 417
+    },
+    "final/mixed-reservation.log": {
+      "sha256": "ebd87ea78b7bd089592dc39f3902ab908f9df9da2aeaafc03c2be8cfba1a233a",
+      "bytes": 202
+    },
+    "ruff.log": {
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+      "bytes": 42
+    },
+    "mypy.log": {
+      "sha256": "8ea8a10a8fb4f1b57c4c630dce51242c32ae9ee64d4df6cff183c3c58f32f33d",
+      "bytes": 1262
+    },
+    "final/ruff.log": {
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+      "bytes": 42
+    },
+    "final/mypy.log": {
+      "sha256": "07a5ca23e5d39b2565c0c1361f0556b8c3c75484bba05841f400436d190bb660",
+      "bytes": 90
+    }
+  },
+  "limits": [
+    "No P1/author6/author37/stdio/fullsuite replay",
+    "Unused/failure release static review only",
+    "No source/SDK/cap/API/install/spawn writes",
+    "No RSS/heap/native/disk cap or final all-toolkit approval"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "observed_at": "2026-11-27T15:48:41.069488+00:00",
+  "source_commit": "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23",
+  "source_clean": true,
+  "files": {
+    "python/deepviz/src/deepviz/tools.py": {
+      "git_and_working_sha256": "11273c5f5b0ff2eee16e09c6c727e560582a43fcae723bb315b6ef80d5a68495",
+      "bytes": 9974
+    },
+    "python/deepviz/src/deepviz/mcp_server.py": {
+      "git_and_working_sha256": "9f1628e04749c3c3d2357607ac4cc0021f74e1119c6237aa36077a0fd67bf480",
+      "bytes": 6729
+    },
+    "python/deepviz/src/deepviz/normalize.py": {
+      "git_and_working_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+      "bytes": 33895
+    },
+    "python/deepviz/src/deepviz/models.py": {
+      "git_and_working_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "bytes": 3493
+    },
+    "python/deepviz/tests/test_r14_tool_json_boundary.py": {
+      "git_and_working_sha256": "231d43801dec500ab6da237c9a232b86e6169718fe05fc9b2b5f5b1ede905a4b",
+      "bytes": 8718
+    },
+    "python/deepviz/tests/test_r14_mcp_resource_budget.py": {
+      "git_and_working_sha256": "0406f524d22879e24606c594d7250124f0e298c7b47b05ddf50f39da55a18d9d",
+      "bytes": 7504
+    },
+    "python/deepviz/src/deepviz/render.py": {
+      "git_and_working_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+      "bytes": 11313
+    }
+  },
+  "origins": {
+    "tools": "python/deepviz/src/deepviz/tools.py",
+    "mcp_server": "python/deepviz/src/deepviz/mcp_server.py",
+    "normalize": "python/deepviz/src/deepviz/normalize.py",
+    "models": "python/deepviz/src/deepviz/models.py"
+  },
+  "dependencies": {
+    "mcp": "1.30.0",
+    "langchain-core": "1.8.5",
+    "pydantic": "2.14.4"
+  },
+  "installed_readonly_sdk_files": {
+    "langchain_core.tools.base": {
+      "installed_source": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py",
+      "sha256": "239c77d07a9283ced902fb161ca0fcdb5e532a9824caaa169ab014ac41c899d4"
+    },
+    "mcp.server.fastmcp.utilities.func_metadata": {
+      "installed_source": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\mcp\\server\\fastmcp\\utilities\\func_metadata.py",
+      "sha256": "c951a064ea3f1488c2f9685168ab049a31d9772c5ff06340f1b435399e1db18c"
+    },
+    "mcp.server.fastmcp.server": {
+      "installed_source": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\mcp\\server\\fastmcp\\server.py",
+      "sha256": "1b1c8cd4f6e350f7d4f62627764ed7c0f51e85872d32aba9d9da560a2bd2c50c"
+    }
+  },
+  "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "scope": "Final committed e47 source; P2 review only; no producer runtime or test borrowing"
+}
