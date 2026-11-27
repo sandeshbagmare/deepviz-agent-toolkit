@@ -1,0 +1,55 @@
+{
+  "actual_session": "ses_de5678115ffewUEpZFi8faBW8C",
+  "checked_at_utc": "2026-11-27T15:02:35.948Z",
+  "expected_login": "sandeshbagmare",
+  "repository": "sandeshbagmare/deepviz-agent-toolkit",
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/user",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/32",
+      "status": 200
+    }
+  ],
+  "mutation_count": 1,
+  "post_http": 201,
+  "get_http": 200,
+  "number": 32,
+  "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/32",
+  "title": "Bug: native SVG category labels overlap at valid 240px width",
+  "state": "open",
+  "body_exact_equal": true,
+  "body_normalized_equal": true,
+  "request_body_sha256": "c3aad447a3e55b35b2f4789852e5d8752e2d12c84561fff1ae13c52284fa7169",
+  "readback_body_sha256": "c3aad447a3e55b35b2f4789852e5d8752e2d12c84561fff1ae13c52284fa7169",
+  "immutable_png_links": [
+    "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/ordinary-eight-240-svg.png",
+    "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/ordinary-eight-240-html.png",
+    "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/ordinary-eight-960-svg.png",
+    "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/ordinary-eight-960-html.png",
+    "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/unicode-eight-240-svg.png",
+    "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/unicode-eight-240-html.png",
+    "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/unicode-eight-960-svg.png",
+    "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/unicode-eight-960-html.png"
+  ],
+  "no_secret_persisted": true,
+  "redirects_followed": false,
+  "no_closure_pr_or_shared_branch_writes": true,
+  "policy_owner": "R04",
+  "policy_decision": "OPEN",
+  "retest_required_on_future_fixed_focused_head": true
+}

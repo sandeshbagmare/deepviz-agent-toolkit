@@ -1,0 +1,41 @@
+{
+  "actual_session": "ses_de5678115ffewUEpZFi8faBW8C",
+  "checked_at_utc": "2026-11-27T14:58:06.723Z",
+  "expected_login": "sandeshbagmare",
+  "repository": "sandeshbagmare/deepviz-agent-toolkit",
+  "default_branch": "main",
+  "push_permission": true,
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/user",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues?state=open&per_page=100&page=1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/15",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/23",
+      "status": 200
+    }
+  ],
+  "complete_open_issue_pages": 1,
+  "open_issue_count": 30,
+  "open_pr_count": 1,
+  "api_writes": 0,
+  "secret_persisted": false,
+  "redirects_followed": false
+}
