@@ -1,0 +1,1880 @@
+{
+  "actual_session": "ses_de5678115ffewUEpZFi8faBW8C",
+  "base": "ca25af486bf443949125df789f5b5fd1fda8bba8",
+  "branch": "agents/r11-12-svg-tick-margin",
+  "red": {
+    "unit": {
+      "exit": 1,
+      "pass": 1,
+      "fail": 10,
+      "skip": 0
+    },
+    "browser": {
+      "exit": 1,
+      "pass": 8,
+      "fail": 12,
+      "skip": 0
+    }
+  },
+  "green": {
+    "unit": {
+      "exit": 0,
+      "pass": 11,
+      "fail": 0,
+      "skip": 0
+    },
+    "browser": {
+      "exit": 0,
+      "pass": 20,
+      "fail": 0,
+      "skip": 0
+    },
+    "full_npm": {
+      "exit": 0,
+      "pass": 257,
+      "fail": 0,
+      "skip": 0
+    },
+    "build": 0,
+    "typecheck": 0,
+    "schema_check": 0,
+    "pack_dry_run": 0
+  },
+  "source_sha256": "be34bcb2be9e44459cb30d145386c3606933bcbdea389ba2fd3fca8d738fac80",
+  "imported_build_sha256": "7640f5147a11e795f3f78564409adae0fb21421bf59f2b95c2d4a9b83c28c4b1",
+  "browser_test_sha256": "0923ca70aa9f34ab6594aa367fef22bc1c8fd104895eb015c2e52378bf8871a7",
+  "node": "v26.13.1",
+  "browser": "159.0.8154.6",
+  "scale_rerun": false,
+  "author_not_independent_reviewer": true,
+  "limitation": "At minimum 240px chart width, category labels visibly overlap although numeric endpoint labels and all text fit. This numeric-margin fix is not general category-layout or all-kind visual approval.",
+  "commands": [
+    "node <installed-typescript>/bin/tsc -p packages/deepviz/tsconfig.json",
+    "node --test --test-reporter=tap packages/deepviz/test/test_r11_svg_tick_margin.test.mjs",
+    "node --test --test-reporter=tap tests/browser/r11-svg-tick-margin.mjs",
+    "npm test",
+    "npm run typecheck",
+    "npm run schema:check",
+    "npm pack --dry-run --workspace @deepviz/agent-toolkit"
+  ],
+  "skipped": [
+    "npm ci/install",
+    "Python gates (unchanged)",
+    "10M benchmark rerun",
+    "remote CI",
+    "clean consumer",
+    "independent review/tester signoff"
+  ],
+  "results": {
+    "red": [
+      {
+        "fixture": "small-positive",
+        "width": 960,
+        "height": 540,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "8.000",
+            "x": 23.765625,
+            "y": 58,
+            "right": 57.44140625,
+            "bottom": 77,
+            "width": 33.67578125,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "0.000",
+            "x": 23.765625,
+            "y": 460,
+            "right": 57.44140625,
+            "bottom": 479,
+            "width": 33.67578125,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "013049c713f76783d65c9e0a8899b68de580ccee70c8d0e64fc353ed632d73a5",
+        "png_sha256": "ccd6eaaa611b85f7c7abb9250b4afa5033620ddb8b1282ae06ab230bc8bb36ae",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "small-positive",
+        "width": 960,
+        "height": 540,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "8.000",
+            "x": 21,
+            "y": 59,
+            "right": 57,
+            "bottom": 76,
+            "width": 36,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "0.000",
+            "x": 21,
+            "y": 461,
+            "right": 57,
+            "bottom": 478,
+            "width": 36,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "06d559f86c4dd19b05999c087868b211c160b5658354ae4c11f1680872dbb5f3",
+        "png_sha256": "9145a7c645cbad95bc53a4f7e59312fcc4c151af5973d40fd9ab8bfb6b090480",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "small-positive",
+        "width": 240,
+        "height": 200,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "8.000",
+            "x": 23.765625,
+            "y": 58,
+            "right": 57.44140625,
+            "bottom": 77,
+            "width": 33.67578125,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "0.000",
+            "x": 23.765625,
+            "y": 120,
+            "right": 57.44140625,
+            "bottom": 139,
+            "width": 33.67578125,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "41ad413e7ffb5b34e1da117bdbf37217388477f53ff834969b59ca704332a59b",
+        "png_sha256": "47ba494fb60da943dd3ae175c6a972bf82904d02466aa447478f3a7336f6abe8",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "small-positive",
+        "width": 240,
+        "height": 200,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "8.000",
+            "x": 21,
+            "y": 59,
+            "right": 57,
+            "bottom": 76,
+            "width": 36,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "0.000",
+            "x": 21,
+            "y": 121,
+            "right": 57,
+            "bottom": 138,
+            "width": 36,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "d2c97c8972ab33ef2c2f7ffedd6e73871a5320e18c238fc9f64fc11303b29204",
+        "png_sha256": "2c972ce0e954abfa07cabee5195bc678d2c5f35dba4165e3019324b4b707ccfb",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "measured-aggregate",
+        "width": 960,
+        "height": 540,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [
+          {
+            "text": "6.250e+12",
+            "x": -8.21875,
+            "y": 58,
+            "right": 57.44921875,
+            "bottom": 77,
+            "width": 65.66796875,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "numeric_ticks": [
+          {
+            "text": "6.250e+12",
+            "x": -8.21875,
+            "y": 58,
+            "right": 57.44921875,
+            "bottom": 77,
+            "width": 65.66796875,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "0.000",
+            "x": 23.765625,
+            "y": 460,
+            "right": 57.44140625,
+            "bottom": 479,
+            "width": 33.67578125,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "9311fa4832f9badea92d9b47ea7197caf8b4b0af7122bf6fac6fb32b0e265c02",
+        "png_sha256": "4a12b406ccc612b7384997ba247911db7dd65cb919a73529705f191bcf1614da",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "measured-aggregate",
+        "width": 960,
+        "height": 540,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [
+          {
+            "text": "6.250e+12",
+            "x": -11.125,
+            "y": 59,
+            "right": 57,
+            "bottom": 76,
+            "width": 68.125,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "numeric_ticks": [
+          {
+            "text": "6.250e+12",
+            "x": -11.125,
+            "y": 59,
+            "right": 57,
+            "bottom": 76,
+            "width": 68.125,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "0.000",
+            "x": 21,
+            "y": 461,
+            "right": 57,
+            "bottom": 478,
+            "width": 36,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "9eed8872a94286b2d976ec7dc2f715cd9bcea1f27fe29019853f71017ce8cf85",
+        "png_sha256": "eb9ae4c282ca6078a8739f6941b01640746dab435227bd19cc5f20fb7ad15913",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "measured-aggregate",
+        "width": 240,
+        "height": 200,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [
+          {
+            "text": "6.250e+12",
+            "x": -8.21875,
+            "y": 58,
+            "right": 57.44921875,
+            "bottom": 77,
+            "width": 65.66796875,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "numeric_ticks": [
+          {
+            "text": "6.250e+12",
+            "x": -8.21875,
+            "y": 58,
+            "right": 57.44921875,
+            "bottom": 77,
+            "width": 65.66796875,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "0.000",
+            "x": 23.765625,
+            "y": 120,
+            "right": 57.44140625,
+            "bottom": 139,
+            "width": 33.67578125,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "6b2203a64ff2c8ce1e03a20845f08cc629a509a1bedae49078c5f1cf84c09643",
+        "png_sha256": "6fb3a3aab6b60b749c0a322f7b596ab3839e7259c9aba01817da985dc5a29b3b",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "measured-aggregate",
+        "width": 240,
+        "height": 200,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [
+          {
+            "text": "6.250e+12",
+            "x": -11.125,
+            "y": 59,
+            "right": 57,
+            "bottom": 76,
+            "width": 68.125,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "numeric_ticks": [
+          {
+            "text": "6.250e+12",
+            "x": -11.125,
+            "y": 59,
+            "right": 57,
+            "bottom": 76,
+            "width": 68.125,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "0.000",
+            "x": 21,
+            "y": 121,
+            "right": 57,
+            "bottom": 138,
+            "width": 36,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "bca0c7f5bbeaa3d25f77f6fd75f32864d3f7be5dec14216ecedca1b3713aa820",
+        "png_sha256": "c730374f393101088c0b5c0bb27f8732b493c7e515349738a5de5e027c3da14d",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "signed-scientific",
+        "width": 960,
+        "height": 540,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [
+          {
+            "text": "9.999e+120",
+            "x": -15.765625,
+            "y": 58,
+            "right": 57.44921875,
+            "bottom": 77,
+            "width": 73.21484375,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-9.999e+120",
+            "x": -21.375,
+            "y": 460,
+            "right": 57.4384765625,
+            "bottom": 479,
+            "width": 78.8134765625,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "numeric_ticks": [
+          {
+            "text": "9.999e+120",
+            "x": -15.765625,
+            "y": 58,
+            "right": 57.44921875,
+            "bottom": 77,
+            "width": 73.21484375,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-9.999e+120",
+            "x": -21.375,
+            "y": 460,
+            "right": 57.4384765625,
+            "bottom": 479,
+            "width": 78.8134765625,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "6e51e6967b58d9a0eba456e5796d54986322fe5935eca80151f4c3289adf8337",
+        "png_sha256": "641d498804555576c6eb6b4a8df55065396976da9591cd1c2b9a6f3dd8feee09",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "signed-scientific",
+        "width": 960,
+        "height": 540,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [
+          {
+            "text": "9.999e+120",
+            "x": -19.125,
+            "y": 59,
+            "right": 57,
+            "bottom": 76,
+            "width": 76.125,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-9.999e+120",
+            "x": -24.453125,
+            "y": 461,
+            "right": 57,
+            "bottom": 478,
+            "width": 81.453125,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "numeric_ticks": [
+          {
+            "text": "9.999e+120",
+            "x": -19.125,
+            "y": 59,
+            "right": 57,
+            "bottom": 76,
+            "width": 76.125,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-9.999e+120",
+            "x": -24.453125,
+            "y": 461,
+            "right": 57,
+            "bottom": 478,
+            "width": 81.453125,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "452d05143c9b64882c41a5a18473ba4dc115ac02f70ef7053e7d4e0632274798",
+        "png_sha256": "27b8823a1734a8620b1894d974778295477af4b427ebdb2e998690ee68453ff3",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "signed-scientific",
+        "width": 240,
+        "height": 200,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [
+          {
+            "text": "9.999e+120",
+            "x": -15.765625,
+            "y": 58,
+            "right": 57.44921875,
+            "bottom": 77,
+            "width": 73.21484375,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-9.999e+120",
+            "x": -21.375,
+            "y": 120,
+            "right": 57.4384765625,
+            "bottom": 139,
+            "width": 78.8134765625,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "numeric_ticks": [
+          {
+            "text": "9.999e+120",
+            "x": -15.765625,
+            "y": 58,
+            "right": 57.44921875,
+            "bottom": 77,
+            "width": 73.21484375,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-9.999e+120",
+            "x": -21.375,
+            "y": 120,
+            "right": 57.4384765625,
+            "bottom": 139,
+            "width": 78.8134765625,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "38d56a4464ce360ef225551bf2850238c50e36757964b8ddd9be6b91744d86d1",
+        "png_sha256": "02a0f16fd271cf34eb0a83a0c8ed4c738e6ed1b6b093e17a5d56b8ef4b700234",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "signed-scientific",
+        "width": 240,
+        "height": 200,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [
+          {
+            "text": "9.999e+120",
+            "x": -19.125,
+            "y": 59,
+            "right": 57,
+            "bottom": 76,
+            "width": 76.125,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-9.999e+120",
+            "x": -24.453125,
+            "y": 121,
+            "right": 57,
+            "bottom": 138,
+            "width": 81.453125,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "numeric_ticks": [
+          {
+            "text": "9.999e+120",
+            "x": -19.125,
+            "y": 59,
+            "right": 57,
+            "bottom": 76,
+            "width": 76.125,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-9.999e+120",
+            "x": -24.453125,
+            "y": 121,
+            "right": 57,
+            "bottom": 138,
+            "width": 81.453125,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "76a2ada5fd0eec457c61c9976275cdacf064e50408c57cbf5aa091162908f7f6",
+        "png_sha256": "632c6caa9197f2c596e481cef30c2d15ec5a9c1c245ed90e5cc87cee9b159487",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "negative",
+        "width": 960,
+        "height": 540,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "1.000",
+            "x": 23.765625,
+            "y": 58,
+            "right": 57.44140625,
+            "bottom": 77,
+            "width": 33.67578125,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-8.000",
+            "x": 18.171875,
+            "y": 460,
+            "right": 57.4462890625,
+            "bottom": 479,
+            "width": 39.2744140625,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "1b048e0153d19b3cac0080c969b2566d43c48a5729289c63fcf9f587aa559e4b",
+        "png_sha256": "0d64099e8beba2a42cdaf99f254f8ab4c23f322a8900886659bf3acf48239726",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "negative",
+        "width": 960,
+        "height": 540,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "1.000",
+            "x": 21,
+            "y": 59,
+            "right": 57,
+            "bottom": 76,
+            "width": 36,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-8.000",
+            "x": 15.671875,
+            "y": 461,
+            "right": 57,
+            "bottom": 478,
+            "width": 41.328125,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "e1f7fbddb8b87b322d1ffa7dcfa27c9ecada961478b677e5ef27927f5914f270",
+        "png_sha256": "1bdc826b268951814bb36aec394ae925b7dc6cd34a4e12e95b7067fabef915ef",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "negative",
+        "width": 240,
+        "height": 200,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "1.000",
+            "x": 23.765625,
+            "y": 58,
+            "right": 57.44140625,
+            "bottom": 77,
+            "width": 33.67578125,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-8.000",
+            "x": 18.171875,
+            "y": 120,
+            "right": 57.4462890625,
+            "bottom": 139,
+            "width": 39.2744140625,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "fd93286d16587d30f20a2738665bcec69317dad96ae881134a4c67a23c9c588c",
+        "png_sha256": "fa713b88c76da9aa5bf40de1a6272f69497604b92998017372d590987f0e9e9f",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "negative",
+        "width": 240,
+        "height": 200,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "1.000",
+            "x": 21,
+            "y": 59,
+            "right": 57,
+            "bottom": 76,
+            "width": 36,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-8.000",
+            "x": 15.671875,
+            "y": 121,
+            "right": 57,
+            "bottom": 138,
+            "width": 41.328125,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "d4ec1c978517dba937f5a8b9ef260bff1ce9a57553d1529dd86dffc6453b95d3",
+        "png_sha256": "5e2f49a12211da43862c59c4a6409cc67c232d9475588425af5e02c14c3d2e9d",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "fixed-small-negative",
+        "width": 960,
+        "height": 540,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [
+          {
+            "text": "-0.000001000",
+            "x": -27.109375,
+            "y": 460,
+            "right": 57.4462890625,
+            "bottom": 479,
+            "width": 84.5556640625,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "numeric_ticks": [
+          {
+            "text": "7.000",
+            "x": 23.765625,
+            "y": 58,
+            "right": 57.44140625,
+            "bottom": 77,
+            "width": 33.67578125,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-0.000001000",
+            "x": -27.109375,
+            "y": 460,
+            "right": 57.4462890625,
+            "bottom": 479,
+            "width": 84.5556640625,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "3b1b44cd1a024330af1f6c7d1a26b0c7700eab55e7cde581119e81a9a644c730",
+        "png_sha256": "57060f247e421b8a41d09a3d7564041ef6a5f7ca736346c2b97415a20b8eb8b8",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "fixed-small-negative",
+        "width": 960,
+        "height": 540,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [
+          {
+            "text": "-0.000001000",
+            "x": -32.328125,
+            "y": 461,
+            "right": 57,
+            "bottom": 478,
+            "width": 89.328125,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "numeric_ticks": [
+          {
+            "text": "7.000",
+            "x": 21,
+            "y": 59,
+            "right": 57,
+            "bottom": 76,
+            "width": 36,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-0.000001000",
+            "x": -32.328125,
+            "y": 461,
+            "right": 57,
+            "bottom": 478,
+            "width": 89.328125,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "d6e56427a4a547249382bc3355678a5c9b3feeb5193cbc96990dfe2e69c63c63",
+        "png_sha256": "56bcdca84a78ac04ba2111716a199e9809ef8042c1b9f30c6051b5885105f88a",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "fixed-small-negative",
+        "width": 240,
+        "height": 200,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [
+          {
+            "text": "-0.000001000",
+            "x": -27.109375,
+            "y": 120,
+            "right": 57.4462890625,
+            "bottom": 139,
+            "width": 84.5556640625,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "numeric_ticks": [
+          {
+            "text": "7.000",
+            "x": 23.765625,
+            "y": 58,
+            "right": 57.44140625,
+            "bottom": 77,
+            "width": 33.67578125,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-0.000001000",
+            "x": -27.109375,
+            "y": 120,
+            "right": 57.4462890625,
+            "bottom": 139,
+            "width": 84.5556640625,
+            "height": 19,
+            "font_size": 14,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "5aa5fb5db9d6fe4ac3973ba1c739588fdba88b65564716d72b912e1ca0d47bab",
+        "png_sha256": "a250a08849f340d4e1439125ec6db843abec775cb59fd3bc0f3d8960d5a671f2",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "fixed-small-negative",
+        "width": 240,
+        "height": 200,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [
+          {
+            "text": "-0.000001000",
+            "x": -32.328125,
+            "y": 121,
+            "right": 57,
+            "bottom": 138,
+            "width": 89.328125,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "numeric_ticks": [
+          {
+            "text": "7.000",
+            "x": 21,
+            "y": 59,
+            "right": 57,
+            "bottom": 76,
+            "width": 36,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-0.000001000",
+            "x": -32.328125,
+            "y": 121,
+            "right": 57,
+            "bottom": 138,
+            "width": 89.328125,
+            "height": 17,
+            "font_size": 16,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "aea8b3f555554366895275602930572d4e06af0627a53b2f0d9d3c497d298644",
+        "png_sha256": "efd0b41befb76a1ed688ab737068a81a06205cb7be1f863dc85607ef4325c7db",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      }
+    ],
+    "green": [
+      {
+        "fixture": "small-positive",
+        "width": 960,
+        "height": 540,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "8.000",
+            "x": 31,
+            "y": 62,
+            "right": 64.390625,
+            "bottom": 76,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "0.000",
+            "x": 31,
+            "y": 464,
+            "right": 64.390625,
+            "bottom": 478,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "64fbd803dfe799990de98ea558d5a2f5764e91cda371a9ae050aef60a9b5d0b7",
+        "png_sha256": "083a41122efbc3182f6c6c5431fca2a49ebe69189f4be1c8adfb5476da239da7",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "small-positive",
+        "width": 960,
+        "height": 540,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "8.000",
+            "x": 31,
+            "y": 62,
+            "right": 64.390625,
+            "bottom": 76,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "0.000",
+            "x": 31,
+            "y": 464,
+            "right": 64.390625,
+            "bottom": 478,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "7894df5d1f92b66a937ad73b87e13fc0154bcc3207c74f918c09aecb5cc091dd",
+        "png_sha256": "0d9afef2f3f119ee376166e58df04814ad0e5a0fd811385c8b64746292ec91fc",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "small-positive",
+        "width": 240,
+        "height": 200,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "8.000",
+            "x": 31,
+            "y": 62,
+            "right": 64.390625,
+            "bottom": 76,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "0.000",
+            "x": 31,
+            "y": 124,
+            "right": 64.390625,
+            "bottom": 138,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "1f937546a414e81df5f08d4b31a5b6d4e889ebe37098e71811207c3b89b4c18a",
+        "png_sha256": "da4305356ed8cb84500b8d4483f9047fba2cf067ecb170279eee43d218608b1f",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "small-positive",
+        "width": 240,
+        "height": 200,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "8.000",
+            "x": 31,
+            "y": 62,
+            "right": 64.390625,
+            "bottom": 76,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "0.000",
+            "x": 31,
+            "y": 124,
+            "right": 64.390625,
+            "bottom": 138,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "2697724f8cf23f87557ea7b97dc69383fee2a2b3a405842bdcccd684c8aa104e",
+        "png_sha256": "a9e10a20bd8453bc4c159f11cb267feac1fadb8a0616555e38264aa624397a23",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "measured-aggregate",
+        "width": 960,
+        "height": 540,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "6.250e+12",
+            "x": 36.609375,
+            "y": 62,
+            "right": 96.390625,
+            "bottom": 76,
+            "width": 59.78125,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "0.000",
+            "x": 63,
+            "y": 464,
+            "right": 96.390625,
+            "bottom": 478,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "d71a2a46c001cb26a13d8dc8d7249526da4c82351d312cce954940347070e93c",
+        "png_sha256": "b8f1a6d4cee76853787567517ab21c2f184311d5182cc8f5be46888eca862f70",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "measured-aggregate",
+        "width": 960,
+        "height": 540,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "6.250e+12",
+            "x": 36.609375,
+            "y": 62,
+            "right": 96.390625,
+            "bottom": 76,
+            "width": 59.78125,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "0.000",
+            "x": 63,
+            "y": 464,
+            "right": 96.390625,
+            "bottom": 478,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "db38f8c1b86bd3a9b5866628f0dc7c7e6f8e3995175817932d6d5b3b120682a5",
+        "png_sha256": "acfd7addc117e7361f84a29aae0e118115443639ee697c284bed4a7e24d0f4b0",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "measured-aggregate",
+        "width": 240,
+        "height": 200,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "6.250e+12",
+            "x": 36.609375,
+            "y": 62,
+            "right": 96.390625,
+            "bottom": 76,
+            "width": 59.78125,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "0.000",
+            "x": 63,
+            "y": 124,
+            "right": 96.390625,
+            "bottom": 138,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "e2bccb625d79ee96eaffe5f8bc867f7a87aa28ca3231d29d5ccb4f856b84a373",
+        "png_sha256": "6ed140dd25659d4ffc840f070f2c7c2c28d6daaefa75be7bb2d41e8478cd8434",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "measured-aggregate",
+        "width": 240,
+        "height": 200,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "6.250e+12",
+            "x": 36.609375,
+            "y": 62,
+            "right": 96.390625,
+            "bottom": 76,
+            "width": 59.78125,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "0.000",
+            "x": 63,
+            "y": 124,
+            "right": 96.390625,
+            "bottom": 138,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "2d6b2f0998768b65c56a19ef584c622b8b90e2b337cf9f8ce22479653db0e911",
+        "png_sha256": "62f95ec600e7f7f7b896c0084bb4d1d493c31efaba9945832d7a363d85d35117",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "signed-scientific",
+        "width": 960,
+        "height": 540,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "9.999e+120",
+            "x": 46.015625,
+            "y": 62,
+            "right": 112.39453125,
+            "bottom": 76,
+            "width": 66.37890625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-9.999e+120",
+            "x": 39.421875,
+            "y": 464,
+            "right": 112.3984375,
+            "bottom": 478,
+            "width": 72.9765625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "86526291b4c9c7435f6705d79712d96f42f304c7dd761234dec47ba0ad9531bf",
+        "png_sha256": "e7314f38484616ed30c8e8f815b9af6e287831d2e80173167844efad51d59c74",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "signed-scientific",
+        "width": 960,
+        "height": 540,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "9.999e+120",
+            "x": 46.015625,
+            "y": 62,
+            "right": 112.39453125,
+            "bottom": 76,
+            "width": 66.37890625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-9.999e+120",
+            "x": 39.421875,
+            "y": 464,
+            "right": 112.3984375,
+            "bottom": 478,
+            "width": 72.9765625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "7e13bc5cec670200fbdea1344c17914fadb579b1a745fb7becfcac819511786b",
+        "png_sha256": "712d14f02ff1fccc366085f1fefd262e04ddeb80889006a94ba6d400cfb6fd7c",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "signed-scientific",
+        "width": 240,
+        "height": 200,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "9.999e+120",
+            "x": 46.015625,
+            "y": 62,
+            "right": 112.39453125,
+            "bottom": 76,
+            "width": 66.37890625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-9.999e+120",
+            "x": 39.421875,
+            "y": 124,
+            "right": 112.3984375,
+            "bottom": 138,
+            "width": 72.9765625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "766a31e66efc378b3475f2d295a1ba5bee001df9246b9b982daacb467b290d98",
+        "png_sha256": "f168816095e9569c8ef09ba294de5f69e8c7f06ee898457a997d116cfcb5bb3e",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "signed-scientific",
+        "width": 240,
+        "height": 200,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "9.999e+120",
+            "x": 46.015625,
+            "y": 62,
+            "right": 112.39453125,
+            "bottom": 76,
+            "width": 66.37890625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-9.999e+120",
+            "x": 39.421875,
+            "y": 124,
+            "right": 112.3984375,
+            "bottom": 138,
+            "width": 72.9765625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "9ec81822a6ee3f632cdbfbc87b2cc3b6903d0281c2b7de51232a831d48cb8c5d",
+        "png_sha256": "f0cb47ba299a005dafd736ec7e02b6914abc266b2838a3cb32adbe592c321ce9",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "negative",
+        "width": 960,
+        "height": 540,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "1.000",
+            "x": 39,
+            "y": 62,
+            "right": 72.390625,
+            "bottom": 76,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-8.000",
+            "x": 32.40625,
+            "y": 464,
+            "right": 72.39453125,
+            "bottom": 478,
+            "width": 39.98828125,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "e98dfcc67de236af05bb61ce17aaae7a2caf89ccb18a58c4909a53239cf350e0",
+        "png_sha256": "99ed81b341a1a9b8955aedbfb0ba5103a23339467cb6abd1a23538d48374c57d",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "negative",
+        "width": 960,
+        "height": 540,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "1.000",
+            "x": 39,
+            "y": 62,
+            "right": 72.390625,
+            "bottom": 76,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-8.000",
+            "x": 32.40625,
+            "y": 464,
+            "right": 72.39453125,
+            "bottom": 478,
+            "width": 39.98828125,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "9b2aa8e594142865f8326b05392fbc3a801e94206866b3988af347276fd19ac0",
+        "png_sha256": "996b8bace2a78bab926043c3fcdf6119a8771c162f139538e82d627158705002",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "negative",
+        "width": 240,
+        "height": 200,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "1.000",
+            "x": 39,
+            "y": 62,
+            "right": 72.390625,
+            "bottom": 76,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-8.000",
+            "x": 32.40625,
+            "y": 124,
+            "right": 72.39453125,
+            "bottom": 138,
+            "width": 39.98828125,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "6feed47e6a5bc121bd9406d41ce087daf9c130c14207f2878f57973d7956dd42",
+        "png_sha256": "566efe0be0be2a238a356a033de75870b80e62f3f05ce4ca83deedc0eaae1c40",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "negative",
+        "width": 240,
+        "height": 200,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "1.000",
+            "x": 39,
+            "y": 62,
+            "right": 72.390625,
+            "bottom": 76,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-8.000",
+            "x": 32.40625,
+            "y": 124,
+            "right": 72.39453125,
+            "bottom": 138,
+            "width": 39.98828125,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "9d6c6f3e273daa07eb12e4d9791522fb6cc6420e853caf7c414fc4efbc5d3405",
+        "png_sha256": "b0ab108abb0be1cbc60c205bd41fb55b678bf15ca48fd04f778e6224a6cd5d02",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "fixed-small-negative",
+        "width": 960,
+        "height": 540,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "7.000",
+            "x": 87,
+            "y": 62,
+            "right": 120.390625,
+            "bottom": 76,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-0.000001000",
+            "x": 40.828125,
+            "y": 464,
+            "right": 120.40234375,
+            "bottom": 478,
+            "width": 79.57421875,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "1957742bbbcb82c9390f63be294e6a29ea011e8e65e4f9485b729a49bfa2d49d",
+        "png_sha256": "d1825987495fe863c4d74e510020cbf5283fc3bf352bf657631dcfe2c66462a0",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "fixed-small-negative",
+        "width": 960,
+        "height": 540,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "7.000",
+            "x": 87,
+            "y": 62,
+            "right": 120.390625,
+            "bottom": 76,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-0.000001000",
+            "x": 40.828125,
+            "y": 464,
+            "right": 120.40234375,
+            "bottom": 478,
+            "width": 79.57421875,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "550f1c5edbd299a2adc5b93ee6d384729e1e9d200ccd455c7f90706871fd473f",
+        "png_sha256": "da424c6844b10933fcdbfa8a186b6d3c523f4b609ffcced2ec98d42b44508baa",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "fixed-small-negative",
+        "width": 240,
+        "height": 200,
+        "carrier": "html",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "7.000",
+            "x": 87,
+            "y": 62,
+            "right": 120.390625,
+            "bottom": 76,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-0.000001000",
+            "x": 40.828125,
+            "y": 124,
+            "right": 120.40234375,
+            "bottom": 138,
+            "width": 79.57421875,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "88833d375456faf53b6dc7400b92c5caaadc83b6f8c70301b42300b084a4f842",
+        "png_sha256": "6d2be85c088c43e87906f45c36234a01010383284279f423ead2348b2dc24ae6",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      },
+      {
+        "fixture": "fixed-small-negative",
+        "width": 240,
+        "height": 200,
+        "carrier": "svg",
+        "marks": 8,
+        "clipped": [],
+        "numeric_ticks": [
+          {
+            "text": "7.000",
+            "x": 87,
+            "y": 62,
+            "right": 120.390625,
+            "bottom": 76,
+            "width": 33.390625,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          },
+          {
+            "text": "-0.000001000",
+            "x": 40.828125,
+            "y": 124,
+            "right": 120.40234375,
+            "bottom": 138,
+            "width": 79.57421875,
+            "height": 14,
+            "font_size": 12,
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "input_sha256": "38778817feb6b6128c735e28e3d43998b63372729ece9f72171ba627cdd5465a",
+        "png_sha256": "170c98843f2aee735b38e160e529978ada78bb24d8b38dd3d4064d69b95a2c57",
+        "console_errors": 0,
+        "page_errors": 0,
+        "external_requests": 0
+      }
+    ]
+  },
+  "log_manifest": [
+    {
+      "path": "artifacts/local/R11-12/red-unit.tap.log",
+      "bytes": 26276,
+      "sha256": "69a8b22a4a8a1d40be68c4b72da50116d12c4c4cd8e8bc23f3dd77d137eebbad"
+    },
+    {
+      "path": "artifacts/local/R11-12/red-browser.tap.log",
+      "bytes": 53778,
+      "sha256": "596a6d789da7ec499bf8a1160e971dfa08303bb9f36a45db8f2db8b2eb927cdf"
+    },
+    {
+      "path": "artifacts/local/R11-12/green-unit.tap.log",
+      "bytes": 5382,
+      "sha256": "5337b0600f3e488beb572837b78f764864820a762da134a494a3c469529e6593"
+    },
+    {
+      "path": "artifacts/local/R11-12/green-browser.tap.log",
+      "bytes": 13152,
+      "sha256": "12d56c1cf0885e90b4396799678022bc14ebdfbf20769cc74ce58bdb24038a29"
+    },
+    {
+      "path": "artifacts/local/R11-12/full-npm.log",
+      "bytes": 48428,
+      "sha256": "d20cb7468c034477f233274765c76bf6a11ebe1af1e93dac4bbc6fbe27c4f5b3"
+    },
+    {
+      "path": "artifacts/local/R11-12/typecheck.log",
+      "bytes": 136,
+      "sha256": "9d4faa42627cce5bfbf96de4e79491b65a667227c10f83c8c032b8776432e971"
+    },
+    {
+      "path": "artifacts/local/R11-12/schema-check.log",
+      "bytes": 584,
+      "sha256": "a56d2c024f92711d17f9b699a4ba9c10d952f2702a581b74ea60ec824b68c6b2"
+    },
+    {
+      "path": "artifacts/local/R11-12/pack-dry-run.log",
+      "bytes": 3458,
+      "sha256": "6f7f061ccf361b9848fbacec4236e6ff06193fca4394cdc624cdfb0e92cd8b55"
+    }
+  ]
+}
