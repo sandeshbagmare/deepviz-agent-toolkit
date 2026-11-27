@@ -87,3 +87,12 @@
 - Immutableoriginaltesthashunchanged; existing31pass5RED/full277pass5RED/core689resultsretainednoreplay. NextfreshsafeGitHubidentitythenexplicitown6pathcheckpointcommit/push/readback; R04eligibleproducertransfer/fixneeded.
 
 - R13freshsafeGET/user2026-11-27T14:00:02.390834UTC200expected`sandeshbagmare`, expectedcredential-freeorigininternallyverified/GCMmemoryonly/noAPIwrites. Currentactionexplicit6ownedpathstage/fullreview/hash+secretscanthencommit/push/readback, noothersourcechanges.
+
+- R13meaningfulscopedcommit **8f8a21f61c33d3527ecb2933427dd0fcded909bc**,6files211insertions; exactallowlist/fullstageddiffreview/whitespace0/credentialscan+recipe/immutabletesthashesPASS; production/schemadiff6d0exit0. Parentactualpublishedee30c8a; onlyownuntrackedartifacts. Nextnonforceownpush/readbacksavefinalMAINreceipt; stillREDunfixed/no-production-edits.
+
+### R13 final actual publication / return checkpoint
+
+- `git push origin agents/r10-09-helper-null-fix:agents/r10-09-helper-null-fix`exit0advancedee30c8a→**8f8a21f61c33d3527ecb2933427dd0fcded909bc**; actual`git ls-remote --heads origin refs/heads/agents/r10-09-helper-null-fix`exit0exactSHAmatcheslocal/expected. No force/sharedcandidate/issue/PRwrites. Trackingownbranchcleanexceptownuntrackedartifacts; finalproduction/schemadiff6d0exit0.
+- RawownR13push/readback/receipt; compactMAIN`docs/coordination/evidence/R13-09/publication.json`; finalMAINR13reportactualreceipt. PostpushMAINupdatesnotclaimedinsidealreadysealedcommit.
+- Ownedhandoffpublished, notsourcefix: strictREDandpositivecontrolsimmutable, newpreflight3PASS/0productsuitesrepeated; futureexecutor/productGREENNOT_RUN. Higherpriorityno-production-editsrespected. FullCI/900unmet; nofinalauthorindependenceclaim.
+- Next executable action/decisionownerR04: recordeligiblegeneralproducertransfer→minimalundefined-onlyhelperdefaultsourcecommit→separatenon-authortesterexactcleancommitrecipe+original40wrappercomparison. DoNOTintegrateREDtestbranchalone.

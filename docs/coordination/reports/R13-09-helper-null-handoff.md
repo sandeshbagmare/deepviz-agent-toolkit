@@ -1,5 +1,7 @@
 # R13-09 immutable helper-null regression and eligible-producer handoff
 
+**Published handoff:** `8f8a21f61c33d3527ecb2933427dd0fcded909bc`, own nonforcepush0 and actualremoteSHAreadback0/exactmatch. Source unchanged; original five nulls remain RED. New recipe preflight3controlsPASS; future product execution NOT_RUN. R04 owns eligible-producer transfer/fix decision.
+
 ## Recovery checkpoint before work
 
 - Actual same session `ses_de56782e5ffe3H1lUAoxrBtEhx`; native session_move confirmed EXISTING worktree `C:\Users\bagma\AppData\Local\Temp\opencode\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx`, branch `agents/r10-09-helper-null-fix`, HEAD **ee30c8a600ab1610477341894922ade6e5bad7f6**. No branch/worktree recreation, reset, source edit or dependency install.
@@ -32,3 +34,15 @@ Fullproduction delivery,900legitimatecreatedANDresolvedissues andgreenfinalCIrem
 
 - RefreshedauthenticatedGET/user **2026-11-27T14:00:02.390834UTC**, HTTP200/expected`sandeshbagmare`, expectedcredential-freeHTTPSoriginverifiedinternally. GCMcapture/tokenmemoryonly/noauthconfigchange/noAPIwrites. Ownsanitizedrawreceipt`artifacts/r13-09-20261127/github-user-get.json`.
 - Currentaction: explicit6pathstage NEWrecipe+R13report/evidence+ownnote+separatedR10receiptcheckpoint, inspectfullstageddiff/whitespace/credentialpatterns/immutablehash, thenownbranchcommit/nonforcepush/readback. No otherworker/sharedproduction/registry/issue/PRfilesallowed.
+
+### Meaningful scoped commit checkpoint
+
+- Explicit6pathallowlist/fullstageddiffreview/`git diff --cached --check`0/credentialpatternscanPASS/recipe+immutabletesthashesPASS. Production/schema diffagainstreleased6d0baseexit0. `git commit -m 'test: hand off immutable helper-null oracle and future retest recipe'` **exit0 →8f8a21f61c33d3527ecb2933427dd0fcded909bc**,6files211insertions, childofactualpublishedee30c8a. No production/existingoracleedits, onlyownuntrackedartifacts.
+- Next executable action: nonforceownbranchpushandexactremote8f8a21freadback; savefinalMAINreceipt. ProductnextR04: expliciteligibleproducertransfer→undefined-onlysourcefix→immutabletest/fullaffectedgates→non-authorreview/testing. This test/handoffcommit alone remainsRED/unfixed.
+
+## Final actual publication and handoff receipt
+
+- `git push origin agents/r10-09-helper-null-fix:agents/r10-09-helper-null-fix` **exit0**, actualownremoteadvancedee30c8a→**8f8a21f61c33d3527ecb2933427dd0fcded909bc**. `git ls-remote --heads origin refs/heads/agents/r10-09-helper-null-fix` **exit0**, readbackexact8f8a21f=localHEAD=expectedcommit; noforce/issue/PR/sharedcandidatewrites.
+- Final`git status --short --branch`showstrackingownbranchatremote/onlyownuntrackedartifacts. Finalproduction/schema diffagainst6d0base **exit0**. Permanentregressionandallproductionbytespreserved. Rawown`artifacts/r13-09-20261127/{push-r13.log,remote-r13.txt,publication-receipt.json}`; compactMAIN`docs/coordination/evidence/R13-09/publication.json`. These postpushreceiptsare saved MAINafteractualpush, notclaimedembeddedinthealreadysealed8f8a21fcommit.
+- CompletedOWNscope: actualee30recoveryreceipt, immutableRED/positivecontrol/minimalproposalhandoff, executablefuturecandidate recipe+3newpreflightcontrols, meaningful6pathcommit/publication. **Unfinishedproduct:** helpernullfixandfutureexecutorgates; no sourcechange/GREEN/finalapproval. ExistingR10countsretainedwithoutreplay. FullCI/900unmet.
+- **Next executable product action (R04 decision owner):** recordeligiblegeneralproducertransferforhelperdefaulting; producerusesimmutable4a585cdtestandminimalundefined-onlydefault, commits/publishesactualsource; a separate non-author tester invokes`tests/r13_probes/role09/retest-helper-null.ps1` against exactcleanproducercommit and runs originalwrapperprobe. Do notintegrateREDtestbranchalone orcallthisauthoranindependentfinalsignoff.
