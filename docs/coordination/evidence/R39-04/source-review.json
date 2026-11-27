@@ -1,0 +1,507 @@
+{
+  "review": "R39-04 independent dashboard-schema SOURCE HUNK only",
+  "session": "ses_de5678314ffeuDXtC7RfGsbD6V",
+  "observed_utc": "2026-11-27T17:08:51.480825+00:00",
+  "source_config_schema": "728bbac47b747501ad27f40525220317ea218064",
+  "parent": "40c67beef133663d8bb50c9db66494d5a0fbf826",
+  "approved_Mapping_guard_source": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+  "observed_merged_main_base": "31cff73ab057c3fed69bd400ac005f2f11609027",
+  "oracle_source": "155e42786ecfcdd8e04aed215c0751cd20ec3331",
+  "own_base": "9087bb28e7981244fa3973e0d28db7f6c6c3b5da",
+  "changed_paths_exact": [
+    "M\tpackages/deepviz/src/chart-spec.schema.json",
+    "M\tpython/deepviz/src/deepviz/models.py",
+    "M\tschemas/chart-spec.schema.json",
+    "M\ttests/test_schema_contract.py"
+  ],
+  "model_only_config_changed_vs_parent_bytes_AST": true,
+  "model_all_other_functions_fields_dataclasses_unchanged_vs_parent": true,
+  "runtime_check_dashboard_728_parent_bff_bytes_equal": {
+    "sha256_bytes": "9b9261190daf3da5a36b846b64fef9facafe5ddac7d5476f1b4fdff947852eba",
+    "sha256_AST": "b50cdb9e831f2faac2357c0e4003e3c026ca1b9009c31446e96dc1cdbbd83397",
+    "line_start": 61,
+    "line_end": 69
+  },
+  "schema_added_semantic_keys_only": [
+    "$.$defs.ChartSpec.allOf",
+    "$.$defs.ChartSpec.else",
+    "$.$defs.ChartSpec.if",
+    "$.$defs.ChartSpec.then"
+  ],
+  "schema_all_other_semantics_unchanged": true,
+  "config_static_literal_equals_published_schema_extra": true,
+  "canonical_npm_schema_bytes_equal": true,
+  "schema_charts_array_max24_and_recursive_ref_unchanged": {
+    "items": {
+      "$ref": "#/$defs/ChartSpec"
+    },
+    "maxItems": 24,
+    "title": "Charts",
+    "type": "array"
+  },
+  "scope_proofs": [
+    {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "ref": "728bbac47b747501ad27f40525220317ea218064",
+      "blob_oid": "17877904985d496f645cd7c66305efc8305bcb5f",
+      "bytes": 3493,
+      "sha256_git_bytes": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "lines": 92
+    },
+    {
+      "path": "schemas/chart-spec.schema.json",
+      "ref": "728bbac47b747501ad27f40525220317ea218064",
+      "blob_oid": "e4b96153ace7b0290bb7d48d3492707abe5186b5",
+      "bytes": 4975,
+      "sha256_git_bytes": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+      "lines": 237
+    },
+    {
+      "path": "packages/deepviz/src/chart-spec.schema.json",
+      "ref": "728bbac47b747501ad27f40525220317ea218064",
+      "blob_oid": "e4b96153ace7b0290bb7d48d3492707abe5186b5",
+      "bytes": 4975,
+      "sha256_git_bytes": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+      "lines": 237
+    },
+    {
+      "path": "tests/test_schema_contract.py",
+      "ref": "728bbac47b747501ad27f40525220317ea218064",
+      "blob_oid": "05e523b94e96edcfa539d5d94f89d4a72baee16b",
+      "bytes": 3383,
+      "sha256_git_bytes": "bd29f8530a5981f28fa7a11302eb547a4fa1173a0e5c870a381c01a93a2fd083",
+      "lines": 86
+    },
+    {
+      "path": "scripts/export_schema.py",
+      "ref": "728bbac47b747501ad27f40525220317ea218064",
+      "blob_oid": "17276da70b78d33e60603c9284070d4b99f0ecc9",
+      "bytes": 1235,
+      "sha256_git_bytes": "a6dad0617fd34b06933490e8ba1711de0d1ba2982fe2675bd932f5ca2eb49491",
+      "lines": 34
+    },
+    {
+      "path": "python/deepviz/src/deepviz/render.py",
+      "ref": "728bbac47b747501ad27f40525220317ea218064",
+      "blob_oid": "b2e15b750b6983902a31d1a89ae5a325b73bccef",
+      "bytes": 7022,
+      "sha256_git_bytes": "b397f65a44305919f4fdc94cd0b8d62aff2b1f939104c844c46d47f0a161f1fa",
+      "lines": 136
+    },
+    {
+      "path": "packages/deepviz/src/models.ts",
+      "ref": "728bbac47b747501ad27f40525220317ea218064",
+      "blob_oid": "58b11ee38240db20974d5ede07a320a8c5ce4740",
+      "bytes": 4737,
+      "sha256_git_bytes": "d43d5ae0bef1d43f251ed71899a9b507c6575562e4403bd2e2ac02bd7caa43e6",
+      "lines": 97
+    },
+    {
+      "path": "packages/deepviz/src/schema.ts",
+      "ref": "728bbac47b747501ad27f40525220317ea218064",
+      "blob_oid": "b99e2013dd6607f3949469d4b3ba47bbd112f038",
+      "bytes": 187,
+      "sha256_git_bytes": "8150ef7a9f4e1376818c38ec0b3a76e4c1fa92a7dec8e361e24195f6e38d0537",
+      "lines": 3
+    },
+    {
+      "path": "packages/deepviz/scripts/check-schema.mjs",
+      "ref": "728bbac47b747501ad27f40525220317ea218064",
+      "blob_oid": "b1857cc1482fcb0c53a02b8c479949e8a4b0eb77",
+      "bytes": 993,
+      "sha256_git_bytes": "9a417cc301087503a2eb2c6088d887085336868751284bb050f75187cdff6834",
+      "lines": 15
+    }
+  ],
+  "oracle": {
+    "path": "tests/r33_probes/role14/dashboard_schema_oracle.py",
+    "ref": "155e42786ecfcdd8e04aed215c0751cd20ec3331",
+    "blob_oid": "ca919b8d63f0a8bc175051220fcefdfde9ae2767",
+    "sha256_git_bytes": "935c768e6e9bba81f425d11ba709c5bafbeffaec60a92c87e32fb746708501ea",
+    "bytes": 10378,
+    "lines": 191,
+    "FULL_read_unchanged_not_executed": true,
+    "literal_RAW_cases": [
+      {
+        "name": "default_bar",
+        "raw_json": "{}",
+        "expected": true
+      },
+      {
+        "name": "bar_explicit_empty_children",
+        "raw_json": "{\"kind\":\"bar\",\"charts\":[]}",
+        "expected": true
+      },
+      {
+        "name": "dashboard_one_default_child",
+        "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{}]}",
+        "expected": true
+      },
+      {
+        "name": "root_integral_numbers",
+        "raw_json": "{\"version\":1.0,\"max_points\":2000.0,\"width\":900.0,\"height\":520.0,\"columns\":2.0}",
+        "expected": true
+      },
+      {
+        "name": "child_integral_numbers",
+        "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"kind\":\"line\",\"version\":1.0,\"max_points\":2000.0,\"width\":900.0,\"height\":520.0,\"columns\":2.0}]}",
+        "expected": true
+      },
+      {
+        "name": "dashboard_missing_children",
+        "raw_json": "{\"kind\":\"dashboard\"}",
+        "expected": false
+      },
+      {
+        "name": "dashboard_empty_children",
+        "raw_json": "{\"kind\":\"dashboard\",\"charts\":[]}",
+        "expected": false
+      },
+      {
+        "name": "bar_nonempty_children",
+        "raw_json": "{\"kind\":\"bar\",\"charts\":[{}]}",
+        "expected": false
+      },
+      {
+        "name": "default_bar_nonempty_children",
+        "raw_json": "{\"charts\":[{\"kind\":\"line\"}]}",
+        "expected": false
+      },
+      {
+        "name": "nested_empty_dashboard",
+        "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"kind\":\"dashboard\",\"charts\":[]}]}",
+        "expected": false
+      },
+      {
+        "name": "nested_nonempty_dashboard",
+        "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"kind\":\"dashboard\",\"charts\":[{}]}]}",
+        "expected": false
+      },
+      {
+        "name": "root_numeric_string",
+        "raw_json": "{\"width\":\"900\"}",
+        "expected": false
+      },
+      {
+        "name": "root_numeric_boolean",
+        "raw_json": "{\"columns\":true}",
+        "expected": false
+      },
+      {
+        "name": "child_numeric_string",
+        "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"version\":\"1\"}]}",
+        "expected": false
+      },
+      {
+        "name": "child_numeric_boolean",
+        "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"width\":true}]}",
+        "expected": false
+      },
+      {
+        "name": "root_forbidden_extra",
+        "raw_json": "{\"code\":\"inert data only\"}",
+        "expected": false
+      },
+      {
+        "name": "child_forbidden_extra",
+        "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"expression\":\"inert data only\"}]}",
+        "expected": false
+      }
+    ],
+    "literal_case_count": 17,
+    "declared_runtime_schema_plus_identity_checks_NOT_EXECUTED": 36
+  },
+  "bff_main_model_bytes_equal": true,
+  "bff_main_model_sha256_git_bytes": "8532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d",
+  "guard_in_bff": {
+    "sha256_bytes": "963f416e26c6e6001f5ced303acc7dab213668d73793ab4855f25b689cdbbee4",
+    "sha256_AST": "33527473c1260de747db1d323418cbd2d2ffed73b13c71976a85a6ad93b715e3",
+    "line_start": 39,
+    "line_end": 48
+  },
+  "old728_wholemodel_not_approved": "728 has dict guard, not approved Mapping import+guard. Copying whole728 would regress known UserDict/MappingProxyType root/child numeric rejection. No new regression probe or claimed live defect.",
+  "reference_only_future_composition": {
+    "actual_new_head_provided": false,
+    "config_only_bff_composition_sha256_LF": "be2cb15f6f91f2de4b9ebd4e283ea677e9e39490932db3ecd9934f2d6c1e4a1f",
+    "runtime_guard_bytes_equal_bff": true,
+    "contains_approved_Mapping_import": true,
+    "not_written_imported_or_validated_as_actual_product": true,
+    "purpose": "Future exact-head equivalence target only; any actual new source/test/schema head still needs its own byte-equivalence/affected gates, not inferred GREEN"
+  },
+  "connected_callers_read": {
+    "Python_model": "models.py19-31/47/61-69",
+    "Python_render": "render.py30-46 validates then inherits mappings/dimensions, never kind/charts; full136lines read",
+    "CLI": "cli.py41-48 model_validate_json before renderer",
+    "ToolSession": "tools.py94-100/132-142 validates before source/render",
+    "npm": "models.ts67-97 same defaultbar/arraymax24/onelevelrules; schema.ts imports JSON; check-schema.mjs compares copies/defaults only",
+    "export": "scripts/export_schema.py20-28 deterministic schema export/check; not executed"
+  },
+  "security_bounds": "Only static composition clauses: no new executable option/parser/URL/HTML/path/file-deletion/data accumulation; existing extra-forbid/max24/field bounds unchanged. Historical render.py spool/runtime bounds not approved by this schema-only review.",
+  "must_fix_findings": [],
+  "disposition": "NO MUST-FIX in exact728config/schemahunk subject to approved bffMapping invariant; NOTwhole728model/newhead/main/v1/CI/humanapproval",
+  "new_strict_counterexample": "none warranted by connected source trace",
+  "executions": {
+    "product_runtime_tests": 0,
+    "old14_oracle": 0,
+    "old82_Mapping_matrix": 0,
+    "NEW_counterexample": 0,
+    "browser_matrix_scale": 0,
+    "build_install": 0,
+    "API": 0,
+    "production_schema_config_oracle_env_writes": 0,
+    "spawn_poll": 0
+  },
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "728bbac47b747501ad27f40525220317ea218064^"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--name-status",
+        "-r",
+        "728bbac47b747501ad27f40525220317ea218064"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "728bbac47b747501ad27f40525220317ea218064:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "40c67beef133663d8bb50c9db66494d5a0fbf826:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "728bbac47b747501ad27f40525220317ea218064:schemas/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "728bbac47b747501ad27f40525220317ea218064:packages/deepviz/src/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "40c67beef133663d8bb50c9db66494d5a0fbf826:schemas/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "155e42786ecfcdd8e04aed215c0751cd20ec3331:tests/r33_probes/role14/dashboard_schema_oracle.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "728bbac47b747501ad27f40525220317ea218064:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "728bbac47b747501ad27f40525220317ea218064:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "728bbac47b747501ad27f40525220317ea218064:schemas/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "728bbac47b747501ad27f40525220317ea218064:schemas/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "728bbac47b747501ad27f40525220317ea218064:packages/deepviz/src/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "728bbac47b747501ad27f40525220317ea218064:packages/deepviz/src/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "728bbac47b747501ad27f40525220317ea218064:tests/test_schema_contract.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "728bbac47b747501ad27f40525220317ea218064:tests/test_schema_contract.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "728bbac47b747501ad27f40525220317ea218064:scripts/export_schema.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "728bbac47b747501ad27f40525220317ea218064:scripts/export_schema.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "728bbac47b747501ad27f40525220317ea218064:python/deepviz/src/deepviz/render.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "728bbac47b747501ad27f40525220317ea218064:python/deepviz/src/deepviz/render.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "728bbac47b747501ad27f40525220317ea218064:packages/deepviz/src/models.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "728bbac47b747501ad27f40525220317ea218064:packages/deepviz/src/models.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "728bbac47b747501ad27f40525220317ea218064:packages/deepviz/src/schema.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "728bbac47b747501ad27f40525220317ea218064:packages/deepviz/src/schema.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "728bbac47b747501ad27f40525220317ea218064:packages/deepviz/scripts/check-schema.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "728bbac47b747501ad27f40525220317ea218064:packages/deepviz/scripts/check-schema.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "155e42786ecfcdd8e04aed215c0751cd20ec3331:tests/r33_probes/role14/dashboard_schema_oracle.py"
+      ],
+      "exit": 0
+    }
+  ]
+}
