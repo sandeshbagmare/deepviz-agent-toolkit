@@ -1,8 +1,8 @@
 # R10-13 — independent CI negative controls
 
-Status: SCOPED CONTROLS VERIFIED / WHOLE SUITE RED / OWN PUBLICATION PENDING, 2026-11-27. Not final CI approval.
+Status: SCOPED CONTROLS VERIFIED / WHOLE SUITE RED / OWN BRANCH PUBLISHED, 2026-11-27. Not final CI approval.
 
-**Recovery pointer:** SAME-ID R13 resumed existing clean dedb41f branch after upstream interruption; no control/full-suite replay or branch recreation. Publication and exact36-case gate-repair handoff are tracked in [`R13-13-ci-gate-repair-handoff.md`](R13-13-ci-gate-repair-handoff.md). R13 authenticated snapshot verifies5340PR31draft/unmerged and Verification45928608970FAIL; evidence-policy success is not approval. Original R10 results below remain unchanged.
+**Recovery pointer:** SAME-ID R13 resumed existing clean dedb41f branch after upstream interruption; no control/full-suite replay or branch recreation. Nonforce OWNpush0 and remoteSHAreadback0 confirm `2e2b6391b8bf8fb9bd6d6e2e481e56686381022f` including dedb41f on `agents/r10-13-ci-negative-controls`. Publication and exact36-case gate-repair handoff are tracked in [`R13-13-ci-gate-repair-handoff.md`](R13-13-ci-gate-repair-handoff.md). R13 authenticated snapshot verifies5340PR31draft/unmerged and Verification45928608970FAIL; evidence-policy success is not approval. Original R10 results below remain unchanged.
 
 ## Outcome / decision for R04
 

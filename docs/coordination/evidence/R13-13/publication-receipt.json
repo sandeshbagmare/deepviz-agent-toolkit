@@ -1,0 +1,58 @@
+{
+  "session": "ses_de56780caffekQ9gdZ58EgQwb5",
+  "recorded_utc": "2026-11-27T14:12:29.898691+00:00",
+  "repository": "sandeshbagmare/deepviz-agent-toolkit",
+  "branch": "agents/r10-13-ci-negative-controls",
+  "published_checkpoint": "2e2b6391b8bf8fb9bd6d6e2e481e56686381022f",
+  "included_probe_commit": "dedb41fa8df3fdb90b845eef7a10b5fa4032872c",
+  "source_base": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "evidence_source": "Immediately preceding tool-observed push and ls-remote outputs; not inferred from local commit.",
+  "observed_commands": [
+    {
+      "argv": [
+        "git",
+        "push",
+        "--porcelain",
+        "-u",
+        "origin",
+        "agents/r10-13-ci-negative-controls:agents/r10-13-ci-negative-controls"
+      ],
+      "exit": 0,
+      "result": "New owned branch created and tracking established; non-force push."
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--heads",
+        "origin",
+        "refs/heads/agents/r10-13-ci-negative-controls"
+      ],
+      "exit": 0,
+      "stdout": "2e2b6391b8bf8fb9bd6d6e2e481e56686381022f\trefs/heads/agents/r10-13-ci-negative-controls\n"
+    }
+  ],
+  "current_local_head_verified": "2e2b6391b8bf8fb9bd6d6e2e481e56686381022f",
+  "current_local_branch_verified": "agents/r10-13-ci-negative-controls",
+  "current_local_status_clean": true,
+  "auth_identity_evidence": "remote-prepublication.json: authenticated GET /user200 sandeshbagmare; token only in captured memory.",
+  "scope": "Own branch only. No shared-candidate/default/issue/PR/workflow/config/dependency/source/existing-oracle edits.",
+  "tests_reexecuted_during_recovery": false,
+  "unmet_gates": {
+    "historical_scoped_controls": {
+      "passed": 31,
+      "failed": 0,
+      "skipped": 0
+    },
+    "historical_whole_suite": {
+      "failed": 36,
+      "passed": 3019,
+      "skipped": 5,
+      "exit": 1
+    },
+    "preserved_main_n15_ruff_findings": 7,
+    "remote_verification_45928608970": "completed/failure; not green",
+    "independent_final_reports": "not claimed",
+    "900_legitimate_created_and_resolved_issues": "unmet"
+  }
+}

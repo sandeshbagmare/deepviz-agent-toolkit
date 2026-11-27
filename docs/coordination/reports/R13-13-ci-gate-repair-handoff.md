@@ -1,6 +1,6 @@
 # R13-13 — recovered CI gate-control publication and repair handoff
 
-Status: RECOVERED / OWN PUBLICATION IN PROGRESS, 2026-11-27. Product CI remains unapproved.
+Status: RECOVERED / OWN BRANCH PUBLISHED / PRODUCT CI RED, 2026-11-27. Product CI remains unapproved.
 
 ## Recovery identity and boundaries
 
@@ -79,3 +79,15 @@ raise SystemExit(1 if any(item['exit'] for item in results) else 0)
 - Remote evidence-policy success can be bootstrap or format validation; it is NOT two genuine reviewer/two tester final-source approval or proof every URL is safe/real. This branch has only author self-review plus real independent CLI execution, not non-author review of its own code.
 
 Current action: copy only own note/reports/compact evidence into existing branch, review exact staged content and publish with non-force own-branch push + SHA readback. Next executable action: scoped copy/stage/review/sanitize; no repeat suites, auth change, remote issue/PR write or shared integration.
+
+## Publication checkpoint 1
+
+Explicit11ownedpaths/fullstageddiff reviewed;8JSONs parse,36unique savedfailure nodeIDs resolve to real testdefinitions, exactscope/secretpattern checks0 and stagedwhitespace0. Small report/evidence commit **`2e2b6391b8bf8fb9bd6d6e2e481e56686381022f`** is local and branchclean. No source/oracle/workflow change or testreplay. Next action: nonforceOWNbranch push and exact remoteSHAreadback; publication not yet claimed.
+
+## Publication checkpoint 2 — actual remote evidence
+
+- `git push --porcelain -u origin agents/r10-13-ci-negative-controls:agents/r10-13-ci-negative-controls` **exit0**, new OWNbranch only, GCM normal HTTPS; no force or PR creation. `git ls-remote --heads origin refs/heads/agents/r10-13-ci-negative-controls` **exit0**, exact **`2e2b6391b8bf8fb9bd6d6e2e481e56686381022f`**. This publishes tested-probecommitdedb41f plus ownedreports/note/compactevidence; not merely a local commit or reportedpush.
+- Immutable checkpoint: [published branch/tree](https://github.com/sandeshbagmare/deepviz-agent-toolkit/tree/2e2b6391b8bf8fb9bd6d6e2e481e56686381022f). No sharedcandidate/default/issue/PR mutation; workflows/source/existingoracles untouched. Actual full-suiteRED,5skips,7N15archivefindings and nofinalreview retained.
+- Additional read-only `git diff --exit-code 3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab 5340bc69b7203ad7a9166543062482d819f9b705 -- tests` exited0: the root acceptance/resource oracles are also byte-equivalent at the two product checkpoints, not just the previously listed protected paths.
+- Save this actual publication receipt in a small OWNdocumentation-only followup; any final followupSHAreadback is saved in OWNMAINnote/report before return. Final frozen-candidate tests/greenActions/four genuine final reports/fullproduction/900remain unmet.
+- **Integrator next executable action:** inspect `git show dedb41fa8df3fdb90b845eef7a10b5fa4032872c` and the5groups in `evidence/R13-13/gate-repair-plan.json`, decide exact contract/oracle corrections through existing source owners, then run the supplied focused recipe on a recorded clean candidate. No parallel source authority is granted by this handoff.
