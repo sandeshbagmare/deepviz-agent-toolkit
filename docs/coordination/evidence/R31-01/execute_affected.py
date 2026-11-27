@@ -1,0 +1,17 @@
+from pathlib import Path
+import hashlib,importlib.metadata,json,os,sys
+import pytest
+from jsonschema import Draft202012Validator
+from pydantic import ValidationError
+import deepviz.models as models
+OUT=Path(os.environ['R31_OUT']);SNAP=Path.cwd();identity=json.loads((OUT/'source-identity.json').read_text());expected=SNAP/'python/deepviz/src/deepviz/models.py';assert Path(models.__file__).resolve()==expected.resolve();assert all(hashlib.sha256((SNAP/rel).read_bytes()).hexdigest()==meta['sha256'] for rel,meta in identity['all_tree_files'].items());assert hashlib.sha256(expected.read_bytes()).hexdigest()=='8532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d';published=Path(os.environ['R31_F1_PROBE']);assert hashlib.sha256(published.read_bytes()).hexdigest()=='308c62bcf763965ca166e7939a5e79aabda7194bec258b276b4ed9f01657d6e4';own=Path(os.environ['R31_OWN_PROBE']);proof={'source':identity['source'],'actual_model_path':models.__file__,'model_Git_LF_sha256':hashlib.sha256(expected.read_bytes()).hexdigest(),'all15exactGitblobs_before_assertions':True,'published_F1_exactSHA':hashlib.sha256(published.read_bytes()).hexdigest(),'new_independent4_sha256':hashlib.sha256(own.read_bytes()).hexdigest(),'provided_new42_sha256':hashlib.sha256((SNAP/'tests/test_native_mapping.py').read_bytes()).hexdigest(),'same_process_pytest':True,'python':sys.version,'versions':{name:importlib.metadata.version(name) for name in ['pydantic','pytest','jsonschema','ruff','mypy']},'path':sys.path};(OUT/'actual-import-proof.json').write_text(json.dumps(proof,indent=2)+'\n',encoding='utf-8',newline='\n');print(json.dumps(proof));rc=pytest.main(['-q','--strict-markers','--tb=short','-p','no:cacheprovider','--junitxml',str(OUT/'affected47.xml'),'tests/test_native_mapping.py',str(published),str(own)])
+schema=models.ChartSpec.model_json_schema();Draft202012Validator.check_schema(schema);generated=(json.dumps(schema,indent=2)+'\n').encode();assert generated==(SNAP/'schemas/chart-spec.schema.json').read_bytes();(OUT/'actual-generated.schema.json').write_bytes(generated);fixtures=json.loads((SNAP/'docs/verification/r22-contract/validation-output.json').read_text());validator=Draft202012Validator(schema)
+for fixture in fixtures['accepted']:
+    parsed=models.ChartSpec.model_validate_json(json.dumps(fixture['input']));actual=json.loads(parsed.model_dump_json());assert actual==fixture['actual_json_output'];validator.validate(actual)
+for fixture in fixtures['rejected']:
+    assert not validator.is_valid(fixture['input'])
+    try:models.ChartSpec.model_validate_json(json.dumps(fixture['input']))
+    except ValidationError as error:
+        errors=[{key:item[key] if key!='loc' else list(item[key]) for key in ['type','loc','msg']} for item in error.errors(include_url=False)];assert errors==fixture['actual_errors']
+    else:raise AssertionError('Committed strict JSON negative accepted')
+fixtures.update({'actual_source':identity['source'],'independently_reexecuted_all10':True,'schema_Git_LF_sha256':hashlib.sha256(generated).hexdigest(),'chart_image_applicable':False});(OUT/'independent-model-JSON-output.json').write_text(json.dumps(fixtures,indent=2)+'\n',encoding='utf-8',newline='\n');print(json.dumps({'source':identity['source'],'affected_pytest_exit':int(rc),'new42_plus_unchangedF1_plus_independent4':47,'all10_model_JSON_outputs_exact':True,'schema_bytes_exact':True}));sys.exit(rc)

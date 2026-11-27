@@ -1,0 +1,839 @@
+diff --git a/.github/workflows/chart-contract.yml b/.github/workflows/chart-contract.yml
+new file mode 100644
+index 0000000..337f3c5
+--- /dev/null
++++ b/.github/workflows/chart-contract.yml
+@@ -0,0 +1,34 @@
++name: ChartSpec contract (focused slice)
++
++on:
++  push:
++    branches: [main, fix/r22-strict-numeric-contract]
++  pull_request:
++    branches: [main]
++
++permissions:
++  contents: read
++
++jobs:
++  numeric-contract:
++    name: Numeric contract / Python ${{ matrix.python }}
++    runs-on: ubuntu-latest
++    strategy:
++      fail-fast: false
++      matrix:
++        python: ['3.11', '3.12', '3.13']
++    env:
++      PYTHONPATH: python/deepviz/src
++    steps:
++      - uses: actions/checkout@v4
++      - uses: actions/setup-python@v5
++        with:
++          python-version: ${{ matrix.python }}
++      - name: Install contract-only test dependencies
++        run: python -m pip install 'pydantic>=2.10,<3' 'pytest>=8' 'jsonschema>=4.23' 'ruff>=0.11' 'mypy>=1.15'
++      - name: Full test suite present in this focused slice (not renderer integration)
++        run: python -m pytest -q --strict-markers --junitxml=contract-results.xml
++      - name: Lint focused source and tests
++        run: python -m ruff check .
++      - name: Type-check focused model
++        run: python -m mypy
+diff --git a/docs/verification/r22-contract/README.md b/docs/verification/r22-contract/README.md
+new file mode 100644
+index 0000000..7487b19
+--- /dev/null
++++ b/docs/verification/r22-contract/README.md
+@@ -0,0 +1,28 @@
++# Focused ChartSpec numeric trust-boundary fix (#30)
++
++This independently usable model fix starts from default `main` **0ae2cf26426822135fc10d337fcacf580b7ed833**, not the broader unfinished toolkit. The only runtime change is the11-line before-validator previously tested at **e44f667ed494fa272f97792ef99942a364ebca24**. It rejects strings and booleans for the five numeric fields, while preserving integral JSON floats, defaults, bounds and dashboard validation. No new schema fields, executable input, renderer or network/file authority.
++
++The original complete30-test prerequisite is included (import-order-only lint adjustment); a new10-test module checks own-checkout imports, generated-schema freshness and JSONSchema/Python agreement at the numeric trust boundary, including children. `schemas/chart-spec.schema.json` is the **real regenerated export**, byte-identical before/after the runtime fix: SHA256 `ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d`.
++
++## Executed evidence
++
++- Original source: **6 failed /24 passed /0 skipped**.
++- Expanded strict controls, still before runtime edits: **12 failed /28 passed /0 skipped**.
++- After exact validator and import-order cleanup: full suite in this focused checkout **40 passed /0 failed /0 skipped**,0.35s. Full-branch Ruff passed; mypy passed for the only model source file.
++- [Machine summary, source/test/workflow hashes and all RED names](red-green-summary.json).
++- [Actual public JSON validation outputs](validation-output.json): four accepted/serialized/Schema-valid fixtures and six rejected fixtures with real errors. This is a **model-only change**, so chart rendering is not applicable; no screenshot or whole-toolkit runtime is invented.
++
++Local verification uses the existing project venv without installations. Because the foundation is a namespace package and the shared venv has another editable checkout, tests use `python -S` with `PYTHONPATH` explicitly containing this checkout's `python/deepviz/src` and the existing read-only site-packages. The test verifies the actual imported model path. CI has a clean dependency-only environment, not the editable sibling hook.
++
++```powershell
++# Set own PYTHONPATH; with shared local venv use -S as explained above.
++python -m pytest -q --strict-markers
++python -m ruff check .
++python -m mypy
++```
++
++The new workflow runs **contract-only** Python3.11/3.12/3.13 tests/lint/types. It does not claim full-renderer integration. No package/dependency/CLI implementation was pulled from the failing broad candidate; those remain future slices.
++
++## Merge gates
++
++Two genuine independent reviewers and two testers must examine the exact published proposed head, and actual focused CI must be observed green before merge. Author evidence is not an independent approval. Broader draft PR31, unresolved toolkit defects and900legitimate-resolution criterion remain separate/unmet.
+diff --git a/docs/verification/r22-contract/red-green-summary.json b/docs/verification/r22-contract/red-green-summary.json
+new file mode 100644
+index 0000000..3ebb04f
+--- /dev/null
++++ b/docs/verification/r22-contract/red-green-summary.json
+@@ -0,0 +1,114 @@
++{
++  "base": "0ae2cf26426822135fc10d337fcacf580b7ed833",
++  "source_equivalent_e44_after_Git_LF_normalization": true,
++  "not_yet_a_commit": true,
++  "results": [
++    {
++      "name": "R22-contract-red",
++      "tests": 30,
++      "failures": 6,
++      "skips": 0,
++      "errors": 0,
++      "xml_seconds": "0.314",
++      "xml_sha256": "3a3dc5ba3a05a35ada95ba7f7b59aba6851ce71b1dbd185aa98869939aca6b16",
++      "failures_by_name": [
++        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[width-900]",
++        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[height-520]",
++        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[columns-2]",
++        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[max_points-2000]",
++        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[version-True]",
++        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[columns-True]"
++      ]
++    },
++    {
++      "name": "R22-contract-expanded-red",
++      "tests": 40,
++      "failures": 12,
++      "skips": 0,
++      "errors": 0,
++      "xml_seconds": "0.377",
++      "xml_sha256": "f1850ddaf21780e1603c329e98d31238ddb71a428484d489aa6d3d57977e2efe",
++      "failures_by_name": [
++        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[width-900]",
++        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[height-520]",
++        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[columns-2]",
++        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[max_points-2000]",
++        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[version-True]",
++        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[columns-True]",
++        "test_numeric_json_types_and_bounds_agree[version-1-1-1]",
++        "test_numeric_json_types_and_bounds_agree[max_points-10-100000-2000]",
++        "test_numeric_json_types_and_bounds_agree[width-240-4096-900]",
++        "test_numeric_json_types_and_bounds_agree[height-200-4096-520]",
++        "test_numeric_json_types_and_bounds_agree[columns-1-6-2]",
++        "test_numeric_child_validation_is_not_bypassed_by_dashboard[900-False]"
++      ]
++    },
++    {
++      "name": "R22-contract-green2",
++      "tests": 40,
++      "failures": 0,
++      "skips": 0,
++      "errors": 0,
++      "xml_seconds": "0.262",
++      "xml_sha256": "dd91e8a37fcf3f782c10ddc6d136dbef6b667c110a9b5ea78e9808eb3b2d429f",
++      "failures_by_name": []
++    }
++  ],
++  "latest_checks": {
++    "pytest_exit": 0,
++    "tests": 40,
++    "failures": 0,
++    "skips": 0,
++    "ruff_exit": 0,
++    "mypy_exit": 0,
++    "mypy_files": 1
++  },
++  "commands": {
++    "source_isolation": "python -S; PYTHONPATH=OWN/python/deepviz/src;MAIN/.venv/Lib/site-packages (no .pth/editable hooks)",
++    "red": "python -S -m pytest tests/test_models.py -q --tb=short -p no:cacheprovider --junitxml=<red.xml>",
++    "expanded_red_and_green": "python -S -m pytest -q --strict-markers --tb=short -p no:cacheprovider --junitxml=<unique.xml>",
++    "lint": "python -S -m ruff check .",
++    "types": "python -S -m mypy --cache-dir <OWN-temp-cache>"
++  },
++  "versions": {
++    "pydantic": "2.14.4",
++    "pytest": "9.2.0",
++    "jsonschema": "4.26.0",
++    "ruff": "0.17.6",
++    "mypy": "2.4.1"
++  },
++  "files": [
++    {
++      "path": "python/deepviz/src/deepviz/models.py",
++      "working_sha256": "02de5fac6ab08166ff0f1692cde8209b4bb73f5326bf13f178e2aa90ddf7253c",
++      "git_LF_sha256": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170"
++    },
++    {
++      "path": "tests/test_models.py",
++      "working_sha256": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32",
++      "git_LF_sha256": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32"
++    },
++    {
++      "path": "tests/test_numeric_schema.py",
++      "working_sha256": "b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3",
++      "git_LF_sha256": "b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3"
++    },
++    {
++      "path": "schemas/chart-spec.schema.json",
++      "working_sha256": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d",
++      "git_LF_sha256": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d"
++    },
++    {
++      "path": ".github/workflows/chart-contract.yml",
++      "working_sha256": "ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227",
++      "git_LF_sha256": "ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227"
++    }
++  ],
++  "scope_limits": [
++    "No rendered chart applicable: only model numeric trust boundary; real serialized validation output supplied",
++    "Foundation main has no renderer/CLI/package modules; no claim full pip/SDK/toolkit operational",
++    "CI and four exact-head independent reports pending",
++    "Original e44 oracle has import-order-only normalization, all assertions preserved",
++    "Two pre-test identity guard failures and two initial Ruff import-group findings are preserved in manager report, not hidden passes"
++  ]
++}
+diff --git a/docs/verification/r22-contract/validation-output.json b/docs/verification/r22-contract/validation-output.json
+new file mode 100644
+index 0000000..81dab1a
+--- /dev/null
++++ b/docs/verification/r22-contract/validation-output.json
+@@ -0,0 +1,225 @@
++{
++  "scope": "Actual model/JSON Schema outputs, not a renderer or full toolkit integration test",
++  "accepted": [
++    {
++      "input": {},
++      "actual_json_output": {
++        "version": 1,
++        "kind": "bar",
++        "title": "Visualization",
++        "description": "",
++        "x": null,
++        "y": null,
++        "color": null,
++        "size": null,
++        "data_path": null,
++        "format": "auto",
++        "aggregation": "auto",
++        "max_points": 2000,
++        "width": 900,
++        "height": 520,
++        "theme": "light",
++        "charts": [],
++        "columns": 2
++      },
++      "schema_valid": true
++    },
++    {
++      "input": {
++        "width": 900.0
++      },
++      "actual_json_output": {
++        "version": 1,
++        "kind": "bar",
++        "title": "Visualization",
++        "description": "",
++        "x": null,
++        "y": null,
++        "color": null,
++        "size": null,
++        "data_path": null,
++        "format": "auto",
++        "aggregation": "auto",
++        "max_points": 2000,
++        "width": 900,
++        "height": 520,
++        "theme": "light",
++        "charts": [],
++        "columns": 2
++      },
++      "schema_valid": true
++    },
++    {
++      "input": {
++        "version": 1.0,
++        "max_points": 10.0,
++        "width": 240.0,
++        "height": 200.0,
++        "columns": 1.0
++      },
++      "actual_json_output": {
++        "version": 1,
++        "kind": "bar",
++        "title": "Visualization",
++        "description": "",
++        "x": null,
++        "y": null,
++        "color": null,
++        "size": null,
++        "data_path": null,
++        "format": "auto",
++        "aggregation": "auto",
++        "max_points": 10,
++        "width": 240,
++        "height": 200,
++        "theme": "light",
++        "charts": [],
++        "columns": 1
++      },
++      "schema_valid": true
++    },
++    {
++      "input": {
++        "kind": "dashboard",
++        "charts": [
++          {
++            "kind": "bar",
++            "width": 900.0
++          }
++        ]
++      },
++      "actual_json_output": {
++        "version": 1,
++        "kind": "dashboard",
++        "title": "Visualization",
++        "description": "",
++        "x": null,
++        "y": null,
++        "color": null,
++        "size": null,
++        "data_path": null,
++        "format": "auto",
++        "aggregation": "auto",
++        "max_points": 2000,
++        "width": 900,
++        "height": 520,
++        "theme": "light",
++        "charts": [
++          {
++            "version": 1,
++            "kind": "bar",
++            "title": "Visualization",
++            "description": "",
++            "x": null,
++            "y": null,
++            "color": null,
++            "size": null,
++            "data_path": null,
++            "format": "auto",
++            "aggregation": "auto",
++            "max_points": 2000,
++            "width": 900,
++            "height": 520,
++            "theme": "light",
++            "charts": [],
++            "columns": 2
++          }
++        ],
++        "columns": 2
++      },
++      "schema_valid": true
++    }
++  ],
++  "rejected": [
++    {
++      "input": {
++        "width": "900"
++      },
++      "schema_valid": false,
++      "actual_errors": [
++        {
++          "type": "value_error",
++          "loc": [],
++          "msg": "Value error, width must be a JSON number, not a string or boolean"
++        }
++      ]
++    },
++    {
++      "input": {
++        "version": true
++      },
++      "schema_valid": false,
++      "actual_errors": [
++        {
++          "type": "value_error",
++          "loc": [],
++          "msg": "Value error, version must be a JSON number, not a string or boolean"
++        }
++      ]
++    },
++    {
++      "input": {
++        "columns": true
++      },
++      "schema_valid": false,
++      "actual_errors": [
++        {
++          "type": "value_error",
++          "loc": [],
++          "msg": "Value error, columns must be a JSON number, not a string or boolean"
++        }
++      ]
++    },
++    {
++      "input": {
++        "height": 520.5
++      },
++      "schema_valid": false,
++      "actual_errors": [
++        {
++          "type": "int_from_float",
++          "loc": [
++            "height"
++          ],
++          "msg": "Input should be a valid integer, got a number with a fractional part"
++        }
++      ]
++    },
++    {
++      "input": {
++        "max_points": 9
++      },
++      "schema_valid": false,
++      "actual_errors": [
++        {
++          "type": "greater_than_equal",
++          "loc": [
++            "max_points"
++          ],
++          "msg": "Input should be greater than or equal to 10"
++        }
++      ]
++    },
++    {
++      "input": {
++        "kind": "dashboard",
++        "charts": [
++          {
++            "width": "900"
++          }
++        ]
++      },
++      "schema_valid": false,
++      "actual_errors": [
++        {
++          "type": "value_error",
++          "loc": [
++            "charts",
++            0
++          ],
++          "msg": "Value error, width must be a JSON number, not a string or boolean"
++        }
++      ]
++    }
++  ]
++}
+diff --git a/python/deepviz/src/deepviz/models.py b/python/deepviz/src/deepviz/models.py
+index 7f09721..676439c 100644
+--- a/python/deepviz/src/deepviz/models.py
++++ b/python/deepviz/src/deepviz/models.py
+@@ -1,6 +1,7 @@
+ """Versioned, execution-free contracts shared by all rendering adapters."""
+ from __future__ import annotations
+ 
++from collections.abc import Mapping
+ from dataclasses import dataclass, field
+ from typing import Any, Literal
+ 
+@@ -35,6 +36,17 @@ class ChartSpec(BaseModel):
+     charts: list[ChartSpec] = Field(default_factory=list, max_length=24)
+     columns: int = Field(default=2, ge=1, le=6)
+ 
++    @model_validator(mode="before")
++    @classmethod
++    def preserve_json_numeric_types(cls, value: Any) -> Any:
++        if isinstance(value, Mapping):
++            for key in ("version", "max_points", "width", "height", "columns"):
++                if key in value and (
++                    isinstance(value[key], bool) or not isinstance(value[key], (int, float))
++                ):
++                    raise ValueError(f"{key} must be a JSON number, not a string or boolean")
++        return value
++
+     @model_validator(mode="after")
+     def check_dashboard(self) -> ChartSpec:
+         if self.kind == "dashboard" and not self.charts:
+diff --git a/schemas/chart-spec.schema.json b/schemas/chart-spec.schema.json
+new file mode 100644
+index 0000000..00a5245
+--- /dev/null
++++ b/schemas/chart-spec.schema.json
+@@ -0,0 +1,190 @@
++{
++  "$defs": {
++    "ChartSpec": {
++      "additionalProperties": false,
++      "description": "Map normalized record fields to a bounded chart or composed dashboard.",
++      "properties": {
++        "version": {
++          "const": 1,
++          "default": 1,
++          "title": "Version",
++          "type": "integer"
++        },
++        "kind": {
++          "default": "bar",
++          "enum": [
++            "bar",
++            "line",
++            "scatter",
++            "area",
++            "pie",
++            "heatmap",
++            "histogram",
++            "box",
++            "violin",
++            "bubble",
++            "radar",
++            "treemap",
++            "sunburst",
++            "funnel",
++            "gauge",
++            "geo",
++            "table",
++            "dashboard"
++          ],
++          "title": "Kind",
++          "type": "string"
++        },
++        "title": {
++          "default": "Visualization",
++          "maxLength": 500,
++          "title": "Title",
++          "type": "string"
++        },
++        "description": {
++          "default": "",
++          "maxLength": 2000,
++          "title": "Description",
++          "type": "string"
++        },
++        "x": {
++          "anyOf": [
++            {
++              "type": "string"
++            },
++            {
++              "type": "null"
++            }
++          ],
++          "default": null,
++          "title": "X"
++        },
++        "y": {
++          "anyOf": [
++            {
++              "type": "string"
++            },
++            {
++              "type": "null"
++            }
++          ],
++          "default": null,
++          "title": "Y"
++        },
++        "color": {
++          "anyOf": [
++            {
++              "type": "string"
++            },
++            {
++              "type": "null"
++            }
++          ],
++          "default": null,
++          "title": "Color"
++        },
++        "size": {
++          "anyOf": [
++            {
++              "type": "string"
++            },
++            {
++              "type": "null"
++            }
++          ],
++          "default": null,
++          "title": "Size"
++        },
++        "data_path": {
++          "anyOf": [
++            {
++              "type": "string"
++            },
++            {
++              "type": "null"
++            }
++          ],
++          "default": null,
++          "title": "Data Path"
++        },
++        "format": {
++          "default": "auto",
++          "enum": [
++            "auto",
++            "json",
++            "jsonl",
++            "csv",
++            "tsv",
++            "parquet",
++            "arrow"
++          ],
++          "title": "Format",
++          "type": "string"
++        },
++        "aggregation": {
++          "default": "auto",
++          "enum": [
++            "auto",
++            "none",
++            "sample",
++            "sum",
++            "mean",
++            "count",
++            "min",
++            "max"
++          ],
++          "title": "Aggregation",
++          "type": "string"
++        },
++        "max_points": {
++          "default": 2000,
++          "maximum": 100000,
++          "minimum": 10,
++          "title": "Max Points",
++          "type": "integer"
++        },
++        "width": {
++          "default": 900,
++          "maximum": 4096,
++          "minimum": 240,
++          "title": "Width",
++          "type": "integer"
++        },
++        "height": {
++          "default": 520,
++          "maximum": 4096,
++          "minimum": 200,
++          "title": "Height",
++          "type": "integer"
++        },
++        "theme": {
++          "default": "light",
++          "enum": [
++            "light",
++            "dark"
++          ],
++          "title": "Theme",
++          "type": "string"
++        },
++        "charts": {
++          "items": {
++            "$ref": "#/$defs/ChartSpec"
++          },
++          "maxItems": 24,
++          "title": "Charts",
++          "type": "array"
++        },
++        "columns": {
++          "default": 2,
++          "maximum": 6,
++          "minimum": 1,
++          "title": "Columns",
++          "type": "integer"
++        }
++      },
++      "title": "ChartSpec",
++      "type": "object"
++    }
++  },
++  "$ref": "#/$defs/ChartSpec"
++}
+diff --git a/tests/test_models.py b/tests/test_models.py
+new file mode 100644
+index 0000000..77441bc
+--- /dev/null
++++ b/tests/test_models.py
+@@ -0,0 +1,66 @@
++"""Trust-boundary tests for the shared, execution-free chart contract."""
++from dataclasses import asdict
++
++import pytest
++from deepviz.models import Artifact, ChartSpec, NormalizedData
++from pydantic import ValidationError
++
++
++@pytest.mark.parametrize("key,value", [
++    ("kind", "arbitrary-code"), ("version", 2), ("max_points", 0),
++    ("max_points", 100001), ("width", 1), ("width", 5000),
++    ("height", 1), ("height", 5000), ("theme", "injected"),
++    ("format", "pickle"), ("aggregation", "eval"), ("columns", 0),
++    ("columns", 7), ("title", "x" * 501), ("description", "x" * 2001),
++])
++def test_invalid_schema_values_fail_closed(key, value):
++    with pytest.raises(ValidationError):
++        ChartSpec.model_validate({key: value})
++
++
++@pytest.mark.parametrize("key", ["code", "expression", "javascript", "sql", "url"])
++def test_executable_and_remote_schema_fields_are_not_supported(key):
++    with pytest.raises(ValidationError):
++        ChartSpec.model_validate({key: "not executable"})
++
++
++def test_defaults_are_bounded_and_serializable():
++    spec = ChartSpec()
++    assert spec.max_points == 2000
++    assert spec.model_dump(mode="json")["version"] == 1
++    assert ChartSpec.model_validate_json(spec.model_dump_json()) == spec
++
++
++@pytest.mark.parametrize("key,value", [
++    ("width", "900"), ("height", "520"), ("columns", "2"),
++    ("max_points", "2000"), ("version", True), ("columns", True),
++])
++def test_json_schema_numeric_types_do_not_coerce_strings_or_booleans(key, value):
++    with pytest.raises(ValidationError):
++        ChartSpec.model_validate({key: value})
++
++
++def test_json_integer_semantics_allow_integral_floats():
++    assert ChartSpec.model_validate({"width": 900.0}).width == 900
++
++
++def test_dashboard_requires_children_and_rejects_nesting():
++    with pytest.raises(ValidationError, match="requires at least one"):
++        ChartSpec(kind="dashboard")
++    with pytest.raises(ValidationError, match="Only dashboards"):
++        ChartSpec(charts=[ChartSpec()])
++    with pytest.raises(ValidationError, match="Nested dashboards"):
++        ChartSpec(kind="dashboard", charts=[ChartSpec(kind="dashboard", charts=[ChartSpec()])])
++    with pytest.raises(ValidationError):
++        ChartSpec(kind="dashboard", charts=[ChartSpec()] * 25)
++
++
++def test_artifact_metadata_does_not_share_mutable_defaults():
++    first = Artifact(["chart.svg"], "image/svg+xml", "vega", 10, 10, "none")
++    second = Artifact(["other.svg"], "image/svg+xml", "vega", 10, 10, "none")
++    first.warnings.append("example")
++    assert not second.warnings
++    assert first.to_dict() == asdict(first)
++    normalized = NormalizedData([], 0)
++    assert normalized.strategy == "none"
++    assert normalized.warnings == []
+diff --git a/tests/test_native_mapping.py b/tests/test_native_mapping.py
+new file mode 100644
+index 0000000..1bcb2e6
+--- /dev/null
++++ b/tests/test_native_mapping.py
+@@ -0,0 +1,45 @@
++"""Accepted native Mapping containers must not bypass numeric validation."""
++from collections import UserDict
++from types import MappingProxyType
++
++import pytest
++from deepviz.models import ChartSpec
++from pydantic import ValidationError
++
++FACTORIES = [UserDict, MappingProxyType]
++NUMBERS = {"version": 1, "max_points": 2000, "width": 900, "height": 520, "columns": 2}
++
++
++@pytest.mark.parametrize("factory", FACTORIES)
++@pytest.mark.parametrize("field", NUMBERS)
++@pytest.mark.parametrize("invalid", ["numeric-string", True, False])
++def test_supported_mappings_reject_the_same_numeric_coercions(factory, field, invalid):
++    value = str(NUMBERS[field]) if invalid == "numeric-string" else invalid
++    original = {field: value}
++    payload = factory(original)
++    with pytest.raises(ValidationError, match=f"{field} must be a JSON number"):
++        ChartSpec.model_validate(payload)
++    assert dict(payload) == original
++
++
++@pytest.mark.parametrize("factory", FACTORIES)
++@pytest.mark.parametrize("values", [{}, {key: float(value) for key, value in NUMBERS.items()}])
++def test_supported_mappings_preserve_defaults_and_integral_numbers(factory, values):
++    payload = factory(values)
++    parsed = ChartSpec.model_validate(payload)
++    assert {key: getattr(parsed, key) for key in NUMBERS} == NUMBERS
++    assert all(type(getattr(parsed, key)) is int for key in NUMBERS)
++    assert dict(payload) == values
++
++
++@pytest.mark.parametrize("factory", FACTORIES)
++@pytest.mark.parametrize("invalid", ["900", True, False])
++def test_nested_mapping_children_cannot_bypass_the_numeric_guard(factory, invalid):
++    with pytest.raises(ValidationError, match="width must be a JSON number"):
++        ChartSpec.model_validate({"kind": "dashboard", "charts": [factory({"width": invalid})]})
++
++
++@pytest.mark.parametrize("factory", FACTORIES)
++def test_nested_integral_mapping_children_remain_valid(factory):
++    parsed = ChartSpec.model_validate({"kind": "dashboard", "charts": [factory({"width": 900.0})]})
++    assert parsed.charts[0].width == 900
+diff --git a/tests/test_numeric_schema.py b/tests/test_numeric_schema.py
+new file mode 100644
+index 0000000..1485a16
+--- /dev/null
++++ b/tests/test_numeric_schema.py
+@@ -0,0 +1,59 @@
++"""JSON Schema agreement for the numeric runtime fix, not toolkit integration."""
++import json
++from pathlib import Path
++
++import deepviz.models as models
++import pytest
++from deepviz.models import ChartSpec
++from jsonschema import Draft202012Validator
++from pydantic import ValidationError
++
++ROOT = Path(__file__).resolve().parents[1]
++
++
++def test_model_import_is_this_checkout_not_an_installed_sibling():
++    assert Path(models.__file__).resolve() == ROOT / "python/deepviz/src/deepviz/models.py"
++
++
++def test_published_schema_is_the_actual_model_export():
++    published = json.loads((ROOT / "schemas/chart-spec.schema.json").read_text(encoding="utf-8"))
++    assert published == ChartSpec.model_json_schema()
++    Draft202012Validator.check_schema(published)
++
++
++@pytest.mark.parametrize("field,minimum,maximum,default", [
++    ("version", 1, 1, 1),
++    ("max_points", 10, 100000, 2000),
++    ("width", 240, 4096, 900),
++    ("height", 200, 4096, 520),
++    ("columns", 1, 6, 2),
++])
++def test_numeric_json_types_and_bounds_agree(field, minimum, maximum, default):
++    schema = Draft202012Validator(ChartSpec.model_json_schema())
++    for value, expected in [
++        (minimum, True), (maximum, True), (default, True), (float(default), True),
++        (True, False), (False, False), (str(default), False), (None, False),
++        (minimum - 1, False), (maximum + 1, False), (default + 0.5, False),
++    ]:
++        payload = {field: value}
++        assert schema.is_valid(payload) is expected
++        try:
++            parsed = ChartSpec.model_validate_json(json.dumps(payload))
++        except ValidationError:
++            assert not expected, (field, value)
++        else:
++            assert expected, (field, value)
++            assert schema.is_valid(parsed.model_dump(mode="json"))
++
++
++@pytest.mark.parametrize("width,valid", [(900.0, True), ("900", False), (True, False)])
++def test_numeric_child_validation_is_not_bypassed_by_dashboard(width, valid):
++    payload = {"kind": "dashboard", "charts": [{"width": width}]}
++    schema = Draft202012Validator(ChartSpec.model_json_schema())
++    assert schema.is_valid(payload) is valid
++    if valid:
++        spec = ChartSpec.model_validate_json(json.dumps(payload))
++        assert spec.charts[0].width == 900
++    else:
++        with pytest.raises(ValidationError):
++            ChartSpec.model_validate_json(json.dumps(payload))

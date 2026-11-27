@@ -1,0 +1,109 @@
+{
+  "source": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+  "parent": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+  "base": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "actual_PR": 33,
+  "reviewer_head": "16f8f1bef0a8b656a32ba07e7fdc669d65a713f5",
+  "new_delta": [
+    "M\tpython/deepviz/src/deepviz/models.py",
+    "A\ttests/test_native_mapping.py"
+  ],
+  "all_PR_paths": [
+    "A\t.github/workflows/chart-contract.yml",
+    "A\tdocs/verification/r22-contract/README.md",
+    "A\tdocs/verification/r22-contract/red-green-summary.json",
+    "A\tdocs/verification/r22-contract/validation-output.json",
+    "M\tpython/deepviz/src/deepviz/models.py",
+    "A\tschemas/chart-spec.schema.json",
+    "A\ttests/test_models.py",
+    "A\ttests/test_native_mapping.py",
+    "A\ttests/test_numeric_schema.py"
+  ],
+  "all_tree_files": {
+    ".github/workflows/chart-contract.yml": {
+      "bytes": 1051,
+      "sha256": "ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227"
+    },
+    ".gitignore": {
+      "bytes": 205,
+      "sha256": "3bebcceee3a15392de8f9a36815347d9a999e21fe58efe576ef28b9664b00e77"
+    },
+    "LICENSE": {
+      "bytes": 1077,
+      "sha256": "afbb59a0c0fccdea7ecc9140e4e762455dc06abea4f02d9cf5324c8fb23b42fd"
+    },
+    "README.md": {
+      "bytes": 199,
+      "sha256": "2497e600ecd5a35af571f0f3e6f2550ce3a49b9322a607e02e6b97aa8c41d40d"
+    },
+    "docs/superpowers/plans/2026-11-26-deepviz-plan.md": {
+      "bytes": 3191,
+      "sha256": "9d941cd545a8a37ddbf6d9395d882ba25360318b35ff93d36ed1556f3668d834"
+    },
+    "docs/superpowers/specs/2026-11-26-deepviz-design.md": {
+      "bytes": 3206,
+      "sha256": "715ef120ba4700ea28ef5dbd1d975cd80cf3cc5b659e64fc9e6cd231c664a973"
+    },
+    "docs/verification/r22-contract/README.md": {
+      "bytes": 2893,
+      "sha256": "f83f3e84a78d9a88c4a96d7df489f19e7fb4a6739c9e662d781f10f06670b3a6"
+    },
+    "docs/verification/r22-contract/red-green-summary.json": {
+      "bytes": 5057,
+      "sha256": "e3db9381970aa74f9a9f9ede2c87712dcd47636c34520fb3984ee39107bf1937"
+    },
+    "docs/verification/r22-contract/validation-output.json": {
+      "bytes": 4915,
+      "sha256": "3896de0d87545af60fc63bdee608b202055ea55d84dc7f49d1334ab729d02a0b"
+    },
+    "pyproject.toml": {
+      "bytes": 1259,
+      "sha256": "c80640f3f3049b9734360abd7bb1b5699449d7bad31f3fcde77c3e2b38a53053"
+    },
+    "python/deepviz/src/deepviz/models.py": {
+      "bytes": 3021,
+      "sha256": "8532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d"
+    },
+    "schemas/chart-spec.schema.json": {
+      "bytes": 4078,
+      "sha256": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d"
+    },
+    "tests/test_models.py": {
+      "bytes": 2684,
+      "sha256": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32"
+    },
+    "tests/test_native_mapping.py": {
+      "bytes": 2012,
+      "sha256": "4f06bc1ad9cdc021f5081f5c59b10081783439e2fa95b69287d079e5dc82bb94"
+    },
+    "tests/test_numeric_schema.py": {
+      "bytes": 2343,
+      "sha256": "b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3"
+    }
+  },
+  "all_materialized_bytes_exact_Git_LF": true,
+  "unchanged_existing_seven_PR_files": {
+    ".github/workflows/chart-contract.yml": true,
+    "tests/test_models.py": true,
+    "tests/test_numeric_schema.py": true,
+    "schemas/chart-spec.schema.json": true,
+    "docs/verification/r22-contract/README.md": true,
+    "docs/verification/r22-contract/red-green-summary.json": true,
+    "docs/verification/r22-contract/validation-output.json": true
+  },
+  "runtime_exact_minimal_import_and_guard_substitution": true,
+  "published_F1_probe": {
+    "path": "tests/r25_probes/role01/test_mapping_numeric_boundary.py",
+    "commit": "16f8f1bef0a8b656a32ba07e7fdc669d65a713f5",
+    "sha256": "308c62bcf763965ca166e7939a5e79aabda7194bec258b276b4ed9f01657d6e4",
+    "unchanged_Gitbytes": true
+  },
+  "packet_model_hash_mismatch": {
+    "reported": "93d1472b168feb9f1a12fa47f81e0296228459ebe006c14a4daba2637d3616ba",
+    "actual_Git_LF": "8532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d",
+    "full_CRLF_sha256": "e4c86a977a7003d3d4e5d557a3bdfb25ccee155608d36207f3af24da2e3981d3",
+    "cause": "unknown producer working-byte convention, not assumed LF/CRLF equivalent",
+    "initial_guard_failed_before_tests": true
+  },
+  "old998_executed": false
+}

@@ -1,0 +1,10 @@
+from pathlib import Path
+import hashlib,json,os,subprocess,xml.etree.ElementTree as ET
+ROOT=Path.cwd();OUT=ROOT/'artifacts/local/R31-01';SNAP=OUT/'actual-bff';PY='C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe';SITE='C:/Users/bagma/deepviz-agent-toolkit/.venv/Lib/site-packages';probe=ROOT/'tests/r31_probes/role01/test_mapping_ownership_contract.py';env={**os.environ,'PYTHONPATH':str(SNAP/'python/deepviz/src')+os.pathsep+SITE,'PYTHONDONTWRITEBYTECODE':'1','PYTEST_DISABLE_PLUGIN_AUTOLOAD':'1','R31_OUT':str(OUT),'R31_F1_PROBE':str(ROOT/'tests/r25_probes/role01/test_mapping_numeric_boundary.py'),'R31_OWN_PROBE':str(probe)};records=[]
+commands=[('affected47',[PY,'-S',str(OUT/'execute_affected.py')]),('root-ruff',[PY,'-S','-m','ruff','check','.','--no-cache']),('root-mypy',[PY,'-S','-m','mypy','--cache-dir',str(OUT/'mypy-cache')]),('own-probe-ruff',[PY,'-S','-m','ruff','check','--config',str(SNAP/'pyproject.toml'),str(probe),'--no-cache'])]
+for label,argv in commands:
+    run=subprocess.run(argv,cwd=SNAP,env=env,capture_output=True,text=True,encoding='utf-8',timeout=120,check=False);log=OUT/(label+'.log');log.write_text(run.stdout+'\n--- stderr ---\n'+run.stderr,encoding='utf-8',newline='\n');record={'label':label,'source':'bff9384d1ebe5c8f6f8f0f994300264b32bb98d8','argv':argv,'cwd':str(SNAP),'exit_code':run.returncode,'log_sha256':hashlib.sha256(log.read_bytes()).hexdigest()}
+    if label=='affected47':
+        suite=ET.parse(OUT/'affected47.xml').getroot().find('testsuite');assert suite is not None;record['totals']={key:int(suite.attrib.get(key,'0')) for key in ['tests','failures','errors','skipped']};record['providedNEWcases']=42;record['unchanged_published_F1_cases']=1;record['new_independent_bounded_cases']=4
+    records.append(record);print(json.dumps(record));print(run.stdout);print(run.stderr)
+(OUT/'execution-results.json').write_text(json.dumps(records,indent=2)+'\n',encoding='utf-8',newline='\n');assert all(item['exit_code']==0 for item in records);assert records[0]['totals']=={'tests':47,'failures':0,'errors':0,'skipped':0}

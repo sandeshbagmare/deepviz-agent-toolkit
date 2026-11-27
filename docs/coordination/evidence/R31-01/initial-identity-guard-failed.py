@@ -1,0 +1,14 @@
+from pathlib import Path
+import hashlib,json,subprocess
+ROOT=Path.cwd();OUT=ROOT/'artifacts/local/R31-01';OUT.mkdir(exist_ok=False);SRC='bff9384d1ebe5c8f6f8f0f994300264b32bb98d8';PARENT='99841ffb80e0f2ea90c753c1bf0ceff718e0e180';BASE='0ae2cf26426822135fc10d337fcacf580b7ed833';SNAP=OUT/'actual-bff';assert subprocess.check_output(['git','rev-parse',SRC+'^'],text=True).strip()==PARENT;tree=subprocess.check_output(['git','ls-tree','-r','--name-only',SRC],text=True).splitlines();files={}
+for rel in tree:
+    blob=subprocess.check_output(['git','show',SRC+':'+rel]);target=SNAP/rel;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(blob);files[rel]={'bytes':len(blob),'sha256':hashlib.sha256(blob).hexdigest()};assert target.read_bytes()==blob
+changes=subprocess.check_output(['git','diff','--name-status',PARENT,SRC],text=True).splitlines();assert len(changes)==2;allchanges=subprocess.check_output(['git','diff','--name-status',BASE,SRC],text=True).splitlines();assert len(allchanges)==9
+for name,left in [('new-minimal.diff',PARENT),('full-PR.diff',BASE)]:
+    diff=subprocess.check_output(['git','diff',left,SRC]);(OUT/name).write_bytes(diff)
+unchanged={}
+for rel in ['.github/workflows/chart-contract.yml','tests/test_models.py','tests/test_numeric_schema.py','schemas/chart-spec.schema.json','docs/verification/r22-contract/README.md','docs/verification/r22-contract/red-green-summary.json','docs/verification/r22-contract/validation-output.json']:
+    assert subprocess.check_output(['git','show',PARENT+':'+rel])==(SNAP/rel).read_bytes();unchanged[rel]=True
+probe='tests/r25_probes/role01/test_mapping_numeric_boundary.py';raw=(ROOT/probe).read_bytes();assert raw==subprocess.check_output(['git','show','16f8f1bef0a8b656a32ba07e7fdc669d65a713f5:'+probe]);assert hashlib.sha256(raw).hexdigest()=='308c62bcf763965ca166e7939a5e79aabda7194bec258b276b4ed9f01657d6e4'
+assert files['python/deepviz/src/deepviz/models.py']['sha256']=='93d1472b168feb9f1a12fa47f81e0296228459ebe006c14a4daba2637d3616ba';assert files['tests/test_numeric_mappings.py']['sha256']=='4f06bc1ad9cdc021f5081f5c59b10081783439e2fa95b69287d079e5dc82bb94'
+record={'source':SRC,'parent':PARENT,'base':BASE,'actual_PR':33,'reviewer_head':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'new_delta':changes,'all_PR_paths':allchanges,'all_tree_files':files,'all_materialized_bytes_exact_Git_LF':True,'unchanged_existing_seven_PR_files':unchanged,'published_F1_probe':{'path':probe,'commit':'16f8f1bef0a8b656a32ba07e7fdc669d65a713f5','sha256':hashlib.sha256(raw).hexdigest(),'unchanged_Gitbytes':True},'old998_executed':False};(OUT/'source-identity.json').write_text(json.dumps(record,indent=2)+'\n',encoding='utf-8',newline='\n');print(json.dumps({'new_delta':changes,'all_PR_paths':allchanges,'source_files':len(files),'published_F1_unchanged':True},indent=2));print((OUT/'new-minimal.diff').read_text())
