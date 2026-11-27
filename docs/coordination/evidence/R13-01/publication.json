@@ -1,0 +1,33 @@
+{
+  "utc": "2026-11-27T14:18:12.476711+00:00",
+  "authenticated_login": "sandeshbagmare",
+  "authenticated_GET_user_status": 200,
+  "branch": "agents/r10-01-correctness-regressions",
+  "commit": "8dae3381e6caa0c99d6f032c2d2d318d5cf2a5ce",
+  "reviewed_source": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+  "push_argv": [
+    "git",
+    "push",
+    "origin",
+    "refs/heads/agents/r10-01-correctness-regressions:refs/heads/agents/r10-01-correctness-regressions"
+  ],
+  "push_exit_code": 0,
+  "force": false,
+  "remote_before": "727ab589ad05e6fcd0d326183a9aaa85d9c8922c",
+  "remote_readback_exit_code": 0,
+  "remote_sha": "8dae3381e6caa0c99d6f032c2d2d318d5cf2a5ce",
+  "remote_ref": "refs/heads/agents/r10-01-correctness-regressions",
+  "verified": true,
+  "scope": "NEW independent tests/report/evidence only; production unchanged; known RED",
+  "python": {
+    "failed": 2,
+    "passed": 65,
+    "skipped": 0
+  },
+  "node": {
+    "failed": 2,
+    "passed": 61,
+    "skipped": 0
+  },
+  "final_candidate_approval": false
+}

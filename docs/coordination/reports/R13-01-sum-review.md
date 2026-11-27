@@ -124,8 +124,15 @@ remote-SHA readback exit0 at13:53:40UTC; fresh authenticated GET/user verified
 sandeshbagmare, GCM credential only in process memory. It fixes rawWindows versus
 GitLF manifest provenance, not source/tests. Original c2628b6 strict RED and0c5
 baseline evidence are preserved. No service/provider/auth configuration changed.
-R13 evidence publication will be claimed only after its own actual push/readback;
-no predicted SHA appears here.
+**R13 actual publication verified:** independent tests/report/evidence commit
+`8dae3381e6caa0c99d6f032c2d2d318d5cf2a5ce` was non-force pushed to the OWN
+`agents/r10-01-correctness-regressions` branch at14:18:12UTC. Push exit0 and
+actual remote-SHA readback exit0 returned that exact SHA; fresh authenticated
+GET/user200 again verified sandeshbagmare, token in memory only. Sanitized actual
+receipt is `evidence/R13-01/publication.json`. These tests remain strict RED, not
+merge-ready source or green CI. A following receipt-only checkpoint records this
+observed first publication; its final remote-tip receipt is kept in MAIN only
+after an actual push/readback, never as a predicted SHA.
 
 ## Limits and executable next action
 

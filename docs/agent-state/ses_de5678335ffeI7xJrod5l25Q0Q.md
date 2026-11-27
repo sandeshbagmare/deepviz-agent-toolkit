@@ -171,3 +171,11 @@ Raw logs/provenance: OWN artifacts/local/R13-01/new-tests-v1/summary.json, pytho
 - Scoped positive controls: exactties/postpromotion/carry/int/statecharge/budget/nullwarning/mean/sample/count fixtures. Full suites, old R10 RED suites,10M/RSS/browser/security/CI not rerun and unverified. Fullgoal/900unmet. Report docs/coordination/reports/R13-01-sum-review.md; compact own evidence/R13-01/; source/probe raw logs own artifacts/local/R13-01.
 - R10 receipt genuinely finished/published727ab58 with exact remoteSHA readback and safe identity check. R13 tests/report/evidence publication not attempted yet. Current action explicit owned staging/diff/credential/whitespace check, honest knownRED commit and safe nonforce ownpush/readback. No source/existingoracle/othersnotes edits, install, auth/provider/servicechanges or spawn.
 - Next executable action: git diff --cached --check after explicit R13 owned-path staging, then scopedcommit/safepush; root/R04 must disposition F1 before exactSUM claim.
+
+
+## R13 actual independent evidence publication
+
+- Owned18-file test/report/evidence commit8dae3381e6caa0c99d6f032c2d2d318d5cf2a5ce nonforcepush0, actual remoteSHA readback0 EXACT8dae at14:18:12UTC. Fresh GCMmemory-only authenticatedGETuser200expected sandeshbagmare; remote727ancestor verified. No sharedsource/Git/issues/PR writes or authchanges. Actual sanitized MAIN evidence/R13-01/publication.json.
+- Reviewedsource remains ec9f669eff28cd5351da142765b7755e3b2f484f, notOWNharnessHEAD; productiondiffempty. StrictNEW results remain2failed65passedPython/2failed61passedNode0skip; no original R10 rerun or sourcefix. One remaining residual-prefix accuracy concern requiresR04/16disposition.
+- Current action: publish small actual-receipt-only checkpoint then save final actual remote-tip receipt in MAIN; no predicted SHA/finalapproval. No own background jobs.
+- Next executable action forR04: reproduce tests/r13_probes/role01/test_sum_review.py on pinnedcorrectedcandidate and disposition F1 before universalexactSUM claims; root should review realreport and refill usefuldisjointwork after completion.
