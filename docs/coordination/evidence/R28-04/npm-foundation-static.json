@@ -1,0 +1,961 @@
+{
+  "role": "R28-04 bounded npm foundation static plan",
+  "session": "ses_de5678314ffeuDXtC7RfGsbD6V",
+  "observed_utc": "2026-11-27T16:11:18.183817+00:00",
+  "refs": {
+    "main": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+    "candidate": "3eab699b61850a20e91132e16caf8c589085f9ee",
+    "npm": "262b0da145e42c94c2908213272ec3be28771206",
+    "asset_fix": "f9c437286c9dfe2245a7d914995d90346e29c233",
+    "initial_npm": "6561c163ce8dee6882f9248ee0e379067c2d985c",
+    "dashboard_schema": "728bbac47b747501ad27f40525220317ea218064",
+    "numeric_contract": "e44f667ed494fa272f97792ef99942a364ebca24",
+    "focused_pr33": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+    "helper_not_reviewed": "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57",
+    "tick_margin_not_reviewed": "5e595a8f893955ce34a0e26553bb7bf257ea93ae"
+  },
+  "remote_default_observation": {
+    "utc": "2026-11-27T15:59:09.1951810+00:00",
+    "branch": "main",
+    "sha": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+    "git_read_exit": 0,
+    "own_branch_tip": "b235fc6422426df9bdeadae18174240ce9ec922c"
+  },
+  "main_tracked_files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "docs/superpowers/plans/2026-11-26-deepviz-plan.md",
+    "docs/superpowers/specs/2026-11-26-deepviz-design.md",
+    "pyproject.toml",
+    "python/deepviz/src/deepviz/models.py"
+  ],
+  "main_file_count": 7,
+  "candidate_parent": "262b0da145e42c94c2908213272ec3be28771206",
+  "candidate_vs_npm_product_diff_paths": [],
+  "minimum_build_runtime_paths": [
+    "package.json",
+    "package-lock.json",
+    "packages/deepviz/package.json",
+    "packages/deepviz/tsconfig.json",
+    "packages/deepviz/LICENSE",
+    "packages/deepviz/README.md",
+    "packages/deepviz/src/chart-spec.schema.json",
+    "packages/deepviz/src/index.ts",
+    "packages/deepviz/src/models.ts",
+    "packages/deepviz/src/normalize.ts",
+    "packages/deepviz/src/render.ts",
+    "packages/deepviz/src/renderers.ts",
+    "packages/deepviz/src/schema.ts",
+    "packages/deepviz/scripts/copy-prompts.mjs",
+    "schemas/chart-spec.schema.json",
+    "prompts/v1/README.md",
+    "prompts/v1/system.md",
+    "prompts/v1/request.md"
+  ],
+  "minimum_build_runtime_count": 18,
+  "additional_existing_tests_scripts_paths": [
+    "packages/deepviz/scripts/benchmark-stream.mjs",
+    "packages/deepviz/scripts/check-package.mjs",
+    "packages/deepviz/scripts/check-schema.mjs",
+    "packages/deepviz/scripts/verify-streaming-scale.mjs",
+    "packages/deepviz/test/browser.browser.mjs",
+    "packages/deepviz/test/contract.test.mjs",
+    "packages/deepviz/test/mapping-layout-n18.test.mjs",
+    "packages/deepviz/test/n21-streaming-scale.test.mjs",
+    "packages/deepviz/test/native-semantics-n18.browser.mjs",
+    "packages/deepviz/test/native-semantics-n18.test.mjs",
+    "packages/deepviz/test/normalization-bytes.test.mjs",
+    "packages/deepviz/test/normalization-means.test.mjs",
+    "packages/deepviz/test/normalization-policy.test.mjs",
+    "packages/deepviz/test/normalization-regressions.test.mjs",
+    "packages/deepviz/test/normalization-unicode-coercion.test.mjs",
+    "packages/deepviz/test/render-budget-n18.test.mjs",
+    "packages/deepviz/test/render.test.mjs",
+    "packages/deepviz/test/test_n17_boundaries.browser.mjs",
+    "packages/deepviz/test/test_n17_boundaries.test.mjs",
+    "packages/deepviz/test/test_n19_text_formats.test.mjs",
+    "packages/deepviz/test/test_n19_unicode_cells.test.mjs",
+    "packages/deepviz/test/test_n21_resource_policy.test.mjs",
+    "packages/deepviz/test/test_r07_finite_overflow.test.mjs",
+    "packages/deepviz/test/test_r11_packaged_prompts.test.mjs",
+    "packages/deepviz/.gitignore"
+  ],
+  "additional_existing_tests_scripts_count": 25,
+  "files": [
+    {
+      "path": "package.json",
+      "group": "minimum_build_runtime",
+      "bytes": 1130,
+      "blob_oid": "8f6fec44a698e5d9bf7bc644102d3d7dbb8d57d4",
+      "sha256_git_bytes": "9afef0ede1cc8d66e6495f33a5d5b4bcdb8472c7dd749721b48056cf73894cc5",
+      "last_change_at_frozen_tree": "b057ae99724d00743b87c45b7eeaa2fe2662b640 ci: include N17 injection cases in the offline browser gate",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "package-lock.json",
+      "group": "minimum_build_runtime",
+      "bytes": 81533,
+      "blob_oid": "2a6175c207b0ed61272bf295813b2966d4c83c97",
+      "sha256_git_bytes": "1401922876f8b7d37e675ce044400fe5335682742dd9b30a1292243ad771d4c9",
+      "last_change_at_frozen_tree": "6561c163ce8dee6882f9248ee0e379067c2d985c feat: add publishable bounded TypeScript visualization toolkit",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/package.json",
+      "group": "minimum_build_runtime",
+      "bytes": 943,
+      "blob_oid": "5a0bfa5e52ed0abad750d0f9751603a5836208bf",
+      "sha256_git_bytes": "f8ce42fc3643693effd1e39e44f3b0379d203b1d5208705d7eb154239664c3fc",
+      "last_change_at_frozen_tree": "262b0da145e42c94c2908213272ec3be28771206 fix: distribute canonical versioned npm prompts",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/tsconfig.json",
+      "group": "minimum_build_runtime",
+      "bytes": 574,
+      "blob_oid": "43b19b487a862108c8b99fa27307f9de01fbe234",
+      "sha256_git_bytes": "2a202b15cdb9443825daff1589036b1dcc09f2cdb01c6274dbbcd97f7651781d",
+      "last_change_at_frozen_tree": "6561c163ce8dee6882f9248ee0e379067c2d985c feat: add publishable bounded TypeScript visualization toolkit",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/LICENSE",
+      "group": "minimum_build_runtime",
+      "bytes": 1077,
+      "blob_oid": "07f747d81c0eebd11b13400c2fe5676ad67d36a6",
+      "sha256_git_bytes": "afbb59a0c0fccdea7ecc9140e4e762455dc06abea4f02d9cf5324c8fb23b42fd",
+      "last_change_at_frozen_tree": "6561c163ce8dee6882f9248ee0e379067c2d985c feat: add publishable bounded TypeScript visualization toolkit",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/README.md",
+      "group": "minimum_build_runtime",
+      "bytes": 16616,
+      "blob_oid": "2b3e1af50c95dc22791ca1367b3c747f556c3112",
+      "sha256_git_bytes": "3ae10b8d7fa27aaff60fe15e1664886ecdda4edeb5eba8d260480d81c2139a80",
+      "last_change_at_frozen_tree": "262b0da145e42c94c2908213272ec3be28771206 fix: distribute canonical versioned npm prompts",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/src/chart-spec.schema.json",
+      "group": "minimum_build_runtime",
+      "bytes": 4975,
+      "blob_oid": "e4b96153ace7b0290bb7d48d3492707abe5186b5",
+      "sha256_git_bytes": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+      "last_change_at_frozen_tree": "728bbac47b747501ad27f40525220317ea218064 fix: encode existing dashboard composition rules in shared schema",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/src/index.ts",
+      "group": "minimum_build_runtime",
+      "bytes": 135,
+      "blob_oid": "2c0f4ed5b75fa3bfccc9714b55f565ccec747ac3",
+      "sha256_git_bytes": "a4c1ebd22dfdc100e28eef28b11030d5f08bb09db0da9649c22848d3ef9a8aac",
+      "last_change_at_frozen_tree": "6561c163ce8dee6882f9248ee0e379067c2d985c feat: add publishable bounded TypeScript visualization toolkit",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/src/models.ts",
+      "group": "minimum_build_runtime",
+      "bytes": 4737,
+      "blob_oid": "58b11ee38240db20974d5ede07a320a8c5ce4740",
+      "sha256_git_bytes": "d43d5ae0bef1d43f251ed71899a9b507c6575562e4403bd2e2ac02bd7caa43e6",
+      "last_change_at_frozen_tree": "6561c163ce8dee6882f9248ee0e379067c2d985c feat: add publishable bounded TypeScript visualization toolkit",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/src/normalize.ts",
+      "group": "minimum_build_runtime",
+      "bytes": 30169,
+      "blob_oid": "999826998a9f6d4edcd8bcbb4abca1353d21fd83",
+      "sha256_git_bytes": "2c730b13f6360fa2e75c66d03ea051ffdb5c253d4922546f51cd8fd60e742c7f",
+      "last_change_at_frozen_tree": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6 fix: retain bounded finite sums after transient overflow",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/src/render.ts",
+      "group": "minimum_build_runtime",
+      "bytes": 11312,
+      "blob_oid": "71bcbd78410148add0f328b8a7913c55fd308369",
+      "sha256_git_bytes": "7f0a69004d570e05b45b8c6ce10c73263652d2874362960af27baed82b3996e9",
+      "last_change_at_frozen_tree": "28878a6cdaa2567a4650a59445fa1d40fe97fa7f fix: preserve TypeScript native chart semantics and payload bounds",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/src/renderers.ts",
+      "group": "minimum_build_runtime",
+      "bytes": 21334,
+      "blob_oid": "fc9694f12bcb00fc6206d02976c479d750c71745",
+      "sha256_git_bytes": "180cb19d8bb01e5c2fe94db7e943e8430681cffadad2251d38a03fd1de5b19d0",
+      "last_change_at_frozen_tree": "b6321811ec9ff5d2badb3574f00a6da351affbd3 fix: reject discarded native color mappings",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/src/schema.ts",
+      "group": "minimum_build_runtime",
+      "bytes": 187,
+      "blob_oid": "b99e2013dd6607f3949469d4b3ba47bbd112f038",
+      "sha256_git_bytes": "8150ef7a9f4e1376818c38ec0b3a76e4c1fa92a7dec8e361e24195f6e38d0537",
+      "last_change_at_frozen_tree": "6561c163ce8dee6882f9248ee0e379067c2d985c feat: add publishable bounded TypeScript visualization toolkit",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/scripts/copy-prompts.mjs",
+      "group": "minimum_build_runtime",
+      "bytes": 362,
+      "blob_oid": "194b6184d5227946f46a06ed9dbca8218f314334",
+      "sha256_git_bytes": "2e29160390a79c62b13c20992ef88c639126a8bad9bee80b327d5b81e6aa06bd",
+      "last_change_at_frozen_tree": "262b0da145e42c94c2908213272ec3be28771206 fix: distribute canonical versioned npm prompts",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "schemas/chart-spec.schema.json",
+      "group": "minimum_build_runtime",
+      "bytes": 4975,
+      "blob_oid": "e4b96153ace7b0290bb7d48d3492707abe5186b5",
+      "sha256_git_bytes": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+      "last_change_at_frozen_tree": "728bbac47b747501ad27f40525220317ea218064 fix: encode existing dashboard composition rules in shared schema",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "prompts/v1/README.md",
+      "group": "minimum_build_runtime",
+      "bytes": 1787,
+      "blob_oid": "d6be785ac34dd423c59148a02a77067b3d7616c4",
+      "sha256_git_bytes": "324cb7f88211424f577327268f36506c8c27d1793528441458e2caba83ee0bbd",
+      "last_change_at_frozen_tree": "3be5614ce54b8735738300f7b57efa384f78fa0c docs: verify runnable agent examples and runtime capability boundaries",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "prompts/v1/system.md",
+      "group": "minimum_build_runtime",
+      "bytes": 4582,
+      "blob_oid": "8e0a1b4b0ce2115d23b5cb2f3d69c0deb113839b",
+      "sha256_git_bytes": "b11e691e8f5d89bc2fd726d284702d6675c57c1a32ec0947ec5902040fdbaba0",
+      "last_change_at_frozen_tree": "3be5614ce54b8735738300f7b57efa384f78fa0c docs: verify runnable agent examples and runtime capability boundaries",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "prompts/v1/request.md",
+      "group": "minimum_build_runtime",
+      "bytes": 761,
+      "blob_oid": "cd61df2fe697009b36b03b872c949b0bef859b10",
+      "sha256_git_bytes": "845be71cb3141d084f036472a1c5a19670be28c16bf73c4a599a3df9d534c6f2",
+      "last_change_at_frozen_tree": "52b817d29eb1fc55538f5b7f8f30d1356e584223 feat: add bounded agent tools and resource-backed MCP integration",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/scripts/benchmark-stream.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 1738,
+      "blob_oid": "3218adf5eea67497d60eed0d8091211d8c24ad20",
+      "sha256_git_bytes": "cf9d3cc04f2ce8b8a351070391a8ec1b531f4f2608d0cfeaa479f88fd8ca5cf4",
+      "last_change_at_frozen_tree": "eb28438c1f10ebaa3063e1fcbdf54075dd255c64 fix: align ingestion and heatmap reductions with Python contracts",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/scripts/check-package.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 3250,
+      "blob_oid": "fb98c8f8ea14f23e136a73ed3ed7955f49130b61",
+      "sha256_git_bytes": "1f7e436182ccb6debf9a7f980c6a67c7aa27fa80bf23259cd6b527c08d27fd80",
+      "last_change_at_frozen_tree": "6561c163ce8dee6882f9248ee0e379067c2d985c feat: add publishable bounded TypeScript visualization toolkit",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/scripts/check-schema.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 993,
+      "blob_oid": "b1857cc1482fcb0c53a02b8c479949e8a4b0eb77",
+      "sha256_git_bytes": "9a417cc301087503a2eb2c6088d887085336868751284bb050f75187cdff6834",
+      "last_change_at_frozen_tree": "eb28438c1f10ebaa3063e1fcbdf54075dd255c64 fix: align ingestion and heatmap reductions with Python contracts",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/scripts/verify-streaming-scale.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 14487,
+      "blob_oid": "4ad80b59011e67f74679d5b5771a18c13a314b50",
+      "sha256_git_bytes": "704079fd512abeae5b0aca04c73e5664ef69a28c71c07f2464af8490663c09f4",
+      "last_change_at_frozen_tree": "ed76a2741db17846925ee7a017c12b2dc773d010 test: add independent TypeScript streaming scale evidence",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/browser.browser.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 5738,
+      "blob_oid": "dc354e7c183910cd797dcf9c60f8b45fba386ad7",
+      "sha256_git_bytes": "2e0cfef8b23edb2d9f0ce64bd9f761fc6f0d4aec62821d7a44ff340bc4c88c0d",
+      "last_change_at_frozen_tree": "b6b375a24e726c494382b91ef5fa5efbb645e233 fix: preserve renderer series, sizing, contrast and readable axes",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/contract.test.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 9392,
+      "blob_oid": "1fc60d5da43dfc391b6245e9052f136b7ed27b4e",
+      "sha256_git_bytes": "2b9dc3fa3d41c7758b4cb38d9fa1a473ae3505d5eba919f6095c6d745f24fa03",
+      "last_change_at_frozen_tree": "0c5fa825f7058f8c5a4ab6ec9597b9fd5fd4ca43 test: preserve inherited no-truncation contract oracle",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/mapping-layout-n18.test.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 3328,
+      "blob_oid": "da84fbc715e3b2e7c21dfb149243ba93bad0ba8c",
+      "sha256_git_bytes": "ea67104f80853eba6ef9ad4cfee526e1dd07ead458d942ebf221beb20c45cf80",
+      "last_change_at_frozen_tree": "b6321811ec9ff5d2badb3574f00a6da351affbd3 fix: reject discarded native color mappings",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/n21-streaming-scale.test.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 6513,
+      "blob_oid": "8b9114fc830880a9659d4b0bb1a3ffdd6a7618ca",
+      "sha256_git_bytes": "87d42f58ec709cdf9624692a15aae317414efef7e2fe606de0875ed9442fb1f5",
+      "last_change_at_frozen_tree": "ed76a2741db17846925ee7a017c12b2dc773d010 test: add independent TypeScript streaming scale evidence",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/native-semantics-n18.browser.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 11029,
+      "blob_oid": "b0228076da598f051c2af452cf1f8a85ab157fc6",
+      "sha256_git_bytes": "1ca85803089fec5af87da4f0ca02c4a6d17fb0eae87ee1aae7fcae1d5cdd157b",
+      "last_change_at_frozen_tree": "28878a6cdaa2567a4650a59445fa1d40fe97fa7f fix: preserve TypeScript native chart semantics and payload bounds",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/native-semantics-n18.test.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 4780,
+      "blob_oid": "bb3bc717775d4c28e3badf3d02a703b1ac19cb9f",
+      "sha256_git_bytes": "7de1c62589971b3e2a438e9cb82b2a7df1c674de68b9cabae749c3dc59e00870",
+      "last_change_at_frozen_tree": "28878a6cdaa2567a4650a59445fa1d40fe97fa7f fix: preserve TypeScript native chart semantics and payload bounds",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/normalization-bytes.test.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 4568,
+      "blob_oid": "f5821d241f016533e4216f41a87e20612a085a41",
+      "sha256_git_bytes": "cf42b62ce837678a5cec7001a8fdd0ccee2ced499002bd2db7eaa998b3e4fdfd",
+      "last_change_at_frozen_tree": "77e9c1da451f3ed41bb5896b63e607ed49ad38c9 fix: bound decoded CSV cells and parser row state",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/normalization-means.test.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 3564,
+      "blob_oid": "b8a4540363229effc06eca44746cbde6d0758845",
+      "sha256_git_bytes": "0bdcd1c7fbc27d922c2777a2becce020a06690e881117c6470a8356b02824696",
+      "last_change_at_frozen_tree": "3cf42fb78bc1ecf59e2349738e2f7086bdf6d8f7 fix: align Unicode coercion and stabilize bounded means",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/normalization-policy.test.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 3892,
+      "blob_oid": "6f9cd3e474295b43d9fb737b3fb00b4faa22def8",
+      "sha256_git_bytes": "dfaffd6583e856813734dacdcad21a7dba407ce3083749327257aef9b0951e88",
+      "last_change_at_frozen_tree": "124d6282a6e91caa4bb69bcceaa6e852cc9001af fix: preserve column and record shape during inference",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/normalization-regressions.test.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 7980,
+      "blob_oid": "0c3c8861d137396441039a32ead2a909e2b85afa",
+      "sha256_git_bytes": "0cb6ce5014900011b2945bb31e57122d7dea5b8ffe09c5b873fb00584f60b42f",
+      "last_change_at_frozen_tree": "9f10443a8dffb20a6cf84590b41efd2f0a5ffc32 fix: preserve record identity around inferred wrappers",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/normalization-unicode-coercion.test.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 1073,
+      "blob_oid": "dda404241492d4952a39a65cf1f5a4731461913c",
+      "sha256_git_bytes": "4cdff9e7183a1b0c19ed42bd1c827e81ff5bed8a1a990e784408d83ded61d658",
+      "last_change_at_frozen_tree": "3cf42fb78bc1ecf59e2349738e2f7086bdf6d8f7 fix: align Unicode coercion and stabilize bounded means",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/render-budget-n18.test.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 2168,
+      "blob_oid": "bff3f83db6ae1cd7a3b0aadcc816291b196a9af5",
+      "sha256_git_bytes": "117d1d14629acad2beb9660baf03fbd25b2cf9202f7b81ff5e374fac47179b1f",
+      "last_change_at_frozen_tree": "28878a6cdaa2567a4650a59445fa1d40fe97fa7f fix: preserve TypeScript native chart semantics and payload bounds",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/render.test.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 8840,
+      "blob_oid": "12309f92ccc38e6580d00999530f48ccdb0903bf",
+      "sha256_git_bytes": "76db94c33522ced682becbb280149aa87035a5c02564ae5b45a7045d41ff4236",
+      "last_change_at_frozen_tree": "eb28438c1f10ebaa3063e1fcbdf54075dd255c64 fix: align ingestion and heatmap reductions with Python contracts",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/test_n17_boundaries.browser.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 4357,
+      "blob_oid": "ff0b2f6e68f7530417d4889db8986b3c7df537a1",
+      "sha256_git_bytes": "daca269a161a503bbbf4dbd787b71a2661be289bffe543b54b289a1667441972",
+      "last_change_at_frozen_tree": "cf27e85b352ee63b92a77cfa4df01f6a798d3fe1 test: add independent N17 adversarial boundary regressions",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/test_n17_boundaries.test.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 3909,
+      "blob_oid": "b8016dc990114306ef5888290b54568100831051",
+      "sha256_git_bytes": "94aa1def799c710e6a9c412005a1d4509f4fe7200bd3c2e841156f52f0690236",
+      "last_change_at_frozen_tree": "b61b7bc7bd98740c1819dba0763eee3c3af6ba0a test: align N17 TypeScript observations with UTF-8 limits",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/test_n19_text_formats.test.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 12241,
+      "blob_oid": "fd90b5d6b93240e9eacd0185449df7e1a03c32b4",
+      "sha256_git_bytes": "51fdc0e78cd9fa3c87f23a0524ee3e049d2ae3027ac8ccc37d577f494ce26da8",
+      "last_change_at_frozen_tree": "0f0912efad97586753aa267d64e61dcd509be7d2 test: add independent TypeScript text format edge oracles",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/test_n19_unicode_cells.test.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 4989,
+      "blob_oid": "00665fe426ff9cc8ba759b2e3a38216aae249951",
+      "sha256_git_bytes": "ab270bef44e66c6be89f9ba6246c6ed6f37b74d834ab6529167a9460d0fddbd4",
+      "last_change_at_frozen_tree": "93a20ddf4c4d2a6dc837d0d1e0ae98de7f1a2a2d test: extend literal Unicode cell and signed-zero controls",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/test_n21_resource_policy.test.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 9815,
+      "blob_oid": "07a76a6325ac2bd1cc6977785f9a7cfb2bc4dfa5",
+      "sha256_git_bytes": "6f3bd337ef825fe86922e5fdf1070f8eabb0c113af1d3a9732422e9cd72a7c17",
+      "last_change_at_frozen_tree": "5d061c5b7ea539d435ec299550651c5b02d8bd20 test: isolate mapped-null resource policy oracle",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/test_r07_finite_overflow.test.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 4706,
+      "blob_oid": "4d8c8c2df4f950b6f53362eb3d354407e5f5aa44",
+      "sha256_git_bytes": "72c909dfe855c107e6205683b7a3c36de269c56a39f4e999c4ad055118a93fcc",
+      "last_change_at_frozen_tree": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6 fix: retain bounded finite sums after transient overflow",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/test/test_r11_packaged_prompts.test.mjs",
+      "group": "existing_test_script_support",
+      "bytes": 2000,
+      "blob_oid": "d327edaecc7868c81173969358d20b7aa2b2bc1d",
+      "sha256_git_bytes": "ec5fb98f80fc2adfe8b3a40fecc82007d4b90f173cc6d2343328d7ce57abb234",
+      "last_change_at_frozen_tree": "262b0da145e42c94c2908213272ec3be28771206 fix: distribute canonical versioned npm prompts",
+      "status_vs_main": "absent/new"
+    },
+    {
+      "path": "packages/deepviz/.gitignore",
+      "group": "existing_test_script_support",
+      "bytes": 9,
+      "blob_oid": "cb2cddd10217ea939da10df452c59f2249ba181b",
+      "sha256_git_bytes": "07f6a9505c1cc3abd34c7727aca904715e62fc3f8322d648a98e31787046bd1b",
+      "last_change_at_frozen_tree": "6561c163ce8dee6882f9248ee0e379067c2d985c feat: add publishable bounded TypeScript visualization toolkit",
+      "status_vs_main": "absent/new"
+    }
+  ],
+  "local_import_graph": {
+    "packages/deepviz/src/index.ts": [
+      {
+        "specifier": "./models.js",
+        "source_path": "packages/deepviz/src/models.ts"
+      },
+      {
+        "specifier": "./normalize.js",
+        "source_path": "packages/deepviz/src/normalize.ts"
+      },
+      {
+        "specifier": "./render.js",
+        "source_path": "packages/deepviz/src/render.ts"
+      },
+      {
+        "specifier": "./schema.js",
+        "source_path": "packages/deepviz/src/schema.ts"
+      }
+    ],
+    "packages/deepviz/src/models.ts": [],
+    "packages/deepviz/src/normalize.ts": [
+      {
+        "specifier": "./models.js",
+        "source_path": "packages/deepviz/src/models.ts"
+      }
+    ],
+    "packages/deepviz/src/render.ts": [
+      {
+        "specifier": "./models.js",
+        "source_path": "packages/deepviz/src/models.ts"
+      },
+      {
+        "specifier": "./normalize.js",
+        "source_path": "packages/deepviz/src/normalize.ts"
+      },
+      {
+        "specifier": "./renderers.js",
+        "source_path": "packages/deepviz/src/renderers.ts"
+      },
+      {
+        "specifier": "./schema.js",
+        "source_path": "packages/deepviz/src/schema.ts"
+      }
+    ],
+    "packages/deepviz/src/renderers.ts": [
+      {
+        "specifier": "./models.js",
+        "source_path": "packages/deepviz/src/models.ts"
+      }
+    ],
+    "packages/deepviz/src/schema.ts": [
+      {
+        "specifier": "./chart-spec.schema.json",
+        "source_path": "packages/deepviz/src/chart-spec.schema.json"
+      }
+    ]
+  },
+  "public_runtime_exports": [
+    {
+      "name": "chartKinds",
+      "file": "packages/deepviz/src/models.ts"
+    },
+    {
+      "name": "ValidationError",
+      "file": "packages/deepviz/src/models.ts"
+    },
+    {
+      "name": "isObject",
+      "file": "packages/deepviz/src/models.ts"
+    },
+    {
+      "name": "safeKey",
+      "file": "packages/deepviz/src/models.ts"
+    },
+    {
+      "name": "validateSpec",
+      "file": "packages/deepviz/src/models.ts"
+    },
+    {
+      "name": "normalize",
+      "file": "packages/deepviz/src/normalize.ts"
+    },
+    {
+      "name": "normalizeStream",
+      "file": "packages/deepviz/src/normalize.ts"
+    },
+    {
+      "name": "defaultAssets",
+      "file": "packages/deepviz/src/render.ts"
+    },
+    {
+      "name": "buildRendererSpec",
+      "file": "packages/deepviz/src/render.ts"
+    },
+    {
+      "name": "render",
+      "file": "packages/deepviz/src/render.ts"
+    },
+    {
+      "name": "renderStream",
+      "file": "packages/deepviz/src/render.ts"
+    },
+    {
+      "name": "createTools",
+      "file": "packages/deepviz/src/render.ts"
+    },
+    {
+      "name": "chartSpecSchema",
+      "file": "packages/deepviz/src/schema.ts"
+    }
+  ],
+  "public_runtime_export_count": 13,
+  "package_metadata": {
+    "name": "@deepviz/agent-toolkit",
+    "version": "0.1.0",
+    "description": "Validated, bounded chart normalization and safe browser artifacts for agents",
+    "type": "module",
+    "license": "MIT",
+    "engines": {
+      "node": ">=22"
+    },
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js"
+      },
+      "./chart-spec.schema.json": "./dist/chart-spec.schema.json",
+      "./prompts/v1/README.md": "./dist/prompts/v1/README.md",
+      "./prompts/v1/system.md": "./dist/prompts/v1/system.md",
+      "./prompts/v1/request.md": "./dist/prompts/v1/request.md"
+    },
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+      "dist",
+      "README.md",
+      "LICENSE"
+    ],
+    "sideEffects": false,
+    "scripts": {
+      "build": "tsc -p tsconfig.json && node scripts/copy-prompts.mjs",
+      "prepack": "npm run build"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit.git",
+      "directory": "packages/deepviz"
+    }
+  },
+  "root_scripts": {
+    "build": "npm run build --workspace @deepviz/agent-toolkit",
+    "test": "npm run build && node --test packages/deepviz/test/*.test.mjs",
+    "lint": "npm run typecheck",
+    "typecheck": "tsc --noEmit -p packages/deepviz/tsconfig.json",
+    "package:check": "npm run build && npm pack --dry-run --workspace @deepviz/agent-toolkit && node packages/deepviz/scripts/check-package.mjs",
+    "test:browser": "npm run build && node --test packages/deepviz/test/browser.browser.mjs packages/deepviz/test/test_n17_boundaries.browser.mjs",
+    "benchmark:stream": "npm run build && node --expose-gc packages/deepviz/scripts/benchmark-stream.mjs",
+    "schema:check": "npm run build && node packages/deepviz/scripts/check-schema.mjs"
+  },
+  "locked_dev_dependencies": {
+    "@antv/g2": "5.4.8",
+    "@types/node": "26.6.11",
+    "echarts": "6.1.0",
+    "playwright": "1.65.1",
+    "plotly.js-dist-min": "4.3.0",
+    "typescript": "7.0.2",
+    "vega": "6.4.0",
+    "vega-embed": "7.4.0",
+    "vega-lite": "6.5.0"
+  },
+  "package_lock_agrees_with_workspace_metadata_static": true,
+  "runtime_external_imports": [],
+  "npm_and_canonical_schema_equal_static": true,
+  "pr33_vs_candidate_schema_semantic_delta_paths": [
+    "$.$defs.ChartSpec.allOf",
+    "$.$defs.ChartSpec.else",
+    "$.$defs.ChartSpec.if",
+    "$.$defs.ChartSpec.then"
+  ],
+  "schema_prerequisite_files": [
+    {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "blob_oid": "17877904985d496f645cd7c66305efc8305bcb5f",
+      "sha256_git_bytes": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "note": "Only dashboard model_config hunk after33; no overwrite or candidate __init__ copy"
+    },
+    {
+      "path": "schemas/chart-spec.schema.json",
+      "blob_oid": "e4b96153ace7b0290bb7d48d3492707abe5186b5",
+      "sha256_git_bytes": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+      "note": "Schema prerequisite, not npm runtime import"
+    },
+    {
+      "path": "scripts/export_schema.py",
+      "blob_oid": "17276da70b78d33e60603c9284070d4b99f0ecc9",
+      "sha256_git_bytes": "a6dad0617fd34b06933490e8ba1711de0d1ba2982fe2675bd932f5ca2eb49491",
+      "note": "Schema prerequisite, not npm runtime import"
+    },
+    {
+      "path": "tests/test_schema_contract.py",
+      "blob_oid": "05e523b94e96edcfa539d5d94f89d4a72baee16b",
+      "sha256_git_bytes": "bd29f8530a5981f28fa7a11302eb547a4fa1173a0e5c870a381c01a93a2fd083",
+      "note": "Schema prerequisite, not npm runtime import"
+    }
+  ],
+  "relevant_source_history_ordered_not_cherrypick_queue": [
+    "715c1f5ca0c13c276110c64d2af8c21deca881ea fix: ship canonical schema in Python distribution",
+    "52b817d29eb1fc55538f5b7f8f30d1356e584223 feat: add bounded agent tools and resource-backed MCP integration",
+    "6561c163ce8dee6882f9248ee0e379067c2d985c feat: add publishable bounded TypeScript visualization toolkit",
+    "b6b375a24e726c494382b91ef5fa5efbb645e233 fix: preserve renderer series, sizing, contrast and readable axes",
+    "eb28438c1f10ebaa3063e1fcbdf54075dd255c64 fix: align ingestion and heatmap reductions with Python contracts",
+    "728bbac47b747501ad27f40525220317ea218064 fix: encode existing dashboard composition rules in shared schema",
+    "3be5614ce54b8735738300f7b57efa384f78fa0c docs: verify runnable agent examples and runtime capability boundaries",
+    "d5d6f8e020036d4686851d3587e4cfd7fe44cb50 fix: preserve TypeScript normalization rows and reduction precision",
+    "9f10443a8dffb20a6cf84590b41efd2f0a5ffc32 fix: preserve record identity around inferred wrappers",
+    "68fe724aa06c0f145b4fd571daaebdbdf179ee81 fix: enforce incremental normalization byte budgets",
+    "d6b612ff75527ff77df8c4274713803bdedc27e4 fix: reject duplicate encoded JSON object keys",
+    "124d6282a6e91caa4bb69bcceaa6e852cc9001af fix: preserve column and record shape during inference",
+    "77e9c1da451f3ed41bb5896b63e607ed49ad38c9 fix: bound decoded CSV cells and parser row state",
+    "28878a6cdaa2567a4650a59445fa1d40fe97fa7f fix: preserve TypeScript native chart semantics and payload bounds",
+    "b057ae99724d00743b87c45b7eeaa2fe2662b640 ci: include N17 injection cases in the offline browser gate",
+    "ed76a2741db17846925ee7a017c12b2dc773d010 test: add independent TypeScript streaming scale evidence",
+    "3cf42fb78bc1ecf59e2349738e2f7086bdf6d8f7 fix: align Unicode coercion and stabilize bounded means",
+    "b6321811ec9ff5d2badb3574f00a6da351affbd3 fix: reject discarded native color mappings",
+    "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6 fix: retain bounded finite sums after transient overflow",
+    "262b0da145e42c94c2908213272ec3be28771206 fix: distribute canonical versioned npm prompts"
+  ],
+  "relevant_source_history_count": 20,
+  "asset_fix_changed_paths": [
+    "packages/deepviz/README.md",
+    "packages/deepviz/package.json",
+    "packages/deepviz/scripts/copy-prompts.mjs",
+    "packages/deepviz/test/test_r11_packaged_prompts.test.mjs"
+  ],
+  "f9_tree_vs_262_package_delta": [
+    "M\tpackages/deepviz/src/normalize.ts",
+    "A\tpackages/deepviz/test/test_r07_finite_overflow.test.mjs"
+  ],
+  "runtime_browser_asset_urls": [
+    "https://cdn.jsdelivr.net/npm/vega@6.4.0/build/vega.min.js",
+    "https://cdn.jsdelivr.net/npm/vega-lite@6.5.0/build/vega-lite.min.js",
+    "https://cdn.jsdelivr.net/npm/vega-embed@7.4.0/build/vega-embed.min.js",
+    "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js",
+    "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+    "https://cdn.jsdelivr.net/npm/plotly.js-dist-min@4.3.0/plotly.min.js"
+  ],
+  "runtime_browser_assets_bundled_in_tarball": false,
+  "expected_pack_members_formula_not_actual_build": "6JS+6declarations+6maps+schema+3prompts+README+LICENSE+package.json=25",
+  "frozen_renderer_vs_ca25_byte_equal": true,
+  "explicit_npm_COUNT_mapping_present_static": true,
+  "finite_range_subtraction_expression_present_static": true,
+  "helper_7d8_render_blob_differs_no_correctness_review": true,
+  "supporting_reports": {
+    "docs/coordination/reports/R24-reviewed-npm-integration.md": {
+      "lines": 26,
+      "sha256_raw": "cf3605dd4479d2c57b6b8979b6a9133b280ceefd2faa787c2ecd7179e82b60d6",
+      "FULL_read": "supporting reported observations, not independently re-executed or current live issue/CI status"
+    },
+    "docs/coordination/reports/R22-03-graphql-bug.md": {
+      "lines": 46,
+      "sha256_raw": "f05a323aeec051f3ce1d7a3e4dabaf8e27d05b7f92a3a8aef3bfd76acc6539c8",
+      "FULL_read": "supporting reported observations, not independently re-executed or current live issue/CI status"
+    },
+    "docs/coordination/reports/R22-13-finite-svg-bug.md": {
+      "lines": 57,
+      "sha256_raw": "85fa74e6623a78e2b20950bfa869dc33f1ea33bd39d1d56572a643dc60ff2422",
+      "FULL_read": "supporting reported observations, not independently re-executed or current live issue/CI status"
+    },
+    "docs/coordination/reports/R22-14-readiness-bug.md": {
+      "lines": 53,
+      "sha256_raw": "3c00cd1316effef600d39e15e224c35041b5644b3b2fe9ba3aea9fa30203aa56",
+      "FULL_read": "supporting reported observations, not independently re-executed or current live issue/CI status"
+    }
+  },
+  "product_commands_executed": {
+    "test": 0,
+    "build": 0,
+    "install": 0,
+    "browser": 0,
+    "scale": 0,
+    "API": 0,
+    "production_config_schema_oracle_writes": 0,
+    "spawn": 0
+  },
+  "command_harness_limitations": [
+    {
+      "initial_collector_exit": 1,
+      "cause": "whole-tree ls-tree appended empty pathspec; child128 confirmed; no result file/test/build produced",
+      "minimal_diagnosis_exit": 0,
+      "corrected_child_exit": 0
+    },
+    {
+      "initial_history_display": "unquoted PowerShell base..npm range showed2commits",
+      "accepted_history": "quoted exact range and list-argv Git give20; no inference from initial partialdisplay"
+    }
+  ],
+  "future_commands_proposals_only": [
+    "npm ci",
+    "npm run build",
+    "npm run typecheck",
+    "npm run schema:check",
+    "npm test",
+    "npm run package:check",
+    "npm pack --dry-run --workspace @deepviz/agent-toolkit",
+    "npm run test:browser",
+    "node --test packages/deepviz/test/native-semantics-n18.browser.mjs",
+    "python scripts/export_schema.py --check after safe own-model import or complete Python foundation",
+    "exact future sealed-head original helper/GraphQL/finiteSVG gates",
+    "release one-pass10/1K/100K/1M/10M counts/values/loss/RSS-heap methodology; not executed here"
+  ],
+  "one_manager": "R04 only; this is bounded npm support, no all-branch audit",
+  "commands": [
+    {"argv":["git","rev-parse","--verify","0ae2cf26426822135fc10d337fcacf580b7ed833^{commit}"],"exit":0},
+    {"argv":["git","rev-parse","--verify","3eab699^{commit}"],"exit":0},
+    {"argv":["git","rev-parse","--verify","262b0da^{commit}"],"exit":0},
+    {"argv":["git","rev-parse","--verify","f9c4372^{commit}"],"exit":0},
+    {"argv":["git","rev-parse","--verify","6561c16^{commit}"],"exit":0},
+    {"argv":["git","rev-parse","--verify","728bbac^{commit}"],"exit":0},
+    {"argv":["git","rev-parse","--verify","e44f667^{commit}"],"exit":0},
+    {"argv":["git","rev-parse","--verify","99841ff^{commit}"],"exit":0},
+    {"argv":["git","rev-parse","--verify","7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57^{commit}"],"exit":0},
+    {"argv":["git","rev-parse","--verify","5e595a8^{commit}"],"exit":0},
+    {"argv":["git","ls-tree","-r","--name-only","0ae2cf26426822135fc10d337fcacf580b7ed833"],"exit":0},
+    {"argv":["git","ls-tree","-r","--name-only","262b0da145e42c94c2908213272ec3be28771206"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:package.json"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:package.json"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","package.json"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:package-lock.json"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:package-lock.json"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","package-lock.json"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/package.json"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/package.json"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/package.json"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/tsconfig.json"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/tsconfig.json"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/tsconfig.json"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/LICENSE"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/LICENSE"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/LICENSE"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/README.md"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/README.md"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/README.md"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/chart-spec.schema.json"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/chart-spec.schema.json"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/src/chart-spec.schema.json"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/index.ts"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/index.ts"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/src/index.ts"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/models.ts"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/models.ts"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/src/models.ts"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/normalize.ts"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/normalize.ts"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/src/normalize.ts"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/render.ts"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/render.ts"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/src/render.ts"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/renderers.ts"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/renderers.ts"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/src/renderers.ts"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/schema.ts"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/schema.ts"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/src/schema.ts"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/scripts/copy-prompts.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/scripts/copy-prompts.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/scripts/copy-prompts.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:schemas/chart-spec.schema.json"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:schemas/chart-spec.schema.json"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","schemas/chart-spec.schema.json"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:prompts/v1/README.md"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:prompts/v1/README.md"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","prompts/v1/README.md"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:prompts/v1/system.md"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:prompts/v1/system.md"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","prompts/v1/system.md"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:prompts/v1/request.md"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:prompts/v1/request.md"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","prompts/v1/request.md"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/scripts/benchmark-stream.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/scripts/benchmark-stream.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/scripts/benchmark-stream.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/scripts/check-package.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/scripts/check-package.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/scripts/check-package.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/scripts/check-schema.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/scripts/check-schema.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/scripts/check-schema.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/scripts/verify-streaming-scale.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/scripts/verify-streaming-scale.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/scripts/verify-streaming-scale.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/browser.browser.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/browser.browser.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/browser.browser.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/contract.test.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/contract.test.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/contract.test.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/mapping-layout-n18.test.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/mapping-layout-n18.test.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/mapping-layout-n18.test.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/n21-streaming-scale.test.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/n21-streaming-scale.test.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/n21-streaming-scale.test.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/native-semantics-n18.browser.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/native-semantics-n18.browser.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/native-semantics-n18.browser.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/native-semantics-n18.test.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/native-semantics-n18.test.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/native-semantics-n18.test.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/normalization-bytes.test.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/normalization-bytes.test.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/normalization-bytes.test.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/normalization-means.test.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/normalization-means.test.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/normalization-means.test.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/normalization-policy.test.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/normalization-policy.test.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/normalization-policy.test.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/normalization-regressions.test.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/normalization-regressions.test.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/normalization-regressions.test.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/normalization-unicode-coercion.test.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/normalization-unicode-coercion.test.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/normalization-unicode-coercion.test.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/render-budget-n18.test.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/render-budget-n18.test.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/render-budget-n18.test.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/render.test.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/render.test.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/render.test.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/test_n17_boundaries.browser.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/test_n17_boundaries.browser.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/test_n17_boundaries.browser.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/test_n17_boundaries.test.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/test_n17_boundaries.test.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/test_n17_boundaries.test.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/test_n19_text_formats.test.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/test_n19_text_formats.test.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/test_n19_text_formats.test.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/test_n19_unicode_cells.test.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/test_n19_unicode_cells.test.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/test_n19_unicode_cells.test.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/test_n21_resource_policy.test.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/test_n21_resource_policy.test.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/test_n21_resource_policy.test.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/test_r07_finite_overflow.test.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/test_r07_finite_overflow.test.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/test_r07_finite_overflow.test.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/test_r11_packaged_prompts.test.mjs"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/test_r11_packaged_prompts.test.mjs"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/test/test_r11_packaged_prompts.test.mjs"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/.gitignore"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/.gitignore"],"exit":0},
+    {"argv":["git","log","-1","--format=%H %s","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/.gitignore"],"exit":0},
+    {"argv":["git","diff","--name-only","262b0da145e42c94c2908213272ec3be28771206","3eab699b61850a20e91132e16caf8c589085f9ee","--","packages","package.json","package-lock.json","schemas","prompts","scripts"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/index.ts"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/models.ts"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/normalize.ts"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/render.ts"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/renderers.ts"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/schema.ts"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/package.json"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:package.json"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:package-lock.json"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:schemas/chart-spec.schema.json"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/chart-spec.schema.json"],"exit":0},
+    {"argv":["git","show","99841ffb80e0f2ea90c753c1bf0ceff718e0e180:schemas/chart-spec.schema.json"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:schemas/chart-spec.schema.json"],"exit":0},
+    {"argv":["git","log","--reverse","--format=%H %s","0ae2cf26426822135fc10d337fcacf580b7ed833..262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz/src","packages/deepviz/package.json","packages/deepviz/tsconfig.json","package.json","package-lock.json","schemas/chart-spec.schema.json","prompts/v1","packages/deepviz/scripts"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:python/deepviz/src/deepviz/models.py"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:python/deepviz/src/deepviz/models.py"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:schemas/chart-spec.schema.json"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:schemas/chart-spec.schema.json"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:scripts/export_schema.py"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:scripts/export_schema.py"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:tests/test_schema_contract.py"],"exit":0},
+    {"argv":["git","rev-parse","262b0da145e42c94c2908213272ec3be28771206:tests/test_schema_contract.py"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/renderers.ts"],"exit":0},
+    {"argv":["git","show","ca25af486bf443949125df789f5b5fd1fda8bba8:packages/deepviz/src/renderers.ts"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/render.ts"],"exit":0},
+    {"argv":["git","show","7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57:packages/deepviz/src/render.ts"],"exit":0},
+    {"argv":["git","status","--porcelain"],"exit":0},
+    {"argv":["git","rev-parse","HEAD"],"exit":0},
+    {"argv":["git","show","-s","--format=%P","3eab699b61850a20e91132e16caf8c589085f9ee"],"exit":0},
+    {"argv":["git","diff-tree","--no-commit-id","--name-only","-r","f9c437286c9dfe2245a7d914995d90346e29c233"],"exit":0},
+    {"argv":["git","diff","--name-status","f9c437286c9dfe2245a7d914995d90346e29c233","262b0da145e42c94c2908213272ec3be28771206","--","packages/deepviz","package.json","package-lock.json","prompts/v1","schemas/chart-spec.schema.json"],"exit":0},
+    {"argv":["git","show","262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/src/render.ts"],"exit":0}
+  ]
+}
