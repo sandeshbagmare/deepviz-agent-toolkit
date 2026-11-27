@@ -1,0 +1,27 @@
+--- initial-namespace-identity-guard
++++ resources-only-namespace-confined-before-import
+@@ -35,7 +35,23 @@
+ sys.path.insert(0, str(snapshot / "python/deepviz/src"))
+ namespace = importlib.util.find_spec("deepviz")
+ assert namespace is not None and namespace.origin is None
+-assert list(namespace.submodule_search_locations) == [str(snapshot / "python/deepviz/src/deepviz")]
++observed_paths = list(namespace.submodule_search_locations)
++own_namespace = str(snapshot / "python/deepviz/src/deepviz")
++assert observed_paths[0] == own_namespace
++extras = observed_paths[1:]
++assert extras in ([], [str(dependencies / "deepviz")])
++if extras:
++    assert sorted(p.name for p in (dependencies / "deepviz").iterdir()) == ["resources"]
++# Identity-only namespace confinement: no production/SDK source, tests or environment changes.
++namespace.submodule_search_locations = [own_namespace]
++parent_namespace = importlib.util.module_from_spec(namespace)
++sys.modules["deepviz"] = parent_namespace
++assert list(parent_namespace.__path__) == [own_namespace]
++(output / "namespace-identity-adapter.json").write_text(json.dumps({
++    "observed_namespace_paths": observed_paths, "selected": list(parent_namespace.__path__),
++    "reason": "Installed resources-only namespace; confine imports to exact Git source before models import",
++    "no_product_or_SDK_patch": True, "no_environment_or_semantic_oracle_change": True,
++}, indent=2) + "\n")
+ model_spec = importlib.util.find_spec("deepviz.models")
+ assert model_spec is not None
+ model_file = snapshot / "python/deepviz/src/deepviz/models.py"

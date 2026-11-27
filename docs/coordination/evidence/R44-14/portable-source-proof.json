@@ -1,0 +1,36 @@
+{
+  "source_commit": "dd1c4080095c7e739582dc5c631bc419047c48d2",
+  "repository": "OWN_WORKTREE",
+  "snapshot": "OWN_ARTIFACTS/r44-schema-test\\portable-once\\snapshot",
+  "verified_before_import": true,
+  "files": [
+    {
+      "file": "python/deepviz/src/deepviz/models.py",
+      "bytes": 3532,
+      "sha256": "be2cb15f6f91f2de4b9ebd4e283ea677e9e39490932db3ecd9934f2d6c1e4a1f"
+    },
+    {
+      "file": "schemas/chart-spec.schema.json",
+      "bytes": 4975,
+      "sha256": "35b5a2786db65051ff8f0289901424d74a7b2a9df87fc6c59342ced5834cd18d"
+    }
+  ],
+  "isolation": {
+    "isolated": 1,
+    "no_site": 1,
+    "dont_write_bytecode": true
+  },
+  "scope": "Only ChartSpec in the exact verified model; no toolkit/renderer imports",
+  "model_origin": "OWN_ARTIFACTS/r44-schema-test\\portable-once\\snapshot\\python\\deepviz\\src\\deepviz\\models.py",
+  "module_name": "r33_verified_models",
+  "model_origin_hash_verified": true,
+  "unrelated_deepviz_imports": [],
+  "dependencies": {
+    "pydantic": "2.14.4",
+    "jsonschema": "4.26.0"
+  },
+  "dependency_origins": {
+    "pydantic": "MAIN\\.venv\\Lib\\site-packages\\pydantic\\__init__.py",
+    "jsonschema": "MAIN\\.venv\\Lib\\site-packages\\jsonschema\\__init__.py"
+  }
+}

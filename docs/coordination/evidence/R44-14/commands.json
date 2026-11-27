@@ -1,0 +1,58 @@
+[
+  {
+    "phase": "unchanged935cportable36",
+    "argv": [
+      "MAIN\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-I",
+      "-S",
+      "OWN_ARTIFACTS/r44-schema-test\\unchanged_935c_oracle.py",
+      "--repository",
+      "OWN_WORKTREE",
+      "--source-commit",
+      "dd1c4080095c7e739582dc5c631bc419047c48d2",
+      "--dependencies",
+      "MAIN\\.venv\\Lib\\site-packages",
+      "--out",
+      "OWN_ARTIFACTS/r44-schema-test\\portable-once"
+    ],
+    "exit": 0,
+    "elapsed_seconds": 1.0264906999946106,
+    "ended_at_utc": "2026-11-27T17:36:04.281719+00:00"
+  },
+  {
+    "phase": "FULLunchangedshipped118",
+    "argv": [
+      "MAIN\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-I",
+      "-S",
+      "OWN_WORKTREE\\docs\\coordination\\evidence\\R44-14\\identity_shipped_launcher.py",
+      "OWN_ARTIFACTS/r44-schema-test\\immutable-dd1",
+      "MAIN\\.venv\\Lib\\site-packages",
+      "OWN_ARTIFACTS/r44-schema-test\\full118-once",
+      "OWN_ARTIFACTS/r44-schema-test\\checkout-source-proof.json"
+    ],
+    "exit": 1,
+    "elapsed_seconds": 0.1273221999872476,
+    "ended_at_utc": "2026-11-27T17:36:04.411442+00:00"
+  },
+  {
+    "phase": "FULLshipped118identity-confinement-firstsemanticrun",
+    "argv": [
+      "MAIN\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-I",
+      "-S",
+      "OWN_WORKTREE\\docs\\coordination\\evidence\\R44-14\\identity_shipped_launcher.py",
+      "OWN_ARTIFACTS/r44-schema-test\\immutable-dd1",
+      "MAIN\\.venv\\Lib\\site-packages",
+      "OWN_ARTIFACTS/r44-schema-test\\full118-confined-once",
+      "OWN_ARTIFACTS/r44-schema-test\\checkout-source-proof.json"
+    ],
+    "exit": 0,
+    "elapsed_seconds": 4.3476167999906465,
+    "ended_at_utc": "2026-11-27T17:39:47.407092+00:00",
+    "portable_not_repeated": true
+  }
+]

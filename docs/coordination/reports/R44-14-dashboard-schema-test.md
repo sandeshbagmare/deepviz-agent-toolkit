@@ -1,0 +1,38 @@
+# R44-14 final: independent schema TEST1 PASS
+
+Exact PRODUCT **dd1c4080095c7e739582dc5c631bc419047c48d2**, parent31cff73ab057c3fed69bd400ac005f2f11609027. Non-author runtime acceptance, not source review/CI/main approval.
+
+- **UNCHANGED935c portable36:36PASS/0FAIL/0ERROR/0SKIP**, exit0, unittest0.021s. Bytes from published155e427 equal OWN oracle and dd1 shipped helper.
+- **FULL shipped118:118PASS/0FAIL/0ERROR/0SKIP**, exit0, pytest2.09s. All shipped tests unchanged.
+- Same17RAW JSON fixtures overlap across commands: **NOT154distinct tests**. No model_dump-generated fixtures/expected booleans, xfail or waiver.
+- All previous6composition schema REDs ACTUALLY resolve on identical literals: bar/default-bar nonempty children; dashboard missing/empty children; nested empty/nonempty dashboard. Actual runtime AND generated/published schemas reject. R33 baseline read as data only, no old bff replay.
+
+## Identity, setup failure and freshness
+RawGit17-file OWN checkout verified BEFORE product import and AFTER commands. Protected public namespace/model object/origin checked before/every test/after; isolated -B-I-S/no editable hooks. Portable model/schema bytes likewise unchanged. Native Mapping/numeric/integral/default/extra controls included.
+
+First118 launcher attempt exited1 at namespace guard BEFORE model import/collection: **0semantic cases**. Diagnosis: existing installed namespace contains ONLY resources. Permitted identity-only adapter confines stdlib ModuleSpec to OWN Git source before public models import; original assertions/source/oracles remain intact. Then FIRST semantic118 run passed. Portable36 NOT repeated. Failure log/initial code hash/adapter diff preserved, not hidden or counted as product RED.
+
+Actual model export passes Draft202012 check and strict sorted JSON equality with published schema. Native export CRLF versus Git LF is explicitly recorded, not claimed byte-identical. Text evidence LF/path alias normalization does not alter source/test inputs.
+
+## Handoff
+Evidence: docs/coordination/evidence/R44-14/ source/origin proofs, commands/exits, all-case results, actual generated schema, setup log and adapter. ONLY role14 central MAIN+OWN status updated. Plotly02hoverF1/20clipV1 remain OPEN; prior56source-clear is not visual approval.
+
+**ONE next action R04:** combine actual dd1 TEST1 with other genuine exact-head gates, observe product publication/PR/CI, decide scoped schema-main merge. Local test blocker NONE; merge/toolkit estimate UNKNOWN/R04 owner. No source/config/schema/oracle/install/env/API/shared/default/PR/closure/spawn/poll changes; no old COUNT/Plotly/bff matrix. No CI/main/v1 approval. One OWN evidence commit/non-force/exact SHA publication, no receipt loop.
+
+## Preserved detailed checkpoints
+# R44-14 dashboard schema independent TEST1
+
+R44PREWORK 2026-11-27T17:28:24.980330+00:00: actualSAMEses_de56780c9ffefIH3Y1KdXhqGwR;FULLR44/common14/currentAGENTS/R42protocol/ownnote/canonicalREAD. OWNbranchagents/r10-14-assets-offline-provenance clean56f2b7ba314598a66b517f0760bbf12c43abf019. NEWdd1c4080095c7e739582dc5c631bc419047c48d2 object/parent31cff/4pathsconfirmed; remoteabsent17:22ROOTreportNOTpublicationproof. TEST1notproductionreview. Plotly02hoverF1/20clipV1remainOPEN.
+AllowedOWNR44report/evidence/note/branch+ONLYMAINstatus/role14.md/OWNcopy. ExactfreshGitcheckout/rawSHA/importnamespaceBEFOREassertions;UNCHANGED935c36from155+FULLshipped118/modelimport/exportJSONfreshness.17rawliteralcasesNEVERmodel_dump;prior6REDmustactuallyresolve/samecasesNOT154distinct. IdentityONLYadapterifneeded/no semanticchanges. NOsource/config/schema/oracle/install/env/API/shared/default/PR/closure/spawn/poll; noCOUNT/Plotly/oldbffreplay.
+Currentprework. Next readactualdd1tests/materialize17Gitfiles, namespaceguardâ†’fresh36+118â†’before-afteridentity/results/statusâ†’ONEscopedcommit/nonforceexactSHA/promptR04handoff/notCI/mainapproval. EstimateUNKNOWN;R04publication/CI/mergeowner. OnepreworkrequestscannerrejectedBEFOREexecution/no write/test.
+
+R44preRUN: rawGit17fileOWNdd1checkout/parent31cffexactverifiedBEFOREanyproductimport.935cportablefrom155==shippedhelper==ownoriginal(byteexact/no semanticadapter). Identity-onlylauncherLF/AST0/sha154879146b5cc63cbada61ce755e91bc497637e94e0c4652b7c1d078657b644e ready: -B-I-S/namespacepath/modeloriginBEFOREimport, noeditablefinder/foreignpackage, plugin-autoload+ambientconftestdisabledCLI(no env/configwrite), raw17files+moduleidentitybeforeeachtest/after118, actualgeneratedschema==published. Readfullactualmodel/118fixturefiles/helperconfiguration; expectedprevious6REDnotpredictedpass. No productrunsyet; first2status/preworkrequests scannerrejectedbeforeexecution, shortownedwritesused. Next ONCE36thenFULL118capturelogs/JSON/JUnit/exports/provenance;failuresunwaived/samecasesnot154distinct.
+R44 material checkpoint: unchanged935c portable on exactdd1 ACTUALLY exit0/36PASS/0FAIL/0ERROR/0SKIP, unittest0.021s. All prior6strictschemaRED now actually resolve on same raw literals (not predicted).
+FULL118 launcher first attempt exit1 BEFORE model import or test collection at namespace-path strictness guard; zero shipped semantic tests executed. This is setup identity failure, NOT product failure/pass and NOT waived. Preserve first log/command/code hash. Next inspect actual namespace paths safely without importing model, then ONLY identity adapter if justified; no source/oracle/env/config changes. Estimate UNKNOWN, role14 owns setup diagnosis; R04 product CI/merge.
+
+R44identitydiagnosis+permittedONLYadapter: actualnamespaceOWNGitpath+existingvenvdeepviz/resourcesONLY(no.py/__init__, no productmodulesloaded). Exactpath-countguard rejectedresourcesnamespace beforemodels/collection. Preservefailedattemptlog/originallauncherSHA. ConstrainstdlibnamespaceModuleSpec.__path__toOWNsource BEFOREactualdeepviz.modelsimport, foreigndirstrictlyresources-only; no installedSDK/source/env/config/schema/oraclechange/no assertionrelaxation. Identityonlydiff/proofsaved/AST0. Portable36ACTUALGREENretained/no repeat. Next firstsemanticFULL118ONLYinnewoutputfolder; actualcount/results/before-afterbytesorstopifguardfails.
+
+R44ACTUALGATEPASS 2026-11-27T17:43:32.872808+00:00: exactdd1/UNCHANGED935cONEportable36PASS0FAIL0ERROR0SKIP0.021s; prior6sameRAWschemaRedsACTUALLYresolved/generated+publishedreject/runtimeagrees. FULLunchangedshipped118PASS0FAIL0ERROR0SKIP2.09s, FIRSTsemanticrunafteronepre-model-importnamespaceguardfailure/0semanticcases (resources-onlyinstallednamespace;strictidentityONLYconfinement, originaloracles/sourcesunmodified). Same17casesoverlapNOT154distinct. All17rawGitfilesunchangedBEFORE/after, publicmodelsnamespace+moduleobjectsamebefore/everytest/after, generatedschema strictsortedJSON==published+Draft202012valid; nativeexportserializationbyteidentityNOTclaimed. Actuallogs/results/6resolvedcaseproof/post-runhashessaved. NoAPI/install/env/config/source/schema/oracle/sharedwrites/oldmatrix; PlotlyF1/V1OPEN. Next ONEOWNpublish/R04gatehandoff; localtestgateblockersNONE, R04CI/PR/defaultowner; forecastUNKNOWN.
+
+
+R44precommit: ACTUALdd1portable935c36PASS/FULL118PASS0fail-error-skip;6previousliteralREDresolved, same17casesNOT154distinct. Source17rawGit/import/protectedpublicnamespace/everytest/aftermodelobject+strictschemafreshnessverified;initialpre-importnamespaceguard1/0semanticcasespreserved+identity-onlyadapterexactexecutedhash. No newtest/domainoracle/source/env/APIchange. Thirdlongreportwrite scannerrejectedBEFOREexecution; boundedownedheaderused. NextONEmeaningfulOWNpublish/exactSHA; R04 remaininggates/productCI/mainowner/no finalapproval. R42finalcurrentreceiptwillupdateONLYrole14MAIN+OWNcopy(no endlessreceiptcommit; anyremainingOWNstatusdirtymustbereported).
