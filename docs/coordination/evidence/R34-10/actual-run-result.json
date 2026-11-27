@@ -1,0 +1,391 @@
+{
+  "source_sha": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+  "oracle_commit": "76cac9d05b0b4abc94e5ff316e3de4d3bc835b79",
+  "results": [
+    {
+      "invocation": "pytest.main(argv), unchanged files",
+      "argv": [
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\tests\\test_r23_count_channel.py",
+        "-q",
+        "-rs",
+        "--strict-markers",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\author16-tmp",
+        "--junitxml",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\author16.xml"
+      ],
+      "exit": 0,
+      "elapsed_seconds": 0.42241240000294056,
+      "counts": {
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "pass": true,
+      "deselected_obsolete_identity_only": 0,
+      "old_identity_not_numeric_waiver": false,
+      "xml_sha256": "34be7aaeb235cd83c2c714d9b4c65eb432dee047a462b4023fd78b5da298bfcd"
+    },
+    {
+      "invocation": "pytest.main(argv), unchanged files",
+      "argv": [
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\immutable17\\test_count_measure.py",
+        "-q",
+        "-rs",
+        "--strict-markers",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\semantic55-tmp",
+        "--junitxml",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\semantic55.xml",
+        "-k",
+        "not loaded_modules_match_pinned_source_identity"
+      ],
+      "exit": 0,
+      "elapsed_seconds": 6.148607900002389,
+      "counts": {
+        "tests": 55,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "pass": true,
+      "deselected_obsolete_identity_only": 1,
+      "old_identity_not_numeric_waiver": true,
+      "xml_sha256": "0a343f7e3edc31e31983827999ab7691b4ff332bfae418e3e395a4ddb58bac0b"
+    }
+  ],
+  "browser": "NOT RUN; bounded Matplotlib PNG+SVG selected",
+  "visual_inspection": "PENDING",
+  "before_import": {
+    "source_sha": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+    "four_modules": [
+      {
+        "module": "engines",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\engines.py",
+        "sha256": "54b9b6ced08b276b87c143334c8b54110ea7f15e52e0b283d65c911fdba6bb18",
+        "loaded_checked": false
+      },
+      {
+        "module": "normalize",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\normalize.py",
+        "sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+        "loaded_checked": false
+      },
+      {
+        "module": "models",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\models.py",
+        "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "loaded_checked": false
+      },
+      {
+        "module": "render",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\render.py",
+        "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+        "loaded_checked": false
+      }
+    ],
+    "oracle_commit": "76cac9d05b0b4abc94e5ff316e3de4d3bc835b79",
+    "unchanged_oracle_hashes": {
+      "test_count_measure.py": "c09f6a052afb4822e3bf06e6877d2e061810fd71d423049152c2b098f9325d54",
+      "count_contract.py": "0e0d468a5d70a3f36f8dda088ffa09e73da031952168e0ecd0cd6918b1940cd1",
+      "collect_visuals.py": "afd8a6c65809dfa858ac61d1b9ed2406ba41f709cec253d7bf0e7b9ac893c929",
+      "browser-count.cjs": "84ca2c022efdb08624f8e082fd0d6dc8d8a22cc8ce1097f91f843aff52159eee"
+    },
+    "unchanged_author_hash": "8270a4748ee5c5f20e9d7cce92674aefad43d7c151dd41709c702446a1b5c683"
+  },
+  "before_tests": {
+    "source_sha": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+    "four_modules": [
+      {
+        "module": "engines",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\engines.py",
+        "sha256": "54b9b6ced08b276b87c143334c8b54110ea7f15e52e0b283d65c911fdba6bb18",
+        "loaded_checked": true
+      },
+      {
+        "module": "normalize",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\normalize.py",
+        "sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+        "loaded_checked": true
+      },
+      {
+        "module": "models",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\models.py",
+        "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "loaded_checked": true
+      },
+      {
+        "module": "render",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\render.py",
+        "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+        "loaded_checked": true
+      }
+    ],
+    "oracle_commit": "76cac9d05b0b4abc94e5ff316e3de4d3bc835b79",
+    "unchanged_oracle_hashes": {
+      "test_count_measure.py": "c09f6a052afb4822e3bf06e6877d2e061810fd71d423049152c2b098f9325d54",
+      "count_contract.py": "0e0d468a5d70a3f36f8dda088ffa09e73da031952168e0ecd0cd6918b1940cd1",
+      "collect_visuals.py": "afd8a6c65809dfa858ac61d1b9ed2406ba41f709cec253d7bf0e7b9ac893c929",
+      "browser-count.cjs": "84ca2c022efdb08624f8e082fd0d6dc8d8a22cc8ce1097f91f843aff52159eee"
+    },
+    "unchanged_author_hash": "8270a4748ee5c5f20e9d7cce92674aefad43d7c151dd41709c702446a1b5c683"
+  },
+  "author16_post_identity": {
+    "source_sha": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+    "four_modules": [
+      {
+        "module": "engines",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\engines.py",
+        "sha256": "54b9b6ced08b276b87c143334c8b54110ea7f15e52e0b283d65c911fdba6bb18",
+        "loaded_checked": true
+      },
+      {
+        "module": "normalize",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\normalize.py",
+        "sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+        "loaded_checked": true
+      },
+      {
+        "module": "models",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\models.py",
+        "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "loaded_checked": true
+      },
+      {
+        "module": "render",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\render.py",
+        "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+        "loaded_checked": true
+      }
+    ],
+    "oracle_commit": "76cac9d05b0b4abc94e5ff316e3de4d3bc835b79",
+    "unchanged_oracle_hashes": {
+      "test_count_measure.py": "c09f6a052afb4822e3bf06e6877d2e061810fd71d423049152c2b098f9325d54",
+      "count_contract.py": "0e0d468a5d70a3f36f8dda088ffa09e73da031952168e0ecd0cd6918b1940cd1",
+      "collect_visuals.py": "afd8a6c65809dfa858ac61d1b9ed2406ba41f709cec253d7bf0e7b9ac893c929",
+      "browser-count.cjs": "84ca2c022efdb08624f8e082fd0d6dc8d8a22cc8ce1097f91f843aff52159eee"
+    },
+    "unchanged_author_hash": "8270a4748ee5c5f20e9d7cce92674aefad43d7c151dd41709c702446a1b5c683"
+  },
+  "semantic55_post_identity": {
+    "source_sha": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+    "four_modules": [
+      {
+        "module": "engines",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\engines.py",
+        "sha256": "54b9b6ced08b276b87c143334c8b54110ea7f15e52e0b283d65c911fdba6bb18",
+        "loaded_checked": true
+      },
+      {
+        "module": "normalize",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\normalize.py",
+        "sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+        "loaded_checked": true
+      },
+      {
+        "module": "models",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\models.py",
+        "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "loaded_checked": true
+      },
+      {
+        "module": "render",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\render.py",
+        "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+        "loaded_checked": true
+      }
+    ],
+    "oracle_commit": "76cac9d05b0b4abc94e5ff316e3de4d3bc835b79",
+    "unchanged_oracle_hashes": {
+      "test_count_measure.py": "c09f6a052afb4822e3bf06e6877d2e061810fd71d423049152c2b098f9325d54",
+      "count_contract.py": "0e0d468a5d70a3f36f8dda088ffa09e73da031952168e0ecd0cd6918b1940cd1",
+      "collect_visuals.py": "afd8a6c65809dfa858ac61d1b9ed2406ba41f709cec253d7bf0e7b9ac893c929",
+      "browser-count.cjs": "84ca2c022efdb08624f8e082fd0d6dc8d8a22cc8ce1097f91f843aff52159eee"
+    },
+    "unchanged_author_hash": "8270a4748ee5c5f20e9d7cce92674aefad43d7c151dd41709c702446a1b5c683"
+  },
+  "actual_artifacts": {
+    "matplotlib": {
+      "manifest_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\semantic55-tmp\\test_public_artifact_reports_e0\\deepviz-fzum9qdr\\manifest.json",
+      "manifest_sha256": "11af930013938c3eca1d4692849901d08c71dd1c0001fca079a1267f0168de12",
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "retained_series": [
+        90,
+        80,
+        70
+      ],
+      "warnings": [],
+      "PNG": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\inspect-matplotlib\\chart.png",
+      "SVG": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\inspect-matplotlib\\chart.svg",
+      "PNG_sha256": "209ababf840586906d88799aec2d9d555c3dc32759d218268a5fa81f24ce865b",
+      "SVG_sha256": "f6c1f8f19f06879f2cdf436b8fdf78eef6cad20ccf9d8a472434a5559193c0e9",
+      "dimensions": [
+        720,
+        440
+      ],
+      "artist_pairs_verified_by": "unchanged17 native measure oracle",
+      "visual_inspection": "PENDING actual image-open by tester, not file existence proof"
+    },
+    "plotly": {
+      "manifest_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\semantic55-tmp\\test_public_artifact_reports_e1\\deepviz-wx7s7hw1\\manifest.json",
+      "manifest_sha256": "1ee727bbf8375efcfc9bc0b5a681e4256b00405403f58b34fe86eff9e02e3fb6",
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "retained_series": [
+        90,
+        80,
+        70
+      ],
+      "warnings": [],
+      "actual_native_pairs": [
+        [
+          "A",
+          2.0
+        ],
+        [
+          "B",
+          3.0
+        ],
+        [
+          "C",
+          1.0
+        ]
+      ],
+      "browser_paint": "NOT RUN; payload is not paint/CDN acceptance"
+    },
+    "vega": {
+      "manifest_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\semantic55-tmp\\test_public_artifact_reports_e2\\deepviz-hkihu6_k\\manifest.json",
+      "manifest_sha256": "c0115a9ab24d5147758b1ed18627a69bd3a62e4d8599cfd3d9268bbbd97c7d61",
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "retained_series": [
+        90,
+        80,
+        70
+      ],
+      "warnings": [],
+      "actual_native_pairs": [
+        [
+          "A",
+          2.0
+        ],
+        [
+          "B",
+          3.0
+        ],
+        [
+          "C",
+          1.0
+        ]
+      ],
+      "browser_paint": "NOT RUN; payload is not paint/CDN acceptance"
+    },
+    "echarts": {
+      "manifest_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\semantic55-tmp\\test_public_artifact_reports_e3\\deepviz-yxhwc3to\\manifest.json",
+      "manifest_sha256": "f61c00c111e031c6b212c38f5c088f83e927278fe632363f72de3ff99106bdac",
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "retained_series": [
+        90,
+        80,
+        70
+      ],
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "actual_native_pairs": [
+        [
+          "A",
+          2.0
+        ],
+        [
+          "B",
+          3.0
+        ],
+        [
+          "C",
+          1.0
+        ]
+      ],
+      "browser_paint": "NOT RUN; payload is not paint/CDN acceptance"
+    },
+    "antv": {
+      "manifest_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\semantic55-tmp\\test_public_artifact_reports_e4\\deepviz-r78y0h85\\manifest.json",
+      "manifest_sha256": "9d7111f516f016e906072acd34395c0a91b489b70d5534950b46f4dc732d1190",
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "retained_series": [
+        90,
+        80,
+        70
+      ],
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "actual_native_pairs": [
+        [
+          "A",
+          2.0
+        ],
+        [
+          "B",
+          3.0
+        ],
+        [
+          "C",
+          1.0
+        ]
+      ],
+      "browser_paint": "NOT RUN; payload is not paint/CDN acceptance"
+    }
+  },
+  "after_tests_and_collection": {
+    "source_sha": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+    "four_modules": [
+      {
+        "module": "engines",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\engines.py",
+        "sha256": "54b9b6ced08b276b87c143334c8b54110ea7f15e52e0b283d65c911fdba6bb18",
+        "loaded_checked": true
+      },
+      {
+        "module": "normalize",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\normalize.py",
+        "sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+        "loaded_checked": true
+      },
+      {
+        "module": "models",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\models.py",
+        "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "loaded_checked": true
+      },
+      {
+        "module": "render",
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\render.py",
+        "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+        "loaded_checked": true
+      }
+    ],
+    "oracle_commit": "76cac9d05b0b4abc94e5ff316e3de4d3bc835b79",
+    "unchanged_oracle_hashes": {
+      "test_count_measure.py": "c09f6a052afb4822e3bf06e6877d2e061810fd71d423049152c2b098f9325d54",
+      "count_contract.py": "0e0d468a5d70a3f36f8dda088ffa09e73da031952168e0ecd0cd6918b1940cd1",
+      "collect_visuals.py": "afd8a6c65809dfa858ac61d1b9ed2406ba41f709cec253d7bf0e7b9ac893c929",
+      "browser-count.cjs": "84ca2c022efdb08624f8e082fd0d6dc8d8a22cc8ce1097f91f843aff52159eee"
+    },
+    "unchanged_author_hash": "8270a4748ee5c5f20e9d7cce92674aefad43d7c151dd41709c702446a1b5c683"
+  },
+  "status": "PASS_SELECTED_TESTS"
+}

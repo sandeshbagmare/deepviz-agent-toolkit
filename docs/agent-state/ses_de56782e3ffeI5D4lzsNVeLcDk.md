@@ -1,5 +1,49 @@
 # SAME-ID R11 role10 — strict MCP regression tester
 
+## R33 first-native acceptance CODE — pre-work
+
+- R34ACTUALfirstONCErunner0/clean857:unchangedauthor16PASS0skip0.24s(wall0.4224)
+  +immutable17semantic55PASS0skip1old5340identityDESELECTED5.98s(wall6.1486)
+  =71uniquepass0fail/errors/skips;no numericwaiver/oldsourcefixturechange/retry.
+  FouractualmoduleGit/work/loadedoriginsBEFORE/AFTEReach/AFTERcollectionexact;
+  all4oldtest-contract-collector-browserhashes76cac9d+author16SHA8270unchanged.
+- Actual5nativebarlinebubbleCOUNT2/3/1+metadata6→3/count+explicit-y/SUM/NONE/
+  missing-zero/heatmap/auto/retainedsize-color/nonmutationstrictoraclesPASS.
+  Read5testgeneratednative-manifests(no secondrender); OPENEDPNG720x44018836B
+  SHA209ababf...A2B3C1zero/legend90/80/70/title,actualSVGreadgeometrybaseline
+  265.8/heights146.947669,220.421503,73.473834ratios2/3/1. No browser/CDNpaint
+  claimsforECharts/G2. OwnAST/Ruff/mypy0twofiles/hashunchanged/sourceclean.
+- MAINR34compactevidence19files/report+R33preservedpartialready. No newmaterial
+  COUNTdefectfoundselected857/notintegrated/native/default/CIapproval. Nextown
+  explicitpathscope-secret-whitespace-byteaudit→ONEmeaningfultestCODE/evidence
+  commit/nonforceOWNpush/exactremoteSHA,MAINreceiptandreturn; noreceiptloop.
+
+- R33coherentpartialSAVEcomplete:finalownAST0/Ruff0/mypy0/259linesSHA2886674d
+  afteronlyharnesscapture_output+equivalenttypenarrowguards. README+JSON/report
+  unknownsready;0productimports/tests/renders. CurrentR34startsNOWexact857
+  independentCOUNTstrictcontrols/oneboundedstaticoutput,notnewjob/capacity.
+
+- DirectR34SAMEsteeringacceptedafternative254lineconsumerwritten; preserveR33
+  partial/prodNOTRUN. OwnAST0/Ruff1UP022/mypy10typenarrowinginitial; onlyown
+  equivalentguards/capture_outputcorrected, staticrecheckthenfreeze. FULLR34
+  manager45/root33/07report76read; conflictingmanagerR35deferralnoted/direct
+  currentrootR34switchgovernsunlessnewsteering. NEWR34preworkreport saved.
+- Exact85796dbe3360fb88686f2e7188122e2da80d54c2/fourGit+importproof→unchanged
+  author16+immutable17semantic55ONCE/setupidentity1NAnotnumericwaiver→oneactual
+  MatplotlibPNG+SVG/open. No oldMCP/entirekinds/npm/scale/install/API/source/spawn.
+
+- FULLMAINR33manager19/rootIDcorrection21/ownnote72READbeforewrites. Native
+  SAMEactualsession`ses_de56782e3ffeI5D4lzsNVeLcDk`confirmed,wrongmanagerIDignored.
+  OWNbranchcleanatP2published7cf21455a3b5523cd383732c1ed4982ffe494caf.
+- NEWrole10R33tests/report/evidence/ownnoteONLY; no production/oracles/env/deps/
+  API/build/install/browser/scale/spawn/old6+3/MCP/e47rerun. Candidate262cli.py/
+  render.pyreadSTATICONLYforrealAPI/flags/0JSONsuccessvs2stderrerror.
+  NextportableexplicitfutureSHA/hash/import-provenAPI+CLI/CSVtext-vs-Path/temp
+  roots/artifactcounts/containment/sentinel/invalidspecconsumerCODE; ownAST/Ruff/
+  typeONLYuntilR04suppliesactualnewnativehead. Unknownpath/CLIdesign=>R04decision.
+- InitialpreworkpatchanchorwrongOWNbranchnotetitle; read/globconfirmednopartial
+  writes, exactanchorcorrectedBEFOREcode. No product execution/results.
+
 - Actualsession `ses_de56782e3ffeI5D4lzsNVeLcDk`;nativeconfirmed in newexactca25worktree. MAINnote retainsR03/R10history; latestR11/R13common+10read. No spawning/installs/sharedGit/issuesPRwrites.
 - R10completed/pushed/readback91d62f4218302b3f3659a01611e76234398cdc98 on `agents/r10-10-stdio-artifact-lifecycle`;25pass1Win1314skip,source-onlycheckpoint3aa521a5. Firstownharnessmodeguardflaw/strictRED→GREENpreserved, no cleanwheel/provider/widgetclaim. Oldworktreesunchanged.
 - OwnR11branch`agents/r11-10-strict-mcp-boundaries`,baseca25af486bf443949125df789f5b5fd1fda8bba8; productsourcebytesidentical3aa521a5; creationexit0. NewtwoR11testfiles+ownreport/evidence/noteonly. Productioneditsprohibitedbydeveloper/recognizedlatestR13; no tools/mcpfixclaim. R04eligibleproducertransferneeded.

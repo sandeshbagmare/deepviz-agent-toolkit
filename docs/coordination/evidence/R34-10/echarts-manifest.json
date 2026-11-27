@@ -1,0 +1,145 @@
+{
+  "engine": "echarts",
+  "charts": [
+    {
+      "engine": "echarts",
+      "requested_kind": "bar",
+      "rendered_kind": "bar",
+      "spec": {
+        "version": 1,
+        "kind": "bar",
+        "title": "Requested COUNT: A=2, B=3, C=1",
+        "description": "",
+        "x": "group",
+        "y": null,
+        "color": "series",
+        "size": null,
+        "data_path": null,
+        "format": "auto",
+        "aggregation": "count",
+        "max_points": 10,
+        "width": 720,
+        "height": 440,
+        "theme": "light",
+        "charts": [],
+        "columns": 2
+      },
+      "records": [
+        {
+          "group": "A",
+          "series": 90,
+          "count": 2
+        },
+        {
+          "group": "B",
+          "series": 80,
+          "count": 3
+        },
+        {
+          "group": "C",
+          "series": 70,
+          "count": 1
+        }
+      ],
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    }
+  ],
+  "warnings": [
+    "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+  ],
+  "native_specs": [
+    {
+      "animation": false,
+      "backgroundColor": "#ffffff",
+      "color": [
+        "#386cb0",
+        "#b85c00",
+        "#2a9d73",
+        "#c44964",
+        "#8861a9",
+        "#a67c42"
+      ],
+      "title": {
+        "text": "Requested COUNT: A=2, B=3, C=1",
+        "textStyle": {
+          "color": "#202938"
+        }
+      },
+      "textStyle": {
+        "color": "#202938"
+      },
+      "tooltip": {
+        "trigger": "item",
+        "renderMode": "richText"
+      },
+      "legend": {
+        "show": true,
+        "top": 30,
+        "textStyle": {
+          "color": "#202938"
+        }
+      },
+      "grid": {
+        "containLabel": true,
+        "left": 50,
+        "right": 30,
+        "top": 65,
+        "bottom": 55
+      },
+      "xAxis": {
+        "type": "category",
+        "data": [
+          "A",
+          "B",
+          "C"
+        ],
+        "name": "group",
+        "nameLocation": "middle",
+        "nameGap": 30
+      },
+      "yAxis": {
+        "type": "value",
+        "name": ""
+      },
+      "series": [
+        {
+          "type": "bar",
+          "name": "90",
+          "data": [
+            [
+              "A",
+              2.0
+            ]
+          ]
+        },
+        {
+          "type": "bar",
+          "name": "80",
+          "data": [
+            [
+              "B",
+              3.0
+            ]
+          ]
+        },
+        {
+          "type": "bar",
+          "name": "70",
+          "data": [
+            [
+              "C",
+              1.0
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "strategy": "count",
+  "accessible_path": "chart.html"
+}

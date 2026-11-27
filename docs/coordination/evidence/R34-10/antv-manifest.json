@@ -1,0 +1,126 @@
+{
+  "engine": "antv",
+  "charts": [
+    {
+      "engine": "antv",
+      "requested_kind": "bar",
+      "rendered_kind": "bar",
+      "spec": {
+        "version": 1,
+        "kind": "bar",
+        "title": "Requested COUNT: A=2, B=3, C=1",
+        "description": "",
+        "x": "group",
+        "y": null,
+        "color": "series",
+        "size": null,
+        "data_path": null,
+        "format": "auto",
+        "aggregation": "count",
+        "max_points": 10,
+        "width": 720,
+        "height": 440,
+        "theme": "light",
+        "charts": [],
+        "columns": 2
+      },
+      "records": [
+        {
+          "group": "A",
+          "series": 90,
+          "count": 2
+        },
+        {
+          "group": "B",
+          "series": 80,
+          "count": 3
+        },
+        {
+          "group": "C",
+          "series": 70,
+          "count": 1
+        }
+      ],
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    }
+  ],
+  "warnings": [
+    "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+  ],
+  "native_specs": [
+    {
+      "type": "interval",
+      "data": [
+        {
+          "_x": "A",
+          "_y": 2.0,
+          "_color": "90",
+          "_size": 8,
+          "_heat": 90.0,
+          "_row": 0
+        },
+        {
+          "_x": "B",
+          "_y": 3.0,
+          "_color": "80",
+          "_size": 8,
+          "_heat": 80.0,
+          "_row": 1
+        },
+        {
+          "_x": "C",
+          "_y": 1.0,
+          "_color": "70",
+          "_size": 8,
+          "_heat": 70.0,
+          "_row": 2
+        }
+      ],
+      "encode": {
+        "x": "_x",
+        "y": "_y",
+        "color": "_color"
+      },
+      "animate": false,
+      "theme": "light",
+      "title": "Requested COUNT: A=2, B=3, C=1",
+      "tooltip": false,
+      "axis": {
+        "x": {
+          "title": "group",
+          "labelFill": "#202938",
+          "titleFill": "#202938"
+        },
+        "y": {
+          "title": "Value",
+          "labelFill": "#202938",
+          "titleFill": "#202938"
+        }
+      },
+      "scale": {
+        "color": {
+          "range": [
+            "#386cb0",
+            "#b85c00",
+            "#2a9d73",
+            "#c44964",
+            "#8861a9",
+            "#a67c42"
+          ]
+        }
+      },
+      "transform": [
+        {
+          "type": "dodgeX"
+        }
+      ]
+    }
+  ],
+  "strategy": "count",
+  "accessible_path": "chart.html"
+}

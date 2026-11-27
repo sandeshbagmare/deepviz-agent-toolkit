@@ -1,0 +1,272 @@
+{
+  "owner": "ses_de56782e3ffeI5D4lzsNVeLcDk",
+  "tested_source": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+  "source_initial_and_final_clean": true,
+  "four_module_Git_working_and_actual_loaded_proof_before_after_each": true,
+  "original_oracle_commit": "76cac9d05b0b4abc94e5ff316e3de4d3bc835b79",
+  "all_four_original_test_contract_collector_browser_hashes_unchanged": true,
+  "author16_unchanged": true,
+  "actual_executions_each_once": [
+    {
+      "invocation": "pytest.main(argv), unchanged files",
+      "argv": [
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\tests\\test_r23_count_channel.py",
+        "-q",
+        "-rs",
+        "--strict-markers",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\author16-tmp",
+        "--junitxml",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\author16.xml"
+      ],
+      "exit": 0,
+      "elapsed_seconds": 0.42241240000294056,
+      "counts": {
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "pass": true,
+      "deselected_obsolete_identity_only": 0,
+      "old_identity_not_numeric_waiver": false,
+      "xml_sha256": "34be7aaeb235cd83c2c714d9b4c65eb432dee047a462b4023fd78b5da298bfcd"
+    },
+    {
+      "invocation": "pytest.main(argv), unchanged files",
+      "argv": [
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\immutable17\\test_count_measure.py",
+        "-q",
+        "-rs",
+        "--strict-markers",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\semantic55-tmp",
+        "--junitxml",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\semantic55.xml",
+        "-k",
+        "not loaded_modules_match_pinned_source_identity"
+      ],
+      "exit": 0,
+      "elapsed_seconds": 6.148607900002389,
+      "counts": {
+        "tests": 55,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "pass": true,
+      "deselected_obsolete_identity_only": 1,
+      "old_identity_not_numeric_waiver": true,
+      "xml_sha256": "0a343f7e3edc31e31983827999ab7691b4ff332bfae418e3e395a4ddb58bac0b"
+    }
+  ],
+  "unique_passed": 71,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "obsolete_source_identity_only_deselected": 1,
+  "no_numeric_oracle_waiver": true,
+  "own_new_code_Ruff_exit": 0,
+  "own_new_code_mypy_exit": 0,
+  "own_new_code_AST_exit": 0,
+  "own_new_python_files": 2,
+  "R33_native_product_execution": "NOT RUN, partial preserved/deferred",
+  "R33_initial_static_failures_preserved": "Ruff1UP022/mypy10 type narrowing; own guards corrected, final AST/Ruff/mypy0",
+  "R34_new_harness_runtime_failures": 0,
+  "reader_pipeline_exit1": "git show piped to Select-Object -First during static reading; NOT a product run/failure",
+  "actual_payload_artifacts": {
+    "matplotlib": {
+      "manifest_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\semantic55-tmp\\test_public_artifact_reports_e0\\deepviz-fzum9qdr\\manifest.json",
+      "manifest_sha256": "11af930013938c3eca1d4692849901d08c71dd1c0001fca079a1267f0168de12",
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "retained_series": [
+        90,
+        80,
+        70
+      ],
+      "warnings": [],
+      "PNG": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\inspect-matplotlib\\chart.png",
+      "SVG": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\inspect-matplotlib\\chart.svg",
+      "PNG_sha256": "209ababf840586906d88799aec2d9d555c3dc32759d218268a5fa81f24ce865b",
+      "SVG_sha256": "f6c1f8f19f06879f2cdf436b8fdf78eef6cad20ccf9d8a472434a5559193c0e9",
+      "dimensions": [
+        720,
+        440
+      ],
+      "artist_pairs_verified_by": "unchanged17 native measure oracle",
+      "visual_inspection": "PENDING actual image-open by tester, not file existence proof"
+    },
+    "plotly": {
+      "manifest_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\semantic55-tmp\\test_public_artifact_reports_e1\\deepviz-wx7s7hw1\\manifest.json",
+      "manifest_sha256": "1ee727bbf8375efcfc9bc0b5a681e4256b00405403f58b34fe86eff9e02e3fb6",
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "retained_series": [
+        90,
+        80,
+        70
+      ],
+      "warnings": [],
+      "actual_native_pairs": [
+        [
+          "A",
+          2.0
+        ],
+        [
+          "B",
+          3.0
+        ],
+        [
+          "C",
+          1.0
+        ]
+      ],
+      "browser_paint": "NOT RUN; payload is not paint/CDN acceptance"
+    },
+    "vega": {
+      "manifest_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\semantic55-tmp\\test_public_artifact_reports_e2\\deepviz-hkihu6_k\\manifest.json",
+      "manifest_sha256": "c0115a9ab24d5147758b1ed18627a69bd3a62e4d8599cfd3d9268bbbd97c7d61",
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "retained_series": [
+        90,
+        80,
+        70
+      ],
+      "warnings": [],
+      "actual_native_pairs": [
+        [
+          "A",
+          2.0
+        ],
+        [
+          "B",
+          3.0
+        ],
+        [
+          "C",
+          1.0
+        ]
+      ],
+      "browser_paint": "NOT RUN; payload is not paint/CDN acceptance"
+    },
+    "echarts": {
+      "manifest_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\semantic55-tmp\\test_public_artifact_reports_e3\\deepviz-yxhwc3to\\manifest.json",
+      "manifest_sha256": "f61c00c111e031c6b212c38f5c088f83e927278fe632363f72de3ff99106bdac",
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "retained_series": [
+        90,
+        80,
+        70
+      ],
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "actual_native_pairs": [
+        [
+          "A",
+          2.0
+        ],
+        [
+          "B",
+          3.0
+        ],
+        [
+          "C",
+          1.0
+        ]
+      ],
+      "browser_paint": "NOT RUN; payload is not paint/CDN acceptance"
+    },
+    "antv": {
+      "manifest_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-10-count-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\selected-run\\semantic55-tmp\\test_public_artifact_reports_e4\\deepviz-r78y0h85\\manifest.json",
+      "manifest_sha256": "9d7111f516f016e906072acd34395c0a91b489b70d5534950b46f4dc732d1190",
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "retained_series": [
+        90,
+        80,
+        70
+      ],
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "actual_native_pairs": [
+        [
+          "A",
+          2.0
+        ],
+        [
+          "B",
+          3.0
+        ],
+        [
+          "C",
+          1.0
+        ]
+      ],
+      "browser_paint": "NOT RUN; payload is not paint/CDN acceptance"
+    }
+  },
+  "inspection": {
+    "PNG_opened_actual_image": true,
+    "PNG_observed": "A=2 B=3 C=1; zero baseline; retained 90/80/70 legend; readable COUNT title and group/value axes",
+    "PNG_sha256": "209ababf840586906d88799aec2d9d555c3dc32759d218268a5fa81f24ce865b",
+    "PNG_bytes": 18836,
+    "PNG_dimensions": [
+      720,
+      440
+    ],
+    "SVG_opened_XML_and_geometry": true,
+    "SVG_sha256": "f6c1f8f19f06879f2cdf436b8fdf78eef6cad20ccf9d8a472434a5559193c0e9",
+    "SVG_bytes": 29502,
+    "SVG_viewBox": "0 0 518.4 316.8",
+    "actual_bar_geometry": [
+      {
+        "native_svg_id": "patch_3",
+        "baseline": 265.8,
+        "top": 118.852331,
+        "height": 146.94766900000002,
+        "expected_literal_count": 2,
+        "ratio_in_last_bar_units": 2.0000000136102876
+      },
+      {
+        "native_svg_id": "patch_4",
+        "baseline": 265.8,
+        "top": 45.378497,
+        "height": 220.421503,
+        "expected_literal_count": 3,
+        "ratio_in_last_bar_units": 3.000000013610287
+      },
+      {
+        "native_svg_id": "patch_5",
+        "baseline": 265.8,
+        "top": 192.326166,
+        "height": 73.47383400000001,
+        "expected_literal_count": 1,
+        "ratio_in_last_bar_units": 1.0
+      }
+    ],
+    "PNG_plus_SVG_from": "original17 public artifact test, not another render/matrix",
+    "browser": "NOT RUN",
+    "browser_console_network_claim": "NONE",
+    "ECharts_G2": "actual native payload+HTML and declared warning only; NOT PAINT/CDN acceptance",
+    "universal_layout_or_full_kind_approval": false
+  },
+  "count_semantics_verified": "literal 2/3/1 all five native bar/line/bubble; explicit-y/SUM/NONE/metadata/zero/null/missing/heatmap/auto/retained-color-size/nonmutation",
+  "original_collector_browser_execution": "NOT RUN; bytes/hash only, old collector labels5340",
+  "no_installs_API_provider_build_browser_scale_MCP_replay_production_edits_spawning": true,
+  "not_final_integrated_native_default_CI_approval": true,
+  "next_R04_action": "Combine genuine independent review14 with this source857 gate; integrate only released two-path source857 then applicable final-head revalidation/other prerequisites/CI before closure/merge."
+}
