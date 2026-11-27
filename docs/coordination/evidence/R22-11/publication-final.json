@@ -1,0 +1,35 @@
+{
+  "observed_utc": "2026-11-27T15:18:44.083058+00:00",
+  "owner_session": "ses_de567811cffdTBwcb8pF5nDi9v",
+  "login": "sandeshbagmare",
+  "repository": "sandeshbagmare/deepviz-agent-toolkit",
+  "branch": "agents/r10-11-python-scale-envelope",
+  "local_commit": "e10e64358df4e2c66410ef8555f45de2c0de07fe",
+  "parent_commit": "4a0f7dfbf19e57f78e2e54c6d893c0912e3d97e3",
+  "remote_before_commit": "4a0f7dfbf19e57f78e2e54c6d893c0912e3d97e3",
+  "remote_before_is_ancestor": true,
+  "push_command": "git push -u origin agents/r10-11-python-scale-envelope:agents/r10-11-python-scale-envelope",
+  "push_exit": 0,
+  "ls_remote_exit": 0,
+  "remote_commit": "e10e64358df4e2c66410ef8555f45de2c0de07fe",
+  "authenticated_ref_status": 200,
+  "authenticated_ref_commit": "e10e64358df4e2c66410ef8555f45de2c0de07fe",
+  "dirty_paths": [],
+  "scope": "Independent R22-11 readiness evidence and reviewer-only gap controls; no production/workflow/shared-candidate/issue/PR writes; no PR or merge claim",
+  "results": {
+    "immutable_e44_contract_passed": 30,
+    "parent_model_regressions": 6,
+    "independent_gap_controls_passed": 13,
+    "skipped": 0,
+    "errors": 0,
+    "readiness_finding": "R22-11-F1: exact e44 tests need import-only reorder under unchanged main Ruff config; actual focused head still pending"
+  },
+  "credential_handling": "GCM captured in memory only; no auth/config mutation",
+  "baseline_junit_serialization": {
+    "raw_os_junit_bytes": 7265,
+    "raw_os_junit_sha256": "eff0f89fff2ed5ade333f93c0c36a9246991d96a13df56651d0729141d46b83e",
+    "git_lf_bytes": 7199,
+    "git_lf_sha256": "7047d2378a1dfa6ca521894149756b99d610b1d77b122dcae99c246ff4597d95",
+    "difference": "Windows traceback newlines only: raw.replace(CRLF,LF) exactly equals committed XML; original raw hash in review-checks.json intentionally names raw artifact, not canonical Git blob. XML test values/status unchanged."
+  }
+}

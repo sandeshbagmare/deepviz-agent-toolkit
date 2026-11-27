@@ -21,7 +21,7 @@ Actual Git preflight exit0: default **`0ae2cf26426822135fc10d337fcacf580b7ed833`
 3. Record concrete blockers and smallest safe PR plan for R04. No invented PR number/head/checks, merge or final approval. When a focused head is actually supplied, verify exact source equivalence and review that head separately.
 4. Meaningful scoped own commit/non-force push/actual remote-SHA receipt; leave current-source/scale/full-toolkit/900 acceptance explicitly unmet.
 
-Next executable action: `git show e44f667...:tests/test_models.py`, inspect main/parent/e44 model+pyproject diffs and tracked callers. No test or readiness result claimed yet.
+Historical pre-work action (completed below): `git show e44f667...:tests/test_models.py`, inspect main/parent/e44 model+pyproject diffs and tracked callers. No result was claimed at that checkpoint.
 
 ## Exact dependency audit / initial source-guard failure
 
@@ -103,3 +103,11 @@ Static replay, with correctly named exact main `pyproject.toml`:
 Own `docs/coordination/evidence/R22-11/`: `review-checks.json` (SHA256 `a813dab85ae80189ee9bf2507dbb16d191b6870576d9d6a8634da891461c21ce`), candidate30 JUnit, genuine baseline6RED/24pass JUnit, own13 JUnit and actual read-only issue/main receipt. Five evidence files total35,305bytes; raw logs remain in the unique external root, hashed in the receipt. All copied files were compared again with exact Git object bytes; source manifests unchanged. Two pre-test source-guard errors and one Ruff config-filename error are preserved separately from product results.
 
 **Next:** publish this scoped readiness handoff; R04 builds/publishes the smallest complete PR and supplies its exact head. On that actual head this same independent reviewer must check complete diff/workflow/prerequisites, model hash, import-only test AST equivalence and source-specific gates, **not borrow this baseline as final approval**. Genuine reviewer01 plus testers04/09 remain separate. No focused PR existence, merge, closure, final-green/full-production/900 success is claimed here.
+
+## Own publication receipt
+
+Own scoped commit **`e10e64358df4e2c66410ef8555f45de2c0de07fe`** (parent `4a0f7df`), exactly 8 authorized paths, committed after whitespace/secret/JSON/LF/production-scope checks exited0. At 15:18:44UTC, expected GCM identity GET `/user` returned200 (`sandeshbagmare`); remote-before was `4a0f7df` and ancestor check exited0. Non-force push exited0. `git ls-remote` and authenticated GitHub ref GET both exited0/200 and returned exact `e10e64358df4e2c66410ef8555f45de2c0de07fe`. Own worktree clean. Sanitized receipt: `docs/coordination/evidence/R22-11/publication-final.json`.
+
+This is a branch/evidence publication, **not a PR or merge claim**. Credentials remained in memory only; no issue/PR/auth configuration or shared candidate mutation. R04's next action is to create the actual focused head from fresh main, resolve F1, run its narrow real CI and obtain genuine reviewer01/tester04/tester09 reports before deciding merge. If that head arrives, this lane must review the head itself rather than reuse this baseline.
+
+Artifact byte disclosure: raw Windows baseline JUnit is7,265B/SHA256`eff0f89fff2ed5ade333f93c0c36a9246991d96a13df56651d0729141d46b83e` (the raw hash in review-checks). Git normalizes traceback CRLF to LF: committed baseline XML is7,199B/SHA256`7047d2378a1dfa6ca521894149756b99d610b1d77b122dcae99c246ff4597d95`. Actual `raw.replace(CRLF,LF)==Gitblob` passed; no case/value/result changed. Other two JUnit files are unchanged byte-for-byte. Publication receipt records both identities, not a false raw/Git byte-equivalence claim.
