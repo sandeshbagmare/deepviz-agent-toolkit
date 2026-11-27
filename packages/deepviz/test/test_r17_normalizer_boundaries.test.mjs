@@ -82,3 +82,24 @@ for(const key of ['nodes','edges'])test(`known nested ${key} connection preserve
     assert.ok(result.warnings.some(message=>/null/i.test(message)));
   }
 });
+
+for(const fault of ['null','missing','empty'])for(const carrier of ['list','json','async']) {
+  test(`late GraphQL error-only page rejects ${fault} data via ${carrier}`,async()=>{
+    const bad={errors:[{message:'late page unavailable'}],...(fault==='missing'?{}:{data:fault==='null'?null:{}})};
+    const source=[{data:{feed:{nodes:Array.from({length:40},(_,id)=>({id,measure:id/4}))}}},{data:{feed:{nodes:[]}}},bad];
+    const spec={kind:'table',aggregation:'none',max_points:100},pulled=[];
+    async function* pages(){for(let i=0;i<source.length;i++){pulled.push(i);yield source[i];}throw new Error('overread after failed page');}
+    if(carrier==='async') {
+      await assert.rejects(normalizeStream(pages(),spec),/GraphQL response contains errors and no data/);
+      assert.deepEqual(pulled,[0,1,2]);
+    } else assert.throws(()=>normalize(carrier==='json'?JSON.stringify(source):source,spec),/GraphQL response contains errors and no data/);
+  });
+}
+for(const carrier of ['list','json','async'])test(`ordinary business errors preserve repeats via ${carrier}`,async()=>{
+  const source=[{id:'repeat',errors:[{message:'ordinary field'}]},{id:'repeat',errors:[{message:'ordinary field'}]}];
+  const expected=[{id:'repeat','errors.0.message':'ordinary field'},{id:'repeat','errors.0.message':'ordinary field'}];
+  const spec={kind:'table',aggregation:'none'};
+  async function* rows(){yield* source;}
+  const result=carrier==='async'?await normalizeStream(rows(),spec):normalize(carrier==='json'?JSON.stringify(source):source,spec);
+  assert.equal(result.input_count,2);assert.deepEqual(result.records,expected);assert.deepEqual(result.warnings,[]);
+});

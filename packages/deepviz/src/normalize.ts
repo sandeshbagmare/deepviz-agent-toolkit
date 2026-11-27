@@ -106,7 +106,10 @@ function* unpack(value: unknown, warn:Notice, depth = 0): Generator<unknown> {
         if(row.node===null)warn('Null GraphQL/path nodes skipped');else yield* unpack(row.node,warn,depth+1);
       }
       else if (isObject(row) && sequenceEnvelope(row)) yield* unpack(row,warn,depth+1);
-      else yield row;
+      else {
+        if(isObject(row))checkGraphql(row,warn);
+        yield row;
+      }
     }
     return;
   }
