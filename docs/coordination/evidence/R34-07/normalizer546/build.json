@@ -1,0 +1,33 @@
+{
+  "observed_at": "2026-11-27T17:33:08.437690+00:00",
+  "source_commit": "9531dab2b4d629c6fffdff9b7dc7dfcebb3def03",
+  "normalizer_dependency": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "argv": [
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+    "-S",
+    "-B",
+    "-m",
+    "build",
+    "--no-isolation",
+    "--outdir",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\normalizer546\\build\\dist"
+  ],
+  "exit": 0,
+  "seconds": 4.371586299996125,
+  "artifacts": [
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\normalizer546\\build\\dist\\deepviz_agent_toolkit-0.1.0-py3-none-any.whl",
+      "bytes": 21233,
+      "sha256": "77f38f0a4bbf7dd7ab0603fd9e7b70ee48007ed44214bca23c658cb3574f1bad"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\normalizer546\\build\\dist\\deepviz_agent_toolkit-0.1.0.tar.gz",
+      "bytes": 128186,
+      "sha256": "b9184af596974acd4d3e7dca5c8a5cc6cc9b56caea9bf6cc2ee413c3c7b5c6f2"
+    }
+  ],
+  "flow": "ACTUAL_SDIST_THEN_WHEEL_FROM_SDIST",
+  "existing_backend": "hatchling1.33.0_current183files_rehashed",
+  "no_installs_network_backend_substitution": true,
+  "source_clean_after": true
+}

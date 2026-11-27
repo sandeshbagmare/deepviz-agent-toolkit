@@ -1,5 +1,11 @@
 # R34-07 actual Python data foundation
 
+**Current R41/R42 continuation:** product source is now
+`9531dab2b4d629c6fffdff9b7dc7dfcebb3def03`, using the explicitly approved
+sealed546 normalizer. See `normalizer546/README.md` and its actual receipts.
+The c1/9ce results and exact recipe below are preserved historical evidence,
+not falsely reused as546 validation or independent approval.
+
 ## Product, not just evidence
 
 Owned branch: `feat/r34-python-data-foundation`.

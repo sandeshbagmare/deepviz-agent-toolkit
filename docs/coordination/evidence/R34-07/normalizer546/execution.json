@@ -1,0 +1,75 @@
+{
+  "observed_at": "2026-11-27T17:42:00.956901+00:00",
+  "source_commit": "9531dab2b4d629c6fffdff9b7dc7dfcebb3def03",
+  "normalizer_dependency": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "current_artifact_source_not_evidence_tip": true,
+  "same_six_tdd": {
+    "red": [
+      0,
+      6,
+      0,
+      0
+    ],
+    "green": [
+      6,
+      0,
+      0,
+      0
+    ],
+    "test_sha256": "b42b945291c6fac4a6202762d90b553b612a2fe03f1b4fa9baf42bf3f9a88643"
+  },
+  "actual_affected_shipped": {
+    "pass": 549,
+    "fail": 9,
+    "error": 0,
+    "skip": 0,
+    "integration_deselected": 6
+  },
+  "backend_known_files_unchanged_after": 183,
+  "raw_outputs_losslessly_json_encoded": 23,
+  "no_installs_or_dependency_network_backend_substitution_source_permission_expansion_or_spawns": true,
+  "no_independent_review_03_19_10_clearance_ci_pr_main_merge_or_final_signoff_claim": true,
+  "not_pip_install_resolution_or_installed_typing": true,
+  "source_inputs_and_own_scripts": [
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\adopt546.py",
+      "sha256": "6a6a23632618cc2e8300768d6bace84850fa980b87e358f4027fd6ed69b457a3",
+      "bytes": 6460
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\artifact-consumer546.py",
+      "sha256": "0943d9ab564c44e34bd4021eed11062933266a867545e38fbf258bdf0f2d0c6f",
+      "bytes": 5026
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\prepare546-validator.py",
+      "sha256": "31474689665855c7807e1e6fee8edf2631c41c7370e97c31ecd4591a4afa251e",
+      "bytes": 6571
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\seal546-build.py",
+      "sha256": "17750052aaae898e7317a814f96e41b7d0f9b2f5a7c97d580222c85e8c4d4783",
+      "bytes": 8115
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\upgrade546-gates.py",
+      "sha256": "052dd274fdc335df08a09939d99ef21a844999a0386ca0fb1456815c28c7a6fb",
+      "bytes": 4610
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\upgrade546-proof.py",
+      "sha256": "438887a50b8a3413c361ac6dce86813dbaec6c269b1249881eb592c338013dcb",
+      "bytes": 1899
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\upgrade546-test.py",
+      "sha256": "728343026e7d244557935ac4611a8669dc70593f6f76e5264011b9172a4804b4",
+      "bytes": 1962
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\validate546-archives.py",
+      "sha256": "b88cc5c2650aeedaa03adbb5ec32c124bf5dfcbefa78f0b97bc2938c424d8c36",
+      "bytes": 6462
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "phase": "546",
+  "source_head": "77a2cc8eaed85b441deaf8e1781798f8b9033cf2",
+  "normalizer_pin": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "origins": {
+    "deepviz": {
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-src\\python\\deepviz\\src\\deepviz\\__init__.py",
+      "sha256": "1d2af209531676d9db31d8b81eae3f5872be66b4558c09c55dcfc4aad94a9890"
+    },
+    "deepviz.models": {
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-src\\python\\deepviz\\src\\deepviz\\models.py",
+      "sha256": "e4c86a977a7003d3d4e5d557a3bdfb25ccee155608d36207f3af24da2e3981d3"
+    },
+    "deepviz.normalize": {
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-src\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc"
+    }
+  },
+  "whole_dependency_and_original_controls_verified": true,
+  "pytest_argv": [
+    "python/deepviz/tests",
+    "tests",
+    "-m",
+    "not integration and not scale",
+    "-q",
+    "--tb=short",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\normalizer546\\affected-gates\\tmp",
+    "--junitxml",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\normalizer546\\affected-gates\\results.xml"
+  ]
+}

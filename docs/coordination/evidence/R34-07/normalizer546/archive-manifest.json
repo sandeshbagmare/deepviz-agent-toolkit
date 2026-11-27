@@ -1,0 +1,177 @@
+{
+  "source_commit": "9531dab2b4d629c6fffdff9b7dc7dfcebb3def03",
+  "wheel_files": {
+    "deepviz/__init__.py": {
+      "bytes": 754,
+      "sha256": "1d2af209531676d9db31d8b81eae3f5872be66b4558c09c55dcfc4aad94a9890"
+    },
+    "deepviz/models.py": {
+      "bytes": 3102,
+      "sha256": "e4c86a977a7003d3d4e5d557a3bdfb25ccee155608d36207f3af24da2e3981d3"
+    },
+    "deepviz/normalize.py": {
+      "bytes": 35820,
+      "sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc"
+    },
+    "deepviz/py.typed": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "deepviz/resources/chart-spec.schema.json": {
+      "bytes": 4268,
+      "sha256": "cf316116251e52a121a74d24f35f99b15794ee0997278010d97181c8c1908b81"
+    },
+    "deepviz/resources/prompts/v1/request.md": {
+      "bytes": 761,
+      "sha256": "845be71cb3141d084f036472a1c5a19670be28c16bf73c4a599a3df9d534c6f2"
+    },
+    "deepviz/resources/prompts/v1/system.md": {
+      "bytes": 4582,
+      "sha256": "b11e691e8f5d89bc2fd726d284702d6675c57c1a32ec0947ec5902040fdbaba0"
+    },
+    "deepviz_agent_toolkit-0.1.0.dist-info/METADATA": {
+      "bytes": 6603,
+      "sha256": "a5adfe7626dc1e65aaf5f23af177c6fab1d423ea9bd48d22a89a75e3853a9541"
+    },
+    "deepviz_agent_toolkit-0.1.0.dist-info/WHEEL": {
+      "bytes": 87,
+      "sha256": "da266b2640c891e0e1d24f528a428ca85b913feb9aea66f822bd40b04478044c"
+    },
+    "deepviz_agent_toolkit-0.1.0.dist-info/licenses/LICENSE": {
+      "bytes": 1098,
+      "sha256": "d1a39f6cb061116b63283c8f2238f33e2b360d3414641ab998538a73260c4eab"
+    },
+    "deepviz_agent_toolkit-0.1.0.dist-info/RECORD": {
+      "bytes": 943,
+      "sha256": "9f1449c2ac592de9c2d6a7757a8cf47f68553c292cd8e5ab881ed3cf81f02c98"
+    }
+  },
+  "expected_package_files": {
+    "deepviz/__init__.py": "python/deepviz/src/deepviz/__init__.py",
+    "deepviz/models.py": "python/deepviz/src/deepviz/models.py",
+    "deepviz/normalize.py": "python/deepviz/src/deepviz/normalize.py",
+    "deepviz/py.typed": "python/deepviz/src/deepviz/py.typed",
+    "deepviz/resources/prompts/v1/system.md": "prompts/v1/system.md",
+    "deepviz/resources/prompts/v1/request.md": "prompts/v1/request.md",
+    "deepviz/resources/chart-spec.schema.json": "schemas/chart-spec.schema.json"
+  },
+  "artifact_hashes": [
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\normalizer546\\build\\dist\\deepviz_agent_toolkit-0.1.0-py3-none-any.whl",
+      "bytes": 21233,
+      "sha256": "77f38f0a4bbf7dd7ab0603fd9e7b70ee48007ed44214bca23c658cb3574f1bad"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\normalizer546\\build\\dist\\deepviz_agent_toolkit-0.1.0.tar.gz",
+      "bytes": 128186,
+      "sha256": "b9184af596974acd4d3e7dca5c8a5cc6cc9b56caea9bf6cc2ee413c3c7b5c6f2"
+    }
+  ],
+  "commands": [
+    {
+      "label": "twine-strict",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-S",
+        "-B",
+        "-m",
+        "twine",
+        "check",
+        "--strict",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\normalizer546\\build\\dist\\deepviz_agent_toolkit-0.1.0-py3-none-any.whl",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\normalizer546\\build\\dist\\deepviz_agent_toolkit-0.1.0.tar.gz"
+      ],
+      "exit": 0,
+      "seconds": 0.7228012999985367
+    },
+    {
+      "label": "artifact-consumer",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-I",
+        "-S",
+        "-B",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\artifact-consumer546.py",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\normalizer546\\archive-consumer\\materialized-wheel",
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\normalizer546\\archive-consumer\\manifest.json"
+      ],
+      "exit": 0,
+      "seconds": 0.5002871999895433,
+      "result": {
+        "status": "REAL_WHEEL_MATERIALIZED_CONSUMER_PASS_NOT_PIP_INSTALL",
+        "origins": {
+          "deepviz": {
+            "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\normalizer546\\archive-consumer\\materialized-wheel\\deepviz\\__init__.py",
+            "sha256": "1d2af209531676d9db31d8b81eae3f5872be66b4558c09c55dcfc4aad94a9890"
+          },
+          "deepviz.models": {
+            "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\normalizer546\\archive-consumer\\materialized-wheel\\deepviz\\models.py",
+            "sha256": "e4c86a977a7003d3d4e5d557a3bdfb25ccee155608d36207f3af24da2e3981d3"
+          },
+          "deepviz.normalize": {
+            "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\normalizer546\\archive-consumer\\materialized-wheel\\deepviz\\normalize.py",
+            "sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc"
+          }
+        },
+        "input_count": 6,
+        "count_records": [
+          {
+            "group": "A",
+            "count": 2
+          },
+          {
+            "group": "B",
+            "count": 3
+          },
+          {
+            "group": "C",
+            "count": 1
+          }
+        ],
+        "one_pass_consumed": 6,
+        "sample": {
+          "input_count": 100,
+          "output_count": 10,
+          "strategy": "sample"
+        },
+        "schema_and_prompts_and_pep561": true,
+        "no_unshipped_or_optional_imports": true,
+        "new546_package_boundary_cases": 6,
+        "pydantic_origin": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\pydantic\\__init__.py",
+        "uses_existing_readonly_runtime_deps_not_clean_resolution": true
+      }
+    }
+  ],
+  "status": "REAL_ARCHIVES_STRICT_TWINE_AND_MATERIALIZED_CONSUMER_PASS",
+  "metadata": {
+    "name": "deepviz-agent-toolkit",
+    "version": "0.1.0",
+    "requires_dist": [
+      "matplotlib>=3.9",
+      "numpy>=1.26",
+      "plotly<7,>=6",
+      "pydantic<3,>=2.10",
+      "vl-convert-python>=1.7",
+      "deepagents>=0.3; extra == 'agents'",
+      "langchain-core<2,>=1; extra == 'agents'",
+      "pyarrow>=19; extra == 'columnar'",
+      "build>=1.2; extra == 'dev'",
+      "httpx>=0.28; extra == 'dev'",
+      "jsonschema>=4.23; extra == 'dev'",
+      "mypy>=1.15; extra == 'dev'",
+      "pillow>=11; extra == 'dev'",
+      "pytest-cov>=6; extra == 'dev'",
+      "pytest>=8; extra == 'dev'",
+      "ruff>=0.11; extra == 'dev'",
+      "twine>=6; extra == 'dev'",
+      "mcp<2,>=1.12; extra == 'mcp'"
+    ],
+    "wheel": "Wheel-Version: 1.0\nGenerator: hatchling 1.33.0\nRoot-Is-Purelib: true\nTag: py3-none-any\n",
+    "no_console_scripts": true
+  },
+  "sdist_files": 78,
+  "all_immutable_dependency_and_test_bytes_match_current_source": true,
+  "observed_at": "2026-11-27T17:36:00.628789+00:00",
+  "not_independent_clean_install_or_original_packaging_pytest": true
+}

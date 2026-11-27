@@ -1,0 +1,162 @@
+{
+  "dependency": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "commands": [
+    {
+      "label": "ruff-source-new",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-S",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "python/deepviz/src/deepviz",
+        "tests/test_r34_data_foundation.py",
+        "tests/test_r34_offline_wheel.py",
+        "tests/test_r34_normalizer546_consumer.py"
+      ],
+      "exit": 0,
+      "seconds": 0.1801077999989502
+    },
+    {
+      "label": "mypy",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-S",
+        "-B",
+        "-m",
+        "mypy",
+        "--cache-dir",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\normalizer546\\affected-gates\\mypy-source"
+      ],
+      "exit": 0,
+      "seconds": 4.429378000000725
+    },
+    {
+      "label": "positive-types",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-S",
+        "-B",
+        "-m",
+        "mypy",
+        "--no-incremental",
+        "--follow-imports=silent",
+        "--show-error-codes",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\green-small\\typed_positive.py"
+      ],
+      "exit": 0,
+      "seconds": 4.0032015000033425
+    },
+    {
+      "label": "negative-types",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-S",
+        "-B",
+        "-m",
+        "mypy",
+        "--no-incremental",
+        "--follow-imports=silent",
+        "--show-error-codes",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\green-small\\typed_negative.py"
+      ],
+      "exit": 1,
+      "seconds": 4.487757499999134,
+      "expected_negative_exit": 1,
+      "arg_type_errors": 2
+    },
+    {
+      "label": "schema-export-check",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-S",
+        "-B",
+        "scripts/export_schema.py",
+        "--check"
+      ],
+      "exit": 1,
+      "seconds": 0.6557354999968084
+    },
+    {
+      "label": "shipped-py",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-S",
+        "-B",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\upgrade546-proof.py",
+        "546",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\normalizer546\\affected-gates\\source-proof.json",
+        "python/deepviz/tests",
+        "tests",
+        "-m",
+        "not integration and not scale",
+        "-q",
+        "--tb=short",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\normalizer546\\affected-gates\\tmp",
+        "--junitxml",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\normalizer546\\affected-gates\\results.xml"
+      ],
+      "exit": 1,
+      "seconds": 23.664336499990895,
+      "totals": {
+        "pass": 549,
+        "fail": 9,
+        "error": 0,
+        "skip": 0
+      },
+      "failures": [
+        {
+          "class": "tests.test_n11_resource_policy",
+          "name": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii]",
+          "message": "ValueError: Input field name exceeds 4096 UTF-8 bytes"
+        },
+        {
+          "class": "tests.test_n11_resource_policy",
+          "name": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte]",
+          "message": "ValueError: Input field name exceeds 4096 UTF-8 bytes"
+        },
+        {
+          "class": "tests.test_n11_resource_policy",
+          "name": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte]",
+          "message": "ValueError: Input field name exceeds 4096 UTF-8 bytes"
+        },
+        {
+          "class": "tests.test_n11_resource_policy",
+          "name": "test_flattened_multibyte_key_at_64kib_is_preserved",
+          "message": "ValueError: Input field name exceeds 4096 UTF-8 bytes"
+        },
+        {
+          "class": "tests.test_schema_contract",
+          "name": "test_schema_and_runtime_reject_invalid_dashboard_composition[payload0]",
+          "message": "AssertionError: assert []\n +  where [] = list(<generator object create.<locals>.Validator.iter_errors at 0x0000025541493740>)\n +    where <generator object create.<locals>.Validator.iter_errors at 0x0000025541493740> = iter_errors({'kind': 'dashboard'})\n[+4 more lines; full report in element text]"
+        },
+        {
+          "class": "tests.test_schema_contract",
+          "name": "test_schema_and_runtime_reject_invalid_dashboard_composition[payload1]",
+          "message": "AssertionError: assert []\n +  where [] = list(<generator object create.<locals>.Validator.iter_errors at 0x0000025541493600>)\n +    where <generator object create.<locals>.Validator.iter_errors at 0x0000025541493600> = iter_errors({'kind': 'dashboard', 'charts': []})\n[+4 more lines; full report in element text]"
+        },
+        {
+          "class": "tests.test_schema_contract",
+          "name": "test_schema_and_runtime_reject_invalid_dashboard_composition[payload2]",
+          "message": "AssertionError: assert []\n +  where [] = list(<generator object create.<locals>.Validator.iter_errors at 0x00000255414939C0>)\n +    where <generator object create.<locals>.Validator.iter_errors at 0x00000255414939C0> = iter_errors({'charts': [{'kind': 'line'}]})\n[+4 more lines; full report in element text]"
+        },
+        {
+          "class": "tests.test_schema_contract",
+          "name": "test_schema_and_runtime_reject_invalid_dashboard_composition[payload3]",
+          "message": "AssertionError: assert []\n +  where [] = list(<generator object create.<locals>.Validator.iter_errors at 0x0000025541493B00>)\n +    where <generator object create.<locals>.Validator.iter_errors at 0x0000025541493B00> = iter_errors({'kind': 'bar', 'charts': [{'kind': 'line'}]})\n[+4 more lines; full report in element text]"
+        },
+        {
+          "class": "tests.test_schema_contract",
+          "name": "test_schema_and_runtime_reject_invalid_dashboard_composition[payload4]",
+          "message": "AssertionError: assert []\n +  where [] = list(<generator object create.<locals>.Validator.iter_errors at 0x0000025541491580>)\n +    where <generator object create.<locals>.Validator.iter_errors at 0x0000025541491580> = iter_errors({'kind': 'dashboard', 'charts': [{'kind': 'dashboard', 'charts': [{'kind': 'bar'}]}]})\n[+4 more lines; full report in element text]"
+        }
+      ]
+    }
+  ],
+  "status": "ACTUAL_AFFECTED_RESULTS_NOT_MERGE_GREEN"
+}
