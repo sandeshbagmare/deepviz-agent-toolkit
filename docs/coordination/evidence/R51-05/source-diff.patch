@@ -1,0 +1,355 @@
+diff --git a/python/deepviz/src/deepviz/engines.py b/python/deepviz/src/deepviz/engines.py
+index d3e437e..05d2fc4 100644
+--- a/python/deepviz/src/deepviz/engines.py
++++ b/python/deepviz/src/deepviz/engines.py
+@@ -614,160 +614,179 @@ def _echarts(data: list[dict], records: list[dict], spec: ChartSpec, kind: str)
+         option["xAxis"].update(nameLocation="middle", nameGap=30)
+         option["grid"]["bottom"] = 55
+     return option
+ 
+ 
+ def _antv(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) -> dict:
+     temporal_x = kind in {"line", "area", "scatter", "bubble"} and _iso_dates([row["_x"] for row in data])
+     if temporal_x:
+         times = [datetime.fromisoformat(row["_x"]) for row in data]
+         data = [{**row, "_x": (value if value.tzinfo else value.replace(tzinfo=UTC)).timestamp() * 1000}
+                 for row, value in zip(data, times, strict=True)]
+     mark = {"bar": "interval", "line": "line", "area": "area", "scatter": "point", "bubble": "point",
+             "pie": "interval", "heatmap": "cell", "histogram": "interval", "box": "box",
+             "radar": "line", "treemap": "rect", "sunburst": "interval", "funnel": "interval",
+             "gauge": "interval", "geo": "point", "table": "text"}[kind]
+     result: dict = {"type": mark, "data": data, "encode": {"x": "_x", "y": "_y"},
+                     "animate": False, "theme": spec.theme, "title": spec.title, "tooltip": False,
+                     "axis": {"x": {"title": spec.x or "Category", "labelFill": _colors(spec)[1], "titleFill": _colors(spec)[1]},
+                              "y": {"title": spec.y or "Value", "labelFill": _colors(spec)[1], "titleFill": _colors(spec)[1]}}}
+     encode = result["encode"]
+     if spec.color:
+         encode["color"] = "_color"
+         result["scale"] = {"color": {"range": PALETTE}}
+     elif kind not in {"pie", "sunburst", "treemap", "gauge"}:
+         result["style"] = {"fill": PALETTE[0], "stroke": PALETTE[0]}
+     if temporal_x:
+         result.setdefault("scale", {})["x"] = {"type": "time"}
+     if kind == "line":
+         groups = _groups(data)
+         result["type"] = "view"
+         result.pop("encode")
+         result.pop("style", None)
+         shapes = ["point", "square", "triangle", "diamond", "hexagon", "bowtie", "cross"]
+         if spec.color:
+             result["scale"]["color"]["domain"] = list(groups)
+             result["scale"]["shape"] = {"domain": list(groups), "range": shapes}
+         children = []
+         for j, group in enumerate(groups.values()):
+             encode = {"x": "_x", "y": "_y"}
+             if spec.color:
+                 encode["color"] = "_color"
+             line_style: dict = {"lineDash": DASHES[j % len(DASHES)], "lineWidth": 2}
+             point_style: dict = {"r": 3}
+             if not spec.color:
+                 line_style["stroke"] = PALETTE[0]
+                 point_style["fill"] = PALETTE[0]
+             children.append({"type": "line", "data": group, "encode": encode,
+                              "style": line_style, "animate": False})
+             children.append({"type": "point", "data": [row for row in group if row["_y"] is not None],
+                              "encode": {**encode, **({"shape": "_color"} if spec.color else {})},
+                              "style": point_style, "animate": False})
+         result["children"] = children
+     elif kind == "bar" and spec.color:
+         result["transform"] = [{"type": "dodgeX"}]
+     elif kind == "bubble":
+         encode["size"] = "_size"
+     elif kind in {"pie", "sunburst"}:
+         result["coordinate"] = {"type": "theta", "innerRadius": .45 if kind == "sunburst" else 0}
+         result["transform"] = [{"type": "stackY"}]
+         encode.pop("x")
+         encode["color"] = "_x"
+         result["legend"] = {"color": {"position": "right"}}
+     elif kind == "radar":
+         result["coordinate"] = {"type": "polar"}
+         result["data"] = data + data[:1]
+     elif kind == "histogram":
+         result["data"] = _histogram(data)
+     elif kind == "heatmap":
+         encode["color"] = "_heat"
+         low = min((row["_heat"] for row in data), default=0)
+         high = max((row["_heat"] for row in data), default=1)
+         if low == high:
+             padding = abs(low) * .05 or 1
+             low = low - padding if math.isfinite(low - padding) else low
+             high = high + padding if math.isfinite(high + padding) else high
+         # Avoid G2's inferred sequential domain, which loses negative extents.
+         result["scale"] = {"color": {"type": "linear", "domain": [low, high],
+                                      "range": ["#ffffd9", "#081d58"], "nice": False}}
+         result["legend"] = {"color": {"data": [{"value": low}, {"value": high}],
+                                        "labelTextAlign": "start"}}
++        span = high - low
++        if not math.isfinite(span):
++            # Keep raw values, but never interpolate across an infinite segment.
++            result["scale"]["color"].update(
++                domain=[low, low / 2 + high / 2, high],
++                range=["#ffffd9", "#848e99", "#081d58"],
++            )
++        if not math.isfinite(span) or not math.isfinite(1 / span):
++            # G2's legend layout/sampling needs a well-conditioned coordinate.
++            # Labels/domainValue remain the actual numeric domain endpoints.
++            # Its auto-size measurement has no ticks here; reserve the default size.
++            result["legend"]["color"].update(
++                domain=[0, 1], color=["#ffffd9", "#081d58"], size=60,
++                data=[{"value": 0, "label": str(low), "domainValue": low},
++                      {"value": 1, "label": str(high), "domainValue": high}],
++            )
++        label_length = 14 * max(len(str(low)), len(str(high))) + 20
++        if label_length > 200:
++            result["legend"]["color"]["length"] = min(spec.width - 32, label_length)
+         result.pop("style", None)
+     elif kind == "box":
+         result["data"] = [{"_x": b["name"], "_y": b["stats"]} for b in _boxes(data)]
+     elif kind == "treemap":
+         result["data"] = _tiles(data)
+         result["encode"] = {"x": ["_left", "_right"], "y": ["_bottom", "_top"], "color": "_x"}
+         result["axis"] = False
+     elif kind == "funnel":
+         result["coordinate"] = {"transform": [{"type": "transpose"}]}
+         result["transform"] = [{"type": "symmetryY"}]
+     elif kind == "gauge":
+         value = min(100, max(0, data[0]["_y"])) if data else 0
+         result["data"] = [{"_x": "Value", "_y": value}, {"_x": "Remaining", "_y": 100 - value}]
+         result["coordinate"] = {"type": "theta", "innerRadius": .75, "startAngle": -math.pi,
+                                  "endAngle": 0}
+         result["encode"] = {"y": "_y", "color": "_x"}
+         result["transform"] = [{"type": "stackY"}]
+         result["axis"] = False
+     elif kind == "geo":
+         result["scale"] = {"x": {"domain": [-180, 180]}, "y": {"domain": [-90, 90]}}
+     elif kind == "table":
+         columns = list(dict.fromkeys(key for row in records for key in row))
+         result["data"] = [{"_x": key, "_y": str(i), "_text": str(row.get(key, ""))}
+                           for i, row in enumerate([dict(zip(columns, columns, strict=True)), *records])
+                           for key in columns]
+         result["encode"] = {"x": "_x", "y": "_y", "text": "_text"}
+         result["axis"] = False
+         result["style"] = {"fill": _colors(spec)[1], "stroke": _colors(spec)[1]}
+     return result
+ 
+ 
+ def native_spec(engine: str, records: list[dict], spec: ChartSpec) -> tuple[dict, list[str], str]:
+     """Build only the selected engine's native declarative payload."""
+     if engine not in ENGINES or engine == "matplotlib":
+         raise ValueError(f"No JSON spec for engine {engine!r}")
+     if spec.kind == "table":
+         _table_budget([records])
+     kind, warnings = _fallback(engine, spec.kind)
+     if spec.kind == "geo" and engine == "plotly":
+         warnings.append("Geographic coordinates use longitude=x, latitude=y without a basemap (offline coordinate plot).")
+     data, notes = _geometry(channels(records, spec), spec)
+     warnings.extend(notes)
+     if engine == "plotly":
+         native = _plotly(data, records, spec)
+     elif engine == "vega":
+         native = _vega(data, records, spec, kind)
+     elif engine == "echarts":
+         native = _echarts(data, records, spec, kind)
+     else:
+         native = _antv(data, records, spec, kind)
+     return native, warnings, kind
+ 
+ 
+ def browser_html(
+     engine: str, payloads: list[dict], specs: list[ChartSpec], parent: ChartSpec,
+     metadata: list[dict] | None = None, image: str | None = None,
+ ) -> str:
+     """Inert JSON, fixed bootstrap, and keyboard-discoverable real data tables.
+ 
+     Static PNG/SVG outputs receive the same companion HTML with a relative image
+     path. Only a concise summary is aria-described; tables stay navigable tables.
+     """
+     _table_budget([info.get("records", []) for info in metadata] if metadata else [])
+     bg, fg = _colors(parent)
+     cards = []
+     for i, spec in enumerate(specs):
+         info = metadata[i] if metadata else {}
+         records = info.get("records", [])
+         columns = list(dict.fromkeys(key for row in records for key in row))
+         summary = (f'{spec.kind} chart. {info.get("output_count", len(records))} displayed records from '
+                    f'{info.get("input_count", len(records))} input records. '
+                    f'Reduction strategy: {info.get("strategy", "none")}. {spec.description}')
+         warnings = "".join(f'<li>{escape(str(w))}</li>' for w in info.get("warnings", []))
+         header = "".join(f'<th scope="col">{escape(str(key))}</th>' for key in columns)
+         body = "".join('<tr>' + "".join(f'<td>{escape(str(row.get(key, "")))}</td>' for key in columns) + '</tr>'
+                        for row in records)
+         graph = "" if image else (
+             f'<div id="chart-{i}" role="img" aria-label="{escape(spec.title, quote=True)}" '
+             f'aria-describedby="chart-summary-{i}" '
+             f'style="width:100%;height:{spec.height}px;background:{_colors(spec)[0]}"></div>')
+diff --git a/python/deepviz/tests/test_r45_antv_subnormal_heatmap.py b/python/deepviz/tests/test_r45_antv_subnormal_heatmap.py
+new file mode 100644
+index 0000000..d64df79
+--- /dev/null
++++ b/python/deepviz/tests/test_r45_antv_subnormal_heatmap.py
+@@ -0,0 +1,83 @@
++"""Real G2 regression: finite heat values must produce honest visible cells."""
++from __future__ import annotations
++
++import copy
++import json
++import math
++import shutil
++import subprocess
++import sys
++from pathlib import Path
++
++import pytest
++
++from deepviz import render
++
++MAX = 1.7976931348623157e308
++CASES = [
++    ("negative-subnormal", [-8e-310, -6e-310, -4e-310, -2e-310]),
++    ("positive-subnormal", [2e-310, 4e-310, 6e-310, 8e-310]),
++    ("minimum-subnormal", [5e-324, 1e-323, 1.5e-323, 2e-323]),
++    ("constant-subnormal", [-8e-310] * 4),
++    ("signed-MAX", [-MAX, 0, MAX]),
++    ("constant-MAX", [MAX] * 4),
++    ("negative-constant-MAX", [-MAX] * 4),
++    ("zero", [0] * 4),
++    ("signed-ordinary", [-12, -3, 3, 12]),
++    ("signed-1e308", [-1e308, 1e308]),
++]
++
++
++@pytest.mark.parametrize(("name", "values"), CASES, ids=[case[0] for case in CASES])
++def test_finite_heatmap_real_cells_keep_values_colors_and_grid(name, values, tmp_path):
++    repo = Path(__file__).resolve().parents[3]
++    candidates = [repo, Path(sys.executable).resolve().parents[2]]
++    tools = next((directory for directory in candidates if
++                  (directory / "node_modules/playwright/package.json").is_file() and
++                  (directory / "node_modules/@antv/g2/dist/g2.min.js").is_file()), None)
++    if shutil.which("node") is None or tools is None:
++        pytest.skip("Real G2 browser regression requires existing Node, Playwright/Chromium and G2 5.4.8; no install")
++    coordinates = [("West", "North"), ("East", "North"), ("West", "South"), ("East", "South")]
++    rows = [{"column": coordinate[0], "row": coordinate[1], "heat": value}
++            for coordinate, value in zip(coordinates, values, strict=False)]
++    original = copy.deepcopy(rows)
++    artifact = render(rows, {"kind": "heatmap", "title": name, "x": "column", "y": "row", "color": "heat",
++                             "aggregation": "none", "width": 960, "height": 520}, "antv", tmp_path)
++    manifest = json.loads(next(Path(name) for name in artifact.paths if name.endswith("manifest.json")).read_text())
++    native = manifest["native_specs"][0]
++    assert rows == original == manifest["charts"][0]["records"]
++    assert [row["_heat"] for row in native["data"]] == values
++    assert [[row["_x"], row["_y"]] for row in native["data"]] == [list(pair) for pair in coordinates[:len(values)]]
++    html = next(name for name in artifact.paths if name.endswith(".html"))
++    output = tmp_path / "actual-native.json"
++    subprocess.run(["node", str(repo / "tests/r45_probes/role17/native.cjs"), html, str(tools), str(output)], check=True)
++    actual = json.loads(output.read_text())
++    assert actual["ready"] == "resolved" and not actual["errors"] and not actual.get("harnessError")
++    state = actual["state"]
++    marks = state["marks"]
++    # The original four strict subnormal conditions: cell count, colors, grid and actual pixel paint.
++    assert len(marks) == len(values) and all(mark["box"]["width"] > 10 and mark["box"]["height"] > 10 for mark in marks)
++    assert len({mark["normalizedColor"] for mark in marks}) == len(set(values))
++    assert math.isfinite(state["views"][0]["layout"]["innerHeight"])
++    if len(set(values)) > 1:
++        assert marks[0]["normalizedColor"] == "#ffffd9"
++        assert marks[-1]["normalizedColor"] == "#081d58"
++    grid = [(0, 0), (1, 0), (0, 1), (1, 1)][:len(values)]
++    for i, mark in enumerate(marks):
++        for j, other in enumerate(marks):
++            for axis, component in [("x", 0), ("y", 1)]:
++                difference = mark["box"][axis] - other["box"][axis]
++                assert (difference > 0) - (difference < 0) == (grid[i][component] > grid[j][component]) - (grid[i][component] < grid[j][component])
++    assert len({tuple(pixel) for pixel in state["pixels"]}) == len(set(values))
++    labels = [label for label in state["ticks"] if label.get("text") not in [None, "_heat"]]
++    ticks = [float(str(label["text"]).replace("âˆ’", "-").replace(",", "")) for label in labels]
++    assert ticks and all(math.isfinite(value) for value in ticks)
++    assert min(ticks) <= min(values) <= max(values) <= max(ticks)
++    assert all(label["box"]["x"] >= 0 and label["box"]["y"] >= 0 and
++               label["box"]["x"] + label["box"]["width"] <= state["width"] and
++               label["box"]["y"] + label["box"]["height"] <= state["height"] for label in labels)
++    for i, label in enumerate(labels):
++        for other in labels[i + 1:]:
++            a, b = label["box"], other["box"]
++            assert (a["x"] + a["width"] <= b["x"] or b["x"] + b["width"] <= a["x"] or
++                    a["y"] + a["height"] <= b["y"] or b["y"] + b["height"] <= a["y"])
+diff --git a/tests/r45_probes/role17/native.cjs b/tests/r45_probes/role17/native.cjs
+new file mode 100644
+index 0000000..33b6706
+--- /dev/null
++++ b/tests/r45_probes/role17/native.cjs
+@@ -0,0 +1,76 @@
++// Read-only observation of the actual unmodified public HTML and real G2 library.
++const fs = require('node:fs');
++const path = require('node:path');
++const {createRequire} = require('node:module');
++const {pathToFileURL} = require('node:url');
++const {createHash} = require('node:crypto');
++const assert = require('node:assert/strict');
++const [html, tools, resultFile] = process.argv.slice(2);
++const load = createRequire(path.join(path.resolve(tools), 'package.json'));
++const asset = path.join(tools, 'node_modules/@antv/g2/dist/g2.min.js');
++const sha = value => createHash('sha256').update(value).digest('hex');
++const beforeHTML = sha(fs.readFileSync(html)), beforeAsset = sha(fs.readFileSync(asset));
++assert.equal(beforeAsset, '7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412');
++async function main() {
++  const {chromium} = load('playwright'), browser = await chromium.launch({headless: true});
++  const result = {node: process.version, chromium: browser.version(), assetSHA256: beforeAsset,
++    method: 'Exact existing G2 5.4.8 body locally fulfilled at unchanged pinned URL; NOT CDN-health. Constructor-return-only observation; no options, DOM, scale, library or paint mutation.', errors: [], requests: []};
++  const page = await browser.newPage({viewport: {width: 1200, height: 900}, deviceScaleFactor: 1});
++  page.on('console', message => {if (message.type() === 'error') result.errors.push({kind: 'console', message: message.text()});});
++  page.on('pageerror', error => result.errors.push({kind: 'page', message: String(error)}));
++  page.on('requestfailed', request => result.errors.push({kind: 'request', message: request.url() + ': ' + request.failure()?.errorText}));
++  await page.route('https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js', async route => {
++    result.requests.push({url: route.request().url(), locallyFulfilledSHA256: beforeAsset});
++    await route.fulfill({path: asset, contentType: 'application/javascript'});
++  });
++  await page.addInitScript(() => {
++    let realG2;
++    window.__nativeCharts = [];
++    Object.defineProperty(window, 'G2', {configurable: true, get: () => realG2, set: value => {
++      realG2 = value;
++      let constructor;
++      Object.defineProperty(value, 'Chart', {configurable: true, enumerable: true, get: () => constructor, set: original => {
++        constructor = new Proxy(original, {construct(target, args, newTarget) {
++          const chart = Reflect.construct(target, args, newTarget); window.__nativeCharts.push(chart); return chart;
++        }});
++      }});
++    }});
++  });
++  try {
++    await page.goto(pathToFileURL(path.resolve(html)).href, {waitUntil: 'load'});
++    result.ready = await page.evaluate(async () => Promise.race([
++      window.deepvizReady.then(() => 'resolved', error => 'rejected: ' + error),
++      new Promise(resolve => setTimeout(() => resolve('timeout'), 15000))]));
++    result.state = await page.evaluate(() => {
++      const chart = window.__nativeCharts[0], element = document.querySelector('[role="img"]');
++      const canvas = element.querySelector('canvas'), ctx = canvas.getContext('2d');
++      const context = chart.getContext(), root = context.canvas.document.documentElement;
++      const color = document.createElement('canvas').getContext('2d');
++      const describe = node => {
++        const b = node.getBBox(); color.fillStyle = '#010203'; color.fillStyle = node.getAttribute('fill');
++        return {text: node.getAttribute('text'), fill: node.getAttribute('fill'), normalizedColor: color.fillStyle,
++          box: {x: b.x, y: b.y, width: b.width, height: b.height}};
++      };
++      const marks = [...root.querySelectorAll('.element')].map(describe);
++      const legend = root.querySelector('.legend-continuous');
++      const payloads = JSON.parse(document.getElementById('deepviz-data').textContent);
++      const values = payloads[0].data.map(row => row._heat);
++      const views = (context.views ?? []).map(view => ({layout: view.layout, color: {
++        options: view.scale.color.getOptions(), map: values.map(value => view.scale.color.map(value)), ticks: view.scale.color.getTicks()}}));
++      return {payloads, marks, views,
++        width: canvas.width, height: canvas.height,
++        ticks: legend ? [...legend.querySelectorAll('text')].map(describe) : [],
++        pixels: marks.map(mark => [...ctx.getImageData(Math.round(mark.box.x + mark.box.width / 2), Math.round(mark.box.y + mark.box.height / 2), 1, 1).data])};
++    });
++  } catch (error) {result.harnessError = String(error.stack ?? error);}
++  result.screenshot = resultFile.replace(/\.json$/, '.png');
++  await page.screenshot({path: result.screenshot, fullPage: true});
++  result.screenshotSHA256 = sha(fs.readFileSync(result.screenshot));
++  await browser.close();
++  assert.equal(sha(fs.readFileSync(html)), beforeHTML);
++  assert.equal(sha(fs.readFileSync(asset)), beforeAsset);
++  result.HTMLbeforeAfterSHA256 = beforeHTML;
++  fs.writeFileSync(resultFile, JSON.stringify(result, (_key, value) => typeof value === 'number' && !Number.isFinite(value) ? {nonfinite: String(value)} : value, 2));
++  console.log(JSON.stringify({ready: result.ready, marks: result.state?.marks.length, errors: result.errors.length, harness: result.harnessError}));
++}
++main().catch(error => {console.error(error); process.exitCode = 1;});

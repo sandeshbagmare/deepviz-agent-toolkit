@@ -1,0 +1,308 @@
+{
+  "node": "v26.13.1",
+  "chromium": "159.0.8154.6",
+  "assetSHA256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412",
+  "method": "Exact existing G2 5.4.8 body locally fulfilled at unchanged pinned URL; NOT CDN-health. Constructor-return-only observation; no options, DOM, scale, library or paint mutation.",
+  "errors": [],
+  "requests": [
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+      "locallyFulfilledSHA256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412"
+    }
+  ],
+  "ready": "resolved",
+  "state": {
+    "payloads": [
+      {
+        "type": "cell",
+        "data": [
+          {
+            "_x": "West",
+            "_y": "North",
+            "_color": "2e-310",
+            "_size": 8,
+            "_heat": 2e-310,
+            "_row": 0
+          },
+          {
+            "_x": "East",
+            "_y": "North",
+            "_color": "4e-310",
+            "_size": 8,
+            "_heat": 4e-310,
+            "_row": 1
+          },
+          {
+            "_x": "West",
+            "_y": "South",
+            "_color": "6e-310",
+            "_size": 8,
+            "_heat": 6e-310,
+            "_row": 2
+          },
+          {
+            "_x": "East",
+            "_y": "South",
+            "_color": "8e-310",
+            "_size": 8,
+            "_heat": 8e-310,
+            "_row": 3
+          }
+        ],
+        "encode": {
+          "x": "_x",
+          "y": "_y",
+          "color": "_heat"
+        },
+        "animate": false,
+        "theme": "light",
+        "title": "positive-subnormal",
+        "tooltip": false,
+        "axis": {
+          "x": {
+            "title": "column",
+            "labelFill": "#202938",
+            "titleFill": "#202938"
+          },
+          "y": {
+            "title": "row",
+            "labelFill": "#202938",
+            "titleFill": "#202938"
+          }
+        },
+        "scale": {
+          "color": {
+            "type": "linear",
+            "domain": [
+              2e-310,
+              8e-310
+            ],
+            "range": [
+              "#ffffd9",
+              "#081d58"
+            ],
+            "nice": false
+          }
+        },
+        "legend": {
+          "color": {
+            "data": [
+              {
+                "value": 0,
+                "label": "2e-310",
+                "domainValue": 2e-310
+              },
+              {
+                "value": 1,
+                "label": "8e-310",
+                "domainValue": 8e-310
+              }
+            ],
+            "labelTextAlign": "start",
+            "domain": [
+              0,
+              1
+            ],
+            "color": [
+              "#ffffd9",
+              "#081d58"
+            ],
+            "size": 60
+          }
+        }
+      }
+    ],
+    "marks": [
+      {
+        "fill": "rgba(255, 255, 217, 1)",
+        "normalizedColor": "#ffffd9",
+        "box": {
+          "x": 83.359375,
+          "y": 127,
+          "width": 430.32031240867934,
+          "height": 163.5
+        }
+      },
+      {
+        "fill": "rgba(173, 180, 174, 1)",
+        "normalizedColor": "#adb4ae",
+        "box": {
+          "x": 513.6796874086792,
+          "y": 127,
+          "width": 430.32031240867946,
+          "height": 163.5
+        }
+      },
+      {
+        "fill": "rgba(90, 104, 131, 1)",
+        "normalizedColor": "#5a6883",
+        "box": {
+          "x": 83.359375,
+          "y": 290.5,
+          "width": 430.32031240867934,
+          "height": 163.5
+        }
+      },
+      {
+        "fill": "rgba(8, 29, 88, 1)",
+        "normalizedColor": "#081d58",
+        "box": {
+          "x": 513.6796874086792,
+          "y": 290.5,
+          "width": 430.32031240867946,
+          "height": 163.5
+        }
+      }
+    ],
+    "views": [
+      {
+        "layout": {
+          "width": 960,
+          "height": 520,
+          "depth": 0,
+          "insetLeft": 0,
+          "insetTop": 0,
+          "insetBottom": 0,
+          "insetRight": 0,
+          "innerWidth": 860.6406248173587,
+          "innerHeight": 327,
+          "paddingLeft": 67.35937518264136,
+          "paddingRight": 0,
+          "paddingTop": 111,
+          "paddingBottom": 50,
+          "marginLeft": 16,
+          "marginBottom": 16,
+          "marginTop": 16,
+          "marginRight": 16,
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "color": {
+          "options": {
+            "domain": [
+              2e-310,
+              8e-310
+            ],
+            "range": [
+              "#ffffd9",
+              "#081d58"
+            ],
+            "nice": false,
+            "clamp": false,
+            "round": false,
+            "tickCount": 5,
+            "guide": {
+              "title": [
+                "_heat"
+              ],
+              "data": [
+                {
+                  "value": 0,
+                  "label": "2e-310",
+                  "domainValue": 2e-310
+                },
+                {
+                  "value": 1,
+                  "label": "8e-310",
+                  "domainValue": 8e-310
+                }
+              ],
+              "labelTextAlign": "start",
+              "domain": [
+                0,
+                1
+              ],
+              "color": [
+                "#ffffd9",
+                "#081d58"
+              ],
+              "size": 60
+            },
+            "field": "_heat",
+            "markKey": "G2_CHART_KEY-0",
+            "expectedDomain": [
+              2e-310,
+              8e-310
+            ],
+            "name": "color",
+            "key": "color1"
+          },
+          "map": [
+            "rgba(255, 255, 217, 1)",
+            "rgba(173, 180, 174, 1)",
+            "rgba(90, 104, 131, 1)",
+            "rgba(8, 29, 88, 1)"
+          ],
+          "ticks": []
+        }
+      }
+    ],
+    "width": 960,
+    "height": 520,
+    "ticks": [
+      {
+        "text": "_heat",
+        "fill": "#2C3542",
+        "normalizedColor": "#2c3542",
+        "box": {
+          "x": 16,
+          "y": 55,
+          "width": 31.029296875,
+          "height": 15
+        }
+      },
+      {
+        "text": "2e-310",
+        "fill": "#1D2129",
+        "normalizedColor": "#1d2129",
+        "box": {
+          "x": 35.1826171875,
+          "y": 91,
+          "width": 38.365234375,
+          "height": 15
+        }
+      },
+      {
+        "text": "8e-310",
+        "fill": "#1D2129",
+        "normalizedColor": "#1d2129",
+        "box": {
+          "x": 196.8173828125,
+          "y": 91,
+          "width": 38.365234375,
+          "height": 15
+        }
+      }
+    ],
+    "pixels": [
+      [
+        255,
+        255,
+        217,
+        242
+      ],
+      [
+        173,
+        180,
+        174,
+        242
+      ],
+      [
+        90,
+        104,
+        131,
+        242
+      ],
+      [
+        8,
+        30,
+        89,
+        242
+      ]
+    ]
+  },
+  "screenshot": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-05-antv-command-01-ses_de567830effe0E5yIwQgDACLMD\\pytest-temp\\test_finite_heatmap_real_cells1\\actual-native.png",
+  "screenshotSHA256": "7a1e50d341f38615cc0ae34bf83500cb2c1e4444b3d959ef6e2da8c6d8fa1168",
+  "HTMLbeforeAfterSHA256": "6448b9aef275087789da0963515279052b792ed2f4f7966ce948bba90945386b"
+}

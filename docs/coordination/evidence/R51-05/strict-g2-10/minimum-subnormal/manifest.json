@@ -1,0 +1,162 @@
+{
+  "engine": "antv",
+  "charts": [
+    {
+      "engine": "antv",
+      "requested_kind": "heatmap",
+      "rendered_kind": "heatmap",
+      "spec": {
+        "version": 1,
+        "kind": "heatmap",
+        "title": "minimum-subnormal",
+        "description": "",
+        "x": "column",
+        "y": "row",
+        "color": "heat",
+        "size": null,
+        "data_path": null,
+        "format": "auto",
+        "aggregation": "none",
+        "max_points": 2000,
+        "width": 960,
+        "height": 520,
+        "theme": "light",
+        "charts": [],
+        "columns": 2
+      },
+      "records": [
+        {
+          "column": "West",
+          "row": "North",
+          "heat": 5e-324
+        },
+        {
+          "column": "East",
+          "row": "North",
+          "heat": 1e-323
+        },
+        {
+          "column": "West",
+          "row": "South",
+          "heat": 1.5e-323
+        },
+        {
+          "column": "East",
+          "row": "South",
+          "heat": 2e-323
+        }
+      ],
+      "input_count": 4,
+      "output_count": 4,
+      "strategy": "none",
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    }
+  ],
+  "warnings": [
+    "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+  ],
+  "native_specs": [
+    {
+      "type": "cell",
+      "data": [
+        {
+          "_x": "West",
+          "_y": "North",
+          "_color": "5e-324",
+          "_size": 8,
+          "_heat": 5e-324,
+          "_row": 0
+        },
+        {
+          "_x": "East",
+          "_y": "North",
+          "_color": "1e-323",
+          "_size": 8,
+          "_heat": 1e-323,
+          "_row": 1
+        },
+        {
+          "_x": "West",
+          "_y": "South",
+          "_color": "1.5e-323",
+          "_size": 8,
+          "_heat": 1.5e-323,
+          "_row": 2
+        },
+        {
+          "_x": "East",
+          "_y": "South",
+          "_color": "2e-323",
+          "_size": 8,
+          "_heat": 2e-323,
+          "_row": 3
+        }
+      ],
+      "encode": {
+        "x": "_x",
+        "y": "_y",
+        "color": "_heat"
+      },
+      "animate": false,
+      "theme": "light",
+      "title": "minimum-subnormal",
+      "tooltip": false,
+      "axis": {
+        "x": {
+          "title": "column",
+          "labelFill": "#202938",
+          "titleFill": "#202938"
+        },
+        "y": {
+          "title": "row",
+          "labelFill": "#202938",
+          "titleFill": "#202938"
+        }
+      },
+      "scale": {
+        "color": {
+          "type": "linear",
+          "domain": [
+            5e-324,
+            2e-323
+          ],
+          "range": [
+            "#ffffd9",
+            "#081d58"
+          ],
+          "nice": false
+        }
+      },
+      "legend": {
+        "color": {
+          "data": [
+            {
+              "value": 0,
+              "label": "5e-324",
+              "domainValue": 5e-324
+            },
+            {
+              "value": 1,
+              "label": "2e-323",
+              "domainValue": 2e-323
+            }
+          ],
+          "labelTextAlign": "start",
+          "domain": [
+            0,
+            1
+          ],
+          "color": [
+            "#ffffd9",
+            "#081d58"
+          ],
+          "size": 60
+        }
+      }
+    }
+  ],
+  "strategy": "none",
+  "accessible_path": "chart.html"
+}

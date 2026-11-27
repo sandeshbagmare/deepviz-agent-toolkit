@@ -1,0 +1,3 @@
+# Minimum-width extreme-label strict RED
+
+The public render API at source `4429f0521612b97eee3790f0d8d0fbc3cad3f8be` produced two ready real G2 cells and no browser errors for finite `-sys.float_info.max,+sys.float_info.max` heat values, width240 (schema minimum), height520. Actual legend endpoint labels overlap by about 98.98 px and both are not wholly inside the 240px canvas; right edge=299.746 px. See `label-bounds.json`, preserved original generated HTML/manifest, read-only browser observation, and opened screenshot. This is a width/label-layout defect, distinct from the existing scale arithmetic case; no issue was filed.

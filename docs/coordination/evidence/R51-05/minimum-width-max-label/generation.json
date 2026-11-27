@@ -1,0 +1,116 @@
+{
+  "utc": "2026-11-27T19:34:25.051018+00:00",
+  "source_commit": "4429f0521612b97eee3790f0d8d0fbc3cad3f8be",
+  "spec": {
+    "kind": "heatmap",
+    "title": "minimum width signed MAX",
+    "x": "column",
+    "y": "row",
+    "color": "heat",
+    "aggregation": "none",
+    "width": 240,
+    "height": 520
+  },
+  "input": [
+    {
+      "column": "West",
+      "row": "North",
+      "heat": -1.7976931348623157e+308
+    },
+    {
+      "column": "East",
+      "row": "North",
+      "heat": 1.7976931348623157e+308
+    }
+  ],
+  "output_count": 2,
+  "native_spec": {
+    "type": "cell",
+    "data": [
+      {
+        "_x": "West",
+        "_y": "North",
+        "_color": "-1.7976931348623157e+308",
+        "_size": 8,
+        "_heat": -1.7976931348623157e+308,
+        "_row": 0
+      },
+      {
+        "_x": "East",
+        "_y": "North",
+        "_color": "1.7976931348623157e+308",
+        "_size": 8,
+        "_heat": 1.7976931348623157e+308,
+        "_row": 1
+      }
+    ],
+    "encode": {
+      "x": "_x",
+      "y": "_y",
+      "color": "_heat"
+    },
+    "animate": false,
+    "theme": "light",
+    "title": "minimum width signed MAX",
+    "tooltip": false,
+    "axis": {
+      "x": {
+        "title": "column",
+        "labelFill": "#202938",
+        "titleFill": "#202938"
+      },
+      "y": {
+        "title": "row",
+        "labelFill": "#202938",
+        "titleFill": "#202938"
+      }
+    },
+    "scale": {
+      "color": {
+        "type": "linear",
+        "domain": [
+          -1.7976931348623157e+308,
+          0.0,
+          1.7976931348623157e+308
+        ],
+        "range": [
+          "#ffffd9",
+          "#848e99",
+          "#081d58"
+        ],
+        "nice": false
+      }
+    },
+    "legend": {
+      "color": {
+        "data": [
+          {
+            "value": 0,
+            "label": "-1.7976931348623157e+308",
+            "domainValue": -1.7976931348623157e+308
+          },
+          {
+            "value": 1,
+            "label": "1.7976931348623157e+308",
+            "domainValue": 1.7976931348623157e+308
+          }
+        ],
+        "labelTextAlign": "start",
+        "domain": [
+          0,
+          1
+        ],
+        "color": [
+          "#ffffd9",
+          "#081d58"
+        ],
+        "size": 60,
+        "length": 208
+      }
+    }
+  },
+  "html": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-05-antv-min-width-02-ses_de567830effe0E5yIwQgDACLMD\\deepviz-kz7g0eer\\chart.html",
+  "html_sha256_before_browser": "eed315197b347d70a29e5da04d631c2f99e669afc7d7cbd9eeb0fcea9aaddd8b",
+  "G2_sha256_before_browser": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412",
+  "source_clean": true
+}

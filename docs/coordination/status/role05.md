@@ -1,11 +1,6 @@
-# Role05 — independent Python mean acceptance
-
-- Owner-confirmed: `ses_de567830effe0E5yIwQgDACLMD`, **2026-11-27T17:23:16.146964Z** actual stage-safety audit receipt.
-- Task: R38/R39 role05, independent Python mean gate supporting the next usable data-package PR. **INDEPENDENT c1b MEAN PASS:76/0fail/0skip2.26s, ONEfreshgate; compact evidence/publication next.**
-- OWN branch `agents/r10-05-inspector-claim-retest`, actual committed tip`fd9631c2b280c3782db4a3808e576f3a00c24b50`+21EXPLICITOWNstagedpaths; actualsameOWNremoteverifiedfd9631c. Stage-safety/GitrawLFmanifest/secret+UTF8+whitespace0, executedprobesEXACTrun. Existing MAIN542dirtypaths preserved/no sharedindexwrites.
-- PRODUCT source exact sealed **c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19**, own detached source created clean; NOT authorlater546c, currentcandidate or MAIN approval.
-- Evidence: `docs/coordination/reports/R38-05-python-mean-test.md`; `docs/coordination/evidence/R38-05/verification.json`+JUnit/origins/command/sourceproof/quality/README. ONEimmutable21producer+55NEW/76BEFOREconsumerprofileguards; SAVEDaudit0/ALL228phasesPASS/12rawGitblobs+executedprobesunchanged. Realbudgetrejectionconsumption0/33/1/254; sourceclean/noenvmutation/editablehook. Rawstdout22eab819…/stderrEMPTY. Three readonlydiscoveryerrors/firstOWNmypy1 preserved; correctedNEW2fileAST/Ruff/MypyALL0, no productRED hidden.
-- PR/CI/defaultmerge: no independent observation in this gate/no API requests. Packet reports PR33/main31cff merged; do not promote that into mean/package delivery or new fullCI approval.
-- Blocker/owner: no product blocker observed **in this narrowc1bmean gate**. Later546c/finalpackage/extracted-head integration and affectedgates remain R04-owned, NOTapprovedhere.
-- Next: finalizeTHIS21pathmeaningfultest/report/statuscommit/nonforce/immediateexactremoteSHA→finalMAIN-onlyactualreceipt/status+promptR04/root handoff. R42protocolFULLread/OWNcentralrecordincludedinTHISmaterialcommit, no status-onlycommit/newjob/restart. No product replay/receiptcommitloop/cleanup69/fullformats/SUMmatrix/10M.
-- Conditional remaining estimate: own evidence/publication depends on safety/hashchecks and network; **UNKNOWN** on failure. No full-toolkit date forecast from this narrow tester gate.
+﻿# Role05 - AntV exact-head independent review
+Main-bound slice: R04-owned five-renderer/dashboard code; PR UNKNOWN. Exact product: 4429f0521612b97eee3790f0d8d0fbc3cad3f8be.
+Real-G2 strict suite: 10 PASS, 0 fail, 0 skip; original four subnormal inputs/assertions unchanged, all ten PNGs opened. Old 21-case/254-check author suite not rerun.
+R51-05-F1 P2 at python/deepviz/src/deepviz/engines.py:710-712: width240 signed MAX labels overlap 98.98px and extend to x299.746; two marks ready, zero browser errors. Screenshot/bounds saved under evidence/R51-05/minimum-width-max-label/. Distinct from role18/21 finite-MAX scale arithmetic. No issue/API write.
+Source verdict REQUEST CHANGES. R04 next owner for disposition/repair grant and new-head independent gates, CI, PR/default merge. No production edits, install, PR, CI or main write by role05. Remaining forecast UNKNOWN.
+Full report reports/R51-05-antv-source-review.md; evidence evidence/R51-05/.

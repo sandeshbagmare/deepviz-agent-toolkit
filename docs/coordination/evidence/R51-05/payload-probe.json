@@ -1,0 +1,421 @@
+{
+  "source_commit": "4429f0521612b97eee3790f0d8d0fbc3cad3f8be",
+  "cases": {
+    "ordinary-signed": {
+      "values": [
+        -12.0,
+        -3.0,
+        3.0,
+        12.0
+      ],
+      "native_data_values": [
+        -12.0,
+        -3.0,
+        3.0,
+        12.0
+      ],
+      "native_coordinates": [
+        [
+          "West",
+          "North"
+        ],
+        [
+          "East",
+          "North"
+        ],
+        [
+          "West",
+          "South"
+        ],
+        [
+          "East",
+          "South"
+        ]
+      ],
+      "scale_domain": [
+        -12.0,
+        12.0
+      ],
+      "scale_range": [
+        "#ffffd9",
+        "#081d58"
+      ],
+      "legend": {
+        "data": [
+          {
+            "value": -12.0
+          },
+          {
+            "value": 12.0
+          }
+        ],
+        "labelTextAlign": "start"
+      },
+      "warnings": [],
+      "json_finite": true
+    },
+    "negative-subnormal": {
+      "values": [
+        -8e-310,
+        -6e-310,
+        -4e-310,
+        -2e-310
+      ],
+      "native_data_values": [
+        -8e-310,
+        -6e-310,
+        -4e-310,
+        -2e-310
+      ],
+      "native_coordinates": [
+        [
+          "West",
+          "North"
+        ],
+        [
+          "East",
+          "North"
+        ],
+        [
+          "West",
+          "South"
+        ],
+        [
+          "East",
+          "South"
+        ]
+      ],
+      "scale_domain": [
+        -8e-310,
+        -2e-310
+      ],
+      "scale_range": [
+        "#ffffd9",
+        "#081d58"
+      ],
+      "legend": {
+        "data": [
+          {
+            "value": 0,
+            "label": "-8e-310",
+            "domainValue": -8e-310
+          },
+          {
+            "value": 1,
+            "label": "-2e-310",
+            "domainValue": -2e-310
+          }
+        ],
+        "labelTextAlign": "start",
+        "domain": [
+          0,
+          1
+        ],
+        "color": [
+          "#ffffd9",
+          "#081d58"
+        ],
+        "size": 60
+      },
+      "warnings": [],
+      "json_finite": true
+    },
+    "minimum-subnormal": {
+      "values": [
+        5e-324,
+        1e-323,
+        1.5e-323,
+        2e-323
+      ],
+      "native_data_values": [
+        5e-324,
+        1e-323,
+        1.5e-323,
+        2e-323
+      ],
+      "native_coordinates": [
+        [
+          "West",
+          "North"
+        ],
+        [
+          "East",
+          "North"
+        ],
+        [
+          "West",
+          "South"
+        ],
+        [
+          "East",
+          "South"
+        ]
+      ],
+      "scale_domain": [
+        5e-324,
+        2e-323
+      ],
+      "scale_range": [
+        "#ffffd9",
+        "#081d58"
+      ],
+      "legend": {
+        "data": [
+          {
+            "value": 0,
+            "label": "5e-324",
+            "domainValue": 5e-324
+          },
+          {
+            "value": 1,
+            "label": "2e-323",
+            "domainValue": 2e-323
+          }
+        ],
+        "labelTextAlign": "start",
+        "domain": [
+          0,
+          1
+        ],
+        "color": [
+          "#ffffd9",
+          "#081d58"
+        ],
+        "size": 60
+      },
+      "warnings": [],
+      "json_finite": true
+    },
+    "signed-MAX": {
+      "values": [
+        -1.7976931348623157e+308,
+        0.0,
+        1.7976931348623157e+308
+      ],
+      "native_data_values": [
+        -1.7976931348623157e+308,
+        0.0,
+        1.7976931348623157e+308
+      ],
+      "native_coordinates": [
+        [
+          "West",
+          "North"
+        ],
+        [
+          "East",
+          "North"
+        ],
+        [
+          "West",
+          "South"
+        ]
+      ],
+      "scale_domain": [
+        -1.7976931348623157e+308,
+        0.0,
+        1.7976931348623157e+308
+      ],
+      "scale_range": [
+        "#ffffd9",
+        "#848e99",
+        "#081d58"
+      ],
+      "legend": {
+        "data": [
+          {
+            "value": 0,
+            "label": "-1.7976931348623157e+308",
+            "domainValue": -1.7976931348623157e+308
+          },
+          {
+            "value": 1,
+            "label": "1.7976931348623157e+308",
+            "domainValue": 1.7976931348623157e+308
+          }
+        ],
+        "labelTextAlign": "start",
+        "domain": [
+          0,
+          1
+        ],
+        "color": [
+          "#ffffd9",
+          "#081d58"
+        ],
+        "size": 60,
+        "length": 208
+      },
+      "warnings": [],
+      "json_finite": true
+    },
+    "constant-MAX": {
+      "values": [
+        1.7976931348623157e+308,
+        1.7976931348623157e+308,
+        1.7976931348623157e+308,
+        1.7976931348623157e+308
+      ],
+      "native_data_values": [
+        1.7976931348623157e+308,
+        1.7976931348623157e+308,
+        1.7976931348623157e+308,
+        1.7976931348623157e+308
+      ],
+      "native_coordinates": [
+        [
+          "West",
+          "North"
+        ],
+        [
+          "East",
+          "North"
+        ],
+        [
+          "West",
+          "South"
+        ],
+        [
+          "East",
+          "South"
+        ]
+      ],
+      "scale_domain": [
+        1.7078084781191998e+308,
+        1.7976931348623157e+308
+      ],
+      "scale_range": [
+        "#ffffd9",
+        "#081d58"
+      ],
+      "legend": {
+        "data": [
+          {
+            "value": 1.7078084781191998e+308
+          },
+          {
+            "value": 1.7976931348623157e+308
+          }
+        ],
+        "labelTextAlign": "start",
+        "length": 208
+      },
+      "warnings": [],
+      "json_finite": true
+    },
+    "negative-constant-MAX": {
+      "values": [
+        -1.7976931348623157e+308,
+        -1.7976931348623157e+308,
+        -1.7976931348623157e+308,
+        -1.7976931348623157e+308
+      ],
+      "native_data_values": [
+        -1.7976931348623157e+308,
+        -1.7976931348623157e+308,
+        -1.7976931348623157e+308,
+        -1.7976931348623157e+308
+      ],
+      "native_coordinates": [
+        [
+          "West",
+          "North"
+        ],
+        [
+          "East",
+          "North"
+        ],
+        [
+          "West",
+          "South"
+        ],
+        [
+          "East",
+          "South"
+        ]
+      ],
+      "scale_domain": [
+        -1.7976931348623157e+308,
+        -1.7078084781191998e+308
+      ],
+      "scale_range": [
+        "#ffffd9",
+        "#081d58"
+      ],
+      "legend": {
+        "data": [
+          {
+            "value": -1.7976931348623157e+308
+          },
+          {
+            "value": -1.7078084781191998e+308
+          }
+        ],
+        "labelTextAlign": "start",
+        "length": 208
+      },
+      "warnings": [],
+      "json_finite": true
+    },
+    "zero": {
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "native_data_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "native_coordinates": [
+        [
+          "West",
+          "North"
+        ],
+        [
+          "East",
+          "North"
+        ],
+        [
+          "West",
+          "South"
+        ],
+        [
+          "East",
+          "South"
+        ]
+      ],
+      "scale_domain": [
+        -1.0,
+        1.0
+      ],
+      "scale_range": [
+        "#ffffd9",
+        "#081d58"
+      ],
+      "legend": {
+        "data": [
+          {
+            "value": -1.0
+          },
+          {
+            "value": 1.0
+          }
+        ],
+        "labelTextAlign": "start"
+      },
+      "warnings": [],
+      "json_finite": true
+    },
+    "non_heatmap_bar_unchanged": {
+      "style": {
+        "fill": "#386cb0",
+        "stroke": "#386cb0"
+      },
+      "has_scale": false
+    }
+  }
+}

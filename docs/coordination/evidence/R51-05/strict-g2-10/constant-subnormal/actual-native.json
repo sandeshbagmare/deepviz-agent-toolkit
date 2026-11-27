@@ -1,0 +1,310 @@
+{
+  "node": "v26.13.1",
+  "chromium": "159.0.8154.6",
+  "assetSHA256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412",
+  "method": "Exact existing G2 5.4.8 body locally fulfilled at unchanged pinned URL; NOT CDN-health. Constructor-return-only observation; no options, DOM, scale, library or paint mutation.",
+  "errors": [],
+  "requests": [
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+      "locallyFulfilledSHA256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412"
+    }
+  ],
+  "ready": "resolved",
+  "state": {
+    "payloads": [
+      {
+        "type": "cell",
+        "data": [
+          {
+            "_x": "West",
+            "_y": "North",
+            "_color": "-8e-310",
+            "_size": 8,
+            "_heat": -8e-310,
+            "_row": 0
+          },
+          {
+            "_x": "East",
+            "_y": "North",
+            "_color": "-8e-310",
+            "_size": 8,
+            "_heat": -8e-310,
+            "_row": 1
+          },
+          {
+            "_x": "West",
+            "_y": "South",
+            "_color": "-8e-310",
+            "_size": 8,
+            "_heat": -8e-310,
+            "_row": 2
+          },
+          {
+            "_x": "East",
+            "_y": "South",
+            "_color": "-8e-310",
+            "_size": 8,
+            "_heat": -8e-310,
+            "_row": 3
+          }
+        ],
+        "encode": {
+          "x": "_x",
+          "y": "_y",
+          "color": "_heat"
+        },
+        "animate": false,
+        "theme": "light",
+        "title": "constant-subnormal",
+        "tooltip": false,
+        "axis": {
+          "x": {
+            "title": "column",
+            "labelFill": "#202938",
+            "titleFill": "#202938"
+          },
+          "y": {
+            "title": "row",
+            "labelFill": "#202938",
+            "titleFill": "#202938"
+          }
+        },
+        "scale": {
+          "color": {
+            "type": "linear",
+            "domain": [
+              -8.39999999999995e-310,
+              -7.6e-310
+            ],
+            "range": [
+              "#ffffd9",
+              "#081d58"
+            ],
+            "nice": false
+          }
+        },
+        "legend": {
+          "color": {
+            "data": [
+              {
+                "value": 0,
+                "label": "-8.39999999999995e-310",
+                "domainValue": -8.39999999999995e-310
+              },
+              {
+                "value": 1,
+                "label": "-7.6e-310",
+                "domainValue": -7.6e-310
+              }
+            ],
+            "labelTextAlign": "start",
+            "domain": [
+              0,
+              1
+            ],
+            "color": [
+              "#ffffd9",
+              "#081d58"
+            ],
+            "size": 60,
+            "length": 328
+          }
+        }
+      }
+    ],
+    "marks": [
+      {
+        "fill": "rgba(132, 142, 153, 1)",
+        "normalizedColor": "#848e99",
+        "box": {
+          "x": 83.359375,
+          "y": 127,
+          "width": 430.32031240867934,
+          "height": 163.5
+        }
+      },
+      {
+        "fill": "rgba(132, 142, 153, 1)",
+        "normalizedColor": "#848e99",
+        "box": {
+          "x": 513.6796874086792,
+          "y": 127,
+          "width": 430.32031240867946,
+          "height": 163.5
+        }
+      },
+      {
+        "fill": "rgba(132, 142, 153, 1)",
+        "normalizedColor": "#848e99",
+        "box": {
+          "x": 83.359375,
+          "y": 290.5,
+          "width": 430.32031240867934,
+          "height": 163.5
+        }
+      },
+      {
+        "fill": "rgba(132, 142, 153, 1)",
+        "normalizedColor": "#848e99",
+        "box": {
+          "x": 513.6796874086792,
+          "y": 290.5,
+          "width": 430.32031240867946,
+          "height": 163.5
+        }
+      }
+    ],
+    "views": [
+      {
+        "layout": {
+          "width": 960,
+          "height": 520,
+          "depth": 0,
+          "insetLeft": 0,
+          "insetTop": 0,
+          "insetBottom": 0,
+          "insetRight": 0,
+          "innerWidth": 860.6406248173587,
+          "innerHeight": 327,
+          "paddingLeft": 67.35937518264136,
+          "paddingRight": 0,
+          "paddingTop": 111,
+          "paddingBottom": 50,
+          "marginLeft": 16,
+          "marginBottom": 16,
+          "marginTop": 16,
+          "marginRight": 16,
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "color": {
+          "options": {
+            "domain": [
+              -8.39999999999995e-310,
+              -7.6e-310
+            ],
+            "range": [
+              "#ffffd9",
+              "#081d58"
+            ],
+            "nice": false,
+            "clamp": false,
+            "round": false,
+            "tickCount": 5,
+            "guide": {
+              "title": [
+                "_heat"
+              ],
+              "data": [
+                {
+                  "value": 0,
+                  "label": "-8.39999999999995e-310",
+                  "domainValue": -8.39999999999995e-310
+                },
+                {
+                  "value": 1,
+                  "label": "-7.6e-310",
+                  "domainValue": -7.6e-310
+                }
+              ],
+              "labelTextAlign": "start",
+              "domain": [
+                0,
+                1
+              ],
+              "color": [
+                "#ffffd9",
+                "#081d58"
+              ],
+              "size": 60,
+              "length": 328
+            },
+            "field": "_heat",
+            "markKey": "G2_CHART_KEY-0",
+            "expectedDomain": [
+              -8.39999999999995e-310,
+              -7.6e-310
+            ],
+            "name": "color",
+            "key": "color1"
+          },
+          "map": [
+            "rgba(132, 142, 153, 1)",
+            "rgba(132, 142, 153, 1)",
+            "rgba(132, 142, 153, 1)",
+            "rgba(132, 142, 153, 1)"
+          ],
+          "ticks": []
+        }
+      }
+    ],
+    "width": 960,
+    "height": 520,
+    "ticks": [
+      {
+        "text": "_heat",
+        "fill": "#2C3542",
+        "normalizedColor": "#2c3542",
+        "box": {
+          "x": 16,
+          "y": 55,
+          "width": 31.029296875,
+          "height": 15
+        }
+      },
+      {
+        "text": "-8.39999999999995e-310",
+        "fill": "#1D2129",
+        "normalizedColor": "#1d2129",
+        "box": {
+          "x": 42.1845703125,
+          "y": 91,
+          "width": 139.12890625,
+          "height": 15
+        }
+      },
+      {
+        "text": "-7.6e-310",
+        "fill": "#1D2129",
+        "normalizedColor": "#1d2129",
+        "box": {
+          "x": 317.8154296875,
+          "y": 91,
+          "width": 52.369140625,
+          "height": 15
+        }
+      }
+    ],
+    "pixels": [
+      [
+        132,
+        142,
+        153,
+        242
+      ],
+      [
+        132,
+        142,
+        153,
+        242
+      ],
+      [
+        132,
+        142,
+        153,
+        242
+      ],
+      [
+        132,
+        142,
+        153,
+        242
+      ]
+    ]
+  },
+  "screenshot": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-05-antv-command-01-ses_de567830effe0E5yIwQgDACLMD\\pytest-temp\\test_finite_heatmap_real_cells3\\actual-native.png",
+  "screenshotSHA256": "605ddcf25389a9ad1c26ec7bd4af3a15ba846ef7446ea4e99371d2b35a572632",
+  "HTMLbeforeAfterSHA256": "ca0dbbcd78a6aef3dde4a59a6e04bbacf013fb1ffe437039555254c6315a99e1"
+}

@@ -1,0 +1,265 @@
+{
+  "node": "v26.13.1",
+  "chromium": "159.0.8154.6",
+  "assetSHA256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412",
+  "method": "Exact existing G2 5.4.8 body locally fulfilled at unchanged pinned URL; NOT CDN-health. Constructor-return-only observation; no options, DOM, scale, library or paint mutation.",
+  "errors": [],
+  "requests": [
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+      "locallyFulfilledSHA256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412"
+    }
+  ],
+  "ready": "resolved",
+  "state": {
+    "payloads": [
+      {
+        "type": "cell",
+        "data": [
+          {
+            "_x": "West",
+            "_y": "North",
+            "_color": "-1.7976931348623157e+308",
+            "_size": 8,
+            "_heat": -1.7976931348623157e+308,
+            "_row": 0
+          },
+          {
+            "_x": "East",
+            "_y": "North",
+            "_color": "1.7976931348623157e+308",
+            "_size": 8,
+            "_heat": 1.7976931348623157e+308,
+            "_row": 1
+          }
+        ],
+        "encode": {
+          "x": "_x",
+          "y": "_y",
+          "color": "_heat"
+        },
+        "animate": false,
+        "theme": "light",
+        "title": "minimum width signed MAX",
+        "tooltip": false,
+        "axis": {
+          "x": {
+            "title": "column",
+            "labelFill": "#202938",
+            "titleFill": "#202938"
+          },
+          "y": {
+            "title": "row",
+            "labelFill": "#202938",
+            "titleFill": "#202938"
+          }
+        },
+        "scale": {
+          "color": {
+            "type": "linear",
+            "domain": [
+              -1.7976931348623157e+308,
+              0,
+              1.7976931348623157e+308
+            ],
+            "range": [
+              "#ffffd9",
+              "#848e99",
+              "#081d58"
+            ],
+            "nice": false
+          }
+        },
+        "legend": {
+          "color": {
+            "data": [
+              {
+                "value": 0,
+                "label": "-1.7976931348623157e+308",
+                "domainValue": -1.7976931348623157e+308
+              },
+              {
+                "value": 1,
+                "label": "1.7976931348623157e+308",
+                "domainValue": 1.7976931348623157e+308
+              }
+            ],
+            "labelTextAlign": "start",
+            "domain": [
+              0,
+              1
+            ],
+            "color": [
+              "#ffffd9",
+              "#081d58"
+            ],
+            "size": 60,
+            "length": 208
+          }
+        }
+      }
+    ],
+    "marks": [
+      {
+        "fill": "rgba(255, 255, 217, 1)",
+        "normalizedColor": "#ffffd9",
+        "box": {
+          "x": 81.34375,
+          "y": 127,
+          "width": 71.32812490867931,
+          "height": 327
+        }
+      },
+      {
+        "fill": "rgba(8, 29, 88, 1)",
+        "normalizedColor": "#081d58",
+        "box": {
+          "x": 152.67187490867929,
+          "y": 127,
+          "width": 71.32812490867934,
+          "height": 327
+        }
+      }
+    ],
+    "views": [
+      {
+        "layout": {
+          "width": 240,
+          "height": 520,
+          "depth": 0,
+          "insetLeft": 0,
+          "insetTop": 0,
+          "insetBottom": 0,
+          "insetRight": 0,
+          "innerWidth": 142.65624981735863,
+          "innerHeight": 327,
+          "paddingLeft": 65.34375018264136,
+          "paddingRight": 0,
+          "paddingTop": 111,
+          "paddingBottom": 50,
+          "marginLeft": 16,
+          "marginBottom": 16,
+          "marginTop": 16,
+          "marginRight": 16,
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "color": {
+          "options": {
+            "domain": [
+              -1.7976931348623157e+308,
+              0,
+              1.7976931348623157e+308
+            ],
+            "range": [
+              "#ffffd9",
+              "#848e99",
+              "#081d58"
+            ],
+            "nice": false,
+            "clamp": false,
+            "round": false,
+            "tickCount": 5,
+            "guide": {
+              "title": [
+                "_heat"
+              ],
+              "data": [
+                {
+                  "value": 0,
+                  "label": "-1.7976931348623157e+308",
+                  "domainValue": -1.7976931348623157e+308
+                },
+                {
+                  "value": 1,
+                  "label": "1.7976931348623157e+308",
+                  "domainValue": 1.7976931348623157e+308
+                }
+              ],
+              "labelTextAlign": "start",
+              "domain": [
+                0,
+                1
+              ],
+              "color": [
+                "#ffffd9",
+                "#081d58"
+              ],
+              "size": 60,
+              "length": 208
+            },
+            "field": "_heat",
+            "markKey": "G2_CHART_KEY-0",
+            "expectedDomain": [
+              -1.7976931348623157e+308,
+              0,
+              1.7976931348623157e+308
+            ],
+            "name": "color",
+            "key": "color1"
+          },
+          "map": [
+            "rgba(255, 255, 217, 1)",
+            "rgba(8, 29, 88, 1)"
+          ],
+          "ticks": []
+        }
+      }
+    ],
+    "width": 240,
+    "height": 520,
+    "ticks": [
+      {
+        "text": "_heat",
+        "fill": "#2C3542",
+        "normalizedColor": "#2c3542",
+        "box": {
+          "x": 16,
+          "y": 55,
+          "width": 31.029296875,
+          "height": 15
+        }
+      },
+      {
+        "text": "-1.7976931348623157e+308",
+        "fill": "#1D2129",
+        "normalizedColor": "#1d2129",
+        "box": {
+          "x": 91.74609375,
+          "y": 91,
+          "width": 155.48828125,
+          "height": 15
+        }
+      },
+      {
+        "text": "1.7976931348623157e+308",
+        "fill": "#1D2129",
+        "normalizedColor": "#1d2129",
+        "box": {
+          "x": 148.25390625,
+          "y": 91,
+          "width": 151.4921875,
+          "height": 15
+        }
+      }
+    ],
+    "pixels": [
+      [
+        255,
+        255,
+        217,
+        242
+      ],
+      [
+        8,
+        30,
+        89,
+        242
+      ]
+    ]
+  },
+  "screenshot": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-05-antv-min-width-02-ses_de567830effe0E5yIwQgDACLMD\\browser-result.png",
+  "screenshotSHA256": "d1aad5d003110b87eb2be8481152be4629d3151ffe74cc5641f44fc02f1ab031",
+  "HTMLbeforeAfterSHA256": "eed315197b347d70a29e5da04d631c2f99e669afc7d7cbd9eeb0fcea9aaddd8b"
+}
