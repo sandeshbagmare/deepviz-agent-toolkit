@@ -71,9 +71,12 @@ The immutable normalizer dependency is the sealed
 `546c25ea75ee9d8a41b3832aa639664bc9a683b5` milestone, adopted whole under R04's
 explicit dependency permission. The package author does not edit that normalizer.
 Its required independent03/19 source reviews and10 acceptance gates must clear
-before package PR merge. The 4KiB field-name versus64KiB policy disagreement and
-raw-dashboard JSON-schema contract cases remain merge blockers; their original
-tests are retained without xfails, stubs or weakened expectations.
+before package PR merge. The model and canonical schema are the published
+`dd1c4080095c7e739582dc5c631bc419047c48d2` pair, adopted whole without changing
+the native Mapping/numeric guards; the packaged schema mirrors that exact file.
+The 4KiB field-name versus64KiB policy disagreement and real clean-install gates
+remain blockers. Original policy/schema tests are retained without xfails, stubs
+or weakened expectations; package-author checks are not independent approval.
 
 ### Packaging and deliberately deferred commands
 
