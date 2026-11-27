@@ -1,0 +1,165 @@
+{
+  "packed_at": "2026-11-27T16:55:45.117846+00:00",
+  "source_commit": "fb0d22e13b89a26eb7df0f6ed008770ecb9e1c35",
+  "source_product_commit": "94319d679661a169856fb0a0ec0e9de5cbd6986f",
+  "finding": {
+    "id": "R35-02-F1",
+    "priority": "P2",
+    "kind": "Incomplete literal Cartesian series hover display, not HTML/JS execution or manifest data loss",
+    "locations": [
+      "python/deepviz/src/deepviz/engines.py:393-399",
+      "python/deepviz/src/deepviz/engines.py:440-443"
+    ],
+    "expected": "R35 long \"\u03a9\" & <b>series-name-preserve-END</b>",
+    "actual": "R35 long \"\u03a9\"...",
+    "native_default_namelength": 15,
+    "security_anchors_handlers_network_console_errors": 0
+  },
+  "distinct_new_strict_test_cases": 1,
+  "actual_executions": [
+    {
+      "directory": "calibration-single-trace",
+      "case_count": 1,
+      "failed": 1,
+      "errors": 0,
+      "skipped": 0,
+      "case_seconds": 3.174,
+      "meaning": "Single trace default excludes name: initial expectation not calibrated, NOT product finding",
+      "observed_hover_names": [],
+      "unexpected_errors_requests": 0,
+      "anchors_handlers": 0
+    },
+    {
+      "directory": "calibrated-before-typecast",
+      "case_count": 1,
+      "failed": 1,
+      "errors": 0,
+      "skipped": 0,
+      "case_seconds": 4.699,
+      "meaning": "Same ONE new case calibrated to two series; actual missing complete hover name",
+      "observed_hover_names": [
+        "R35 long \"\u03a9\"..."
+      ],
+      "unexpected_errors_requests": 0,
+      "anchors_handlers": 0
+    },
+    {
+      "directory": ".",
+      "case_count": 1,
+      "failed": 1,
+      "errors": 0,
+      "skipped": 0,
+      "case_seconds": 4.095,
+      "meaning": "Final SAME case after no-op typing cast only; genuine strict completeness failure",
+      "observed_hover_names": [
+        "R35 long \"\u03a9\"..."
+      ],
+      "unexpected_errors_requests": 0,
+      "anchors_handlers": 0
+    }
+  ],
+  "final_pytest_exit": 1,
+  "final_pytest_console_seconds": 4.44,
+  "final_case_expected_not_weakened": true,
+  "final_source_typing_only_change": "typing.cast(str,module.__file__) no-op; original/full hover assertion unchanged",
+  "focused_checks": {
+    "ruff": 0,
+    "mypy_final": 0,
+    "mypy_initial_optional_file_type": 1,
+    "node_check": 0,
+    "checked_python_files": 1
+  },
+  "collector_initial_failure": "One collector expected-literal Unicode pipeline encoding assertion; source-after.json already written/read back. Corrected collector to ASCII chr(937), no test/oracle/source edits or rerun. Exact final DOM predicate unchanged.",
+  "original_nine_or_author23_tests_replayed": 0,
+  "old_mcp_or_other_matrices_replayed": 0,
+  "author_full_results_not_rerun_or_adopted_as_green": {
+    "failed": 38,
+    "passed": 2547,
+    "errors": 517,
+    "skipped": 5,
+    "scale_not_run": 9,
+    "build": "blocked missing hatchling"
+  },
+  "screenshots_actually_opened": [
+    "calibration-single-trace/long-hover.png",
+    "calibrated-before-typecast/long-hover.png",
+    "long-hover.png"
+  ],
+  "artifact_hashes": {
+    "docs/coordination/evidence/R35-02/calibrated-before-typecast/long-hover-dom.json": {
+      "sha256": "7bec0e84524a7469beae8455afb432517d52858ad9c2313e9e4126ed1e718b03",
+      "bytes": 1258
+    },
+    "docs/coordination/evidence/R35-02/calibrated-before-typecast/long-hover.log": {
+      "sha256": "7b34e0d460cddf160bb9cbc3918fb51a56f59336608728a2c6f403ea15148ccc",
+      "bytes": 1282
+    },
+    "docs/coordination/evidence/R35-02/calibrated-before-typecast/long-hover.png": {
+      "sha256": "ac14569cfe3207fdc198a7bdd2e1a5c2b2f6cb13cfee5104d96ef5eb40b43a5b",
+      "bytes": 43552
+    },
+    "docs/coordination/evidence/R35-02/calibrated-before-typecast/long-hover.xml": {
+      "sha256": "6c48d35e905c2d63ecb24ca7e4fa33bb233106b8be85fc186f004cfa2017418d",
+      "bytes": 1079
+    },
+    "docs/coordination/evidence/R35-02/calibrated-before-typecast/test_long_hover_counterexample.py.txt": {
+      "sha256": "d74191dc5277c235b45a290bb1c00c6ed1c05e44a5a07095487fdcd08b929046",
+      "bytes": 3573
+    },
+    "docs/coordination/evidence/R35-02/calibration-single-trace/long-hover-dom.json": {
+      "sha256": "ed8682e8bcc6aeab82d6aa8dc9c63d3cb1a7c5201b36cee07686e42da97440d3",
+      "bytes": 1017
+    },
+    "docs/coordination/evidence/R35-02/calibration-single-trace/long-hover.log": {
+      "sha256": "5d4875764b3f1be50c497e69f285691435d7c2b6a73d82efb4f9b9f35555a9ed",
+      "bytes": 1210
+    },
+    "docs/coordination/evidence/R35-02/calibration-single-trace/long-hover.png": {
+      "sha256": "dd3a4e5ce00b133986884afdf0e035c815187f611a863c438b1a4afa707bce43",
+      "bytes": 38773
+    },
+    "docs/coordination/evidence/R35-02/calibration-single-trace/long-hover.xml": {
+      "sha256": "55353e2ea3b18167338c0cd724e78aada7bf7cf45b14b2059ece2fc8d8ff13d5",
+      "bytes": 987
+    },
+    "docs/coordination/evidence/R35-02/calibration-single-trace/test_long_hover_counterexample.py.txt": {
+      "sha256": "99ede88686e03cf665009e13c32e7609f5317415f53c826fa695dd427aeab32d",
+      "bytes": 3497
+    },
+    "docs/coordination/evidence/R35-02/long-hover-dom.json": {
+      "sha256": "7bec0e84524a7469beae8455afb432517d52858ad9c2313e9e4126ed1e718b03",
+      "bytes": 1258
+    },
+    "docs/coordination/evidence/R35-02/long-hover.log": {
+      "sha256": "80d5e6acfe78ff38a60d8618910ed07b493cafbbf40efb7d81965282033fa5df",
+      "bytes": 1282
+    },
+    "docs/coordination/evidence/R35-02/long-hover.png": {
+      "sha256": "a9798b205b5ab9fa2c46bed8f200871c01791cd62225360537c93ac73c6c3569",
+      "bytes": 43553
+    },
+    "docs/coordination/evidence/R35-02/long-hover.xml": {
+      "sha256": "7c0ae2c18b4b05ee635e12d2de0719268138c6d569c1f5b4ca38d90a8c83e8ee",
+      "bytes": 1079
+    },
+    "docs/coordination/evidence/R35-02/long_hover_browser.cjs": {
+      "sha256": "bef7f31d8c0729b76b90de296a4b4130d2050144cfb4d622cac2a78a108a770d",
+      "bytes": 3078
+    },
+    "docs/coordination/evidence/R35-02/source-after.json": {
+      "sha256": "a3a1265afdab6a73df82e5f6052f67efdf941662f56952ac2978f3d2c10a1374",
+      "bytes": 2450
+    },
+    "docs/coordination/evidence/R35-02/source-before.json": {
+      "sha256": "a6f6a9da837f724a89bec35ea5fec950d793013a61405bd76aedc7f8ab490ffe",
+      "bytes": 5118
+    },
+    "docs/coordination/evidence/R35-02/test_long_hover_counterexample.py": {
+      "sha256": "f864d0af68d9eb4bab680fa0a023fcf9ff94f6a176f793ea2e014a9821fe5a97",
+      "bytes": 3608
+    }
+  },
+  "source_after_same": true,
+  "no_production_or_old_oracle_mutations": true,
+  "no_final_signoff": true
+}

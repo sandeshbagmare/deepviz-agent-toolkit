@@ -1,0 +1,120 @@
+{
+  "observed_at": "2026-11-27T16:44:52.538670+00:00",
+  "base": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "source_commits": [
+    "72244399d3606046621afd6b11aaf19894d1460b",
+    "94319d679661a169856fb0a0ec0e9de5cbd6986f"
+  ],
+  "sealed_head": "fb0d22e13b89a26eb7df0f6ed008770ecb9e1c35",
+  "source_clean": true,
+  "independent_ast_scope": [
+    {
+      "before": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+      "after": "72244399d3606046621afd6b11aaf19894d1460b",
+      "outside_prefix_suffix_exact_bytes_equal": true,
+      "all_other_module_ast_nodes_equal": true,
+      "new_function_lines": [
+        385,
+        447
+      ]
+    },
+    {
+      "before": "72244399d3606046621afd6b11aaf19894d1460b",
+      "after": "94319d679661a169856fb0a0ec0e9de5cbd6986f",
+      "outside_prefix_suffix_exact_bytes_equal": true,
+      "all_other_module_ast_nodes_equal": true,
+      "new_function_lines": [
+        385,
+        447
+      ]
+    },
+    {
+      "before": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+      "after": "fb0d22e13b89a26eb7df0f6ed008770ecb9e1c35",
+      "outside_prefix_suffix_exact_bytes_equal": true,
+      "all_other_module_ast_nodes_equal": true,
+      "new_function_lines": [
+        385,
+        447
+      ]
+    }
+  ],
+  "source_and_tests_second_to_sealed_equal_paths": 57,
+  "files": {
+    "python/deepviz/src/deepviz/engines.py": {
+      "git_lf_sha256": "bbf19726873cb7fc5dd62ceea8983aa4377408228ef3f26cf0969fb1531e5642",
+      "bytes": 44241
+    },
+    "python/deepviz/src/deepviz/render.py": {
+      "git_lf_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+      "bytes": 11637
+    },
+    "python/deepviz/src/deepviz/normalize.py": {
+      "git_lf_sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+      "bytes": 34886
+    },
+    "python/deepviz/src/deepviz/models.py": {
+      "git_lf_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "bytes": 3493
+    },
+    "python/deepviz/tests/test_r27_plotly_literal.py": {
+      "git_lf_sha256": "d12b0f93b331d4a3040833e660e25e2faacb948f0cda1679e37e64d36f4d69d3",
+      "bytes": 7762
+    },
+    "tests/browser/r27_plotly_literal.mjs": {
+      "git_lf_sha256": "d2bf2e42808552bdc64c203131b74114dc09d87e0293ff14c43cc3235732205c",
+      "bytes": 3367
+    },
+    "python/deepviz/tests/test_backend_plotly.py": {
+      "git_lf_sha256": "a36c75526fbaade06750eb03ba83dce8019840e9baefc0cca0d8eb3d194d40f5",
+      "bytes": 11018
+    },
+    "python/deepviz/tests/test_render.py": {
+      "git_lf_sha256": "385b6938046b6264f43d07b03085936f299b66fc4bd1ddb07aadbb25b8fdb452",
+      "bytes": 21736
+    }
+  },
+  "original_nine_controls_four_files": {
+    "tests/r10_probes/role20/test_plotly_literal_labels.py": {
+      "commit": "eb98261567d05300b9c7d79af78c83f04812c853",
+      "git_sha256": "a0f506b5d91408e18f0935d7deef010c685f976ccb4a298a8a7f3e1dc503580e",
+      "lines": 95,
+      "read_only_source_not_replayed": true
+    },
+    "tests/r10_probes/role20/browser_assertions.cjs": {
+      "commit": "eb98261567d05300b9c7d79af78c83f04812c853",
+      "git_sha256": "27b2ade313bcb0bb3d73ec47497f2c2ff2e359fb9c4bca947946b0922f4daa0b",
+      "lines": 56,
+      "read_only_source_not_replayed": true
+    },
+    "tests/r13_probes/role20/test_plotly_sink_discrimination.py": {
+      "commit": "eb98261567d05300b9c7d79af78c83f04812c853",
+      "git_sha256": "a3d6851f0d6f43cd0fb79ac1f4e8b2db0e3d1e63e932844a11cb0bc5ebf5f99d",
+      "lines": 87,
+      "read_only_source_not_replayed": true
+    },
+    "tests/r13_probes/role20/sink_browser.cjs": {
+      "commit": "eb98261567d05300b9c7d79af78c83f04812c853",
+      "git_sha256": "d437736de487d7f372b25d0d41355543f7c8333e9d6a0096d0532cece21c1a62",
+      "lines": 65,
+      "read_only_source_not_replayed": true
+    }
+  },
+  "new23_read_as_source": "13category+3coordinate+1heat_geo+1table_titles+5browser; no author tests executed",
+  "import_origins": {
+    "engines": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-02-plotly-fb0-ses_de5678328ffeYCFXQhRPKd4a9h\\python\\deepviz\\src\\deepviz\\engines.py",
+    "render": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-02-plotly-fb0-ses_de5678328ffeYCFXQhRPKd4a9h\\python\\deepviz\\src\\deepviz\\render.py",
+    "normalize": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-02-plotly-fb0-ses_de5678328ffeYCFXQhRPKd4a9h\\python\\deepviz\\src\\deepviz\\normalize.py",
+    "models": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-02-plotly-fb0-ses_de5678328ffeYCFXQhRPKd4a9h\\python\\deepviz\\src\\deepviz\\models.py"
+  },
+  "plotly_runtime": {
+    "python_version": "6.9.0",
+    "bundle": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\plotly\\package_data\\plotly.min.js",
+    "bytes": 4851164,
+    "sha256": "8ef4c6ab1369f0019611cbcd2d5b8aafef23e5d19ef58c39d4b4249831fe2180",
+    "namelength_default15_offset": 174334
+  },
+  "tests_before_new_counterexample": 0,
+  "browser_nine_replayed": 0,
+  "api_calls": 0
+}

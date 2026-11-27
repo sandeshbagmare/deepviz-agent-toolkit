@@ -1,0 +1,61 @@
+"""ONE new strict public-render Cartesian hover-name completeness control."""
+from __future__ import annotations
+
+import hashlib
+import importlib
+import json
+import os
+import shutil
+import subprocess
+from pathlib import Path
+
+import pytest
+
+SERIES = 'R35 long "Ω" & <b>series-name-preserve-END</b>'
+
+
+def test_complete_literal_series_name_survives_cartesian_hover(tmp_path: Path) -> None:
+    here = Path(__file__).resolve().parent
+    source = Path(os.environ["R35_02_SOURCE"]).resolve()
+    proof = json.loads((here / "source-before.json").read_text(encoding="utf-8"))
+    for name in ("engines", "render", "normalize", "models"):
+        module = importlib.import_module("deepviz." + name)
+        actual = Path(module.__file__).resolve()
+        relative = f"python/deepviz/src/deepviz/{name}.py"
+        assert actual == source / relative
+        assert hashlib.sha256(actual.read_bytes().replace(b"\r\n", b"\n")).hexdigest() == proof["files"][relative]["git_lf_sha256"]
+    node = shutil.which("node")
+    modules = Path(os.environ["R35_02_NODE_MODULES"]).resolve()
+    if node is None or not (modules / "playwright/package.json").is_file():
+        pytest.fail("Missing existing Node/Playwright prerequisite; no install or skip")
+    from deepviz.models import ChartSpec
+    from deepviz.render import render
+
+    records = [{"x": x, "y": y, "series": series} for series, points in ((SERIES, ((1, 3), (2, 7))), ("Other", ((1, 5), (2, 9)))) for x, y in points]
+    original = json.loads(json.dumps(records))
+    artifact = render(records, ChartSpec(kind="line", x="x", y="y", color="series",
+                      title="R35 single Cartesian hover control", aggregation="none", width=1200, height=500),
+                      engine="plotly", output_dir=tmp_path / "out")
+    html = next(Path(p) for p in artifact.paths if p.endswith("chart.html"))
+    manifest = json.loads(next(Path(p) for p in artifact.paths if p.endswith("manifest.json")).read_text(encoding="utf-8"))
+    assert records == original == manifest["charts"][0]["records"]
+    assert artifact.input_count == artifact.output_count == 4
+    request = {"html": str(html), "result": str(here / "long-hover-dom.json"),
+               "image": str(here / "long-hover.png")}
+    assert not Path(request["result"]).exists() and not Path(request["image"]).exists()
+    request_file = tmp_path / "request.json"
+    request_file.write_text(json.dumps(request), encoding="utf-8")
+    process = subprocess.run([node, str(here / "long_hover_browser.cjs"), str(request_file), str(modules)],
+                             capture_output=True, text=True, timeout=90, check=False)
+    assert process.returncode == 0, process.stderr[-2000:]
+    observed = json.loads(Path(request["result"]).read_text(encoding="utf-8"))
+    observed.update(expected_complete_series=SERIES, raw_manifest_records=manifest["charts"][0]["records"],
+                    input_count=artifact.input_count, output_count=artifact.output_count,
+                    html_sha256=hashlib.sha256(html.read_bytes()).hexdigest())
+    Path(request["result"]).write_text(json.dumps(observed, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    assert observed["errors"] == [] and observed["blocked"] == []
+    assert observed["anchors"] == [] and observed["handlers"] == []
+    assert observed["x"] == [1, 2] and observed["y"] == [3, 7]
+    assert observed["legend"] == [SERIES, "Other"]
+    assert SERIES in observed["hover_names"], (
+        "R35-02-F1: complete literal Cartesian series hover name was lost: " + repr(observed["hover_names"]))
