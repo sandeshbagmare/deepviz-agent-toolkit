@@ -1,0 +1,110 @@
+........................................................................ [ 28%]
+........................................................................ [ 57%]
+........................................................................ [ 86%]
+..........FFFFFF...FF..........FFFF                                      [100%]
+================================== FAILURES ===================================
+______ test_protocol_named_columns_keep_zero_false_and_null[False-False] ______
+..\..\..\r11-10-mcp-ses_de56782e3ffeI5D4lzsNVeLcDk\tests\r41_probes\role10\test_literals.py:27: in test_protocol_named_columns_keep_zero_false_and_null
+    assert (result.input_count, result.strategy, result.warnings) == (3, "none", [])
+E   AssertionError: assert (3, 'none', [...s: records.']) == (3, 'none', [])
+E     
+E     At index 2 diff: ['Fields contain mixed numeric/non-numeric values: records.'] != []
+E     Use -v to get more diff
+______ test_protocol_named_columns_keep_zero_false_and_null[False-True] _______
+..\..\..\r11-10-mcp-ses_de56782e3ffeI5D4lzsNVeLcDk\tests\r41_probes\role10\test_literals.py:27: in test_protocol_named_columns_keep_zero_false_and_null
+    assert (result.input_count, result.strategy, result.warnings) == (3, "none", [])
+E   AssertionError: assert (3, 'none', [...s: records.']) == (3, 'none', [])
+E     
+E     At index 2 diff: ['Fields contain mixed numeric/non-numeric values: records.'] != []
+E     Use -v to get more diff
+______ test_protocol_named_columns_keep_zero_false_and_null[True-False] _______
+..\..\..\r11-10-mcp-ses_de56782e3ffeI5D4lzsNVeLcDk\tests\r41_probes\role10\test_literals.py:27: in test_protocol_named_columns_keep_zero_false_and_null
+    assert (result.input_count, result.strategy, result.warnings) == (3, "none", [])
+E   AssertionError: assert (3, 'none', [...s: records.']) == (3, 'none', [])
+E     
+E     At index 2 diff: ['Fields contain mixed numeric/non-numeric values: records.'] != []
+E     Use -v to get more diff
+_______ test_protocol_named_columns_keep_zero_false_and_null[True-True] _______
+..\..\..\r11-10-mcp-ses_de56782e3ffeI5D4lzsNVeLcDk\tests\r41_probes\role10\test_literals.py:27: in test_protocol_named_columns_keep_zero_false_and_null
+    assert (result.input_count, result.strategy, result.warnings) == (3, "none", [])
+E   AssertionError: assert (3, 'none', [...s: records.']) == (3, 'none', [])
+E     
+E     At index 2 diff: ['Fields contain mixed numeric/non-numeric values: records.'] != []
+E     Use -v to get more diff
+____ test_selected_record_arrays_do_not_reinterpret_protocol_cells[False] _____
+..\..\..\r11-10-mcp-ses_de56782e3ffeI5D4lzsNVeLcDk\tests\r41_probes\role10\test_literals.py:35: in test_selected_record_arrays_do_not_reinterpret_protocol_cells
+    result = normalize(json.dumps(data) if encoded else data, RAW | {"data_path": "outer"})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:726: in normalize
+    for row, size in islice(rows, 32):
+                     ^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:508: in _records
+    for index, item in enumerate(expanded):
+                       ^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:392: in _expand
+    yield from _expand(item, counts, depth + 1, record=True)
+python\deepviz\src\deepviz\normalize.py:354: in _expand
+    connection = _connection(value) if not scalar_columns and (protocol or nested_wrapper) else None
+                 ^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:307: in _connection
+    raise ValueError("Ambiguous GraphQL connection fields; select rows with data_path")
+E   ValueError: Ambiguous GraphQL connection fields; select rows with data_path
+_____ test_selected_record_arrays_do_not_reinterpret_protocol_cells[True] _____
+..\..\..\r11-10-mcp-ses_de56782e3ffeI5D4lzsNVeLcDk\tests\r41_probes\role10\test_literals.py:35: in test_selected_record_arrays_do_not_reinterpret_protocol_cells
+    result = normalize(json.dumps(data) if encoded else data, RAW | {"data_path": "outer"})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:726: in normalize
+    for row, size in islice(rows, 32):
+                     ^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:508: in _records
+    for index, item in enumerate(expanded):
+                       ^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:392: in _expand
+    yield from _expand(item, counts, depth + 1, record=True)
+python\deepviz\src\deepviz\normalize.py:354: in _expand
+    connection = _connection(value) if not scalar_columns and (protocol or nested_wrapper) else None
+                 ^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:307: in _connection
+    raise ValueError("Ambiguous GraphQL connection fields; select rows with data_path")
+E   ValueError: Ambiguous GraphQL connection fields; select rows with data_path
+______ test_graphql_null_metadata_empty_middle_and_late_warning[object] _______
+..\..\..\r11-10-mcp-ses_de56782e3ffeI5D4lzsNVeLcDk\tests\r41_probes\role10\test_literals.py:60: in test_graphql_null_metadata_empty_middle_and_late_warning
+    assert result.records == [{"id": "r", "value": 0}, {"id": "r", "value": 0}, {"id": "z", "value": -0.5}]
+E   AssertionError: assert [{'pages.data...': None, ...}] == [{'id': 'r', ...value': -0.5}]
+E     
+E     At index 0 diff: {'pages.data.feed.nodes.0.id': 'r', 'pages.data.feed.nodes.0.value': 0, 'pages.data.feed.nodes.1': None, 'pages.data.feed.nodes.2.id': 'r', 'pages.data.feed.nodes.2.value': 0, 'pages.data.feed.pageInfo': None, 'pages.data.feed.totalCount': None, 'pages.extensions': None} != {'id': 'r', 'value': 0}
+E     Use -v to get more diff
+_______ test_graphql_null_metadata_empty_middle_and_late_warning[json] ________
+..\..\..\r11-10-mcp-ses_de56782e3ffeI5D4lzsNVeLcDk\tests\r41_probes\role10\test_literals.py:60: in test_graphql_null_metadata_empty_middle_and_late_warning
+    assert result.records == [{"id": "r", "value": 0}, {"id": "r", "value": 0}, {"id": "z", "value": -0.5}]
+E   AssertionError: assert [{'pages.data...': None, ...}] == [{'id': 'r', ...value': -0.5}]
+E     
+E     At index 0 diff: {'pages.data.feed.nodes.0.id': 'r', 'pages.data.feed.nodes.0.value': 0, 'pages.data.feed.nodes.1': None, 'pages.data.feed.nodes.2.id': 'r', 'pages.data.feed.nodes.2.value': 0, 'pages.data.feed.pageInfo': None, 'pages.data.feed.totalCount': None, 'pages.extensions': None} != {'id': 'r', 'value': 0}
+E     Use -v to get more diff
+_ test_counts_include_input_while_numeric_sum_excludes_boolean_null_and_string[sum] _
+..\..\..\r11-10-mcp-ses_de56782e3ffeI5D4lzsNVeLcDk\tests\r41_probes\role10\test_literals.py:117: in test_counts_include_input_while_numeric_sum_excludes_boolean_null_and_string
+    assert len(result.warnings) == (1 if aggregation == "sum" else 0)
+E   AssertionError: assert 2 == 1
+E    +  where 2 = len(['2 non-numeric measure values excluded from reduction.', 'Fields contain mixed numeric/non-numeric values: v.'])
+E    +    where ['2 non-numeric measure values excluded from reduction.', 'Fields contain mixed numeric/non-numeric values: v.'] = NormalizedData(records=[{'g': 'r', 'v': -2}], input_count=5, warnings=['2 non-numeric measure values excluded from reduction.', 'Fields contain mixed numeric/non-numeric values: v.'], strategy='sum').warnings
+_ test_counts_include_input_while_numeric_sum_excludes_boolean_null_and_string[count] _
+..\..\..\r11-10-mcp-ses_de56782e3ffeI5D4lzsNVeLcDk\tests\r41_probes\role10\test_literals.py:117: in test_counts_include_input_while_numeric_sum_excludes_boolean_null_and_string
+    assert len(result.warnings) == (1 if aggregation == "sum" else 0)
+E   AssertionError: assert 1 == 0
+E    +  where 1 = len(['Fields contain mixed numeric/non-numeric values: v.'])
+E    +    where ['Fields contain mixed numeric/non-numeric values: v.'] = NormalizedData(records=[{'g': 'r', 'v': 5}], input_count=5, warnings=['Fields contain mixed numeric/non-numeric values: v.'], strategy='count').warnings
+__ test_positive_jsonl_lifetime_and_host_content_preserved[borrowed-reader] ___
+..\..\..\r11-10-mcp-ses_de56782e3ffeI5D4lzsNVeLcDk\tests\r41_probes\role10\test_literals.py:142: in test_positive_jsonl_lifetime_and_host_content_preserved
+    assert (result.input_count, result.strategy, result.warnings) == (3, "none", [])
+E   AssertionError: assert (3, 'none', [... values: v.']) == (3, 'none', [])
+E     
+E     At index 2 diff: ['Fields contain mixed numeric/non-numeric values: v.'] != []
+E     Use -v to get more diff
+_____ test_positive_jsonl_lifetime_and_host_content_preserved[owned-path] _____
+..\..\..\r11-10-mcp-ses_de56782e3ffeI5D4lzsNVeLcDk\tests\r41_probes\role10\test_literals.py:142: in test_positive_jsonl_lifetime_and_host_content_preserved
+    assert (result.input_count, result.strategy, result.warnings) == (3, "none", [])
+E   AssertionError: assert (3, 'none', [... values: v.']) == (3, 'none', [])
+E     
+E     At index 2 diff: ['Fields contain mixed numeric/non-numeric values: v.'] != []
+E     Use -v to get more diff
+12 failed, 239 passed in 1.78s

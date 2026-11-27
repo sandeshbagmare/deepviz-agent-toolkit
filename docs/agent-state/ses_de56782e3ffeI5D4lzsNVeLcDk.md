@@ -1,5 +1,47 @@
 # SAME-ID R11 role10 — strict MCP regression tester
 
+## R41 normalizer546 independent acceptance — pre-work
+
+- 18:01:20UTC prepublication: FULLliveMAINstatus97+owncentral35 read atsafe
+  checkpoint; R48packet18/currentAGENTS53/currentR42task25 acknowledged. MAIN
+  target546dependencyfor07Pythondata+08npm, NOTschemaPR38; no runtimepinchange.
+  Collector0 actualallGit/module/oracle/build/toolhashchecks+literalunchanged+
+  AST4Py0; finalRuff0/mypy4Py0;31rawcopies+verification1b2bedc4... preserveRED.
+  NativeOWNremote682==localbase682;43allowedOWNfiles only/noproduct/config/
+  schema/dashboarddiff/secrets/activehooks. No APIauthlookup/credextraction under
+  NO-API; existingnativeGitonly. NextONEexplicit-pathCODE+evidencecommit/
+  nonforceOWNpush/exactSHAreadback; actualreceipt inownedcentral+uniquetemp,
+  promptONEhandoff, no receiptcommitloop/replays/sourcegrantexpansion. R04
+  ownsoneboundarycontractfamily+4fieldpolicy decisions/mainpromotion gating.
+
+- ACTUAL17:42:11UTC:exact546freshsource24+base6d0source21/13immutablecontrols/
+  readonlycompilerboth0/38ownemits; loadedPythonbefore/afterandrealbaseline-S
+  proof+NodeworkersownJS beforeoriginalconsumers. Oldproducer86Py98Node+
+  GP73each+prefix67Py63Node=460uniqueunchangedPASS. Initial251Py239pass12fail;
+  Nodefirst4FILE-levelC:URIharnessfail/0cases preserved, ONLYbindingURIcorrected
+  ->257Node249pass8fail0skip558.8885ms. Allnewliteralasserts/dataUNCHANGED:
+ 14wrong-empty-warningdiagnostics,2knownPyauto-pagespolicy,4selectedroot/protocol
+  nestedcellerrorsONEfamily R04contractdisposition needed/not4newbugs. Four
+  originalfieldpolicy actual4FAIL0skip1retained. NewseparatehomogeneousJSONL2
+  positivePASS0.10s0 actualownedclose+Winrename/borrowedopen-reusable/content;
+  no oldgate/cost/10M/source/oracle edits. OwnRuff0/mypy0threePy. R42centralMAIN
+  role10sameOWNcopyupdated; nextcompacthash/evidence/scopeaudit→ONEtestCODEcommit/
+  nonforceOWNpush/exactremoteSHA/handoff. OverallRED, notcurrentCI/mainapproval.
+
+- 2026-11-27T17:15:12Z actual nativeSAMEIDreconfirmed. FULLMAINR41packet24/
+  currentAGENTS52/R42protocol23/MAINown92/OWNown91/producer16handoff129/
+  R13prefixreview154 read beforework; ROOTacceptedR34COUNT71+PNGnarrowly,
+  no replay. ExistingONEOWNbranchcleanpublished682c7047d444daed31356aee626e550590a9654d.
+- Exact546c25ea75ee9d8a41b3832aa639664bc9a683b5 NEWcleanOWNsource/readonly
+  compiler/ownJS/allGit+importproofbeforeconsumer; newproducerboundary+unchanged
+  R15GP/R13prefix(sourcebindingONLY)+boundedliteralcallercontrols. Preserve4
+  knownpolicyRED/separately; no numericoracle/source/config/schema/install/env/
+  API/default/shared/spawn/poll/COUNT-MCPP2-fullnpm-10M-costreplay. PreworkR41
+  report and R42ownedcentralrole10 sameOWNcopy saved, statePREPARE/no tests yet.
+  Next source/oracle/compilerbinding; estimateUNKNOWN until proof. R04 ownspolicy/
+  integration/PR/currentCI/default gates, no finalclaim. MAINupdatesONLYrole10
+  centralrecord, not aggregates/otherrecords or canonicalcheckpoint.
+
 ## R33 first-native acceptance CODE — pre-work
 
 - R34ACTUALfirstONCErunner0/clean857:unchangedauthor16PASS0skip0.24s(wall0.4224)

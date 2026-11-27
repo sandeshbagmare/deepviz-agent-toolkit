@@ -1,0 +1,6 @@
+COMMAND: python -m ruff check --no-cache tests/r41_probes/role10
+All checks passed!
+EXIT: 0
+COMMAND: python -m mypy --cache-dir <OWNartifact>/mypy-cache tests/r41_probes/role10
+Success: no issues found in 4 source files
+EXIT: 0

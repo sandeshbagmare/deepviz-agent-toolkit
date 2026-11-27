@@ -1,0 +1,100 @@
+{
+  "scope": "Publication byte integrity only; NO test/source/oracle/result change",
+  "existing_Git_filter": "13 evidence files CRLF->LF, no config changes",
+  "recovery": "For each listed Git LF blob, replace LF with CRLF; exactly reproduces observed raw bytes and SHA256",
+  "all_13_recovery_hashes_verified": true,
+  "source_and_literal_probe_files_byte_identical": true,
+  "files": [
+    {
+      "path": "docs/coordination/evidence/R41-10/actual-runs.json",
+      "working_SHA256": "1960cce9c32dba71bbbf688f8fa05005c3f2140f466345d68f8bddfb12848079",
+      "staged_SHA256": "c9d2079955acfad350fe02f0698f6c8115c755efdfa23c1d51c3b16141e15375",
+      "raw_bytes_unchanged": false,
+      "CRLF_to_LF_only": true
+    },
+    {
+      "path": "docs/coordination/evidence/R41-10/base-child-proof.json",
+      "working_SHA256": "38df401db3f5b8ab580cdfe808098c26e3e8ea8598a9bf24f1a227b050fa850f",
+      "staged_SHA256": "dc8364b0d324d7e71fb34000a7e7bba86c469eb7b715c087ad6d84542adb7191",
+      "raw_bytes_unchanged": false,
+      "CRLF_to_LF_only": true
+    },
+    {
+      "path": "docs/coordination/evidence/R41-10/bindings.json",
+      "working_SHA256": "5e6ff254cb4644423153e592ba2aca23d5a858714844ad375345d8d4e0e7f493",
+      "staged_SHA256": "66fb751ef9c71ebe25883a12674948b2b0fc28c9513e04f2c53d5e5c0818b84b",
+      "raw_bytes_unchanged": false,
+      "CRLF_to_LF_only": true
+    },
+    {
+      "path": "docs/coordination/evidence/R41-10/first-code-hashes.json",
+      "working_SHA256": "9fc8a2fb730434a7a7a8927b4bb2645e4e2b0d875c108525a581b2a8f8a64515",
+      "staged_SHA256": "9e16192be3e94b0950aa454aad437ffded197fc0a8c3aa38070dcd149fa8c7f9",
+      "raw_bytes_unchanged": false,
+      "CRLF_to_LF_only": true
+    },
+    {
+      "path": "docs/coordination/evidence/R41-10/known-policy-red-proof.json",
+      "working_SHA256": "d22d96bc6e84b29eb6ff4bfd6f3db1e30229fe5f526bbae1bbecbc6552919ef7",
+      "staged_SHA256": "ca41d4187b01a68b88da32ee515845f3aaec4e28dcb03c3add8cec07081f0107",
+      "raw_bytes_unchanged": false,
+      "CRLF_to_LF_only": true
+    },
+    {
+      "path": "docs/coordination/evidence/R41-10/known-policy-red.stdout.log",
+      "working_SHA256": "1f403b77bde63de18bc6c2fbe1dbcb92f72ca88885747f24817925e3f9e935ab",
+      "staged_SHA256": "b511be0c102c690e97709cad7d5c5d5a919ccd9f154946b7c70b4bb7f28617f9",
+      "raw_bytes_unchanged": false,
+      "CRLF_to_LF_only": true
+    },
+    {
+      "path": "docs/coordination/evidence/R41-10/known-policy-red.xml",
+      "working_SHA256": "0f7a4892f179cfe247d48ad7197ad8979fc7efa2aa5cb0c4169a70b906b4449e",
+      "staged_SHA256": "4f6999f488e6dfaf73c0eba67bc20910fda97a9bf9fc5f07675bf56c8f926e0a",
+      "raw_bytes_unchanged": false,
+      "CRLF_to_LF_only": true
+    },
+    {
+      "path": "docs/coordination/evidence/R41-10/node-resume-runs.json",
+      "working_SHA256": "ad0d8361ccb549887790eb047776fb1f8cf72e95d6ac4fa4e2310b35b6779b7a",
+      "staged_SHA256": "6d520aa902b1287bc751c50f6d95365ecdca5d741eff8324acbbb7253f9d1ab6",
+      "raw_bytes_unchanged": false,
+      "CRLF_to_LF_only": true
+    },
+    {
+      "path": "docs/coordination/evidence/R41-10/python-ownership-positive-proof.json",
+      "working_SHA256": "389d4e5a27cabe2e44bf8442eca50a91388c61472b9d4882ca2e5dd5e4155c70",
+      "staged_SHA256": "1d4618d4adfbed809ddf2f414f445d669ddebf73d058991d502239043b3bca6b",
+      "raw_bytes_unchanged": false,
+      "CRLF_to_LF_only": true
+    },
+    {
+      "path": "docs/coordination/evidence/R41-10/python-semantics-proof.json",
+      "working_SHA256": "65a3f6e85532de7acddea7988b114b4ee5950d0c30329f59368b789b5f663f80",
+      "staged_SHA256": "b43d7f25b624b66acca1a5cca14e70b05f66f09f5ef78e50f8d2af4301b6c88c",
+      "raw_bytes_unchanged": false,
+      "CRLF_to_LF_only": true
+    },
+    {
+      "path": "docs/coordination/evidence/R41-10/python-semantics.stdout.log",
+      "working_SHA256": "58cc50242d25a646baccea50c8b1ffed5037c0fcaff410922192935aa2bb9083",
+      "staged_SHA256": "c4dd6916cb3acd50b8709eb0d67cb4bea4749605e6056132c10e7ab2ef9a40cd",
+      "raw_bytes_unchanged": false,
+      "CRLF_to_LF_only": true
+    },
+    {
+      "path": "docs/coordination/evidence/R41-10/python-semantics.xml",
+      "working_SHA256": "78d2470e3e6aecafb48cbda65b961b35c60928f198143e920b85e589efa3cbc1",
+      "staged_SHA256": "51631469d2789ddac72594de93fc2a6cb785f9d392e8b1fc7aa2b322872139a1",
+      "raw_bytes_unchanged": false,
+      "CRLF_to_LF_only": true
+    },
+    {
+      "path": "docs/coordination/evidence/R41-10/verification.json",
+      "working_SHA256": "1b2bedc441e830e590922ff4efadcc783800a10e7f50fed4aefa2201346b8ee1",
+      "staged_SHA256": "f09ecfaa38711c3924d7fda66317906800851d5bbe23320d42f7a0b4372f6835",
+      "raw_bytes_unchanged": false,
+      "CRLF_to_LF_only": true
+    }
+  ]
+}

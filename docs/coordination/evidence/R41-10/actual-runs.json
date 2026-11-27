@@ -1,0 +1,65 @@
+[
+  {
+    "argv": [
+      "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+      "-S",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-10-mcp-ses_de56782e3ffeI5D4lzsNVeLcDk\\tests\\r41_probes\\role10\\driver.py",
+      "python",
+      "--bindings",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r41-10-546-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\bound-run\\bindings.json"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r41-10-546-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\bound-run\\candidate",
+    "exit": 1,
+    "elapsed_seconds": 2.582669800001895,
+    "stdout_sha256": "58cc50242d25a646baccea50c8b1ffed5037c0fcaff410922192935aa2bb9083",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "label": "python-semantics",
+    "counts": {
+      "tests": 251,
+      "failures": 12,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "argv": [
+      "node",
+      "--import",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-10-mcp-ses_de56782e3ffeI5D4lzsNVeLcDk\\tests\\r41_probes\\role10\\node_gate.mjs",
+      "--test",
+      "--test-reporter=tap",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r41-10-546-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\bound-run\\candidate\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r41-10-546-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\bound-run\\candidate\\tests\\r15_probes\\role03\\graphql-pages.test.mjs",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r41-10-546-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\bound-run\\candidate\\tests\\r13_probes\\role01\\sum-review.test.mjs",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-10-mcp-ses_de56782e3ffeI5D4lzsNVeLcDk\\tests\\r41_probes\\role10\\literals.test.mjs"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r41-10-546-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\bound-run\\candidate",
+    "exit": 1,
+    "elapsed_seconds": 0.5384140000096522,
+    "stdout_sha256": "3fd3a44eb05ecf320beaeb6f6339a214ee406691beeb0b6f090a95b1534c83fc",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "label": "node-semantics"
+  },
+  {
+    "argv": [
+      "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+      "-S",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-10-mcp-ses_de56782e3ffeI5D4lzsNVeLcDk\\tests\\r41_probes\\role10\\driver.py",
+      "policy",
+      "--bindings",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r41-10-546-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\bound-run\\bindings.json"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r41-10-546-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\bound-run\\candidate",
+    "exit": 1,
+    "elapsed_seconds": 0.9646234999963781,
+    "stdout_sha256": "1f403b77bde63de18bc6c2fbe1dbcb92f72ca88885747f24817925e3f9e935ab",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "label": "known-policy-red",
+    "counts": {
+      "tests": 4,
+      "failures": 4,
+      "errors": 0,
+      "skipped": 0
+    }
+  }
+]

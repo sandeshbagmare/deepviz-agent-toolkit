@@ -1,0 +1,2826 @@
+{
+  "UTC": "2026-11-27T17:49:31.074190+00:00",
+  "owner": "ses_de56782e3ffeI5D4lzsNVeLcDk",
+  "product_sha": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "scope": "independent exact546 selected normalization; NOT final/main acceptance",
+  "source_clean": true,
+  "all_input_oracle_emit_compiler_hashes_still_match": true,
+  "all_13_original_external_oracle_files_match_original_Git": true,
+  "all_first_literal_assertions_and_data_byte_unchanged": true,
+  "module_SHA256": [
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r41-10-546-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\bound-run\\candidate\\packages\\deepviz\\src\\normalize.ts",
+      "relative": "packages/deepviz/src/normalize.ts",
+      "sha256": "7754126f9c90d7fc5b4d84d409400fa5d58ed0b2ab785df7fd666e2b1b90452e",
+      "Git_commit": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+      "bytes": 30684
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r41-10-546-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\bound-run\\candidate\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "relative": "python/deepviz/src/deepviz/normalize.py",
+      "sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+      "Git_commit": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+      "bytes": 35820
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r41-10-546-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\bound-run\\candidate\\packages\\deepviz\\dist\\normalize.js",
+      "sha256": "5d41fefef79777061e3dd42c711a67c348693382811e79a08d197315d6207eff",
+      "bytes": 35990
+    }
+  ],
+  "python_per_cohort": {
+    "python.deepviz.tests.test_r17_normalizer_boundaries": {
+      "pass": 86,
+      "failure": 0,
+      "error": 0,
+      "skip": 0
+    },
+    "tests.r15_probes.role03.test_graphql_pages": {
+      "pass": 73,
+      "failure": 0,
+      "error": 0,
+      "skip": 0
+    },
+    "tests.r13_probes.role01.test_sum_review": {
+      "pass": 67,
+      "failure": 0,
+      "error": 0,
+      "skip": 0
+    },
+    "OWN-new-literal-diagnostics": {
+      "pass": 13,
+      "failure": 12,
+      "error": 0,
+      "skip": 0
+    }
+  },
+  "node_per_cohort": {
+    "OWN-new-literal-diagnostics": {
+      "pass": 15,
+      "failure": 8
+    },
+    "producer": {
+      "pass": 98,
+      "failure": 0
+    },
+    "prefix": {
+      "pass": 63,
+      "failure": 0
+    },
+    "GP": {
+      "pass": 73,
+      "failure": 0
+    }
+  },
+  "python_cases": [
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_owned_jsonl_unwinds_before_downstream_exception_returns[plan]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_owned_jsonl_unwinds_before_downstream_exception_returns[late-flatten]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_owned_jsonl_unwinds_before_downstream_exception_returns[selected-path-plan]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_borrowed_generator_is_not_closed_when_planning_raises",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[split-positive-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[split-positive-one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[split-negative-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[split-negative-one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[overflow-tiny-tail-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[overflow-tiny-tail-one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[late-overflow-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[late-overflow-one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[constant-tiny-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[constant-tiny-one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[tie-even-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[tie-even-one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[positive-half-zero-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[positive-half-zero-one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[negative-half-zero-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[negative-half-zero-one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[wide-numerator-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[wide-numerator-one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[prefix-residual-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_mean_rounds_exact_finite_rational_once[prefix-residual-one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_other_mean_uses_all_numeric_contributions_not_boolean_or_null",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-rows]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-items]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-results]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-data]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-nodes]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-edges]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-pages]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-rows]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-items]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-results]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-data]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-nodes]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-edges]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-pages]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-rows]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-items]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-results]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-data]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-nodes]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-edges]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-pages]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-rows]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-items]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-results]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-data]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-nodes]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-edges]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-pages]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_sequence_and_nested_flags_are_not_empty_records[records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_scalar_sequence_and_nested_flags_are_not_empty_records[one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_connection_siblings_require_a_path_instead_of_disappearing[sibling0-nodes]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_connection_siblings_require_a_path_instead_of_disappearing[sibling0-edges]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_connection_siblings_require_a_path_instead_of_disappearing[sibling1-nodes]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_connection_siblings_require_a_path_instead_of_disappearing[sibling1-edges]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_custom_connection_wrapper_requires_explicit_selection",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_known_nested_connection_carrier_preserves_flags_nulls_and_metadata[nodes]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_known_nested_connection_carrier_preserves_flags_nulls_and_metadata[edges]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_named_column_iterators_stay_one_pass_without_materializing_a_probe_prefix",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_explicit_selected_column_object_keeps_root_boundary",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_explicit_selected_record_array_keeps_nested_cells_and_source_order",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_borrowed_second_line_jsonl_parse_failure_keeps_stream_usable",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late-1-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late-1-one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late--1-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late--1-one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late-1-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late-1-one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late--1-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late--1-one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow-1-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow-1-one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow--1-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow--1-one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow-1-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow-1-one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow--1-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "name": "test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow--1-one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nodes-auto-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nodes-auto-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nodes-auto-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[edges-auto-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[edges-auto-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[edges-auto-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[mixed-auto-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[mixed-auto-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[mixed-auto-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nested-select-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nested-select-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nested-select-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[siblings-select-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[siblings-select-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[siblings-select-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[pages-envelope-select-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[pages-envelope-select-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[pages-envelope-select-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[warnings-late-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[warnings-late-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[warnings-late-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[missing-branch-select-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[missing-branch-select-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[missing-branch-select-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[all-empty-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[all-empty-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[all-empty-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-auto-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-auto-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-auto-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-explicit-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-explicit-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-explicit-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-auto-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-auto-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-auto-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-explicit-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-explicit-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-explicit-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-auto-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-auto-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-auto-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-explicit-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-explicit-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-explicit-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-auto-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-auto-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-auto-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-explicit-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-explicit-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-explicit-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-auto-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-auto-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-auto-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-explicit-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-explicit-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-explicit-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[feed-first-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[feed-first-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[feed-first-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[shadow-first-list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[shadow-first-json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[shadow-first-iterator]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[nodes-scalar]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[nodes-nested]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[edges-scalar]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[edges-nested]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_minimal_valid_direct_and_single_page_controls[direct-records]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_minimal_valid_direct_and_single_page_controls[single-page]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_direct_error_only_envelope_control_uses_same_policy_as_page_list[error-only-response]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_direct_error_only_envelope_control_uses_same_policy_as_page_list[error-only-no-data]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_direct_error_only_envelope_control_uses_same_policy_as_page_list[error-only-empty-data]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r15_probes.role03.test_graphql_pages",
+      "name": "test_import_and_fixture_guards_cannot_silently_use_an_installed_or_sibling_normalizer",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie--1021-even--1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie--1021-even-1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie--1021-odd--1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie--1021-odd-1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie--500-even--1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie--500-even-1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie--500-odd--1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie--500-odd-1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie-0-even--1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie-0-even-1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie-0-odd--1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie-0-odd-1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie-500-even--1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie-500-even-1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie-500-odd--1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie-500-odd-1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie-1023-even--1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie-1023-even-1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie-1023-odd--1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[tie-1023-odd-1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-0]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-2]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-3]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-4]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-5]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-6]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-7]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-8]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-9]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-10]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-11]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-12]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-13]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-14]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-15]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-16]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-17]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-18]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-19]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-20]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-21]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-22]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-23]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-24]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-25]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-26]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-27]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-28]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-29]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-30]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[post-promotion-exact-31]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[carry-0x1.0000000000000p-3]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[carry-0x1.0000000000000p+970]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[carry--0x1.0000000000000p+970]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[pre-promotion-unit]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[same-multiset-promoted-first-unit]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[pre-promotion-subnormal]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_sum_equals_independent_exact_oracle[same-multiset-promoted-first-subnormal]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_pure_integer_policy_remains_exact[96]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_pure_integer_policy_remains_exact[512]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_pure_integer_policy_remains_exact[4096]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_promoted_state_has_one_integer_not_a_partial_list",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_mean_and_sample_match_untouched_base",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_truly_unrepresentable_sum_remains_warned_null[-1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_truly_unrepresentable_sum_remains_warned_null[1]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "tests.r13_probes.role01.test_sum_review",
+      "name": "test_promoted_integer_is_charged_against_existing_budget",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "",
+      "name": "test_protocol_named_columns_keep_zero_false_and_null[False-False]",
+      "outcome": "failure",
+      "message": "AssertionError: assert (3, 'none', [...s: records.']) == (3, 'none', [])\n  \n  At index 2 diff: ['Fields contain mixed numeric/non-numeric values: records.'] != []\n  Use -v to get more diff"
+    },
+    {
+      "class": "",
+      "name": "test_protocol_named_columns_keep_zero_false_and_null[False-True]",
+      "outcome": "failure",
+      "message": "AssertionError: assert (3, 'none', [...s: records.']) == (3, 'none', [])\n  \n  At index 2 diff: ['Fields contain mixed numeric/non-numeric values: records.'] != []\n  Use -v to get more diff"
+    },
+    {
+      "class": "",
+      "name": "test_protocol_named_columns_keep_zero_false_and_null[True-False]",
+      "outcome": "failure",
+      "message": "AssertionError: assert (3, 'none', [...s: records.']) == (3, 'none', [])\n  \n  At index 2 diff: ['Fields contain mixed numeric/non-numeric values: records.'] != []\n  Use -v to get more diff"
+    },
+    {
+      "class": "",
+      "name": "test_protocol_named_columns_keep_zero_false_and_null[True-True]",
+      "outcome": "failure",
+      "message": "AssertionError: assert (3, 'none', [...s: records.']) == (3, 'none', [])\n  \n  At index 2 diff: ['Fields contain mixed numeric/non-numeric values: records.'] != []\n  Use -v to get more diff"
+    },
+    {
+      "class": "",
+      "name": "test_selected_record_arrays_do_not_reinterpret_protocol_cells[False]",
+      "outcome": "failure",
+      "message": "ValueError: Ambiguous GraphQL connection fields; select rows with data_path"
+    },
+    {
+      "class": "",
+      "name": "test_selected_record_arrays_do_not_reinterpret_protocol_cells[True]",
+      "outcome": "failure",
+      "message": "ValueError: Ambiguous GraphQL connection fields; select rows with data_path"
+    },
+    {
+      "class": "",
+      "name": "test_business_error_details_remain_repeated_record_fields[list]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "",
+      "name": "test_business_error_details_remain_repeated_record_fields[json]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "",
+      "name": "test_business_error_details_remain_repeated_record_fields[one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "",
+      "name": "test_graphql_null_metadata_empty_middle_and_late_warning[object]",
+      "outcome": "failure",
+      "message": "AssertionError: assert [{'pages.data...': None, ...}] == [{'id': 'r', ...value': -0.5}]\n  \n  At index 0 diff: {'pages.data.feed.nodes.0.id': 'r', 'pages.data.feed.nodes.0.value': 0, 'pages.data.feed.nodes.1': None, 'pages.data.feed.nodes.2.id': 'r', 'pages.data.feed.nodes.2.value': 0, 'pages.data.feed.pageInfo': None, 'pages.data.feed.totalCount': None, 'pages.extensions': None} != {'id': 'r', 'value': 0}\n  Use -v to get more diff"
+    },
+    {
+      "class": "",
+      "name": "test_graphql_null_metadata_empty_middle_and_late_warning[json]",
+      "outcome": "failure",
+      "message": "AssertionError: assert [{'pages.data...': None, ...}] == [{'id': 'r', ...value': -0.5}]\n  \n  At index 0 diff: {'pages.data.feed.nodes.0.id': 'r', 'pages.data.feed.nodes.0.value': 0, 'pages.data.feed.nodes.1': None, 'pages.data.feed.nodes.2.id': 'r', 'pages.data.feed.nodes.2.value': 0, 'pages.data.feed.pageInfo': None, 'pages.data.feed.totalCount': None, 'pages.extensions': None} != {'id': 'r', 'value': 0}\n  Use -v to get more diff"
+    },
+    {
+      "class": "",
+      "name": "test_graphql_null_metadata_empty_middle_and_late_warning[one-pass]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "",
+      "name": "test_error_only_null_metadata_stops_without_closing_borrowed_generator",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "",
+      "name": "test_new_exact_prefix_literals_preserve_signed_fraction_or_subnormal[False--1-False]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "",
+      "name": "test_new_exact_prefix_literals_preserve_signed_fraction_or_subnormal[False--1-True]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "",
+      "name": "test_new_exact_prefix_literals_preserve_signed_fraction_or_subnormal[False-1-False]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "",
+      "name": "test_new_exact_prefix_literals_preserve_signed_fraction_or_subnormal[False-1-True]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "",
+      "name": "test_new_exact_prefix_literals_preserve_signed_fraction_or_subnormal[True--1-False]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "",
+      "name": "test_new_exact_prefix_literals_preserve_signed_fraction_or_subnormal[True--1-True]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "",
+      "name": "test_new_exact_prefix_literals_preserve_signed_fraction_or_subnormal[True-1-False]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "",
+      "name": "test_new_exact_prefix_literals_preserve_signed_fraction_or_subnormal[True-1-True]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "",
+      "name": "test_counts_include_input_while_numeric_sum_excludes_boolean_null_and_string[sum]",
+      "outcome": "failure",
+      "message": "AssertionError: assert 2 == 1\n +  where 2 = len(['2 non-numeric measure values excluded from reduction.', 'Fields contain mixed numeric/non-numeric values: v.'])\n +    where ['2 non-numeric measure values excluded from reduction.', 'Fields contain mixed numeric/non-numeric values: v.'] = NormalizedData(records=[{'g': 'r', 'v': -2}], input_count=5, warnings=['2 non-numeric measure values excluded from reduction.', 'Fields contain mixed numeric/non-numeric values: v.'], strategy='sum').warnings"
+    },
+    {
+      "class": "",
+      "name": "test_counts_include_input_while_numeric_sum_excludes_boolean_null_and_string[count]",
+      "outcome": "failure",
+      "message": "AssertionError: assert 1 == 0\n +  where 1 = len(['Fields contain mixed numeric/non-numeric values: v.'])\n +    where ['Fields contain mixed numeric/non-numeric values: v.'] = NormalizedData(records=[{'g': 'r', 'v': 5}], input_count=5, warnings=['Fields contain mixed numeric/non-numeric values: v.'], strategy='count').warnings"
+    },
+    {
+      "class": "",
+      "name": "test_positive_jsonl_lifetime_and_host_content_preserved[borrowed-reader]",
+      "outcome": "failure",
+      "message": "AssertionError: assert (3, 'none', [... values: v.']) == (3, 'none', [])\n  \n  At index 2 diff: ['Fields contain mixed numeric/non-numeric values: v.'] != []\n  Use -v to get more diff"
+    },
+    {
+      "class": "",
+      "name": "test_positive_jsonl_lifetime_and_host_content_preserved[owned-path]",
+      "outcome": "failure",
+      "message": "AssertionError: assert (3, 'none', [... values: v.']) == (3, 'none', [])\n  \n  At index 2 diff: ['Fields contain mixed numeric/non-numeric values: v.'] != []\n  Use -v to get more diff"
+    }
+  ],
+  "node_cases": [
+    {
+      "name": "new protocol columns false false",
+      "outcome": "failure"
+    },
+    {
+      "name": "new protocol columns false true",
+      "outcome": "failure"
+    },
+    {
+      "name": "new protocol columns true false",
+      "outcome": "failure"
+    },
+    {
+      "name": "new protocol columns true true",
+      "outcome": "failure"
+    },
+    {
+      "name": "new selected record protocol cells false",
+      "outcome": "failure"
+    },
+    {
+      "name": "new selected record protocol cells true",
+      "outcome": "failure"
+    },
+    {
+      "name": "new business reason/boolean errors list",
+      "outcome": "pass"
+    },
+    {
+      "name": "new business reason/boolean errors json",
+      "outcome": "pass"
+    },
+    {
+      "name": "new business reason/boolean errors async",
+      "outcome": "pass"
+    },
+    {
+      "name": "new null GraphQL metadata and late warning object",
+      "outcome": "pass"
+    },
+    {
+      "name": "new null GraphQL metadata and late warning json",
+      "outcome": "pass"
+    },
+    {
+      "name": "new null GraphQL metadata and late warning async",
+      "outcome": "pass"
+    },
+    {
+      "name": "new late error-only/null-metadata async page stops before host tail",
+      "outcome": "pass"
+    },
+    {
+      "name": "new exact prefix false -1 false",
+      "outcome": "pass"
+    },
+    {
+      "name": "new exact prefix false -1 true",
+      "outcome": "pass"
+    },
+    {
+      "name": "new exact prefix false 1 false",
+      "outcome": "pass"
+    },
+    {
+      "name": "new exact prefix false 1 true",
+      "outcome": "pass"
+    },
+    {
+      "name": "new exact prefix true -1 false",
+      "outcome": "pass"
+    },
+    {
+      "name": "new exact prefix true -1 true",
+      "outcome": "pass"
+    },
+    {
+      "name": "new exact prefix true 1 false",
+      "outcome": "pass"
+    },
+    {
+      "name": "new exact prefix true 1 true",
+      "outcome": "pass"
+    },
+    {
+      "name": "new raw count versus numeric contribution sum",
+      "outcome": "failure"
+    },
+    {
+      "name": "new raw count versus numeric contribution count",
+      "outcome": "failure"
+    },
+    {
+      "name": "mean rounds once split-positive records",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once split-positive async-one-pass",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once split-negative records",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once split-negative async-one-pass",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once overflow-tiny-tail records",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once overflow-tiny-tail async-one-pass",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once late-overflow records",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once late-overflow async-one-pass",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once constant-tiny records",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once constant-tiny async-one-pass",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once tie-even records",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once tie-even async-one-pass",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once positive-half-zero records",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once positive-half-zero async-one-pass",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once negative-half-zero records",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once negative-half-zero async-one-pass",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once wide-numerator records",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once wide-numerator async-one-pass",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once prefix-residual records",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean rounds once prefix-residual async-one-pass",
+      "outcome": "pass"
+    },
+    {
+      "name": "other mean preserves tiny values and excludes booleans/null/numeric strings",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column rows inferred object",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column rows inferred encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column rows explicit-y object",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column rows explicit-y encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column records inferred object",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column records inferred encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column records explicit-y object",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column records explicit-y encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column items inferred object",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column items inferred encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column items explicit-y object",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column items explicit-y encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column results inferred object",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column results inferred encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column results explicit-y object",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column results explicit-y encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column data inferred object",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column data inferred encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column data explicit-y object",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column data explicit-y encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column nodes inferred object",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column nodes inferred encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column nodes explicit-y object",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column nodes explicit-y encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column edges inferred object",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column edges inferred encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column edges explicit-y object",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column edges explicit-y encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column pages inferred object",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column pages inferred encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column pages explicit-y object",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar column pages explicit-y encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar sequence and nested flags survive records",
+      "outcome": "pass"
+    },
+    {
+      "name": "scalar sequence and nested flags survive async-one-pass",
+      "outcome": "pass"
+    },
+    {
+      "name": "connection nodes rejects disappearing scalar sibling object",
+      "outcome": "pass"
+    },
+    {
+      "name": "connection nodes rejects disappearing scalar sibling encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "connection nodes rejects disappearing scalar sibling async-one-pass",
+      "outcome": "pass"
+    },
+    {
+      "name": "connection nodes rejects disappearing object sibling object",
+      "outcome": "pass"
+    },
+    {
+      "name": "connection nodes rejects disappearing object sibling encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "connection nodes rejects disappearing object sibling async-one-pass",
+      "outcome": "pass"
+    },
+    {
+      "name": "connection edges rejects disappearing scalar sibling object",
+      "outcome": "pass"
+    },
+    {
+      "name": "connection edges rejects disappearing scalar sibling encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "connection edges rejects disappearing scalar sibling async-one-pass",
+      "outcome": "pass"
+    },
+    {
+      "name": "connection edges rejects disappearing object sibling object",
+      "outcome": "pass"
+    },
+    {
+      "name": "connection edges rejects disappearing object sibling encoded-json",
+      "outcome": "pass"
+    },
+    {
+      "name": "connection edges rejects disappearing object sibling async-one-pass",
+      "outcome": "pass"
+    },
+    {
+      "name": "custom connection wrapper requires explicit selection",
+      "outcome": "pass"
+    },
+    {
+      "name": "known nested nodes connection preserves flags/nulls/metadata",
+      "outcome": "pass"
+    },
+    {
+      "name": "known nested edges connection preserves flags/nulls/metadata",
+      "outcome": "pass"
+    },
+    {
+      "name": "late GraphQL error-only page rejects null data via list",
+      "outcome": "pass"
+    },
+    {
+      "name": "late GraphQL error-only page rejects null data via json",
+      "outcome": "pass"
+    },
+    {
+      "name": "late GraphQL error-only page rejects null data via async",
+      "outcome": "pass"
+    },
+    {
+      "name": "late GraphQL error-only page rejects missing data via list",
+      "outcome": "pass"
+    },
+    {
+      "name": "late GraphQL error-only page rejects missing data via json",
+      "outcome": "pass"
+    },
+    {
+      "name": "late GraphQL error-only page rejects missing data via async",
+      "outcome": "pass"
+    },
+    {
+      "name": "late GraphQL error-only page rejects empty data via list",
+      "outcome": "pass"
+    },
+    {
+      "name": "late GraphQL error-only page rejects empty data via json",
+      "outcome": "pass"
+    },
+    {
+      "name": "late GraphQL error-only page rejects empty data via async",
+      "outcome": "pass"
+    },
+    {
+      "name": "ordinary business errors preserve repeats via list",
+      "outcome": "pass"
+    },
+    {
+      "name": "ordinary business errors preserve repeats via json",
+      "outcome": "pass"
+    },
+    {
+      "name": "ordinary business errors preserve repeats via async",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact prefix SUM normal-promoted-late 1 records",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact prefix SUM normal-promoted-late 1 async",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact prefix SUM normal-promoted-late -1 records",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact prefix SUM normal-promoted-late -1 async",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact prefix SUM tiny-promoted-late 1 records",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact prefix SUM tiny-promoted-late 1 async",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact prefix SUM tiny-promoted-late -1 records",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact prefix SUM tiny-promoted-late -1 async",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact prefix SUM normal-never-overflow 1 records",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact prefix SUM normal-never-overflow 1 async",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact prefix SUM normal-never-overflow -1 records",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact prefix SUM normal-never-overflow -1 async",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact prefix SUM tiny-never-overflow 1 records",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact prefix SUM tiny-never-overflow 1 async",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact prefix SUM tiny-never-overflow -1 records",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact prefix SUM tiny-never-overflow -1 async",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie--1021-even--1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie--1021-even-1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie--1021-odd--1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie--1021-odd-1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie--500-even--1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie--500-even-1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie--500-odd--1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie--500-odd-1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie-0-even--1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie-0-even-1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie-0-odd--1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie-0-odd-1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie-500-even--1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie-500-even-1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie-500-odd--1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie-500-odd-1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie-1023-even--1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie-1023-even-1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie-1023-odd--1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle tie-1023-odd-1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-0",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-1",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-2",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-3",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-4",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-5",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-6",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-7",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-8",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-9",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-10",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-11",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-12",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-13",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-14",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-15",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-16",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-17",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-18",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-19",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-20",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-21",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-22",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-23",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-24",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-25",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-26",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-27",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-28",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-29",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-30",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle post-promotion-exact-31",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle carry-0x1.0000000000000p-3",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle carry-0x1.0000000000000p+970",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle carry--0x1.0000000000000p+970",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle pre-promotion-unit",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle same-multiset-promoted-first-unit",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle pre-promotion-subnormal",
+      "outcome": "pass"
+    },
+    {
+      "name": "exact independent oracle same-multiset-promoted-first-subnormal",
+      "outcome": "pass"
+    },
+    {
+      "name": "one async group consumes the whole stream with one aggregate output",
+      "outcome": "pass"
+    },
+    {
+      "name": "mean and deterministic sampling match untouched base output exactly",
+      "outcome": "pass"
+    },
+    {
+      "name": "true -1 overflow remains warned JSON-safe null",
+      "outcome": "pass"
+    },
+    {
+      "name": "true 1 overflow remains warned JSON-safe null",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:nodes-auto:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:nodes-auto:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:nodes-auto:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:edges-auto:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:edges-auto:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:edges-auto:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:mixed-auto:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:mixed-auto:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:mixed-auto:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:nested-select:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:nested-select:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:nested-select:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:siblings-select:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:siblings-select:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:siblings-select:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:pages-envelope-select:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:pages-envelope-select:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:pages-envelope-select:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:warnings-late:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:warnings-late:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:warnings-late:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:missing-branch-select:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:missing-branch-select:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:missing-branch-select:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:all-empty:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:all-empty:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "cross-page-empty-repeat:all-empty:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:edge-without-node:auto:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:edge-without-node:auto:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:edge-without-node:auto:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:edge-without-node:explicit:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:edge-without-node:explicit:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:edge-without-node:explicit:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:node-field-collision:auto:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:node-field-collision:auto:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:node-field-collision:auto:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:node-field-collision:explicit:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:node-field-collision:explicit:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:node-field-collision:explicit:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:error-only-response:auto:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:error-only-response:auto:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:error-only-response:auto:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:error-only-response:explicit:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:error-only-response:explicit:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:error-only-response:explicit:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:error-only-no-data:auto:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:error-only-no-data:auto:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:error-only-no-data:auto:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:error-only-no-data:explicit:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:error-only-no-data:explicit:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:error-only-no-data:explicit:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:error-only-empty-data:auto:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:error-only-empty-data:auto:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:error-only-empty-data:auto:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:error-only-empty-data:explicit:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:error-only-empty-data:explicit:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-invalid-after-prefix-and-empty:error-only-empty-data:explicit:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-multiple-connections-no-implicit-merge:feed-first:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-multiple-connections-no-implicit-merge:feed-first:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-multiple-connections-no-implicit-merge:feed-first:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-multiple-connections-no-implicit-merge:shadow-first:list",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-multiple-connections-no-implicit-merge:shadow-first:json",
+      "outcome": "pass"
+    },
+    {
+      "name": "late-multiple-connections-no-implicit-merge:shadow-first:async",
+      "outcome": "pass"
+    },
+    {
+      "name": "DEDUP-R10-01-F1-late-sibling-loss-must-reject:nodes-scalar",
+      "outcome": "pass"
+    },
+    {
+      "name": "DEDUP-R10-01-F1-late-sibling-loss-must-reject:nodes-nested",
+      "outcome": "pass"
+    },
+    {
+      "name": "DEDUP-R10-01-F1-late-sibling-loss-must-reject:edges-scalar",
+      "outcome": "pass"
+    },
+    {
+      "name": "DEDUP-R10-01-F1-late-sibling-loss-must-reject:edges-nested",
+      "outcome": "pass"
+    },
+    {
+      "name": "minimal-valid-control:direct-records",
+      "outcome": "pass"
+    },
+    {
+      "name": "minimal-valid-control:single-page",
+      "outcome": "pass"
+    },
+    {
+      "name": "direct-error-only-envelope-control:error-only-response",
+      "outcome": "pass"
+    },
+    {
+      "name": "direct-error-only-envelope-control:error-only-no-data",
+      "outcome": "pass"
+    },
+    {
+      "name": "direct-error-only-envelope-control:error-only-empty-data",
+      "outcome": "pass"
+    },
+    {
+      "name": "ordinary-business-errors-field-is-not-a-transport-envelope",
+      "outcome": "pass"
+    }
+  ],
+  "positive_cases": [
+    {
+      "class": "",
+      "name": "test_real_positive_jsonl_ownership[borrowed-stays-open]",
+      "outcome": "pass",
+      "message": ""
+    },
+    {
+      "class": "",
+      "name": "test_real_positive_jsonl_ownership[owned-closes-and-renames]",
+      "outcome": "pass",
+      "message": ""
+    }
+  ],
+  "known_policy_cases": [
+    {
+      "class": "tests.test_n11_resource_policy",
+      "name": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii]",
+      "outcome": "failure",
+      "message": "ValueError: Input field name exceeds 4096 UTF-8 bytes"
+    },
+    {
+      "class": "tests.test_n11_resource_policy",
+      "name": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte]",
+      "outcome": "failure",
+      "message": "ValueError: Input field name exceeds 4096 UTF-8 bytes"
+    },
+    {
+      "class": "tests.test_n11_resource_policy",
+      "name": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte]",
+      "outcome": "failure",
+      "message": "ValueError: Input field name exceeds 4096 UTF-8 bytes"
+    },
+    {
+      "class": "tests.test_n11_resource_policy",
+      "name": "test_flattened_multibyte_key_at_64kib_is_preserved",
+      "outcome": "failure",
+      "message": "ValueError: Input field name exceeds 4096 UTF-8 bytes"
+    }
+  ],
+  "independent_unchanged_passes": 460,
+  "additional_actual_ownership_passes": 2,
+  "failure_disposition": {
+    "over_strict_own_empty_warning_assumptions_not_product_bugs": 14,
+    "previously_disclosed_python_AUTO_pages_question": 2,
+    "selected_record_protocol_cells_contract_question_R04_owner_one_family": 4,
+    "unchanged_fieldname4096_vs65536_policy_R04_owner": 4
+  },
+  "initial_Node": "4 FILE-level Windows --import path errors BEFORE consumers; 0 consumer assertions; preserved",
+  "overall": "RED; R04 boundary/field-policy disposition required; no oracle/source repair here",
+  "limits": [
+    "No GitHub API/PR/currentCI/main merge verification",
+    "No npm fullsuite/pack/install or Python distribution build",
+    "No COUNT/MCP/10M/cost/format-matrix/browser/provider replay",
+    "Zero selected skips does not prove symlink privilege or optional Arrow/Parquet coverage"
+  ],
+  "copied_evidence_files": [
+    {
+      "path": "bindings.json",
+      "bytes": 39358,
+      "sha256": "5e6ff254cb4644423153e592ba2aca23d5a858714844ad375345d8d4e0e7f493"
+    },
+    {
+      "path": "baseline-compile.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "baseline-compile.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "candidate-compile.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "candidate-compile.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compiler-version.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compiler-version.stdout.log",
+      "bytes": 14,
+      "sha256": "41024334022fa58f9c7337359517de307cbcfc6055c19f2b734245eacc2fe97a"
+    },
+    {
+      "path": "known-policy-red.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "known-policy-red.stdout.log",
+      "bytes": 4407,
+      "sha256": "1f403b77bde63de18bc6c2fbe1dbcb92f72ca88885747f24817925e3f9e935ab"
+    },
+    {
+      "path": "node-bound.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "node-bound.stdout.log",
+      "bytes": 52149,
+      "sha256": "6426f719e54cc6712cbd6c99efc0e0b33d2f0868749256edc0d68a7a57889ca1"
+    },
+    {
+      "path": "node-semantics.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "node-semantics.stdout.log",
+      "bytes": 7402,
+      "sha256": "3fd3a44eb05ecf320beaeb6f6339a214ee406691beeb0b6f090a95b1534c83fc"
+    },
+    {
+      "path": "python-ownership-positive.stdout.log",
+      "bytes": 202,
+      "sha256": "2d3545b169c11006dbf0d26b3d84e4aead781ad0ef85342cd1568cdbaba2f164"
+    },
+    {
+      "path": "python-semantics.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "python-semantics.stdout.log",
+      "bytes": 9261,
+      "sha256": "58cc50242d25a646baccea50c8b1ffed5037c0fcaff410922192935aa2bb9083"
+    },
+    {
+      "path": "known-policy-red.xml",
+      "bytes": 5041,
+      "sha256": "0f7a4892f179cfe247d48ad7197ad8979fc7efa2aa5cb0c4169a70b906b4449e"
+    },
+    {
+      "path": "python-ownership-positive.xml",
+      "bytes": 454,
+      "sha256": "4f2d2194c2c32e95247003b2df62d8a6e21655632e44d7c116a5e4b0610126fd"
+    },
+    {
+      "path": "python-semantics.xml",
+      "bytes": 53358,
+      "sha256": "78d2470e3e6aecafb48cbda65b961b35c60928f198143e920b85e589efa3cbc1"
+    },
+    {
+      "path": "base-child-proof.json",
+      "bytes": 4142,
+      "sha256": "38df401db3f5b8ab580cdfe808098c26e3e8ea8598a9bf24f1a227b050fa850f"
+    },
+    {
+      "path": "known-policy-red-proof.json",
+      "bytes": 5525,
+      "sha256": "d22d96bc6e84b29eb6ff4bfd6f3db1e30229fe5f526bbae1bbecbc6552919ef7"
+    },
+    {
+      "path": "python-ownership-positive-proof.json",
+      "bytes": 4790,
+      "sha256": "389d4e5a27cabe2e44bf8442eca50a91388c61472b9d4882ca2e5dd5e4155c70"
+    },
+    {
+      "path": "python-semantics-proof.json",
+      "bytes": 5938,
+      "sha256": "65a3f6e85532de7acddea7988b114b4ee5950d0c30329f59368b789b5f663f80"
+    },
+    {
+      "path": "actual-runs.json",
+      "bytes": 3306,
+      "sha256": "1960cce9c32dba71bbbf688f8fa05005c3f2140f466345d68f8bddfb12848079"
+    },
+    {
+      "path": "node-resume-runs.json",
+      "bytes": 1381,
+      "sha256": "ad0d8361ccb549887790eb047776fb1f8cf72e95d6ac4fa4e2310b35b6779b7a"
+    },
+    {
+      "path": "node-proofs/10752.json",
+      "bytes": 1894,
+      "sha256": "7a723a5a3cae147b51a8cddd87f6480345b0f263ab234325585d71fcacea70a9"
+    },
+    {
+      "path": "node-proofs/27436.json",
+      "bytes": 1894,
+      "sha256": "f6dbc2a820fbb59f0f9e0e38420fcf6609b5c154e4bc0525d83e52cef4b338c3"
+    },
+    {
+      "path": "node-proofs/35964.json",
+      "bytes": 1894,
+      "sha256": "a197339d103956d1eba1d9534a47cf9c6bcee43374625190b6e9c374cab98cd7"
+    },
+    {
+      "path": "node-proofs/43548.json",
+      "bytes": 1894,
+      "sha256": "cea75fb92b4ceb8d35af74723f9e55fd1d4a3c52f1fad9a09ec213d7dd25d184"
+    },
+    {
+      "path": "first-code-hashes.json",
+      "bytes": 500,
+      "sha256": "9fc8a2fb730434a7a7a8927b4bb2645e4e2b0d875c108525a581b2a8f8a64515"
+    },
+    {
+      "path": "final-quality.log",
+      "bytes": 228,
+      "sha256": "f1db0ff75d566368b0ad15f442e0b94a36f4dff3a499b87bc8b056b638f0cd58"
+    }
+  ]
+}
