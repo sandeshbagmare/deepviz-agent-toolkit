@@ -1,0 +1,315 @@
+{
+  "source": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+  "identity": {
+    "source": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+    "review_head": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+    "parent": "1c721bb6497746641b897eb2eb938cfad52068d2",
+    "branch": "agents/r38-18-antv-source-review",
+    "changed_paths": [
+      "M\tpython/deepviz/src/deepviz/engines.py",
+      "A\tpython/deepviz/tests/test_r20_antv_color_scale.py",
+      "A\ttests/browser/r20-antv-color-scale.cjs"
+    ],
+    "numstat": [
+      "12\t2\tpython/deepviz/src/deepviz/engines.py",
+      "174\t0\tpython/deepviz/tests/test_r20_antv_color_scale.py",
+      "162\t0\ttests/browser/r20-antv-color-scale.cjs"
+    ],
+    "outside_antv_prefix_exact": true,
+    "outside_antv_suffix_exact": true,
+    "protected_functions_byte_identical": [
+      {
+        "ordinal": 0,
+        "function": "_table_budget",
+        "sha256": "bad0eb4009eb41abb5d9e8e5aa15ac0abe68f15f212b4d21d09448f389187b9f"
+      },
+      {
+        "ordinal": 1,
+        "function": "safe_json",
+        "sha256": "9532185aa8c228122d4b829e68ebd7e6433ce947330d6e7e2051225e590aa4a7"
+      },
+      {
+        "ordinal": 2,
+        "function": "_number",
+        "sha256": "ffb90abf3b9f79fde227cdec362c4c00b2b3be177138f4d0fe27638df8ea9e98"
+      },
+      {
+        "ordinal": 3,
+        "function": "_number",
+        "sha256": "a58c4713486312f47c3af6eca8a5636fbf32bee27b06678e4d0a3e568048b35e"
+      },
+      {
+        "ordinal": 4,
+        "function": "_number",
+        "sha256": "0f2a554a4dc85bb5ce6c632799a29ee1c891e37c73b9ba6d0b7b1bec5c431a44"
+      },
+      {
+        "ordinal": 5,
+        "function": "channels",
+        "sha256": "66fa585ee2264eac55e4849911c4793f6c3a63a589148b70e9a8702d9eeccd91"
+      },
+      {
+        "ordinal": 6,
+        "function": "_groups",
+        "sha256": "eaf8a788b2cb8f94f0100da4a447cd866b7fe281924e6f11075ced00686b2737"
+      },
+      {
+        "ordinal": 7,
+        "function": "_geometry",
+        "sha256": "761e79f306fe7a599a7ea04469f51b909057105626c4c90aacff3884c764d661"
+      },
+      {
+        "ordinal": 8,
+        "function": "_boxes",
+        "sha256": "a816b42df5fde4d122a012285aee96d3d7fb79d983802f3376bd9df3755c8f0e"
+      },
+      {
+        "ordinal": 9,
+        "function": "_histogram_values",
+        "sha256": "3a6cc763c43c405c65697ff6253b3a0a7bc4e1d6451e47480e0addef2964186b"
+      },
+      {
+        "ordinal": 10,
+        "function": "_histogram",
+        "sha256": "cf472590f960ac5ac448042f8bc7007701f12a5a244ea9a33d37a148e6b66db9"
+      },
+      {
+        "ordinal": 11,
+        "function": "_tiles",
+        "sha256": "075bb03d2bb80469537bf041826e94176b1eefb25e02b41966f239d562978224"
+      },
+      {
+        "ordinal": 12,
+        "function": "_heatmap",
+        "sha256": "44e46f35ed6a28bb894ea48468f6b2966c9bdad893035b49ce37acbfc1a6487e"
+      },
+      {
+        "ordinal": 13,
+        "function": "_colors",
+        "sha256": "04a43d8034ac605085871d5fd3650b5cc2d3b0abd5d27edb19738131bd420471"
+      },
+      {
+        "ordinal": 14,
+        "function": "_label_color",
+        "sha256": "eed3c0a99d3a57aa1cf87f2f24e3f1150b0713ba2543a5cb143ab2579155336d"
+      },
+      {
+        "ordinal": 15,
+        "function": "_wrap",
+        "sha256": "3534c7c8dfceba4befc18ec35e02d0326c40e11593f9f6985d95af926e0d8bde"
+      },
+      {
+        "ordinal": 16,
+        "function": "_fallback",
+        "sha256": "123fcf0f3d59c8e3030108297828acca0a45458b83945e96e76b375890029e26"
+      },
+      {
+        "ordinal": 17,
+        "function": "matplotlib_figure",
+        "sha256": "093ddd4cb8a79822e8d0a5d74388e2bab00f53a050b8b93bb06655aa20c29965"
+      },
+      {
+        "ordinal": 18,
+        "function": "_plotly",
+        "sha256": "73bef49498a81515c18094d05c017abf1edd35ae28aada0819fc6393bbb64638"
+      },
+      {
+        "ordinal": 19,
+        "function": "_iso_dates",
+        "sha256": "8083281a3570793de4d89ea94b34402c2a6825d3593e4284b8e17540e63817b9"
+      },
+      {
+        "ordinal": 20,
+        "function": "_vega",
+        "sha256": "701655eaa03e997b8c1c1f66e116d6baa8134cb28a2d24fbd08e869db8233fe8"
+      },
+      {
+        "ordinal": 21,
+        "function": "_echarts",
+        "sha256": "79e7fcba9b6e804f0d72354fa5f0e0615bbefb21196119e2b368796ebcfc10f7"
+      },
+      {
+        "ordinal": 23,
+        "function": "native_spec",
+        "sha256": "48ba0a7497df10239b3aa963ceb74c11ce01da1133b1a856df87bfef86bcfc9e"
+      },
+      {
+        "ordinal": 24,
+        "function": "browser_html",
+        "sha256": "85d46987a758fdf6d9b818ad51c6f6ab614f5dcd6d21bb906e64e972c17192de"
+      }
+    ],
+    "files": [
+      {
+        "path": "python/deepviz/src/deepviz/__init__.py",
+        "raw_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "git_lf_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+      },
+      {
+        "path": "python/deepviz/src/deepviz/models.py",
+        "raw_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "git_lf_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+      },
+      {
+        "path": "python/deepviz/src/deepviz/engines.py",
+        "raw_sha256": "d519700c20007009ffffb6e8343696c30335949b0df798aa4a83ac8b0025fc29",
+        "git_lf_sha256": "d519700c20007009ffffb6e8343696c30335949b0df798aa4a83ac8b0025fc29"
+      },
+      {
+        "path": "python/deepviz/src/deepviz/render.py",
+        "raw_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+        "git_lf_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+      },
+      {
+        "path": "python/deepviz/src/deepviz/normalize.py",
+        "raw_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+        "git_lf_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+      }
+    ],
+    "product_imports": 0,
+    "tests_run": 0,
+    "scope": "independent source review, not full branch/main approval"
+  },
+  "actually_imported_modules": [
+    {
+      "module": "deepviz",
+      "path": "python/deepviz/src/deepviz/__init__.py",
+      "raw_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+    },
+    {
+      "module": "deepviz.models",
+      "path": "python/deepviz/src/deepviz/models.py",
+      "raw_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    {
+      "module": "deepviz.engines",
+      "path": "python/deepviz/src/deepviz/engines.py",
+      "raw_sha256": "d519700c20007009ffffb6e8343696c30335949b0df798aa4a83ac8b0025fc29"
+    },
+    {
+      "module": "deepviz.render",
+      "path": "python/deepviz/src/deepviz/render.py",
+      "raw_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+    },
+    {
+      "module": "deepviz.normalize",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "raw_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+    }
+  ],
+  "rows": [
+    {
+      "column": "Low",
+      "row": "Only",
+      "heat": -1.7976931348623157e+308
+    },
+    {
+      "column": "Middle",
+      "row": "Only",
+      "heat": 0.0
+    },
+    {
+      "column": "High",
+      "row": "Only",
+      "heat": 1.7976931348623157e+308
+    }
+  ],
+  "spec": {
+    "kind": "heatmap",
+    "x": "column",
+    "y": "row",
+    "color": "heat",
+    "aggregation": "none",
+    "title": "R38-18 opposite-sign MAX endpoint counterexample"
+  },
+  "native": {
+    "type": "cell",
+    "data": [
+      {
+        "_x": "Low",
+        "_y": "Only",
+        "_color": "-1.7976931348623157e+308",
+        "_size": 8,
+        "_heat": -1.7976931348623157e+308,
+        "_row": 0
+      },
+      {
+        "_x": "Middle",
+        "_y": "Only",
+        "_color": "0.0",
+        "_size": 8,
+        "_heat": 0.0,
+        "_row": 1
+      },
+      {
+        "_x": "High",
+        "_y": "Only",
+        "_color": "1.7976931348623157e+308",
+        "_size": 8,
+        "_heat": 1.7976931348623157e+308,
+        "_row": 2
+      }
+    ],
+    "encode": {
+      "x": "_x",
+      "y": "_y",
+      "color": "_heat"
+    },
+    "animate": false,
+    "theme": "light",
+    "title": "R38-18 opposite-sign MAX endpoint counterexample",
+    "tooltip": false,
+    "axis": {
+      "x": {
+        "title": "column",
+        "labelFill": "#202938",
+        "titleFill": "#202938"
+      },
+      "y": {
+        "title": "row",
+        "labelFill": "#202938",
+        "titleFill": "#202938"
+      }
+    },
+    "scale": {
+      "color": {
+        "type": "linear",
+        "domain": [
+          -1.7976931348623157e+308,
+          1.7976931348623157e+308
+        ],
+        "range": [
+          "#ffffd9",
+          "#081d58"
+        ],
+        "nice": false
+      }
+    },
+    "legend": {
+      "color": {
+        "data": [
+          {
+            "value": -1.7976931348623157e+308
+          },
+          {
+            "value": 1.7976931348623157e+308
+          }
+        ],
+        "labelTextAlign": "start"
+      }
+    }
+  },
+  "expected_high_endpoint_rgb": "rgb(8, 29, 88)",
+  "expected_low_endpoint_rgb": "rgb(255, 255, 217)",
+  "limits": "One source-guided public render plus native-scale consumer; NO browser/paint/readiness/console/CDN health or full finite acceptance result.",
+  "artifacts": [
+    {
+      "path": "deepviz-ulfmbr3n/manifest.json",
+      "sha256": "1a4e9477014e68e9a2c40116fc780d7f2dc25c5db841d5a6ecd2eb04fd9dd3e3"
+    },
+    {
+      "path": "deepviz-ulfmbr3n/chart.html",
+      "sha256": "9fc5dcf7ffe50b549c04c8b8a538b0e7cbadab8d057b7228073971d6f63fc48f"
+    }
+  ]
+}

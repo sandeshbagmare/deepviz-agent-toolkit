@@ -1,0 +1,120 @@
+{
+  "id": "R38-18-F1",
+  "priority": "P2",
+  "state": "OPEN: quantitative color-scale correctness blocker",
+  "source": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+  "location": "python/deepviz/src/deepviz/engines.py:683-693",
+  "title": "Finite opposite-sign MAX heatmap domain overflows the G2 linear span and yields NaN color",
+  "actual": {
+    "source": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+    "finding": "R38-18-F1",
+    "product_rows": [
+      -1.7976931348623157e+308,
+      0,
+      1.7976931348623157e+308
+    ],
+    "native_options": {
+      "type": "linear",
+      "domain": [
+        -1.7976931348623157e+308,
+        1.7976931348623157e+308
+      ],
+      "range": [
+        "#ffffd9",
+        "#081d58"
+      ],
+      "nice": false
+    },
+    "g2": "5.4.8",
+    "scale": "0.5.2",
+    "node": "v26.13.1",
+    "actual_scale_constructor": "Linear",
+    "consumer": "Unmodified installed G2 CJS Linear factory with exact native domain/range and its documented-in-source default color interpolator.",
+    "span": {
+      "nonfinite": "Infinity"
+    },
+    "positions": [
+      0,
+      0,
+      {
+        "nonfinite": "NaN"
+      }
+    ],
+    "actual_colors": [
+      "rgba(255, 255, 217, 1)",
+      "rgba(255, 255, 217, 1)",
+      "rgba(NaN, NaN, NaN, NaN)"
+    ],
+    "expected_high_endpoint_rgb": "rgb(8, 29, 88)",
+    "high_endpoint_correct": false,
+    "high_channels": [
+      {
+        "nonfinite": "NaN"
+      },
+      {
+        "nonfinite": "NaN"
+      },
+      {
+        "nonfinite": "NaN"
+      },
+      {
+        "nonfinite": "NaN"
+      }
+    ],
+    "expected_high_rgb_channels": [
+      8,
+      29,
+      88
+    ],
+    "expected_high_alpha": 1,
+    "ticks": [],
+    "files": [
+      {
+        "library": "@antv/g2",
+        "relative": "package.json",
+        "sha256": "fbf2d44b7366584a35621d421aecf7c913ec0c496d257a8157b9809e95676820"
+      },
+      {
+        "library": "@antv/g2",
+        "relative": "lib/scale/linear.js",
+        "sha256": "b48d6a59e98dadf38850a3b21b481ca4152da8d4593ccda0253e8adaf4014644"
+      },
+      {
+        "library": "@antv/g2",
+        "relative": "lib/runtime/scale.js",
+        "sha256": "9e254e4650f5010af33fe9b16b3c4abaca272ba780afca9e4a5ee0761e2df3e6"
+      },
+      {
+        "library": "@antv/g2",
+        "relative": "dist/g2.min.js",
+        "sha256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412"
+      },
+      {
+        "library": "@antv/scale",
+        "relative": "package.json",
+        "sha256": "3c6d9c8c9e3ccf89c8a1d2b0f777f0bc3d89fc55cfaaaf1b459bd505d1f51910"
+      },
+      {
+        "library": "@antv/scale",
+        "relative": "lib/scales/continuous.js",
+        "sha256": "8e2c24417304faff1a8d0e48d0a246b5bc727deb05b75c775e5eb26025ae8261"
+      },
+      {
+        "library": "@antv/scale",
+        "relative": "lib/utils/normalize.js",
+        "sha256": "610be02a9628975ad6ca9094bd8ea0b499e2bfef31d4f7a15c933c032d50ea49"
+      }
+    ],
+    "strict_assertions": 1,
+    "browser_runs": 0,
+    "limits": "Scale mapping only: no chart/canvas/legend paint/readiness/console/CDN health claim; not an attribution of role17 subnormal internal cause."
+  },
+  "reproduction": "Run extreme_heatmap.py using exact checked product source/existing site-packages and a NEW output; then extreme_heatmap.cjs on its counterexample.json/existing tool-root/NEW result path. Corrected one endpoint assertion exits1.",
+  "proof_scope": "ONE new source-guided public render with3literal rows; installed unmodified G2 CJS Linear factory/default interpolation, not a browser/chart render. Source and input remain unchanged.",
+  "first_attempt_limit": "Original string comparison was also overstrict rgb-vs-rgba; original script/result preserved. Corrected own numeric RGB/opaque-alpha assertion remains genuinely RED. This is ONE counterexample, not two bugs.",
+  "source_localization": "Finite low/high on the nonconstant branch pass directly into the new linear domain; isfinite guards apply only to constant padding. G2 createNormalize computes (value-low)/(high-low), producing positions0,0,NaN at spanInfinity. getTicks returns[].",
+  "minimal_fix_options": "Authorized owner must handle unsafe span before publishing an artifact: explicit truthful ValueError rejection is safer than invalid paint; or use a bounded overflow-safe derived color coordinate with truthful original-value legend and independently validate real geometry. Do not clip values, manufacture cells, hide legend or rely solely on finite endpoints/zero browser errors. No source fix implemented here.",
+  "known_other_blocker": "R38-17-F1 actual subnormal blank browser output independently blocks full-finite acceptance; do not attribute its unconfirmed internal cause to this MAX proof or count borrowed checks as ours. R04 owns deduplication/decision/fix grant.",
+  "owner": "R04 sole integration/release/source-grant manager",
+  "limits": "No tested parent-regression classification, browser paint/readiness/console/CDN-health/all-finite/full-toolkit/CI/main/PR approval."
+}

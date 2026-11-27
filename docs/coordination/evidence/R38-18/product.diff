@@ -1,0 +1,32 @@
+diff --git a/python/deepviz/src/deepviz/engines.py b/python/deepviz/src/deepviz/engines.py
+index a366259..d3e437e 100644
+--- a/python/deepviz/src/deepviz/engines.py
++++ b/python/deepviz/src/deepviz/engines.py
+@@ -634,7 +634,7 @@ def _antv(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) ->
+     if spec.color:
+         encode["color"] = "_color"
+         result["scale"] = {"color": {"range": PALETTE}}
+-    else:
++    elif kind not in {"pie", "sunburst", "treemap", "gauge"}:
+         result["style"] = {"fill": PALETTE[0], "stroke": PALETTE[0]}
+     if temporal_x:
+         result.setdefault("scale", {})["x"] = {"type": "time"}
+@@ -680,7 +680,17 @@ def _antv(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) ->
+         result["data"] = _histogram(data)
+     elif kind == "heatmap":
+         encode["color"] = "_heat"
+-        result.pop("scale", None)
++        low = min((row["_heat"] for row in data), default=0)
++        high = max((row["_heat"] for row in data), default=1)
++        if low == high:
++            padding = abs(low) * .05 or 1
++            low = low - padding if math.isfinite(low - padding) else low
++            high = high + padding if math.isfinite(high + padding) else high
++        # Avoid G2's inferred sequential domain, which loses negative extents.
++        result["scale"] = {"color": {"type": "linear", "domain": [low, high],
++                                     "range": ["#ffffd9", "#081d58"], "nice": False}}
++        result["legend"] = {"color": {"data": [{"value": low}, {"value": high}],
++                                       "labelTextAlign": "start"}}
+         result.pop("style", None)
+     elif kind == "box":
+         result["data"] = [{"_x": b["name"], "_y": b["stats"]} for b in _boxes(data)]

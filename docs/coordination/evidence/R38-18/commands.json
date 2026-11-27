@@ -1,0 +1,103 @@
+{
+  "recorded_utc": "2026-11-27T17:30:27.700612+00:00",
+  "timing_note": "Actual exits from tool results; start/end times were not instrumented and are not invented.",
+  "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r38-18-ses_de567805bffdER1GlVd0ngLgKg",
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-S",
+        "docs/coordination/evidence/R38-18/source_audit.py"
+      ],
+      "exit": 0,
+      "phase": "pre-public/source-only, repeated once after consumer to check unchanged source",
+      "product_imports": 0,
+      "tests": 0
+    },
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-S",
+        "docs/coordination/evidence/R38-18/extreme_heatmap.py",
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages",
+        "docs/coordination/evidence/R38-18/extreme-public"
+      ],
+      "exit": 0,
+      "phase": "ONE publicrender,3input/outputrecords,0browserruns"
+    },
+    {
+      "argv": [
+        "node",
+        "docs/coordination/evidence/R38-18/extreme_heatmap.cjs",
+        "docs/coordination/evidence/R38-18/extreme-public/counterexample.json",
+        "C:\\Users\\bagma\\deepviz-agent-toolkit",
+        "docs/coordination/evidence/R38-18/extreme-native-result.json"
+      ],
+      "exit": 1,
+      "phase": "first own strict string oracle; script now preserved as extreme_heatmap-first-string-oracle.cjs",
+      "counting_note": "Actual NaN color plus overstrict RGB/RGBA text format; not a separately counted product failure"
+    },
+    {
+      "argv": [
+        "node",
+        "docs/coordination/evidence/R38-18/extreme_heatmap.cjs",
+        "docs/coordination/evidence/R38-18/extreme-public/counterexample.json",
+        "C:\\Users\\bagma\\deepviz-agent-toolkit",
+        "docs/coordination/evidence/R38-18/extreme-native-numeric-result.json"
+      ],
+      "exit": 1,
+      "phase": "corrected own numeric endpoint assertion,1strictRED,0browserruns"
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "docs/coordination/evidence/R38-18/extreme_heatmap.cjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "docs/coordination/evidence/R38-18/extreme_heatmap-first-string-oracle.cjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "docs/coordination/evidence/R38-18/source_audit.py",
+        "docs/coordination/evidence/R38-18/extreme_heatmap.py"
+      ],
+      "exit": 1,
+      "phase": "initial own lint3formatting errors,retained"
+    },
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "docs/coordination/evidence/R38-18/source_audit.py",
+        "docs/coordination/evidence/R38-18/extreme_heatmap.py"
+      ],
+      "exit": 0,
+      "phase": "formatting-only ownprobe repair,AST-identical proof"
+    }
+  ],
+  "not_run": [
+    "producer21pytest/browser254",
+    "role17browser13",
+    "fullpytest/build/mypy/npm/scale/10M",
+    "browser forMAX counterexample"
+  ],
+  "skips": "No skipped tests claimed; these out-of-scope suites were NOT RUN, not passed."
+}

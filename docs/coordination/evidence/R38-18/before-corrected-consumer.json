@@ -1,0 +1,28 @@
+{
+  "utc": "2026-11-27T17:25:30.919583+00:00",
+  "source": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+  "phase": "BEFORE corrected ONE native-scale consumer; no new product render or browser replay",
+  "first_attempt": "exit1; actual color rgba(NaN,NaN,NaN,NaN), but strict rgb-vs-rgba string comparison was also overstrict; first script/result retained. NEW own oracle only compares finite numeric RGB/opaque alpha, no production/existing-oracle edit.",
+  "probes": [
+    {
+      "path": "docs/coordination/evidence/R38-18/source_audit.py",
+      "sha256": "d2bac34453308822650a8923a69cee0a831f81360036c0872ba8c59efd0f797f"
+    },
+    {
+      "path": "docs/coordination/evidence/R38-18/extreme_heatmap.py",
+      "sha256": "fba7a94c6d5693af83f13e6f8a75c5b28e0fbb5fe59742e5f5fb7ff76155adc5"
+    },
+    {
+      "path": "docs/coordination/evidence/R38-18/extreme_heatmap.cjs",
+      "sha256": "1281ded3fa65bc37455087d7a3aba3a55aa840b53d6e907e049b416a0f73ec3e"
+    },
+    {
+      "path": "docs/coordination/evidence/R38-18/extreme-public/counterexample.json",
+      "sha256": "6ac55a3c122edea079081791b27a17df48c1c76dfc65c263fd3ba26cb1b5a392"
+    },
+    {
+      "path": "docs/coordination/evidence/R38-18/extreme-native-result.json",
+      "sha256": "335128155152054690c0b662442e10ece23059ef46a843320b9271c322de7b14"
+    }
+  ]
+}
