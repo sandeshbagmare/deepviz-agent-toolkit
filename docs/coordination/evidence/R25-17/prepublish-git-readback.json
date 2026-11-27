@@ -1,0 +1,17 @@
+{
+  "observed_utc": "2026-11-27T15:57:41.715177+00:00",
+  "source": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+  "origin_matches_expected": true,
+  "command": "git ls-remote --heads origin <OWNbranch> <actualfocusedPR33branch> <main>",
+  "exit": 0,
+  "actual_refs": {
+    "refs/heads/agents/r10-17-vega-visible-title": "b6ae8409b6d8d0b1d3daa4c94c7839d3ded42387",
+    "refs/heads/fix/r22-strict-numeric-contract": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+    "refs/heads/main": "0ae2cf26426822135fc10d337fcacf580b7ed833"
+  },
+  "tested_source_still_actual_published_PR_branch": true,
+  "protected_production_workflow_schema_original_oracles_and79diff_exit": 0,
+  "source14workingfile_hashes_still_exact": true,
+  "API_requests": 0,
+  "limitation": "Git branch/ref readback only; no PR API/CI/merge claim. R04 and19 own current exacthead green merge gates."
+}

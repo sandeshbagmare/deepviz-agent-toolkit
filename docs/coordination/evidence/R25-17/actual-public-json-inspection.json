@@ -1,0 +1,357 @@
+{
+  "source": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+  "actual_public_module_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R25-17\\pr33-source-gitlf\\python\\deepviz\\src\\deepviz\\models.py",
+  "actual_public_model_sha256": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+  "inspection_kind": "15 serialized/error-output inspections, NOT additional pytest cases",
+  "accepted": 4,
+  "rejected": 11,
+  "outputs": [
+    {
+      "label": "defaults",
+      "raw_json": "{}",
+      "expected_accepted": true,
+      "schema_accepted": true,
+      "model_accepted": true,
+      "serialized_json": "{\"version\":1,\"kind\":\"bar\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":2000,\"width\":900,\"height\":520,\"theme\":\"light\",\"charts\":[],\"columns\":2}",
+      "serialized_value": {
+        "version": 1,
+        "kind": "bar",
+        "title": "Visualization",
+        "description": "",
+        "x": null,
+        "y": null,
+        "color": null,
+        "size": null,
+        "data_path": null,
+        "format": "auto",
+        "aggregation": "auto",
+        "max_points": 2000,
+        "width": 900,
+        "height": 520,
+        "theme": "light",
+        "charts": [],
+        "columns": 2
+      }
+    },
+    {
+      "label": "integral-json-floats",
+      "raw_json": "{\"version\":1.0,\"width\":900.0,\"height\":520.0,\"columns\":2.0,\"max_points\":2000.0}",
+      "expected_accepted": true,
+      "schema_accepted": true,
+      "model_accepted": true,
+      "serialized_json": "{\"version\":1,\"kind\":\"bar\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":2000,\"width\":900,\"height\":520,\"theme\":\"light\",\"charts\":[],\"columns\":2}",
+      "serialized_value": {
+        "version": 1,
+        "kind": "bar",
+        "title": "Visualization",
+        "description": "",
+        "x": null,
+        "y": null,
+        "color": null,
+        "size": null,
+        "data_path": null,
+        "format": "auto",
+        "aggregation": "auto",
+        "max_points": 2000,
+        "width": 900,
+        "height": 520,
+        "theme": "light",
+        "charts": [],
+        "columns": 2
+      }
+    },
+    {
+      "label": "mixed-valid-bounds",
+      "raw_json": "{\"version\":1,\"width\":240,\"height\":4096,\"columns\":6,\"max_points\":100000}",
+      "expected_accepted": true,
+      "schema_accepted": true,
+      "model_accepted": true,
+      "serialized_json": "{\"version\":1,\"kind\":\"bar\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":100000,\"width\":240,\"height\":4096,\"theme\":\"light\",\"charts\":[],\"columns\":6}",
+      "serialized_value": {
+        "version": 1,
+        "kind": "bar",
+        "title": "Visualization",
+        "description": "",
+        "x": null,
+        "y": null,
+        "color": null,
+        "size": null,
+        "data_path": null,
+        "format": "auto",
+        "aggregation": "auto",
+        "max_points": 100000,
+        "width": 240,
+        "height": 4096,
+        "theme": "light",
+        "charts": [],
+        "columns": 6
+      }
+    },
+    {
+      "label": "dashboard-child-integral-floats",
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"version\":1.0,\"width\":900.0,\"height\":200.0,\"columns\":1.0,\"max_points\":10.0}]}",
+      "expected_accepted": true,
+      "schema_accepted": true,
+      "model_accepted": true,
+      "serialized_json": "{\"version\":1,\"kind\":\"dashboard\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":2000,\"width\":900,\"height\":520,\"theme\":\"light\",\"charts\":[{\"version\":1,\"kind\":\"bar\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":10,\"width\":900,\"height\":200,\"theme\":\"light\",\"charts\":[],\"columns\":1}],\"columns\":2}",
+      "serialized_value": {
+        "version": 1,
+        "kind": "dashboard",
+        "title": "Visualization",
+        "description": "",
+        "x": null,
+        "y": null,
+        "color": null,
+        "size": null,
+        "data_path": null,
+        "format": "auto",
+        "aggregation": "auto",
+        "max_points": 2000,
+        "width": 900,
+        "height": 520,
+        "theme": "light",
+        "charts": [
+          {
+            "version": 1,
+            "kind": "bar",
+            "title": "Visualization",
+            "description": "",
+            "x": null,
+            "y": null,
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "auto",
+            "max_points": 10,
+            "width": 900,
+            "height": 200,
+            "theme": "light",
+            "charts": [],
+            "columns": 1
+          }
+        ],
+        "columns": 2
+      }
+    },
+    {
+      "label": "child-version-boolean",
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"version\":true}]}",
+      "expected_accepted": false,
+      "schema_accepted": false,
+      "model_accepted": false,
+      "errors": [
+        {
+          "type": "value_error",
+          "loc": [
+            "charts",
+            0
+          ],
+          "msg": "Value error, version must be a JSON number, not a string or boolean",
+          "input": {
+            "version": true
+          }
+        }
+      ]
+    },
+    {
+      "label": "child-version-numeric-string",
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"version\":\"1\"}]}",
+      "expected_accepted": false,
+      "schema_accepted": false,
+      "model_accepted": false,
+      "errors": [
+        {
+          "type": "value_error",
+          "loc": [
+            "charts",
+            0
+          ],
+          "msg": "Value error, version must be a JSON number, not a string or boolean",
+          "input": {
+            "version": "1"
+          }
+        }
+      ]
+    },
+    {
+      "label": "child-width-boolean",
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"width\":true}]}",
+      "expected_accepted": false,
+      "schema_accepted": false,
+      "model_accepted": false,
+      "errors": [
+        {
+          "type": "value_error",
+          "loc": [
+            "charts",
+            0
+          ],
+          "msg": "Value error, width must be a JSON number, not a string or boolean",
+          "input": {
+            "width": true
+          }
+        }
+      ]
+    },
+    {
+      "label": "child-width-numeric-string",
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"width\":\"900\"}]}",
+      "expected_accepted": false,
+      "schema_accepted": false,
+      "model_accepted": false,
+      "errors": [
+        {
+          "type": "value_error",
+          "loc": [
+            "charts",
+            0
+          ],
+          "msg": "Value error, width must be a JSON number, not a string or boolean",
+          "input": {
+            "width": "900"
+          }
+        }
+      ]
+    },
+    {
+      "label": "child-height-boolean",
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"height\":true}]}",
+      "expected_accepted": false,
+      "schema_accepted": false,
+      "model_accepted": false,
+      "errors": [
+        {
+          "type": "value_error",
+          "loc": [
+            "charts",
+            0
+          ],
+          "msg": "Value error, height must be a JSON number, not a string or boolean",
+          "input": {
+            "height": true
+          }
+        }
+      ]
+    },
+    {
+      "label": "child-height-numeric-string",
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"height\":\"520\"}]}",
+      "expected_accepted": false,
+      "schema_accepted": false,
+      "model_accepted": false,
+      "errors": [
+        {
+          "type": "value_error",
+          "loc": [
+            "charts",
+            0
+          ],
+          "msg": "Value error, height must be a JSON number, not a string or boolean",
+          "input": {
+            "height": "520"
+          }
+        }
+      ]
+    },
+    {
+      "label": "child-columns-boolean",
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"columns\":true}]}",
+      "expected_accepted": false,
+      "schema_accepted": false,
+      "model_accepted": false,
+      "errors": [
+        {
+          "type": "value_error",
+          "loc": [
+            "charts",
+            0
+          ],
+          "msg": "Value error, columns must be a JSON number, not a string or boolean",
+          "input": {
+            "columns": true
+          }
+        }
+      ]
+    },
+    {
+      "label": "child-columns-numeric-string",
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"columns\":\"2\"}]}",
+      "expected_accepted": false,
+      "schema_accepted": false,
+      "model_accepted": false,
+      "errors": [
+        {
+          "type": "value_error",
+          "loc": [
+            "charts",
+            0
+          ],
+          "msg": "Value error, columns must be a JSON number, not a string or boolean",
+          "input": {
+            "columns": "2"
+          }
+        }
+      ]
+    },
+    {
+      "label": "child-max_points-boolean",
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"max_points\":true}]}",
+      "expected_accepted": false,
+      "schema_accepted": false,
+      "model_accepted": false,
+      "errors": [
+        {
+          "type": "value_error",
+          "loc": [
+            "charts",
+            0
+          ],
+          "msg": "Value error, max_points must be a JSON number, not a string or boolean",
+          "input": {
+            "max_points": true
+          }
+        }
+      ]
+    },
+    {
+      "label": "child-max_points-numeric-string",
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"max_points\":\"2000\"}]}",
+      "expected_accepted": false,
+      "schema_accepted": false,
+      "model_accepted": false,
+      "errors": [
+        {
+          "type": "value_error",
+          "loc": [
+            "charts",
+            0
+          ],
+          "msg": "Value error, max_points must be a JSON number, not a string or boolean",
+          "input": {
+            "max_points": "2000"
+          }
+        }
+      ]
+    },
+    {
+      "label": "child-unknown-code-key",
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"code\":\"not executable\"}]}",
+      "expected_accepted": false,
+      "schema_accepted": false,
+      "model_accepted": false,
+      "errors": [
+        {
+          "type": "extra_forbidden",
+          "loc": [
+            "charts",
+            0,
+            "code"
+          ],
+          "msg": "Extra inputs are not permitted",
+          "input": "not executable"
+        }
+      ]
+    }
+  ]
+}
