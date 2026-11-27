@@ -41,4 +41,17 @@ BothcategoricalPNGswereactuallyopened;3/7/11barsvisible,blueactiveHTTPSlinkandbo
 
 ## Owned publication
 
-Pendingexplicitstaging/whitespace/diff/secretsscan/REDcommit/nonforcepush/remoteSHAreadback. Thissectionwillbeupdatedwithactualreceipts; no pushorGREENclaimedinadvance. R04aloneintegrates/issues/PRs.
+Explicit11ownedfilesstagedonly,full2NEWtestdiffreviewed,`git diff --cached --check`exit0. Read-onlyPythonstagedblobauditassertedexact11pathallowlist,files<200,000B,PNGsvalidatedmagic,0credential-shapedtoken/privatekey/credentializedGitHubURLmatches,largestfile32,196B,productiondiffempty. No`git add .`/force/reset.
+
+```powershell
+git add -- tests/r10_probes/role20/test_plotly_literal_labels.py tests/r10_probes/role20/browser_assertions.cjs docs/agent-state/ses_de567801cffeGZFlt50oYv0Dnt.md docs/coordination/reports/R10-20-plotly-literal-labels.md docs/coordination/evidence/R10-20/github-before.json docs/coordination/evidence/R10-20/identity.json docs/coordination/evidence/R10-20/strict-red.json docs/coordination/evidence/R10-20/strict-red.xml docs/coordination/evidence/R10-20/categorical-chart.png docs/coordination/evidence/R10-20/categorical-dashboard.png docs/coordination/evidence/R10-20/commands.md
+git diff --cached --check
+git diff --cached --stat
+git diff --cached -- tests/r10_probes/role20/test_plotly_literal_labels.py tests/r10_probes/role20/browser_assertions.cjs
+git commit -m "test: add strict RED Plotly literal-label browser regression"
+git push -u origin agents/r10-20-plotly-literal-labels
+git ls-remote --heads origin refs/heads/agents/r10-20-plotly-literal-labels
+git rev-parse HEAD
+```
+
+Allexit0. ActualNEWbranchpublishednonforce,local/remoteSHA**c1bf91c5439d585e2ff157752f380cfa4fe85c6d**exactmatch. GenuineRED2failed/4passed/0skipped; nofixed/green/merge/CI/finalsignoffclaim. R04aloneintegrates/issues/PRs. Verifiedpublicationreceiptstoredin`publication.json`; a doc-onlyfollowuprecordsfirstpushwithoutchangingproductionorNEWtestbytes. MAINownreport/noteholdfinalbranchreadbackafterthatfollowup.
