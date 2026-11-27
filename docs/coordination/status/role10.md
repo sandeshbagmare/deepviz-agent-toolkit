@@ -83,6 +83,9 @@
   four-case retest. Keep security error-only rejection and top-level partial-data
   warning behavior unchanged. R50 PR2/main promotion remains blocked pending
   R04 contract decision and independent accepted gates.
-- Exact own publication SHA / native push readback: to be recorded after commit.
-  PR/current CI/default merge **UNKNOWN**. Estimate for further implementation,
-  retest and PR2/main: **UNKNOWN**, conditional on R04 decision.
+- Exact own publication: proposal/evidence commit
+  **fdf1ec37928c42aade4befd696c0f5c51faa1a60**, parent10b8766c; non-force push
+  exit0 and native `ls-remote` exact readback exit0. Seven scoped paths only;
+  no product source/oracle/schema/default/PR/CI mutation. PR/current CI/default
+  merge **UNKNOWN**. Estimate for further implementation, retest and PR2/main:
+  **UNKNOWN**, conditional on R04 decision.

@@ -34,6 +34,14 @@
   Estimate for follow-up work/PR2 **UNKNOWN** pending R04 choice. Publish once,
   exact native OWN remote readback, then handoff; no source implementation.
 
+- R50 publication receipt: one scoped proposal/evidence commit
+  **fdf1ec37928c42aade4befd696c0f5c51faa1a60** parent10b8766c, non-force push
+  exit0, native `ls-remote` exact remote readback exit0. Seven owned paths only;
+  production normalizers/oracles/schema/default/PR/CI untouched. Final handoff
+  to R04: choose A/B/C in the report, then grant minimum implementation and
+  four-case retest if warranted. No receipt loop, old replay, new job or source
+  implementation. PR2/main ETA UNKNOWN.
+
 ## R41 normalizer546 independent acceptance — pre-work
 
 - FINAL18:11:14UTC actualOWNtestCODE **10b8766c07482290fb6ece7c11f110f9d27995b6**,

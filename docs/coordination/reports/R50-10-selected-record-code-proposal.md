@@ -95,3 +95,14 @@ the role10 analysis/handoff itself is complete. R04’s next executable action i
 to choose A/B/C, record the decision, and route any authorized minimal source
 patch plus exact affected retest. Overall R41/R50 selected acceptance remains
 **RED**, with all four policy REDs preserved.
+
+## Publication receipt
+
+One meaningful OWN proposal/evidence commit was created and published without
+force: `fdf1ec37928c42aade4befd696c0f5c51faa1a60`, parent
+`10b8766c07482290fb6ece7c11f110f9d27995b6`. Native `git ls-remote` readback
+returned the exact same SHA on `agents/r11-10-strict-mcp-boundaries`. The
+published payload contains only the seven proposal/evidence/probe/OWN-record
+paths in this report’s scope; production normalizers and all original R41 tests
+remain byte-untouched. No PR, default branch, issue, CI, API, install or source
+implementation action was performed.
