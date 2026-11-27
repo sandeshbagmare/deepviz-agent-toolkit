@@ -1,0 +1,15 @@
+# R14 role18 producer checkpoint
+
+## Latest checkpoint
+
+P1scopedfinal160cases157pass1preexistingN17serializationfail2genuineWin1314skip62.84s1; all37NEWP1casesGREEN includingactualstdio rawduplicates/rawbytes+Unicode/handlerender/readrecovery andasyncpublicStructuredToolguard. SolefailureN17dashboardserialization independentlybaselinererun1fail10.17s(identicalserialized=[]), oldoracleuntouched. Ruff0/mypy0/3files, actualcurrentRevenuePNGJan12Feb18opened. Compactp1-resultsJSON/hashes inownevidence. FullsuitependingstableP2, notallgreen/finalsignoff. NextP1meaningfulscopedcommit, thenNEWP2capacity128serverlifetimeREDbeforemcpresourceedit. No sourceexpansion/SDK/deps/authoritychanges.
+
+ActualSAME-ID`ses_de567805bffdER1GlVd0ngLgKg`, nativeconfirmedownNEW`fix/r14-mcp-json-budget` at5340bc69b7203ad7a9166543062482d819f9b705. SignedR04R14eligibleGENERALrelease accepted after docscheckpoint72580477published/readback; tester02/10sourcebansrespected. Fullplan/acceptance/authority savedMAIN`reports/R14-18-mcp-json-budget.md` beforework; thisbranchreport durableinlineledger. Docsbranch0c5baselineworktrees preserved.
+
+Allowedonlytools.py/mcp_server.py +NEWtest_r14_tool_json_boundary.py/test_r14_mcp_resource_budget.py +ownR14report/evidence/actualIDnote. No normalizers/engines/render/models/schema/SDK/deps/oldtests/sharedREADME/prompts/othernotes/sharedGit/issuesPR/spawn. Exactraw1,000,000UTF8byte+duplicateJSONbeforeSDK first; separate128serverlifetimeboundedresourcepolicy second, nofilesdeleted/authorityexpanded. ExistingMAINvenvreadonly/noinstalls.
+
+Task1current NEWREDtests; SDKpermissivepreparse/ToolSessionrepeatedplainloads/deeprecursionroots traced; normalizerstrictdecoder readonlyreuseavailable. No productionedit yet. Next P`-m pytest python/deepviz/tests/test_r14_tool_json_boundary.py -q --tb=short --junitxml A/p1-red.xml` with ownsource/Aapprovedtemp. FullCI/scale/provider/browser/900notmet; authornotindependentreview.
+
+Task1genuineRED beforeproduction:29tests16fail13pass0skip4.56s1;9silentduplicates/3rawSDKoperations/1rawSDKfile/2SDKdepthboundary/1realstdio. Actualstdiofirst5badrequestsaccepted/deeprejected, validUnicode/handlerender/resource recovered. Log+XMLA/p1-red.*; directcoredup3/exactrawlimit3/otherpositive13GREEN. Nextminimalreleasedhelper admission atoriginalMCPdata+ToolSession/cache, strictnormalizerdecoderreadonlyreuse, unchanged1,000,000bytes; no SDK/normalizer/schemaedit.
+
+P1firstfix2fail27pass0skip7.73s1: actualrawdup/oversize/stdioGREEN. TwoSDKdepth1500failures OWNwrongValueError-onlyassumption (SDKdeclaredToolError wrapsconcisenormalizererror), initial16failure≠16productdefects:14product+2harness. CorrectownexceptionclassONLYValueError/SDKToolError, stillneverRecursionError; add10000depthliteral controls andverifybaselinefirst. InitialRuff1importlayout/mypy1ownresourceunionguard correctedminimally; rerunpending. No existingtestsweakened/sourceoutsidereleasedpaths. Nextbaselineexpandeddepththenown35cases/scopedchecks.

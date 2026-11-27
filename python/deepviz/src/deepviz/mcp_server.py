@@ -12,7 +12,15 @@ from typing import Any
 from pydantic import AnyUrl, BaseModel
 
 from .models import ChartSpec, Engine
-from .tools import ENGINES, MAX_ARTIFACT_BYTES, NormalizeInput, RecommendInput, RenderInput, ToolSession
+from .tools import (
+    ENGINES,
+    MAX_ARTIFACT_BYTES,
+    NormalizeInput,
+    RecommendInput,
+    RenderInput,
+    ToolSession,
+    _inline_data,
+)
 
 
 def create_server(output_dir: str | Path | None = None, *, data_dir: str | Path | None = None) -> Any:
@@ -40,6 +48,8 @@ def create_server(output_dir: str | Path | None = None, *, data_dir: str | Path 
         async def call_tool(self, name: str, arguments: dict[str, Any]) -> Sequence[ContentBlock] | dict[str, Any]:
             if name in input_models:
                 input_models[name].model_validate(arguments)
+                # The SDK otherwise plain-decodes Any strings, losing duplicates/raw size.
+                arguments = {**arguments, "data": _inline_data(arguments["data"])}
             return await super().call_tool(name, arguments)
 
     session = ToolSession(output_dir, data_dir=data_dir)

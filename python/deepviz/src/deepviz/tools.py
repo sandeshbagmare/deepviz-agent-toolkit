@@ -19,6 +19,27 @@ MAX_INLINE_BYTES = 1_000_000
 MAX_ARTIFACT_BYTES = 16 * 1024 * 1024
 
 
+def _inline_data(data: Any) -> Any:
+    """Admit original encoded bytes before any caller can discard JSON details."""
+    if isinstance(data, str):
+        if len(data.encode("utf-8")) > MAX_INLINE_BYTES:
+            raise ValueError("Inline data exceeds 1 MB; configure data_dir and use a file reference")
+        from .normalize import _json
+
+        data = _json(data, "inline data")
+    if not isinstance(data, (list, dict)):
+        raise ValueError("Inline data must be a JSON array or object, not a file path string")
+    try:
+        encoded = json.dumps(data, allow_nan=False)
+    except RecursionError as error:
+        raise ValueError("Inline JSON data is nested too deeply") from error
+    except (TypeError, ValueError, OverflowError) as error:
+        raise ValueError("Tool inputs must be finite JSON data or an explicit file reference") from error
+    if len(encoded.encode("utf-8")) > MAX_INLINE_BYTES:
+        raise ValueError("Inline data exceeds 1 MB; configure data_dir and use a file reference")
+    return data
+
+
 def _profile_spec() -> ChartSpec:
     return ChartSpec(kind="table", aggregation="sample", max_points=200)
 
@@ -54,6 +75,7 @@ class ToolSession:
         self.datasets: OrderedDict[str, dict[str, Any]] = OrderedDict()
 
     def _source(self, data: Any) -> Any:
+        data = _inline_data(data)
         if isinstance(data, dict) and set(data) == {"dataset_id"}:
             cached = self.datasets.get(str(data["dataset_id"]))
             if cached is None:
@@ -71,30 +93,12 @@ class ToolSession:
             if not candidate.is_file():
                 raise ValueError("File does not exist in the configured data directory")
             return candidate
-        if isinstance(data, str):
-            if len(data.encode("utf-8")) > MAX_INLINE_BYTES:
-                raise ValueError("Inline data exceeds 1 MB; configure data_dir and use a file reference")
-            try:
-                data = json.loads(data)
-            except json.JSONDecodeError as error:
-                raise ValueError("Use inline JSON data or an explicit {file: relative_path} reference") from error
-            # A decoded string might otherwise be interpreted as a path by ingestion.
-            if isinstance(data, str):
-                raise ValueError("Inline data must be a JSON array or object, not a file path string")
-            return self._source(data)
-        try:
-            encoded = json.dumps(data, allow_nan=False)
-        except (TypeError, ValueError, OverflowError) as error:
-            raise ValueError("Tool inputs must be finite JSON data or an explicit file reference") from error
-        if len(encoded.encode("utf-8")) > MAX_INLINE_BYTES:
-            raise ValueError("Inline data exceeds 1 MB; configure data_dir and use a file reference")
-        if not isinstance(data, (list, dict)):
-            raise ValueError("Inline data must be a JSON array or object")
         return data
 
     def normalize_data(self, data: Any, spec: ChartSpec | dict[str, Any] | None = None) -> dict[str, Any]:
         """Profile bounded rows; return counts, field types, and a reusable handle, never raw rows."""
         chart = ChartSpec.model_validate(spec) if spec is not None else _profile_spec()
+        data = _inline_data(data)
         source = self._source(data)
         from .normalize import normalize
 
@@ -110,7 +114,7 @@ class ToolSession:
         }
         # Keep original small sources/references, not copied full or reduced datasets.
         # Decode validated JSON references without caching the resolved file Path.
-        original = json.loads(data) if isinstance(data, str) else data
+        original = data
         if isinstance(original, dict) and set(original) == {"dataset_id"}:
             original = self.datasets[str(original["dataset_id"])]["source"]
         self.datasets[dataset_id] = {"source": original, "summary": result}
@@ -179,13 +183,25 @@ def create_tools(output_dir: str | Path | None = None, *, data_dir: str | Path |
     except ImportError as error:
         raise ImportError("Install the agents extra: pip install -e '.[agents]'") from error
 
+    class ValidatedTool(StructuredTool):
+        # LangChain formats inputs for callbacks before invoking our function.
+        def run(self, tool_input: str | dict[str, Any], *args: Any, **kwargs: Any) -> Any:
+            if isinstance(tool_input, dict) and "data" in tool_input:
+                tool_input = {**tool_input, "data": _inline_data(tool_input["data"])}
+            return super().run(tool_input, *args, **kwargs)
+
+        async def arun(self, tool_input: str | dict[str, Any], *args: Any, **kwargs: Any) -> Any:
+            if isinstance(tool_input, dict) and "data" in tool_input:
+                tool_input = {**tool_input, "data": _inline_data(tool_input["data"])}
+            return await super().arun(tool_input, *args, **kwargs)
+
     session = ToolSession(output_dir, data_dir=data_dir)
     tools = [
-        StructuredTool.from_function(session.renderer(engine), args_schema=RenderInput)
+        ValidatedTool.from_function(session.renderer(engine), args_schema=RenderInput)
         for engine in ENGINES
     ]
     tools.extend([
-        StructuredTool.from_function(session.normalize_data, args_schema=NormalizeInput),
-        StructuredTool.from_function(session.recommend_chart, args_schema=RecommendInput),
+        ValidatedTool.from_function(session.normalize_data, args_schema=NormalizeInput),
+        ValidatedTool.from_function(session.recommend_chart, args_schema=RecommendInput),
     ])
     return tools

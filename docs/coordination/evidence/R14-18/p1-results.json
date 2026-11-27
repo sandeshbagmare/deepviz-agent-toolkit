@@ -1,0 +1,19 @@
+{
+  "owner_session": "ses_de567805bffdER1GlVd0ngLgKg",
+  "branch": "fix/r14-mcp-json-budget",
+  "base": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "stage": "priority1 author-scoped verification, not final candidate or independent approval",
+  "source_sha256": {"tools.py": "11273c5f5b0ff2eee16e09c6c727e560582a43fcae723bb315b6ef80d5a68495", "mcp_server.py": "77b3ff80e52b88b79e322a15fd9db2a39eec9a1dbd8505480fca0cb54724fcce"},
+  "red": {"tests": 29, "failed": 16, "passed": 13, "skipped": 0, "exit": 1, "display_seconds": 4.56, "xml_sha256": "113bd21c6275428987cd8e51f00d6199481e7a599c4d17c1f9aa6b480bb8a0f6", "caveat": "14 product boundary failures plus two own SDK exception-class assumptions corrected explicitly in report"},
+  "expanded_baseline_depth": {"failed": 4, "passed": 8, "deselected": 23, "skipped": 0, "exit": 1, "display_seconds": 2.20, "xml_sha256": "ddbbbc2ff02980c32e79699351f2b00f2aa06f0c95a5cd8f6c2880b75bb92d6a"},
+  "async_baseline_red": {"failed": 1, "passed": 0, "exit": 1, "display_seconds": 1.49, "xml_sha256": "51ceba9092ce9826ee4e3ec5294e8858853f5b2ac6eeea6efbff094555d46732"},
+  "focused_final": {"tests": 160, "passed": 157, "failed": 1, "errors": 0, "skipped": 2, "exit": 1, "display_seconds": 62.84, "xml_sha256": "b54451e1f6f423398172367ad57e214a4a281803661d0b8831caa85ccc8e704d", "all_new_p1_tests_passed": 37, "unchanged_failure": "test_n17_dashboard_serialization_order_observation", "skips": "two real WinError1314 symlink controls, not passes"},
+  "unchanged_failure_baseline_rerun": {"failed": 1, "exit": 1, "display_seconds": 10.17, "xml_seconds": 0.377, "xml_sha256": "8a3d2774bd9c549f40fabe6518aa1a8ad5cc021d59fe3086de446297ec669095", "source": "preserved3aa whose tools/MCP bytes equal5340; assertion serialized=[] identical"},
+  "scoped_ruff_exit": 0,
+  "scoped_mypy_exit": 0,
+  "scoped_mypy_files": 3,
+  "real_stdio": {"duplicates_top_nested_file": "rejected before SDK", "raw_oversize_data_and_file": "rejected before SDK", "valid_unicode_handle_render_resource_recovery": "passed"},
+  "actual_png_inspected": {"source_test": "test_every_structured_tool_creates_real_artifacts", "observed": "Revenue chart, Jan12/Feb18, zero baseline and correct proportions; no browser/CDN claim"},
+  "unrun_at_this_checkpoint": ["full repository pytest", "distribution build", "final scale/browser/provider/CI", "priority2 resource capacity"],
+  "remaining": "priority2 separate RED/fix/verification; preserve pre-existing full-suite defects and independent02/10 retests"
+}
