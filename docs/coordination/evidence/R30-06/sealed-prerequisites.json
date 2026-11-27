@@ -1,0 +1,82 @@
+{
+  "COUNT": {
+    "sha": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+    "parent": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+    "subject": "fix: map explicit count charts to the reduced count measure",
+    "changed_paths": [
+      "M\tpython/deepviz/src/deepviz/engines.py",
+      "A\tpython/deepviz/tests/test_r23_count_channel.py"
+    ],
+    "ancestor_of_candidate": false,
+    "ancestry_command_exit": 1
+  },
+  "owned_cleanup": {
+    "sha": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+    "parent": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+    "subject": "fix: unwind owned normalization adapters without closing borrowed input",
+    "changed_paths": [
+      "M\tpython/deepviz/src/deepviz/normalize.py",
+      "A\tpython/deepviz/tests/test_r17_normalizer_boundaries.py"
+    ],
+    "ancestor_of_candidate": false,
+    "ancestry_command_exit": 1
+  },
+  "strict_tool_boundary": {
+    "sha": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+    "parent": "5340bc69b7203ad7a9166543062482d819f9b705",
+    "subject": "fix: validate tool JSON before SDK decoding and callback bookkeeping",
+    "changed_paths": [
+      "A\tdocs/agent-state/ses_de567805bffdER1GlVd0ngLgKg.md",
+      "A\tdocs/coordination/evidence/R14-18/p1-results.json",
+      "A\tdocs/coordination/reports/R14-18-mcp-json-budget.md",
+      "M\tpython/deepviz/src/deepviz/mcp_server.py",
+      "M\tpython/deepviz/src/deepviz/tools.py",
+      "A\tpython/deepviz/tests/test_r14_tool_json_boundary.py"
+    ],
+    "ancestor_of_candidate": false,
+    "ancestry_command_exit": 1
+  },
+  "MCP_resource_followup": {
+    "sha": "cd75c459ddba9f3d6bc0a5185b570af369fb4980",
+    "parent": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+    "subject": "fix: bound MCP artifact issuance with concurrent pre-render reservations",
+    "changed_paths": [
+      "M\tdocs/agent-state/ses_de567805bffdER1GlVd0ngLgKg.md",
+      "A\tdocs/coordination/evidence/R14-18/full-python-results.json",
+      "A\tdocs/coordination/evidence/R14-18/github-prepublication-get.json",
+      "A\tdocs/coordination/evidence/R14-18/p1-publication.json",
+      "A\tdocs/coordination/evidence/R14-18/p2-results.json",
+      "A\tdocs/coordination/evidence/R14-18/tool-revenue.png",
+      "M\tdocs/coordination/reports/R14-18-mcp-json-budget.md",
+      "M\tpython/deepviz/src/deepviz/mcp_server.py",
+      "A\tpython/deepviz/tests/test_r14_mcp_resource_budget.py"
+    ],
+    "ancestor_of_candidate": false,
+    "ancestry_command_exit": 1
+  },
+  "MCP_handback_context": {
+    "sha": "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23",
+    "parent": "2e6968a10097dbfee0133c3ee253c1079ce303f3",
+    "subject": "docs: finalize MCP producer remote receipt and ownership handback",
+    "changed_paths": [
+      "M\tdocs/agent-state/ses_de567805bffdER1GlVd0ngLgKg.md",
+      "A\tdocs/coordination/evidence/R14-18/final-handoff.json",
+      "M\tdocs/coordination/reports/R14-18-mcp-json-budget.md"
+    ],
+    "ancestor_of_candidate": false,
+    "ancestry_command_exit": 1
+  },
+  "mean": {
+    "sha": "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19",
+    "parent": "79232fb2f402bf21d455fbc021f1c238d19abe80",
+    "subject": "fix: preserve representable mean values with bounded exact numerators",
+    "changed_paths": [
+      "M\tpackages/deepviz/src/normalize.ts",
+      "A\tpackages/deepviz/test/test_r17_normalizer_boundaries.test.mjs",
+      "M\tpython/deepviz/src/deepviz/normalize.py",
+      "M\tpython/deepviz/tests/test_r17_normalizer_boundaries.py"
+    ],
+    "ancestor_of_candidate": false,
+    "ancestry_command_exit": 1
+  }
+}

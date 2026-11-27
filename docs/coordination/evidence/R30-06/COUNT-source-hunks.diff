@@ -1,0 +1,13 @@
+diff --git a/python/deepviz/src/deepviz/engines.py b/python/deepviz/src/deepviz/engines.py
+index a366259..993c1b1 100644
+--- a/python/deepviz/src/deepviz/engines.py
++++ b/python/deepviz/src/deepviz/engines.py
+@@ -94,6 +94,8 @@ def channels(records: list[dict], spec: ChartSpec) -> list[dict]:
+     )]
+     x = spec.x or next((key for key in fields if key not in numeric), fields[0] if fields else None)
+     y = spec.y or next((key for key in numeric if key != x), numeric[0] if numeric else None)
++    if spec.aggregation == "count" and spec.y is None and spec.kind != "heatmap":
++        y = "count"
+     if spec.kind == "histogram" and spec.x is None:
+         x = spec.y or next((key for key in numeric if key != "index"), x)
+     heat = spec.color or ("count" if spec.kind == "heatmap" else y)

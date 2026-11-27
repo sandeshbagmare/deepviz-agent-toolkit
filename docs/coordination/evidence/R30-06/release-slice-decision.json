@@ -1,0 +1,51 @@
+{
+  "classification": "Static release preparation only; not implemented or tested",
+  "owner": "R04 is sole manager, source-integration, all-branch inventory, PR and default-release owner",
+  "source_candidate": "3eab699b61850a20e91132e16caf8c589085f9ee",
+  "source_product": "262b0da145e42c94c2908213272ec3be28771206",
+  "main_snapshot": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "PR33_historical_context": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+  "minimal_preserved_runtime_modules": [
+    "models.py", "normalize.py", "engines.py", "render.py",
+    "__init__.py", "cli.py", "tools.py", "recommend.py"
+  ],
+  "initial_public_capability": {
+    "engine": "matplotlib",
+    "chart_kinds": ["bar", "line"],
+    "entrypoints": ["deepviz.render", "deepviz.normalize", "deepviz render"],
+    "artifact_files": ["chart.png", "chart.svg", "chart.html", "manifest.json"]
+  },
+  "required_unintegrated_COUNT_source": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+  "required_owned_cleanup_source_hunks": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+  "tools_strict_admission_source_hunks": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+  "model_condition": "Use actual repaired/four-gated Mapping successor, not the old dict-only candidate guard",
+  "normalizer_condition": "Preserve current source plus actual reviewed fixes; never whole-copy older cleanup source over newer SUM repair. Remaining numerical/GraphQL scope requires R04/16 disposition, not waiver.",
+  "new_unimplemented_adaptations": [
+    "Matplotlib-only engine tuples in engines/tools; existing render engine admission stays effective",
+    "Public render rejects other initial kinds before source/output allocation",
+    "Render-only CLI keeps ToolSession file authority, containment, failed-subtree cleanup and JSON errors",
+    "Accurate minimal public initializer, no new unsupported agent/prompt export",
+    "Remove dangling deepviz-mcp console script; retain declared resources only with their supported APIs"
+  ],
+  "not_required_on_static_path": [
+    "MCP server module, SDK, callback/resource gates if MCP entrypoints are not shipped",
+    "Deep Agent or LangChain optional dependencies",
+    "CDN/browser engine assets or TypeScript build",
+    "Plotly license resource at runtime for static image HTML",
+    "Prompts if no prompt API is exposed; preserve assets if foundation already exposes it"
+  ],
+  "future_literal_bar": {"input_count": 6, "output_count": 3, "strategy": "count", "numeric_color": [90, 80, 70], "visible_heights": [2, 3, 1], "baseline": 0},
+  "future_literal_line": {"x": [-3, 0, 6], "y": [-2, 0, 4], "input_count": 3, "output_count": 3, "strategy": "none", "pixel_x_gap_ratio": "1:2"},
+  "future_recipe": "tests/r30_probes/role06/future_acceptance.py",
+  "recipe_executed": false,
+  "actual_R30_product_imports": 0,
+  "actual_R30_product_tests": 0,
+  "actual_R30_builds": 0,
+  "actual_R30_renders": 0,
+  "actual_R30_browser_runs": 0,
+  "actual_R30_installs": 0,
+  "actual_R30_API_calls": 0,
+  "actual_first_render_head_received": false,
+  "independent_final_approval": false,
+  "next_owner_action": "R04 freezes a dependency-complete first-render head and routes genuine source/consumer/output/CI gates. SAME06 retests only on supplied actual source, not old matrices."
+}

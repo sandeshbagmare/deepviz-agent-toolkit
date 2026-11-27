@@ -1,0 +1,908 @@
+{
+  "recorded_at": "2026-11-27T16:13:33.371780+00:00",
+  "native_session": "ses_de56782fbffdVfBNQu0BxwziM4",
+  "OWN_branch": "agents/r10-06-native-kind-browser",
+  "OWN_prework_HEAD": "272f23d9684c1c21e2cd5946a961985ee134bc17",
+  "expected_origin": "https://github.com/sandeshbagmare/deepviz-agent-toolkit.git",
+  "candidate": "3eab699b61850a20e91132e16caf8c589085f9ee",
+  "candidate_product": "262b0da145e42c94c2908213272ec3be28771206",
+  "candidate_vs_product_code_diff": [],
+  "actual_local_main_ref": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "supplied_main_snapshot": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "supplied_PR33_context": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+  "source_reads_only": true,
+  "product_imports": 0,
+  "product_tests": 0,
+  "builds": 0,
+  "renders": 0,
+  "browser_runs": 0,
+  "installs": 0,
+  "API_calls": 0,
+  "remote_default_rechecked": false,
+  "source_files": [
+    {
+      "path": "pyproject.toml",
+      "source_sha": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "9296a498b364680d3d1ebe04090eeb7b7c32d430",
+      "bytes": 1487,
+      "sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+      "line_count": 49
+    },
+    {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "source_sha": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "17877904985d496f645cd7c66305efc8305bcb5f",
+      "bytes": 3493,
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "line_count": 92,
+      "top_level_imports": [
+        {
+          "line": 2,
+          "source": "from __future__ import annotations"
+        },
+        {
+          "line": 4,
+          "source": "from dataclasses import dataclass, field"
+        },
+        {
+          "line": 5,
+          "source": "from typing import Any, Literal"
+        },
+        {
+          "line": 7,
+          "source": "from pydantic import BaseModel, ConfigDict, Field, model_validator"
+        }
+      ],
+      "top_level_units": [
+        {
+          "name": "ChartSpec",
+          "start": 16,
+          "end": 69,
+          "sha256": "05e240778a175a4bbf7a8a5067a008a12cf9b26b8edadbb5d06fa141e4542047"
+        },
+        {
+          "name": "NormalizedData",
+          "start": 73,
+          "end": 77,
+          "sha256": "529406ea61e78992cd89b8d4dd41f91737712877b98b0f1ec3a0f5617da5f5fe"
+        },
+        {
+          "name": "Artifact",
+          "start": 81,
+          "end": 92,
+          "sha256": "d8709294f7acb135cc4e27f5293d023a26d208874120daf419122ba1bad1d00f"
+        }
+      ]
+    },
+    {
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "source_sha": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "7028f7a24e92a8995859b3818f0938b4276a0726",
+      "bytes": 34886,
+      "sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+      "line_count": 769,
+      "top_level_imports": [
+        {
+          "line": 27,
+          "source": "from __future__ import annotations"
+        },
+        {
+          "line": 29,
+          "source": "import csv"
+        },
+        {
+          "line": 30,
+          "source": "import io"
+        },
+        {
+          "line": 31,
+          "source": "import json"
+        },
+        {
+          "line": 32,
+          "source": "import math"
+        },
+        {
+          "line": 33,
+          "source": "import random"
+        },
+        {
+          "line": 34,
+          "source": "import re"
+        },
+        {
+          "line": 35,
+          "source": "from collections import Counter"
+        },
+        {
+          "line": 36,
+          "source": "from collections.abc import Iterable, Iterator, Mapping"
+        },
+        {
+          "line": 37,
+          "source": "from datetime import date, datetime, time"
+        },
+        {
+          "line": 38,
+          "source": "from decimal import Decimal"
+        },
+        {
+          "line": 39,
+          "source": "from itertools import chain, islice, zip_longest"
+        },
+        {
+          "line": 40,
+          "source": "from numbers import Integral, Real"
+        },
+        {
+          "line": 41,
+          "source": "from pathlib import Path"
+        },
+        {
+          "line": 42,
+          "source": "from typing import Any"
+        },
+        {
+          "line": 44,
+          "source": "from .models import ChartSpec, NormalizedData"
+        }
+      ],
+      "top_level_units": [
+        {
+          "name": "_iterable",
+          "start": 67,
+          "end": 70,
+          "sha256": "c3b9e8f404fc212b29552fdd2953ac6b33216b14c70b8689f36dba6f12a2b5d9"
+        },
+        {
+          "name": "_json",
+          "start": 73,
+          "end": 77,
+          "sha256": "383c4e806d283410b7d0b5a640810818656794dacc80acfa2d0c767bdf890997"
+        },
+        {
+          "name": "_unique_json_object",
+          "start": 80,
+          "end": 86,
+          "sha256": "27042c6c91258491afaef6787ea344aeaccc7d2eaff662b88c6be889617267f6"
+        },
+        {
+          "name": "_without_bom",
+          "start": 89,
+          "end": 94,
+          "sha256": "fe62ce007b534b0cf338242cc8b42ee3a3a39937eadd1f5ed5308f14db86f7d1"
+        },
+        {
+          "name": "_jsonl",
+          "start": 97,
+          "end": 100,
+          "sha256": "a20b48a8fad4b13f9950115e9cf50d8c46648ec66597a4f6140f158a174506d2"
+        },
+        {
+          "name": "_cell",
+          "start": 103,
+          "end": 111,
+          "sha256": "5428f2d527f6eaff3ef7b90b78f31f9cf6a9dbb1284b7bf3a0a94b0309d6759a"
+        },
+        {
+          "name": "_delimited",
+          "start": 114,
+          "end": 133,
+          "sha256": "9b1d000fafb7c0be2f6cf1e485b3b2417ccf8cde8fee4704d561311547056319"
+        },
+        {
+          "name": "_text",
+          "start": 136,
+          "end": 158,
+          "sha256": "37cda8de7eb02e3eb44b29227b09469ef3d124a8996c1c448e6cab6fa3500da2"
+        },
+        {
+          "name": "_arrow_module",
+          "start": 161,
+          "end": 166,
+          "sha256": "cc54ada737f64f0b026ee65349997dbae9cb413a7867c7a994c2cf3591358809"
+        },
+        {
+          "name": "_arrow_rows",
+          "start": 169,
+          "end": 182,
+          "sha256": "f530934f98140c35b14b0cc1f749eeb43f26949b37edb85fac40b64cf3c3340e"
+        },
+        {
+          "name": "_validate_arrow_fields",
+          "start": 185,
+          "end": 199,
+          "sha256": "7d0a728c0581bb7221a337dd59ea807cf927443ebc04d753480997126f118c0c"
+        },
+        {
+          "name": "_binary_rows",
+          "start": 202,
+          "end": 223,
+          "sha256": "0733d63b71b3f16b4a43f6cbddbe007911d94232a1f7a49f43da75cce356dae8"
+        },
+        {
+          "name": "_path_rows",
+          "start": 226,
+          "end": 234,
+          "sha256": "0767ebdf75d18a94d3ecd8dc3cafc548e2774c5ab4bed066cafaf2d7c9dae2d0"
+        },
+        {
+          "name": "_source",
+          "start": 237,
+          "end": 262,
+          "sha256": "2a5bdf72458597a6a18063898384a7a910f0836ce2aa61fa540e13cc26d4751d"
+        },
+        {
+          "name": "_select_path",
+          "start": 265,
+          "end": 295,
+          "sha256": "6ecf4fb669de56a5193469860fb0ba0e1b48fedf5fc61f0e769ae9c7f0babd94"
+        },
+        {
+          "name": "_connection",
+          "start": 298,
+          "end": 314,
+          "sha256": "90033dc9084171efaec7283fc8a1965dc15a55b5604e509f9953791658c70d25"
+        },
+        {
+          "name": "_graphql_errors",
+          "start": 317,
+          "end": 321,
+          "sha256": "109dd500d12b13a1b7c1f2dcdd735d58d30e84f524d10a0d5a7d6358e1f17850"
+        },
+        {
+          "name": "_expand",
+          "start": 324,
+          "end": 383,
+          "sha256": "9280990e2af6ff5f7b103e726756a16ccf900f2305594952dfd20c2790a1cd0c"
+        },
+        {
+          "name": "_scalar",
+          "start": 386,
+          "end": 405,
+          "sha256": "32484bb4f9aaccca263abc59ea1d9aac3b9ec73625292f3b7a652d58a13e68a1"
+        },
+        {
+          "name": "_utf8_size",
+          "start": 408,
+          "end": 414,
+          "sha256": "8318db11df54a80432627413dcd5e5216fc172d9ff8710faaad8c48d0dd0f12d"
+        },
+        {
+          "name": "_string_bytes",
+          "start": 417,
+          "end": 421,
+          "sha256": "8d0a5854834773a8fbe82721e135ce69dcd3e6301fc82965b03ddc4f647e7039"
+        },
+        {
+          "name": "_record_bytes",
+          "start": 424,
+          "end": 439,
+          "sha256": "31763040e1bd4ad76818e33659f2b434afbcf17382fad4b072bbf96f16b7d893"
+        },
+        {
+          "name": "_check_retained_bytes",
+          "start": 442,
+          "end": 444,
+          "sha256": "f6cf1a47f95f33d0350d31639670ba827d899cd642fccd6f37eba18b53504d5b"
+        },
+        {
+          "name": "_flatten",
+          "start": 447,
+          "end": 476,
+          "sha256": "e183ed66e9435c7500b3be6e2154337c41fa9aef58a4e15f10d4fa387de25f08"
+        },
+        {
+          "name": "_records",
+          "start": 479,
+          "end": 512,
+          "sha256": "50ba44a1929c442fb4ea80d8c600220efeb601970c45a7a51be6db272312a95b"
+        },
+        {
+          "name": "_plan",
+          "start": 515,
+          "end": 553,
+          "sha256": "1c4eeeee36182ce2b8c9cbfda8e329e50ca5e6ca711ff9d8becf74203f8b18fa"
+        },
+        {
+          "name": "_sum_units",
+          "start": 556,
+          "end": 559,
+          "sha256": "d1cc6bd3fba046c9583cb621f106ee38fa88496dc7956f78ea2261ec2c6f2a51"
+        },
+        {
+          "name": "_Reducer",
+          "start": 562,
+          "end": 680,
+          "sha256": "4d12f0ba94d7e92ae401fdf7044c1211687dd048967e5a0f9c55d8a92030b32f"
+        },
+        {
+          "name": "normalize",
+          "start": 683,
+          "end": 769,
+          "sha256": "8c87c33af7830c95314aa5f9d6c1b256cfa1c1f4323b595014818370316270d5"
+        }
+      ]
+    },
+    {
+      "path": "python/deepviz/src/deepviz/engines.py",
+      "source_sha": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "a366259600e7fec8afafd2b890623f97db588aa2",
+      "bytes": 44039,
+      "sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225",
+      "line_count": 803,
+      "top_level_imports": [
+        {
+          "line": 8,
+          "source": "from __future__ import annotations"
+        },
+        {
+          "line": 10,
+          "source": "import json"
+        },
+        {
+          "line": 11,
+          "source": "import math"
+        },
+        {
+          "line": 12,
+          "source": "import textwrap"
+        },
+        {
+          "line": 13,
+          "source": "from collections import defaultdict"
+        },
+        {
+          "line": 14,
+          "source": "from datetime import UTC, datetime"
+        },
+        {
+          "line": 15,
+          "source": "from html import escape"
+        },
+        {
+          "line": 16,
+          "source": "from importlib.resources import files"
+        },
+        {
+          "line": 17,
+          "source": "from typing import Any, overload"
+        },
+        {
+          "line": 19,
+          "source": "import numpy as np"
+        },
+        {
+          "line": 21,
+          "source": "from .models import ChartSpec"
+        }
+      ],
+      "top_level_units": [
+        {
+          "name": "_table_budget",
+          "start": 34,
+          "end": 61,
+          "sha256": "bad0eb4009eb41abb5d9e8e5aa15ac0abe68f15f212b4d21d09448f389187b9f"
+        },
+        {
+          "name": "safe_json",
+          "start": 64,
+          "end": 70,
+          "sha256": "9532185aa8c228122d4b829e68ebd7e6433ce947330d6e7e2051225e590aa4a7"
+        },
+        {
+          "name": "_number",
+          "start": 74,
+          "end": 74,
+          "sha256": "ffb90abf3b9f79fde227cdec362c4c00b2b3be177138f4d0fe27638df8ea9e98"
+        },
+        {
+          "name": "_number",
+          "start": 78,
+          "end": 78,
+          "sha256": "a58c4713486312f47c3af6eca8a5636fbf32bee27b06678e4d0a3e568048b35e"
+        },
+        {
+          "name": "_number",
+          "start": 81,
+          "end": 86,
+          "sha256": "0f2a554a4dc85bb5ce6c632799a29ee1c891e37c73b9ba6d0b7b1bec5c431a44"
+        },
+        {
+          "name": "channels",
+          "start": 89,
+          "end": 105,
+          "sha256": "66fa585ee2264eac55e4849911c4793f6c3a63a589148b70e9a8702d9eeccd91"
+        },
+        {
+          "name": "_groups",
+          "start": 108,
+          "end": 112,
+          "sha256": "eaf8a788b2cb8f94f0100da4a447cd866b7fe281924e6f11075ced00686b2737"
+        },
+        {
+          "name": "_geometry",
+          "start": 115,
+          "end": 137,
+          "sha256": "761e79f306fe7a599a7ea04469f51b909057105626c4c90aacff3884c764d661"
+        },
+        {
+          "name": "_boxes",
+          "start": 140,
+          "end": 146,
+          "sha256": "a816b42df5fde4d122a012285aee96d3d7fb79d983802f3376bd9df3755c8f0e"
+        },
+        {
+          "name": "_histogram_values",
+          "start": 149,
+          "end": 153,
+          "sha256": "3a6cc763c43c405c65697ff6253b3a0a7bc4e1d6451e47480e0addef2964186b"
+        },
+        {
+          "name": "_histogram",
+          "start": 156,
+          "end": 163,
+          "sha256": "cf472590f960ac5ac448042f8bc7007701f12a5a244ea9a33d37a148e6b66db9"
+        },
+        {
+          "name": "_tiles",
+          "start": 166,
+          "end": 175,
+          "sha256": "075bb03d2bb80469537bf041826e94176b1eefb25e02b41966f239d562978224"
+        },
+        {
+          "name": "_heatmap",
+          "start": 178,
+          "end": 183,
+          "sha256": "44e46f35ed6a28bb894ea48468f6b2966c9bdad893035b49ce37acbfc1a6487e"
+        },
+        {
+          "name": "_colors",
+          "start": 186,
+          "end": 187,
+          "sha256": "04a43d8034ac605085871d5fd3650b5cc2d3b0abd5d27edb19738131bd420471"
+        },
+        {
+          "name": "_label_color",
+          "start": 190,
+          "end": 194,
+          "sha256": "eed3c0a99d3a57aa1cf87f2f24e3f1150b0713ba2543a5cb143ab2579155336d"
+        },
+        {
+          "name": "_wrap",
+          "start": 197,
+          "end": 198,
+          "sha256": "3534c7c8dfceba4befc18ec35e02d0326c40e11593f9f6985d95af926e0d8bde"
+        },
+        {
+          "name": "_fallback",
+          "start": 201,
+          "end": 214,
+          "sha256": "123fcf0f3d59c8e3030108297828acca0a45458b83945e96e76b375890029e26"
+        },
+        {
+          "name": "matplotlib_figure",
+          "start": 217,
+          "end": 382,
+          "sha256": "093ddd4cb8a79822e8d0a5d74388e2bab00f53a050b8b93bb06655aa20c29965"
+        },
+        {
+          "name": "_plotly",
+          "start": 385,
+          "end": 444,
+          "sha256": "73bef49498a81515c18094d05c017abf1edd35ae28aada0819fc6393bbb64638"
+        },
+        {
+          "name": "_iso_dates",
+          "start": 447,
+          "end": 457,
+          "sha256": "8083281a3570793de4d89ea94b34402c2a6825d3593e4284b8e17540e63817b9"
+        },
+        {
+          "name": "_vega",
+          "start": 460,
+          "end": 536,
+          "sha256": "701655eaa03e997b8c1c1f66e116d6baa8134cb28a2d24fbd08e869db8233fe8"
+        },
+        {
+          "name": "_echarts",
+          "start": 539,
+          "end": 616,
+          "sha256": "79e7fcba9b6e804f0d72354fa5f0e0615bbefb21196119e2b368796ebcfc10f7"
+        },
+        {
+          "name": "_antv",
+          "start": 619,
+          "end": 712,
+          "sha256": "b02f7667de5d233269f3d450aeaf823a08dbdecbc537c625e4e779be1d794b37"
+        },
+        {
+          "name": "native_spec",
+          "start": 715,
+          "end": 734,
+          "sha256": "48ba0a7497df10239b3aa963ceb74c11ce01da1133b1a856df87bfef86bcfc9e"
+        },
+        {
+          "name": "browser_html",
+          "start": 737,
+          "end": 803,
+          "sha256": "85d46987a758fdf6d9b818ad51c6f6ab614f5dcd6d21bb906e64e972c17192de"
+        }
+      ]
+    },
+    {
+      "path": "python/deepviz/src/deepviz/render.py",
+      "source_sha": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "64490a82f232e0c3c51a142bd898fd7f6c7c6dbf",
+      "bytes": 11637,
+      "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+      "line_count": 234,
+      "top_level_imports": [
+        {
+          "line": 2,
+          "source": "from __future__ import annotations"
+        },
+        {
+          "line": 4,
+          "source": "import json"
+        },
+        {
+          "line": 5,
+          "source": "import math"
+        },
+        {
+          "line": 6,
+          "source": "import tempfile"
+        },
+        {
+          "line": 7,
+          "source": "import xml.etree.ElementTree as ET"
+        },
+        {
+          "line": 8,
+          "source": "from collections.abc import Iterator, Mapping"
+        },
+        {
+          "line": 9,
+          "source": "from datetime import date, datetime, time"
+        },
+        {
+          "line": 10,
+          "source": "from decimal import Decimal"
+        },
+        {
+          "line": 11,
+          "source": "from numbers import Integral, Real"
+        },
+        {
+          "line": 12,
+          "source": "from pathlib import Path"
+        },
+        {
+          "line": 13,
+          "source": "from typing import Any"
+        },
+        {
+          "line": 15,
+          "source": "from .engines import (\n    ENGINES,\n    _colors,\n    _fallback,\n    _geometry,\n    _table_budget,\n    browser_html,\n    channels,\n    matplotlib_figure,\n    native_spec,\n)"
+        },
+        {
+          "line": 26,
+          "source": "from .models import Artifact, ChartSpec"
+        }
+      ],
+      "top_level_units": [
+        {
+          "name": "_payload_budget",
+          "start": 33,
+          "end": 39,
+          "sha256": "23e2665374c241b77b34e1db7ee28bb80cf322d5db6308e6b29b1fd0c6328f2d"
+        },
+        {
+          "name": "_check_replay",
+          "start": 42,
+          "end": 57,
+          "sha256": "84f4c6053e11dda383d72f1093e8ab11309ecdd05f58a624a7998205e20ec17b"
+        },
+        {
+          "name": "_replay_scalar",
+          "start": 60,
+          "end": 72,
+          "sha256": "b1f800c3329810b1845c6a4c615d1974b64dc9287d344c72cad77dc97063aa9d"
+        },
+        {
+          "name": "render",
+          "start": 75,
+          "end": 234,
+          "sha256": "d1a82ceed4d2a658f6f5d1e330505fd5cd5c6e5460b1f0d575afc1e7444fbe30"
+        }
+      ]
+    },
+    {
+      "path": "python/deepviz/src/deepviz/__init__.py",
+      "source_sha": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "0fed1772355f25da05329fda38bd29216ab4c75f",
+      "bytes": 1133,
+      "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+      "line_count": 27,
+      "top_level_imports": [
+        {
+          "line": 2,
+          "source": "from __future__ import annotations"
+        },
+        {
+          "line": 4,
+          "source": "from importlib.resources import files"
+        },
+        {
+          "line": 5,
+          "source": "from pathlib import Path"
+        },
+        {
+          "line": 6,
+          "source": "from typing import Any"
+        },
+        {
+          "line": 8,
+          "source": "from .models import Artifact, ChartSpec, NormalizedData"
+        },
+        {
+          "line": 9,
+          "source": "from .normalize import normalize"
+        },
+        {
+          "line": 10,
+          "source": "from .render import render"
+        }
+      ],
+      "top_level_units": [
+        {
+          "name": "read_prompt",
+          "start": 16,
+          "end": 20,
+          "sha256": "00e6fc5af1510d5ee4bccae2b684c7b0d609688d5f5592e7042d6b5444391911"
+        },
+        {
+          "name": "create_tools",
+          "start": 23,
+          "end": 27,
+          "sha256": "1c895a1d0d98c536bacf7b5c0d5c15651b60dfc2ba67486f242688d7aa4b5d70"
+        }
+      ]
+    },
+    {
+      "path": "python/deepviz/src/deepviz/cli.py",
+      "source_sha": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "54d0e8e3f75e8f064a112c0bf22e9b2dda18c8e9",
+      "bytes": 2623,
+      "sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+      "line_count": 60,
+      "top_level_imports": [
+        {
+          "line": 2,
+          "source": "from __future__ import annotations"
+        },
+        {
+          "line": 4,
+          "source": "import argparse"
+        },
+        {
+          "line": 5,
+          "source": "import json"
+        },
+        {
+          "line": 6,
+          "source": "from pathlib import Path"
+        },
+        {
+          "line": 7,
+          "source": "from typing import Any"
+        },
+        {
+          "line": 9,
+          "source": "from .models import ChartSpec"
+        },
+        {
+          "line": 10,
+          "source": "from .tools import ENGINES, ToolSession"
+        }
+      ],
+      "top_level_units": [
+        {
+          "name": "main",
+          "start": 13,
+          "end": 56,
+          "sha256": "23b9b280e23fde9937f30fba5cfae5e8f5621069a1aa59bb789edef9cad3aeed"
+        }
+      ]
+    },
+    {
+      "path": "python/deepviz/src/deepviz/tools.py",
+      "source_sha": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "eafa9f0a5b9b324d5f0272c02b7a4f39915ad512",
+      "bytes": 9383,
+      "sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+      "line_count": 191,
+      "top_level_imports": [
+        {
+          "line": 2,
+          "source": "from __future__ import annotations"
+        },
+        {
+          "line": 4,
+          "source": "import json"
+        },
+        {
+          "line": 5,
+          "source": "import shutil"
+        },
+        {
+          "line": 6,
+          "source": "import tempfile"
+        },
+        {
+          "line": 7,
+          "source": "from collections import OrderedDict"
+        },
+        {
+          "line": 8,
+          "source": "from pathlib import Path, PureWindowsPath"
+        },
+        {
+          "line": 9,
+          "source": "from typing import Any"
+        },
+        {
+          "line": 10,
+          "source": "from uuid import uuid4"
+        },
+        {
+          "line": 12,
+          "source": "from pydantic import BaseModel, ConfigDict, Field"
+        },
+        {
+          "line": 14,
+          "source": "from .models import ChartSpec, Engine"
+        },
+        {
+          "line": 15,
+          "source": "from .recommend import Goal, profile, recommend"
+        }
+      ],
+      "top_level_units": [
+        {
+          "name": "_profile_spec",
+          "start": 22,
+          "end": 23,
+          "sha256": "6de9bf4313e9e09bddfc2bb85397e52d12f6f0d73fda6b06308d95a9645a429f"
+        },
+        {
+          "name": "RenderInput",
+          "start": 26,
+          "end": 29,
+          "sha256": "5427d97ed55fbac4440a01d152c485d2cfeb55a131acbe200e717114d235f652"
+        },
+        {
+          "name": "NormalizeInput",
+          "start": 32,
+          "end": 33,
+          "sha256": "055b0b6e09bd9dc3587f723d30953238ce885984e553f0a657cac5071b5b451f"
+        },
+        {
+          "name": "RecommendInput",
+          "start": 36,
+          "end": 39,
+          "sha256": "23032f92fb30ce4dd7d05c34c3c62bf2321f7daefc4ce544dc35c7bf9e6189d3"
+        },
+        {
+          "name": "ToolSession",
+          "start": 42,
+          "end": 172,
+          "sha256": "668fb0dca9e61c7b1735c75cf262930ca11ec0549bf7c7f15ee84b8020403cf1"
+        },
+        {
+          "name": "create_tools",
+          "start": 175,
+          "end": 191,
+          "sha256": "61846b160494a1c20c6723d947a03dbf21c69e835565a12accdce41f30e74bf8"
+        }
+      ]
+    },
+    {
+      "path": "python/deepviz/src/deepviz/recommend.py",
+      "source_sha": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "6b1540d5ef3e5782be677cb9bcf3bddec8774661",
+      "bytes": 4875,
+      "sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+      "line_count": 115,
+      "top_level_imports": [
+        {
+          "line": 2,
+          "source": "from __future__ import annotations"
+        },
+        {
+          "line": 4,
+          "source": "import math"
+        },
+        {
+          "line": 5,
+          "source": "from datetime import datetime"
+        },
+        {
+          "line": 6,
+          "source": "from typing import Any, Literal"
+        },
+        {
+          "line": 8,
+          "source": "from .models import ChartKind, ChartSpec, NormalizedData"
+        }
+      ],
+      "top_level_units": [
+        {
+          "name": "_number",
+          "start": 13,
+          "end": 20,
+          "sha256": "4f77bcbd92f37bd5d72f5481085724900e232ade5cb3a25bc593263b9fb3dee1"
+        },
+        {
+          "name": "_date",
+          "start": 23,
+          "end": 30,
+          "sha256": "7d29dc258192b11e90b19f99fe12c5f15268900f88092a6dee974e7b6dbe740b"
+        },
+        {
+          "name": "profile",
+          "start": 33,
+          "end": 75,
+          "sha256": "49515f0b1440abe2bdf13ffa79e491453ac9507a1211a3345351f6746318d63e"
+        },
+        {
+          "name": "recommend",
+          "start": 78,
+          "end": 115,
+          "sha256": "7fbb230d3ee4a6983146ef2ec61aa856ca87b51c5c4e748d434cd51992614eff"
+        }
+      ]
+    },
+    {
+      "path": "python/deepviz/src/deepviz/py.typed",
+      "source_sha": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "534be2bf62bbce9a10221b4a328930b9be4ac0b7",
+      "bytes": 46,
+      "sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+      "line_count": 1
+    },
+    {
+      "path": "schemas/chart-spec.schema.json",
+      "source_sha": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "e4b96153ace7b0290bb7d48d3492707abe5186b5",
+      "bytes": 4975,
+      "sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+      "line_count": 237
+    },
+    {
+      "path": "prompts/v1/system.md",
+      "source_sha": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "8e0a1b4b0ce2115d23b5cb2f3d69c0deb113839b",
+      "bytes": 4582,
+      "sha256": "b11e691e8f5d89bc2fd726d284702d6675c57c1a32ec0947ec5902040fdbaba0",
+      "line_count": 65
+    },
+    {
+      "path": "prompts/v1/request.md",
+      "source_sha": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "cd61df2fe697009b36b03b872c949b0bef859b10",
+      "bytes": 761,
+      "sha256": "845be71cb3141d084f036472a1c5a19670be28c16bf73c4a599a3df9d534c6f2",
+      "line_count": 13
+    },
+    {
+      "path": "prompts/v1/README.md",
+      "source_sha": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "blob": "d6be785ac34dd423c59148a02a77067b3d7616c4",
+      "bytes": 1787,
+      "sha256": "324cb7f88211424f577327268f36506c8c27d1793528441458e2caba83ee0bbd",
+      "line_count": 29
+    }
+  ]
+}
