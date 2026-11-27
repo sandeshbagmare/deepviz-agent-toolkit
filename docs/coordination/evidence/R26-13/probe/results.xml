@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="30" time="0.841" timestamp="2026-11-27T21:26:01.153174+05:30" hostname="SandeshAcer"><testcase classname="test_default_contract" name="test_json_numeric_types_agree_with_schema[version-&quot;1&quot;]" time="0.002" /><testcase classname="test_default_contract" name="test_json_numeric_types_agree_with_schema[version-true]" time="0.002"><failure message="Failed: Runtime accepted a numeric type rejected by its public JSON Schema">field = 'version', literal = 'true'
+
+    @pytest.mark.parametrize(
+        ("field", "literal"),
+        [
+            ("version", '"1"'), ("version", "true"),
+            ("columns", '"2"'), ("columns", "true"),
+            ("width", '"900"'), ("width", "true"),
+            ("height", '"520"'), ("height", "true"),
+            ("max_points", '"2000"'), ("max_points", "true"),
+        ],
+    )
+    def test_json_numeric_types_agree_with_schema(field, literal):
+        wire = '{"' + field + '":' + literal + "}"
+        value = json.loads(wire)
+        assert not SCHEMA.is_valid(value), "Independent schema must reject this type"
+        try:
+            model = ChartSpec.model_validate_json(wire)
+        except ValidationError:
+            OBSERVATIONS.append({"wire": wire, "schema_accepts": False, "model_accepts": False})
+            return
+        OBSERVATIONS.append({
+            "wire": wire, "schema_accepts": False, "model_accepts": True,
+            "coerced_value": getattr(model, field),
+        })
+&gt;       pytest.fail("Runtime accepted a numeric type rejected by its public JSON Schema")
+E       Failed: Runtime accepted a numeric type rejected by its public JSON Schema
+
+..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r26_probes\role13\test_default_contract.py:39: Failed</failure></testcase><testcase classname="test_default_contract" name="test_json_numeric_types_agree_with_schema[columns-&quot;2&quot;]" time="0.003"><failure message="Failed: Runtime accepted a numeric type rejected by its public JSON Schema">field = 'columns', literal = '"2"'
+
+    @pytest.mark.parametrize(
+        ("field", "literal"),
+        [
+            ("version", '"1"'), ("version", "true"),
+            ("columns", '"2"'), ("columns", "true"),
+            ("width", '"900"'), ("width", "true"),
+            ("height", '"520"'), ("height", "true"),
+            ("max_points", '"2000"'), ("max_points", "true"),
+        ],
+    )
+    def test_json_numeric_types_agree_with_schema(field, literal):
+        wire = '{"' + field + '":' + literal + "}"
+        value = json.loads(wire)
+        assert not SCHEMA.is_valid(value), "Independent schema must reject this type"
+        try:
+            model = ChartSpec.model_validate_json(wire)
+        except ValidationError:
+            OBSERVATIONS.append({"wire": wire, "schema_accepts": False, "model_accepts": False})
+            return
+        OBSERVATIONS.append({
+            "wire": wire, "schema_accepts": False, "model_accepts": True,
+            "coerced_value": getattr(model, field),
+        })
+&gt;       pytest.fail("Runtime accepted a numeric type rejected by its public JSON Schema")
+E       Failed: Runtime accepted a numeric type rejected by its public JSON Schema
+
+..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r26_probes\role13\test_default_contract.py:39: Failed</failure></testcase><testcase classname="test_default_contract" name="test_json_numeric_types_agree_with_schema[columns-true]" time="0.002"><failure message="Failed: Runtime accepted a numeric type rejected by its public JSON Schema">field = 'columns', literal = 'true'
+
+    @pytest.mark.parametrize(
+        ("field", "literal"),
+        [
+            ("version", '"1"'), ("version", "true"),
+            ("columns", '"2"'), ("columns", "true"),
+            ("width", '"900"'), ("width", "true"),
+            ("height", '"520"'), ("height", "true"),
+            ("max_points", '"2000"'), ("max_points", "true"),
+        ],
+    )
+    def test_json_numeric_types_agree_with_schema(field, literal):
+        wire = '{"' + field + '":' + literal + "}"
+        value = json.loads(wire)
+        assert not SCHEMA.is_valid(value), "Independent schema must reject this type"
+        try:
+            model = ChartSpec.model_validate_json(wire)
+        except ValidationError:
+            OBSERVATIONS.append({"wire": wire, "schema_accepts": False, "model_accepts": False})
+            return
+        OBSERVATIONS.append({
+            "wire": wire, "schema_accepts": False, "model_accepts": True,
+            "coerced_value": getattr(model, field),
+        })
+&gt;       pytest.fail("Runtime accepted a numeric type rejected by its public JSON Schema")
+E       Failed: Runtime accepted a numeric type rejected by its public JSON Schema
+
+..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r26_probes\role13\test_default_contract.py:39: Failed</failure></testcase><testcase classname="test_default_contract" name="test_json_numeric_types_agree_with_schema[width-&quot;900&quot;]" time="0.002"><failure message="Failed: Runtime accepted a numeric type rejected by its public JSON Schema">field = 'width', literal = '"900"'
+
+    @pytest.mark.parametrize(
+        ("field", "literal"),
+        [
+            ("version", '"1"'), ("version", "true"),
+            ("columns", '"2"'), ("columns", "true"),
+            ("width", '"900"'), ("width", "true"),
+            ("height", '"520"'), ("height", "true"),
+            ("max_points", '"2000"'), ("max_points", "true"),
+        ],
+    )
+    def test_json_numeric_types_agree_with_schema(field, literal):
+        wire = '{"' + field + '":' + literal + "}"
+        value = json.loads(wire)
+        assert not SCHEMA.is_valid(value), "Independent schema must reject this type"
+        try:
+            model = ChartSpec.model_validate_json(wire)
+        except ValidationError:
+            OBSERVATIONS.append({"wire": wire, "schema_accepts": False, "model_accepts": False})
+            return
+        OBSERVATIONS.append({
+            "wire": wire, "schema_accepts": False, "model_accepts": True,
+            "coerced_value": getattr(model, field),
+        })
+&gt;       pytest.fail("Runtime accepted a numeric type rejected by its public JSON Schema")
+E       Failed: Runtime accepted a numeric type rejected by its public JSON Schema
+
+..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r26_probes\role13\test_default_contract.py:39: Failed</failure></testcase><testcase classname="test_default_contract" name="test_json_numeric_types_agree_with_schema[width-true]" time="0.002" /><testcase classname="test_default_contract" name="test_json_numeric_types_agree_with_schema[height-&quot;520&quot;]" time="0.002"><failure message="Failed: Runtime accepted a numeric type rejected by its public JSON Schema">field = 'height', literal = '"520"'
+
+    @pytest.mark.parametrize(
+        ("field", "literal"),
+        [
+            ("version", '"1"'), ("version", "true"),
+            ("columns", '"2"'), ("columns", "true"),
+            ("width", '"900"'), ("width", "true"),
+            ("height", '"520"'), ("height", "true"),
+            ("max_points", '"2000"'), ("max_points", "true"),
+        ],
+    )
+    def test_json_numeric_types_agree_with_schema(field, literal):
+        wire = '{"' + field + '":' + literal + "}"
+        value = json.loads(wire)
+        assert not SCHEMA.is_valid(value), "Independent schema must reject this type"
+        try:
+            model = ChartSpec.model_validate_json(wire)
+        except ValidationError:
+            OBSERVATIONS.append({"wire": wire, "schema_accepts": False, "model_accepts": False})
+            return
+        OBSERVATIONS.append({
+            "wire": wire, "schema_accepts": False, "model_accepts": True,
+            "coerced_value": getattr(model, field),
+        })
+&gt;       pytest.fail("Runtime accepted a numeric type rejected by its public JSON Schema")
+E       Failed: Runtime accepted a numeric type rejected by its public JSON Schema
+
+..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r26_probes\role13\test_default_contract.py:39: Failed</failure></testcase><testcase classname="test_default_contract" name="test_json_numeric_types_agree_with_schema[height-true]" time="0.001" /><testcase classname="test_default_contract" name="test_json_numeric_types_agree_with_schema[max_points-&quot;2000&quot;]" time="0.001"><failure message="Failed: Runtime accepted a numeric type rejected by its public JSON Schema">field = 'max_points', literal = '"2000"'
+
+    @pytest.mark.parametrize(
+        ("field", "literal"),
+        [
+            ("version", '"1"'), ("version", "true"),
+            ("columns", '"2"'), ("columns", "true"),
+            ("width", '"900"'), ("width", "true"),
+            ("height", '"520"'), ("height", "true"),
+            ("max_points", '"2000"'), ("max_points", "true"),
+        ],
+    )
+    def test_json_numeric_types_agree_with_schema(field, literal):
+        wire = '{"' + field + '":' + literal + "}"
+        value = json.loads(wire)
+        assert not SCHEMA.is_valid(value), "Independent schema must reject this type"
+        try:
+            model = ChartSpec.model_validate_json(wire)
+        except ValidationError:
+            OBSERVATIONS.append({"wire": wire, "schema_accepts": False, "model_accepts": False})
+            return
+        OBSERVATIONS.append({
+            "wire": wire, "schema_accepts": False, "model_accepts": True,
+            "coerced_value": getattr(model, field),
+        })
+&gt;       pytest.fail("Runtime accepted a numeric type rejected by its public JSON Schema")
+E       Failed: Runtime accepted a numeric type rejected by its public JSON Schema
+
+..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r26_probes\role13\test_default_contract.py:39: Failed</failure></testcase><testcase classname="test_default_contract" name="test_json_numeric_types_agree_with_schema[max_points-true]" time="0.002" /><testcase classname="test_default_contract" name="test_integral_json_numbers_stay_supported[version-1.0]" time="0.003" /><testcase classname="test_default_contract" name="test_integral_json_numbers_stay_supported[columns-2.0]" time="0.004" /><testcase classname="test_default_contract" name="test_integral_json_numbers_stay_supported[width-900.0]" time="0.002" /><testcase classname="test_default_contract" name="test_integral_json_numbers_stay_supported[height-520.0]" time="0.002" /><testcase classname="test_default_contract" name="test_integral_json_numbers_stay_supported[max_points-2000.0]" time="0.002" /><testcase classname="test_default_contract" name="test_numeric_bounds_are_enforced[columns-1-6]" time="0.002" /><testcase classname="test_default_contract" name="test_numeric_bounds_are_enforced[width-240-4096]" time="0.002" /><testcase classname="test_default_contract" name="test_numeric_bounds_are_enforced[height-200-4096]" time="0.003" /><testcase classname="test_default_contract" name="test_numeric_bounds_are_enforced[max_points-10-100000]" time="0.002" /><testcase classname="test_default_contract" name="test_defaults_and_unicode_literal_roundtrip" time="0.002" /><testcase classname="test_default_contract" name="test_extra_executable_configuration_is_not_admitted" time="0.001" /><testcase classname="test_default_contract" name="test_valid_dashboard_public_model" time="0.002" /><testcase classname="test_default_contract" name="test_invalid_dashboard_composition_is_rejected[{&quot;kind&quot;:&quot;dashboard&quot;,&quot;charts&quot;:[]}]" time="0.002" /><testcase classname="test_default_contract" name="test_invalid_dashboard_composition_is_rejected[{&quot;kind&quot;:&quot;bar&quot;,&quot;charts&quot;:[{&quot;kind&quot;:&quot;line&quot;}]}]" time="0.001" /><testcase classname="test_default_contract" name="test_invalid_dashboard_composition_is_rejected[{&quot;kind&quot;:&quot;dashboard&quot;,&quot;charts&quot;:[{&quot;kind&quot;:&quot;dashboard&quot;,&quot;charts&quot;:[{}]}]}]" time="0.001" /><testcase classname="test_default_contract" name="test_normalized_data_warning_lists_are_not_shared" time="0.001" /><testcase classname="test_default_contract" name="test_artifact_public_dict_preserves_counts_and_copies_lists" time="0.001" /><testcase classname="test_default_contract" name="test_default_identity_guard_rejects_wrong_provenance[sha]" time="0.120" /><testcase classname="test_default_contract" name="test_default_identity_guard_rejects_wrong_provenance[hash]" time="0.112" /><testcase classname="test_default_contract" name="test_default_identity_guard_rejects_wrong_provenance[origin]" time="0.108" /></testsuite></testsuites>

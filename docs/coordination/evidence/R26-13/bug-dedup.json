@@ -1,0 +1,527 @@
+{
+  "observed_utc": "2026-11-27T15:59:05.602123+00:00",
+  "tested_default_sha": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "purpose": "One post-test targeted duplicate review, not default/CI/job polling",
+  "identity": "sandeshbagmare",
+  "repository": "sandeshbagmare/deepviz-agent-toolkit",
+  "complete_open_inventory": true,
+  "complete_relevant_comment_pagination": true,
+  "open_issues": 35,
+  "pr_entries": 2,
+  "issue_titles": [
+    {
+      "number": 1,
+      "title": "[Epic] Shared contracts and loss-aware bounded ingestion"
+    },
+    {
+      "number": 2,
+      "title": "[Epic] Five renderer alternatives and interoperable browser artifacts"
+    },
+    {
+      "number": 3,
+      "title": "[Epic] Deep Agents and stdio MCP visualization workflows"
+    },
+    {
+      "number": 4,
+      "title": "[Epic] Secure, measurable and independently evidenced release readiness"
+    },
+    {
+      "number": 5,
+      "title": "Version and validate the shared ChartSpec and artifact contracts"
+    },
+    {
+      "number": 6,
+      "title": "Normalize records, columns and delimited/line-oriented inputs deterministically"
+    },
+    {
+      "number": 7,
+      "title": "Normalize nested JSON and GraphQL edges/nodes without dropping pages"
+    },
+    {
+      "number": 8,
+      "title": "Reduce large streams before bounded record materialization"
+    },
+    {
+      "number": 9,
+      "title": "Render real Matplotlib static artifacts from the shared contract"
+    },
+    {
+      "number": 10,
+      "title": "Render interactive Plotly artifacts with explicit runtime requirements"
+    },
+    {
+      "number": 11,
+      "title": "Render validated Vega-Lite specifications and real artifacts"
+    },
+    {
+      "number": 12,
+      "title": "Render safe ECharts options and browser artifacts"
+    },
+    {
+      "number": 13,
+      "title": "Render real AntV G2 specifications and browser artifacts"
+    },
+    {
+      "number": 14,
+      "title": "Validate shared schema fixtures and bounded normalization in TypeScript"
+    },
+    {
+      "number": 15,
+      "title": "Build safe browser engine artifacts and composed dashboards in TypeScript"
+    },
+    {
+      "number": 16,
+      "title": "Expose five real Deep Agents visualization tools with safe artifacts"
+    },
+    {
+      "number": 17,
+      "title": "Serve visualization tools over a real stdio MCP session"
+    },
+    {
+      "number": 18,
+      "title": "Version safe chart-selection prompts and runnable agent examples"
+    },
+    {
+      "number": 19,
+      "title": "Ground architecture and competitor research in dated official sources"
+    },
+    {
+      "number": 20,
+      "title": "Gate Python and TypeScript changes with real lint, type, test and build CI"
+    },
+    {
+      "number": 21,
+      "title": "Prove untrusted specs, HTML values and filesystem paths stay within safe boundaries"
+    },
+    {
+      "number": 22,
+      "title": "Measure 10 through 10M input rows on the bounded streaming path"
+    },
+    {
+      "number": 23,
+      "title": "Inspect real renderer outputs and commit reproducible visual evidence"
+    },
+    {
+      "number": 24,
+      "title": "Build and clean-install Python wheel/sdist with real entrypoint smoke tests"
+    },
+    {
+      "number": 25,
+      "title": "Build and clean-install the npm tarball with usable types and exports"
+    },
+    {
+      "number": 26,
+      "title": "Enforce evidence-bearing PRs with two reviewer and two tester reports"
+    },
+    {
+      "number": 27,
+      "title": "Publish a traceable backlog, evidence policy and honest completion tracker"
+    },
+    {
+      "number": 28,
+      "title": "[Blocker] 900 genuinely resolved issues are not presently evidenced; bulk API limits constrain seeding"
+    },
+    {
+      "number": 29,
+      "title": "[Constraint/workaround] Preserve independent agent-report provenance without GitHub self-approval"
+    },
+    {
+      "number": 30,
+      "title": "Bug: Python chart schema coerces strings and booleans unlike JSON Schema"
+    },
+    {
+      "number": 32,
+      "title": "Bug: native SVG category labels overlap at valid 240px width"
+    },
+    {
+      "number": 34,
+      "title": "Bug: GraphQL error-only pages become data rows in TypeScript arrays and JSON"
+    },
+    {
+      "number": 35,
+      "title": "Bug: synchronous browser initialization loses readiness Promise and error channel"
+    },
+    {
+      "number": 36,
+      "title": "Bug: Plotly data labels, legend and hover become active links instead of literal text"
+    },
+    {
+      "number": 37,
+      "title": "Bug: native SVG finite signed range overflows into zero/NaN bar geometry"
+    }
+  ],
+  "relevance_regex": "schema|coerc|numeric.{0,20}(?:type|string|bool)|contract|pydantic",
+  "relevant_full_bodies_comments": [
+    {
+      "number": 1,
+      "title": "[Epic] Shared contracts and loss-aware bounded ingestion",
+      "body": "<!-- deepviz-key: EPIC-FOUNDATION -->\n# EPIC-FOUNDATION\n\n## Outcome\nEvery engine receives the same validated, bounded records and truthful reduction metadata.\n\n## Coordination\n- Suggested owner lane: core agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n\n## Acceptance criteria\n- [ ] CONTRACT, INPUT-FORMATS, INPUT-GRAPHQL and STREAMING are independently verified and closed with evidence.\n- [ ] Versioned schema, Python public API and documented normalization semantics agree.\n- [ ] Raw streams are not fully materialized before reduction; lossy decisions are surfaced.\n\n## Required evidence\n- Linked child PRs and schema/fixture test reports\n- Scale and edge-case results at exact reviewed commits\n\n## Child work\n- [ ] #5 - CONTRACT: Version and validate the shared ChartSpec and artifact contracts\n- [ ] #6 - INPUT-FORMATS: Normalize records, columns and delimited/line-oriented inputs deterministically\n- [ ] #7 - INPUT-GRAPHQL: Normalize nested JSON and GraphQL edges/nodes without dropping pages\n- [ ] #8 - STREAMING: Reduce large streams before bounded record materialization\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/1",
+      "state": "open",
+      "updated_at": "2026-11-26T17:58:28Z",
+      "comments": []
+    },
+    {
+      "number": 2,
+      "title": "[Epic] Five renderer alternatives and interoperable browser artifacts",
+      "body": "<!-- deepviz-key: EPIC-VISUALIZATION -->\n# EPIC-VISUALIZATION\n\n## Outcome\nUsers can choose Matplotlib, Plotly, Vega-Lite, ECharts or AntV G2 against one mapped/reduced dataset.\n\n## Coordination\n- Suggested owner lane: rendering and TypeScript agents (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n\n## Acceptance criteria\n- [ ] All five renderer stories and both TypeScript stories have verified acceptance evidence.\n- [ ] Unsupported kind/engine combinations fail explicitly instead of silently changing meaning.\n- [ ] Committed SVG/PNG/screenshots demonstrate the actual generated artifacts and dashboard behavior.\n\n## Required evidence\n- Cross-engine parity report\n- Inspected output artifacts and browser test report\n\n## Child work\n- [ ] #9 - RENDER-MPL: Render real Matplotlib static artifacts from the shared contract\n- [ ] #10 - RENDER-PLOTLY: Render interactive Plotly artifacts with explicit runtime requirements\n- [ ] #11 - RENDER-VEGA: Render validated Vega-Lite specifications and real artifacts\n- [ ] #12 - RENDER-ECHARTS: Render safe ECharts options and browser artifacts\n- [ ] #13 - RENDER-ANTV: Render real AntV G2 specifications and browser artifacts\n- [ ] #14 - TS-CONTRACT: Validate shared schema fixtures and bounded normalization in TypeScript\n- [ ] #15 - TS-BROWSER: Build safe browser engine artifacts and composed dashboards in TypeScript\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/2",
+      "state": "open",
+      "updated_at": "2026-11-26T17:58:31Z",
+      "comments": []
+    },
+    {
+      "number": 5,
+      "title": "Version and validate the shared ChartSpec and artifact contracts",
+      "body": "<!-- deepviz-key: CONTRACT -->\n# CONTRACT\n\n## Outcome\nPython, TypeScript and integrations share one explicit schema and metadata contract.\n\n## Coordination\n- Suggested owner lane: core agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #1 (EPIC-FOUNDATION).\n\n## Acceptance criteria\n- [ ] Commit schema version 1 and positive/negative fixtures for declared kinds, mappings, nested charts and bounds.\n- [ ] Pydantic models and JSON Schema agree on required fields, defaults and invalid values.\n- [ ] NormalizedData and Artifact expose input/output counts, strategy, warnings and safe filesystem paths.\n- [ ] Public names/signatures match the design or carry an explicit documented decision.\n\n## Required evidence\n- Schema validation tests and exact test command\n- Fixture parity report\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/5",
+      "state": "open",
+      "updated_at": "2026-11-26T17:56:50Z",
+      "comments": []
+    },
+    {
+      "number": 6,
+      "title": "Normalize records, columns and delimited/line-oriented inputs deterministically",
+      "body": "<!-- deepviz-key: INPUT-FORMATS -->\n# INPUT-FORMATS\n\n## Outcome\nA caller can normalize ordinary tabular and streaming file shapes without silent row loss.\n\n## Coordination\n- Suggested owner lane: core agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #1 (EPIC-FOUNDATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Cover records, column-oriented inputs, CSV, TSV, JSONL and explicit path/mapping selection with fixtures.\n- [ ] Define deterministic treatment of nulls, missing keys, mixed values, NaN and infinity.\n- [ ] Malformed rows and missing mapping fields produce actionable errors or counted warnings, not silent omission.\n- [ ] Optional Arrow/Parquet behavior is tested or explicitly documented as unavailable with dependency guidance.\n\n## Required evidence\n- Fixture-based normalization tests including malformed and empty inputs\n- Input/output count assertions\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/6",
+      "state": "open",
+      "updated_at": "2026-11-26T17:56:53Z",
+      "comments": []
+    },
+    {
+      "number": 7,
+      "title": "Normalize nested JSON and GraphQL edges/nodes without dropping pages",
+      "body": "<!-- deepviz-key: INPUT-GRAPHQL -->\n# INPUT-GRAPHQL\n\n## Outcome\nNested and paginated API results become explicit records using documented mapping rules.\n\n## Coordination\n- Suggested owner lane: core agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #1 (EPIC-FOUNDATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Fixtures cover GraphQL edges/node, nodes arrays, multiple pages and nested array/path selection.\n- [ ] Flattening rules for colliding keys and nested arrays are deterministic and documented.\n- [ ] Hierarchy and geographic record adapters have explicit accepted shapes and mapping failures.\n- [ ] Tests prove all selected pages contribute to input counts and no arbitrary remote URL is fetched.\n\n## Required evidence\n- Nested/pagination fixtures and assertions\n- Documented mapping examples\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/7",
+      "state": "open",
+      "updated_at": "2026-11-26T17:56:57Z",
+      "comments": []
+    },
+    {
+      "number": 8,
+      "title": "Reduce large streams before bounded record materialization",
+      "body": "<!-- deepviz-key: STREAMING -->\n# STREAMING\n\n## Outcome\nLarge inputs have bounded renderer payloads with disclosed sampling and aggregation semantics.\n\n## Coordination\n- Suggested owner lane: core agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #1 (EPIC-FOUNDATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] An iterator/JSONL path reduces records before creating the bounded renderer list.\n- [ ] Requested aggregation and max_points are honored with deterministic strategy metadata.\n- [ ] Counts reflect original inputs and retained/reduced outputs; warnings disclose lossy choices.\n- [ ] Tests detect accidental list/materialization of an unbounded stream and cover empty/invalid bounds.\n\n## Required evidence\n- Streaming regression tests\n- Memory/time benchmark linked from SCALE\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/8",
+      "state": "open",
+      "updated_at": "2026-11-26T17:57:01Z",
+      "comments": []
+    },
+    {
+      "number": 9,
+      "title": "Render real Matplotlib static artifacts from the shared contract",
+      "body": "<!-- deepviz-key: RENDER-MPL -->\n# RENDER-MPL\n\n## Outcome\nUsers obtain readable static images without browser runtime requirements.\n\n## Coordination\n- Suggested owner lane: rendering agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Supported chart kinds produce actual nonempty PNG/SVG artifacts from bounded normalized records.\n- [ ] Mapped fields, titles, units, category ordering and reduction metadata remain truthful.\n- [ ] Themes and labels remain readable; unsupported kinds and missing fields fail explicitly.\n- [ ] At least one composed/example artifact is opened and inspected; dependencies are disclosed.\n\n## Required evidence\n- Renderer unit/integration tests\n- Committed inspected PNG/SVG and dimensions\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/9",
+      "state": "open",
+      "updated_at": "2026-11-26T17:57:06Z",
+      "comments": []
+    },
+    {
+      "number": 10,
+      "title": "Render interactive Plotly artifacts with explicit runtime requirements",
+      "body": "<!-- deepviz-key: RENDER-PLOTLY -->\n# RENDER-PLOTLY\n\n## Outcome\nUsers can inspect Plotly charts with the same mappings and reductions as other engines.\n\n## Coordination\n- Suggested owner lane: rendering agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Supported kinds generate actual Plotly figures and usable HTML artifacts.\n- [ ] Shared fixtures assert series, axes and values, including category and missing-value handling.\n- [ ] Remote or bundled runtime dependencies and any static-export extras are documented.\n- [ ] Untrusted strings cannot execute in the output; an actual browser artifact is inspected.\n\n## Required evidence\n- Plotly structure/security tests\n- Committed browser screenshot and HTML fixture\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/10",
+      "state": "open",
+      "updated_at": "2026-11-26T17:57:10Z",
+      "comments": []
+    },
+    {
+      "number": 11,
+      "title": "Render validated Vega-Lite specifications and real artifacts",
+      "body": "<!-- deepviz-key: RENDER-VEGA -->\n# RENDER-VEGA\n\n## Outcome\nA declarative Vega-Lite adapter preserves the shared schema semantics.\n\n## Coordination\n- Suggested owner lane: rendering agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Supported kinds emit valid Vega-Lite encodings and actual renderable output.\n- [ ] Data values and types match shared fixtures; unsupported combinations fail explicitly.\n- [ ] Optional vl-convert/runtime requirements and offline behavior are documented.\n- [ ] Inspect and commit at least one real SVG/PNG or browser screenshot, not a hand-drawn stand-in.\n\n## Required evidence\n- Spec validation/render tests\n- Committed inspected render artifact\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/11",
+      "state": "open",
+      "updated_at": "2026-11-26T17:57:14Z",
+      "comments": []
+    },
+    {
+      "number": 12,
+      "title": "Render safe ECharts options and browser artifacts",
+      "body": "<!-- deepviz-key: RENDER-ECHARTS -->\n# RENDER-ECHARTS\n\n## Outcome\nUsers can choose ECharts without changing data normalization or mapping semantics.\n\n## Coordination\n- Suggested owner lane: rendering agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Supported kinds emit actual ECharts options and executable browser artifacts using the legitimate runtime.\n- [ ] Fixture assertions verify series data, legends, axes and dashboard/composition behavior where supported.\n- [ ] No model-authored JavaScript callback/eval path is accepted; runtime loading is explicit.\n- [ ] Browser checks report console failures and include a committed inspected screenshot.\n\n## Required evidence\n- Option parity/security tests\n- Browser test report and screenshot\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/12",
+      "state": "open",
+      "updated_at": "2026-11-26T17:57:18Z",
+      "comments": []
+    },
+    {
+      "number": 13,
+      "title": "Render real AntV G2 specifications and browser artifacts",
+      "body": "<!-- deepviz-key: RENDER-ANTV -->\n# RENDER-ANTV\n\n## Outcome\nAntV G2 is a genuine fifth renderer rather than a renamed fallback engine.\n\n## Coordination\n- Suggested owner lane: rendering agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Supported kinds produce valid G2 specifications and load the actual G2 runtime.\n- [ ] Mappings, reduced values and metadata match shared fixtures and other adapters.\n- [ ] Unsupported kinds and unavailable runtime dependencies are explicit; no fake visual fallback is used.\n- [ ] An actual browser render is tested, inspected and committed as a screenshot.\n\n## Required evidence\n- G2 spec/semantic tests\n- Browser execution report and screenshot\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/13",
+      "state": "open",
+      "updated_at": "2026-11-26T17:57:22Z",
+      "comments": []
+    },
+    {
+      "number": 14,
+      "title": "Validate shared schema fixtures and bounded normalization in TypeScript",
+      "body": "<!-- deepviz-key: TS-CONTRACT -->\n# TS-CONTRACT\n\n## Outcome\nThe npm interface rejects invalid inputs consistently with the Python contract.\n\n## Coordination\n- Suggested owner lane: TypeScript agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Use the same versioned schema and shared positive/negative fixtures as Python.\n- [ ] Implement and test documented bounded normalization with truthful counts/warnings/strategy.\n- [ ] Strict TypeScript checking and unit tests cover mapping, invalid kinds and unsupported values.\n- [ ] Differences from Python semantics are explicit and tested rather than accidental.\n\n## Required evidence\n- Typecheck and unit-test commands\n- Cross-language fixture parity report\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/14",
+      "state": "open",
+      "updated_at": "2026-11-26T17:57:26Z",
+      "comments": []
+    },
+    {
+      "number": 15,
+      "title": "Build safe browser engine artifacts and composed dashboards in TypeScript",
+      "body": "<!-- deepviz-key: TS-BROWSER -->\n# TS-BROWSER\n\n## Outcome\nJavaScript callers can generate browser charts and dashboards from the shared spec.\n\n## Coordination\n- Suggested owner lane: TypeScript agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #14 (TS-CONTRACT).\n\n## Acceptance criteria\n- [ ] Document and test actual engine support rather than implying all Python-only exports exist in the browser.\n- [ ] Dashboard composition preserves per-chart titles, mappings and bounded datasets.\n- [ ] HTML serialization escapes untrusted titles/data and rejects executable configuration.\n- [ ] An installed/built package generates an inspected browser artifact and committed screenshot.\n\n## Required evidence\n- Browser/spec unit tests and HTML security tests\n- Build smoke test and screenshot\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/15",
+      "state": "open",
+      "updated_at": "2026-11-26T17:57:29Z",
+      "comments": []
+    },
+    {
+      "number": 16,
+      "title": "Expose five real Deep Agents visualization tools with safe artifacts",
+      "body": "<!-- deepviz-key: TOOLS -->\n# TOOLS\n\n## Outcome\nA Deep Agent attaches actual structured tools and receives artifact metadata rather than arbitrary code execution.\n\n## Coordination\n- Suggested owner lane: integrations agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #3 (EPIC-INTEGRATIONS).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] create_tools(output_dir) returns five renderer tools using real compatible integration APIs.\n- [ ] Tool schemas validate ChartSpec inputs and surface render/normalization errors predictably.\n- [ ] Safe output directories, bounded metadata and renderer/dependency errors are tested.\n- [ ] A real attachment and multi-tool invocation flow is demonstrated; mocks alone do not satisfy acceptance.\n\n## Required evidence\n- Integration command and package versions\n- Tool discovery/invocation transcript\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/16",
+      "state": "open",
+      "updated_at": "2026-11-26T17:57:33Z",
+      "comments": []
+    },
+    {
+      "number": 18,
+      "title": "Version safe chart-selection prompts and runnable agent examples",
+      "body": "<!-- deepviz-key: PROMPTS -->\n# PROMPTS\n\n## Outcome\nUsers see reproducible workflows that choose charts, reduce inputs and explain limitations.\n\n## Coordination\n- Suggested owner lane: integrations agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #3 (EPIC-INTEGRATIONS).\n- Depends on: #16 (TOOLS).\n\n## Acceptance criteria\n- [ ] Commit prompts/v1 and runnable examples for normalization, chart selection and multi-tool workflow.\n- [ ] Prompts forbid arbitrary code/URL execution and require disclosure of lossy reduction.\n- [ ] Examples use the actual tool schemas and declare credentials, optional extras or network needs.\n- [ ] Document chart-choice rationale, artifact paths and a failure/recovery example.\n\n## Required evidence\n- Executed examples or explicit unavailable-prerequisite notes\n- Prompt/version documentation review\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/18",
+      "state": "open",
+      "updated_at": "2026-11-26T17:57:41Z",
+      "comments": []
+    },
+    {
+      "number": 20,
+      "title": "Gate Python and TypeScript changes with real lint, type, test and build CI",
+      "body": "<!-- deepviz-key: CI -->\n# CI\n\n## Outcome\nRemote PR checks run the same meaningful verification documented locally.\n\n## Coordination\n- Suggested owner lane: parent/core and TypeScript owners (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #4 (EPIC-DELIVERY).\n\n## Acceptance criteria\n- [ ] Workflow runs Python lint/type/unit/integration and TypeScript type/test/build/package checks as applicable.\n- [ ] Visual/security/scale smoke checks are explicit; expensive full benchmarks have a documented invocation.\n- [ ] Use minimal workflow permissions and no committed secrets; optional dependency failures are visible.\n- [ ] A remote workflow run on the proposed commit is recorded, or its real blocker stays open.\n\n## Required evidence\n- Workflow file and remote run URL/status\n- Local-to-CI command mapping\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/20",
+      "state": "open",
+      "updated_at": "2026-11-27T15:09:27Z",
+      "comments": [
+        {
+          "id": 7221697848,
+          "body": "<!-- deepviz-r22-ci-45928608970 -->\n## Evidence-backed CI triage \u2014 audited run, not current-head approval\n\nAgent QA/backlog-manager comment under the R22 assignment. **Keep #20 open.** This is not a human approval, a source fix, or a claim that the current candidate passes.\n\n### Observed failure and source\n\n[Verification run 45928608970, attempt 1](https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970) completed **failure** for head `5340bc69b7203ad7a9166543062482d819f9b705`. The checkout was PR merge `aa66ea97c1184554613d14e873e4cc34e54453b0`; official commit/compare GETs confirmed its entire tree equals the head tree (`7aecbc5f4e8a105d296b413d7c70c662ce54794f`, no changed files).\n\n| Python | Unit failures / passes | Unit skip / deselected | Integration |\n| --- | --- | --- | --- |\n| 3.11 | **38 / 2456** | 1 / 550 | **SKIPPED** |\n| 3.12 | **36 / 2458** | 1 / 550 | **SKIPPED** |\n| 3.13 | **240 / 2254** | 1 / 550 | **SKIPPED** |\n\nAll three first fail step 11, **Unit and contract tests**, with `test_backend_antv.py:201`: expected dashboard payload types `[interval, line, interval]`, actual middle type **`view`**. The native implementation deliberately contains line + point children in that view; the preceding unique-container/manifest assertions passed, but the later child-value assertion was not reached. Unit process exit was **1**. Lint/types/schema/CI-negative-control steps succeeded; eight other jobs succeeded. Neither those successes nor the **51 + 27 evidence-integrity checks** constitute full-product green CI. The unit skip's reason is not established by these logs.\n\n### Seven disposition groups \u2014 existing issues, not new tickets\n\n**314 failure instances / 242 distinct node IDs** collapse into the seven groups below. These are triage groups, not seven completed fixes or proven independent root causes. Counts are Python **3.11 / 3.12 / 3.13**.\n\n| Group; counts; existing scope | Owner/dependency and strict minimum acceptance |\n| --- | --- |\n| AntV view-wrapper oracle; **1/1/1**; #13, #23 | R04 owns the existing-oracle decision/integration; role08's released `_antv` production scope remains exclusive. Validate three unique containers, nested line + point marks and exact independent child values; retain wrong-ID/wrong-value controls. Do not flatten correct marks merely to satisfy an old shape assertion. |\n| Deep JSON recursion boundary; **2/0/0**; #16, #17, #21 | Eligible role18 only after its prior checkpoint/eligibility; role10 remains an independent tester. Both 1500-level inline Python JSON and JSON text must reject with actionable `ValueError` (`deep`/`nest`), not leaked `RecursionError`, on 3.11\u20133.13. Preserve valid Unicode, handles/files, raw-byte, duplicate-key and stdio recovery controls. No global recursion-limit workaround. |\n| N17 serialization-order observation; **1/1/1**; #21, #22 | R04 render/budget policy. The old observation expects an invalid wide row to serialize before rejection; actual capture is empty. Establish correct pre-serialization rejection and cleanup with a valid-small-row positive control before changing the oracle. Never widen budgets or remove the early guard to make that observation pass. |\n| Vega standalone-child title scope; **10/10/10**; #11, #23 | R04 existing-matrix decision; role17's independent title-scope controls. Pair child specs/records strictly; check each child title in its own compiled output and parent + both child titles in the complete SVG, with real marks. Keep wrong-child, metadata-only, script/event and missing-title negatives. |\n| ECharts numeric line/area x oracle; **20/20/20**; #12, #23 | R04 existing-matrix decision; role03's independent controls. Require exact numeric values/types/counts and nonuniform `1,2,10` spacing; retain categorical-bar/string/time controls and browser geometry/console checks. Do not stringify both sides to hide a mismatch. |\n| Field-name envelope policy; **4/4/4**; #5, #14, #22 | R04 decides/documents the language-specific policy; role04 independently tests it; normalizer production remains exclusive. The old 64 KiB key positives hit Python's 4 KiB name guard. If that policy is retained, adjust only key-boundary expectations; preserve 64 KiB **cell** limits, multibyte/flattening, early-consumption/state/memory negatives. No blind source-limit widening. |\n| Python 3.13 SVG comment-title portability; **0/0/204**; #9, #23 | R04 existing SVG/N09-oracle policy plus independent portable-parser/visual QA. This includes **4 synthetic valid-comment positives failing before mutation**, 14 gallery cases and 186 matrix/text/stream cases. Reproduce portable comment/text extraction on 3.11\u20133.13, retain title/geometry and missing/altered/script/event negatives, and inspect actual SVG/PNG. No 3.13 skip, manifest-only title acceptance or undiagnosed dependency pin. The underlying CPython mechanism was not locally reproduced by this PM. |\n\n### Acceptance checklist for the manager\n\n- [ ] Disposition each group against its existing issue and current exclusive source owner; preserve original RED evidence and use strict positive/negative controls for any justified oracle/policy correction. Respect the retained allocation/security work and role18 eligibility; do not give production work to tester09/10.\n- [ ] On the **actual proposed integrated head**, run all relevant Python 3.11\u20133.13 unit **and integration** gates, schema/lint/types, applicable npm build/type/test/package and visual/security/streaming checks. An integration step skipped after unit failure is not a pass. Record exact commands, totals/skips, source and new remote run/check URLs.\n- [ ] For the planned focused #30 contract slice, name its real contract-only check scope; do not label a filtered slice full-toolkit verification. Require two genuine independent reviewer-agent reports and two tester-agent reports at the actual focused head, output/correctness evidence where applicable, and observed required checks before R04 merges to `main`.\n- [ ] Close only the acceptance scope actually proven after the manager verifies merge/default ancestry and evidence. Do not close this broad CI issue on branch existence, partial passes or the old run.\n\nPublished evidence: [full disposition](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/37a27cdfbb0d500cc4e2642bb403d68a145fbb21/docs/coordination/reports/R15-19-ci-failure-disposition.md), [exact classified failures and acceptance](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/b9534eab21fa13a37cb8f383b6691596355ef2b1/docs/coordination/evidence/R15-19/classified-failures-and-acceptance.json), [actual publication receipt](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/37a27cdfbb0d500cc4e2642bb403d68a145fbb21/docs/coordination/evidence/R15-19/publication-receipt.json).\n\n**Limits:** this PM did not test later `7bcfb2d` or `6c72cec`, create a focused PR, rerun tests/log downloads, or verify a newer CI result. PR31's draft status is a dated observation, not a fresh PR query. QA12's density bug and QA20's Plotly literal-text bug remain their exclusive filing scopes; this comment creates neither. The 900 genuinely created **and resolved** issue goal remains unmet; test cases are not tickets.\n",
+          "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/20#issuecomment-7221697848"
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "title": "Build and clean-install Python wheel/sdist with real entrypoint smoke tests",
+      "body": "<!-- deepviz-key: PY-PACKAGE -->\n# PY-PACKAGE\n\n## Outcome\nThe Python distribution works outside the source checkout with honest optional-extra requirements.\n\n## Coordination\n- Suggested owner lane: parent/core and integrations owners (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #4 (EPIC-DELIVERY).\n\n## Acceptance criteria\n- [ ] Build wheel and sdist; inspect metadata, included schemas/prompts and declared extras.\n- [ ] Install from built artifacts in a clean environment and import the public API.\n- [ ] Smoke-test a real render and available CLI/MCP entrypoints from the installed package.\n- [ ] Record versions, commands and limitations; do not publish to a public registry without authorization.\n\n## Required evidence\n- Build and clean-install logs\n- Installed artifact/entrypoint smoke results\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/24",
+      "state": "open",
+      "updated_at": "2026-11-26T17:58:04Z",
+      "comments": []
+    },
+    {
+      "number": 25,
+      "title": "Build and clean-install the npm tarball with usable types and exports",
+      "body": "<!-- deepviz-key: NPM-PACKAGE -->\n# NPM-PACKAGE\n\n## Outcome\nConsumers install a real tarball whose exports and declarations match documentation.\n\n## Coordination\n- Suggested owner lane: TypeScript agent and independent testers (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #4 (EPIC-DELIVERY).\n- Depends on: #14 (TS-CONTRACT).\n- Depends on: #15 (TS-BROWSER).\n\n## Acceptance criteria\n- [ ] Build, typecheck, test and npm pack the package with no credentials or unrelated local files.\n- [ ] Inspect exports, declarations, runtime requirements and shared-schema inclusion.\n- [ ] Install the tarball in a clean consumer and compile/run a representative chart example.\n- [ ] Record commands and package contents; public npm publication is not authorized by this task.\n\n## Required evidence\n- Pack file list and tarball checksum\n- Clean-consumer compile/run report\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/25",
+      "state": "open",
+      "updated_at": "2026-11-26T17:58:08Z",
+      "comments": []
+    },
+    {
+      "number": 30,
+      "title": "Bug: Python chart schema coerces strings and booleans unlike JSON Schema",
+      "body": "## Reproduction\n\nThe generated JSON Schema declares numeric fields, but the Python runtime accepted numeric strings and JSON booleans through Pydantic coercion:\n\n```python\nChartSpec.model_validate({\"width\": \"900\"})\nChartSpec.model_validate({\"version\": True})\nChartSpec.model_validate({\"columns\": True})\n```\n\nThis diverges from JSON Schema and a schema-validating TypeScript consumer.\n\n## Acceptance criteria\n\n- Reject string values for numeric schema fields and booleans for version/columns.\n- Continue to accept mathematically integral JSON numeric values, such as `900.0`, consistent with JSON Schema integer semantics.\n- Preserve valid defaults and all existing bounds.\n- Add regression tests and run lint/type checks.\n\n## Observed test evidence\n\nBefore fix: `python -m pytest tests/test_models.py -q`: **6 failed, 24 passed** (all six failures were unexpected acceptance).\n\nAfter adding a before-validator: full current checkout suite `python -m pytest -q`: **30 passed**; Ruff and mypy passed for the changed implementation/tests. This evidence concerns the schema-only branch, not the unfinished integrated product.\n\nLeave open until the reviewed release PR merges the fix.\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/30",
+      "state": "open",
+      "updated_at": "2026-11-26T18:12:31Z",
+      "comments": []
+    },
+    {
+      "number": 32,
+      "title": "Bug: native SVG category labels overlap at valid 240px width",
+      "body": "<!-- deepviz-qa-key: R17-12-D1-category-density -->\n## Reproduced defect (one layout cause)\n\nThe TypeScript native SVG renderer successfully returns a chart at the schema-valid\nminimum240x200dimensions, but its category labels overlap. Both standalone SVG and\ngenerated HTML retain all eight correct values/marks while the visible labels are unreadable.\nThis is not the separate numeric-tick clipping fix and is not a request for a ticket per case.\n\nRelated parent scopes:#15,#23. Fresh complete open-issue review found no specific duplicate;\nthose are broad browser/visual stories, not this bounded defect report.\n\n## Exact source and already-executed QA evidence\n\n- Renderer source:[5e595a8f893955ce34a0e26553bb7bf257ea93ae](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/5e595a8f893955ce34a0e26553bb7bf257ea93ae/packages/deepviz/src/renderers.ts).\n- Probe/evidence:[4867f144507436ba5d81cec515a4976723c4a698](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/tests/r17_probes/role12/category-density.test.mjs).\n- Actual imported compiled`renderers.js`SHA256:`7640f5147a11e795f3f78564409adae0fb21421bf59f2b95c2d4a9b83c28c4b1`; source SHA256:`be34bcb2be9e44459cb30d145386c3606933bcbdea389ba2fd3fca8d738fac80`.\n- Node26.13.1/Chromium159.0.8154.6/Windows. Single strict NEW test command: **exit1,5pass/4fail/0skip**,4141.2145ms. Four failures are genuine final pairwise text-box overlap assertions; four full-size browser controls plus one overlap-oracle self-control pass.\n- All eight cases preserve literal category text/order, eight nonempty marks, original1..8values, height ratios/common zero and dimensions. All eight have **0console/page/runtime errors,0external/failed requests and0clipped text boxes**. Containment and correct values do not imply readable category labels.\n- Actual PNGs were opened and inspected. Exact[DOM boxes/gaps/mark values](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/browser-cases.jsonl),[summary](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/summary.json),[actual TAP](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/density.tap.log).\n\n## Bounded reproduction\n\nEight finite records:`{group: 'g0', value:1}`\u2026`{group:'g7', value:8}`.\nOne additional finite Unicode fixture uses`\u6771\u4eac\u90fd\u6771\u90e8\u652f\u5e971`\u2026`\u6771\u4eac\u90fd\u6771\u90e8\u652f\u5e978` with the\nsame1..8values, below the existing18-character abbreviation threshold.\nSpec:`{kind:'bar',x:'group',y:'value',aggregation:'none',max_points:10,width:240,height:200}`;\nengine`svg`. Repeat at`width:960,height:540` as positive control; inspect rawSVGandHTML.\n\nFrom the immutable probe commit with matching built`dist/`and an already available\nPlaywright/Chromium (see[probe README](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/tests/r17_probes/role12/README.md)):\n\n```powershell\n$env:DEEPVIZ_PLAYWRIGHT_ENTRY = 'C:/path/to/existing/node_modules/playwright/index.mjs'\n$env:DEEPVIZ_R17_OUTPUT = 'C:/path/to/NEW/unique/output'\nnode --test --test-reporter=tap tests/r17_probes/role12/category-density.test.mjs\n```\n\nNo tests/build/browser/10Mwere replayed to file this issue; these are the recorded R17 results.\n\n| Fixture/dimensions | Plot/slot(px) | Label bbox width(px) | Minimum adjacent gap(px) | Overlapping pairs | Actual SVG screenshot | Actual HTML screenshot |\n|---|---:|---:|---:|---:|---|---|\n| Ordinary8,240x200 |103/12.875|13.598|-0.723|7|[SVG](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/ordinary-eight-240-svg.png)|[HTML](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/ordinary-eight-240-html.png)|\n| Ordinary8,960x540 |823/102.875|13.598|89.277|0|[SVG](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/ordinary-eight-960-svg.png)|[HTML](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/ordinary-eight-960-html.png)|\n| Unicode8,240x200 |103/12.875|92|-79.125|28|[SVG](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/unicode-eight-240-svg.png)|[HTML](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/unicode-eight-240-html.png)|\n| Unicode8,960x540 |823/102.875|92|10.875|0|[SVG](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/unicode-eight-960-svg.png)|[HTML](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/evidence/R17-12/unicode-eight-960-html.png)|\n\n## Cause, expected outcome and open decision\n\nCurrent tick selection uses category count(`ceil(n/12)`) without the remaining plot width\nor actual category glyph boxes. All eight labels are selected even when each slot is narrower\nthan its label. This is ONE layout cause across both carriers/fixtures. The existing HTML\naccessible-data disclosure does not make the visible chart labels nonoverlapping.\n\n- [ ] For supported finite fixtures, provide readable complete labels without positive-area overlap or clipping in actual SVG+HTML, keeping values/order/mark meaning/usable plot and readable text size.\n- [ ] If the requested dimensions truly cannot fit the complete finite labels, follow an **explicitly approved** descriptive density-infeasibility policy rather than successful unreadable output. No silent hiding/truncation/category or value change, arbitrary global schema-minimum expansion or unlimited-Unicode-text promise.\n- [ ] Preserve the960positive controls and numeric-axis containment; add strict future fixed-head controls for any approved rejection/no-output path rather than calling the current RED a pass.\n- [ ] Obtain genuine non-author fixed-head review/retest before closure. This QA author also authored the separate numeric-margin change; this report is not self-signoff on it.\n\n**Policy/implementation owner:R04; layout-policy and eligible-producer release decision remain OPEN.**\nThe[bounded stagger/infeasibility proposal](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/4867f144507436ba5d81cec515a4976723c4a698/docs/coordination/reports/R17-12-category-density.md)\nis not an approved or implemented fix. Font fallback metrics above are actual Chromium/Windows\nmeasurements, not a universal font guarantee. Leave this genuine bug open until the manager's\nevidence-based acceptance/merge/closure process is satisfied. No900-count padding or final\nvisual/scale/release approval is claimed.\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/32",
+      "state": "open",
+      "updated_at": "2026-11-27T15:02:34Z",
+      "comments": []
+    },
+    {
+      "number": 34,
+      "title": "Bug: GraphQL error-only pages become data rows in TypeScript arrays and JSON",
+      "body": "<!-- deepviz-r22-graphql-error-carrier -->\n## Reproduced defect: failed GraphQL page becomes a data row\n\nThe TypeScript public normalizer silently succeeds when a supplied GraphQL\npage array or its encoded JSON contains an error-only response after valid data.\nInstead of rejecting the failed page, it flattens the transport error into an\ninvented record, increments the count, and emits **no warning**.\n\nOne cause, not six tickets: `data:null`, absent `data`, and `data:{}` each fail\nthrough automatic array and encoded-JSON carriers. Direct-envelope, real async\nstream, explicit-path, and Python controls already reject these same envelopes.\nThis does **not** report the separate known unexpected-connection-sibling loss.\n\nRelated parent: #7 (nested/GraphQL pages); related contract: #14.\nFresh complete open-issue/body/comment review found no specific duplicate.\nThose broad feature stories are not the same bounded defect report.\n\n## Exact source and already-executed independent QA\n\n- Product checkpoint: **5340bc69b7203ad7a9166543062482d819f9b705**;\n  [TypeScript source](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/5340bc69b7203ad7a9166543062482d819f9b705/packages/deepviz/src/normalize.ts#L95-L118).\n- Permanent independent probes/evidence: **648f399e2745aa1f62319cddb15fb0095ab0a34c**;\n  [strict Node suite](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/648f399e2745aa1f62319cddb15fb0095ab0a34c/tests/r15_probes/role03/graphql-pages.test.mjs),\n  [Python controls](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/648f399e2745aa1f62319cddb15fb0095ab0a34c/tests/r15_probes/role03/test_graphql_pages.py),\n  [actual diagnostic](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/648f399e2745aa1f62319cddb15fb0095ab0a34c/docs/coordination/evidence/R15-03/node-carrier-diagnostic.json#L190-L229),\n  [commands/results/import hashes](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/648f399e2745aa1f62319cddb15fb0095ab0a34c/docs/coordination/evidence/R15-03/verification.json).\n- Loaded source SHA256:\n  `d1b45d2a55dfd05361184a57da952a0da735e9b6d72c2491f908ef27bda22371`;\n  compiled `normalize.js` SHA256:\n  `adb0493123fd478567212e76e2c6e52c828aeaa9eb5425c219b5b1a576689612`.\n- Windows / Nodev26.13.1 / Python3.12.16. Independent isolated source was byte-equal\n  to checkpoint5340, not a sibling dirty build. No mocks, xfails, sampling or skips.\n\nAlready-executed strict command (not newly rerun during bug filing):\n\n```powershell\nnode --test --test-reporter=tap tests/r15_probes/role03/graphql-pages.test.mjs\n```\n\nActual: **73tests /63PASS /10FAIL /0skip /0cancel**, exit1,469.4565ms from an\nexternal-CWD portability run. **Six** failures are this error-carrier cause;\nthe other **four** are explicitly deduplicated known F1 sibling-loss tests and\nmust not inflate this bug. Same-source Python controls: **73PASS /0skip**,\nexit0,0.81s. [Exact failed IDs and raw logs](https://github.com/sandeshbagmare/deepviz-agent-toolkit/tree/648f399e2745aa1f62319cddb15fb0095ab0a34c/docs/coordination/evidence/R15-03).\n\n## Minimal two-page literal (no fixture builder)\n\nFrom the repository root after building that pinned package:\n\n```js\nimport {normalize} from './packages/deepviz/dist/index.js';\nconst pages = [\n  {data: {feed: {nodes: [{id: 'kept', measure: 2}]}}},\n  {data: null, errors: [{message: 'late page unavailable'}]}\n];\nnormalize(pages, {kind: 'table', aggregation: 'none', max_points: 100});\n// Also reproduces with JSON.stringify(pages) and format: 'json'.\n```\n\nActual saved output for the literal array:\n\n```json\n{\n  \"records\": [\n    {\"id\": \"kept\", \"measure\": 2},\n    {\"data\": null, \"errors.0.message\": \"late page unavailable\"}\n  ],\n  \"input_count\": 2,\n  \"warnings\": [],\n  \"strategy\": \"none\"\n}\n```\n\nLarger strict fixtures keep40valid records, an empty intermediate page and then\nthe failed page: actual41records/41input_count/no warnings. The empty page is\nnot the termination point; the error envelope is wrongly treated as an observation.\n\n## Expected behavior / fix acceptance\n\n- Reject error-only GraphQL pages concisely and consistently across supplied\n  arrays, encoded JSON, direct envelopes, async streams and explicit paths;\n  never return a successful prefix or invented error row. Existing direct/stream\n  controls use `GraphQL response contains errors and no data`.\n- Make all **six** permanent error-carrier negatives pass without xfail/skipping\n  or weakening count/value/type/order/early-stop assertions. Keep known F1 sibling\n  regressions separate, strict, and independently tracked.\n- Preserve ordinary business records containing an `errors` field: the existing\n  sync+async positive produces `{'id':'business-record','errors.0.message':...}`.\n  Do not reject all fields named `errors` indiscriminately.\n- Preserve partial-error warnings with usable data, null-node warning disclosure,\n  empty-page continuation, valid explicit selection, and exact ordered repeated\n  values/counts (five records include four legitimate equal repeated nodes).\n- Source-flow diagnosis: `sequenceEnvelope` requires a data collection;\n  `unpack`'s array ordinary-row branch therefore bypasses `checkGraphql` for these\n  failed envelopes. Reuse the existing validation semantics without inventing\n  implicit connection merging or an object-only node policy.\n\nSource ownership remains16/R04; QA has not changed implementation or existing\noracles. Proposed priorityP1 because failed input silently becomes fabricated\ndata, subject to maintainer triage. Leave open until a reviewed fix and fresh\nindependent candidate retest; this report is not a fix, greenCI, merge, closure\nor final-release signoff. No test/build/browser rerun was needed to file the bug.\n",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/34",
+      "state": "open",
+      "updated_at": "2026-11-27T15:27:18Z",
+      "comments": []
+    }
+  ],
+  "http_receipts": [
+    {
+      "method": "GET",
+      "path": "/user",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:58:51.385200+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:58:51.883088+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues?state=open&sort=created&direction=asc&per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:58:54.636135+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/1/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:58:55.111600+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/2/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:58:55.570504+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/5/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:58:55.988138+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/6/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:58:56.565714+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/7/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:58:56.979989+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/8/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:58:57.387535+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/9/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:58:57.825208+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/10/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:58:58.276605+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/11/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:58:59.164146+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/12/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:59:00.095576+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/13/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:59:00.610149+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/14/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:59:01.151876+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/15/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:59:01.815044+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/16/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:59:02.269653+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/18/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:59:02.766624+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/20/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:59:03.420646+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/24/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:59:03.822855+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/25/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:59:04.243979+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/30/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:59:04.667686+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/32/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:59:05.093424+00:00"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/34/comments?per_page=100&page=1",
+      "status": 200,
+      "more": false,
+      "observed_utc": "2026-11-27T15:59:05.602123+00:00"
+    }
+  ],
+  "decision": "Known root cause #30 reused by URL only. Six existing-type-coercion failures on actual 0ae2 default, no new issue/comment adds necessary scope or evidence unavailable in this OWN report; no POST/PATCH/closures.",
+  "reused_bug_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/30",
+  "new_issue_count": 0,
+  "new_comment_count": 0,
+  "api_mutations": 0,
+  "not_a_test_of_unmerged_PR33": true
+}

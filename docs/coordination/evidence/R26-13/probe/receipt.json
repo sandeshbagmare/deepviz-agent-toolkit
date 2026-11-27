@@ -1,0 +1,139 @@
+{
+  "source_commit": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "source": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r26-13-main-0ae2-ses_de56780caffekQ9gdZ58EgQwb5",
+  "mode": "probe",
+  "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+  "pytest_version": "9.2.0",
+  "pydantic_version": "2.14.4",
+  "jsonschema_origin": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\jsonschema\\__init__.py",
+  "model_origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r26-13-main-0ae2-ses_de56780caffekQ9gdZ58EgQwb5\\python\\deepviz\\src\\deepviz\\models.py",
+  "namespace_paths": [
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r26-13-main-0ae2-ses_de56780caffekQ9gdZ58EgQwb5\\python\\deepviz\\src\\deepviz",
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\deepviz"
+  ],
+  "pytest_arguments": [
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\\tests\\r26_probes\\role13\\test_default_contract.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--import-mode=importlib",
+    "--confcutdir=C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\\tests\\r26_probes\\role13",
+    "--rootdir=C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\\tests\\r26_probes\\role13",
+    "--junitxml=C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\\docs\\coordination\\evidence\\R26-13\\probe\\results.xml"
+  ],
+  "exit": 1,
+  "totals": {
+    "tests": 30,
+    "failures": 6,
+    "errors": 0,
+    "skipped": 0
+  },
+  "passed": 24,
+  "all_tracked_and_own_probe_runner_raw_hashes_before": {
+    ".gitignore": "7dcc06f91893f9703d15fe96817d2f9149e0b320bada22a765a1ef1e42f1040d",
+    "LICENSE": "d1a39f6cb061116b63283c8f2238f33e2b360d3414641ab998538a73260c4eab",
+    "README.md": "f22763432a078847c7af1c53e8330594e60923cb3691294b7c7134f62c830a65",
+    "docs/superpowers/plans/2026-11-26-deepviz-plan.md": "56c402faa7b5519dec62b3619bc40ebbf972d07dd8de0d68bc2556c49dd05c2a",
+    "docs/superpowers/specs/2026-11-26-deepviz-design.md": "0574c46eb494c163539b1f64b54550c31df1542abce26891496db463890ce623",
+    "pyproject.toml": "59272015ea328698d8f030051c2d460a66c83625f6bc5005ffa16382403a31ef",
+    "python/deepviz/src/deepviz/models.py": "56b404e12772f9f41574319205649065c7085313095f4a9637e555b3d26e76dd",
+    "OWN_RUNNER": "2aae07388c4c3c8baf091e43106a949c581f4609a69ddd427393baa5cd9cc3c6",
+    "OWN_PROBE": "289fcceb07aec73260cd1087b26d859075883aed0c5ef3251902c64d7f654ee1"
+  },
+  "all_tracked_and_own_probe_runner_raw_hashes_after": {
+    ".gitignore": "7dcc06f91893f9703d15fe96817d2f9149e0b320bada22a765a1ef1e42f1040d",
+    "LICENSE": "d1a39f6cb061116b63283c8f2238f33e2b360d3414641ab998538a73260c4eab",
+    "README.md": "f22763432a078847c7af1c53e8330594e60923cb3691294b7c7134f62c830a65",
+    "docs/superpowers/plans/2026-11-26-deepviz-plan.md": "56c402faa7b5519dec62b3619bc40ebbf972d07dd8de0d68bc2556c49dd05c2a",
+    "docs/superpowers/specs/2026-11-26-deepviz-design.md": "0574c46eb494c163539b1f64b54550c31df1542abce26891496db463890ce623",
+    "pyproject.toml": "59272015ea328698d8f030051c2d460a66c83625f6bc5005ffa16382403a31ef",
+    "python/deepviz/src/deepviz/models.py": "56b404e12772f9f41574319205649065c7085313095f4a9637e555b3d26e76dd",
+    "OWN_RUNNER": "2aae07388c4c3c8baf091e43106a949c581f4609a69ddd427393baa5cd9cc3c6",
+    "OWN_PROBE": "289fcceb07aec73260cd1087b26d859075883aed0c5ef3251902c64d7f654ee1"
+  },
+  "same_process_identity_before_after": true,
+  "observations": [
+    {
+      "wire": "{\"version\":\"1\"}",
+      "schema_accepts": false,
+      "model_accepts": false
+    },
+    {
+      "wire": "{\"version\":true}",
+      "schema_accepts": false,
+      "model_accepts": true,
+      "coerced_value": 1
+    },
+    {
+      "wire": "{\"columns\":\"2\"}",
+      "schema_accepts": false,
+      "model_accepts": true,
+      "coerced_value": 2
+    },
+    {
+      "wire": "{\"columns\":true}",
+      "schema_accepts": false,
+      "model_accepts": true,
+      "coerced_value": 1
+    },
+    {
+      "wire": "{\"width\":\"900\"}",
+      "schema_accepts": false,
+      "model_accepts": true,
+      "coerced_value": 900
+    },
+    {
+      "wire": "{\"width\":true}",
+      "schema_accepts": false,
+      "model_accepts": false
+    },
+    {
+      "wire": "{\"height\":\"520\"}",
+      "schema_accepts": false,
+      "model_accepts": true,
+      "coerced_value": 520
+    },
+    {
+      "wire": "{\"height\":true}",
+      "schema_accepts": false,
+      "model_accepts": false
+    },
+    {
+      "wire": "{\"max_points\":\"2000\"}",
+      "schema_accepts": false,
+      "model_accepts": true,
+      "coerced_value": 2000
+    },
+    {
+      "wire": "{\"max_points\":true}",
+      "schema_accepts": false,
+      "model_accepts": false
+    },
+    {
+      "valid_public_model_json": {
+        "version": 1,
+        "kind": "bar",
+        "title": "QA <literal> & \u6771\u4eac",
+        "description": "",
+        "x": null,
+        "y": null,
+        "color": null,
+        "size": null,
+        "data_path": null,
+        "format": "auto",
+        "aggregation": "auto",
+        "max_points": 2000,
+        "width": 900,
+        "height": 520,
+        "theme": "light",
+        "charts": [],
+        "columns": 2
+      }
+    }
+  ],
+  "no_editable_site_hooks": true,
+  "source_clean": true,
+  "scope": "Actual current default foundation only; no PR33/candidate imports",
+  "no_shipped_tests_is_not_green": false
+}

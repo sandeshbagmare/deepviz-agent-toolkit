@@ -1,0 +1,74 @@
+{
+  "initial_staging_verification_exit": 1,
+  "reason": "Raw-byte equality assertion rejected existing Git CRLF-to-LF normalization after staging; NOT a product failure.",
+  "readback_before_retry": true,
+  "staged_paths_at_readback": 33,
+  "all_differences_only_raw_CRLF_to_git_LF": true,
+  "normalized_files": [
+    {
+      "path": "docs/coordination/evidence/R26-13/main-mypy.stdout.log",
+      "raw_sha256": "8e63ae22e8213e327a5e9cbd584067681681bd8ef7f25c869877887ccdcfc4ff",
+      "git_LF_sha256": "5d4b6d285b77932e3d08212c3b4974d0a803f98ec60408ac6ccf6a063fa6c19e",
+      "raw_bytes": 43,
+      "git_bytes": 42
+    },
+    {
+      "path": "docs/coordination/evidence/R26-13/probe.stdout.log",
+      "raw_sha256": "b317a08cdfae4df7bff2dc7d9302d2a0d603b77892933b8386e748ee5f7662a6",
+      "git_LF_sha256": "217dd103f3218008b1197dfe256719b385cf85877be851820b650008164857e8",
+      "raw_bytes": 9885,
+      "git_bytes": 9689
+    },
+    {
+      "path": "docs/coordination/evidence/R26-13/probe/generated-schema.json",
+      "raw_sha256": "cf316116251e52a121a74d24f35f99b15794ee0997278010d97181c8c1908b81",
+      "git_LF_sha256": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d",
+      "raw_bytes": 4268,
+      "git_bytes": 4078
+    },
+    {
+      "path": "docs/coordination/evidence/R26-13/probe/receipt.json",
+      "raw_sha256": "c9bbcfb3a00b6415c4a63fd23502f247045cba382a5d233fb780a875796f6705",
+      "git_LF_sha256": "e2d624a9d306b34dcef4318d98f31536fd2d99bf727f5307c2c8a37baeedeed2",
+      "raw_bytes": 5850,
+      "git_bytes": 5711
+    },
+    {
+      "path": "docs/coordination/evidence/R26-13/probe/results.xml",
+      "raw_sha256": "a22f18b0670da445419a7c34f269c24ac6c4c4ba24581c5bb2ed72f818db4070",
+      "git_LF_sha256": "cfbd2f8d6b8c0607800d502589d12ee87714b7eed98a54d1dfb4444cb1e927e1",
+      "raw_bytes": 12905,
+      "git_bytes": 12737
+    },
+    {
+      "path": "docs/coordination/evidence/R26-13/shipped.stdout.log",
+      "raw_sha256": "a960cff0848dcd0ed301afc0462ccf421c36b069c3d7783137007a86254aca54",
+      "git_LF_sha256": "fd637db4c244dc02ad65049d9f339eab9c30f1c02a401a04f6f729d811eaf002",
+      "raw_bytes": 25,
+      "git_bytes": 23
+    },
+    {
+      "path": "docs/coordination/evidence/R26-13/shipped/generated-schema.json",
+      "raw_sha256": "cf316116251e52a121a74d24f35f99b15794ee0997278010d97181c8c1908b81",
+      "git_LF_sha256": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d",
+      "raw_bytes": 4268,
+      "git_bytes": 4078
+    },
+    {
+      "path": "docs/coordination/evidence/R26-13/shipped/receipt.json",
+      "raw_sha256": "92c1d375599b0dd085c243ad3f0033a805196e3308f4da3c95527aba27b1e0bb",
+      "git_LF_sha256": "ff6540b51973c2dc932cfbd65f9db0e5e1327c1feb6d0f8e9b15ed27ed8fadcd",
+      "raw_bytes": 3887,
+      "git_bytes": 3826
+    }
+  ],
+  "all_other_files_byte_exact": true,
+  "exact_executed_archives_byte_equal": true,
+  "git_config_changes": 0,
+  "source_changes": 0,
+  "product_test_replays": 0,
+  "raw_evidence_preserved_LOCALLY_and_MAIN": true,
+  "generated_schema_raw_sha256": "cf316116251e52a121a74d24f35f99b15794ee0997278010d97181c8c1908b81",
+  "generated_schema_git_lf_sha256": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d",
+  "future_verification_rule": "Compare raw hash when raw local artifact is requested; compare canonical Git LF after raw.replace(CRLF,LF) for published text. Never change a source/probe/oracle to match evidence."
+}

@@ -1,0 +1,44 @@
+{
+  "initial_command": [
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\ruff.exe",
+    "check",
+    "--no-cache",
+    "tests/r26_probes/role13/verify_default.py",
+    "tests/r26_probes/role13/test_default_contract.py"
+  ],
+  "initial_exit": 1,
+  "initial_findings": "2 I001 import-order findings, OWN new files only; main source unchanged",
+  "files": [
+    {
+      "path": "tests/r26_probes/role13/verify_default.py",
+      "executed_archive": "executed-sources/verify_default.py.txt",
+      "executed_sha256": "2aae07388c4c3c8baf091e43106a949c581f4609a69ddd427393baa5cd9cc3c6",
+      "current_import_ordered_sha256": "0f4c84562986964edfe01194748ba5c2d69759903c9d5170ef56c2c89e1f3027",
+      "import_multiset_equal": true,
+      "all_nonimport_AST_equal": true,
+      "current_bytes_product_tested": false
+    },
+    {
+      "path": "tests/r26_probes/role13/test_default_contract.py",
+      "executed_archive": "executed-sources/test_default_contract.py.txt",
+      "executed_sha256": "289fcceb07aec73260cd1087b26d859075883aed0c5ef3251902c64d7f654ee1",
+      "current_import_ordered_sha256": "d04f1114413453d69a814e18b57f1a586f8c234b7b73db48e880bcf5ec3dff9b",
+      "import_multiset_equal": true,
+      "all_nonimport_AST_equal": true,
+      "current_bytes_product_tested": false
+    }
+  ],
+  "final_lint_argv": [
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\ruff.exe",
+    "check",
+    "--no-cache",
+    "tests/r26_probes/role13/verify_default.py",
+    "tests/r26_probes/role13/test_default_contract.py"
+  ],
+  "final_lint_exit": 0,
+  "stdout": "own-ruff-final.stdout.log",
+  "stderr": "own-ruff-final.stderr.log",
+  "no_product_replay": true,
+  "no_unchanged_source_rerun": true,
+  "runtime_results_belong_to_archived_exact_bytes": true
+}

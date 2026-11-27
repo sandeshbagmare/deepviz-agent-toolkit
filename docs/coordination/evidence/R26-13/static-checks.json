@@ -1,0 +1,40 @@
+{
+  "commands": [
+    {
+      "name": "main-ruff",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\ruff.exe",
+        "check",
+        "--config",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r26-13-main-0ae2-ses_de56780caffekQ9gdZ58EgQwb5\\pyproject.toml",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r26-13-main-0ae2-ses_de56780caffekQ9gdZ58EgQwb5\\python\\deepviz\\src\\deepviz\\models.py"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r26-13-main-0ae2-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "elapsed_seconds": 0.06694370000332128,
+      "stdout": "main-ruff.stdout.log",
+      "stderr": "main-ruff.stderr.log"
+    },
+    {
+      "name": "main-mypy",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\mypy.exe",
+        "--config-file",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r26-13-main-0ae2-ses_de56780caffekQ9gdZ58EgQwb5\\pyproject.toml",
+        "--cache-dir",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\\docs\\coordination\\evidence\\R26-13\\mypy-cache",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r26-13-main-0ae2-ses_de56780caffekQ9gdZ58EgQwb5\\python\\deepviz\\src\\deepviz\\models.py"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r26-13-main-0ae2-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "elapsed_seconds": 3.7604797999956645,
+      "stdout": "main-mypy.stdout.log",
+      "stderr": "main-mypy.stderr.log"
+    }
+  ],
+  "source": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "source_clean_after": true,
+  "source_edits": 0,
+  "installs": 0,
+  "scope": "Actual main shipped models.py only; no CI workflows exist at this SHA; no inferred full candidate passes."
+}

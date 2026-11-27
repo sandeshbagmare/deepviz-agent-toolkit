@@ -1,0 +1,71 @@
+{
+  "verified_utc": "2026-11-27T16:00:44.772487+00:00",
+  "actual_default_sha": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "source_clean_before_and_after": true,
+  "all_7_tracked_source_and_own_probe_runner_raw_hashes_match": true,
+  "model_origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r26-13-main-0ae2-ses_de56780caffekQ9gdZ58EgQwb5\\python\\deepviz\\src\\deepviz\\models.py",
+  "model_raw_sha256": "56b404e12772f9f41574319205649065c7085313095f4a9637e555b3d26e76dd",
+  "generated_schema_sha256": "cf316116251e52a121a74d24f35f99b15794ee0997278010d97181c8c1908b81",
+  "source_namespace_fallback_caveat": [
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r26-13-main-0ae2-ses_de56780caffekQ9gdZ58EgQwb5\\python\\deepviz\\src\\deepviz",
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\deepviz"
+  ],
+  "versions": {
+    "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+    "pydantic": "2.14.4",
+    "pytest": "9.2.0",
+    "ruff": {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\ruff.exe",
+        "--version"
+      ],
+      "exit": 0,
+      "output": "ruff 0.17.6"
+    },
+    "mypy": {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\mypy.exe",
+        "--version"
+      ],
+      "exit": 0,
+      "output": "mypy 2.4.1 (compiled: yes)"
+    }
+  },
+  "shipped_suite": {
+    "exit": 5,
+    "tests": 0,
+    "not_green": true
+  },
+  "new_probe": {
+    "exit": 1,
+    "tests": 30,
+    "failed": 6,
+    "passed": 24,
+    "skipped": 0,
+    "errors": 0,
+    "public_contract_passes": 21,
+    "own_provenance_guard_passes": 3,
+    "failed_literal_wires": [
+      "{\"columns\":\"2\"}",
+      "{\"columns\":true}",
+      "{\"height\":\"520\"}",
+      "{\"max_points\":\"2000\"}",
+      "{\"version\":true}",
+      "{\"width\":\"900\"}"
+    ]
+  },
+  "configured_main_model_ruff_exit": 0,
+  "configured_main_model_mypy_exit": 0,
+  "reused_open_bug": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/30",
+  "new_bug_issues": 0,
+  "new_bug_comments": 0,
+  "R26_api_mutations": 0,
+  "known_baseline_not_new_regression": true,
+  "no_claims": [
+    "No PR33 source tested or merged-default approval",
+    "No current candidate imports/final-source approval",
+    "No installed package/browser/renderer/MCP/npm/build/scale test claim for missing foundation implementations",
+    "No issue closure or full 900-delivery claim"
+  ],
+  "next_action": "R04/root supplies an actual merge/default SHA notification; then freeze new actual main, verify ancestry/import bytes and run all actual shipped first-slice tests plus retained literal/schema controls. No polling/repeated unchanged-source tests."
+}

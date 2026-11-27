@@ -1,0 +1,196 @@
+.FFFF.F.F.....................                                           [100%]
+================================== FAILURES ===================================
+___________ test_json_numeric_types_agree_with_schema[version-true] ___________
+
+field = 'version', literal = 'true'
+
+    @pytest.mark.parametrize(
+        ("field", "literal"),
+        [
+            ("version", '"1"'), ("version", "true"),
+            ("columns", '"2"'), ("columns", "true"),
+            ("width", '"900"'), ("width", "true"),
+            ("height", '"520"'), ("height", "true"),
+            ("max_points", '"2000"'), ("max_points", "true"),
+        ],
+    )
+    def test_json_numeric_types_agree_with_schema(field, literal):
+        wire = '{"' + field + '":' + literal + "}"
+        value = json.loads(wire)
+        assert not SCHEMA.is_valid(value), "Independent schema must reject this type"
+        try:
+            model = ChartSpec.model_validate_json(wire)
+        except ValidationError:
+            OBSERVATIONS.append({"wire": wire, "schema_accepts": False, "model_accepts": False})
+            return
+        OBSERVATIONS.append({
+            "wire": wire, "schema_accepts": False, "model_accepts": True,
+            "coerced_value": getattr(model, field),
+        })
+>       pytest.fail("Runtime accepted a numeric type rejected by its public JSON Schema")
+E       Failed: Runtime accepted a numeric type rejected by its public JSON Schema
+
+..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r26_probes\role13\test_default_contract.py:39: Failed
+___________ test_json_numeric_types_agree_with_schema[columns-"2"] ____________
+
+field = 'columns', literal = '"2"'
+
+    @pytest.mark.parametrize(
+        ("field", "literal"),
+        [
+            ("version", '"1"'), ("version", "true"),
+            ("columns", '"2"'), ("columns", "true"),
+            ("width", '"900"'), ("width", "true"),
+            ("height", '"520"'), ("height", "true"),
+            ("max_points", '"2000"'), ("max_points", "true"),
+        ],
+    )
+    def test_json_numeric_types_agree_with_schema(field, literal):
+        wire = '{"' + field + '":' + literal + "}"
+        value = json.loads(wire)
+        assert not SCHEMA.is_valid(value), "Independent schema must reject this type"
+        try:
+            model = ChartSpec.model_validate_json(wire)
+        except ValidationError:
+            OBSERVATIONS.append({"wire": wire, "schema_accepts": False, "model_accepts": False})
+            return
+        OBSERVATIONS.append({
+            "wire": wire, "schema_accepts": False, "model_accepts": True,
+            "coerced_value": getattr(model, field),
+        })
+>       pytest.fail("Runtime accepted a numeric type rejected by its public JSON Schema")
+E       Failed: Runtime accepted a numeric type rejected by its public JSON Schema
+
+..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r26_probes\role13\test_default_contract.py:39: Failed
+___________ test_json_numeric_types_agree_with_schema[columns-true] ___________
+
+field = 'columns', literal = 'true'
+
+    @pytest.mark.parametrize(
+        ("field", "literal"),
+        [
+            ("version", '"1"'), ("version", "true"),
+            ("columns", '"2"'), ("columns", "true"),
+            ("width", '"900"'), ("width", "true"),
+            ("height", '"520"'), ("height", "true"),
+            ("max_points", '"2000"'), ("max_points", "true"),
+        ],
+    )
+    def test_json_numeric_types_agree_with_schema(field, literal):
+        wire = '{"' + field + '":' + literal + "}"
+        value = json.loads(wire)
+        assert not SCHEMA.is_valid(value), "Independent schema must reject this type"
+        try:
+            model = ChartSpec.model_validate_json(wire)
+        except ValidationError:
+            OBSERVATIONS.append({"wire": wire, "schema_accepts": False, "model_accepts": False})
+            return
+        OBSERVATIONS.append({
+            "wire": wire, "schema_accepts": False, "model_accepts": True,
+            "coerced_value": getattr(model, field),
+        })
+>       pytest.fail("Runtime accepted a numeric type rejected by its public JSON Schema")
+E       Failed: Runtime accepted a numeric type rejected by its public JSON Schema
+
+..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r26_probes\role13\test_default_contract.py:39: Failed
+___________ test_json_numeric_types_agree_with_schema[width-"900"] ____________
+
+field = 'width', literal = '"900"'
+
+    @pytest.mark.parametrize(
+        ("field", "literal"),
+        [
+            ("version", '"1"'), ("version", "true"),
+            ("columns", '"2"'), ("columns", "true"),
+            ("width", '"900"'), ("width", "true"),
+            ("height", '"520"'), ("height", "true"),
+            ("max_points", '"2000"'), ("max_points", "true"),
+        ],
+    )
+    def test_json_numeric_types_agree_with_schema(field, literal):
+        wire = '{"' + field + '":' + literal + "}"
+        value = json.loads(wire)
+        assert not SCHEMA.is_valid(value), "Independent schema must reject this type"
+        try:
+            model = ChartSpec.model_validate_json(wire)
+        except ValidationError:
+            OBSERVATIONS.append({"wire": wire, "schema_accepts": False, "model_accepts": False})
+            return
+        OBSERVATIONS.append({
+            "wire": wire, "schema_accepts": False, "model_accepts": True,
+            "coerced_value": getattr(model, field),
+        })
+>       pytest.fail("Runtime accepted a numeric type rejected by its public JSON Schema")
+E       Failed: Runtime accepted a numeric type rejected by its public JSON Schema
+
+..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r26_probes\role13\test_default_contract.py:39: Failed
+___________ test_json_numeric_types_agree_with_schema[height-"520"] ___________
+
+field = 'height', literal = '"520"'
+
+    @pytest.mark.parametrize(
+        ("field", "literal"),
+        [
+            ("version", '"1"'), ("version", "true"),
+            ("columns", '"2"'), ("columns", "true"),
+            ("width", '"900"'), ("width", "true"),
+            ("height", '"520"'), ("height", "true"),
+            ("max_points", '"2000"'), ("max_points", "true"),
+        ],
+    )
+    def test_json_numeric_types_agree_with_schema(field, literal):
+        wire = '{"' + field + '":' + literal + "}"
+        value = json.loads(wire)
+        assert not SCHEMA.is_valid(value), "Independent schema must reject this type"
+        try:
+            model = ChartSpec.model_validate_json(wire)
+        except ValidationError:
+            OBSERVATIONS.append({"wire": wire, "schema_accepts": False, "model_accepts": False})
+            return
+        OBSERVATIONS.append({
+            "wire": wire, "schema_accepts": False, "model_accepts": True,
+            "coerced_value": getattr(model, field),
+        })
+>       pytest.fail("Runtime accepted a numeric type rejected by its public JSON Schema")
+E       Failed: Runtime accepted a numeric type rejected by its public JSON Schema
+
+..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r26_probes\role13\test_default_contract.py:39: Failed
+________ test_json_numeric_types_agree_with_schema[max_points-"2000"] _________
+
+field = 'max_points', literal = '"2000"'
+
+    @pytest.mark.parametrize(
+        ("field", "literal"),
+        [
+            ("version", '"1"'), ("version", "true"),
+            ("columns", '"2"'), ("columns", "true"),
+            ("width", '"900"'), ("width", "true"),
+            ("height", '"520"'), ("height", "true"),
+            ("max_points", '"2000"'), ("max_points", "true"),
+        ],
+    )
+    def test_json_numeric_types_agree_with_schema(field, literal):
+        wire = '{"' + field + '":' + literal + "}"
+        value = json.loads(wire)
+        assert not SCHEMA.is_valid(value), "Independent schema must reject this type"
+        try:
+            model = ChartSpec.model_validate_json(wire)
+        except ValidationError:
+            OBSERVATIONS.append({"wire": wire, "schema_accepts": False, "model_accepts": False})
+            return
+        OBSERVATIONS.append({
+            "wire": wire, "schema_accepts": False, "model_accepts": True,
+            "coerced_value": getattr(model, field),
+        })
+>       pytest.fail("Runtime accepted a numeric type rejected by its public JSON Schema")
+E       Failed: Runtime accepted a numeric type rejected by its public JSON Schema
+
+..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r26_probes\role13\test_default_contract.py:39: Failed
+=========================== short test summary info ===========================
+FAILED ..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r26_probes\role13\test_default_contract.py::test_json_numeric_types_agree_with_schema[version-true]
+FAILED ..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r26_probes\role13\test_default_contract.py::test_json_numeric_types_agree_with_schema[columns-"2"]
+FAILED ..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r26_probes\role13\test_default_contract.py::test_json_numeric_types_agree_with_schema[columns-true]
+FAILED ..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r26_probes\role13\test_default_contract.py::test_json_numeric_types_agree_with_schema[width-"900"]
+FAILED ..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r26_probes\role13\test_default_contract.py::test_json_numeric_types_agree_with_schema[height-"520"]
+FAILED ..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r26_probes\role13\test_default_contract.py::test_json_numeric_types_agree_with_schema[max_points-"2000"]
+6 failed, 24 passed in 0.90s
