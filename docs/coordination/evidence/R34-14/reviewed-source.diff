@@ -1,0 +1,137 @@
+diff --git a/python/deepviz/src/deepviz/engines.py b/python/deepviz/src/deepviz/engines.py
+index a366259..993c1b1 100644
+--- a/python/deepviz/src/deepviz/engines.py
++++ b/python/deepviz/src/deepviz/engines.py
+@@ -94,6 +94,8 @@ def channels(records: list[dict], spec: ChartSpec) -> list[dict]:
+     )]
+     x = spec.x or next((key for key in fields if key not in numeric), fields[0] if fields else None)
+     y = spec.y or next((key for key in numeric if key != x), numeric[0] if numeric else None)
++    if spec.aggregation == "count" and spec.y is None and spec.kind != "heatmap":
++        y = "count"
+     if spec.kind == "histogram" and spec.x is None:
+         x = spec.y or next((key for key in numeric if key != "index"), x)
+     heat = spec.color or ("count" if spec.kind == "heatmap" else y)
+diff --git a/python/deepviz/tests/test_r23_count_channel.py b/python/deepviz/tests/test_r23_count_channel.py
+new file mode 100644
+index 0000000..f8edcee
+--- /dev/null
++++ b/python/deepviz/tests/test_r23_count_channel.py
+@@ -0,0 +1,118 @@
++"""COUNT chooses the reduced measure, never a retained numeric dimension."""
++from __future__ import annotations
++
++from copy import deepcopy
++from dataclasses import asdict
++
++import pytest
++
++from deepviz.engines import channels
++from deepviz.models import ChartSpec
++from deepviz.normalize import normalize
++
++ROWS = [
++    {"group": "A", "position": 0, "series": 90, "measure": 10},
++    {"group": "A", "position": 0, "series": 90, "measure": 10},
++    {"group": "B", "position": 1, "series": 80, "measure": 20},
++    {"group": "B", "position": 1, "series": 80, "measure": 20},
++    {"group": "B", "position": 1, "series": 80, "measure": 20},
++    {"group": "C", "position": 10, "series": 70, "measure": 30},
++]
++
++
++@pytest.mark.parametrize("kind", ["bar", "line", "bubble"])
++def test_count_measure_is_not_numeric_color_or_retained_size(kind):
++    spec = ChartSpec(kind=kind, x="position" if kind == "bubble" else "group", color="series",
++                     size="series" if kind == "bubble" else None, aggregation="count")
++    before, spec_before = deepcopy(ROWS), spec.model_dump()
++    result = normalize(ROWS, spec)
++    key = "position" if kind == "bubble" else "group"
++    labels = [0, 1, 10] if kind == "bubble" else ["A", "B", "C"]
++    assert asdict(result) == {
++        "records": [{key: label, "series": series, "count": count}
++                    for label, series, count in zip(labels, [90, 80, 70], [2, 3, 1], strict=True)],
++        "input_count": 6, "warnings": [], "strategy": "count",
++    }
++    normalized_before = deepcopy(asdict(result))
++    mapped = channels(result.records, spec)
++    assert [row["_x"] for row in mapped] == labels
++    assert [row["_color"] for row in mapped] == ["90", "80", "70"]
++    assert [row["_size"] for row in mapped] == ([90, 80, 70] if kind == "bubble" else [8, 8, 8])
++    assert ROWS == before and asdict(result) == normalized_before and spec.model_dump() == spec_before
++    assert [row["_y"] for row in mapped] == [2, 3, 1]
++
++
++@pytest.mark.parametrize("aggregation, expected", [
++    ("count", [2, 3, 1]), ("sum", [20, 60, 30]), ("mean", [10, 20, 30]),
++    ("min", [10, 20, 30]), ("max", [10, 20, 30]), ("none", [10, 10, 20, 20, 20, 30]),
++])
++def test_named_measure_remains_authoritative(aggregation, expected):
++    spec = ChartSpec(kind="line", x="group", y="measure", color="series", aggregation=aggregation)
++    result = normalize(deepcopy(ROWS), spec)
++    before = deepcopy(asdict(result))
++    assert result.strategy == aggregation and not result.warnings
++    assert [row["_y"] for row in channels(result.records, spec)] == expected
++    assert "count" not in result.records[0] and asdict(result) == before
++
++
++def test_auto_count_keeps_categorical_labels_and_normalization_metadata():
++    rows = [{"label": "A", "series": "east"}, {"label": "A", "series": "east"},
++            {"label": "B", "series": "west"}]
++    spec = ChartSpec(x="label", color="series")
++    result = normalize(rows, spec)
++    assert asdict(result) == {
++        "records": [{"label": "A", "series": "east", "count": 2},
++                    {"label": "B", "series": "west", "count": 1}],
++        "input_count": 3, "warnings": [], "strategy": "count",
++    }
++    mapped = channels(result.records, spec)
++    assert [row["_y"] for row in mapped] == [2, 1]
++    assert [row["_color"] for row in mapped] == ["east", "west"]
++    assert spec.aggregation == "auto" and spec.y is None
++
++
++def test_scatter_auto_does_not_steal_a_field_named_count():
++    rows = [{"position": 0, "measure": 4, "count": 90}, {"position": 1, "measure": 7, "count": 80}]
++    spec = ChartSpec(kind="scatter", x="position")
++    result = normalize(rows, spec)
++    assert result.strategy == "none" and result.records == rows and not result.warnings
++    mapped = channels(result.records, spec)
++    assert [row["_x"] for row in mapped] == [0, 1]
++    assert [row["_y"] for row in mapped] == [4, 7]
++
++
++@pytest.mark.parametrize("aggregation", ["count", "auto"])
++def test_heatmap_count_preserves_implicit_y_coordinates(aggregation):
++    rows = [{"east": "E", "north": 0}, {"east": "E", "north": 0}, {"east": "W", "north": 1}]
++    spec = ChartSpec(kind="heatmap", x="east", aggregation=aggregation)
++    result = normalize(rows, spec)
++    before = deepcopy(asdict(result))
++    assert result.records == [{"east": "E", "north": 0, "count": 2}, {"east": "W", "north": 1, "count": 1}]
++    mapped = channels(result.records, spec)
++    assert [row["_y"] for row in mapped] == [0, 1]
++    assert [row["_heat"] for row in mapped] == [2, 1]
++    assert asdict(result) == before
++
++
++@pytest.mark.parametrize("aggregation", ["none", "sample"])
++def test_zero_is_not_a_missing_named_observation(aggregation):
++    rows = [{"label": "zero", "measure": 0, "series": 90},
++            {"label": "null", "measure": None, "series": 80}, {"label": "missing", "series": 70}]
++    spec = ChartSpec(kind="line", x="label", y="measure", color="series", aggregation=aggregation)
++    result = normalize(rows, spec)
++    before = deepcopy(asdict(result))
++    assert [row["_y"] for row in channels(result.records, spec)] == [0, None, None]
++    assert asdict(result) == before and rows[-1] == {"label": "missing", "series": 70}
++
++
++def test_absent_generated_count_does_not_fall_back_to_numeric_color():
++    # Direct adapter boundary: invalid reducer output must not fabricate a measure.
++    rows = [{"label": "zero", "series": 90, "count": 0},
++            {"label": "null", "series": 80, "count": None}, {"label": "missing", "series": 70}]
++    before = deepcopy(rows)
++    spec = ChartSpec(x="label", color="series", size="series", aggregation="count")
++    mapped = channels(rows, spec)
++    assert rows == before
++    assert [row["_color"] for row in mapped] == ["90", "80", "70"]
++    assert [row["_size"] for row in mapped] == [90, 80, 70]
++    assert [row["_y"] for row in mapped] == [0, None, None]

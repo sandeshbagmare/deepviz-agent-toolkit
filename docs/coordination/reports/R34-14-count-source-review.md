@@ -1,0 +1,41 @@
+# R34-14: independent COUNT source review
+
+**What this change does:** Explicit COUNT charts without a named y now use the reducer's count field, not a retained numeric color/size dimension. Heatmap coordinates and explicit y remain authoritative.
+
+## Decision
+**No introduced must-fix found in immutable 85796dbe3360fb88686f2e7188122e2da80d54c2.** The two-line repair is correct/minimal for this boundary. **Source-clear for focused integration, NOT final integrated-head/runtime/paint/CI/main/v1 approval.** No counterexample execution was justified; author07's16, historical55 and independent tester10 results are not my passes.
+
+## Exact source/protected scope
+Parent **7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6** verified. FULL commit exactly2paths: engines.py adds97-98; NEW test_r23_count_channel.py118lines/16static cases. Four Git modules hashed/read: models/normalize/render byte-equal7bc; engines entire file equals7bc after exactly those two added lines. All22protected definitions, imports/constants and **_antv** byte-identical7bc. Source snapshots are reference only, not whole-file integration authority.
+
+## Connected review
+- Reducer contract: normalize.py515-553 selects measure=count for explicit count/y=None;607-610 counts observations;670-673 writes that measure. Engines91-96 could otherwise infer numeric series first. Static literal trace: A/series90 twice,B/80 three,C/70 once -> reduced count2/3/1; old y selected90/80/70,new97-98 selects count. This is source reasoning, not a runtime claim.
+- Named-y: normalize539/548 writes the count result into the requested measure; engines97 requires y=None, so explicitly named y and other reducers/none/sample stay intact. Empty names already reject upstream.
+- Heatmap: normalize519-531 separates coordinate y from color/count; exclusion at engines97 preserves coordinate _y and _heat101/103/106. Do not remove this exclusion.
+- Color/size/missing: engines102-107 leaves x/color/size and input rows/spec untouched; _number81-86 preserves zero and returns None for absent/null count. Geometry117-139 retains existing omissions/gap warnings, not fabricated color-as-y. Reducer collision/removed-size guards normalize549-552 remain active.
+- Auto: normalize538-544 retains existing prefix-based sum/count/none choice. Numeric dimension may choose sum; ordinary categorical auto-count has count as the numeric measure. This is not universal heterogeneous inference certification; no automatic-policy expansion.
+- ALL3production calls read: engines245 Matplotlib; engines726 native_spec for4JSON engines; render158 geometry check. Public render95/98-111 builds effective dashboard children,135-145 normalizes,153 delegates; Matplotlib later calls245. Native adapters consume _y: Plotly393,Vega466-467,ECharts559/571,AntV631/654. Histogram x99-100/151-165 and raw-table paths unchanged.
+- Safety/load: constant predicates/field assignment only; no new retained state, loops, I/O/path/URL/code authority or serializer change. Existing escaping/budgets/artifact safety remain unchanged, not broadly reapproved. Plotly/AntV/readiness/other numerical issues stay separate.
+
+## Author oracle inspection, no execution borrowing
+NEW118line file:3bar/line/bubble+6named reducer+auto+scatter/countname+2heatmap+2zero/missing+direct absentcount =16. Literal values/metadata/immutability assertions; no old tests changed or xfail/skip. Direct channels/normalize assertions do not prove source-origin or painted output. **ZERO COUNT product imports/tests/browser runs here.** Tester10 owns actual independent acceptance; no author16/old55/browser replay.
+
+## R33 partial preserved, not COUNT evidence
+R33 ACTUALLY started. NEW portable code tests/r33_probes/role14/dashboard_schema_oracle.py unchangedSHA935c768e6e9bba81f425d11ba709c5bafbeffaec60a92c87e32fb746708501ea. ONE exactbff9384d1ebe5c8f6f8f0f994300264b32bb98d8 run:36tests,6strictschemaFAIL/30PASS/0ERROR/0SKIP0.022s; all17runtime raw-literal assertions passed. Both schemas accept six known invalid composition forms; not six new issues/bff4gates/857 approval. Ruff0/AST0. Future728fix/GREEN/README/finalreview unrun or unfinished. Code/provenance/results/log preserved, no rerun/deletion. Latest direct R34steering followed; managerfile's visible R35annotation differed, recorded for R04/root reconciliation rather than inventing concurrent grants.
+
+## Evidence and next action
+ActualSAME ses_de56780c9ffefIH3Y1KdXhqGwR; OWNbranch agents/r10-14-assets-offline-provenance/e755beforework, only ownedR33 dirt preserved. FULLR34manager45/root27lines read, prework saved. Git diff/show/grep/revparse/cat-file0; inspect_count.py/read_adapters.py/decision.py0, source-only. Long checkpoint/report shell requests scanner-rejected before execution; no test/API/write happened from them. No production/originaloracle/API/install/build/browser/scale/shared/default/PR/closure/spawn. Packet evidence/R34-14 has four-module-source-proof.json, reviewed-source.diff, review-decision.json and manifest; R33partial remains separately labeled.
+
+**ONE next executable action R04:** combine this source-clear review with tester10's actual result and other required gates, integrate ONLY the two channels lines and NEW test path into the actual target. Do NOT copy whole engines/four-module snapshots over newer08AntV/Plotly source. Revalidate affected integrated output/CI before focused product merge. No current main delivery, human approval, v1/900 completion or final signoff. Single OWN preservation/review publication follows.
+
+## Preserved prework/progress ledger
+# R34-14 COUNT source review
+
+R34PREWORK2026-11-27 SAMEactualses_de56780c9ffefIH3Y1KdXhqGwR. FULLR34manager45lines/common+14androot27linesread. LatestdirectusersteersR33toR34afterpartialcheckpoint(no newjob/ID); managerfileR35annotationconflictexplicitabove. OWNbranchagents/r10-14-assets-offline-provenance e755a457650b274815e03f5c5221f4d024786db2 ONLYownedR33code/evidence/note dirtpreserved. Immutable85796dbe3360fb88686f2e7188122e2da80d54c2 object/stat2pathsconfirmed. Non-authorreviewerNOT07;10tester distinct; no borrowed16/55/browserpass.
+AllowedNEWreports/R34-14-count-source-review.md;evidence/R34-14/;ownactualnote/OWNbranch;NEWcounterexampleONLYifmaterialreasonfirst. ReadALLtwo-pathdiff/twoaddedchannelslines+118lineNEW16cases, connectednormalize/channels/heatmap/explicity/color/size/auto/ALLcallers/fourmoduleGitproof; protectALLotherfunctionsespecially08_antvexact7bc. No production/originaloracle/API/install/spawn/shared/default/PR/closure orroutineauthor16/55/browserreplay. Verdict857only/notintegratedmain/v1/humanapproval. R33strictRedsarepartialprepNOTR34productpasses.
+Currentactiondurableprework. Next exact857parentdiff+fourmoduleGit/ASTread/callers, concretecounterexampleonlyifnewmaterialgap; boundedfindings/minimalfixor sourceclear+limits; ONEmeaningfulOWNcommit/nonforce/exactremote/promptONEmanagerR04handoff.
+
+R34sourcecheckpoint: FULL857two-pathdiff/118lineNEW16cases+ALL3productionchannelscallsites+normalizeplan/reducer+effectivepublicdashboardflow+allfiveadapterbranchesread. StaticdecisionNOintroducedmustfix/two-lineexplicitCOUNTrepairalignsnormalizecountfield;explicit-y/heatmap/color/size/zero/autoauthorityunchanged. FourmoduleGitproof:models/normalize/renderbyteequal7bc,enginesEXACT2addedlinesONLY;22protecteddefinitions incl08_antv+ALLimports/constantsbyteidentical7bc. No productimports/author16/55/browserreplay/newcounterexamplejustified. R33partialcode6RED30PASSseparateNOT857passes. Next boundedfindingsreport+meaningfulcombinedOWNpreservation/reviewcommit/nonforceexactSHA; R04integratesONLY2lines/testnotwholeenginesover08/laterPlotly.
+
+
+R34precommitcheckpoint: genuineNONAUTHOR857sourceclear/no introducedmustfix;parent7bc/exact2lines+118line16caseoracle/fourmoduleGit+22protecteddefinitionsincAntVidentical/all3callsites+5adaptersread. ZEROCOUNTtests/productimports;10independenttester distinct/no borrowed16/55/browser. PreservedR33actualtestCODEUNCHANGEDSHA935c76...+onebff36run6strictFAIL30PASS0ERROR0SKIP/separateknownschema728prereq/not857passes. No futurefixGREEN/CI/main/v1approval/sourceedits. LatestdirectR34followed/R35annotationdiscrepancydurable. Next ONEcombinedOWNtestCODEpreservation+reviewcommit/nonforce/exactSHA/finalMAINhandoffR04(no receiptloop).

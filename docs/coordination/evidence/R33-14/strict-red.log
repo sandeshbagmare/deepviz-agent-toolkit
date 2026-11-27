@@ -1,0 +1,178 @@
+python.exe : test_00_source_origin_stays_verified 
+(__main__.main.<locals>.DashboardSchemaOracles.test_00_source_origin_stays_verified) ... ok
+At line:1 char:1
++ & 'MAIN\.venv\Scripts\python.exe' -B  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_00_source_...erified) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_01_published_schema_equals_actual_model_export 
+(__main__.main.<locals>.DashboardSchemaOracles.test_01_published_schema_equals_actual_model_export) ... ok
+test_runtime_bar_explicit_empty_children 
+(__main__.main.<locals>.DashboardSchemaOracles.test_runtime_bar_explicit_empty_children) ... ok
+test_runtime_bar_nonempty_children (__main__.main.<locals>.DashboardSchemaOracles.test_runtime_bar_nonempty_children) 
+... ok
+test_runtime_child_forbidden_extra (__main__.main.<locals>.DashboardSchemaOracles.test_runtime_child_forbidden_extra) 
+... ok
+test_runtime_child_integral_numbers 
+(__main__.main.<locals>.DashboardSchemaOracles.test_runtime_child_integral_numbers) ... ok
+test_runtime_child_numeric_boolean (__main__.main.<locals>.DashboardSchemaOracles.test_runtime_child_numeric_boolean) 
+... ok
+test_runtime_child_numeric_string (__main__.main.<locals>.DashboardSchemaOracles.test_runtime_child_numeric_string) 
+... ok
+test_runtime_dashboard_empty_children 
+(__main__.main.<locals>.DashboardSchemaOracles.test_runtime_dashboard_empty_children) ... ok
+test_runtime_dashboard_missing_children 
+(__main__.main.<locals>.DashboardSchemaOracles.test_runtime_dashboard_missing_children) ... ok
+test_runtime_dashboard_one_default_child 
+(__main__.main.<locals>.DashboardSchemaOracles.test_runtime_dashboard_one_default_child) ... ok
+test_runtime_default_bar (__main__.main.<locals>.DashboardSchemaOracles.test_runtime_default_bar) ... ok
+test_runtime_default_bar_nonempty_children 
+(__main__.main.<locals>.DashboardSchemaOracles.test_runtime_default_bar_nonempty_children) ... ok
+test_runtime_nested_empty_dashboard 
+(__main__.main.<locals>.DashboardSchemaOracles.test_runtime_nested_empty_dashboard) ... ok
+test_runtime_nested_nonempty_dashboard 
+(__main__.main.<locals>.DashboardSchemaOracles.test_runtime_nested_nonempty_dashboard) ... ok
+test_runtime_root_forbidden_extra (__main__.main.<locals>.DashboardSchemaOracles.test_runtime_root_forbidden_extra) 
+... ok
+test_runtime_root_integral_numbers (__main__.main.<locals>.DashboardSchemaOracles.test_runtime_root_integral_numbers) 
+... ok
+test_runtime_root_numeric_boolean (__main__.main.<locals>.DashboardSchemaOracles.test_runtime_root_numeric_boolean) 
+... ok
+test_runtime_root_numeric_string (__main__.main.<locals>.DashboardSchemaOracles.test_runtime_root_numeric_string) ... 
+ok
+test_schema_bar_explicit_empty_children 
+(__main__.main.<locals>.DashboardSchemaOracles.test_schema_bar_explicit_empty_children) ... ok
+test_schema_bar_nonempty_children (__main__.main.<locals>.DashboardSchemaOracles.test_schema_bar_nonempty_children) 
+... FAIL
+test_schema_child_forbidden_extra (__main__.main.<locals>.DashboardSchemaOracles.test_schema_child_forbidden_extra) 
+... ok
+test_schema_child_integral_numbers (__main__.main.<locals>.DashboardSchemaOracles.test_schema_child_integral_numbers) 
+... ok
+test_schema_child_numeric_boolean (__main__.main.<locals>.DashboardSchemaOracles.test_schema_child_numeric_boolean) 
+... ok
+test_schema_child_numeric_string (__main__.main.<locals>.DashboardSchemaOracles.test_schema_child_numeric_string) ... 
+ok
+test_schema_dashboard_empty_children 
+(__main__.main.<locals>.DashboardSchemaOracles.test_schema_dashboard_empty_children) ... FAIL
+test_schema_dashboard_missing_children 
+(__main__.main.<locals>.DashboardSchemaOracles.test_schema_dashboard_missing_children) ... FAIL
+test_schema_dashboard_one_default_child 
+(__main__.main.<locals>.DashboardSchemaOracles.test_schema_dashboard_one_default_child) ... ok
+test_schema_default_bar (__main__.main.<locals>.DashboardSchemaOracles.test_schema_default_bar) ... ok
+test_schema_default_bar_nonempty_children 
+(__main__.main.<locals>.DashboardSchemaOracles.test_schema_default_bar_nonempty_children) ... FAIL
+test_schema_nested_empty_dashboard (__main__.main.<locals>.DashboardSchemaOracles.test_schema_nested_empty_dashboard) 
+... FAIL
+test_schema_nested_nonempty_dashboard 
+(__main__.main.<locals>.DashboardSchemaOracles.test_schema_nested_nonempty_dashboard) ... FAIL
+test_schema_root_forbidden_extra (__main__.main.<locals>.DashboardSchemaOracles.test_schema_root_forbidden_extra) ... 
+ok
+test_schema_root_integral_numbers (__main__.main.<locals>.DashboardSchemaOracles.test_schema_root_integral_numbers) 
+... ok
+test_schema_root_numeric_boolean (__main__.main.<locals>.DashboardSchemaOracles.test_schema_root_numeric_boolean) ... 
+ok
+test_schema_root_numeric_string (__main__.main.<locals>.DashboardSchemaOracles.test_schema_root_numeric_string) ... ok
+
+======================================================================
+FAIL: test_schema_bar_nonempty_children 
+(__main__.main.<locals>.DashboardSchemaOracles.test_schema_bar_nonempty_children)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "OWN_WORKTREE\tests\r33_probes\role14
+\dashboard_schema_oracle.py", line 164, in check
+    self.assertEqual(accepted, dict.fromkeys(validators, expected),
+AssertionError: {'generated': True, 'published': True} != {'generated': False, 'published': False}
+- {'generated': True, 'published': True}
+?               ^^^                ^^^
+
++ {'generated': False, 'published': False}
+?               ^^^^                ^^^^
+ : Strict schema oracle must honor RAW input, not model_dump: {"kind":"bar","charts":[{}]}
+
+======================================================================
+FAIL: test_schema_dashboard_empty_children 
+(__main__.main.<locals>.DashboardSchemaOracles.test_schema_dashboard_empty_children)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "OWN_WORKTREE\tests\r33_probes\role14
+\dashboard_schema_oracle.py", line 164, in check
+    self.assertEqual(accepted, dict.fromkeys(validators, expected),
+AssertionError: {'generated': True, 'published': True} != {'generated': False, 'published': False}
+- {'generated': True, 'published': True}
+?               ^^^                ^^^
+
++ {'generated': False, 'published': False}
+?               ^^^^                ^^^^
+ : Strict schema oracle must honor RAW input, not model_dump: {"kind":"dashboard","charts":[]}
+
+======================================================================
+FAIL: test_schema_dashboard_missing_children 
+(__main__.main.<locals>.DashboardSchemaOracles.test_schema_dashboard_missing_children)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "OWN_WORKTREE\tests\r33_probes\role14
+\dashboard_schema_oracle.py", line 164, in check
+    self.assertEqual(accepted, dict.fromkeys(validators, expected),
+AssertionError: {'generated': True, 'published': True} != {'generated': False, 'published': False}
+- {'generated': True, 'published': True}
+?               ^^^                ^^^
+
++ {'generated': False, 'published': False}
+?               ^^^^                ^^^^
+ : Strict schema oracle must honor RAW input, not model_dump: {"kind":"dashboard"}
+
+======================================================================
+FAIL: test_schema_default_bar_nonempty_children 
+(__main__.main.<locals>.DashboardSchemaOracles.test_schema_default_bar_nonempty_children)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "OWN_WORKTREE\tests\r33_probes\role14
+\dashboard_schema_oracle.py", line 164, in check
+    self.assertEqual(accepted, dict.fromkeys(validators, expected),
+AssertionError: {'generated': True, 'published': True} != {'generated': False, 'published': False}
+- {'generated': True, 'published': True}
+?               ^^^                ^^^
+
++ {'generated': False, 'published': False}
+?               ^^^^                ^^^^
+ : Strict schema oracle must honor RAW input, not model_dump: {"charts":[{"kind":"line"}]}
+
+======================================================================
+FAIL: test_schema_nested_empty_dashboard 
+(__main__.main.<locals>.DashboardSchemaOracles.test_schema_nested_empty_dashboard)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "OWN_WORKTREE\tests\r33_probes\role14
+\dashboard_schema_oracle.py", line 164, in check
+    self.assertEqual(accepted, dict.fromkeys(validators, expected),
+AssertionError: {'generated': True, 'published': True} != {'generated': False, 'published': False}
+- {'generated': True, 'published': True}
+?               ^^^                ^^^
+
++ {'generated': False, 'published': False}
+?               ^^^^                ^^^^
+ : Strict schema oracle must honor RAW input, not model_dump: 
+{"kind":"dashboard","charts":[{"kind":"dashboard","charts":[]}]}
+
+======================================================================
+FAIL: test_schema_nested_nonempty_dashboard 
+(__main__.main.<locals>.DashboardSchemaOracles.test_schema_nested_nonempty_dashboard)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "OWN_WORKTREE\tests\r33_probes\role14
+\dashboard_schema_oracle.py", line 164, in check
+    self.assertEqual(accepted, dict.fromkeys(validators, expected),
+AssertionError: {'generated': True, 'published': True} != {'generated': False, 'published': False}
+- {'generated': True, 'published': True}
+?               ^^^                ^^^
+
++ {'generated': False, 'published': False}
+?               ^^^^                ^^^^
+ : Strict schema oracle must honor RAW input, not model_dump: 
+{"kind":"dashboard","charts":[{"kind":"dashboard","charts":[{}]}]}
+
+----------------------------------------------------------------------
+Ran 36 tests in 0.022s
+
+FAILED (failures=6)

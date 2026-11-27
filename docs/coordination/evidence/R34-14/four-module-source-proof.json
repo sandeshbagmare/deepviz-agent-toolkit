@@ -1,0 +1,153 @@
+{
+  "source": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+  "parent": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "full_diff_paths": [
+    "M\tpython/deepviz/src/deepviz/engines.py",
+    "A\tpython/deepviz/tests/test_r23_count_channel.py"
+  ],
+  "four_modules": [
+    {
+      "file": "python/deepviz/src/deepviz/models.py",
+      "bytes": 3493,
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "base_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "equal_base": true
+    },
+    {
+      "file": "python/deepviz/src/deepviz/normalize.py",
+      "bytes": 34886,
+      "sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+      "base_sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+      "equal_base": true
+    },
+    {
+      "file": "python/deepviz/src/deepviz/engines.py",
+      "bytes": 44141,
+      "sha256": "54b9b6ced08b276b87c143334c8b54110ea7f15e52e0b283d65c911fdba6bb18",
+      "base_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225",
+      "equal_base": false
+    },
+    {
+      "file": "python/deepviz/src/deepviz/render.py",
+      "bytes": 11637,
+      "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+      "base_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+      "equal_base": true
+    }
+  ],
+  "exact_two_line_channels_only_replacement": true,
+  "protected_top_level_definitions": [
+    {
+      "name": "_table_budget",
+      "byte_equal": true,
+      "sha256": "e6f59a5abe92b56c7358bb5c6eb6755a6933fd3269e327f12a5a31cab2216f8e"
+    },
+    {
+      "name": "safe_json",
+      "byte_equal": true,
+      "sha256": "bb4aa61b9355b47d9cf1b04f5550c6c3fb9ea53e09e927ff06ac36957d814a69"
+    },
+    {
+      "name": "_number",
+      "byte_equal": true,
+      "sha256": "99ea212a112afd304ed0ae4a8cff604c0b181499f23a69366d27b5d4919b1dbd"
+    },
+    {
+      "name": "_groups",
+      "byte_equal": true,
+      "sha256": "2c545d6d9f55b61ae1596097982764aba7bcedf27342da18b4e27858c92bc60e"
+    },
+    {
+      "name": "_geometry",
+      "byte_equal": true,
+      "sha256": "aca17ffbc1a0dc94fdcabb9e78e278738bd3e6d2a698bafae04ef9a7f100115b"
+    },
+    {
+      "name": "_boxes",
+      "byte_equal": true,
+      "sha256": "c198ac709c6ba3dd6a74bc010f5c5de700551d8c0ff5a82500861740416ae57d"
+    },
+    {
+      "name": "_histogram_values",
+      "byte_equal": true,
+      "sha256": "245cc859bcc6cc81e68c4361dc4672eb62478c495d3967b0e331bffe139ee05e"
+    },
+    {
+      "name": "_histogram",
+      "byte_equal": true,
+      "sha256": "f363c050c7ac0422b4ad1a7eee1422d26e5e4eaeaea69c4881947f366593fdcd"
+    },
+    {
+      "name": "_tiles",
+      "byte_equal": true,
+      "sha256": "6b4385bc6529464e877e105ff9d19eb411c0419bec46d35f2b1629116736f5d1"
+    },
+    {
+      "name": "_heatmap",
+      "byte_equal": true,
+      "sha256": "d6626e70999d5d2102c1bcb87a0c4bc936d3b869821950afd1383f3830ba3528"
+    },
+    {
+      "name": "_colors",
+      "byte_equal": true,
+      "sha256": "c4cfe975327330db218d08e5509876640bc0e6044258d2d05cef94f52cf571f4"
+    },
+    {
+      "name": "_label_color",
+      "byte_equal": true,
+      "sha256": "0dcca46cf58a700c1f8cdbdace5576565fcd68b6dd43da19253a10224aa91fb8"
+    },
+    {
+      "name": "_wrap",
+      "byte_equal": true,
+      "sha256": "1c75a84368394af2d5c94ccb09d6bc343692c6f3bd232e91a2ecd2a93fc19195"
+    },
+    {
+      "name": "_fallback",
+      "byte_equal": true,
+      "sha256": "ec66453d3c89f8efce4f4a85b300ec0209b9d9dacc888992f55797f6933eb571"
+    },
+    {
+      "name": "matplotlib_figure",
+      "byte_equal": true,
+      "sha256": "7a0e6d9013655e321326afc5bf7dd88c876a4660aad676a39c78f8a445381ddd"
+    },
+    {
+      "name": "_plotly",
+      "byte_equal": true,
+      "sha256": "f81f391dcb4c1e2b56a13cdb7e10da7cbffba59e2e8e619eb772009082dab433"
+    },
+    {
+      "name": "_iso_dates",
+      "byte_equal": true,
+      "sha256": "a5ac965d7e9beab7981051e1e68055ba54785e79886ef041712c272b3f69cf6b"
+    },
+    {
+      "name": "_vega",
+      "byte_equal": true,
+      "sha256": "00c5b54050a54581d8c05e92b0dc10419f016a643577995f95dd5565e7df5320"
+    },
+    {
+      "name": "_echarts",
+      "byte_equal": true,
+      "sha256": "3ba859c0dd8122138ba7f1aac322d012590801b31bf22c558c33ba61334abaad"
+    },
+    {
+      "name": "_antv",
+      "byte_equal": true,
+      "sha256": "0a20b95a5c51ad1463a9e9777a8d7ff77b9d6ae280f52af9e454114f869745ee"
+    },
+    {
+      "name": "native_spec",
+      "byte_equal": true,
+      "sha256": "f785b592e35ef2e33f681f9f75c99d4a1fba5937458a8fb94dbdcedaa76d07b8"
+    },
+    {
+      "name": "browser_html",
+      "byte_equal": true,
+      "sha256": "609b9db6f323a47f3022dae53c9f0e296be0a4cf4f5d506767f90823670f4ed3"
+    }
+  ],
+  "antv_equal_base": true,
+  "no_product_imports_or_tests": true
+}

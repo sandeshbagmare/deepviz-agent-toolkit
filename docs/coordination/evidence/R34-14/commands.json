@@ -1,0 +1,39 @@
+{
+  "source": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+  "parent": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "commands": [
+    {
+      "command": "git diff7bc..857 -- python/deepviz/src/deepviz/engines.py python/deepviz/tests/test_r23_count_channel.py",
+      "exit": 0
+    },
+    {
+      "command": "git show --no-patch --format=%H_%P_%s857; git grep -n -E channels/normalize/aggregation857 -- python/deepviz/src",
+      "exit": 0
+    },
+    {
+      "command": "PY -B -I OUT/inspect_count.py",
+      "exit": 0,
+      "result": "4modulehashes/exacttwo-lineedit/22protecteddefinitionsinclAntVidentical"
+    },
+    {
+      "command": "git grep -n channels857 -- python/deepviz/src; PY -B -I OUT/read_adapters.py",
+      "exit": 0,
+      "result": "all3callsites/all5adapters/heatmap/histogram/auto/explicitybranchesread"
+    },
+    {
+      "command": "PY -B -I OUT/decision.py",
+      "exit": 0,
+      "result": "nointroducedmustfix;0productimports/tests/newcounterexamples"
+    }
+  ],
+  "runtime_COUNT_tests": 0,
+  "not_run": [
+    "author16",
+    "historical55",
+    "browserbaseline",
+    "oldhelper/readiness",
+    "build/install/scale",
+    "APIwrites/default/PR/closure/spawn"
+  ],
+  "harness_limits": "Longcheckpoint/reportrequestsportable-scannerrejectedBEFOREexecution;shorterownedwritesused/no product/APIaction. LatestdirectR34steerpreservedactualR33partial;managerR35annotationconflictreported."
+}

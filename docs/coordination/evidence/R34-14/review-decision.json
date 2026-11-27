@@ -1,0 +1,81 @@
+{
+  "review_source": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+  "parent": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "must_fix_findings_introduced": [],
+  "verdict": "Two-lineexplicitCOUNT/no-y/nonheatmaprepaircorrect/minimal;source-onlynon-authorreview,notfinalintegratedhead/CI/paint/main/v1/humanapproval.",
+  "nonexecuting_original_bug_trace": {
+    "input_groups": "Aseries90two/Bseries80three/Cseries70one;aggregationcount/spec.yNone/colorseries",
+    "reducer": "normalize548measurecount,607-610increments,670-673returnsnumericseriesandcount2/3/1",
+    "old_channels": "numericinsertionorderseriesbeforecount=>yseries90/80/70",
+    "new_channels": "97-98forcesycount=>_y2/3/1",
+    "limits": "StaticcodeandliteralcounttraceNOTexecutedruntime/painttest"
+  },
+  "branch_review": [
+    {
+      "case": "explicitcount/spec.yNone/nonheatmap",
+      "lines": "engines97-98/normalize515-553,607-610,670-673",
+      "decision": "alignsresolvedywithactualreduceroutputfield"
+    },
+    {
+      "case": "explicitycountandotherreducers",
+      "lines": "engines96-98;normalize539/548-552",
+      "decision": "namedyremainsauthoritative/reducerwritescounttothemappedmeasurewhenexplicit"
+    },
+    {
+      "case": "heatmapcount/auto",
+      "lines": "engines97/101/103/106;normalize519-531",
+      "decision": "excludedfromoverride;_ycoordinatekept/_heatcountorcolorvalueunchanged"
+    },
+    {
+      "case": "color/size/fieldnamecollision",
+      "lines": "engines102-107;normalize547-552",
+      "decision": "no_color/_size/_xmutation;countgroupcollisionrejectedbyexistingmeasure-ingroupsguard"
+    },
+    {
+      "case": "auto",
+      "lines": "normalize538-544;engines97",
+      "decision": "autopolicyunchanged/numericmeasureautoselectssumratherthanrewrite;categoricalautocountonlycountnumericnormally. Notuniversalheterogeneousinferencecertification."
+    },
+    {
+      "case": "zero/null/missing",
+      "lines": "engines81-86/103/117-139",
+      "decision": "zero_number0preserved;null/absentcountNoneandexistinggeometrywarningsratherthancolorborrow"
+    },
+    {
+      "case": "histogram/table/othernativekinds",
+      "lines": "engines99-107/151-165/387-446/462-538/541-618/621-714",
+      "decision": "histogramxselectionunchanged;allnativepathsconsumemapped_yorrawtable;noadditionalrendererchangeapproved"
+    }
+  ],
+  "all_production_channels_callers": [
+    "85796dbe3360fb88686f2e7188122e2da80d54c2:python/deepviz/src/deepviz/engines.py:89:def channels(records: list[dict], spec: ChartSpec) -> list[dict]:",
+    "85796dbe3360fb88686f2e7188122e2da80d54c2:python/deepviz/src/deepviz/engines.py:245:        data = channels(records, spec)",
+    "85796dbe3360fb88686f2e7188122e2da80d54c2:python/deepviz/src/deepviz/engines.py:726:    data, notes = _geometry(channels(records, spec), spec)",
+    "85796dbe3360fb88686f2e7188122e2da80d54c2:python/deepviz/src/deepviz/render.py:158:            _, geometry_notes = _geometry(channels(result.records, child), child)"
+  ],
+  "entry_flow": "render95ChartSpec/98-111effectivechildren/135-145normalize/153native_spec->engines726channels->fouradapters;matplotlib245channels;render158geometryprecheck. All3productioncallsitesread.",
+  "safety": "Assignmentonly/noIOfetchcodeeval/newstructures/resourcepolicy/serializer/pathauthoritychanges;allprotectedfunctionbytesandimportsconstantsidentical7bc. ExistingPlotly/AntV/readiness/numericpoliciesnotreapproved.",
+  "author_new_tests": {
+    "file": "python/deepviz/tests/test_r23_count_channel.py",
+    "bytes": 5812,
+    "sha256": "8270a4748ee5c5f20e9d7cce92674aefad43d7c151dd41709c702446a1b5c683",
+    "lines": 118,
+    "static_case_count": 16,
+    "executed_here": 0,
+    "functions": [
+      "test_count_measure_is_not_numeric_color_or_retained_size",
+      "test_named_measure_remains_authoritative",
+      "test_auto_count_keeps_categorical_labels_and_normalization_metadata",
+      "test_scatter_auto_does_not_steal_a_field_named_count",
+      "test_heatmap_count_preserves_implicit_y_coordinates",
+      "test_zero_is_not_a_missing_named_observation",
+      "test_absent_generated_count_does_not_fall_back_to_numeric_color"
+    ],
+    "strengths": "3barlinebubble+6explicityreducers+auto+scatter/countname+2heatmap+2zero/missing+directabsentcount;literalvalues/metadata/immutabilityasserts",
+    "limits": "directchannels/normalizeassertionsnotsourceselfproof/nativepaint;additionaltester10ownsactualstrictacceptance;no borrowedauthor16/old55/browserresult"
+  },
+  "counterexample_execution": "None justified;existingnew16casescoverthenarrowsourceboundaryandstatictracesufficient. Noauthor16/old55/browserbaselineexecution.",
+  "integration_warning": "Applyonly2channelslinesandNEWtestpathonmanagerexactlatestownedhead;wholeenginesfilecopywouldoverwrite08AntV/laterPlotlychanges. Fourmodulesnapshotreferenceonlynotintegrationgrant.",
+  "tests_product_imports_browser_build_install_APIwrites": 0,
+  "r33_partial": "PreservedoneNEWbffschemaoracleactual6FAIL30PASS0ERROR0SKIP/36tests;NOT857producttestcount/currentCIapproval;latestdirectR34steeraftercoherentcheckpoint."
+}
