@@ -17,6 +17,7 @@ from .engines import (
     _colors,
     _fallback,
     _geometry,
+    _table_budget,
     browser_html,
     channels,
     matplotlib_figure,
@@ -84,6 +85,9 @@ def render(
     Replay rejects records over 1 MiB or a total source over 64 MiB of UTF-8 JSONL.
     Combined retained records/specs and native payloads are limited to 32 MiB;
     engine geometry, image buffers and escaped HTML have additional overhead.
+    Expanded tables across all children are preflighted at 10,000 cells including
+    headers and 16 MiB estimated bytes before native/HTML allocation. The latter
+    is a conservative serialization allowance, not an OS-memory/file-size limit.
     Browser artifacts use pinned CDN libraries except self-contained Plotly.
     """
     if engine not in ENGINES:
@@ -139,6 +143,7 @@ def render(
                 result = normalize(source, child)
             payload_bytes = _payload_budget(result.records, payload_bytes)
             normalized.append(result)
+    _table_budget([result.records for result in normalized])
     warnings = [message for result in normalized for message in result.warnings]
     payloads = []
     charts: list[dict[str, Any]] = []
