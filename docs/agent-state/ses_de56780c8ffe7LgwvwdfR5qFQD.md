@@ -19,3 +19,17 @@
 - Blocker: RED ownership lifecycle; no sourcefixrelease here; noGREEN/finalsignoff.
 - Next executable action: R04 runs NEW strictregressions with releasedfix/frozencandidate
   PYTHONPATH, resolves owning vs borrowed lifetimes, then independent tests/reviews/CI.
+
+## R13 NEW meaningful refill (sameID, no R10 replay)
+
+- Reused branchparent60599dd; entirePythonpackagebytes exactly5340bc69b7203ad7a9166543062482d819f9b705(diffexit0), module0473... . Normalizers16exclusive/no dirtySUMcopy/sourcefix.
+- OwnNEW `tests/r13_probes/role15/`, R13-15report/evidenceonly plus thisnote.21tests
+  final17pass4fail0skip5.73s/exit1, scopedRuff0/mypy0(1file). Initial4OWNinvalidmax_points
+  harnessfailures/types preservedandcorrectedonlyinnewprobe, notcountedproductbugs.
+- FourCSV/JSONL/Arrow/Parquetownedreducerguardleaks atinput256/prefix32, actualWinError32,
+  thenowncleanup/renamepass.17borrowed/fullconsume/EIOafter48/sampling10consume64controls pass.
+- Finite270rows/legal65,520bytegroupcells, eachfile<18MiB; real16MiBguard notpatched.
+  This is newerror-phaseacceptance foroneF1workitem, not4/21tickets. Windowsactualonly.
+- No R10old43replay/production/existingoracle/install/spawn/issue/PR/sharedbranchwrites.
+- Evidence R13report+summary, rawlocalartifactsuntracked; actualpublicationreceiptMAIN-only
+  aftercommands. NextR04/16guaranteedownedunwindwithborrowedpreservation, freshindependentretest.
