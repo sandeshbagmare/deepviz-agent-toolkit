@@ -92,3 +92,14 @@ independent semantic/memory/origin verification. Root will route09replacement fo
 independent review only after its actual committed handoff; no polling/waiting.
 Own scoped Git-only publication/readback follows; no authenticated-user API claim,
 project approval, merge, CI-green or900issue completion.
+
+## Actual publication (not project signoff)
+
+C1 code commit0b5476fc4fddddb33e1d20f8ec33ece711dda7ba,18ownedpaths;
+2026-11-27T15:49:40.184123Z-15:49:44.930559Z nonforce Git push exit0,
+scoped ls-remote exit0/exactC1. Git-only; no API/token/account-identity query.
+Stage payload17files151824B plus manifest: heuristic secret0, AST parse checks,
+all tested code hashes match staged bytes, diff-check0. C2 will checkpoint the
+actual C1 receipt in only this report, own note and publication-receipt.json;
+code remains exactly the tested C1. Latest final C2 receipt is then MAIN-only,
+not falsely claimed embedded in its own commit. No product or scale approval.

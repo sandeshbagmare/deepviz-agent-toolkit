@@ -1,0 +1,105 @@
+{
+  "owner": "ses_de5678018ffezK8JGDUaSzvcWn",
+  "branch": "agents/r10-21-recovery-git-bootstrap",
+  "base": "5d57692731949cf98bcf92a319eb25ebc85fc62b",
+  "started_utc": "2026-11-27T15:49:40.184123+00:00",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "5d57692731949cf98bcf92a319eb25ebc85fc62b",
+        "0b5476fc4fddddb33e1d20f8ec33ece711dda7ba"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "5d57692731949cf98bcf92a319eb25ebc85fc62b",
+        "0b5476fc4fddddb33e1d20f8ec33ece711dda7ba"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "push",
+        "origin",
+        "HEAD:refs/heads/agents/r10-21-recovery-git-bootstrap"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--heads",
+        "origin",
+        "refs/heads/agents/r10-21-recovery-git-bootstrap"
+      ],
+      "exit": 0
+    }
+  ],
+  "API_used": false,
+  "local_commit": "0b5476fc4fddddb33e1d20f8ec33ece711dda7ba",
+  "owned_paths": [
+    "docs/agent-state/ses_de5678018ffezK8JGDUaSzvcWn.md",
+    "docs/coordination/evidence/R22-21/final-controls.xml",
+    "docs/coordination/evidence/R22-21/first-controls.xml",
+    "docs/coordination/evidence/R22-21/input-provenance.json",
+    "docs/coordination/evidence/R22-21/input-types-red.xml",
+    "docs/coordination/evidence/R22-21/lf-corrected.xml",
+    "docs/coordination/evidence/R22-21/portable-fixture-receipts.json",
+    "docs/coordination/evidence/R22-21/publish_owned.txt",
+    "docs/coordination/evidence/R22-21/quality-checks.json",
+    "docs/coordination/evidence/R22-21/second-controls.xml",
+    "docs/coordination/evidence/R22-21/stage-envelope.json",
+    "docs/coordination/evidence/R22-21/tdd-red.xml",
+    "docs/coordination/evidence/R22-21/third-controls.xml",
+    "docs/coordination/evidence/R22-21/verify_owned.txt",
+    "docs/coordination/reports/R22-21-frozen-source-envelope.md",
+    "tests/r22_probes/role21/README.md",
+    "tests/r22_probes/role21/frozen_scale_envelope.py",
+    "tests/r22_probes/role21/test_frozen_scale_envelope.py"
+  ],
+  "remote_sha_readback": "0b5476fc4fddddb33e1d20f8ec33ece711dda7ba",
+  "status": "OWN_NONFORCE_PUBLISHED_EXACT_SHA_NOT_PRODUCT_APPROVAL",
+  "finished_utc": "2026-11-27T15:49:44.930559+00:00"
+}
