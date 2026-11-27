@@ -77,6 +77,25 @@ is nested. `validateSpec` enforces these rules at runtime as well. JavaScript
 validation intentionally does not coerce strings into
 numbers. Model-authored schemas cannot supply code, renderer options, or URLs.
 
+### Versioned raw prompts
+
+The tarball includes byte-identical copies of the canonical `prompts/v1/README.md`,
+`system.md` and `request.md`. These are raw Markdown resources, not executable
+templates or a JavaScript/browser prompt-reader API. In a Node.js ESM consumer:
+
+```js
+import { readFile } from 'node:fs/promises';
+
+const systemPrompt = await readFile(
+  new URL(import.meta.resolve('@deepviz/agent-toolkit/prompts/v1/system.md')),
+  'utf8',
+);
+```
+
+The `README.md` and `request.md` subpaths use the same versioned prefix. Rebuild
+and reinstall after changing the canonical source prompts; do not edit generated
+copies. Prompt text is guidance, not a security sandbox.
+
 ### Contract defaults
 
 `version: 1`, `kind: 'bar'`, `title: 'Visualization'`, `description: ''`,
