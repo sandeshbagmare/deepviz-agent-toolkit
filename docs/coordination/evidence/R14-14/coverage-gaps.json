@@ -1,0 +1,95 @@
+{
+  "retrieval_date_utc": "2026-11-27",
+  "records": [
+    {
+      "url": "https://api.github.com/repos/plotly/plotly.js/pulls/8168",
+      "retrieved_at_utc": "2026-11-27T14:22:54.158460+00:00",
+      "status": 200,
+      "bytes": 18817,
+      "sha256": "b6fb32696cd4acb5d2409a957daec16437b6f39943c3ca4b09da6352dc8cf90c",
+      "final_url": "https://api.github.com/repos/plotly/plotly.js/pulls/8168",
+      "kind": "official-upstream-release-linked-PR",
+      "fields": {
+        "html_url": "https://github.com/plotly/plotly.js/pull/8168",
+        "title": "Bugfix: fix potential prototype pollution when expanding/merging object paths",
+        "body": "This PR fixes a potential issue that allowed certain graph configurations to pollute objects' builtins or prototype chain.\nNow, only \"own\" properties are considered when expanding/merging objects.",
+        "merged": true,
+        "merged_at": "2026-11-10T21:13:05Z",
+        "merge_commit_sha": null,
+        "changed_files": 4
+      },
+      "affected_version_range": "Not stated by this PR metadata; do not infer3.7.0 is affected."
+    },
+    {
+      "url": "https://api.github.com/repos/vega/.github/contents/SECURITY.md",
+      "retrieved_at_utc": "2026-11-27T14:22:55.723053+00:00",
+      "status": 200,
+      "bytes": 2552,
+      "sha256": "231b6f8a74b67306b7a7c5971288b91f06a24a249d986a40196cc115354bf3b2",
+      "final_url": "https://api.github.com/repos/vega/.github/contents/SECURITY.md",
+      "kind": "official-organization-security-policy",
+      "fields": {
+        "html_url": "https://github.com/vega/.github/blob/main/SECURITY.md",
+        "blob_sha": "e63246af82ee8da341f8d7af3515fdeb758396a1",
+        "sha256": "211d3dfb4a0df22dc0b4ee88abcac9c903364970a21f968331d9c13980c8c3a1",
+        "relevant_lines": [
+          "# Security",
+          "The Vega team and community take security bugs in [Vega languages and tools](https://github.com/vega) seriously. We appreciate your efforts to responsibly disclose your findings, and will make every effort to acknowledge your contributions.",
+          "## Reporting Security Issues",
+          "**Please do not report security vulnerabilities through public GitHub issues.**",
+          "To report a security issue privately, please use the GitHub Security Advisory [\"Report a Vulnerability\"](https://github.com/vega/.github/security/advisories/new) tab.",
+          "## Learning More About Security",
+          "To learn more about security measures in Vega, see the documentation on using an expression [`interpreter`](https://vega.github.io/vega/usage/interpreter/) for [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) compliance, or [`loader`](https://github.com/vega/vega/tree/main/packages/vega-loader) for opening network or filesystem resources."
+        ]
+      }
+    },
+    {
+      "url": "https://plotly.com/chart-studio-help/security-advisories/",
+      "retrieved_at_utc": "2026-11-27T14:22:57.126578+00:00",
+      "status": 308,
+      "location": "/chart-studio-updates/",
+      "error": "HTTP-error-or-redirect",
+      "kind": "official-policy-linked-advisory-webpage"
+    },
+    {
+      "url": "https://plotly.com/chart-studio-updates/",
+      "retrieved_at_utc": "2026-11-27T14:22:57.412470+00:00",
+      "status": 200,
+      "bytes": 525750,
+      "sha256": "2cc4f884bd5e5d6f985552cd60b1c7fabf977ff0ce4a4d3f5dfd4d7610f76572",
+      "final_url": "https://plotly.com/chart-studio-updates/",
+      "kind": "official-policy-linked-advisory-webpage",
+      "observation": "Returned Chart Studio shutdown/replacement page, not an advisory index.",
+      "contains_shutdown_phrase": true
+    },
+    {
+      "url": "https://docs.github.com/en/rest/security-advisories/global-advisories?apiVersion=2026-03-10",
+      "retrieved_at_utc": "2026-11-27T14:22:57.984251+00:00",
+      "status": 200,
+      "bytes": 334131,
+      "sha256": "d6cdb278a0cd2ea1bf757a405808941454fcfc6ffd1e6927ef06bd1c797edc33",
+      "final_url": "https://docs.github.com/en/rest/security-advisories/global-advisories?apiVersion=2026-03-10",
+      "kind": "official-GitHub-REST-query-documentation",
+      "documented_controls": [
+        "ecosystem npm",
+        "affects package or package@version",
+        "type reviewed/unreviewed/malware",
+        "cursor before/after from Link",
+        "per_page maximum100"
+      ],
+      "observed_keywords": {
+        "affects": true,
+        "per_page": true,
+        "unreviewed": true,
+        "malware": true,
+        "2026-03-10": true
+      }
+    }
+  ],
+  "limits": [
+    "These HTTP/hash reads preserve earlier display-only webfetch observations in compact durable evidence.",
+    "PR/release prose supplies no affected-version range or demonstrated DeepViz exploit path.",
+    "Organization policy is linked by Vega policy; missing repository-local policy does not mean no organization policy.",
+    "The old Plotly policy-linked advisory URL does not supply a comprehensive current advisory corpus."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "commands": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "-I",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "tests/r14_probes/role14/test_query_controls.py",
+        "--basetemp",
+        "OWN_NEW_TEMP"
+      ],
+      "exit_code": 0,
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0,
+      "elapsed_seconds": 0.04
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "tests/r14_probes/role14"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "mypy",
+        "--cache-dir",
+        "OWN_CACHE",
+        "tests/r14_probes/role14/query_advisories.py"
+      ],
+      "exit_code": 0,
+      "source_files": 1
+    }
+  ],
+  "previous_own_probe_Ruff_failure": "Initial6formatfindings correctedONLYnewprobe (2UTC aliases,4semicolons); final0. No queries repeated afterformat.",
+  "limits": "Only NEWprobe tests/lint/types; no product/fullsuite/browser/build result inferred."
+}

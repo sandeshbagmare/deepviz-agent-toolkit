@@ -1,0 +1,67 @@
+{
+  "source_target": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "inventory_source": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "files": [
+    {
+      "file": "docs/coordination/evidence/R14-14/advisory-queries.json",
+      "bytes": 63786,
+      "sha256": "c8a51df83f7493b9a56d2354bfab432892a0e85b5071fd2c0bb6c8fa2a585bd4"
+    },
+    {
+      "file": "docs/coordination/evidence/R14-14/controls-final.log",
+      "bytes": 99,
+      "sha256": "06cdf8bcb89efbe1e002f486792f1f4e5041790a94a9ede6adf87e5214f877f9"
+    },
+    {
+      "file": "docs/coordination/evidence/R14-14/coverage-gaps.json",
+      "bytes": 5006,
+      "sha256": "00f5e0a6e1e71da10d26118aa0e249ac5ded16267f7628f782e1e9ebe18ec5de"
+    },
+    {
+      "file": "docs/coordination/evidence/R14-14/quality.json",
+      "bytes": 1087,
+      "sha256": "a36ff2603f6dbd09ae1af3f049f8daa8166ee282304c149cccaaebd939933993"
+    },
+    {
+      "file": "docs/coordination/evidence/R14-14/source-continuity.json",
+      "bytes": 9397,
+      "sha256": "142ac05dc6dd80b533b9451081d2b7cb96e7aaec1613d8ccfcd6a74efdec4b0b"
+    },
+    {
+      "file": "docs/coordination/evidence/R14-14/upstream-controls.json",
+      "bytes": 23396,
+      "sha256": "0f925713dc18bcf25b84c05bc70ed33110fa10404f1ab9691bec26746a793f83"
+    },
+    {
+      "file": "tests/r14_probes/role14/query_advisories.py",
+      "bytes": 9849,
+      "sha256": "0b3a2031460567d2537b6fdd76169505bba5d476b70113b1dc8ba078e1c3ee27"
+    },
+    {
+      "file": "tests/r14_probes/role14/README.md",
+      "bytes": 2939,
+      "sha256": "94036a8f37e730d200c2f1a2888fb47abd089177b375f1f51c911c210f2a6afc"
+    },
+    {
+      "file": "tests/r14_probes/role14/test_query_controls.py",
+      "bytes": 3040,
+      "sha256": "60881b047c17d8f866b1d726e80252ecfbabc086bdb40111c95c6a6281403ad4"
+    }
+  ],
+  "claims_verified": {
+    "relevant_immutable_sourcefiles_equal": 26,
+    "filteredqueries": 30,
+    "exactqueries_returned0": 24,
+    "historicalGHSA": 10,
+    "rangecontrols": 4,
+    "HTTPmetadata_requests": 56,
+    "HTTP200": 48,
+    "HTTP404": 7,
+    "HTTP308": 1,
+    "rate_or_HTTP_query_errors": 0,
+    "secret_pattern_findings": 0,
+    "absolute_compact_evidence_paths": 0,
+    "downloadedcodeexecuted": false
+  },
+  "limits": "Hashes/complete filteredpages are observations, not security or release approval. Ownnote/report mutate for publication receipts and are not self-hashed."
+}
