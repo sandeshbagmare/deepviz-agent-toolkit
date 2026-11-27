@@ -25,3 +25,13 @@ Next executable action: update ownR09 D07/D08/D10 and nextbatch6/7routing toR13/
 - Secret/signedURL-pattern, Markdown whitespace/fences and allownJSONparse checks passed in this scopedcommand. This is **documentation/evidence integrity**, not product correctness, test/reviewer approval, remoteCIgreen or issueclosure.
 
 Next executable action: freshauthenticatedGET/useridentity + ownremote collision read, copy explicitOWNpublication manifest to existingOWNbranch, stageddiff/whitespace/secret review, meaningfulscopedcommit/nonforcepush/actualSHAreadback; save receipt before handoff. No publication claimed yet.
+
+## Actual publication and persisted-tree evidence
+
+- Freshauth13:59:32UTC: GET/userHTTP200/login`sandeshbagmare`, existingGCMmemoryonly/noauthmutation; safeownbranchcollisionread exit0/absent. `publication-identity.json`.
+- ExplicitOWNmanifest staged/reviewed14:00:14UTC:26inputfiles539,574bytes plus one ownstagedreviewreceipt; no source/othernotes/rootcanonical files. Allcopybytesmatch, cachedwhitespacecheck0, credentialsignedURLpatterns0. OriginalR03report/evidence preserved. `staged-review.json`.
+- Actualmeaningfulcommit `bca3849c82227b2a7aca97a865ed642698defe76`: `git commit -m "docs: map real delivery acceptance and recovery backlog"` with honest `Refs #27,#28` body, exit0;27ownedfiles. `git push origin HEAD:refs/heads/agents/r10-19-real-backlog-commits` **nonforce/exit0**; `git ls-remote --heads origin refs/heads/agents/r10-19-real-backlog-commits` **exit0/exactbca3849** at14:01:21UTC. Fullargs/exits/sanitizedoutput in `publication-attempt.json`.
+-14:02:37UTC actualpublishedGittree readback **37checksPASS/0FAIL/exit0**:14/20/10, all11originalchecklist mappings/all30genuineissues;09/10restrictions/07+18conditionaltransfers;900gap; zero product-pathdelta; ownworktreeclean.6filesexactbytes/21onlyCRLF→GitLFnormalization, eachhashrecorded; originalR03reportGitbytehashexact2a7f19ea... Baselinehistory notrewritten. `published-content-verification.json`.
+- No producttests/builds/benchmarks/browser/sourcefixes/issuePRmutations/newcensus/spawning in thisPMcontinuation. RootremoteVerificationFAIL and900legitimatecreatedANDresolvedUNMET remain. Agentprocessaudit is not humanapproval or one of fourfinalproductreports.
+
+Next executable action: publish the narrowOWNreceipt checkpoint, finalremoteSHA+cleanstatusreadback, save MAINactual-IDnote/R10pointer then return actualreceipt; R04source action remains existingR12P1preflight budget, not oracle-onlycleanup or forbidden testerproductionedits.
