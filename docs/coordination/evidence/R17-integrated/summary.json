@@ -1,0 +1,585 @@
+{
+  "source_sha": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "scope": "Integrated milestone, not release/final-candidate acceptance",
+  "source_hashes": [
+    {
+      "path": "python/deepviz/src/deepviz/engines.py",
+      "working_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225",
+      "git_blob_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225"
+    },
+    {
+      "path": "python/deepviz/src/deepviz/render.py",
+      "working_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+      "git_blob_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+    },
+    {
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "working_sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+      "git_blob_sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2"
+    },
+    {
+      "path": "packages/deepviz/src/normalize.ts",
+      "working_sha256": "2c730b13f6360fa2e75c66d03ea051ffdb5c253d4922546f51cd8fd60e742c7f",
+      "git_blob_sha256": "2c730b13f6360fa2e75c66d03ea051ffdb5c253d4922546f51cd8fd60e742c7f"
+    },
+    {
+      "path": "python/deepviz/tests/test_r12_table_budget.py",
+      "working_sha256": "cb2f6d17c6820003dddf54fa7f753ef6f734deff243118602c41f6b6c4bc0fe8",
+      "git_blob_sha256": "cb2f6d17c6820003dddf54fa7f753ef6f734deff243118602c41f6b6c4bc0fe8"
+    },
+    {
+      "path": "python/deepviz/tests/test_r07_finite_overflow.py",
+      "working_sha256": "cbb18b1ab0107ab4cfd4dfff1515b6c6afc5f4495b4a9b56be090dfb2bce610f",
+      "git_blob_sha256": "cbb18b1ab0107ab4cfd4dfff1515b6c6afc5f4495b4a9b56be090dfb2bce610f"
+    },
+    {
+      "path": "packages/deepviz/test/test_r07_finite_overflow.test.mjs",
+      "working_sha256": "72c909dfe855c107e6205683b7a3c36de269c56a39f4e999c4ad055118a93fcc",
+      "git_blob_sha256": "72c909dfe855c107e6205683b7a3c36de269c56a39f4e999c4ad055118a93fcc"
+    }
+  ],
+  "full_nonscale": {
+    "file": "R17-integrated-nonscale.xml",
+    "sha256": "69181e740a4b813ec7cc57e55041eb033ea561cfe0b51e839f9a1ae0adbd750d",
+    "totals": {
+      "tests": 3084,
+      "failures": 36,
+      "errors": 0,
+      "skipped": 5,
+      "passed": 3043
+    },
+    "xml_seconds": 344.446,
+    "outcomes": [
+      {
+        "class": "python.deepviz.tests.test_backend_antv",
+        "name": "test_dashboard_duplicate_titles_get_unique_containers_and_independent_options",
+        "outcome": "failure"
+      },
+      {
+        "class": "python.deepviz.tests.test_mcp_transport",
+        "name": "test_stdio_registered_artifact_symlink_swap_cannot_read_outside_output_root",
+        "outcome": "skipped"
+      },
+      {
+        "class": "python.deepviz.tests.test_n17_boundaries",
+        "name": "test_n17_symlink_outside_data_directory_is_rejected",
+        "outcome": "skipped"
+      },
+      {
+        "class": "python.deepviz.tests.test_n17_boundaries",
+        "name": "test_n17_dashboard_serialization_order_observation",
+        "outcome": "failure"
+      },
+      {
+        "class": "python.deepviz.tests.test_render",
+        "name": "test_browser_executes_all_native_kinds[plotly]",
+        "outcome": "skipped"
+      },
+      {
+        "class": "python.deepviz.tests.test_render",
+        "name": "test_browser_executes_all_native_kinds[echarts]",
+        "outcome": "skipped"
+      },
+      {
+        "class": "python.deepviz.tests.test_render",
+        "name": "test_browser_executes_all_native_kinds[antv]",
+        "outcome": "skipped"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-records]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-nested_json]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-graphql]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-columns]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-csv]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-records]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-nested_json]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-graphql]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-columns]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-csv]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-records]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-nested_json]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-graphql]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-columns]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-csv]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-records]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-nested_json]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-graphql]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-columns]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-csv]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-records]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-nested_json]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-graphql]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-columns]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-csv]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-records]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-nested_json]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-graphql]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-columns]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-csv]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_n11_resource_policy",
+        "name": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_n11_resource_policy",
+        "name": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_n11_resource_policy",
+        "name": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte]",
+        "outcome": "failure"
+      },
+      {
+        "class": "tests.test_n11_resource_policy",
+        "name": "test_flattened_multibyte_key_at_64kib_is_preserved",
+        "outcome": "failure"
+      }
+    ]
+  },
+  "focused": {
+    "file": "R17-sum-integrated-nonscale.xml",
+    "sha256": "f17a528d152ff87b69d573249b97ed5902c68312db03bcf518437730551f3035",
+    "totals": {
+      "tests": 345,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 345
+    },
+    "xml_seconds": 27.792,
+    "outcomes": []
+  },
+  "nonscale_exclusions": 9,
+  "npm": {
+    "tests": 269,
+    "pass": 269,
+    "fail": 0,
+    "skip": 0,
+    "milliseconds": 4801.9805,
+    "build_exit": 0,
+    "typecheck_exit": 0,
+    "schema_exit": 0,
+    "pack_dry_run_exit": 0,
+    "npm_ci": "NOT RUN: no installs authorized"
+  },
+  "memory_control": {
+    "before": {
+      "input_bytes": 1700,
+      "input_count": 128,
+      "output_count": 128,
+      "union_fields": 128,
+      "native_graphics": 16512,
+      "tracemalloc_current": 55431,
+      "tracemalloc_peak": 30698790,
+      "elapsed_seconds": 3.8151665999976103
+    },
+    "before_source_correction": "Original probe hardcodes 0c5 source; actual unchanged loaded modules were independently verified at 5340 (3aa product bytes), see R12 report",
+    "after": {
+      "api": "ToolSession.render_chart",
+      "input_bytes": 1700,
+      "input_rows": 128,
+      "planned_cells": 16512,
+      "status": "rejected",
+      "error": "Dense table exceeds 10000 cell budget (including headers)",
+      "new_artifacts": 0,
+      "caller_preserved": true,
+      "elapsed_seconds": 0.011463700007880107,
+      "tracemalloc_current": 53218,
+      "tracemalloc_peak": 69587
+    },
+    "method": "Per-call tracemalloc Python allocations, not OS RSS/native/browser memory or a general memory ceiling"
+  },
+  "browser": {
+    "browser": "159.0.8154.6",
+    "node": "v26.13.1",
+    "resource_mode": "Exact generated pinned CDN URLs fulfilled by installed local asset bytes; all other network denied",
+    "assets": [
+      {
+        "url": "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js",
+        "sha256": "b66b25aeb4df84e33199dc21694014d336d222cbd9deb0e5a7c14bd6aa0d0fd0"
+      },
+      {
+        "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+        "sha256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412"
+      }
+    ],
+    "limits": "Five small normal table outputs only; images require actual inspection, no CDN-health/all-kind/final acceptance claim"
+  },
+  "renders": [
+    {
+      "engine": "matplotlib",
+      "status": "PASS",
+      "observed": {
+        "headings": [
+          "label",
+          "value"
+        ],
+        "rows": [
+          [
+            "A",
+            "3"
+          ],
+          [
+            "B",
+            "7"
+          ]
+        ],
+        "svgText": [],
+        "images": [
+          {
+            "width": 672,
+            "height": 384
+          }
+        ],
+        "svg": 0,
+        "canvas": 0,
+        "renderError": null
+      },
+      "image": "matplotlib-normal.png",
+      "sha256": "2b872db6d7fde8961e3909094fc1b77b2849fc9c8ca918bd3938b2da6bf25de7",
+      "bytes": 24344,
+      "opened_by_R04": true,
+      "correctness": "Native and accessible table preserve headers label/value and rows A=3,B=7; no clipping in this two-row fixture"
+    },
+    {
+      "engine": "plotly",
+      "status": "PASS",
+      "observed": {
+        "headings": [
+          "label",
+          "value"
+        ],
+        "rows": [
+          [
+            "A",
+            "3"
+          ],
+          [
+            "B",
+            "7"
+          ]
+        ],
+        "svgText": [
+          "A",
+          "B",
+          "label",
+          "3",
+          "7",
+          "value",
+          "R12 table: A=3, B=7"
+        ],
+        "images": [],
+        "svg": 4,
+        "canvas": 0,
+        "renderError": null
+      },
+      "image": "plotly-normal.png",
+      "sha256": "f3d128d9c8f8d90aac3fd30d23f9dc46857dab6a0b93a03db4d45f3e00e87dd6",
+      "bytes": 22117,
+      "opened_by_R04": true,
+      "correctness": "Native and accessible table preserve headers label/value and rows A=3,B=7; no clipping in this two-row fixture"
+    },
+    {
+      "engine": "vega",
+      "status": "PASS",
+      "observed": {
+        "headings": [
+          "label",
+          "value"
+        ],
+        "rows": [
+          [
+            "A",
+            "3"
+          ],
+          [
+            "B",
+            "7"
+          ]
+        ],
+        "svgText": [],
+        "images": [
+          {
+            "width": 700,
+            "height": 400
+          }
+        ],
+        "svg": 0,
+        "canvas": 0,
+        "renderError": null
+      },
+      "image": "vega-normal.png",
+      "sha256": "586b862a17de00b22aa382dc998add2c8525285e5df908355b1a20c1c998c08b",
+      "bytes": 21991,
+      "opened_by_R04": true,
+      "correctness": "Native and accessible table preserve headers label/value and rows A=3,B=7; no clipping in this two-row fixture"
+    },
+    {
+      "engine": "echarts",
+      "status": "PASS",
+      "observed": {
+        "headings": [
+          "label",
+          "value"
+        ],
+        "rows": [
+          [
+            "A",
+            "3"
+          ],
+          [
+            "B",
+            "7"
+          ]
+        ],
+        "svgText": [
+          "label",
+          "value",
+          "A",
+          "3",
+          "B",
+          "7",
+          "R12 table: A=3, B=7"
+        ],
+        "images": [],
+        "svg": 1,
+        "canvas": 0,
+        "renderError": null
+      },
+      "image": "echarts-normal.png",
+      "sha256": "2f5c8809fbf2d7a81492e5c579b4c6f00dcd17248f3fea29f858115ae20356b5",
+      "bytes": 27122,
+      "opened_by_R04": true,
+      "correctness": "Native and accessible table preserve headers label/value and rows A=3,B=7; no clipping in this two-row fixture"
+    },
+    {
+      "engine": "antv",
+      "status": "PASS",
+      "observed": {
+        "headings": [
+          "label",
+          "value"
+        ],
+        "rows": [
+          [
+            "A",
+            "3"
+          ],
+          [
+            "B",
+            "7"
+          ]
+        ],
+        "svgText": [],
+        "images": [],
+        "svg": 0,
+        "canvas": 1,
+        "renderError": null
+      },
+      "image": "antv-normal.png",
+      "sha256": "69fd4bd4ca1e0691bd02999591f22179eb868bb4232cd57d106a1b36e5a341f6",
+      "bytes": 25918,
+      "opened_by_R04": true,
+      "correctness": "Native and accessible table preserve headers label/value and rows A=3,B=7; no clipping in this two-row fixture"
+    }
+  ],
+  "raw_local_evidence": [
+    {
+      "name": "R12-red.log",
+      "bytes": 18348,
+      "sha256": "e818ad74ea7dc5f369f96d981526ae5c48f7a7a5ba9c93d817eff4db84562702"
+    },
+    {
+      "name": "R12-expanded-red.log",
+      "bytes": 20372,
+      "sha256": "16bc1b9acc59823dcc855a986b81b1ec6a2fd9ea3774892d771e06556a65fd70"
+    },
+    {
+      "name": "R12-green.log",
+      "bytes": 204,
+      "sha256": "761d7203a330ead276edef3c7a1cc7ddc80c0ddee3ba266758a601c6d8779faf"
+    },
+    {
+      "name": "R12-clean-not-scale.log",
+      "bytes": 84724,
+      "sha256": "217f09437e5224b9310b51aa11616b24eed23dbbdf2c7383a7bf90d0c23a972e"
+    },
+    {
+      "name": "R17-sum-integrated.log",
+      "bytes": 650,
+      "sha256": "63c8c9c1a2c5df1291b498d3c66c2a154d74ffddc4e7066e8c651ac56357d679"
+    },
+    {
+      "name": "R17-integrated-nonscale.log",
+      "bytes": 84724,
+      "sha256": "b04919591fed90eec86c3dfd3808d27ed862de164ec8da050822668655ef3fc0"
+    },
+    {
+      "name": "R17-sum-integrated-nonscale.log",
+      "bytes": 884,
+      "sha256": "2c681355c7c6cd61ad9ff77e7195c18ec08712dde4192662b22fdcaacf98a0c4"
+    },
+    {
+      "name": "R17-sum-ruff.log",
+      "bytes": 42,
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    {
+      "name": "R17-sum-mypy.log",
+      "bytes": 90,
+      "sha256": "78f4eddeecec3ff5f4e648b8876206c11c8e0de446e84cf14aa1e97fd122d67c"
+    },
+    {
+      "name": "R17-npm-build.log",
+      "bytes": 264,
+      "sha256": "54663bc0db3ea6b28614ed2ceb4972d5a7f39add82ae76ac81c7dc94d0f1210a"
+    },
+    {
+      "name": "R17-npm-typecheck.log",
+      "bytes": 136,
+      "sha256": "9d4faa42627cce5bfbf96de4e79491b65a667227c10f83c8c032b8776432e971"
+    },
+    {
+      "name": "R17-npm-test.log",
+      "bytes": 50374,
+      "sha256": "c0698924475c3f92d49e621e62eb2d91df22e02279fab186aacf35f7eb038893"
+    },
+    {
+      "name": "R17-npm-schema.log",
+      "bytes": 584,
+      "sha256": "a56d2c024f92711d17f9b699a4ba9c10d952f2702a581b74ea60ec824b68c6b2"
+    },
+    {
+      "name": "R17-npm-pack.log",
+      "bytes": 3460,
+      "sha256": "ec422799d94adde77a3aabc5b1896fa28d83a71fe05563b63a8a1a8704d35029"
+    }
+  ],
+  "limits": [
+    "36 full non-scale failures remain",
+    "5 skips and 9 scale deselections are not passes",
+    "Prefix-SUM accuracy R13-01-F1 remains open",
+    "No fresh 10M/distribution/installed-consumer/green-CI/final-review approval"
+  ]
+}
