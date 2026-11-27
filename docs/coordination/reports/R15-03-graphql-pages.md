@@ -1,6 +1,6 @@
 # R15-03 — Independent paginated GraphQL traversal/count integrity
 
-**Current measured verdict: Python73passed0skip; TS63passed10strictfailures0skip.** Six TS failures expose one additional error-envelope carrier bypass; four are deliberately deduplicated R10-01F1 sibling-loss regressions. Source stablepublished5340 bytes, no production/old-oracle edits. Not final-candidate signoff. Publication pending until actualOWNpush/SHAreceipt below.
+**Current measured verdict: Python73passed0skip; TS63passed10strictfailures0skip.** Six TS failures expose one additional error-envelope carrier bypass; four are deliberately deduplicated R10-01F1 sibling-loss regressions. Source stablepublished5340 bytes, no production/old-oracle edits. OWNmeaningfultests/evidence648f399published/exactremotereadback0 at15:01:52UTC; firstfailedpushretainedbelow. Not final-candidate signoff.
 
 ## Before-work checkpoint
 
@@ -74,3 +74,15 @@ Limits: no installs, production/existingoracleedits, broadformats/scales/browser
 OWNexplicit19filesstaged; preflight **exit0**, stagedpaths exactallowlist, `git diff --cached --check`0, credentialpatterns0, all8testedprobeindexbytes exactlyworktreehashes, source/schema/existingoraclediff5340exit0. ReadactualstagedNEWtest/builders/diagnosticdiff+ownreport/note; stat19files1950insertions. `staged-check.json` recordsper-file rawworktreeANDGitblobSHA256/canonicalization, notconflatedrawloghashes. No unrelatedindexentry/sourcechange; no commit/pushyet. Finalupdatedreport/note/snapshotstagecheckpending.
 
 **True next executable action:** stageONLYupdatedownreport/note+R15staged-checkJSON, finalscope/whitespace/secretpatterns/8probe-bytecheck, meaningfulOWNcommit; thennonforceOWNrefpush+`git ls-remote` exactHEADmatch andsavedreceipt. DoNOTreruncompletedtests/builds/browser.
+
+ActualOWNmeaningfulcommit **648f399e2745aa1f62319cddb15fb0095ab0a34c**, commitexit0/20ownedfiles2124insertions; finalallowlistscope20/whitespace0/secretpatterns0/8testedprobeGitblobmatches/source5340andoldoraclediff0. Trackedclean/onlyownuntrackedartifacts. LocalcommitNOTpublication; actualpush/readbackpending. **Next executable action:** nonforce`git push origin refs/heads/agents/r10-03-echarts-numeric-x:refs/heads/agents/r10-03-echarts-numeric-x`, immediateexact`git ls-remote`readback, savereceipt.
+
+FirstactualnonforceOWNpush **exit1** (helperprintedonlysanitizedfailure; noexactreadbackyet, no publicationreceiptfilecreated). DoNOTclaimpushsuccess/remoteSHA. Meaningfulcommit648f399safe/local/sourceunchanged. **Immediate next executable action:** readonlyOWN`git ls-remote`/hooks/config/branchidentitydiagnosis BEFOREanyretry (push may have changed remote despite localerror); saveactualcause/sanitizedreceipts, neverforce orsharedrefwrites.
+
+Readonlypost-failure`git ls-remote` **exit0/OWNremotestill941c4e8**, local648f399/ahead1. Fast-forwardancestorcheck0, no customhookspath(defaultconfigqueryexit1meansunset),only`.sample`hooks/noactiveprepushhook; sourceoraclediff0. Firstfailurecause**unknown**, initialoverlysafehelperdiscardedcapturedstderr: honestharnesslimitation, notinventednetworkdiagnosis. `git push --dry-run origin OWNref:OWNref` **exit0** at14:59:06UTC, safe941c4e8→648f399negotiationonly; `push-diagnosis.json` preservesactualsanitizedoutput. Correctedonlyownpublicationhelper tosavefailurestderr/sanitizedrecordandboundonerealattempt2; no actualsuccessfulpushclaimed. **Next executable action:** one boundednonforceOWNpushretryafterverifieddryrun, immediateexactreadback; stop/savediagnosticifstillfails.
+
+## Actual publication — meaningful tests/evidence safely remote
+
+Boundedrealattempt2nonforcepush **exit0**; immediateOWN`git ls-remote --heads origin refs/heads/agents/r10-03-echarts-numeric-x` **exit0/exact648f399e2745aa1f62319cddb15fb0095ab0a34c=localHEAD** at**2026-11-27T15:01:52.354499UTC**. `publication-first.json` savesactualcommands/exits/remoteSHAandearlieractualpush1/unknowncause/dryrun0. No force/sharedref/PR/issue/sourcewrite. PublicationdoesNOTturn10REDgreenorconstitutefinalsignoff.
+
+**True next executable action:** receipt-onlyOWNcommitofthisownreport/note+COMMANDS+push-diagnosis/publication-firstJSON, final5-pathscope/whitespace/secret/test-byte/sourcechecks, nonforceOWNpush/exactnewtipreadback; copyOWNcompactevidenceMAINhash-check, savefinaltipMAINnote/report. Donotreplaytests/sourcechanges; R04/16reviewsGP-ERR-CARRIERandknownF1fixthenfreshcandidatechecks separately.

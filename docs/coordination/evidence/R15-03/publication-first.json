@@ -1,0 +1,31 @@
+{
+  "observed_at": "2026-11-27T15:01:52.354499+00:00",
+  "branch": "agents/r10-03-echarts-numeric-x",
+  "actual_push_attempt": 2,
+  "earlier_actual_push_exit": 1,
+  "earlier_failure_cause": "unknown; original wrapper discarded captured stderr",
+  "between_attempts_readonly_remote_sha": "941c4e8352010fbfc57d75ccf7f251c8fd3a1ecc",
+  "between_attempts_nonforce_dry_run_exit": 0,
+  "meaningful_commit": "648f399e2745aa1f62319cddb15fb0095ab0a34c",
+  "push_argv": [
+    "git",
+    "push",
+    "origin",
+    "refs/heads/agents/r10-03-echarts-numeric-x:refs/heads/agents/r10-03-echarts-numeric-x"
+  ],
+  "push_exit": 0,
+  "readback_argv": [
+    "git",
+    "ls-remote",
+    "--heads",
+    "origin",
+    "refs/heads/agents/r10-03-echarts-numeric-x"
+  ],
+  "readback_exit": 0,
+  "actual_remote_sha": "648f399e2745aa1f62319cddb15fb0095ab0a34c",
+  "actual_remote_ref": "refs/heads/agents/r10-03-echarts-numeric-x",
+  "matches_local_head": true,
+  "force": false,
+  "source_checkpoint": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "claim": "own known-RED test/evidence publication, not source fix, CI pass, final approval or merge"
+}

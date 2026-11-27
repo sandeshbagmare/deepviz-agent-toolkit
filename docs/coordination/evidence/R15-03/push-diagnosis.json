@@ -1,0 +1,21 @@
+{
+  "observed_at": "2026-11-27T14:59:06.046156+00:00",
+  "argv": [
+    "git",
+    "push",
+    "--dry-run",
+    "origin",
+    "refs/heads/agents/r10-03-echarts-numeric-x:refs/heads/agents/r10-03-echarts-numeric-x"
+  ],
+  "exit": 0,
+  "stdout": "",
+  "stderr": "To https://github.com/sandeshbagmare/deepviz-agent-toolkit.git\n   941c4e8..648f399  agents/r10-03-echarts-numeric-x -> agents/r10-03-echarts-numeric-x\n",
+  "earlier_actual_push_exit": 1,
+  "earlier_cause": "unknown: initial wrapper intentionally discarded captured stderr",
+  "after_failure_actual_remote": "941c4e8352010fbfc57d75ccf7f251c8fd3a1ecc",
+  "after_failure_local_head": "648f399e2745aa1f62319cddb15fb0095ab0a34c",
+  "fast_forward_ancestor_check_exit": 0,
+  "custom_hooks_path_configured": false,
+  "pre_push_hook_present": false,
+  "claim": "dry-run negotiation only, not successful real push or final signoff"
+}

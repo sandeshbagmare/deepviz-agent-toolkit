@@ -83,3 +83,29 @@ Not run here: installs, all formats/scales, rendering/browser, both distribution
 builds, MCP/Deep Agent, full-release suites/lint/types, final candidate/green CI or
 900issue verification. No GitHub issue/PR mutation. Publication receipts follow
 actual OWN commit/push/readback; no final signoff implied.
+
+## Actual scoped publication and retained failed command
+
+- `PY artifacts/r15-03/stage_r15.py` exit0:19ownedfiles; staged whitespace0,
+  secret-patterns0, all8tested-probe Git-blob bytes match; source/oracle diff0.
+  Actual staged NEW probes/report/note diff read, no unrelated index paths.
+- `PY artifacts/r15-03/commit_r15.py` exit0: final20ownedpaths including snapshot,
+  repeated scope/whitespace/secret/testedbytes/source checks0, commit
+  **648f399e2745aa1f62319cddb15fb0095ab0a34c** (20files2124insertions).
+- First actual `git push origin refs/heads/agents/r10-03-echarts-numeric-x:refs/heads/agents/r10-03-echarts-numeric-x`
+  **exit1**. Initial over-cautious helper discarded captured stderr; cause unknown,
+  not falsely attributed to a transient network issue. No publication claimed.
+- Readonly `git ls-remote --heads origin refs/heads/agents/r10-03-echarts-numeric-x`
+  exit0 remote941c4e8; local648f399. `git merge-base --is-ancestor 941c4e8352010fbfc57d75ccf7f251c8fd3a1ecc 648f399e2745aa1f62319cddb15fb0095ab0a34c`
+  exit0. No active pre-push hook/custom hooksPath; config query1meansunset.
+- `git push --dry-run origin refs/heads/agents/r10-03-echarts-numeric-x:refs/heads/agents/r10-03-echarts-numeric-x`
+  exit0 at14:59:06UTC; safe941→648negotiation, not actual publication.
+  `push-diagnosis.json` records the sanitized real response and unknown first cause.
+- Bounded real attempt2 SAME nonforce push **exit0**, immediate same readonly
+  `git ls-remote` **exit0/exact648f399e2745aa1f62319cddb15fb0095ab0a34c=HEAD**,
+  at15:01:52.354499UTC. `publication-first.json` exact argv/exits/SHA. No shared
+  branch/issue/PR mutation, force push or false-green/final-signoff claim.
+
+Receipt-only commit/nonforce push/readback are separate from meaningful test work;
+actual final tip goes into MAIN actual-ID note/report after observation, avoiding
+a self-referential commit-SHA assertion. No completed tests/browser replays.
