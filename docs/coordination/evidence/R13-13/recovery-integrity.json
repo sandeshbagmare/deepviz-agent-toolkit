@@ -1,0 +1,118 @@
+{
+  "session": "ses_de56780caffekQ9gdZ58EgQwb5",
+  "checked_utc": "2026-11-27T13:55:16.052256+00:00",
+  "existing_probe_commit": "dedb41fa8df3fdb90b845eef7a10b5fa4032872c",
+  "product_base": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "checks": [
+    {
+      "name": "saved-control-artifact:controls.log",
+      "passed": true
+    },
+    {
+      "name": "saved-control-artifact:controls.xml",
+      "passed": true
+    },
+    {
+      "name": "saved-control-artifact:run2\\controls.log",
+      "passed": true
+    },
+    {
+      "name": "saved-control-artifact:run2\\controls.xml",
+      "passed": true
+    },
+    {
+      "name": "saved-control-artifact:run2\\child-commands.jsonl",
+      "passed": true
+    },
+    {
+      "name": "saved-full-suite-artifact:full.log",
+      "passed": true
+    },
+    {
+      "name": "saved-full-suite-artifact:full.xml",
+      "passed": true
+    },
+    {
+      "name": "unchanged-production-file:scripts/export_schema.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged-production-file:scripts/verify_evidence.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged-production-file:.github/workflows/ci.yml",
+      "passed": true
+    },
+    {
+      "name": "unchanged-production-file:.github/workflows/evidence.yml",
+      "passed": true
+    },
+    {
+      "name": "unchanged-production-file:pyproject.toml",
+      "passed": true
+    },
+    {
+      "name": "unchanged-production-file:schemas/chart-spec.schema.json",
+      "passed": true
+    },
+    {
+      "name": "preserved-N15:docs\\coordination\\evidence\\N15-coverage-14c7b27-20261126T201607\\capture_snapshot.py",
+      "passed": true
+    },
+    {
+      "name": "preserved-N15:docs\\coordination\\evidence\\N15-docs-235e7e3-20261126T194254\\audit_docs.py",
+      "passed": true
+    },
+    {
+      "name": "own-module:python\\deepviz\\src\\deepviz\\__init__.py",
+      "passed": true
+    },
+    {
+      "name": "own-module:python\\deepviz\\src\\deepviz\\models.py",
+      "passed": true
+    },
+    {
+      "name": "saved-control-exits-totals",
+      "passed": true
+    },
+    {
+      "name": "saved-full-suite-exit-totals",
+      "passed": true
+    },
+    {
+      "name": "completed-command-receipt:run2/run-command.json",
+      "passed": true
+    },
+    {
+      "name": "completed-command-receipt:full-suite/full-command.json",
+      "passed": true
+    },
+    {
+      "name": "protected-production-diff",
+      "passed": true
+    },
+    {
+      "name": "reused-existing-tested-probe-commit",
+      "passed": true
+    }
+  ],
+  "tests_reexecuted": false,
+  "command_reconciliation": "Completed receipt for controls exit0 and whole suite exit1 verified once. No in-flight command pending; no replay or polling.",
+  "source_diff_argv": [
+    "git",
+    "diff",
+    "--exit-code",
+    "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+    "--",
+    "scripts",
+    ".github",
+    "pyproject.toml",
+    "schemas",
+    "packages",
+    "python/deepviz/src",
+    "python/deepviz/tests"
+  ],
+  "source_diff_exit": 0,
+  "limitations": "Evidence-integrity checks, not new product-test passes or final remote-CI signoff."
+}

@@ -1,0 +1,109 @@
+{
+  "session": "ses_de56780caffekQ9gdZ58EgQwb5",
+  "observed_utc": "2026-11-27T02:25:27.211794+00:00",
+  "authenticated_user": "sandeshbagmare",
+  "user_get_status": 200,
+  "repository": "sandeshbagmare/deepviz-agent-toolkit",
+  "origin_matches_authorized_https": true,
+  "get_observations": [
+    {
+      "endpoint": "issues/20",
+      "http_status": 200,
+      "number": 20,
+      "state": "open",
+      "title": "Gate Python and TypeScript changes with real lint, type, test and build CI"
+    },
+    {
+      "endpoint": "issues/30",
+      "http_status": 200,
+      "number": 30,
+      "state": "open",
+      "title": "Bug: Python chart schema coerces strings and booleans unlike JSON Schema"
+    },
+    {
+      "endpoint": "pulls/31",
+      "http_status": 200,
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head_sha": "ca25af486bf443949125df789f5b5fd1fda8bba8"
+    },
+    {
+      "endpoint": "commits/ca25af486bf443949125df789f5b5fd1fda8bba8/check-runs",
+      "http_status": 200,
+      "total_count": 12,
+      "checks": [
+        {
+          "name": "One-pass scale 10 records",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Python 3.11 lint, types, unit and integration",
+          "status": "in_progress",
+          "conclusion": null
+        },
+        {
+          "name": "One-pass scale 1000000 records",
+          "status": "in_progress",
+          "conclusion": null
+        },
+        {
+          "name": "Raster visual regression (semantic pixel comparison)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Python 3.13 lint, types, unit and integration",
+          "status": "in_progress",
+          "conclusion": null
+        },
+        {
+          "name": "One-pass scale 100000 records",
+          "status": "in_progress",
+          "conclusion": null
+        },
+        {
+          "name": "Python and npm distribution checks (no publishing)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "One-pass scale 1000 records",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "One-pass scale 10000000 records",
+          "status": "queued",
+          "conclusion": null
+        },
+        {
+          "name": "Python 3.12 lint, types, unit and integration",
+          "status": "in_progress",
+          "conclusion": null
+        },
+        {
+          "name": "npm build, types and tests (Node 24)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "evidence",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "source_preflight": {
+    "base": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+    "base_exists_exit": 0,
+    "own_local_branch_absent_exit": 1,
+    "own_remote_branch_query_exit": 0,
+    "own_remote_branch_exists": false,
+    "worktree_path_already_exists": false,
+    "author_name_configured": true,
+    "author_email_configured": true
+  }
+}

@@ -1,0 +1,543 @@
+{
+  "created_utc": "2026-11-27T02:36:25.209174+00:00",
+  "owner": "ses_de56780caffekQ9gdZ58EgQwb5",
+  "source_base": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "branch": "agents/r10-13-ci-negative-controls",
+  "parent_command": {
+    "argv": [
+      "<project-python>",
+      "-m",
+      "pytest",
+      "tests/r10_probes/role13",
+      ".github/tests",
+      "-q",
+      "--strict-markers",
+      "--basetemp",
+      "<owned-temp>\\run2\\cases",
+      "--junitxml",
+      "<owned-temp>\\run2\\controls.xml"
+    ],
+    "cwd": "<checkout>",
+    "exit": 0
+  },
+  "parent_tests": [
+    {
+      "class": "tests.r10_probes.role13.test_gate_negative_controls",
+      "name": "test_schema_gate_rejects_valid_json_nested_drift_without_rewriting",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": "tests.r10_probes.role13.test_gate_negative_controls",
+      "name": "test_required_gate_rejects_non_https_image_packets[http://images.invalid/fixture.png]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": "tests.r10_probes.role13.test_gate_negative_controls",
+      "name": "test_required_gate_rejects_non_https_image_packets[file:///fixture.png]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": "tests.r10_probes.role13.test_gate_negative_controls",
+      "name": "test_required_gate_rejects_non_https_image_packets[javascript:void(0)]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": "tests.r10_probes.role13.test_gate_negative_controls",
+      "name": "test_required_gate_rejects_non_https_image_packets[data:image/svg+xml,fixture]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": "tests.r10_probes.role13.test_gate_negative_controls",
+      "name": "test_required_gate_rejects_unsafe_report_links[http://reports.invalid/reviewer-1]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": "tests.r10_probes.role13.test_gate_negative_controls",
+      "name": "test_required_gate_rejects_unsafe_report_links[file:///reviewer-1]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": "tests.r10_probes.role13.test_gate_negative_controls",
+      "name": "test_required_gate_rejects_unsafe_report_links[javascript:void(0)]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": "tests.r10_probes.role13.test_gate_negative_controls",
+      "name": "test_required_gate_rejects_unsafe_report_links[data:text/html,fixture]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": "tests.r10_probes.role13.test_gate_negative_controls",
+      "name": "test_required_gate_rejects_unsafe_report_links[https://reports.invalid/<script>]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": "tests.r10_probes.role13.test_gate_negative_controls",
+      "name": "test_incomplete_required_packet_cannot_take_the_bootstrap_success_path",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": "tests.r10_probes.role13.test_gate_negative_controls",
+      "name": "test_label_text_in_body_is_not_an_actual_required_label_or_an_approval",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": "tests.r10_probes.role13.test_gate_negative_controls",
+      "name": "test_complete_synthetic_packet_only_validates_structure_not_real_approval",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": "tests.r10_probes.role13.test_gate_negative_controls",
+      "name": "test_rejected_untrusted_body_stays_inert_in_the_real_cli",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": "tests.r10_probes.role13.test_gate_negative_controls",
+      "name": "test_real_pytest_failure_reaches_exit_status_and_junit",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": ".github.tests.test_verification",
+      "name": "test_evidence_policy_allows_bootstrap_without_fabricated_reports",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": ".github.tests.test_verification",
+      "name": "test_evidence_policy_accepts_complete_distinct_reports",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": ".github.tests.test_verification",
+      "name": "test_evidence_policy_rejects_missing_or_stale_evidence[issue]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": ".github.tests.test_verification",
+      "name": "test_evidence_policy_rejects_missing_or_stale_evidence[image]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": ".github.tests.test_verification",
+      "name": "test_evidence_policy_rejects_missing_or_stale_evidence[explanation]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": ".github.tests.test_verification",
+      "name": "test_evidence_policy_rejects_missing_or_stale_evidence[identity]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": ".github.tests.test_verification",
+      "name": "test_evidence_policy_rejects_missing_or_stale_evidence[sha]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": ".github.tests.test_verification",
+      "name": "test_evidence_policy_rejects_missing_or_stale_evidence[report]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": ".github.tests.test_verification",
+      "name": "test_evidence_cli_distinguishes_structure_from_approval[complete-0]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": ".github.tests.test_verification",
+      "name": "test_evidence_cli_distinguishes_structure_from_approval[bootstrap-0]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": ".github.tests.test_verification",
+      "name": "test_evidence_cli_distinguishes_structure_from_approval[stale-1]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": ".github.tests.test_verification",
+      "name": "test_evidence_cli_distinguishes_structure_from_approval[missing_reports-1]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": ".github.tests.test_verification",
+      "name": "test_visual_gate_compares_rendered_pixels_not_artifact_existence",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": ".github.tests.test_verification",
+      "name": "test_visual_gate_rejects_wrong_geometry_and_blank_images[image0]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": ".github.tests.test_verification",
+      "name": "test_visual_gate_rejects_wrong_geometry_and_blank_images[image1]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "class": ".github.tests.test_verification",
+      "name": "test_scale_gate_requires_full_consumption_and_bounded_output",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    }
+  ],
+  "new_controls": 15,
+  "existing_ci_controls": 16,
+  "child_commands": [
+    {
+      "argv": [
+        "<project-python>",
+        "<checkout>\\scripts\\export_schema.py",
+        "--output",
+        "<owned-temp>\\run2\\cases\\test_schema_gate_rejects_valid0\\scratch-schema.json"
+      ],
+      "cwd": "<owned-temp>\\run2\\cases\\test_schema_gate_rejects_valid0",
+      "exit": 0,
+      "stdout": "Exported <owned-temp>\\run2\\cases\\test_schema_gate_rejects_valid0\\scratch-schema.json\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "<project-python>",
+        "<checkout>\\scripts\\export_schema.py",
+        "--output",
+        "<owned-temp>\\run2\\cases\\test_schema_gate_rejects_valid0\\scratch-schema.json",
+        "--check"
+      ],
+      "cwd": "<owned-temp>\\run2\\cases\\test_schema_gate_rejects_valid0",
+      "exit": 0,
+      "stdout": "Schema matches Python contract: <owned-temp>\\run2\\cases\\test_schema_gate_rejects_valid0\\scratch-schema.json\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "<project-python>",
+        "<checkout>\\scripts\\export_schema.py",
+        "--output",
+        "<owned-temp>\\run2\\cases\\test_schema_gate_rejects_valid0\\scratch-schema.json",
+        "--check"
+      ],
+      "cwd": "<owned-temp>\\run2\\cases\\test_schema_gate_rejects_valid0",
+      "exit": 1,
+      "stdout": "Schema missing or stale: <owned-temp>\\run2\\cases\\test_schema_gate_rejects_valid0\\scratch-schema.json; run python scripts/export_schema.py\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "<project-python>",
+        "-I",
+        "<checkout>\\scripts\\verify_evidence.py",
+        "<owned-temp>\\run2\\cases\\test_required_gate_rejects_non0\\synthetic-event.json"
+      ],
+      "cwd": "<owned-temp>\\run2\\cases\\test_required_gate_rejects_non0",
+      "exit": 1,
+      "stdout": "Evidence policy: Rendered output must embed an HTTPS image, not just name an artifact\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "<project-python>",
+        "-I",
+        "<checkout>\\scripts\\verify_evidence.py",
+        "<owned-temp>\\run2\\cases\\test_required_gate_rejects_non1\\synthetic-event.json"
+      ],
+      "cwd": "<owned-temp>\\run2\\cases\\test_required_gate_rejects_non1",
+      "exit": 1,
+      "stdout": "Evidence policy: Rendered output must embed an HTTPS image, not just name an artifact\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "<project-python>",
+        "-I",
+        "<checkout>\\scripts\\verify_evidence.py",
+        "<owned-temp>\\run2\\cases\\test_required_gate_rejects_non2\\synthetic-event.json"
+      ],
+      "cwd": "<owned-temp>\\run2\\cases\\test_required_gate_rejects_non2",
+      "exit": 1,
+      "stdout": "Evidence policy: Rendered output must embed an HTTPS image, not just name an artifact\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "<project-python>",
+        "-I",
+        "<checkout>\\scripts\\verify_evidence.py",
+        "<owned-temp>\\run2\\cases\\test_required_gate_rejects_non3\\synthetic-event.json"
+      ],
+      "cwd": "<owned-temp>\\run2\\cases\\test_required_gate_rejects_non3",
+      "exit": 1,
+      "stdout": "Evidence policy: Rendered output must embed an HTTPS image, not just name an artifact\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "<project-python>",
+        "-I",
+        "<checkout>\\scripts\\verify_evidence.py",
+        "<owned-temp>\\run2\\cases\\test_required_gate_rejects_uns0\\synthetic-event.json"
+      ],
+      "cwd": "<owned-temp>\\run2\\cases\\test_required_gate_rejects_uns0",
+      "exit": 1,
+      "stdout": "Evidence policy: reviewer-1: link the actual report using HTTPS\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "<project-python>",
+        "-I",
+        "<checkout>\\scripts\\verify_evidence.py",
+        "<owned-temp>\\run2\\cases\\test_required_gate_rejects_uns1\\synthetic-event.json"
+      ],
+      "cwd": "<owned-temp>\\run2\\cases\\test_required_gate_rejects_uns1",
+      "exit": 1,
+      "stdout": "Evidence policy: reviewer-1: link the actual report using HTTPS\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "<project-python>",
+        "-I",
+        "<checkout>\\scripts\\verify_evidence.py",
+        "<owned-temp>\\run2\\cases\\test_required_gate_rejects_uns2\\synthetic-event.json"
+      ],
+      "cwd": "<owned-temp>\\run2\\cases\\test_required_gate_rejects_uns2",
+      "exit": 1,
+      "stdout": "Evidence policy: reviewer-1: link the actual report using HTTPS\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "<project-python>",
+        "-I",
+        "<checkout>\\scripts\\verify_evidence.py",
+        "<owned-temp>\\run2\\cases\\test_required_gate_rejects_uns3\\synthetic-event.json"
+      ],
+      "cwd": "<owned-temp>\\run2\\cases\\test_required_gate_rejects_uns3",
+      "exit": 1,
+      "stdout": "Evidence policy: reviewer-1: link the actual report using HTTPS\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "<project-python>",
+        "-I",
+        "<checkout>\\scripts\\verify_evidence.py",
+        "<owned-temp>\\run2\\cases\\test_required_gate_rejects_uns4\\synthetic-event.json"
+      ],
+      "cwd": "<owned-temp>\\run2\\cases\\test_required_gate_rejects_uns4",
+      "exit": 1,
+      "stdout": "Evidence policy: reviewer-1: link the actual report using HTTPS\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "<project-python>",
+        "-I",
+        "<checkout>\\scripts\\verify_evidence.py",
+        "<owned-temp>\\run2\\cases\\test_incomplete_required_packe0\\synthetic-event.json"
+      ],
+      "cwd": "<owned-temp>\\run2\\cases\\test_incomplete_required_packe0",
+      "exit": 1,
+      "stdout": "Evidence policy: Linked issues must include a full issue URL in this repository\nEvidence policy: Rendered output must embed an HTTPS image, not just name an artifact\nEvidence policy: Correctness explanation must describe the observed result (at least 40 characters)\nEvidence policy: reviewer-1: supply one identity, report URL, and exact tested commit\nEvidence policy: reviewer-2: supply one identity, report URL, and exact tested commit\nEvidence policy: tester-1: supply one identity, report URL, and exact tested commit\nEvidence policy: tester-2: supply one identity, report URL, and exact tested commit\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "<project-python>",
+        "-I",
+        "<checkout>\\scripts\\verify_evidence.py",
+        "<owned-temp>\\run2\\cases\\test_label_text_in_body_is_not0\\synthetic-event.json"
+      ],
+      "cwd": "<owned-temp>\\run2\\cases\\test_label_text_in_body_is_not0",
+      "exit": 0,
+      "stdout": "Bootstrap mode: evidence-required label absent; no evidence approval is asserted\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "<project-python>",
+        "-I",
+        "<checkout>\\scripts\\verify_evidence.py",
+        "<owned-temp>\\run2\\cases\\test_complete_synthetic_packet0\\synthetic-event.json"
+      ],
+      "cwd": "<owned-temp>\\run2\\cases\\test_complete_synthetic_packet0",
+      "exit": 0,
+      "stdout": "Declared evidence structure validated; report truth and independence are not verified; no approval is asserted\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "<project-python>",
+        "-I",
+        "<checkout>\\scripts\\verify_evidence.py",
+        "<owned-temp>\\run2\\cases\\test_rejected_untrusted_body_s0\\synthetic-event.json"
+      ],
+      "cwd": "<owned-temp>\\run2\\cases\\test_rejected_untrusted_body_s0",
+      "exit": 1,
+      "stdout": "Evidence policy: Rendered output must embed an HTTPS image, not just name an artifact\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "<project-python>",
+        "-m",
+        "pytest",
+        "-q",
+        "--strict-markers",
+        "--confcutdir",
+        "<owned-temp>\\run2\\cases\\test_real_pytest_failure_reach0",
+        "<owned-temp>\\run2\\cases\\test_real_pytest_failure_reach0\\positive_case.py",
+        "--junitxml",
+        "<owned-temp>\\run2\\cases\\test_real_pytest_failure_reach0\\positive.xml"
+      ],
+      "cwd": "<owned-temp>\\run2\\cases\\test_real_pytest_failure_reach0",
+      "exit": 0,
+      "stdout": ".                                                                        [100%]\n1 passed in 0.07s\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "<project-python>",
+        "-m",
+        "pytest",
+        "-q",
+        "--strict-markers",
+        "--confcutdir",
+        "<owned-temp>\\run2\\cases\\test_real_pytest_failure_reach0",
+        "<owned-temp>\\run2\\cases\\test_real_pytest_failure_reach0\\positive_case.py",
+        "<owned-temp>\\run2\\cases\\test_real_pytest_failure_reach0\\deliberate_negative_case.py",
+        "--junitxml",
+        "<owned-temp>\\run2\\cases\\test_real_pytest_failure_reach0\\negative.xml"
+      ],
+      "cwd": "<owned-temp>\\run2\\cases\\test_real_pytest_failure_reach0",
+      "exit": 1,
+      "stdout": ".F                                                                       [100%]\n================================== FAILURES ===================================\n__________________________ test_deliberate_negative ___________________________\n\n    def test_deliberate_negative():\n>       assert False, 'R10 deliberate gate rejection'\nE       AssertionError: R10 deliberate gate rejection\nE       assert False\n\ndeliberate_negative_case.py:2: AssertionError\n=========================== short test summary info ===========================\nFAILED deliberate_negative_case.py::test_deliberate_negative - AssertionError...\n1 failed, 1 passed in 0.13s\n",
+      "stderr": ""
+    }
+  ],
+  "child_expected_negative_exits": 13,
+  "child_positive_exits": 5,
+  "source_files": [
+    {
+      "path": "scripts/export_schema.py",
+      "sha256": "a6dad0617fd34b06933490e8ba1711de0d1ba2982fe2675bd932f5ca2eb49491",
+      "bytes": 1235
+    },
+    {
+      "path": "scripts/verify_evidence.py",
+      "sha256": "86acba0a7675a0f1655da7fb0959088a7c572212b6b626b9afa3665367473e71",
+      "bytes": 3669
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "95627b755386ed8e973a1ad5804ac0326c90dc9b88e0f2852f569fe8b877b2d2",
+      "bytes": 7431
+    },
+    {
+      "path": ".github/workflows/evidence.yml",
+      "sha256": "c0394db0cb7912d5f8de996394e5ef1abafea44123be3bf1f892a4d58e0683de",
+      "bytes": 707
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+      "bytes": 1487
+    },
+    {
+      "path": "schemas/chart-spec.schema.json",
+      "sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+      "bytes": 4975
+    }
+  ],
+  "raw_artifacts": [
+    {
+      "label": "controls.log",
+      "sha256": "835c4336a1dfb45410fc8865102cce42a6761cf873964c4d71f4b5209fcad30e",
+      "bytes": 1473
+    },
+    {
+      "label": "controls.xml",
+      "sha256": "e3fb362648b07a367ff72352cd156de128c5a7403a28cb94a2337b5f4d4e0b07",
+      "bytes": 3816
+    },
+    {
+      "label": "run2\\controls.log",
+      "sha256": "e9b35dbae509aa950a1444579f9e69fc532641d1b1c98dd511fe6e9a034ab2b8",
+      "bytes": 101
+    },
+    {
+      "label": "run2\\controls.xml",
+      "sha256": "e84b3d05ea0306baf6e67b5179deca72fa5b2207105da5910193c78b3f204f27",
+      "bytes": 5014
+    },
+    {
+      "label": "run2\\child-commands.jsonl",
+      "sha256": "4a7ba40459cd8d34b1ee207a04eb2925d5a293bcc3d61e8b5d2080c90932ead9",
+      "bytes": 14182
+    }
+  ],
+  "limitations": [
+    "Local Windows installed-tool CLI checks, not observed remote CI or final candidate signoff.",
+    "Synthetic packet acceptance validates structure only; report truth, URL safety/content and identity are not verified.",
+    "First run had an own schema-fixture KeyError before stale rejection; preserved, corrected only in NEW test."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "source_base": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "probe_commit": "dedb41fa8df3fdb90b845eef7a10b5fa4032872c",
+  "source_base_is_tested_checkpoint_not_final_freeze": true,
+  "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "loaded_modules": [
+    {
+      "module": "deepviz",
+      "path": "python\\deepviz\\src\\deepviz\\__init__.py",
+      "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+    },
+    {
+      "module": "deepviz.models",
+      "path": "python\\deepviz\\src\\deepviz\\models.py",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    }
+  ],
+  "installed_versions": {
+    "ruff": "0.17.6",
+    "mypy": "2.4.1",
+    "pytest": "9.2.0",
+    "pydantic": "2.14.4"
+  },
+  "protected_paths": [
+    "scripts",
+    ".github",
+    "pyproject.toml",
+    "schemas",
+    "packages",
+    "python/deepviz/src",
+    "python/deepviz/tests"
+  ],
+  "protected_diff_exit": 0,
+  "independent_review": "Not obtained by author. No spawning allowed; R04/root must route a genuine non-author review before integration.",
+  "author_self_review": "Reviewed unchanged CLI entry points, new tests/recipe, staged full diff and whitespace; no source/config change; full suite failures retained."
+}

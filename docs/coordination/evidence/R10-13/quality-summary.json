@@ -1,0 +1,112 @@
+{
+  "observed_utc": "2026-11-27T02:37:15.817154+00:00",
+  "heads": {
+    "own": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+    "main_observed": "5340bc69b7203ad7a9166543062482d819f9b705"
+  },
+  "commands": [
+    {
+      "name": "own-complete-ruff",
+      "argv": [
+        "<main-checkout>\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        ".",
+        ".github/tests"
+      ],
+      "cwd": "<checkout>",
+      "exit": 0,
+      "output": "All checks passed!\n",
+      "raw_log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "raw_log_bytes": 19
+    },
+    {
+      "name": "own-package-and-probe-mypy",
+      "argv": [
+        "<main-checkout>\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "python/deepviz/src/deepviz",
+        "tests/r10_probes/role13/test_gate_negative_controls.py"
+      ],
+      "cwd": "<checkout>",
+      "exit": 0,
+      "output": "Success: no issues found in 10 source files\r\n",
+      "raw_log_sha256": "e522fa370334927ac2ccb7106100045b572938dd238093267de825336e6704f2",
+      "raw_log_bytes": 45
+    },
+    {
+      "name": "own-schema-check",
+      "argv": [
+        "<main-checkout>\\.venv\\Scripts\\python.exe",
+        "scripts/export_schema.py",
+        "--check"
+      ],
+      "cwd": "<checkout>",
+      "exit": 0,
+      "output": "Schema matches Python contract: <checkout>\\schemas\\chart-spec.schema.json\r\n",
+      "raw_log_sha256": "e6d044d7a29f6241bfc22d74b812dba65fad146ab59fd737c7ee468c8802439b",
+      "raw_log_bytes": 166
+    },
+    {
+      "name": "own-actionlint",
+      "argv": [
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\actionlint-ci-1.7.12\\actionlint.exe",
+        "-color=false",
+        ".github/workflows/ci.yml",
+        ".github/workflows/evidence.yml"
+      ],
+      "cwd": "<checkout>",
+      "exit": 0,
+      "output": "",
+      "raw_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_log_bytes": 0
+    },
+    {
+      "name": "main-full-ruff",
+      "argv": [
+        "<main-checkout>\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        ".",
+        ".github/tests"
+      ],
+      "cwd": "<main-checkout>",
+      "exit": 1,
+      "output": "UP017 [*] Use `datetime.UTC` alias\n  --> docs\\coordination\\evidence\\N15-coverage-14c7b27-20261126T201607\\capture_snapshot.py:39:32\n   |\n37 |                         \"sha256\": hashlib.sha256(data).hexdigest()})\n38 | result = {\n39 |     \"access_utc\": datetime.now(timezone.utc).isoformat(), \"audit_commit\": sha,\n   |                                ^^^^^^^^^^^^\n40 |     \"main_head_observed\": git(\"rev-parse\", \"HEAD\").decode().strip(),\n41 |     \"main_status\": git(\"status\", \"--short\", \"--branch\").decode(),\n   |\nhelp: Convert to `datetime.UTC` alias\n   |\n7  | import zipfile\n   - from datetime import datetime, timezone\n8  + from datetime import datetime, timezone, UTC\n9  | from pathlib import Path\n--------------------------------------------------------------------------------\n38 | result = {\n   -     \"access_utc\": datetime.now(timezone.utc).isoformat(), \"audit_commit\": sha,\n39 +     \"access_utc\": datetime.now(UTC).isoformat(), \"audit_commit\": sha,\n40 |     \"main_head_observed\": git(\"rev-parse\", \"HEAD\").decode().strip(),\n   |\n\nI001 [*] Import block is un-sorted or un-formatted\n  --> docs\\coordination\\evidence\\N15-docs-235e7e3-20261126T194254\\audit_docs.py:2:1\n   |\n 1 |   \"\"\"Independent scoped N15 evidence, not a production module or full suite.\"\"\"\n 2 | / import argparse\n 3 | | import datetime\n 4 | | import hashlib\n 5 | | import importlib.util\n 6 | | import json\n 7 | | import re\n 8 | | import sys\n 9 | | from pathlib import Path\n10 | | from urllib.parse import unquote, urlsplit\n   | |__________________________________________^\nhelp: Organize imports\n   |\n11 |\n   -\n12 | parser = argparse.ArgumentParser()\n   |\n\nE402 Module level import not at top of file\n  --> docs\\coordination\\evidence\\N15-docs-235e7e3-20261126T194254\\audit_docs.py:94:1\n   |\n93 | sys.path.insert(0, str(root / \"python/deepviz/src\"))\n94 | import deepviz\n   | ^^^^^^^^^^^^^^\n95 | from deepviz.engines import native_spec\n96 | from deepviz.models import ChartSpec\n   |\nhelp: Move module level imports to top of file\n\nE402 Module level import not at top of file\n  --> docs\\coordination\\evidence\\N15-docs-235e7e3-20261126T194254\\audit_docs.py:95:1\n   |\n93 | sys.path.insert(0, str(root / \"python/deepviz/src\"))\n94 | import deepviz\n95 | from deepviz.engines import native_spec\n   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n96 | from deepviz.models import ChartSpec\n97 | from deepviz.normalize import normalize\n   |\nhelp: Move module level imports to top of file\n\nE402 Module level import not at top of file\n  --> docs\\coordination\\evidence\\N15-docs-235e7e3-20261126T194254\\audit_docs.py:96:1\n   |\n94 | import deepviz\n95 | from deepviz.engines import native_spec\n96 | from deepviz.models import ChartSpec\n   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n97 | from deepviz.normalize import normalize\n   |\nhelp: Move module level imports to top of file\n\nE402 Module level import not at top of file\n  --> docs\\coordination\\evidence\\N15-docs-235e7e3-20261126T194254\\audit_docs.py:97:1\n   |\n95 | from deepviz.engines import native_spec\n96 | from deepviz.models import ChartSpec\n97 | from deepviz.normalize import normalize\n   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n98 |\n99 | observations = []\n   |\nhelp: Move module level imports to top of file\n\nUP017 [*] Use `datetime.UTC` alias\n   --> docs\\coordination\\evidence\\N15-docs-235e7e3-20261126T194254\\audit_docs.py:161:43\n    |\n159 |            \"python/deepviz/src/deepviz/mcp_server.py\"]\n160 | result = {\n161 |     \"recorded_utc\": datetime.datetime.now(datetime.timezone.utc).isoformat(),\n    |                                           ^^^^^^^^^^^^^^^^^^^^^\n162 |     \"source_commit\": \"235e7e361e395b86781101172f040ee51b9423d2\",\n163 |     \"root\": str(root), \"deepviz_import\": deepviz.__file__, \"python_version\": sys.version,\n    |\nhelp: Convert to `datetime.UTC` alias\n    |\n160 | result = {\n    -     \"recorded_utc\": datetime.datetime.now(datetime.timezone.utc).isoformat(),\n161 +     \"recorded_utc\": datetime.datetime.now(datetime.UTC).isoformat(),\n162 |     \"source_commit\": \"235e7e361e395b86781101172f040ee51b9423d2\",\n    |\n\nFound 7 errors.\n[*] 3 fixable with `--fix`.\n",
+      "raw_log_sha256": "09c9f20700916bd50bc5f262868e323e24ca9ed2bf1d31c56e7b14d132826f69",
+      "raw_log_bytes": 4088
+    },
+    {
+      "name": "n15-only-ruff",
+      "argv": [
+        "<main-checkout>\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "docs/coordination/evidence/N15-coverage-14c7b27-20261126T201607/capture_snapshot.py",
+        "docs/coordination/evidence/N15-docs-235e7e3-20261126T194254/audit_docs.py"
+      ],
+      "cwd": "<main-checkout>",
+      "exit": 1,
+      "output": "UP017 [*] Use `datetime.UTC` alias\n  --> docs\\coordination\\evidence\\N15-coverage-14c7b27-20261126T201607\\capture_snapshot.py:39:32\n   |\n37 |                         \"sha256\": hashlib.sha256(data).hexdigest()})\n38 | result = {\n39 |     \"access_utc\": datetime.now(timezone.utc).isoformat(), \"audit_commit\": sha,\n   |                                ^^^^^^^^^^^^\n40 |     \"main_head_observed\": git(\"rev-parse\", \"HEAD\").decode().strip(),\n41 |     \"main_status\": git(\"status\", \"--short\", \"--branch\").decode(),\n   |\nhelp: Convert to `datetime.UTC` alias\n   |\n7  | import zipfile\n   - from datetime import datetime, timezone\n8  + from datetime import datetime, timezone, UTC\n9  | from pathlib import Path\n--------------------------------------------------------------------------------\n38 | result = {\n   -     \"access_utc\": datetime.now(timezone.utc).isoformat(), \"audit_commit\": sha,\n39 +     \"access_utc\": datetime.now(UTC).isoformat(), \"audit_commit\": sha,\n40 |     \"main_head_observed\": git(\"rev-parse\", \"HEAD\").decode().strip(),\n   |\n\nI001 [*] Import block is un-sorted or un-formatted\n  --> docs\\coordination\\evidence\\N15-docs-235e7e3-20261126T194254\\audit_docs.py:2:1\n   |\n 1 |   \"\"\"Independent scoped N15 evidence, not a production module or full suite.\"\"\"\n 2 | / import argparse\n 3 | | import datetime\n 4 | | import hashlib\n 5 | | import importlib.util\n 6 | | import json\n 7 | | import re\n 8 | | import sys\n 9 | | from pathlib import Path\n10 | | from urllib.parse import unquote, urlsplit\n   | |__________________________________________^\nhelp: Organize imports\n   |\n11 |\n   -\n12 | parser = argparse.ArgumentParser()\n   |\n\nE402 Module level import not at top of file\n  --> docs\\coordination\\evidence\\N15-docs-235e7e3-20261126T194254\\audit_docs.py:94:1\n   |\n93 | sys.path.insert(0, str(root / \"python/deepviz/src\"))\n94 | import deepviz\n   | ^^^^^^^^^^^^^^\n95 | from deepviz.engines import native_spec\n96 | from deepviz.models import ChartSpec\n   |\nhelp: Move module level imports to top of file\n\nE402 Module level import not at top of file\n  --> docs\\coordination\\evidence\\N15-docs-235e7e3-20261126T194254\\audit_docs.py:95:1\n   |\n93 | sys.path.insert(0, str(root / \"python/deepviz/src\"))\n94 | import deepviz\n95 | from deepviz.engines import native_spec\n   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n96 | from deepviz.models import ChartSpec\n97 | from deepviz.normalize import normalize\n   |\nhelp: Move module level imports to top of file\n\nE402 Module level import not at top of file\n  --> docs\\coordination\\evidence\\N15-docs-235e7e3-20261126T194254\\audit_docs.py:96:1\n   |\n94 | import deepviz\n95 | from deepviz.engines import native_spec\n96 | from deepviz.models import ChartSpec\n   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n97 | from deepviz.normalize import normalize\n   |\nhelp: Move module level imports to top of file\n\nE402 Module level import not at top of file\n  --> docs\\coordination\\evidence\\N15-docs-235e7e3-20261126T194254\\audit_docs.py:97:1\n   |\n95 | from deepviz.engines import native_spec\n96 | from deepviz.models import ChartSpec\n97 | from deepviz.normalize import normalize\n   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n98 |\n99 | observations = []\n   |\nhelp: Move module level imports to top of file\n\nUP017 [*] Use `datetime.UTC` alias\n   --> docs\\coordination\\evidence\\N15-docs-235e7e3-20261126T194254\\audit_docs.py:161:43\n    |\n159 |            \"python/deepviz/src/deepviz/mcp_server.py\"]\n160 | result = {\n161 |     \"recorded_utc\": datetime.datetime.now(datetime.timezone.utc).isoformat(),\n    |                                           ^^^^^^^^^^^^^^^^^^^^^\n162 |     \"source_commit\": \"235e7e361e395b86781101172f040ee51b9423d2\",\n163 |     \"root\": str(root), \"deepviz_import\": deepviz.__file__, \"python_version\": sys.version,\n    |\nhelp: Convert to `datetime.UTC` alias\n    |\n160 | result = {\n    -     \"recorded_utc\": datetime.datetime.now(datetime.timezone.utc).isoformat(),\n161 +     \"recorded_utc\": datetime.datetime.now(datetime.UTC).isoformat(),\n162 |     \"source_commit\": \"235e7e361e395b86781101172f040ee51b9423d2\",\n    |\n\nFound 7 errors.\n[*] 3 fixable with `--fix`.\n",
+      "raw_log_sha256": "09c9f20700916bd50bc5f262868e323e24ca9ed2bf1d31c56e7b14d132826f69",
+      "raw_log_bytes": 4088
+    }
+  ],
+  "n15_unchanged_baseline_bytes": [
+    {
+      "path": "docs\\coordination\\evidence\\N15-coverage-14c7b27-20261126T201607\\capture_snapshot.py",
+      "sha256": "53cc35900e921fbc5cf86a3bdea1367333832ae030cd9da5e2af6ec2a50648ec",
+      "bytes": 3275
+    },
+    {
+      "path": "docs\\coordination\\evidence\\N15-docs-235e7e3-20261126T194254\\audit_docs.py",
+      "sha256": "bf7199c2ac0a39096115ec55801cb9ff67ee5df193d7ee52c41d618f2be40ddd",
+      "bytes": 8546
+    }
+  ],
+  "rule": "No Ruff exclusion/ignore/config change used. Clean source and dirty archival evidence failures are separate observations."
+}

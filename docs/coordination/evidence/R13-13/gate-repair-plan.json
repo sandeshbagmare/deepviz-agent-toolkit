@@ -1,0 +1,153 @@
+{
+  "owner": "ses_de56780caffekQ9gdZ58EgQwb5",
+  "tested_product_base": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "tested_probe_commit": "dedb41fa8df3fdb90b845eef7a10b5fa4032872c",
+  "published_product_checkpoint": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "protected_3aa_to_5340_diff_exit": 0,
+  "protected_paths": [
+    "scripts",
+    ".github",
+    "pyproject.toml",
+    "schemas",
+    "packages",
+    "python/deepviz/src",
+    "python/deepviz/tests"
+  ],
+  "groups": [
+    {
+      "id": "antv-view-wrapper",
+      "nodeids": [
+        "python/deepviz/tests/test_backend_antv.py::test_dashboard_duplicate_titles_get_unique_containers_and_independent_options"
+      ],
+      "historical_exit": 1,
+      "decision": "Top-level view != line: preserve unique containers, per-child data and real line/marker semantics; do not weaken to presence-only. R04 contract/oracle owner; independent role06 diagnosis."
+    },
+    {
+      "id": "pre-serialization-observation",
+      "nodeids": [
+        "python/deepviz/tests/test_n17_boundaries.py::test_n17_dashboard_serialization_order_observation"
+      ],
+      "historical_exit": 1,
+      "decision": "Historical observation expects >1MiB invalid row to serialize before rejection. Current serialized=[] may represent successful early validation; verify early rejection and no unauthorized output instead of demanding unsafe work. R04 owns oracle disposition."
+    },
+    {
+      "id": "vega-parent-child-title-oracle",
+      "nodeids": [
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-records]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-nested_json]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-graphql]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-columns]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-csv]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-records]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-nested_json]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-graphql]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-columns]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-csv]"
+      ],
+      "historical_exit": 1,
+      "decision": "Recursive child compilation expects parent title in each child SVG. Preserve composed visible parent title once, per-child titles/geometry/data and XSS negatives. R04 decides with role17 independent report."
+    },
+    {
+      "id": "echarts-numeric-x-oracle",
+      "nodeids": [
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-records]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-nested_json]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-graphql]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-columns]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-csv]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-records]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-nested_json]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-graphql]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-columns]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-csv]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-records]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-nested_json]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-graphql]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-columns]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-csv]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-records]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-nested_json]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-graphql]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-columns]",
+        "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-csv]"
+      ],
+      "historical_exit": 1,
+      "decision": "Existing oracle stringifies numeric x for every line/area. Native value-axis coordinates must remain numeric and preserve unequal spacing; stringification only for actual category axes. R04 decides with role03 independent numeric/categorical/time controls."
+    },
+    {
+      "id": "field-byte-envelope",
+      "nodeids": [
+        "tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii]",
+        "tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte]",
+        "tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte]",
+        "tests/test_n11_resource_policy.py::test_flattened_multibyte_key_at_64kib_is_preserved"
+      ],
+      "historical_exit": 1,
+      "decision": "Four historical cases expect 64KiB field names. Python source enforces 4KiB names versus 64KiB cells. Resolve declared contract without widening memory limits or truncation; R04 owner, role04 independent envelope evidence. Normalizers remain exclusively role16 until handback."
+    }
+  ],
+  "failed_total": 36,
+  "skip_causes": [
+    {
+      "nodeid": "python/deepviz/tests/test_mcp_transport::test_stdio_registered_artifact_symlink_swap_cannot_read_outside_output_root",
+      "reason": "Host does not permit symlink creation: [WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-bagma\\\\pytest-1909\\\\test_stdio_registered_artifact0\\\\secret.html' -> 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-bagma\\\\pytest-1909\\\\test_stdio_registered_artifact0\\\\symlink-probe'"
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_n17_boundaries::test_n17_symlink_outside_data_directory_is_rejected",
+      "reason": "Host cannot create symlinks: [WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-bagma\\\\pytest-1909\\\\test_n17_symlink_outside_data_0\\\\outside.json' -> 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-bagma\\\\pytest-1909\\\\test_n17_symlink_outside_data_0\\\\allowed\\\\escape.json'"
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_render::test_browser_executes_all_native_kinds[plotly]",
+      "reason": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_render::test_browser_executes_all_native_kinds[echarts]",
+      "reason": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_render::test_browser_executes_all_native_kinds[antv]",
+      "reason": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+    }
+  ],
+  "replay_prefix": [
+    "<project-python>",
+    "-m",
+    "pytest"
+  ],
+  "replay_suffix": [
+    "-q",
+    "--strict-markers"
+  ],
+  "replay_execution": "NOT RUN during recovery; recipes for eligible integrator after source/oracle contract decision. Use new unique JUnit/output directories and exact candidate SHA.",
+  "ci_prerequisites": {
+    "python": [
+      "3.11",
+      "3.12",
+      "3.13"
+    ],
+    "node": "24",
+    "clean_install_recipe": [
+      "python -m pip install -e \".[dev,agents,mcp,columnar]\"",
+      "npm ci",
+      "npm run build"
+    ],
+    "install_execution": "Not run or authorized by this recovery worker; intended CI/fresh eligible environment only.",
+    "headless_environment": {
+      "MPLBACKEND": "Agg",
+      "PYTHONHASHSEED": "0"
+    },
+    "schema": "python scripts/export_schema.py --check",
+    "lint": "python -m ruff check . .github/tests",
+    "mypy": [
+      "python -m mypy",
+      "python -m mypy scripts/export_schema.py scripts/verify_evidence.py scripts/verify_visual.py scripts/verify_scale.py"
+    ],
+    "unit": "python -m pytest -m \"not integration and not scale\" --strict-markers --junitxml=<new-output>/unit.xml",
+    "integration": "python -m pytest -m \"integration and not scale\" --strict-markers --junitxml=<new-output>/integration.xml"
+  },
+  "limits": [
+    "31 passing gate controls do not make the 36 existing failures green.",
+    "Evidence policy success is format/bootstrap status, not two reviewer/two tester approval.",
+    "Remote jobs snapshot shows unit/contract step failures but no remote per-test results were downloaded; do not equate local and remote failure counts."
+  ]
+}
