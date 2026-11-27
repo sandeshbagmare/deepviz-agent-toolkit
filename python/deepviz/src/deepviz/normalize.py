@@ -553,6 +553,12 @@ def _plan(spec: ChartSpec, prefix: list[dict[str, Any]]) -> tuple[str, list[str]
     return strategy, groups, measure
 
 
+def _sum_units(value: int | float) -> int:
+    """Represent a finite number as integer multiples of the smallest subnormal."""
+    numerator, denominator = value.as_integer_ratio()
+    return numerator << (1074 - (denominator.bit_length() - 1))
+
+
 class _Reducer:
     """Keep at most limit group states; no set of overflow keys is retained."""
 
@@ -609,6 +615,9 @@ class _Reducer:
             return
         state[0] += 1
         correction, exponent = state[2:4]
+        if self.strategy == "sum" and exponent == -1074:
+            self._store(state, state[1] + _sum_units(value), exponent=-1074)
+            return
         if self.strategy == "mean" and exponent:
             value = math.ldexp(value, -exponent)
         previous = state[1]
@@ -616,6 +625,11 @@ class _Reducer:
             total = value
         elif self.strategy in {"sum", "mean"}:
             total = previous + value
+            if self.strategy == "sum" and isinstance(total, float) and not math.isfinite(total):
+                # Promote only overflowing sums; one budgeted integer, never a partial/input list.
+                units = _sum_units(previous) + _sum_units(correction) + _sum_units(value)
+                self._store(state, units, exponent=-1074)
+                return
             if self.strategy == "mean" and isinstance(total, float) and not math.isfinite(total):
                 # Scale the numerator by powers of two; the finite mean need not overflow.
                 previous = math.ldexp(previous, -1)
@@ -639,7 +653,13 @@ class _Reducer:
         def result(state: list[Any]) -> Any:
             value = state[1]
             if self.strategy == "sum" and value is not None:
-                value += state[2]
+                if state[3] == -1074:
+                    try:
+                        value = value / (1 << 1074)
+                    except OverflowError:
+                        value = math.inf
+                else:
+                    value += state[2]
             elif self.strategy == "mean" and value is not None:
                 try:
                     value = math.ldexp(value / state[0] + state[2] / state[0], state[3])
