@@ -1,0 +1,328 @@
+{
+  "owner_session": "ses_de567808bffdXko8hyKFRhPv77",
+  "source_commit": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+  "source_parent": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+  "own_branch": "fix/r17-normalizer-boundaries",
+  "source_scope": "ONLY Python normalizer lifetime and NEW permanent5case R17 file; no TS/reduction/mean/SUM/shape/schema/caps/oracle change",
+  "raw_source_and_built_sha256": {
+    "python/deepviz/src/deepviz/normalize.py": "eef44a7df71926932fc14b33ff47225903b30824c2435e74b9707b49ed357f2b",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py": "4451d287cfba3cf2e18a3c5174341eeee30436b0304d6e6591c83125a0629068",
+    "packages/deepviz/src/normalize.ts": "2c730b13f6360fa2e75c66d03ea051ffdb5c253d4922546f51cd8fd60e742c7f",
+    "packages/deepviz/dist/normalize.js": "52d718460e6501ca84a3ef8c9a5b9da92eb4c2b71109bd73a3b9351db85501e5",
+    "packages/deepviz/dist/index.js": "887a0d361250e936d43f6b5f8cac4f65a024676520ad6bcfb49ab8042e355c39"
+  },
+  "independent15_oracles_raw_sha256_unchanged": {
+    "tests/r10_probes/role15/test_owned_input_cleanup.py": "43279c443d9eb76b22f39a80cd4bfcbfcca058193cf8e96780f7c5763c7729a0",
+    "tests/r13_probes/role15/test_reducer_source_ownership.py": "5a9ebaba4968381624d20f646afbd8105531be4bfd179fe56fa5accb7118314e"
+  },
+  "red": {
+    "exit": 1,
+    "seconds": 8.04,
+    "total": 69,
+    "counts": {
+      "failure": 21,
+      "passed": 48
+    }
+  },
+  "green": {
+    "exit": 0,
+    "seconds": 6.93,
+    "total": 69,
+    "counts": {
+      "passed": 69
+    }
+  },
+  "focused_initial_harness": {
+    "exit": 2,
+    "collection_errors": 1,
+    "tests_executed": 0,
+    "cause": "chosen importlib mode incompatible with unchanged N19 sibling import; default prepend corrected runner only"
+  },
+  "focused_corrected": {
+    "exit": 1,
+    "seconds": 22.96,
+    "total": 423,
+    "counts": {
+      "passed": 419,
+      "failure": 4
+    },
+    "failure_family": "known4field-policy 64KiB expected vs unchanged4096byte field limit"
+  },
+  "full_not_scale": {
+    "exit": 1,
+    "seconds": 266.71,
+    "scale_deselected": 9,
+    "total": 3064,
+    "counts": {
+      "passed": 2501,
+      "failure": 41,
+      "skipped": 5,
+      "error": 517
+    },
+    "failures": [
+      {
+        "class": "python.deepviz.tests.test_backend_antv",
+        "name": "test_dashboard_duplicate_titles_get_unique_containers_and_independent_options"
+      },
+      {
+        "class": "python.deepviz.tests.test_n17_boundaries",
+        "name": "test_n17_dashboard_serialization_order_observation"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-records]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-nested_json]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-graphql]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-columns]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-csv]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-records]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-nested_json]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-graphql]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-columns]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-csv]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-records]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-nested_json]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-graphql]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-columns]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-csv]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-records]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-nested_json]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-graphql]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-columns]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-csv]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-records]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-nested_json]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-graphql]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-columns]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-csv]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-records]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-nested_json]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-graphql]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-columns]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-csv]"
+      },
+      {
+        "class": "tests.test_n09_performance_inspector",
+        "name": "test_declared_drawable_geometry_must_not_accept_nondrawable_tags[empty-path]"
+      },
+      {
+        "class": "tests.test_n09_performance_inspector",
+        "name": "test_declared_drawable_geometry_must_not_accept_nondrawable_tags[nonnumeric-rectangle]"
+      },
+      {
+        "class": "tests.test_n09_performance_inspector",
+        "name": "test_declared_drawable_geometry_must_not_accept_nondrawable_tags[negative-radius]"
+      },
+      {
+        "class": "tests.test_n09_performance_inspector",
+        "name": "test_declared_drawable_geometry_must_not_accept_nondrawable_tags[invalid-points]"
+      },
+      {
+        "class": "tests.test_n11_resource_policy",
+        "name": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii]"
+      },
+      {
+        "class": "tests.test_n11_resource_policy",
+        "name": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte]"
+      },
+      {
+        "class": "tests.test_n11_resource_policy",
+        "name": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte]"
+      },
+      {
+        "class": "tests.test_n11_resource_policy",
+        "name": "test_flattened_multibyte_key_at_64kib_is_preserved"
+      },
+      {
+        "class": "tests.test_packaging_regressions",
+        "name": "test_external_mypy_discovers_installed_public_annotations"
+      }
+    ],
+    "errors_by_class": {
+      "tests.test_cross_language_contract": 186,
+      "tests.test_n12_authoritative_parity": 106,
+      "tests.test_n12_contract_edges": 225
+    },
+    "error_cause": "OWN build prerequisite omission; all517schema integration errors before own dist/index.js existed",
+    "skips": [
+      {
+        "class": "python.deepviz.tests.test_mcp_transport",
+        "name": "test_stdio_registered_artifact_symlink_swap_cannot_read_outside_output_root",
+        "reason_family": "host Windows symlink privilege"
+      },
+      {
+        "class": "python.deepviz.tests.test_n17_boundaries",
+        "name": "test_n17_symlink_outside_data_directory_is_rejected",
+        "reason_family": "host Windows symlink privilege"
+      },
+      {
+        "class": "python.deepviz.tests.test_render",
+        "name": "test_browser_executes_all_native_kinds[plotly]",
+        "reason_family": "browser opt-in not enabled"
+      },
+      {
+        "class": "python.deepviz.tests.test_render",
+        "name": "test_browser_executes_all_native_kinds[echarts]",
+        "reason_family": "browser opt-in not enabled"
+      },
+      {
+        "class": "python.deepviz.tests.test_render",
+        "name": "test_browser_executes_all_native_kinds[antv]",
+        "reason_family": "browser opt-in not enabled"
+      }
+    ]
+  },
+  "schema_build_correction_only": {
+    "exit": 0,
+    "seconds": 1.93,
+    "total": 867,
+    "counts": {
+      "passed": 867
+    },
+    "scope": "only3previouslyerrored schema files; includes350already-passing Python controls, no wholefull/render/scale replay"
+  },
+  "static": {
+    "root_ruff_exit": 0,
+    "package_plus_new_test_mypy_exit": 0,
+    "mypy_files": 10,
+    "initial_failures_preserved": "UP028 unsafe-yieldfrom suggestion and Iterator.close typing corrected with narrow ownership reason/Generator annotations"
+  },
+  "distribution": {
+    "command": "python -m build --no-isolation --sdist --wheel --outdir <own>/p1-dist",
+    "exit": 1,
+    "cause": "hatchling.build unavailable; no install"
+  },
+  "full_packaging_consumer_failure": "Disposable-consumer venv ensurepip --upgrade --default-pip subprocess failed exit1; full test attempted its own fixture bootstrap, no proactive installs/sharedenv changes and no retry",
+  "typescript_build": {
+    "command": "node <readonly-existing-typescript>/bin/tsc -p packages/deepviz/tsconfig.json",
+    "exit": 0,
+    "timing": "only AFTER full command completion, not mutating build under running tests"
+  },
+  "publication": {
+    "commit": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+    "fresh_safe_get_utc": "2026-11-27T14:59:46.387875+00:00",
+    "expected_login": "sandeshbagmare",
+    "own_branch_preexisting": false,
+    "nonforce_push_exit": 0,
+    "exact_ls_remote_readback_exit": 0,
+    "remote_sha": "5ba860305dcc86ac2f95f01705b984d2b40f2799"
+  },
+  "raw_completed_local_artifact_sha256": {
+    "ownership-red.log": "607f31d3b46871bdd45d06588090d88d665cd58af9446ac081f78545db20d99c",
+    "ownership-red.xml": "124b6c36faf529452431ac98569e56a1c44f4d8332d118a825c7e5fd92f8f607",
+    "ownership-green.log": "79539fa3f11b1960840422bd2f3b2f1d6b95f2325699abb81da86a1b31803fdd",
+    "ownership-green.xml": "2e38aa31a68d5d306e1cf9762f8a1eee7fd5fac1063eaa4b7a020181b1f59b02",
+    "ruff-p1-initial.log": "06f3f76ca7eaf5222cef2561b90146ea05b4aeda966f651779e1b07105f0aec6",
+    "mypy-p1-initial.log": "84c54ed8540bb86e50580bd04e7017fd70e234a447548e3ad4e3e79a6e268e57",
+    "p1-focused.log": "311fd2d86df057d070dc2b222e30db0dc253870595850725c3507c4aa615efec",
+    "p1-focused.xml": "c0b7ea72a18676f92cf57c4799076460fc7150fcd08daf0bd871eb53eb9199d0",
+    "p1-focused-corrected.log": "576d1028cbfdff61ed116f9c4bf278c91cdaf9fdc793fec6816ae70cebca91e3",
+    "p1-focused-corrected.xml": "b173d4fdd48791c633ce0a66a2aa4e61adb5c5142637cf5067f33bb8d8ebf09d",
+    "ruff-p1.log": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+    "mypy-p1.log": "f338801c86ba1cc9449bfc736adce1bdc79c2b319b89e3df10cc05c52940e450",
+    "p1-full-not-scale.log": "2c0d1ce34117d7cd923fac6fb5cbbcf7b12f9f384a19fc34ee7db4720cf1766f",
+    "p1-full-not-scale.xml": "95f351483758a14621aae868eec155815dba42654a20682eac3c079c51266d49",
+    "p1-schema-build-corrected.log": "e5f92777088024aafc237df287f181acdd342ca36ae731ce54b94534ca5f54a9",
+    "p1-schema-build-corrected.xml": "141ad197ce360d8bcadd7e6f5a7d5c8de995e48d1b6130584ea547d34d1bc27b",
+    "p1-distribution.log": "dbedda2ac292adfdb23263d2cbcaed7a074d059903e88ac28ab5a8fa38daaf7b",
+    "p1-own-ts-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "p1-github-pre-push.json": "bc53f323b92835c057510d841a61d26fabd6a60a0753ae64e81328fb4fa834ac",
+    "p1-push.log": "6c7fda08ca318f86336030ba29de9b6d33e0d5b7bccbe9e607771e849eff176b",
+    "p1-remote-readback.txt": "2577b6d2eb5327f09026e51f144f0a6bbaa1ac56fe287a9f18ca12a018d28dc2"
+  },
+  "limits": [
+    "author69pass is not independent15/01/02/20 signoff",
+    "full41fail is not repository green; renderer/inspector/fieldpolicy paths untouched",
+    "old01 strict2SUM RED/language still OPEN incomplete accuracy",
+    "2hostsymlink/3browser skips not passes;9scale excluded",
+    "no10M/performance/CI/browser/distribution/900issue/release completion claim"
+  ],
+  "next": "publish compact P1 evidence; R04 inspect/cherry-pick SOURCE5ba8603 and independent oracles; producer only then ordered bounded mean/scalar/GraphQL NEW RED and P2 exactprefix cost/design"
+}
