@@ -1,0 +1,571 @@
+{
+  "captured_utc": "2026-11-27T02:02:27.595820+00:00",
+  "scope": "One bounded saved-report inventory. File existence/quotes are not worker completion, runtime activity, independent rerun or final approval.",
+  "reports": {
+    "R03-01-correctness-review.md": {
+      "sha256": "70dabdd5072aa3b8c97b472b3bf93ff1edf4e5def64077642149ad53b2af3527",
+      "bytes": 10043,
+      "mtime_utc": "2026-11-27T01:59:31.458129+00:00",
+      "session_ids": [
+        "ses_de5678335ffeI7xJrod5l25Q0Q"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 6,
+          "text": "Scope: independent READONLY normalization/reduction/models Python/TS correctness review with concrete count/shape/numerical/resource repros. Baseline only, not final signoff."
+        },
+        {
+          "line": 28,
+          "text": "- Corrected focused command (main interpreter, pinned PYTHONPATH, PYTHONDONTWRITEBYTECODE=1): `python -m pytest python/deepviz/tests/test_normalize.py python/deepviz/tests/test_aggregation_semantics.py python/deepviz/tests/test_n04_normalize_regressions.py tests/test_n12_authoritative_parity.py -m 'not integration' -q --tb=short -p no:cacheprovider` exited0, **301 passed /106 deselected /0 skipped**,7.73s."
+        },
+        {
+          "line": 29,
+          "text": "- Pinned public npm parity command: same interpreter/environment, `python -m pytest tests/test_n12_authoritative_parity.py -m integration -q --tb=short -p no:cacheprovider` exited0, **106 passed /161 deselected /0 skipped**,0.49s."
+        },
+        {
+          "line": 30,
+          "text": "- Node focused four-file command for normalization-policy/bytes/means/unicode-coercion: exit0, **38 passed /0 failed /0 skipped**,2529.481ms. This is not whole-package/final candidate acceptance."
+        },
+        {
+          "line": 54,
+          "text": "- Python independent regressions: exit1,10 failed/6 passed/0 skipped,0.42s. Five failures are count channel/native values100 vs2; five scalar-column-name oracles fail. These are2 defect groups, not10 issues."
+        },
+        {
+          "line": 55,
+          "text": "- TypeScript independent regressions: exit1,9 failed/7 passed/0 skipped,170.4158ms. Eight direct nodes/edges sibling ambiguity failures plus custom GraphQL wrapper policy failure; explicit-path/metadata/column positive controls pass."
+        },
+        {
+          "line": 56,
+          "text": "- Corrected existing resource+models: exit1,4 failed/52 passed/0 skipped,2.29s. Exactly64KiB field-name expectations conflict with implemented Python4KiB field ceiling; role04 owns policy disposition, not a newly inferred memory bug."
+        },
+        {
+          "line": 57,
+          "text": "- Existing models+cross-language+raw/default contract: exit0,630 passed/0 skipped,2.41s. Own rebuilt public package used; no stale sibling dist."
+        }
+      ]
+    },
+    "R03-02-security-review.md": {
+      "sha256": "a181e3e7e740bacfb622d1a6e42e3c04cb039411f8dd64f49e97c76822dce33f",
+      "bytes": 5033,
+      "mtime_utc": "2026-11-27T01:58:19.022222+00:00",
+      "session_ids": [
+        "ses_de5678328ffeYCFXQhRPKd4a9h"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 6,
+          "text": "Authority: R03-independent-wave common contract + section02 and R05-22-subagents read; root dispatch-only, R04 product/canonical owner. No spawning. Baseline only, not final signoff."
+        },
+        {
+          "line": 22,
+          "text": "Own PYTHONPATH plus existing MAIN venv: `python -m pytest -q --basetemp=C:/Users/bagma/AppData/Local/Temp/opencode/r03-02-security-artifacts/pytest-parent/run-001 python/deepviz/tests/test_mcp_transport.py python/deepviz/tests/test_n06_mcp_validation.py python/deepviz/tests/test_n06_tool_lifecycle.py python/deepviz/tests/test_n06_encoded_handles.py python/deepviz/tests/test_backend_plotly.py python/deepviz/tests/test_backend_vega.py tests/test_n13_concurrency.py` exit0: **64 passed,1 skipped,31.62s**. Actual loaded module paths are own pinned worktree; tools/MCP/engines hashes recorded in own note. First failed harness launch preserved, not counted as tests executed. No source edits. Next: own bounded probes for resource lifetime, error leakage and table expansion; concrete findings only after repro."
+        },
+        {
+          "line": 29,
+          "text": "Next: real stdio duplicate/error check, preserve compact exact-source evidence, final ranked report. Baseline only, no final signoff."
+        }
+      ]
+    },
+    "R03-03-echarts-oracle.md": {
+      "sha256": "e4ac8cc5d765e86ee11d1b482c52e928a6e4c155bb410c2a620f38ba4298a8f3",
+      "bytes": 12404,
+      "mtime_utc": "2026-11-27T02:02:07.654441+00:00",
+      "session_ids": [
+        "ses_de5678315ffeDxQVEpE9V9WSTE"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 5,
+          "text": "**The20 failures are one obsolete-oracle assumption, not a demonstrated renderer defect.** Numeric line/area x remains numeric on a quantitative ECharts value axis; the matrix instead always expects string x. Reverting the source to category axes would make the assertion pass while corrupting irregular numeric spacing. This report recommends a strict, axis-aware oracle correction; **no existing matrix/source/assertion was edited.** Not final-candidate signoff."
+        },
+        {
+          "line": 9,
+          "text": "Owner actual session `ses_de5678315ffeDxQVEpE9V9WSTE`, native session_move confirmed. Assignment: common contract+03 in `R03-independent-wave.md`; latest budget `R05-22-subagents.md`. No spawning. **Baseline evidence only, not final-candidate signoff.**"
+        },
+        {
+          "line": 37,
+          "text": "# exit0: 10passed,1139deselected,0skipped in0.41s"
+        },
+        {
+          "line": 43,
+          "text": "# exit0: 23passed,0skipped in0.33s; includes genuine SVG path coordinates vs native transforms"
+        }
+      ]
+    },
+    "R03-04-field-budget.md": {
+      "sha256": "d3b04d4a792020a8a842b939f2d3e179e7d66c871e8e9d97c236e710b821fe84",
+      "bytes": 12948,
+      "mtime_utc": "2026-11-27T02:02:07.606406+00:00",
+      "session_ids": [
+        "ses_de5678314ffeuDXtC7RfGsbD6V"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 3,
+          "text": "**Status: diagnosis complete; recommendations only, no source/oracle correction applied.** 2026-11-27. This is baseline evidence on the pin, NOT final-candidate acceptance or a scale/memory signoff."
+        },
+        {
+          "line": 55,
+          "text": "| `& $PY -m pytest tests/test_n11_resource_policy.py -q -k 'exact_64kib_utf8_key_or_cell_is_preserved or flattened_multibyte_key_at_64kib_is_preserved'` |1;4failed/3passed/19deselected/0skipped,0.43s |"
+        },
+        {
+          "line": 56,
+          "text": "| `& $PY -m pytest tests/test_n11_resource_policy.py -q --tb=short --junitxml=$A/python-oracle.xml` |1;4failed/22passed/0skipped,2.31s;`python-oracle.log/xml` |"
+        },
+        {
+          "line": 57,
+          "text": "| `& $PY -m pytest $P/test_field_budget_probe.py -q --junitxml=$A/python-probe.xml` |0;10passed/0skipped,1.04s;`python-probe.log/xml` (earlier run10passed,0.29s) |"
+        },
+        {
+          "line": 58,
+          "text": "| `& $PY -m pytest python/deepviz/tests/test_n17_boundaries.py -q -k oversized_utf8 --tb=short` |0;2passed/38deselected/0skipped,0.32s;`python-n17.log` |"
+        },
+        {
+          "line": 60,
+          "text": "| `node --test packages/deepviz/test/test_n21_resource_policy.test.mjs` |0;23passed/0failed/0skipped,1777.4132ms;`ts-policy.log` (earlier run23passed,1676.5965ms) |"
+        },
+        {
+          "line": 61,
+          "text": "| `node --test $P/test_field_budget_probe.mjs` |0;6passed/0failed/0skipped,211.7469ms;`ts-probe.log` (earlier corrected run114.255ms) |"
+        },
+        {
+          "line": 72,
+          "text": "- Not run: full product Python/npm suites, global Ruff/mypy, distribution/browser/render gates or10Mscale. No dependency installs; finite byte probes are NOT total-process/RSS/continuous-memory proofs. No issue closures/reviews/CI/final acceptance claimed. No source fix was allowed or applied."
+        }
+      ]
+    },
+    "R03-05-drawable-inspector.md": {
+      "sha256": "413958c02baab0c1449e0efd3472a09f1d571ee5e014f0361d92610c76c85e99",
+      "bytes": 14407,
+      "mtime_utc": "2026-11-27T01:59:13.220656+00:00",
+      "session_ids": [
+        "ses_de567830effe0E5yIwQgDACLMD"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 21,
+          "text": "- Exit `1`; `4 failed, 63 passed, 0 skipped` in `2.94s`. Artifact: `C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r03-05-drawable-inspector-ses_de567830effe0E5yIwQgDACLMD-artifacts\\focused-inspector.log`."
+        },
+        {
+          "line": 91,
+          "text": "This is pinned-baseline investigation, not final-candidate signoff. No production fix authorized or made. No full-suite/lint/typecheck/package/format/scale/MCP/DeepAgent gate was run by this narrowly scoped worker; those remain separate R03 roles, not implicit passes. The primitive browser controls prove these nine local cases only, not renderer-wide visual correctness. Python Playwright is unavailable but installed Node Playwright was actually exercised; no dependency installation was attempted."
+        }
+      ]
+    },
+    "R03-06-native-browser-tester.md": {
+      "sha256": "4b95a8a98dc42f93e2e334ad166c56e8166851dc836fa2f3a4f70108b03a3c3b",
+      "bytes": 1753,
+      "mtime_utc": "2026-11-27T01:25:09.027744+00:00",
+      "session_ids": [
+        "ses_de56782fbffdVfBNQu0BxwziM4"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 12,
+          "text": "Run supported installed opt-in Plotly/ECharts/AntV native-kind tests in real Chromium; capture and inspect genuine images/console/errors/values/axis spacing/labels; diagnose AntV native-line view wrapper without blindly weakening its oracle. Exact CDN/optional-tool skips and baseline theme defect must remain explicit. Runtime paint alone is not visual approval. This report is baseline evidence, NOT final signoff for any later candidate."
+        }
+      ]
+    },
+    "R03-07-python-distribution.md": {
+      "sha256": "57822e2c0b3c40ccfcb9ad3d94671965038097757d7c0304f1d0e802ce005e3c",
+      "bytes": 11711,
+      "mtime_utc": "2026-11-27T01:58:56.855034+00:00",
+      "session_ids": [
+        "ses_de56782e8ffentAvzUUfMncFRA"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 21,
+          "text": "Command: `C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe -m build --no-isolation --outdir C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r03-07-python-distribution-artifacts-ses_de56782e8ffentAvzUUfMncFRA\\dist`; exit `1`. The exact failure is `BackendUnavailable: Cannot import 'hatchling.build'` / `ModuleNotFoundError: No module named 'hatchling'`; log: `...r03-07-python-distribution-artifacts-ses_de56782e8ffentAvzUUfMncFRA\\build-no-isolation.log`. No wheel or sdist was produced. This is a precise offline/missing-backend blocker, not a build pass. Default isolated build was intentionally not attempted because it could install dependencies and violate the no-install contract."
+        },
+        {
+          "line": 35,
+          "text": "## Current disposition"
+        },
+        {
+          "line": 37,
+          "text": "Totals: current wheel builds `0`; current sdist builds `0`; current build failures `2` (`--sdist`, `--wheel`), plus the combined build failure; cached wheel installs `2/2`; cached consumer import probes `2/2` process-successful; current pinned consumer `0` because no current archive exists. Skips/blockers: current packaging archive inspection, current clean installed consumer, sdist contents, Twine validation and current entrypoint execution are blocked by absent `hatchling.build`; the packaging pytest and Twine checks were not run because they require a current artifact and the fixture would invoke an install-capable isolated build. These are explicit skips, not passes. No dependency installation was authorized or attempted. Build byte identity for the pinned source is therefore unavailable. Historical Wheel A evidence is bounded to its cached hash and explicitly differs in `tools.py`; "
+        }
+      ]
+    },
+    "R03-08-npm-distribution.md": {
+      "sha256": "99a4928f3f00f6ac3b34c44b350b266f7e50770427c408d22e34ad2121852ceb",
+      "bytes": 13568,
+      "mtime_utc": "2026-11-27T01:55:48.211723+00:00",
+      "session_ids": [
+        "ses_de56782e6ffeVWDIuY3v01kkBt"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 5,
+          "text": "**PASS for exercised npm build/runtime/type/pack scope; NOT full G7 or final-candidate signoff.** Detached source remained tracked/untracked clean, only own ignored `dist/` generated. `npm ci` was intentionally NOT RUN (assignment prohibits dependency installs). No production, package, lockfile, shared dependency, GitHub or other-owner edits."
+        },
+        {
+          "line": 11,
+          "text": "| Same CLI `test` | exit0; **246 passed/0 failed/0 cancelled/0 skipped/0 todo**,3963.4317ms; `verified-tests.stdout.log` |"
+        },
+        {
+          "line": 31,
+          "text": "4. `npm run package:check` not run as a whole because its helper uses direct root `node_modules/typescript` and its own consumer install path; equivalent stronger tarball-only consumer checks were run explicitly with installed tooling and retained artifacts. No main npm ci/install, no registry publication, no new third-party installs. Python/full-browser/10M/remote gates belong to other scopes and remain unverified here."
+        },
+        {
+          "line": 47,
+          "text": "Run build/typecheck/pack using installed tooling read-only; inspect actual tarball contents and public exports, types, schema/prompts; execute clean extracted-package Node and browser entry points where existing tooling permits. Record exact commands, exit codes, totals, skips, source/build/module hashes and unique evidence paths. Missing tools become precise blockers, never inferred passes. This is baseline evidence, not final signoff on later fixes."
+        },
+        {
+          "line": 66,
+          "text": "- `npm.cmd test` with explicit PATH, exit0: **246 passed/0 failed/0 cancelled/0 skipped/0 todo**, duration3007.8907ms (`npm-test.log`, exit marker0), Node26.13.1."
+        }
+      ]
+    },
+    "R03-09-schema-parity.md": {
+      "sha256": "c8d36c68ad7378d15b6dead821addced99c2c7b5c4802995675c4c0b36141cdb",
+      "bytes": 13340,
+      "mtime_utc": "2026-11-27T02:00:40.005607+00:00",
+      "session_ids": [
+        "ses_de56782e5ffe3H1lUAoxrBtEhx"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 3,
+          "text": "**Latest outcome: core ChartSpec parity/freshness checks pass, but an independently added public tool-boundary probe is RED (exit1): 5/40 cases disagree because all five npm `invoke()` helpers accept explicit `spec:null` despite their schema and `validateSpec(null)` rejecting it. See R03-09-F1 below. Baseline only; not final signoff.**"
+        },
+        {
+          "line": 16,
+          "text": "This is baseline independent evidence only, not final-candidate signoff. Broader builds/browser/MCP/formats/scale belong to disjoint R03 lanes and are not claimed here."
+        },
+        {
+          "line": 34,
+          "text": "| `$py -m pytest tests/test_schema_contract.py -q` | 0 | 19 passed /0 failed /0 skipped, 2.31s. |"
+        },
+        {
+          "line": 35,
+          "text": "| `$py -m pytest tests/test_cross_language_contract.py -q` | 0 | 373 passed /0 failed /0 skipped, 1.49s. |"
+        },
+        {
+          "line": 36,
+          "text": "| `$py -m pytest tests/test_n12_authoritative_parity.py -q` | 0 | 267 passed /0 failed /0 skipped, 0.69s. |"
+        },
+        {
+          "line": 37,
+          "text": "| `$py -m pytest tests/test_models.py -q` | 0 | 30 passed /0 failed /0 skipped, 0.19s. |"
+        },
+        {
+          "line": 39,
+          "text": "| `$files=@(Get-ChildItem packages/deepviz/test -Filter '*.test.mjs' \\| ForEach-Object {$_.FullName}); node --test $files` | 0 | 246 passed /0 failed /0 skipped, 5441.957ms. This is full existing package Node unit-test execution, not browser execution. |"
+        },
+        {
+          "line": 43,
+          "text": "Total four focused pytest executions: **689 passed,0 failed,0 skipped**. Separate Node package suite **246 passed,0 failed,0 skipped**, separate independent probe **52 agreed inputs**. Counts are not claims of unrelated gates/900 issues."
+        }
+      ]
+    },
+    "R03-10-mcp-deepagents.md": {
+      "sha256": "b9f5d09c975c49e094369adaf337c4cb582003d50a8b5bad5e47b7282c427319",
+      "bytes": 7623,
+      "mtime_utc": "2026-11-27T01:53:33.909862+00:00",
+      "session_ids": [
+        "ses_de56782e3ffeI5D4lzsNVeLcDk"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 6,
+          "text": "- Pinned source: `0c5fa825f7058f8c5a4ab6ec9597b9fd5fd4ca43`; baseline only, not final-candidate signoff."
+        },
+        {
+          "line": 21,
+          "text": "- First executed suite command: `python -m pytest python/deepviz/tests/test_mcp_transport.py python/deepviz/tests/test_n06_mcp_validation.py python/deepviz/tests/test_n06_tool_lifecycle.py -q --strict-markers`; **17 passed, 1 skipped, exit 0, 29.09s**. Raw output: `C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r03-10-mcp-deepagents-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\focused-mcp-n06-pytest.log`. Skip reason still being resolved with explicit skip reporting."
+        },
+        {
+          "line": 22,
+          "text": "- Skip-report reruns with `-q -rs --strict-markers`: **17 passed, 1 skipped**, exit 0, 18.02s (console) and 21.36s (saved `focused-mcp-n06-pytest-skip-details.log`). The sole skip is `test_stdio_registered_artifact_symlink_swap_cannot_read_outside_output_root`, Windows **WinError1314**: required symlink privilege unavailable. This boundary was not exercised."
+        },
+        {
+          "line": 23,
+          "text": "- `python -m pytest python/deepviz/tests/test_n13_transport_acceptance.py -q -rs --strict-markers`: **24 passed, 0 skipped**, exit0, 20.76s; `n13-transport-acceptance-pytest.log`. Includes real stdio five-engine chain, bytes/manifest/count/aggregation resource oracles, handle eviction/isolation/default no-filesystem, deterministic real Deep Agent seven-tool graph, alternate MCP entrypoints, CLI positives/negatives. The installed executables import pinned source through own PYTHONPATH; this is not clean wheel-consumer evidence."
+        },
+        {
+          "line": 24,
+          "text": "- Persistent-evidence rerun: `python -m pytest python/deepviz/tests/test_n13_transport_acceptance.py -q --strict-markers --basetemp <artifact>/n13-preserved-run -k 'one_stdio_session_five_engine_chain or actual_deep_agent_runs_seven_tool_chain'`: **2 passed, 22 deselected, 0 skipped**, exit0, 10.63s; `n13-preserved-run-pytest.log`. Calls/retrieved bytes/five engine artifacts and Deep Agent tool messages preserved under the unique artifact root. Duplicate runs are not added to distinct totals."
+        },
+        {
+          "line": 26,
+          "text": "- Own isolated probe only at `tests/r03_probes/mcp-deepagents/test_role10_unique_boundaries.py`: `python -m pytest tests/r03_probes/mcp-deepagents/test_role10_unique_boundaries.py -q -rs --strict-markers --basetemp <artifact>/unique-probes-pytest-tmp` with `R03_ROLE10_ARTIFACT=<artifact>/unique-probes`: **2 passed, 0 skipped**, exit0, 2.85s. Checks 3K-row source summary/recommendation exclude raw marker/records and remain <20KiB, malformed 200KiB JSON is a small error (<4KiB), marker-free and artifact-free."
+        },
+        {
+          "line": 28,
+          "text": "- Additional relevant public suites: `python -m pytest python/deepviz/tests/test_integrations.py python/deepviz/tests/test_n06_encoded_handles.py -q -rs --strict-markers --basetemp <artifact>/integrations-and-encoded-handles-tmp`: **41 passed, 0 skipped**, exit0, 17.46s; covers direct LangChain StructuredTools, all five renderers, file/URL/raw-string/executable/output-dir rejection, 1MB guidance, optional-import independence, full 301-row source behind 200-row profiles, encoded handles after eviction, real MCP encoded handle control."
+        },
+        {
+          "line": 29,
+          "text": "- Scoped N17 command: `python -m pytest python/deepviz/tests/test_n17_boundaries.py -q -rs --strict-markers --basetemp <artifact>/n17-mcp-tool-boundaries-tmp -k 'tool_rejects_model_authored_path_escape or symlink_outside_data_directory or directory_junction_cannot_escape_data_root or strings_never_opt_in or handle_expiry_and_renewal or inline_size_is_utf8 or failed_tool_render or artifact_limit_rejection or artifact_names_are_unique or real_stdio_handle'`: **18 passed, 1 skipped, 21 deselected**, exit0, 2.56s. Additional skip is input-file symlink containment (WinError1314). Actual Windows directory-junction containment passed; deleted-resource rejection preserved live transport."
+        }
+      ]
+    },
+    "R03-11-python-scale.md": {
+      "sha256": "84206354c8df8d9b769772a152e4b0f5b9431af8aad07bc3f7222aa5b253c373",
+      "bytes": 15789,
+      "mtime_utc": "2026-11-27T01:54:29.765197+00:00",
+      "session_ids": [
+        "ses_de567811cffdTBwcb8pF5nDi9v"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 3,
+          "text": "**Final status (2026-11-27): baseline assignment complete.20 fresh-process matrix workers passed;30 existing contract tests passed/9deselected/0skipped; independent exact-oracle/source readback passed.** No material failure observed in this scope. **Not final-candidate signoff.** Sanitized machine evidence: `docs/coordination/evidence/R03-11/scale-summary.json` SHA256 `43a2d9abf6458e3b9a7fb29491403d914c5f63c4622c553077275702662561fc`."
+        },
+        {
+          "line": 7,
+          "text": "Date 2026-11-27; actual owner `ses_de567811cffdTBwcb8pF5nDi9v`, obtained by native `session_move`. Assignment: R03 common contract + 11, and R05 cap. Baseline only, **not final candidate signoff or proof of 10M visible marks**."
+        },
+        {
+          "line": 39,
+          "text": "## Executed matrix results — baseline only"
+        },
+        {
+          "line": 65,
+          "text": "Stdout/stderr `<own-artifacts>/pytest-contract.log`, **exit0:30passed,9deselected,0skipped in3.74s**. The9scale pytest cases were deliberately deselected because the independently executed matrix already covered all tiers, not treated as pytest passes. This30test subset includes lazy source observation/exhaustion, deliberate incorrect count/bound/value/undisclosed-loss/aggregate/changed-source/input-scaled-memory rejection controls, deterministic nonprefix sample, weighted overflow mean, actual normalization, fresh-worker provenance, and all five renderers receiving ten bounded records. Renderer smoke is structure-only, not browser execution or visual signoff."
+        },
+        {
+          "line": 67,
+          "text": "Dedicated matrix still has0rendercases; contract smoke does not turn the10M workloads into rendering benchmarks. Full pytest/ruff/mypy/build/package/browser gates were not run in this lane."
+        },
+        {
+          "line": 91,
+          "text": "# Exit0;30passed/9deselected/0skipped,3.74s"
+        },
+        {
+          "line": 101,
+          "text": "**Remaining limits/skips:**9scale pytest cases deselected; the matrix covered their three large tiers separately. Dedicated matrix rendering excluded (`render_counts=[]`); contract renderer smoke is not visual/browser signoff. Full suite/lint/type/build/package/final-head/remote acceptance was not run. All evidence belongs only to pinned baseline`0c5fa82`, not subsequent fixes."
+        }
+      ]
+    },
+    "R03-12-typescript-scale.md": {
+      "sha256": "d2a987343c3955b7107d9afda9492eec8c4c6901b76dd338d8ea10b4f73d1521",
+      "bytes": 9143,
+      "mtime_utc": "2026-11-27T02:01:22.607273+00:00",
+      "session_ids": [
+        "ses_de5678115ffewUEpZFi8faBW8C"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 34,
+          "text": "- `node --test --test-reporter=tap packages/deepviz/test/test_n21_resource_policy.test.mjs`: exit0,23 passed/0 failed/0 skipped. Exact/over UTF-8 cell, field, flattened record, escaping, incremental retained-state and combined dashboard resource controls executed."
+        }
+      ]
+    },
+    "R03-13-ci-lint-policy.md": {
+      "sha256": "9a810c14922b0b62d2afdb73db319ca98c19309aa69f0e05b86acd1fdde2502f",
+      "bytes": 5095,
+      "mtime_utc": "2026-11-27T01:49:15.026001+00:00",
+      "session_ids": [
+        "ses_de56780caffekQ9gdZ58EgQwb5"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 3,
+          "text": "Status: INITIAL CHECKPOINT, 2026-11-27. Baseline only; no final signoff."
+        },
+        {
+          "line": 10,
+          "text": "- Pinned `python -m mypy`: exit 0, 9 files; script mypy exit 0, 4 files. Schema `--check` exit 0; `.github/tests -q --strict-markers` exit 0, 16 passed/0 failed/0 skipped."
+        },
+        {
+          "line": 11,
+          "text": "- Pinned npm build/typecheck/test/pack-dry-run/schema-check, using preinstalled MAIN tools read-only through PATH: each exit 0; npm tests 246 passed/0 failed/0 skipped; dry run 22 files. No installs. Nineteen ignored output files under isolated `packages/deepviz/dist`. Exact build/typecheck without shared-tool PATH each exited 1 (`tsc` absent in clean worktree without node_modules); the explicit shared-tool reruns passed."
+        },
+        {
+          "line": 12,
+          "text": "- `python -m build --no-isolation --outdir <own isolated artifacts>`: exit 1, missing `hatchling.build`; no installation attempted. `actionlint` not on PATH. No full Python suite, Linux/Node24, actual clean consumers, scale/raster/browser, or remote GitHub check claimed."
+        }
+      ]
+    },
+    "R03-14-assets-offline-license.md": {
+      "sha256": "8ba64daa03228b4ca0154902050196fa41d29c0a467806e053739aca67873599",
+      "bytes": 5287,
+      "mtime_utc": "2026-11-27T01:57:48.774920+00:00",
+      "session_ids": [
+        "ses_de56780c9ffefIH3Y1KdXhqGwR"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 4,
+          "text": "Immutable BASELINE source: 0c5fa825f7058f8c5a4ab6ec9597b9fd5fd4ca43; NOT final signoff."
+        },
+        {
+          "line": 17,
+          "text": "Checkpoint 2: focused pytest rerun returned exit0, 24 passed/0 skipped in 0.79s; log in own external artifact directory pytest-assets.log. Main installed Python3.12.16, Plotly6.9.0 embeds JS3.7.0 (4851164 bytes, SHA256 8ef4c6ab1369f0019611cbcd2d5b8aafef23e5d19ef58c39d4b4249831fe2180); local full Plotly notice SHA256 8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7. Corrected module provenance command exit0 confirms own pinned Python module paths; initial attempts had missing hatchling and package-export function mistaken for module (both exit1). Hatchling absent; no Python wheel build claimed or dependency installed. Own TS compiled via main installed tsc7.0.2 exit0 without node_modules installs. npm pack --dry-run --json --ignore-scripts --offline with own cache exit0:22 files, no bundled runtime libraries; log npm-pack-dry-run.json. Official registry exact-version metad"
+        }
+      ]
+    },
+    "R03-15-input-formats.md": {
+      "sha256": "a81f8854f92fd975ec245a8c43fefbeb7b580388750dee842ad5baba7638ac7c",
+      "bytes": 9047,
+      "mtime_utc": "2026-11-27T02:00:53.195427+00:00",
+      "session_ids": [
+        "ses_before",
+        "ses_de56780c8ffe7LgwvwdfR5qFQD"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 3,
+          "text": "**2026-11-27 result: 269 passed / 1 failed / 0 skipped.** F1 is an owned-input close/Windows file-lock defect; no production code changed. Baseline only, not final signoff."
+        }
+      ]
+    },
+    "R03-16-numerical-reduction.md": {
+      "sha256": "39a9ed1e05ab2e9c19be800d15b0a353461f31fe1a4883fcad0324397d38bea0",
+      "bytes": 13667,
+      "mtime_utc": "2026-11-27T01:58:43.819412+00:00",
+      "session_ids": [
+        "ses_de567808bffdXko8hyKFRhPv77"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 38,
+          "text": "- Latest Python diagnostic/control **16 passed / 0 failed / 0 skipped in0.31s**, exit0; TS diagnostic/control **16 passed / 0 failed / 0 skipped, 223.8771ms**, exit0. Python exact-sum acceptance **0 passed / 1 failed / 0 skipped in0.35s**, exit1; TS exact-sum acceptance **0 passed / 1 failed / 0 skipped, 198.2312ms**, exit1. Overall latest scoped evidence is **32 passed / 2 failed / 0 skipped**, NOT a green correctness gate. Unique artifacts: `C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r03-16-numerical-reduction-ses_de567808bffdXko8hyKFRhPv77-artifacts\\{python-expanded.log,typescript-expanded.log,python-exact-red.log,typescript-exact-red.log}`. Earlier 7+7 green diagnostics/logs remain historical; no prior result replaces these independent red oracles."
+        },
+        {
+          "line": 49,
+          "text": "- Early runs intentionally retained: first Python **4 passed/2 failed**, TS **6 passed/1 failed** because my independent probe chose `max_points=7`, below both models' declared minimum10, and Python's rational-oracle assertion incorrectly compared a rounded Decimal sum with the exact binary float. Changed probes only: use valid capacity10 and `Fraction.from_float` exact arithmetic."
+        },
+        {
+          "line": 50,
+          "text": "- Next attempt Python **5 passed/1 failed** from one stale `Decimal` identifier after switching the oracle to Fraction; TS **7 passed**. Corrected own probe import/reference only."
+        },
+        {
+          "line": 66,
+          "text": "- Status: independent scoped evidence submitted, no execution blocker, source untouched; exact-accuracy acceptance remains RED in both languages. Next executable action for R04/N04/N03: run the saved `test_exact_sum_acceptance.{py,mjs}` commands to reproduce F1, explicitly disposition the finite-overflow loss and sign/sample policies, then rerun all four own probe files on the exact changed candidate. Preserve this baseline evidence rather than treating it as future signoff."
+        }
+      ]
+    },
+    "R03-17-vega-dashboard.md": {
+      "sha256": "3c793008d95e282c8ced1b229b2fd3907e82c74c91be2af3099715108e978acc",
+      "bytes": 8103,
+      "mtime_utc": "2026-11-27T02:00:42.499531+00:00",
+      "session_ids": [
+        "ses_de5678086ffeNido4phnXCJ8J4"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 25,
+          "text": "- Blockers/limits: no product blocker established in ten-case diagnosis; not final review/theme/otherengine/remoteCI evidence. No dependencies installed or shared environments/source touched."
+        },
+        {
+          "line": 31,
+          "text": "- `python -m pytest python/deepviz/tests/test_backend_vega.py tests/r03_probes/vega-dashboard/test_dashboard_title_contract.py -q --tb=short --junitxml=artifacts/r03-17-vega-dashboard-title-probe/scoped-tests.xml`: **30passed/0failed/0skip16.87s**, process0 (prior preliminary29passed15.56s before one new metadata-negative-control test). Existing Vega backend is unmodified; own isolated tests are not a replaced matrix."
+        }
+      ]
+    },
+    "R03-18-docs-examples-prompts.md": {
+      "sha256": "90f4353e3920c9731a8ae4079311f9e2ee541cdfb046b7e73035fa15cf36eb0e",
+      "bytes": 10374,
+      "mtime_utc": "2026-11-27T01:59:33.808382+00:00",
+      "session_ids": [
+        "ses_de567805bffdER1GlVd0ngLgKg"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 32,
+          "text": "| `P -m pytest examples/test_examples.py -q` |0; **2passed/0skipped6.78s** | `A\\pytest-examples.log`, `.exit.txt` |"
+        },
+        {
+          "line": 33,
+          "text": "| `P -m pytest python/deepviz/tests/test_integrations.py -q` |0; **35passed/0skipped17.08s** | `A\\pytest-integrations.log`, `.exit.txt` |"
+        },
+        {
+          "line": 40,
+          "text": "Source prompt boundary is already explicitly documented in README177–183/prompts README9–15; **not** a new loader bug or a claim the wheel mapping is missing. Root pyproject27–29 maps versioned prompts into distributions. A clean build/install is not run here (no installs allowed; build backend absent); distribution role owns it. Browser/CDN, live-provider, scale, and final-candidate checks remain unrun."
+        },
+        {
+          "line": 62,
+          "text": "Current action: inspect actual images/manifests, finish prompt/trust/capability drift comparison and inventory recount. No product execution blocker so far; local hatchling missing means no clean wheel build in this no-install role. **This is baseline evidence, not final signoff.**"
+        }
+      ]
+    },
+    "R03-20-html-artifact-adversary.md": {
+      "sha256": "b398e665c43fd1f08428f7eb698c7af88efa71f0b5c2bd2ee868e4bcd526fcb6",
+      "bytes": 10750,
+      "mtime_utc": "2026-11-27T01:59:16.719092+00:00",
+      "session_ids": [
+        "ses_de567801cffeGZFlt50oYv0Dnt"
+      ],
+      "selected_status_excerpts": [
+        {
+          "line": 9,
+          "text": "- Acceptance: actual generated five-engine/dashboard artifacts with adversarial titles/labels/field names/cells; safe inert script-closing/XSS/CSP/link/path payloads; serialized-output bounds; native installed browser behavior. Complement role02 source review with actual output evidence. This is baseline evidence, not final-candidate approval."
+        },
+        {
+          "line": 32,
+          "text": "- Byte probes: `$env:PYTHONPATH = '<own worktree>\\python\\deepviz\\src'; & C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe -m pytest tests\\r03_probes\\role20\\test_byte_bounds.py -q -s --basetemp=C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r03-20-byte-artifacts-ses_de567801cffeGZFlt50oYv0Dnt --junitxml=<html-artifact-root>\\byte-results.xml` — exit0, **31 passed / 0 failed / 0 skipped in8.14s**. Ten exact64KiB ASCII/multibyte-cell artifacts accepted across five engines. Twenty rejection cases across five engines (>64KiBcell, >256KiBrecord, >16MiBretained, >32MiBcombineddashboard) fail before creating output directories; streamed retained data rejection stops before consuming300rows. No monkeypatching resource limits/source."
+        },
+        {
+          "line": 40,
+          "text": "- Blockers: no test blockers; final targeted regression/hash/evidence capture pending. Baseline only, no final signoff; no source edits or installs."
+        }
+      ]
+    },
+    "R03-21-restart-recovery-audit.md": {
+      "sha256": "a119e2c77b5e2c3cff67caa267bba8230dfb7efc5cea05bd1f085b81c8792cdb",
+      "bytes": 6849,
+      "mtime_utc": "2026-11-27T02:02:04.534553+00:00",
+      "session_ids": [
+        "ses_de5678018ffezK8JGDUaSzvcWn",
+        "ses_de56ad930fferPKGibj5Mc304B"
+      ],
+      "selected_status_excerpts": []
+    }
+  },
+  "git_inspection": [
+    {
+      "command": [
+        "git",
+        "ls-tree",
+        "--name-only",
+        "0c5fa825f7058f8c5a4ab6ec9597b9fd5fd4ca43"
+      ],
+      "exit_code": 0,
+      "stdout": ".gitattributes\n.github\n.gitignore\nAGENTS.md\nLICENSE\nREADME.md\nRESUME.md\nSECURITY.md\ndocs\nexamples\nopencode.json\npackage-lock.json\npackage.json\npackages\nprompts\npyproject.toml\npython\nschemas\nscripts\ntests",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "6d0e72ebef4b622f8dec2bce2bd07cc23e7a81ce",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "0c5fa825f7058f8c5a4ab6ec9597b9fd5fd4ca43^{tree}"
+      ],
+      "exit_code": 0,
+      "stdout": "716371e016f5c729f6824a8802b6156417d254e1",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--name-only",
+        "0c5fa825f7058f8c5a4ab6ec9597b9fd5fd4ca43",
+        "--",
+        "python",
+        "packages",
+        "schemas",
+        "prompts",
+        "examples",
+        "scripts",
+        ".github"
+      ],
+      "exit_code": 0,
+      "stdout": "python/deepviz/src/deepviz/engines.py\npython/deepviz/tests/test_r02_chart_background.py",
+      "stderr": ""
+    }
+  ]
+}

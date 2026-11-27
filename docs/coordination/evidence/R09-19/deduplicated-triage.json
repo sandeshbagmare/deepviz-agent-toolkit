@@ -1,0 +1,444 @@
+{
+  "owner": "ses_de5678052ffdJwVtlB6SX6LZrT",
+  "generated_utc": "2026-11-27T02:51:43.145710+00:00",
+  "source_checkpoint": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "scope": "File-backed PM mapping; no new issues/closures/PRs, no product rerun or final acceptance. Local IDs are NOT GitHub tickets.",
+  "reused_census": {
+    "path": "docs\\coordination\\evidence\\R10-root\\github-census-20261127T021310936884Z.json",
+    "sha256": "4c6c35edfd8b32589c76458bf46f0395648ab19c41d630f852842f370e229848",
+    "observed_utc": "2026-11-27T02:13:10.935886+00:00",
+    "complete": true,
+    "present": 30,
+    "open": 30,
+    "closed": 0,
+    "closure_evidence_audited": false,
+    "new_census_requests_by_role19": 0
+  },
+  "findings": [
+    {
+      "id": "D01",
+      "priority_and_existing_scope": "D01 P1 /#21,#23,#12",
+      "existing_issues": [
+        {
+          "number": 12,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/12"
+        },
+        {
+          "number": 21,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/21"
+        },
+        {
+          "number": 23,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/23"
+        }
+      ],
+      "root_cause_and_evidence": "Security02F1: sparse tables create dense native/HTML Cartesian product before payload check;128sparse rows→16,512graphics,~30.7MBtraced peak from1,700inputbytes. Finite probe, not OOM/RSS claim. `engines.py:573–579`, render.py145–150.",
+      "owner_dependency_and_closure_proof": "R04engines/render budget retained; permanent bounded sparse positive/negative controls, pre-allocation declared dense-cell/byte budget, no truncation; semantic/byte/resource retest before fullgate. More urgent than oracle-only cleanups.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D02",
+      "priority_and_existing_scope": "D02 P1 /#7,#14",
+      "existing_issues": [
+        {
+          "number": 7,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/7"
+        },
+        {
+          "number": 14,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/14"
+        }
+      ],
+      "root_cause_and_evidence": "Role01F1 TSdirectnodes/edges/unknownwrapper sibling loss: `{nodes:[{id:1}],version:7}` dropsversion with no warning.9REDcases are one discrimination/metadata-policy gap, not9tickets.",
+      "owner_dependency_and_closure_proof": "16owns normalize.ts until actual handback, then R04source release;01regressions independent. Explicit data_path valid, legitimate metadata allowed, unknown siblings reject or deliberate mapping/warning; sync/stream parity.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D03",
+      "priority_and_existing_scope": "D03 P1 /#9–#13,#23",
+      "existing_issues": [
+        {
+          "number": 9,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/9"
+        },
+        {
+          "number": 10,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/10"
+        },
+        {
+          "number": 11,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/11"
+        },
+        {
+          "number": 12,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/12"
+        },
+        {
+          "number": 13,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/13"
+        },
+        {
+          "number": 23,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/23"
+        }
+      ],
+      "root_cause_and_evidence": "Role01F2 count renderer chooses numeric series label100instead of computedcount2 for x=g,color=s,count.5REDoracles are one sharedchannel inference bug. `engines.py:59–73`, common native compiler.",
+      "owner_dependency_and_closure_proof": "R04engines serialized with D01/D06, not parallel edits. Count-aware effective measure without breaking heatmap axes; allfive realnative/visible values2, categorical control preserved.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D04",
+      "priority_and_existing_scope": "D04 correctness /#8,#14,#22",
+      "existing_issues": [
+        {
+          "number": 8,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/8"
+        },
+        {
+          "number": 14,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/14"
+        },
+        {
+          "number": 22,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/22"
+        }
+      ],
+      "root_cause_and_evidence": "Role16 finite-final-sum loss `[1e308,1e308,-1e308]`→null despite exact finite1e308; two languageREDtests, one cross-language accumulator scope.",
+      "owner_dependency_and_closure_proof": "ExistingR07/R10-16producer release, no competing normalizer fix. Bounded strategy, permutations/groups/cancellation/trueoverflow/resourcecontrols, exact/tolerance rationale, fullnpm/types and later affectedscale. Smallest-subnormal mean follow-up in role01 is related numerical family but distinct rounding condition; preserve as explicit follow-up, not silently claim fixed by overflow patch.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D05",
+      "priority_and_existing_scope": "D05 P2 /#6,#8",
+      "existing_issues": [
+        {
+          "number": 6,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/6"
+        },
+        {
+          "number": 8,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/8"
+        }
+      ],
+      "root_cause_and_evidence": "Role15F1 library-owned source remains open when downstream validation traceback retained;269pass/1strictfail and six carrier WinError32rename manifestations, one lifecycle root cause.",
+      "owner_dependency_and_closure_proof": "Queue after16normalizer handback; R04source owner,15strictindependent fixture. Close library-owned chains on prefix/planning/consumption errors; DO NOTclose caller-owned streams/readers. Real JSONL/CSV/TSV/Arrow/Parquet rename/recovery controls.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D06",
+      "priority_and_existing_scope": "D06 P2 /#10,#21,#23",
+      "existing_issues": [
+        {
+          "number": 10,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/10"
+        },
+        {
+          "number": 21,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/21"
+        },
+        {
+          "number": 23,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/23"
+        }
+      ],
+      "root_cause_and_evidence": "Security02F3 **and** role20F20-1 are SAME Plotly rich-text label sink: actual nativeSVGanchors from inertHTTPSstring, chart/dashboard/legend. No clicks/JSexecution/exploit demonstrated.",
+      "owner_dependency_and_closure_proof": "R04engines retained;20independentrealbrowserregression,02complementarysecurity. Escape rich-text string sinks preserving numeric/time fields; exactliteral text/noanchors/nohandlers/console0 in chart+dashboard, numeric controls. One fix scope, not duplicate tickets/reviews counted as approvals.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D07",
+      "priority_and_existing_scope": "D07 P2 /#6,#16,#17,#21",
+      "existing_issues": [
+        {
+          "number": 6,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/6"
+        },
+        {
+          "number": 16,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/16"
+        },
+        {
+          "number": 17,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/17"
+        },
+        {
+          "number": 21,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/21"
+        }
+      ],
+      "root_cause_and_evidence": "Security02F2: ToolSession plain JSON decode + MCP SDK preprocessing erase duplicate keys before strictnormalizer sees them; directnormalize rejects but realstdio returns lastvalue/no warning.",
+      "owner_dependency_and_closure_proof": "R11-10precise tools.py+mcp_server.pyrelease, priority1; retain handle/file boundaries. Top/nestedduplicates and deepJSON reject consistently BEFORE SDK loss; validUnicode/copy/realstdio recovery/resource-read controls. ToolSession-onlyfix insufficient.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D08",
+      "priority_and_existing_scope": "D08 P2 /#17,#21",
+      "existing_issues": [
+        {
+          "number": 17,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/17"
+        },
+        {
+          "number": 21,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/21"
+        }
+      ],
+      "root_cause_and_evidence": "Security02F4: successfulrenders register growing closures/resources;64calls→128live resources; dataset32handlecap does not bound registry.",
+      "owner_dependency_and_closure_proof": "R11-10priority2after D07; explicit safe cap/lifetime/preflight/atomic reservation with old resources readable or documentedexpired errors; no arbitraryFS template/silenthostfiledeletion. If morepaths/policyneeded, separate testedD07handback and precise proposal rather than inventedregistrypass.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D09",
+      "priority_and_existing_scope": "D09 P2 /#15,#23,#22",
+      "existing_issues": [
+        {
+          "number": 15,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/15"
+        },
+        {
+          "number": 22,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/22"
+        },
+        {
+          "number": 23,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/23"
+        }
+      ],
+      "root_cause_and_evidence": "Role12R06actualSVG+HTML tick6.250e+12clipped, x<0, although8marks/exactvalues/ratios/zerobaseline/console0. One layoutbug, no need another10Mrun.",
+      "owner_dependency_and_closure_proof": "R11-12released `renderers.ts` nativeSVGaxis/tickmargin only+permanentNode/browsertests. Reuse exact8aggregates; verify bothrawSVG/HTML labelbounds/minsize/scientific/negative/numericcontrols and open fresh images.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D10",
+      "priority_and_existing_scope": "D10 P2 /#14,#16,#5",
+      "existing_issues": [
+        {
+          "number": 5,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/5"
+        },
+        {
+          "number": 14,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/14"
+        },
+        {
+          "number": 16,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/16"
+        }
+      ],
+      "root_cause_and_evidence": "Role09F1 five npmhelpers default explicitnullspec via `??{}` contrary to advertisedschema;5mismatches/40cases, one callsite defect.",
+      "owner_dependency_and_closure_proof": "R07/R10-09released render.ts only+NEWpermanent regression. Default omittedspec, rejectexplicitnull, preserve valid/empty/dashboard/invalidcontrols; build/types/fullnpm/schema/retest. Do not widen schema.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D11",
+      "priority_and_existing_scope": "D11 P2 /#6,#14,#5",
+      "existing_issues": [
+        {
+          "number": 5,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/5"
+        },
+        {
+          "number": 6,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/6"
+        },
+        {
+          "number": 14,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/14"
+        }
+      ],
+      "root_cause_and_evidence": "Role01F3 Python `{rows:[1,2]}` and records/items/results/data lose scalarcolumn name; explicity=rows fails whileTS preserves.5names one wrapperprecedence defect.",
+      "owner_dependency_and_closure_proof": "16→R04handoff dependency,01strict fixture. Adopt existing chosen shared discrimination rule or explicit documented rejection, preserve callerfieldnames/counts/custompayload controls; no universalparity claim before retest.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D12",
+      "priority_and_existing_scope": "D12 deliverygap /#25,#18",
+      "existing_issues": [
+        {
+          "number": 18,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/18"
+        },
+        {
+          "number": 25,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/25"
+        }
+      ],
+      "root_cause_and_evidence": "Role08actualtarball omits canonicalv1prompts. Runtimeexports/type/browserbaseline work; omission not a nonexistentpromptreader API bug.",
+      "owner_dependency_and_closure_proof": "R11-08released package metadata/newcopy-script/newpacktest/packageREADME raw-subpathusage; canonicalrootprompts unchanged. All3exactcanonicalbytes inpack/externalconsumer through documentedsubpaths, repeatpack and existing16types/13exports/schema/browser unaffected. Python-onlywaiver expresslyrejected.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D13",
+      "priority_and_existing_scope": "D13 docs /#18,#19",
+      "existing_issues": [
+        {
+          "number": 18,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/18"
+        },
+        {
+          "number": 19,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/19"
+        }
+      ],
+      "root_cause_and_evidence": "Role14+18 duplicate currentversionfinding (PythonECharts5.6.0guidance vs actual6.1.0) plus role18obsolete zero-coercion and truncation/plannedlimits claims. Historicaldatedreports are not editscope.",
+      "owner_dependency_and_closure_proof": "18currentdocsproposals/R04apply; packageREADME coordinate08handback. Currentpin outside namedoldadvisoryrange per14officialevidence, do not manufacturecurrentexploit. Rerunexamples and installedprompts afterexact-source docrefresh.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D14",
+      "priority_and_existing_scope": "D14 contract/oracle /#5,#14,#22",
+      "existing_issues": [
+        {
+          "number": 5,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/5"
+        },
+        {
+          "number": 14,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/14"
+        },
+        {
+          "number": 22,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/22"
+        }
+      ],
+      "root_cause_and_evidence": "Role04Python4KiBnames vsTS64KiBnames, both64KiBcells;192observations/36accepted-envelope differences. FouroldPython64KiBpositivekeyoracles RED.",
+      "owner_dependency_and_closure_proof": "R04explicitlanguage-specificpolicy (minimal recommendation) or separatelyreleasedcommonceiling; key-onlyfixturecorrection afterdecision, preserve65536/65537cell/rejection/record/state/earlyconsumptioncontrols. No sourcewidening to makeoldtestgreen.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D15",
+      "priority_and_existing_scope": "D15 oracle /#12,#23,#20",
+      "existing_issues": [
+        {
+          "number": 12,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/12"
+        },
+        {
+          "number": 20,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/20"
+        },
+        {
+          "number": 23,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/23"
+        }
+      ],
+      "root_cause_and_evidence": "Role03twentyECharts line/area failures compare numericnative x to stringifiedoldexpected; numericspacing/categorical/time controls needed, not rewritecorrectsource to categoricalstrings.",
+      "owner_dependency_and_closure_proof": "03portable independentcontrols→R04authorizedexistingmatrixfix; strict value/type/spacing checks and meaningfulnegativecontrols; final fullsuite separate.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D16",
+      "priority_and_existing_scope": "D16 oracle /#11,#23,#20",
+      "existing_issues": [
+        {
+          "number": 11,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/11"
+        },
+        {
+          "number": 20,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/20"
+        },
+        {
+          "number": 23,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/23"
+        }
+      ],
+      "root_cause_and_evidence": "Role17tenVega failures apply parenttitle to recursively recompiled standalonechildren; actualcompleteSVGhas literalparent+bothchildtitles,30strictscopepasses. Metadata-onlytitlefalsepositive also caught.",
+      "owner_dependency_and_closure_proof": "17strictparentANDchild/geometry/XSSprobes→R04scopedmatrixfix; pairnative_specs/charts bystrictlength/index, preserve visibletextnotmetadata and semantic checks. No productmissingtitle/XSSbug inferred fromthese10fixtures.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D17",
+      "priority_and_existing_scope": "D17 inspector retest /#22,#23,#20",
+      "existing_issues": [
+        {
+          "number": 20,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/20"
+        },
+        {
+          "number": 22,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/22"
+        },
+        {
+          "number": 23,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/23"
+        }
+      ],
+      "root_cause_and_evidence": "Role05fourmalformedprimitive falseclaim failures; now3aa521a explicitly reports XMLstructure+supported-elementpresence, NOTdrawablegeometry/paint; R04reports97passes9deselected.",
+      "owner_dependency_and_closure_proof": "05independentretest ofactualcheckpoint and originalnegative/positivecontrols; preserve oldRED evidence and explicitsemanticlimit. Newmetadatawording not universalgeometryvalidator or visualsignoff.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D18",
+      "priority_and_existing_scope": "D18 unresolved observation /#21,#22,#20",
+      "existing_issues": [
+        {
+          "number": 20,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/20"
+        },
+        {
+          "number": 21,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/21"
+        },
+        {
+          "number": 22,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/22"
+        }
+      ],
+      "root_cause_and_evidence": "One N17dashboard serialization-order observation in savedfullsuite expects capturedpayload; saved failure captureempty. No PMconclusion sourcebugvsobsoleteoracle.",
+      "owner_dependency_and_closure_proof": "R04owns focused investigation: preserve originaltest/repro, record whether earlyguard correctlypreventsserialization and verify truebytebudget. Do not waive or addphantomsourcefix without evidence.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D19",
+      "priority_and_existing_scope": "D19 verification/policy /#20,#27",
+      "existing_issues": [
+        {
+          "number": 20,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/20"
+        },
+        {
+          "number": 27,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/27"
+        }
+      ],
+      "root_cause_and_evidence": "Role13cleanpinworkflowlint/types/Actionlint/16CIcontrols pass; dirtyMAINarchives add7Rufffindings. No productCIdefect implied by archivalstyle, but whole-rootFAIL cannot be calledpass.",
+      "owner_dependency_and_closure_proof": "R04declare maintainedlintboundary/narrowarchivepolicy, preservearchivebytes/originalRED, don'tcontinue-on-error or broadsuppress.13negativecontrols oncheckpoint; actualremotegreenrequired.",
+      "new_ticket_proposed": false,
+      "closed": false
+    },
+    {
+      "id": "D20",
+      "priority_and_existing_scope": "D20 environment/verification /#24",
+      "existing_issues": [
+        {
+          "number": 24,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/24"
+        }
+      ],
+      "root_cause_and_evidence": "Role07pinnedno-isolationbuild blockedmissingHatchling; cachednoncurrentwheels do not provecurrentconsumer.",
+      "owner_dependency_and_closure_proof": "07authorizedOWNdisposabledeclaredbuild/runtimecontext perR10; wheel/sdist/strictTwine/freshconsumer/CLI/MCP/prompts/schema/typing/notices/staticrender. This is missingexecutionevidence, not provenpackagesourcebug.",
+      "new_ticket_proposed": false,
+      "closed": false
+    }
+  ],
+  "new_issue_proposals": 0
+}

@@ -1,0 +1,351 @@
+{
+  "captured_utc": "2026-11-27T01:31:44.377305+00:00",
+  "run": 45881106713,
+  "scope": "GET-only job log excerpts; external redirect authorization stripped; full logs not retained.",
+  "jobs": {
+    "python-3.11": {
+      "job_id": 140120367140,
+      "http_status": 200,
+      "log_bytes": 71355,
+      "matched_excerpts": [
+        {
+          "line_relative": 33,
+          "text": "2026-11-26T19:06:29.6305420Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)"
+        },
+        {
+          "line_relative": 34,
+          "text": "2026-11-26T19:06:29.7905410Z Complete job name: Python 3.11 lint, types, unit and integration"
+        },
+        {
+          "line_relative": 35,
+          "text": "2026-11-26T19:06:29.8601961Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1"
+        },
+        {
+          "line_relative": 241,
+          "text": "2026-11-26T19:06:34.7527759Z   Downloading pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)"
+        },
+        {
+          "line_relative": 242,
+          "text": "2026-11-26T19:06:35.0060481Z Collecting ruff>=0.11 (from deepviz-agent-toolkit==0.1.0)"
+        },
+        {
+          "line_relative": 243,
+          "text": "2026-11-26T19:06:35.0221486Z   Downloading ruff-0.17.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)"
+        },
+        {
+          "line_relative": 244,
+          "text": "2026-11-26T19:06:35.0468422Z Collecting twine>=6 (from deepviz-agent-toolkit==0.1.0)"
+        },
+        {
+          "line_relative": 555,
+          "text": "2026-11-26T19:06:45.8437665Z Downloading rpds_py-2026.9.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (375 kB)"
+        },
+        {
+          "line_relative": 556,
+          "text": "2026-11-26T19:06:45.8695884Z Downloading ruff-0.17.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.6 MB)"
+        },
+        {
+          "line_relative": 557,
+          "text": "2026-11-26T19:06:45.9445250Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.6/10.6 MB 142.2 MB/s  0:00:00"
+        },
+        {
+          "line_relative": 601,
+          "text": "2026-11-26T19:06:48.2454736Z Successfully built deepviz-agent-toolkit"
+        },
+        {
+          "line_relative": 602,
+          "text": "2026-11-26T19:06:48.4101988Z Installing collected packages: filetype, zstandard, zipp, xxhash, websockets, vl-convert-python, uuid-utils, urllib3, tzdata, typing-extensions, truststore, tenacity, sniffio, ruff, rpds-py, rfc3986, pyyaml, python-multipart, python-dotenv, pyproject_hooks, pyparsing, pyjwt, pygments, pycparser, pyasn1, pyarrow, pluggy, pillow, pathspec, packaging, ormsgpack, orjson, numpy, nh3, narwhals, mypy_extensions, more-itertools, mdurl, lazy-importer, kiwisolver, jsonpointer,"
+        },
+        {
+          "line_relative": 603,
+          "text": "2026-11-26T19:07:05.6075442Z "
+        },
+        {
+          "line_relative": 604,
+          "text": "2026-11-26T19:07:05.6115105Z Successfully installed SecretStorage-3.5.0 annotated-types-0.8.0 anthropic-2.14.0 anyio-4.16.0 ast-serialize-0.13.1 attrs-26.1.0 backports.tarfile-1.2.0 bracex-3.2.4 build-1.6.1 certifi-2026.11.20 cffi-2.1.1 charset_normalizer-3.5.3 click-8.5.1 contourpy-1.3.3 coverage-7.17.5 cryptography-50.0.2 cycler-0.12.1 deepagents-0.7.42 deepviz-agent-toolkit-0.1.0 distro-1.9.0 docstring-parser-0.18.0 docutils-0.23 filetype-1.2.0 fonttools-4.69.1 google-auth-2.63.1 google-genai"
+        },
+        {
+          "line_relative": 605,
+          "text": "2026-11-26T19:07:06.2575717Z ##[group]Run python -m ruff check . .github/tests"
+        },
+        {
+          "line_relative": 606,
+          "text": "2026-11-26T19:07:06.2576058Z \u001b[36;1mpython -m ruff check . .github/tests\u001b[0m"
+        },
+        {
+          "line_relative": 607,
+          "text": "2026-11-26T19:07:06.2608137Z shell: /usr/bin/bash -e {0}"
+        },
+        {
+          "line_relative": 618,
+          "text": "2026-11-26T19:07:06.2611065Z ##[endgroup]"
+        },
+        {
+          "line_relative": 619,
+          "text": "2026-11-26T19:07:06.2955670Z I001 [*] Import block is un-sorted or un-formatted"
+        },
+        {
+          "line_relative": 620,
+          "text": "2026-11-26T19:07:06.2956155Z   --> examples/deep_agent.py:15:5"
+        },
+        {
+          "line_relative": 636,
+          "text": "2026-11-26T19:07:06.2960377Z "
+        },
+        {
+          "line_relative": 637,
+          "text": "2026-11-26T19:07:06.2960445Z Found 1 error."
+        },
+        {
+          "line_relative": 638,
+          "text": "2026-11-26T19:07:06.2960644Z [*] 1 fixable with `--fix`."
+        },
+        {
+          "line_relative": 639,
+          "text": "2026-11-26T19:07:06.2975806Z ##[error]Process completed with exit code 1."
+        },
+        {
+          "line_relative": 640,
+          "text": "2026-11-26T19:07:06.3073417Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9"
+        }
+      ],
+      "full_log_retained": false
+    },
+    "python-3.12": {
+      "job_id": 140120367227,
+      "http_status": 200,
+      "log_bytes": 69919,
+      "matched_excerpts": [
+        {
+          "line_relative": 33,
+          "text": "2026-11-26T19:06:30.0685215Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)"
+        },
+        {
+          "line_relative": 34,
+          "text": "2026-11-26T19:06:30.2361851Z Complete job name: Python 3.12 lint, types, unit and integration"
+        },
+        {
+          "line_relative": 35,
+          "text": "2026-11-26T19:06:30.3053877Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1"
+        },
+        {
+          "line_relative": 241,
+          "text": "2026-11-26T19:06:35.1674650Z   Downloading pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)"
+        },
+        {
+          "line_relative": 242,
+          "text": "2026-11-26T19:06:35.3928219Z Collecting ruff>=0.11 (from deepviz-agent-toolkit==0.1.0)"
+        },
+        {
+          "line_relative": 243,
+          "text": "2026-11-26T19:06:35.4031264Z   Downloading ruff-0.17.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)"
+        },
+        {
+          "line_relative": 244,
+          "text": "2026-11-26T19:06:35.4319622Z Collecting twine>=6 (from deepviz-agent-toolkit==0.1.0)"
+        },
+        {
+          "line_relative": 547,
+          "text": "2026-11-26T19:06:42.9111719Z Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (371 kB)"
+        },
+        {
+          "line_relative": 548,
+          "text": "2026-11-26T19:06:42.9235179Z Downloading ruff-0.17.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.6 MB)"
+        },
+        {
+          "line_relative": 549,
+          "text": "2026-11-26T19:06:43.0021540Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.6/10.6 MB 135.0 MB/s  0:00:00"
+        },
+        {
+          "line_relative": 589,
+          "text": "2026-11-26T19:06:44.1358816Z Successfully built deepviz-agent-toolkit"
+        },
+        {
+          "line_relative": 590,
+          "text": "2026-11-26T19:06:44.3172955Z Installing collected packages: filetype, zstandard, xxhash, websockets, vl-convert-python, uuid-utils, urllib3, tzdata, typing-extensions, truststore, tenacity, sniffio, ruff, rpds-py, rfc3986, pyyaml, python-multipart, python-dotenv, pyproject_hooks, pyparsing, pyjwt, pygments, pycparser, pyasn1, pyarrow, pluggy, pillow, pathspec, packaging, ormsgpack, orjson, numpy, nh3, narwhals, mypy_extensions, more-itertools, mdurl, kiwisolver, jsonpointer, jiter, jeepney, jara"
+        },
+        {
+          "line_relative": 591,
+          "text": "2026-11-26T19:07:00.1845171Z "
+        },
+        {
+          "line_relative": 592,
+          "text": "2026-11-26T19:07:00.1906774Z Successfully installed SecretStorage-3.5.0 annotated-types-0.8.0 anthropic-2.14.0 anyio-4.16.0 ast-serialize-0.13.1 attrs-26.1.0 bracex-3.2.4 build-1.6.1 certifi-2026.11.20 cffi-2.1.1 charset_normalizer-3.5.3 click-8.5.1 contourpy-1.4.0 coverage-7.17.5 cryptography-50.0.2 cycler-0.12.1 deepagents-0.7.42 deepviz-agent-toolkit-0.1.0 distro-1.9.0 docstring-parser-0.18.0 docutils-0.23 filetype-1.2.0 fonttools-4.69.1 google-auth-2.63.1 google-genai-3.6.1 h11-0.16.0 httpco"
+        },
+        {
+          "line_relative": 593,
+          "text": "2026-11-26T19:07:00.4198172Z ##[group]Run python -m ruff check . .github/tests"
+        },
+        {
+          "line_relative": 594,
+          "text": "2026-11-26T19:07:00.4198889Z \u001b[36;1mpython -m ruff check . .github/tests\u001b[0m"
+        },
+        {
+          "line_relative": 595,
+          "text": "2026-11-26T19:07:00.4220961Z shell: /usr/bin/bash -e {0}"
+        },
+        {
+          "line_relative": 606,
+          "text": "2026-11-26T19:07:00.4224825Z ##[endgroup]"
+        },
+        {
+          "line_relative": 607,
+          "text": "2026-11-26T19:07:00.4601119Z I001 [*] Import block is un-sorted or un-formatted"
+        },
+        {
+          "line_relative": 608,
+          "text": "2026-11-26T19:07:00.4601748Z   --> examples/deep_agent.py:15:5"
+        },
+        {
+          "line_relative": 624,
+          "text": "2026-11-26T19:07:00.4607486Z "
+        },
+        {
+          "line_relative": 625,
+          "text": "2026-11-26T19:07:00.4607625Z Found 1 error."
+        },
+        {
+          "line_relative": 626,
+          "text": "2026-11-26T19:07:00.4608087Z [*] 1 fixable with `--fix`."
+        },
+        {
+          "line_relative": 627,
+          "text": "2026-11-26T19:07:00.4617268Z ##[error]Process completed with exit code 1."
+        },
+        {
+          "line_relative": 628,
+          "text": "2026-11-26T19:07:00.4735282Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9"
+        }
+      ],
+      "full_log_retained": false
+    },
+    "python-3.13": {
+      "job_id": 140120367285,
+      "http_status": 200,
+      "log_bytes": 69915,
+      "matched_excerpts": [
+        {
+          "line_relative": 33,
+          "text": "2026-11-26T19:06:30.3679448Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)"
+        },
+        {
+          "line_relative": 34,
+          "text": "2026-11-26T19:06:30.5201559Z Complete job name: Python 3.13 lint, types, unit and integration"
+        },
+        {
+          "line_relative": 35,
+          "text": "2026-11-26T19:06:30.5927567Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1"
+        },
+        {
+          "line_relative": 241,
+          "text": "2026-11-26T19:06:40.2332027Z   Downloading pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)"
+        },
+        {
+          "line_relative": 242,
+          "text": "2026-11-26T19:06:40.6545218Z Collecting ruff>=0.11 (from deepviz-agent-toolkit==0.1.0)"
+        },
+        {
+          "line_relative": 243,
+          "text": "2026-11-26T19:06:40.6620233Z   Downloading ruff-0.17.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)"
+        },
+        {
+          "line_relative": 244,
+          "text": "2026-11-26T19:06:40.6802449Z Collecting twine>=6 (from deepviz-agent-toolkit==0.1.0)"
+        },
+        {
+          "line_relative": 547,
+          "text": "2026-11-26T19:06:53.2620726Z Downloading rpds_py-2026.9.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (370 kB)"
+        },
+        {
+          "line_relative": 548,
+          "text": "2026-11-26T19:06:53.2729132Z Downloading ruff-0.17.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.6 MB)"
+        },
+        {
+          "line_relative": 549,
+          "text": "2026-11-26T19:06:53.3572514Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.6/10.6 MB 126.8 MB/s  0:00:00"
+        },
+        {
+          "line_relative": 589,
+          "text": "2026-11-26T19:06:55.1944636Z Successfully built deepviz-agent-toolkit"
+        },
+        {
+          "line_relative": 590,
+          "text": "2026-11-26T19:06:55.3774475Z Installing collected packages: filetype, zstandard, xxhash, websockets, vl-convert-python, uuid-utils, urllib3, tzdata, typing-extensions, truststore, tenacity, sniffio, ruff, rpds-py, rfc3986, pyyaml, python-multipart, python-dotenv, pyproject_hooks, pyparsing, pyjwt, pygments, pycparser, pyasn1, pyarrow, pluggy, pillow, pathspec, packaging, ormsgpack, orjson, numpy, nh3, narwhals, mypy_extensions, more-itertools, mdurl, kiwisolver, jsonpointer, jiter, jeepney, jara"
+        },
+        {
+          "line_relative": 591,
+          "text": "2026-11-26T19:07:15.7624516Z "
+        },
+        {
+          "line_relative": 592,
+          "text": "2026-11-26T19:07:15.7705196Z Successfully installed SecretStorage-3.5.0 annotated-types-0.8.0 anthropic-2.14.0 anyio-4.16.0 ast-serialize-0.13.1 attrs-26.1.0 bracex-3.2.4 build-1.6.1 certifi-2026.11.20 cffi-2.1.1 charset_normalizer-3.5.3 click-8.5.1 contourpy-1.4.0 coverage-7.17.5 cryptography-50.0.2 cycler-0.12.1 deepagents-0.7.42 deepviz-agent-toolkit-0.1.0 distro-1.9.0 docstring-parser-0.18.0 docutils-0.23 filetype-1.2.0 fonttools-4.69.1 google-auth-2.63.1 google-genai-3.6.1 h11-0.16.0 httpco"
+        },
+        {
+          "line_relative": 593,
+          "text": "2026-11-26T19:07:16.2967557Z ##[group]Run python -m ruff check . .github/tests"
+        },
+        {
+          "line_relative": 594,
+          "text": "2026-11-26T19:07:16.2967906Z \u001b[36;1mpython -m ruff check . .github/tests\u001b[0m"
+        },
+        {
+          "line_relative": 595,
+          "text": "2026-11-26T19:07:16.2999470Z shell: /usr/bin/bash -e {0}"
+        },
+        {
+          "line_relative": 606,
+          "text": "2026-11-26T19:07:16.3002442Z ##[endgroup]"
+        },
+        {
+          "line_relative": 607,
+          "text": "2026-11-26T19:07:16.3511340Z I001 [*] Import block is un-sorted or un-formatted"
+        },
+        {
+          "line_relative": 608,
+          "text": "2026-11-26T19:07:16.3517177Z   --> examples/deep_agent.py:15:5"
+        },
+        {
+          "line_relative": 624,
+          "text": "2026-11-26T19:07:16.3522425Z "
+        },
+        {
+          "line_relative": 625,
+          "text": "2026-11-26T19:07:16.3522526Z Found 1 error."
+        },
+        {
+          "line_relative": 626,
+          "text": "2026-11-26T19:07:16.3522792Z [*] 1 fixable with `--fix`."
+        },
+        {
+          "line_relative": 627,
+          "text": "2026-11-26T19:07:16.3533417Z ##[error]Process completed with exit code 1."
+        },
+        {
+          "line_relative": 628,
+          "text": "2026-11-26T19:07:16.3641540Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9"
+        }
+      ],
+      "full_log_retained": false
+    },
+    "evidence": {
+      "job_id": 140120366571,
+      "http_status": 200,
+      "log_bytes": 17863,
+      "matched_excerpts": [
+        {
+          "line_relative": 183,
+          "text": "2026-11-26T19:06:30.3937862Z ##[endgroup]"
+        },
+        {
+          "line_relative": 184,
+          "text": "2026-11-26T19:06:30.4580724Z Bootstrap mode: evidence-required label absent; no evidence approval is asserted"
+        },
+        {
+          "line_relative": 185,
+          "text": "2026-11-26T19:06:30.4712270Z Post job cleanup."
+        }
+      ],
+      "full_log_retained": false
+    }
+  }
+}

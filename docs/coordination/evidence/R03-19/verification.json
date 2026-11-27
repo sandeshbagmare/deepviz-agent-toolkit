@@ -1,0 +1,198 @@
+{
+  "verified_utc": "2026-11-27T02:08:59.280596+00:00",
+  "scope": "Documentation/evidence integrity only, not product tests or final acceptance. Checks are independent auditor assertions over saved observations, never issue closures or reviewer approvals.",
+  "checks": [
+    {
+      "check": "R03-19-delivery-acceptance-audit.md: exists/nonempty",
+      "passed": true
+    },
+    {
+      "check": "R03-19-delivery-acceptance-audit.md: no trailing whitespace",
+      "passed": true
+    },
+    {
+      "check": "R03-19-delivery-acceptance-audit.md: balanced markdown fences",
+      "passed": true
+    },
+    {
+      "check": "R03-19-delivery-acceptance-audit.md: actual session/pin",
+      "passed": true
+    },
+    {
+      "check": "R03-19-delivery-acceptance-audit.md: explicit not-final scope",
+      "passed": true
+    },
+    {
+      "check": "ses_de5678052ffdJwVtlB6SX6LZrT.md: exists/nonempty",
+      "passed": true
+    },
+    {
+      "check": "ses_de5678052ffdJwVtlB6SX6LZrT.md: no trailing whitespace",
+      "passed": true
+    },
+    {
+      "check": "ses_de5678052ffdJwVtlB6SX6LZrT.md: balanced markdown fences",
+      "passed": true
+    },
+    {
+      "check": "ses_de5678052ffdJwVtlB6SX6LZrT.md: actual session/pin",
+      "passed": true
+    },
+    {
+      "check": "ses_de5678052ffdJwVtlB6SX6LZrT.md: explicit not-final scope",
+      "passed": true
+    },
+    {
+      "check": "current-github-get-snapshot.json: valid JSON",
+      "passed": true
+    },
+    {
+      "check": "current-github-get-snapshot.json: no secret-like literals",
+      "passed": true
+    },
+    {
+      "check": "existing-issue-map.json: valid JSON",
+      "passed": true
+    },
+    {
+      "check": "existing-issue-map.json: no secret-like literals",
+      "passed": true
+    },
+    {
+      "check": "remote-job-log-excerpts.json: valid JSON",
+      "passed": true
+    },
+    {
+      "check": "remote-job-log-excerpts.json: no secret-like literals",
+      "passed": true
+    },
+    {
+      "check": "saved-evidence-audit.json: valid JSON",
+      "passed": true
+    },
+    {
+      "check": "saved-evidence-audit.json: no secret-like literals",
+      "passed": true
+    },
+    {
+      "check": "saved-report-inventory.json: valid JSON",
+      "passed": true
+    },
+    {
+      "check": "saved-report-inventory.json: no secret-like literals",
+      "passed": true
+    },
+    {
+      "check": "22 JSON GETs all HTTP200/no mutations",
+      "passed": true
+    },
+    {
+      "check": "complete real issue exclusion/count",
+      "passed": true
+    },
+    {
+      "check": "numeric blocker remains open",
+      "passed": true
+    },
+    {
+      "check": "draft/unmerged identity consistent",
+      "passed": true
+    },
+    {
+      "check": "zero reviews/comments kept distinct",
+      "passed": true
+    },
+    {
+      "check": "all four published reports noncurrent",
+      "passed": true
+    },
+    {
+      "check": "actual Verification failed",
+      "passed": true
+    },
+    {
+      "check": "three failed Lint jobs/downstream skips",
+      "passed": true
+    },
+    {
+      "check": "four final HTTP200 job-log requests",
+      "passed": true
+    },
+    {
+      "check": "bootstrap explicitly nonapproval",
+      "passed": true
+    },
+    {
+      "check": "saved pytest total matches XML",
+      "passed": true
+    },
+    {
+      "check": "saved failure grouping exact40",
+      "passed": true
+    },
+    {
+      "check": "saved skip reasons exact2+3",
+      "passed": true
+    },
+    {
+      "check": "research count qualified",
+      "passed": true
+    },
+    {
+      "check": "historical scale distinct/source-limited",
+      "passed": true
+    },
+    {
+      "check": "saved report inventory limited/bounded",
+      "passed": true
+    },
+    {
+      "check": "existing issue map genuine30",
+      "passed": true
+    },
+    {
+      "check": "all saved-input hashes still match",
+      "passed": true
+    },
+    {
+      "check": "scoped git diff check (untracked supplement only)",
+      "passed": true
+    }
+  ],
+  "passed": 39,
+  "failed": 0,
+  "product_tests_run": 0,
+  "head_at_verification": "6d0e72ebef4b622f8dec2bce2bd07cc23e7a81ce",
+  "git_diff_check_exit": 0,
+  "saved_input_hashes_checked": 10,
+  "owned_file_hashes": {
+    "docs\\coordination\\reports\\R03-19-delivery-acceptance-audit.md": {
+      "bytes": 25685,
+      "sha256": "6d0c8f73edafba105a71afe6334d271f81c6e107ad11a04d2e3b37d2b7e81819"
+    },
+    "docs\\agent-state\\ses_de5678052ffdJwVtlB6SX6LZrT.md": {
+      "bytes": 5253,
+      "sha256": "a397828c02ac72079983a49958f2f2f6e92a09b47fbabb81caa2ca0451878193"
+    },
+    "docs\\coordination\\evidence\\R03-19\\current-github-get-snapshot.json": {
+      "bytes": 172805,
+      "sha256": "25b92160c2b3c9c436f05bb6e1fa3efb2a41b18cd6b0c44e42552771caaade87"
+    },
+    "docs\\coordination\\evidence\\R03-19\\existing-issue-map.json": {
+      "bytes": 58761,
+      "sha256": "028859d6e8127b7140e18744a1ca3670346ace3fdd088bfffa2d37549713f1f5"
+    },
+    "docs\\coordination\\evidence\\R03-19\\remote-job-log-excerpts.json": {
+      "bytes": 16174,
+      "sha256": "e464ac7712cce909675efbe7bd94bdd4f730db33b1a32c8e3a029221be6ca09f"
+    },
+    "docs\\coordination\\evidence\\R03-19\\saved-evidence-audit.json": {
+      "bytes": 16595,
+      "sha256": "50eff94485e8b568e3d7bbf57697a6172bcadaa7cb0a0ec1b2598503ea87746c"
+    },
+    "docs\\coordination\\evidence\\R03-19\\saved-report-inventory.json": {
+      "bytes": 37220,
+      "sha256": "eaea2d3f5aa7853618c7581eaefd5466082d9ddc2b34e0ea1c0d98adc98e24ba"
+    }
+  }
+}

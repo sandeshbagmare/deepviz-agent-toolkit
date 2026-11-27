@@ -1,0 +1,321 @@
+{
+  "captured_utc": "2026-11-27T01:55:03.830925+00:00",
+  "source_pin": "0c5fa825f7058f8c5a4ab6ec9597b9fd5fd4ca43",
+  "scope": "Independent readback/parsing/hashing of saved evidence; no product test/build/browser/benchmark rerun.",
+  "files": {
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\docs\\coordination\\evidence\\R02-pytest-full.xml": {
+      "bytes": 498977,
+      "sha256": "a2ffc07442f062b02b69522b45676c50c2a55ba22ab39c562b87de2668b98140"
+    },
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\docs\\coordination\\evidence\\R02-pytest-full.log": {
+      "bytes": 90300,
+      "sha256": "0c69514595b10336ffbca6579ac5636bdb2b27fd46559e0ef96acde39fc5dbd1"
+    },
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\docs\\coordination\\evidence\\R02-npm-integrated.log": {
+      "bytes": 46102,
+      "sha256": "6cdb37b7b782d6232f586b59d3cf238d25adbd54e2d5481be0b1da52e58b5730"
+    },
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\docs\\coordination\\evidence\\R02-mypy.log": {
+      "bytes": 90,
+      "sha256": "78f4eddeecec3ff5f4e648b8876206c11c8e0de446e84cf14aa1e97fd122d67c"
+    },
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\docs\\coordination\\evidence\\R02-typecheck.log": {
+      "bytes": 136,
+      "sha256": "9d4faa42627cce5bfbf96de4e79491b65a667227c10f83c8c032b8776432e971"
+    },
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\docs\\coordination\\evidence\\R02-ruff.log": {
+      "bytes": 8398,
+      "sha256": "283f35f4311f17dbbfc73d0f0bba8556cefe8636304632409a0d212d2e211d7c"
+    },
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\docs\\coordination\\evidence\\R02-ruff-tracked.log": {
+      "bytes": 42,
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\docs\\coordination\\evidence\\R02-pytest-failure-index.json": {
+      "bytes": 56044,
+      "sha256": "6720a3a613785f543b9841e7e46be53c46f3aa57f58802223bcd5ebce279f81d"
+    },
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\docs\\coordination\\evidence\\R02-gallery-summary.json": {
+      "bytes": 7960,
+      "sha256": "612a48f3f1d3e841d31115b6ff8e99a87085f07a6d3020ba6a6d049715ad0571"
+    },
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\deepviz-n11\\artifacts\\local\\N11\\n11-streaming-20261127-r1.json": {
+      "bytes": 50896,
+      "sha256": "81d87ac5e1fa0036bb065b862d82f0ff4659ebf0d7fc4329436094cb176f51cd"
+    }
+  },
+  "r02_saved_pytest": {
+    "suites": [
+      {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "40",
+        "skipped": "5",
+        "tests": "3039",
+        "time": "544.102",
+        "timestamp": "2026-11-27T06:30:22.499213+05:30",
+        "hostname": "SandeshAcer"
+      }
+    ],
+    "case_count": 3039,
+    "counts": {
+      "passed": 2994,
+      "failed": 40,
+      "skipped": 5
+    },
+    "failure_groups": {
+      "antv_native_line_shape": 1,
+      "dashboard_serialization_observation": 1,
+      "vega_dashboard_title_recompile": 10,
+      "echarts_line_area_oracle": 20,
+      "inspector_nondrawable_tags": 4,
+      "field_name_4kib_vs64kib": 4
+    },
+    "skips": [
+      {
+        "id": "python.deepviz.tests.test_mcp_transport::test_stdio_registered_artifact_symlink_swap_cannot_read_outside_output_root",
+        "message": "Host does not permit symlink creation: [WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-bagma\\\\pytest-1875\\\\test_stdio_registered_artifact0\\\\secret.html' -> 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-bagma\\\\pytest-1875\\\\test_stdio_registered_artifact0\\\\symlink-probe'",
+        "text": "C:\\Users\\bagma\\deepviz-agent-toolkit\\python\\deepviz\\tests\\test_mcp_transport.py:172: Host does not permit symlink creation: [WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-bagma\\\\pytest-1875\\\\test_stdio_registered_artifact0\\\\secret.html' -> 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-bagma\\\\pytest-1875\\\\test_stdio_registered_artifact0\\\\symlink-probe'"
+      },
+      {
+        "id": "python.deepviz.tests.test_n17_boundaries::test_n17_symlink_outside_data_directory_is_rejected",
+        "message": "Host cannot create symlinks: [WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-bagma\\\\pytest-1875\\\\test_n17_symlink_outside_data_0\\\\outside.json' -> 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-bagma\\\\pytest-1875\\\\test_n17_symlink_outside_data_0\\\\allowed\\\\escape.json'",
+        "text": "C:\\Users\\bagma\\deepviz-agent-toolkit\\python\\deepviz\\tests\\test_n17_boundaries.py:133: Host cannot create symlinks: [WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-bagma\\\\pytest-1875\\\\test_n17_symlink_outside_data_0\\\\outside.json' -> 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-bagma\\\\pytest-1875\\\\test_n17_symlink_outside_data_0\\\\allowed\\\\escape.json'"
+      },
+      {
+        "id": "python.deepviz.tests.test_render::test_browser_executes_all_native_kinds[plotly]",
+        "message": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks",
+        "text": "C:\\Users\\bagma\\deepviz-agent-toolkit\\python\\deepviz\\tests\\test_render.py:433: Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+      },
+      {
+        "id": "python.deepviz.tests.test_render::test_browser_executes_all_native_kinds[echarts]",
+        "message": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks",
+        "text": "C:\\Users\\bagma\\deepviz-agent-toolkit\\python\\deepviz\\tests\\test_render.py:433: Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+      },
+      {
+        "id": "python.deepviz.tests.test_render::test_browser_executes_all_native_kinds[antv]",
+        "message": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks",
+        "text": "C:\\Users\\bagma\\deepviz-agent-toolkit\\python\\deepviz\\tests\\test_render.py:433: Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+      }
+    ],
+    "source_attribution": "R02-integration.md explicitly attributes this command to clean product source at pin; XML alone is not source provenance.",
+    "classification_note": "Initial filename-pattern summary classified three direct-key failures and left the flattened-multibyte-key failure unclassified; readback of the exact failure index confirms that fourth case has the identical 4096-byte error, grouped here with field_name_4kib_vs64kib. No test or oracle was changed."
+  },
+  "saved_log_footers": {
+    "R02-pytest-full.log": [
+      "FAILED tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-graphql]",
+      "FAILED tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-columns]",
+      "FAILED tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-csv]",
+      "FAILED tests/test_n09_performance_inspector.py::test_declared_drawable_geometry_must_not_accept_nondrawable_tags[empty-path]",
+      "FAILED tests/test_n09_performance_inspector.py::test_declared_drawable_geometry_must_not_accept_nondrawable_tags[nonnumeric-rectangle]",
+      "FAILED tests/test_n09_performance_inspector.py::test_declared_drawable_geometry_must_not_accept_nondrawable_tags[negative-radius]",
+      "FAILED tests/test_n09_performance_inspector.py::test_declared_drawable_geometry_must_not_accept_nondrawable_tags[invalid-points]",
+      "FAILED tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii]",
+      "FAILED tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte]",
+      "FAILED tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte]",
+      "FAILED tests/test_n11_resource_policy.py::test_flattened_multibyte_key_at_64kib_is_preserved",
+      "40 failed, 2994 passed, 5 skipped in 544.36s (0:09:04)"
+    ],
+    "R02-npm-integrated.log": [
+      "Γ£ö N21 policy: retained group keys reject before the raw key bytes exceed 16MiB (445.2534ms)",
+      "Γä╣ {\"source\":{\"yielded\":140,\"iterations\":1,\"closed\":true},\"last_allowed_yields\":280}",
+      "Γ£ö N21 policy: safe dashboard control preserves counts and UTF8 data (8.1366ms)",
+      "Γ£ö N21 policy: combined dashboard rejects over 32MiB before top-level HTML serialization (188.4454ms)",
+      "Γä╣ tests 246",
+      "Γä╣ suites 0",
+      "Γä╣ pass 246",
+      "Γä╣ fail 0",
+      "Γä╣ cancelled 0",
+      "Γä╣ skipped 0",
+      "Γä╣ todo 0",
+      "Γä╣ duration_ms 3298.9451"
+    ],
+    "R02-mypy.log": [
+      "Success: no issues found in 9 source files"
+    ],
+    "R02-typecheck.log": [
+      "> typecheck",
+      "> tsc --noEmit -p packages/deepviz/tsconfig.json"
+    ],
+    "R02-ruff.log": [
+      "163 |     \"root\": str(root), \"deepviz_import\": deepviz.__file__, \"python_version\": sys.version,",
+      "    |",
+      "help: Convert to `datetime.UTC` alias",
+      "    |",
+      "160 | result = {",
+      "    -     \"recorded_utc\": datetime.datetime.now(datetime.timezone.utc).isoformat(),",
+      "161 +     \"recorded_utc\": datetime.datetime.now(datetime.UTC).isoformat(),",
+      "162 |     \"source_commit\": \"235e7e361e395b86781101172f040ee51b9423d2\",",
+      "    |",
+      "Found 7 errors.",
+      "[*] 3 fixable with `--fix`."
+    ],
+    "R02-ruff-tracked.log": [
+      "All checks passed!"
+    ]
+  },
+  "r02_failure_index": {
+    "failed": 40,
+    "skipped": 5
+  },
+  "r02_saved_gallery": {
+    "source": "0c5fa825f7058f8c5a4ab6ec9597b9fd5fd4ca43",
+    "total": 15,
+    "attempted": 15,
+    "captured": 15,
+    "failed": 0,
+    "fatal_errors": [],
+    "item_console_error_count": 0,
+    "item_ids": [
+      "bar-light-matplotlib",
+      "bar-light-plotly",
+      "bar-light-vega",
+      "bar-light-echarts",
+      "bar-light-antv",
+      "line-numeric-matplotlib",
+      "line-numeric-plotly",
+      "line-numeric-vega",
+      "line-numeric-echarts",
+      "line-numeric-antv",
+      "dashboard-mixed-matplotlib",
+      "dashboard-mixed-plotly",
+      "dashboard-mixed-vega",
+      "dashboard-mixed-echarts",
+      "dashboard-mixed-antv"
+    ],
+    "semantic_limit": "Metadata runtime/capture success only; known AntV child-theme visual defect recorded by R02. Auditor opened no images."
+  },
+  "research_index": {
+    "accessed_on": "2026-11-26",
+    "repository_count": 15,
+    "distinct_source_urls": 100,
+    "limit": "Inventory recount only, not new fetches/audits of upstream sources."
+  },
+  "pinned_contract_identity": {
+    "schemas/chart-spec.schema.json": {
+      "sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+      "git_blob": "e4b96153ace7b0290bb7d48d3492707abe5186b5"
+    },
+    "python/deepviz/src/deepviz/models.py": {
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "git_blob": "17877904985d496f645cd7c66305efc8305bcb5f"
+    },
+    "scripts/verify_evidence.py": {
+      "sha256": "86acba0a7675a0f1655da7fb0959088a7c572212b6b626b9afa3665367473e71",
+      "git_blob": "c3cd6a32876295fc60c903dd6cc416a2886872ad"
+    },
+    "examples/deep_agent.py": {
+      "sha256": "c92aae22432062b556e55d2c99b59e1988179864a153e95dcc109e7476340211",
+      "git_blob": "8f74667dcbf435730e23095dc135ab75173fa0ce"
+    }
+  },
+  "historical_n11_scale": {
+    "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\deepviz-n11\\artifacts\\local\\N11\\n11-streaming-20261127-r1.json",
+    "source": {
+      "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\deepviz-n11",
+      "commit": "b6abc8d9b80a8dd4e3813e5d4ef28f17f1788835",
+      "dirty_paths": [],
+      "sha256": {
+        "python/deepviz/src/deepviz/__init__.py": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "python/deepviz/src/deepviz/cli.py": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "python/deepviz/src/deepviz/engines.py": "809fbc884059451489a2acc3a595796c2341155eb4a2e92e58943acd3913a028",
+        "python/deepviz/src/deepviz/mcp_server.py": "34e520c38cab4d861925c55271e422333d46e982dc67636d66f76be6fe4315e7",
+        "python/deepviz/src/deepviz/models.py": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+        "python/deepviz/src/deepviz/normalize.py": "5ee60ef4a86a3d22b44f43cb7d072953879ee0edb44955fbdc1a932fbc907a0f",
+        "python/deepviz/src/deepviz/recommend.py": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "python/deepviz/src/deepviz/render.py": "b397f65a44305919f4fdc94cd0b8d62aff2b1f939104c844c46d47f0a161f1fa",
+        "python/deepviz/src/deepviz/tools.py": "3995835806fc6db915c3d8ff7ec634c7d37ba665cefef6bb8cfaf13765644768"
+      }
+    },
+    "status": "passed",
+    "requested_counts": [
+      10,
+      1000,
+      100000,
+      1000000,
+      10000000
+    ],
+    "requested_cases": [
+      "numeric_sample",
+      "category_sum",
+      "category_mean"
+    ],
+    "render_counts": [],
+    "browser_execution": "not_verified_by_this_harness",
+    "result_count": 20,
+    "status_counts": {
+      "passed": 20
+    },
+    "ten_million_rows": [
+      {
+        "count": 10000000,
+        "case": "numeric_sample",
+        "repeat": 1,
+        "input_count": 10000000,
+        "consumed_count": 10000000,
+        "source_exhausted": true,
+        "output_count": 2000,
+        "strategy": "sample",
+        "elapsed_seconds": 108.77566389999993,
+        "peak_rss_bytes": 43950080,
+        "method": "GetProcessMemoryInfo.PeakWorkingSetSize",
+        "scope": "inclusive_process_high_water_mark",
+        "warnings": [
+          "Deterministic reservoir sample: 2000 of 10000000 rows; max_points=2000 overrides aggregation='sample'. Original source order is preserved, but sampling may miss peaks/extrema and short-lived events."
+        ]
+      },
+      {
+        "count": 10000000,
+        "case": "numeric_sample",
+        "repeat": 2,
+        "input_count": 10000000,
+        "consumed_count": 10000000,
+        "source_exhausted": true,
+        "output_count": 2000,
+        "strategy": "sample",
+        "elapsed_seconds": 110.1609139000002,
+        "peak_rss_bytes": 43974656,
+        "method": "GetProcessMemoryInfo.PeakWorkingSetSize",
+        "scope": "inclusive_process_high_water_mark",
+        "warnings": [
+          "Deterministic reservoir sample: 2000 of 10000000 rows; max_points=2000 overrides aggregation='sample'. Original source order is preserved, but sampling may miss peaks/extrema and short-lived events."
+        ]
+      },
+      {
+        "count": 10000000,
+        "case": "category_sum",
+        "repeat": 1,
+        "input_count": 10000000,
+        "consumed_count": 10000000,
+        "source_exhausted": true,
+        "output_count": 7,
+        "strategy": "sum",
+        "elapsed_seconds": 129.78600000000006,
+        "peak_rss_bytes": 42401792,
+        "method": "GetProcessMemoryInfo.PeakWorkingSetSize",
+        "scope": "inclusive_process_high_water_mark",
+        "warnings": []
+      },
+      {
+        "count": 10000000,
+        "case": "category_mean",
+        "repeat": 1,
+        "input_count": 10000000,
+        "consumed_count": 10000000,
+        "source_exhausted": true,
+        "output_count": 7,
+        "strategy": "mean",
+        "elapsed_seconds": 90.71461729999919,
+        "peak_rss_bytes": 42385408,
+        "method": "GetProcessMemoryInfo.PeakWorkingSetSize",
+        "scope": "inclusive_process_high_water_mark",
+        "warnings": []
+      }
+    ],
+    "limit": "Historical file readback only; source differs from pin/current; no benchmark rerun or final-source acceptance."
+  },
+  "read_only_git": {
+    "head_at_read": "6d0e72ebef4b622f8dec2bce2bd07cc23e7a81ce",
+    "pin_to_head_source_paths": "M\tpython/deepviz/src/deepviz/engines.py\nA\tpython/deepviz/tests/test_r02_chart_background.py"
+  }
+}

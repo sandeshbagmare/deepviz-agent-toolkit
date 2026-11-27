@@ -1,0 +1,2684 @@
+{
+  "session": "ses_de5678052ffdJwVtlB6SX6LZrT",
+  "source_pin": "0c5fa825f7058f8c5a4ab6ec9597b9fd5fd4ca43",
+  "started_utc": "2026-11-27T01:28:07.288120+00:00",
+  "invocation": "MAIN/.venv/Scripts/python.exe - (PowerShell single-quoted inline Python)",
+  "scope": "Authenticated API GET-only; no product tests, downloads, mutations, auth/config changes, or approval assertion.",
+  "authenticated_login": "sandeshbagmare",
+  "repository": {
+    "id": 1473492568,
+    "full_name": "sandeshbagmare/deepviz-agent-toolkit",
+    "private": false,
+    "visibility": "public",
+    "default_branch": "main",
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 31
+  },
+  "issues": {
+    "complete": true,
+    "pages": 1,
+    "total_present": 30,
+    "open": 30,
+    "closed": 0,
+    "excluded_pull_request_records": 1,
+    "records": [
+      {
+        "number": 1,
+        "title": "[Epic] Shared contracts and loss-aware bounded ingestion",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/1",
+        "created_at": "2026-11-26T17:56:35Z",
+        "updated_at": "2026-11-26T17:58:28Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: EPIC-FOUNDATION -->\n# EPIC-FOUNDATION\n\n## Outcome\nEvery engine receives the same validated, bounded records and truthful reduction metadata.\n\n## Coordination\n- Suggested owner lane: core agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n\n## Acceptance criteria\n- [ ] CONTRACT, INPUT-FORMATS, INPUT-GRAPHQL and STREAMING are independently verified and closed with evidence.\n- [ ] Versioned schema, Python public API and documented normalization semantics agree.\n- [ ] Raw streams are not fully materialized before reduction; lossy decisions are surfaced.\n\n## Required evidence\n- Linked child PRs and schema/fixture test reports\n- Scale and edge-case results at exact reviewed commits\n\n## Child work\n- [ ] #5 - CONTRACT: Version and validate the shared ChartSpec and artifact contracts\n- [ ] #6 - INPUT-FORMATS: Normalize records, columns and delimited/line-oriented inputs deterministically\n- [ ] #7 - INPUT-GRAPHQL: Normalize nested JSON and GraphQL edges/nodes without dropping pages\n- [ ] #8 - STREAMING: Reduce large streams before bounded record materialization\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:epic",
+          "area:ingestion",
+          "priority:p0"
+        ],
+        "milestone": 1
+      },
+      {
+        "number": 2,
+        "title": "[Epic] Five renderer alternatives and interoperable browser artifacts",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/2",
+        "created_at": "2026-11-26T17:56:38Z",
+        "updated_at": "2026-11-26T17:58:31Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: EPIC-VISUALIZATION -->\n# EPIC-VISUALIZATION\n\n## Outcome\nUsers can choose Matplotlib, Plotly, Vega-Lite, ECharts or AntV G2 against one mapped/reduced dataset.\n\n## Coordination\n- Suggested owner lane: rendering and TypeScript agents (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n\n## Acceptance criteria\n- [ ] All five renderer stories and both TypeScript stories have verified acceptance evidence.\n- [ ] Unsupported kind/engine combinations fail explicitly instead of silently changing meaning.\n- [ ] Committed SVG/PNG/screenshots demonstrate the actual generated artifacts and dashboard behavior.\n\n## Required evidence\n- Cross-engine parity report\n- Inspected output artifacts and browser test report\n\n## Child work\n- [ ] #9 - RENDER-MPL: Render real Matplotlib static artifacts from the shared contract\n- [ ] #10 - RENDER-PLOTLY: Render interactive Plotly artifacts with explicit runtime requirements\n- [ ] #11 - RENDER-VEGA: Render validated Vega-Lite specifications and real artifacts\n- [ ] #12 - RENDER-ECHARTS: Render safe ECharts options and browser artifacts\n- [ ] #13 - RENDER-ANTV: Render real AntV G2 specifications and browser artifacts\n- [ ] #14 - TS-CONTRACT: Validate shared schema fixtures and bounded normalization in TypeScript\n- [ ] #15 - TS-BROWSER: Build safe browser engine artifacts and composed dashboards in TypeScript\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:epic",
+          "area:renderers",
+          "priority:p1"
+        ],
+        "milestone": 2
+      },
+      {
+        "number": 3,
+        "title": "[Epic] Deep Agents and stdio MCP visualization workflows",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/3",
+        "created_at": "2026-11-26T17:56:42Z",
+        "updated_at": "2026-11-26T17:58:34Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: EPIC-INTEGRATIONS -->\n# EPIC-INTEGRATIONS\n\n## Outcome\nAgents discover safe tools, call them with structured inputs and receive bounded artifact metadata.\n\n## Coordination\n- Suggested owner lane: integrations agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n\n## Acceptance criteria\n- [ ] TOOLS, MCP and PROMPTS acceptance criteria are independently verified.\n- [ ] Integration uses real package APIs rather than mock-only compatibility claims.\n- [ ] Multi-tool flow, validation failures, artifact paths and dependency requirements are documented.\n\n## Required evidence\n- Real integration transcripts with commands and versions\n- Independent tester reports\n\n## Child work\n- [ ] #16 - TOOLS: Expose five real Deep Agents visualization tools with safe artifacts\n- [ ] #17 - MCP: Serve visualization tools over a real stdio MCP session\n- [ ] #18 - PROMPTS: Version safe chart-selection prompts and runnable agent examples\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:epic",
+          "area:integrations",
+          "priority:p1"
+        ],
+        "milestone": 3
+      },
+      {
+        "number": 4,
+        "title": "[Epic] Secure, measurable and independently evidenced release readiness",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/4",
+        "created_at": "2026-11-26T17:56:46Z",
+        "updated_at": "2026-11-26T18:15:21Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: EPIC-DELIVERY -->\n# EPIC-DELIVERY\n\n## Outcome\nRelease claims are backed by repeatable checks, inspected outputs and an honest unmet-criteria audit.\n\n## Coordination\n- Suggested owner lane: parent coordinator with QA/research/process owners (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n\n## Acceptance criteria\n- [ ] RESEARCH, CI, SECURITY, SCALE, VISUAL-QA, PY-PACKAGE, NPM-PACKAGE, REVIEW-GATE, PROCESS and REVIEW-PROVENANCE are verified.\n- [ ] Each proposed merge has two independent reviewer-agent reports, two tester-agent reports and committed visual evidence embedded in its PR body.\n- [ ] The unmet 900-issue requirement remains explicit; independent agent reports satisfy the review criterion without inventing a distinct-account GitHub approval requirement.\n\n## Required evidence\n- Remote workflow/build state and package-install reports\n- Final open/closed issue and PR audit excluding PRs from issue counts\n\n## Child work\n- [ ] #19 - RESEARCH: Ground architecture and competitor research in dated official sources\n- [ ] #20 - CI: Gate Python and TypeScript changes with real lint, type, test and build CI\n- [ ] #21 - SECURITY: Prove untrusted specs, HTML values and filesystem paths stay within safe boundaries\n- [ ] #22 - SCALE: Measure 10 through 10M input rows on the bounded streaming path\n- [ ] #23 - VISUAL-QA: Inspect real renderer outputs and commit reproducible visual evidence\n- [ ] #24 - PY-PACKAGE: Build and clean-install Python wheel/sdist with real entrypoint smoke tests\n- [ ] #25 - NPM-PACKAGE: Build and clean-install the npm tarball with usable types and exports\n- [ ] #26 - REVIEW-GATE: Enforce evidence-bearing PRs with two reviewer and two tester reports\n- [ ] #27 - PROCESS: Publish a traceable backlog, evidence policy and honest completion tracker\n\n- [ ] #29 - REVIEW-PROVENANCE: [Constraint/workaround] Preserve independent agent-report provenance without GitHub self-approval\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:epic",
+          "area:qa",
+          "priority:p0"
+        ],
+        "milestone": 4
+      },
+      {
+        "number": 5,
+        "title": "Version and validate the shared ChartSpec and artifact contracts",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/5",
+        "created_at": "2026-11-26T17:56:50Z",
+        "updated_at": "2026-11-26T17:56:50Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: CONTRACT -->\n# CONTRACT\n\n## Outcome\nPython, TypeScript and integrations share one explicit schema and metadata contract.\n\n## Coordination\n- Suggested owner lane: core agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #1 (EPIC-FOUNDATION).\n\n## Acceptance criteria\n- [ ] Commit schema version 1 and positive/negative fixtures for declared kinds, mappings, nested charts and bounds.\n- [ ] Pydantic models and JSON Schema agree on required fields, defaults and invalid values.\n- [ ] NormalizedData and Artifact expose input/output counts, strategy, warnings and safe filesystem paths.\n- [ ] Public names/signatures match the design or carry an explicit documented decision.\n\n## Required evidence\n- Schema validation tests and exact test command\n- Fixture parity report\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:task",
+          "area:ingestion",
+          "priority:p0"
+        ],
+        "milestone": 1
+      },
+      {
+        "number": 6,
+        "title": "Normalize records, columns and delimited/line-oriented inputs deterministically",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/6",
+        "created_at": "2026-11-26T17:56:53Z",
+        "updated_at": "2026-11-26T17:56:53Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: INPUT-FORMATS -->\n# INPUT-FORMATS\n\n## Outcome\nA caller can normalize ordinary tabular and streaming file shapes without silent row loss.\n\n## Coordination\n- Suggested owner lane: core agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #1 (EPIC-FOUNDATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Cover records, column-oriented inputs, CSV, TSV, JSONL and explicit path/mapping selection with fixtures.\n- [ ] Define deterministic treatment of nulls, missing keys, mixed values, NaN and infinity.\n- [ ] Malformed rows and missing mapping fields produce actionable errors or counted warnings, not silent omission.\n- [ ] Optional Arrow/Parquet behavior is tested or explicitly documented as unavailable with dependency guidance.\n\n## Required evidence\n- Fixture-based normalization tests including malformed and empty inputs\n- Input/output count assertions\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:story",
+          "area:ingestion",
+          "priority:p1"
+        ],
+        "milestone": 1
+      },
+      {
+        "number": 7,
+        "title": "Normalize nested JSON and GraphQL edges/nodes without dropping pages",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/7",
+        "created_at": "2026-11-26T17:56:57Z",
+        "updated_at": "2026-11-26T17:56:57Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: INPUT-GRAPHQL -->\n# INPUT-GRAPHQL\n\n## Outcome\nNested and paginated API results become explicit records using documented mapping rules.\n\n## Coordination\n- Suggested owner lane: core agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #1 (EPIC-FOUNDATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Fixtures cover GraphQL edges/node, nodes arrays, multiple pages and nested array/path selection.\n- [ ] Flattening rules for colliding keys and nested arrays are deterministic and documented.\n- [ ] Hierarchy and geographic record adapters have explicit accepted shapes and mapping failures.\n- [ ] Tests prove all selected pages contribute to input counts and no arbitrary remote URL is fetched.\n\n## Required evidence\n- Nested/pagination fixtures and assertions\n- Documented mapping examples\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:story",
+          "area:ingestion",
+          "priority:p1"
+        ],
+        "milestone": 1
+      },
+      {
+        "number": 8,
+        "title": "Reduce large streams before bounded record materialization",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/8",
+        "created_at": "2026-11-26T17:57:01Z",
+        "updated_at": "2026-11-26T17:57:01Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: STREAMING -->\n# STREAMING\n\n## Outcome\nLarge inputs have bounded renderer payloads with disclosed sampling and aggregation semantics.\n\n## Coordination\n- Suggested owner lane: core agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #1 (EPIC-FOUNDATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] An iterator/JSONL path reduces records before creating the bounded renderer list.\n- [ ] Requested aggregation and max_points are honored with deterministic strategy metadata.\n- [ ] Counts reflect original inputs and retained/reduced outputs; warnings disclose lossy choices.\n- [ ] Tests detect accidental list/materialization of an unbounded stream and cover empty/invalid bounds.\n\n## Required evidence\n- Streaming regression tests\n- Memory/time benchmark linked from SCALE\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:story",
+          "area:ingestion",
+          "priority:p0"
+        ],
+        "milestone": 1
+      },
+      {
+        "number": 9,
+        "title": "Render real Matplotlib static artifacts from the shared contract",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/9",
+        "created_at": "2026-11-26T17:57:05Z",
+        "updated_at": "2026-11-26T17:57:06Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: RENDER-MPL -->\n# RENDER-MPL\n\n## Outcome\nUsers obtain readable static images without browser runtime requirements.\n\n## Coordination\n- Suggested owner lane: rendering agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Supported chart kinds produce actual nonempty PNG/SVG artifacts from bounded normalized records.\n- [ ] Mapped fields, titles, units, category ordering and reduction metadata remain truthful.\n- [ ] Themes and labels remain readable; unsupported kinds and missing fields fail explicitly.\n- [ ] At least one composed/example artifact is opened and inspected; dependencies are disclosed.\n\n## Required evidence\n- Renderer unit/integration tests\n- Committed inspected PNG/SVG and dimensions\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:story",
+          "area:renderers",
+          "priority:p1"
+        ],
+        "milestone": 2
+      },
+      {
+        "number": 10,
+        "title": "Render interactive Plotly artifacts with explicit runtime requirements",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/10",
+        "created_at": "2026-11-26T17:57:10Z",
+        "updated_at": "2026-11-26T17:57:10Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: RENDER-PLOTLY -->\n# RENDER-PLOTLY\n\n## Outcome\nUsers can inspect Plotly charts with the same mappings and reductions as other engines.\n\n## Coordination\n- Suggested owner lane: rendering agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Supported kinds generate actual Plotly figures and usable HTML artifacts.\n- [ ] Shared fixtures assert series, axes and values, including category and missing-value handling.\n- [ ] Remote or bundled runtime dependencies and any static-export extras are documented.\n- [ ] Untrusted strings cannot execute in the output; an actual browser artifact is inspected.\n\n## Required evidence\n- Plotly structure/security tests\n- Committed browser screenshot and HTML fixture\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:story",
+          "area:renderers",
+          "priority:p1"
+        ],
+        "milestone": 2
+      },
+      {
+        "number": 11,
+        "title": "Render validated Vega-Lite specifications and real artifacts",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/11",
+        "created_at": "2026-11-26T17:57:14Z",
+        "updated_at": "2026-11-26T17:57:14Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: RENDER-VEGA -->\n# RENDER-VEGA\n\n## Outcome\nA declarative Vega-Lite adapter preserves the shared schema semantics.\n\n## Coordination\n- Suggested owner lane: rendering agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Supported kinds emit valid Vega-Lite encodings and actual renderable output.\n- [ ] Data values and types match shared fixtures; unsupported combinations fail explicitly.\n- [ ] Optional vl-convert/runtime requirements and offline behavior are documented.\n- [ ] Inspect and commit at least one real SVG/PNG or browser screenshot, not a hand-drawn stand-in.\n\n## Required evidence\n- Spec validation/render tests\n- Committed inspected render artifact\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:story",
+          "area:renderers",
+          "priority:p1"
+        ],
+        "milestone": 2
+      },
+      {
+        "number": 12,
+        "title": "Render safe ECharts options and browser artifacts",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/12",
+        "created_at": "2026-11-26T17:57:18Z",
+        "updated_at": "2026-11-26T17:57:18Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: RENDER-ECHARTS -->\n# RENDER-ECHARTS\n\n## Outcome\nUsers can choose ECharts without changing data normalization or mapping semantics.\n\n## Coordination\n- Suggested owner lane: rendering agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Supported kinds emit actual ECharts options and executable browser artifacts using the legitimate runtime.\n- [ ] Fixture assertions verify series data, legends, axes and dashboard/composition behavior where supported.\n- [ ] No model-authored JavaScript callback/eval path is accepted; runtime loading is explicit.\n- [ ] Browser checks report console failures and include a committed inspected screenshot.\n\n## Required evidence\n- Option parity/security tests\n- Browser test report and screenshot\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:story",
+          "area:renderers",
+          "priority:p1"
+        ],
+        "milestone": 2
+      },
+      {
+        "number": 13,
+        "title": "Render real AntV G2 specifications and browser artifacts",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/13",
+        "created_at": "2026-11-26T17:57:22Z",
+        "updated_at": "2026-11-26T17:57:22Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: RENDER-ANTV -->\n# RENDER-ANTV\n\n## Outcome\nAntV G2 is a genuine fifth renderer rather than a renamed fallback engine.\n\n## Coordination\n- Suggested owner lane: rendering agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Supported kinds produce valid G2 specifications and load the actual G2 runtime.\n- [ ] Mappings, reduced values and metadata match shared fixtures and other adapters.\n- [ ] Unsupported kinds and unavailable runtime dependencies are explicit; no fake visual fallback is used.\n- [ ] An actual browser render is tested, inspected and committed as a screenshot.\n\n## Required evidence\n- G2 spec/semantic tests\n- Browser execution report and screenshot\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:story",
+          "area:renderers",
+          "priority:p1"
+        ],
+        "milestone": 2
+      },
+      {
+        "number": 14,
+        "title": "Validate shared schema fixtures and bounded normalization in TypeScript",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/14",
+        "created_at": "2026-11-26T17:57:25Z",
+        "updated_at": "2026-11-26T17:57:26Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: TS-CONTRACT -->\n# TS-CONTRACT\n\n## Outcome\nThe npm interface rejects invalid inputs consistently with the Python contract.\n\n## Coordination\n- Suggested owner lane: TypeScript agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Use the same versioned schema and shared positive/negative fixtures as Python.\n- [ ] Implement and test documented bounded normalization with truthful counts/warnings/strategy.\n- [ ] Strict TypeScript checking and unit tests cover mapping, invalid kinds and unsupported values.\n- [ ] Differences from Python semantics are explicit and tested rather than accidental.\n\n## Required evidence\n- Typecheck and unit-test commands\n- Cross-language fixture parity report\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:task",
+          "area:typescript",
+          "priority:p0"
+        ],
+        "milestone": 2
+      },
+      {
+        "number": 15,
+        "title": "Build safe browser engine artifacts and composed dashboards in TypeScript",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/15",
+        "created_at": "2026-11-26T17:57:29Z",
+        "updated_at": "2026-11-26T17:57:29Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: TS-BROWSER -->\n# TS-BROWSER\n\n## Outcome\nJavaScript callers can generate browser charts and dashboards from the shared spec.\n\n## Coordination\n- Suggested owner lane: TypeScript agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #14 (TS-CONTRACT).\n\n## Acceptance criteria\n- [ ] Document and test actual engine support rather than implying all Python-only exports exist in the browser.\n- [ ] Dashboard composition preserves per-chart titles, mappings and bounded datasets.\n- [ ] HTML serialization escapes untrusted titles/data and rejects executable configuration.\n- [ ] An installed/built package generates an inspected browser artifact and committed screenshot.\n\n## Required evidence\n- Browser/spec unit tests and HTML security tests\n- Build smoke test and screenshot\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:story",
+          "area:typescript",
+          "priority:p1"
+        ],
+        "milestone": 2
+      },
+      {
+        "number": 16,
+        "title": "Expose five real Deep Agents visualization tools with safe artifacts",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/16",
+        "created_at": "2026-11-26T17:57:33Z",
+        "updated_at": "2026-11-26T17:57:33Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: TOOLS -->\n# TOOLS\n\n## Outcome\nA Deep Agent attaches actual structured tools and receives artifact metadata rather than arbitrary code execution.\n\n## Coordination\n- Suggested owner lane: integrations agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #3 (EPIC-INTEGRATIONS).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] create_tools(output_dir) returns five renderer tools using real compatible integration APIs.\n- [ ] Tool schemas validate ChartSpec inputs and surface render/normalization errors predictably.\n- [ ] Safe output directories, bounded metadata and renderer/dependency errors are tested.\n- [ ] A real attachment and multi-tool invocation flow is demonstrated; mocks alone do not satisfy acceptance.\n\n## Required evidence\n- Integration command and package versions\n- Tool discovery/invocation transcript\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:story",
+          "area:integrations",
+          "priority:p1"
+        ],
+        "milestone": 3
+      },
+      {
+        "number": 17,
+        "title": "Serve visualization tools over a real stdio MCP session",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/17",
+        "created_at": "2026-11-26T17:57:37Z",
+        "updated_at": "2026-11-26T17:57:37Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: MCP -->\n# MCP\n\n## Outcome\nMCP clients discover and call the toolkit using a genuine protocol server.\n\n## Coordination\n- Suggested owner lane: integrations agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #3 (EPIC-INTEGRATIONS).\n- Depends on: #16 (TOOLS).\n\n## Acceptance criteria\n- [ ] A stdio client initializes, lists tools and successfully calls an actual renderer tool.\n- [ ] Protocol stdout remains valid; diagnostics are not mixed into the message stream.\n- [ ] Invalid requests, unsafe paths and missing optional dependencies return structured errors.\n- [ ] CLI/entrypoint and startup instructions work from a built/installed package.\n\n## Required evidence\n- Real client/server discovery and call test\n- Installed-entrypoint smoke transcript\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:story",
+          "area:integrations",
+          "priority:p1"
+        ],
+        "milestone": 3
+      },
+      {
+        "number": 18,
+        "title": "Version safe chart-selection prompts and runnable agent examples",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/18",
+        "created_at": "2026-11-26T17:57:41Z",
+        "updated_at": "2026-11-26T17:57:41Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: PROMPTS -->\n# PROMPTS\n\n## Outcome\nUsers see reproducible workflows that choose charts, reduce inputs and explain limitations.\n\n## Coordination\n- Suggested owner lane: integrations agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #3 (EPIC-INTEGRATIONS).\n- Depends on: #16 (TOOLS).\n\n## Acceptance criteria\n- [ ] Commit prompts/v1 and runnable examples for normalization, chart selection and multi-tool workflow.\n- [ ] Prompts forbid arbitrary code/URL execution and require disclosure of lossy reduction.\n- [ ] Examples use the actual tool schemas and declare credentials, optional extras or network needs.\n- [ ] Document chart-choice rationale, artifact paths and a failure/recovery example.\n\n## Required evidence\n- Executed examples or explicit unavailable-prerequisite notes\n- Prompt/version documentation review\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:task",
+          "area:integrations",
+          "priority:p1"
+        ],
+        "milestone": 3
+      },
+      {
+        "number": 19,
+        "title": "Ground architecture and competitor research in dated official sources",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/19",
+        "created_at": "2026-11-26T17:57:45Z",
+        "updated_at": "2026-11-26T17:57:45Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: RESEARCH -->\n# RESEARCH\n\n## Outcome\nArchitecture choices and public comparisons are traceable without claiming access to proprietary internals.\n\n## Coordination\n- Suggested owner lane: research agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #4 (EPIC-DELIVERY).\n\n## Acceptance criteria\n- [ ] Research cites primary documentation with access dates for five renderers, Deep Agents and MCP.\n- [ ] Separate observed public behavior, documentation facts, inferences and unknown proprietary internals.\n- [ ] Record runtime/dependency, licensing, scale and output-format trade-offs without invented benchmark claims.\n- [ ] Architecture and feature support claims agree with implemented/tested capabilities or are clearly future work.\n\n## Required evidence\n- Committed source-linked research notes\n- Claim-to-source and capability review\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:task",
+          "area:research",
+          "priority:p1"
+        ],
+        "milestone": 4
+      },
+      {
+        "number": 20,
+        "title": "Gate Python and TypeScript changes with real lint, type, test and build CI",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/20",
+        "created_at": "2026-11-26T17:57:48Z",
+        "updated_at": "2026-11-26T17:57:49Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: CI -->\n# CI\n\n## Outcome\nRemote PR checks run the same meaningful verification documented locally.\n\n## Coordination\n- Suggested owner lane: parent/core and TypeScript owners (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #4 (EPIC-DELIVERY).\n\n## Acceptance criteria\n- [ ] Workflow runs Python lint/type/unit/integration and TypeScript type/test/build/package checks as applicable.\n- [ ] Visual/security/scale smoke checks are explicit; expensive full benchmarks have a documented invocation.\n- [ ] Use minimal workflow permissions and no committed secrets; optional dependency failures are visible.\n- [ ] A remote workflow run on the proposed commit is recorded, or its real blocker stays open.\n\n## Required evidence\n- Workflow file and remote run URL/status\n- Local-to-CI command mapping\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:task",
+          "area:ci",
+          "priority:p0"
+        ],
+        "milestone": 4
+      },
+      {
+        "number": 21,
+        "title": "Prove untrusted specs, HTML values and filesystem paths stay within safe boundaries",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/21",
+        "created_at": "2026-11-26T17:57:52Z",
+        "updated_at": "2026-11-26T17:57:52Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: SECURITY -->\n# SECURITY\n\n## Outcome\nModel-authored inputs cannot execute arbitrary code, escape output roots or overwrite unrelated files.\n\n## Coordination\n- Suggested owner lane: parent with core/rendering/TypeScript/integrations owners (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #4 (EPIC-DELIVERY).\n\n## Acceptance criteria\n- [ ] Negative tests cover script/title/cell injection, script-closing sequences and dangerous configuration values.\n- [ ] Reject traversal, absolute-path escape and arbitrary remote-URL/code execution pathways.\n- [ ] Artifact creation avoids unrelated-file overwrite and documents optional network-loaded runtimes.\n- [ ] Review dependencies, diagnostics and packaging for accidental credential disclosure.\n\n## Required evidence\n- Named negative tests and results\n- Independent security review with exact commit\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:task",
+          "area:security",
+          "priority:p0"
+        ],
+        "milestone": 4
+      },
+      {
+        "number": 22,
+        "title": "Measure 10 through 10M input rows on the bounded streaming path",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/22",
+        "created_at": "2026-11-26T17:57:56Z",
+        "updated_at": "2026-11-26T17:57:56Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: SCALE -->\n# SCALE\n\n## Outcome\nScale claims describe measured processing and retained marks instead of promising ten million browser marks.\n\n## Coordination\n- Suggested owner lane: parent/core owner with independent testers (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #4 (EPIC-DELIVERY).\n- Depends on: #8 (STREAMING).\n\n## Acceptance criteria\n- [ ] Run and record 10, 1K, 100K, 1M and 10M input scales using a generated/streamed source.\n- [ ] Report environment, command, wall time, memory measurement method and input/output counts.\n- [ ] Verify bounded renderer payloads and disclose aggregation/sampling at every scale.\n- [ ] Failures, unavailable memory metrics and unrun engines/scales are explicit, not extrapolated as passes.\n\n## Required evidence\n- Machine-readable benchmark results and reproducible command\n- Independent tester replication or explicit limitation\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:task",
+          "area:scale",
+          "priority:p1"
+        ],
+        "milestone": 4
+      },
+      {
+        "number": 23,
+        "title": "Inspect real renderer outputs and commit reproducible visual evidence",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/23",
+        "created_at": "2026-11-26T17:58:00Z",
+        "updated_at": "2026-11-26T17:58:00Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: VISUAL-QA -->\n# VISUAL-QA\n\n## Outcome\nChart correctness includes readable labels and actual browser/static renders, not just nonempty files.\n\n## Coordination\n- Suggested owner lane: parent coordinator and independent tester agents (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #4 (EPIC-DELIVERY).\n\n## Acceptance criteria\n- [ ] Generate committed SVG/PNG/screenshots for representative outputs of all five engines and a dashboard.\n- [ ] Inspect clipping, labels, legends, axes/units, accessible contrast and semantic agreement with source fixtures.\n- [ ] Browser checks detect runtime/console errors and state whether network access was required.\n- [ ] Each PR embeds committed visual evidence and identifies which exact commit/output was inspected.\n\n## Required evidence\n- Committed visual files and generation commands\n- Two independent tester reports per PR\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:task",
+          "area:qa",
+          "priority:p0"
+        ],
+        "milestone": 4
+      },
+      {
+        "number": 24,
+        "title": "Build and clean-install Python wheel/sdist with real entrypoint smoke tests",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/24",
+        "created_at": "2026-11-26T17:58:04Z",
+        "updated_at": "2026-11-26T17:58:04Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: PY-PACKAGE -->\n# PY-PACKAGE\n\n## Outcome\nThe Python distribution works outside the source checkout with honest optional-extra requirements.\n\n## Coordination\n- Suggested owner lane: parent/core and integrations owners (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #4 (EPIC-DELIVERY).\n\n## Acceptance criteria\n- [ ] Build wheel and sdist; inspect metadata, included schemas/prompts and declared extras.\n- [ ] Install from built artifacts in a clean environment and import the public API.\n- [ ] Smoke-test a real render and available CLI/MCP entrypoints from the installed package.\n- [ ] Record versions, commands and limitations; do not publish to a public registry without authorization.\n\n## Required evidence\n- Build and clean-install logs\n- Installed artifact/entrypoint smoke results\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:task",
+          "area:packaging",
+          "priority:p1"
+        ],
+        "milestone": 4
+      },
+      {
+        "number": 25,
+        "title": "Build and clean-install the npm tarball with usable types and exports",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/25",
+        "created_at": "2026-11-26T17:58:08Z",
+        "updated_at": "2026-11-26T17:58:08Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: NPM-PACKAGE -->\n# NPM-PACKAGE\n\n## Outcome\nConsumers install a real tarball whose exports and declarations match documentation.\n\n## Coordination\n- Suggested owner lane: TypeScript agent and independent testers (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #4 (EPIC-DELIVERY).\n- Depends on: #14 (TS-CONTRACT).\n- Depends on: #15 (TS-BROWSER).\n\n## Acceptance criteria\n- [ ] Build, typecheck, test and npm pack the package with no credentials or unrelated local files.\n- [ ] Inspect exports, declarations, runtime requirements and shared-schema inclusion.\n- [ ] Install the tarball in a clean consumer and compile/run a representative chart example.\n- [ ] Record commands and package contents; public npm publication is not authorized by this task.\n\n## Required evidence\n- Pack file list and tarball checksum\n- Clean-consumer compile/run report\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:task",
+          "area:packaging",
+          "priority:p1"
+        ],
+        "milestone": 4
+      },
+      {
+        "number": 26,
+        "title": "Enforce evidence-bearing PRs with two reviewer and two tester reports",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/26",
+        "created_at": "2026-11-26T17:58:12Z",
+        "updated_at": "2026-11-26T17:58:12Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: REVIEW-GATE -->\n# REVIEW-GATE\n\n## Outcome\nEvery merge decision has genuine independent analysis and testing attached to the exact proposed commit.\n\n## Coordination\n- Suggested owner lane: parent coordinator (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #4 (EPIC-DELIVERY).\n\n## Acceptance criteria\n- [ ] Each PR has two distinct reviewer-agent reports and two distinct tester-agent reports, independently produced.\n- [ ] Reports record agent/session identity, scope, exact commit, findings/commands/results and limitations.\n- [ ] Fixes resolve material findings with retest evidence; changed commits identify stale reports and receive appropriate renewed verification.\n- [ ] Commit screenshots/SVG/PNG and embed their repository paths in the PR body before merge.\n- [ ] Do not equate reports or comments submitted through one account with two GitHub APPROVED reviews.\n\n## Required evidence\n- Per-PR evidence checklist with four report links\n- Committed visual embeds and remote PR head/merge state\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:task",
+          "area:qa",
+          "priority:p0"
+        ],
+        "milestone": 4
+      },
+      {
+        "number": 27,
+        "title": "Publish a traceable backlog, evidence policy and honest completion tracker",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/27",
+        "created_at": "2026-11-26T17:58:16Z",
+        "updated_at": "2026-11-26T17:58:16Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: PROCESS -->\n# PROCESS\n\n## Outcome\nThe team can map the design to real issues and distinguish planned, implemented, verified and released work.\n\n## Coordination\n- Suggested owner lane: PM/process agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #4 (EPIC-DELIVERY).\n\n## Acceptance criteria\n- [ ] Create distinct scoped epics/stories/tasks with labels, milestones, dependencies and acceptance criteria.\n- [ ] Commit issue mapping and review/test/visual evidence policy under docs/process only.\n- [ ] Document GitHub secondary content limits and the single-author approval restriction from primary sources.\n- [ ] Leave every issue open until parent-supplied implementation and independent review/test evidence meets acceptance.\n- [ ] Record requested 900 created/resolved issues as unmet rather than padding, duplicating or inventing closures.\n\n## Required evidence\n- Remote issue/milestone/label snapshot\n- Process-doc commit and parent-provided verification before closure\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:task",
+          "area:process",
+          "priority:p1"
+        ],
+        "milestone": 4
+      },
+      {
+        "number": 28,
+        "title": "[Blocker] 900 genuinely resolved issues are not presently evidenced; bulk API limits constrain seeding",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/28",
+        "created_at": "2026-11-26T17:58:20Z",
+        "updated_at": "2026-11-26T18:03:39Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: BLOCKER-900 -->\n# BLOCKER-900\n\n## Outcome\nKeep the numerical request visible without treating ticket volume as completed engineering.\n\n## Coordination\n- Suggested owner lane: parent coordinator / user acceptance (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n\n## Acceptance criteria\n- [ ] Do not close until at least 900 distinct legitimate issues have verified deliverables, or the user explicitly revises the requirement.\n- [ ] Any future decomposition must identify unique scope, acceptance and evidence; no empty/duplicate tickets or automatic closure.\n- [ ] Plan API mutations against the account-wide content budget; do not evade limits with alternate accounts/tokens/interfaces.\n- [ ] Publish actual remote created/open/closed issue counts excluding pull requests and disclose what remains unmet.\n\n## Required evidence\n- Primary GitHub rate-limit documentation accessed 2026-11-26\n- Remote issue audit and linked completed deliverables\n\n## Observed constraint\nObserved starting state was zero issues. This seed is 29 genuine issues, not 900 completions. At least 900 genuine creates plus 900 closes require at least 1,800 mutations before other process work. GitHub documents general secondary limits of 80 content-generating requests/minute and 500/hour, potentially lower or undisclosed endpoint limits, and no queryable secondary-budget status. 900 creates alone exceed a single documented 500/hour content window; issue updates/closures, labels, milestones, comments and other agents' writes require additional shared budget. This is a feasibility/planning blocker, not a claim that GitHub has actually returned 403/429. Source: https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api .\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:blocker",
+          "area:process",
+          "priority:p0",
+          "status:blocked"
+        ],
+        "milestone": 4
+      },
+      {
+        "number": 29,
+        "title": "[Constraint/workaround] Preserve independent agent-report provenance without GitHub self-approval",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/29",
+        "created_at": "2026-11-26T17:58:24Z",
+        "updated_at": "2026-11-26T18:15:14Z",
+        "closed_at": null,
+        "body": "<!-- deepviz-key: REVIEW-PROVENANCE -->\n# REVIEW-PROVENANCE\n\n## Outcome\nSatisfy the user's independent-agent review criterion through genuine reports while accurately describing GitHub account-level review states.\n\n## Coordination\n- Parent epic: #4 (EPIC-DELIVERY).\n- Suggested owner lane: parent coordinator (not a claim of GitHub assignment).\n- Classification: ordinary process task / documented platform constraint and implemented workaround; not a blocker to the user's independent-agent criterion.\n- Status: open until the parent supplies evidence that the report workflow is genuinely implemented.\n\n## Acceptance criteria\n- [ ] Document that the user requires two actual independent reviewer-agent reports and two actual independent tester-agent reports per merged PR, not distinct GitHub human approvals.\n- [ ] Implement the workaround on the integrated candidate PR: publish or link the four genuine reports as GitHub comments and/or committed source evidence with session identity, exact reviewed/tested SHA, scope and observed findings/results.\n- [ ] Embed the committed actual gallery image in the integrated candidate PR and keep report provenance distinct from platform APPROVED review states.\n- [ ] Do not attempt self-approval or change repository rules merely to claim completion; this constraint is not a blocker to the user's agent-review criterion.\n\n## Required evidence\n- Four genuine independent agent-report links/files on the integrated candidate PR, with exact commit provenance\n- Documented workflow and actual committed gallery image embedded in the candidate PR body\n\n## Constraint and workaround\nParent clarification on 2026-11-26: distinct GitHub human approvals are not a user requirement. One coordinator account may post independently produced agent reports as comments or committed source evidence; account identity must not be confused with agent/session independence. GitHub's author self-approval restriction is a platform constraint only, not a new acceptance requirement. The same issue number #29 is retained; its former key BLOCKER-APPROVALS is historical. Close only after the documented workaround is genuinely implemented and parent evidence is supplied. Source: https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/approving-a-pull-request-with-required-reviews .\n\n## Delivery strategy\nThe parent is assembling one integrated release/candidate PR while preserving all original feature branches. The user asks for multiple reviewer agents, not distinct GitHub human approvals. Actual independently produced agent reports may be posted through one coordinator account as GitHub comments and/or committed source evidence, with each session and reviewed/tested commit identified. No new agents are launched by this process update.\n\n## Closure and merge gate\nThe parent may close this issue when the documented workaround is genuinely implemented: two actual independent reviewer-agent reports, two actual independent tester-agent reports, exact commit provenance, and an embedded committed actual gallery image on the integrated candidate PR. Do not close on documentation existence alone. Do not invent a self-approval or human-approver requirement. Agent reports/comments are not GitHub APPROVED review states.\n\n## Source of scope\n- Parent clarification on 2026-11-26\n- docs/process/review-and-evidence.md\n- docs/process/github-constraints.md\n- docs/process/backlog.json\n",
+        "comments": 0,
+        "labels": [
+          "type:task",
+          "area:process",
+          "priority:p1"
+        ],
+        "milestone": 4
+      },
+      {
+        "number": 30,
+        "title": "Bug: Python chart schema coerces strings and booleans unlike JSON Schema",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/30",
+        "created_at": "2026-11-26T18:12:31Z",
+        "updated_at": "2026-11-26T18:12:31Z",
+        "closed_at": null,
+        "body": "## Reproduction\n\nThe generated JSON Schema declares numeric fields, but the Python runtime accepted numeric strings and JSON booleans through Pydantic coercion:\n\n```python\nChartSpec.model_validate({\"width\": \"900\"})\nChartSpec.model_validate({\"version\": True})\nChartSpec.model_validate({\"columns\": True})\n```\n\nThis diverges from JSON Schema and a schema-validating TypeScript consumer.\n\n## Acceptance criteria\n\n- Reject string values for numeric schema fields and booleans for version/columns.\n- Continue to accept mathematically integral JSON numeric values, such as `900.0`, consistent with JSON Schema integer semantics.\n- Preserve valid defaults and all existing bounds.\n- Add regression tests and run lint/type checks.\n\n## Observed test evidence\n\nBefore fix: `python -m pytest tests/test_models.py -q`: **6 failed, 24 passed** (all six failures were unexpected acceptance).\n\nAfter adding a before-validator: full current checkout suite `python -m pytest -q`: **30 passed**; Ruff and mypy passed for the changed implementation/tests. This evidence concerns the schema-only branch, not the unfinished integrated product.\n\nLeave open until the reviewed release PR merges the fix.\n",
+        "comments": 0,
+        "labels": [
+          "area:ingestion",
+          "priority:p0"
+        ],
+        "milestone": 1
+      }
+    ]
+  },
+  "pulls": {
+    "complete": true,
+    "pages": 1,
+    "records": [
+      {
+        "number": 31,
+        "title": "Integrate Python-first DeepViz toolkit and evidence-backed verification",
+        "state": "open",
+        "draft": true,
+        "merged_at": null,
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/pull/31",
+        "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16"
+      }
+    ]
+  },
+  "pr31": {
+    "number": 31,
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "merged_at": null,
+    "mergeable": true,
+    "mergeable_state": "unstable",
+    "merge_commit_sha": "cf636aeae18c8f70c1589d3858e59c070283f811",
+    "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/pull/31",
+    "created_at": "2026-11-26T19:06:20Z",
+    "updated_at": "2026-11-26T19:06:20Z",
+    "body": "## Integrated candidate (draft — blocking fixes and final evidence pending)\n\nIntegrates preserved committed Python ingestion/reduction, five native renderer alternatives, Deep Agents tools, resource-backed stdio MCP/CLI, shared schema, TypeScript SDK, research, independent tests, scale/visual harnesses and CI. Does not rebuild or discard historical worktrees.\n\nRelated genuine scopes: #1 #2 #3 #4 #5 #6 #7 #8 #9 #10 #11 #12 #13 #14 #15 #16 #17 #18 #19 #20 #21 #22 #23 #24 #25 #26 #27 #29 #30. **No issue is closed by this draft.** #28 remains the honest unmet900-legitimate-resolutions criterion.\n\n### Actual rendered output\n\nKnown input revenue rows: Q1=12,Q2=19,Q3=8,Q4=24, aggregation none,4 input/4 output. The actual Matplotlib PNG was opened and inspected: four correctly ordered bars with zero baseline, correct relative/exact tick heights, visible title/category/value axes and no observed clipping. Matching actual Matplotlib/Vega SVGs are committed. This smoke is not full five-engine/browser acceptance.\n\n![Actual Matplotlib quarterly revenue chart](https://raw.githubusercontent.com/sandeshbagmare/deepviz-agent-toolkit/release/candidate/docs/verification/artifacts/c17-preflight/matplotlib/deepviz-d6qmdxbh/chart.png)\n\n[Matching actual SVG](https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/release/candidate/docs/verification/artifacts/c17-preflight/matplotlib/deepviz-d6qmdxbh/chart.svg)\n\n### Observed local baseline (not remote/final pass)\n\n- Integrated baseline b6abc8d; source-identical import-order-only commit d4ee4e8.\n- Python3.12.16; actual candidate `deepviz/__init__.py` import identity verified. All optional agents/MCP/columnar/dev dependencies installed.\n- `npm ci`, build, typecheck, test exit0;30 passed/0 failed/0 skipped.\n- Generated Python/schema and shipped TS schema check exit0.\n- Strict numeric negative-golden repair4aa3788: Python/schema/cross-language suite390 passed, no skips.\n- Raster analytic silhouette gate exit0, four light/dark permutations, IoU0.99868976 >=0.94; report path identifies local source attribution limitations.\n- Ruff baseline10 import-group failures; nine tests repaired; example import assigned docs owner. Mypy8 baseline errors assigned source owners. Full Python suite/final distributions/browser/10M/remote CI pending.\n\n### Independent agent evidence — draft findings, not fabricated approval\n\n- [N01 independent reviewer](../blob/release/candidate/docs/coordination/reports/N01-data-review.md): concrete correctness findings, real visually inspected PNGs; **changes required** on baseline.\n- [N02 independent reviewer](../blob/release/candidate/docs/coordination/reports/N02-package-review.md): package prompts/CI prerequisite/stale fixtures; **changes required** on baseline.\n- Independent tester A N09 and tester B N10 are actively executing; reports and exact final source will be linked before merge.\n- Twenty actual nested disjoint lanes and two reserved coordinator slots documented in `docs/coordination/C17-live-slots.md`; all count toward max22. No canceled historical session restarted.\n\n### Merge blockers / honest limits\n\n- Resolve independently reproduced data/rendering/packaging/typing defects and rerun all affected checks.\n- Two genuinely distinct non-author reviewer reports and two distinct tester reports on final candidate plus real semantic output are required before merge. Agent reports are not GitHub human approvals and no human-approval gate is invented.\n- Observe actual green Actions on candidate; no remote run existed at baseline audit.\n- Finish actual streaming through10M, real browser console/semantics, actual Deep Agent attachment/stdio MCP and clean installed Python/npm consumer checks.\n-900 legitimate issues not met (remote audit30 total/0 closed). No filler issues, fake closures, unrun tests or package publication.\n\nCurrent execution/handoffs: `docs/coordination/reports/C17-integration.md`. This is an explicitly incomplete draft PR to run real remote CI while productive fixes proceed.\n",
+    "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+    "base_sha": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+    "labels": [],
+    "platform_reviews": {
+      "complete": true,
+      "count": 0,
+      "records": []
+    },
+    "review_comments": {
+      "complete": true,
+      "count": 0,
+      "records": []
+    },
+    "issue_comments": {
+      "complete": true,
+      "count": 0,
+      "records": []
+    }
+  },
+  "branches": {
+    "main": {
+      "sha": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+      "protected": false
+    },
+    "release/candidate": {
+      "sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+      "protected": false
+    }
+  },
+  "head_checks": {
+    "complete": true,
+    "records": [
+      {
+        "id": 140120367285,
+        "name": "Python 3.13 lint, types, unit and integration",
+        "status": "completed",
+        "conclusion": "failure",
+        "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+        "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120367285",
+        "started_at": "2026-11-26T19:06:28Z",
+        "completed_at": "2026-11-26T19:07:19Z"
+      },
+      {
+        "id": 140120367227,
+        "name": "Python 3.12 lint, types, unit and integration",
+        "status": "completed",
+        "conclusion": "failure",
+        "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+        "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120367227",
+        "started_at": "2026-11-26T19:06:28Z",
+        "completed_at": "2026-11-26T19:07:03Z"
+      },
+      {
+        "id": 140120367212,
+        "name": "One-pass scale 1000 records",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+        "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120367212",
+        "started_at": "2026-11-26T19:06:28Z",
+        "completed_at": "2026-11-26T19:06:58Z"
+      },
+      {
+        "id": 140120367146,
+        "name": "Python and npm distribution checks (no publishing)",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+        "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120367146",
+        "started_at": "2026-11-26T19:06:29Z",
+        "completed_at": "2026-11-26T19:07:22Z"
+      },
+      {
+        "id": 140120367140,
+        "name": "Python 3.11 lint, types, unit and integration",
+        "status": "completed",
+        "conclusion": "failure",
+        "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+        "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120367140",
+        "started_at": "2026-11-26T19:06:28Z",
+        "completed_at": "2026-11-26T19:07:08Z"
+      },
+      {
+        "id": 140120367129,
+        "name": "Raster visual regression (semantic pixel comparison)",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+        "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120367129",
+        "started_at": "2026-11-26T19:06:28Z",
+        "completed_at": "2026-11-26T19:07:00Z"
+      },
+      {
+        "id": 140120367106,
+        "name": "One-pass scale 100000 records",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+        "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120367106",
+        "started_at": "2026-11-26T19:07:00Z",
+        "completed_at": "2026-11-26T19:07:30Z"
+      },
+      {
+        "id": 140120367087,
+        "name": "One-pass scale 1000000 records",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+        "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120367087",
+        "started_at": "2026-11-26T19:07:00Z",
+        "completed_at": "2026-11-26T19:07:33Z"
+      },
+      {
+        "id": 140120367044,
+        "name": "One-pass scale 10 records",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+        "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120367044",
+        "started_at": "2026-11-26T19:06:28Z",
+        "completed_at": "2026-11-26T19:06:58Z"
+      },
+      {
+        "id": 140120366979,
+        "name": "One-pass scale 10000000 records",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+        "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120366979",
+        "started_at": "2026-11-26T19:07:33Z",
+        "completed_at": "2026-11-26T19:10:25Z"
+      },
+      {
+        "id": 140120366755,
+        "name": "npm build, types and tests (Node 24)",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+        "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120366755",
+        "started_at": "2026-11-26T19:06:28Z",
+        "completed_at": "2026-11-26T19:06:37Z"
+      },
+      {
+        "id": 140120366571,
+        "name": "evidence",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+        "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106730/job/140120366571",
+        "started_at": "2026-11-26T19:06:28Z",
+        "completed_at": "2026-11-26T19:06:33Z"
+      },
+      {
+        "id": 140120064638,
+        "name": ".github/dependabot.yml",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+        "details_url": "https://dependabot-api.githubapp.com",
+        "started_at": "2026-11-26T19:05:42Z",
+        "completed_at": "2026-11-26T19:05:43Z"
+      }
+    ]
+  },
+  "head_status": {
+    "state": "pending",
+    "total_count": 0,
+    "sha": "340e5c5f68932fd84733c0d925c3be3e40543f16"
+  },
+  "published_tree": {
+    "sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+    "truncated": false,
+    "gallery": [
+      {
+        "path": "docs/verification/artifacts/c17-preflight/matplotlib",
+        "sha": "5add1e88ed9c5ea6f5d3f64efe9e2f8622a09f11",
+        "size": null,
+        "type": "tree"
+      },
+      {
+        "path": "docs/verification/artifacts/c17-preflight/matplotlib/deepviz-d6qmdxbh",
+        "sha": "fbbaf73e05376f59eadd5c0f9700f6fb30ed8f01",
+        "size": null,
+        "type": "tree"
+      },
+      {
+        "path": "docs/verification/artifacts/c17-preflight/matplotlib/deepviz-d6qmdxbh/chart.png",
+        "sha": "09bc4482fc7cc9584e9a43c59cd7a3b558edb85d",
+        "size": 15125,
+        "type": "blob"
+      },
+      {
+        "path": "docs/verification/artifacts/c17-preflight/matplotlib/deepviz-d6qmdxbh/chart.svg",
+        "sha": "43576b31e2dd69d058e13ead3060b3bb19426c82",
+        "size": 21694,
+        "type": "blob"
+      },
+      {
+        "path": "docs/verification/artifacts/c17-preflight/vega",
+        "sha": "b93c6a351ad292051f209f27b52bce5e74e7c83a",
+        "size": null,
+        "type": "tree"
+      },
+      {
+        "path": "docs/verification/artifacts/c17-preflight/vega/deepviz-ktbplv1k",
+        "sha": "b6baa7cad94e3cdefd4ae8bfe8081d2661394c1c",
+        "size": null,
+        "type": "tree"
+      },
+      {
+        "path": "docs/verification/artifacts/c17-preflight/vega/deepviz-ktbplv1k/chart.svg",
+        "sha": "e80784d67ee8d1208f37f398874a654c1ae71a6e",
+        "size": 9320,
+        "type": "blob"
+      }
+    ],
+    "workflows": [
+      ".github/workflows/ci.yml",
+      ".github/workflows/evidence.yml"
+    ]
+  },
+  "published_reports": {
+    "N01-data-review.md": {
+      "git_blob": "298e7a65f2293c7c343656830e4eb88bda653951",
+      "sha256": "34ea007022424550c566a57d338c9afcc4534f3c598843b91e06648929b162f9",
+      "bytes": 19233,
+      "mentions_pr_head": false,
+      "mentions_source_pin": false,
+      "sessions": [
+        "ses_de6da09ecffeMwVLSxt0fA4s3K"
+      ],
+      "excerpts": [
+        {
+          "line": 5,
+          "text": "- Owner/session: N01, nested independent reviewer under C17; actual session `ses_de6da09ecffeMwVLSxt0fA4s3K` read back from C17's report."
+        },
+        {
+          "line": 9,
+          "text": "- Source access: read-only; no production edits, Git mutations, commits, or spawning."
+        },
+        {
+          "line": 14,
+          "text": "- Acceptance checks: independent data/security review, exact source/import identity, concrete reproductions and exit codes, bounded-memory/statistics/parser/loss-disclosure checks, explicit limitations; no final-candidate signoff from historical source."
+        },
+        {
+          "line": 18,
+          "text": "- Status: **evidence submitted; changes required, not approved for release**."
+        },
+        {
+          "line": 19,
+          "text": "- Current action: bounded independent review complete; evidence saved, awaiting source-owner fixes and a new candidate for retest."
+        },
+        {
+          "line": 20,
+          "text": "- Next executable action for C17: assign findings 1–4 to the renderer owner and finding 5/numerical residual to ingestion, integrate scoped fixes, then rerun the exact combined command below on the resulting candidate. N01 made no source fixes."
+        },
+        {
+          "line": 26,
+          "text": "2. `git rev-parse HEAD`, `git rev-parse 'HEAD^{tree}'`, per-source SHA-256 read-back: Git/hash steps succeeded. Source SHA-256: `normalize.py=5ee60ef4a86a3d22b44f43cb7d072953879ee0edb44955fbdc1a932fbc907a0f`; `render.py=b397f65a44305919f4fdc94cd0b8d62aff2b1f939104c844c46d47f0a161f1fa`; `engines.py=809fbc884059451489a2acc3a595796c2341155eb4a2e92e58943acd3913a028`."
+        },
+        {
+          "line": 31,
+          "text": "The integrated pipeline accepts heterogeneous data, reduces it into bounded rows, and compiles those rows for five chart engines. This independent review checks whether numeric meaning, partial-data warnings, stream replay, and resource disclosure survive those boundaries."
+        },
+        {
+          "line": 35,
+          "text": "All line numbers below refer to the first observed integrated source/hashes above. Reproducer file: `docs/coordination/evidence/N01-data-review-20261127/test_independent_data.py`. These are findings on that source, not claims that concurrent fixes are absent."
+        },
+        {
+          "line": 41,
+          "text": "   - If skipped: ordinary frequency heatmaps display false uniform zero intensities across all five adapters sharing `channels` (four native specs executed; Matplotlib visually confirmed below)."
+        },
+        {
+          "line": 47,
+          "text": "   - If skipped: charts assert a false crash to zero, and box/violin statistics can include invented measurements."
+        },
+        {
+          "line": 53,
+          "text": "   - If skipped: changing values without changing input length may leave the displayed histogram unchanged."
+        },
+        {
+          "line": 59,
+          "text": "   - If skipped: merely changing a source from list to iterator changes chart numbers; source streaming and materialized inputs are not semantically equivalent."
+        },
+        {
+          "line": 64,
+          "text": "   - Fix: account for GraphQL envelope errors while traversing/selecting source pages, before path extraction removes metadata."
+        },
+        {
+          "line": 65,
+          "text": "   - If skipped: the explicit path needed for ambiguous responses makes known partial data appear complete."
+        },
+        {
+          "line": 75,
+          "text": "Exit **1**: **8 failed, 2 passed, 0 skipped in 0.49s**. Four failures are engine variants of finding 1; remaining failures reproduce findings 2–5. Passing controls: explicit heatmap color and explicit scalar histogram field. Failure logs were returned directly by the tool; verification artifacts are in the N01-owned paths above. Corrected import-identity probe exited **0**, selecting candidate `__init__.py`, models, normalize, render, and engines under the main checkout with Python **3.12.16** (`.venv/Scripts/python.exe`)."
+        },
+        {
+          "line": 85,
+          "text": "Same interpreter/import environment. Exit **1**: **1 failed, 124 passed, 0 skipped in 4.25s**. This includes the existing generator/high-cardinality tracemalloc controls and installed Arrow/Parquet/IPC tests; their pass does not establish 10M scale or a byte bound. Existing independent test `test_sum_preserves_small_residual_under_large_cancellation_with_documented_tolerance` fails: float sequence `[1e16,1.0,-1e16]` returns `0.0`, independent `math.fsum` oracle gives `1.0`; integer control returns `1`. Root source `normalize.py:497-498` uses naïve repeated addition. **Additional P2 numerical-accuracy finding (not N01-authored original test):** use bounded compensated accumulation for sums (and derive robust mean consistently), with the existing test retained. C17/ingestion owner must resolve or explicitly document a deliberate tolerance policy; the current suite is red."
+        },
+        {
+          "line": 87,
+          "text": "## Actual visual and resource evidence"
+        },
+        {
+          "line": 89,
+          "text": "Command: `.venv/Scripts/python.exe docs/coordination/evidence/N01-data-review-20261127/probe_artifacts.py` with the same import/bytecode environment and N01-owned `MPLCONFIGDIR=C:/Users/bagma/AppData/Local/Temp/opencode/N01-data-review-20261127-mpl`. Exit **0** (diagnostic generation, not passing acceptance). `artifact-evidence.json` records full paths, counts, warnings, source hashes, SHA/tree before and after; source remained **b6abc8d / 8bf9b428** and all four module hashes were unchanged throughout generation."
+        },
+        {
+          "line": 93,
+          "text": "- `docs/coordination/evidence/N01-data-review-20261127/figures/count-heatmap/deepviz-ou24z73t/chart.png`: both North/South squares have the same zero color; colorbar is approximately −0.1..0.1 despite source counts 2 and 1. Finding 1 is now also visually reproduced in the fifth engine. Artifact warnings empty."
+        },
+        {
+          "line": 99,
+          "text": "**Existing resource risk R5 concretely confirmed, not counted as a newly discovered issue:** one table row with a **2,097,152-byte** string cell is fully retained with `max_points=10` and **no warning**. This is a small byte-policy probe, not an exploit, memory benchmark, or claim of unbounded row-state growth. The normalizer bounds rows/keys/depth but not cell/total bytes. The artifact evidence records lengths rather than storing the long input. Owner/security/performance lanes must set or document the byte envelope; row caps alone are not a byte bound."
+        },
+        {
+          "line": 103,
+          "text": "Command: `.venv/Scripts/python.exe -m pytest docs/coordination/evidence/N01-data-review-20261127/test_independent_controls.py -q -s -p no:cacheprovider --basetemp C:/Users/bagma/AppData/Local/Temp/opencode/N01-data-review-20261127-controls`, with the same candidate import/bytecode environment. Exit **0**: **10 passed, 0 skipped in 7.46s**."
+        },
+        {
+          "line": 107,
+          "text": "- JSONL TextIO GraphQL pages preserved all nonnull rows and disclosed the skipped null node."
+        },
+        {
+          "line": 108,
+          "text": "- Plain URL/path-like strings did not invoke `Path.open`; model execution/remote-source extra fields were rejected; ToolSession without configured data_dir rejected explicit file references and path text."
+        },
+        {
+          "line": 113,
+          "text": "- Candidate integration is concurrent; current checked source may not be the final candidate. No final release signoff."
+        },
+        {
+          "line": 114,
+          "text": "- No full Python/npm/remote CI/build/package gate run by N01; no Git writes, dependency installs or source edits."
+        },
+        {
+          "line": 129,
+          "text": "Fresh combined result: exit **1**, **9 failed, 136 passed, 0 skipped in 21.43s**. All five N01 findings and the preexisting independent floating-sum residual failure reproduce together. The warmed-process 100K tracemalloc probe reported **96,616 bytes** (earlier isolated-control run 218,370 bytes); this difference is reported, not hidden, and neither number is total process RSS. Full failure log saved at `docs/coordination/evidence/N01-data-review-20261127/final-pytest.log`."
+        },
+        {
+          "line": 131,
+          "text": "**Verdict: fix findings 1–5 and resolve the existing numerical-accuracy regression before acceptance.** No source/Git/remote modifications, spawning, final-candidate approval, or issue closure performed by N01. Byte/disk resource envelope remains an explicitly open cross-lane gate, not a new invented issue count."
+        },
+        {
+          "line": 133,
+          "text": "### Final source continuity and fresh handoff check"
+        },
+        {
+          "line": 138,
+          "text": "- Corrected bounded comparison, `git diff b6abc8d9b80a8dd4e3813e5d4ef28f17f1788835 -- <four reviewed production modules>`, returned **no changes**. Comparing the three test modules against that same baseline showed only those blank lines. Full comparisons, final dirty state, SHA and tree are saved in `handoff-identity.json` (exit0). The remaining dirty paths were recovery/config/coordination records, not reviewed product source."
+        },
+        {
+          "line": 146,
+          "text": "Same absolute candidate PYTHONPATH and bytecode-disabled environment. Exit **1**: **8 failed, 12 passed, 0 skipped in 16.71s**. All five original N01 findings persist; the ten independent positive controls and two explicit-mapping controls still pass. Historical combined/visual evidence remains applicable only to these explicitly unchanged four production modules; no future source revision is approved by continuity assumption."
+        },
+        {
+          "line": 148,
+          "text": "**Owner handoff:** N05/renderer resolves findings 1–4; N04/ingestion resolves finding5 plus the existing numerical residual failure. N17/security/N11/performance should disposition the already-recorded byte/disk-envelope risk. C17 decides integration/issue mapping; N01 has no authority to edit their source or close issues. Ready for a later exact-candidate independent retest; no execution blocker prevented this bounded review."
+        }
+      ]
+    },
+    "N02-package-review.md": {
+      "git_blob": "34e52180f5cf5dec44b711dc6c5d57a4a00b2594",
+      "sha256": "185c948330a8894f10e7ab8c6fd99d0d8f5fbb1e902dc7c12495860b3b656b46",
+      "bytes": 11606,
+      "mentions_pr_head": false,
+      "mentions_source_pin": false,
+      "sessions": [
+        "ses_de6d9dcf1ffe5D9TNNF3B2hP4V"
+      ],
+      "excerpts": [
+        {
+          "line": 5,
+          "text": "- Owner: N02, independent nested QA/reviewer under C17; actual session `ses_de6d9dcf1ffe5D9TNNF3B2hP4V` recorded in C17's report."
+        },
+        {
+          "line": 8,
+          "text": "- Source policy: read-only production/source/Git review; no commits, no spawning, no sibling-worktree mutations."
+        },
+        {
+          "line": 11,
+          "text": "- Branch: `release/candidate`; independently observed integrated baseline SHA `b6abc8d9b80a8dd4e3813e5d4ef28f17f1788835`, tree `8bf9b42841e1171e2e3827685bc17ef44535aa1c`."
+        },
+        {
+          "line": 13,
+          "text": "- Frozen verification snapshot: `C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\N02-package-review-b6abc8d\\source`, created read-only from committed Git archive; all builds/check artifacts stay under the N02 directory. No sibling worktree writes."
+        },
+        {
+          "line": 19,
+          "text": "- Record exact source identity, commands, exit codes, observed outputs, limitations, and severity/file/line/reproducer for findings."
+        },
+        {
+          "line": 20,
+          "text": "- Prove imports resolve to tested source; do not treat old-source findings as candidate signoff."
+        },
+        {
+          "line": 25,
+          "text": "- Status: in progress; required RESUME/AGENTS/STATE/ROSTER/BRIEF/REQUEST/design/plan/dependency-gates and C17/WORKLOG handoffs read. C17 reports complete baseline integrated; no gate pass yet."
+        },
+        {
+          "line": 26,
+          "text": "- Current action: Python clean-wheel prompt resource failure reproduced; auditing CI cross-language discovery and MCP boundaries next."
+        },
+        {
+          "line": 27,
+          "text": "- Next executable action: reproduce Python CI's missing-built-npm prerequisite with a pristine TS archive and `tests/test_cross_language_contract.py`, then run targeted trust-boundary probes on the frozen source."
+        },
+        {
+          "line": 31,
+          "text": "- Identity commands: `git status --short --branch`, `git log -8 --oneline`, `git worktree list --porcelain` exited 0; observed 24 worktrees. Initial unquoted `git rev-parse HEAD HEAD^{tree}` was mangled by PowerShell and failed; corrected `git rev-parse HEAD 'HEAD^{tree}'` exited 0 and yielded SHA/tree above."
+        },
+        {
+          "line": 33,
+          "text": "- `git archive --format=zip --output <N02-root>\\source.zip <full-SHA>` and `Expand-Archive ...\\source`: exit 0. Frozen source identity is the committed tree, independent of concurrent candidate changes."
+        },
+        {
+          "line": 44,
+          "text": "- **What this is:** `read_prompt()` opens `deepviz/resources/prompts/v1/{system,request}.md` (`python/deepviz/src/deepviz/__init__.py:16-20`); README `135-153` uses this API to initialize the documented Deep Agent."
+        },
+        {
+          "line": 46,
+          "text": "- **Fix:** Package `prompts/v1` at the resource location the API uses, and exercise both prompt reads in an installed-wheel consumer. No API redesign is needed."
+        },
+        {
+          "line": 47,
+          "text": "- **If we skip it:** The published/source-built Deep Agent example crashes before creating its agent."
+        },
+        {
+          "line": 48,
+          "text": "- **Exact repro:** From frozen source, project Python `-B -m build --outdir ..\\python-dist` (exit 0); `-m twine check --strict ..\\python-dist\\*` (exit 0); create fresh `..\\python-consumer`, install the wheel with ordinary dependencies (exit 0); run `..\\python-consumer\\Scripts\\python.exe -I -B ..\\verify_installed.py` (probe exit 0, both intentional error observations saved). Probe and JSON are under the N02 artifact root. Wheel SHA-256 `14025e5d3afcbad656ae8a9625b98360bf8349a34e06987f85d62e871cf6bb08`."
+        },
+        {
+          "line": 49,
+          "text": "- **Import identity:** `...\\N02-package-review-b6abc8d\\python-consumer\\Lib\\site-packages\\deepviz\\__init__.py`; `mcp`, `deepagents`, `langchain_core` absent there, proving base imports/rendering do not accidentally use those shared optional dependencies."
+        },
+        {
+          "line": 57,
+          "text": "- **Exact repro:** Git-archive only `packages/deepviz` from the exact baseline into N02 `ci-pristine`; set `PYTHONPATH=<N02-root>\\source\\python\\deepviz\\src`, `DEEPVIZ_TS_PACKAGE_ROOT=<N02-root>\\ci-pristine\\packages\\deepviz`, `PYTHONDONTWRITEBYTECODE=1`; run project Python `-B -m pytest <N02-root>\\source\\tests\\test_cross_language_contract.py::test_public_npm_validator_matches_python -q --maxfail=1 --junitxml=<N02-root>\\ci-pristine-parity.xml -o cache_dir=<N02-root>\\.pytest-cache-ci`. Exit 1; 1 setup error at `[defaults]`, not a semantic parity result. Text log `ci-pristine-parity.txt`. Python import printed and confirmed the frozen source path, not main editable source. This local Windows prerequisite reproduction is not a remote Actions run."
+        },
+        {
+          "line": 65,
+          "text": "- **Exact repro:** With `PYTHONPATH=<frozen-source>\\python\\deepviz\\src`, `DEEPVIZ_TS_PACKAGE_ROOT=<built-frozen-source>\\packages\\deepviz`, `PYTHONDONTWRITEBYTECODE=1`, `MPLBACKEND=Agg`, project Python `-B -m pytest tests/test_models.py tests/test_schema_contract.py tests/test_cross_language_contract.py python/deepviz/tests/test_integrations.py python/deepviz/tests/test_mcp_transport.py -q --junitxml=<N02-root>\\targeted-tests.xml --basetemp=<N02-root>\\pytest-temp -o cache_dir=<N02-root>\\.pytest-cache`. Exit 1; **13 failed, 451 passed, 1 skipped**, 79.18 seconds. Durable full failure log `targeted-tests.txt`; JUnit XML records exact cases. Skip reason inspection pending."
+        },
+        {
+          "line": 69,
+          "text": "All commands below ran in the N02 frozen snapshot unless noted; baseline SHA/tree above applies."
+        },
+        {
+          "line": 74,
+          "text": "| `npm run build` | 0 | Built source TypeScript |"
+        },
+        {
+          "line": 76,
+          "text": "| `npm test` | 0; 30 passed, 0 failed, 0 skipped | Included normalization/render/tool-helper tests, not browser acceptance |"
+        },
+        {
+          "line": 82,
+          "text": "| Fresh virtualenv wheel install | 0 | Base dependencies installed without shared site-packages |"
+        },
+        {
+          "line": 86,
+          "text": "| Targeted Python/model/schema/parity/agent/MCP suite with npm built | 1; 13 failed, 451 passed, 1 skipped | Stale golden fixtures (finding 3); current runtime Python/TS validator comparisons passed |"
+        },
+        {
+          "line": 88,
+          "text": "- Durable artifacts: `source.zip`, `source/`, `python-dist/`, `python-consumer/`, `verify_installed.py`, `installed-wheel-results.json`, `wheel-render/deepviz-9tbxz9ct/{chart.png,chart.svg,chart.html,manifest.json}` under `C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\N02-package-review-b6abc8d`."
+        }
+      ]
+    },
+    "N09-static-tester.md": {
+      "git_blob": "a15cbd43396e7c71b8e2c9ec396fab7b6f75f2c6",
+      "sha256": "871b362c4c2efc94f63a93a4c9b4862f466e7c1171b49ae5ee759e71bbac65f1",
+      "bytes": 11088,
+      "mentions_pr_head": false,
+      "mentions_source_pin": false,
+      "sessions": [],
+      "excerpts": [
+        {
+          "line": 3,
+          "text": "- Date: 2026-11-27. Owner: N09 independent tester, dispatched by C17; session ID not exposed to this child prompt."
+        },
+        {
+          "line": 4,
+          "text": "- Status: in progress; initial checkpoint before candidate execution."
+        },
+        {
+          "line": 5,
+          "text": "- Assignment source: `docs/coordination/tasks/N09-static-tester.md` and `tasks/C17-wave-common.md` read first. Required recovery, contract, design, plan, and dependency gates read."
+        },
+        {
+          "line": 6,
+          "text": "- Isolated worktree created: `C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\deepviz-n09`; branch `test/n09-static`; base/current `b6abc8d9b80a8dd4e3813e5d4ef28f17f1788835`; initial own dirty state empty. Main observed at same SHA on `release/candidate` with existing `AGENTS.md`, `opencode.json`, `RESUME.md`, and coordination changes; left untouched except this report."
+        },
+        {
+          "line": 8,
+          "text": "- Acceptance: prove own candidate source import using main `.venv/Scripts/python.exe` with explicit own `PYTHONPATH`; execute full Python acceptance plus static semantics/input/theme/safety checks; generate known-value bar/line/scatter/area/pie/heatmap/dashboard/theme SVG and PNG; inspect actual visual marks/axes/legends and machine-readable semantics. Record exact commands, exits and pass/fail/skip totals; preserve failures and route renderer findings to N05 through this saved report."
+        },
+        {
+          "line": 9,
+          "text": "- Current action: complete Python suite is running asynchronously; preparing independent known-value static-output probes and visual gallery in parallel."
+        },
+        {
+          "line": 10,
+          "text": "- Completed checks: `git worktree add -b test/n09-static <own path> b6abc8d9b80a8dd4e3813e5d4ef28f17f1788835` exit 0. Identity assertion exit 0: all four imported `deepviz`, `render`, `normalize`, and `engines` modules resolve under the N09 worktree, never main editable source. Main interpreter Python 3.12.16, Matplotlib 3.11.2, Plotly 6.9.0, vl-convert 1.9.0.post1, PyArrow 26.0.1, deepagents 0.7.42, MCP 1.30.0. Schema SHA-256 `f5f0316b592f78f5dc058fce123cd9a7c683d2259685f56524724af27880135a`."
+        },
+        {
+          "line": 11,
+          "text": "- Evidence root (ignored, unique): own `artifacts/local/N09/run-b6abc8d-20261127/`; `source-identity.json` records clean-source identity and dependency versions."
+        },
+        {
+          "line": 20,
+          "text": "- Current action: execute independent static quality checks and investigate existing semantic assertions while full suite runs; gallery visual inspection follows completed output."
+        },
+        {
+          "line": 27,
+          "text": "- Read-only isolation command generated native spec, compiled Vega, scenegraph, public SVG and public PNG under `<evidence>/area-investigation/`; exit 0. `vega-compiled.json` contains a `stack` transform on `_y`, grouped by `_x`, output `_y_start`/`_y_end`, offset `zero`. Source cause: `engines.py:_vega` sets `encoding.y.stack=None` only for grouped bars, not areas (lines 371–378)."
+        },
+        {
+          "line": 28,
+          "text": "- **Actual visual inspection completed:** `area-investigation/vega-area.png` (rasterized exported SVG) and `area-investigation/matplotlib/deepviz-jyimkkoq/chart.png`. The former visibly shows 7 cumulative top; the latter correct independent endpoints. Both carry East/West legends and real axes. Public Vega source SVG: `area-investigation/vega/deepviz-t009x2o6/chart.svg`."
+        },
+        {
+          "line": 35,
+          "text": "- `python -m build --no-isolation --outdir <evidence>/dist` exit 1: environment blocker **hatchling is not installed** in main venv, backend `hatchling.build` unavailable. No install attempted under the no-shared-install constraint; C17 owns dependency resolution. This is not a successful package build or an established production packaging defect."
+        },
+        {
+          "line": 40,
+          "text": "- Focused command (explicit own source): `python -m pytest -ra python/deepviz/tests/test_backend_antv.py python/deepviz/tests/test_backend_plotly.py python/deepviz/tests/test_backend_vega.py python/deepviz/tests/test_aggregation_semantics.py python/deepviz/tests/test_n09_vega_area_regression.py --junitxml=<evidence>/focused-renderer.xml`; exit **1; 57 passed, 12 failed, 0 skipped in 26.40s**. Full trace retained in `focused-renderer.log`, extracted UTF-8 `focused-failures.json`."
+        },
+        {
+          "line": 44,
+          "text": "- First N09 gallery run's viewport-corner oracle treated transparent SVG padding as black via `RGBA.convert('RGB')`; corrected the test to composite alpha on the declared theme background, **not a production fix**. Scoped rerun: **46 passed, 1 failed, 0 skipped in87.38s**; sole remaining failure is the independent negative-bar text parser expecting ASCII `-4` whereas Vega correctly renders Unicode `−4`. Corrected that test parser to normalize the minus sign; rerun pending. Existing artifact data/geometry retain the negative measurement."
+        },
+        {
+          "line": 50,
+          "text": "- Vega exported SVG displays **both panels light** with no warning, despite explicit dark child. `render.py:104–107` pops `$schema`, `config`, and `background` from the same child native payloads used in the manifest; exported SVG contains no `#171b26` dark background and manifest children lose all backgrounds. Actual inspected PNG `mixed-dashboard/vega-mixed-theme.png`, public source `mixed-dashboard/vega/deepviz-m2c71tz3/chart.svg`."
+        },
+        {
+          "line": 51,
+          "text": "- Matplotlib honors the first plot's dark face but paints its title/x/y labels near-white on the **light parent figure outside the plot**, making them nearly invisible. Actual inspected public PNG `mixed-dashboard/matplotlib/deepviz-nbr9ib6b/chart.png` clearly shows the lost title/outer label contrast. Source: child foreground is used for outside-axes text while figure background comes from parent (`engines.py:155–167,172,210–211`)."
+        }
+      ]
+    },
+    "N10-browser-tester.md": {
+      "git_blob": "f421b206ca0ea242dbd5e15fd4373c91c2346c25",
+      "sha256": "0332caabef71efa3a29cf1430eb434e0570bfbbe292367dfd7d9df0b8e70fbc8",
+      "bytes": 5412,
+      "mentions_pr_head": false,
+      "mentions_source_pin": false,
+      "sessions": [],
+      "excerpts": [
+        {
+          "line": 3,
+          "text": "- Owner/session: N10, external child session (session identifier not provided)."
+        },
+        {
+          "line": 5,
+          "text": "- Assigned base: `b6abc8d`; current SHA and dirty state pending verification."
+        },
+        {
+          "line": 7,
+          "text": "- Current action: read common contract and required recovery/design/dependency records, then create isolated worktree and inspect browser harness."
+        },
+        {
+          "line": 8,
+          "text": "- Acceptance: actual engine dependencies load, browser console errors fail; known-value Python five-engine and TypeScript browser semantic/screenshot inspection; exact source identity, commands, failures, limitations and artifact evidence recorded."
+        },
+        {
+          "line": 14,
+          "text": "In progress. No test or rendering success claimed."
+        },
+        {
+          "line": 16,
+          "text": "## Checkpoint 1 — isolated source and dependency setup"
+        },
+        {
+          "line": 23,
+          "text": "- Next action: prepare independent known-value Python/TS artifact and real-browser verifier while the own dependency operation finishes; then build and run with resource/console capture."
+        },
+        {
+          "line": 29,
+          "text": "- Proved imported source is `deepviz-n10/python/deepviz/src/deepviz/__init__.py`, baseline full SHA unchanged. Versions: Python3.12.16, Matplotlib3.11.2, Plotly6.9.0, vl-convert-python1.9.0.post1, Pydantic2.14.4; schema SHA256 `f5f0316b592f78f5dc058fce123cd9a7c683d2259685f56524724af27880135a`."
+        },
+        {
+          "line": 30,
+          "text": "- Native dependencies are actual installed engines, no stubs. No product source edits."
+        },
+        {
+          "line": 31,
+          "text": "- Next executable action: preserve first output, rerun corrected generator, finish own npm/build, run actual Chromium resource/console/semantic inspection."
+        },
+        {
+          "line": 36,
+          "text": "- Evidence root: `C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\deepviz-n10\\artifacts\\local\\N10`. `python-manifest.json` records every source input/spec, paths, native manifest and exact import/schema/package identity. `python-generate.log` contains current successful generation command output. Earlier harness failure preserved as `python-generate-harness-error.log` and `python-manifest-harness-error.json`; product output folders remain untouched."
+        },
+        {
+          "line": 38,
+          "text": "- Independent browser driver `tests/browser/n10/inspect.mjs` prepared: unmodified default HTML through localhost, external CDN resources requested normally (no route interception/stubs), script response SHA/bytes/status, true engine versions, actual native Plotly calcdata/ECharts layout, SVG geometry/text and observational canvas text capture, real screenshots and raster summaries. Optional TS local-asset mode uses supported public render options and real npm library bytes, explicitly not default-network acceptance."
+        }
+      ]
+    }
+  },
+  "workflow_runs": {
+    "complete": true,
+    "records": [
+      {
+        "id": 45881106730,
+        "name": "PR evidence policy",
+        "event": "pull_request",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+        "head_branch": "release/candidate",
+        "run_attempt": 1,
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106730",
+        "created_at": "2026-11-26T19:06:25Z",
+        "updated_at": "2026-11-26T19:06:33Z",
+        "jobs_complete": true,
+        "jobs": [
+          {
+            "id": 140120366571,
+            "name": "evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+            "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106730/job/140120366571",
+            "steps": [
+              {
+                "number": 1,
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:28Z",
+                "completed_at": "2026-11-26T19:06:29Z"
+              },
+              {
+                "number": 2,
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:29Z",
+                "completed_at": "2026-11-26T19:06:30Z"
+              },
+              {
+                "number": 3,
+                "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:30Z",
+                "completed_at": "2026-11-26T19:06:30Z"
+              },
+              {
+                "number": 4,
+                "name": "Validate event file without interpolating untrusted PR body into shell",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:30Z",
+                "completed_at": "2026-11-26T19:06:30Z"
+              },
+              {
+                "number": 7,
+                "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:30Z",
+                "completed_at": "2026-11-26T19:06:30Z"
+              },
+              {
+                "number": 8,
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:30Z",
+                "completed_at": "2026-11-26T19:06:30Z"
+              },
+              {
+                "number": 9,
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:30Z",
+                "completed_at": "2026-11-26T19:06:30Z"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 45881106713,
+        "name": "Verification",
+        "event": "pull_request",
+        "status": "completed",
+        "conclusion": "failure",
+        "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+        "head_branch": "release/candidate",
+        "run_attempt": 1,
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713",
+        "created_at": "2026-11-26T19:06:25Z",
+        "updated_at": "2026-11-26T19:10:26Z",
+        "jobs_complete": true,
+        "jobs": [
+          {
+            "id": 140120366755,
+            "name": "npm build, types and tests (Node 24)",
+            "status": "completed",
+            "conclusion": "success",
+            "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+            "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120366755",
+            "steps": [
+              {
+                "number": 1,
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:28Z",
+                "completed_at": "2026-11-26T19:06:29Z"
+              },
+              {
+                "number": 2,
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:29Z",
+                "completed_at": "2026-11-26T19:06:30Z"
+              },
+              {
+                "number": 3,
+                "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:30Z",
+                "completed_at": "2026-11-26T19:06:30Z"
+              },
+              {
+                "number": 4,
+                "name": "Run npm ci",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:30Z",
+                "completed_at": "2026-11-26T19:06:33Z"
+              },
+              {
+                "number": 5,
+                "name": "Run npm run build",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:33Z",
+                "completed_at": "2026-11-26T19:06:34Z"
+              },
+              {
+                "number": 6,
+                "name": "Run npm run typecheck",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:34Z",
+                "completed_at": "2026-11-26T19:06:34Z"
+              },
+              {
+                "number": 7,
+                "name": "Run npm test",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:34Z",
+                "completed_at": "2026-11-26T19:06:34Z"
+              },
+              {
+                "number": 13,
+                "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:34Z",
+                "completed_at": "2026-11-26T19:06:36Z"
+              },
+              {
+                "number": 14,
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:36Z",
+                "completed_at": "2026-11-26T19:06:36Z"
+              },
+              {
+                "number": 15,
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:36Z",
+                "completed_at": "2026-11-26T19:06:36Z"
+              }
+            ]
+          },
+          {
+            "id": 140120366979,
+            "name": "One-pass scale 10000000 records",
+            "status": "completed",
+            "conclusion": "success",
+            "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+            "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120366979",
+            "steps": [
+              {
+                "number": 1,
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:34Z",
+                "completed_at": "2026-11-26T19:07:36Z"
+              },
+              {
+                "number": 2,
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:36Z",
+                "completed_at": "2026-11-26T19:07:41Z"
+              },
+              {
+                "number": 3,
+                "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:41Z",
+                "completed_at": "2026-11-26T19:07:48Z"
+              },
+              {
+                "number": 4,
+                "name": "Run python -m pip install -e '.[dev]'",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:48Z",
+                "completed_at": "2026-11-26T19:08:04Z"
+              },
+              {
+                "number": 5,
+                "name": "Assert full stream consumption, exact counts, bounded records and peak memory",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:08:04Z",
+                "completed_at": "2026-11-26T19:10:21Z"
+              },
+              {
+                "number": 6,
+                "name": "Preserve measured counts, elapsed time and memory methodology",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:10:21Z",
+                "completed_at": "2026-11-26T19:10:23Z"
+              },
+              {
+                "number": 11,
+                "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:10:23Z",
+                "completed_at": "2026-11-26T19:10:23Z"
+              },
+              {
+                "number": 12,
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:10:23Z",
+                "completed_at": "2026-11-26T19:10:23Z"
+              },
+              {
+                "number": 13,
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:10:23Z",
+                "completed_at": "2026-11-26T19:10:23Z"
+              }
+            ]
+          },
+          {
+            "id": 140120367044,
+            "name": "One-pass scale 10 records",
+            "status": "completed",
+            "conclusion": "success",
+            "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+            "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120367044",
+            "steps": [
+              {
+                "number": 1,
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:29Z",
+                "completed_at": "2026-11-26T19:06:29Z"
+              },
+              {
+                "number": 2,
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:29Z",
+                "completed_at": "2026-11-26T19:06:30Z"
+              },
+              {
+                "number": 3,
+                "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:30Z",
+                "completed_at": "2026-11-26T19:06:31Z"
+              },
+              {
+                "number": 4,
+                "name": "Run python -m pip install -e '.[dev]'",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:31Z",
+                "completed_at": "2026-11-26T19:06:52Z"
+              },
+              {
+                "number": 5,
+                "name": "Assert full stream consumption, exact counts, bounded records and peak memory",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:52Z",
+                "completed_at": "2026-11-26T19:06:53Z"
+              },
+              {
+                "number": 6,
+                "name": "Preserve measured counts, elapsed time and memory methodology",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:53Z",
+                "completed_at": "2026-11-26T19:06:54Z"
+              },
+              {
+                "number": 11,
+                "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:54Z",
+                "completed_at": "2026-11-26T19:06:56Z"
+              },
+              {
+                "number": 12,
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:56Z",
+                "completed_at": "2026-11-26T19:06:56Z"
+              },
+              {
+                "number": 13,
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:56Z",
+                "completed_at": "2026-11-26T19:06:56Z"
+              }
+            ]
+          },
+          {
+            "id": 140120367087,
+            "name": "One-pass scale 1000000 records",
+            "status": "completed",
+            "conclusion": "success",
+            "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+            "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120367087",
+            "steps": [
+              {
+                "number": 1,
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:01Z",
+                "completed_at": "2026-11-26T19:07:01Z"
+              },
+              {
+                "number": 2,
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:01Z",
+                "completed_at": "2026-11-26T19:07:02Z"
+              },
+              {
+                "number": 3,
+                "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:02Z",
+                "completed_at": "2026-11-26T19:07:05Z"
+              },
+              {
+                "number": 4,
+                "name": "Run python -m pip install -e '.[dev]'",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:05Z",
+                "completed_at": "2026-11-26T19:07:18Z"
+              },
+              {
+                "number": 5,
+                "name": "Assert full stream consumption, exact counts, bounded records and peak memory",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:18Z",
+                "completed_at": "2026-11-26T19:07:29Z"
+              },
+              {
+                "number": 6,
+                "name": "Preserve measured counts, elapsed time and memory methodology",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:29Z",
+                "completed_at": "2026-11-26T19:07:30Z"
+              },
+              {
+                "number": 11,
+                "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:30Z",
+                "completed_at": "2026-11-26T19:07:30Z"
+              },
+              {
+                "number": 12,
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:30Z",
+                "completed_at": "2026-11-26T19:07:31Z"
+              },
+              {
+                "number": 13,
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:31Z",
+                "completed_at": "2026-11-26T19:07:31Z"
+              }
+            ]
+          },
+          {
+            "id": 140120367106,
+            "name": "One-pass scale 100000 records",
+            "status": "completed",
+            "conclusion": "success",
+            "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+            "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120367106",
+            "steps": [
+              {
+                "number": 1,
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:01Z",
+                "completed_at": "2026-11-26T19:07:01Z"
+              },
+              {
+                "number": 2,
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:01Z",
+                "completed_at": "2026-11-26T19:07:02Z"
+              },
+              {
+                "number": 3,
+                "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:02Z",
+                "completed_at": "2026-11-26T19:07:04Z"
+              },
+              {
+                "number": 4,
+                "name": "Run python -m pip install -e '.[dev]'",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:04Z",
+                "completed_at": "2026-11-26T19:07:25Z"
+              },
+              {
+                "number": 5,
+                "name": "Assert full stream consumption, exact counts, bounded records and peak memory",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:25Z",
+                "completed_at": "2026-11-26T19:07:27Z"
+              },
+              {
+                "number": 6,
+                "name": "Preserve measured counts, elapsed time and memory methodology",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:27Z",
+                "completed_at": "2026-11-26T19:07:28Z"
+              },
+              {
+                "number": 11,
+                "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:28Z",
+                "completed_at": "2026-11-26T19:07:28Z"
+              },
+              {
+                "number": 12,
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:28Z",
+                "completed_at": "2026-11-26T19:07:29Z"
+              },
+              {
+                "number": 13,
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:29Z",
+                "completed_at": "2026-11-26T19:07:29Z"
+              }
+            ]
+          },
+          {
+            "id": 140120367129,
+            "name": "Raster visual regression (semantic pixel comparison)",
+            "status": "completed",
+            "conclusion": "success",
+            "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+            "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120367129",
+            "steps": [
+              {
+                "number": 1,
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:29Z",
+                "completed_at": "2026-11-26T19:06:29Z"
+              },
+              {
+                "number": 2,
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:29Z",
+                "completed_at": "2026-11-26T19:06:30Z"
+              },
+              {
+                "number": 3,
+                "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:30Z",
+                "completed_at": "2026-11-26T19:06:31Z"
+              },
+              {
+                "number": 4,
+                "name": "Run python -m pip install -e '.[dev]'",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:31Z",
+                "completed_at": "2026-11-26T19:06:56Z"
+              },
+              {
+                "number": 5,
+                "name": "Compare actual Matplotlib PNG pixels to analytic silhouettes",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:56Z",
+                "completed_at": "2026-11-26T19:06:57Z"
+              },
+              {
+                "number": 6,
+                "name": "Preserve actual images and comparison report",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:57Z",
+                "completed_at": "2026-11-26T19:06:58Z"
+              },
+              {
+                "number": 11,
+                "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:58Z",
+                "completed_at": "2026-11-26T19:06:59Z"
+              },
+              {
+                "number": 12,
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:59Z",
+                "completed_at": "2026-11-26T19:06:59Z"
+              },
+              {
+                "number": 13,
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:59Z",
+                "completed_at": "2026-11-26T19:06:59Z"
+              }
+            ]
+          },
+          {
+            "id": 140120367140,
+            "name": "Python 3.11 lint, types, unit and integration",
+            "status": "completed",
+            "conclusion": "failure",
+            "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+            "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120367140",
+            "steps": [
+              {
+                "number": 1,
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:29Z",
+                "completed_at": "2026-11-26T19:06:29Z"
+              },
+              {
+                "number": 2,
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:29Z",
+                "completed_at": "2026-11-26T19:06:30Z"
+              },
+              {
+                "number": 3,
+                "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:30Z",
+                "completed_at": "2026-11-26T19:06:31Z"
+              },
+              {
+                "number": 4,
+                "name": "Install all integration dependencies (no live service credentials)",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:31Z",
+                "completed_at": "2026-11-26T19:07:06Z"
+              },
+              {
+                "number": 5,
+                "name": "Lint",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-11-26T19:07:06Z",
+                "completed_at": "2026-11-26T19:07:06Z"
+              },
+              {
+                "number": 6,
+                "name": "Typecheck package and verification scripts",
+                "status": "completed",
+                "conclusion": "skipped",
+                "started_at": "2026-11-26T19:07:06Z",
+                "completed_at": "2026-11-26T19:07:06Z"
+              },
+              {
+                "number": 7,
+                "name": "Check generated schema without changing files",
+                "status": "completed",
+                "conclusion": "skipped",
+                "started_at": "2026-11-26T19:07:06Z",
+                "completed_at": "2026-11-26T19:07:06Z"
+              },
+              {
+                "number": 8,
+                "name": "Test CI gate negative controls",
+                "status": "completed",
+                "conclusion": "skipped",
+                "started_at": "2026-11-26T19:07:06Z",
+                "completed_at": "2026-11-26T19:07:06Z"
+              },
+              {
+                "number": 9,
+                "name": "Unit and contract tests",
+                "status": "completed",
+                "conclusion": "skipped",
+                "started_at": "2026-11-26T19:07:06Z",
+                "completed_at": "2026-11-26T19:07:06Z"
+              },
+              {
+                "number": 10,
+                "name": "Integration tests",
+                "status": "completed",
+                "conclusion": "skipped",
+                "started_at": "2026-11-26T19:07:06Z",
+                "completed_at": "2026-11-26T19:07:06Z"
+              },
+              {
+                "number": 11,
+                "name": "Preserve test reports for diagnosis, not as a substitute for success",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:06Z",
+                "completed_at": "2026-11-26T19:07:06Z"
+              },
+              {
+                "number": 21,
+                "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "skipped",
+                "started_at": "2026-11-26T19:07:06Z",
+                "completed_at": "2026-11-26T19:07:06Z"
+              },
+              {
+                "number": 22,
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:06Z",
+                "completed_at": "2026-11-26T19:07:06Z"
+              },
+              {
+                "number": 23,
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:06Z",
+                "completed_at": "2026-11-26T19:07:06Z"
+              }
+            ]
+          },
+          {
+            "id": 140120367146,
+            "name": "Python and npm distribution checks (no publishing)",
+            "status": "completed",
+            "conclusion": "success",
+            "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+            "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120367146",
+            "steps": [
+              {
+                "number": 1,
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:30Z",
+                "completed_at": "2026-11-26T19:06:33Z"
+              },
+              {
+                "number": 2,
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:33Z",
+                "completed_at": "2026-11-26T19:06:38Z"
+              },
+              {
+                "number": 3,
+                "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:38Z",
+                "completed_at": "2026-11-26T19:06:39Z"
+              },
+              {
+                "number": 4,
+                "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:39Z",
+                "completed_at": "2026-11-26T19:06:47Z"
+              },
+              {
+                "number": 5,
+                "name": "Run python -m pip install '.[dev]'",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:47Z",
+                "completed_at": "2026-11-26T19:07:09Z"
+              },
+              {
+                "number": 6,
+                "name": "Run python -m build",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:09Z",
+                "completed_at": "2026-11-26T19:07:11Z"
+              },
+              {
+                "number": 7,
+                "name": "Run python -m twine check --strict dist/*",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:11Z",
+                "completed_at": "2026-11-26T19:07:12Z"
+              },
+              {
+                "number": 8,
+                "name": "Run npm ci",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:12Z",
+                "completed_at": "2026-11-26T19:07:15Z"
+              },
+              {
+                "number": 9,
+                "name": "Run npm run build",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:15Z",
+                "completed_at": "2026-11-26T19:07:15Z"
+              },
+              {
+                "number": 10,
+                "name": "Run npm pack --dry-run --workspace @deepviz/agent-toolkit",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:15Z",
+                "completed_at": "2026-11-26T19:07:16Z"
+              },
+              {
+                "number": 11,
+                "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:16Z",
+                "completed_at": "2026-11-26T19:07:18Z"
+              },
+              {
+                "number": 20,
+                "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:18Z",
+                "completed_at": "2026-11-26T19:07:18Z"
+              },
+              {
+                "number": 21,
+                "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:18Z",
+                "completed_at": "2026-11-26T19:07:18Z"
+              },
+              {
+                "number": 22,
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:18Z",
+                "completed_at": "2026-11-26T19:07:18Z"
+              },
+              {
+                "number": 23,
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:18Z",
+                "completed_at": "2026-11-26T19:07:18Z"
+              }
+            ]
+          },
+          {
+            "id": 140120367212,
+            "name": "One-pass scale 1000 records",
+            "status": "completed",
+            "conclusion": "success",
+            "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+            "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120367212",
+            "steps": [
+              {
+                "number": 1,
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:29Z",
+                "completed_at": "2026-11-26T19:06:30Z"
+              },
+              {
+                "number": 2,
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:30Z",
+                "completed_at": "2026-11-26T19:06:31Z"
+              },
+              {
+                "number": 3,
+                "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:31Z",
+                "completed_at": "2026-11-26T19:06:31Z"
+              },
+              {
+                "number": 4,
+                "name": "Run python -m pip install -e '.[dev]'",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:31Z",
+                "completed_at": "2026-11-26T19:06:54Z"
+              },
+              {
+                "number": 5,
+                "name": "Assert full stream consumption, exact counts, bounded records and peak memory",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:54Z",
+                "completed_at": "2026-11-26T19:06:54Z"
+              },
+              {
+                "number": 6,
+                "name": "Preserve measured counts, elapsed time and memory methodology",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:54Z",
+                "completed_at": "2026-11-26T19:06:56Z"
+              },
+              {
+                "number": 11,
+                "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:56Z",
+                "completed_at": "2026-11-26T19:06:56Z"
+              },
+              {
+                "number": 12,
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:56Z",
+                "completed_at": "2026-11-26T19:06:56Z"
+              },
+              {
+                "number": 13,
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:56Z",
+                "completed_at": "2026-11-26T19:06:56Z"
+              }
+            ]
+          },
+          {
+            "id": 140120367227,
+            "name": "Python 3.12 lint, types, unit and integration",
+            "status": "completed",
+            "conclusion": "failure",
+            "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+            "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120367227",
+            "steps": [
+              {
+                "number": 1,
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:29Z",
+                "completed_at": "2026-11-26T19:06:30Z"
+              },
+              {
+                "number": 2,
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:30Z",
+                "completed_at": "2026-11-26T19:06:31Z"
+              },
+              {
+                "number": 3,
+                "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:31Z",
+                "completed_at": "2026-11-26T19:06:32Z"
+              },
+              {
+                "number": 4,
+                "name": "Install all integration dependencies (no live service credentials)",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:32Z",
+                "completed_at": "2026-11-26T19:07:00Z"
+              },
+              {
+                "number": 5,
+                "name": "Lint",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-11-26T19:07:00Z",
+                "completed_at": "2026-11-26T19:07:00Z"
+              },
+              {
+                "number": 6,
+                "name": "Typecheck package and verification scripts",
+                "status": "completed",
+                "conclusion": "skipped",
+                "started_at": "2026-11-26T19:07:00Z",
+                "completed_at": "2026-11-26T19:07:00Z"
+              },
+              {
+                "number": 7,
+                "name": "Check generated schema without changing files",
+                "status": "completed",
+                "conclusion": "skipped",
+                "started_at": "2026-11-26T19:07:00Z",
+                "completed_at": "2026-11-26T19:07:00Z"
+              },
+              {
+                "number": 8,
+                "name": "Test CI gate negative controls",
+                "status": "completed",
+                "conclusion": "skipped",
+                "started_at": "2026-11-26T19:07:00Z",
+                "completed_at": "2026-11-26T19:07:00Z"
+              },
+              {
+                "number": 9,
+                "name": "Unit and contract tests",
+                "status": "completed",
+                "conclusion": "skipped",
+                "started_at": "2026-11-26T19:07:00Z",
+                "completed_at": "2026-11-26T19:07:00Z"
+              },
+              {
+                "number": 10,
+                "name": "Integration tests",
+                "status": "completed",
+                "conclusion": "skipped",
+                "started_at": "2026-11-26T19:07:00Z",
+                "completed_at": "2026-11-26T19:07:00Z"
+              },
+              {
+                "number": 11,
+                "name": "Preserve test reports for diagnosis, not as a substitute for success",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:00Z",
+                "completed_at": "2026-11-26T19:07:00Z"
+              },
+              {
+                "number": 21,
+                "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "skipped",
+                "started_at": "2026-11-26T19:07:00Z",
+                "completed_at": "2026-11-26T19:07:00Z"
+              },
+              {
+                "number": 22,
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:00Z",
+                "completed_at": "2026-11-26T19:07:00Z"
+              },
+              {
+                "number": 23,
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:00Z",
+                "completed_at": "2026-11-26T19:07:00Z"
+              }
+            ]
+          },
+          {
+            "id": 140120367285,
+            "name": "Python 3.13 lint, types, unit and integration",
+            "status": "completed",
+            "conclusion": "failure",
+            "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16",
+            "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/job/140120367285",
+            "steps": [
+              {
+                "number": 1,
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:29Z",
+                "completed_at": "2026-11-26T19:06:30Z"
+              },
+              {
+                "number": 2,
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:30Z",
+                "completed_at": "2026-11-26T19:06:32Z"
+              },
+              {
+                "number": 3,
+                "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:32Z",
+                "completed_at": "2026-11-26T19:06:34Z"
+              },
+              {
+                "number": 4,
+                "name": "Install all integration dependencies (no live service credentials)",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:06:34Z",
+                "completed_at": "2026-11-26T19:07:16Z"
+              },
+              {
+                "number": 5,
+                "name": "Lint",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-11-26T19:07:16Z",
+                "completed_at": "2026-11-26T19:07:16Z"
+              },
+              {
+                "number": 6,
+                "name": "Typecheck package and verification scripts",
+                "status": "completed",
+                "conclusion": "skipped",
+                "started_at": "2026-11-26T19:07:16Z",
+                "completed_at": "2026-11-26T19:07:16Z"
+              },
+              {
+                "number": 7,
+                "name": "Check generated schema without changing files",
+                "status": "completed",
+                "conclusion": "skipped",
+                "started_at": "2026-11-26T19:07:16Z",
+                "completed_at": "2026-11-26T19:07:16Z"
+              },
+              {
+                "number": 8,
+                "name": "Test CI gate negative controls",
+                "status": "completed",
+                "conclusion": "skipped",
+                "started_at": "2026-11-26T19:07:16Z",
+                "completed_at": "2026-11-26T19:07:16Z"
+              },
+              {
+                "number": 9,
+                "name": "Unit and contract tests",
+                "status": "completed",
+                "conclusion": "skipped",
+                "started_at": "2026-11-26T19:07:16Z",
+                "completed_at": "2026-11-26T19:07:16Z"
+              },
+              {
+                "number": 10,
+                "name": "Integration tests",
+                "status": "completed",
+                "conclusion": "skipped",
+                "started_at": "2026-11-26T19:07:16Z",
+                "completed_at": "2026-11-26T19:07:16Z"
+              },
+              {
+                "number": 11,
+                "name": "Preserve test reports for diagnosis, not as a substitute for success",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:16Z",
+                "completed_at": "2026-11-26T19:07:16Z"
+              },
+              {
+                "number": 21,
+                "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+                "status": "completed",
+                "conclusion": "skipped",
+                "started_at": "2026-11-26T19:07:16Z",
+                "completed_at": "2026-11-26T19:07:16Z"
+              },
+              {
+                "number": 22,
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:16Z",
+                "completed_at": "2026-11-26T19:07:16Z"
+              },
+              {
+                "number": 23,
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "started_at": "2026-11-26T19:07:16Z",
+                "completed_at": "2026-11-26T19:07:16Z"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "complete": true,
+    "records": [
+      {
+        "id": 15148215331,
+        "name": "scale-10000000-1",
+        "size_in_bytes": 631,
+        "expired": false,
+        "created_at": "2026-11-26T19:10:22Z",
+        "expires_at": "2026-12-03T19:10:21Z",
+        "digest": "sha256:ffc03c9835b7660f03c970a59a0ec0d820c55fe9783f3eb94210998de17c3f60",
+        "workflow_run": {
+          "id": 45881106713,
+          "repository_id": 1473492568,
+          "head_repository_id": 1473492568,
+          "head_branch": "release/candidate",
+          "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16"
+        }
+      },
+      {
+        "id": 15147685222,
+        "name": "scale-1000000-1",
+        "size_in_bytes": 627,
+        "expired": false,
+        "created_at": "2026-11-26T19:07:30Z",
+        "expires_at": "2026-12-03T19:07:29Z",
+        "digest": "sha256:1b4aede8658ae4e1ce1716a63d604606890833f79140497403e49da90a1ce0fd",
+        "workflow_run": {
+          "id": 45881106713,
+          "repository_id": 1473492568,
+          "head_repository_id": 1473492568,
+          "head_branch": "release/candidate",
+          "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16"
+        }
+      },
+      {
+        "id": 15147600243,
+        "name": "python-distributions-1",
+        "size_in_bytes": 577600,
+        "expired": false,
+        "created_at": "2026-11-26T19:07:18Z",
+        "expires_at": "2026-12-03T19:07:16Z",
+        "digest": "sha256:7473b86c0604cabd41e11d3d017250fcafa1ccf5e12e081b89f0e56408dd8199",
+        "workflow_run": {
+          "id": 45881106713,
+          "repository_id": 1473492568,
+          "head_repository_id": 1473492568,
+          "head_branch": "release/candidate",
+          "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16"
+        }
+      },
+      {
+        "id": 15147425783,
+        "name": "raster-visual-1",
+        "size_in_bytes": 65883,
+        "expired": false,
+        "created_at": "2026-11-26T19:06:58Z",
+        "expires_at": "2026-12-03T19:06:58Z",
+        "digest": "sha256:5205c62842c52d6d2efcd568417c19c9b24242586557f130ef8b6f554e5977cb",
+        "workflow_run": {
+          "id": 45881106713,
+          "repository_id": 1473492568,
+          "head_repository_id": 1473492568,
+          "head_branch": "release/candidate",
+          "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16"
+        }
+      },
+      {
+        "id": 15146929461,
+        "name": "scale-100000-1",
+        "size_in_bytes": 623,
+        "expired": false,
+        "created_at": "2026-11-26T19:07:28Z",
+        "expires_at": "2026-12-03T19:07:28Z",
+        "digest": "sha256:03ee513d39df54745a522b350dc4abe1b3b9cc7289319a1d0e0f81b23ba31d18",
+        "workflow_run": {
+          "id": 45881106713,
+          "repository_id": 1473492568,
+          "head_repository_id": 1473492568,
+          "head_branch": "release/candidate",
+          "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16"
+        }
+      },
+      {
+        "id": 15146684849,
+        "name": "scale-10-1",
+        "size_in_bytes": 509,
+        "expired": false,
+        "created_at": "2026-11-26T19:06:54Z",
+        "expires_at": "2026-12-03T19:06:53Z",
+        "digest": "sha256:93d15b08216f4065b13f4f56ba359713c9f8b4d6c57325e600f96277c6928f95",
+        "workflow_run": {
+          "id": 45881106713,
+          "repository_id": 1473492568,
+          "head_repository_id": 1473492568,
+          "head_branch": "release/candidate",
+          "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16"
+        }
+      },
+      {
+        "id": 15146604675,
+        "name": "scale-1000-1",
+        "size_in_bytes": 512,
+        "expired": false,
+        "created_at": "2026-11-26T19:06:55Z",
+        "expires_at": "2026-12-03T19:06:55Z",
+        "digest": "sha256:82e5137774fed1a569713da0b75b51c50ebdd268bfa6f76e7a6ce445af9ddb61",
+        "workflow_run": {
+          "id": 45881106713,
+          "repository_id": 1473492568,
+          "head_repository_id": 1473492568,
+          "head_branch": "release/candidate",
+          "head_sha": "340e5c5f68932fd84733c0d925c3be3e40543f16"
+        }
+      }
+    ]
+  },
+  "labels": {
+    "complete": true,
+    "names": [
+      "accessibility",
+      "area:ci",
+      "area:ingestion",
+      "area:integrations",
+      "area:packaging",
+      "area:process",
+      "area:qa",
+      "area:renderers",
+      "area:research",
+      "area:scale",
+      "area:security",
+      "area:typescript",
+      "bug",
+      "documentation",
+      "duplicate",
+      "enhancement",
+      "good first issue",
+      "help wanted",
+      "invalid",
+      "priority:p0",
+      "priority:p1",
+      "priority:p2",
+      "question",
+      "status:blocked",
+      "type:blocker",
+      "type:epic",
+      "type:story",
+      "type:task",
+      "wontfix"
+    ]
+  },
+  "finished_utc": "2026-11-27T01:28:24.557729+00:00",
+  "get_ledger": [
+    {
+      "method": "GET",
+      "path": "/user",
+      "utc": "2026-11-27T01:28:09.113792+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:09 GMT",
+      "rate_remaining": "4970"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit",
+      "utc": "2026-11-27T01:28:10.074431+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:09 GMT",
+      "rate_remaining": "4969"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues?state=all&sort=created&direction=asc&per_page=100&page=1",
+      "utc": "2026-11-27T01:28:10.565394+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:10 GMT",
+      "rate_remaining": "4968"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/pulls?state=all&sort=created&direction=asc&per_page=100&page=1",
+      "utc": "2026-11-27T01:28:12.067165+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:11 GMT",
+      "rate_remaining": "4967"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/pulls/31",
+      "utc": "2026-11-27T01:28:12.692221+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:12 GMT",
+      "rate_remaining": "4966"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/pulls/31/reviews?per_page=100&page=1",
+      "utc": "2026-11-27T01:28:13.414321+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:13 GMT",
+      "rate_remaining": "4965"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/pulls/31/comments?per_page=100&page=1",
+      "utc": "2026-11-27T01:28:14.043512+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:13 GMT",
+      "rate_remaining": "4964"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/31/comments?per_page=100&page=1",
+      "utc": "2026-11-27T01:28:14.515829+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:14 GMT",
+      "rate_remaining": "4963"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/branches/main",
+      "utc": "2026-11-27T01:28:15.066259+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:14 GMT",
+      "rate_remaining": "4962"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/branches/release%2Fcandidate",
+      "utc": "2026-11-27T01:28:15.588219+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:15 GMT",
+      "rate_remaining": "4961"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/commits/340e5c5f68932fd84733c0d925c3be3e40543f16/check-runs?per_page=100&page=1",
+      "utc": "2026-11-27T01:28:16.105797+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:16 GMT",
+      "rate_remaining": "4960"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/commits/340e5c5f68932fd84733c0d925c3be3e40543f16/status",
+      "utc": "2026-11-27T01:28:17.172893+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:16 GMT",
+      "rate_remaining": "4959"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/git/trees/340e5c5f68932fd84733c0d925c3be3e40543f16?recursive=1",
+      "utc": "2026-11-27T01:28:17.736213+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:17 GMT",
+      "rate_remaining": "4958"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/git/blobs/298e7a65f2293c7c343656830e4eb88bda653951",
+      "utc": "2026-11-27T01:28:18.377562+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:18 GMT",
+      "rate_remaining": "4957"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/git/blobs/34e52180f5cf5dec44b711dc6c5d57a4a00b2594",
+      "utc": "2026-11-27T01:28:18.898630+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:18 GMT",
+      "rate_remaining": "4956"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/git/blobs/a15cbd43396e7c71b8e2c9ec396fab7b6f75f2c6",
+      "utc": "2026-11-27T01:28:19.398821+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:19 GMT",
+      "rate_remaining": "4955"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/git/blobs/f421b206ca0ea242dbd5e15fd4373c91c2346c25",
+      "utc": "2026-11-27T01:28:19.954268+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:19 GMT",
+      "rate_remaining": "4954"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/actions/runs?per_page=100&page=1",
+      "utc": "2026-11-27T01:28:20.425402+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:20 GMT",
+      "rate_remaining": "4953"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106730/jobs?filter=latest&per_page=100&page=1",
+      "utc": "2026-11-27T01:28:21.201834+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:21 GMT",
+      "rate_remaining": "4952"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45881106713/jobs?filter=latest&per_page=100&page=1",
+      "utc": "2026-11-27T01:28:21.985053+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:22 GMT",
+      "rate_remaining": "4951"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/actions/artifacts?per_page=100&page=1",
+      "utc": "2026-11-27T01:28:23.486754+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:23 GMT",
+      "rate_remaining": "4950"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/labels?per_page=100&page=1",
+      "utc": "2026-11-27T01:28:23.970981+00:00",
+      "status": 200,
+      "server_date": "Fri, 27 Nov 2026 01:28:23 GMT",
+      "rate_remaining": "4949"
+    }
+  ],
+  "http_status_counts": {
+    "200": 22
+  },
+  "mutations": 0
+}

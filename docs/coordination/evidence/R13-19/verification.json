@@ -1,0 +1,254 @@
+{
+  "observed_utc": "2026-11-27T13:57:39.657823+00:00",
+  "owner": "ses_de5678052ffdJwVtlB6SX6LZrT",
+  "own_source_base": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "issue_inventory_observed_utc": "2026-11-27T02:13:10.935886+00:00",
+  "inventory_limit": "Complete issue census is dated02:13:10, not the later13:47PR/CI observation. No duplicate census requests.",
+  "new_issue_proposals": 0,
+  "issue_PR_mutations": 0,
+  "final_release_accepted": false,
+  "original_report_sha256": "06aa1ce80b042589d7f6ba82801d4310c09cccea74da0632f2edf95b116537d7",
+  "scope": "Own PMprocess traceability/credential-pattern/provenance/Git checks ONLY;0producttests,0issues/PRmutations,0newcensus; sourceproducer releases not actualfixes.",
+  "passed": 53,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "whitespace-tolerant row parser preserves14/20/10",
+      "pass": true
+    },
+    {
+      "name": "14 requirement IDs exact",
+      "pass": true
+    },
+    {
+      "name": "20 distinct local finding IDs exact",
+      "pass": true
+    },
+    {
+      "name": "10 real ordered nextbatch rows",
+      "pass": true
+    },
+    {
+      "name": "all11 original checklist mappings retain coverage",
+      "pass": true
+    },
+    {
+      "name": "all30actual existing issues, no new number",
+      "pass": true
+    },
+    {
+      "name": "triage and nextbatch only actualissue numbers",
+      "pass": true
+    },
+    {
+      "name": "09 tester only in D10, eligible07R14transfer",
+      "pass": true
+    },
+    {
+      "name": "10 tester only in D07-D08, eligible18R14transfer",
+      "pass": true
+    },
+    {
+      "name": "batch6 and7 require eligibletransfer not oldtesters",
+      "pass": true
+    },
+    {
+      "name": "raw input byte limit included before SDKparse",
+      "pass": true
+    },
+    {
+      "name": "SUMnormalizer dependency held, no sourceoverlap",
+      "pass": true
+    },
+    {
+      "name": "900 true gap preserved, notsyntheticissues",
+      "pass": true
+    },
+    {
+      "name": "root13:47PRdraftopenunmerged5340",
+      "pass": true
+    },
+    {
+      "name": "remoteCI failure notgreenbootstrap",
+      "pass": true
+    },
+    {
+      "name": "complete census notduplicated",
+      "pass": true
+    },
+    {
+      "name": "historical75pass1fragilephrasefail preserved",
+      "pass": true
+    },
+    {
+      "name": "originalR03reportbyteunchanged",
+      "pass": true
+    },
+    {
+      "name": "readonly git branch --show-current",
+      "pass": true
+    },
+    {
+      "name": "readonly git rev-parse HEAD",
+      "pass": true
+    },
+    {
+      "name": "readonly git diff --name-only 3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab..5340bc69b7203ad7a9166543062482d819f9b705 -- python packages schemas scripts tests .github",
+      "pass": true
+    },
+    {
+      "name": "readonly git diff --check",
+      "pass": true
+    },
+    {
+      "name": "ownbranchbaseunchanged",
+      "pass": true
+    },
+    {
+      "name": "5340 adds coordination not productbytes",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/agent-state/ses_de5678052ffdJwVtlB6SX6LZrT.md",
+      "pass": true
+    },
+    {
+      "name": "no trailingwhitespace/fence mismatch docs/agent-state/ses_de5678052ffdJwVtlB6SX6LZrT.md",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/reports/R03-19-delivery-acceptance-audit.md",
+      "pass": true
+    },
+    {
+      "name": "no trailingwhitespace/fence mismatch docs/coordination/reports/R03-19-delivery-acceptance-audit.md",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/reports/R09-real-backlog-and-commit-evidence.md",
+      "pass": true
+    },
+    {
+      "name": "no trailingwhitespace/fence mismatch docs/coordination/reports/R09-real-backlog-and-commit-evidence.md",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/reports/R10-19-real-backlog-commits.md",
+      "pass": true
+    },
+    {
+      "name": "no trailingwhitespace/fence mismatch docs/coordination/reports/R10-19-real-backlog-commits.md",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/reports/R13-19-backlog-recovery.md",
+      "pass": true
+    },
+    {
+      "name": "no trailingwhitespace/fence mismatch docs/coordination/reports/R13-19-backlog-recovery.md",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R03-19/current-github-get-snapshot.json",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R03-19/existing-issue-map.json",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R03-19/handoff-verification.json",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R03-19/remote-job-log-excerpts.json",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R03-19/saved-evidence-audit.json",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R03-19/saved-report-inventory.json",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R03-19/verification.json",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R09-19/acceptance-map.json",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R09-19/deduplicated-triage.json",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R09-19/next-batch.json",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R09-19/provenance.json",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R09-19/source-change-boundary.json",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R10-19/authenticated-user.json",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R10-19/precommit-verification.json",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R10-19/remote-branch-preflight.json",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R13-19/acceptance-map.json",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R13-19/deduplicated-triage.json",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R13-19/next-batch.json",
+      "pass": true
+    },
+    {
+      "name": "no credential/signedURL docs/coordination/evidence/R13-19/source-and-remote-snapshot.json",
+      "pass": true
+    }
+  ],
+  "publication_paths": [
+    "docs/agent-state/ses_de5678052ffdJwVtlB6SX6LZrT.md",
+    "docs/coordination/reports/R03-19-delivery-acceptance-audit.md",
+    "docs/coordination/reports/R09-real-backlog-and-commit-evidence.md",
+    "docs/coordination/reports/R10-19-real-backlog-commits.md",
+    "docs/coordination/reports/R13-19-backlog-recovery.md",
+    "docs/coordination/evidence/R03-19/current-github-get-snapshot.json",
+    "docs/coordination/evidence/R03-19/existing-issue-map.json",
+    "docs/coordination/evidence/R03-19/handoff-verification.json",
+    "docs/coordination/evidence/R03-19/remote-job-log-excerpts.json",
+    "docs/coordination/evidence/R03-19/saved-evidence-audit.json",
+    "docs/coordination/evidence/R03-19/saved-report-inventory.json",
+    "docs/coordination/evidence/R03-19/verification.json",
+    "docs/coordination/evidence/R09-19/acceptance-map.json",
+    "docs/coordination/evidence/R09-19/deduplicated-triage.json",
+    "docs/coordination/evidence/R09-19/next-batch.json",
+    "docs/coordination/evidence/R09-19/provenance.json",
+    "docs/coordination/evidence/R09-19/source-change-boundary.json",
+    "docs/coordination/evidence/R10-19/authenticated-user.json",
+    "docs/coordination/evidence/R10-19/precommit-verification.json",
+    "docs/coordination/evidence/R10-19/remote-branch-preflight.json",
+    "docs/coordination/evidence/R13-19/acceptance-map.json",
+    "docs/coordination/evidence/R13-19/deduplicated-triage.json",
+    "docs/coordination/evidence/R13-19/next-batch.json",
+    "docs/coordination/evidence/R13-19/source-and-remote-snapshot.json"
+  ]
+}

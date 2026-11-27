@@ -1,0 +1,107 @@
+{
+  "verified_utc": "2026-11-27T02:09:46.799198+00:00",
+  "scope": "Final saved handoff text and evidence integrity only; no product tests, release signoff, issue closure or GitHub approval.",
+  "checks": [
+    {
+      "check": "R03-19-delivery-acceptance-audit.md: final saved text/nonempty",
+      "passed": true
+    },
+    {
+      "check": "R03-19-delivery-acceptance-audit.md: no trailing whitespace",
+      "passed": true
+    },
+    {
+      "check": "R03-19-delivery-acceptance-audit.md: balanced fences",
+      "passed": true
+    },
+    {
+      "check": "R03-19-delivery-acceptance-audit.md: no secret-like literal",
+      "passed": true
+    },
+    {
+      "check": "ses_de5678052ffdJwVtlB6SX6LZrT.md: final saved text/nonempty",
+      "passed": true
+    },
+    {
+      "check": "ses_de5678052ffdJwVtlB6SX6LZrT.md: no trailing whitespace",
+      "passed": true
+    },
+    {
+      "check": "ses_de5678052ffdJwVtlB6SX6LZrT.md: balanced fences",
+      "passed": true
+    },
+    {
+      "check": "ses_de5678052ffdJwVtlB6SX6LZrT.md: no secret-like literal",
+      "passed": true
+    },
+    {
+      "check": "prior actual39/0 integrity results read back",
+      "passed": true
+    },
+    {
+      "check": "current-github-get-snapshot.json: final JSON parse",
+      "passed": true
+    },
+    {
+      "check": "existing-issue-map.json: final JSON parse",
+      "passed": true
+    },
+    {
+      "check": "remote-job-log-excerpts.json: final JSON parse",
+      "passed": true
+    },
+    {
+      "check": "saved-evidence-audit.json: final JSON parse",
+      "passed": true
+    },
+    {
+      "check": "saved-report-inventory.json: final JSON parse",
+      "passed": true
+    },
+    {
+      "check": "verification.json: final JSON parse",
+      "passed": true
+    },
+    {
+      "check": "final scoped whitespace diffcheck",
+      "passed": true
+    }
+  ],
+  "passed": 16,
+  "failed": 0,
+  "head_at_read": "6d0e72ebef4b622f8dec2bce2bd07cc23e7a81ce",
+  "owned_hashes": {
+    "docs\\coordination\\reports\\R03-19-delivery-acceptance-audit.md": {
+      "bytes": 26863,
+      "sha256": "2a7f19ea6bcbeabe71270b7b09d65b153f3b0180d56a29654f7434f6345bae4f"
+    },
+    "docs\\agent-state\\ses_de5678052ffdJwVtlB6SX6LZrT.md": {
+      "bytes": 5565,
+      "sha256": "4680160ac73f640e088e6c5dd90e3de7d67096a80d5c071edfa2ba5a6d55490c"
+    },
+    "docs\\coordination\\evidence\\R03-19\\current-github-get-snapshot.json": {
+      "bytes": 172805,
+      "sha256": "25b92160c2b3c9c436f05bb6e1fa3efb2a41b18cd6b0c44e42552771caaade87"
+    },
+    "docs\\coordination\\evidence\\R03-19\\existing-issue-map.json": {
+      "bytes": 58761,
+      "sha256": "028859d6e8127b7140e18744a1ca3670346ace3fdd088bfffa2d37549713f1f5"
+    },
+    "docs\\coordination\\evidence\\R03-19\\remote-job-log-excerpts.json": {
+      "bytes": 16174,
+      "sha256": "e464ac7712cce909675efbe7bd94bdd4f730db33b1a32c8e3a029221be6ca09f"
+    },
+    "docs\\coordination\\evidence\\R03-19\\saved-evidence-audit.json": {
+      "bytes": 16595,
+      "sha256": "50eff94485e8b568e3d7bbf57697a6172bcadaa7cb0a0ec1b2598503ea87746c"
+    },
+    "docs\\coordination\\evidence\\R03-19\\saved-report-inventory.json": {
+      "bytes": 37220,
+      "sha256": "eaea2d3f5aa7853618c7581eaefd5466082d9ddc2b34e0ea1c0d98adc98e24ba"
+    },
+    "docs\\coordination\\evidence\\R03-19\\verification.json": {
+      "bytes": 5717,
+      "sha256": "2f241b0ac02cb3e475966847b1409a799370af77c583c940c2f1cad275acccc0"
+    }
+  }
+}

@@ -1,0 +1,447 @@
+{
+  "owner": "ses_de5678052ffdJwVtlB6SX6LZrT",
+  "generated_utc": "2026-11-27T02:51:43.145710+00:00",
+  "source_checkpoint": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "scope": "File-backed PM mapping; no new issues/closures/PRs, no product rerun or final acceptance. Local IDs are NOT GitHub tickets.",
+  "reused_census": {
+    "path": "docs\\coordination\\evidence\\R10-root\\github-census-20261127T021310936884Z.json",
+    "sha256": "4c6c35edfd8b32589c76458bf46f0395648ab19c41d630f852842f370e229848",
+    "observed_utc": "2026-11-27T02:13:10.935886+00:00",
+    "complete": true,
+    "present": 30,
+    "open": 30,
+    "closed": 0,
+    "closure_evidence_audited": false,
+    "new_census_requests_by_role19": 0
+  },
+  "original_checklist_mapping": {
+    "research_and_library_comparison": [
+      "A01"
+    ],
+    "github_monorepo_architecture": [
+      "A02"
+    ],
+    "remote_ci_green": [
+      "A03"
+    ],
+    "five_tools_chart_dashboard_semantics": [
+      "A04"
+    ],
+    "chained_tool_flows": [
+      "A05"
+    ],
+    "formats_edge_cases_scale_10M": [
+      "A06",
+      "A07"
+    ],
+    "900_legitimate_created_AND_resolved": [
+      "A08"
+    ],
+    "every_merged_PR_reports_output": [
+      "A09"
+    ],
+    "npm_pip_clean_consumers": [
+      "A10"
+    ],
+    "README_installs_DeepAgents_MCP": [
+      "A11"
+    ],
+    "schema_prompts_recoverable_workflow": [
+      "A02",
+      "A11",
+      "A12",
+      "A14"
+    ]
+  },
+  "requirements": [
+    {
+      "id": "A01",
+      "requirement": "A01 Research/public pipelines and library comparison",
+      "existing_issues": [
+        {
+          "number": 4,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/4",
+          "state_at_census": "open"
+        },
+        {
+          "number": 19,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/19",
+          "state_at_census": "open"
+        }
+      ],
+      "actual_evidence": "`docs/research/{agent-pipelines,libraries,scaling-and-benchmarks,coordination}.md`, `source-index.json`;15repos/100distinct URLs, not100audits. R03-14/18 source-qualified claim audits.",
+      "remaining_acceptance_and_owner": "Date/source-check claims for ChatGPT/Claude/OpenCode and named alternatives G2/G2Plot/AVA/Vega/Vega-Lite/ECharts/Plotly/D3/ObservablePlot/deck.gl/uPlot/Datashader/Bokeh/Altair; distinguish public fact/observation/inference, not proprietary access. Fix stale current guidance, retain history. Docs/research owner viaR04.",
+      "final_accepted": false,
+      "criterion_met_at_bounded_observation": false,
+      "final_release_approval": false
+    },
+    {
+      "id": "A02",
+      "requirement": "A02 Real user's GitHub monorepo and justified architecture",
+      "existing_issues": [
+        {
+          "number": 4,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/4",
+          "state_at_census": "open"
+        },
+        {
+          "number": 27,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/27",
+          "state_at_census": "open"
+        }
+      ],
+      "actual_evidence": "Public `sandeshbagmare/deepviz-agent-toolkit` verified in reused census; Python/npm/schema/prompts/examples/docs/tests/workflows in committed tree; `docs/architecture.md`.",
+      "remaining_acceptance_and_owner": "Repo/layout exist; this is not production completion. Preserve history and boundaries; publish current recoverable handoffs, not recreate repo or claim an unobserved migration. R04/root within scopes.",
+      "final_accepted": false,
+      "criterion_met_at_bounded_observation": true,
+      "final_release_approval": false
+    },
+    {
+      "id": "A03",
+      "requirement": "A03 Green meaningful remoteCI",
+      "existing_issues": [
+        {
+          "number": 20,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/20",
+          "state_at_census": "open"
+        }
+      ],
+      "actual_evidence": "`.github/workflows/{ci,evidence}.yml`; cdc1636 prerequisites/consumers,817c5c6browserCI; role13clean0c5Ruff/mypy/schema/Actionlint/16CIcontrols and246npm passes. Later R04run45927353552 was in progress at saved observation.",
+      "remaining_acceptance_and_owner": "Exact final-source lint/types/unit/integration/schema/security/visual/scale/build/package jobs actually green; bootstrap evidence success not report approval. Keep Windows/Node26 local versus Linux/Node24/minNode22 scopes distinct. R04/CI owner.",
+      "final_accepted": false,
+      "criterion_met_at_bounded_observation": false,
+      "final_release_approval": false
+    },
+    {
+      "id": "A04",
+      "requirement": "A04 Five real engine alternatives, chart breadth, dashboard/theming",
+      "existing_issues": [
+        {
+          "number": 2,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/2",
+          "state_at_census": "open"
+        },
+        {
+          "number": 9,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/9",
+          "state_at_census": "open"
+        },
+        {
+          "number": 10,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/10",
+          "state_at_census": "open"
+        },
+        {
+          "number": 11,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/11",
+          "state_at_census": "open"
+        },
+        {
+          "number": 12,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/12",
+          "state_at_census": "open"
+        },
+        {
+          "number": 13,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/13",
+          "state_at_census": "open"
+        },
+        {
+          "number": 14,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/14",
+          "state_at_census": "open"
+        },
+        {
+          "number": 15,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/15",
+          "state_at_census": "open"
+        },
+        {
+          "number": 23,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/23",
+          "state_at_census": "open"
+        }
+      ],
+      "actual_evidence": "`engines.py`, `render.py`, TS`renderers.ts`; bb89453native semantics,09f1e4abudgets,6d0e72etheme; actual baseline five-engine outputs and new AntV image in R04evidence.",
+      "remaining_acceptance_and_owner": "Matplotlib/Plotly/Vega-Lite/ECharts/G2; standard bar/line/scatter/area/pie/heatmap plus every declared additional kind verified or explicit unsupported/fallback. Fix wrong count values, dense-table preallocation, Plotly literal labels and SVG clipping; real visible titles/axes/units/legends/contrast/interaction where promised, zero console errors. R04source owners plus independent06/12/17/20.",
+      "final_accepted": false,
+      "criterion_met_at_bounded_observation": false,
+      "final_release_approval": false
+    },
+    {
+      "id": "A05",
+      "requirement": "A05 Actual DeepAgents attachment, tools, MCP and chained flows",
+      "existing_issues": [
+        {
+          "number": 3,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/3",
+          "state_at_census": "open"
+        },
+        {
+          "number": 16,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/16",
+          "state_at_census": "open"
+        },
+        {
+          "number": 17,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/17",
+          "state_at_census": "open"
+        },
+        {
+          "number": 18,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/18",
+          "state_at_census": "open"
+        }
+      ],
+      "actual_evidence": "`tools.py`, `mcp_server.py`, `cli.py`, examples;02566c1real chains,65b3fc4cleanup,4a766c4encodedcopies. R03-10realstdio/deterministic local graph and R03-18executed examples.",
+      "remaining_acceptance_and_owner": "Final-source normalize→recommend→render, seven-tool stdio discovery/call/registered resource read/shutdown, safe handle/error lifecycle from installed package; fix duplicate decoding/registry growth. No paid-model/native-host-widget claim without execution; bridge absence explicit. Role10released paths/R04.",
+      "final_accepted": false,
+      "criterion_met_at_bounded_observation": false,
+      "final_release_approval": false
+    },
+    {
+      "id": "A06",
+      "requirement": "A06 Supported structured formats and edge cases",
+      "existing_issues": [
+        {
+          "number": 1,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/1",
+          "state_at_census": "open"
+        },
+        {
+          "number": 6,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/6",
+          "state_at_census": "open"
+        },
+        {
+          "number": 7,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/7",
+          "state_at_census": "open"
+        }
+      ],
+      "actual_evidence": "Python/TSnormalizers;40c67beformats,3051823duplicates,f650964GraphQL/bytes; R03-15actual Arrow/Parquet plus269pass/1cleanupfail, no optional format skips.",
+      "remaining_acceptance_and_owner": "Arrays/records/columns/JSON/nested/GraphQL pages+edges+nodes/CSV/TSV/JSONL/time series/hierarchy/geo with explicit mappings, ragged/ambiguous/malformed/missing/mixed/nonfinite inputs and counts; no universal opaque-format claim. Fix TS sibling loss, Python scalar-column naming and owned-source cleanup; later relevant regressions/consumer paths. Normalizer ownership16→R04, role01/15independent.",
+      "final_accepted": false,
+      "criterion_met_at_bounded_observation": false,
+      "final_release_approval": false
+    },
+    {
+      "id": "A07",
+      "requirement": "A07 Bounded10/1K/100K/1M/10M scaling and truthful output",
+      "existing_issues": [
+        {
+          "number": 8,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/8",
+          "state_at_census": "open"
+        },
+        {
+          "number": 22,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/22",
+          "state_at_census": "open"
+        }
+      ],
+      "actual_evidence": "Stream before bounded renderer input; N11historical b6abc8d, R03-11twenty Python fresh-process cases, R03-12ten TS cases/22,202,020consumed+23resourcecontrols.",
+      "remaining_acceptance_and_owner": "Frozen-source affected reruns after numerical/shape fixes; exact source/output counts, grouped/sample values/order/loss, retained byte/cardinality/dashboard caps, elapsed time and qualified memory. Python OSinclusive peak vs TSsampledRSS/heap; reduced visible marks, not10Mbrowsermarks. Tick clipping still blocks visual acceptance despite correct eight aggregates. Roles11/12/R04.",
+      "final_accepted": false,
+      "criterion_met_at_bounded_observation": false,
+      "final_release_approval": false
+    },
+    {
+      "id": "A08",
+      "requirement": "A08 At least900legitimate issues created AND resolved",
+      "existing_issues": [
+        {
+          "number": 4,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/4",
+          "state_at_census": "open"
+        },
+        {
+          "number": 27,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/27",
+          "state_at_census": "open"
+        },
+        {
+          "number": 28,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/28",
+          "state_at_census": "open"
+        }
+      ],
+      "actual_evidence": "Reused complete census:30present/30open/0closed; no closure evidence audited.",
+      "remaining_acceptance_and_owner": "870additional legitimate present scopes merely reach900created;900verified resolutions still not demonstrated. Balance unplanned/unmet, no filler/per-test/per-parameter tickets, fake closures or substitute commits. R04alone issue mutations; rootusercontact retains full requirement.",
+      "final_accepted": false,
+      "criterion_met_at_bounded_observation": false,
+      "final_release_approval": false
+    },
+    {
+      "id": "A09",
+      "requirement": "A09 Every merged PR genuine reviews/testers/output",
+      "existing_issues": [
+        {
+          "number": 23,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/23",
+          "state_at_census": "open"
+        },
+        {
+          "number": 26,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/26",
+          "state_at_census": "open"
+        },
+        {
+          "number": 29,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/29",
+          "state_at_census": "open"
+        }
+      ],
+      "actual_evidence": "PR31draft/unmerged; old N01/N02/N09/N10reports genuine but stale/nonapproving; validator/bootstrap and actual independent R03findings retained.",
+      "remaining_acceptance_and_owner": "Every actual merge needs two distinct non-author reviewer-agent and two tester-agent final-head reports, material finding dispositions/retests, committed real output/spec/recipe/hashes/correctness and observedgreenCI. One coordinator account may post genuine reports; no invented human approvals/selfapproval. R04plus independent lanes.",
+      "final_accepted": false,
+      "criterion_met_at_bounded_observation": false,
+      "final_release_approval": false
+    },
+    {
+      "id": "A10",
+      "requirement": "A10 Python+npmdistributions work cleanly",
+      "existing_issues": [
+        {
+          "number": 18,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/18",
+          "state_at_census": "open"
+        },
+        {
+          "number": 24,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/24",
+          "state_at_census": "open"
+        },
+        {
+          "number": 25,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/25",
+          "state_at_census": "open"
+        }
+      ],
+      "actual_evidence": "f67afacPythonprompts,8b26852typing,7698c03assetnotice; R03-08actual22member tarball/clean consumer/16types/six small Chromium visuals. R03-07old no-isolation builds blockedHatchling.",
+      "remaining_acceptance_and_owner": "Current wheel+sdist/strictTwine/fresh consumer API/prompts/schema/assets/typing/CLI/MCP/render; current npmci/build/typecheck/fulltests/dryrun+actualpack/external installed consumer/types/ESM/browser. npm canonicalv1prompts REQUIRED, not waived Python-only; R11-08release. Roles07/08own disposable deps only, no registry publication.",
+      "final_accepted": false,
+      "criterion_met_at_bounded_observation": false,
+      "final_release_approval": false
+    },
+    {
+      "id": "A11",
+      "requirement": "A11 README/examples, prompts and all tool inputs/outputs/limitations",
+      "existing_issues": [
+        {
+          "number": 16,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/16",
+          "state_at_census": "open"
+        },
+        {
+          "number": 17,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/17",
+          "state_at_census": "open"
+        },
+        {
+          "number": 18,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/18",
+          "state_at_census": "open"
+        },
+        {
+          "number": 19,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/19",
+          "state_at_census": "open"
+        }
+      ],
+      "actual_evidence": "`README.md`, package/examplesREADMEs, `prompts/v1`, real CLI/multitool/local graph/MCP examples;3be5614examples. R03-18real37passes and actualMatplotlib images.",
+      "remaining_acceptance_and_owner": "Current installation/API/DeepAgent/MCP/artifact retrieval/chained examples and5tools' actual outputs; fix old5.6.0version, zero-coercion and planned-byte/truncation wording; preserve source-checkout vs installed-resource boundary, online dependencies/fallbacks, no hidden host integration guarantees. Docs proposal18→R04; coordinate packageREADME08ownership.",
+      "final_accepted": false,
+      "criterion_met_at_bounded_observation": false,
+      "final_release_approval": false
+    },
+    {
+      "id": "A12",
+      "requirement": "A12 Strict shared contracts/schema/parity and prompt conventions",
+      "existing_issues": [
+        {
+          "number": 5,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/5",
+          "state_at_census": "open"
+        },
+        {
+          "number": 14,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/14",
+          "state_at_census": "open"
+        },
+        {
+          "number": 18,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/18",
+          "state_at_census": "open"
+        },
+        {
+          "number": 30,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/30",
+          "state_at_census": "open"
+        }
+      ],
+      "actual_evidence": "`models.py`, generated schemas, TSvalidator;728bbacdashboard schema,4aa3788strictgoldens; R03-09reports689focusedpasses/52independentagreements and exact schemahash.",
+      "remaining_acceptance_and_owner": "Final regenerate/check on contract change, Python/JSONSchema/TS accept/reject/default/dashboard agreement; fix explicit-null helper boundary, settle scalar-column/name-byte contracts and numerical edge policy. #30requires reviewed release merge, old30schema-onlypasses insufficient. Role09producer/helper,16normalizers,R04contract owner.",
+      "final_accepted": false,
+      "criterion_met_at_bounded_observation": false,
+      "final_release_approval": false
+    },
+    {
+      "id": "A13",
+      "requirement": "A13 Trust/resource/filesystem safety",
+      "existing_issues": [
+        {
+          "number": 8,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/8",
+          "state_at_census": "open"
+        },
+        {
+          "number": 16,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/16",
+          "state_at_census": "open"
+        },
+        {
+          "number": 17,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/17",
+          "state_at_census": "open"
+        },
+        {
+          "number": 21,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/21",
+          "state_at_census": "open"
+        }
+      ],
+      "actual_evidence": "Declarative specs forbid code/URLdata; safeJSON/path/uniqueartifacts/bytebounds, security02andactualoutput20tests; real invalid inputs/handle controls.",
+      "remaining_acceptance_and_owner": "Fix dense-table allocation before serialization, tool+realMCP duplicate overwrite, literal Plotly label links, bounded successful-resource registry. Preserve source authorization, no arbitrary filesystem/URL/execution, no overwrite, concise errors, dependency/notices. Real WinError1314symlink skips are not passes; documented60MBHTML expansion is not a claimed32MiBfile guarantee or invented unbounded bypass. R04/10/02/20.",
+      "final_accepted": false,
+      "criterion_met_at_bounded_observation": false,
+      "final_release_approval": false
+    },
+    {
+      "id": "A14",
+      "requirement": "A14 Real Agile/fullSDLC, commits, recoverable orchestration",
+      "existing_issues": [
+        {
+          "number": 4,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/4",
+          "state_at_census": "open"
+        },
+        {
+          "number": 27,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/27",
+          "state_at_census": "open"
+        },
+        {
+          "number": 29,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/29",
+          "state_at_census": "open"
+        }
+      ],
+      "actual_evidence": "Named actual sessions/briefs/notes/reports, isolated branches, genuine commits; R10own-branch policy and R04published product checkpoint; original goal/design/architecture saved.",
+      "remaining_acceptance_and_owner": "Rolling18–22target22useful descendants includingR04/rootseparate, inspect actual completions/refill safely via rootonly. Every agent own scoped tested commits/nonforcepush/readback; R04integrates/issues/PRs. Preserve canceled sessions/dirty work, no fictitious activity or unobserved oh-my-opencode/openagent migration. Rootpointofcontact/dispatcher,R04canonical, workerownnotes.",
+      "final_accepted": false,
+      "criterion_met_at_bounded_observation": false,
+      "final_release_approval": false
+    }
+  ]
+}
