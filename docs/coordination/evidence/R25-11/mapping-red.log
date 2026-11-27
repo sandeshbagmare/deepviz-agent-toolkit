@@ -1,0 +1,53 @@
+FFFFFF..FF                                                               [100%]
+================================== FAILURES ===================================
+_ test_supported_mapping_carriers_reject_the_same_invalid_numeric_values[width-900-UserDict] _
+tests\r25_probes\role11\test_mapping_numeric_contract.py:13: in test_supported_mapping_carriers_reject_the_same_invalid_numeric_values
+    with pytest.raises(ValidationError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValidationError
+_ test_supported_mapping_carriers_reject_the_same_invalid_numeric_values[width-900-mappingproxy] _
+tests\r25_probes\role11\test_mapping_numeric_contract.py:13: in test_supported_mapping_carriers_reject_the_same_invalid_numeric_values
+    with pytest.raises(ValidationError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValidationError
+_ test_supported_mapping_carriers_reject_the_same_invalid_numeric_values[version-True-UserDict] _
+tests\r25_probes\role11\test_mapping_numeric_contract.py:13: in test_supported_mapping_carriers_reject_the_same_invalid_numeric_values
+    with pytest.raises(ValidationError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValidationError
+_ test_supported_mapping_carriers_reject_the_same_invalid_numeric_values[version-True-mappingproxy] _
+tests\r25_probes\role11\test_mapping_numeric_contract.py:13: in test_supported_mapping_carriers_reject_the_same_invalid_numeric_values
+    with pytest.raises(ValidationError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValidationError
+_ test_supported_mapping_carriers_reject_the_same_invalid_numeric_values[columns-True-UserDict] _
+tests\r25_probes\role11\test_mapping_numeric_contract.py:13: in test_supported_mapping_carriers_reject_the_same_invalid_numeric_values
+    with pytest.raises(ValidationError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValidationError
+_ test_supported_mapping_carriers_reject_the_same_invalid_numeric_values[columns-True-mappingproxy] _
+tests\r25_probes\role11\test_mapping_numeric_contract.py:13: in test_supported_mapping_carriers_reject_the_same_invalid_numeric_values
+    with pytest.raises(ValidationError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValidationError
+__ test_dashboard_child_mapping_does_not_bypass_numeric_validation[UserDict] __
+tests\r25_probes\role11\test_mapping_numeric_contract.py:26: in test_dashboard_child_mapping_does_not_bypass_numeric_validation
+    with pytest.raises(ValidationError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValidationError
+_ test_dashboard_child_mapping_does_not_bypass_numeric_validation[mappingproxy] _
+tests\r25_probes\role11\test_mapping_numeric_contract.py:26: in test_dashboard_child_mapping_does_not_bypass_numeric_validation
+    with pytest.raises(ValidationError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValidationError
+=========================== short test summary info ===========================
+FAILED tests/r25_probes/role11/test_mapping_numeric_contract.py::test_supported_mapping_carriers_reject_the_same_invalid_numeric_values[width-900-UserDict]
+FAILED tests/r25_probes/role11/test_mapping_numeric_contract.py::test_supported_mapping_carriers_reject_the_same_invalid_numeric_values[width-900-mappingproxy]
+FAILED tests/r25_probes/role11/test_mapping_numeric_contract.py::test_supported_mapping_carriers_reject_the_same_invalid_numeric_values[version-True-UserDict]
+FAILED tests/r25_probes/role11/test_mapping_numeric_contract.py::test_supported_mapping_carriers_reject_the_same_invalid_numeric_values[version-True-mappingproxy]
+FAILED tests/r25_probes/role11/test_mapping_numeric_contract.py::test_supported_mapping_carriers_reject_the_same_invalid_numeric_values[columns-True-UserDict]
+FAILED tests/r25_probes/role11/test_mapping_numeric_contract.py::test_supported_mapping_carriers_reject_the_same_invalid_numeric_values[columns-True-mappingproxy]
+FAILED tests/r25_probes/role11/test_mapping_numeric_contract.py::test_dashboard_child_mapping_does_not_bypass_numeric_validation[UserDict]
+FAILED tests/r25_probes/role11/test_mapping_numeric_contract.py::test_dashboard_child_mapping_does_not_bypass_numeric_validation[mappingproxy]
+8 failed, 2 passed in 0.30s
+ACTUAL_MAPPING_REGRESSION_IDENTITY={"tested_commit": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180", "pytest_exit": 1, "actual_models_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-11-pr33-998-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz\\models.py", "actual_models_sha256": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170", "all14_source_before_after_unchanged": true, "probe_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-11-python-scale-envelope-ses_de567811cffdTBwcb8pF5nDi9v\\tests\\r25_probes\\role11\\test_mapping_numeric_contract.py", "probe_sha256_before_after": "5c6dd27b730040764a9e650a1e1ddfaa0326b21d602954f87f8d00f7f1423fd7", "scope": "New independent strict regression, NOT softened to match actual bypass. All sources/existing oracles unchanged."}

@@ -1,0 +1,148 @@
+{
+  "observed_utc": "2026-11-27T15:50:10.620893+00:00",
+  "user_status": 200,
+  "login": "sandeshbagmare",
+  "repository_status": 200,
+  "repository": "sandeshbagmare/deepviz-agent-toolkit",
+  "default_branch": "main",
+  "pr_status": 200,
+  "pr": {
+    "number": 33,
+    "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/pull/33",
+    "state": "open",
+    "draft": false,
+    "merged": false,
+    "merged_at": null,
+    "merge_commit_sha": "2110446935aa51642687f1b5915a4b3bf5a49b7d"
+  },
+  "head_sha": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+  "head_ref": "fix/r22-strict-numeric-contract",
+  "base_sha": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "base_ref": "main",
+  "files_status": 200,
+  "files": [
+    {
+      "filename": ".github/workflows/chart-contract.yml",
+      "status": "added",
+      "additions": 34,
+      "deletions": 0,
+      "changes": 34
+    },
+    {
+      "filename": "docs/verification/r22-contract/README.md",
+      "status": "added",
+      "additions": 28,
+      "deletions": 0,
+      "changes": 28
+    },
+    {
+      "filename": "docs/verification/r22-contract/red-green-summary.json",
+      "status": "added",
+      "additions": 114,
+      "deletions": 0,
+      "changes": 114
+    },
+    {
+      "filename": "docs/verification/r22-contract/validation-output.json",
+      "status": "added",
+      "additions": 225,
+      "deletions": 0,
+      "changes": 225
+    },
+    {
+      "filename": "python/deepviz/src/deepviz/models.py",
+      "status": "modified",
+      "additions": 11,
+      "deletions": 0,
+      "changes": 11
+    },
+    {
+      "filename": "schemas/chart-spec.schema.json",
+      "status": "added",
+      "additions": 190,
+      "deletions": 0,
+      "changes": 190
+    },
+    {
+      "filename": "tests/test_models.py",
+      "status": "added",
+      "additions": 66,
+      "deletions": 0,
+      "changes": 66
+    },
+    {
+      "filename": "tests/test_numeric_schema.py",
+      "status": "added",
+      "additions": 59,
+      "deletions": 0,
+      "changes": 59
+    }
+  ],
+  "checks_status": 200,
+  "checks_total": 6,
+  "checks": [
+    {
+      "name": "Numeric contract / Python 3.13",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024845339/job/140593455356",
+      "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024845339/job/140593455356",
+      "started_at": "2026-11-27T15:25:55Z",
+      "completed_at": "2026-11-27T15:26:12Z"
+    },
+    {
+      "name": "Numeric contract / Python 3.11",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024845339/job/140593455231",
+      "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024845339/job/140593455231",
+      "started_at": "2026-11-27T15:25:56Z",
+      "completed_at": "2026-11-27T15:26:10Z"
+    },
+    {
+      "name": "Numeric contract / Python 3.12",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024845339/job/140593454841",
+      "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024845339/job/140593454841",
+      "started_at": "2026-11-27T15:25:55Z",
+      "completed_at": "2026-11-27T15:26:09Z"
+    },
+    {
+      "name": "Numeric contract / Python 3.13",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024835646/job/140593420462",
+      "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024835646/job/140593420462",
+      "started_at": "2026-11-27T15:25:52Z",
+      "completed_at": "2026-11-27T15:26:12Z"
+    },
+    {
+      "name": "Numeric contract / Python 3.12",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024835646/job/140593420306",
+      "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024835646/job/140593420306",
+      "started_at": "2026-11-27T15:25:52Z",
+      "completed_at": "2026-11-27T15:26:07Z"
+    },
+    {
+      "name": "Numeric contract / Python 3.11",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024835646/job/140593420061",
+      "details_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46024835646/job/140593420061",
+      "started_at": "2026-11-27T15:25:52Z",
+      "completed_at": "2026-11-27T15:26:05Z"
+    }
+  ],
+  "read_only": true,
+  "scope": "Actual PR33 head/eight paths/six focused contract checks; not other independent reports/human approval/main merge/fulltoolkit green",
+  "credential_handling": "GCM in memory only; official origin/no redirects; no auth/config/API mutation"
+}

@@ -1,0 +1,448 @@
+{
+  "owner_session": "ses_de567811cffdTBwcb8pF5nDi9v",
+  "observed_utc": "2026-11-27T15:57:22.158287+00:00",
+  "pr": 33,
+  "tested_source": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+  "base": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "review_verdict": "Request changes: R25-11-F1 supported Mapping carrier bypass leaves issue30 strict Python numeric contract incomplete. Not approval or new-regression claim.",
+  "reviewed_changed_paths": [
+    ".github/workflows/chart-contract.yml",
+    "docs/verification/r22-contract/README.md",
+    "docs/verification/r22-contract/red-green-summary.json",
+    "docs/verification/r22-contract/validation-output.json",
+    "python/deepviz/src/deepviz/models.py",
+    "schemas/chart-spec.schema.json",
+    "tests/test_models.py",
+    "tests/test_numeric_schema.py"
+  ],
+  "all14_final_Git_byte_hashes_verified": true,
+  "immutable_manifest": {
+    "models_commit": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+    "file_origins": {
+      ".github/workflows/chart-contract.yml": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      ".gitignore": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "LICENSE": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "README.md": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "docs/superpowers/plans/2026-11-26-deepviz-plan.md": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "docs/superpowers/specs/2026-11-26-deepviz-design.md": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "docs/verification/r22-contract/README.md": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "docs/verification/r22-contract/red-green-summary.json": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "docs/verification/r22-contract/validation-output.json": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "pyproject.toml": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "python/deepviz/src/deepviz/models.py": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "schemas/chart-spec.schema.json": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "tests/test_models.py": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "tests/test_numeric_schema.py": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180"
+    },
+    "sha256": {
+      ".github/workflows/chart-contract.yml": "ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227",
+      ".gitignore": "3bebcceee3a15392de8f9a36815347d9a999e21fe58efe576ef28b9664b00e77",
+      "LICENSE": "afbb59a0c0fccdea7ecc9140e4e762455dc06abea4f02d9cf5324c8fb23b42fd",
+      "README.md": "2497e600ecd5a35af571f0f3e6f2550ce3a49b9322a607e02e6b97aa8c41d40d",
+      "docs/superpowers/plans/2026-11-26-deepviz-plan.md": "9d941cd545a8a37ddbf6d9395d882ba25360318b35ff93d36ed1556f3668d834",
+      "docs/superpowers/specs/2026-11-26-deepviz-design.md": "715ef120ba4700ea28ef5dbd1d975cd80cf3cc5b659e64fc9e6cd231c664a973",
+      "docs/verification/r22-contract/README.md": "f83f3e84a78d9a88c4a96d7df489f19e7fb4a6739c9e662d781f10f06670b3a6",
+      "docs/verification/r22-contract/red-green-summary.json": "e3db9381970aa74f9a9f9ede2c87712dcd47636c34520fb3984ee39107bf1937",
+      "docs/verification/r22-contract/validation-output.json": "3896de0d87545af60fc63bdee608b202055ea55d84dc7f49d1334ab729d02a0b",
+      "pyproject.toml": "c80640f3f3049b9734360abd7bb1b5699449d7bad31f3fcde77c3e2b38a53053",
+      "python/deepviz/src/deepviz/models.py": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+      "schemas/chart-spec.schema.json": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d",
+      "tests/test_models.py": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32",
+      "tests/test_numeric_schema.py": "b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3"
+    },
+    "snapshot_type": "Exact complete14-file immutable PR33 tree; GitLF bytes; source-identity.json reviewer metadata outside Git tree",
+    "own_branch_at_start": "18d7121b5194c76d95a9d3b5f60e4b8002f84449",
+    "original30_test_nonimport_ast_identical_e44": true,
+    "actual_test_hash_equals_readiness_import_only_proposal": true,
+    "main_pyproject_byte_unchanged": true,
+    "author5_LF_hash_claims_independently_verified": true,
+    "observed_utc": "2026-11-27T15:48:53.521041+00:00"
+  },
+  "results": {
+    "provided40_plus_unchanged_own13": {
+      "passed": 53,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "total": 53,
+      "failure_names": [],
+      "raw_sha256": "2ca61a41a8a6b465fd6151705192c975ffb3d5f9b7616d9c1fdcc6c645e350f3",
+      "git_lf_sha256": "2ca61a41a8a6b465fd6151705192c975ffb3d5f9b7616d9c1fdcc6c645e350f3",
+      "newline_normalization": "Raw Windows traceback CRLF may normalize to Git LF only; test values/status unchanged"
+    },
+    "new_mapping_regressions": {
+      "passed": 2,
+      "failed": 8,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "total": 10,
+      "failure_names": [
+        "test_supported_mapping_carriers_reject_the_same_invalid_numeric_values[width-900-UserDict]",
+        "test_supported_mapping_carriers_reject_the_same_invalid_numeric_values[width-900-mappingproxy]",
+        "test_supported_mapping_carriers_reject_the_same_invalid_numeric_values[version-True-UserDict]",
+        "test_supported_mapping_carriers_reject_the_same_invalid_numeric_values[version-True-mappingproxy]",
+        "test_supported_mapping_carriers_reject_the_same_invalid_numeric_values[columns-True-UserDict]",
+        "test_supported_mapping_carriers_reject_the_same_invalid_numeric_values[columns-True-mappingproxy]",
+        "test_dashboard_child_mapping_does_not_bypass_numeric_validation[UserDict]",
+        "test_dashboard_child_mapping_does_not_bypass_numeric_validation[mappingproxy]"
+      ],
+      "raw_sha256": "3db49984a4448dc7b65c185810092c560e9d47d0f3f61e8f02b9a1e8c2fa2c23",
+      "git_lf_sha256": "45367a411f74cdf9cee92f436e7292c9612f79f7fdf9e1e12374267f48e98101",
+      "newline_normalization": "Raw Windows traceback CRLF may normalize to Git LF only; test values/status unchanged"
+    }
+  },
+  "execution": {
+    "observed_utc": "2026-11-27T15:50:59.407517+00:00",
+    "tested_commit": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+    "base": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+    "interpreter": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+    "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+    "versions": {
+      "pydantic": "2.14.4",
+      "pytest": "9.2.0",
+      "jsonschema": "4.26.0",
+      "ruff": "0.17.6",
+      "mypy": "2.4.1"
+    },
+    "invocation": "python -S stdin driver; explicit snapshot PYTHONPATH plus readonly existing site-packages; pytest.main(args)",
+    "pytest_args": [
+      "tests",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-11-python-scale-envelope-ses_de567811cffdTBwcb8pF5nDi9v\\tests\\r22_probes\\role11\\test_numeric_contract_slice.py",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--strict-markers",
+      "--basetemp",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-11-pr33-998-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\actual998-53-temp",
+      "--junitxml",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-11-pr33-998-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\actual998-53.xml"
+    ],
+    "pytest_exit": 0,
+    "wall_seconds": 7.16093600000022,
+    "source_before": {
+      "commit": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "model_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-11-pr33-998-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz\\models.py",
+      "model_sha256": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+      "all14_sha256": {
+        ".github/workflows/chart-contract.yml": "ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227",
+        ".gitignore": "3bebcceee3a15392de8f9a36815347d9a999e21fe58efe576ef28b9664b00e77",
+        "LICENSE": "afbb59a0c0fccdea7ecc9140e4e762455dc06abea4f02d9cf5324c8fb23b42fd",
+        "README.md": "2497e600ecd5a35af571f0f3e6f2550ce3a49b9322a607e02e6b97aa8c41d40d",
+        "docs/superpowers/plans/2026-11-26-deepviz-plan.md": "9d941cd545a8a37ddbf6d9395d882ba25360318b35ff93d36ed1556f3668d834",
+        "docs/superpowers/specs/2026-11-26-deepviz-design.md": "715ef120ba4700ea28ef5dbd1d975cd80cf3cc5b659e64fc9e6cd231c664a973",
+        "docs/verification/r22-contract/README.md": "f83f3e84a78d9a88c4a96d7df489f19e7fb4a6739c9e662d781f10f06670b3a6",
+        "docs/verification/r22-contract/red-green-summary.json": "e3db9381970aa74f9a9f9ede2c87712dcd47636c34520fb3984ee39107bf1937",
+        "docs/verification/r22-contract/validation-output.json": "3896de0d87545af60fc63bdee608b202055ea55d84dc7f49d1334ab729d02a0b",
+        "pyproject.toml": "c80640f3f3049b9734360abd7bb1b5699449d7bad31f3fcde77c3e2b38a53053",
+        "python/deepviz/src/deepviz/models.py": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+        "schemas/chart-spec.schema.json": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d",
+        "tests/test_models.py": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32",
+        "tests/test_numeric_schema.py": "b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3"
+      },
+      "deepviz_namespace_paths": [
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-11-pr33-998-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz",
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\deepviz"
+      ],
+      "sys_path": [
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-11-python-scale-envelope-ses_de567811cffdTBwcb8pF5nDi9v\\tests\\r22_probes\\role11",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-11-pr33-998-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\tests",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-11-python-scale-envelope-ses_de567811cffdTBwcb8pF5nDi9v",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-11-pr33-998-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src",
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages",
+        "C:\\Users\\bagma\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\python312.zip",
+        "C:\\Users\\bagma\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\DLLs",
+        "C:\\Users\\bagma\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\Lib",
+        "C:\\Users\\bagma\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none"
+      ],
+      "no_site": true,
+      "dont_write_bytecode": true,
+      "dirty_tracked_paths": []
+    },
+    "source_after": {
+      "commit": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "model_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-11-pr33-998-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz\\models.py",
+      "model_sha256": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+      "all14_sha256": {
+        ".github/workflows/chart-contract.yml": "ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227",
+        ".gitignore": "3bebcceee3a15392de8f9a36815347d9a999e21fe58efe576ef28b9664b00e77",
+        "LICENSE": "afbb59a0c0fccdea7ecc9140e4e762455dc06abea4f02d9cf5324c8fb23b42fd",
+        "README.md": "2497e600ecd5a35af571f0f3e6f2550ce3a49b9322a607e02e6b97aa8c41d40d",
+        "docs/superpowers/plans/2026-11-26-deepviz-plan.md": "9d941cd545a8a37ddbf6d9395d882ba25360318b35ff93d36ed1556f3668d834",
+        "docs/superpowers/specs/2026-11-26-deepviz-design.md": "715ef120ba4700ea28ef5dbd1d975cd80cf3cc5b659e64fc9e6cd231c664a973",
+        "docs/verification/r22-contract/README.md": "f83f3e84a78d9a88c4a96d7df489f19e7fb4a6739c9e662d781f10f06670b3a6",
+        "docs/verification/r22-contract/red-green-summary.json": "e3db9381970aa74f9a9f9ede2c87712dcd47636c34520fb3984ee39107bf1937",
+        "docs/verification/r22-contract/validation-output.json": "3896de0d87545af60fc63bdee608b202055ea55d84dc7f49d1334ab729d02a0b",
+        "pyproject.toml": "c80640f3f3049b9734360abd7bb1b5699449d7bad31f3fcde77c3e2b38a53053",
+        "python/deepviz/src/deepviz/models.py": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+        "schemas/chart-spec.schema.json": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d",
+        "tests/test_models.py": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32",
+        "tests/test_numeric_schema.py": "b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3"
+      },
+      "deepviz_namespace_paths": [
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-11-pr33-998-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz",
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\deepviz"
+      ],
+      "sys_path": [
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-11-python-scale-envelope-ses_de567811cffdTBwcb8pF5nDi9v\\tests\\r22_probes\\role11",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-11-pr33-998-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\tests",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-11-python-scale-envelope-ses_de567811cffdTBwcb8pF5nDi9v",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-11-pr33-998-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src",
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages",
+        "C:\\Users\\bagma\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\python312.zip",
+        "C:\\Users\\bagma\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\DLLs",
+        "C:\\Users\\bagma\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\Lib",
+        "C:\\Users\\bagma\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none"
+      ],
+      "no_site": true,
+      "dont_write_bytecode": true,
+      "dirty_tracked_paths": []
+    },
+    "unchanged_own_probe": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-11-python-scale-envelope-ses_de567811cffdTBwcb8pF5nDi9v\\tests\\r22_probes\\role11\\test_numeric_contract_slice.py",
+      "sha256": "dca048bdc3f374b598bed19e6123a5f2ba758e710e6445589fc2a482142c8e5b",
+      "source_commit": "18d7121b5194c76d95a9d3b5f60e4b8002f84449",
+      "expected_cases": 13
+    },
+    "scope": "Actual PR33 provided40+unchanged own13 once, no baseline/e44/fulltoolkit/scale replay"
+  },
+  "new_regression_execution": {
+    "tested_commit": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+    "pytest_exit": 1,
+    "actual_models_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-11-pr33-998-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz\\models.py",
+    "actual_models_sha256": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+    "all14_source_before_after_unchanged": true,
+    "probe_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-11-python-scale-envelope-ses_de567811cffdTBwcb8pF5nDi9v\\tests\\r25_probes\\role11\\test_mapping_numeric_contract.py",
+    "probe_sha256_before_after": "5c6dd27b730040764a9e650a1e1ddfaa0326b21d602954f87f8d00f7f1423fd7",
+    "scope": "New independent strict regression, NOT softened to match actual bypass. All sources/existing oracles unchanged."
+  },
+  "diagnostic": {
+    "source": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+    "actual_module": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-11-pr33-998-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz\\models.py",
+    "model_sha256_before_after": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+    "outcomes": [
+      {
+        "carrier": "dict",
+        "input": {
+          "width": "900"
+        },
+        "accepted": false,
+        "error_types": [
+          "value_error"
+        ]
+      },
+      {
+        "carrier": "dict",
+        "input": {
+          "version": true
+        },
+        "accepted": false,
+        "error_types": [
+          "value_error"
+        ]
+      },
+      {
+        "carrier": "dict",
+        "input": {
+          "columns": true
+        },
+        "accepted": false,
+        "error_types": [
+          "value_error"
+        ]
+      },
+      {
+        "carrier": "dict",
+        "input": {
+          "width": 900.0
+        },
+        "accepted": true,
+        "output_subset": {
+          "width": 900
+        }
+      },
+      {
+        "carrier": "UserDict",
+        "input": {
+          "width": "900"
+        },
+        "accepted": true,
+        "output_subset": {
+          "width": 900
+        }
+      },
+      {
+        "carrier": "UserDict",
+        "input": {
+          "version": true
+        },
+        "accepted": true,
+        "output_subset": {
+          "version": 1
+        }
+      },
+      {
+        "carrier": "UserDict",
+        "input": {
+          "columns": true
+        },
+        "accepted": true,
+        "output_subset": {
+          "columns": 1
+        }
+      },
+      {
+        "carrier": "UserDict",
+        "input": {
+          "width": 900.0
+        },
+        "accepted": true,
+        "output_subset": {
+          "width": 900
+        }
+      },
+      {
+        "carrier": "mappingproxy",
+        "input": {
+          "width": "900"
+        },
+        "accepted": true,
+        "output_subset": {
+          "width": 900
+        }
+      },
+      {
+        "carrier": "mappingproxy",
+        "input": {
+          "version": true
+        },
+        "accepted": true,
+        "output_subset": {
+          "version": 1
+        }
+      },
+      {
+        "carrier": "mappingproxy",
+        "input": {
+          "columns": true
+        },
+        "accepted": true,
+        "output_subset": {
+          "columns": 1
+        }
+      },
+      {
+        "carrier": "mappingproxy",
+        "input": {
+          "width": 900.0
+        },
+        "accepted": true,
+        "output_subset": {
+          "width": 900
+        }
+      }
+    ],
+    "scope": "Diagnostic public model_validate with ordinary Mapping carriers; no model_construct, mutation, arbitrary custom model/executable object or source edits"
+  },
+  "schema_output_proof": {
+    "tested_source": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+    "actual_model_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-11-pr33-998-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz\\models.py",
+    "model_sha256_before_after": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+    "generated_schema_equals_published": true,
+    "schema_export_byte_for_byte_equal_json_dumps_indent2_plus_LF": true,
+    "schema_git_lf_sha256": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d",
+    "schema_canonical_sorted_compact_sha256": "75972780be039e8dbbbf78a93d0611d9e6a5c9ed6e57a7ecf4239c2af20d6670",
+    "committed_validation_output_rebuilt_exactly": true,
+    "accepted_serialized_and_schema_valid": 4,
+    "rejected_python_and_json_with_exact_errors": 6,
+    "not_claimed": "JSON Schema does not encode custom dashboard structural validator; only numeric contract agreement is promised; Mapping carrier issue remains a Python-public-API finding",
+    "applicability": "Actual model/schema/wire output; no renderer/chart/browser present or claimed"
+  },
+  "finding": {
+    "id": "R25-11-F1",
+    "priority": "P2",
+    "file": "python/deepviz/src/deepviz/models.py",
+    "lines": "41-47",
+    "title": "Validate all supported Mapping carriers before Pydantic numeric coercion",
+    "reproduction": "from collections import UserDict; ChartSpec.model_validate(UserDict({\"width\":\"900\"})).width == 900; MappingProxyType({\"columns\":True}) yields columns1; nested child mappings also bypass",
+    "expected": "ValidationError, just as direct dict and model_validate_json reject the same numeric strings/booleans",
+    "actual": "8 genuine strict failures:6 direct mapping values plus2 dashboard children;2 integral mapping positives pass",
+    "smallest_fix_proposal": "Apply guard to collections.abc.Mapping rather than only dict, or field before-validators for the five numeric fields; keep raw string/bool rejection and valid integral number behavior; author owns source fix",
+    "scope": "Incomplete issue30 fix on supported public model_validate carrier, preexisting coercion not newly introduced regression; JSON decoded dict/literals are protected"
+  },
+  "workflow_review": {
+    "path": ".github/workflows/chart-contract.yml",
+    "lines": "1-34",
+    "push_branches": [
+      "main",
+      "fix/r22-strict-numeric-contract"
+    ],
+    "pull_request_base": [
+      "main"
+    ],
+    "permissions": {
+      "contents": "read"
+    },
+    "matrix": [
+      "3.11",
+      "3.12",
+      "3.13"
+    ],
+    "commands": [
+      "dependency-only pip install matching existing main declared ranges",
+      "pytest full tests present/strict markers/JUnit",
+      "ruff check .",
+      "mypy configured actualmodelscope"
+    ],
+    "no_secret_or_PR_target_or_user_controlled_shell_input": true,
+    "no_ignored_test_failures": true,
+    "dependency_or_pyproject_changes": false,
+    "limits": "Action version tags and dependency version ranges float; no pinned-dependency reproduction/minimum-version local matrix or platform equivalence claim"
+  },
+  "static_checks": {
+    "actual_head_fulltree_ruff_exit": 0,
+    "actual_head_configured_model_mypy_exit": 0,
+    "mypy_file_count": 1,
+    "new_own_mapping_probe_ruff_exit": 0
+  },
+  "published_head_and_checks_receipt": "published-pr33-checks.json",
+  "raw_artifact_root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-11-pr33-998-ses_de567811cffdTBwcb8pF5nDi9v-artifacts",
+  "raw_logs": {
+    "actual998-53.log": "fd0456f1be587ea1acff8ccc371d2382862d7f1d705856702d3c2abee61f28e4",
+    "mapping-red.log": "4b3dc326490b4c8469e669ccabd045555c8508cb6e9eee923d71f943aa9c1137",
+    "actual998-ruff.log": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+    "actual998-mypy.log": "94594db09076fe305d51b50210d0bc5e9d275fb814f8b42c1ed4cf3368392f9a",
+    "mapping-probe-ruff.log": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+  },
+  "harness_errors": [
+    {
+      "phase": "prework shell rejected by portable scanner",
+      "result": "Before execution, no state/test/API mutation; invalid-structure request replaced by simpler PowerShell",
+      "product_failure": false
+    },
+    {
+      "phase": "snapshot file-count assertion15",
+      "result": "Actual immutable tree14, all14 copied raw bytes correct. Corrected count only before any import/test",
+      "product_failure": false
+    }
+  ],
+  "limits": [
+    "No product/existing oracle/schema/workflow/default/API writes; no dependency install or shared environment mutation",
+    "Shared Python3.12.16/Pydantic2.14.4 local only; six remote focused jobs independently observed success but not independent test reports",
+    "No renderer/chart/HTML/data-ingestion/filesystem-write sink exists on this slice; no artifact/10M/memory/wholetoolkit/package-release claim",
+    "No parent/e44 baseline replay; readiness equality restricted to explicitly checked model hash/originaltestAST/schema field definitions",
+    "No other reviewer/tester reports or human GitHub approval invented; no merge/closure authority",
+    "Custom dashboard validation not fully expressible in current exported schema; existing baseline semantics not advertised as universal schema equivalence"
+  ],
+  "next_action": "R04 disposition/fix F1 on own source branch, freeze new head and notify actualhead reviewer01+11/testers17+15 for affected rerun and exacthead CI before merge",
+  "publication_serialization": {
+    "mapping_red_log_raw_encoding": "PowerShell redirected UTF16LE with BOM",
+    "mapping_red_log_raw_sha256": "4b3dc326490b4c8469e669ccabd045555c8508cb6e9eee923d71f943aa9c1137",
+    "mapping_red_log_published_encoding": "UTF8 LF, decoded text identical",
+    "mapping_red_log_published_sha256": "6c3911d3f0a569ecadeed1d3c83aa57f01dbe085fa29d12b6401a574f60d8dbd",
+    "mapping_probe_raw_sha256": "5c6dd27b730040764a9e650a1e1ddfaa0326b21d602954f87f8d00f7f1423fd7",
+    "mapping_probe_GitLF_sha256": "83f1407e0970939afc1d25dad6fc3e5eb1b59dab0fd2c9cf135cbdc1e267912f",
+    "no_source_or_test_rewrite": true
+  }
+}
