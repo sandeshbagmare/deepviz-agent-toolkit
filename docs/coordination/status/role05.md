@@ -5,3 +5,4 @@ Strict real-G2 10-case suite: 10 passed, 0 failed, 0 skipped; original four subn
 Finding F1 P2 at python/deepviz/src/deepviz/engines.py:710-712: valid width240 signed finite-MAX heatmap paints two cells without browser errors, but labels overlap 98.98px and extend to x299.746. Screenshot and bounds are under evidence/R51-05/minimum-width-max-label/. Distinct from the existing finite-MAX scale issue. No issue/API write.
 Disposition REQUEST CHANGES, not ready PR. R04 next owner for source disposition/repair, fresh independent gates, CI, PR and main. These were not performed by role05. Estimate UNKNOWN.
 Full report reports/R51-05-antv-source-review.md; test/output/source proof evidence/R51-05/.
+Final readback: first evidence commit d38083c51cf75033d3d85a6a9bfa120822b03749 and receipt/status commit facb8dbc3a01f7455424554c975d7002b6a6e200 both non-force pushed and returned exactly by immediate remote ref readback. No PR or default-branch change.
