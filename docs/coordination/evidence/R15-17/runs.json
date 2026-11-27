@@ -1,0 +1,190 @@
+{
+  "source_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "scope": "NEW independent baseline count fidelity only, known R03-01 root cause, not final signoff",
+  "python": {
+    "command": "python -m pytest tests/r15_probes/role17 -q --tb=short --junitxml=artifacts/local/R15-17/checks/count.xml",
+    "exit_code": 1,
+    "tests": 55,
+    "passed": 40,
+    "failed": 15,
+    "errors": 0,
+    "skipped": 0,
+    "console_seconds": 3.86,
+    "junit_suite_seconds": "2.924",
+    "junit_sha256": "156ee4cbcc33553f1c1a9fa9ff89b682718e33dfcfa98d878f505717cafa58c4",
+    "failed_cases": [
+      "test_count_native_measure_equals_literal_multiplicity_not_numeric_color_or_size[bar-matplotlib]",
+      "test_count_native_measure_equals_literal_multiplicity_not_numeric_color_or_size[bar-plotly]",
+      "test_count_native_measure_equals_literal_multiplicity_not_numeric_color_or_size[bar-vega]",
+      "test_count_native_measure_equals_literal_multiplicity_not_numeric_color_or_size[bar-echarts]",
+      "test_count_native_measure_equals_literal_multiplicity_not_numeric_color_or_size[bar-antv]",
+      "test_count_native_measure_equals_literal_multiplicity_not_numeric_color_or_size[line-matplotlib]",
+      "test_count_native_measure_equals_literal_multiplicity_not_numeric_color_or_size[line-plotly]",
+      "test_count_native_measure_equals_literal_multiplicity_not_numeric_color_or_size[line-vega]",
+      "test_count_native_measure_equals_literal_multiplicity_not_numeric_color_or_size[line-echarts]",
+      "test_count_native_measure_equals_literal_multiplicity_not_numeric_color_or_size[line-antv]",
+      "test_count_native_measure_equals_literal_multiplicity_not_numeric_color_or_size[bubble-matplotlib]",
+      "test_count_native_measure_equals_literal_multiplicity_not_numeric_color_or_size[bubble-plotly]",
+      "test_count_native_measure_equals_literal_multiplicity_not_numeric_color_or_size[bubble-vega]",
+      "test_count_native_measure_equals_literal_multiplicity_not_numeric_color_or_size[bubble-echarts]",
+      "test_count_native_measure_equals_literal_multiplicity_not_numeric_color_or_size[bubble-antv]"
+    ]
+  },
+  "typescript": {
+    "command": "node --test --test-reporter=tap tests/r15_probes/role17/count-parity.test.mjs",
+    "exit_code": 0,
+    "tests": 28,
+    "passed": 28,
+    "failed": 0,
+    "skipped": 0,
+    "duration_ms": 171.3292,
+    "public_entry": "source-5340-v2/packages/deepviz/dist/index.js",
+    "compiler_command": "node <existing TypeScript>/bin/tsc -p artifacts/local/R15-17/source-5340-v2/packages/deepviz/tsconfig.json",
+    "compiler_exit": 0
+  },
+  "browser": {
+    "command": "node tests/r15_probes/role17/browser-count.cjs artifacts/local/R15-17/visuals-v2 artifacts/local/R15-17/browser-v2",
+    "exit_code": 1,
+    "strict_red": 1,
+    "strict_pass": 1,
+    "infrastructure_passes": 2,
+    "http_200": 2,
+    "console_errors": 0,
+    "console_warnings": 0,
+    "page_errors": 0,
+    "failed_requests": 0,
+    "external_requests": 0,
+    "actual_images_opened": [
+      "matplotlib-count-red.png",
+      "vega-count-red.png",
+      "plotly-count-red.png",
+      "plotly-count-control.png"
+    ]
+  },
+  "scoped_ruff_exit": 0,
+  "browser_node_check_exit": 0,
+  "source_existing_tests_diff_exit": 0,
+  "native_svg_packet_audits": [
+    {
+      "name": "vega-count-red.svg",
+      "xml_inert_element_attribute_href_checks": "PASS",
+      "not_a_general_security_certification": true
+    },
+    {
+      "name": "plotly-count-red.svg",
+      "xml_inert_element_attribute_href_checks": "PASS",
+      "not_a_general_security_certification": true
+    }
+  ],
+  "raw_console_logs": [
+    {
+      "name": "count",
+      "exit_code": 1,
+      "raw_local_path": "artifacts/local/R15-17/checks/count.log",
+      "raw_bytes": 19112,
+      "raw_sha256": "94e7e68f54346162c05d1ea318376d6cb2d4f34c8ecf986d8d801faed0648a49",
+      "last_console_line": "15 failed, 40 passed in 3.86s"
+    },
+    {
+      "name": "ts-count",
+      "exit_code": 1,
+      "raw_local_path": "artifacts/local/R15-17/checks/ts-count.log",
+      "raw_bytes": 13964,
+      "raw_sha256": "69cc76f0c1cb198877bbdf58c09b45fff8797641677a27029a32ee19da85638d",
+      "last_console_line": "# duration_ms 169.5335"
+    },
+    {
+      "name": "ts-count-fixed",
+      "exit_code": 0,
+      "raw_local_path": "artifacts/local/R15-17/checks/ts-count-fixed.log",
+      "raw_bytes": 10570,
+      "raw_sha256": "ca4474a3f1f2c09f3a4771dea087d0fc1bca5ae54f70e5fd588e64f0e876a699",
+      "last_console_line": "# duration_ms 171.3292"
+    },
+    {
+      "name": "visual-collector",
+      "exit_code": 1,
+      "raw_local_path": "artifacts/local/R15-17/checks/visual-collector.log",
+      "raw_bytes": 2088,
+      "raw_sha256": "d14eaf44bad09d7399f2890ec2d30c31cf71bc4f0f8928f651c2732c7e6c2ab5",
+      "last_console_line": "ValueError: Invalid suffix 'png'"
+    },
+    {
+      "name": "visual-collector-fixed",
+      "exit_code": 0,
+      "raw_local_path": "artifacts/local/R15-17/checks/visual-collector-fixed.log",
+      "raw_bytes": 440,
+      "raw_sha256": "cb3e052ee62260e67acda97453f4dc92ba3d85e715ef4123d2b731fceb064d5d",
+      "last_console_line": "{\"source_sha\": \"5340bc69b7203ad7a9166543062482d819f9b705\", \"artifacts\": 6, \"count_fidelity\": {\"matplotlib\": false, \"plotly\": false, \"vega\": false, \"echarts\": false, \"antv\": false}, \"collector_exit_not_fidelity\": true}"
+    },
+    {
+      "name": "browser",
+      "exit_code": 1,
+      "raw_local_path": "artifacts/local/R15-17/checks/browser.log",
+      "raw_bytes": 3964,
+      "raw_sha256": "7ede9d51d096c627bff153aee0da54d201f675c3a5868674905792d69accd8e9",
+      "last_console_line": "\u001b[2m       - waiting 500ms\u001b[22m"
+    },
+    {
+      "name": "browser-fixed",
+      "exit_code": 1,
+      "raw_local_path": "artifacts/local/R15-17/checks/browser-fixed.log",
+      "raw_bytes": 160,
+      "raw_sha256": "33320d9ce5d0642623478e9b477fc234211a2b855fa3baadbddb31e4edef4ee2",
+      "last_console_line": "{\"navigations\":2,\"strictPasses\":1,\"infrastructurePasses\":2,\"consoleErrors\":0}"
+    },
+    {
+      "name": "channel",
+      "exit_code": 1,
+      "raw_local_path": "artifacts/local/R15-17/checks/channel.log",
+      "raw_bytes": 1576,
+      "raw_sha256": "13c71a7acffc55e85f2cba6cbab05778d374aa6efd3220e00e9ca2c81eaa3819",
+      "last_console_line": "1 failed, 55 deselected in 0.61s"
+    }
+  ],
+  "unsuccessful_own_harness_checks": [
+    "git archive128 requested nonexistent tsconfig.base.json before source extraction",
+    "TS27pass1fail wrong ECharts object-valued bubble reader; native count was already correct",
+    "visual collector1 own missing dot in PNG suffix; partial outputs preserved",
+    "browser1 native drag layer intercepted direct path.hover before screenshots; coordinate mouse driver corrected"
+  ],
+  "not_run": [
+    "full Python suite/mypy/distribution builds",
+    "npm ci/npm test/package builds/pack",
+    "ECharts/G2 actual browser paint",
+    "scale/10M/theme/title matrix/all-kind browser/XSS hostile fixtures",
+    "future corrected R04 source, independent final-candidate signoff, remote CI"
+  ],
+  "deduplication": "16 NEW Python case failures and bad paint share R03-01 P1#2 channels wrong inferred count measure; not new tickets or a normalizer fault.",
+  "additional_disjoint_python_channel_case": {
+    "command": "python -m pytest tests/r15_probes/role17 -q -k retained_numeric_color_size --tb=short --junitxml=artifacts/local/R15-17/checks/channel.xml",
+    "exit_code": 1,
+    "executed": 1,
+    "failed": 1,
+    "passed": 0,
+    "deselected": 55,
+    "skipped": 0,
+    "console_seconds": 0.61,
+    "junit_sha256": "fec7b63016430d342e500d1d16df66b98e155706e8f15e5f81d61fd880367c2d",
+    "failure_name": "test_retained_numeric_color_size_channels_do_not_become_the_count_measure",
+    "source_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+    "retained_color_and_size_assertions": "Both passed before wrong _y literal count assertion failed."
+  },
+  "distinct_python_cases_executed_across_disjoint_commands": {
+    "total": 56,
+    "failed": 16,
+    "passed": 40,
+    "skipped": 0,
+    "final_all_56_in_one_command": "NOT RUN; original 55 cases were not replayed after adding the one disjoint channel case."
+  },
+  "process_environment": {
+    "python_executable": "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+    "PYTHONPATH": "<OWNWT>/artifacts/local/R15-17/source-5340-v2/python/deepviz/src",
+    "DEEPVIZ_R15_SOURCE_IDENTITY": "<OWNWT>/artifacts/local/R15-17/source-5340-v2/source-identity.json",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONIOENCODING": "utf-8",
+    "NODE_PATH_for_browser_only": "C:/Users/bagma/deepviz-agent-toolkit/node_modules",
+    "DEEPVIZ_R15_TS_ENTRY": "<OWNWT>/artifacts/local/R15-17/source-5340-v2/packages/deepviz/dist/index.js",
+    "all_overrides": "process-only; existing dependencies read-only; no installs"
+  }
+}

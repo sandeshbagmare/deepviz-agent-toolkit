@@ -1,0 +1,189 @@
+{
+  "source_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "expected_from_caller": [
+    [
+      "A",
+      2
+    ],
+    [
+      "B",
+      3
+    ],
+    [
+      "C",
+      1
+    ]
+  ],
+  "observed_native_measures": {
+    "matplotlib": [
+      [
+        "A",
+        90.0
+      ],
+      [
+        "B",
+        80.0
+      ],
+      [
+        "C",
+        70.0
+      ]
+    ],
+    "plotly": [
+      [
+        "A",
+        90.0
+      ],
+      [
+        "B",
+        80.0
+      ],
+      [
+        "C",
+        70.0
+      ]
+    ],
+    "vega": [
+      [
+        "A",
+        90.0
+      ],
+      [
+        "B",
+        80.0
+      ],
+      [
+        "C",
+        70.0
+      ]
+    ],
+    "echarts": [
+      [
+        "A",
+        90.0
+      ],
+      [
+        "B",
+        80.0
+      ],
+      [
+        "C",
+        70.0
+      ]
+    ],
+    "antv": [
+      [
+        "A",
+        90.0
+      ],
+      [
+        "B",
+        80.0
+      ],
+      [
+        "C",
+        70.0
+      ]
+    ]
+  },
+  "count_fidelity": {
+    "matplotlib": false,
+    "plotly": false,
+    "vega": false,
+    "echarts": false,
+    "antv": false
+  },
+  "collection_not_verification": true,
+  "artifacts": {
+    "matplotlib": {
+      "engine": "matplotlib",
+      "files": {
+        "png": "matplotlib/deepviz-vc5cu75q/chart.png",
+        "svg": "matplotlib/deepviz-vc5cu75q/chart.svg",
+        "html": "matplotlib/deepviz-vc5cu75q/chart.html"
+      },
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "warnings": []
+    },
+    "plotly": {
+      "engine": "plotly",
+      "files": {
+        "html": "plotly/deepviz-cgqxqgkf/chart.html"
+      },
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "warnings": []
+    },
+    "vega": {
+      "engine": "vega",
+      "files": {
+        "svg": "vega/deepviz-_glq8kli/chart.svg",
+        "html": "vega/deepviz-_glq8kli/chart.html",
+        "png": "vega/deepviz-_glq8kli/chart.png"
+      },
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "warnings": []
+    },
+    "echarts": {
+      "engine": "echarts",
+      "files": {
+        "html": "echarts/deepviz-wm9l_3x4/chart.html"
+      },
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    },
+    "antv": {
+      "engine": "antv",
+      "files": {
+        "html": "antv/deepviz-lb6ujkfq/chart.html"
+      },
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    },
+    "plotly-explicit-y-control": {
+      "engine": "plotly",
+      "files": {
+        "html": "plotly-explicit-y-control/deepviz-vzjkj_r4/chart.html"
+      },
+      "input_count": 6,
+      "output_count": 3,
+      "strategy": "count",
+      "warnings": []
+    }
+  },
+  "modules": [
+    {
+      "name": "deepviz.normalize",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R15-17\\source-5340-v2\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+    },
+    {
+      "name": "deepviz.models",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R15-17\\source-5340-v2\\python\\deepviz\\src\\deepviz\\models.py",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    {
+      "name": "deepviz.engines",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R15-17\\source-5340-v2\\python\\deepviz\\src\\deepviz\\engines.py",
+      "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de"
+    },
+    {
+      "name": "deepviz.render",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-17-vega-visible-title-ses_de5678086ffeNido4phnXCJ8J4\\artifacts\\local\\R15-17\\source-5340-v2\\python\\deepviz\\src\\deepviz\\render.py",
+      "sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+    }
+  ]
+}

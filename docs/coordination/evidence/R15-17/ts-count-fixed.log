@@ -1,0 +1,178 @@
+TAP version 13
+# Subtest: vega bar COUNT ignores numeric color/retained size as measure
+ok 1 - vega bar COUNT ignores numeric color/retained size as measure
+  ---
+  duration_ms: 6.8386
+  type: 'test'
+  ...
+# Subtest: vega line COUNT ignores numeric color/retained size as measure
+ok 2 - vega line COUNT ignores numeric color/retained size as measure
+  ---
+  duration_ms: 0.5678
+  type: 'test'
+  ...
+# Subtest: vega bubble COUNT ignores numeric color/retained size as measure
+ok 3 - vega bubble COUNT ignores numeric color/retained size as measure
+  ---
+  duration_ms: 0.9213
+  type: 'test'
+  ...
+# Subtest: vega bar explicit sum remains its own measure
+ok 4 - vega bar explicit sum remains its own measure
+  ---
+  duration_ms: 0.4017
+  type: 'test'
+  ...
+# Subtest: vega bar explicit none remains its own measure
+ok 5 - vega bar explicit none remains its own measure
+  ---
+  duration_ms: 0.6758
+  type: 'test'
+  ...
+# Subtest: vega line explicit sum remains its own measure
+ok 6 - vega line explicit sum remains its own measure
+  ---
+  duration_ms: 0.268
+  type: 'test'
+  ...
+# Subtest: vega line explicit none remains its own measure
+ok 7 - vega line explicit none remains its own measure
+  ---
+  duration_ms: 0.2082
+  type: 'test'
+  ...
+# Subtest: antv bar COUNT ignores numeric color/retained size as measure
+ok 8 - antv bar COUNT ignores numeric color/retained size as measure
+  ---
+  duration_ms: 0.4002
+  type: 'test'
+  ...
+# Subtest: antv line COUNT ignores numeric color/retained size as measure
+ok 9 - antv line COUNT ignores numeric color/retained size as measure
+  ---
+  duration_ms: 0.3286
+  type: 'test'
+  ...
+# Subtest: antv bubble COUNT ignores numeric color/retained size as measure
+ok 10 - antv bubble COUNT ignores numeric color/retained size as measure
+  ---
+  duration_ms: 0.3388
+  type: 'test'
+  ...
+# Subtest: antv bar explicit sum remains its own measure
+ok 11 - antv bar explicit sum remains its own measure
+  ---
+  duration_ms: 0.3891
+  type: 'test'
+  ...
+# Subtest: antv bar explicit none remains its own measure
+ok 12 - antv bar explicit none remains its own measure
+  ---
+  duration_ms: 0.4287
+  type: 'test'
+  ...
+# Subtest: antv line explicit sum remains its own measure
+ok 13 - antv line explicit sum remains its own measure
+  ---
+  duration_ms: 0.2305
+  type: 'test'
+  ...
+# Subtest: antv line explicit none remains its own measure
+ok 14 - antv line explicit none remains its own measure
+  ---
+  duration_ms: 0.1602
+  type: 'test'
+  ...
+# Subtest: plotly bar COUNT ignores numeric color/retained size as measure
+ok 15 - plotly bar COUNT ignores numeric color/retained size as measure
+  ---
+  duration_ms: 0.7762
+  type: 'test'
+  ...
+# Subtest: plotly line COUNT ignores numeric color/retained size as measure
+ok 16 - plotly line COUNT ignores numeric color/retained size as measure
+  ---
+  duration_ms: 0.2919
+  type: 'test'
+  ...
+# Subtest: plotly bubble COUNT ignores numeric color/retained size as measure
+ok 17 - plotly bubble COUNT ignores numeric color/retained size as measure
+  ---
+  duration_ms: 0.285
+  type: 'test'
+  ...
+# Subtest: plotly bar explicit sum remains its own measure
+ok 18 - plotly bar explicit sum remains its own measure
+  ---
+  duration_ms: 0.3113
+  type: 'test'
+  ...
+# Subtest: plotly bar explicit none remains its own measure
+ok 19 - plotly bar explicit none remains its own measure
+  ---
+  duration_ms: 0.1639
+  type: 'test'
+  ...
+# Subtest: plotly line explicit sum remains its own measure
+ok 20 - plotly line explicit sum remains its own measure
+  ---
+  duration_ms: 0.2105
+  type: 'test'
+  ...
+# Subtest: plotly line explicit none remains its own measure
+ok 21 - plotly line explicit none remains its own measure
+  ---
+  duration_ms: 0.6647
+  type: 'test'
+  ...
+# Subtest: echarts bar COUNT ignores numeric color/retained size as measure
+ok 22 - echarts bar COUNT ignores numeric color/retained size as measure
+  ---
+  duration_ms: 0.6915
+  type: 'test'
+  ...
+# Subtest: echarts line COUNT ignores numeric color/retained size as measure
+ok 23 - echarts line COUNT ignores numeric color/retained size as measure
+  ---
+  duration_ms: 0.2233
+  type: 'test'
+  ...
+# Subtest: echarts bubble COUNT ignores numeric color/retained size as measure
+ok 24 - echarts bubble COUNT ignores numeric color/retained size as measure
+  ---
+  duration_ms: 0.4073
+  type: 'test'
+  ...
+# Subtest: echarts bar explicit sum remains its own measure
+ok 25 - echarts bar explicit sum remains its own measure
+  ---
+  duration_ms: 0.2265
+  type: 'test'
+  ...
+# Subtest: echarts bar explicit none remains its own measure
+ok 26 - echarts bar explicit none remains its own measure
+  ---
+  duration_ms: 0.1282
+  type: 'test'
+  ...
+# Subtest: echarts line explicit sum remains its own measure
+ok 27 - echarts line explicit sum remains its own measure
+  ---
+  duration_ms: 0.1688
+  type: 'test'
+  ...
+# Subtest: echarts line explicit none remains its own measure
+ok 28 - echarts line explicit none remains its own measure
+  ---
+  duration_ms: 0.115
+  type: 'test'
+  ...
+1..28
+# tests 28
+# suites 0
+# pass 28
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 171.3292

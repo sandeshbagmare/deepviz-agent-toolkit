@@ -1,0 +1,12 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+__ test_retained_numeric_color_size_channels_do_not_become_the_count_measure __
+tests\r15_probes\role17\test_count_measure.py:96: in test_retained_numeric_color_size_channels_do_not_become_the_count_measure
+    assert [row["_y"] for row in mapped] == [2, 3, 1]
+E   assert [90.0, 80.0, 70.0] == [2, 3, 1]
+E     
+E     At index 0 diff: 90.0 != 2
+E     Use -v to get more diff
+=========================== short test summary info ===========================
+FAILED tests/r15_probes/role17/test_count_measure.py::test_retained_numeric_color_size_channels_do_not_become_the_count_measure
+1 failed, 55 deselected in 0.61s
