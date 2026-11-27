@@ -96,3 +96,24 @@
 - RawownR13push/readback/receipt; compactMAIN`docs/coordination/evidence/R13-09/publication.json`; finalMAINR13reportactualreceipt. PostpushMAINupdatesnotclaimedinsidealreadysealedcommit.
 - Ownedhandoffpublished, notsourcefix: strictREDandpositivecontrolsimmutable, newpreflight3PASS/0productsuitesrepeated; futureexecutor/productGREENNOT_RUN. Higherpriorityno-production-editsrespected. FullCI/900unmet; nofinalauthorindependenceclaim.
 - Next executable action/decisionownerR04: recordeligiblegeneralproducertransfer→minimalundefined-onlyhelperdefaultsourcecommit→separatenon-authortesterexactcleancommitrecipe+original40wrappercomparison. DoNOTintegrateREDtestbranchalone.
+
+- Actual8f8a21fpostpushreceiptcheckpointcommit **4c603257bea57219a4402c6603e1de5236f36795**,3owneddocpaths46insertions/fullstagedreview/allowlist/whitespace0/credentialscanPASS; no source/recipe/testchanges. Nextfinalnonforceownpush/readback4c60325, thenreturnR04decisionhandoff; no productsuitereplay.
+
+- **Finalactualremote tip4c603257bea57219a4402c6603e1de5236f36795**: nonforceownpush0+exactlsremotereadback0/local=remote=expected. Savedownrawreceipt-checkpointlogs/JSONandMAIN`evidence/R13-09/publication-tip.json`; trackedclean/ownuntrackedartifacts, finalproductionschemadiff6d0exit0/testhashunchanged. NoextraSCMloop; returnR04publishedREDhandoff/constraintandfutureeligibleproducerrecipe. LastMAINpostpushreceiptnotclaimedembeddedinsealedtip. NextR04eligibleproducertransfer/fix/separatenon-authorretest; fullCI/900unmet.
+
+## R15-09 reserved JSON keys — pre-work checkpoint
+
+- SAMEactualnativeID/existingownworktree/branch reconfirmed, HEAD4c603257bea57219a4402c6603e1de5236f36795 trackedclean/ownuntrackedartifacts. ReadFULLMAINR15common+09/currentcanonical/RESUME/STATE+ownnote; R14withdraws09productionauthority,eligible07/R04sourceowners. TesterNOproductionedits, nospawning/sourceororacle/sharedGit/PR/issuewrites.
+- NEWownpaths`tests/r15_probes/role09/`, report`R15-09-reserved-json-keys.md`, evidence`R15-09/`, thisnote. ReservedkeysONLY__proto__/constructor/prototype/toString inertJSON/freshNode/publicnormalize/stream/tool; ordinarydot/indexcollisions04scope. Noold36matrix/futureexecutorunfixed/buildbusywork.
+- Targetstable5340TSsource/config exactdiff0; targetandownTSsrctreec7943ddc22177add1a5ccf14b6322bf793b63274 identical; existingownR10distfilehashesrecordedreport. Sourcebyte-equivalenceNOTfull5340checkout/newbuild; noinstall/rebuildneeded. FirstbracepathPowerShellqueryparser1beforeexecution, correctedexplicitpathsquery0/sourceequalityconfirmed.
+- Acceptancepreserveownreservedvalues/countsORexplicitvalidatedreject, no inheritedpath/fieldresolution/input/globalprototypepollution, ordinary/nullprototypepositives; distinguishcontractquestions. Currentactionpreworksaved; nextinspectpublicsource/existingreservedtests, add/runonlynewstrictportablechildprobes. FullCI/900unmet.
+
+### R15 new public-path probe executed
+
+- Inspectedexistingreservedtests/publicsource; no cross-routeown/nullproto/toString/inheritedmatrixduplication. AddedNEW2files`tests/r15_probes/role09/{reserved-keys.test.mjs,reserved-keys-worker.mjs}`, no production/oracleedits.
+- `node --test tests/r15_probes/role09/reserved-keys.test.mjs` **exit0/84pass0fail0skip0cancel/7594.05ms**:1provenance+83freshNodechildren. Actualsource5340equivalent/ownpublicdistentrypointeachchild/knownbuildhashesverified, no rebuild/install/fullsuite/old36matrix.
+- 36explicitreservedpolicyValidationErrors+26validatedboundaryrejects+21literalownfields/countpreservations; all83input/privateprototype/globalObject.prototypeintegritychecksPASS. Ownfirst3reservedkeysrejectexplicitly, owntoStringretainedexactly; inheritedpaths/missingmappedfieldreject; ordinary/nullproto/omittedpositivespass/directnullspec2reject. Toolonlyrender_svgtable/no browser/network.
+- NOnewmaterialdefectestablished; explicitrejectpolicyacceptable/nosilentlossorprototypepollutionobservedforfixtures. Limits/current5helpernullRED/fullCI/900unchanged. Rawown`artifacts/r15-09-20261127/reserved-keys.tap`; detailedreportR15-09. Nextextractcompact83diagnostics/totals/hashesandpublishmeaningfulownscopewithactualremoteSHA.
+
+- Savedlogparser0asserted83caseintegrity/exact36policyreject26boundaryreject21preserve/84testtotals; MAINown`evidence/R15-09/summary.json`includespercase/source/build/probehashes/rawloghash. Probehashese1e94532.../14a1f783...; no replay. Portablecommand/candidate+referenceenvlimitsinreport.
+- SafeGET/user14:25:09.786000UTC200expected`sandeshbagmare`, originverifiedcredential-free/tokenmemoryonly/noAPIwrites; ownremote4c60325confirmedlsremote0; preflightreceiptMAINR15evidence. Finalsource/config5340diff0. Currentactionexplicit7ownedpathstage (2probes/report/3R15evidencefiles/note), fullreview/whitespace/secrets/hashchecks→meaningfulcommit/nonforceownpush/remoteSHA. No newreservedkeydefect/fix/finalapproval.
