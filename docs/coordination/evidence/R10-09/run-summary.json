@@ -1,0 +1,45 @@
+{
+  "session": "ses_de56782e5ffe3H1lUAoxrBtEhx",
+  "branch": "agents/r10-09-helper-null-fix",
+  "base_sha": "6d0e72ebef4b622f8dec2bce2bd07cc23e7a81ce",
+  "status": "RED regression handoff, not a source fix or final approval",
+  "blocker": "Higher-priority session developer instruction prohibits production-code edits; render.ts was not changed.",
+  "worktree": "C:/Users/bagma/AppData/Local/Temp/opencode/r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx",
+  "public_import": "file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx/packages/deepviz/dist/index.js",
+  "tooling": {"node": "26.13.1", "typescript": "7.0.2", "install_performed": false, "shared_tooling_read_only": true, "npm_cache": "own artifacts/r10-09-20261127/npm-cache"},
+  "commands": [
+    {"command": "npm run build", "exit": 0},
+    {"command": "npm run typecheck", "exit": 0},
+    {"command": "node --test packages/deepviz/test/test_r07_tool_spec_null.test.mjs", "exit": 1, "tests": 36, "passed": 31, "failed": 5, "skipped": 0, "duration_ms": 1191.4643},
+    {"command": "npm test", "exit": 1, "tests": 282, "passed": 277, "failed": 5, "skipped": 0, "duration_ms": 4278.2679, "existing_tests_passed": 246},
+    {"command": "npm run schema:check", "exit": 0},
+    {"command": "<main venv python> scripts/export_schema.py --check", "exit": 0},
+    {"command": "<main venv python> -m pytest tests/test_models.py tests/test_schema_contract.py tests/test_cross_language_contract.py tests/test_n12_authoritative_parity.py -q", "exit": 0, "passed": 689, "failed": 0, "skipped": 0, "seconds": 3.98},
+    {"command": "inline original public-wrapper comparison against own built public package", "exit": 1, "comparisons": 40, "agreement": 35, "mismatch": 5},
+    {"command": "git diff --exit-code 6d0e72ebef4b622f8dec2bce2bd07cc23e7a81ce -- packages/deepviz/src python/deepviz/src schemas", "exit": 0}
+  ],
+  "failing_tests": [
+    "R07 render_vega: explicit null spec rejects instead of rendering defaults",
+    "R07 render_echarts: explicit null spec rejects instead of rendering defaults",
+    "R07 render_antv: explicit null spec rejects instead of rendering defaults",
+    "R07 render_plotly: explicit null spec rejects instead of rendering defaults",
+    "R07 render_svg: explicit null spec rejects instead of rendering defaults"
+  ],
+  "failure_reason": "Missing expected rejection (ValidationError). Explicit null spec reaches input.spec??{} and is silently defaulted, unlike advertised JSON Schema and direct validateSpec(null).",
+  "sha256": {
+    "packages/deepviz/src/render.ts": "7f0a69004d570e05b45b8c6ce10c73263652d2874362960af27baed82b3996e9",
+    "packages/deepviz/dist/render.js": "39bcd415d119e39ef3107dee4b455778541776f3901c4ae5facbb1447fcc5388",
+    "packages/deepviz/test/test_r07_tool_spec_null.test.mjs": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227",
+    "schemas/chart-spec.schema.json": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+    "regression-red.log": "4deabb3c5d6a72a5df91d85ea280f5f6d3857823fa9985c5f7edb27f850b4f2a",
+    "npm-full-red.log": "0bc19489189dba7d3a78dfd3ee32acb1b72e218a269c9dcd8ec279303b53330d",
+    "public-wrapper-summary.json": "9b7a99cda523113562c116bd2c2a3123f9d6fb25066d9b20cde99138a73b9255",
+    "public-wrapper-results.json": "3296013bcd7914adc0f0557867f9fe06843e712257b7b554e06953bcdbf78320",
+    "pytest-core-parity.log": "bfa40ce074e719cce44e786cdd2831ceb739ab64989169f3079b879d94585d03"
+  },
+  "github_get": {"observed_utc": "2026-11-27T02:40:06.726830+00:00", "login": "sandeshbagmare", "user_http": 200, "repo_http": 200, "issue_30_http": 200, "issue_30_state": "open", "writes": false, "credential_persisted": false},
+  "related_existing_issue": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/30",
+  "issue_relationship": "Related schema/runtime agreement issue; F1 is a distinct helper-defaulting defect, not proof that issue 30's original numeric-coercion bug remains. R04 chooses issue disposition; no issue mutation performed.",
+  "next_action": "R04 applies undefined-only helper spec defaulting under source authority, reruns this strict permanent regression and full npm/type/schema gates, then routes independent non-author review/testing. Do not merge this RED branch alone.",
+  "unrun": ["production source fix and GREEN verification", "full Python suite", "wheel/sdist and npm tarball consumer acceptance", "browser visual acceptance", "MCP/Deep Agent transport", "10M final-candidate rerun", "remote CI acceptance"]
+}
