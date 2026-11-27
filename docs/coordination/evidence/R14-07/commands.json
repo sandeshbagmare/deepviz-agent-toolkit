@@ -1,0 +1,217 @@
+{
+  "baseline": [
+    {
+      "label": "npm-ci",
+      "argv": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "ci"
+      ],
+      "cwd": "<OWN_R14_SOURCE>",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 18.890645999999833
+    },
+    {
+      "label": "build",
+      "argv": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "run",
+        "build"
+      ],
+      "cwd": "<OWN_R14_SOURCE>",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 1.7673742000042694
+    },
+    {
+      "label": "typecheck",
+      "argv": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "run",
+        "typecheck"
+      ],
+      "cwd": "<OWN_R14_SOURCE>",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 0.6550032000086503
+    },
+    {
+      "label": "immutable-null-regression",
+      "argv": [
+        "node",
+        "--test",
+        "packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+      ],
+      "cwd": "<OWN_R14_SOURCE>",
+      "exit": 1,
+      "expected_exit": 1,
+      "seconds": 0.30148300000291783
+    }
+  ],
+  "recovery": [
+    {
+      "argv": [
+        "<MAIN_READONLY>\\.venv\\Scripts\\python.exe",
+        "-B",
+        "<OWN_R14_ARTIFACTS>\\wrapper_compare.py",
+        "--source",
+        "<OWN_R14_SOURCE>",
+        "--output",
+        "<OWN_R14_ARTIFACTS>\\red-recovery\\wrapper"
+      ],
+      "cwd": "<OWN_R14_SOURCE>",
+      "exit": 1,
+      "expected_exit": 1,
+      "seconds": 1.2025543999916408
+    }
+  ],
+  "green": [
+    {
+      "label": "build",
+      "argv": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "run",
+        "build"
+      ],
+      "cwd": "<OWN_R14_SOURCE>",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 5.803190199992969
+    },
+    {
+      "label": "typecheck",
+      "argv": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "run",
+        "typecheck"
+      ],
+      "cwd": "<OWN_R14_SOURCE>",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 0.8969368999969447
+    },
+    {
+      "label": "immutable-regression",
+      "argv": [
+        "node",
+        "--test",
+        "packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+      ],
+      "cwd": "<OWN_R14_SOURCE>",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 0.31626480001432355
+    },
+    {
+      "label": "full-npm",
+      "argv": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "test"
+      ],
+      "cwd": "<OWN_R14_SOURCE>",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 5.185330699998303
+    },
+    {
+      "label": "schema-check",
+      "argv": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "run",
+        "schema:check"
+      ],
+      "cwd": "<OWN_R14_SOURCE>",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 1.6177752999938093
+    },
+    {
+      "label": "python-schema-check",
+      "argv": [
+        "<MAIN_READONLY>\\.venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/export_schema.py",
+        "--check"
+      ],
+      "cwd": "<OWN_R14_SOURCE>",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 0.4714676000003237
+    },
+    {
+      "label": "core-parity",
+      "argv": [
+        "<MAIN_READONLY>\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "tests/test_models.py",
+        "tests/test_schema_contract.py",
+        "tests/test_cross_language_contract.py",
+        "tests/test_n12_authoritative_parity.py",
+        "-q"
+      ],
+      "cwd": "<OWN_R14_SOURCE>",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 14.652141800004756
+    },
+    {
+      "label": "original-wrapper",
+      "argv": [
+        "<MAIN_READONLY>\\.venv\\Scripts\\python.exe",
+        "-B",
+        "<OWN_R14_ARTIFACTS>\\wrapper_compare.py",
+        "--source",
+        "<OWN_R14_SOURCE>",
+        "--output",
+        "<OWN_R14_ARTIFACTS>\\green\\wrapper"
+      ],
+      "cwd": "<OWN_R14_SOURCE>",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 1.8730035000044154
+    },
+    {
+      "label": "npm-pack-dry-run",
+      "argv": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "pack",
+        "--dry-run",
+        "--workspace",
+        "@deepviz/agent-toolkit"
+      ],
+      "cwd": "<OWN_R14_SOURCE>",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 3.8614736999879824
+    },
+    {
+      "label": "diff-check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "<OWN_R14_SOURCE>",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 0.15785639999376144
+    }
+  ],
+  "browser_commands_observed_exit0": [
+    [
+      "node",
+      "<OWN_R14_ARTIFACTS>\\visual.mjs",
+      "<OWN_R14_SOURCE>",
+      "<OWN_R14_ARTIFACTS>\\visual"
+    ],
+    [
+      "node",
+      "<OWN_R14_ARTIFACTS>\\visual.mjs",
+      "<OWN_R14_SOURCE>",
+      "<OWN_R14_ARTIFACTS>\\visual-wide",
+      "2000"
+    ]
+  ]
+}

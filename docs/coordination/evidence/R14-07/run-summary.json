@@ -1,0 +1,717 @@
+{
+  "observed_at": "2026-11-27T14:48:14.649888+00:00",
+  "owner": "ses_de56782e8ffentAvzUUfMncFRA",
+  "branch": "fix/r14-helper-null",
+  "base_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "status": "SCOPED_AUTHOR_RED_TO_GREEN_NOT_INDEPENDENT_FINAL_APPROVAL",
+  "source_delta": "Only helper undefined default in render.ts plus new immutable tester09 regression; no schemas/locks/dependencies changes",
+  "immutable_regression": {
+    "commit": "4a585cd2ab683421a19c217d3373478b88e49379",
+    "path": "packages/deepviz/test/test_r07_tool_spec_null.test.mjs",
+    "sha256": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227"
+  },
+  "baseline": {
+    "source_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+    "commands": [
+      {
+        "label": "npm-ci",
+        "argv": [
+          "C:\\Program Files\\nodejs\\npm.cmd",
+          "ci"
+        ],
+        "cwd": "<OWN_R14_SOURCE>",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 18.890645999999833
+      },
+      {
+        "label": "build",
+        "argv": [
+          "C:\\Program Files\\nodejs\\npm.cmd",
+          "run",
+          "build"
+        ],
+        "cwd": "<OWN_R14_SOURCE>",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 1.7673742000042694
+      },
+      {
+        "label": "typecheck",
+        "argv": [
+          "C:\\Program Files\\nodejs\\npm.cmd",
+          "run",
+          "typecheck"
+        ],
+        "cwd": "<OWN_R14_SOURCE>",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 0.6550032000086503
+      },
+      {
+        "label": "immutable-null-regression",
+        "argv": [
+          "node",
+          "--test",
+          "packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+        ],
+        "cwd": "<OWN_R14_SOURCE>",
+        "exit": 1,
+        "expected_exit": 1,
+        "seconds": 0.30148300000291783
+      }
+    ],
+    "complete": false,
+    "package_lock_before": {
+      "bytes": 81533,
+      "sha256": "1401922876f8b7d37e675ce044400fe5335682742dd9b30a1292243ad771d4c9"
+    }
+  },
+  "red_recovery": {
+    "saved_regression_totals": {
+      "tests": 36,
+      "pass": 31,
+      "fail": 5,
+      "skipped": 0
+    },
+    "commands": [
+      {
+        "argv": [
+          "<MAIN_READONLY>\\.venv\\Scripts\\python.exe",
+          "-B",
+          "<OWN_R14_ARTIFACTS>\\wrapper_compare.py",
+          "--source",
+          "<OWN_R14_SOURCE>",
+          "--output",
+          "<OWN_R14_ARTIFACTS>\\red-recovery\\wrapper"
+        ],
+        "cwd": "<OWN_R14_SOURCE>",
+        "exit": 1,
+        "expected_exit": 1,
+        "seconds": 1.2025543999916408
+      }
+    ],
+    "complete": true,
+    "wrapper": {
+      "source_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "source_dirty": "?? packages/deepviz/test/test_r07_tool_spec_null.test.mjs\n",
+      "public_import": "file:///<OWN_R14_SOURCE>/packages/deepviz/dist/index.js",
+      "python_models": "<OWN_R14_SOURCE>\\python\\deepviz\\src\\deepviz\\models.py",
+      "comparison_count": 40,
+      "agreement_count": 35,
+      "mismatches": [
+        {
+          "tool": "render_vega",
+          "case": "spec-null",
+          "schema_accepted": false,
+          "runtime_accepted": true
+        },
+        {
+          "tool": "render_echarts",
+          "case": "spec-null",
+          "schema_accepted": false,
+          "runtime_accepted": true
+        },
+        {
+          "tool": "render_antv",
+          "case": "spec-null",
+          "schema_accepted": false,
+          "runtime_accepted": true
+        },
+        {
+          "tool": "render_plotly",
+          "case": "spec-null",
+          "schema_accepted": false,
+          "runtime_accepted": true
+        },
+        {
+          "tool": "render_svg",
+          "case": "spec-null",
+          "schema_accepted": false,
+          "runtime_accepted": true
+        }
+      ],
+      "direct_null_accepted": false,
+      "sha256": {
+        "packages/deepviz/src/render.ts": "7f0a69004d570e05b45b8c6ce10c73263652d2874362960af27baed82b3996e9",
+        "packages/deepviz/dist/render.js": "39bcd415d119e39ef3107dee4b455778541776f3901c4ae5facbb1447fcc5388",
+        "packages/deepviz/dist/index.js": "887a0d361250e936d43f6b5f8cac4f65a024676520ad6bcfb49ab8042e355c39",
+        "packages/deepviz/test/test_r07_tool_spec_null.test.mjs": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227",
+        "schemas/chart-spec.schema.json": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "packages/deepviz/src/chart-spec.schema.json": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "packages/deepviz/dist/chart-spec.schema.json": "b995523b04fde40735946aade2769187b1b3b65296c85f03f764d5c6c752e651"
+      }
+    },
+    "package_lock_unchanged": {
+      "bytes": 81533,
+      "sha256": "1401922876f8b7d37e675ce044400fe5335682742dd9b30a1292243ad771d4c9"
+    }
+  },
+  "green": {
+    "source_base_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+    "source_dirty": "one released render.ts line plus new immutable test",
+    "commands": [
+      {
+        "label": "build",
+        "argv": [
+          "C:\\Program Files\\nodejs\\npm.cmd",
+          "run",
+          "build"
+        ],
+        "cwd": "<OWN_R14_SOURCE>",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 5.803190199992969
+      },
+      {
+        "label": "typecheck",
+        "argv": [
+          "C:\\Program Files\\nodejs\\npm.cmd",
+          "run",
+          "typecheck"
+        ],
+        "cwd": "<OWN_R14_SOURCE>",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 0.8969368999969447
+      },
+      {
+        "label": "immutable-regression",
+        "argv": [
+          "node",
+          "--test",
+          "packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+        ],
+        "cwd": "<OWN_R14_SOURCE>",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 0.31626480001432355
+      },
+      {
+        "label": "full-npm",
+        "argv": [
+          "C:\\Program Files\\nodejs\\npm.cmd",
+          "test"
+        ],
+        "cwd": "<OWN_R14_SOURCE>",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 5.185330699998303
+      },
+      {
+        "label": "schema-check",
+        "argv": [
+          "C:\\Program Files\\nodejs\\npm.cmd",
+          "run",
+          "schema:check"
+        ],
+        "cwd": "<OWN_R14_SOURCE>",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 1.6177752999938093
+      },
+      {
+        "label": "python-schema-check",
+        "argv": [
+          "<MAIN_READONLY>\\.venv\\Scripts\\python.exe",
+          "-B",
+          "scripts/export_schema.py",
+          "--check"
+        ],
+        "cwd": "<OWN_R14_SOURCE>",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 0.4714676000003237
+      },
+      {
+        "label": "core-parity",
+        "argv": [
+          "<MAIN_READONLY>\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "tests/test_models.py",
+          "tests/test_schema_contract.py",
+          "tests/test_cross_language_contract.py",
+          "tests/test_n12_authoritative_parity.py",
+          "-q"
+        ],
+        "cwd": "<OWN_R14_SOURCE>",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 14.652141800004756
+      },
+      {
+        "label": "original-wrapper",
+        "argv": [
+          "<MAIN_READONLY>\\.venv\\Scripts\\python.exe",
+          "-B",
+          "<OWN_R14_ARTIFACTS>\\wrapper_compare.py",
+          "--source",
+          "<OWN_R14_SOURCE>",
+          "--output",
+          "<OWN_R14_ARTIFACTS>\\green\\wrapper"
+        ],
+        "cwd": "<OWN_R14_SOURCE>",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 1.8730035000044154
+      },
+      {
+        "label": "npm-pack-dry-run",
+        "argv": [
+          "C:\\Program Files\\nodejs\\npm.cmd",
+          "pack",
+          "--dry-run",
+          "--workspace",
+          "@deepviz/agent-toolkit"
+        ],
+        "cwd": "<OWN_R14_SOURCE>",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 3.8614736999879824
+      },
+      {
+        "label": "diff-check",
+        "argv": [
+          "git",
+          "diff",
+          "--check"
+        ],
+        "cwd": "<OWN_R14_SOURCE>",
+        "exit": 0,
+        "expected_exit": 0,
+        "seconds": 0.15785639999376144
+      }
+    ],
+    "complete": true,
+    "new_tests": {
+      "tests": 36,
+      "pass": 36,
+      "fail": 0,
+      "skipped": 0
+    },
+    "full_npm": {
+      "tests": 282,
+      "pass": 282,
+      "fail": 0,
+      "skipped": 0
+    },
+    "gate_scope": "Author producer validation, not independent final acceptance",
+    "core_parity": {
+      "passed": 689,
+      "failed": 0,
+      "skipped": 0
+    },
+    "wrapper": {
+      "source_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "source_dirty": " M packages/deepviz/src/render.ts\n?? packages/deepviz/test/test_r07_tool_spec_null.test.mjs\n",
+      "public_import": "file:///<OWN_R14_SOURCE>/packages/deepviz/dist/index.js",
+      "python_models": "<OWN_R14_SOURCE>\\python\\deepviz\\src\\deepviz\\models.py",
+      "comparison_count": 40,
+      "agreement_count": 40,
+      "mismatches": [],
+      "direct_null_accepted": false,
+      "sha256": {
+        "packages/deepviz/src/render.ts": "71ab2701ef63fbc37999447a62a5a06a04404d690bd0fb3e0ea5f765433efa4b",
+        "packages/deepviz/dist/render.js": "bc43ad42f0d731db59eb51a3adef78477450689b2a4e39ec5b7a5acedd2e638c",
+        "packages/deepviz/dist/index.js": "887a0d361250e936d43f6b5f8cac4f65a024676520ad6bcfb49ab8042e355c39",
+        "packages/deepviz/test/test_r07_tool_spec_null.test.mjs": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227",
+        "schemas/chart-spec.schema.json": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "packages/deepviz/src/chart-spec.schema.json": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "packages/deepviz/dist/chart-spec.schema.json": "b995523b04fde40735946aade2769187b1b3b65296c85f03f764d5c6c752e651"
+      }
+    },
+    "identities": {
+      "packages/deepviz/src/render.ts": {
+        "bytes": 11340,
+        "sha256": "71ab2701ef63fbc37999447a62a5a06a04404d690bd0fb3e0ea5f765433efa4b"
+      },
+      "packages/deepviz/dist/render.js": {
+        "bytes": 10931,
+        "sha256": "bc43ad42f0d731db59eb51a3adef78477450689b2a4e39ec5b7a5acedd2e638c"
+      },
+      "packages/deepviz/dist/index.js": {
+        "bytes": 170,
+        "sha256": "887a0d361250e936d43f6b5f8cac4f65a024676520ad6bcfb49ab8042e355c39"
+      },
+      "packages/deepviz/test/test_r07_tool_spec_null.test.mjs": {
+        "bytes": 4129,
+        "sha256": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227"
+      },
+      "schemas/chart-spec.schema.json": {
+        "bytes": 4975,
+        "sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71"
+      },
+      "packages/deepviz/src/chart-spec.schema.json": {
+        "bytes": 4975,
+        "sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71"
+      },
+      "packages/deepviz/dist/chart-spec.schema.json": {
+        "bytes": 7397,
+        "sha256": "b995523b04fde40735946aade2769187b1b3b65296c85f03f764d5c6c752e651"
+      },
+      "package-lock.json": {
+        "bytes": 81533,
+        "sha256": "1401922876f8b7d37e675ce044400fe5335682742dd9b30a1292243ad771d4c9"
+      },
+      "pyproject.toml": {
+        "bytes": 1487,
+        "sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f"
+      },
+      "node_modules/typescript/lib/tsc.js": {
+        "bytes": 609,
+        "sha256": "cbdfbf11c26ed00dfc073155e316a42d6d6d8a387be61006b82fa9aa93ac572e"
+      },
+      "node_modules/typescript/package.json": {
+        "bytes": 3087,
+        "sha256": "3722b30210616a13a3213ded11575ba6b2dbab10c32a5ef67afca8513e27017e"
+      }
+    }
+  },
+  "baseline_collector_limitation": "After four completed children, saved RED output parser raised TypeError on Windows-cp1252-decoded Node26 Unicode marker. No product failure was hidden. Finish_red parsed the preserved 31/5 ASCII labels and ran ONLY the unexecuted original wrapper. No provisioning/build/type/regression replay.",
+  "browser_1500": {
+    "scope": "Author fixture inspection of real SVG helper; not all-engine browser acceptance",
+    "browser_executable": "<USER_HOME>\\AppData\\Local\\ms-playwright\\chromium-1255\\chrome-win64\\chrome.exe",
+    "status": "PASS",
+    "checks": [
+      {
+        "fixture": "omitted-default",
+        "status": "pass",
+        "input_count": 2,
+        "output_count": 2,
+        "chart_count": 1,
+        "title_controls": [
+          "Visualization"
+        ],
+        "each_chart_mark_labels": [
+          "A: 2",
+          "B: 3"
+        ],
+        "bar_height_ratio": "2/3"
+      },
+      {
+        "fixture": "dashboard",
+        "status": "pass",
+        "input_count": 2,
+        "output_count": 4,
+        "chart_count": 2,
+        "title_controls": [
+          "A=2, B=3",
+          "Defaults retained"
+        ],
+        "each_chart_mark_labels": [
+          "A: 2",
+          "B: 3"
+        ],
+        "bar_height_ratio": "2/3"
+      }
+    ],
+    "errors": [],
+    "external_requests": [],
+    "browser_version": "159.0.8154.6"
+  },
+  "browser_2000": {
+    "scope": "Author fixture inspection of real SVG helper; not all-engine browser acceptance",
+    "browser_executable": "<USER_HOME>\\AppData\\Local\\ms-playwright\\chromium-1255\\chrome-win64\\chrome.exe",
+    "status": "PASS",
+    "viewport": {
+      "width": 2000,
+      "height": 800
+    },
+    "checks": [
+      {
+        "fixture": "omitted-default",
+        "status": "pass",
+        "input_count": 2,
+        "output_count": 2,
+        "chart_count": 1,
+        "title_controls": [
+          "Visualization"
+        ],
+        "each_chart_mark_labels": [
+          "A: 2",
+          "B: 3"
+        ],
+        "bar_height_ratio": "2/3"
+      },
+      {
+        "fixture": "dashboard",
+        "status": "pass",
+        "input_count": 2,
+        "output_count": 4,
+        "chart_count": 2,
+        "title_controls": [
+          "A=2, B=3",
+          "Defaults retained"
+        ],
+        "each_chart_mark_labels": [
+          "A: 2",
+          "B: 3"
+        ],
+        "bar_height_ratio": "2/3"
+      }
+    ],
+    "errors": [],
+    "external_requests": [],
+    "browser_version": "159.0.8154.6"
+  },
+  "visual_inspection": {
+    "opened_by_image_reader": [
+      "visual/omitted-default.png",
+      "visual/dashboard.png",
+      "visual-wide/dashboard.png"
+    ],
+    "correctness": "Default A=2/B=3 bars, zero axes, readable labels/title. 2000px two-chart dashboard shows both complete A=2/B=3 pairs, independent bar heights260/390=2/3. At1500px fixed900px child plots intentionally scroll and screenshot clips edges; no layout change in this helper-only fix.",
+    "console_errors": 0,
+    "external_requests": 0
+  },
+  "raw_owned_file_identities": {
+    "baseline/build.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "baseline/build.stdout.log": {
+      "bytes": 131,
+      "sha256": "59b3282841035b703ceb5add286f220f2b249b458f2b2a29f98fd1404a7efcba"
+    },
+    "baseline/immutable-null-regression.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "baseline/immutable-null-regression.stdout.log": {
+      "bytes": 6901,
+      "sha256": "fb56404b6c052502bb439e2c438eec9b08165743d0849cbd4eac438e34a919b0"
+    },
+    "baseline/npm-ci.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "baseline/npm-ci.stdout.log": {
+      "bytes": 29,
+      "sha256": "01c6d8cb8f3c5fb9aa408a120a6c0538e410fc669782b64790c62b352dd5af81"
+    },
+    "baseline/result.json": {
+      "bytes": 1508,
+      "sha256": "3d6429422cd5b53246b8df8d525018848299762a083625acffc08915ca141879"
+    },
+    "baseline/typecheck.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "baseline/typecheck.stdout.log": {
+      "bytes": 67,
+      "sha256": "f4e727dbd47ef22b6bd29cca67059181d987d1e0eea80bfa120b241ce1f4ef81"
+    },
+    "baseline.py": {
+      "bytes": 4979,
+      "sha256": "b056d2a1853465f76649e3281a53e6181571632936372f1249bedfa603f0803c"
+    },
+    "collect.py": {
+      "bytes": 5124,
+      "sha256": "e5720e13722963b875d25c1367610e455d5aebfb09f753e750560c53bcb1bf9a"
+    },
+    "finish_red.py": {
+      "bytes": 2607,
+      "sha256": "5438e0881a6ce1fb04a231b93fcf442d73c8d427a9880fc9577d8583bec49fca"
+    },
+    "green/build.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "green/build.stdout.log": {
+      "bytes": 131,
+      "sha256": "59b3282841035b703ceb5add286f220f2b249b458f2b2a29f98fd1404a7efcba"
+    },
+    "green/core-parity.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "green/core-parity.stdout.log": {
+      "bytes": 832,
+      "sha256": "9e52a8453d5beb509729c3badba070f8f7ad641fb22ef02f321452357c110c46"
+    },
+    "green/diff-check.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "green/diff-check.stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "green/full-npm.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "green/full-npm.stdout.log": {
+      "bytes": 26190,
+      "sha256": "28ed3bb86a6526ee46dd493f30afa400211467263d066700bb1660dec067d4ad"
+    },
+    "green/immutable-regression.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "green/immutable-regression.stdout.log": {
+      "bytes": 3228,
+      "sha256": "6193eef3615482051f5c9e5fc12663a00c0a904bbd3fe678902c49f43fa5e970"
+    },
+    "green/npm-pack-dry-run.stderr.log": {
+      "bytes": 1251,
+      "sha256": "a868e1b167e04d1cf37b44d9548b9790e348b1aa41caf3a046ee836e31cb6a24"
+    },
+    "green/npm-pack-dry-run.stdout.log": {
+      "bytes": 160,
+      "sha256": "b6f97e5ee57766244815374ca7b01a67739ccd7d25bfb0ea8e8f2a88764ce5a3"
+    },
+    "green/original-wrapper.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "green/original-wrapper.stdout.log": {
+      "bytes": 1354,
+      "sha256": "1efc3048359ac1c138c4bdafca567753a9017dee3c0899588069b4db48ab7d6e"
+    },
+    "green/python-schema-check.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "green/python-schema-check.stdout.log": {
+      "bytes": 118,
+      "sha256": "f61c08d858748db341a393498ec12cd52b0c95df5aa5c56e05a07ea6c5ff0eb0"
+    },
+    "green/result.json": {
+      "bytes": 7524,
+      "sha256": "1555c198d4e4355d2e5749269da7545da0e327be903d9614f70a2585ea312f33"
+    },
+    "green/schema-check.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "green/schema-check.stdout.log": {
+      "bytes": 291,
+      "sha256": "1c263fc644f4ddd61d1631b9203f913febb9721bd11f6f809b610115749524fa"
+    },
+    "green/typecheck.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "green/typecheck.stdout.log": {
+      "bytes": 67,
+      "sha256": "f4e727dbd47ef22b6bd29cca67059181d987d1e0eea80bfa120b241ce1f4ef81"
+    },
+    "green/wrapper/results.json": {
+      "bytes": 56247,
+      "sha256": "87aa588d234ae3e772b5147d47a65f2a822e3899b611a5bb4e7beb11c831c800"
+    },
+    "green/wrapper/summary.json": {
+      "bytes": 1354,
+      "sha256": "1efc3048359ac1c138c4bdafca567753a9017dee3c0899588069b4db48ab7d6e"
+    },
+    "green.py": {
+      "bytes": 5867,
+      "sha256": "61380dede713ff74bcfd35f9480d8fe55f1af3f84257316250d3f2800a031081"
+    },
+    "publish.py": {
+      "bytes": 4162,
+      "sha256": "bd760462455d195009c8741d7ff139f4be5b57cc78182d840c6f68d30a63f240"
+    },
+    "red-recovery/result.json": {
+      "bytes": 3023,
+      "sha256": "6c33578bce1aceba483ad8c963bd776d89519cd44aebb86a5cd092e484a65843"
+    },
+    "red-recovery/wrapper/results.json": {
+      "bytes": 55902,
+      "sha256": "eaec83c992a95d484a3de33c65932b2e93bc9011679a9c202a212d761bb022d1"
+    },
+    "red-recovery/wrapper/summary.json": {
+      "bytes": 2016,
+      "sha256": "8adf350a5b012c5c4eac97156907a6f2d812efe4dc9696bc0ec59314f60eec89"
+    },
+    "red-recovery/wrapper.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "red-recovery/wrapper.stdout.log": {
+      "bytes": 2016,
+      "sha256": "8adf350a5b012c5c4eac97156907a6f2d812efe4dc9696bc0ec59314f60eec89"
+    },
+    "visual/dashboard-0.svg": {
+      "bytes": 906,
+      "sha256": "2127dabe4e3eeaf178642717992a5deea6af81a2a0330580b1ba25a990ad841c"
+    },
+    "visual/dashboard-1.svg": {
+      "bytes": 924,
+      "sha256": "cd40c2aa9a5f17a23d7eabee6b68115d7fe5381742aa806b4c60d6c4a93d93db"
+    },
+    "visual/dashboard.html": {
+      "bytes": 7328,
+      "sha256": "ab99ca480a9b7863f6cbc8d30666ac3626386d69b2a1f2e14d406eb1c3dabd9e"
+    },
+    "visual/dashboard.png": {
+      "bytes": 15623,
+      "sha256": "462c5657d0f099bfd6883134e1d21fde7e069fbdd9fdcebaa8755c048c500c02"
+    },
+    "visual/omitted-default-0.svg": {
+      "bytes": 916,
+      "sha256": "3c0a8ea799ecc5c8f54de233cf88111752252eb6e1fb3049f0c4635dab1f1eaf"
+    },
+    "visual/omitted-default.html": {
+      "bytes": 4619,
+      "sha256": "7585d6d54e23db87252dc50a8e91aed49548b5a6e48f90d775a5047b07e04ced"
+    },
+    "visual/omitted-default.png": {
+      "bytes": 12849,
+      "sha256": "630896f4c026a759075735ef042a49b49ba05785925340546521636c09754221"
+    },
+    "visual/result.json": {
+      "bytes": 971,
+      "sha256": "52b5ce55d4d15ca20fb6462009dc4aab995633e41862de161a3578be1b5eaedd"
+    },
+    "visual-wide/dashboard-0.svg": {
+      "bytes": 906,
+      "sha256": "2127dabe4e3eeaf178642717992a5deea6af81a2a0330580b1ba25a990ad841c"
+    },
+    "visual-wide/dashboard-1.svg": {
+      "bytes": 924,
+      "sha256": "cd40c2aa9a5f17a23d7eabee6b68115d7fe5381742aa806b4c60d6c4a93d93db"
+    },
+    "visual-wide/dashboard.html": {
+      "bytes": 7328,
+      "sha256": "c47a63c633a30ca2d14a05ba45ff767472c892cac7756566a0c394aa93eb4dbd"
+    },
+    "visual-wide/dashboard.png": {
+      "bytes": 17058,
+      "sha256": "0d0dfbb521d953e205ce81345d2bb612981d0412514f7fa5533df78bfdafc102"
+    },
+    "visual-wide/omitted-default-0.svg": {
+      "bytes": 916,
+      "sha256": "3c0a8ea799ecc5c8f54de233cf88111752252eb6e1fb3049f0c4635dab1f1eaf"
+    },
+    "visual-wide/omitted-default.html": {
+      "bytes": 4619,
+      "sha256": "60a7c973b9eafd09ce62c973517ec482a2ce332bbd3792ebb46049af96d3dd91"
+    },
+    "visual-wide/omitted-default.png": {
+      "bytes": 14095,
+      "sha256": "6a8de7797ff826ffdede2168d3e1da8a2d5114e95824ea253b2527a97f1301b6"
+    },
+    "visual-wide/result.json": {
+      "bytes": 1029,
+      "sha256": "5a8e3019cdfe9801e5a3f05175dccdbb3f4e10266c882c25f21ac7fbe6e00ebf"
+    },
+    "visual.mjs": {
+      "bytes": 4700,
+      "sha256": "75e6b7166df34d85d55cad67677ff4c80a00677d64da73ad3ef11a473afb3f75"
+    },
+    "wrapper_compare.py": {
+      "bytes": 4272,
+      "sha256": "9aba0b07dc6da1013fee1e310ee798b1c6de4db22c4dc16fd287b9663670eea2"
+    }
+  },
+  "limits": [
+    "Windows/Node26.13.1/npm11.20.0/Python3.12 only",
+    "No full Python suite, scale/CDN/all-engine browser/DeepAgent/MCP matrix/final remoteCI gate in this helper lane",
+    "Prior Python distribution evidence is NOT acceptance of this later source",
+    "Producer author is not independent approval; R04 integrates, tester09 must independently retest exact clean commit"
+  ]
+}

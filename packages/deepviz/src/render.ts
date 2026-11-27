@@ -137,7 +137,7 @@ export function createTools(options:RenderOptions={}):RenderTool[] {
     inputSchema:{type:'object',additionalProperties:false,required:['data'],properties:{data:{},spec:{$ref:'#/$defs/ChartSpec'}},$defs:chartSpecSchema.$defs},
     async invoke(input:unknown):Promise<HtmlArtifact> {
       if(!isObject(input) || !Object.hasOwn(input,'data') || Object.keys(input).some(key=>!['data','spec'].includes(key))) throw new ValidationError('Tool input requires data and optional spec only');
-      return render(input.data,input.spec??{},engine,options);
+      return render(input.data,input.spec === undefined ? {} : input.spec,engine,options);
     },
   }));
 }
