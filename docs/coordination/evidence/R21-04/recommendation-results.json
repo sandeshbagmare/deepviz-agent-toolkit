@@ -1,0 +1,265 @@
+{
+  "role": "R21-04-recommendation-fidelity",
+  "owner_session": "ses_de5678314ffeuDXtC7RfGsbD6V",
+  "observed_utc": "2026-11-27T15:03:50.046543+00:00",
+  "exact_source_commit": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "clean_detached_source_checkout": "C:/Users/bagma/AppData/Local/Temp/opencode/r21-04-source7bc-ses_de5678314ffeuDXtC7RfGsbD6V",
+  "source_checkout_clean_before_after": true,
+  "source_import_identity": {
+    "python/deepviz/src/deepviz/__init__.py": {
+      "source_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+      "target_blob": "0fed1772355f25da05329fda38bd29216ab4c75f",
+      "actual_import_path": "C:/Users/bagma/AppData/Local/Temp/opencode/r21-04-source7bc-ses_de5678314ffeuDXtC7RfGsbD6V/python/deepviz/src/deepviz/__init__.py",
+      "exact_git_bytes": true
+    },
+    "python/deepviz/src/deepviz/tools.py": {
+      "source_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+      "target_blob": "eafa9f0a5b9b324d5f0272c02b7a4f39915ad512",
+      "actual_import_path": "C:/Users/bagma/AppData/Local/Temp/opencode/r21-04-source7bc-ses_de5678314ffeuDXtC7RfGsbD6V/python/deepviz/src/deepviz/tools.py",
+      "exact_git_bytes": true
+    },
+    "python/deepviz/src/deepviz/recommend.py": {
+      "source_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+      "target_blob": "6b1540d5ef3e5782be677cb9bcf3bddec8774661",
+      "actual_import_path": "C:/Users/bagma/AppData/Local/Temp/opencode/r21-04-source7bc-ses_de5678314ffeuDXtC7RfGsbD6V/python/deepviz/src/deepviz/recommend.py",
+      "exact_git_bytes": true
+    },
+    "python/deepviz/src/deepviz/normalize.py": {
+      "source_sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+      "target_blob": "7028f7a24e92a8995859b3818f0938b4276a0726",
+      "actual_import_path": "C:/Users/bagma/AppData/Local/Temp/opencode/r21-04-source7bc-ses_de5678314ffeuDXtC7RfGsbD6V/python/deepviz/src/deepviz/normalize.py",
+      "exact_git_bytes": true
+    },
+    "python/deepviz/src/deepviz/models.py": {
+      "source_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "target_blob": "17877904985d496f645cd7c66305efc8305bcb5f",
+      "actual_import_path": "C:/Users/bagma/AppData/Local/Temp/opencode/r21-04-source7bc-ses_de5678314ffeuDXtC7RfGsbD6V/python/deepviz/src/deepviz/models.py",
+      "exact_git_bytes": true
+    },
+    "python/deepviz/src/deepviz/render.py": {
+      "source_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+      "target_blob": "64490a82f232e0c3c51a142bd898fd7f6c7c6dbf",
+      "actual_import_path": "C:/Users/bagma/AppData/Local/Temp/opencode/r21-04-source7bc-ses_de5678314ffeuDXtC7RfGsbD6V/python/deepviz/src/deepviz/render.py",
+      "exact_git_bytes": true
+    },
+    "python/deepviz/src/deepviz/engines.py": {
+      "source_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225",
+      "target_blob": "a366259600e7fec8afafd2b890623f97db588aa2",
+      "actual_import_path": "C:/Users/bagma/AppData/Local/Temp/opencode/r21-04-source7bc-ses_de5678314ffeuDXtC7RfGsbD6V/python/deepviz/src/deepviz/engines.py",
+      "exact_git_bytes": true
+    }
+  },
+  "publication_branch": "agents/r10-04-utf8-field-envelope",
+  "prior_own_head": "c92e70d08176b19787f4ca5509dbfa2c8d771f23",
+  "own_branch_production_schema_diff_exit": 0,
+  "target_source_diff_exit": 0,
+  "new_checks": {
+    "pytest": {
+      "exit": 0,
+      "passed": 24,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 2.6
+    },
+    "ruff": {
+      "exit": 0
+    },
+    "mypy": {
+      "exit": 0,
+      "source_files": 1
+    }
+  },
+  "new_case_breakdown": {
+    "public_handle_recommended_native_goal_fidelity": 5,
+    "negative_zero_composition_native_safety": 2,
+    "missing_null_bool_no_measure": 6,
+    "empty_distribution_table": 1,
+    "nonfinite_boundary_rejection": 3,
+    "exact_profile100_field_privacy": 3,
+    "public_profile256_name_signal": 1,
+    "ambiguous_id_mixedstring_editable_warning": 2,
+    "real_public_recommended_static_render": 1
+  },
+  "testcase_names": [
+    "test_public_handle_recommendation_preserves_real_native_goal_values[comparison]",
+    "test_public_handle_recommendation_preserves_real_native_goal_values[trend]",
+    "test_public_handle_recommendation_preserves_real_native_goal_values[relationship]",
+    "test_public_handle_recommendation_preserves_real_native_goal_values[distribution]",
+    "test_public_handle_recommendation_preserves_real_native_goal_values[composition]",
+    "test_unsafe_composition_is_editable_bar_with_original_native_values[negative-parts]",
+    "test_unsafe_composition_is_editable_bar_with_original_native_values[zero-total]",
+    "test_no_numeric_measure_never_invents_a_valid_mapping[relationship-absent]",
+    "test_no_numeric_measure_never_invents_a_valid_mapping[relationship-all-null]",
+    "test_no_numeric_measure_never_invents_a_valid_mapping[relationship-boolean]",
+    "test_no_numeric_measure_never_invents_a_valid_mapping[composition-absent]",
+    "test_no_numeric_measure_never_invents_a_valid_mapping[composition-all-null]",
+    "test_no_numeric_measure_never_invents_a_valid_mapping[composition-boolean]",
+    "test_empty_source_stays_a_reviewable_table",
+    "test_nonfinite_tool_input_rejects_before_advice_cache_or_artifact[nan]",
+    "test_nonfinite_tool_input_rejects_before_advice_cache_or_artifact[inf]",
+    "test_nonfinite_tool_input_rejects_before_advice_cache_or_artifact[minus-inf]",
+    "test_public_profile_exact_field_cap_privacy_and_truncation[99]",
+    "test_public_profile_exact_field_cap_privacy_and_truncation[100]",
+    "test_public_profile_exact_field_cap_privacy_and_truncation[101]",
+    "test_public_profile_name_256_is_retained_257_is_signaled_not_rewritten",
+    "test_uncertain_semantics_require_editable_review_not_perfect_field_guess[numeric-id]",
+    "test_uncertain_semantics_require_editable_review_not_perfect_field_guess[mixed-string]",
+    "test_recommended_spec_reaches_real_static_render_unchanged_and_exact"
+  ],
+  "tested_fixture_sha256": {
+    "tests/r21_probes/role04/test_recommendation_fidelity.py": "74ccd06e6f5b7c3e3a783ba5a55e37fb4f9a1c52b2388c4e49447bb71c252c33",
+    "tests/r21_probes/role04/README.md": "b152547750878b5bf584ee7710be8f8b7934fda5c02815d6674aba318ef3d0da"
+  },
+  "inspected_existing_tests_deduped": "python/deepviz/tests/test_integrations.py:36-46,97-104,120-128,170-185 already cover handle/bar/basicprivacy/10Kname/sixkind-only goals. NEW tests assert actual native mappings and practical safety through ToolSession, not rerun old tests.",
+  "render": {
+    "advice": {
+      "spec": {
+        "version": 1,
+        "kind": "bar",
+        "title": "Visualization",
+        "description": "",
+        "x": "region",
+        "y": "units",
+        "format": "auto",
+        "aggregation": "auto",
+        "max_points": 2000,
+        "width": 900,
+        "height": 520,
+        "theme": "light",
+        "charts": [],
+        "columns": 2
+      },
+      "engine": "matplotlib",
+      "rationale": "Compare an observed numeric measure across categories; verify the aggregation and units.",
+      "warnings": [
+        "Recommendation uses bounded observed rows/types only; review fields, units, and reduction."
+      ],
+      "input_count": 3
+    },
+    "artifact": {
+      "paths": [
+        "artifacts/local/R21-04/render-final/matplotlib-0r5bkooj/deepviz-u8672bo1/chart.png",
+        "artifacts/local/R21-04/render-final/matplotlib-0r5bkooj/deepviz-u8672bo1/chart.svg",
+        "artifacts/local/R21-04/render-final/matplotlib-0r5bkooj/deepviz-u8672bo1/chart.html",
+        "artifacts/local/R21-04/render-final/matplotlib-0r5bkooj/deepviz-u8672bo1/manifest.json"
+      ],
+      "mime_type": "image/png",
+      "engine": "matplotlib",
+      "input_count": 3,
+      "output_count": 3,
+      "strategy": "sum",
+      "warnings": []
+    },
+    "native": {
+      "native_heights": [
+        7.0,
+        19.0,
+        11.0
+      ],
+      "native_labels": [
+        "Alpha",
+        "Beta",
+        "Gamma"
+      ],
+      "native_x_label": "region",
+      "native_y_label": "units",
+      "native_notes": []
+    },
+    "fixture": [
+      {
+        "region": "Alpha",
+        "units": 7
+      },
+      {
+        "region": "Beta",
+        "units": 19
+      },
+      {
+        "region": "Gamma",
+        "units": 11
+      }
+    ],
+    "manifest_matches_exact_fixture": true,
+    "input_and_recommended_spec_unchanged": true,
+    "caller_file_preserved": true,
+    "actual_png": "artifacts/local/R21-04/render-final/matplotlib-0r5bkooj/deepviz-u8672bo1/chart.png",
+    "visual_inspection": "Actual final PNG OPENED with image-reading tool: readable Visualization title, region/units axes and Alpha/Beta/Gamma labels, correct relative heights7/19/11, no obvious clipping at900x520. No browser/otherengine claim.",
+    "published_png": "docs/coordination/evidence/R21-04/comparison-recommended-7bc.png"
+  },
+  "png": {
+    "published_path": "docs/coordination/evidence/R21-04/comparison-recommended-7bc.png",
+    "sha256": "5d3282c76acbabc2fe896c0f004ca252c88b580a0605d246fa055cd833636a63",
+    "bytes": 14452,
+    "dimensions": [
+      900,
+      520
+    ],
+    "image_read_tool_opened": true,
+    "native_artist_values_exact": [
+      7,
+      19,
+      11
+    ],
+    "native_labels_exact": [
+      "Alpha",
+      "Beta",
+      "Gamma"
+    ],
+    "published_copy_bytes_match_actual": true
+  },
+  "privacy_and_profile": "Public summary/advice omit synthetic raw-value sentinels; exact99/100/101 fields and256/257 character names verify cap/truncation. No actual personal data used.",
+  "uncertainty_policy": "Already ordered date inputs; rationale requires verifying ordering/time semantics. Numeric IDs and mixed strings require bounded observed/review warning, not semantic omniscience or a forced perfect choice.",
+  "product_failures_observed": 0,
+  "new_tickets_or_issue_mutations": 0,
+  "own_harness_type_failure": {
+    "initial_pytest": {
+      "passed": 24,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 2.87,
+      "exit": 0
+    },
+    "initial_ruff_exit": 0,
+    "initial_mypy_exit": 1,
+    "cause": "ModuleType.__file__ is str|None; own runtime path guard lacked explicit non-None type narrowing",
+    "own_test_fix": "assert module.__file__ is not None; no product edit",
+    "corrected_final_checks_exit": 0
+  },
+  "github_readonly_identity": {
+    "user_http": 200,
+    "expected_login": "sandeshbagmare",
+    "repo_http": 200,
+    "push_permission": true,
+    "own_ref_http": 200,
+    "prior_remote_sha": "c92e70d08176b19787f4ca5509dbfa2c8d771f23",
+    "credential_helper": "manager",
+    "git_author_configured": true,
+    "api_writes": 0,
+    "handling": "GCM captured output; token in memory only, no credentials in args/logs/files; redirects disabled"
+  },
+  "raw_local_root": "artifacts/local/R21-04/",
+  "raw_local_artifact_sha256": {
+    "recommendation-v1.log": "8ef953e750bec2414c534824de9fcbd6c58014a6b02184434c5918457352b4c1",
+    "recommendation-v1.xml": "5a820f24e07f529781b61319fb5b9bd8822d142495902d1480f83edb6882192c",
+    "ruff-v1.log": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+    "mypy-v1.log": "b12b9212b575231aa9b23c84ae767782435ff904e984dc05b08c8c6e7a2103d5",
+    "test-exits-v1.json": "15531a3f50e130ea244cd7536b7e93ebf676090249a27f6cf2b67cafe50fa12e",
+    "lint-type-exits-v1.json": "93944a6a690ce6004acc239c87a96aecbbdacc4a5bdb4da2684a9659992662b8",
+    "recommendation-final.log": "41c13982d8ddcba9fce28a0112357ec48f8106c806b1054fb3f3fabaf6356133",
+    "recommendation-final.xml": "5865ff351b541982eeadb6484e3a9ec1ccb9b0155d58a6cb38c4d5fef05c496b",
+    "ruff-final.log": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+    "mypy-final.log": "94594db09076fe305d51b50210d0bc5e9d275fb814f8b42c1ed4cf3368392f9a",
+    "final-command-exits.json": "6196bea2682c2bc355416be95704272b08d2f410c7091945dd07b73c332f451f",
+    "render-final/render-observation.json": "5b9dc38dfa96941102069d317eb4529703e7afb8cc0819fb4ffef82a1f7a6105"
+  },
+  "limits": [
+    "exact7bc finite Python recommendation/nativeMatplotlib flow only",
+    "single chosen actual PNG visually opened; other four goals native artist assertions only",
+    "no automatic temporal reordering or perfect numeric-ID/string semantics promised",
+    "no model/provider/LangChain/browser/CDN/allengine acceptance",
+    "no production/originaltest/schema/source changes",
+    "no full suites/build/distribution/currentCI or source-owner fixes/10M/RSS/release approval"
+  ],
+  "next_action": "Meaningful explicit owned commit/nonforce own push/actualremoteSHA receipt; R04 retain bounded editable heuristic/current safety guards, use this exact7bc pass as scoped evidence not wholecandidate approval"
+}
