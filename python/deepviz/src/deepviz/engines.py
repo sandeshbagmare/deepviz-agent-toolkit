@@ -430,7 +430,7 @@ def _plotly(data: list[dict], records: list[dict], spec: ChartSpec) -> dict:
                    "gauge": {"axis": {"range": [0, 100]}}}]
     elif kind == "geo":
         # Cartesian longitude/latitude avoids Plotly's network-fetched topojson.
-        traces = [{"type": "scatter", "mode": "markers", "x": [r["_x"] for r in data],
+        traces = [{"type": "scatter", "mode": "markers", "x": [literal(r["_x"]) for r in data],
                    "y": [r["_y"] for r in data], "text": [literal(r["_color"]) for r in data]}]
     elif kind == "table":
         columns = list(dict.fromkeys(key for row in records for key in row))

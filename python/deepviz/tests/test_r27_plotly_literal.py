@@ -25,7 +25,7 @@ SERIES = '<b>Group" & Ω</b>'
 
 @pytest.mark.parametrize("kind,channel", [
     ("bar", "x"), ("line", "x"), ("area", "x"), ("scatter", "x"),
-    ("bubble", "x"), ("box", "x"), ("violin", "x"), ("pie", "labels"),
+    ("bubble", "x"), ("box", "x"), ("violin", "x"), ("geo", "x"), ("pie", "labels"),
     ("treemap", "labels"), ("sunburst", "labels"), ("funnel", "y"), ("radar", "theta"),
 ])
 def test_every_category_sink_encodes_literal_strings_once(kind: ChartKind, channel: str) -> None:
@@ -80,7 +80,7 @@ def test_title_fields_table_quotes_and_entities_have_text_not_attribute_encoding
     assert payload["layout"]["xaxis"]["title"]["text"] == 'axis "Ω" &amp; &lt;i&gt;X&lt;/i&gt;'
 
 
-@pytest.mark.parametrize("case", ["chart", "dashboard", "table", "geo"])
+@pytest.mark.parametrize("case", ["chart", "dashboard", "table", "geo", "geo-axis"])
 def test_public_render_native_dom_is_exact_literal_and_inert(case: str, tmp_path: Path) -> None:
     node = shutil.which("node")
     modules = Path(os.environ.get("R27_NODE_MODULES", "node_modules")).resolve()
@@ -90,6 +90,11 @@ def test_public_render_native_dom_is_exact_literal_and_inert(case: str, tmp_path
         rows = [{FIELD: TEXT, VALUE: 7, "entity": ENTITY}]
         child = ChartSpec(kind="table", title=TITLE, width=1400, height=500)
         literals = [FIELD, VALUE, TEXT, ENTITY]
+    elif case == "geo-axis":
+        # Accepted string x coordinates can still become native category ticks.
+        rows = [{"lon": LINK, "lat": 7}]
+        child = ChartSpec(kind="geo", x="lon", y="lat", title=TITLE, width=1400, height=500)
+        literals = [LINK]
     elif case == "geo":
         rows = [{"lon": x, "lat": y, "label": label} for x, y, label in
                 zip([-120, -60, 120], [10, 20, 35], [LINK, ENTITY, TEXT], strict=True)]
