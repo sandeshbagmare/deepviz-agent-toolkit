@@ -1,0 +1,1887 @@
+{
+  "group": "boundaries",
+  "source": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+  "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+  "pytest": "9.2.0",
+  "argv": [
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\tests\\test_r17_normalizer_boundaries.py",
+    "-c",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\pyproject.toml",
+    "--disable-plugin-autoload",
+    "--import-mode=importlib",
+    "--strict-markers",
+    "-q",
+    "--tb=short",
+    "-rA",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "junit_family=legacy",
+    "--basetemp",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\boundaries\\tmp",
+    "--junitxml",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\boundaries\\junit.xml"
+  ],
+  "int_digit_limit": 4300,
+  "no_site": 1,
+  "bytecode_disabled": true,
+  "our_environment_writes": 0,
+  "before": {
+    "product_sha": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+    "files": {
+      "pyproject.toml": {
+        "raw_sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "git_sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/__init__.py": {
+        "raw_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "git_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/cli.py": {
+        "raw_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "git_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/engines.py": {
+        "raw_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "git_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/mcp_server.py": {
+        "raw_sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "git_sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/models.py": {
+        "raw_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "git_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/normalize.py": {
+        "raw_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "git_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/py.typed": {
+        "raw_sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "git_sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/recommend.py": {
+        "raw_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "git_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/render.py": {
+        "raw_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "git_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt": {
+        "raw_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "git_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/tools.py": {
+        "raw_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "git_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "raw_equals_git": true
+      },
+      "python/deepviz/tests/test_r17_normalizer_boundaries.py": {
+        "raw_sha256": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+        "git_sha256": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+        "raw_equals_git": true
+      },
+      "schemas/chart-spec.schema.json": {
+        "raw_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "git_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "raw_equals_git": true
+      },
+      "tests/test_n11_resource_policy.py": {
+        "raw_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+        "git_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+        "raw_equals_git": true
+      }
+    },
+    "probes": {
+      "corpus.json": "67faab68f4388d8a96ddf9318a7f7f5fdd4538e656b4f4528a076a54610bb9de",
+      "exact-cases.json": "6e4aed8bd72c84e51a162fdb5698a263f0304a2b7085d52882507333334078fa",
+      "graphql_fixtures.py": "4a77c7fea2cfca4391ffa10861da22c03ae95c1f13af47e34ac4f1ce79fec3b4",
+      "original-controls.json": "e95b517c53a63f5875afee0eaa597cf6170ab6e613775967ef94a69f2f272934",
+      "README.md": "1dba3b7a52c04c1b214d96127aae070178d53e191269b7c3592b65a3b7e15354",
+      "run_gate.py": "fe3130ebef61e28cd1e87208dadfc5afe4257c607645f7de3a52b8cff1707699",
+      "test_correctness_regressions.py": "aadd94225decbcc3997264ae88508c08633e929595f9eefd817faf598cb0cf2b",
+      "test_graphql_pages.py": "7b676dfc04a1d1526b89316442fc8f64c64db3598e17c094d7866febfef22cc3",
+      "test_large_integer_mean.py": "d7262febf984bd0f83aa29d5a43133d5c083c56aeb97788940218493df28c226",
+      "test_literal_acceptance.py": "0e74800af711641d32a1fffece99c4243a3a19e777962a91ec8ae484522e7a41",
+      "test_owned_input_cleanup.py": "43279c443d9eb76b22f39a80cd4bfcbfcca058193cf8e96780f7c5763c7729a0",
+      "test_reducer_source_ownership.py": "5a9ebaba4968381624d20f646afbd8105531be4bfd179fe56fa5accb7118314e",
+      "test_sum_review.py": "93b059b2fc56eb1d11291c2fa8cd65b56536649a23cec42ad9207c941dce03f8"
+    },
+    "all_originals_raw_git_exact": true,
+    "source_tracked_clean": true
+  },
+  "imports_before_pytest": {
+    "deepviz": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\__init__.py",
+      "raw_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+    },
+    "deepviz.normalize": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "raw_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc"
+    },
+    "deepviz.models": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\models.py",
+      "raw_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    "deepviz.engines": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\engines.py",
+      "raw_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de"
+    },
+    "deepviz.render": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\render.py",
+      "raw_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+    }
+  },
+  "exit": 0,
+  "wall_seconds": 0.3721129000041401,
+  "selected": [
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_owned_jsonl_unwinds_before_downstream_exception_returns[plan]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_owned_jsonl_unwinds_before_downstream_exception_returns[late-flatten]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_owned_jsonl_unwinds_before_downstream_exception_returns[selected-path-plan]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_borrowed_generator_is_not_closed_when_planning_raises",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[split-positive-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[split-positive-one-pass]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[split-negative-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[split-negative-one-pass]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[overflow-tiny-tail-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[overflow-tiny-tail-one-pass]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[late-overflow-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[late-overflow-one-pass]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[constant-tiny-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[constant-tiny-one-pass]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[tie-even-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[tie-even-one-pass]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[positive-half-zero-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[positive-half-zero-one-pass]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[negative-half-zero-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[negative-half-zero-one-pass]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[wide-numerator-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[wide-numerator-one-pass]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[prefix-residual-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[prefix-residual-one-pass]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_other_mean_uses_all_numeric_contributions_not_boolean_or_null",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-rows]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-items]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-results]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-data]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-nodes]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-edges]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-pages]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-rows]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-items]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-results]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-data]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-nodes]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-edges]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-pages]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-rows]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-items]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-results]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-data]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-nodes]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-edges]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-pages]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-rows]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-items]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-results]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-data]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-nodes]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-edges]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-pages]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_sequence_and_nested_flags_are_not_empty_records[records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_sequence_and_nested_flags_are_not_empty_records[one-pass]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_connection_siblings_require_a_path_instead_of_disappearing[sibling0-nodes]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_connection_siblings_require_a_path_instead_of_disappearing[sibling0-edges]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_connection_siblings_require_a_path_instead_of_disappearing[sibling1-nodes]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_connection_siblings_require_a_path_instead_of_disappearing[sibling1-edges]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_custom_connection_wrapper_requires_explicit_selection",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_known_nested_connection_carrier_preserves_flags_nulls_and_metadata[nodes]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_known_nested_connection_carrier_preserves_flags_nulls_and_metadata[edges]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_named_column_iterators_stay_one_pass_without_materializing_a_probe_prefix",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_explicit_selected_column_object_keeps_root_boundary",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_explicit_selected_record_array_keeps_nested_cells_and_source_order",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_borrowed_second_line_jsonl_parse_failure_keeps_stream_usable",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late-1-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late-1-one-pass]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late--1-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late--1-one-pass]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late-1-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late-1-one-pass]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late--1-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late--1-one-pass]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow-1-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow-1-one-pass]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow--1-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow--1-one-pass]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow-1-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow-1-one-pass]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow--1-records]",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow--1-one-pass]"
+  ],
+  "deselected": [],
+  "actual_reports": [
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_owned_jsonl_unwinds_before_downstream_exception_returns[plan]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.005503899999894202
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_owned_jsonl_unwinds_before_downstream_exception_returns[plan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.005834199997480027
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_owned_jsonl_unwinds_before_downstream_exception_returns[plan]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00029939999512862414
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_owned_jsonl_unwinds_before_downstream_exception_returns[late-flatten]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0029675999976461753
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_owned_jsonl_unwinds_before_downstream_exception_returns[late-flatten]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0031790000066393986
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_owned_jsonl_unwinds_before_downstream_exception_returns[late-flatten]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00019720000273082405
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_owned_jsonl_unwinds_before_downstream_exception_returns[selected-path-plan]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0020152999932179227
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_owned_jsonl_unwinds_before_downstream_exception_returns[selected-path-plan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.003420599998207763
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_owned_jsonl_unwinds_before_downstream_exception_returns[selected-path-plan]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00018709999858401716
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_borrowed_generator_is_not_closed_when_planning_raises",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0001201999984914437
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_borrowed_generator_is_not_closed_when_planning_raises",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005910000036237761
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_borrowed_generator_is_not_closed_when_planning_raises",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00011900000390596688
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[split-positive-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00034980000054929405
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[split-positive-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0007852999988244846
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[split-positive-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014480001118499786
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[split-positive-one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003837999975075945
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[split-positive-one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00041310000233352184
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[split-positive-one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.000149500003317371
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[split-negative-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003242999955546111
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[split-negative-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00037540000630542636
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[split-negative-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014540000120177865
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[split-negative-one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00033999999868683517
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[split-negative-one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0003575000009732321
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[split-negative-one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014350000128615648
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[overflow-tiny-tail-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003093999985139817
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[overflow-tiny-tail-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0003786000015679747
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[overflow-tiny-tail-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00015220000932458788
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[overflow-tiny-tail-one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003285999991931021
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[overflow-tiny-tail-one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0003941000031773001
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[overflow-tiny-tail-one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014350000128615648
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[late-overflow-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00032809999538585544
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[late-overflow-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0008944000001065433
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[late-overflow-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001466999965487048
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[late-overflow-one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00031480001052841544
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[late-overflow-one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0007919000054243952
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[late-overflow-one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014599999121855944
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[constant-tiny-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00034300000697840005
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[constant-tiny-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0003496999997878447
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[constant-tiny-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014279999595601112
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[constant-tiny-one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00032389999250881374
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[constant-tiny-one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0003218000056222081
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[constant-tiny-one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014139999984763563
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[tie-even-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00030590000096708536
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[tie-even-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002610000083222985
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[tie-even-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013139999646227807
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[tie-even-one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00028229999588802457
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[tie-even-one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002536000101827085
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[tie-even-one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00012700000661425292
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[positive-half-zero-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002759000053629279
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[positive-half-zero-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002403999969828874
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[positive-half-zero-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00012460000289138407
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[positive-half-zero-one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002764999953797087
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[positive-half-zero-one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00023799999326001853
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[positive-half-zero-one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001230000052601099
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[negative-half-zero-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00027660001069307327
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[negative-half-zero-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00023499999952036887
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[negative-half-zero-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00012399999832268804
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[negative-half-zero-one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002702999918255955
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[negative-half-zero-one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002378999924985692
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[negative-half-zero-one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00012540000898297876
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[wide-numerator-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00027600000612437725
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[wide-numerator-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0006602999928873032
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[wide-numerator-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001357000001007691
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[wide-numerator-one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00028959999326616526
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[wide-numerator-one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0006105999927967787
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[wide-numerator-one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013410000246949494
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[prefix-residual-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00028160000510979444
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[prefix-residual-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0003896000125678256
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[prefix-residual-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00012959999730810523
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[prefix-residual-one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002793000021483749
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[prefix-residual-one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0004071000003023073
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_mean_rounds_exact_finite_rational_once[prefix-residual-one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013559999933931977
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_other_mean_uses_all_numeric_contributions_not_boolean_or_null",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00010859999747481197
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_other_mean_uses_all_numeric_contributions_not_boolean_or_null",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005567000043811277
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_other_mean_uses_all_numeric_contributions_not_boolean_or_null",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00011130000348202884
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-rows]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003547999949660152
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-rows]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00037689998862333596
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-rows]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013870000839233398
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002896999940276146
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00022329999774228781
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013159999798517674
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-items]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003012999950442463
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-items]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00021769999875687063
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-items]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001289000065298751
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-results]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00028839999868068844
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-results]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00021669999114237726
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-results]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013139999646227807
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-data]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00028900000324938446
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-data]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002179000002797693
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-data]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013190000026952475
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-nodes]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00028900000324938446
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-nodes]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00022039999021217227
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-nodes]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013240000407677144
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-edges]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002894999925047159
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-edges]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002199000009568408
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-edges]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013220000255387276
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-pages]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002893999917432666
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-pages]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00021749999723397195
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-inferred-pages]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013179999950807542
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-rows]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00028979999478906393
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-rows]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002195999986724928
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-rows]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013109999417793006
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002879999956348911
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002182000025641173
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001345999917248264
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-items]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002902999985963106
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-items]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00021719999494962394
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-items]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013020000187680125
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-results]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002862999972421676
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-results]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00021579999884124845
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-results]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014340000052470714
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-data]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002862000110326335
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-data]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00021689999266527593
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-data]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013169999874662608
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-nodes]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002843999973265454
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-nodes]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00022020000324118882
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-nodes]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001432000135537237
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-edges]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003259000077378005
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-edges]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002243999915663153
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-edges]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013600000238511711
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-pages]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0008803999953670427
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-pages]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0003237000055378303
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[object-explicit-y-pages]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00015279999934136868
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-rows]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.000301799998851493
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-rows]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002632999967318028
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-rows]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00011990001075901091
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002578999992692843
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002158999996026978
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00011870000162161887
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-items]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00026619998971000314
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-items]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00029120000544935465
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-items]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00011680000170599669
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-results]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002528000040911138
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-results]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002066999877570197
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-results]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00012689999130088836
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-data]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00025800000003073364
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-data]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00020199999562464654
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-data]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00011119998816866428
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-nodes]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00024509998911526054
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-nodes]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002018999948631972
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-nodes]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00011229999654460698
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-edges]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002449000021442771
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-edges]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00020840000070165843
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-edges]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00012570001126732677
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-pages]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002451999898767099
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-pages]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00020009999570902437
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-inferred-pages]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00011149999045301229
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-rows]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00024359999224543571
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-rows]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00020710000535473228
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-rows]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00011170000652782619
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00024130000383593142
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00020059999951627105
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00011269999959040433
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-items]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002445999998599291
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-items]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00020219999714754522
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-items]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00011239999730605632
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-results]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002435000060359016
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-results]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00020080000103916973
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-results]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00011170000652782619
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-data]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002432000037515536
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-data]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00020009999570902437
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-data]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00011049999739043415
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-nodes]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002521000133128837
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-nodes]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00020119998953305185
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-nodes]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001112000027205795
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-edges]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00024500000290572643
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-edges]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0003620999923441559
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-edges]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00011930000619031489
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-pages]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002535999956307933
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-pages]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002111999929184094
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_array_column_keeps_its_name_and_boolean_null_cells[encoded-json-explicit-y-pages]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001142999972216785
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_sequence_and_nested_flags_are_not_empty_records[records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00015870000061113387
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_sequence_and_nested_flags_are_not_empty_records[records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00020619999850168824
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_sequence_and_nested_flags_are_not_empty_records[records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00010459999612066895
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_sequence_and_nested_flags_are_not_empty_records[one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0001576999929966405
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_sequence_and_nested_flags_are_not_empty_records[one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00019920000340789557
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_scalar_sequence_and_nested_flags_are_not_empty_records[one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00010460001067258418
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_connection_siblings_require_a_path_instead_of_disappearing[sibling0-nodes]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00020670000230893493
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_connection_siblings_require_a_path_instead_of_disappearing[sibling0-nodes]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.000294400000711903
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_connection_siblings_require_a_path_instead_of_disappearing[sibling0-nodes]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00011189999349880964
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_connection_siblings_require_a_path_instead_of_disappearing[sibling0-edges]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00020539999241009355
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_connection_siblings_require_a_path_instead_of_disappearing[sibling0-edges]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00022450000687967986
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_connection_siblings_require_a_path_instead_of_disappearing[sibling0-edges]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001103000104194507
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_connection_siblings_require_a_path_instead_of_disappearing[sibling1-nodes]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00023939998936839402
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_connection_siblings_require_a_path_instead_of_disappearing[sibling1-nodes]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00021229998674243689
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_connection_siblings_require_a_path_instead_of_disappearing[sibling1-nodes]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00010989999282173812
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_connection_siblings_require_a_path_instead_of_disappearing[sibling1-edges]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00020569999469444156
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_connection_siblings_require_a_path_instead_of_disappearing[sibling1-edges]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002762000076472759
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_connection_siblings_require_a_path_instead_of_disappearing[sibling1-edges]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00012759999663103372
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_custom_connection_wrapper_requires_explicit_selection",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 9.40000027185306e-05
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_custom_connection_wrapper_requires_explicit_selection",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002671999973244965
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_custom_connection_wrapper_requires_explicit_selection",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 9.359999967273325e-05
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_known_nested_connection_carrier_preserves_flags_nulls_and_metadata[nodes]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00015900000289548188
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_known_nested_connection_carrier_preserves_flags_nulls_and_metadata[nodes]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00019529998826328665
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_known_nested_connection_carrier_preserves_flags_nulls_and_metadata[nodes]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00010240000847261399
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_known_nested_connection_carrier_preserves_flags_nulls_and_metadata[edges]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0001576999929966405
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_known_nested_connection_carrier_preserves_flags_nulls_and_metadata[edges]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002018000086536631
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_known_nested_connection_carrier_preserves_flags_nulls_and_metadata[edges]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001277999981539324
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_named_column_iterators_stay_one_pass_without_materializing_a_probe_prefix",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 9.300000965595245e-05
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_named_column_iterators_stay_one_pass_without_materializing_a_probe_prefix",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00018689999706111848
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_named_column_iterators_stay_one_pass_without_materializing_a_probe_prefix",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 9.420000424142927e-05
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_explicit_selected_column_object_keeps_root_boundary",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 9.119999594986439e-05
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_explicit_selected_column_object_keeps_root_boundary",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00018819999240804464
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_explicit_selected_column_object_keeps_root_boundary",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00010070001007989049
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_explicit_selected_record_array_keeps_nested_cells_and_source_order",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 9.689999569673091e-05
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_explicit_selected_record_array_keeps_nested_cells_and_source_order",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00018909999926108867
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_explicit_selected_record_array_keeps_nested_cells_and_source_order",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 9.750000026542693e-05
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_borrowed_second_line_jsonl_parse_failure_keeps_stream_usable",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 9.539999882690609e-05
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_borrowed_second_line_jsonl_parse_failure_keeps_stream_usable",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0006138000026112422
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_borrowed_second_line_jsonl_parse_failure_keeps_stream_usable",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00010599999222904444
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late-1-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003096000000368804
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late-1-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00035880001087207347
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late-1-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001362000039080158
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late-1-one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003608999977586791
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late-1-one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00036359998921398073
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late-1-one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001303000026382506
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late--1-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00034929999674204737
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late--1-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00035849999403581023
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late--1-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001286000042455271
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late--1-one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00031090000993572176
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late--1-one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0003406000032555312
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late--1-one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00012719999358523637
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late-1-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003240999940317124
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late-1-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00046609999844804406
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late-1-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013309999485500157
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late-1-one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00032330000249203295
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late-1-one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0003547999949660152
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late-1-one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013390000094659626
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late--1-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003228999994462356
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late--1-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00038130000757519156
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late--1-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013610000314656645
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late--1-one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00032920000376179814
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late--1-one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00037719999090768397
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late--1-one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013519999629352242
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow-1-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003308000013930723
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow-1-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0003192000003764406
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow-1-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001357000001007691
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow-1-one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003465000045252964
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow-1-one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0003251000016462058
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow-1-one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001512000017100945
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow--1-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00032720000308472663
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow--1-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0003268000000389293
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow--1-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013780000153928995
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow--1-one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003391999925952405
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow--1-one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0003360999980941415
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow--1-one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001368000084767118
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow-1-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003332999913254753
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow-1-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0003429999924264848
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow-1-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013690000923816115
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow-1-one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00035790000401902944
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow-1-one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00033290000283159316
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow-1-one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013890000991523266
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow--1-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00036440000985749066
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow--1-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00034830000367946923
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow--1-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013929999840911478
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow--1-one-pass]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003876000118907541
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow--1-one-pass]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0003403999871807173
+    },
+    {
+      "nodeid": "python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow--1-one-pass]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001689000055193901
+    }
+  ],
+  "after": {
+    "product_sha": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+    "files": {
+      "pyproject.toml": {
+        "raw_sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "git_sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/__init__.py": {
+        "raw_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "git_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/cli.py": {
+        "raw_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "git_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/engines.py": {
+        "raw_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "git_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/mcp_server.py": {
+        "raw_sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "git_sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/models.py": {
+        "raw_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "git_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/normalize.py": {
+        "raw_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "git_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/py.typed": {
+        "raw_sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "git_sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/recommend.py": {
+        "raw_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "git_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/render.py": {
+        "raw_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "git_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt": {
+        "raw_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "git_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/tools.py": {
+        "raw_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "git_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "raw_equals_git": true
+      },
+      "python/deepviz/tests/test_r17_normalizer_boundaries.py": {
+        "raw_sha256": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+        "git_sha256": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+        "raw_equals_git": true
+      },
+      "schemas/chart-spec.schema.json": {
+        "raw_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "git_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "raw_equals_git": true
+      },
+      "tests/test_n11_resource_policy.py": {
+        "raw_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+        "git_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+        "raw_equals_git": true
+      }
+    },
+    "probes": {
+      "corpus.json": "67faab68f4388d8a96ddf9318a7f7f5fdd4538e656b4f4528a076a54610bb9de",
+      "exact-cases.json": "6e4aed8bd72c84e51a162fdb5698a263f0304a2b7085d52882507333334078fa",
+      "graphql_fixtures.py": "4a77c7fea2cfca4391ffa10861da22c03ae95c1f13af47e34ac4f1ce79fec3b4",
+      "original-controls.json": "e95b517c53a63f5875afee0eaa597cf6170ab6e613775967ef94a69f2f272934",
+      "README.md": "1dba3b7a52c04c1b214d96127aae070178d53e191269b7c3592b65a3b7e15354",
+      "run_gate.py": "fe3130ebef61e28cd1e87208dadfc5afe4257c607645f7de3a52b8cff1707699",
+      "test_correctness_regressions.py": "aadd94225decbcc3997264ae88508c08633e929595f9eefd817faf598cb0cf2b",
+      "test_graphql_pages.py": "7b676dfc04a1d1526b89316442fc8f64c64db3598e17c094d7866febfef22cc3",
+      "test_large_integer_mean.py": "d7262febf984bd0f83aa29d5a43133d5c083c56aeb97788940218493df28c226",
+      "test_literal_acceptance.py": "0e74800af711641d32a1fffece99c4243a3a19e777962a91ec8ae484522e7a41",
+      "test_owned_input_cleanup.py": "43279c443d9eb76b22f39a80cd4bfcbfcca058193cf8e96780f7c5763c7729a0",
+      "test_reducer_source_ownership.py": "5a9ebaba4968381624d20f646afbd8105531be4bfd179fe56fa5accb7118314e",
+      "test_sum_review.py": "93b059b2fc56eb1d11291c2fa8cd65b56536649a23cec42ad9207c941dce03f8"
+    },
+    "all_originals_raw_git_exact": true,
+    "source_tracked_clean": true
+  }
+}

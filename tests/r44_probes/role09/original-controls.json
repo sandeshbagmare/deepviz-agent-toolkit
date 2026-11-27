@@ -1,0 +1,80 @@
+{
+  "product_sha": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "originals": [
+    {
+      "commit": "dd73e9d498295567e5b90c9d396acfa748e02751",
+      "original_path": "tests/r10_probes/role01/test_correctness_regressions.py",
+      "copied_name": "test_correctness_regressions.py",
+      "sha256": "aadd94225decbcc3997264ae88508c08633e929595f9eefd817faf598cb0cf2b",
+      "bytes": 5392,
+      "changes": "NONE_RAW_GIT_BYTES"
+    },
+    {
+      "commit": "acb11f862dd211a0563fd3dd824b8e5f5493ffaf",
+      "original_path": "tests/r15_probes/role03/test_graphql_pages.py",
+      "copied_name": "test_graphql_pages.py",
+      "sha256": "7b676dfc04a1d1526b89316442fc8f64c64db3598e17c094d7866febfef22cc3",
+      "bytes": 5629,
+      "changes": "NONE_RAW_GIT_BYTES"
+    },
+    {
+      "commit": "acb11f862dd211a0563fd3dd824b8e5f5493ffaf",
+      "original_path": "tests/r15_probes/role03/graphql_fixtures.py",
+      "copied_name": "graphql_fixtures.py",
+      "sha256": "4a77c7fea2cfca4391ffa10861da22c03ae95c1f13af47e34ac4f1ce79fec3b4",
+      "bytes": 4589,
+      "changes": "NONE_RAW_GIT_BYTES"
+    },
+    {
+      "commit": "acb11f862dd211a0563fd3dd824b8e5f5493ffaf",
+      "original_path": "tests/r15_probes/role03/corpus.json",
+      "copied_name": "corpus.json",
+      "sha256": "67faab68f4388d8a96ddf9318a7f7f5fdd4538e656b4f4528a076a54610bb9de",
+      "bytes": 1298,
+      "changes": "NONE_RAW_GIT_BYTES"
+    },
+    {
+      "commit": "60599dd209e60eae559e721bc7bb200a47e3032f",
+      "original_path": "tests/r10_probes/role15/test_owned_input_cleanup.py",
+      "copied_name": "test_owned_input_cleanup.py",
+      "sha256": "43279c443d9eb76b22f39a80cd4bfcbfcca058193cf8e96780f7c5763c7729a0",
+      "bytes": 9534,
+      "changes": "NONE_RAW_GIT_BYTES"
+    },
+    {
+      "commit": "8a10108752567f6d0faac700240c4acf77b32556",
+      "original_path": "tests/r13_probes/role15/test_reducer_source_ownership.py",
+      "copied_name": "test_reducer_source_ownership.py",
+      "sha256": "5a9ebaba4968381624d20f646afbd8105531be4bfd179fe56fa5accb7118314e",
+      "bytes": 13994,
+      "changes": "NONE_RAW_GIT_BYTES"
+    },
+    {
+      "commit": "dd73e9d498295567e5b90c9d396acfa748e02751",
+      "original_path": "tests/r13_probes/role01/test_sum_review.py",
+      "copied_name": "test_sum_review.py",
+      "sha256": "93b059b2fc56eb1d11291c2fa8cd65b56536649a23cec42ad9207c941dce03f8",
+      "bytes": 3726,
+      "changes": "NONE_RAW_GIT_BYTES"
+    },
+    {
+      "commit": "dd73e9d498295567e5b90c9d396acfa748e02751",
+      "original_path": "tests/r13_probes/role01/exact-cases.json",
+      "copied_name": "exact-cases.json",
+      "sha256": "6e4aed8bd72c84e51a162fdb5698a263f0304a2b7085d52882507333334078fa",
+      "bytes": 20019,
+      "changes": "NONE_RAW_GIT_BYTES"
+    },
+    {
+      "commit": "8ce82e78bf7df5b4dacd027fdc3bddb01e771357",
+      "original_path": "tests/r38_probes/role11/test_large_integer_mean.py",
+      "copied_name": "test_large_integer_mean.py",
+      "sha256": "d7262febf984bd0f83aa29d5a43133d5c083c56aeb97788940218493df28c226",
+      "bytes": 653,
+      "changes": "NONE_RAW_GIT_BYTES"
+    }
+  ],
+  "method": "UNCHANGED original Git blobs copied ONLY into NEW tests/r44_probes/role09 in OWN546 and publication worktrees. Same three-parent depth preserves existing import guards; no source/original/oracle/ROOT/env edits.",
+  "original_R16_31": "READ_NOT_RUN: environment-selector autouse guard requires env writes forbidden here; unchanged R10F1/F3 + R17 published scalar/selected-root controls selected instead.",
+  "prefix_exclusion": "ONLY test_mean_and_sample_match_untouched_base: unaffected old-base child/env comparison is outside affected prefix scope; rest unchanged including strict residuals/state/budget/rounding/integer controls."
+}

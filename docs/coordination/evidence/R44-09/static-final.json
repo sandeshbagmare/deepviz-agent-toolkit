@@ -1,0 +1,35 @@
+[
+  {
+    "name": "ruff-runner",
+    "argv": [
+      "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "ruff",
+      "check",
+      "--no-cache",
+      "--config",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\pyproject.toml",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r44_probes\\role09\\run_gate.py"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "mypy-runner",
+    "argv": [
+      "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "mypy",
+      "--config-file",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\pyproject.toml",
+      "--no-site-packages",
+      "--follow-imports=skip",
+      "--no-incremental",
+      "--cache-dir",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\mypy-final",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r44_probes\\role09\\run_gate.py"
+    ],
+    "exit": 0
+  }
+]

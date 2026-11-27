@@ -1,0 +1,1640 @@
+{
+  "group": "graphql",
+  "source": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+  "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+  "pytest": "9.2.0",
+  "argv": [
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r44_probes\\role09\\test_graphql_pages.py",
+    "-c",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\pyproject.toml",
+    "--disable-plugin-autoload",
+    "--import-mode=importlib",
+    "--strict-markers",
+    "-q",
+    "--tb=short",
+    "-rA",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "junit_family=legacy",
+    "--basetemp",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\graphql\\tmp",
+    "--junitxml",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\graphql\\junit.xml"
+  ],
+  "int_digit_limit": 4300,
+  "no_site": 1,
+  "bytecode_disabled": true,
+  "our_environment_writes": 0,
+  "before": {
+    "product_sha": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+    "files": {
+      "pyproject.toml": {
+        "raw_sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "git_sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/__init__.py": {
+        "raw_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "git_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/cli.py": {
+        "raw_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "git_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/engines.py": {
+        "raw_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "git_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/mcp_server.py": {
+        "raw_sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "git_sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/models.py": {
+        "raw_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "git_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/normalize.py": {
+        "raw_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "git_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/py.typed": {
+        "raw_sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "git_sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/recommend.py": {
+        "raw_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "git_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/render.py": {
+        "raw_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "git_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt": {
+        "raw_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "git_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/tools.py": {
+        "raw_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "git_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "raw_equals_git": true
+      },
+      "python/deepviz/tests/test_r17_normalizer_boundaries.py": {
+        "raw_sha256": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+        "git_sha256": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+        "raw_equals_git": true
+      },
+      "schemas/chart-spec.schema.json": {
+        "raw_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "git_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "raw_equals_git": true
+      },
+      "tests/test_n11_resource_policy.py": {
+        "raw_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+        "git_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+        "raw_equals_git": true
+      }
+    },
+    "probes": {
+      "corpus.json": "67faab68f4388d8a96ddf9318a7f7f5fdd4538e656b4f4528a076a54610bb9de",
+      "exact-cases.json": "6e4aed8bd72c84e51a162fdb5698a263f0304a2b7085d52882507333334078fa",
+      "graphql_fixtures.py": "4a77c7fea2cfca4391ffa10861da22c03ae95c1f13af47e34ac4f1ce79fec3b4",
+      "original-controls.json": "e95b517c53a63f5875afee0eaa597cf6170ab6e613775967ef94a69f2f272934",
+      "README.md": "1dba3b7a52c04c1b214d96127aae070178d53e191269b7c3592b65a3b7e15354",
+      "run_gate.py": "fe3130ebef61e28cd1e87208dadfc5afe4257c607645f7de3a52b8cff1707699",
+      "test_correctness_regressions.py": "aadd94225decbcc3997264ae88508c08633e929595f9eefd817faf598cb0cf2b",
+      "test_graphql_pages.py": "7b676dfc04a1d1526b89316442fc8f64c64db3598e17c094d7866febfef22cc3",
+      "test_large_integer_mean.py": "d7262febf984bd0f83aa29d5a43133d5c083c56aeb97788940218493df28c226",
+      "test_literal_acceptance.py": "0e74800af711641d32a1fffece99c4243a3a19e777962a91ec8ae484522e7a41",
+      "test_owned_input_cleanup.py": "43279c443d9eb76b22f39a80cd4bfcbfcca058193cf8e96780f7c5763c7729a0",
+      "test_reducer_source_ownership.py": "5a9ebaba4968381624d20f646afbd8105531be4bfd179fe56fa5accb7118314e",
+      "test_sum_review.py": "93b059b2fc56eb1d11291c2fa8cd65b56536649a23cec42ad9207c941dce03f8"
+    },
+    "all_originals_raw_git_exact": true,
+    "source_tracked_clean": true
+  },
+  "imports_before_pytest": {
+    "deepviz": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\__init__.py",
+      "raw_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+    },
+    "deepviz.normalize": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "raw_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc"
+    },
+    "deepviz.models": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\models.py",
+      "raw_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    "deepviz.engines": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\engines.py",
+      "raw_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de"
+    },
+    "deepviz.render": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\render.py",
+      "raw_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+    }
+  },
+  "exit": 0,
+  "wall_seconds": 0.33248789999925066,
+  "selected": [
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nodes-auto-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nodes-auto-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nodes-auto-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[edges-auto-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[edges-auto-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[edges-auto-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[mixed-auto-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[mixed-auto-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[mixed-auto-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nested-select-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nested-select-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nested-select-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[siblings-select-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[siblings-select-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[siblings-select-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[pages-envelope-select-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[pages-envelope-select-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[pages-envelope-select-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[warnings-late-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[warnings-late-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[warnings-late-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[missing-branch-select-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[missing-branch-select-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[missing-branch-select-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[all-empty-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[all-empty-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[all-empty-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-auto-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-auto-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-auto-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-explicit-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-explicit-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-explicit-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-auto-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-auto-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-auto-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-explicit-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-explicit-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-explicit-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-auto-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-auto-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-auto-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-explicit-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-explicit-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-explicit-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-auto-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-auto-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-auto-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-explicit-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-explicit-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-explicit-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-auto-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-auto-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-auto-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-explicit-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-explicit-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-explicit-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[feed-first-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[feed-first-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[feed-first-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[shadow-first-list]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[shadow-first-json]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[shadow-first-iterator]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[nodes-scalar]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[nodes-nested]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[edges-scalar]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[edges-nested]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_minimal_valid_direct_and_single_page_controls[direct-records]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_minimal_valid_direct_and_single_page_controls[single-page]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_direct_error_only_envelope_control_uses_same_policy_as_page_list[error-only-response]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_direct_error_only_envelope_control_uses_same_policy_as_page_list[error-only-no-data]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_direct_error_only_envelope_control_uses_same_policy_as_page_list[error-only-empty-data]",
+    "tests/r44_probes/role09/test_graphql_pages.py::test_import_and_fixture_guards_cannot_silently_use_an_installed_or_sibling_normalizer"
+  ],
+  "deselected": [],
+  "actual_reports": [
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nodes-auto-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0005777000042144209
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nodes-auto-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.001261299999896437
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nodes-auto-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0003279999946244061
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nodes-auto-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0005158000130904838
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nodes-auto-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0017038000078173354
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nodes-auto-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00023260001034941524
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nodes-auto-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0005455000064102933
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nodes-auto-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0008331999997608364
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nodes-auto-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001723000023048371
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[edges-auto-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002860999957192689
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[edges-auto-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005104000010760501
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[edges-auto-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014930000179447234
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[edges-auto-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00028079999901819974
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[edges-auto-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005586000042967498
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[edges-auto-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014730000111740083
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[edges-auto-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002792000013869256
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[edges-auto-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005113000079290941
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[edges-auto-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014449999434873462
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[mixed-auto-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002736999886110425
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[mixed-auto-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00047640000411774963
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[mixed-auto-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014369998825713992
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[mixed-auto-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00027999999292660505
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[mixed-auto-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.000542099995072931
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[mixed-auto-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001421999913873151
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[mixed-auto-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00026620000426191837
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[mixed-auto-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0004926000110572204
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[mixed-auto-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014570000348612666
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nested-select-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00026640000578481704
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nested-select-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0006997000018600374
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nested-select-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014959998952690512
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nested-select-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002741999924182892
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nested-select-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.000717100003384985
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nested-select-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014969999028835446
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nested-select-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00026030000299215317
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nested-select-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005252999981166795
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[nested-select-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001453000004403293
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[siblings-select-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00024870000197552145
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[siblings-select-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0004616999940481037
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[siblings-select-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00012969999806955457
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[siblings-select-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00024820001272019
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[siblings-select-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005035000067437068
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[siblings-select-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00012839998817071319
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[siblings-select-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002961999998660758
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[siblings-select-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005062999989604577
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[siblings-select-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014999999257270247
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[pages-envelope-select-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003119000029982999
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[pages-envelope-select-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005219000013312325
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[pages-envelope-select-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014600000577047467
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[pages-envelope-select-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00032380000629927963
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[pages-envelope-select-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005967999895801768
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[pages-envelope-select-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00015779999375808984
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[pages-envelope-select-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00042440000106580555
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[pages-envelope-select-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005092000064905733
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[pages-envelope-select-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013220000255387276
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[warnings-late-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002381999947829172
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[warnings-late-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0004420000041136518
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[warnings-late-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013040000339969993
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[warnings-late-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00024370000755880028
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[warnings-late-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005028999876230955
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[warnings-late-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013309999485500157
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[warnings-late-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00024500000290572643
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[warnings-late-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0004608000017469749
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[warnings-late-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0003041000018129125
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[missing-branch-select-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002798999921651557
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[missing-branch-select-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00050889998965431
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[missing-branch-select-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001343000039923936
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[missing-branch-select-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00024280000070575625
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[missing-branch-select-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00046209999709390104
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[missing-branch-select-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001250000059371814
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[missing-branch-select-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002376000047661364
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[missing-branch-select-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0004800000024260953
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[missing-branch-select-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001230000052601099
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[all-empty-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00023499999952036887
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[all-empty-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00026929999876301736
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[all-empty-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00012579999747686088
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[all-empty-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00023379999038297683
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[all-empty-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00031119999766815454
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[all-empty-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00012510000669863075
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[all-empty-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00023469999723602086
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[all-empty-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00027550000231713057
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_empty_intermediate_page_and_repeated_values_are_not_termination_or_identity_keys[all-empty-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001255999959539622
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-auto-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00028079999901819974
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-auto-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0006895000115036964
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-auto-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013349999790079892
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-auto-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002840999950421974
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-auto-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0007573000038973987
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-auto-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00015029999485705048
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-auto-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00029680000443477184
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-auto-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005996000109007582
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-auto-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014059999375604093
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-explicit-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00029520000680349767
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-explicit-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0007050000131130219
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-explicit-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00016320000577252358
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-explicit-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00032360000477638096
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-explicit-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0008622000023024157
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-explicit-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014749998808838427
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-explicit-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003525000065565109
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-explicit-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0007029999978840351
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[edge-without-node-explicit-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00015389999316539615
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-auto-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003432000085012987
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-auto-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0007691000064369291
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-auto-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014399999054148793
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-auto-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003108999953838065
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-auto-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0007322000019485131
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-auto-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001390999968862161
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-auto-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002902999985963106
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-auto-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0007113999890862033
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-auto-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001336999994236976
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-explicit-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003257999924244359
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-explicit-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005868000007467344
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-explicit-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013219998800195754
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-explicit-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0007328999927267432
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-explicit-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0006885000038892031
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-explicit-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013299999409355223
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-explicit-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002761999930953607
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-explicit-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.01358710000931751
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[node-field-collision-explicit-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014350000128615648
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-auto-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00027409999165683985
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-auto-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.000552500001504086
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-auto-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001281000004382804
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-auto-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00028390000807121396
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-auto-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0006204999954206869
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-auto-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001320000010309741
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-auto-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00027940000290982425
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-auto-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0006739000091329217
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-auto-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013420000323094428
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-explicit-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002800000074785203
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-explicit-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005671000108122826
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-explicit-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013509999553207308
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-explicit-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002899999963119626
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-explicit-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.001065699994796887
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-explicit-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0002666999935172498
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-explicit-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0005770999996457249
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-explicit-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0011082999990321696
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-response-explicit-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00025009999808389693
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-auto-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00042460000258870423
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-auto-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0009543999913148582
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-auto-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00019570000586099923
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-auto-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00041059999784920365
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-auto-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0013047999964328483
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-auto-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00020300000323913991
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-auto-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00045200000749900937
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-auto-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0010356999991927296
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-auto-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00021070000366307795
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-explicit-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00046600001223850995
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-explicit-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.001247100008185953
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-explicit-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00022289999469649047
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-explicit-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00048099999548867345
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-explicit-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0013390999956754968
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-explicit-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0002545000024838373
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-explicit-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.000484500007587485
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-explicit-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0006824000010965392
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-no-data-explicit-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00015309998707380146
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-auto-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003124999930150807
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-auto-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0007660999981453642
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-auto-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00016080000204965472
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-auto-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003152999997837469
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-auto-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0007416000007651746
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-auto-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014829999417997897
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-auto-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00034220000088680536
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-auto-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0007980000082170591
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-auto-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00015920000441838056
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-explicit-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00034499999310355633
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-explicit-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0006282999966060743
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-explicit-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001615999935893342
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-explicit-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003274000046076253
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-explicit-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0015184999938355759
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-explicit-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0002523000002838671
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-explicit-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0006834999949205667
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-explicit-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0010819000017363578
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_invalid_late_page_after_empty_page_is_not_a_successful_prefix[error-only-empty-data-explicit-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00016500000492669642
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[feed-first-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003274000046076253
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[feed-first-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0010813999979291111
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[feed-first-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00021040000137872994
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[feed-first-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00026870000874623656
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[feed-first-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0006327000010060146
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[feed-first-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013869999384041876
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[feed-first-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00026190000062342733
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[feed-first-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0010433999996166676
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[feed-first-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001480999926570803
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[shadow-first-list]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002705999941099435
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[shadow-first-list]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005628999933833256
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[shadow-first-list]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014089999604038894
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[shadow-first-json]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00030520001018885523
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[shadow-first-json]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0006777999951737002
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[shadow-first-json]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014040000678505749
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[shadow-first-iterator]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0002590999938547611
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[shadow-first-iterator]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0006168999971123412
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_late_multiple_connections_require_path_not_an_implicit_semantic_merge[shadow-first-iterator]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00015069999790284783
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[nodes-scalar]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00019880000036209822
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[nodes-scalar]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0006036999984644353
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[nodes-scalar]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013760000001639128
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[nodes-nested]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00020629999926313758
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[nodes-nested]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005477999948197976
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[nodes-nested]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013390000094659626
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[edges-scalar]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00020249999943189323
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[edges-scalar]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0006119000026956201
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[edges-scalar]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014019999071024358
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[edges-nested]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00021109999215696007
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[edges-nested]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005381999944802374
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_known_sibling_loss_remains_strictly_rejected_when_only_late_page_has_it[edges-nested]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013889999536331743
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_minimal_valid_direct_and_single_page_controls[direct-records]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00023629999486729503
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_minimal_valid_direct_and_single_page_controls[direct-records]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002914000069722533
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_minimal_valid_direct_and_single_page_controls[direct-records]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013449999096337706
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_minimal_valid_direct_and_single_page_controls[single-page]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00020930000755470246
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_minimal_valid_direct_and_single_page_controls[single-page]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00028759999258909374
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_minimal_valid_direct_and_single_page_controls[single-page]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001323000033153221
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_direct_error_only_envelope_control_uses_same_policy_as_page_list[error-only-response]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00021230000129435211
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_direct_error_only_envelope_control_uses_same_policy_as_page_list[error-only-response]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0003023000026587397
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_direct_error_only_envelope_control_uses_same_policy_as_page_list[error-only-response]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013630000466946512
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_direct_error_only_envelope_control_uses_same_policy_as_page_list[error-only-no-data]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00020450000010896474
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_direct_error_only_envelope_control_uses_same_policy_as_page_list[error-only-no-data]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0002049000031547621
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_direct_error_only_envelope_control_uses_same_policy_as_page_list[error-only-no-data]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013279999257065356
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_direct_error_only_envelope_control_uses_same_policy_as_page_list[error-only-empty-data]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00020480000239331275
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_direct_error_only_envelope_control_uses_same_policy_as_page_list[error-only-empty-data]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00019799999427050352
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_direct_error_only_envelope_control_uses_same_policy_as_page_list[error-only-empty-data]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00019950000569224358
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_import_and_fixture_guards_cannot_silently_use_an_installed_or_sibling_normalizer",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00017129999469034374
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_import_and_fixture_guards_cannot_silently_use_an_installed_or_sibling_normalizer",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0009094999986700714
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_graphql_pages.py::test_import_and_fixture_guards_cannot_silently_use_an_installed_or_sibling_normalizer",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00014560000272467732
+    }
+  ],
+  "after": {
+    "product_sha": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+    "files": {
+      "pyproject.toml": {
+        "raw_sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "git_sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/__init__.py": {
+        "raw_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "git_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/cli.py": {
+        "raw_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "git_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/engines.py": {
+        "raw_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "git_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/mcp_server.py": {
+        "raw_sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "git_sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/models.py": {
+        "raw_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "git_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/normalize.py": {
+        "raw_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "git_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/py.typed": {
+        "raw_sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "git_sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/recommend.py": {
+        "raw_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "git_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/render.py": {
+        "raw_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "git_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt": {
+        "raw_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "git_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/tools.py": {
+        "raw_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "git_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "raw_equals_git": true
+      },
+      "python/deepviz/tests/test_r17_normalizer_boundaries.py": {
+        "raw_sha256": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+        "git_sha256": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+        "raw_equals_git": true
+      },
+      "schemas/chart-spec.schema.json": {
+        "raw_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "git_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "raw_equals_git": true
+      },
+      "tests/test_n11_resource_policy.py": {
+        "raw_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+        "git_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+        "raw_equals_git": true
+      }
+    },
+    "probes": {
+      "corpus.json": "67faab68f4388d8a96ddf9318a7f7f5fdd4538e656b4f4528a076a54610bb9de",
+      "exact-cases.json": "6e4aed8bd72c84e51a162fdb5698a263f0304a2b7085d52882507333334078fa",
+      "graphql_fixtures.py": "4a77c7fea2cfca4391ffa10861da22c03ae95c1f13af47e34ac4f1ce79fec3b4",
+      "original-controls.json": "e95b517c53a63f5875afee0eaa597cf6170ab6e613775967ef94a69f2f272934",
+      "README.md": "1dba3b7a52c04c1b214d96127aae070178d53e191269b7c3592b65a3b7e15354",
+      "run_gate.py": "fe3130ebef61e28cd1e87208dadfc5afe4257c607645f7de3a52b8cff1707699",
+      "test_correctness_regressions.py": "aadd94225decbcc3997264ae88508c08633e929595f9eefd817faf598cb0cf2b",
+      "test_graphql_pages.py": "7b676dfc04a1d1526b89316442fc8f64c64db3598e17c094d7866febfef22cc3",
+      "test_large_integer_mean.py": "d7262febf984bd0f83aa29d5a43133d5c083c56aeb97788940218493df28c226",
+      "test_literal_acceptance.py": "0e74800af711641d32a1fffece99c4243a3a19e777962a91ec8ae484522e7a41",
+      "test_owned_input_cleanup.py": "43279c443d9eb76b22f39a80cd4bfcbfcca058193cf8e96780f7c5763c7729a0",
+      "test_reducer_source_ownership.py": "5a9ebaba4968381624d20f646afbd8105531be4bfd179fe56fa5accb7118314e",
+      "test_sum_review.py": "93b059b2fc56eb1d11291c2fa8cd65b56536649a23cec42ad9207c941dce03f8"
+    },
+    "all_originals_raw_git_exact": true,
+    "source_tracked_clean": true
+  }
+}

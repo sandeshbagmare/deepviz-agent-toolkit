@@ -1,0 +1,76 @@
+FFFF                                                                     [100%]
+================================== FAILURES ===================================
+__________ test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii] __________
+tests\test_n11_resource_policy.py:45: in test_exact_64kib_utf8_key_or_cell_is_preserved
+    result = normalize(source, {"kind": "table", "aggregation": "none", "max_points": 10})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:726: in normalize
+    for row, size in islice(rows, 32):
+                     ^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:510: in _records
+    row = _flatten(item, counts) if isinstance(item, dict) or isinstance(item, Mapping) else {
+          ^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:486: in _flatten
+    add(key, item, 0)
+python\deepviz\src\deepviz\normalize.py:462: in add
+    _utf8_size(key, _MAX_FIELD_BYTES, "field name")
+python\deepviz\src\deepviz\normalize.py:421: in _utf8_size
+    raise ValueError(f"Input {label} exceeds {limit} UTF-8 bytes")
+E   ValueError: Input field name exceeds 4096 UTF-8 bytes
+________ test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte] _________
+tests\test_n11_resource_policy.py:45: in test_exact_64kib_utf8_key_or_cell_is_preserved
+    result = normalize(source, {"kind": "table", "aggregation": "none", "max_points": 10})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:726: in normalize
+    for row, size in islice(rows, 32):
+                     ^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:510: in _records
+    row = _flatten(item, counts) if isinstance(item, dict) or isinstance(item, Mapping) else {
+          ^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:486: in _flatten
+    add(key, item, 0)
+python\deepviz\src\deepviz\normalize.py:462: in add
+    _utf8_size(key, _MAX_FIELD_BYTES, "field name")
+python\deepviz\src\deepviz\normalize.py:421: in _utf8_size
+    raise ValueError(f"Input {label} exceeds {limit} UTF-8 bytes")
+E   ValueError: Input field name exceeds 4096 UTF-8 bytes
+________ test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte] ________
+tests\test_n11_resource_policy.py:45: in test_exact_64kib_utf8_key_or_cell_is_preserved
+    result = normalize(source, {"kind": "table", "aggregation": "none", "max_points": 10})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:726: in normalize
+    for row, size in islice(rows, 32):
+                     ^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:510: in _records
+    row = _flatten(item, counts) if isinstance(item, dict) or isinstance(item, Mapping) else {
+          ^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:486: in _flatten
+    add(key, item, 0)
+python\deepviz\src\deepviz\normalize.py:462: in add
+    _utf8_size(key, _MAX_FIELD_BYTES, "field name")
+python\deepviz\src\deepviz\normalize.py:421: in _utf8_size
+    raise ValueError(f"Input {label} exceeds {limit} UTF-8 bytes")
+E   ValueError: Input field name exceeds 4096 UTF-8 bytes
+_____________ test_flattened_multibyte_key_at_64kib_is_preserved ______________
+tests\test_n11_resource_policy.py:68: in test_flattened_multibyte_key_at_64kib_is_preserved
+    result = normalize(iter([{outer: {inner: 7}}]), {"kind": "table", "aggregation": "none"})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:726: in normalize
+    for row, size in islice(rows, 32):
+                     ^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:510: in _records
+    row = _flatten(item, counts) if isinstance(item, dict) or isinstance(item, Mapping) else {
+          ^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:486: in _flatten
+    add(key, item, 0)
+python\deepviz\src\deepviz\normalize.py:462: in add
+    _utf8_size(key, _MAX_FIELD_BYTES, "field name")
+python\deepviz\src\deepviz\normalize.py:421: in _utf8_size
+    raise ValueError(f"Input {label} exceeds {limit} UTF-8 bytes")
+E   ValueError: Input field name exceeds 4096 UTF-8 bytes
+=========================== short test summary info ===========================
+FAILED tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii]
+FAILED tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte]
+FAILED tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte]
+FAILED tests/test_n11_resource_policy.py::test_flattened_multibyte_key_at_64kib_is_preserved
+4 failed in 0.48s

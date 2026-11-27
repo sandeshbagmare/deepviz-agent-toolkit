@@ -1,0 +1,912 @@
+{
+  "utc": "2026-11-27T18:12:09.732288+00:00",
+  "owner": "ses_de56782e5ffe3H1lUAoxrBtEhx",
+  "product_sha": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "own_branch": "agents/r10-09-helper-null-fix",
+  "own_prepublication_parent": "f58a93bf4c20ae67929dc27996c4eddbdc1c628a",
+  "verdict": "REQUEST_CHANGES_KNOWN_MEAN_F1_REPRODUCED_ON_546_POLICY4_SEPARATE",
+  "groups": [
+    {
+      "group": "boundaries",
+      "exit": 0,
+      "tests": 86,
+      "passed": 86,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "junit_seconds": 0.216,
+      "driver_seconds": 0.3721129000041401,
+      "failed_ids": [],
+      "actual_command": {
+        "group": "boundaries",
+        "argv": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-S",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r44_probes\\role09\\run_gate.py",
+          "--source",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+          "--site-packages",
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages",
+          "--output",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\boundaries",
+          "--group",
+          "boundaries"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+        "exit": 0,
+        "utc_done": "2026-11-27T18:00:06.666403+00:00",
+        "raw_output": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\boundaries"
+      },
+      "hashes": {
+        "before.json": "ecc7450dd414d5b22ac9d274e492d2d6c4bcef41ac232c549084ae7871c6a0fc",
+        "junit.xml": "2338f4a5454591ffae9ab275838d56b965400aa7c47feb83eea0c81efe7dbfe9",
+        "result.json": "12b65610ed1e433c461517f2f2dc4106022793be72ade79494dff660d269eb79",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.log": "40ab1bf538965dcfcc2b62bb03e9c06c95a2cf5f2cd57d5a4bc09191217aa8e4"
+      }
+    },
+    {
+      "group": "fidelity",
+      "exit": 0,
+      "tests": 22,
+      "passed": 22,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 11,
+      "junit_seconds": 0.082,
+      "driver_seconds": 0.19587460000184365,
+      "failed_ids": [],
+      "actual_command": {
+        "group": "fidelity",
+        "argv": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-S",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r44_probes\\role09\\run_gate.py",
+          "--source",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+          "--site-packages",
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages",
+          "--output",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\fidelity",
+          "--group",
+          "fidelity"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+        "exit": 0,
+        "utc_done": "2026-11-27T18:00:13.217885+00:00",
+        "raw_output": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\fidelity"
+      },
+      "hashes": {
+        "before.json": "5e88babd321c570d5240b5643c361ee178d35f3d6f4a75ee128f261298b3c433",
+        "junit.xml": "9985e4446d5bf84eea39def6729ff3d4812bf15d7a43b77d26b884e892b381e2",
+        "result.json": "471a399a8f9409aee85d75b096d78d314dfafb036d70fe291fa23b3720a5fc92",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.log": "107edceaca0973470337fdaaa19169c0b653c13fe57286844d1d7d8c01a2af51"
+      }
+    },
+    {
+      "group": "graphql",
+      "exit": 0,
+      "tests": 73,
+      "passed": 73,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "junit_seconds": 0.2,
+      "driver_seconds": 0.33248789999925066,
+      "failed_ids": [],
+      "actual_command": {
+        "group": "graphql",
+        "argv": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-S",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r44_probes\\role09\\run_gate.py",
+          "--source",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+          "--site-packages",
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages",
+          "--output",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\graphql",
+          "--group",
+          "graphql"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+        "exit": 0,
+        "utc_done": "2026-11-27T18:00:18.332671+00:00",
+        "raw_output": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\graphql"
+      },
+      "hashes": {
+        "before.json": "ebf4e5fbfbb90b3390caadbf78bf16cba7c71f8c4ddf0847b32423e7025f98c4",
+        "junit.xml": "5f897326c801544d955f1a5f60bf7f943df7f2a98124c4aee4a93b82ff931ef8",
+        "result.json": "0a0e072b5bc45058f015548626e4abb1216ebb53eb3baa3783cfc51099cf870e",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.log": "843788d24f88c403a3092204d5efe72490162d602d3a64aa6855783b773fbc33"
+      }
+    },
+    {
+      "group": "lifetime",
+      "exit": 0,
+      "tests": 64,
+      "passed": 64,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "junit_seconds": 6.832,
+      "driver_seconds": 6.99843979999423,
+      "failed_ids": [],
+      "actual_command": {
+        "group": "lifetime",
+        "argv": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-S",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r44_probes\\role09\\run_gate.py",
+          "--source",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+          "--site-packages",
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages",
+          "--output",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\lifetime",
+          "--group",
+          "lifetime"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+        "exit": 0,
+        "utc_done": "2026-11-27T18:00:30.639425+00:00",
+        "raw_output": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\lifetime"
+      },
+      "hashes": {
+        "before.json": "731b0b4dbb7cfb6bfd05ceedf9c8797a94f315754d4b560b8511e3ef05e30e7c",
+        "junit.xml": "cfd43236371cb7831c8b8777cb2b31e477ea8ef6667b76926f3de0f8d7e2456f",
+        "result.json": "625247cc50b2c4a920838906ca67a0a43632b86d5b0f9b65e0d24301f44be9fd",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.log": "9dc593ba45f5716aba647129414e1c81570d09a7cf1dd00672cd18dc88120648"
+      }
+    },
+    {
+      "group": "prefix",
+      "exit": 0,
+      "tests": 66,
+      "passed": 66,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 1,
+      "junit_seconds": 0.355,
+      "driver_seconds": 0.5918101999995997,
+      "failed_ids": [],
+      "actual_command": {
+        "group": "prefix",
+        "argv": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-S",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r44_probes\\role09\\run_gate.py",
+          "--source",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+          "--site-packages",
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages",
+          "--output",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\prefix",
+          "--group",
+          "prefix"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+        "exit": 0,
+        "utc_done": "2026-11-27T18:00:36.510111+00:00",
+        "raw_output": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\prefix"
+      },
+      "hashes": {
+        "before.json": "ff7a97a06faff5a701f2b47676d3f0d3e56b2f21c925f06741588ff89b336764",
+        "junit.xml": "ee8b79b147c18a5bafbd062be1309b30a40fb94ef7cf1eb85bb7e06f78419e0e",
+        "result.json": "6a5872c56b2f46f03d9307297107b2d17ca714208e0cc849e28341bb6aa81f04",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.log": "9c4aff4dd25c43f3a1815a29c42f386960019e043e8d114a26d00c350d91d5f2"
+      }
+    },
+    {
+      "group": "literal",
+      "exit": 0,
+      "tests": 9,
+      "passed": 9,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "junit_seconds": 0.305,
+      "driver_seconds": 0.40573079999012407,
+      "failed_ids": [],
+      "actual_command": {
+        "group": "literal",
+        "argv": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-S",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r44_probes\\role09\\run_gate.py",
+          "--source",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+          "--site-packages",
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages",
+          "--output",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\literal",
+          "--group",
+          "literal"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+        "exit": 0,
+        "utc_done": "2026-11-27T18:00:41.135763+00:00",
+        "raw_output": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\literal"
+      },
+      "hashes": {
+        "before.json": "c0dcaaae71cfae798c4fc5da8e3032ee62d4926b098291ac4435f9bad8e8ae64",
+        "junit.xml": "bc3156627b51713b717f900c523e968d242deefe42a8e6b856507ede4bb86b62",
+        "result.json": "81c0f2a5302126779d494a0229c9abfb53400bb99036d54bf61421de0bb366f4",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.log": "781de1cc0ea874f56b7c296d11b1fcca0afce1d4122e916ee1cf64936c51da16"
+      }
+    },
+    {
+      "group": "policy",
+      "exit": 1,
+      "tests": 4,
+      "passed": 0,
+      "failed": 4,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "junit_seconds": 0.412,
+      "driver_seconds": 0.6220881000044756,
+      "failed_ids": [
+        "test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii]",
+        "test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte]",
+        "test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte]",
+        "test_flattened_multibyte_key_at_64kib_is_preserved"
+      ],
+      "actual_command": {
+        "group": "policy",
+        "argv": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-S",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r44_probes\\role09\\run_gate.py",
+          "--source",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+          "--site-packages",
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages",
+          "--output",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\policy",
+          "--group",
+          "policy"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+        "exit": 1,
+        "utc_done": "2026-11-27T18:03:09.767565+00:00",
+        "raw_output": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\policy"
+      },
+      "hashes": {
+        "before.json": "ad925ef7b1f8225705ff010edc5f827d96a88471107ce8a00423be3e00da125e",
+        "junit.xml": "827afa21b6f4649f3894586d4ee143593a00141deb5e0fa479951b19eb76ee04",
+        "result.json": "6c898f5ec82772ae3fce0b935179f95afba85f962bbb6ee4cc480fc18dbfd1ef",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.log": "b73557a3873c80a1c49f7f72a54d494dc0fbb6407563bf92e0bcd4d691c478c5"
+      }
+    },
+    {
+      "group": "known-mean",
+      "exit": 1,
+      "tests": 1,
+      "passed": 0,
+      "failed": 1,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "junit_seconds": 0.275,
+      "driver_seconds": 0.4892755000037141,
+      "failed_ids": [
+        "test_large_valid_integer_cancellation_mean_does_not_need_decimal_unit_encoding"
+      ],
+      "actual_command": {
+        "group": "known-mean",
+        "argv": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-S",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r44_probes\\role09\\run_gate.py",
+          "--source",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+          "--site-packages",
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages",
+          "--output",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\known-mean",
+          "--group",
+          "known-mean"
+        ],
+        "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+        "exit": 1,
+        "utc_done": "2026-11-27T18:03:17.206206+00:00",
+        "raw_output": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\known-mean"
+      },
+      "hashes": {
+        "before.json": "b8d6583adf2041538658f7ad6332da0f49ce2f7e5593f7ad845dba719d299ff6",
+        "junit.xml": "0051d2ddd3b8d32275642132811d2a16bdbfbd4cd26f3a242058220cf6ca453d",
+        "result.json": "eafc9bab4f15a08b9e4a919de4923ae2cfe96b5b8c54c7fee48b1b09b8930510",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.log": "f0da2537ea05e64ec760987736e937fba74aa95e271b15093f50f379260d4c22"
+      }
+    }
+  ],
+  "total": {
+    "tests": 325,
+    "passed": 320,
+    "failed": 5,
+    "errors": 0,
+    "skipped": 0,
+    "deselected": 12
+  },
+  "source_and_probe_manifest": {
+    "product_sha": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+    "files": {
+      "pyproject.toml": {
+        "raw_sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "git_sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/__init__.py": {
+        "raw_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "git_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/cli.py": {
+        "raw_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "git_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/engines.py": {
+        "raw_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "git_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/mcp_server.py": {
+        "raw_sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "git_sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/models.py": {
+        "raw_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "git_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/normalize.py": {
+        "raw_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "git_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/py.typed": {
+        "raw_sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "git_sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/recommend.py": {
+        "raw_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "git_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/render.py": {
+        "raw_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "git_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt": {
+        "raw_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "git_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/tools.py": {
+        "raw_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "git_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "raw_equals_git": true
+      },
+      "python/deepviz/tests/test_r17_normalizer_boundaries.py": {
+        "raw_sha256": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+        "git_sha256": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+        "raw_equals_git": true
+      },
+      "schemas/chart-spec.schema.json": {
+        "raw_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "git_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "raw_equals_git": true
+      },
+      "tests/test_n11_resource_policy.py": {
+        "raw_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+        "git_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+        "raw_equals_git": true
+      }
+    },
+    "probes": {
+      "corpus.json": "67faab68f4388d8a96ddf9318a7f7f5fdd4538e656b4f4528a076a54610bb9de",
+      "exact-cases.json": "6e4aed8bd72c84e51a162fdb5698a263f0304a2b7085d52882507333334078fa",
+      "graphql_fixtures.py": "4a77c7fea2cfca4391ffa10861da22c03ae95c1f13af47e34ac4f1ce79fec3b4",
+      "original-controls.json": "e95b517c53a63f5875afee0eaa597cf6170ab6e613775967ef94a69f2f272934",
+      "README.md": "1dba3b7a52c04c1b214d96127aae070178d53e191269b7c3592b65a3b7e15354",
+      "run_gate.py": "fe3130ebef61e28cd1e87208dadfc5afe4257c607645f7de3a52b8cff1707699",
+      "test_correctness_regressions.py": "aadd94225decbcc3997264ae88508c08633e929595f9eefd817faf598cb0cf2b",
+      "test_graphql_pages.py": "7b676dfc04a1d1526b89316442fc8f64c64db3598e17c094d7866febfef22cc3",
+      "test_large_integer_mean.py": "d7262febf984bd0f83aa29d5a43133d5c083c56aeb97788940218493df28c226",
+      "test_literal_acceptance.py": "0e74800af711641d32a1fffece99c4243a3a19e777962a91ec8ae484522e7a41",
+      "test_owned_input_cleanup.py": "43279c443d9eb76b22f39a80cd4bfcbfcca058193cf8e96780f7c5763c7729a0",
+      "test_reducer_source_ownership.py": "5a9ebaba4968381624d20f646afbd8105531be4bfd179fe56fa5accb7118314e",
+      "test_sum_review.py": "93b059b2fc56eb1d11291c2fa8cd65b56536649a23cec42ad9207c941dce03f8"
+    },
+    "all_originals_raw_git_exact": true,
+    "source_tracked_clean": true
+  },
+  "source_import_proofs_match_all_8_groups": true,
+  "originals_changed": 0,
+  "giant_mean_independent_analysis": {
+    "method": "Independent integer arithmetic/input serialization ONLY; no repeated product call",
+    "input_rows": 2,
+    "input_json_bytes": 8047,
+    "internal_units_bits": 14362,
+    "internal_units_decimal_digits_by_integer_bounds": 4324,
+    "default_int_digit_limit": 4300,
+    "changed_interpreter_limit": false
+  },
+  "observations": [
+    {
+      "group": "lifetime",
+      "node": "test_owned_input_closed_before_downstream_error_returns[jsonl-flatten]",
+      "properties": [
+        {
+          "name": "owned_handles_closed",
+          "value": "[true]"
+        },
+        {
+          "name": "rename_error",
+          "value": "null"
+        },
+        {
+          "name": "traceback_retained",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_owned_input_closed_before_downstream_error_returns[jsonl-flatten-late]",
+      "properties": [
+        {
+          "name": "owned_handles_closed",
+          "value": "[true]"
+        },
+        {
+          "name": "rename_error",
+          "value": "null"
+        },
+        {
+          "name": "traceback_retained",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_owned_input_closed_before_downstream_error_returns[jsonl-plan]",
+      "properties": [
+        {
+          "name": "owned_handles_closed",
+          "value": "[true]"
+        },
+        {
+          "name": "rename_error",
+          "value": "null"
+        },
+        {
+          "name": "traceback_retained",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_owned_input_closed_before_downstream_error_returns[csv-plan]",
+      "properties": [
+        {
+          "name": "owned_handles_closed",
+          "value": "[true]"
+        },
+        {
+          "name": "rename_error",
+          "value": "null"
+        },
+        {
+          "name": "traceback_retained",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_owned_input_closed_before_downstream_error_returns[tsv-plan]",
+      "properties": [
+        {
+          "name": "owned_handles_closed",
+          "value": "[true]"
+        },
+        {
+          "name": "rename_error",
+          "value": "null"
+        },
+        {
+          "name": "traceback_retained",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_owned_input_closed_before_downstream_error_returns[arrow-file-flatten]",
+      "properties": [
+        {
+          "name": "owned_handles_closed",
+          "value": "[true]"
+        },
+        {
+          "name": "rename_error",
+          "value": "null"
+        },
+        {
+          "name": "traceback_retained",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_owned_input_closed_before_downstream_error_returns[arrow-stream-flatten]",
+      "properties": [
+        {
+          "name": "owned_handles_closed",
+          "value": "[true]"
+        },
+        {
+          "name": "rename_error",
+          "value": "null"
+        },
+        {
+          "name": "traceback_retained",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_owned_input_closed_before_downstream_error_returns[parquet-flatten]",
+      "properties": [
+        {
+          "name": "owned_handles_closed",
+          "value": "[true]"
+        },
+        {
+          "name": "rename_error",
+          "value": "null"
+        },
+        {
+          "name": "traceback_retained",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_owned_input_closed_before_downstream_error_returns[arrow-file-plan]",
+      "properties": [
+        {
+          "name": "owned_handles_closed",
+          "value": "[true]"
+        },
+        {
+          "name": "rename_error",
+          "value": "null"
+        },
+        {
+          "name": "traceback_retained",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_owned_input_closed_before_downstream_error_returns[arrow-stream-plan]",
+      "properties": [
+        {
+          "name": "owned_handles_closed",
+          "value": "[true]"
+        },
+        {
+          "name": "rename_error",
+          "value": "null"
+        },
+        {
+          "name": "traceback_retained",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_owned_input_closed_before_downstream_error_returns[parquet-plan]",
+      "properties": [
+        {
+          "name": "owned_handles_closed",
+          "value": "[true]"
+        },
+        {
+          "name": "rename_error",
+          "value": "null"
+        },
+        {
+          "name": "traceback_retained",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_reducer_state_guard_releases_owned_source_after_valid_prefix[csv]",
+      "properties": [
+        {
+          "name": "error_stage",
+          "value": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}"
+        },
+        {
+          "name": "handles_closed_before_test_cleanup",
+          "value": "[true]"
+        },
+        {
+          "name": "rename_before_test_cleanup",
+          "value": "null"
+        },
+        {
+          "name": "rename_after_test_cleanup",
+          "value": "null"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_reducer_state_guard_releases_owned_source_after_valid_prefix[jsonl]",
+      "properties": [
+        {
+          "name": "error_stage",
+          "value": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}"
+        },
+        {
+          "name": "handles_closed_before_test_cleanup",
+          "value": "[true]"
+        },
+        {
+          "name": "rename_before_test_cleanup",
+          "value": "null"
+        },
+        {
+          "name": "rename_after_test_cleanup",
+          "value": "null"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_reducer_state_guard_releases_owned_source_after_valid_prefix[arrow]",
+      "properties": [
+        {
+          "name": "error_stage",
+          "value": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}"
+        },
+        {
+          "name": "handles_closed_before_test_cleanup",
+          "value": "[true]"
+        },
+        {
+          "name": "rename_before_test_cleanup",
+          "value": "null"
+        },
+        {
+          "name": "rename_after_test_cleanup",
+          "value": "null"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_reducer_state_guard_releases_owned_source_after_valid_prefix[parquet]",
+      "properties": [
+        {
+          "name": "error_stage",
+          "value": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}"
+        },
+        {
+          "name": "handles_closed_before_test_cleanup",
+          "value": "[true]"
+        },
+        {
+          "name": "rename_before_test_cleanup",
+          "value": "null"
+        },
+        {
+          "name": "rename_after_test_cleanup",
+          "value": "null"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_borrowed_text_source_ownership_survives_guard_or_full_consumption[guard-csv]",
+      "properties": [
+        {
+          "name": "error_stage",
+          "value": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_borrowed_text_source_ownership_survives_guard_or_full_consumption[guard-jsonl]",
+      "properties": [
+        {
+          "name": "error_stage",
+          "value": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_borrowed_arrow_reader_remains_usable_after_reducer_guard",
+      "properties": [
+        {
+          "name": "error_stage",
+          "value": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_after_prefix_carrier_eio_respects_source_ownership[owned-path-csv]",
+      "properties": [
+        {
+          "name": "error_stage",
+          "value": "{\"frames\": [\"normalize\", \"_records\", \"_expand\", \"_path_rows\", \"_delimited\", \"_without_bom\"], \"input_count\": 48, \"prefix_rows\": 32}"
+        },
+        {
+          "name": "closed_before_caller_cleanup",
+          "value": "True"
+        },
+        {
+          "name": "rename_before_caller_cleanup",
+          "value": "null"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_after_prefix_carrier_eio_respects_source_ownership[owned-path-jsonl]",
+      "properties": [
+        {
+          "name": "error_stage",
+          "value": "{\"frames\": [\"normalize\", \"_records\", \"_expand\", \"_path_rows\", \"_jsonl\", \"_without_bom\"], \"input_count\": 48, \"prefix_rows\": 32}"
+        },
+        {
+          "name": "closed_before_caller_cleanup",
+          "value": "True"
+        },
+        {
+          "name": "rename_before_caller_cleanup",
+          "value": "null"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_after_prefix_carrier_eio_respects_source_ownership[borrowed-stream-csv]",
+      "properties": [
+        {
+          "name": "error_stage",
+          "value": "{\"frames\": [\"normalize\", \"_records\", \"_expand\", \"_delimited\", \"_without_bom\"], \"input_count\": 48, \"prefix_rows\": 32}"
+        },
+        {
+          "name": "closed_before_caller_cleanup",
+          "value": "False"
+        },
+        {
+          "name": "rename_before_caller_cleanup",
+          "value": "{\"type\": \"PermissionError\", \"errno\": 13, \"winerror\": 32}"
+        }
+      ]
+    },
+    {
+      "group": "lifetime",
+      "node": "test_after_prefix_carrier_eio_respects_source_ownership[borrowed-stream-jsonl]",
+      "properties": [
+        {
+          "name": "error_stage",
+          "value": "{\"frames\": [\"normalize\", \"_records\", \"_expand\", \"_jsonl\", \"_without_bom\"], \"input_count\": 48, \"prefix_rows\": 32}"
+        },
+        {
+          "name": "closed_before_caller_cleanup",
+          "value": "False"
+        },
+        {
+          "name": "rename_before_caller_cleanup",
+          "value": "{\"type\": \"PermissionError\", \"errno\": 13, \"winerror\": 32}"
+        }
+      ]
+    },
+    {
+      "group": "literal",
+      "node": "test_selected_late_collision_retained_traceback_closes_only_owned_source[owned-path]",
+      "properties": [
+        {
+          "name": "traceback_retained_stage",
+          "value": "{\"prefix\": 32, \"input_count\": 41}"
+        },
+        {
+          "name": "closed_before_test_cleanup",
+          "value": "[true]"
+        }
+      ]
+    },
+    {
+      "group": "literal",
+      "node": "test_selected_late_collision_retained_traceback_closes_only_owned_source[borrowed-stream]",
+      "properties": [
+        {
+          "name": "traceback_retained_stage",
+          "value": "{\"prefix\": 32, \"input_count\": 41}"
+        },
+        {
+          "name": "closed_before_test_cleanup",
+          "value": "[false]"
+        }
+      ]
+    },
+    {
+      "group": "literal",
+      "node": "test_two_group_field_budget_stops_borrowed_generator_without_taking_ownership",
+      "properties": [
+        {
+          "name": "pulled_before_guard",
+          "value": "128"
+        },
+        {
+          "name": "borrowed_closed_before_caller_cleanup",
+          "value": "False"
+        }
+      ]
+    }
+  ],
+  "main_delivery_target": "Dependency-complete Python data-only foundation; sealed normalizer546 plus role07 packaging/API/prompts/typing/consumer closure. PR/package head UNKNOWN.",
+  "blocker_removed": "Missing independent Python546 runtime evidence for scoped scalar/root/GP/lifetime/prefix controls; not the source F1/policy failures.",
+  "next_owner_action": "R04 sole manager dispositions actual546 F1 via its granted accounting producer04 and policy decisions; role07/frozen-head independent package gates then gated PR/default merge.",
+  "not_run": [
+    "R16 environment-selector31 (guard read/not modified/bypassed)",
+    "unaffected old-base mean/sample child comparison",
+    "renderer F2",
+    "other22resource cases",
+    "TS",
+    "old finite13",
+    "517schema matrix",
+    "fullformats",
+    "10M/scale",
+    "MCP/DeepAgents",
+    "browser",
+    "Python/npm builds/installs",
+    "final-main/CI/GitHubAPI"
+  ],
+  "memory_method": "Actual bounded payload/state guards, source counts and real handle/borrowed future-row assertions ONLY. No RSS/native/process allocation measurement or global memory ceiling."
+}

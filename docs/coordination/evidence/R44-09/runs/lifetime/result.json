@@ -1,0 +1,1470 @@
+{
+  "group": "lifetime",
+  "source": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+  "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+  "pytest": "9.2.0",
+  "argv": [
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r44_probes\\role09\\test_owned_input_cleanup.py",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r44_probes\\role09\\test_reducer_source_ownership.py",
+    "-c",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\pyproject.toml",
+    "--disable-plugin-autoload",
+    "--import-mode=importlib",
+    "--strict-markers",
+    "-q",
+    "--tb=short",
+    "-rA",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "junit_family=legacy",
+    "--basetemp",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\lifetime\\tmp",
+    "--junitxml",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\lifetime\\junit.xml"
+  ],
+  "int_digit_limit": 4300,
+  "no_site": 1,
+  "bytecode_disabled": true,
+  "our_environment_writes": 0,
+  "before": {
+    "product_sha": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+    "files": {
+      "pyproject.toml": {
+        "raw_sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "git_sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/__init__.py": {
+        "raw_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "git_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/cli.py": {
+        "raw_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "git_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/engines.py": {
+        "raw_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "git_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/mcp_server.py": {
+        "raw_sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "git_sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/models.py": {
+        "raw_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "git_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/normalize.py": {
+        "raw_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "git_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/py.typed": {
+        "raw_sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "git_sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/recommend.py": {
+        "raw_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "git_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/render.py": {
+        "raw_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "git_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt": {
+        "raw_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "git_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/tools.py": {
+        "raw_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "git_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "raw_equals_git": true
+      },
+      "python/deepviz/tests/test_r17_normalizer_boundaries.py": {
+        "raw_sha256": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+        "git_sha256": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+        "raw_equals_git": true
+      },
+      "schemas/chart-spec.schema.json": {
+        "raw_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "git_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "raw_equals_git": true
+      },
+      "tests/test_n11_resource_policy.py": {
+        "raw_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+        "git_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+        "raw_equals_git": true
+      }
+    },
+    "probes": {
+      "corpus.json": "67faab68f4388d8a96ddf9318a7f7f5fdd4538e656b4f4528a076a54610bb9de",
+      "exact-cases.json": "6e4aed8bd72c84e51a162fdb5698a263f0304a2b7085d52882507333334078fa",
+      "graphql_fixtures.py": "4a77c7fea2cfca4391ffa10861da22c03ae95c1f13af47e34ac4f1ce79fec3b4",
+      "original-controls.json": "e95b517c53a63f5875afee0eaa597cf6170ab6e613775967ef94a69f2f272934",
+      "README.md": "1dba3b7a52c04c1b214d96127aae070178d53e191269b7c3592b65a3b7e15354",
+      "run_gate.py": "fe3130ebef61e28cd1e87208dadfc5afe4257c607645f7de3a52b8cff1707699",
+      "test_correctness_regressions.py": "aadd94225decbcc3997264ae88508c08633e929595f9eefd817faf598cb0cf2b",
+      "test_graphql_pages.py": "7b676dfc04a1d1526b89316442fc8f64c64db3598e17c094d7866febfef22cc3",
+      "test_large_integer_mean.py": "d7262febf984bd0f83aa29d5a43133d5c083c56aeb97788940218493df28c226",
+      "test_literal_acceptance.py": "0e74800af711641d32a1fffece99c4243a3a19e777962a91ec8ae484522e7a41",
+      "test_owned_input_cleanup.py": "43279c443d9eb76b22f39a80cd4bfcbfcca058193cf8e96780f7c5763c7729a0",
+      "test_reducer_source_ownership.py": "5a9ebaba4968381624d20f646afbd8105531be4bfd179fe56fa5accb7118314e",
+      "test_sum_review.py": "93b059b2fc56eb1d11291c2fa8cd65b56536649a23cec42ad9207c941dce03f8"
+    },
+    "all_originals_raw_git_exact": true,
+    "source_tracked_clean": true
+  },
+  "imports_before_pytest": {
+    "deepviz": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\__init__.py",
+      "raw_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+    },
+    "deepviz.normalize": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "raw_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc"
+    },
+    "deepviz.models": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\models.py",
+      "raw_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    "deepviz.engines": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\engines.py",
+      "raw_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de"
+    },
+    "deepviz.render": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\render.py",
+      "raw_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+    }
+  },
+  "exit": 0,
+  "wall_seconds": 6.99843979999423,
+  "selected": [
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[jsonl-flatten]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[jsonl-flatten-late]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[jsonl-plan]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[csv-plan]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[tsv-plan]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[arrow-file-flatten]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[arrow-stream-flatten]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[parquet-flatten]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[arrow-file-plan]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[arrow-stream-plan]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[parquet-plan]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[json-success]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[json-parse]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[jsonl-success]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[jsonl-parse]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[csv-success]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[csv-parse]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[tsv-success]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[tsv-parse]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[json-flatten]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[json-plan]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[arrow-file-success]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[arrow-file-schema-duplicate]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[arrow-stream-success]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[arrow-stream-schema-duplicate]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[parquet-success]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[parquet-schema-duplicate]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[json-success]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[json-parse]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[json-flatten]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[json-plan]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-success]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-parse]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-flatten]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-plan]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[csv-success]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[csv-parse]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[csv-plan]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[tsv-success]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[tsv-parse]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[tsv-plan]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-parse-first]",
+    "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_real_text_file_remains_open_after_second_line_parse_error",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_reducer_state_guard_releases_owned_source_after_valid_prefix[csv]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_reducer_state_guard_releases_owned_source_after_valid_prefix[jsonl]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_reducer_state_guard_releases_owned_source_after_valid_prefix[arrow]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_reducer_state_guard_releases_owned_source_after_valid_prefix[parquet]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_full_reducer_consumption_closes_owned_source[csv]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_full_reducer_consumption_closes_owned_source[jsonl]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_full_reducer_consumption_closes_owned_source[arrow]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_full_reducer_consumption_closes_owned_source[parquet]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_text_source_ownership_survives_guard_or_full_consumption[guard-csv]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_text_source_ownership_survives_guard_or_full_consumption[guard-jsonl]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_text_source_ownership_survives_guard_or_full_consumption[full-consumption-csv]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_text_source_ownership_survives_guard_or_full_consumption[full-consumption-jsonl]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_arrow_reader_remains_usable_after_reducer_guard",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_after_prefix_carrier_eio_respects_source_ownership[owned-path-csv]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_after_prefix_carrier_eio_respects_source_ownership[owned-path-jsonl]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_after_prefix_carrier_eio_respects_source_ownership[borrowed-stream-csv]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_after_prefix_carrier_eio_respects_source_ownership[borrowed-stream-jsonl]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_sampling_limit_is_not_an_early_source_stop[owned-path-csv]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_sampling_limit_is_not_an_early_source_stop[owned-path-jsonl]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_sampling_limit_is_not_an_early_source_stop[borrowed-stream-csv]",
+    "tests/r44_probes/role09/test_reducer_source_ownership.py::test_sampling_limit_is_not_an_early_source_stop[borrowed-stream-jsonl]"
+  ],
+  "deselected": [],
+  "actual_reports": [
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[jsonl-flatten]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.004742099990835413
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[jsonl-flatten]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.003003700010594912
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[jsonl-flatten]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00028979999478906393
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[jsonl-flatten-late]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0027471000066725537
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[jsonl-flatten-late]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0030605999927502126
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[jsonl-flatten-late]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00022600000374950469
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[jsonl-plan]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0021654000011039898
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[jsonl-plan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0031900000030873343
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[jsonl-plan]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0003285999991931021
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[csv-plan]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0027131999959237874
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[csv-plan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.003480900006252341
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[csv-plan]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00020799999765586108
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[tsv-plan]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0024153999984264374
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[tsv-plan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.002556799998274073
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[tsv-plan]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00020619999850168824
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[arrow-file-flatten]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0030925999890314415
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[arrow-file-flatten]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.17144489999918733
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[arrow-file-flatten]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00018679999629966915
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[arrow-stream-flatten]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.001848600004450418
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[arrow-stream-flatten]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0053524000104516745
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[arrow-stream-flatten]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00017389999993611127
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[parquet-flatten]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0020742000051541254
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[parquet-flatten]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.09465099999215454
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[parquet-flatten]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0002325000095879659
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[arrow-file-plan]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0020374000014271587
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[arrow-file-plan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0032219999993685633
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[arrow-file-plan]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00016280000272672623
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[arrow-stream-plan]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0026944999990519136
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[arrow-stream-plan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0030540000007022172
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[arrow-stream-plan]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00023079999664332718
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[parquet-plan]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.002050399998552166
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[parquet-plan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.012852500003646128
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_input_closed_before_downstream_error_returns[parquet-plan]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00018980000459123403
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[json-success]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.002202999996370636
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[json-success]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.003427699994063005
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[json-success]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00023879999935161322
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[json-parse]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0020827999978791922
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[json-parse]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0023210999934235588
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[json-parse]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00016969999705906957
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[jsonl-success]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.002645100001245737
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[jsonl-success]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.002068800007691607
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[jsonl-success]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00018789999012369663
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[jsonl-parse]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0021100000012665987
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[jsonl-parse]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.005550199988647364
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[jsonl-parse]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00025769999774638563
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[csv-success]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0031599000067217276
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[csv-success]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0024453000078210607
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[csv-success]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00020979999681003392
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[csv-parse]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.002377199998591095
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[csv-parse]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0035120999964419752
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[csv-parse]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.000229199999012053
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[tsv-success]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.003154899997753091
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[tsv-success]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0027513000095495954
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[tsv-success]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00036160000308882445
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[tsv-parse]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.006520900002215058
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[tsv-parse]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.007999200010090135
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[tsv-parse]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0008147999906213954
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[json-flatten]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.006681300001218915
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[json-flatten]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.005575900009716861
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[json-flatten]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0004959000070812181
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[json-plan]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.007005600011325441
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[json-plan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.006332699995255098
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[json-plan]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00038840000343043357
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[arrow-file-success]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.004684399988036603
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[arrow-file-success]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.007224899993161671
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[arrow-file-success]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0004236999957356602
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[arrow-file-schema-duplicate]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.006256599997868761
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[arrow-file-schema-duplicate]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.007337499991990626
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[arrow-file-schema-duplicate]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0010384000051999465
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[arrow-stream-success]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00473809998948127
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[arrow-stream-success]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.005212700008996762
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[arrow-stream-success]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0007294999959412962
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[arrow-stream-schema-duplicate]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00513600000704173
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[arrow-stream-schema-duplicate]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.010986099994624965
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[arrow-stream-schema-duplicate]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.000375300005543977
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[parquet-success]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.008824600008665584
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[parquet-success]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.009593099995981902
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[parquet-success]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0006730999884894118
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[parquet-schema-duplicate]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.013157600013073534
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[parquet-schema-duplicate]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.01909940000041388
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_owned_success_or_parser_originated_error_closes_its_input[parquet-schema-duplicate]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0002855000057024881
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[json-success]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00800580000213813
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[json-success]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0005090000049676746
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[json-success]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0003188999980920926
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[json-parse]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0005187000060686842
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[json-parse]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00037059999885968864
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[json-parse]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00032929998997133225
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[json-flatten]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0004493000014917925
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[json-flatten]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00040820000867825
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[json-flatten]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00020539999241009355
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[json-plan]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0003895999980159104
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[json-plan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.02048609999474138
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[json-plan]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0003597000031732023
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-success]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.004076800003531389
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-success]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.005189899995457381
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-success]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0006719999946653843
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-parse]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0062003000057302415
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-parse]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.003879399999277666
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-parse]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00032130000181496143
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-flatten]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0034229000011691824
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-flatten]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.006889700001920573
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-flatten]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00030399998649954796
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-plan]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.001963600007002242
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-plan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0074760999996215105
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-plan]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00029490000451914966
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[csv-success]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0004945999971823767
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[csv-success]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.003871600012644194
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[csv-success]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0005899999960092828
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[csv-parse]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.005004299993743189
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[csv-parse]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0006214000022737309
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[csv-parse]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0012149999965913594
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[csv-plan]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.002777600006083958
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[csv-plan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.006335300000500865
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[csv-plan]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0005414000042947009
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[tsv-success]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0015144999924814329
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[tsv-success]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0006858999986434355
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[tsv-success]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00026670000806916505
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[tsv-parse]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0005184000037843361
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[tsv-parse]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0013431999977910891
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[tsv-parse]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00033719999191816896
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[tsv-plan]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0007247000030474737
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[tsv-plan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0030147000070428476
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[tsv-plan]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0006035000114934519
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-parse-first]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.005136099993251264
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-parse-first]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.003962400005548261
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-parse-first]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.007364500008407049
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_real_text_file_remains_open_after_second_line_parse_error",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.016385599999921396
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_real_text_file_remains_open_after_second_line_parse_error",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.007937699992908165
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_owned_input_cleanup.py::test_caller_owned_real_text_file_remains_open_after_second_line_parse_error",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.005338700007996522
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_reducer_state_guard_releases_owned_source_after_valid_prefix[csv]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.013450200000079349
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_reducer_state_guard_releases_owned_source_after_valid_prefix[csv]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 1.033142799991765
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_reducer_state_guard_releases_owned_source_after_valid_prefix[csv]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0015077999996719882
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_reducer_state_guard_releases_owned_source_after_valid_prefix[jsonl]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0008436999924015254
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_reducer_state_guard_releases_owned_source_after_valid_prefix[jsonl]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.469985200004885
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_reducer_state_guard_releases_owned_source_after_valid_prefix[jsonl]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.000294700002996251
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_reducer_state_guard_releases_owned_source_after_valid_prefix[arrow]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0005747999966843054
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_reducer_state_guard_releases_owned_source_after_valid_prefix[arrow]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.42529640000429936
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_reducer_state_guard_releases_owned_source_after_valid_prefix[arrow]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00026709999656304717
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_reducer_state_guard_releases_owned_source_after_valid_prefix[parquet]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0006015999970259145
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_reducer_state_guard_releases_owned_source_after_valid_prefix[parquet]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.5031232000037562
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_reducer_state_guard_releases_owned_source_after_valid_prefix[parquet]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0003251000016462058
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_full_reducer_consumption_closes_owned_source[csv]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0006477999995695427
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_full_reducer_consumption_closes_owned_source[csv]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.5453125999920303
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_full_reducer_consumption_closes_owned_source[csv]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0004282000008970499
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_full_reducer_consumption_closes_owned_source[jsonl]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0006638000049861148
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_full_reducer_consumption_closes_owned_source[jsonl]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.45315250000567175
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_full_reducer_consumption_closes_owned_source[jsonl]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0004140999953961
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_full_reducer_consumption_closes_owned_source[arrow]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0005541999998968095
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_full_reducer_consumption_closes_owned_source[arrow]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.6562612999987323
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_full_reducer_consumption_closes_owned_source[arrow]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0003507000074023381
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_full_reducer_consumption_closes_owned_source[parquet]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00041599999531172216
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_full_reducer_consumption_closes_owned_source[parquet]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.31642469999496825
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_full_reducer_consumption_closes_owned_source[parquet]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00024140000459738076
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_text_source_ownership_survives_guard_or_full_consumption[guard-csv]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00043420000292826444
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_text_source_ownership_survives_guard_or_full_consumption[guard-csv]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.36104499999783
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_text_source_ownership_survives_guard_or_full_consumption[guard-csv]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00019379999139346182
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_text_source_ownership_survives_guard_or_full_consumption[guard-jsonl]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0004442999925231561
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_text_source_ownership_survives_guard_or_full_consumption[guard-jsonl]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.24280970000836533
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_text_source_ownership_survives_guard_or_full_consumption[guard-jsonl]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.000202799987164326
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_text_source_ownership_survives_guard_or_full_consumption[full-consumption-csv]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0004879999905824661
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_text_source_ownership_survives_guard_or_full_consumption[full-consumption-csv]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.28524490000563674
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_text_source_ownership_survives_guard_or_full_consumption[full-consumption-csv]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001917000045068562
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_text_source_ownership_survives_guard_or_full_consumption[full-consumption-jsonl]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00041120000241789967
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_text_source_ownership_survives_guard_or_full_consumption[full-consumption-jsonl]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.18163160000403877
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_text_source_ownership_survives_guard_or_full_consumption[full-consumption-jsonl]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00048060000699479133
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_arrow_reader_remains_usable_after_reducer_guard",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0007350999949267134
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_arrow_reader_remains_usable_after_reducer_guard",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.32132100001035724
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_borrowed_arrow_reader_remains_usable_after_reducer_guard",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001934000028995797
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_after_prefix_carrier_eio_respects_source_ownership[owned-path-csv]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0027743999962694943
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_after_prefix_carrier_eio_respects_source_ownership[owned-path-csv]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.006980699996347539
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_after_prefix_carrier_eio_respects_source_ownership[owned-path-csv]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00045310000132303685
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_after_prefix_carrier_eio_respects_source_ownership[owned-path-jsonl]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0024487000046065077
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_after_prefix_carrier_eio_respects_source_ownership[owned-path-jsonl]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.006609100004425272
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_after_prefix_carrier_eio_respects_source_ownership[owned-path-jsonl]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00022679999528918415
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_after_prefix_carrier_eio_respects_source_ownership[borrowed-stream-csv]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.003917800000635907
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_after_prefix_carrier_eio_respects_source_ownership[borrowed-stream-csv]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0076336000056471676
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_after_prefix_carrier_eio_respects_source_ownership[borrowed-stream-csv]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0003454000107012689
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_after_prefix_carrier_eio_respects_source_ownership[borrowed-stream-jsonl]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0029759999888483435
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_after_prefix_carrier_eio_respects_source_ownership[borrowed-stream-jsonl]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.005011100001865998
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_after_prefix_carrier_eio_respects_source_ownership[borrowed-stream-jsonl]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00021270000434014946
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_sampling_limit_is_not_an_early_source_stop[owned-path-csv]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.002637700003106147
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_sampling_limit_is_not_an_early_source_stop[owned-path-csv]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.003764599998248741
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_sampling_limit_is_not_an_early_source_stop[owned-path-csv]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0001917000045068562
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_sampling_limit_is_not_an_early_source_stop[owned-path-jsonl]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0021553999977186322
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_sampling_limit_is_not_an_early_source_stop[owned-path-jsonl]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0037856999988434836
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_sampling_limit_is_not_an_early_source_stop[owned-path-jsonl]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00020929999300278723
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_sampling_limit_is_not_an_early_source_stop[borrowed-stream-csv]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00246540000080131
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_sampling_limit_is_not_an_early_source_stop[borrowed-stream-csv]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.004253500010236166
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_sampling_limit_is_not_an_early_source_stop[borrowed-stream-csv]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0002097000106004998
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_sampling_limit_is_not_an_early_source_stop[borrowed-stream-jsonl]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0025329000054625794
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_sampling_limit_is_not_an_early_source_stop[borrowed-stream-jsonl]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.004619200000888668
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_reducer_source_ownership.py::test_sampling_limit_is_not_an_early_source_stop[borrowed-stream-jsonl]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0002787000121315941
+    }
+  ],
+  "after": {
+    "product_sha": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+    "files": {
+      "pyproject.toml": {
+        "raw_sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "git_sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/__init__.py": {
+        "raw_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "git_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/cli.py": {
+        "raw_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "git_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/engines.py": {
+        "raw_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "git_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/mcp_server.py": {
+        "raw_sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "git_sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/models.py": {
+        "raw_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "git_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/normalize.py": {
+        "raw_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "git_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/py.typed": {
+        "raw_sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "git_sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/recommend.py": {
+        "raw_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "git_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/render.py": {
+        "raw_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "git_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt": {
+        "raw_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "git_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/tools.py": {
+        "raw_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "git_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "raw_equals_git": true
+      },
+      "python/deepviz/tests/test_r17_normalizer_boundaries.py": {
+        "raw_sha256": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+        "git_sha256": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+        "raw_equals_git": true
+      },
+      "schemas/chart-spec.schema.json": {
+        "raw_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "git_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "raw_equals_git": true
+      },
+      "tests/test_n11_resource_policy.py": {
+        "raw_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+        "git_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+        "raw_equals_git": true
+      }
+    },
+    "probes": {
+      "corpus.json": "67faab68f4388d8a96ddf9318a7f7f5fdd4538e656b4f4528a076a54610bb9de",
+      "exact-cases.json": "6e4aed8bd72c84e51a162fdb5698a263f0304a2b7085d52882507333334078fa",
+      "graphql_fixtures.py": "4a77c7fea2cfca4391ffa10861da22c03ae95c1f13af47e34ac4f1ce79fec3b4",
+      "original-controls.json": "e95b517c53a63f5875afee0eaa597cf6170ab6e613775967ef94a69f2f272934",
+      "README.md": "1dba3b7a52c04c1b214d96127aae070178d53e191269b7c3592b65a3b7e15354",
+      "run_gate.py": "fe3130ebef61e28cd1e87208dadfc5afe4257c607645f7de3a52b8cff1707699",
+      "test_correctness_regressions.py": "aadd94225decbcc3997264ae88508c08633e929595f9eefd817faf598cb0cf2b",
+      "test_graphql_pages.py": "7b676dfc04a1d1526b89316442fc8f64c64db3598e17c094d7866febfef22cc3",
+      "test_large_integer_mean.py": "d7262febf984bd0f83aa29d5a43133d5c083c56aeb97788940218493df28c226",
+      "test_literal_acceptance.py": "0e74800af711641d32a1fffece99c4243a3a19e777962a91ec8ae484522e7a41",
+      "test_owned_input_cleanup.py": "43279c443d9eb76b22f39a80cd4bfcbfcca058193cf8e96780f7c5763c7729a0",
+      "test_reducer_source_ownership.py": "5a9ebaba4968381624d20f646afbd8105531be4bfd179fe56fa5accb7118314e",
+      "test_sum_review.py": "93b059b2fc56eb1d11291c2fa8cd65b56536649a23cec42ad9207c941dce03f8"
+    },
+    "all_originals_raw_git_exact": true,
+    "source_tracked_clean": true
+  }
+}

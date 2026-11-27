@@ -1,0 +1,424 @@
+{
+  "group": "literal",
+  "source": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx",
+  "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+  "pytest": "9.2.0",
+  "argv": [
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r44_probes\\role09\\test_literal_acceptance.py",
+    "-c",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\pyproject.toml",
+    "--disable-plugin-autoload",
+    "--import-mode=importlib",
+    "--strict-markers",
+    "-q",
+    "--tb=short",
+    "-rA",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "junit_family=legacy",
+    "--basetemp",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\literal\\tmp",
+    "--junitxml",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r44-09-python546\\runs\\literal\\junit.xml"
+  ],
+  "int_digit_limit": 4300,
+  "no_site": 1,
+  "bytecode_disabled": true,
+  "our_environment_writes": 0,
+  "before": {
+    "product_sha": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+    "files": {
+      "pyproject.toml": {
+        "raw_sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "git_sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/__init__.py": {
+        "raw_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "git_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/cli.py": {
+        "raw_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "git_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/engines.py": {
+        "raw_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "git_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/mcp_server.py": {
+        "raw_sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "git_sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/models.py": {
+        "raw_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "git_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/normalize.py": {
+        "raw_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "git_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/py.typed": {
+        "raw_sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "git_sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/recommend.py": {
+        "raw_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "git_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/render.py": {
+        "raw_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "git_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt": {
+        "raw_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "git_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/tools.py": {
+        "raw_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "git_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "raw_equals_git": true
+      },
+      "python/deepviz/tests/test_r17_normalizer_boundaries.py": {
+        "raw_sha256": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+        "git_sha256": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+        "raw_equals_git": true
+      },
+      "schemas/chart-spec.schema.json": {
+        "raw_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "git_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "raw_equals_git": true
+      },
+      "tests/test_n11_resource_policy.py": {
+        "raw_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+        "git_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+        "raw_equals_git": true
+      }
+    },
+    "probes": {
+      "corpus.json": "67faab68f4388d8a96ddf9318a7f7f5fdd4538e656b4f4528a076a54610bb9de",
+      "exact-cases.json": "6e4aed8bd72c84e51a162fdb5698a263f0304a2b7085d52882507333334078fa",
+      "graphql_fixtures.py": "4a77c7fea2cfca4391ffa10861da22c03ae95c1f13af47e34ac4f1ce79fec3b4",
+      "original-controls.json": "e95b517c53a63f5875afee0eaa597cf6170ab6e613775967ef94a69f2f272934",
+      "README.md": "1dba3b7a52c04c1b214d96127aae070178d53e191269b7c3592b65a3b7e15354",
+      "run_gate.py": "fe3130ebef61e28cd1e87208dadfc5afe4257c607645f7de3a52b8cff1707699",
+      "test_correctness_regressions.py": "aadd94225decbcc3997264ae88508c08633e929595f9eefd817faf598cb0cf2b",
+      "test_graphql_pages.py": "7b676dfc04a1d1526b89316442fc8f64c64db3598e17c094d7866febfef22cc3",
+      "test_large_integer_mean.py": "d7262febf984bd0f83aa29d5a43133d5c083c56aeb97788940218493df28c226",
+      "test_literal_acceptance.py": "0e74800af711641d32a1fffece99c4243a3a19e777962a91ec8ae484522e7a41",
+      "test_owned_input_cleanup.py": "43279c443d9eb76b22f39a80cd4bfcbfcca058193cf8e96780f7c5763c7729a0",
+      "test_reducer_source_ownership.py": "5a9ebaba4968381624d20f646afbd8105531be4bfd179fe56fa5accb7118314e",
+      "test_sum_review.py": "93b059b2fc56eb1d11291c2fa8cd65b56536649a23cec42ad9207c941dce03f8"
+    },
+    "all_originals_raw_git_exact": true,
+    "source_tracked_clean": true
+  },
+  "imports_before_pytest": {
+    "deepviz": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\__init__.py",
+      "raw_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+    },
+    "deepviz.normalize": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "raw_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc"
+    },
+    "deepviz.models": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\models.py",
+      "raw_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    "deepviz.engines": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\engines.py",
+      "raw_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de"
+    },
+    "deepviz.render": {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-09-python546-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src\\deepviz\\render.py",
+      "raw_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+    }
+  },
+  "exit": 0,
+  "wall_seconds": 0.40573079999012407,
+  "selected": [
+    "tests/r44_probes/role09/test_literal_acceptance.py::test_selected_root_keeps_two_named_scalar_columns_and_false_null",
+    "tests/r44_probes/role09/test_literal_acceptance.py::test_float_promotion_after_literal_integer_prefix_is_one_pass",
+    "tests/r44_probes/role09/test_literal_acceptance.py::test_one_pass_count_keeps_all_other_bucket_observations",
+    "tests/r44_probes/role09/test_literal_acceptance.py::test_selected_late_collision_retained_traceback_closes_only_owned_source[owned-path]",
+    "tests/r44_probes/role09/test_literal_acceptance.py::test_selected_late_collision_retained_traceback_closes_only_owned_source[borrowed-stream]",
+    "tests/r44_probes/role09/test_literal_acceptance.py::test_two_group_field_budget_stops_borrowed_generator_without_taking_ownership",
+    "tests/r44_probes/role09/test_literal_acceptance.py::test_large_integer_positive_controls_do_not_require_digit_limit_changes[large-int-sum]",
+    "tests/r44_probes/role09/test_literal_acceptance.py::test_large_integer_positive_controls_do_not_require_digit_limit_changes[smaller-int-mean]",
+    "tests/r44_probes/role09/test_literal_acceptance.py::test_one_pass_business_errors_field_is_literal_data_not_a_transport_failure"
+  ],
+  "deselected": [],
+  "actual_reports": [
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_selected_root_keeps_two_named_scalar_columns_and_false_null",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00015609999536536634
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_selected_root_keeps_two_named_scalar_columns_and_false_null",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.020904700009850785
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_selected_root_keeps_two_named_scalar_columns_and_false_null",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0005330999993020669
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_float_promotion_after_literal_integer_prefix_is_one_pass",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00017859999206848443
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_float_promotion_after_literal_integer_prefix_is_one_pass",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0008014000050025061
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_float_promotion_after_literal_integer_prefix_is_one_pass",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.000225800002226606
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_one_pass_count_keeps_all_other_bucket_observations",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00016369999502785504
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_one_pass_count_keeps_all_other_bucket_observations",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0010204999998677522
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_one_pass_count_keeps_all_other_bucket_observations",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00017290000687353313
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_selected_late_collision_retained_traceback_closes_only_owned_source[owned-path]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.005311799992341548
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_selected_late_collision_retained_traceback_closes_only_owned_source[owned-path]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00642050000897143
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_selected_late_collision_retained_traceback_closes_only_owned_source[owned-path]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00036750000435858965
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_selected_late_collision_retained_traceback_closes_only_owned_source[borrowed-stream]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.0034050999965984374
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_selected_late_collision_retained_traceback_closes_only_owned_source[borrowed-stream]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.003920399991329759
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_selected_late_collision_retained_traceback_closes_only_owned_source[borrowed-stream]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.0003367000026628375
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_two_group_field_budget_stops_borrowed_generator_without_taking_ownership",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00029850000282749534
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_two_group_field_budget_stops_borrowed_generator_without_taking_ownership",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.19075639999937266
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_two_group_field_budget_stops_borrowed_generator_without_taking_ownership",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00017270000535063446
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_large_integer_positive_controls_do_not_require_digit_limit_changes[large-int-sum]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00031879999733064324
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_large_integer_positive_controls_do_not_require_digit_limit_changes[large-int-sum]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0024053000088315457
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_large_integer_positive_controls_do_not_require_digit_limit_changes[large-int-sum]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00016410001262556762
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_large_integer_positive_controls_do_not_require_digit_limit_changes[smaller-int-mean]",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00028670000028796494
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_large_integer_positive_controls_do_not_require_digit_limit_changes[smaller-int-mean]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0004678999976022169
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_large_integer_positive_controls_do_not_require_digit_limit_changes[smaller-int-mean]",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013630000466946512
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_one_pass_business_errors_field_is_literal_data_not_a_transport_failure",
+      "phase": "setup",
+      "outcome": "passed",
+      "seconds": 0.00011380000796634704
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_one_pass_business_errors_field_is_literal_data_not_a_transport_failure",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00023820000933483243
+    },
+    {
+      "nodeid": "tests/r44_probes/role09/test_literal_acceptance.py::test_one_pass_business_errors_field_is_literal_data_not_a_transport_failure",
+      "phase": "teardown",
+      "outcome": "passed",
+      "seconds": 0.00013710001076105982
+    }
+  ],
+  "after": {
+    "product_sha": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+    "files": {
+      "pyproject.toml": {
+        "raw_sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "git_sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/__init__.py": {
+        "raw_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "git_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/cli.py": {
+        "raw_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "git_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/engines.py": {
+        "raw_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "git_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/mcp_server.py": {
+        "raw_sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "git_sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/models.py": {
+        "raw_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "git_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/normalize.py": {
+        "raw_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "git_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/py.typed": {
+        "raw_sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "git_sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/recommend.py": {
+        "raw_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "git_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/render.py": {
+        "raw_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "git_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt": {
+        "raw_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "git_sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "raw_equals_git": true
+      },
+      "python/deepviz/src/deepviz/tools.py": {
+        "raw_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "git_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+        "raw_equals_git": true
+      },
+      "python/deepviz/tests/test_r17_normalizer_boundaries.py": {
+        "raw_sha256": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+        "git_sha256": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+        "raw_equals_git": true
+      },
+      "schemas/chart-spec.schema.json": {
+        "raw_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "git_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+        "raw_equals_git": true
+      },
+      "tests/test_n11_resource_policy.py": {
+        "raw_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+        "git_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+        "raw_equals_git": true
+      }
+    },
+    "probes": {
+      "corpus.json": "67faab68f4388d8a96ddf9318a7f7f5fdd4538e656b4f4528a076a54610bb9de",
+      "exact-cases.json": "6e4aed8bd72c84e51a162fdb5698a263f0304a2b7085d52882507333334078fa",
+      "graphql_fixtures.py": "4a77c7fea2cfca4391ffa10861da22c03ae95c1f13af47e34ac4f1ce79fec3b4",
+      "original-controls.json": "e95b517c53a63f5875afee0eaa597cf6170ab6e613775967ef94a69f2f272934",
+      "README.md": "1dba3b7a52c04c1b214d96127aae070178d53e191269b7c3592b65a3b7e15354",
+      "run_gate.py": "fe3130ebef61e28cd1e87208dadfc5afe4257c607645f7de3a52b8cff1707699",
+      "test_correctness_regressions.py": "aadd94225decbcc3997264ae88508c08633e929595f9eefd817faf598cb0cf2b",
+      "test_graphql_pages.py": "7b676dfc04a1d1526b89316442fc8f64c64db3598e17c094d7866febfef22cc3",
+      "test_large_integer_mean.py": "d7262febf984bd0f83aa29d5a43133d5c083c56aeb97788940218493df28c226",
+      "test_literal_acceptance.py": "0e74800af711641d32a1fffece99c4243a3a19e777962a91ec8ae484522e7a41",
+      "test_owned_input_cleanup.py": "43279c443d9eb76b22f39a80cd4bfcbfcca058193cf8e96780f7c5763c7729a0",
+      "test_reducer_source_ownership.py": "5a9ebaba4968381624d20f646afbd8105531be4bfd179fe56fa5accb7118314e",
+      "test_sum_review.py": "93b059b2fc56eb1d11291c2fa8cd65b56536649a23cec42ad9207c941dce03f8"
+    },
+    "all_originals_raw_git_exact": true,
+    "source_tracked_clean": true
+  }
+}
