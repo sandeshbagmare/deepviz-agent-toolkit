@@ -1,0 +1,35 @@
+* Getting build dependencies for sdist...
+* Building sdist...
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+* Building wheel...
+Traceback (most recent call last):
+  File "C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\pyproject_hooks\_in_process\_in_process.py", line 406, in <module>
+    main()
+  File "C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\pyproject_hooks\_in_process\_in_process.py", line 381, in main
+    json_out["return_val"] = hook(**hook_input["kwargs"])
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\pyproject_hooks\_in_process\_in_process.py", line 286, in build_wheel
+    return _build_backend().build_wheel(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bagma\AppData\Local\uv\cache\archive-v0\jkbzHwF8yZf-_AQ0\hatchling\build.py", line 58, in build_wheel
+    return os.path.basename(next(builder.build(directory=wheel_directory, versions=["standard"])))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bagma\AppData\Local\uv\cache\archive-v0\jkbzHwF8yZf-_AQ0\hatchling\builders\plugin\interface.py", line 166, in build
+    artifact = version_api[version](directory, **build_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bagma\AppData\Local\uv\cache\archive-v0\jkbzHwF8yZf-_AQ0\hatchling\builders\wheel.py", line 529, in build_standard
+    record = archive.add_file(included_file)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bagma\AppData\Local\uv\cache\archive-v0\jkbzHwF8yZf-_AQ0\hatchling\builders\wheel.py", line 135, in add_file
+    with open(included_file.path, "rb") as in_file, self.zf.open(zip_info, "w") as out_file:
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bagma\AppData\Local\uv\cache\archive-v0\jkbzHwF8yZf-_AQ0\hatchling\builders\wheel.py", line 82, in open
+    raise ValueError(message)
+ValueError: A second file is being added to the wheel archive at the same path: `deepviz/resources/chart-spec.schema.json`.
+
+The most likely cause of this is an entry in the `tool.hatch.build.targets.wheel.force-include` table. See: https://hatch.pypa.io/1.8/config/build/#forced-inclusion
+
+
+TIP pass --env-dir and --sdist-extract-dir to keep the build environment and sources, then see https://build.pypa.io/en/stable/how-to/troubleshooting.html#debug-a-failed-build for help debugging a failed build
+ERROR Backend subprocess exited when trying to invoke build_wheel

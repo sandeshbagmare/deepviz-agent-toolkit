@@ -1,0 +1,59 @@
+{
+  "observed_at": "2026-11-27T16:41:48.035966+00:00",
+  "argv": [
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+    "-S",
+    "-B",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\proof-pytest.py",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\red\\source-proof.json",
+    "tests/test_r34_data_foundation.py",
+    "-q",
+    "--tb=short",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\red\\tmp",
+    "--junitxml",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\red\\results.xml"
+  ],
+  "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-src",
+  "exit": 1,
+  "seconds": 1.3241516999987653,
+  "totals": {
+    "pass": 0,
+    "fail": 11,
+    "error": 0,
+    "skip": 0
+  },
+  "new_test_sha256": "df1d2cf3adb49bbee95c2daa39df7a2d74f88c10808132466dbf7542f6fdea13",
+  "source_proof": {
+    "status": "SAME_PROCESS_OWN_IMPORT_AND_FULL_IMMUTABLE_BLOBS_VERIFIED",
+    "normalizer_sha": "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19",
+    "base": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+    "origins": {
+      "deepviz.models": {
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-src\\python\\deepviz\\src\\deepviz\\models.py",
+        "sha256": "e4c86a977a7003d3d4e5d557a3bdfb25ccee155608d36207f3af24da2e3981d3"
+      },
+      "deepviz.normalize": {
+        "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-src\\python\\deepviz\\src\\deepviz\\normalize.py",
+        "sha256": "f3cc6e78e188ed97f62133a954154dbfdd416128c97cd4b154144ae62f778296"
+      },
+      "deepviz": {
+        "origin": null
+      }
+    },
+    "argv": [
+      "tests/test_r34_data_foundation.py",
+      "-q",
+      "--tb=short",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\red\\tmp",
+      "--junitxml",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\red\\results.xml"
+    ]
+  },
+  "production_initializer_exists": false
+}

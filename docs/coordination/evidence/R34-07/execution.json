@@ -1,0 +1,602 @@
+{
+  "observed_at": "2026-11-27T17:10:38.785653+00:00",
+  "status": "ACTUAL_PRODUCT_PUBLISHED_DRAFT_GATES_REMAIN",
+  "source_commit": "9ce04fcc0e91c1896979e3efb9740294dae38240",
+  "base": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+  "source_commits_in_order": [
+    "a711ea5c9f4b97d53a80e1cac86c42e25c9d4dbc",
+    "9ce04fcc0e91c1896979e3efb9740294dae38240"
+  ],
+  "full_shipped_oracles": {
+    "pass": 483,
+    "fail": 9,
+    "error": 0,
+    "skip": 0,
+    "original_packaging_deselected_blocked": 5
+  },
+  "public_tdd": {
+    "red_fail": 11,
+    "green_pass": 11
+  },
+  "offline_wheel_tdd": {
+    "red_fail": 1,
+    "green_pass": 1
+  },
+  "real_default_sdist_then_wheel": {
+    "observed_at": "2026-11-27T16:59:35.274725+00:00",
+    "source_commit": "9ce04fcc0e91c1896979e3efb9740294dae38240",
+    "argv": [
+      "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+      "-S",
+      "-B",
+      "-m",
+      "build",
+      "--no-isolation",
+      "--outdir",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\build-fixed\\dist"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-src",
+    "exit": 0,
+    "seconds": 3.837794400009443,
+    "artifacts": [
+      {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\build-fixed\\dist\\deepviz_agent_toolkit-0.1.0-py3-none-any.whl",
+        "bytes": 21015,
+        "sha256": "0b297fd5e6232c41b23090f356ea9880416321d85219ec80c4f55097f3d39fd6"
+      },
+      {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\build-fixed\\dist\\deepviz_agent_toolkit-0.1.0.tar.gz",
+        "bytes": 56633,
+        "sha256": "de00145da6b6d31451701cf173e1a1ba64a237a46cd601c1d56f4238ba4e515e"
+      }
+    ],
+    "flow": "REAL_SDIST_THEN_WHEEL_FROM_SDIST",
+    "backend": "existing hatchling.build1.33.0",
+    "no_installs_network_backend_substitution": true,
+    "clean_after": true
+  },
+  "artifact_consumer": {
+    "status": "REAL_WHEEL_MATERIALIZED_CONSUMER_PASS_NOT_PIP_INSTALL",
+    "origins": {
+      "deepviz": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\archive-consumer\\materialized-wheel\\deepviz\\__init__.py",
+        "sha256": "1d2af209531676d9db31d8b81eae3f5872be66b4558c09c55dcfc4aad94a9890"
+      },
+      "deepviz.models": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\archive-consumer\\materialized-wheel\\deepviz\\models.py",
+        "sha256": "e4c86a977a7003d3d4e5d557a3bdfb25ccee155608d36207f3af24da2e3981d3"
+      },
+      "deepviz.normalize": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\archive-consumer\\materialized-wheel\\deepviz\\normalize.py",
+        "sha256": "f3cc6e78e188ed97f62133a954154dbfdd416128c97cd4b154144ae62f778296"
+      }
+    },
+    "input_count": 6,
+    "count_records": [
+      {
+        "group": "A",
+        "count": 2
+      },
+      {
+        "group": "B",
+        "count": 3
+      },
+      {
+        "group": "C",
+        "count": 1
+      }
+    ],
+    "one_pass_consumed": 6,
+    "sample": {
+      "input_count": 100,
+      "output_count": 10,
+      "strategy": "sample"
+    },
+    "schema_and_prompts_and_pep561": true,
+    "no_unshipped_or_optional_imports": true,
+    "pydantic_origin": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\pydantic\\__init__.py",
+    "uses_existing_readonly_runtime_deps_not_clean_resolution": true
+  },
+  "unrun_clean_install_and_original_packaging": true,
+  "installed_typing_not_claimed": true,
+  "normalizer_immutable_full_sha": "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19",
+  "backend_files_rehashed_unchanged_after": 183,
+  "final_pending_readbacks": [
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-S",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "python/deepviz/src/deepviz",
+        "tests/test_r34_data_foundation.py",
+        "tests/test_r34_offline_wheel.py",
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\docs\\coordination\\evidence\\R34-07\\verify-and-test.py"
+      ],
+      "exit": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+        "HEAD",
+        "--",
+        "python/deepviz/src/deepviz/models.py",
+        "schemas/chart-spec.schema.json",
+        "tests/test_models.py",
+        "tests/test_native_mapping.py",
+        "tests/test_numeric_schema.py"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+        "HEAD",
+        "--check"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "raw_file_hashes": [
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\archive-consumer\\artifact-consumer.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\archive-consumer\\artifact-consumer.stdout.log",
+      "bytes": 1245,
+      "sha256": "ac97c736a01756698fe249ee5fa56d8d426d5e5431bf6302be7ede16369d76bb"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\archive-consumer\\manifest.json",
+      "bytes": 6923,
+      "sha256": "9eb1f6307c884f023f2a55b92bc8f6a63785d380afc7da9850c819ef734a1762"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\archive-consumer\\twine-strict.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\archive-consumer\\twine-strict.stdout.log",
+      "bytes": 266,
+      "sha256": "5d44e017cea3e19f43158a27ab5fc75636edb6f37074099a7203862caf660712"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\artifact-consumer.py",
+      "bytes": 3873,
+      "sha256": "5525e770064e5239eb9a2fcad5f7155dbe9b2229a34b81fcba55eca06a4607f1"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\assemble.py",
+      "bytes": 7406,
+      "sha256": "dfb57e61572c2c673916dd9e165f11e6fcc86ecd911ae4e18362ae5e01fdf601"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\backend-current.json",
+      "bytes": 46583,
+      "sha256": "c513e703d4e03f108812f7bf68901c04218c31418b8438a310d83ad33501875b"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\backend-proof.py",
+      "bytes": 2782,
+      "sha256": "ccfe183986c4a80821d3f54fccb71f72550f8ddb3ed8f636d74d362d6ab9f5da"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\build-fixed\\dist\\deepviz_agent_toolkit-0.1.0-py3-none-any.whl",
+      "bytes": 21015,
+      "sha256": "0b297fd5e6232c41b23090f356ea9880416321d85219ec80c4f55097f3d39fd6"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\build-fixed\\dist\\deepviz_agent_toolkit-0.1.0.tar.gz",
+      "bytes": 56633,
+      "sha256": "de00145da6b6d31451701cf173e1a1ba64a237a46cd601c1d56f4238ba4e515e"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\build-fixed\\result.json",
+      "bytes": 1197,
+      "sha256": "5d6ca327cb82afbd41a3b0e45ff14af23d21523597eadf2815ff6c5d025736d5"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\build-fixed\\stderr.log",
+      "bytes": 157,
+      "sha256": "4e425155e33c9a4fe67580a04b2f30956b28d665fdf45b14f5c66842626123a7"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\build-fixed\\stdout.log",
+      "bytes": 104,
+      "sha256": "f66ec4abc4797d57c644e3bced1b6d6b164d480ec7817605b0578514de7020b0"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\build-fixed.py",
+      "bytes": 2500,
+      "sha256": "14bce7bc19f279a0c878740212a3276eb6bf31a3ffe6663b5a6b6de301a6cdf2"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\build-v1\\dist\\deepviz_agent_toolkit-0.1.0.tar.gz",
+      "bytes": 56120,
+      "sha256": "6d8dc118336ed1c4c1fb017424eef80a5f565d2eafcdb83b5cb81c7615f3ece3"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\build-v1\\result.json",
+      "bytes": 2414,
+      "sha256": "2f28a42f233b6bee80b12ba417233abdb307bcb56c71844805358db2637d6e2d"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\build-v1\\stderr.log",
+      "bytes": 2650,
+      "sha256": "51a4b0300d946bcc565a3360af68d9bab1efe1eee3512259593571863a7bff0b"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\build-v1\\stdout.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\build.py",
+      "bytes": 2595,
+      "sha256": "9edd34d1456e03e4c68d2c4c6a9beb3eca2c0d9a2161ec207e91f73abc5d9342"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\complete-manifest.py",
+      "bytes": 3301,
+      "sha256": "c957f6fbe85a3fdd3f05fdf30e9903807d165d12cdfedad6ee03dead1d63860f"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\continue-gates.py",
+      "bytes": 4399,
+      "sha256": "9cfd840f4f61e83b763aba6d1bcfe1fd51e42b53a5759012406a20bebf32c83b"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\extract.py",
+      "bytes": 3741,
+      "sha256": "b7061e363f5f9cae9a3cbd0e326ea1519a109b0b15f4a2be9991929c156408dd"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\final-checks\\final-scoped-ruff.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\final-checks\\final-scoped-ruff.stdout.log",
+      "bytes": 747,
+      "sha256": "04a0c7ac8400afc4dc1ed236afd1fa1080341f8c60ee6eccabe23cf57694a708"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\final-checks\\recipe-final-source-11.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\final-checks\\recipe-final-source-11.stdout.log",
+      "bytes": 1123,
+      "sha256": "0985e5c1d7e07e5b7ecaa1572000fac9313caded666eb70850d3582e836a5ff1"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\final-checks\\recipe.xml",
+      "bytes": 1776,
+      "sha256": "f95307247b33ed5f00876c42e31e5df864cb14cca73b8f2750d2dc7c3000d23d"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\final-checks\\result.json",
+      "bytes": 1433,
+      "sha256": "6ea6bee60ab7fc9151b50102d7eae7242c75e73250aa58fd6c52b87f157cd9db"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\final-checks.py",
+      "bytes": 3168,
+      "sha256": "ba91aabfb997c56cf7fa1a17302c860618f37d51b609f2388eeea1e2fbff1705"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\green-small\\result.json",
+      "bytes": 1312,
+      "sha256": "333ffe33ca04c571572dc2e626b8d16cec037ad5417c0ec06214d7660335fd8b"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\green-small\\results.xml",
+      "bytes": 1776,
+      "sha256": "8c9868cf62989a15bae321666148a9243ceab39ec18516738de46409b23c9cd1"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\green-small\\ruff.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\green-small\\ruff.stdout.log",
+      "bytes": 777,
+      "sha256": "17057c2d5cab3cb273063687bcce224b59c7b308dad22c5c72a16f73fdf37858"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\green-small\\same-new-11.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\green-small\\same-new-11.stdout.log",
+      "bytes": 101,
+      "sha256": "a58649ca31fe9b28115558a474c43f34a5f8761ef0475fc4e580126d73cf77ff"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\green-small\\source-proof.json",
+      "bytes": 1173,
+      "sha256": "82a73298d641df44f86c456ea8e8aa4de76a3d9e0a6f4d8f1f26c193de90f503"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\green-small\\typed_negative.py",
+      "bytes": 64,
+      "sha256": "a8c238a9e5294acd5b6b83234913510d5f2c08b28ed1c7f9cc6d807fc494acb9"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\green-small\\typed_positive.py",
+      "bytes": 264,
+      "sha256": "c3aad8e46c5461a8fe95ab5963a2bc2a5c8572cb0e66f22701060e8e27991aea"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\green-small.py",
+      "bytes": 3483,
+      "sha256": "b1b9b82c0ad16a6afc4ba80305d3c9db066e3eb7e8437737674db5aa9ac6bde8"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\immutable-inputs.json",
+      "bytes": 7694,
+      "sha256": "46b68ec775fca2546b6636161463276e8838757c453f9b7586795fc71971e575"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\offline-test.py",
+      "bytes": 2429,
+      "sha256": "1c38f12beb4e89d2f11aa9eae30435336189fd2083d8847224a7425b9def01fe"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\offline-wheel-green\\result.json",
+      "bytes": 828,
+      "sha256": "c2efab71d2803954a136b30b5f36a6e6d371bfcb9e71e1e1e957f8850e0ed93a"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\offline-wheel-green\\results.xml",
+      "bytes": 396,
+      "sha256": "194a4548e197f12aaaac17fdad3f4e2e3a57a75ad6d9d3d9acc6ced143b84f7c"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\offline-wheel-green\\source-proof.json",
+      "bytes": 1187,
+      "sha256": "8c7b70e79127d5af479b5ced2aaee68f09320b4c5c5cba1e8240c9a652545e27"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\offline-wheel-green\\stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\offline-wheel-green\\stdout.log",
+      "bytes": 100,
+      "sha256": "951021ecca1977cc9a700a0c396457e710fa58d60a69ddd5466ac116b5d75334"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\offline-wheel-red\\result.json",
+      "bytes": 822,
+      "sha256": "ff4b3869c17baa3d58daabc7afcc568caa558241a96247ba45424c40ee44f8fd"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\offline-wheel-red\\results.xml",
+      "bytes": 4278,
+      "sha256": "82f394ea446562dc65658a0efe677423e54ea3726305e97e55d72f7bc15febdc"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\offline-wheel-red\\source-proof.json",
+      "bytes": 1183,
+      "sha256": "7854c91d305df17ea03483883b35dc948ac1c808c1d96f8d9f209088cdcbc2bc"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\offline-wheel-red\\stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\offline-wheel-red\\stdout.log",
+      "bytes": 3711,
+      "sha256": "fdd17f1c6e527eee11450e2783b60fa86d90bcf52235e39f7f36acfd0a770d4c"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\diff-check.stderr.log",
+      "bytes": 211,
+      "sha256": "ca611c5d533e56401eef370c09af17a07719f6620e75ab7285a07350519bc32e"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\diff-check.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\full-shipped-data.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\full-shipped-data.stdout.log",
+      "bytes": 14956,
+      "sha256": "f141d78f4bf31bbc15d9c3fe0634c46afdbf9ad79a0340535fc6e2544d58fca9"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\mypy-source.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\mypy-source.stdout.log",
+      "bytes": 44,
+      "sha256": "281a094c39385b4d7b53e5db635f52158036861433c2a4975b9039e77a627a24"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\per-file.json",
+      "bytes": 1879,
+      "sha256": "210be6c9fe55fd99e02fb874223718557eb7b7ab19dcbe22f24637274b38e1a6"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\result.json",
+      "bytes": 8830,
+      "sha256": "1ebe040400f607a87b70fcbef69d47ebd037a24b1b178bb035b1f0bf9a7c6f25"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\results.xml",
+      "bytes": 91131,
+      "sha256": "8dce223c2f711fbe2868188ab2b274e976bb8b008eb961e9685c07c872b27c5b"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\ruff-full-shipped-root.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\ruff-full-shipped-root.stdout.log",
+      "bytes": 7767,
+      "sha256": "4595fb5193cf93f95a28b237da8b1e93697e7f91f793f66fdd5868e663216e8c"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\ruff-scoped.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\ruff-scoped.stdout.log",
+      "bytes": 20,
+      "sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\schema-check.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\schema-check.stdout.log",
+      "bytes": 148,
+      "sha256": "3e98a45821935a7845b0573be03b7aeceb11795bac542d43e2c5cfe9e7740e9d"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\source-proof.json",
+      "bytes": 1228,
+      "sha256": "530da6ea801bc27f0fa4e27433eb7b1d64e964fe9a2078129a95d2c6fdff03de"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\typed-negative.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\typed-negative.stdout.log",
+      "bytes": 416,
+      "sha256": "504b5d53555d37dfd742c63badae724bdaa299ac8906e5d6ad54a6cdd0c93b75"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\typed-positive.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\preserved-gates\\typed-positive.stdout.log",
+      "bytes": 43,
+      "sha256": "8e63ae22e8213e327a5e9cbd584067681681bd8ef7f25c869877887ccdcfc4ff"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\proof-pytest.py",
+      "bytes": 1982,
+      "sha256": "a33dc7e405684bfa74cba0e983290a6f2c103e9cf4a661c7fdc69cc0c0b1d042"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\publish.py",
+      "bytes": 2388,
+      "sha256": "ca156ea99aa536c7d6326a43a7ddffee438a23aecc0f8be935d189d411f121b2"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\red\\result.json",
+      "bytes": 2107,
+      "sha256": "4bfc57f698650d63599012635a554b648ec9d6f92d9ef6e65ebfc9f922cc243b"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\red\\results.xml",
+      "bytes": 11066,
+      "sha256": "fcd1ed4ef3b3d4d915dd4189fd2c9a976a0c18ce0cb0a4ac414ff1adc72c5db8"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\red\\source-proof.json",
+      "bytes": 1055,
+      "sha256": "3d78c3071c6499ae88a132ba0bade63039fe2d51a0f2d5a0ca961a3912a97c60"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\red\\stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\red\\stdout.log",
+      "bytes": 7907,
+      "sha256": "ddd6ec5b5d01bd0c902a37b04874513d25961f0a4fd1ab2ccfb8e83e036f4f43"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\red.py",
+      "bytes": 2286,
+      "sha256": "f72b49ed89e9f9a7c50cbd36d402afcce98e1b50fbfe54ad1692b5a0f6046348"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\resource-copies.json",
+      "bytes": 988,
+      "sha256": "eff11d1292f6beeb0dcddf1ac49e5c03f303eaf704b8a0b1d64ea82e61a99fb8"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\resources.py",
+      "bytes": 1871,
+      "sha256": "de138ab83021428f421d97cdda197fb686df7812243cb9def7f9561c0510ffc4"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\seal-resource-fix.py",
+      "bytes": 2690,
+      "sha256": "f59612ef5d4469c29f64b20096b80015397a232601dd2ba279d4f3d6d57b6af0"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\seal-source.py",
+      "bytes": 3391,
+      "sha256": "bdecbfe40af3926b1ef82585ba0cdaf1eef7024b71dc76b402bd382837fc6506"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\source-commit.json",
+      "bytes": 1811,
+      "sha256": "f4f465c53d66de656dec6da6d2269799de775f433efe3748e5a8cb528b8a6587"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\source-final.json",
+      "bytes": 407,
+      "sha256": "5b444b712164300957001c101f7a00adfdbe52961dfebb20f5da9091540e63a0"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\source-publication.json",
+      "bytes": 615,
+      "sha256": "d3faa22e36525c5cab29a867f36d9fe1601de6e0c055dcf8825ff832e5cff6a8"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\test_r34_data_foundation.executed.py",
+      "bytes": 5108,
+      "sha256": "df1d2cf3adb49bbee95c2daa39df7a2d74f88c10808132466dbf7542f6fdea13"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\validate-archives.py",
+      "bytes": 6225,
+      "sha256": "52a54411d6469c124d52672e022aae070fef83adb01c78f10b3613985cf2162c"
+    }
+  ],
+  "no_install_network_dependencies_shared_venv_api_pr_default_closure_or_spawn": true,
+  "not_independent_review_ci_merge_or_final_v1": true
+}

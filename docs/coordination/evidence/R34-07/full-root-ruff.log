@@ -1,0 +1,281 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> python\deepviz\tests\test_aggregation_semantics.py:3:1
+   |
+ 1 |   """Small independent statistical oracles for the public normalization contract."""
+ 2 |
+ 3 | / import math
+ 4 | | import statistics
+ 5 | | from collections import defaultdict
+ 6 | |
+ 7 | | import pytest
+ 8 | |
+ 9 | | from deepviz.models import ChartSpec
+10 | | from deepviz.normalize import normalize
+   | |_______________________________________^
+11 |
+12 |   REDUCERS = ("sum", "mean", "count", "min", "max")
+   |
+help: Organize imports
+  |
+7 | import pytest
+  -
+8 | from deepviz.models import ChartSpec
+  |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> python\deepviz\tests\test_graphql_contract.py:3:1
+  |
+1 |   """Public normalization contracts for GraphQL responses and connections."""
+2 |
+3 | / import pytest
+4 | |
+5 | | from deepviz.models import ChartSpec, NormalizedData
+6 | | from deepviz.normalize import normalize
+  | |_______________________________________^
+help: Organize imports
+  |
+3 | import pytest
+  -
+4 | from deepviz.models import ChartSpec, NormalizedData
+  |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> python\deepviz\tests\test_n04_format_guards.py:3:1
+  |
+1 |   """Additional boundary cases for the independent N19 format findings."""
+2 |
+3 | / import io
+4 | |
+5 | | import pytest
+6 | |
+7 | | from deepviz.normalize import normalize
+  | |_______________________________________^
+help: Organize imports
+  |
+5 | import pytest
+  -
+6 | from deepviz.normalize import normalize
+  |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> python\deepviz\tests\test_n04_normalize_regressions.py:3:1
+  |
+1 |   """Regressions for bounded accumulation and selected GraphQL envelopes."""
+2 |
+3 | / import json
+4 | | import math
+5 | |
+6 | | import pytest
+7 | |
+8 | | from deepviz.normalize import normalize
+  | |_______________________________________^
+help: Organize imports
+  |
+6 | import pytest
+  -
+7 | from deepviz.normalize import normalize
+  |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> python\deepviz\tests\test_n04_shape_policy.py:3:1
+  |
+1 |   """C17-authorized JSON numeric identity and stable record-boundary rules."""
+2 |
+3 | / import pytest
+4 | |
+5 | | from deepviz.normalize import normalize
+  | |_______________________________________^
+help: Organize imports
+  |
+3 | import pytest
+  -
+4 | from deepviz.normalize import normalize
+  |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> python\deepviz\tests\test_n19_format_regressions.py:2:1
+   |
+ 1 |   """N19 minimal data-loss regressions; source fixes belong to the N04 owner."""
+ 2 | / from __future__ import annotations
+ 3 | |
+ 4 | | from pathlib import Path
+ 5 | | from typing import Any
+ 6 | |
+ 7 | | import pytest
+ 8 | | from test_n19_formats import ARROW_FORMS, RAW, _columnar_source
+ 9 | |
+10 | | from deepviz.normalize import normalize
+   | |_______________________________________^
+help: Organize imports
+   |
+7  | import pytest
+   - from test_n19_formats import ARROW_FORMS, RAW, _columnar_source
+   -
+8  | from deepviz.normalize import normalize
+9  + from test_n19_formats import ARROW_FORMS, RAW, _columnar_source
+10 |
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> python\deepviz\tests\test_n19_formats.py:2:1
+   |
+ 1 |   """Independent row/value oracles for supported formats; no production helpers reused."""
+ 2 | / from __future__ import annotations
+ 3 | |
+ 4 | | import copy
+ 5 | | import csv
+ 6 | | import io
+ 7 | | import json
+ 8 | | import math
+ 9 | | from datetime import UTC, date, datetime, timedelta
+10 | | from decimal import Decimal
+11 | | from pathlib import Path
+12 | | from typing import Any
+13 | |
+14 | | import pytest
+15 | |
+16 | | from deepviz.normalize import normalize
+   | |_______________________________________^
+17 |
+18 |   RAW = {"kind": "table", "aggregation": "none", "max_points": 10000}
+   |
+help: Organize imports
+   |
+14 | import pytest
+   -
+15 | from deepviz.normalize import normalize
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> python\deepviz\tests\test_normalize.py:2:1
+   |
+ 1 |   """Ingestion contracts, including streaming reductions rather than head truncation."""
+ 2 | / from __future__ import annotations
+ 3 | |
+ 4 | | import json
+ 5 | | import math
+ 6 | | import subprocess
+ 7 | | import sys
+ 8 | | import tracemalloc
+ 9 | | from pathlib import Path
+10 | | from typing import Any
+11 | |
+12 | | import pytest
+13 | |
+14 | | from deepviz.models import ChartSpec, NormalizedData
+15 | | from deepviz.normalize import normalize as normalize_impl
+   | |_________________________________________________________^
+help: Organize imports
+   |
+12 | import pytest
+   -
+13 | from deepviz.models import ChartSpec, NormalizedData
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> python\deepviz\tests\test_r07_finite_overflow.py:2:1
+   |
+ 1 |   """Finite-final SUMs must survive transient overflow without unbounded partials."""
+ 2 | / import json
+ 3 | | import math
+ 4 | | import sys
+ 5 | | from fractions import Fraction
+ 6 | | from itertools import permutations
+ 7 | |
+ 8 | | import pytest
+ 9 | |
+10 | | from deepviz import normalize
+   | |_____________________________^
+11 |
+12 |   SUM = {"kind": "table", "x": "g", "y": "v", "aggregation": "sum"}
+   |
+help: Organize imports
+  |
+8 | import pytest
+  -
+9 | from deepviz import normalize
+  |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> python\deepviz\tests\test_r17_normalizer_boundaries.py:2:1
+   |
+ 1 |   """Public source-lifetime regressions for the R17 normalizer boundary repair."""
+ 2 | / from __future__ import annotations
+ 3 | |
+ 4 | | import io
+ 5 | | import json
+ 6 | | import math
+ 7 | | from collections.abc import Generator
+ 8 | | from fractions import Fraction
+ 9 | | from pathlib import Path
+10 | | from typing import Any
+11 | |
+12 | | import pytest
+13 | |
+14 | | from deepviz import normalize
+   | |_____________________________^
+help: Organize imports
+   |
+12 | import pytest
+   -
+13 | from deepviz import normalize
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> tests\test_n11_resource_policy.py:7:1
+   |
+ 5 |   not process RSS. No 10M source or prebuilt large record list is used.
+ 6 |   """
+ 7 | / from __future__ import annotations
+ 8 | |
+ 9 | | from collections.abc import Iterator
+10 | | from typing import Any
+11 | |
+12 | | import pytest
+13 | |
+14 | | from deepviz import normalize
+   | |_____________________________^
+15 |
+16 |   LIMIT_MESSAGE = r"(?i)(byte|utf.?8|kib|limit|budget)"
+   |
+help: Organize imports
+   |
+12 | import pytest
+   -
+13 | from deepviz import normalize
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> tests\test_schema_contract.py:2:1
+   |
+ 1 |   """The checked-in JSON schema must be an exact export of Python's contract."""
+ 2 | / from __future__ import annotations
+ 3 | |
+ 4 | | import json
+ 5 | | import os
+ 6 | | import subprocess
+ 7 | | import sys
+ 8 | | from pathlib import Path
+ 9 | | from typing import Any
+10 | |
+11 | | import jsonschema
+12 | | import pytest
+13 | | from pydantic import ValidationError
+14 | |
+15 | | from deepviz.models import ChartSpec
+   | |____________________________________^
+16 |
+17 |   ROOT = Path(__file__).resolve().parents[1]
+   |
+help: Organize imports
+   |
+12 | import pytest
+   - from pydantic import ValidationError
+   -
+13 | from deepviz.models import ChartSpec
+14 + from pydantic import ValidationError
+15 |
+   |
+
+Found 12 errors.
+[*] 12 fixable with `--fix`.

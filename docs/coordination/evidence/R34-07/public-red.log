@@ -1,0 +1,98 @@
+FFFFFFFFFFF                                                              [100%]
+================================== FAILURES ===================================
+________ test_public_count_consumes_once_and_exports_actual_data_types ________
+tests\test_r34_data_foundation.py:21: in test_public_count_consumes_once_and_exports_actual_data_types
+    assert callable(getattr(deepviz, "normalize", None)), "The public data API is missing"
+E   AssertionError: The public data API is missing
+E   assert False
+E    +  where False = callable(<module 'deepviz.normalize' from 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-src\\python\\deepviz\\src\\deepviz\\normalize.py'>)
+E    +    where <module 'deepviz.normalize' from 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-src\\python\\deepviz\\src\\deepviz\\normalize.py'> = getattr(deepviz, 'normalize', None)
+________ test_public_sampling_retains_bounded_values_and_reports_loss _________
+tests\test_r34_data_foundation.py:46: in test_public_sampling_retains_bounded_values_and_reports_loss
+    assert callable(getattr(deepviz, "normalize", None)), "The public data API is missing"
+E   AssertionError: The public data API is missing
+E   assert False
+E    +  where False = callable(<module 'deepviz.normalize' from 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-src\\python\\deepviz\\src\\deepviz\\normalize.py'>)
+E    +    where <module 'deepviz.normalize' from 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-src\\python\\deepviz\\src\\deepviz\\normalize.py'> = getattr(deepviz, 'normalize', None)
+__________ test_public_prompt_reads_canonical_utf8_resource[system] ___________
+tests\test_r34_data_foundation.py:57: in test_public_prompt_reads_canonical_utf8_resource
+    assert callable(getattr(deepviz, "read_prompt", None)), "The installed-resource API is missing"
+E   AssertionError: The installed-resource API is missing
+E   assert False
+E    +  where False = callable(None)
+E    +    where None = getattr(deepviz, 'read_prompt', None)
+__________ test_public_prompt_reads_canonical_utf8_resource[request] __________
+tests\test_r34_data_foundation.py:57: in test_public_prompt_reads_canonical_utf8_resource
+    assert callable(getattr(deepviz, "read_prompt", None)), "The installed-resource API is missing"
+E   AssertionError: The installed-resource API is missing
+E   assert False
+E    +  where False = callable(None)
+E    +    where None = getattr(deepviz, 'read_prompt', None)
+___ test_prompt_selector_rejects_escape_and_unshipped_versions[../system-1] ___
+tests\test_r34_data_foundation.py:63: in test_prompt_selector_rejects_escape_and_unshipped_versions
+    assert callable(getattr(deepviz, "read_prompt", None)), "The installed-resource API is missing"
+E   AssertionError: The installed-resource API is missing
+E   assert False
+E    +  where False = callable(None)
+E    +    where None = getattr(deepviz, 'read_prompt', None)
+_____ test_prompt_selector_rejects_escape_and_unshipped_versions[other-1] _____
+tests\test_r34_data_foundation.py:63: in test_prompt_selector_rejects_escape_and_unshipped_versions
+    assert callable(getattr(deepviz, "read_prompt", None)), "The installed-resource API is missing"
+E   AssertionError: The installed-resource API is missing
+E   assert False
+E    +  where False = callable(None)
+E    +    where None = getattr(deepviz, 'read_prompt', None)
+____ test_prompt_selector_rejects_escape_and_unshipped_versions[system-2] _____
+tests\test_r34_data_foundation.py:63: in test_prompt_selector_rejects_escape_and_unshipped_versions
+    assert callable(getattr(deepviz, "read_prompt", None)), "The installed-resource API is missing"
+E   AssertionError: The installed-resource API is missing
+E   assert False
+E    +  where False = callable(None)
+E    +    where None = getattr(deepviz, 'read_prompt', None)
+____ test_prompt_selector_rejects_escape_and_unshipped_versions[request-0] ____
+tests\test_r34_data_foundation.py:63: in test_prompt_selector_rejects_escape_and_unshipped_versions
+    assert callable(getattr(deepviz, "read_prompt", None)), "The installed-resource API is missing"
+E   AssertionError: The installed-resource API is missing
+E   assert False
+E    +  where False = callable(None)
+E    +    where None = getattr(deepviz, 'read_prompt', None)
+_________ test_public_resources_publish_schema_and_inline_type_marker _________
+tests\test_r34_data_foundation.py:70: in test_public_resources_publish_schema_and_inline_type_marker
+    assert package.joinpath("py.typed").is_file(), "The PEP561 package marker is missing"
+E   AssertionError: The PEP561 package marker is missing
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r34p07-src/python/deepviz/src/deepviz/py.typed').is_file
+E    +      where WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r34p07-src/python/deepviz/src/deepviz/py.typed') = joinpath('py.typed')
+E    +        where joinpath = MultiplexedPath('C:\Users\bagma\AppData\Local\Temp\opencode\r34p07-src\python\deepviz\src\deepviz', 'C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\deepviz').joinpath
+___________ test_declared_console_scripts_have_real_shipped_modules ___________
+tests\test_r34_data_foundation.py:80: in test_declared_console_scripts_have_real_shipped_modules
+    assert (ROOT / "python/deepviz/src" / (module.replace(".", "/") + ".py")).is_file(), name
+E   AssertionError: deepviz
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = ((WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r34p07-src') / 'python/deepviz/src') / ('deepviz/cli' + '.py')).is_file
+E    +      where 'deepviz/cli' = <built-in method replace of str object at 0x000001A53B8F77B0>('.', '/')
+E    +        where <built-in method replace of str object at 0x000001A53B8F77B0> = 'deepviz.cli'.replace
+____ test_external_data_consumer_needs_no_unshipped_render_or_optional_sdk ____
+tests\test_r34_data_foundation.py:103: in test_external_data_consumer_needs_no_unshipped_render_or_optional_sdk
+    assert result.returncode == 0, result.stdout + result.stderr
+E   AssertionError: Traceback (most recent call last):
+E       File "<string>", line 11, in <module>
+E     AssertionError
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe', '-S', '-B', '-c', "\nimp...e=1, stdout='', stderr='Traceback (most recent call last):\n  File "<string>", line 11, in <module>\nAssertionError\n').returncode
+=========================== short test summary info ===========================
+FAILED tests/test_r34_data_foundation.py::test_public_count_consumes_once_and_exports_actual_data_types
+FAILED tests/test_r34_data_foundation.py::test_public_sampling_retains_bounded_values_and_reports_loss
+FAILED tests/test_r34_data_foundation.py::test_public_prompt_reads_canonical_utf8_resource[system]
+FAILED tests/test_r34_data_foundation.py::test_public_prompt_reads_canonical_utf8_resource[request]
+FAILED tests/test_r34_data_foundation.py::test_prompt_selector_rejects_escape_and_unshipped_versions[../system-1]
+FAILED tests/test_r34_data_foundation.py::test_prompt_selector_rejects_escape_and_unshipped_versions[other-1]
+FAILED tests/test_r34_data_foundation.py::test_prompt_selector_rejects_escape_and_unshipped_versions[system-2]
+FAILED tests/test_r34_data_foundation.py::test_prompt_selector_rejects_escape_and_unshipped_versions[request-0]
+FAILED tests/test_r34_data_foundation.py::test_public_resources_publish_schema_and_inline_type_marker
+FAILED tests/test_r34_data_foundation.py::test_declared_console_scripts_have_real_shipped_modules
+FAILED tests/test_r34_data_foundation.py::test_external_data_consumer_needs_no_unshipped_render_or_optional_sdk
+11 failed in 0.45s

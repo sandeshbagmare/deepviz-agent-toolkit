@@ -1,0 +1,176 @@
+{
+  "observed_at": "2026-11-27T16:41:41.799644+00:00",
+  "base": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+  "normalizer_full_sha": "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19",
+  "required_ancestor": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+  "ancestor_exit": 0,
+  "normalizer_extraction_only_no_edits": true,
+  "files": [
+    {
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "source_commit": "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19",
+      "git_blob": "dc13ef47bfd77c976e5ade304f26814e79bb746e",
+      "bytes": 35309,
+      "sha256": "f3cc6e78e188ed97f62133a954154dbfdd416128c97cd4b154144ae62f778296",
+      "checkout_encoding": "EXACT_GIT_BYTES"
+    },
+    {
+      "path": "python/deepviz/tests/test_r17_normalizer_boundaries.py",
+      "source_commit": "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19",
+      "git_blob": "2a412e47f02fa87e6358d9f8ed19904b7c3b67a7",
+      "bytes": 5665,
+      "sha256": "95e9bd99773fcc0729215dc4605e78aad35158c68579fe7f31c6516bcb8a8a11",
+      "checkout_encoding": "EXACT_GIT_BYTES"
+    },
+    {
+      "path": "python/deepviz/tests/test_normalize.py",
+      "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "git_blob": "ec0087ee1e7d4dd5d9078aa5a983ec7d272f2c75",
+      "bytes": 21525,
+      "sha256": "7ccda1fe47bba9310d183b9fed2fd2d85f70a275478053726f3c7b5533da13a5",
+      "checkout_encoding": "EXACT_GIT_BYTES"
+    },
+    {
+      "path": "python/deepviz/tests/test_aggregation_semantics.py",
+      "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "git_blob": "f9525eb61a889f8e46e83a8c3b25294cfcf82bc8",
+      "bytes": 12094,
+      "sha256": "1388b4a41e76de429828bb3e655217cba34ab50edd0983b48d770f6e392e0312",
+      "checkout_encoding": "EXACT_GIT_BYTES"
+    },
+    {
+      "path": "python/deepviz/tests/test_graphql_contract.py",
+      "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "git_blob": "55e0faa21d68270590b20a17b746bf385082b50f",
+      "bytes": 8214,
+      "sha256": "1514b43b86f209fbdb7a3a63bd73950fe26cc1a0f67c9c96150a8aa20bf695dd",
+      "checkout_encoding": "EXACT_GIT_BYTES"
+    },
+    {
+      "path": "python/deepviz/tests/test_n04_format_guards.py",
+      "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "git_blob": "af0bd5a8a9cc541a49d0361639993225731d2ffa",
+      "bytes": 1640,
+      "sha256": "9aa70c9893f2eb626a0cfd62062fda71d33e90d285c4cb2596f92776fed03224",
+      "checkout_encoding": "EXACT_GIT_BYTES"
+    },
+    {
+      "path": "python/deepviz/tests/test_n04_normalize_regressions.py",
+      "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "git_blob": "fd96fbd9044fba48e42a0dc8384dac7b50391650",
+      "bytes": 8835,
+      "sha256": "4ce0b2d59d045aa402f7f031028fd406ac67db8d8835f882f547e5edc687b5fa",
+      "checkout_encoding": "EXACT_GIT_BYTES"
+    },
+    {
+      "path": "python/deepviz/tests/test_n04_shape_policy.py",
+      "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "git_blob": "71f8ce0c978f19068f2bec58588e94019d795787",
+      "bytes": 2304,
+      "sha256": "53aeb381a5c426e61fc212910ec258a9c27814fbff48af5d7688f105f4430fec",
+      "checkout_encoding": "EXACT_GIT_BYTES"
+    },
+    {
+      "path": "python/deepviz/tests/test_n19_format_regressions.py",
+      "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "git_blob": "98faa19991ce278c5729f4dcbdf07ac3f63860d7",
+      "bytes": 2465,
+      "sha256": "3d90ad4bf0947d67fff4933329bdae29879a008a18a01b7f298ca88ebd5714ff",
+      "checkout_encoding": "EXACT_GIT_BYTES"
+    },
+    {
+      "path": "python/deepviz/tests/test_n19_formats.py",
+      "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "git_blob": "a01376c7e85fb630fbf7ff2e2ad63bf60d9bdc02",
+      "bytes": 14284,
+      "sha256": "6ad373d9efc779fc4c58af3cdbf2bdbcead5e632af50667624c04d81ac5b8973",
+      "checkout_encoding": "EXACT_GIT_BYTES"
+    },
+    {
+      "path": "python/deepviz/tests/test_r07_finite_overflow.py",
+      "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "git_blob": "8f437a8c454278a15c2d9628877f46aa4d1f81df",
+      "bytes": 5370,
+      "sha256": "cbb18b1ab0107ab4cfd4dfff1515b6c6afc5f4495b4a9b56be090dfb2bce610f",
+      "checkout_encoding": "EXACT_GIT_BYTES"
+    },
+    {
+      "path": "tests/test_schema_contract.py",
+      "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "git_blob": "05e523b94e96edcfa539d5d94f89d4a72baee16b",
+      "bytes": 3383,
+      "sha256": "bd29f8530a5981f28fa7a11302eb547a4fa1173a0e5c870a381c01a93a2fd083",
+      "checkout_encoding": "EXACT_GIT_BYTES"
+    },
+    {
+      "path": "tests/test_n11_resource_policy.py",
+      "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "git_blob": "214ad418c30510e667333334db89aba29983beaf",
+      "bytes": 8077,
+      "sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+      "checkout_encoding": "EXACT_GIT_BYTES"
+    },
+    {
+      "path": "tests/test_packaging_regressions.py",
+      "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "git_blob": "8ed72347673879bb7c5ddff4ce30a5c3a6297bc4",
+      "bytes": 4894,
+      "sha256": "a596f30def5aa05ea9261c3b375b44db39426e6224d4c638701b8eca01c3b594",
+      "checkout_encoding": "EXACT_GIT_BYTES"
+    },
+    {
+      "path": "scripts/export_schema.py",
+      "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "git_blob": "17276da70b78d33e60603c9284070d4b99f0ecc9",
+      "bytes": 1235,
+      "sha256": "a6dad0617fd34b06933490e8ba1711de0d1ba2982fe2675bd932f5ca2eb49491",
+      "checkout_encoding": "EXACT_GIT_BYTES"
+    },
+    {
+      "path": "scripts/benchmark_scale.py",
+      "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "git_blob": "f4629b5bd0c193daa3eb17fea93b47cd85f63fad",
+      "bytes": 5190,
+      "sha256": "70f22dba76e64ff86d4f20935a5685413f6c984a93c6658f7dc0bda5f54a126c",
+      "checkout_encoding": "EXACT_GIT_BYTES"
+    },
+    {
+      "path": "prompts/v1/system.md",
+      "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "git_blob": "8e0a1b4b0ce2115d23b5cb2f3d69c0deb113839b",
+      "bytes": 4582,
+      "sha256": "b11e691e8f5d89bc2fd726d284702d6675c57c1a32ec0947ec5902040fdbaba0",
+      "checkout_encoding": "EXACT_GIT_BYTES"
+    },
+    {
+      "path": "prompts/v1/request.md",
+      "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "git_blob": "cd61df2fe697009b36b03b872c949b0bef859b10",
+      "bytes": 761,
+      "sha256": "845be71cb3141d084f036472a1c5a19670be28c16bf73c4a599a3df9d534c6f2",
+      "checkout_encoding": "EXACT_GIT_BYTES"
+    },
+    {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "source_commit": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+      "git_blob": "676439c677dad06021eaa0c546ddc4fc66d24137",
+      "bytes": 3021,
+      "sha256": "8532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d",
+      "checkout_bytes": 3102,
+      "checkout_sha256": "e4c86a977a7003d3d4e5d557a3bdfb25ccee155608d36207f3af24da2e3981d3",
+      "checkout_encoding": "CRLF_WORKTREE_GIT_LF_NO_SOURCE_CHANGE"
+    },
+    {
+      "path": "schemas/chart-spec.schema.json",
+      "source_commit": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+      "git_blob": "00a524503774822832c686c7be8e266e9e5d39bc",
+      "bytes": 4078,
+      "sha256": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d",
+      "checkout_bytes": 4268,
+      "checkout_sha256": "cf316116251e52a121a74d24f35f99b15794ee0997278010d97181c8c1908b81",
+      "checkout_encoding": "CRLF_WORKTREE_GIT_LF_NO_SOURCE_CHANGE"
+    }
+  ],
+  "preserved_first_extraction_exit": 1,
+  "cause": "Existing bff checkout CRLF, Git LF; zero tests ran"
+}

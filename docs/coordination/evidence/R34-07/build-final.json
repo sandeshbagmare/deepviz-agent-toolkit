@@ -1,0 +1,33 @@
+{
+  "observed_at": "2026-11-27T16:59:35.274725+00:00",
+  "source_commit": "9ce04fcc0e91c1896979e3efb9740294dae38240",
+  "argv": [
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+    "-S",
+    "-B",
+    "-m",
+    "build",
+    "--no-isolation",
+    "--outdir",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\build-fixed\\dist"
+  ],
+  "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-src",
+  "exit": 0,
+  "seconds": 3.837794400009443,
+  "artifacts": [
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\build-fixed\\dist\\deepviz_agent_toolkit-0.1.0-py3-none-any.whl",
+      "bytes": 21015,
+      "sha256": "0b297fd5e6232c41b23090f356ea9880416321d85219ec80c4f55097f3d39fd6"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\build-fixed\\dist\\deepviz_agent_toolkit-0.1.0.tar.gz",
+      "bytes": 56633,
+      "sha256": "de00145da6b6d31451701cf173e1a1ba64a237a46cd601c1d56f4238ba4e515e"
+    }
+  ],
+  "flow": "REAL_SDIST_THEN_WHEEL_FROM_SDIST",
+  "backend": "existing hatchling.build1.33.0",
+  "no_installs_network_backend_substitution": true,
+  "clean_after": true
+}

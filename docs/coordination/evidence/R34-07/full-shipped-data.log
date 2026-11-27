@@ -1,0 +1,137 @@
+........................................................................ [ 14%]
+........................................................................ [ 29%]
+........................................................................ [ 43%]
+........................................................................ [ 58%]
+........................................................................ [ 73%]
+........................FFF.........F................................... [ 87%]
+......................................................FFFFF.             [100%]
+================================== FAILURES ===================================
+__________ test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii] __________
+tests\test_n11_resource_policy.py:45: in test_exact_64kib_utf8_key_or_cell_is_preserved
+    result = normalize(source, {"kind": "table", "aggregation": "none", "max_points": 10})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:717: in normalize
+    for row, size in islice(rows, 32):
+                     ^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:497: in _records
+    row = _flatten(item, counts) if isinstance(item, dict) or isinstance(item, Mapping) else {
+          ^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:477: in _flatten
+    add(key, item, 0)
+python\deepviz\src\deepviz\normalize.py:453: in add
+    _utf8_size(key, _MAX_FIELD_BYTES, "field name")
+python\deepviz\src\deepviz\normalize.py:412: in _utf8_size
+    raise ValueError(f"Input {label} exceeds {limit} UTF-8 bytes")
+E   ValueError: Input field name exceeds 4096 UTF-8 bytes
+________ test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte] _________
+tests\test_n11_resource_policy.py:45: in test_exact_64kib_utf8_key_or_cell_is_preserved
+    result = normalize(source, {"kind": "table", "aggregation": "none", "max_points": 10})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:717: in normalize
+    for row, size in islice(rows, 32):
+                     ^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:497: in _records
+    row = _flatten(item, counts) if isinstance(item, dict) or isinstance(item, Mapping) else {
+          ^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:477: in _flatten
+    add(key, item, 0)
+python\deepviz\src\deepviz\normalize.py:453: in add
+    _utf8_size(key, _MAX_FIELD_BYTES, "field name")
+python\deepviz\src\deepviz\normalize.py:412: in _utf8_size
+    raise ValueError(f"Input {label} exceeds {limit} UTF-8 bytes")
+E   ValueError: Input field name exceeds 4096 UTF-8 bytes
+________ test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte] ________
+tests\test_n11_resource_policy.py:45: in test_exact_64kib_utf8_key_or_cell_is_preserved
+    result = normalize(source, {"kind": "table", "aggregation": "none", "max_points": 10})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:717: in normalize
+    for row, size in islice(rows, 32):
+                     ^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:497: in _records
+    row = _flatten(item, counts) if isinstance(item, dict) or isinstance(item, Mapping) else {
+          ^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:477: in _flatten
+    add(key, item, 0)
+python\deepviz\src\deepviz\normalize.py:453: in add
+    _utf8_size(key, _MAX_FIELD_BYTES, "field name")
+python\deepviz\src\deepviz\normalize.py:412: in _utf8_size
+    raise ValueError(f"Input {label} exceeds {limit} UTF-8 bytes")
+E   ValueError: Input field name exceeds 4096 UTF-8 bytes
+_____________ test_flattened_multibyte_key_at_64kib_is_preserved ______________
+tests\test_n11_resource_policy.py:68: in test_flattened_multibyte_key_at_64kib_is_preserved
+    result = normalize(iter([{outer: {inner: 7}}]), {"kind": "table", "aggregation": "none"})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:717: in normalize
+    for row, size in islice(rows, 32):
+                     ^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:497: in _records
+    row = _flatten(item, counts) if isinstance(item, dict) or isinstance(item, Mapping) else {
+          ^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:477: in _flatten
+    add(key, item, 0)
+python\deepviz\src\deepviz\normalize.py:453: in add
+    _utf8_size(key, _MAX_FIELD_BYTES, "field name")
+python\deepviz\src\deepviz\normalize.py:412: in _utf8_size
+    raise ValueError(f"Input {label} exceeds {limit} UTF-8 bytes")
+E   ValueError: Input field name exceeds 4096 UTF-8 bytes
+___ test_schema_and_runtime_reject_invalid_dashboard_composition[payload0] ____
+tests\test_schema_contract.py:62: in test_schema_and_runtime_reject_invalid_dashboard_composition
+    assert list(jsonschema.Draft202012Validator(exported_schema()).iter_errors(payload))
+E   AssertionError: assert []
+E    +  where [] = list(<generator object create.<locals>.Validator.iter_errors at 0x0000015FF8C3AD40>)
+E    +    where <generator object create.<locals>.Validator.iter_errors at 0x0000015FF8C3AD40> = iter_errors({'kind': 'dashboard'})
+E    +      where iter_errors = Draft202012Validator(schema={'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normaliz...ed ...um': 1, 'title': 'Columns', ...}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'}, format_checker=None).iter_errors
+E    +        where Draft202012Validator(schema={'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normaliz...ed ...um': 1, 'title': 'Columns', ...}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'}, format_checker=None) = <class 'jsonschema.validators.Draft202012Validator'>({'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normalized record fields to a bounded char...ngth': 2000, 'title': 'Description', 'type': 'string'}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'})
+E    +          where <class 'jsonschema.validators.Draft202012Validator'> = jsonschema.Draft202012Validator
+E    +          and   {'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normalized record fields to a bounded char...ngth': 2000, 'title': 'Description', 'type': 'string'}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'} = exported_schema()
+___ test_schema_and_runtime_reject_invalid_dashboard_composition[payload1] ____
+tests\test_schema_contract.py:62: in test_schema_and_runtime_reject_invalid_dashboard_composition
+    assert list(jsonschema.Draft202012Validator(exported_schema()).iter_errors(payload))
+E   AssertionError: assert []
+E    +  where [] = list(<generator object create.<locals>.Validator.iter_errors at 0x0000015FF8C3B600>)
+E    +    where <generator object create.<locals>.Validator.iter_errors at 0x0000015FF8C3B600> = iter_errors({'kind': 'dashboard', 'charts': []})
+E    +      where iter_errors = Draft202012Validator(schema={'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normaliz...ed ...um': 1, 'title': 'Columns', ...}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'}, format_checker=None).iter_errors
+E    +        where Draft202012Validator(schema={'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normaliz...ed ...um': 1, 'title': 'Columns', ...}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'}, format_checker=None) = <class 'jsonschema.validators.Draft202012Validator'>({'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normalized record fields to a bounded char...ngth': 2000, 'title': 'Description', 'type': 'string'}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'})
+E    +          where <class 'jsonschema.validators.Draft202012Validator'> = jsonschema.Draft202012Validator
+E    +          and   {'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normalized record fields to a bounded char...ngth': 2000, 'title': 'Description', 'type': 'string'}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'} = exported_schema()
+___ test_schema_and_runtime_reject_invalid_dashboard_composition[payload2] ____
+tests\test_schema_contract.py:62: in test_schema_and_runtime_reject_invalid_dashboard_composition
+    assert list(jsonschema.Draft202012Validator(exported_schema()).iter_errors(payload))
+E   AssertionError: assert []
+E    +  where [] = list(<generator object create.<locals>.Validator.iter_errors at 0x0000015FF8C3B9C0>)
+E    +    where <generator object create.<locals>.Validator.iter_errors at 0x0000015FF8C3B9C0> = iter_errors({'charts': [{'kind': 'line'}]})
+E    +      where iter_errors = Draft202012Validator(schema={'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normaliz...ed ...um': 1, 'title': 'Columns', ...}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'}, format_checker=None).iter_errors
+E    +        where Draft202012Validator(schema={'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normaliz...ed ...um': 1, 'title': 'Columns', ...}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'}, format_checker=None) = <class 'jsonschema.validators.Draft202012Validator'>({'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normalized record fields to a bounded char...ngth': 2000, 'title': 'Description', 'type': 'string'}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'})
+E    +          where <class 'jsonschema.validators.Draft202012Validator'> = jsonschema.Draft202012Validator
+E    +          and   {'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normalized record fields to a bounded char...ngth': 2000, 'title': 'Description', 'type': 'string'}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'} = exported_schema()
+___ test_schema_and_runtime_reject_invalid_dashboard_composition[payload3] ____
+tests\test_schema_contract.py:62: in test_schema_and_runtime_reject_invalid_dashboard_composition
+    assert list(jsonschema.Draft202012Validator(exported_schema()).iter_errors(payload))
+E   AssertionError: assert []
+E    +  where [] = list(<generator object create.<locals>.Validator.iter_errors at 0x0000015FF8C3BB00>)
+E    +    where <generator object create.<locals>.Validator.iter_errors at 0x0000015FF8C3BB00> = iter_errors({'kind': 'bar', 'charts': [{'kind': 'line'}]})
+E    +      where iter_errors = Draft202012Validator(schema={'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normaliz...ed ...um': 1, 'title': 'Columns', ...}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'}, format_checker=None).iter_errors
+E    +        where Draft202012Validator(schema={'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normaliz...ed ...um': 1, 'title': 'Columns', ...}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'}, format_checker=None) = <class 'jsonschema.validators.Draft202012Validator'>({'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normalized record fields to a bounded char...ngth': 2000, 'title': 'Description', 'type': 'string'}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'})
+E    +          where <class 'jsonschema.validators.Draft202012Validator'> = jsonschema.Draft202012Validator
+E    +          and   {'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normalized record fields to a bounded char...ngth': 2000, 'title': 'Description', 'type': 'string'}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'} = exported_schema()
+___ test_schema_and_runtime_reject_invalid_dashboard_composition[payload4] ____
+tests\test_schema_contract.py:62: in test_schema_and_runtime_reject_invalid_dashboard_composition
+    assert list(jsonschema.Draft202012Validator(exported_schema()).iter_errors(payload))
+E   AssertionError: assert []
+E    +  where [] = list(<generator object create.<locals>.Validator.iter_errors at 0x0000015FF8C39580>)
+E    +    where <generator object create.<locals>.Validator.iter_errors at 0x0000015FF8C39580> = iter_errors({'kind': 'dashboard', 'charts': [{'kind': 'dashboard', 'charts': [{'kind': 'bar'}]}]})
+E    +      where iter_errors = Draft202012Validator(schema={'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normaliz...ed ...um': 1, 'title': 'Columns', ...}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'}, format_checker=None).iter_errors
+E    +        where Draft202012Validator(schema={'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normaliz...ed ...um': 1, 'title': 'Columns', ...}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'}, format_checker=None) = <class 'jsonschema.validators.Draft202012Validator'>({'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normalized record fields to a bounded char...ngth': 2000, 'title': 'Description', 'type': 'string'}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'})
+E    +          where <class 'jsonschema.validators.Draft202012Validator'> = jsonschema.Draft202012Validator
+E    +          and   {'$defs': {'ChartSpec': {'additionalProperties': False, 'description': 'Map normalized record fields to a bounded char...ngth': 2000, 'title': 'Description', 'type': 'string'}, ...}, 'title': 'ChartSpec', ...}}, '$ref': '#/$defs/ChartSpec'} = exported_schema()
+=========================== short test summary info ===========================
+FAILED tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii]
+FAILED tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte]
+FAILED tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte]
+FAILED tests/test_n11_resource_policy.py::test_flattened_multibyte_key_at_64kib_is_preserved
+FAILED tests/test_schema_contract.py::test_schema_and_runtime_reject_invalid_dashboard_composition[payload0]
+FAILED tests/test_schema_contract.py::test_schema_and_runtime_reject_invalid_dashboard_composition[payload1]
+FAILED tests/test_schema_contract.py::test_schema_and_runtime_reject_invalid_dashboard_composition[payload2]
+FAILED tests/test_schema_contract.py::test_schema_and_runtime_reject_invalid_dashboard_composition[payload3]
+FAILED tests/test_schema_contract.py::test_schema_and_runtime_reject_invalid_dashboard_composition[payload4]
+9 failed, 483 passed, 5 deselected in 21.43s

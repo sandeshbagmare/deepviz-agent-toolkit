@@ -1,0 +1,45 @@
+{
+  "observed_at": "2026-11-27T16:44:43.737821+00:00",
+  "commands": [
+    {
+      "label": "same-new-11",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-S",
+        "-B",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\proof-pytest.py",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\green-small\\source-proof.json",
+        "tests/test_r34_data_foundation.py",
+        "-q",
+        "--tb=short",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\green-small\\tmp",
+        "--junitxml",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\green-small\\results.xml"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "seconds": 1.5241355000034673
+    },
+    {
+      "label": "ruff",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-S",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "python/deepviz/src/deepviz",
+        "tests/test_r34_data_foundation.py"
+      ],
+      "exit": 1,
+      "expected": 0,
+      "seconds": 0.14337969999178313
+    }
+  ],
+  "status": "STOPPED_INSPECT_ACTUAL_FAILURE"
+}

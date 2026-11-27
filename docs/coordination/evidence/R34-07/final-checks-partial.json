@@ -1,0 +1,45 @@
+{
+  "source_commit": "9ce04fcc0e91c1896979e3efb9740294dae38240",
+  "backend_files_unchanged": 183,
+  "commands": [
+    {
+      "label": "recipe-final-source-11",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-S",
+        "-B",
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\docs\\coordination\\evidence\\R34-07\\verify-and-test.py",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-src",
+        "tests/test_r34_data_foundation.py",
+        "-q",
+        "--tb=short",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\final-checks\\tmp",
+        "--junitxml",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34p07-run\\final-checks\\recipe.xml"
+      ],
+      "exit": 0,
+      "seconds": 2.1311894000100438
+    },
+    {
+      "label": "final-scoped-ruff",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-S",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "python/deepviz/src/deepviz",
+        "tests/test_r34_data_foundation.py",
+        "tests/test_r34_offline_wheel.py",
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\docs\\coordination\\evidence\\R34-07\\verify-and-test.py"
+      ],
+      "exit": 1,
+      "seconds": 0.18519649999507237
+    }
+  ]
+}
