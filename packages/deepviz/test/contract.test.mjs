@@ -125,7 +125,9 @@ test('unsafe keys, cycles, non-finite values and oversized fields have explicit 
   const result=normalize([{x:NaN,y:Infinity,text:'a'.repeat(20000)}],{aggregation:'none'});
   assert.equal(result.records[0].x,null);
   assert.equal(result.records[0].y,null);
-  assert.ok(result.records[0].text.length<=10000);
+  assert.equal(result.records[0].text,'a'.repeat(20000));
+  assert.ok(!result.warnings.some((warning)=>/truncat/i.test(warning)));
+  assert.throws(()=>normalize([{text:'a'.repeat(64*1024+1)}],{aggregation:'none'}),/UTF-8|bytes/i);
   assert.ok(result.warnings.length);
   assert.equal({}.polluted,undefined);
 });
