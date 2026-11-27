@@ -1,0 +1,724 @@
+{
+  "review": "R35-04 independent NONAUTHOR source-only COUNT review",
+  "session": "ses_de5678314ffeuDXtC7RfGsbD6V",
+  "observed_utc": "2026-11-27T16:43:36.822817+00:00",
+  "source": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+  "parent": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "own_publication_base": "9d30a393250d3f2b1ab1473e8a0bedd0b679c9e7",
+  "changed_paths_exact": [
+    "M\tpython/deepviz/src/deepviz/engines.py",
+    "A\tpython/deepviz/tests/test_r23_count_channel.py"
+  ],
+  "production_change": "engines.py97-98 only: explicit count, y None, kind not heatmap -> generated count measure",
+  "exact_added_bytes_utf8": "    if spec.aggregation == \"count\" and spec.y is None and spec.kind != \"heatmap\":\n        y = \"count\"\n",
+  "removing_only_added_two_lines_yields_identical_parent_module": true,
+  "module_AST_excluding_channels_identical": true,
+  "all_nonchannels_functions_byte_AST_identical_count": 24,
+  "all_nonchannels_functions": [
+    {
+      "key": "_table_budget#1",
+      "parent": {
+        "name": "_table_budget",
+        "line_start": 34,
+        "line_end": 61,
+        "bytes_sha256": "e6f59a5abe92b56c7358bb5c6eb6755a6933fd3269e327f12a5a31cab2216f8e",
+        "ast_sha256": "2de2086bad1e5712103394a2ac57e59706fc31610aec162c847daed94f5fb992"
+      },
+      "source": {
+        "name": "_table_budget",
+        "line_start": 34,
+        "line_end": 61,
+        "bytes_sha256": "e6f59a5abe92b56c7358bb5c6eb6755a6933fd3269e327f12a5a31cab2216f8e",
+        "ast_sha256": "2de2086bad1e5712103394a2ac57e59706fc31610aec162c847daed94f5fb992"
+      }
+    },
+    {
+      "key": "safe_json#1",
+      "parent": {
+        "name": "safe_json",
+        "line_start": 64,
+        "line_end": 70,
+        "bytes_sha256": "bb4aa61b9355b47d9cf1b04f5550c6c3fb9ea53e09e927ff06ac36957d814a69",
+        "ast_sha256": "05ecf657670c5d7293aafadf6ab92bdecea969e9d6efb496dffbf136eaba6c31"
+      },
+      "source": {
+        "name": "safe_json",
+        "line_start": 64,
+        "line_end": 70,
+        "bytes_sha256": "bb4aa61b9355b47d9cf1b04f5550c6c3fb9ea53e09e927ff06ac36957d814a69",
+        "ast_sha256": "05ecf657670c5d7293aafadf6ab92bdecea969e9d6efb496dffbf136eaba6c31"
+      }
+    },
+    {
+      "key": "_number#1",
+      "parent": {
+        "name": "_number",
+        "line_start": 73,
+        "line_end": 74,
+        "bytes_sha256": "916e71ad66a4f3c35e4b2162edc9cea4565101e74025b02869235fdbbef5c0bc",
+        "ast_sha256": "a1e7c43f866f0e4068be39f91e27d08b5e9ded366bd3cdc2383ede8097879dc4"
+      },
+      "source": {
+        "name": "_number",
+        "line_start": 73,
+        "line_end": 74,
+        "bytes_sha256": "916e71ad66a4f3c35e4b2162edc9cea4565101e74025b02869235fdbbef5c0bc",
+        "ast_sha256": "a1e7c43f866f0e4068be39f91e27d08b5e9ded366bd3cdc2383ede8097879dc4"
+      }
+    },
+    {
+      "key": "_number#2",
+      "parent": {
+        "name": "_number",
+        "line_start": 77,
+        "line_end": 78,
+        "bytes_sha256": "f3cd22cdd46b0d914161de18d800ecb234df0ada2f76fb87347322683f46c7f0",
+        "ast_sha256": "a1e1d34d6f35b5197c527e0c95d1ef2bda6c0a1ce1dfe92314f4c44fd6bdd2da"
+      },
+      "source": {
+        "name": "_number",
+        "line_start": 77,
+        "line_end": 78,
+        "bytes_sha256": "f3cd22cdd46b0d914161de18d800ecb234df0ada2f76fb87347322683f46c7f0",
+        "ast_sha256": "a1e1d34d6f35b5197c527e0c95d1ef2bda6c0a1ce1dfe92314f4c44fd6bdd2da"
+      }
+    },
+    {
+      "key": "_number#3",
+      "parent": {
+        "name": "_number",
+        "line_start": 81,
+        "line_end": 86,
+        "bytes_sha256": "99ea212a112afd304ed0ae4a8cff604c0b181499f23a69366d27b5d4919b1dbd",
+        "ast_sha256": "32de92935d55ecd3b75218c4a61adb2d7d20ec148ec9a1413e8068799045ef00"
+      },
+      "source": {
+        "name": "_number",
+        "line_start": 81,
+        "line_end": 86,
+        "bytes_sha256": "99ea212a112afd304ed0ae4a8cff604c0b181499f23a69366d27b5d4919b1dbd",
+        "ast_sha256": "32de92935d55ecd3b75218c4a61adb2d7d20ec148ec9a1413e8068799045ef00"
+      }
+    },
+    {
+      "key": "_groups#1",
+      "parent": {
+        "name": "_groups",
+        "line_start": 108,
+        "line_end": 112,
+        "bytes_sha256": "2c545d6d9f55b61ae1596097982764aba7bcedf27342da18b4e27858c92bc60e",
+        "ast_sha256": "7d462fbaf5dceaa789bab094454582e0adea2a79f6f59c7260b4bcd1df16343f"
+      },
+      "source": {
+        "name": "_groups",
+        "line_start": 110,
+        "line_end": 114,
+        "bytes_sha256": "2c545d6d9f55b61ae1596097982764aba7bcedf27342da18b4e27858c92bc60e",
+        "ast_sha256": "7d462fbaf5dceaa789bab094454582e0adea2a79f6f59c7260b4bcd1df16343f"
+      }
+    },
+    {
+      "key": "_geometry#1",
+      "parent": {
+        "name": "_geometry",
+        "line_start": 115,
+        "line_end": 137,
+        "bytes_sha256": "aca17ffbc1a0dc94fdcabb9e78e278738bd3e6d2a698bafae04ef9a7f100115b",
+        "ast_sha256": "c65466b28441fe79cc5a92a1af70bbb9154233ffdf771aef94fe694cdb68149e"
+      },
+      "source": {
+        "name": "_geometry",
+        "line_start": 117,
+        "line_end": 139,
+        "bytes_sha256": "aca17ffbc1a0dc94fdcabb9e78e278738bd3e6d2a698bafae04ef9a7f100115b",
+        "ast_sha256": "c65466b28441fe79cc5a92a1af70bbb9154233ffdf771aef94fe694cdb68149e"
+      }
+    },
+    {
+      "key": "_boxes#1",
+      "parent": {
+        "name": "_boxes",
+        "line_start": 140,
+        "line_end": 146,
+        "bytes_sha256": "c198ac709c6ba3dd6a74bc010f5c5de700551d8c0ff5a82500861740416ae57d",
+        "ast_sha256": "1283006a8e4d46740214bde6d333c46e3a35eb0db220456cc2f857c8b1a94ad6"
+      },
+      "source": {
+        "name": "_boxes",
+        "line_start": 142,
+        "line_end": 148,
+        "bytes_sha256": "c198ac709c6ba3dd6a74bc010f5c5de700551d8c0ff5a82500861740416ae57d",
+        "ast_sha256": "1283006a8e4d46740214bde6d333c46e3a35eb0db220456cc2f857c8b1a94ad6"
+      }
+    },
+    {
+      "key": "_histogram_values#1",
+      "parent": {
+        "name": "_histogram_values",
+        "line_start": 149,
+        "line_end": 153,
+        "bytes_sha256": "245cc859bcc6cc81e68c4361dc4672eb62478c495d3967b0e331bffe139ee05e",
+        "ast_sha256": "432191f449cb5781fc02ec5117a515c046fb4b7fab5782f88b2581d793c638da"
+      },
+      "source": {
+        "name": "_histogram_values",
+        "line_start": 151,
+        "line_end": 155,
+        "bytes_sha256": "245cc859bcc6cc81e68c4361dc4672eb62478c495d3967b0e331bffe139ee05e",
+        "ast_sha256": "432191f449cb5781fc02ec5117a515c046fb4b7fab5782f88b2581d793c638da"
+      }
+    },
+    {
+      "key": "_histogram#1",
+      "parent": {
+        "name": "_histogram",
+        "line_start": 156,
+        "line_end": 163,
+        "bytes_sha256": "f363c050c7ac0422b4ad1a7eee1422d26e5e4eaeaea69c4881947f366593fdcd",
+        "ast_sha256": "09c35cab7763a59b09a1d1d900a5d68af1c107abeab7f8c92de34c3a6a61db0e"
+      },
+      "source": {
+        "name": "_histogram",
+        "line_start": 158,
+        "line_end": 165,
+        "bytes_sha256": "f363c050c7ac0422b4ad1a7eee1422d26e5e4eaeaea69c4881947f366593fdcd",
+        "ast_sha256": "09c35cab7763a59b09a1d1d900a5d68af1c107abeab7f8c92de34c3a6a61db0e"
+      }
+    },
+    {
+      "key": "_tiles#1",
+      "parent": {
+        "name": "_tiles",
+        "line_start": 166,
+        "line_end": 175,
+        "bytes_sha256": "6b4385bc6529464e877e105ff9d19eb411c0419bec46d35f2b1629116736f5d1",
+        "ast_sha256": "b85f3731690148de8b5ed7bb4c803653d0d9401025cabf8ba55f1a0a478d8aa2"
+      },
+      "source": {
+        "name": "_tiles",
+        "line_start": 168,
+        "line_end": 177,
+        "bytes_sha256": "6b4385bc6529464e877e105ff9d19eb411c0419bec46d35f2b1629116736f5d1",
+        "ast_sha256": "b85f3731690148de8b5ed7bb4c803653d0d9401025cabf8ba55f1a0a478d8aa2"
+      }
+    },
+    {
+      "key": "_heatmap#1",
+      "parent": {
+        "name": "_heatmap",
+        "line_start": 178,
+        "line_end": 183,
+        "bytes_sha256": "d6626e70999d5d2102c1bcb87a0c4bc936d3b869821950afd1383f3830ba3528",
+        "ast_sha256": "cfc962147f16a8843415a409d234e777a3abdc01d5fb081fcff60fcb7c5ffcec"
+      },
+      "source": {
+        "name": "_heatmap",
+        "line_start": 180,
+        "line_end": 185,
+        "bytes_sha256": "d6626e70999d5d2102c1bcb87a0c4bc936d3b869821950afd1383f3830ba3528",
+        "ast_sha256": "cfc962147f16a8843415a409d234e777a3abdc01d5fb081fcff60fcb7c5ffcec"
+      }
+    },
+    {
+      "key": "_colors#1",
+      "parent": {
+        "name": "_colors",
+        "line_start": 186,
+        "line_end": 187,
+        "bytes_sha256": "c4cfe975327330db218d08e5509876640bc0e6044258d2d05cef94f52cf571f4",
+        "ast_sha256": "0de7ff4997d5644ad756c792b48ca3a9520542b4633383367547b5468c647bd0"
+      },
+      "source": {
+        "name": "_colors",
+        "line_start": 188,
+        "line_end": 189,
+        "bytes_sha256": "c4cfe975327330db218d08e5509876640bc0e6044258d2d05cef94f52cf571f4",
+        "ast_sha256": "0de7ff4997d5644ad756c792b48ca3a9520542b4633383367547b5468c647bd0"
+      }
+    },
+    {
+      "key": "_label_color#1",
+      "parent": {
+        "name": "_label_color",
+        "line_start": 190,
+        "line_end": 194,
+        "bytes_sha256": "0dcca46cf58a700c1f8cdbdace5576565fcd68b6dd43da19253a10224aa91fb8",
+        "ast_sha256": "41baa33ca615eee400c242ffdc1f540360dde5f75a2f1471be7714b830aa7c6a"
+      },
+      "source": {
+        "name": "_label_color",
+        "line_start": 192,
+        "line_end": 196,
+        "bytes_sha256": "0dcca46cf58a700c1f8cdbdace5576565fcd68b6dd43da19253a10224aa91fb8",
+        "ast_sha256": "41baa33ca615eee400c242ffdc1f540360dde5f75a2f1471be7714b830aa7c6a"
+      }
+    },
+    {
+      "key": "_wrap#1",
+      "parent": {
+        "name": "_wrap",
+        "line_start": 197,
+        "line_end": 198,
+        "bytes_sha256": "1c75a84368394af2d5c94ccb09d6bc343692c6f3bd232e91a2ecd2a93fc19195",
+        "ast_sha256": "bc3ad4d145b9f8d3dad4e77598cb09fcf20c7112599a0ef1084126324769be74"
+      },
+      "source": {
+        "name": "_wrap",
+        "line_start": 199,
+        "line_end": 200,
+        "bytes_sha256": "1c75a84368394af2d5c94ccb09d6bc343692c6f3bd232e91a2ecd2a93fc19195",
+        "ast_sha256": "bc3ad4d145b9f8d3dad4e77598cb09fcf20c7112599a0ef1084126324769be74"
+      }
+    },
+    {
+      "key": "_fallback#1",
+      "parent": {
+        "name": "_fallback",
+        "line_start": 201,
+        "line_end": 214,
+        "bytes_sha256": "ec66453d3c89f8efce4f4a85b300ec0209b9d9dacc888992f55797f6933eb571",
+        "ast_sha256": "5c9d9b3e52029cd5f57a4fb21c7af958553fee375dac30ebf34727cb8f0f987d"
+      },
+      "source": {
+        "name": "_fallback",
+        "line_start": 203,
+        "line_end": 216,
+        "bytes_sha256": "ec66453d3c89f8efce4f4a85b300ec0209b9d9dacc888992f55797f6933eb571",
+        "ast_sha256": "5c9d9b3e52029cd5f57a4fb21c7af958553fee375dac30ebf34727cb8f0f987d"
+      }
+    },
+    {
+      "key": "matplotlib_figure#1",
+      "parent": {
+        "name": "matplotlib_figure",
+        "line_start": 217,
+        "line_end": 382,
+        "bytes_sha256": "7a0e6d9013655e321326afc5bf7dd88c876a4660aad676a39c78f8a445381ddd",
+        "ast_sha256": "6b7ca7b81f6693ce7e1c8c488d1b95064374a434d409375afb42593d77511fb8"
+      },
+      "source": {
+        "name": "matplotlib_figure",
+        "line_start": 219,
+        "line_end": 384,
+        "bytes_sha256": "7a0e6d9013655e321326afc5bf7dd88c876a4660aad676a39c78f8a445381ddd",
+        "ast_sha256": "6b7ca7b81f6693ce7e1c8c488d1b95064374a434d409375afb42593d77511fb8"
+      }
+    },
+    {
+      "key": "_plotly#1",
+      "parent": {
+        "name": "_plotly",
+        "line_start": 385,
+        "line_end": 444,
+        "bytes_sha256": "f81f391dcb4c1e2b56a13cdb7e10da7cbffba59e2e8e619eb772009082dab433",
+        "ast_sha256": "907542f362de4b6400325d6f35a9bcc91911071b15e8e5c893dbf80b7f7a867c"
+      },
+      "source": {
+        "name": "_plotly",
+        "line_start": 387,
+        "line_end": 446,
+        "bytes_sha256": "f81f391dcb4c1e2b56a13cdb7e10da7cbffba59e2e8e619eb772009082dab433",
+        "ast_sha256": "907542f362de4b6400325d6f35a9bcc91911071b15e8e5c893dbf80b7f7a867c"
+      }
+    },
+    {
+      "key": "_iso_dates#1",
+      "parent": {
+        "name": "_iso_dates",
+        "line_start": 447,
+        "line_end": 457,
+        "bytes_sha256": "a5ac965d7e9beab7981051e1e68055ba54785e79886ef041712c272b3f69cf6b",
+        "ast_sha256": "1474bc6a1501e98c62084fca1683870701f833ebde4d1c5273ebea90ac312dbf"
+      },
+      "source": {
+        "name": "_iso_dates",
+        "line_start": 449,
+        "line_end": 459,
+        "bytes_sha256": "a5ac965d7e9beab7981051e1e68055ba54785e79886ef041712c272b3f69cf6b",
+        "ast_sha256": "1474bc6a1501e98c62084fca1683870701f833ebde4d1c5273ebea90ac312dbf"
+      }
+    },
+    {
+      "key": "_vega#1",
+      "parent": {
+        "name": "_vega",
+        "line_start": 460,
+        "line_end": 536,
+        "bytes_sha256": "00c5b54050a54581d8c05e92b0dc10419f016a643577995f95dd5565e7df5320",
+        "ast_sha256": "2887be4656e71b8ad37b5460eddf8fc81116c72b6ddfd9510509031e61319afc"
+      },
+      "source": {
+        "name": "_vega",
+        "line_start": 462,
+        "line_end": 538,
+        "bytes_sha256": "00c5b54050a54581d8c05e92b0dc10419f016a643577995f95dd5565e7df5320",
+        "ast_sha256": "2887be4656e71b8ad37b5460eddf8fc81116c72b6ddfd9510509031e61319afc"
+      }
+    },
+    {
+      "key": "_echarts#1",
+      "parent": {
+        "name": "_echarts",
+        "line_start": 539,
+        "line_end": 616,
+        "bytes_sha256": "3ba859c0dd8122138ba7f1aac322d012590801b31bf22c558c33ba61334abaad",
+        "ast_sha256": "a0ce62a5bf1931cd73b622e29ebf4396c14df32cabd59917386eb39aeaed540a"
+      },
+      "source": {
+        "name": "_echarts",
+        "line_start": 541,
+        "line_end": 618,
+        "bytes_sha256": "3ba859c0dd8122138ba7f1aac322d012590801b31bf22c558c33ba61334abaad",
+        "ast_sha256": "a0ce62a5bf1931cd73b622e29ebf4396c14df32cabd59917386eb39aeaed540a"
+      }
+    },
+    {
+      "key": "_antv#1",
+      "parent": {
+        "name": "_antv",
+        "line_start": 619,
+        "line_end": 712,
+        "bytes_sha256": "0a20b95a5c51ad1463a9e9777a8d7ff77b9d6ae280f52af9e454114f869745ee",
+        "ast_sha256": "52cb59735b8b0bb07e4574899c89bacaaf2336cd997d7809dd7b4d4b4b1a54d9"
+      },
+      "source": {
+        "name": "_antv",
+        "line_start": 621,
+        "line_end": 714,
+        "bytes_sha256": "0a20b95a5c51ad1463a9e9777a8d7ff77b9d6ae280f52af9e454114f869745ee",
+        "ast_sha256": "52cb59735b8b0bb07e4574899c89bacaaf2336cd997d7809dd7b4d4b4b1a54d9"
+      }
+    },
+    {
+      "key": "native_spec#1",
+      "parent": {
+        "name": "native_spec",
+        "line_start": 715,
+        "line_end": 734,
+        "bytes_sha256": "f785b592e35ef2e33f681f9f75c99d4a1fba5937458a8fb94dbdcedaa76d07b8",
+        "ast_sha256": "24b1b72816bb64d55746dc125dec39accf4edfb45af2e9ec008942073d6d8ccc"
+      },
+      "source": {
+        "name": "native_spec",
+        "line_start": 717,
+        "line_end": 736,
+        "bytes_sha256": "f785b592e35ef2e33f681f9f75c99d4a1fba5937458a8fb94dbdcedaa76d07b8",
+        "ast_sha256": "24b1b72816bb64d55746dc125dec39accf4edfb45af2e9ec008942073d6d8ccc"
+      }
+    },
+    {
+      "key": "browser_html#1",
+      "parent": {
+        "name": "browser_html",
+        "line_start": 737,
+        "line_end": 803,
+        "bytes_sha256": "609b9db6f323a47f3022dae53c9f0e296be0a4cf4f5d506767f90823670f4ed3",
+        "ast_sha256": "03b063ba1147495bf18cd7a315fa01ce1381197e32d83cf0675680fcd5232e9a"
+      },
+      "source": {
+        "name": "browser_html",
+        "line_start": 739,
+        "line_end": 805,
+        "bytes_sha256": "609b9db6f323a47f3022dae53c9f0e296be0a4cf4f5d506767f90823670f4ed3",
+        "ast_sha256": "03b063ba1147495bf18cd7a315fa01ce1381197e32d83cf0675680fcd5232e9a"
+      }
+    }
+  ],
+  "protected_antv": {
+    "name": "_antv",
+    "line_start": 621,
+    "line_end": 714,
+    "bytes_sha256": "0a20b95a5c51ad1463a9e9777a8d7ff77b9d6ae280f52af9e454114f869745ee",
+    "ast_sha256": "52cb59735b8b0bb07e4574899c89bacaaf2336cd997d7809dd7b4d4b4b1a54d9"
+  },
+  "source_test_hashes": [
+    {
+      "path": "python/deepviz/src/deepviz/engines.py",
+      "blob_oid": "993c1b1dc460c541cb16e166e2aff18c8fd3226f",
+      "bytes": 44141,
+      "sha256_git_bytes": "54b9b6ced08b276b87c143334c8b54110ea7f15e52e0b283d65c911fdba6bb18"
+    },
+    {
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "blob_oid": "7028f7a24e92a8995859b3818f0938b4276a0726",
+      "bytes": 34886,
+      "sha256_git_bytes": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+      "byte_identical_parent": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/render.py",
+      "blob_oid": "64490a82f232e0c3c51a142bd898fd7f6c7c6dbf",
+      "bytes": 11637,
+      "sha256_git_bytes": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+      "byte_identical_parent": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "blob_oid": "17877904985d496f645cd7c66305efc8305bcb5f",
+      "bytes": 3493,
+      "sha256_git_bytes": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "byte_identical_parent": true
+    },
+    {
+      "path": "python/deepviz/tests/test_r23_count_channel.py",
+      "blob_oid": "f8edcee954e199348ba8368f05cccc11e9fdf237",
+      "bytes": 5812,
+      "sha256_git_bytes": "8270a4748ee5c5f20e9d7cce92674aefad43d7c151dd41709c702446a1b5c683"
+    }
+  ],
+  "new_test_functions_and_declared_cases": [
+    {
+      "name": "test_count_measure_is_not_numeric_color_or_retained_size",
+      "line": 24,
+      "declared_parametrized_cases_not_executed": 3
+    },
+    {
+      "name": "test_named_measure_remains_authoritative",
+      "line": 49,
+      "declared_parametrized_cases_not_executed": 6
+    },
+    {
+      "name": "test_auto_count_keeps_categorical_labels_and_normalization_metadata",
+      "line": 58,
+      "declared_parametrized_cases_not_executed": 1
+    },
+    {
+      "name": "test_scatter_auto_does_not_steal_a_field_named_count",
+      "line": 74,
+      "declared_parametrized_cases_not_executed": 1
+    },
+    {
+      "name": "test_heatmap_count_preserves_implicit_y_coordinates",
+      "line": 85,
+      "declared_parametrized_cases_not_executed": 2
+    },
+    {
+      "name": "test_zero_is_not_a_missing_named_observation",
+      "line": 98,
+      "declared_parametrized_cases_not_executed": 2
+    },
+    {
+      "name": "test_absent_generated_count_does_not_fall_back_to_numeric_color",
+      "line": 108,
+      "declared_parametrized_cases_not_executed": 1
+    }
+  ],
+  "declared_cases_read_only_not_run": 16,
+  "production_channels_callers": [
+    {
+      "file": "engines.py",
+      "line": 245,
+      "caller": "matplotlib_figure"
+    },
+    {
+      "file": "engines.py",
+      "line": 726,
+      "caller": "native_spec -> _plotly/_vega/_echarts/_antv"
+    },
+    {
+      "file": "render.py",
+      "line": 158,
+      "caller": "render geometry warnings for matplotlib"
+    }
+  ],
+  "normalizer_proof": {
+    "planner": "normalize.py515-553; explicitCOUNT with no y writes count548; heatmap separate519-531; rejects measure/group collision549-550 and removed size551-552",
+    "COUNT_state": "607-610 increments every observation; finish670-679 emits keyed measure and bounded other bucket",
+    "normalization_limits": "683-769; bounded inference32/max_points/retained16MiB; unchanged",
+    "records_missing_and_scalar": "386-405/479-512: no new count-column source requirement; explicitmissing mapped fields existing validation",
+    "render_path": "render.py95-166 supplies same original child spec to normalization/native mapping; dashboard inheritance104-111; source metadata165-167 unchanged"
+  },
+  "reviewed_positive_controls_static": [
+    "count with omittedy and numericretainedcolor/size -> generatedcount, sourceunchanged",
+    "explicit-y count -> namedmeasure, no override",
+    "sum/mean/min/max/none/sample/auto -> guardfalse/exactparentlogic",
+    "auto-count categoricaldimension -> existingcountinference, no broadcountfieldstealing",
+    "heatmap count/auto -> coordinatey; color/count_heat unchanged",
+    "direct count0/null/missing -> _number0/None/None, no numericcolorfallback",
+    "empty -> empty; no source/specmutation",
+    "histogram_x-first helper/table_originalrecords unaffected in implementation; no new general histogram semantics claim",
+    "five adapters consume _y or chart-specific derivedlayout from sharedmappeddata; no new backend-specificCOUNTpath"
+  ],
+  "security_and_resources_scope": "Two scalar branch checks and constant field name; no parser/I-O/path/HTML/callback/serializer/network/budget/state shape changes. Existing browser/Plotly/AntV issues are not cleared by unchanged bytes. No added unbounded retention or raw-row replay.",
+  "must_fix_findings": [],
+  "source_review_disposition": "NO MUST-FIX found for exact two-line source patch; one actual independent source review, not test/CI/human/main/v1 acceptance",
+  "new_counterexample": "none warranted by source trace; zero runtime probes",
+  "product_executions": {
+    "author16": 0,
+    "author55": 0,
+    "new_tests_or_runtime_probes": 0,
+    "browser": 0,
+    "full_matrix": 0,
+    "scale": 0,
+    "build": 0,
+    "install": 0,
+    "API": 0,
+    "production_config_schema_oracle_writes": 0,
+    "spawn": 0
+  },
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "85796dbe3360fb88686f2e7188122e2da80d54c2^"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--name-status",
+        "-r",
+        "85796dbe3360fb88686f2e7188122e2da80d54c2"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6:python/deepviz/src/deepviz/engines.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "85796dbe3360fb88686f2e7188122e2da80d54c2:python/deepviz/src/deepviz/engines.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "85796dbe3360fb88686f2e7188122e2da80d54c2:python/deepviz/src/deepviz/engines.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "85796dbe3360fb88686f2e7188122e2da80d54c2:python/deepviz/src/deepviz/engines.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "85796dbe3360fb88686f2e7188122e2da80d54c2:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "85796dbe3360fb88686f2e7188122e2da80d54c2:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "85796dbe3360fb88686f2e7188122e2da80d54c2:python/deepviz/src/deepviz/render.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "85796dbe3360fb88686f2e7188122e2da80d54c2:python/deepviz/src/deepviz/render.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6:python/deepviz/src/deepviz/render.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "85796dbe3360fb88686f2e7188122e2da80d54c2:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "85796dbe3360fb88686f2e7188122e2da80d54c2:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "85796dbe3360fb88686f2e7188122e2da80d54c2:python/deepviz/tests/test_r23_count_channel.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "85796dbe3360fb88686f2e7188122e2da80d54c2:python/deepviz/tests/test_r23_count_channel.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "85796dbe3360fb88686f2e7188122e2da80d54c2:python/deepviz/tests/test_r23_count_channel.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit": 0
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+# R35-04 independent COUNT source review
+
+What this change does: At exact source 85796dbe3360fb88686f2e7188122e2da80d54c2, two added lines in engines.py::channels choose the generated count column for explicit COUNT without y. This is a non-author connected-code review, not author-test or integrated-head acceptance.
+
+## Before-work checkpoint 2026-11-27
+
+- SAME actual-ID ses_de5678314ffeuDXtC7RfGsbD6V. Own branch agents/r10-04-utf8-field-envelope clean and published 9d30a393250d3f2b1ab1473e8a0bedd0b679c9e7; fresh Git remote readback0/exact9d30 at2026-11-27T16:38:44.3118112UTC. Prior npm plan complete/static, not this gate.
+- FULL MAIN R35common+04/rootactualdispatch/currentAGENTS/ownnote read; canonical/RESUME/STATE refreshed. Active14COUNTreview is independent, not borrowed approval;07author is on other code. Latest root receipts override stale packet assumptions; no spawning or polling.
+- Exact source85796dbe3360fb88686f2e7188122e2da80d54c2 parent7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6; only engines.py and NEW test_r23_count_channel.py changed. Git identity/path checks0, not a moving producer tree.
+- Allowed writes only NEW report/evidenceR35-04/own actual-ID note/OWNbranch. No production/config/schema/old-oracle/SDK/env/API/install/shared/default/PR/closure/spawn/jobpoll writes. No author16+55/browser/fullmatrix/scale/runtimebaseline replay. One NEW strict counterexample only for a genuine material gap.
+- Acceptance: entire function diff; normalizer COUNT outputs; every native consumer/render caller; direct null/missing/zero/color/size/explicit-y/auto/heatmap/all-aggregation controls; all nonchannels AST and bytes unchanged, protected08_antv intact. Findings require file/line plus concrete reproduction. No human/CI/integratedhead/main/v1 approval.
+- Current action: immutable full two-path diff and connected source inspection. Next exact Git reads, source/test hashes and static AST/byte comparison, then bounded finding or no-must-fix and owned publication.
+- Initial combined Python checkpoint shell request was scanner-rejected invalid-structure BEFORE execution. No write/test/source read resulted; this simpler checkpoint is the replacement, not a product failure.
+
+## Connected source checkpoint
+
+- Read entire two-pathdiff/new118line16-case file, fullchannels89-107 and number81-86; normalizer plan515-553/reducer562-680/normalize683-769 plus record/null/scalar gates; all5adapter consumers219-736, geometry117-139 and histogram/heatmap helpers142-185; publicrender75-234/dashboardinheritance/payloadlimits/outputmetadata/browser739-805.
+- Explicit nonheatmapCOUNT/no-y matches normalizer measure=count at548 and reducer count increment607-610/finish670-679. Numeric retained grouping/color/size no longer becomes y. Explicit y and all other aggregation values take identical old statements; heatmap remains coordinate-y with count/color heat. Direct count0/null/missing uses number0/None/None, not color fallback. Empty list stays empty; no input/spec mutation or added retention.
+- All source channels references inspected; only Matplotlib245/native_spec726/rendergeometry158 production calls. Four nativeJSON adapters consume mapped_y; histogram derives bins from_x first and table uses originalrecords; their helpers are unchanged. Direct native_spec assumes prepared records, not a new normalizer. Author16/55/browsers notrun orborrowed. No material gap or justified new runtime counterexample found so far; static byte/AST evidence still to finalize.
+- Next: exacttwoaddedline-only/allotherbytesAST/protected_antv/source-testhash proof, then final bounded no-must-fix review/publication. No new production runtime/test/build execution.
+## Final independent source review
+
+**No must-fix findings for exact85796dbe3360fb88686f2e7188122e2da80d54c2 against parent7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6.** This is one genuine non-author SOURCE review. No other reviewer's result, producer16/55 passes, browser output or integrated-head CI is used as independence.
+
+### Why the change is correct
+
+- The only production addition is `python/deepviz/src/deepviz/engines.py:97-98`: explicit aggregation=count AND y is None AND not heatmap selects literal count. `normalize.py:548` chooses exactly that output name; `:607-610` counts each row independently of its source measure/nulls, and `:670-679` emits that measure alongside grouping fields, including the bounded overflow bucket. The patch corrects mapping, not counts, reduction policy, row ordering or warning metadata.
+- Source-derived walkthrough, NOT an executed probe: rows A/series90 twice and B/series80 once, x=label/color=series/aggregation=count/no y, normalize to A/90/count2 and B/80/count1. Numeric inference at engines.py:92-96 otherwise chooses series90/80. The new branch chooses y=count2/1 while x/color/size still use their original independent fields. No new count field is demanded from raw rows; generated count exists only after normalization.
+- Every production caller receives prepared normalized records and the same resolved ChartSpec: `render.py:104-111,136-158` preserves dashboard inheritance and calls normalization/native mapping; `engines.py:245` maps for Matplotlib, and `:726` maps once before the four JSON adapters. No alternate hidden COUNT mapper was found by source-wide call search.
+
+### Connected behavior and positive-control review (static, not executed)
+
+| Case | Exact connected source / disposition |
+|---|---|
+| Explicit COUNT/no-y, numeric x/color/retained size | engines.py:95-105 and normalize.py:547-552: only y changes to the generated measure. Count is not inferred from a retained numeric grouping/color dimension. Existing size validation rejects a reducer that would remove its mapping. Source records/spec are not assigned/mutated. |
+| Explicit y with COUNT | Guard requires y is None, not false-like; normalize.py:548 writes the named measure instead. engines.py:96 retains explicit-y priority. Named count/sum/mean/min/max/none positive controls are read in NEW test:45-55, not replayed. |
+| sum/mean/min/max/none/sample/auto | engines.py:97 guard is false, so every original channels statement/field choice/conversion is unchanged. normalize.py:538-548 and sample/finalization:725-769 stay parent-identical. This does not certify every preexisting inference combination. |
+| Auto-count vs a business field named count | Auto is not force-overridden; categorical-only reduced rows still infer their numeric generated count, while unrelated scatter-auto numeric measure selection remains unchanged. NEW test:58-80 covers both directions. No blanket count-column hijack. |
+| Heatmap COUNT/auto/named color | Explicit exclusion preserves coordinate y and color/count heat: engines.py:99-106; normalize.py:519-531 groups both coordinates and reduces color or count. NEW test:83-94 preserves numeric north0/1 as y and count2/1 as heat. Other heatmap aggregation values take identical parent code. |
+| Direct channels zero/null/missing/nonnumeric | engines.py:81-86,103: count0 becomes0.0; absent/None/non-numeric string becomesNone, not a numeric-color fallback or fabricated1. Numeric strings follow the existing float conversion; normalizer-generated COUNT is an integer. `_geometry` at:117-139 preserves gaps for line/area/radar and omits invalid geometry for other marks with warnings. NEW test:97-118 covers zero/null/missing and retained color/size without mutation. |
+| Empty records | List comprehension:102-107 stays empty; the extra field-name assignment allocates no records or group state. Existing normalize.py:717-724/finalization returns no reducer records for no observations. |
+| Matplotlib/Plotly/Vega/ECharts/AntV | `_y` is consumed by Matplotlib:252-278, Plotly:390-433, Vega:466-516, ECharts:552-599, AntV:631-705. They do not re-infer a numeric field after shared mapping. Group styling/size and special layout transforms remain unchanged. All source functions read, including native dispatch:717-736. |
+| Histogram/table/special layouts | Histogram helpers:151-165 use numeric_x first and y only as existing fallback; all five histogram branches rebuild bins. Table branches use original records, not a newly inferred measure. Heatmap uses_heat; hierarchy/funnel/gauge transforms consume mapped values under unchanged existing policies. No new universal chart-semantics claim. |
+| Render metadata/bounds/output ownership | render.py:135-167,224-234 retain source records/input-output counts/strategy/warnings. Existing record/group/payload/table/replay limits remain unchanged; source rows are not materialized or replayed by this branch. Output path generation/filesystem/HTML serialization remain byte-identical to parent. |
+
+### Exact scope, safety and regression-test inspection
+
+- Static collector exit0 proves exactly TWOchangedpaths: engines.py and NEW `python/deepviz/tests/test_r23_count_channel.py`. Removing only the two added UTF-8 lines yields the ENTIRE parent engines.py bytes. No existing test/config/schema/source file outside this addition changes.
+- Parsed Python AST (syntax tree; never executed/imported) and exact function-byte hashes independently match for **all24nonchannels function definitions**, including overload definitions. Entire module AST with channels excluded is identical. Protected `_antv` bytes SHA256 **0a20b95a5c51ad1463a9e9777a8d7ff77b9d6ae280f52af9e454114f869745ee**, same on parent/source; its working owner tree was not read or changed.
+- Exact857 engines.py SHA256 **54b9b6ced08b276b87c143334c8b54110ea7f15e52e0b283d65c911fdba6bb18**; NEW test SHA256 **8270a4748ee5c5f20e9d7cce92674aefad43d7c151dd41709c702446a1b5c683**. Normalizer/render/models Git bytes match parent and are individually hashed in [`../evidence/R35-04/source-review.json`](../evidence/R35-04/source-review.json).
+- Read all118NEWtestlines:7testfunctions expand statically to16declared cases (3+6+1+1+2+2+1), covering the original incorrect numeric dimension, explicit measure, auto positive/non-hijack, heatmap exclusion, zero/null/missing and no-mutation controls. **16declared is NOT16executed/PASS.** No old oracle or author result was borrowed, modified or run.
+- Prioritized data loss/invalid chart values first. The generated finite numeric COUNT replaces the wrong dimension; no source values/groups are deleted. No new HTML text context, filesystem path input, parser, network source, callback/executable schema, serializer or unchecked resource collection is introduced. Existing HTML/browser/Plotly/AntV issues are not absolved by byte identity. Added guard/constant field selection adds bounded scalar work only; existing bounded normalized-record load is assumed, not unbounded raw marks.
+- Lean: two production lines are the smallest local correction matching the established reducer contract; no abstraction/dependency/options expansion is needed. No style-only or inherited-unrelated findings.
+
+### Commands, limits and next action
+
+- Read exact commit/parent/two-path diff via immutable Git, source-wide channels references, connected functions/planner/reducer/render/models and source contract controls. `git show --check`0. Static evidence collector20successful Git reads/AST+byte/hash assertions exit0; JSON is copied byte-identically MAIN+OWN. These are metadata/syntax checks, not runtime tests.
+- Product executions: **0author16,0author55,0NEWruntime probes,0browser,0fullmatrix,0scale,0build,0install,0SDK/API,0source/config/schema/old-oracle edits,0spawn**. No material uncovered gap justified using the optional one-counterexample allowance. One checkpoint shell was scanner-rejected BEFORE execution; simpler replacement succeeded, not a product failure.
+- Current action: publish this bounded source-review/report/hash evidence on existingOWNbranch with explicit-path staging/secret+whitespace+scope checks, meaningfulcommit/nonforcepush/exactremoteSHA, then prompt return. R04 retains integration/actualhead/native/test/CI/main-ancestry/issue dispositions; active14 remains a separate real review, not a second label on this one.
+
+**Verdict: Ship this exact two-line source fix into the manager's independently gated integration queue; no must-fix source finding.** Not an instruction to merge an ungated combined head, not GitHub human APPROVED, and not integrated-head/main/v1/CI acceptance.
+
+**Not checked:** runtime execution, installed import identity, author16+55, native/browser artifacts, fullmatrix/scale, later combined heads/CI/main status. No tests were run just to restate the source review.
