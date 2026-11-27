@@ -1,0 +1,85 @@
+{
+  "purpose": "Conditional R50 contract literals; fixture integrity only, not product execution",
+  "product_pin": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "source_semantics": "Explicit data_path selecting an ordinary record collection preserves row boundaries; nested arrays flatten with dotted field names and do not trigger protocol/column inference.",
+  "cases": [
+    {
+      "id": "f1-object",
+      "format": "object",
+      "input": {"outer": [{"nodes": [0, false], "items": [null]}, {"nodes": [-2], "items": [true]}]},
+      "spec": {"kind": "table", "aggregation": "none", "data_path": "outer"},
+      "expected": {
+        "records": [
+          {"nodes.0": 0, "nodes.1": false, "items.0": null},
+          {"nodes.0": -2, "items.0": true}
+        ],
+        "input_count": 2,
+        "strategy": "none",
+        "warnings": []
+      },
+      "current_observation": {"python": "ValueError: Ambiguous GraphQL connection fields; select rows with data_path", "typescript": "ValidationError: Column arrays must have equal length"}
+    },
+    {
+      "id": "f1-json",
+      "format": "json",
+      "input": "{\"outer\":[{\"nodes\":[0,false],\"items\":[null]},{\"nodes\":[-2],\"items\":[true]}]}",
+      "spec": {"kind": "table", "aggregation": "none", "data_path": "outer"},
+      "expected": {
+        "records": [
+          {"nodes.0": 0, "nodes.1": false, "items.0": null},
+          {"nodes.0": -2, "items.0": true}
+        ],
+        "input_count": 2,
+        "strategy": "none",
+        "warnings": []
+      },
+      "current_observation": {"python": "ValueError: Ambiguous GraphQL connection fields; select rows with data_path", "typescript": "ValidationError: Column arrays must have equal length"}
+    },
+    {
+      "id": "bounded-nested-record",
+      "format": "object",
+      "input": {"outer": [{"nodes": [{"id": 1}], "items": ["x", "y"], "label": "a"}]},
+      "spec": {"kind": "table", "aggregation": "none", "data_path": "outer"},
+      "expected": {
+        "records": [{"nodes.0.id": 1, "items.0": "x", "items.1": "y", "label": "a"}],
+        "input_count": 1,
+        "strategy": "none",
+        "warnings": []
+      },
+      "status": "new bounded conditional literal; not executed against production source"
+    },
+    {
+      "id": "ordinary-protocol-looking-sibling",
+      "format": "object",
+      "input": {"outer": [{"nodes": [1], "edges": [2], "items": [3]}]},
+      "spec": {"kind": "table", "aggregation": "none", "data_path": "outer"},
+      "expected": {
+        "records": [{"nodes.0": 1, "edges.0": 2, "items.0": 3}],
+        "input_count": 1,
+        "strategy": "none",
+        "warnings": []
+      },
+      "status": "new bounded ambiguity discriminator; R04 must decide reserved-name precedence"
+    },
+    {
+      "id": "graphql-partial-control",
+      "format": "object",
+      "input": {"data": {"users": {"nodes": [{"id": 1}]}}, "errors": [{"message": "partial"}]},
+      "spec": {"kind": "table", "aggregation": "none", "data_path": "data.users.nodes"},
+      "expected": {
+        "records": [{"id": 1}],
+        "input_count": 1,
+        "warnings_contains": "GraphQL responses contained errors alongside usable data"
+      },
+      "status": "existing security/partial-data control; must remain unchanged and is not replayed here"
+    },
+    {
+      "id": "graphql-error-only-control",
+      "format": "object",
+      "input": {"data": null, "errors": [{"message": "unavailable"}]},
+      "spec": {"kind": "table", "aggregation": "none", "data_path": "data.users.nodes"},
+      "expected_error": "GraphQL response contains errors and no data",
+      "status": "existing security/error-only control; must remain unchanged and is not replayed here"
+    }
+  ]
+}

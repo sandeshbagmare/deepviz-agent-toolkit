@@ -1,6 +1,55 @@
 # SAME-ID R11 role10 — strict MCP regression tester
 
+## R50 selected-record contract proposal — 2026-11-28
+
+- Direct SAME-ID assignment accepted; FULL live MAIN status, role10 central,
+  AGENTS, R50 task and complete OWN R41 report read before analysis. Verified
+  saved admission proof: actual parent root, inactive before call, 12 active +
+  two admits = 14 upper bound. No fresh census/dispatch.
+- Source pin `546c25ea75ee9d8a41b3832aa639664bc9a683b5`, clean detached worktree;
+  own branch `agents/r11-10-strict-mcp-boundaries`, published head
+  `10b8766c07482290fb6ece7c11f110f9d27995b6` before R50. No production, oracle,
+  schema, config, default, API, install or GitHub API writes.
+- R41 actual source acceptance retained unaltered/no replay: 460 unchanged
+  Python+Node controls PASS +2 additional positive ownership PASS; diagnostic
+  cohorts Python13PASS/12FAIL and Node15PASS/8FAIL; fourteen own warning-assumption
+  failures (not product bugs), two existing Python AUTO-pages ambiguities, four
+  selected-record failures (one contract family), and four original field-policy
+  REDs. Preserve all; no xfail/waiver/relabel.
+- Canonical architecture, capabilities, shared design, Python and TypeScript
+  selection/expansion/flattening boundaries and connected existing path/GraphQL
+  tests read. Exact explicit-path ordinary-record semantics are clear; precedence
+  for row fields named `nodes`/`edges` and nulls in non-GraphQL selected rows is
+  not specified. Report offers A/B/C for R04; conditional patch shape unapplied.
+- New six-case JSON literals: unchanged F1 object+JSON, two bounded discriminators,
+  and protected GraphQL partial/error-only controls. Fixture checker alone ran:
+  six structurally verified/zero product executions/exit0. Ruff0/mypy0, Node
+  syntax0, JSON parse0. No old matrix/test/build replay.
+- Main-bound slice PR2 Python data foundation; blocker is one record-vs-protocol
+  decision. Report `docs/coordination/reports/R50-10-selected-record-code-proposal.md`,
+  evidence `docs/coordination/evidence/R50-10/`, probes `tests/r50_probes/role10/`.
+- Next owner/action: R04 choose A record-first, B reserved names, or C common
+  explicit rejection; then grant minimum patch plus four affected retests. Keep
+  GraphQL error-only rejection and top-level partial-data warning semantics.
+  Estimate for follow-up work/PR2 **UNKNOWN** pending R04 choice. Publish once,
+  exact native OWN remote readback, then handoff; no source implementation.
+
 ## R41 normalizer546 independent acceptance — pre-work
+
+- FINAL18:11:14UTC actualOWNtestCODE **10b8766c07482290fb6ece7c11f110f9d27995b6**,
+  commit0/nonforcepush0/native remoteexactSHA0;44ownedfiles/noproduct/config/
+  schema/defaultdashboarddiff. Clean BEFORE these final OWNnote/status liveupdates;
+  two intentionallydirtyrecords only, no unpublishedtestcode. Actualsource546
+  frozen/strictacceptanceRED:460unchangedPASS+2actualownershipPASS; diagnostic
+ 14overstrictOWNwarningassumptions(notbugs)+2knownPypages-policy+4selectedrecord
+  errorsONEfamily/R04decision;4originalfieldpolicyREDretained. Latestdirect
+  USERsteer rereadLIVEroot97+R48task18+OWNcentral50 safely, main-target07Python/
+  08npmfoundation, no sourcepinchange/newjob/fakeACK. ExistingGit13CRLF→LF map
+  exactrawrecoveryproved;publishedverificationf09ecfaa...,raw1b2bedc4...bothvalid.
+  Receipt+argv preservedR41artifact publication-receipt.json/publication-commands.json;
+  onlyONEpayloadcommit, NOAPI/credentials/default/PR/CIwrites/receiptloop/replay.
+  NEXTpromptONEhandoffnow:R04contractdisposition/minimalgrantedrepair/new-head
+  independentgate before07/08PR/mainpromotion; no sourcefix/finalselfapproval.
 
 - 18:01:20UTC prepublication: FULLliveMAINstatus97+owncentral35 read atsafe
   checkpoint; R48packet18/currentAGENTS53/currentR42task25 acknowledged. MAIN
