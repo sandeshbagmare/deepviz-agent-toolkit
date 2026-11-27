@@ -5,7 +5,7 @@ These are strict tests, not production fixes or final signoff. Reviewed checkpoi
 
 ## Reproduce
 
-Use an existing environment with the project, pytest, and the declared `agents`/`mcp`
+Use an existing environment with the project, pytest/Ruff/mypy, and the declared `agents`/`mcp`
 extras installed. No test installs dependencies or fetches remote data. From the repo
 root, select that environment's Python; this PowerShell recipe uses `python` on PATH:
 
@@ -18,9 +18,9 @@ $env:MPLBACKEND = 'Agg'
 $out = Join-Path ([IO.Path]::GetTempPath()) ('r10-role02-' + [guid]::NewGuid().ToString('N'))
 New-Item -ItemType Directory -Path $out | Out-Null
 & $PY tests/r10_probes/role02/source_identity.py (Join-Path $out 'source.json')
-& $PY -m pytest -q -rs --tb=short --basetemp=(Join-Path $out 'pytest') --junitxml=(Join-Path $out 'junit.xml') tests/r10_probes/role02
+& $PY -m pytest -q -rs --tb=short --basetemp (Join-Path $out 'pytest') --junitxml (Join-Path $out 'junit.xml') tests/r10_probes/role02
 & $PY -m ruff check tests/r10_probes/role02
-& $PY -m mypy --cache-dir=(Join-Path $out 'mypy') tests/r10_probes/role02
+& $PY -m mypy --cache-dir (Join-Path $out 'mypy') tests/r10_probes/role02
 ```
 
 Always use a fresh output directory: pytest owns and clears its supplied basetemp.

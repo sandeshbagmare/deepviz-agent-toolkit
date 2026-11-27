@@ -1,0 +1,26 @@
+{
+  "observed_at": "2026-11-27T14:09:08.798088+00:00",
+  "branch": "agents/r10-02-security-boundaries",
+  "published_commit": "2590a5465b14b24f7ceaa674a7b68c3a446ba917",
+  "source_commit": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "push_command": [
+    "git",
+    "push",
+    "origin",
+    "agents/r10-02-security-boundaries:refs/heads/agents/r10-02-security-boundaries"
+  ],
+  "push_exit": 0,
+  "readback_command": [
+    "git",
+    "ls-remote",
+    "--heads",
+    "origin",
+    "refs/heads/agents/r10-02-security-boundaries"
+  ],
+  "readback_exit": 0,
+  "remote_head": "2590a5465b14b24f7ceaa674a7b68c3a446ba917",
+  "exact_match": true,
+  "force": false,
+  "scope": "Owned branch/report/evidence/new probes only; no source, candidate, issue or PR mutation",
+  "verification": "Preserved 22pass/10RED/0skip at stated source. Not a fix or green CI."
+}
