@@ -1,0 +1,86 @@
+{
+  "product_source": "3eab699b61850a20e91132e16caf8c589085f9ee",
+  "method": "ordinary package render API; isolated selected-source imports; no test harness patches",
+  "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "module_origins": {
+    "deepviz": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R49-role21\\source-3eab\\python\\deepviz\\src\\deepviz\\__init__.py",
+    "engines": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R49-role21\\source-3eab\\python\\deepviz\\src\\deepviz\\engines.py",
+    "render": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R49-role21\\source-3eab\\python\\deepviz\\src\\deepviz\\render.py"
+  },
+  "source_sha256": {
+    "engines.py": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225",
+    "render.py": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+  },
+  "cases": [
+    {
+      "case": "ordinary_finite_control",
+      "status": "ARTIFACT_RETURNED",
+      "input_count": 2,
+      "output_count": 2,
+      "normalized_records": [
+        {
+          "metric": "A",
+          "score": 4
+        },
+        {
+          "metric": "B",
+          "score": 7
+        }
+      ],
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "radar": {
+        "indicator": [
+          {
+            "name": "A",
+            "max": 7.0
+          },
+          {
+            "name": "B",
+            "max": 7.0
+          }
+        ]
+      },
+      "series": [
+        {
+          "type": "radar",
+          "data": [
+            {
+              "value": [
+                4.0,
+                7.0
+              ]
+            }
+          ]
+        }
+      ],
+      "paths": [
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R49-role21\\actual\\ordinary_finite_control\\deepviz-rmotam6a\\chart.html",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R49-role21\\actual\\ordinary_finite_control\\deepviz-rmotam6a\\manifest.json"
+      ]
+    },
+    {
+      "case": "one_missing_y_observation",
+      "status": "EXCEPTION",
+      "error_type": "TypeError",
+      "error": "'>' not supported between instances of 'NoneType' and 'float'",
+      "traceback_tail": [
+        "  File \"C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R49-role21\\source-3eab\\python\\deepviz\\src\\deepviz\\engines.py\", line 731, in native_spec",
+        "    native = _echarts(data, records, spec, kind)",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R49-role21\\source-3eab\\python\\deepviz\\src\\deepviz\\engines.py\", line 595, in _echarts",
+        "    option[\"radar\"] = {\"indicator\": [{\"name\": str(r[\"_x\"]), \"max\": max(1, max(v[\"_y\"] for v in data))}",
+        "                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "TypeError: '>' not supported between instances of 'NoneType' and 'float'"
+      ]
+    }
+  ],
+  "counts": {
+    "cases": 2,
+    "passed": 1,
+    "failed": 1,
+    "skipped": 0
+  },
+  "oracle_basis": "_geometry emits a radar warning that missing/non-numeric y remains a gap, not zero; expected public result is handled chart or explicitly documented rejection, not unhandled TypeError before artifact."
+}
