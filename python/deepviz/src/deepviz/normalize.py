@@ -624,28 +624,23 @@ class _Reducer:
             return
         state[0] += 1
         correction, exponent = state[2:4]
+        if self.strategy == "mean":
+            # One budgeted exact numerator avoids both overflow and subnormal double rounding.
+            self._store(state, (state[1] or 0) + _sum_units(value), exponent=-1074)
+            return
         if self.strategy == "sum" and exponent == -1074:
             self._store(state, state[1] + _sum_units(value), exponent=-1074)
             return
-        if self.strategy == "mean" and exponent:
-            value = math.ldexp(value, -exponent)
         previous = state[1]
         if previous is None:
             total = value
-        elif self.strategy in {"sum", "mean"}:
+        elif self.strategy == "sum":
             total = previous + value
             if self.strategy == "sum" and isinstance(total, float) and not math.isfinite(total):
                 # Promote only overflowing sums; one budgeted integer, never a partial/input list.
                 units = _sum_units(previous) + _sum_units(correction) + _sum_units(value)
                 self._store(state, units, exponent=-1074)
                 return
-            if self.strategy == "mean" and isinstance(total, float) and not math.isfinite(total):
-                # Scale the numerator by powers of two; the finite mean need not overflow.
-                previous = math.ldexp(previous, -1)
-                value = math.ldexp(value, -1)
-                correction = math.ldexp(correction, -1)
-                exponent += 1
-                total = previous + value
             if not isinstance(total, float) or math.isfinite(total):
                 # Neumaier compensation also survives transfer into the other bucket.
                 correction += (
@@ -671,7 +666,7 @@ class _Reducer:
                     value += state[2]
             elif self.strategy == "mean" and value is not None:
                 try:
-                    value = math.ldexp(value / state[0] + state[2] / state[0], state[3])
+                    value = value / (state[0] << 1074)
                 except OverflowError:
                     value = math.inf
             return _scalar(value, self.counts)

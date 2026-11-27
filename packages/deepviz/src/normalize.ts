@@ -345,6 +345,16 @@ function sumFromUnits(units:bigint):number {
   return (negative?-1:1)*Number(rounded)*2**(shift-1074);
 }
 
+function meanFromUnits(units:bigint,count:number):number {
+  const negative=units<0n,magnitude=negative?-units:units,divisor=BigInt(count);
+  const shift=Math.max(0,(magnitude/divisor).toString(2).length-53);
+  const denominator=divisor<<BigInt(shift);
+  let rounded=magnitude/denominator;
+  const twiceRemainder=(magnitude%denominator)*2n;
+  if(twiceRemainder>denominator || (twiceRemainder===denominator && (rounded&1n)!==0n))rounded++;
+  return (negative?-1:1)*Number(rounded)*2**(shift-1074);
+}
+
 class Reducer {
   private records: {row:DataRecord,index:number,cost:number}[]=[];
   private groups=new Map<string,{row:DataRecord,count:number,value:number|null,correction:number,exponent:number,cost:number,exact?:bigint}>();
@@ -455,20 +465,19 @@ class Reducer {
       if(typeof value!=='number') {if(value!==null && value!==undefined)this.notice('Non-numeric measure values excluded from reduction');return;}
       group.count++;
       if(group.exact!==undefined) {group.exact+=sumUnits(value);return;}
-      if(this.strategy==='mean' && group.exponent)value*=2**-group.exponent;
+      if(this.strategy==='mean') {
+        // One <=2151-bit numerator for finite doubles and a safe-integer count.
+        this.reserve(512);group.cost+=512;group.exact=sumUnits(value);group.value=0;
+        return;
+      }
       if(group.value===null) group.value=value;
-      else if(this.strategy==='sum' || this.strategy==='mean') {
+      else if(this.strategy==='sum') {
         let previous=group.value,total=previous+value;
         if(this.strategy==='sum' && !Number.isFinite(total)) {
           // <=2151 bits for finite doubles and a safe-integer count; charge before retaining.
           this.reserve(512);group.cost+=512;
           group.exact=sumUnits(previous)+sumUnits(group.correction)+sumUnits(value);
           return;
-        }
-        if(this.strategy==='mean' && !Number.isFinite(total)) {
-          // A finite mean can have an overflowing numerator: scale every term together.
-          previous*=0.5;value*=0.5;group.correction*=0.5;group.exponent++;
-          total=previous+value;
         }
         // Carry a bounded Neumaier correction with the group, including when it overflows into other.
         group.correction=Number.isFinite(total)?group.correction+(Math.abs(previous)>=Math.abs(value)?(previous-total)+value:(value-total)+previous):0;
@@ -511,8 +520,8 @@ class Reducer {
     if(grouped) {
       this.groups.clear();this.other=null;
       for(const group of states) {
-        const value=group.value===null?null:group.exact!==undefined?sumFromUnits(group.exact):this.strategy==='mean'?
-          (group.value/group.count+group.correction/group.count)*2**group.exponent:
+        const value=group.value===null?null:group.exact!==undefined?
+          (this.strategy==='mean'?meanFromUnits(group.exact,group.count):sumFromUnits(group.exact)):
           group.value+(this.strategy==='sum'?group.correction:0);
         if(value!==null && !Number.isFinite(value))this.notice('Non-finite numeric values replaced with null');
         const row={...group.row,[this.measure]:value===null || !Number.isFinite(value)?null:value};

@@ -3,7 +3,9 @@ from __future__ import annotations
 
 import io
 import json
+import math
 from collections.abc import Generator
+from fractions import Fraction
 from pathlib import Path
 from typing import Any
 
@@ -72,6 +74,56 @@ def test_borrowed_generator_is_not_closed_when_planning_raises() -> None:
     finally:
         source.close()
     assert closed == [True]
+
+
+_TINY = float.fromhex("0x0.0000000000001p-1022")
+_MEAN_CASES = [
+    ("split-positive", [1.0, _TINY, -1.0, _TINY, _TINY]),
+    ("split-negative", [-1.0, -_TINY, 1.0, -_TINY, -_TINY]),
+    ("overflow-tiny-tail", [1e308, 1e308, -1e308, -1e308, 4 * _TINY]),
+    ("late-overflow", [8 * _TINY] * 32 + [1e308, 1e308, -1e308, -1e308]),
+    ("constant-tiny", [_TINY] * 5),
+    ("tie-even", [_TINY, 2 * _TINY]),
+    ("positive-half-zero", [0.0, _TINY]),
+    ("negative-half-zero", [0.0, -_TINY]),
+    ("wide-numerator", [0.0] * 32 + [1e308, 1e308]),
+    ("prefix-residual", [1e30, 1.0, -1e30, _TINY, 1e308, 1e308, -1e308, -1e308]),
+]
+
+
+@pytest.mark.parametrize("stream", [False, True], ids=["records", "one-pass"])
+@pytest.mark.parametrize("name,values", _MEAN_CASES, ids=[case[0] for case in _MEAN_CASES])
+def test_mean_rounds_exact_finite_rational_once(name: str, values: list[float], stream: bool) -> None:
+    expected = float(sum(map(Fraction.from_float, values), Fraction()) / len(values))
+    rows = [{"g": "only", "v": value} for value in values]
+    consumed: list[int] = []
+
+    def records() -> Generator[dict[str, Any], None, None]:
+        for row in rows:
+            consumed.append(1)
+            yield row
+
+    result = normalize(records() if stream else rows, {
+        "kind": "bar", "x": "g", "y": "v", "aggregation": "mean", "max_points": 10,
+    })
+    assert result.input_count == len(values)
+    assert result.strategy == "mean" and result.warnings == []
+    assert result.records == [{"g": "only", "v": expected}], name
+    assert math.copysign(1, result.records[0]["v"]) == math.copysign(1, expected)
+    json.dumps(result.records, allow_nan=False)
+    assert len(consumed) == (len(values) if stream else 0)
+
+
+def test_other_mean_uses_all_numeric_contributions_not_boolean_or_null() -> None:
+    rows: list[dict[str, Any]] = [{"g": f"g{i}", "v": i} for i in range(9)]
+    values: list[Any] = [1e308, 1e308, -1e308, -1e308, 6 * _TINY, True, None, "2"]
+    rows += [{"g": f"overflow{i}", "v": value} for i, value in enumerate(values)]
+    result = normalize(iter(rows), {"x": "g", "y": "v", "aggregation": "mean", "max_points": 10})
+    assert result.input_count == len(rows) and len(result.records) == 10
+    assert result.records[:9] == rows[:9]
+    assert result.records[-1] == {"g": "__deepviz_other__", "v": _TINY}
+    assert any("non-numeric" in message.lower() for message in result.warnings)
+    assert any("other" in message for message in result.warnings)
 
 
 def test_borrowed_second_line_jsonl_parse_failure_keeps_stream_usable() -> None:
