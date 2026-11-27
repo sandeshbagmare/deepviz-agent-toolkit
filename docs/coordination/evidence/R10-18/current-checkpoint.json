@@ -1,0 +1,61 @@
+{
+  "owner_session": "ses_de567805bffdER1GlVd0ngLgKg",
+  "source_checkpoint": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "branch": "agents/r10-18-docs-prompts-claims",
+  "scope": "current-checkpoint baseline; six strict documentation failures; not final signoff",
+  "python_version": "3.12.16",
+  "versions": {"deepagents": "0.7.42", "langchain-core": "1.8.5", "mcp": "1.30.0", "plotly": "6.9.0", "matplotlib": "3.11.2", "vl-convert-python": "1.9.0.post1"},
+  "install_probe": {"build": true, "hatchling": false, "dependency_installation_performed": false},
+  "module_sha256": {
+    "__init__": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+    "models": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+    "normalize": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+    "engines": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+    "render": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+    "tools": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+    "mcp_server": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95"
+  },
+  "command_argv_aliases": {"python": "existing MAIN virtual-environment Python", "deepviz-entry": "its existing deepviz console entrypoint", "run": "fresh own output run directory; exact paths in local run-summary.json"},
+  "commands": [
+    {"name": "module-render", "exit": 0, "argv": ["{python}", "-m", "deepviz.cli", "render", "examples/data/sales.csv", "--spec", "examples/data/chart.json", "--engine", "matplotlib", "--output-dir", "{run}/cli"]},
+    {"name": "entry-render", "exit": 0, "argv": ["{deepviz-entry}", "render", "examples/data/sales.csv", "--spec", "examples/data/chart.json", "--engine", "matplotlib", "--output-dir", "{run}/cli"]},
+    {"name": "module-normalize", "exit": 0, "argv": ["{python}", "-m", "deepviz.cli", "normalize", "examples/data/sales.csv", "--spec", "examples/data/chart.json"]},
+    {"name": "entry-normalize", "exit": 0, "argv": ["{deepviz-entry}", "normalize", "examples/data/sales.csv", "--spec", "examples/data/chart.json"]},
+    {"name": "module-recommend", "exit": 0, "argv": ["{python}", "-m", "deepviz.cli", "recommend", "examples/data/sales.csv", "--goal", "comparison"]},
+    {"name": "entry-recommend", "exit": 0, "argv": ["{deepviz-entry}", "recommend", "examples/data/sales.csv", "--goal", "comparison"]},
+    {"name": "seven-tools", "exit": 0, "argv": ["{python}", "examples/multi_tool_flow.py", "--output-dir", "{run}/seven-tools"]},
+    {"name": "deep-agent-local", "exit": 0, "argv": ["{python}", "examples/deep_agent_local.py", "--output-dir", "{run}/deep-agent-local"]},
+    {"name": "mcp-client", "exit": 0, "argv": ["{python}", "examples/mcp_client.py", "--output-dir", "{run}/mcp-client"]},
+    {"name": "live-provider-help-only", "exit": 0, "argv": ["{python}", "examples/deep_agent.py", "--help"]}
+  ],
+  "api": {"input_count": 3, "output_count": 3, "strategy": "sum", "warnings": []},
+  "seven_tools": {"tool_count": 7, "normalization_counts": [3, 3], "all_five_render_counts": [3, 3], "all_render_strategies": "sum", "echarts_and_antv_warn_about_cdn": true},
+  "deep_agent": {"mode": "deterministic-local-model", "tools_called": ["normalize_data", "recommend_chart", "render_matplotlib"], "counts": [3, 3]},
+  "mcp": {"downloaded_resources": 6, "downloaded_svg_sibling_resolves": true, "mode": "real stdio source checkout; not clean wheel"},
+  "working_example_tests": {"tests": 37, "failures": 0, "errors": 0, "skipped": 0, "passed": 37, "xml_seconds": 17.134, "pytest_display_seconds": 17.16},
+  "strict_claim_tests": {
+    "tests": 21, "failures": 6, "errors": 0, "skipped": 0, "passed": 15, "xml_seconds": 7.284, "pytest_display_seconds": 7.33,
+    "failed_names": [
+      "test_current_echarts_docs_match_actual_pin[README.md]",
+      "test_current_echarts_docs_match_actual_pin[examples/README.md]",
+      "test_current_echarts_docs_match_actual_pin[packages/deepviz/README.md]",
+      "test_current_prompt_matches_invalid_y_behavior",
+      "test_current_readme_names_implemented_guards",
+      "test_current_node_docs_do_not_promise_obsolete_truncation"
+    ]
+  },
+  "runtime_small_controls": {"invalid_y_bars": "five engines each input3/output3, warning says two omitted; normalized counts are not drawn marks", "node": "10001ASCIIcharacters retained/no warning;65537ASCIIbytes rejected;small direct duplicateJSON rejected", "resource_limit_scope": "small negatives and source constants only; not exhaustive envelope proof"},
+  "prompts": {
+    "system": {"bytes": 4582, "sha256": "b11e691e8f5d89bc2fd726d284702d6675c57c1a32ec0947ec5902040fdbaba0"},
+    "request": {"bytes": 761, "sha256": "845be71cb3141d084f036472a1c5a19670be28c16bf73c4a599a3df9d534c6f2"},
+    "source_resource_probe": "both read_prompt calls raise expected FileNotFoundError in documented source-PYTHONPATH mode; not a wheel result"
+  },
+  "inventory": {"distinct_urls": 100, "repositories": 15, "meaning": "local index recount, not100audits or fresh upstream fetch"},
+  "artifacts": {
+    "api-bar.png": {"bytes": 15301, "sha256": "dd39816a3f48fe44afedd5b9e7e8f64219adfaf06e944ea8127684d7c4944501", "actually_opened": true, "visual": "Jan12/Feb18/Mar15, zero baseline, correct relative heights"},
+    "invalid-y-bar.png": {"bytes": 8418, "sha256": "9d7c4a77a4b5bfbc8335b3106c300cff84330a9376ba17cde28428c697b1aefc", "actually_opened": true, "visual": "only valid5 bar; no fabricated zero bars"}
+  },
+  "skips": ["dependency installation", "clean installed Python/npm consumers", "live provider or model-adherence evaluation", "CDN/browser execution", "upstream research retrieval", "full gates, scale, remoteCI and final signoff"],
+  "raw_summary_sha256": "c1f6c8097a8173d084bffbb85525c13ce85ebf21beb4d7866ed107e5d8cf59c5",
+  "strict_xml_sha256": "165f23e8f706655a1a71924ee9d6e582e866f044e6fab608da39c6ddb2a0aa23"
+}
