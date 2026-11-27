@@ -155,8 +155,18 @@ passing fix; its strict RED tests preserve evidence for an eligible producer and
 
 ## Publication
 
-R10 authorizes ownbranch/ownedpaths only. Publication receipt is pending, not inferred from
-local files. Explicit-path stage, staged-whitespace/sanitization review, small commit,
-non-force ownbranch push and actual remoteSHA readback must precede a successful publication
-claim. R04 retains sharedcandidate/integration/issues/PRs. R13 recovery note records the actual
-receipt when available; no earlier baseline blanket publication ban is used to block this scope.
+First owned checkpoint **0c0be15d5d2a46e6f38960e9e6df18a243fb5de2** published at
+2026-11-27T14:04:00.852662UTC. Exact non-force ownbranch push exit0 and subsequent
+`git ls-remote --heads origin refs/heads/agents/r10-02-security-boundaries` exit0
+confirmed that exact SHA. `evidence/R13-02/publication-0c0be15.json` records commands/exits.
+Explicit scope, staged-whitespace/source diff checks and sanitized credential-pattern scan
+passed; 21file/92,857byte premanifest snapshot scanned with zero pattern matches. Its
+`staged-sanitization.json` records original working-copy and Git-blob SHA256 separately:
+17textfiles normalize CRLF to GitLF; UTF16 logs remain byte-identical. No claim that a
+raw Windows working-copy SHA equals its normalized published text blob is made.
+
+R13 recovery/report/actual-ID note include the real receipt in a small owned follow-up;
+its eventual latest remote SHA is recorded in MAIN after actual readback, not predicted.
+Only owned branch/paths were staged. Production source remains exact3aa bytes; 22pass/
+10RED/0skip is the saved test outcome, not new green CI. R04 retains all sharedcandidate/
+integration/issues/PR writes. Publication is not a fix, release or final signoff.
