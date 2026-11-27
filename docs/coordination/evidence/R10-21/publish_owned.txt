@@ -5,6 +5,7 @@ import hashlib
 import json
 import re
 import subprocess
+import sys
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -100,8 +101,11 @@ except Exception as error:
     receipt["error_summary"] = str(error) if isinstance(error, RuntimeError) else "sanitized_external_error"
 finally:
     receipt["finished_utc"] = dt.datetime.now(dt.timezone.utc).isoformat()
-    OUT.write_text(json.dumps(receipt, indent=2) + chr(10), encoding="utf-8")
-    (MAIN / "docs/coordination/evidence/R10-21/publication-receipt.json").write_bytes(OUT.read_bytes())
+    body = json.dumps(receipt, indent=2) + chr(10)
+    if "--main-only" not in sys.argv:
+        OUT.write_text(body, encoding="utf-8")
+    (MAIN / "docs/coordination/evidence/R10-21/publication-receipt.json").write_text(body, encoding="utf-8")
     print(json.dumps(receipt, indent=2))
 raise SystemExit(0 if receipt["status"].startswith("published-") else 1)
+
 

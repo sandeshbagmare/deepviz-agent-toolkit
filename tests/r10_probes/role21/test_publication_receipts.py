@@ -111,3 +111,14 @@ def test_real_recovery_gaps_remain_visible(packet: dict[str, Any]) -> None:
         "legacy_entry_redirect_current:docs/coordination/ROSTER.md",
         "old_isolated_pin_has_current_bootstrap",
     }
+
+def test_actual_owned_publication_receipt() -> None:
+    path = SNAPSHOT.with_name("publication-receipt.json")
+    receipt = json.loads(path.read_text(encoding="utf-8"))
+    assert receipt["owner"] == SESSION and receipt["branch"] == BRANCH
+    assert receipt["local_commit"] == receipt["remote_sha_readback"] == "b15afe32d63523c28613172ed14431624407bea7"
+    assert receipt["push_exit"] == receipt["remote_readback_exit"] == 0
+    assert receipt["identity"] == {"http": 200, "login": "sandeshbagmare"}
+    assert receipt["committed_own_report"]["git_blob_matches"] is True
+    assert receipt["committed_own_report"]["bootstrap_proposal_present"] is True
+    assert all(command["exit"] == 0 for command in receipt["commands"])
