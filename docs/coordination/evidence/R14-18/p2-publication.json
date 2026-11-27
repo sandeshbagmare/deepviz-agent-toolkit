@@ -1,0 +1,53 @@
+{
+  "owner_session": "ses_de567805bffdER1GlVd0ngLgKg",
+  "branch": "fix/r14-mcp-json-budget",
+  "source_commit": "cd75c459ddba9f3d6bc0a5185b570af369fb4980",
+  "pre_test_status": "clean",
+  "p1_commit": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+  "actual_p2_remote_sha": "cd75c459ddba9f3d6bc0a5185b570af369fb4980",
+  "authenticated_user_before_push": "sandeshbagmare",
+  "own_remote_pre_push": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+  "ancestor_check": 0,
+  "push": {
+    "command": "git push origin HEAD:refs/heads/fix/r14-mcp-json-budget",
+    "force": false,
+    "exit": 0
+  },
+  "readback": {
+    "command": "git ls-remote --heads origin refs/heads/fix/r14-mcp-json-budget",
+    "exit": 0,
+    "actual_sha": "cd75c459ddba9f3d6bc0a5185b570af369fb4980"
+  },
+  "fresh_clean_commit_test": {
+    "command": "python -m pytest python/deepviz/tests/test_r14_tool_json_boundary.py python/deepviz/tests/test_r14_mcp_resource_budget.py tests/gallery/test_generate_gallery.py -q --tb=short --junitxml A/clean-commit54.xml --basetemp A/clean-commit54",
+    "exit": 0,
+    "display_seconds": 23.68,
+    "xml_totals": {
+      "tests": "54",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "23.635"
+    },
+    "xml_sha256": "d13d688c25111bc94580d5eb38be83ffcc8f4e7742321765f94da8b0aba59869",
+    "log_sha256": "a574e4563e5d5ed4256be29abd0f83ceb7cf44db7f931ea1155120b812e7bc19",
+    "scope": "all43own plus all11unchangedgallery with matching source snapshots"
+  },
+  "all_git_changes_scoped": true,
+  "issue_pr_shared_api_writes": false,
+  "credentials_saved": false,
+  "limits": [
+    "full repository run remains failed and has not been repeated",
+    "517 missing npm build errors not resolved in this2path producer lane",
+    "36 preserved other oracle/policy failures require their owners",
+    "missing hatchling offline build blocked",
+    "no independent02/10 exactsource retests yet",
+    "not final integrated candidate/CI/release/scale/browser/provider/900acceptance"
+  ],
+  "actual_capacity_png": {
+    "name": "capacity-alpha-beta.png",
+    "sha256": "7f2888bcb4dd7176e1ee8e31d6fb7fb0b1624bcef5a2da6de98996126ec0f906",
+    "bytes": 12150,
+    "observed": "Opened actual clean cd75 MCP capacity Matplotlib output: Alpha3/Beta7, zero baseline and correct proportions, native4resourcesat128count allreadable. No browser/CDN claim."
+  }
+}

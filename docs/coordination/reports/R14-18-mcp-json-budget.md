@@ -1,5 +1,18 @@
 # R14 role18 tools/MCP producer — task ledger
 
+## Producer handback — source ready for independent retest, not merge approval
+
+**Owner:** `ses_de567805bffdER1GlVd0ngLgKg`. **Branch:** `fix/r14-mcp-json-budget`; exact base `5340bc69b7203ad7a9166543062482d819f9b705`. P1 **d65dfc0fd807d0335b858476de8cdf7c6b958711**; separate P2 **cd75c459ddba9f3d6bc0a5185b570af369fb4980**. Both non-force pushed, remote SHA independently read back. Final evidence-only checkpoint follows; no source changes after cd75. All older pending/running statuses below are chronological, superseded here.
+
+- **Fix:** strict shared inline decoding rejects duplicate JSON before SDK loss, admits original raw1,000,000 UTF-8 bytes before SDK preprocessing, translates excessive recursion concisely, preserves authorized file/handle/copy semantics. Own StructuredTool public run/arun guards precede LangChain callback repr. No SDK patch/schema/normalizer edit.
+- **Resource policy:**128 issued artifact resources per server lifetime; locked engine4/3/2 reservation BEFORE output; failed/unused slots released, registered slots retained; no expiry/eviction/deletion. Old URIs remain readable. Explicit initialize/error guidance tells host to create new server at capacity. Real SDK/list/read/stdio/concurrent/failure-recovery tests prove boundary; not an RSS/OOM guarantee.
+- **Final exact clean cd75 check:** own43 regressions + all11 unchanged gallery tests **54 passed/0 failed/0 skipped/23.68s/exit0**. Clean source snapshot checks pass; gallery's dirty-source8events are corrected by committing source, not changing oracle. Final full Ruff0/mypy0(9files), scoped mypy0(4files). Source/test/XML hashes and exact commands: `p2-results.json`, `p2-publication.json`.
+- **Actual outputs:** P1Revenue12/18 PNG and cleanP2capacityAlpha3/Beta7 PNG both opened. Zero baselines, visible heights/labels/proportions correct. `capacity-alpha-beta.png`12,150B/SHA256`7f2888bcb4dd7176e1ee8e31d6fb7fb0b1624bcef5a2da6de98996126ec0f906`; all4static issued resources at128 readable. No browser/CDN paint or provider claim.
+- **Full result remains FAIL:**42failed/2521passed/5skipped/520errors/705.06s1. All567nonpassingIDs preserved.517missing own npm-dist prerequisites;36other old oracle/policy failures retained; dirty-gallery8events now clean11GREEN; ownSDKexception-class assumption corrected and43GREEN. No rerun or arithmetic subtraction presented as full-green. Five skips2Win1314+3opt-inbrowser. Offline build1 missing hatchling; no installs. npm unchanged/notbuilt, scale/provider/browser/CI/finalconsumer/900 not accepted.
+- **Review:** author-only static review above; no invented independent signoffs. Ready for02/10 genuine exact-source retests, not merge. Public #21/PR31 left unchanged; no shared Git/GitHub/issue/PR mutations or spawning. Existing sharedREADME/prompts remain proposal-only as prior72580477doc branch.
+
+**Executable next action (root/R04):** accept source ownership handback; dispatch independent02/10 on this immutable source/qualified final evidence head; integrate only the2released source files +2NEWregression files with provenance, preserving current MAIN actual-ID/history/other-owner changes. Run current-candidate tests after building own npm prerequisite using its authorized build lane. The `_json(text, location)` helper signature on current MAIN was read-only rechecked compatible, but no validation is transferred across pins. Producer source edits end here; no background command remains.
+
 ## Latest checkpoint — own gates complete; product acceptance still blocked
 
 - P1 published and remote-verified: **d65dfc0fd807d0335b858476de8cdf7c6b958711**.
