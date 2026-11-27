@@ -1,6 +1,7 @@
 """Versioned, execution-free contracts shared by all rendering adapters."""
 from __future__ import annotations
 
+from collections.abc import Mapping
 from dataclasses import dataclass, field
 from typing import Any, Literal
 
@@ -34,6 +35,17 @@ class ChartSpec(BaseModel):
     theme: Literal["light", "dark"] = "light"
     charts: list[ChartSpec] = Field(default_factory=list, max_length=24)
     columns: int = Field(default=2, ge=1, le=6)
+
+    @model_validator(mode="before")
+    @classmethod
+    def preserve_json_numeric_types(cls, value: Any) -> Any:
+        if isinstance(value, Mapping):
+            for key in ("version", "max_points", "width", "height", "columns"):
+                if key in value and (
+                    isinstance(value[key], bool) or not isinstance(value[key], (int, float))
+                ):
+                    raise ValueError(f"{key} must be a JSON number, not a string or boolean")
+        return value
 
     @model_validator(mode="after")
     def check_dashboard(self) -> ChartSpec:
