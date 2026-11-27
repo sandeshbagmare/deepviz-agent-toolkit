@@ -1,0 +1,126 @@
+{
+  "observed_utc": "2026-11-27T13:59:32.722145+00:00",
+  "branch": "agents/r10-17-vega-visible-title",
+  "base_sha": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "scope": "precommit staged owned-path safety audit, not independent reviewer signoff",
+  "staged_file_count": 17,
+  "staged_total_bytes": 168359,
+  "credentials_pattern_findings": [],
+  "credential_pattern_labels": [
+    "github_token",
+    "aws_access_key",
+    "private_key",
+    "auth_value",
+    "credential_url"
+  ],
+  "staged_whitespace_exit": 0,
+  "source_and_existing_oracle_diff_exit": 0,
+  "json_and_python_syntax": "parsed without execution",
+  "native_svg": "XML parsed; no forbidden element/event/external href",
+  "git_crlf_to_lf_paths": [
+    "docs/coordination/evidence/R10-17/artifact-index.json",
+    "docs/coordination/evidence/R10-17/browser-results.json",
+    "docs/coordination/evidence/R10-17/github-prewrite.json",
+    "docs/coordination/evidence/R10-17/runs.json",
+    "docs/coordination/evidence/R10-17/source-comparison.json",
+    "docs/coordination/evidence/R13-17/github-identity.json"
+  ],
+  "checks": [
+    {
+      "command": "git diff --cached --check",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --exit-code 3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab -- python/deepviz/src tests/test_acceptance_matrix.py python/deepviz/tests/test_backend_vega.py",
+      "exit_code": 0
+    }
+  ],
+  "staged_files": [
+    {
+      "path": "docs/agent-state/ses_de5678086ffeNido4phnXCJ8J4.md",
+      "staged_bytes": 15978,
+      "staged_sha256": "6142d31588e6d0aeb77510dceeacd9830059ae649b544cd72d28cb9a6a5db128"
+    },
+    {
+      "path": "docs/coordination/evidence/R10-17/artifact-index.json",
+      "staged_bytes": 1638,
+      "staged_sha256": "e1807a40663ae19a98679d2ba1137c4d99a799d04cd31b01b3edab932a656bb3"
+    },
+    {
+      "path": "docs/coordination/evidence/R10-17/baseline-portable.log",
+      "staged_bytes": 104,
+      "staged_sha256": "88d39976231362e553b67a0117e94b6e3aa20ee5ab36efc6191a3a0689d0d753"
+    },
+    {
+      "path": "docs/coordination/evidence/R10-17/browser-results.json",
+      "staged_bytes": 6044,
+      "staged_sha256": "20d5fd315f37a99066f342010dd2377e4bf64ad5aeb01c9c6828a5f0594488b6"
+    },
+    {
+      "path": "docs/coordination/evidence/R10-17/composed.png",
+      "staged_bytes": 73884,
+      "staged_sha256": "012e315522075e130d0a379f6cf99ed15462f58aff1099441f6762ddd9db1d56"
+    },
+    {
+      "path": "docs/coordination/evidence/R10-17/composed.svg",
+      "staged_bytes": 17622,
+      "staged_sha256": "27b44161189e1577179e49b463087802ca1607d2bbe660f5522b49382a1286e7"
+    },
+    {
+      "path": "docs/coordination/evidence/R10-17/current-final.log",
+      "staged_bytes": 104,
+      "staged_sha256": "4a8f6cac8300b28310c2df5e94936017f68eb20d33ce9bfaf6976cc8b9edfc4d"
+    },
+    {
+      "path": "docs/coordination/evidence/R10-17/github-prewrite.json",
+      "staged_bytes": 1003,
+      "staged_sha256": "c7305cc7d4e3782132cc498b39221db4e59320a313838db8c221b3e13bfe7130"
+    },
+    {
+      "path": "docs/coordination/evidence/R10-17/runs.json",
+      "staged_bytes": 5857,
+      "staged_sha256": "17199117a44681cf3854b4fc10f18b9cf039b7e2e8da9c1498730a7aefa1e7df"
+    },
+    {
+      "path": "docs/coordination/evidence/R10-17/source-comparison.json",
+      "staged_bytes": 4576,
+      "staged_sha256": "e573914dc929e44b93a798358753b49cd2ccc3676e7dc33def7f838af5e0458e"
+    },
+    {
+      "path": "docs/coordination/evidence/R13-17/github-identity.json",
+      "staged_bytes": 270,
+      "staged_sha256": "22b4face79a625299d990d43cf4b26eedfb5b5d4d07c7171ac33d7a77ec485ce"
+    },
+    {
+      "path": "docs/coordination/reports/R10-17-vega-visible-title.md",
+      "staged_bytes": 9856,
+      "staged_sha256": "5538b2f6690a337dc1da6adbafa968f59cb4e6128a438502e67eede0316b36e4"
+    },
+    {
+      "path": "docs/coordination/reports/R13-17-vega-publication.md",
+      "staged_bytes": 3719,
+      "staged_sha256": "3db3d4123aa00db46181ab9b16a3e571d0a2d9e2b69bb3f3b312880ab7d03f30"
+    },
+    {
+      "path": "tests/r10_probes/role17/README.md",
+      "staged_bytes": 2865,
+      "staged_sha256": "99cf9ce6b4e3b535817a7767c1d610d18a6ab4aeb6f129e372017b5ad73b6fac"
+    },
+    {
+      "path": "tests/r10_probes/role17/browser.cjs",
+      "staged_bytes": 6592,
+      "staged_sha256": "4191d5dd6c0c00bd75a1ecebabdc2d0d3b7493da453b79efaa31fdaf76f6e4cf"
+    },
+    {
+      "path": "tests/r10_probes/role17/test_visible_titles.py",
+      "staged_bytes": 5740,
+      "staged_sha256": "911cf6945021a4a84cecb173dbeaa3b1de3a62498b2ab087f3c26e1e2feb8890"
+    },
+    {
+      "path": "tests/r10_probes/role17/vega_contract.py",
+      "staged_bytes": 12507,
+      "staged_sha256": "cd11f63a4367b188c35dc28602efdbe8032180116e8415180f66ca85d82a1061"
+    }
+  ],
+  "limitation": "Pattern scan is scoped, not a guarantee of all secret detection. This ledger itself is staged separately and rechecked before commit."
+}

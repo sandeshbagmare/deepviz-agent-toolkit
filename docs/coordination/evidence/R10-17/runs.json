@@ -1,0 +1,123 @@
+{
+  "scope": "independent checkpoint diagnostics, not final acceptance",
+  "runs": [
+    {
+      "name": "checkpoint_final",
+      "source_sha": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+      "command": "python -m pytest python/deepviz/tests/test_backend_vega.py tests/r10_probes/role17 -q --tb=short --junitxml=artifacts/local/R10-17/checks/current-final.xml",
+      "exit_code": 0,
+      "tests": 40,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "junit_suite_elapsed_seconds": 17.425,
+      "console_elapsed_seconds": 17.59,
+      "class_counts": {
+        "python.deepviz.tests.test_backend_vega": 12,
+        "tests.r10_probes.role17.test_visible_titles": 28
+      },
+      "failed_case_names": [],
+      "raw_local_xml": "checks/current-final.xml",
+      "raw_xml_sha256": "77b72699dee9b7953c0d3811490d7242f021c171c613ebf0356c22cfe012da78"
+    },
+    {
+      "name": "old_pin_new_portable_harness",
+      "source_sha": "0c5fa825f7058f8c5a4ab6ec9597b9fd5fd4ca43",
+      "command": "python -m pytest python/deepviz/tests/test_backend_vega.py tests/r10_probes/role17 -q --tb=short --junitxml=artifacts/local/R10-17/checks/baseline-portable.xml",
+      "exit_code": 0,
+      "tests": 40,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "junit_suite_elapsed_seconds": 17.425,
+      "console_elapsed_seconds": 32.65,
+      "class_counts": {
+        "python.deepviz.tests.test_backend_vega": 12,
+        "tests.r10_probes.role17.test_visible_titles": 28
+      },
+      "failed_case_names": [],
+      "raw_local_xml": "checks/baseline-portable.xml",
+      "raw_xml_sha256": "61f68e0ae5976defefd85575248e48483fc22d779eebc804d475bd5ccdc92023"
+    },
+    {
+      "name": "unchanged_original_matrix",
+      "source_sha": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+      "command": "python -m pytest tests/test_acceptance_matrix.py -q -k 'vega-dashboard' --tb=short --junitxml=artifacts/local/R10-17/original/matrix.xml",
+      "exit_code": 1,
+      "tests": 10,
+      "failed": 10,
+      "errors": 0,
+      "skipped": 0,
+      "junit_suite_elapsed_seconds": 5.196,
+      "console_elapsed_seconds": 6.22,
+      "class_counts": {
+        "tests.test_acceptance_matrix": 10
+      },
+      "failed_case_names": [
+        "test_engine_kind_theme_source_acceptance[vega-dashboard-light-records]",
+        "test_engine_kind_theme_source_acceptance[vega-dashboard-light-nested_json]",
+        "test_engine_kind_theme_source_acceptance[vega-dashboard-light-graphql]",
+        "test_engine_kind_theme_source_acceptance[vega-dashboard-light-columns]",
+        "test_engine_kind_theme_source_acceptance[vega-dashboard-light-csv]",
+        "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-records]",
+        "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-nested_json]",
+        "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-graphql]",
+        "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-columns]",
+        "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-csv]"
+      ],
+      "raw_local_xml": "original/matrix.xml",
+      "raw_xml_sha256": "2e149144594e34528d1d9a2ff7cb1b6e2d6351661656de70e8f1edb1d3d70a9a"
+    },
+    {
+      "name": "initial_own_guard_bug_not_product",
+      "source_sha": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+      "command": "python -m pytest python/deepviz/tests/test_backend_vega.py tests/r10_probes/role17 -q --tb=short --junitxml=artifacts/local/R10-17/checks/current.xml",
+      "exit_code": 1,
+      "tests": 39,
+      "failed": 12,
+      "errors": 0,
+      "skipped": 0,
+      "junit_suite_elapsed_seconds": 9.551,
+      "console_elapsed_seconds": 9.61,
+      "class_counts": {
+        "python.deepviz.tests.test_backend_vega": 12,
+        "tests.r10_probes.role17.test_visible_titles": 27
+      },
+      "failed_case_names": [
+        "test_real_parent_correct_children_and_irregular_native_geometry[records-light]",
+        "test_real_parent_correct_children_and_irregular_native_geometry[records-dark]",
+        "test_real_parent_correct_children_and_irregular_native_geometry[columns-light]",
+        "test_real_parent_correct_children_and_irregular_native_geometry[columns-dark]",
+        "test_real_parent_correct_children_and_irregular_native_geometry[nested_json-light]",
+        "test_real_parent_correct_children_and_irregular_native_geometry[nested_json-dark]",
+        "test_real_parent_correct_children_and_irregular_native_geometry[graphql-light]",
+        "test_real_parent_correct_children_and_irregular_native_geometry[graphql-dark]",
+        "test_real_parent_correct_children_and_irregular_native_geometry[csv-light]",
+        "test_real_parent_correct_children_and_irregular_native_geometry[csv-dark]",
+        "test_native_value_corruption_is_rejected[1]",
+        "test_distinct_malicious_title_field_and_category_remain_literal_text"
+      ],
+      "raw_local_xml": "checks/current.xml",
+      "raw_xml_sha256": "d7835bd19edbf3cc070b2cb0efef1048c12ae15adbe7fb49005beda439525617"
+    }
+  ],
+  "historical_R03_distinct_tests": {
+    "source_sha": "0c5fa825f7058f8c5a4ab6ec9597b9fd5fd4ca43",
+    "passed": 30,
+    "note": "12 backend plus different 18 R03 probes; not relabeled as these 40-case runs"
+  },
+  "original_matrix_deselected": 1139,
+  "original_matrix_failure_scope": "parent title applied to standalone child; full composed parent passes",
+  "source_mypy": {
+    "exit_code": 0,
+    "source_files": 9
+  },
+  "probe_ruff": {
+    "exit_code": 0
+  },
+  "artifact_bytes_equal_between_sources": {
+    "composed.svg": true,
+    "composed.png": true
+  },
+  "timing_limitation": "Console and raw JUnit timing are recorded separately. Both 40-case XML suites advertise 17.425 seconds, while console totals are 17.59 and 32.65 seconds. Cause not established; no performance comparison or rerun inferred."
+}

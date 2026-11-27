@@ -1,0 +1,217 @@
+{
+  "source_sha": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "node": "v26.13.1",
+  "playwright": "1.65.1",
+  "browser": "158.0.4370.45",
+  "renderer": "Native Vega-Lite compiled SVG painted by Edge; no CDN or engine fallback",
+  "favicon": "ephemeral harness HTTP204",
+  "directSvgScreenshot": "not attempted; wrapper image and converter PNG inspected",
+  "results": [
+    {
+      "name": "ordinary",
+      "extension": "html",
+      "status": 200,
+      "titlesCorrect": true,
+      "geometryCorrect": true,
+      "screenshot": "ordinary-browser.png",
+      "pass": true,
+      "errors": [],
+      "warnings": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "externalRequests": [],
+      "state": {
+        "title": "Parent Ω & </title></script><script>window.__DV_XSS__=1</script>",
+        "h1": "Parent Ω & </title></script><script>window.__DV_XSS__=1</script>",
+        "h2": [
+          "Bars & <literal>",
+          "Points </script><script>window.__DV_XSS__=2</script>"
+        ],
+        "xssMarkerType": "undefined",
+        "executableElements": 0,
+        "anchors": 0,
+        "eventAttributes": [],
+        "images": [
+          {
+            "src": "chart.svg",
+            "width": 640,
+            "height": 400
+          }
+        ],
+        "requiredSvgTitles": [
+          {
+            "title": "Parent Ω & </title></script><script>window.__DV_XSS__=1</script>",
+            "exists": false
+          },
+          {
+            "title": "Bars & <literal>",
+            "exists": false
+          },
+          {
+            "title": "Points </script><script>window.__DV_XSS__=2</script>",
+            "exists": false
+          }
+        ],
+        "bars": 0,
+        "points": 0
+      }
+    },
+    {
+      "name": "ordinary",
+      "extension": "svg",
+      "status": 200,
+      "titlesCorrect": true,
+      "geometryCorrect": true,
+      "screenshot": null,
+      "pass": true,
+      "errors": [],
+      "warnings": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "externalRequests": [],
+      "state": {
+        "title": "",
+        "h2": [],
+        "xssMarkerType": "undefined",
+        "executableElements": 0,
+        "anchors": 0,
+        "eventAttributes": [],
+        "images": [],
+        "requiredSvgTitles": [
+          {
+            "title": "Parent Ω & </title></script><script>window.__DV_XSS__=1</script>",
+            "exists": true,
+            "width": 429.90509033203125,
+            "height": 14.999996185302734,
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1"
+          },
+          {
+            "title": "Bars & <literal>",
+            "exists": true,
+            "width": 98.29302978515625,
+            "height": 15,
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1"
+          },
+          {
+            "title": "Points </script><script>window.__DV_XSS__=2</script>",
+            "exists": true,
+            "width": 358.2438659667969,
+            "height": 15,
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1"
+          }
+        ],
+        "bars": 3,
+        "points": 3
+      }
+    },
+    {
+      "name": "strict",
+      "extension": "html",
+      "status": 200,
+      "titlesCorrect": true,
+      "geometryCorrect": true,
+      "screenshot": "strict-browser.png",
+      "pass": true,
+      "errors": [],
+      "warnings": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "externalRequests": [],
+      "state": {
+        "title": "Parent Ω & </title></script><script>window.__DV_XSS__=1</script>",
+        "h1": "Parent Ω & </title></script><script>window.__DV_XSS__=1</script>",
+        "h2": [
+          "Bars & <literal>",
+          "Points </script><script>window.__DV_XSS__=2</script>"
+        ],
+        "xssMarkerType": "undefined",
+        "executableElements": 0,
+        "anchors": 0,
+        "eventAttributes": [],
+        "images": [
+          {
+            "src": "chart.svg",
+            "width": 640,
+            "height": 400
+          }
+        ],
+        "requiredSvgTitles": [
+          {
+            "title": "Parent Ω & </title></script><script>window.__DV_XSS__=1</script>",
+            "exists": false
+          },
+          {
+            "title": "Bars & <literal>",
+            "exists": false
+          },
+          {
+            "title": "Points </script><script>window.__DV_XSS__=2</script>",
+            "exists": false
+          }
+        ],
+        "bars": 0,
+        "points": 0
+      }
+    },
+    {
+      "name": "strict",
+      "extension": "svg",
+      "status": 200,
+      "titlesCorrect": true,
+      "geometryCorrect": true,
+      "screenshot": null,
+      "pass": true,
+      "errors": [],
+      "warnings": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "externalRequests": [],
+      "state": {
+        "title": "",
+        "h2": [],
+        "xssMarkerType": "undefined",
+        "executableElements": 0,
+        "anchors": 0,
+        "eventAttributes": [],
+        "images": [],
+        "requiredSvgTitles": [
+          {
+            "title": "Parent Ω & </title></script><script>window.__DV_XSS__=1</script>",
+            "exists": true,
+            "width": 425.80279541015625,
+            "height": 15.000001907348633,
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1"
+          },
+          {
+            "title": "Bars & <literal>",
+            "exists": true,
+            "width": 97.41507720947266,
+            "height": 15,
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1"
+          },
+          {
+            "title": "Points </script><script>window.__DV_XSS__=2</script>",
+            "exists": true,
+            "width": 354.8382873535156,
+            "height": 15,
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1"
+          }
+        ],
+        "bars": 1,
+        "points": 1
+      }
+    }
+  ]
+}
