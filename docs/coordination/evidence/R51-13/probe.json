@@ -1,0 +1,110 @@
+{
+  "source_sha": "484ff08ddcae6c36d43ce61de774c00b6c422c88",
+  "model_origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-13-main-484ff08-ses_de56780caffekQ9gdZ58EgQwb5\\python\\deepviz\\src\\deepviz\\models.py",
+  "model_sha256": "be2cb15f6f91f2de4b9ebd4e283ea677e9e39490932db3ecd9934f2d6c1e4a1f",
+  "schema_sha256": "35b5a2786db65051ff8f0289901424d74a7b2a9df87fc6c59342ced5834cd18d",
+  "cases": {
+    "default": {
+      "accepted": true,
+      "json": {
+        "version": 1,
+        "kind": "bar",
+        "title": "Visualization",
+        "description": "",
+        "x": null,
+        "y": null,
+        "color": null,
+        "size": null,
+        "data_path": null,
+        "format": "auto",
+        "aggregation": "auto",
+        "max_points": 2000,
+        "width": 900,
+        "height": 520,
+        "theme": "light",
+        "charts": [],
+        "columns": 2
+      }
+    },
+    "dashboard": {
+      "accepted": true,
+      "json": {
+        "version": 1,
+        "kind": "dashboard",
+        "title": "Visualization",
+        "description": "",
+        "x": null,
+        "y": null,
+        "color": null,
+        "size": null,
+        "data_path": null,
+        "format": "auto",
+        "aggregation": "auto",
+        "max_points": 2000,
+        "width": 900,
+        "height": 520,
+        "theme": "light",
+        "charts": [
+          {
+            "version": 1,
+            "kind": "line",
+            "title": "Visualization",
+            "description": "",
+            "x": null,
+            "y": null,
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "auto",
+            "max_points": 2000,
+            "width": 900,
+            "height": 520,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          }
+        ],
+        "columns": 2
+      }
+    },
+    "dashboard_missing_children": {
+      "accepted": false,
+      "error_type": "ValidationError"
+    },
+    "non_dashboard_children": {
+      "accepted": false,
+      "error_type": "ValidationError"
+    },
+    "numeric_string": {
+      "accepted": false,
+      "error_type": "ValidationError"
+    },
+    "numeric_boolean": {
+      "accepted": false,
+      "error_type": "ValidationError"
+    },
+    "extra_executable_field": {
+      "accepted": false,
+      "error_type": "ValidationError"
+    }
+  },
+  "case_count": 7,
+  "model_schema_equal": true,
+  "schema_valid": true,
+  "artifact_metadata": {
+    "paths": [
+      "r51-model-output.json"
+    ],
+    "mime_type": "application/json",
+    "engine": "contract-only",
+    "input_count": 2,
+    "output_count": 1,
+    "strategy": "none",
+    "warnings": []
+  },
+  "viewable_chart_artifact": false,
+  "viewable_artifact_limit": "Exact merged tree contains only models/schema; no renderer or image/html output exists to open.",
+  "installed_candidate_import": false,
+  "network_install_api": 0
+}

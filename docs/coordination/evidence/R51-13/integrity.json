@@ -1,0 +1,151 @@
+{
+  "exact_source_sha": "484ff08ddcae6c36d43ce61de774c00b6c422c88",
+  "source_worktree_clean": true,
+  "source_worktree_creation_provenance": "unknown; exact named detached worktree existed before QA",
+  "source_17_git_blobs_verified": true,
+  "model_sha256": "be2cb15f6f91f2de4b9ebd4e283ea677e9e39490932db3ecd9934f2d6c1e4a1f",
+  "schema_sha256": "35b5a2786db65051ff8f0289901424d74a7b2a9df87fc6c59342ced5834cd18d",
+  "probe_source_sha256": "d8185977c9a5ac15946566902fc778d9dd1bbe2e6c2505aaeda7a24513e8ce42",
+  "credential_pattern_scan_paths": 27,
+  "credential_pattern_hits": 0,
+  "valid_json_files": 13,
+  "evidence_files": [
+    {
+      "path": "docs/coordination/evidence/R51-13/actual-model-output.json",
+      "bytes": 939,
+      "sha256": "4da8e2b88d415251a9781b6cc124a0f6feba2aeb43e1ce40e0da4fad799dbc56"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/commands.json",
+      "bytes": 15218,
+      "sha256": "f0617ec10712993ac9d9d4dffa034e6fe64c94e7ba49f6a6295acac33d33a92b"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/literal-oracles/oracle-results.json",
+      "bytes": 11650,
+      "sha256": "cf0b64dce5bb922d596378e26dba7d4e3c1db2c3d4705934715ab0ab0d159f52"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/literal-oracles/snapshot/python/deepviz/src/deepviz/models.py",
+      "bytes": 3532,
+      "sha256": "be2cb15f6f91f2de4b9ebd4e283ea677e9e39490932db3ecd9934f2d6c1e4a1f"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/literal-oracles/snapshot/schemas/chart-spec.schema.json",
+      "bytes": 4975,
+      "sha256": "35b5a2786db65051ff8f0289901424d74a7b2a9df87fc6c59342ced5834cd18d"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/literal-oracles/source-provenance.json",
+      "bytes": 1657,
+      "sha256": "d0b26288238c49806806217a18ef8479f639f0a3175e655392884a9e4741b671"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/oracle-oracle-results.json",
+      "bytes": 11650,
+      "sha256": "cf0b64dce5bb922d596378e26dba7d4e3c1db2c3d4705934715ab0ab0d159f52"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/oracle-probe-execution.json",
+      "bytes": 6029,
+      "sha256": "98ac841fac484a1e3756b0b46578e7b23a8562e3f24f1acaa0bbfed9f10aa277"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/oracle-probe.stderr.log",
+      "bytes": 4720,
+      "sha256": "6ddd5c262db81a5df77d4175dd07a55093cdc8763962bdb58a90c84066dee842"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/oracle-probe.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/oracle-source-provenance.json",
+      "bytes": 1657,
+      "sha256": "d0b26288238c49806806217a18ef8479f639f0a3175e655392884a9e4741b671"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/preflight-harness-failure.json",
+      "bytes": 364,
+      "sha256": "a576da207565fde83503fd3321c44399698cf4e406fe570897d709467f4ab4d2"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/probe.json",
+      "bytes": 3067,
+      "sha256": "fe8d981fd10261e92de06953d8c9697ea1b48761ee4072e27bc1b23b06a69b16"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/pytest-mapping.log",
+      "bytes": 204,
+      "sha256": "c37ae629c7fec7f2edc03ef471e92e1eb32a45085f3b9c26bfb22b394e57e39e"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/pytest-selected-2.log",
+      "bytes": 1190,
+      "sha256": "605bd72b5facd5e68474fc32dfedb0245a2a495d9840a47f58087d9e04fc2477"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/pytest-selected-3.log",
+      "bytes": 366,
+      "sha256": "2347eecae90faa96cab9064c26b820a0fa5ab7eab27b5749260226f5ad4e77f2"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/pytest-selected.log",
+      "bytes": 1632,
+      "sha256": "8120ad76231c1ee81c1f159b902399bd6b61ba66353dd364142f685b3b6076b2"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/pytest_mapping_runner.py",
+      "bytes": 343,
+      "sha256": "16e93f8f8207cbfc4232e51071693b3e3fb531ed3c4543da013c43d233a0fbcd"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/pytest_runner.py",
+      "bytes": 448,
+      "sha256": "52485adb29b1252c3dc8dde0bca9b67b1350dccba5bf06e430d05ed06820b10b"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/schema-output.json",
+      "bytes": 5763,
+      "sha256": "af989d67f67b66ebb3c08ab8179d7a59d14e2a204f80ad78a7912c173856a770"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/source-freeze.json",
+      "bytes": 5438,
+      "sha256": "bace811190c6932bc137028d2b47f85c8594275aa77925e0e89c42d25cce6aff"
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/summary.json",
+      "bytes": 1668,
+      "sha256": "ecf0988f4c39082c70e126ccf4810f0362781f89e7e6310961555316dc18a0e9"
+    }
+  ],
+  "limitations": [
+    "integrity excludes its own hash",
+    "source worktree creation provenance remains unknown",
+    "credential scan covers common token patterns only"
+  ],
+  "owned_checkpoint_hashes": [
+    {
+      "path": "tests/r51_probes/role13/main_qa_probe.py",
+      "bytes": 4137,
+      "sha256": "d8185977c9a5ac15946566902fc778d9dd1bbe2e6c2505aaeda7a24513e8ce42"
+    },
+    {
+      "path": "docs/coordination/reports/R51-13-main-qa.md",
+      "bytes": 10162,
+      "sha256": "567a0dc79df3e8d7a26d7c5d553532198127b5a69b82726ce7dfa587df595c5f"
+    },
+    {
+      "path": "docs/agent-state/ses_de56780caffekQ9gdZ58EgQwb5.md",
+      "bytes": 43343,
+      "sha256": "26fedbfebf069d8026f0b9d3542f6487c4faabe804fd9d35b86294dfd1914153"
+    },
+    {
+      "path": "docs/coordination/status/role13.md",
+      "bytes": 6320,
+      "sha256": "3abdd53770d17c5e09f76b6ccea429805bbfefb24e7418fe91f90dccb9e2bc31"
+    }
+  ]
+}

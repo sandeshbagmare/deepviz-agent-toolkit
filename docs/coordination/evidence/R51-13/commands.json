@@ -1,0 +1,388 @@
+{
+  "utc_recorded": "2026-11-27T19:38:59.976783+00:00",
+  "source_sha": "484ff08ddcae6c36d43ce61de774c00b6c422c88",
+  "source_tree": "b2919671ec90c5fe9f08c7e9703f8385b33981b6",
+  "remote_fetches": 0,
+  "remote_queries": 0,
+  "network_or_API": 0,
+  "install_or_download": 0,
+  "source_or_oracle_edits": 0,
+  "product_test_suites": [
+    {
+      "tests": 76,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    {
+      "tests": 42,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    {
+      "tests": 36,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    }
+  ],
+  "seven_separate_probe_cases": 7,
+  "successful_commands": [
+    {
+      "id": "git-commit-object",
+      "argv": [
+        "git",
+        "cat-file",
+        "-e",
+        "484ff08ddcae6c36d43ce61de774c00b6c422c88^{commit}"
+      ],
+      "cwd": "C:\\Users\\bagma\\deepviz-agent-toolkit",
+      "exit": 0
+    },
+    {
+      "id": "git-commit-parent-tree",
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%H%n%P%n%T",
+        "484ff08ddcae6c36d43ce61de774c00b6c422c88"
+      ],
+      "cwd": "C:\\Users\\bagma\\deepviz-agent-toolkit",
+      "exit": 0,
+      "stdout": "484ff08ddcae6c36d43ce61de774c00b6c422c88\n31cff73ab057c3fed69bd400ac005f2f11609027 dd1c4080095c7e739582dc5c631bc419047c48d2\nb2919671ec90c5fe9f08c7e9703f8385b33981b6\n"
+    },
+    {
+      "id": "git-reviewed-tree",
+      "argv": [
+        "git",
+        "rev-parse",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2^{tree}"
+      ],
+      "cwd": "C:\\Users\\bagma\\deepviz-agent-toolkit",
+      "exit": 0,
+      "stdout": "b2919671ec90c5fe9f08c7e9703f8385b33981b6\n"
+    },
+    {
+      "id": "git-tree-file-enumeration",
+      "argv": [
+        "git",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "484ff08ddcae6c36d43ce61de774c00b6c422c88"
+      ],
+      "cwd": "C:\\Users\\bagma\\deepviz-agent-toolkit",
+      "exit": 0,
+      "stdout_count": 17
+    },
+    {
+      "id": "source-branch-head-clean-hash-verification",
+      "commands": [
+        [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        [
+          "git",
+          "status",
+          "--porcelain"
+        ],
+        [
+          "git",
+          "hash-object",
+          "--path",
+          "<each tracked file>",
+          "<worktree path>"
+        ]
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-13-main-484ff08-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "result": "exact SHA, clean, 17 tracked worktree files match exact commit Git blobs/raw bytes"
+    },
+    {
+      "id": "bounded-model-schema-probe",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-S",
+        "tests/r51_probes/role13/main_qa_probe.py"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "env": {
+        "R51_SOURCE": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-13-main-484ff08-ses_de56780caffekQ9gdZ58EgQwb5",
+        "R51_SOURCE_SHA": "484ff08ddcae6c36d43ce61de774c00b6c422c88",
+        "R51_SITE_PACKAGES": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages",
+        "R51_EVIDENCE": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-13-qa-run-ses_de56780caffekQ9gdZ58EgQwb5"
+      },
+      "stdout_file": "evidence/R51-13/actual-model-output.json + schema-output.json + probe.json",
+      "stderr": "one QA-probe DeprecationWarning for jsonschema.__version__; no product error",
+      "result": "7 positive/negative cases; model-generated schema equals published schema; output JSON saved"
+    },
+    {
+      "id": "pytest-contracts",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-S",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\\docs\\coordination\\evidence\\R51-13\\pytest_runner.py"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "env": {
+        "R51_SOURCE": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-13-main-484ff08-ses_de56780caffekQ9gdZ58EgQwb5",
+        "R51_SITE_PACKAGES": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages",
+        "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+      },
+      "runner": "evidence/R51-13/pytest_runner.py",
+      "test_paths": [
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-13-main-484ff08-ses_de56780caffekQ9gdZ58EgQwb5\\tests\\test_models.py",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-13-main-484ff08-ses_de56780caffekQ9gdZ58EgQwb5\\tests\\test_numeric_schema.py",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-13-main-484ff08-ses_de56780caffekQ9gdZ58EgQwb5\\tests\\test_dashboard_schema.py"
+      ],
+      "runner_flags": [
+        "-q",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "result": "76 passed, 0 failed, 0 errors, 0 skipped; pytest reported 0.49s"
+    },
+    {
+      "id": "pytest-native-mapping",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-S",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\\docs\\coordination\\evidence\\R51-13\\pytest_mapping_runner.py"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "env": {
+        "R51_SOURCE": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-13-main-484ff08-ses_de56780caffekQ9gdZ58EgQwb5",
+        "R51_SITE_PACKAGES": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages",
+        "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+      },
+      "runner": "evidence/R51-13/pytest_mapping_runner.py",
+      "test_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-13-main-484ff08-ses_de56780caffekQ9gdZ58EgQwb5\\tests\\test_native_mapping.py",
+      "runner_flags": [
+        "-q",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "result": "42 passed, 0 failed, 0 errors, 0 skipped; pytest reported 0.18s"
+    },
+    {
+      "id": "existing-literal-dashboard-oracle",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-S",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-13-main-484ff08-ses_de56780caffekQ9gdZ58EgQwb5\\tests\\dashboard_schema_oracle.py",
+        "--repository",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-13-main-484ff08-ses_de56780caffekQ9gdZ58EgQwb5",
+        "--source-commit",
+        "484ff08ddcae6c36d43ce61de774c00b6c422c88",
+        "--dependencies",
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages",
+        "--out",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\\docs\\coordination\\evidence\\R51-13\\literal-oracles"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout_file": "evidence/R51-13/oracle-probe.stdout.log",
+      "stderr_file": "evidence/R51-13/oracle-probe.stderr.log",
+      "result": "36 run, 0 failed, 0 errors, 0 skipped; 17 raw literals; actual commit model/schema blobs copied before import"
+    },
+    {
+      "id": "tool-versions",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-S",
+        "-c",
+        "import sys,importlib.metadata as m; sys.path.insert(0,r<explicit-site-packages>); print(sys.version); print(pytest,pydantic,jsonschema versions)"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "stdout": "Python 3.12.16; pytest 9.2.0; pydantic 2.14.4; jsonschema 4.26.0"
+    }
+  ],
+  "harness_failures": [
+    {
+      "id": "source-freeze-expected-count",
+      "command": "Initial read-only local source-freeze Python harness asserted expected tracked-file count 19 after `git ls-tree -r --name-only 484ff08?`.",
+      "exit": 1,
+      "actual": 17,
+      "effect": "no product tests/source mutation; assertion expectation corrected"
+    },
+    {
+      "id": "worktree-path-already-registered",
+      "argv": [
+        "git",
+        "worktree",
+        "add",
+        "--detach",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-13-main-484ff08-ses_de56780caffekQ9gdZ58EgQwb5",
+        "484ff08ddcae6c36d43ce61de774c00b6c422c88"
+      ],
+      "cwd": "C:\\Users\\bagma\\deepviz-agent-toolkit",
+      "exit": 128,
+      "stderr": "fatal: exact target path already exists/registered",
+      "effect": "read-only inspection found exact SHA clean detached worktree; no overwrite"
+    },
+    {
+      "id": "source-worktree-preexistence-guard",
+      "command": "Corrected freeze helper verified count17, then stopped at `assert not source.exists()` because the exact target path was already registered.",
+      "exit": 1,
+      "effect": "no worktree mutation; read-only inspection subsequently verified exact detached source/clean state; creation provenance remains unknown"
+    },
+    {
+      "id": "pytest-inline-quoting",
+      "command": "Initial PowerShell inline `python -B -I -S -c` pytest runner attempt.",
+      "exit": 1,
+      "stderr": "SyntaxError in generated inline source before pytest collection",
+      "tests_started": 0
+    },
+    {
+      "id": "pytest-isolated-path-order",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-I",
+        "-S",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-13-qa-run-ses_de56780caffekQ9gdZ58EgQwb5\\pytest_runner.py"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 1,
+      "stderr": "ModuleNotFoundError: No module named pytest",
+      "effect": "initial runner imported pytest before adding explicit venv site-packages; corrected runner adds path before import"
+    },
+    {
+      "id": "evidence-copy-collector",
+      "command": "Initial owned evidence copy/manifest Python helper.",
+      "exit": 1,
+      "stderr": "TypeError: unsupported operand type(s) for +: WindowsPath and str",
+      "effect": "corrected destination path expression; QA outputs and source unchanged"
+    }
+  ],
+  "known_product_findings": [],
+  "new_issue_or_comment": 0,
+  "rendered_image_or_html": "NOT PRESENT in exact17-file main tree; no rendering claim",
+  "limitations": [
+    "not full pytest",
+    "no package build or install",
+    "no renderer/browser/MCP/DeepAgents/npm/scale/10M/remote CI",
+    "manual source import is not installed consumer"
+  ],
+  "logs": [
+    {
+      "path": "docs/coordination/evidence/R51-13/actual-model-output.json",
+      "sha256": "4da8e2b88d415251a9781b6cc124a0f6feba2aeb43e1ce40e0da4fad799dbc56",
+      "bytes": 939
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/literal-oracles/oracle-results.json",
+      "sha256": "cf0b64dce5bb922d596378e26dba7d4e3c1db2c3d4705934715ab0ab0d159f52",
+      "bytes": 11650
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/literal-oracles/snapshot/python/deepviz/src/deepviz/models.py",
+      "sha256": "be2cb15f6f91f2de4b9ebd4e283ea677e9e39490932db3ecd9934f2d6c1e4a1f",
+      "bytes": 3532
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/literal-oracles/snapshot/schemas/chart-spec.schema.json",
+      "sha256": "35b5a2786db65051ff8f0289901424d74a7b2a9df87fc6c59342ced5834cd18d",
+      "bytes": 4975
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/literal-oracles/source-provenance.json",
+      "sha256": "d0b26288238c49806806217a18ef8479f639f0a3175e655392884a9e4741b671",
+      "bytes": 1657
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/oracle-oracle-results.json",
+      "sha256": "cf0b64dce5bb922d596378e26dba7d4e3c1db2c3d4705934715ab0ab0d159f52",
+      "bytes": 11650
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/oracle-probe-execution.json",
+      "sha256": "98ac841fac484a1e3756b0b46578e7b23a8562e3f24f1acaa0bbfed9f10aa277",
+      "bytes": 6029
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/oracle-probe.stderr.log",
+      "sha256": "6ddd5c262db81a5df77d4175dd07a55093cdc8763962bdb58a90c84066dee842",
+      "bytes": 4720
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/oracle-probe.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/oracle-source-provenance.json",
+      "sha256": "d0b26288238c49806806217a18ef8479f639f0a3175e655392884a9e4741b671",
+      "bytes": 1657
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/preflight-harness-failure.json",
+      "sha256": "a576da207565fde83503fd3321c44399698cf4e406fe570897d709467f4ab4d2",
+      "bytes": 364
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/probe.json",
+      "sha256": "fe8d981fd10261e92de06953d8c9697ea1b48761ee4072e27bc1b23b06a69b16",
+      "bytes": 3067
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/pytest-mapping.log",
+      "sha256": "c37ae629c7fec7f2edc03ef471e92e1eb32a45085f3b9c26bfb22b394e57e39e",
+      "bytes": 204
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/pytest-selected-2.log",
+      "sha256": "605bd72b5facd5e68474fc32dfedb0245a2a495d9840a47f58087d9e04fc2477",
+      "bytes": 1190
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/pytest-selected-3.log",
+      "sha256": "2347eecae90faa96cab9064c26b820a0fa5ab7eab27b5749260226f5ad4e77f2",
+      "bytes": 366
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/pytest-selected.log",
+      "sha256": "8120ad76231c1ee81c1f159b902399bd6b61ba66353dd364142f685b3b6076b2",
+      "bytes": 1632
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/pytest_mapping_runner.py",
+      "sha256": "16e93f8f8207cbfc4232e51071693b3e3fb531ed3c4543da013c43d233a0fbcd",
+      "bytes": 343
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/pytest_runner.py",
+      "sha256": "52485adb29b1252c3dc8dde0bca9b67b1350dccba5bf06e430d05ed06820b10b",
+      "bytes": 448
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/schema-output.json",
+      "sha256": "af989d67f67b66ebb3c08ab8179d7a59d14e2a204f80ad78a7912c173856a770",
+      "bytes": 5763
+    },
+    {
+      "path": "docs/coordination/evidence/R51-13/source-freeze.json",
+      "sha256": "bace811190c6932bc137028d2b47f85c8594275aa77925e0e89c42d25cce6aff",
+      "bytes": 5438
+    }
+  ],
+  "log_hashes_refreshed_utc": "2026-11-28 (after evidence and source-freeze checkpoint correction)"
+}

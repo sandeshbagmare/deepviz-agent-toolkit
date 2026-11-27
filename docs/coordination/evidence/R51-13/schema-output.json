@@ -1,0 +1,240 @@
+{
+  "source_sha": "484ff08ddcae6c36d43ce61de774c00b6c422c88",
+  "schema": {
+    "$defs": {
+      "ChartSpec": {
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "properties": {
+              "charts": {
+                "items": {
+                  "not": {
+                    "properties": {
+                      "kind": {
+                        "const": "dashboard"
+                      }
+                    },
+                    "required": [
+                      "kind"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "description": "Map normalized record fields to a bounded chart or composed dashboard.",
+        "else": {
+          "properties": {
+            "charts": {
+              "maxItems": 0
+            }
+          }
+        },
+        "if": {
+          "properties": {
+            "kind": {
+              "const": "dashboard"
+            }
+          },
+          "required": [
+            "kind"
+          ]
+        },
+        "properties": {
+          "version": {
+            "const": 1,
+            "default": 1,
+            "title": "Version",
+            "type": "integer"
+          },
+          "kind": {
+            "default": "bar",
+            "enum": [
+              "bar",
+              "line",
+              "scatter",
+              "area",
+              "pie",
+              "heatmap",
+              "histogram",
+              "box",
+              "violin",
+              "bubble",
+              "radar",
+              "treemap",
+              "sunburst",
+              "funnel",
+              "gauge",
+              "geo",
+              "table",
+              "dashboard"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "title": {
+            "default": "Visualization",
+            "maxLength": 500,
+            "title": "Title",
+            "type": "string"
+          },
+          "description": {
+            "default": "",
+            "maxLength": 2000,
+            "title": "Description",
+            "type": "string"
+          },
+          "x": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "X"
+          },
+          "y": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Y"
+          },
+          "color": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Color"
+          },
+          "size": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Size"
+          },
+          "data_path": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Data Path"
+          },
+          "format": {
+            "default": "auto",
+            "enum": [
+              "auto",
+              "json",
+              "jsonl",
+              "csv",
+              "tsv",
+              "parquet",
+              "arrow"
+            ],
+            "title": "Format",
+            "type": "string"
+          },
+          "aggregation": {
+            "default": "auto",
+            "enum": [
+              "auto",
+              "none",
+              "sample",
+              "sum",
+              "mean",
+              "count",
+              "min",
+              "max"
+            ],
+            "title": "Aggregation",
+            "type": "string"
+          },
+          "max_points": {
+            "default": 2000,
+            "maximum": 100000,
+            "minimum": 10,
+            "title": "Max Points",
+            "type": "integer"
+          },
+          "width": {
+            "default": 900,
+            "maximum": 4096,
+            "minimum": 240,
+            "title": "Width",
+            "type": "integer"
+          },
+          "height": {
+            "default": 520,
+            "maximum": 4096,
+            "minimum": 200,
+            "title": "Height",
+            "type": "integer"
+          },
+          "theme": {
+            "default": "light",
+            "enum": [
+              "light",
+              "dark"
+            ],
+            "title": "Theme",
+            "type": "string"
+          },
+          "charts": {
+            "items": {
+              "$ref": "#/$defs/ChartSpec"
+            },
+            "maxItems": 24,
+            "title": "Charts",
+            "type": "array"
+          },
+          "columns": {
+            "default": 2,
+            "maximum": 6,
+            "minimum": 1,
+            "title": "Columns",
+            "type": "integer"
+          }
+        },
+        "then": {
+          "properties": {
+            "charts": {
+              "minItems": 1
+            }
+          },
+          "required": [
+            "charts"
+          ]
+        },
+        "title": "ChartSpec",
+        "type": "object"
+      }
+    },
+    "$ref": "#/$defs/ChartSpec"
+  }
+}

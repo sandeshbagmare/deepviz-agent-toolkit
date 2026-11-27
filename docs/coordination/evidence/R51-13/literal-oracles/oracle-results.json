@@ -1,0 +1,483 @@
+{
+  "source_commit": "484ff08ddcae6c36d43ce61de774c00b6c422c88",
+  "literal_payload_count": 17,
+  "tests_run": 36,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "failed_tests": [],
+  "error_tests": [],
+  "cases": {
+    "bar_explicit_empty_children": {
+      "runtime_accepted": true,
+      "runtime_error_types": [],
+      "schema_accepted": {
+        "generated": true,
+        "published": true
+      },
+      "schema_errors": {
+        "generated": [],
+        "published": []
+      },
+      "raw_json": "{\"kind\":\"bar\",\"charts\":[]}",
+      "expected_accepted": true
+    },
+    "bar_nonempty_children": {
+      "runtime_accepted": false,
+      "runtime_error_types": [
+        "value_error"
+      ],
+      "schema_accepted": {
+        "generated": false,
+        "published": false
+      },
+      "schema_errors": {
+        "generated": [
+          {
+            "validator": "maxItems",
+            "path": [
+              "charts"
+            ]
+          }
+        ],
+        "published": [
+          {
+            "validator": "maxItems",
+            "path": [
+              "charts"
+            ]
+          }
+        ]
+      },
+      "raw_json": "{\"kind\":\"bar\",\"charts\":[{}]}",
+      "expected_accepted": false
+    },
+    "child_forbidden_extra": {
+      "runtime_accepted": false,
+      "runtime_error_types": [
+        "extra_forbidden"
+      ],
+      "schema_accepted": {
+        "generated": false,
+        "published": false
+      },
+      "schema_errors": {
+        "generated": [
+          {
+            "validator": "additionalProperties",
+            "path": [
+              "charts",
+              0
+            ]
+          }
+        ],
+        "published": [
+          {
+            "validator": "additionalProperties",
+            "path": [
+              "charts",
+              0
+            ]
+          }
+        ]
+      },
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"expression\":\"inert data only\"}]}",
+      "expected_accepted": false
+    },
+    "child_integral_numbers": {
+      "runtime_accepted": true,
+      "runtime_error_types": [],
+      "schema_accepted": {
+        "generated": true,
+        "published": true
+      },
+      "schema_errors": {
+        "generated": [],
+        "published": []
+      },
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"kind\":\"line\",\"version\":1.0,\"max_points\":2000.0,\"width\":900.0,\"height\":520.0,\"columns\":2.0}]}",
+      "expected_accepted": true
+    },
+    "child_numeric_boolean": {
+      "runtime_accepted": false,
+      "runtime_error_types": [
+        "value_error"
+      ],
+      "schema_accepted": {
+        "generated": false,
+        "published": false
+      },
+      "schema_errors": {
+        "generated": [
+          {
+            "validator": "type",
+            "path": [
+              "charts",
+              0,
+              "width"
+            ]
+          }
+        ],
+        "published": [
+          {
+            "validator": "type",
+            "path": [
+              "charts",
+              0,
+              "width"
+            ]
+          }
+        ]
+      },
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"width\":true}]}",
+      "expected_accepted": false
+    },
+    "child_numeric_string": {
+      "runtime_accepted": false,
+      "runtime_error_types": [
+        "value_error"
+      ],
+      "schema_accepted": {
+        "generated": false,
+        "published": false
+      },
+      "schema_errors": {
+        "generated": [
+          {
+            "validator": "const",
+            "path": [
+              "charts",
+              0,
+              "version"
+            ]
+          },
+          {
+            "validator": "type",
+            "path": [
+              "charts",
+              0,
+              "version"
+            ]
+          }
+        ],
+        "published": [
+          {
+            "validator": "const",
+            "path": [
+              "charts",
+              0,
+              "version"
+            ]
+          },
+          {
+            "validator": "type",
+            "path": [
+              "charts",
+              0,
+              "version"
+            ]
+          }
+        ]
+      },
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"version\":\"1\"}]}",
+      "expected_accepted": false
+    },
+    "dashboard_empty_children": {
+      "runtime_accepted": false,
+      "runtime_error_types": [
+        "value_error"
+      ],
+      "schema_accepted": {
+        "generated": false,
+        "published": false
+      },
+      "schema_errors": {
+        "generated": [
+          {
+            "validator": "minItems",
+            "path": [
+              "charts"
+            ]
+          }
+        ],
+        "published": [
+          {
+            "validator": "minItems",
+            "path": [
+              "charts"
+            ]
+          }
+        ]
+      },
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[]}",
+      "expected_accepted": false
+    },
+    "dashboard_missing_children": {
+      "runtime_accepted": false,
+      "runtime_error_types": [
+        "value_error"
+      ],
+      "schema_accepted": {
+        "generated": false,
+        "published": false
+      },
+      "schema_errors": {
+        "generated": [
+          {
+            "validator": "required",
+            "path": []
+          }
+        ],
+        "published": [
+          {
+            "validator": "required",
+            "path": []
+          }
+        ]
+      },
+      "raw_json": "{\"kind\":\"dashboard\"}",
+      "expected_accepted": false
+    },
+    "dashboard_one_default_child": {
+      "runtime_accepted": true,
+      "runtime_error_types": [],
+      "schema_accepted": {
+        "generated": true,
+        "published": true
+      },
+      "schema_errors": {
+        "generated": [],
+        "published": []
+      },
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{}]}",
+      "expected_accepted": true
+    },
+    "default_bar": {
+      "runtime_accepted": true,
+      "runtime_error_types": [],
+      "schema_accepted": {
+        "generated": true,
+        "published": true
+      },
+      "schema_errors": {
+        "generated": [],
+        "published": []
+      },
+      "raw_json": "{}",
+      "expected_accepted": true
+    },
+    "default_bar_nonempty_children": {
+      "runtime_accepted": false,
+      "runtime_error_types": [
+        "value_error"
+      ],
+      "schema_accepted": {
+        "generated": false,
+        "published": false
+      },
+      "schema_errors": {
+        "generated": [
+          {
+            "validator": "maxItems",
+            "path": [
+              "charts"
+            ]
+          }
+        ],
+        "published": [
+          {
+            "validator": "maxItems",
+            "path": [
+              "charts"
+            ]
+          }
+        ]
+      },
+      "raw_json": "{\"charts\":[{\"kind\":\"line\"}]}",
+      "expected_accepted": false
+    },
+    "nested_empty_dashboard": {
+      "runtime_accepted": false,
+      "runtime_error_types": [
+        "value_error"
+      ],
+      "schema_accepted": {
+        "generated": false,
+        "published": false
+      },
+      "schema_errors": {
+        "generated": [
+          {
+            "validator": "not",
+            "path": [
+              "charts",
+              0
+            ]
+          },
+          {
+            "validator": "minItems",
+            "path": [
+              "charts",
+              0,
+              "charts"
+            ]
+          }
+        ],
+        "published": [
+          {
+            "validator": "not",
+            "path": [
+              "charts",
+              0
+            ]
+          },
+          {
+            "validator": "minItems",
+            "path": [
+              "charts",
+              0,
+              "charts"
+            ]
+          }
+        ]
+      },
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"kind\":\"dashboard\",\"charts\":[]}]}",
+      "expected_accepted": false
+    },
+    "nested_nonempty_dashboard": {
+      "runtime_accepted": false,
+      "runtime_error_types": [
+        "value_error"
+      ],
+      "schema_accepted": {
+        "generated": false,
+        "published": false
+      },
+      "schema_errors": {
+        "generated": [
+          {
+            "validator": "not",
+            "path": [
+              "charts",
+              0
+            ]
+          }
+        ],
+        "published": [
+          {
+            "validator": "not",
+            "path": [
+              "charts",
+              0
+            ]
+          }
+        ]
+      },
+      "raw_json": "{\"kind\":\"dashboard\",\"charts\":[{\"kind\":\"dashboard\",\"charts\":[{}]}]}",
+      "expected_accepted": false
+    },
+    "root_forbidden_extra": {
+      "runtime_accepted": false,
+      "runtime_error_types": [
+        "extra_forbidden"
+      ],
+      "schema_accepted": {
+        "generated": false,
+        "published": false
+      },
+      "schema_errors": {
+        "generated": [
+          {
+            "validator": "additionalProperties",
+            "path": []
+          }
+        ],
+        "published": [
+          {
+            "validator": "additionalProperties",
+            "path": []
+          }
+        ]
+      },
+      "raw_json": "{\"code\":\"inert data only\"}",
+      "expected_accepted": false
+    },
+    "root_integral_numbers": {
+      "runtime_accepted": true,
+      "runtime_error_types": [],
+      "schema_accepted": {
+        "generated": true,
+        "published": true
+      },
+      "schema_errors": {
+        "generated": [],
+        "published": []
+      },
+      "raw_json": "{\"version\":1.0,\"max_points\":2000.0,\"width\":900.0,\"height\":520.0,\"columns\":2.0}",
+      "expected_accepted": true
+    },
+    "root_numeric_boolean": {
+      "runtime_accepted": false,
+      "runtime_error_types": [
+        "value_error"
+      ],
+      "schema_accepted": {
+        "generated": false,
+        "published": false
+      },
+      "schema_errors": {
+        "generated": [
+          {
+            "validator": "type",
+            "path": [
+              "columns"
+            ]
+          }
+        ],
+        "published": [
+          {
+            "validator": "type",
+            "path": [
+              "columns"
+            ]
+          }
+        ]
+      },
+      "raw_json": "{\"columns\":true}",
+      "expected_accepted": false
+    },
+    "root_numeric_string": {
+      "runtime_accepted": false,
+      "runtime_error_types": [
+        "value_error"
+      ],
+      "schema_accepted": {
+        "generated": false,
+        "published": false
+      },
+      "schema_errors": {
+        "generated": [
+          {
+            "validator": "type",
+            "path": [
+              "width"
+            ]
+          }
+        ],
+        "published": [
+          {
+            "validator": "type",
+            "path": [
+              "width"
+            ]
+          }
+        ]
+      },
+      "raw_json": "{\"width\":\"900\"}",
+      "expected_accepted": false
+    }
+  },
+  "oracle_source_sha256": "935c768e6e9bba81f425d11ba709c5bafbeffaec60a92c87e32fb746708501ea",
+  "limits": "Known next-728 prerequisite, not a new issue or bff gate approval; no source/schema fix applied"
+}
