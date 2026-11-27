@@ -72,3 +72,26 @@
   source/import/test-byteproof and freshUNCHANGED74mandatorybeforePRsignoff.
 - NextR04 supplies actualfocusedhead; rootreview/refill notidlewait/poll. Detailed
   MAINreport/checkpoints and portableNEWtests; publicationreceiptMAINaftercommands.
+
+## R25 final actual PR33 tester2 — PASS, not toolkit approval
+
+- SAMEID/FULLMAINR24+R25common15+R26/canonical/AGENTS/ownnote/prework saved;
+  R22commandcheckpoint2b62fbbfinishedbeforeactual998followup. ActualPR33head
+  **99841ffb80e0f2ea90c753c1bf0ceff718e0e180**,base0ae2,git-onlyremoteexact0.
+- NEWcleanimmutableLFcheckout(commandlocalGitflag/no source/configrewrite),all14
+  rawGitbytesbeforeafter/actualpublicsameprocessmodelonlyloadedcodeOWN998,
+  unusedresources-onlynamespace/no.py disclosed/no pathmutation; separate74
+  uniqueactualmodelsfileimport/no deepvizpackage. No e44testpasscarriedforward.
+- Actualsupplied40 **40pass0error0skip0.22s** +unchangedOWN74 **74pass0error0skip
+  4.12s**=114actual998pytestpass. FocusedRuff0/mypy0onefile; ownhelperRuff/mypy0.
+ 67literal19accept48reject/generated==committedDraftschema75972780.../actual
+  decoder+wirefullJSON/errors/roundtrip+3nonJSONschemaN/A+3corruptioncontrols.
+- Cross-lanepostrungate0all14Git/import/schema/JUnit114+unchangedoldprobehashes/
+  actual67outputs19canonicalhashes. NEWportable12actualsamples/sourceidentity/
+  summary/helper/report. InitialownnamespaceguardBEFOREtests andI001preserved,
+  correctedownproof/importsONLY/notproductfinding/nooraclesoftening.
+- **Scopedactual998finaltestersignoffPASS/no material finding**, chartimageN/A
+  modelonly/no renderer; nofulltoolkit/TS/MCP/agents/packages/10M/CI/mergeclaim.
+  No source/originaloracle/API/install/spawn/SUM/Fraction/cleanup/formatsreplay.
+  NextR04fourgenuineactual998reports/materialdisposition+freshgreenCI→ownedmerge/
+  defaultancestry/#30decision. Ownmeaningfulscopedpublication/receiptMAINpending.

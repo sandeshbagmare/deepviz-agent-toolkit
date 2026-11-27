@@ -1,0 +1,60 @@
+{
+  "source_commit": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+  "scope": "12 representative actual outputs from 67 independently specified literals, run fresh on actual PR33; full67 raw output SHA retained",
+  "full67_output_sha256": "d51dfdaaa8c95d8491aa3dc57c577b14af5593063b2f395ab544dd83fe7d391b",
+  "both_paths": "json.loads(wire) -> ChartSpec.model_validate -> model_dump_json -> json.loads -> Draft202012, and model_validate_json -> same dump/schema/roundtrip",
+  "actual_decoded_output_equals_wire_output_for_all_accepted": true,
+  "schema_generated_equals_committed": true,
+  "representatives": [
+    {
+      "name": "omitted-defaults", "literal_wire": "{}", "accepted": true, "schema_valid": true,
+      "actual_json": {"version":1,"kind":"bar","title":"Visualization","description":"","x":null,"y":null,"color":null,"size":null,"data_path":null,"format":"auto","aggregation":"auto","max_points":2000,"width":900,"height":520,"theme":"light","charts":[],"columns":2}
+    },
+    {
+      "name": "width-integral-json-float", "literal_wire": "{\"width\":900.0}", "accepted": true, "schema_valid": true,
+      "actual_json": {"version":1,"kind":"bar","title":"Visualization","description":"","x":null,"y":null,"color":null,"size":null,"data_path":null,"format":"auto","aggregation":"auto","max_points":2000,"width":900,"height":520,"theme":"light","charts":[],"columns":2}
+    },
+    {
+      "name": "max_points-lower-bound", "literal_wire": "{\"max_points\":10}", "accepted": true, "schema_valid": true,
+      "actual_json": {"version":1,"kind":"bar","title":"Visualization","description":"","x":null,"y":null,"color":null,"size":null,"data_path":null,"format":"auto","aggregation":"auto","max_points":10,"width":900,"height":520,"theme":"light","charts":[],"columns":2}
+    },
+    {
+      "name": "columns-upper-bound", "literal_wire": "{\"columns\":6}", "accepted": true, "schema_valid": true,
+      "actual_json": {"version":1,"kind":"bar","title":"Visualization","description":"","x":null,"y":null,"color":null,"size":null,"data_path":null,"format":"auto","aggregation":"auto","max_points":2000,"width":900,"height":520,"theme":"light","charts":[],"columns":6}
+    },
+    {
+      "name": "child-integral-float", "literal_wire": "{\"kind\":\"dashboard\",\"charts\":[{\"width\":900.0}]}", "accepted": true, "schema_valid": true,
+      "actual_json": {"version":1,"kind":"dashboard","title":"Visualization","description":"","x":null,"y":null,"color":null,"size":null,"data_path":null,"format":"auto","aggregation":"auto","max_points":2000,"width":900,"height":520,"theme":"light","charts":[{"version":1,"kind":"bar","title":"Visualization","description":"","x":null,"y":null,"color":null,"size":null,"data_path":null,"format":"auto","aggregation":"auto","max_points":2000,"width":900,"height":520,"theme":"light","charts":[],"columns":2}],"columns":2}
+    },
+    {
+      "name": "literal-untrusted-title-is-data", "literal_wire": "{\"title\":\"<script>literal data only</script>\"}", "accepted": true, "schema_valid": true,
+      "actual_json": {"version":1,"kind":"bar","title":"<script>literal data only</script>","description":"","x":null,"y":null,"color":null,"size":null,"data_path":null,"format":"auto","aggregation":"auto","max_points":2000,"width":900,"height":520,"theme":"light","charts":[],"columns":2}
+    },
+    {
+      "name": "version-boolean-true", "literal_wire": "{\"version\":true}", "accepted": false, "schema_valid": false,
+      "actual_errors": [{"type":"value_error","loc":[],"msg":"Value error, version must be a JSON number, not a string or boolean"}]
+    },
+    {
+      "name": "width-numeric-string", "literal_wire": "{\"width\":\"900.0\"}", "accepted": false, "schema_valid": false,
+      "actual_errors": [{"type":"value_error","loc":[],"msg":"Value error, width must be a JSON number, not a string or boolean"}]
+    },
+    {
+      "name": "height-nonintegral", "literal_wire": "{\"height\":520.5}", "accepted": false, "schema_valid": false,
+      "actual_errors": [{"type":"int_from_float","loc":["height"],"msg":"Input should be a valid integer, got a number with a fractional part"}]
+    },
+    {
+      "name": "max_points-above-bound", "literal_wire": "{\"max_points\":100001}", "accepted": false, "schema_valid": false,
+      "actual_errors": [{"type":"less_than_equal","loc":["max_points"],"msg":"Input should be less than or equal to 100000"}]
+    },
+    {
+      "name": "child-string-width", "literal_wire": "{\"kind\":\"dashboard\",\"charts\":[{\"width\":\"900\"}]}", "accepted": false, "schema_valid": false,
+      "actual_errors": [{"type":"value_error","loc":["charts",0],"msg":"Value error, width must be a JSON number, not a string or boolean"}]
+    },
+    {
+      "name": "child-extra-expression", "literal_wire": "{\"kind\":\"dashboard\",\"charts\":[{\"expression\":\"not executable\"}]}", "accepted": false, "schema_valid": false,
+      "actual_errors": [{"type":"extra_forbidden","loc":["charts",0,"expression"],"msg":"Extra inputs are not permitted"}]
+    }
+  ],
+  "nonJSON_token_schema_stage": "NaN/Infinity/-Infinity literals rejected before a JSON instance exists; schema stage N/A, not Draft validation pass",
+  "chart_image": "N/A model-only slice; these are applicable actual serialized model outputs, not renderer evidence"
+}
