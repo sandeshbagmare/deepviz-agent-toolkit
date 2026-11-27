@@ -1,0 +1,114 @@
+{
+  "base": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "source_equivalent_e44_after_Git_LF_normalization": true,
+  "not_yet_a_commit": true,
+  "results": [
+    {
+      "name": "R22-contract-red",
+      "tests": 30,
+      "failures": 6,
+      "skips": 0,
+      "errors": 0,
+      "xml_seconds": "0.314",
+      "xml_sha256": "3a3dc5ba3a05a35ada95ba7f7b59aba6851ce71b1dbd185aa98869939aca6b16",
+      "failures_by_name": [
+        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[width-900]",
+        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[height-520]",
+        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[columns-2]",
+        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[max_points-2000]",
+        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[version-True]",
+        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[columns-True]"
+      ]
+    },
+    {
+      "name": "R22-contract-expanded-red",
+      "tests": 40,
+      "failures": 12,
+      "skips": 0,
+      "errors": 0,
+      "xml_seconds": "0.377",
+      "xml_sha256": "f1850ddaf21780e1603c329e98d31238ddb71a428484d489aa6d3d57977e2efe",
+      "failures_by_name": [
+        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[width-900]",
+        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[height-520]",
+        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[columns-2]",
+        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[max_points-2000]",
+        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[version-True]",
+        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[columns-True]",
+        "test_numeric_json_types_and_bounds_agree[version-1-1-1]",
+        "test_numeric_json_types_and_bounds_agree[max_points-10-100000-2000]",
+        "test_numeric_json_types_and_bounds_agree[width-240-4096-900]",
+        "test_numeric_json_types_and_bounds_agree[height-200-4096-520]",
+        "test_numeric_json_types_and_bounds_agree[columns-1-6-2]",
+        "test_numeric_child_validation_is_not_bypassed_by_dashboard[900-False]"
+      ]
+    },
+    {
+      "name": "R22-contract-green2",
+      "tests": 40,
+      "failures": 0,
+      "skips": 0,
+      "errors": 0,
+      "xml_seconds": "0.262",
+      "xml_sha256": "dd91e8a37fcf3f782c10ddc6d136dbef6b667c110a9b5ea78e9808eb3b2d429f",
+      "failures_by_name": []
+    }
+  ],
+  "latest_checks": {
+    "pytest_exit": 0,
+    "tests": 40,
+    "failures": 0,
+    "skips": 0,
+    "ruff_exit": 0,
+    "mypy_exit": 0,
+    "mypy_files": 1
+  },
+  "commands": {
+    "source_isolation": "python -S; PYTHONPATH=OWN/python/deepviz/src;MAIN/.venv/Lib/site-packages (no .pth/editable hooks)",
+    "red": "python -S -m pytest tests/test_models.py -q --tb=short -p no:cacheprovider --junitxml=<red.xml>",
+    "expanded_red_and_green": "python -S -m pytest -q --strict-markers --tb=short -p no:cacheprovider --junitxml=<unique.xml>",
+    "lint": "python -S -m ruff check .",
+    "types": "python -S -m mypy --cache-dir <OWN-temp-cache>"
+  },
+  "versions": {
+    "pydantic": "2.14.4",
+    "pytest": "9.2.0",
+    "jsonschema": "4.26.0",
+    "ruff": "0.17.6",
+    "mypy": "2.4.1"
+  },
+  "files": [
+    {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "working_sha256": "02de5fac6ab08166ff0f1692cde8209b4bb73f5326bf13f178e2aa90ddf7253c",
+      "git_LF_sha256": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170"
+    },
+    {
+      "path": "tests/test_models.py",
+      "working_sha256": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32",
+      "git_LF_sha256": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32"
+    },
+    {
+      "path": "tests/test_numeric_schema.py",
+      "working_sha256": "b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3",
+      "git_LF_sha256": "b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3"
+    },
+    {
+      "path": "schemas/chart-spec.schema.json",
+      "working_sha256": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d",
+      "git_LF_sha256": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d"
+    },
+    {
+      "path": ".github/workflows/chart-contract.yml",
+      "working_sha256": "ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227",
+      "git_LF_sha256": "ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227"
+    }
+  ],
+  "scope_limits": [
+    "No rendered chart applicable: only model numeric trust boundary; real serialized validation output supplied",
+    "Foundation main has no renderer/CLI/package modules; no claim full pip/SDK/toolkit operational",
+    "CI and four exact-head independent reports pending",
+    "Original e44 oracle has import-order-only normalization, all assertions preserved",
+    "Two pre-test identity guard failures and two initial Ruff import-group findings are preserved in manager report, not hidden passes"
+  ]
+}
