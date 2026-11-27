@@ -1,0 +1,63 @@
+{
+  "reviewed_source": "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19",
+  "actual_commands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "5ba69^{commit}"
+      ],
+      "exit": 128,
+      "phase": "reviewer origin shortcut guessed, before product execution"
+    },
+    {
+      "argv": [
+        "git",
+        "log",
+        "-8",
+        "--format=%H %s",
+        "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+        "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R38-01\\prove_origin.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R38-01\\static_review.py"
+      ],
+      "exit": 0
+    }
+  ],
+  "raw_Git_comparisons": 16,
+  "full_normalizer_lines_read": [
+    1,
+    776
+  ],
+  "static_AST_units": 32,
+  "unchanged_function_units": 30,
+  "producer_mean_cases_INSPECTED_not_run": 21,
+  "product_imports_calls": 0,
+  "pytest_tests": 0,
+  "benchmarks": 0,
+  "new_counterexamples": 0,
+  "scanner_rejections_before_report_write": 2,
+  "SOURCE_gate": "no new mustfix onlyc1b Pythonmean",
+  "unverified": "runtime/TS/546/integration/CI/actualmain/scale"
+}

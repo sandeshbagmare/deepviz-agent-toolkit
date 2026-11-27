@@ -1,0 +1,103 @@
+{
+  "reviewed_source": "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19",
+  "parent": "79232fb2f402bf21d455fbc021f1c238d19abe80",
+  "P1_cleanup_ancestor": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+  "P1_is_ancestor_exit": 0,
+  "reviewer_head": "a84c07c2c36a8554a9cda77bfed0390d3e3b7009",
+  "raw_snapshot_equals_Git_blobs": true,
+  "files": {
+    "pyproject.toml": {
+      "sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+      "bytes": 1487,
+      "lines": 49
+    },
+    "packages/deepviz/src/normalize.ts": {
+      "sha256": "7e10c7a686044532ffe21b9fcc79aabed1c5d1ed953fdee12be4b2de3eec9c15",
+      "bytes": 30489,
+      "lines": 557
+    },
+    "packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs": {
+      "sha256": "39c2440f23e152ae9f331b227a646050a7a33377bdd1385d7fc30241b6edf8c1",
+      "bytes": 2288,
+      "lines": 42
+    },
+    "python/deepviz/tests/test_normalize.py": {
+      "sha256": "7ccda1fe47bba9310d183b9fed2fd2d85f70a275478053726f3c7b5533da13a5",
+      "bytes": 21525,
+      "lines": 497
+    },
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py": {
+      "sha256": "95e9bd99773fcc0729215dc4605e78aad35158c68579fe7f31c6516bcb8a8a11",
+      "bytes": 5665,
+      "lines": 139
+    },
+    "python/deepviz/src/deepviz/cli.py": {
+      "sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+      "bytes": 2623,
+      "lines": 60
+    },
+    "python/deepviz/src/deepviz/engines.py": {
+      "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+      "bytes": 42230,
+      "lines": 767
+    },
+    "python/deepviz/src/deepviz/mcp_server.py": {
+      "sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+      "bytes": 5395,
+      "lines": 115
+    },
+    "python/deepviz/src/deepviz/models.py": {
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "bytes": 3493,
+      "lines": 92
+    },
+    "python/deepviz/src/deepviz/normalize.py": {
+      "sha256": "f3cc6e78e188ed97f62133a954154dbfdd416128c97cd4b154144ae62f778296",
+      "bytes": 35309,
+      "lines": 776
+    },
+    "python/deepviz/src/deepviz/py.typed": {
+      "sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+      "bytes": 46,
+      "lines": 1
+    },
+    "python/deepviz/src/deepviz/recommend.py": {
+      "sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+      "bytes": 4875,
+      "lines": 115
+    },
+    "python/deepviz/src/deepviz/render.py": {
+      "sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+      "bytes": 11313,
+      "lines": 229
+    },
+    "python/deepviz/src/deepviz/tools.py": {
+      "sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+      "bytes": 9383,
+      "lines": 191
+    },
+    "python/deepviz/src/deepviz/__init__.py": {
+      "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+      "bytes": 1133,
+      "lines": 27
+    },
+    "python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt": {
+      "sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+      "bytes": 1086,
+      "lines": 21
+    }
+  },
+  "later546_handback_reviewed": false,
+  "actual_main_mean_claimed": false,
+  "runtime_executed": false,
+  "initial_identity_failure": {
+    "command": [
+      "git",
+      "rev-parse",
+      "5ba69^{commit}"
+    ],
+    "exit": 128,
+    "cause": "reviewer guessed overlong short ancestor, not found; actual c1b log resolves P1 to5ba860",
+    "tests_before_actual_proof": 0
+  }
+}

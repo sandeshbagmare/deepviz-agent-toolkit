@@ -1,0 +1,344 @@
+{
+  "source": "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19",
+  "parent": "79232fb2f402bf21d455fbc021f1c238d19abe80",
+  "product_runtime_calls": 0,
+  "pytest_tests_run": 0,
+  "new_counterexamples_needed": false,
+  "changed_Python_function_units": [
+    "_Reducer.add",
+    "_Reducer.finish"
+  ],
+  "all_other_30_units_AST_exact_parent": true,
+  "full_normalizer_read_range": [
+    1,
+    776
+  ],
+  "all_relevant_units": [
+    {
+      "unit": "_iterable",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 67,
+      "end": 70,
+      "AST_sha256": "4b4bb61786a9cda5d0ac42246368deb850867787e5b5d5c3052f66d6165e8ab3",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_json",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 73,
+      "end": 77,
+      "AST_sha256": "5f2804c4bdbadfa44388f18aee78c92ee2ae0c0f0fcf8d1d7180c369f502be31",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_unique_json_object",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 80,
+      "end": 86,
+      "AST_sha256": "abcb3d9547b3c6261730efdb99fa40c4b62da0aa66444b05b6ca2a5978f1dedf",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_without_bom",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 89,
+      "end": 96,
+      "AST_sha256": "84ca65b3462423e5d7d80c3945fc651763af2a93ceae7906e665e07285beddcc",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_jsonl",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 99,
+      "end": 102,
+      "AST_sha256": "2505edd19e810462a2861343fbfb90acad422a63d5b2407a2866c4bbf9133412",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_cell",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 105,
+      "end": 113,
+      "AST_sha256": "1a035c7ff3ee49c55b8ab0eb95b4cc09d8733497acd2f59105825cf4470f257a",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_delimited",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 116,
+      "end": 135,
+      "AST_sha256": "f26cd880c4ab5c24a23d8d0638f1d3a990626a956def233c491522a9d36d9a0c",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_text",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 138,
+      "end": 160,
+      "AST_sha256": "1b8033e42a15b631b8a85dab2cc75a833f7dcb348bd7b2b8d2bde8ab401eeab8",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_arrow_module",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 163,
+      "end": 168,
+      "AST_sha256": "2a5a1198bf2401611c2f491de8e756233a7186160367447fff35fd43e20111ff",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_arrow_rows",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 171,
+      "end": 184,
+      "AST_sha256": "4e32aea83a180129cc45590b11cd30325f17bdf9bf5904248019c256f52773c5",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_validate_arrow_fields",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 187,
+      "end": 201,
+      "AST_sha256": "94d841d2bb9b5c83e2ef3650fee1f500ff6e150d3a92481a35506c177aaaae6f",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_binary_rows",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 204,
+      "end": 225,
+      "AST_sha256": "8b9f0b6fd79c8cfaa9610747660e51612b6bc9b6d3e26415d02d70157f3209a6",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_path_rows",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 228,
+      "end": 236,
+      "AST_sha256": "a5b63643b0b1dd4503aedf3d5bf19b870e5f2ad1d5b364c7d4df545e1271e00e",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_source",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 239,
+      "end": 264,
+      "AST_sha256": "a5ae30c43ff393c7af45e4fb3ecda8c21e8a0e2a0924f44ecbd077ef2b5351e5",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_select_path",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 267,
+      "end": 297,
+      "AST_sha256": "ea943485c7623b0b7e09f6ef86712f062b2ae740713daae7140df39ad0148d87",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_connection",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 300,
+      "end": 316,
+      "AST_sha256": "53677b4e39405193cb9314f57378ba971fdb3f41f540a038f82b597a799032d9",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_graphql_errors",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 319,
+      "end": 323,
+      "AST_sha256": "e36648a0984139e4798d8024995a88b00d918b478df23536200af74cb7f0acce",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_expand",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 326,
+      "end": 385,
+      "AST_sha256": "25a34d05aac0060ab282b0ae783a3f6078f0f3e5031bf5601d670f605fa115b7",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_scalar",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 388,
+      "end": 407,
+      "AST_sha256": "af01f920e8623cb335f3c93bbda4a9391894e7b5b2a29e8f973ebf826d59e935",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_utf8_size",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 410,
+      "end": 416,
+      "AST_sha256": "e4782df1af2abddba1d49ec742e2dc51aecb0a424894fe76121d887f9f84cd58",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_string_bytes",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 419,
+      "end": 423,
+      "AST_sha256": "9159978d884039841a025e86216542b49428f15d420e91ee8e12ffe483395d3b",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_record_bytes",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 426,
+      "end": 441,
+      "AST_sha256": "2d2bea7733e899f8c5427a2229ce49b0b94390dcced1a60f41d43a8f3d8dfff9",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_check_retained_bytes",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 444,
+      "end": 446,
+      "AST_sha256": "3a9c20549e87f43c02e48834c4c325523689d36d06a3e1d410e0cf27a62c2237",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_flatten",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 449,
+      "end": 478,
+      "AST_sha256": "97dee7278693a1800377101ca982360b70760b3d33799b25bd38192243dde68a",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_records",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 481,
+      "end": 521,
+      "AST_sha256": "8b51cb1b138624ee6a01fe6d912637b44135fb0bd92c41405ed5ddc27406b247",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_plan",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 524,
+      "end": 562,
+      "AST_sha256": "40dbbdb8f44c9c0c4dd0241a8c9a428c51878bf55ad09f8828c688a65319e166",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_sum_units",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 565,
+      "end": 568,
+      "AST_sha256": "7d17bd1ad41c9d999c48baf02ff3b6d0e72eb148e6c70db40e180279abe9413e",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_Reducer.__init__",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 574,
+      "end": 582,
+      "AST_sha256": "dcdcb39c6f0b2f87dd575b2fe50464f4a87c9506f6fd8f81a53f23680df39220",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_Reducer._store",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 584,
+      "end": 591,
+      "AST_sha256": "ce1c91135daf15aa20feac46c8a58e901bf46b94e7e59a97e69224f3755b0501",
+      "changed": false,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_Reducer.add",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 593,
+      "end": 654,
+      "AST_sha256": "8ffffdbe27c0bccb17903906aa9ceda054ea4c2c2af9392fc3c81441fa207145",
+      "changed": true,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "_Reducer.finish",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 656,
+      "end": 684,
+      "AST_sha256": "d9654a1f9bf4fae3d2e0500570f606069753f942ff062380da80ba5164565943",
+      "changed": true,
+      "reviewed_full_unit": true
+    },
+    {
+      "unit": "normalize",
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "start": 687,
+      "end": 776,
+      "AST_sha256": "86c8314d6d22b3d7fc6ffada68cca156f733579237b6c1da3d7356512fa9eb67",
+      "changed": false,
+      "reviewed_full_unit": true
+    }
+  ],
+  "public_callers_reviewed": {
+    "python/deepviz/src/deepviz/__init__.py": [
+      1,
+      27
+    ],
+    "python/deepviz/src/deepviz/models.py": [
+      1,
+      92
+    ],
+    "python/deepviz/src/deepviz/render.py": [
+      1,
+      229
+    ],
+    "python/deepviz/src/deepviz/tools.py": [
+      1,
+      191
+    ],
+    "python/deepviz/src/deepviz/cli.py": [
+      1,
+      60
+    ],
+    "python/deepviz/src/deepviz/mcp_server.py": [
+      1,
+      115
+    ]
+  },
+  "producer_mean_oracles_full_read": "python/deepviz/tests/test_r17_normalizer_boundaries.py:1-139",
+  "source_finding": "no new mustfix in narrow c1b Python mean delta",
+  "later546_or_actualmain_approval": false,
+  "original_lifetime_test_functions_unchanged_AST": [
+    "test_owned_jsonl_unwinds_before_downstream_exception_returns",
+    "test_borrowed_generator_is_not_closed_when_planning_raises",
+    "test_borrowed_second_line_jsonl_parse_failure_keeps_stream_usable"
+  ],
+  "new_producer_test_functions": [
+    "test_other_mean_uses_all_numeric_contributions_not_boolean_or_null",
+    "test_mean_rounds_exact_finite_rational_once"
+  ]
+}
