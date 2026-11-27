@@ -691,6 +691,25 @@ def _antv(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) -> 
                                      "range": ["#ffffd9", "#081d58"], "nice": False}}
         result["legend"] = {"color": {"data": [{"value": low}, {"value": high}],
                                        "labelTextAlign": "start"}}
+        span = high - low
+        if not math.isfinite(span):
+            # Keep raw values, but never interpolate across an infinite segment.
+            result["scale"]["color"].update(
+                domain=[low, low / 2 + high / 2, high],
+                range=["#ffffd9", "#848e99", "#081d58"],
+            )
+        if not math.isfinite(span) or not math.isfinite(1 / span):
+            # G2's legend layout/sampling needs a well-conditioned coordinate.
+            # Labels/domainValue remain the actual numeric domain endpoints.
+            # Its auto-size measurement has no ticks here; reserve the default size.
+            result["legend"]["color"].update(
+                domain=[0, 1], color=["#ffffd9", "#081d58"], size=60,
+                data=[{"value": 0, "label": str(low), "domainValue": low},
+                      {"value": 1, "label": str(high), "domainValue": high}],
+            )
+        label_length = 14 * max(len(str(low)), len(str(high))) + 20
+        if label_length > 200:
+            result["legend"]["color"]["length"] = min(spec.width - 32, label_length)
         result.pop("style", None)
     elif kind == "box":
         result["data"] = [{"_x": b["name"], "_y": b["stats"]} for b in _boxes(data)]
