@@ -164,3 +164,14 @@ prerequisite, publish the real focused head, then notify this SAME reviewer sess
 with its immutable SHA/PR. I must verify ALL actual scoped paths/context and the
 relevant strict controls before a final focused-head review. Do not wait for all
 unrelated workers or substitute readiness for that review.
+
+## Actual scoped readiness publication
+
+Readiness review/probes/evidence commit
+**9566872da8d0733c3412c0d2e83ff4037fe5278b** was non-force pushed to the OWN
+`agents/r10-01-correctness-regressions` branch at15:14:15UTC. Push exit0 and
+immediate exact remote-SHA readback exit0 confirmed that SHA. Fresh authenticated
+GET/user200 verified expected `sandeshbagmare`; credential stayed in process
+memory and was not placed in args/logs/repository. `evidence/R22-01/publication.json`
+is the sanitized receipt. This publishes readiness evidence, not a focused-PR
+head, approval, merge, final green CI or #30 closure.

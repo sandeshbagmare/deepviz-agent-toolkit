@@ -1,0 +1,40 @@
+{
+  "utc": "2026-11-27T15:14:15.553955+00:00",
+  "authenticated_login": "sandeshbagmare",
+  "authenticated_GET_user_status": 200,
+  "branch": "agents/r10-01-correctness-regressions",
+  "commit": "9566872da8d0733c3412c0d2e83ff4037fe5278b",
+  "reviewed_proposal": "e44f667ed494fa272f97792ef99942a364ebca24",
+  "parent": "715c1f5ca0c13c276110c64d2af8c21deca881ea",
+  "default_main_baseline": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "push_argv": [
+    "git",
+    "push",
+    "origin",
+    "refs/heads/agents/r10-01-correctness-regressions:refs/heads/agents/r10-01-correctness-regressions"
+  ],
+  "push_exit_code": 0,
+  "force": false,
+  "remote_before": "ac67f5f910b27d00b20fef541e49b5e8c96719a9",
+  "remote_readback_exit_code": 0,
+  "remote_sha": "9566872da8d0733c3412c0d2e83ff4037fe5278b",
+  "remote_ref": "refs/heads/agents/r10-01-correctness-regressions",
+  "verified": true,
+  "scope": "NEW independent strictnumeric readiness review, nested JSON probes, generated schema/CI prerequisite evidence only; production/originaloracles unchanged",
+  "new_parent_negative_controls": {
+    "failed": 3,
+    "passed": 4,
+    "errors": 0,
+    "skipped": 0
+  },
+  "new_proposal_controls": {
+    "passed": 7,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "readiness_finding": "CI1: correct first-party Ruffclassification needed when adding completeoriginaltests to7filemain",
+  "original30_executed_by_role01": false,
+  "actual_FOCUSED_head": null,
+  "final_candidate_approval": false
+}

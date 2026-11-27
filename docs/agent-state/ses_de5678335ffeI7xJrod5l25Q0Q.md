@@ -281,3 +281,10 @@ Firststandard `PYTHONPATH=proposal/src python -c importdeepviz.models` resolvedM
 - ActualNEW7nestedguards parent3RED4positive -> e44GREEN7/0skip, correctmoduleSHAproofwith-S; schema/defaultbothunchanged/Gitblobexact. WrongPYTHONPATH-onlysourceimport blockedwith0tests; RuffmaincontextI001retained/explicitclassification-onlyoverride0, mypy1file0. No original30/oldSUM/npm/fullproductreplay.12snapshot+3minimalcontext+executedprobehashesverify.
 - AllowedownedpathsONLYNEW R22report/evidence/probes/ownnote copiedtopublishonexistingOWNbranch. Production/workflow/oldoracles untouched, no installs/spawn/APIwrites/sharedmutations. Currentaction explicitpathstaging/scan/hash/diffcheck/scopedmeaningfulcommit/nonforcepush/exactSHA. No publishedcommitpredicted.
 - One executable nextaction: git diff --cached --check then commit independentR22readiness/nestedcontrols, safeownpublication. R04mustgetrealfocusedhead/context/tests/CIverifiedby2reviewers+2testersbeforemerge/#30closure; notifySAMEIDwithactualSHA ratherthanidlewait/poll.
+
+
+## R22 actual owned readiness publication checkpoint
+
+- Readinessreview/probes/evidence commit9566872da8d0733c3412c0d2e83ff4037fe5278b nonforcepush0/actualremoteSHAreadback0 at15:14:15UTC; safeGETuser200 expected, memory-onlycredential, ancestorcheck. Receipt evidence/R22-01/publication.json. Scope NEWnested7, exacte44/parent/main source/CI1 prerequisite only; no source/workflow/oracle/API/sharedwrites.
+- Actual NEW parent3RED/4pass -> e44 7pass/0skip; schema/default/hash/importproof; main Ruff I001/explicit classification0; mypy1source0. No original30/role11 run, no SUM/npm/full product; actual FOCUSED head none, final approval false.
+- Currentaction: receipt-only docs checkpoint then final exact readback. One executable nextaction R04: prepare/publish real focused #30 head from freshmain with complete30 tests+CI1, then notify SAME reviewer for exacthead final review; root reviews completion and refills next useful disjoint work.
