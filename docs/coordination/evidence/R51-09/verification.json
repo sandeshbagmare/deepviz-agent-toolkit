@@ -1,0 +1,120 @@
+{
+  "utc": "2026-11-27T19:30:56.748302+00:00",
+  "owner": "ses_de56782e5ffe3H1lUAoxrBtEhx",
+  "source_commit": "96b819aee5b01ba88b5a609b587331a528aaa070",
+  "source_worktree": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-09-accounting96-ses_de56782e5ffe3H1lUAoxrBtEhx",
+  "source_tracked_clean": true,
+  "normalizer_sha256": "b64814a6406857d9c9a1078fb759725a65a4a91d0db033c765d015df018dc6fd",
+  "test_sha256": "fb56b9d865691dc1bbab39f1c51de241928e4ac69b5d60479fcc7b503269575b",
+  "test_path": "tests/r51_probes/role09/test_numeric_accounting_test2.py",
+  "commands": [
+    {
+      "name": "ruff-final",
+      "exit": 0,
+      "argv": "python -B -m ruff check --no-cache --config <exact96>/pyproject.toml <exact96>/tests/r51_probes/role09/test_numeric_accounting_test2.py"
+    },
+    {
+      "name": "mypy-final",
+      "exit": 0,
+      "argv": "python -B -m mypy --config-file <exact96>/pyproject.toml --no-site-packages --follow-imports=skip --no-incremental --cache-dir <unique> <exact96>/tests/r51_probes/role09/test_numeric_accounting_test2.py"
+    },
+    {
+      "name": "pytest-final",
+      "exit": 0,
+      "argv": "python -B -m pytest <exact96>/tests/r51_probes/role09/test_numeric_accounting_test2.py -q --disable-plugin-autoload --strict-markers --tb=short -p no:cacheprovider --basetemp <unique> --junitxml=<unique>/tests-final-2.xml"
+    }
+  ],
+  "final_totals": {
+    "tests": 19,
+    "passed": 19,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "deselected": 0,
+    "pytest_exit": 0,
+    "wall_seconds": 1.06
+  },
+  "initial_draft_correction": {
+    "ruff_exit": 1,
+    "finding": "NEW test file unused os import",
+    "mypy_exit": 0,
+    "pytest_exit": 0,
+    "pytest_passed": 19,
+    "product_failure": false,
+    "superseded_by_final": true
+  },
+  "coverage": [
+    "huge mean/SUM cancellation at 10**4000 with both signs/order and native/one-pass inputs",
+    "independent bit_length decimal-size bound",
+    "ordinary signed finite-float and count",
+    "natural unchanged retained-state budget on lazy stream",
+    "zero result",
+    "one-pass count",
+    "input nonmutation",
+    "strict unsupported-value error"
+  ],
+  "default_digit_limit": 4300,
+  "source_oracle_caps_environment_changed": false,
+  "old_matrix_replayed": false,
+  "author_or_role11_results_borrowed": false,
+  "role11_r51_report_available_in_inspected_main_paths": false,
+  "verdict": "SCOPED_TEST2_PASS_REQUEST_R04_COMPARISON_BEFORE_PR2_INTEGRATION",
+  "blocker_removed": "Independent exact96 runtime evidence for valid huge cancellation and unchanged budget/one-pass/error behavior.",
+  "remaining_blockers": [
+    "role11 TEST1 comparison unavailable at this checkpoint",
+    "R04 source/package/CI/PR2 integration decision",
+    "full package/default/main acceptance UNKNOWN"
+  ],
+  "next_owner_action": "R04 compares actual role09 TEST2 and role11 TEST1 with independent source reviews14/21, then decides whether role07 may integrate only approved exact96 functional paths into PR2. No self-approval.",
+  "estimate": "UNKNOWN",
+  "limits": [
+    "bounded 19-case test only",
+    "no full Python suite",
+    "no build/install/CI/default/API/PR",
+    "no RSS/general memory measurement",
+    "no 10M/renderer/browser/MCP/DeepAgent gate"
+  ],
+  "execution_environment": {
+    "python": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+    "python_version": "3.12.16",
+    "transient_process_PYTHONPATH": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r51-09-accounting96-ses_de56782e5ffe3H1lUAoxrBtEhx\\python\\deepviz\\src",
+    "persistent_environment_changed": false,
+    "install_or_dependency_change": false
+  },
+  "role11_independent_comparison": {
+    "report_path": "role11 own worktree: docs/coordination/reports/R50-11-numeric-accounting-test.md",
+    "report_sha256": "1057d90a2826dd3c3a2fc8ea644ba54f37fc2390fc75687eb8a93e5dc3e3435e",
+    "role11_branch": "agents/r10-11-python-scale-envelope",
+    "role11_HEAD": "8aadc163d72c6e258a657eab54fd6060e936cbd0",
+    "role11_worktree_clean": true,
+    "source_commit": "96b819aee5b01ba88b5a609b587331a528aaa070",
+    "normalizer_sha256": "b64814a6406857d9c9a1078fb759725a65a4a91d0db033c765d015df018dc6fd",
+    "role11_totals": {
+      "tests": 17,
+      "passed": 17,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0
+    },
+    "role11_default_digit_limit_before_after": 4300,
+    "role11_natural_budget_pulls": 1001,
+    "role09_totals": {
+      "tests": 19,
+      "passed": 19,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "pytest_exit": 0,
+      "wall_seconds": 1.06
+    },
+    "result": "No failures, source hash, digit limit or principal output disagreement. Suites overlap; 36 executions do not mean 36 unique cases. No role11 result is included in role09 totals.",
+    "role09_only_observations": [
+      "locally derived bit_length bound",
+      "strict unsupported-value TypeError with input nonmutation",
+      "explicit zero-result and extra ordinary/signed/floating/count literals"
+    ],
+    "role11_only_observation": "borrowed-generator remains open and usable after error then caller closes"
+  }
+}
