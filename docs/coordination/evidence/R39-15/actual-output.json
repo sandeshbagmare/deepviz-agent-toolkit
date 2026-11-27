@@ -1,0 +1,223 @@
+{
+  "source_commit": "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19",
+  "independent_actual_output_rows": 35,
+  "raw_all35_JSONL_sha256": "851ff3717424aa9fc0ecd1f4c0d713e81c991e26d712ce34d69fe3018d36a73f",
+  "runtime_negative_zero_recorded_by_bits_JSON_serializes_zero_without_sign": true,
+  "actual_outputs": [
+    {
+      "test": "negative-third-underflow",
+      "stream": true,
+      "expected_bits": "8000000000000000",
+      "actual_bits": "8000000000000000",
+      "valid_denominator": 3,
+      "result": {
+        "records": [
+          {
+            "g": "only",
+            "v": 0
+          }
+        ],
+        "input_count": 3,
+        "warnings": [],
+        "strategy": "mean"
+      },
+      "consumed": 3,
+      "iterations": 1,
+      "closed": true,
+      "input_not_mutated": true,
+      "spec_not_mutated": true
+    },
+    {
+      "test": "maximum-finite-constant",
+      "stream": true,
+      "expected_bits": "7fefffffffffffff",
+      "actual_bits": "7fefffffffffffff",
+      "valid_denominator": 2,
+      "result": {
+        "records": [
+          {
+            "g": "only",
+            "v": 1.7976931348623157e+308
+          }
+        ],
+        "input_count": 2,
+        "warnings": [],
+        "strategy": "mean"
+      },
+      "consumed": 2,
+      "iterations": 1,
+      "closed": true,
+      "input_not_mutated": true,
+      "spec_not_mutated": true
+    },
+    {
+      "test": "cross-initialization-37",
+      "stream": true,
+      "expected_bits": "0000000000000001",
+      "actual_bits": "0000000000000001",
+      "valid_denominator": 37,
+      "result": {
+        "records": [
+          {
+            "g": "only",
+            "v": 5e-324
+          }
+        ],
+        "input_count": 37,
+        "warnings": [],
+        "strategy": "mean"
+      },
+      "consumed": 37,
+      "iterations": 1,
+      "closed": true,
+      "input_not_mutated": true,
+      "spec_not_mutated": true
+    },
+    {
+      "test": "valid-denominator-only",
+      "stream": true,
+      "expected_bits": "4000000000000000",
+      "actual_bits": "4000000000000000",
+      "valid_denominator": 2,
+      "result": {
+        "records": [
+          {
+            "g": "only",
+            "v": 2
+          }
+        ],
+        "input_count": 5,
+        "warnings": [
+          "Non-numeric measure values excluded from reduction",
+          "Fields contain mixed numeric/non-numeric values: v."
+        ],
+        "strategy": "mean"
+      },
+      "consumed": 5,
+      "iterations": 1,
+      "closed": true,
+      "input_not_mutated": true,
+      "spec_not_mutated": true
+    },
+    {
+      "test": "all-nonnumeric",
+      "stream": true,
+      "expected_bits": null,
+      "actual_bits": null,
+      "valid_denominator": 0,
+      "result": {
+        "records": [
+          {
+            "g": "only",
+            "v": null
+          }
+        ],
+        "input_count": 3,
+        "warnings": [
+          "Non-numeric measure values excluded from reduction"
+        ],
+        "strategy": "mean"
+      },
+      "consumed": 3,
+      "iterations": 1,
+      "closed": true,
+      "input_not_mutated": true,
+      "spec_not_mutated": true
+    },
+    {
+      "test": "weighted-other",
+      "stream": true,
+      "result": {
+        "records": [
+          {
+            "g": "g0",
+            "v": 0
+          },
+          {
+            "g": "g1",
+            "v": 1
+          },
+          {
+            "g": "g2",
+            "v": 2
+          },
+          {
+            "g": "g3",
+            "v": 3
+          },
+          {
+            "g": "g4",
+            "v": 4
+          },
+          {
+            "g": "g5",
+            "v": 5
+          },
+          {
+            "g": "g6",
+            "v": 6
+          },
+          {
+            "g": "g7",
+            "v": 7
+          },
+          {
+            "g": "g8",
+            "v": 8
+          },
+          {
+            "g": "__deepviz_other__",
+            "v": 8
+          }
+        ],
+        "input_count": 18,
+        "warnings": [
+          "Group cardinality exceeded max_points=10; first 9 groups are exact and all remaining contributions form the final other bucket",
+          "Non-numeric measure values excluded from reduction",
+          "Fields contain mixed numeric/non-numeric values: v."
+        ],
+        "strategy": "mean"
+      },
+      "consumed": 18,
+      "iterations": 1,
+      "closed": true,
+      "expected_bits": "4020000000000000",
+      "actual_bits": "4020000000000000",
+      "valid_denominator": 6,
+      "input_not_mutated": true
+    },
+    {
+      "test": "inferred-mapping-default-budget",
+      "stream": true,
+      "result": {
+        "records": [
+          {
+            "g": "only",
+            "v": 3
+          }
+        ],
+        "input_count": 2,
+        "warnings": [],
+        "strategy": "mean"
+      },
+      "consumed": 2,
+      "iterations": 1,
+      "closed": true,
+      "input_not_mutated": true,
+      "spec_not_mutated": true
+    },
+    {
+      "test": "retained-budget-negative",
+      "max_input_records": 512,
+      "consumed": 254,
+      "iterations": 1,
+      "closed": true,
+      "actual_error": {
+        "name": "ValidationError",
+        "message": "Retained normalized state exceeds 16 MiB UTF-8 JSON byte budget; lower max_points or reduce fields"
+      },
+      "expected_rejection": true,
+      "no_input_mutation": true
+    }
+  ]
+}

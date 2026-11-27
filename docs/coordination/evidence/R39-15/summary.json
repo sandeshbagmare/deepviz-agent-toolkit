@@ -1,0 +1,85 @@
+{
+  "source_commit": "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19",
+  "owner_session": "ses_de56780c8ffe7LgwvwdfR5qFQD",
+  "scope": "Narrow c1b TS mean acceptance only, NOT later546/main/full-toolkit approval",
+  "result": "PASS 56 distinct actual cases; no product failure observed",
+  "actual_runs": {
+    "producer21.tap": {
+      "passed": 21,
+      "failed": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "duration_ms": 331.3999,
+      "exit": 0
+    },
+    "independent35.tap": {
+      "passed": 35,
+      "failed": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "duration_ms": 746.5738,
+      "exit": 0
+    }
+  },
+  "distinct_passed": 56,
+  "failed": 0,
+  "cancelled": 0,
+  "skipped": 0,
+  "one_producer_selection_only": true,
+  "one_new_independent_selection_only": true,
+  "independent_oracle": "Explicit literal inputs plus stdlib Fraction exact binary64 rational/one rounding; no Python production imported",
+  "independent_vectors": 14,
+  "independent_generic_rational_tests": 26,
+  "independent_other_default_count_empty_budget_tests": 9,
+  "independent_actual_input_records": 448,
+  "producer_fixture_records_asserted": 225,
+  "total_fixture_records_asserted_plus_new_actual": 673,
+  "all_input_under1024": true,
+  "budget_negative": {
+    "test": "retained-budget-negative",
+    "max_input_records": 512,
+    "consumed": 254,
+    "iterations": 1,
+    "closed": true,
+    "actual_error": {
+      "name": "ValidationError",
+      "message": "Retained normalized state exceeds 16 MiB UTF-8 JSON byte budget; lower max_points or reduce fields"
+    },
+    "expected_rejection": true,
+    "no_input_mutation": true
+  },
+  "build_exit": 0,
+  "own_JS_syntax_exit": 0,
+  "own_Python_Ruff_exit": 0,
+  "own_Python_mypy_exit": 0,
+  "source_dist_compiler_before_after_gate_exit": 0,
+  "actual_row_receipts": 35,
+  "nonmutation_via_frozen_inputs_and_bit_snapshots": true,
+  "actual_default_mean_scope": "aggregation explicitly mean; x/y and max_points omitted; no claim auto defaults to mean",
+  "raw_artifact_sha256": {
+    "build-proof-after.json": "cd2b2fb3b6c1b751a102c327c8927df2e8818e5a8bb7d7f7ffb76a8e2f413961",
+    "build-proof-before.json": "397c3bf3b42556ddab54ba9fe885c0a7e82f1409d52585b3b41bc4178c6433ae",
+    "import-proof-independent-41548.json": "dfa54e7e25025e0e63ab157f6e8d7993feba6102b15c31d216708ddd966ca07f",
+    "import-proof-producer-43624.json": "7f456627e3da23b1437ba2a9b7864245c05d01f2d0d4d0844569a161abadcabc",
+    "independent-actual.jsonl": "851ff3717424aa9fc0ecd1f4c0d713e81c991e26d712ce34d69fe3018d36a73f",
+    "independent35.tap": "108b2c4c8a0b63166c21f249affb9c52674079f40ec65c727f3af4e7356d118f",
+    "producer21.tap": "8a1e2b06ac0c1bbe34e143b8b0ec8b0441143a9db05a23f4a22e506b5ac77b5b",
+    "reference-vectors.json": "02481b24e74f2e131046bf12c4365064103a8b108be30802c2b220adebd1ba14",
+    "source-compiler-prebuild.json": "2ef991edcde24b57c7a9329fa7d3ee540632b2be1e358cdd3a220b8251bb0008"
+  },
+  "setup_failures_preserved": [
+    "R38 guessed nonexistent nested pyproject path Git128/materializer1, AntV incomplete/zero runtime/no approval",
+    "First R39 compiler proof assumed absent lib/_tsc.js setup1 before build/tests; actual entry imports lib/tsc.js",
+    "PowerShell report AppendAllLines overload error, note/proof/build succeeded; corrected AppendAllText",
+    "Initial portable metadata parser1 on TAP CRLF, diagnostic confirmed exact pass counts; corrected splitlines without changing tests/oracles"
+  ],
+  "limits": [
+    "No Python product runtime/source approval, no later546 final approval",
+    "No196Mapping/fullNPM/fullprefix/SUMaccuracy/formats/scale/AntV/browser runtime replay",
+    "No install/SDK/config/schema/source/originaloracle/API/persistentenv/sharedwrites/spawn/jobpoll",
+    "Data-only slice: actual JSON and binary64 output bits supplied, no fake chart",
+    "R38 partial checkpoint not full AntV review;21 owns continuing review"
+  ]
+}

@@ -121,3 +121,13 @@
   ownnoteonly; meaningfulOWNpublication/remoteSHAreceiptMAINaftercommands.
 - NextR04fouractualbffreports/materialresolution/freshgreenCI→OWNmerge/default
   ancestry/QA13/#30decision; ROOTpromptcompletion/refill, no wholewavewait.
+
+## R38 coherent checkpoint / R39 TS mean actual acceptance
+
+- SAME actualID/FULL R39 common15/currentAGENTS/ownnote read after explicit steer. R38 AntV initial Gitdiff/partial10blob capture retained exact3185, materializer1 on nonexistent guessed nestedpyproject(Git128); fullconnected/protectedAST/runtime NOT RUN/no AntV approval. Root21 now continuing AntV source. No parallel task/duplicate runtime.
+- R39 exactc1b0b29a84c3f6cb69c6be9cc73cf0330043cf19, own parent575eb35/branchr10-15. Eleven Git-exact copied source/test/config/schema inputs, readonly TS7.0.2/compiler416, own strict dist/maps6 verified BEFORE consumers and AFTER; actual publicindex/normalizer/models object identity two import receipts/no external NODE_OPTIONS.
+- ONE unchanged new producer21 PASS0failcancelledskip331.3999ms0; ONE new independent35 PASS0failcancelledskip746.5738ms0. **56 distinct actual passes**, no carry/replay. Independent448 records +225 producer asserted literals=673<1024. Budget-negative254 consumed/512 available/one iterator/closedtrue/expectedValidationError; no RSS benchmark claim.
+- Explicit literals/stdlibFraction14(no Pythonproduction), generic26 +weightedother/defaultinference/count/empty/budget9. Frozen native rows/specs and generic bit snapshots/no mutation; binary64 signed underflow/tie/MAX/37-boundary/null valid denominator; weightedother8/count4/mean-inferred3. Eight actual JSON/error samples/all35raw rows/hash. Aggregation explicitly mean, no auto-default-mean claim.
+- Actual raw normalize.ts7e10c7a6.../builtJSd35a0a3e.../unchangedproducer39c2440f...; source/dist/compiler beforeafter and correctedTAP/reference/actual-output receiptgate0. Node syntax0/PythonRuff0/mypy0twofiles/isolatedtsc0. Setup errors preserved: guessedcompiler _tsc.js absent->actualtsc.js; report AppendAllLines overload corrected; metadata TAP-CRLF regex1->splitlines0. No productfailure/sourceoraclechanges/test replays.
+- **Genuine independent c1b TSmean bounded acceptance PASS/no materialfinding**, NOT later546/Python/SUM/GraphQL/scalar/fullnpm/mainCI/v1 approval. No install/envpersistent/API/shared/source/config/schema/oracle/spawn/poll/196Mapping/scale/AntVruntime. NEW OWN R39tests/evidence/report plus preserved own R38partialreport/evidence and note only.
+- Next explicit OWN scope safety→one meaningful test/report commit/nonforce/exactremoteSHA/MAINreceipt/prompt handoff. R04 owns finalhead/integration affected gates/actual main delivery; root useful refill, no publication loop.
