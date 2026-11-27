@@ -1,0 +1,635 @@
+{
+  "source": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+  "gate": "PASS exact5ba only",
+  "split": {
+    "producer5": 5,
+    "independentR10": 43,
+    "independentR13": 21
+  },
+  "passed": 69,
+  "failed": 0,
+  "skipped": 0,
+  "runtime_identity": {
+    "deepviz.models": {
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r30-05-owned-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\src\\deepviz\\models.py",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    "deepviz.normalize": {
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r30-05-owned-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "sha256": "eef44a7df71926932fc14b33ff47225903b30824c2435e74b9707b49ed357f2b"
+    },
+    "deepviz.engines": {
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r30-05-owned-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\src\\deepviz\\engines.py",
+      "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de"
+    },
+    "deepviz.render": {
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r30-05-owned-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\src\\deepviz\\render.py",
+      "sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+    },
+    "deepviz": {
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r30-05-owned-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\src\\deepviz\\__init__.py",
+      "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+    }
+  },
+  "raw_gitblob_verified_files": 11,
+  "same_process_per_case_origin_guards": 69,
+  "owned_real_windows_rename_failures": 0,
+  "borrowed_eio_open_handle_locks_expected": [
+    {
+      "group": "independentR13",
+      "name": "test_after_prefix_carrier_eio_respects_source_ownership[borrowed-stream-csv]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {
+        "error_stage": "{\"frames\": [\"normalize\", \"_records\", \"_expand\", \"_delimited\", \"_without_bom\"], \"input_count\": 48, \"prefix_rows\": 32}",
+        "closed_before_caller_cleanup": "False",
+        "rename_before_caller_cleanup": "{\"type\": \"PermissionError\", \"errno\": 13, \"winerror\": 32}"
+      }
+    },
+    {
+      "group": "independentR13",
+      "name": "test_after_prefix_carrier_eio_respects_source_ownership[borrowed-stream-jsonl]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {
+        "error_stage": "{\"frames\": [\"normalize\", \"_records\", \"_expand\", \"_jsonl\", \"_without_bom\"], \"input_count\": 48, \"prefix_rows\": 32}",
+        "closed_before_caller_cleanup": "False",
+        "rename_before_caller_cleanup": "{\"type\": \"PermissionError\", \"errno\": 13, \"winerror\": 32}"
+      }
+    }
+  ],
+  "all_case_properties": [
+    {
+      "group": "producer5",
+      "name": "test_owned_jsonl_unwinds_before_downstream_exception_returns[plan]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r30-05-owned-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\tests\\test_r17_normalizer_boundaries.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "producer5",
+      "name": "test_owned_jsonl_unwinds_before_downstream_exception_returns[late-flatten]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r30-05-owned-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\tests\\test_r17_normalizer_boundaries.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "producer5",
+      "name": "test_owned_jsonl_unwinds_before_downstream_exception_returns[selected-path-plan]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r30-05-owned-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\tests\\test_r17_normalizer_boundaries.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "producer5",
+      "name": "test_borrowed_generator_is_not_closed_when_planning_raises",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r30-05-owned-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\tests\\test_r17_normalizer_boundaries.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "producer5",
+      "name": "test_borrowed_second_line_jsonl_parse_failure_keeps_stream_usable",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r30-05-owned-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\tests\\test_r17_normalizer_boundaries.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_input_closed_before_downstream_error_returns[jsonl-flatten]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {
+        "owned_handles_closed": "[true]",
+        "rename_error": "null",
+        "traceback_retained": "true"
+      }
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_input_closed_before_downstream_error_returns[jsonl-flatten-late]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {
+        "owned_handles_closed": "[true]",
+        "rename_error": "null",
+        "traceback_retained": "true"
+      }
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_input_closed_before_downstream_error_returns[jsonl-plan]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {
+        "owned_handles_closed": "[true]",
+        "rename_error": "null",
+        "traceback_retained": "true"
+      }
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_input_closed_before_downstream_error_returns[csv-plan]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {
+        "owned_handles_closed": "[true]",
+        "rename_error": "null",
+        "traceback_retained": "true"
+      }
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_input_closed_before_downstream_error_returns[tsv-plan]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {
+        "owned_handles_closed": "[true]",
+        "rename_error": "null",
+        "traceback_retained": "true"
+      }
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_input_closed_before_downstream_error_returns[arrow-file-flatten]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {
+        "owned_handles_closed": "[true]",
+        "rename_error": "null",
+        "traceback_retained": "true"
+      }
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_input_closed_before_downstream_error_returns[arrow-stream-flatten]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {
+        "owned_handles_closed": "[true]",
+        "rename_error": "null",
+        "traceback_retained": "true"
+      }
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_input_closed_before_downstream_error_returns[parquet-flatten]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {
+        "owned_handles_closed": "[true]",
+        "rename_error": "null",
+        "traceback_retained": "true"
+      }
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_input_closed_before_downstream_error_returns[arrow-file-plan]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {
+        "owned_handles_closed": "[true]",
+        "rename_error": "null",
+        "traceback_retained": "true"
+      }
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_input_closed_before_downstream_error_returns[arrow-stream-plan]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {
+        "owned_handles_closed": "[true]",
+        "rename_error": "null",
+        "traceback_retained": "true"
+      }
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_input_closed_before_downstream_error_returns[parquet-plan]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {
+        "owned_handles_closed": "[true]",
+        "rename_error": "null",
+        "traceback_retained": "true"
+      }
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_success_or_parser_originated_error_closes_its_input[json-success]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_success_or_parser_originated_error_closes_its_input[json-parse]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_success_or_parser_originated_error_closes_its_input[jsonl-success]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_success_or_parser_originated_error_closes_its_input[jsonl-parse]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_success_or_parser_originated_error_closes_its_input[csv-success]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_success_or_parser_originated_error_closes_its_input[csv-parse]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_success_or_parser_originated_error_closes_its_input[tsv-success]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_success_or_parser_originated_error_closes_its_input[tsv-parse]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_success_or_parser_originated_error_closes_its_input[json-flatten]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_success_or_parser_originated_error_closes_its_input[json-plan]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_success_or_parser_originated_error_closes_its_input[arrow-file-success]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_success_or_parser_originated_error_closes_its_input[arrow-file-schema-duplicate]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_success_or_parser_originated_error_closes_its_input[arrow-stream-success]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_success_or_parser_originated_error_closes_its_input[arrow-stream-schema-duplicate]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_success_or_parser_originated_error_closes_its_input[parquet-success]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_owned_success_or_parser_originated_error_closes_its_input[parquet-schema-duplicate]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_caller_owned_text_stream_is_never_closed_by_normalize[json-success]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_caller_owned_text_stream_is_never_closed_by_normalize[json-parse]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_caller_owned_text_stream_is_never_closed_by_normalize[json-flatten]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_caller_owned_text_stream_is_never_closed_by_normalize[json-plan]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-success]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-parse]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-flatten]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-plan]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_caller_owned_text_stream_is_never_closed_by_normalize[csv-success]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_caller_owned_text_stream_is_never_closed_by_normalize[csv-parse]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_caller_owned_text_stream_is_never_closed_by_normalize[csv-plan]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_caller_owned_text_stream_is_never_closed_by_normalize[tsv-success]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_caller_owned_text_stream_is_never_closed_by_normalize[tsv-parse]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_caller_owned_text_stream_is_never_closed_by_normalize[tsv-plan]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_caller_owned_text_stream_is_never_closed_by_normalize[jsonl-parse-first]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR10",
+      "name": "test_caller_owned_real_text_file_remains_open_after_second_line_parse_error",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR13",
+      "name": "test_reducer_state_guard_releases_owned_source_after_valid_prefix[csv]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {
+        "error_stage": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}",
+        "handles_closed_before_test_cleanup": "[true]",
+        "rename_before_test_cleanup": "null",
+        "rename_after_test_cleanup": "null"
+      }
+    },
+    {
+      "group": "independentR13",
+      "name": "test_reducer_state_guard_releases_owned_source_after_valid_prefix[jsonl]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {
+        "error_stage": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}",
+        "handles_closed_before_test_cleanup": "[true]",
+        "rename_before_test_cleanup": "null",
+        "rename_after_test_cleanup": "null"
+      }
+    },
+    {
+      "group": "independentR13",
+      "name": "test_reducer_state_guard_releases_owned_source_after_valid_prefix[arrow]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {
+        "error_stage": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}",
+        "handles_closed_before_test_cleanup": "[true]",
+        "rename_before_test_cleanup": "null",
+        "rename_after_test_cleanup": "null"
+      }
+    },
+    {
+      "group": "independentR13",
+      "name": "test_reducer_state_guard_releases_owned_source_after_valid_prefix[parquet]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {
+        "error_stage": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}",
+        "handles_closed_before_test_cleanup": "[true]",
+        "rename_before_test_cleanup": "null",
+        "rename_after_test_cleanup": "null"
+      }
+    },
+    {
+      "group": "independentR13",
+      "name": "test_full_reducer_consumption_closes_owned_source[csv]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR13",
+      "name": "test_full_reducer_consumption_closes_owned_source[jsonl]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR13",
+      "name": "test_full_reducer_consumption_closes_owned_source[arrow]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR13",
+      "name": "test_full_reducer_consumption_closes_owned_source[parquet]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR13",
+      "name": "test_borrowed_text_source_ownership_survives_guard_or_full_consumption[guard-csv]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {
+        "error_stage": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}"
+      }
+    },
+    {
+      "group": "independentR13",
+      "name": "test_borrowed_text_source_ownership_survives_guard_or_full_consumption[guard-jsonl]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {
+        "error_stage": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}"
+      }
+    },
+    {
+      "group": "independentR13",
+      "name": "test_borrowed_text_source_ownership_survives_guard_or_full_consumption[full-consumption-csv]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR13",
+      "name": "test_borrowed_text_source_ownership_survives_guard_or_full_consumption[full-consumption-jsonl]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR13",
+      "name": "test_borrowed_arrow_reader_remains_usable_after_reducer_guard",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {
+        "error_stage": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}"
+      }
+    },
+    {
+      "group": "independentR13",
+      "name": "test_after_prefix_carrier_eio_respects_source_ownership[owned-path-csv]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {
+        "error_stage": "{\"frames\": [\"normalize\", \"_records\", \"_expand\", \"_path_rows\", \"_delimited\", \"_without_bom\"], \"input_count\": 48, \"prefix_rows\": 32}",
+        "closed_before_caller_cleanup": "True",
+        "rename_before_caller_cleanup": "null"
+      }
+    },
+    {
+      "group": "independentR13",
+      "name": "test_after_prefix_carrier_eio_respects_source_ownership[owned-path-jsonl]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {
+        "error_stage": "{\"frames\": [\"normalize\", \"_records\", \"_expand\", \"_path_rows\", \"_jsonl\", \"_without_bom\"], \"input_count\": 48, \"prefix_rows\": 32}",
+        "closed_before_caller_cleanup": "True",
+        "rename_before_caller_cleanup": "null"
+      }
+    },
+    {
+      "group": "independentR13",
+      "name": "test_after_prefix_carrier_eio_respects_source_ownership[borrowed-stream-csv]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {
+        "error_stage": "{\"frames\": [\"normalize\", \"_records\", \"_expand\", \"_delimited\", \"_without_bom\"], \"input_count\": 48, \"prefix_rows\": 32}",
+        "closed_before_caller_cleanup": "False",
+        "rename_before_caller_cleanup": "{\"type\": \"PermissionError\", \"errno\": 13, \"winerror\": 32}"
+      }
+    },
+    {
+      "group": "independentR13",
+      "name": "test_after_prefix_carrier_eio_respects_source_ownership[borrowed-stream-jsonl]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {
+        "error_stage": "{\"frames\": [\"normalize\", \"_records\", \"_expand\", \"_jsonl\", \"_without_bom\"], \"input_count\": 48, \"prefix_rows\": 32}",
+        "closed_before_caller_cleanup": "False",
+        "rename_before_caller_cleanup": "{\"type\": \"PermissionError\", \"errno\": 13, \"winerror\": 32}"
+      }
+    },
+    {
+      "group": "independentR13",
+      "name": "test_sampling_limit_is_not_an_early_source_stop[owned-path-csv]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR13",
+      "name": "test_sampling_limit_is_not_an_early_source_stop[owned-path-jsonl]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR13",
+      "name": "test_sampling_limit_is_not_an_early_source_stop[borrowed-stream-csv]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {}
+    },
+    {
+      "group": "independentR13",
+      "name": "test_sampling_limit_is_not_an_early_source_stop[borrowed-stream-jsonl]",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "result": "passed",
+      "properties": {}
+    }
+  ],
+  "tests_replayed": 0,
+  "source_clean_after": true,
+  "wrapper_unchanged_after": true
+}

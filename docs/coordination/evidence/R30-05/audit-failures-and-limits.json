@@ -1,0 +1,37 @@
+{
+  "product_gate": {
+    "runs": 1,
+    "exit": 0,
+    "passed": 69,
+    "failed": 0,
+    "skipped": 0
+  },
+  "own_audit_failures_retained": [
+    {
+      "stage": "read-only pre-test Git/config discovery",
+      "exit": 1,
+      "subcommand_exit": 128,
+      "command": "git show 5ba860305dcc86ac2f95f01705b984d2b40f2799:python/deepviz/pyproject.toml",
+      "error": "fatal: path 'python/deepviz/pyproject.toml' does not exist in '5ba860305dcc86ac2f95f01705b984d2b40f2799'",
+      "executed_product_cases": 0,
+      "resolution": "Read actual committed ROOT pyproject, no retry or config edit."
+    },
+    {
+      "stage": "saved-result classname-based split collector",
+      "exit": 1,
+      "error": "AssertionError: Counter({'independentR13': 64, 'producer5': 5})",
+      "cause": "External importlib JUnit classnames are empty; classifier defaulted to R13. Existing69 outcomes unchanged.",
+      "resolution": "Read actual JUnit file attributes and map exact immutable file paths; saved-result-only collector exit0, split5+43+21.",
+      "product_replay": 0
+    }
+  ],
+  "failure_receipt_limit": "Critical actual command/error/exit preserved here and report; those two ad-hoc audit stdout/stderr were returned in tool transcript, not saved as raw log files.",
+  "limits": [
+    "Source5ba only; future extracted dependency-complete head needs affected revalidation.",
+    "No producer69/source-review signoff borrowed;05 independently ran once.",
+    "Pyarrow26.0.1 exercised, no optional/Windows privilege skips.",
+    "Deterministic EIO is injected at48 valid rows, not a physical disk fault.",
+    "270row/18MiB bounded fixtures, not scale/RSS/performance proof.",
+    "No helper36+40/build/browser/npm/TSbuild/full517/scale/installedconsumer/matrices/API/install/source/sharedbranch/spawn operations."
+  ]
+}

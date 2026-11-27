@@ -1,0 +1,66 @@
+{
+  "source_commit": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+  "modules": {
+    "deepviz.models": {
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r30-05-owned-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\src\\deepviz\\models.py",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    "deepviz.normalize": {
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r30-05-owned-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "sha256": "eef44a7df71926932fc14b33ff47225903b30824c2435e74b9707b49ed357f2b"
+    },
+    "deepviz.engines": {
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r30-05-owned-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\src\\deepviz\\engines.py",
+      "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de"
+    },
+    "deepviz.render": {
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r30-05-owned-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\src\\deepviz\\render.py",
+      "sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+    },
+    "deepviz": {
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r30-05-owned-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\src\\deepviz\\__init__.py",
+      "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+    }
+  },
+  "raw_gitblob_exact": {
+    "python/deepviz/src/deepviz/__init__.py": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+    "python/deepviz/src/deepviz/cli.py": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+    "python/deepviz/src/deepviz/engines.py": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+    "python/deepviz/src/deepviz/mcp_server.py": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+    "python/deepviz/src/deepviz/models.py": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+    "python/deepviz/src/deepviz/normalize.py": "eef44a7df71926932fc14b33ff47225903b30824c2435e74b9707b49ed357f2b",
+    "python/deepviz/src/deepviz/recommend.py": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+    "python/deepviz/src/deepviz/render.py": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+    "python/deepviz/src/deepviz/tools.py": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+    "pyproject.toml": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+    "schemas/chart-spec.schema.json": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71"
+  },
+  "oracles": [
+    {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r30-05-owned-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\tests\\test_r17_normalizer_boundaries.py",
+      "commit": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+      "sha256": "4451d287cfba3cf2e18a3c5174341eeee30436b0304d6e6591c83125a0629068"
+    },
+    {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r10_probes\\role15\\test_owned_input_cleanup.py",
+      "commit": "60599dd209e60eae559e721bc7bb200a47e3032f",
+      "sha256": "43279c443d9eb76b22f39a80cd4bfcbfcca058193cf8e96780f7c5763c7729a0"
+    },
+    {
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-15-ses_de56780c8ffe7LgwvwdfR5qFQD\\tests\\r13_probes\\role15\\test_reducer_source_ownership.py",
+      "commit": "8a10108752567f6d0faac700240c4acf77b32556",
+      "sha256": "5a9ebaba4968381624d20f646afbd8105531be4bfd179fe56fa5accb7118314e"
+    }
+  ],
+  "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "pytest": "9.2.0",
+  "pyarrow": {
+    "available": true,
+    "version": "26.0.1",
+    "origin": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\pyarrow\\__init__.py"
+  },
+  "no_site": 1,
+  "bytecode_disabled": true
+}
