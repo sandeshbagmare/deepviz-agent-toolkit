@@ -334,6 +334,15 @@ def _expand(value: Any, counts: Counter[str], depth: int = 0, record: bool = Fal
         if len(value) > _MAX_FIELDS:
             raise ValueError(f"Input exceeds {_MAX_FIELDS} fields")
         _graphql_errors(value, counts)
+        # Inspect only existing arrays; never consume a caller's column iterator for inference.
+        scalar_columns = not record and all(
+            isinstance(column, (list, tuple)) and all(
+                not isinstance(item, Mapping) and not _iterable(item) for item in column
+            ) for column in value.values()
+        ) and not (
+            len(value) == 1 and next(iter(value)) in {"nodes", "edges"}
+            and all(item is None for item in next(iter(value.values())))
+        )
         if "node" in value and set(value).issubset({"node", "cursor"}):
             if value["node"] is None:
                 counts["null_nodes"] += 1
@@ -342,7 +351,7 @@ def _expand(value: Any, counts: Counter[str], depth: int = 0, record: bool = Fal
             return
         protocol = "data" in value or "edges" in value or "nodes" in value
         nested_wrapper = not record and all(isinstance(child, Mapping) for child in value.values())
-        connection = _connection(value) if protocol or nested_wrapper else None
+        connection = _connection(value) if not scalar_columns and (protocol or nested_wrapper) else None
         if connection is not None:
             if not protocol and not any(wrapper in value for wrapper in _WRAPPERS):
                 raise ValueError("Custom GraphQL wrapper requires an explicit data_path")
@@ -364,7 +373,7 @@ def _expand(value: Any, counts: Counter[str], depth: int = 0, record: bool = Fal
             yield value
             return
         for wrapper in _WRAPPERS:
-            if wrapper in value and set(value).difference({wrapper}).issubset(_METADATA):
+            if not scalar_columns and wrapper in value and set(value).difference({wrapper}).issubset(_METADATA):
                 wrapped = value[wrapper]
                 if isinstance(wrapped, Mapping) or _iterable(wrapped):
                     yield from _expand(wrapped, counts, depth + 1)
@@ -492,7 +501,11 @@ def _records(
             source = _select_path(source, tokens, counts)
         requested = tuple(dict.fromkeys(field for field in (spec.x, spec.y, spec.color, spec.size) if field))
         had_rows = False
-        for index, item in enumerate(_expand(source, counts)):
+        # Path matches are new roots, not ordinary rows from a record sequence.
+        expanded = _expand(source, counts) if spec.data_path is None else chain.from_iterable(
+            _expand(selected, counts) for selected in source
+        )
+        for index, item in enumerate(expanded):
             had_rows = True
             row = _flatten(item, counts) if isinstance(item, dict) or isinstance(item, Mapping) else {
                 "index": index, "value": _scalar(item, counts),
@@ -628,25 +641,21 @@ class _Reducer:
             # One budgeted exact numerator avoids both overflow and subnormal double rounding.
             self._store(state, (state[1] or 0) + _sum_units(value), exponent=-1074)
             return
-        if self.strategy == "sum" and exponent == -1074:
-            self._store(state, state[1] + _sum_units(value), exponent=-1074)
-            return
         previous = state[1]
+        if self.strategy == "sum":
+            if exponent == -1074:
+                total = previous + _sum_units(value)
+            elif type(value) is int and (previous is None or type(previous) is int):
+                # Pure integer prefixes are already exact and keep their existing policy.
+                self._store(state, (previous or 0) + value)
+                return
+            else:
+                # Promote the still-exact prefix BEFORE a float can round away a residual.
+                total = _sum_units(previous if previous is not None else 0) + _sum_units(value)
+            self._store(state, total, exponent=-1074)
+            return
         if previous is None:
             total = value
-        elif self.strategy == "sum":
-            total = previous + value
-            if self.strategy == "sum" and isinstance(total, float) and not math.isfinite(total):
-                # Promote only overflowing sums; one budgeted integer, never a partial/input list.
-                units = _sum_units(previous) + _sum_units(correction) + _sum_units(value)
-                self._store(state, units, exponent=-1074)
-                return
-            if not isinstance(total, float) or math.isfinite(total):
-                # Neumaier compensation also survives transfer into the other bucket.
-                correction += (
-                    (previous - total) + value if abs(previous) >= abs(value)
-                    else (value - total) + previous
-                )
         elif self.strategy == "min":
             total = min(previous, value)
         else:

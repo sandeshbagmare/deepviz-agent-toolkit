@@ -67,11 +67,13 @@ backport of a different model that could remove its strict numeric guard.
   finite generators do not imply universal bounded input memory. Retained-payload
   budgets are **not process RSS limits**. No 10M performance claim is made here.
 
-The immutable normalizer dependency is the sealed mean/lifetime milestone
-`c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19`. Packaging does not fix its remaining
-scalar/GraphQL/exact-prefix-SUM findings. The 4KiB field-name versus64KiB policy
-disagreement and raw-dashboard JSON-schema contract cases remain merge blockers;
-their original tests are retained without xfails, stubs or weakened expectations.
+The immutable normalizer dependency is the sealed
+`546c25ea75ee9d8a41b3832aa639664bc9a683b5` milestone, adopted whole under R04's
+explicit dependency permission. The package author does not edit that normalizer.
+Its required independent03/19 source reviews and10 acceptance gates must clear
+before package PR merge. The 4KiB field-name versus64KiB policy disagreement and
+raw-dashboard JSON-schema contract cases remain merge blockers; their original
+tests are retained without xfails, stubs or weakened expectations.
 
 ### Packaging and deliberately deferred commands
 
