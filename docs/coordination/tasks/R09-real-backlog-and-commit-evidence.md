@@ -1,0 +1,21 @@
+# R09: original goal, real ticket backlog and commit evidence
+
+Date: 2026-11-27. Latest reaffirmation and POC correction: `R08-github-poc-publication.md`. POC means point of contact, not proof of concept; all original requirements remain in `../REQUEST.md` and the original checklist. This assignment is saved before dispatch.
+
+## Owner and source boundary
+
+Existing actual own child role19 PM: `ses_de5678052ffdJwVtlB6SX6LZrT`. No new session, source ownership or GitHub mutation authorization. R04 owns source/shared candidate/remote writes. Root owns supported dispatch and its own records. Read the updated R08, REQUEST, design/architecture, dependency gates, actual R03-19 baseline report and relevant current source/checkpoints; distinguish original baseline0c5fa82, observed current6d0e72e and the freshly observed published head. Preserve the completed independent audit verbatim; append own continuation note and use a NEW report.
+
+Allowed MAIN writes: own actual-ID note, NEW `docs/coordination/reports/R09-real-backlog-and-commit-evidence.md`, NEW sanitized `docs/coordination/evidence/R09-19/` only. Read-only Git/API allowed; no issue/PR/comment/label/milestone/commit/push/source/shared-document writes, installs, spawning or progress polling. Reuse root's fresh remote census if available rather than duplicate it. Save source/command/exits/limitations and one executable next action before substantial work and before returning.
+
+## Deliverable
+
+1. Map EVERY original requested success criterion to actual existing issue(s), source/PR/commit evidence and remaining acceptance, separating completed work from baseline checks, open defects, missing evidence and blockers. Do not downgrade under POC wording or omit research, chart breadth, Deep Agents/MCP, distributions, examples, reviews, CI, commits or10M semantics.
+2. Build a deduplicated bounded triage of the REAL independent findings returned01/05/09/13/15/16/17 and actual security/browser/package/doc findings as reports arrive. Distinguish one root cause with many failing fixtures from separate tickets. Reuse an existing suitable issue; propose a new issue only for a demonstrably distinct actionable scope with precise repro, owner, dependency, acceptance and closure evidence. No arbitrary requirement to propose900 rows or inflate counts. Prioritize P1 data-loss/wrong-chart-value/security/cleanup defects before oracle-only corrections.
+3. Reaffirm the900 legitimate created-and-resolved requirement explicitly. Record actual issue census timestamp/completeness, exclude PRs, keep created/open/closed/independently verified closures separate, and quantify the true gap without claiming all closed are validated. If900 genuine scopes are not yet evidenced, mark the balance unplanned/unmet; do not silently revise the target. Explain how genuine epics/stories/tasks/bugs will accrue from delivered work with acceptance and dedupe, not quota filler or test-case multiplication.
+4. Audit commit/publication gaps using read-only local/remote identities. Specify the practical workflow: issue-linked scoped branch, genuine RED→GREEN where applicable, tested small commit, non-force push, linked draft PR/checkpoint, two independent non-author reviewer+two tester final-source reports and real outputs, observed green CI, then evidence-based closure/merge. A pushed failing checkpoint can be honest progress, not a release. Root is the user's point of contact; R04 owns canonical integration/publication.
+5. Return a concise executable NEXT BATCH for R04: existing issue to update or genuinely new candidate, exact owner/path/repro, commit/evidence needed and dependency. This is a useful plan from observed work, not proof the tickets were created, fixed or closed. Do not block source fixes waiting for a comprehensive900-ticket document.
+
+## Dispatch reservation
+
+Existing role19 returned its actual audit notification; reserve a supported SAME-ID continuation only after fresh capacity admission. Shared maximum22subagents including R04 plus mainroot remains. R07 separately authorizes09/16 source fixes, not this lane. Record actual tool-returned IDs immediately. At file creation no continuation, new ticket, push, closure or final pass is claimed.

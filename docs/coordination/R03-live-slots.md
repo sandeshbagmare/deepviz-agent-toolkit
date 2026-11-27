@@ -10,6 +10,8 @@ After pre-admission02:16:08UTC observed only4subagents (belowtarget; not hidden)
 
 User repeated: "subagents decreasing are you not spining up after one completes please add this rule". AGENTS/R10 now EXPLICITLY require evidence/decision review and useful refill on EACHcompletion, prioritize replenishing below18before routine reporting/publication, target22cap22, and never end completion handling with an actionable queue and idle freed slots. No filler or polling to manufacture headcount.
 
+**Actual post-refill observation02:22:33UTC:** one bounded authenticated native API metadata/runtime reconciliation exited0 and verified ALL22actualchildparentlinks=thisroot,22activechartingsubagents+root23,0missing/extra/nested. Machine evidence `evidence/R10-root/post-dispatch-runtime.json`. This is a dated true count, not a future always-running claim, branch-push receipt or product test/signoff. Root routed the repeated mandatoryrefill rule and02security/07build/12clip/20anchor actualfindings toR04 for ownedcanonical consolidation. Latercompletionevents must each trigger useful review/refill, not another passivewholebatchwait.
+
 | R10 role | Actual SAME-ID tool receipt | Accepted meaningful scope |
 |---|---|---|
 |01|`ses_de5678335ffeI7xJrod5l25Q0Q`|correctness-regressions|
