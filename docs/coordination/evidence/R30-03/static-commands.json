@@ -1,0 +1,194 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "show",
+        "5ba860305dcc86ac2f95f01705b984d2b40f2799:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "eef44a7df71926932fc14b33ff47225903b30824c2435e74b9707b49ed357f2b"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "ec9f669eff28cd5351da142765b7755e3b2f484f:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2"
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "0ae2cf26426822135fc10d337fcacf580b7ed833"
+      ],
+      "exit": 0,
+      "stdout_sha256": "eb6c00cb6fa0b037d69aab4e4711d58e19b42b5898fd3ae9d53e4634834c9120"
+    },
+    {
+      "argv": [
+        "git",
+        "log",
+        "--reverse",
+        "--format=%H %s",
+        "0ae2cf26426822135fc10d337fcacf580b7ed833..5ba860305dcc86ac2f95f01705b984d2b40f2799",
+        "--",
+        "python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "b7a35fed1ab365a01c20458afb40e50f354395596bc2f9f148826aa51cc8fc07"
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--name-only",
+        "-r",
+        "ba171160de0895f785807e895b4b4cb14dff970e"
+      ],
+      "exit": 0,
+      "stdout_sha256": "9752bfd30a38beb5bd1ca0e2ecb787624eae97a4a395c9bbfb447f195eae6966"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "ba171160de0895f785807e895b4b4cb14dff970e:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "6a5b5414a28c04130e398378db86cfc3da326325b4c53cd1dc486c8770777ddd"
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--name-only",
+        "-r",
+        "4795509273a7d8274c394b4d67d0a98509b0ca93"
+      ],
+      "exit": 0,
+      "stdout_sha256": "be1b0105b76440420032f7f7a6ee3466c5ea4e1036f27ea3a92f13d987949123"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "4795509273a7d8274c394b4d67d0a98509b0ca93:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "d980278559c11c603ba1b9876328475a8627d73c738525f8d5db045c27e8c014"
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--name-only",
+        "-r",
+        "f650964345703ba64327717f7b3e76742e53ca69"
+      ],
+      "exit": 0,
+      "stdout_sha256": "67885bb078b7bc9420adcbac2bd64a788f35b4cf1853a403a85d38400025c97f"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "f650964345703ba64327717f7b3e76742e53ca69:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "e326e94eefb604fbed4bdf489bc307585793c842ee6c44368260b6c65b9d7e9e"
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--name-only",
+        "-r",
+        "3051823906a2a869ab7ca941a21ef621ee994dd2"
+      ],
+      "exit": 0,
+      "stdout_sha256": "5d4770b9f46e4542b83f7cd42fb0785af34069bddeba6d42a8ab556e4bbf56a6"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "3051823906a2a869ab7ca941a21ef621ee994dd2:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "bf0be68f4794f9ecd9df27c3d074317106a1047d4c6140f2b945a7025e29795d"
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--name-only",
+        "-r",
+        "235e7e361e395b86781101172f040ee51b9423d2"
+      ],
+      "exit": 0,
+      "stdout_sha256": "b097564b36653ac0c3d118ac3dbcb62fa183a9b423342d2cace6fb36531c84ec"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "235e7e361e395b86781101172f040ee51b9423d2:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "7e154ef11c8f5c40ccafe0f4d20bc3a691884b8dab69f0e0564bc13ec7d9c731"
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--name-only",
+        "-r",
+        "ec9f669eff28cd5351da142765b7755e3b2f484f"
+      ],
+      "exit": 0,
+      "stdout_sha256": "ad9849f66f5076e88ffeb41b62bd77a8454da406f7eb9caf2e9213d909b52b33"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "ec9f669eff28cd5351da142765b7755e3b2f484f:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "b6aa820b88d922357eace02fdf165d3d6a5bfe02a80b20d0e5347712b43b4fe3"
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--name-only",
+        "-r",
+        "5ba860305dcc86ac2f95f01705b984d2b40f2799"
+      ],
+      "exit": 0,
+      "stdout_sha256": "36c0841184a7f7fd80d1f821ad239f7f35038c54c579b82e19809ae2ab4707a8"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "5ba860305dcc86ac2f95f01705b984d2b40f2799:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "ad3b441b3053058a4779f1bade5de5fc3b309ee45b53ba322f02231737dfa901"
+    }
+  ],
+  "product_imports_tests_builds_installs_api_calls": 0
+}

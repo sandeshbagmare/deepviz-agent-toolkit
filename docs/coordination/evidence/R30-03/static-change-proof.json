@@ -1,0 +1,148 @@
+{
+  "observed_at": "2026-11-27T16:13:50.228585+00:00",
+  "source": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+  "parent": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+  "changed_top_level_definitions": [
+    "_records",
+    "_without_bom",
+    "normalize"
+  ],
+  "all_other_top_level_definitions_ast_equal": {
+    "_Reducer": {
+      "start": 571,
+      "end": 689,
+      "ast_unchanged": true
+    },
+    "_arrow_module": {
+      "start": 163,
+      "end": 168,
+      "ast_unchanged": true
+    },
+    "_arrow_rows": {
+      "start": 171,
+      "end": 184,
+      "ast_unchanged": true
+    },
+    "_binary_rows": {
+      "start": 204,
+      "end": 225,
+      "ast_unchanged": true
+    },
+    "_cell": {
+      "start": 105,
+      "end": 113,
+      "ast_unchanged": true
+    },
+    "_check_retained_bytes": {
+      "start": 444,
+      "end": 446,
+      "ast_unchanged": true
+    },
+    "_connection": {
+      "start": 300,
+      "end": 316,
+      "ast_unchanged": true
+    },
+    "_delimited": {
+      "start": 116,
+      "end": 135,
+      "ast_unchanged": true
+    },
+    "_expand": {
+      "start": 326,
+      "end": 385,
+      "ast_unchanged": true
+    },
+    "_flatten": {
+      "start": 449,
+      "end": 478,
+      "ast_unchanged": true
+    },
+    "_graphql_errors": {
+      "start": 319,
+      "end": 323,
+      "ast_unchanged": true
+    },
+    "_iterable": {
+      "start": 67,
+      "end": 70,
+      "ast_unchanged": true
+    },
+    "_json": {
+      "start": 73,
+      "end": 77,
+      "ast_unchanged": true
+    },
+    "_jsonl": {
+      "start": 99,
+      "end": 102,
+      "ast_unchanged": true
+    },
+    "_path_rows": {
+      "start": 228,
+      "end": 236,
+      "ast_unchanged": true
+    },
+    "_plan": {
+      "start": 524,
+      "end": 562,
+      "ast_unchanged": true
+    },
+    "_record_bytes": {
+      "start": 426,
+      "end": 441,
+      "ast_unchanged": true
+    },
+    "_scalar": {
+      "start": 388,
+      "end": 407,
+      "ast_unchanged": true
+    },
+    "_select_path": {
+      "start": 267,
+      "end": 297,
+      "ast_unchanged": true
+    },
+    "_source": {
+      "start": 239,
+      "end": 264,
+      "ast_unchanged": true
+    },
+    "_string_bytes": {
+      "start": 419,
+      "end": 423,
+      "ast_unchanged": true
+    },
+    "_sum_units": {
+      "start": 565,
+      "end": 568,
+      "ast_unchanged": true
+    },
+    "_text": {
+      "start": 138,
+      "end": 160,
+      "ast_unchanged": true
+    },
+    "_unique_json_object": {
+      "start": 80,
+      "end": 86,
+      "ast_unchanged": true
+    },
+    "_utf8_size": {
+      "start": 410,
+      "end": 416,
+      "ast_unchanged": true
+    },
+    "_validate_arrow_fields": {
+      "start": 187,
+      "end": 201,
+      "ast_unchanged": true
+    }
+  },
+  "counts_reducer_planner_sampling_statements_equal_after_exact_cleanup_shell_removal": true,
+  "records_signature_change_only": "Iterator -> Generator to expose close() typing",
+  "without_bom_only_change": "yield-from into borrowed iterator -> non-delegating for/yield",
+  "records_cleanup_added": "retained source adapter identity before path wrapper; finally adapter.close()",
+  "normalize_cleanup_added": "finally rows.close() spans prefix, planner, reducer, sampler",
+  "checks": "Static structure/equality, NOT runtime/unit tests or universal mathematical correctness."
+}

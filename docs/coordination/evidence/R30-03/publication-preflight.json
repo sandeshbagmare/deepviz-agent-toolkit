@@ -1,0 +1,86 @@
+{
+  "observed_at": "2026-11-27T16:18:15.609789+00:00",
+  "owner_session": "ses_de5678315ffeDxQVEpE9V9WSTE",
+  "source_review_target": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+  "own_base_head": "fd115828f414c1a753790860adea67941d1e700f",
+  "staged_paths_before_snapshot": [
+    "docs/agent-state/ses_de5678315ffeDxQVEpE9V9WSTE.md",
+    "docs/coordination/evidence/R30-03/COMMANDS.md",
+    "docs/coordination/evidence/R30-03/dependency-closure.json",
+    "docs/coordination/evidence/R30-03/review-verdict.json",
+    "docs/coordination/evidence/R30-03/sealed-source.diff",
+    "docs/coordination/evidence/R30-03/source-chain.json",
+    "docs/coordination/evidence/R30-03/source-identity.json",
+    "docs/coordination/evidence/R30-03/static-change-proof.json",
+    "docs/coordination/evidence/R30-03/static-commands.json",
+    "docs/coordination/reports/R30-03-owned-cleanup-source-review.md"
+  ],
+  "final_scoped_path_count_with_snapshot": 11,
+  "whitespace_exit": 0,
+  "credential_pattern_matches": 0,
+  "production_configuration_and_all_old_test_diff_base_exit": 0,
+  "raw_13_sealed_file_hashes_rechecked": true,
+  "static_not_product_test_proof": {
+    "unchanged_defs": 26,
+    "exact_computation_ast_preserved": true
+  },
+  "product_import_test_build_api_install_spawn_count": 0,
+  "file_hashes": {
+    "docs/agent-state/ses_de5678315ffeDxQVEpE9V9WSTE.md": {
+      "raw_worktree_sha256": "c7a00712beb64c96a3eba4c4ee0b3e5cd0f28a3d6abad3c8641fc48c4177214b",
+      "git_staged_blob_sha256": "c7a00712beb64c96a3eba4c4ee0b3e5cd0f28a3d6abad3c8641fc48c4177214b"
+    },
+    "docs/coordination/evidence/R30-03/COMMANDS.md": {
+      "raw_worktree_sha256": "a14450be17d59a2c692252eb1600707a9cb92d31662ffa82c841f43e2d7ee21d",
+      "git_staged_blob_sha256": "a14450be17d59a2c692252eb1600707a9cb92d31662ffa82c841f43e2d7ee21d"
+    },
+    "docs/coordination/evidence/R30-03/dependency-closure.json": {
+      "raw_worktree_sha256": "4790a42f62f2cdbc8942854aa3f573449a5f439f464efbee6bb9a38604dc1524",
+      "git_staged_blob_sha256": "26be8514f15eb6324eaa02edde034527e7865fd0c4818b7f3ba0405474522cae"
+    },
+    "docs/coordination/evidence/R30-03/review-verdict.json": {
+      "raw_worktree_sha256": "ca753b88de912723ba840e42ea2b408d0b56c91f6a259f1d4a43732ec4e6e04f",
+      "git_staged_blob_sha256": "ca753b88de912723ba840e42ea2b408d0b56c91f6a259f1d4a43732ec4e6e04f"
+    },
+    "docs/coordination/evidence/R30-03/sealed-source.diff": {
+      "raw_worktree_sha256": "6b50cf8c166912e5cb3df026400a873ccfc7ee4f30f390a58cf537c797a93382",
+      "git_staged_blob_sha256": "6b50cf8c166912e5cb3df026400a873ccfc7ee4f30f390a58cf537c797a93382"
+    },
+    "docs/coordination/evidence/R30-03/source-chain.json": {
+      "raw_worktree_sha256": "8582a73d8d81cc49f271e80a7262d620881f928fdd03d451def2130bea7b15f0",
+      "git_staged_blob_sha256": "ac14e6e5d9627bd1c0a6c9a90b57afcc124e0110bf781baa4478524933997c07"
+    },
+    "docs/coordination/evidence/R30-03/source-identity.json": {
+      "raw_worktree_sha256": "bbde24e9a26d2f8ee73e85d346f7f33479141f53e8ee7658510cc1d9ac189038",
+      "git_staged_blob_sha256": "51918506872aa28fbed70845989ebf72fe6fe5078b249245a23bda153c3ae1a1"
+    },
+    "docs/coordination/evidence/R30-03/static-change-proof.json": {
+      "raw_worktree_sha256": "df6309287deb17efee704d8fb088a4eb8930b7aac30c3a1ba544aa8ede5cd6f8",
+      "git_staged_blob_sha256": "06d90c16f276dcb7ede8c2f1f2f79929f491330d81d1fd26aa2fd2fc6d85d9ca"
+    },
+    "docs/coordination/evidence/R30-03/static-commands.json": {
+      "raw_worktree_sha256": "660832aee5dcf1e9ed8cf42ab3003378318956157b58b318c6f280bdd99934f5",
+      "git_staged_blob_sha256": "7d3f01f4b154026e2cc96526707bd77ac08f0d913a8f982b9646d8af2d932ed8"
+    },
+    "docs/coordination/reports/R30-03-owned-cleanup-source-review.md": {
+      "raw_worktree_sha256": "ff82a36d402f731bc9d5693fc5de86ef1cada513b5fef9f61a6c8936eab1ac0f",
+      "git_staged_blob_sha256": "ff82a36d402f731bc9d5693fc5de86ef1cada513b5fef9f61a6c8936eab1ac0f"
+    }
+  },
+  "own_collector_failures_preserved": "firstextractor1/nonexistentnestedpyproject;treediagnosis0/corrected0/staticcollector0",
+  "limitations": "source-review gate only; no tester/final foundation/CI/default merge approval",
+  "final_checked_at": "2026-11-27T16:21:49.781357+00:00",
+  "final_staged_paths": [
+    "docs/agent-state/ses_de5678315ffeDxQVEpE9V9WSTE.md",
+    "docs/coordination/evidence/R30-03/COMMANDS.md",
+    "docs/coordination/evidence/R30-03/dependency-closure.json",
+    "docs/coordination/evidence/R30-03/publication-preflight.json",
+    "docs/coordination/evidence/R30-03/review-verdict.json",
+    "docs/coordination/evidence/R30-03/sealed-source.diff",
+    "docs/coordination/evidence/R30-03/source-chain.json",
+    "docs/coordination/evidence/R30-03/source-identity.json",
+    "docs/coordination/evidence/R30-03/static-change-proof.json",
+    "docs/coordination/evidence/R30-03/static-commands.json",
+    "docs/coordination/reports/R30-03-owned-cleanup-source-review.md"
+  ]
+}

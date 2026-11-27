@@ -1,0 +1,216 @@
+{
+  "source": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+  "base_default": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "main_paths": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "docs/superpowers/plans/2026-11-26-deepviz-plan.md",
+    "docs/superpowers/specs/2026-11-26-deepviz-design.md",
+    "pyproject.toml",
+    "python/deepviz/src/deepviz/models.py"
+  ],
+  "relative_import_edges_including_local_imports": {
+    "__init__": [
+      {
+        "module": "models",
+        "line": 8,
+        "names": [
+          "Artifact",
+          "ChartSpec",
+          "NormalizedData"
+        ]
+      },
+      {
+        "module": "normalize",
+        "line": 9,
+        "names": [
+          "normalize"
+        ]
+      },
+      {
+        "module": "render",
+        "line": 10,
+        "names": [
+          "render"
+        ]
+      },
+      {
+        "module": "tools",
+        "line": 25,
+        "names": [
+          "create_tools"
+        ]
+      }
+    ],
+    "cli": [
+      {
+        "module": "models",
+        "line": 9,
+        "names": [
+          "ChartSpec"
+        ]
+      },
+      {
+        "module": "tools",
+        "line": 10,
+        "names": [
+          "ENGINES",
+          "ToolSession"
+        ]
+      },
+      {
+        "module": "mcp_server",
+        "line": 33,
+        "names": [
+          "create_server"
+        ]
+      }
+    ],
+    "engines": [
+      {
+        "module": "models",
+        "line": 21,
+        "names": [
+          "ChartSpec"
+        ]
+      }
+    ],
+    "mcp_server": [
+      {
+        "module": "models",
+        "line": 14,
+        "names": [
+          "ChartSpec",
+          "Engine"
+        ]
+      },
+      {
+        "module": "tools",
+        "line": 15,
+        "names": [
+          "ENGINES",
+          "MAX_ARTIFACT_BYTES",
+          "NormalizeInput",
+          "RecommendInput",
+          "RenderInput",
+          "ToolSession"
+        ]
+      }
+    ],
+    "models": [],
+    "normalize": [
+      {
+        "module": "models",
+        "line": 44,
+        "names": [
+          "ChartSpec",
+          "NormalizedData"
+        ]
+      }
+    ],
+    "recommend": [
+      {
+        "module": "models",
+        "line": 8,
+        "names": [
+          "ChartKind",
+          "ChartSpec",
+          "NormalizedData"
+        ]
+      }
+    ],
+    "render": [
+      {
+        "module": "engines",
+        "line": 15,
+        "names": [
+          "ENGINES",
+          "_colors",
+          "_fallback",
+          "_geometry",
+          "browser_html",
+          "channels",
+          "matplotlib_figure",
+          "native_spec"
+        ]
+      },
+      {
+        "module": "models",
+        "line": 25,
+        "names": [
+          "Artifact",
+          "ChartSpec"
+        ]
+      },
+      {
+        "module": "normalize",
+        "line": 92,
+        "names": [
+          "normalize"
+        ]
+      }
+    ],
+    "tools": [
+      {
+        "module": "models",
+        "line": 14,
+        "names": [
+          "ChartSpec",
+          "Engine"
+        ]
+      },
+      {
+        "module": "recommend",
+        "line": 15,
+        "names": [
+          "Goal",
+          "profile",
+          "recommend"
+        ]
+      },
+      {
+        "module": "normalize",
+        "line": 99,
+        "names": [
+          "normalize"
+        ]
+      },
+      {
+        "module": "render",
+        "line": 141,
+        "names": [
+          "render"
+        ]
+      }
+    ]
+  },
+  "internal_normalize_closure": [
+    "models",
+    "normalize"
+  ],
+  "unchanged_eager_init_closure": [
+    "__init__",
+    "models",
+    "normalize",
+    "render",
+    "engines"
+  ],
+  "all_advertised_init_and_cli_mcp_closure": [
+    "__init__",
+    "cli",
+    "engines",
+    "mcp_server",
+    "models",
+    "normalize",
+    "recommend",
+    "render",
+    "tools"
+  ],
+  "root_pyproject_scripts": {
+    "deepviz": "deepviz.cli:main",
+    "deepviz-mcp": "deepviz.mcp_server:main"
+  },
+  "recommendation": "manager-authorized data-only initializer and honest metadata, retain fixed contract; do not wholesale copy eager init/CLI/all history",
+  "not_a_production_edit_or_installed_import_claim": true
+}

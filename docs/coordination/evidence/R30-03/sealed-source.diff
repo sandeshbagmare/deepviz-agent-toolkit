@@ -1,0 +1,327 @@
+diff --git a/python/deepviz/src/deepviz/normalize.py b/python/deepviz/src/deepviz/normalize.py
+index 7028f7a..423d2e0 100644
+--- a/python/deepviz/src/deepviz/normalize.py
++++ b/python/deepviz/src/deepviz/normalize.py
+@@ -26,21 +26,21 @@ and may miss peaks and short-lived events.
+ """
+ from __future__ import annotations
+ 
+ import csv
+ import io
+ import json
+ import math
+ import random
+ import re
+ from collections import Counter
+-from collections.abc import Iterable, Iterator, Mapping
++from collections.abc import Generator, Iterable, Iterator, Mapping
+ from datetime import date, datetime, time
+ from decimal import Decimal
+ from itertools import chain, islice, zip_longest
+ from numbers import Integral, Real
+ from pathlib import Path
+ from typing import Any
+ 
+ from .models import ChartSpec, NormalizedData
+ 
+ _MAX_FIELDS = 1024
+@@ -84,21 +84,23 @@ def _unique_json_object(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
+             raise ValueError("Duplicate JSON object key")
+         record[key] = value
+     return record
+ 
+ 
+ def _without_bom(lines: Iterable[str]) -> Iterator[str]:
+     iterator = iter(lines)
+     first = next(iterator, None)
+     if first is not None:
+         yield first.removeprefix("\ufeff")
+-    yield from iterator
++    # Delegation would forward close() to a caller-owned stream on parser failure.
++    for line in iterator:  # noqa: UP028 - must not forward close() to borrowed input
++        yield line
+ 
+ 
+ def _jsonl(lines: Iterable[str]) -> Iterator[Any]:
+     for number, line in enumerate(_without_bom(lines), 1):
+         if line.strip():
+             yield _json(line, f"at line {number}")
+ 
+ 
+ def _cell(value: str) -> Any:
+     stripped = value.strip()
+@@ -471,52 +473,59 @@ def _flatten(value: Mapping[str, Any], counts: Counter[str]) -> dict[str, Any]:
+ 
+     for key, item in value.items():
+         if not isinstance(key, str) or not key:
+             raise ValueError("Record field names must be non-empty strings")
+         add(key, item, 0)
+     return output
+ 
+ 
+ def _records(
+     data: Any, spec: ChartSpec, counts: Counter[str], schema: dict[str, int],
+-) -> Iterator[tuple[dict[str, Any], int]]:
++) -> Generator[tuple[dict[str, Any], int], None, None]:
+     source = _source(data, spec.format)
+-    if spec.data_path is not None:
+-        tokens = spec.data_path.split(".")
+-        if any(not token for token in tokens):
+-            raise ValueError("data_path must contain non-empty dot-separated components")
+-        source = _select_path(source, tokens, counts)
+-    requested = tuple(dict.fromkeys(field for field in (spec.x, spec.y, spec.color, spec.size) if field))
+-    had_rows = False
+-    for index, item in enumerate(_expand(source, counts)):
+-        had_rows = True
+-        row = _flatten(item, counts) if isinstance(item, dict) or isinstance(item, Mapping) else {
+-            "index": index, "value": _scalar(item, counts),
+-        }
+-        for key, value in row.items():
+-            mask = 1 if type(value) in (int, float) else 2 if isinstance(value, str) else 4 if value is not None else 0
+-            schema[key] = schema.get(key, 0) | mask
+-        if len(schema) > _MAX_FIELDS:
+-            raise ValueError(f"Input schema exceeds {_MAX_FIELDS} fields")
+-        for field in requested:
+-            if field not in row:
+-                counts["missing"] += 1
+-                row[field] = None
+-        yield row, _record_bytes(row)
+-    if spec.data_path is not None and not counts["path_matches"] and (
+-        not counts["path_empty"] or counts["path_missing"]
+-    ):
+-        raise ValueError(f"data_path {spec.data_path!r} did not match any input")
+-    if counts["path_matches"] or spec.data_path is None:
+-        missing = [field for field in requested if field not in schema]
+-        if missing and had_rows:
+-            raise ValueError(f"Requested fields are missing from input: {', '.join(missing)}")
++    # Retain the adapter root even when path selection wraps it; never own caller input.
++    owned = source if source is not data else None
++    try:
++        if spec.data_path is not None:
++            tokens = spec.data_path.split(".")
++            if any(not token for token in tokens):
++                raise ValueError("data_path must contain non-empty dot-separated components")
++            source = _select_path(source, tokens, counts)
++        requested = tuple(dict.fromkeys(field for field in (spec.x, spec.y, spec.color, spec.size) if field))
++        had_rows = False
++        for index, item in enumerate(_expand(source, counts)):
++            had_rows = True
++            row = _flatten(item, counts) if isinstance(item, dict) or isinstance(item, Mapping) else {
++                "index": index, "value": _scalar(item, counts),
++            }
++            for key, value in row.items():
++                mask = 1 if type(value) in (int, float) else 2 if isinstance(value, str) else 4 if value is not None else 0
++                schema[key] = schema.get(key, 0) | mask
++            if len(schema) > _MAX_FIELDS:
++                raise ValueError(f"Input schema exceeds {_MAX_FIELDS} fields")
++            for field in requested:
++                if field not in row:
++                    counts["missing"] += 1
++                    row[field] = None
++            yield row, _record_bytes(row)
++        if spec.data_path is not None and not counts["path_matches"] and (
++            not counts["path_empty"] or counts["path_missing"]
++        ):
++            raise ValueError(f"data_path {spec.data_path!r} did not match any input")
++        if counts["path_matches"] or spec.data_path is None:
++            missing = [field for field in requested if field not in schema]
++            if missing and had_rows:
++                raise ValueError(f"Requested fields are missing from input: {', '.join(missing)}")
++    finally:
++        close = getattr(owned, "close", None)
++        if close is not None:
++            close()
+ 
+ 
+ def _plan(spec: ChartSpec, prefix: list[dict[str, Any]]) -> tuple[str, list[str], str]:
+     numeric = [key for row in prefix for key, value in row.items() if type(value) in (int, float)]
+     categorical = [key for row in prefix for key, value in row.items() if isinstance(value, (str, bool))]
+     strategy = spec.aggregation
+     if spec.kind == "heatmap":
+         coordinates = list(dict.fromkeys(key for row in prefix for key in row if key != spec.color))
+         x = spec.x if spec.x is not None else next((key for key in coordinates if key != spec.y), None)
+         y = spec.y if spec.y is not None else next((key for key in coordinates if key != x), None)
+@@ -700,54 +709,57 @@ def normalize(data: Any, spec: ChartSpec | dict[str, Any]) -> NormalizedData:
+     integer range, even though Python's integer reductions remain exact beyond it.
+     """
+     if not isinstance(spec, (ChartSpec, dict)):
+         raise TypeError("spec must be a ChartSpec or dictionary")
+     spec = spec if isinstance(spec, ChartSpec) else ChartSpec.model_validate(spec)
+     if any(field is not None and not field.strip() for field in (spec.x, spec.y, spec.color, spec.size)):
+         raise ValueError("Mapped field names must not be empty")
+     counts: Counter[str] = Counter()
+     schema: dict[str, int] = {}
+     rows = _records(data, spec, counts, schema)
+-    prefix = []
+-    prefix_bytes = 0
+-    for row, size in islice(rows, 32):
+-        prefix.append((row, size))
+-        prefix_bytes += size
+-        if prefix_bytes >= _MAX_RETAINED_BYTES:
+-            break
+-    strategy, fields, measure = _plan(spec, [row for row, _ in prefix])
+-    input_count = 0
+-    if strategy in _REDUCTIONS:
+-        reducer = _Reducer(strategy, fields, measure, spec.max_points, counts)
+-        for row, _ in chain(prefix, rows):
+-            input_count += 1
+-            reducer.add(row)
+-        records = reducer.finish()
+-    else:
+-        rng = random.Random(0)
+-        reservoir: list[tuple[int, dict[str, Any], int]] = []
+-        retained_bytes = 2
+-        for row, size in chain(prefix, rows):
+-            input_count += 1
+-            if input_count <= spec.max_points:
+-                retained_bytes += size + bool(reservoir)
+-                _check_retained_bytes(retained_bytes)
+-                reservoir.append((input_count, row, size))
+-            else:
+-                slot = rng.randrange(input_count)
+-                if slot < spec.max_points:
+-                    retained_bytes += size - reservoir[slot][2]
++    try:
++        prefix = []
++        prefix_bytes = 0
++        for row, size in islice(rows, 32):
++            prefix.append((row, size))
++            prefix_bytes += size
++            if prefix_bytes >= _MAX_RETAINED_BYTES:
++                break
++        strategy, fields, measure = _plan(spec, [row for row, _ in prefix])
++        input_count = 0
++        if strategy in _REDUCTIONS:
++            reducer = _Reducer(strategy, fields, measure, spec.max_points, counts)
++            for row, _ in chain(prefix, rows):
++                input_count += 1
++                reducer.add(row)
++            records = reducer.finish()
++        else:
++            rng = random.Random(0)
++            reservoir: list[tuple[int, dict[str, Any], int]] = []
++            retained_bytes = 2
++            for row, size in chain(prefix, rows):
++                input_count += 1
++                if input_count <= spec.max_points:
++                    retained_bytes += size + bool(reservoir)
+                     _check_retained_bytes(retained_bytes)
+-                    reservoir[slot] = (input_count, row, size)
+-        records = [row for _, row, _ in sorted(reservoir)]
+-        if input_count > spec.max_points:
+-            strategy = "sample"
++                    reservoir.append((input_count, row, size))
++                else:
++                    slot = rng.randrange(input_count)
++                    if slot < spec.max_points:
++                        retained_bytes += size - reservoir[slot][2]
++                        _check_retained_bytes(retained_bytes)
++                        reservoir[slot] = (input_count, row, size)
++            records = [row for _, row, _ in sorted(reservoir)]
++            if input_count > spec.max_points:
++                strategy = "sample"
++    finally:
++        rows.close()
+     _check_retained_bytes(2 + sum(_record_bytes(row) for row in records) + max(0, len(records) - 1))
+     warnings = []
+     if strategy == "sample" and input_count > spec.max_points:
+         warnings.append(
+             f"Deterministic reservoir sample: {len(records)} of {input_count} rows; "
+             f"max_points={spec.max_points} overrides aggregation={spec.aggregation!r}. "
+             "Original source order is preserved, but sampling may miss peaks/extrema and short-lived events."
+         )
+     if counts["overflow"]:
+         warnings.append(
+diff --git a/python/deepviz/tests/test_r17_normalizer_boundaries.py b/python/deepviz/tests/test_r17_normalizer_boundaries.py
+new file mode 100644
+index 0000000..5da3fdd
+--- /dev/null
++++ b/python/deepviz/tests/test_r17_normalizer_boundaries.py
+@@ -0,0 +1,87 @@
++"""Public source-lifetime regressions for the R17 normalizer boundary repair."""
++from __future__ import annotations
++
++import io
++import json
++from collections.abc import Generator
++from pathlib import Path
++from typing import Any
++
++import pytest
++
++from deepviz import normalize
++
++
++@pytest.mark.parametrize("phase", ["plan", "late-flatten", "selected-path-plan"])
++def test_owned_jsonl_unwinds_before_downstream_exception_returns(
++    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, phase: str,
++) -> None:
++    path = tmp_path / "owned.jsonl"
++    records: list[dict[str, Any]] = [{"label": "a", "note": "b"} for _ in range(40)]
++    if phase == "late-flatten":
++        records[35] = {"a.b": 1, "a": {"b": 2}}
++    if phase == "selected-path-plan":
++        records = [{"page": record} for record in records]
++    path.write_text("".join(json.dumps(row) + "\n" for row in records), encoding="utf-8")
++    handles: list[Any] = []
++    original = Path.open
++
++    def opened(self: Path, *args: Any, **kwargs: Any) -> Any:
++        file = original(self, *args, **kwargs)
++        if self == path:
++            handles.append(file)
++        return file
++
++    monkeypatch.setattr(Path, "open", opened)
++    spec: dict[str, Any] = {"kind": "bar", "format": "jsonl", "aggregation": "sum"}
++    if phase == "late-flatten":
++        spec["aggregation"] = "none"
++    elif phase == "selected-path-plan":
++        spec["data_path"] = "page"
++    message = "collision" if phase == "late-flatten" else "numeric y"
++    try:
++        with pytest.raises(ValueError, match=message) as caught:
++            normalize(path, spec)
++        assert caught.traceback is not None
++        assert handles and all(file.closed for file in handles), "Owned adapter must unwind even with retained traceback"
++        moved = path.with_suffix(".unlocked")
++        path.rename(moved)
++        assert moved.exists()
++    finally:
++        for file in handles:
++            file.close()
++
++
++def test_borrowed_generator_is_not_closed_when_planning_raises() -> None:
++    closed: list[bool] = []
++
++    def records() -> Generator[dict[str, str], None, None]:
++        try:
++            for _ in range(40):
++                yield {"label": "a", "note": "b"}
++        finally:
++            closed.append(True)
++
++    source = records()
++    try:
++        with pytest.raises(ValueError, match="numeric y") as caught:
++            normalize(source, {"kind": "bar", "aggregation": "sum"})
++        assert caught.traceback is not None
++        assert closed == [], "Do not transfer caller generator ownership on downstream failure"
++        assert next(source) == {"label": "a", "note": "b"}
++    finally:
++        source.close()
++    assert closed == [True]
++
++
++def test_borrowed_second_line_jsonl_parse_failure_keeps_stream_usable() -> None:
++    source = io.StringIO('{"v":1}\nnot-json\n')
++    try:
++        with pytest.raises(ValueError, match="line 2") as caught:
++            normalize(source, {"kind": "table", "format": "jsonl", "aggregation": "none"})
++        assert caught.traceback is not None
++        assert not source.closed
++        source.seek(0)
++        assert source.readline() == '{"v":1}\n'
++    finally:
++        source.close()

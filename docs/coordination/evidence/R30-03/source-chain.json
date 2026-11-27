@@ -1,0 +1,74 @@
+{
+  "source": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+  "main": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "normalizer_history": [
+    {
+      "commit": "ba171160de0895f785807e895b4b4cb14dff970e",
+      "subject": "feat: normalize heterogeneous inputs with bounded streaming reductions",
+      "full_commit_paths": [
+        "python/deepviz/src/deepviz/normalize.py",
+        "python/deepviz/tests/test_normalize.py",
+        "scripts/benchmark_scale.py"
+      ],
+      "normalizer_git_blob": "5a47519311331c99a16524d56666b0174d821ab8"
+    },
+    {
+      "commit": "4795509273a7d8274c394b4d67d0a98509b0ca93",
+      "subject": "fix: reduce heatmap measures by coordinate pair and disclose sampling limits",
+      "full_commit_paths": [
+        "python/deepviz/src/deepviz/normalize.py",
+        "python/deepviz/tests/test_normalize.py"
+      ],
+      "normalizer_git_blob": "9770511eee57862e9d3de95d764fbfc6ecb14648"
+    },
+    {
+      "commit": "f650964345703ba64327717f7b3e76742e53ca69",
+      "subject": "fix: bound normalized bytes and preserve numeric and GraphQL semantics",
+      "full_commit_paths": [
+        "python/deepviz/src/deepviz/normalize.py",
+        "python/deepviz/tests/test_n04_normalize_regressions.py"
+      ],
+      "normalizer_git_blob": "534ab4a4ee9f3c80a55f764352dd7cfd30a5d32f"
+    },
+    {
+      "commit": "3051823906a2a869ab7ca941a21ef621ee994dd2",
+      "subject": "fix: reject duplicate encoded fields and preserve stream boundaries",
+      "full_commit_paths": [
+        "python/deepviz/src/deepviz/normalize.py",
+        "python/deepviz/tests/test_n04_format_guards.py"
+      ],
+      "normalizer_git_blob": "1664e34063f3ed0320ab4bd83f4957cfbec3f742"
+    },
+    {
+      "commit": "235e7e361e395b86781101172f040ee51b9423d2",
+      "subject": "fix: stabilize record inference and JSON numeric group identity",
+      "full_commit_paths": [
+        "python/deepviz/src/deepviz/normalize.py",
+        "python/deepviz/tests/test_n04_shape_policy.py"
+      ],
+      "normalizer_git_blob": "04e15965934d37f4140f2dd6772b2e97747920ea"
+    },
+    {
+      "commit": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+      "subject": "fix: retain bounded finite sums after transient overflow",
+      "full_commit_paths": [
+        "packages/deepviz/src/normalize.ts",
+        "packages/deepviz/test/test_r07_finite_overflow.test.mjs",
+        "python/deepviz/src/deepviz/normalize.py",
+        "python/deepviz/tests/test_r07_finite_overflow.py"
+      ],
+      "normalizer_git_blob": "7028f7a24e92a8995859b3818f0938b4276a0726"
+    },
+    {
+      "commit": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+      "subject": "fix: unwind owned normalization adapters without closing borrowed input",
+      "full_commit_paths": [
+        "python/deepviz/src/deepviz/normalize.py",
+        "python/deepviz/tests/test_r17_normalizer_boundaries.py"
+      ],
+      "normalizer_git_blob": "423d2e08f5da7531a407c282b4720915e7045920"
+    }
+  ],
+  "policy": "Historical dependency proof only, not a directive to cherry-pick these multi-file commits onto main.",
+  "source_only_runs": true
+}
