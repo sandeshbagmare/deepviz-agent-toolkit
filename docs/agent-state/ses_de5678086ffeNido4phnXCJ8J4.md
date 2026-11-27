@@ -69,3 +69,9 @@
 
 - R13precommitactualchecks0: explicit17ownstagedpaths/168359bytesdiffinspected; whitespace0/protectedsource+existingmatrix+backenddiff0; scopedcredentialpatterns0findings, JSON/PythonASTparsed, actualstagedSVGnoexecutable/foreign/event/externalhref; node--check0.6ownedJSONCRLF→LFexplicit, SVGPNGbytesunchanged. Ownprecommitledgerrecords17-fileauditnotselfreferentialfinalmanifest.
 - Currentactionstageonlyowncheckpointupdates+ledger/finalboundaryscan, thenmeaningfulowncommit/nonforceOWNpush/actualremoteSHAreceipt. No expensivecompletedchecksrepeated. Commit/pushpending; R04integration/finalCI/fullgoal900unmet.
+
+- Localcommitreceipt: final18ownedpathsboundary/credentialscan/whitespace0, commit **e974da9856ee8cc4a7f8567d731c8f947acaa64e** (`test: add portable strict Vega dashboard probes`)exit0/18files1365insertions; ownbranchclean. Product/existingmatrixsourceunchanged. No testsrerun/relabel;40currentat3aa+40oldpinremainexact.
+- Truefirstunfinishedaction **nonforceOWNpush** `git push -u origin agents/r10-17-vega-visible-title`, thenexactremoteSHAreadback via `git ls-remote --heads origin refs/heads/agents/r10-17-vega-visible-title`; expectedlocal e974da9. PushNOTYET; nofakepublishedclaim.
+
+- **Actualpublishedreceipt:** nonforce`git push -u origin agents/r10-17-vega-visible-title`exit0/newOWNbranch; immediatelsremoteexit0 actual **e974da9856ee8cc4a7f8567d731c8f947acaa64e** equalslocal. MAINownJSONreceipt/R10report/R13reportupdated; standardPRsuggestionnotPRcreation, noissuesPR/sharedpush. All40+40/browser/original10REDstaydated3aa/0c5evidence.
+- Currentfirstunfinishedaction docs-onlyownedreceipt/report/notecommit+nonforcepush/finalSHAreadback; thenMAINsavefinalheadwithoutselfreferentialcommitloop/handofftoR04. ProductnextactionR04independentlyevaluateportableoracleproposalretainingvisibleparent+correctchild/nativevaluesgeometry/XSShiddennegatives; fullCI/reviews/production900unmet/no finalsignoff.

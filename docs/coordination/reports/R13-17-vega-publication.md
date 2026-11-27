@@ -23,3 +23,15 @@
 - Stagedbyte credential-pattern audit **exit0/0findings** (GitHub token patterns, AWS access keys, private keys, concrete authorization values and credential-bearing URLs). All stagedJSONparsed/PythonASTparsed; actual stagedSVGXMLhas0forbiddennodes/events/externalhrefs. Patternscan is scoped, not a securityguarantee or independentreviewer signoff. `node --check tests/r10_probes/role17/browser.cjs`0; no browser rerun.
 - Git normalizes6ownedJSONfilesCRLF→LF; actualSVGPNG are byte-identical to the recorded generated originals. Precommitcheckledger saved `evidence/R13-17/precommit-checks.json`; it describes the audited17files before adding this ledger/report checkpoint, not a self-referential finalmanifest.
 - Currentfirstunfinishedaction: stage only own checkpointupdates+ledger, finalowned-boundary/whitespace/credentialscan, meaningful owncommit, **non-force ownbranch push**, actualremoteSHAreadback and MAINreceipt. No commit/push claimed yet; completed40+40/browserresultsnotrerun.
+
+## Local commit receipt — push still pending
+
+- Final18ownedstagedpaths boundary/credentialscan/whitespace all exit0; zero credential-pattern findings. `git commit -m "test: add portable strict Vega dashboard probes"` **exit0**, commit **`e974da9856ee8cc4a7f8567d731c8f947acaa64e`**, 18files/1365insertions including actual73884BPNG+17622BSVG. Only NEWprobes/ownreports/note/evidence, no product/existing-oracle changes.
+- Postcommit `git status --short --branch` cleanownbranch. Parent is assigned3aa; tests remain source-specific at3aa/0c5, not relabeled tests executed on the docs/test commit or later movingcandidate.
+- **Next executableaction:** `git push -u origin agents/r10-17-vega-visible-title` (no force), then `git ls-remote --heads origin refs/heads/agents/r10-17-vega-visible-title` and require exacte974da9SHA. A localcommit is not publication; no remotepass claimed before that readback.
+
+## Actual OWN publication receipt
+
+- `git push -u origin agents/r10-17-vega-visible-title` **exit0**, non-force/newOWNbranch; immediate `git ls-remote --heads origin refs/heads/agents/r10-17-vega-visible-title` **exit0**, actualremote **`e974da9856ee8cc4a7f8567d731c8f947acaa64e`** equalslocal. ExistingGCMhelper only; expectedauthGET/user alreadyconfirmed. No issue/PRwrites/sharedbranchpush; standardGitHubPRsuggestion is not PRcreation.
+- MAINownreceipt `evidence/R13-17/publication-receipt.json` saved from actualtoolresults; R10report/ownnote updated. This is meaningful portable-regression/actualSVGPNG/evidence publication, NOTfullcandidategreenCI/signoff/900completion.
+- Currentworkeraction: commit/pushonlytheowned receipt/report/note checkpoint (docs-only), then readback finalOWNremoteHEAD and save MAINreceipt without repeating completed tests or pursuing a self-referential receipt commit loop. Productdecision belongsR04: retain all strictvisibleparent/correctchild/value/geometry/XSS/hiddennegativecontrols when evaluating oracleadoption. Fullgoal/CI/independentfinalreviews remainunmet.
