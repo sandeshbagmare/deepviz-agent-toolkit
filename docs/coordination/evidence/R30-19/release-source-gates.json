@@ -1,0 +1,1204 @@
+{
+  "schema_version": 1,
+  "sealed_packet_captured_utc": "2026-11-27T16:15:53.811080+00:00",
+  "owner": "ses_de5678052ffdJwVtlB6SX6LZrT",
+  "assignment": "R30common+19source-to-next2-4PRgates",
+  "default_context": {
+    "sha": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+    "local_commits": 2,
+    "local_tracked_paths": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "docs/superpowers/plans/2026-11-26-deepviz-plan.md",
+      "docs/superpowers/specs/2026-11-26-deepviz-design.md",
+      "pyproject.toml",
+      "python/deepviz/src/deepviz/models.py"
+    ],
+    "live_remote_verified_here": false
+  },
+  "candidate_context": {
+    "published_checkpoint_reported": "3eab699b61850a20e91132e16caf8c589085f9ee",
+    "product_integrated": "262b0da145e42c94c2908213272ec3be28771206",
+    "not_default_merge": true,
+    "current_API_or_CI_verified_here": false
+  },
+  "reading_and_evidence_limits": [
+    "FULLexistingreportcontentreadbeforeuse; exactnamedimmutableGitreportblobsverified",
+    "Historicalsavedpublicationreceiptsarebasis;notfreshremoterefchecks",
+    "No reportprogresspoll/newbranchinventory/currentCI/census/APIquery/test/build/install/spawn",
+    "OldR25zero-of-fourtimestampnotreused:fouractual998reportsnowread,twoREQUESTCHANGES/twoboundedtesterPASS",
+    "NewR30assigned03/05/20/06jobsnotcompletionevidence",
+    "Sourcefix/newheadMappingnotprovidedintheassignment;no successorapprovalinvented"
+  ],
+  "groups": [
+    {
+      "id": "strict_contract",
+      "sources": [
+        {
+          "source_id": "strict_contract",
+          "commit": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+          "direct_parents": [
+            "0ae2cf26426822135fc10d337fcacf580b7ed833"
+          ],
+          "all_commit_paths": [
+            ".github/workflows/chart-contract.yml",
+            "docs/verification/r22-contract/README.md",
+            "docs/verification/r22-contract/red-green-summary.json",
+            "docs/verification/r22-contract/validation-output.json",
+            "python/deepviz/src/deepviz/models.py",
+            "schemas/chart-spec.schema.json",
+            "tests/test_models.py",
+            "tests/test_numeric_schema.py"
+          ],
+          "product_test_workflow_schema_paths": [
+            ".github/workflows/chart-contract.yml",
+            "python/deepviz/src/deepviz/models.py",
+            "schemas/chart-spec.schema.json",
+            "tests/test_models.py",
+            "tests/test_numeric_schema.py"
+          ],
+          "commit_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/commit/99841ffb80e0f2ea90c753c1bf0ceff718e0e180"
+        }
+      ],
+      "existing_issues": [
+        {
+          "number": 30,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/30",
+          "basis": "Saved ownR25officialsnapshot+FULLactual998finalreports; no newquery",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        },
+        {
+          "number": 5,
+          "title": "Version and validate the shared ChartSpec and artifact contracts",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/5",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        }
+      ],
+      "ready_to_receive": "ExistingPR33 at998 BLOCKED, four genuine reports exist but two requestchanges",
+      "ready_to_merge": false,
+      "dependencies": [
+        "Actualmain0ae2 foundation; Mapping successor notice and affected newhead gates"
+      ],
+      "missing_gates": [
+        "MinimalMappingrepair/permanentREDtoGREEN/newsealedsource",
+        "Allfouraffectedreview11+01/test17+15atNEWhead",
+        "Actualnewhead3PythonCI/requiredsettings/merge/defaultancestry/QA13/#30acceptancedecision"
+      ],
+      "next_owner": "R04 ownsMappingrepair/PR; root routes actual newhead to01/11/17/15",
+      "scope_limits": [
+        "47/53/40+79/40+74areactual998source-specificresults,notMappingresolution",
+        "ModelJSON/schema/errorsapplicable; chartimagesN/A",
+        "No currentCI/publishednewhead/mergeverifiedhere"
+      ],
+      "material_findings": [
+        {
+          "id": "R25-01-F1 / R25-11-F1",
+          "severity": "P2",
+          "cause": "One dict-only before-validator misses supportedUserDict/MappingProxyTypeanddashboardchildren",
+          "state": "OPEN perfinalreports/managerR31, no livepoll",
+          "counterexamples": "width numericstring/versionTrue/columnsTrue accepted; validMappingpositivecontinuesworking"
+        }
+      ],
+      "current_remote_CI": null,
+      "new_focused_head": null,
+      "source_integrated_on_reported_default": false,
+      "evidence_ids": [
+        "contract-review01",
+        "contract-review11",
+        "contract-test17",
+        "contract-test15"
+      ],
+      "evidence_records": [
+        {
+          "id": "contract-review01",
+          "evidence_commit": "16f8f1bef0a8b656a32ba07e7fdc669d65a713f5",
+          "target_source": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "47 passed plus1 strict Mapping failure; P2REQUESTCHANGES",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/16f8f1bef0a8b656a32ba07e7fdc669d65a713f5/docs/coordination/reports/R25-01-pr33-final-review.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        },
+        {
+          "id": "contract-review11",
+          "evidence_commit": "7527a8c88a785bc39efad6c2173aa2c7932782cc",
+          "target_source": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "53pass plus8failed2pass Mapping; REQUESTCHANGES",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/7527a8c88a785bc39efad6c2173aa2c7932782cc/docs/coordination/reports/R25-11-pr33-final-review.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        },
+        {
+          "id": "contract-test17",
+          "evidence_commit": "a4386829f6c70ba31b8e5c741579b5c8b66a9178",
+          "target_source": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "40pass and79pass separately; literalJSON scope, notMappingcounterexample",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/a4386829f6c70ba31b8e5c741579b5c8b66a9178/docs/coordination/reports/R25-17-pr33-final-test.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        },
+        {
+          "id": "contract-test15",
+          "evidence_commit": "a2449226618f48e2fa4a023a92605733c745196e",
+          "target_source": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "40+74pass,67outputchecks,decoderwire notMappingrepair",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/a2449226618f48e2fa4a023a92605733c745196e/docs/coordination/reports/R25-15-pr33-final-wire-test.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        }
+      ],
+      "independent_review_test_ids": [
+        "contract-review01",
+        "contract-review11",
+        "contract-test17",
+        "contract-test15"
+      ],
+      "published_independent_review_test_ids": [
+        "contract-review01",
+        "contract-review11",
+        "contract-test17",
+        "contract-test15"
+      ]
+    },
+    {
+      "id": "owned_cleanup",
+      "sources": [
+        {
+          "source_id": "owned_cleanup",
+          "commit": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+          "direct_parents": [
+            "ec9f669eff28cd5351da142765b7755e3b2f484f"
+          ],
+          "all_commit_paths": [
+            "python/deepviz/src/deepviz/normalize.py",
+            "python/deepviz/tests/test_r17_normalizer_boundaries.py"
+          ],
+          "product_test_workflow_schema_paths": [
+            "python/deepviz/src/deepviz/normalize.py",
+            "python/deepviz/tests/test_r17_normalizer_boundaries.py"
+          ],
+          "commit_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/commit/5ba860305dcc86ac2f95f01705b984d2b40f2799"
+        }
+      ],
+      "existing_issues": [
+        {
+          "number": 6,
+          "title": "Normalize records, columns and delimited/line-oriented inputs deterministically",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/6",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        },
+        {
+          "number": 8,
+          "title": "Reduce large streams before bounded record materialization",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/8",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        },
+        {
+          "number": 21,
+          "title": "Prove untrusted specs, HTML values and filesystem paths stay within safe boundaries",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/21",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        }
+      ],
+      "ready_to_receive": "P1sealedsourceRECEIVABLE; finalfoundation/headnotready",
+      "ready_to_merge": false,
+      "dependencies": [
+        "normalize/models/publicpackagefoundation absentonmain",
+        "Baseec9SUMprefix remains applicable to any broader normalizationpromise"
+      ],
+      "missing_gates": [
+        "Secondsource-review03assignednotcompletedinpacket",
+        "Freshindependent05lifetime69assignednotcompletedinpacket",
+        "Distinctsecondtesterlane + finalfocusedsourceidentity/package/CI/outputgates"
+      ],
+      "next_owner": "R04+Pythonfoundation21; source-review03/04,test05+distincttester",
+      "scope_limits": [
+        "04source+18executionisoneagentnotfourindependentagents",
+        "Author69notindependent; no newR30reportprogresspoll",
+        "ApplicableoutputOSownedclose/renameandborrowerpreservation; no chartrequired"
+      ],
+      "material_findings": [],
+      "current_remote_CI": null,
+      "new_focused_head": null,
+      "source_integrated_on_reported_default": false,
+      "evidence_ids": [
+        "cleanup-review04"
+      ],
+      "evidence_records": [
+        {
+          "id": "cleanup-review04",
+          "evidence_commit": "b235fc6422426df9bdeadae18174240ce9ec922c",
+          "target_source": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "source review plus18passfinite lifetime subset; sameoneagentnot4gates",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/b235fc6422426df9bdeadae18174240ce9ec922c/docs/coordination/reports/R22-04-owned-unwind-review.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        }
+      ],
+      "independent_review_test_ids": [
+        "cleanup-review04"
+      ],
+      "published_independent_review_test_ids": [
+        "cleanup-review04"
+      ]
+    },
+    {
+      "id": "mean",
+      "sources": [
+        {
+          "source_id": "mean",
+          "commit": "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19",
+          "direct_parents": [
+            "79232fb2f402bf21d455fbc021f1c238d19abe80"
+          ],
+          "all_commit_paths": [
+            "packages/deepviz/src/normalize.ts",
+            "packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs",
+            "python/deepviz/src/deepviz/normalize.py",
+            "python/deepviz/tests/test_r17_normalizer_boundaries.py"
+          ],
+          "product_test_workflow_schema_paths": [
+            "packages/deepviz/src/normalize.ts",
+            "packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs",
+            "python/deepviz/src/deepviz/normalize.py",
+            "python/deepviz/tests/test_r17_normalizer_boundaries.py"
+          ],
+          "commit_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/commit/c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19"
+        }
+      ],
+      "existing_issues": [
+        {
+          "number": 8,
+          "title": "Reduce large streams before bounded record materialization",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/8",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        },
+        {
+          "number": 22,
+          "title": "Measure 10 through 10M input rows on the bounded streaming path",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/22",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        },
+        {
+          "number": 6,
+          "title": "Normalize records, columns and delimited/line-oriented inputs deterministically",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/6",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        },
+        {
+          "number": 7,
+          "title": "Normalize nested JSON and GraphQL edges/nodes without dropping pages",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/7",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        }
+      ],
+      "ready_to_receive": "Exactc1bsealedmilestone available, no independent acceptance supplied",
+      "ready_to_merge": false,
+      "dependencies": [
+        "c1bparent792docs childof5ba; exactparentrecorded",
+        "BothPythonandTSnormalizerfoundations/contracts/builds",
+        "Scalar/GraphQL andprefixSUMothercausesnotfixedbymean"
+      ],
+      "missing_gates": [
+        "Twoindependentsourcereviewandtwotestsonactualc1borchosenhead",
+        "Fraction/subnormal/rounding/eviction/statebudgetcontrols+actualoutputs",
+        "Packaging/CI/affectedcostonfinalheadwithoutinvented10M"
+      ],
+      "next_owner": "R04 allocates independentgates;16ownsnormalizerfollowups",
+      "scope_limits": [
+        "Producerreported82Python/21Node/fullnpm290/cost24processesAUTHORonly",
+        "1K/100KfiniteconstanttrialsnotgeneralRSS/latencyspeedup/10Mproof",
+        "5bapassnotcarriedforward:Pythonmodulechanged",
+        "Unpublishedsuccessor/dirtyproducerworkexcluded"
+      ],
+      "material_findings": [],
+      "current_remote_CI": null,
+      "new_focused_head": null,
+      "source_integrated_on_reported_default": false,
+      "evidence_ids": [],
+      "evidence_records": [],
+      "independent_review_test_ids": [],
+      "published_independent_review_test_ids": []
+    },
+    {
+      "id": "helper_null",
+      "sources": [
+        {
+          "source_id": "helper",
+          "commit": "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57",
+          "direct_parents": [
+            "5340bc69b7203ad7a9166543062482d819f9b705"
+          ],
+          "all_commit_paths": [
+            "docs/agent-state/ses_de56782e8ffentAvzUUfMncFRA.md",
+            "docs/coordination/evidence/R14-07/README.md",
+            "docs/coordination/evidence/R14-07/commands.json",
+            "docs/coordination/evidence/R14-07/dashboard-wide.png",
+            "docs/coordination/evidence/R14-07/omitted-default.png",
+            "docs/coordination/evidence/R14-07/run-summary.json",
+            "docs/coordination/reports/R14-07-helper-null.md",
+            "packages/deepviz/src/render.ts",
+            "packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+          ],
+          "product_test_workflow_schema_paths": [
+            "packages/deepviz/src/render.ts",
+            "packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+          ],
+          "commit_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/commit/7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57"
+        }
+      ],
+      "existing_issues": [
+        {
+          "number": 16,
+          "title": "Expose five real Deep Agents visualization tools with safe artifacts",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/16",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        },
+        {
+          "number": 14,
+          "title": "Validate shared schema fixtures and bounded normalization in TypeScript",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/14",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        },
+        {
+          "number": 25,
+          "title": "Build and clean-install the npm tarball with usable types and exports",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/25",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        }
+      ],
+      "ready_to_receive": "NarrowhelperrepairSOURCEreceivable,standalonecherryunusable",
+      "ready_to_merge": false,
+      "dependencies": [
+        "Sevennpmruntimepaths/workspace/lock/tsconfig/schema/packageguards/tests absentonmain",
+        "Schema728dashboardannotationprerequisiteorreviewedequivalent",
+        "Do not copyoldcandidatewholemodeloverfixedmaincontract"
+      ],
+      "missing_gates": [
+        "Review14localcommite755remotepublicationnotestablishedatsavedread",
+        "Distinctsecondindependenttester",
+        "Frozencompleteheadactualbuild/strict36+40/importorigin/packedconsumer/realoutput/CI/two+two"
+      ],
+      "next_owner": "R04+04npmfoundation,14publicationand05+distincttester",
+      "scope_limits": [
+        "Full7d8commit9pathsbutonly2packagepaths; excludeproducernotes",
+        "01/14source-onlynotruntimepasses",
+        "05viewportimagesnotfullPageorpackedinstalledconsumerproof"
+      ],
+      "material_findings": [],
+      "current_remote_CI": null,
+      "new_focused_head": null,
+      "source_integrated_on_reported_default": false,
+      "evidence_ids": [
+        "helper-review01",
+        "helper-review14",
+        "helper-test05"
+      ],
+      "evidence_records": [
+        {
+          "id": "helper-review01",
+          "evidence_commit": "26db4af34ded1ff1432132d1c8be3c74ca118ea0",
+          "target_source": "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "sourceonly0runtime no mustfixordinaryJSON",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/26db4af34ded1ff1432132d1c8be3c74ca118ea0/docs/coordination/reports/R24-01-helper-null-review.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        },
+        {
+          "id": "helper-review14",
+          "evidence_commit": "e755a457650b274815e03f5c5221f4d024786db2",
+          "target_source": "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57",
+          "publication_status": "LOCAL_commit_ONLY_remote_publication_not_evidenced_at_read",
+          "scope": "secondsource review no mustfix, missingnpmfoundation/schema728",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/e755a457650b274815e03f5c5221f4d024786db2/docs/coordination/reports/R26-14-helper-slice-review.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": false
+        },
+        {
+          "id": "helper-test05",
+          "evidence_commit": "eebacec61da32c21da01eba0faa8043687227997",
+          "target_source": "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "36pass40agreements,onebuild,2openedPNGs; notpackedconsumerorfinalhead",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/eebacec61da32c21da01eba0faa8043687227997/docs/coordination/reports/R22-05-helper-null-retest.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        }
+      ],
+      "independent_review_test_ids": [
+        "helper-review01",
+        "helper-review14",
+        "helper-test05"
+      ],
+      "published_independent_review_test_ids": [
+        "helper-review01",
+        "helper-test05"
+      ]
+    },
+    {
+      "id": "npm_prompts",
+      "sources": [
+        {
+          "source_id": "npm_prompts",
+          "commit": "f9c437286c9dfe2245a7d914995d90346e29c233",
+          "direct_parents": [
+            "ca25af486bf443949125df789f5b5fd1fda8bba8"
+          ],
+          "all_commit_paths": [
+            "packages/deepviz/README.md",
+            "packages/deepviz/package.json",
+            "packages/deepviz/scripts/copy-prompts.mjs",
+            "packages/deepviz/test/test_r11_packaged_prompts.test.mjs"
+          ],
+          "product_test_workflow_schema_paths": [
+            "packages/deepviz/README.md",
+            "packages/deepviz/package.json",
+            "packages/deepviz/scripts/copy-prompts.mjs",
+            "packages/deepviz/test/test_r11_packaged_prompts.test.mjs"
+          ],
+          "commit_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/commit/f9c437286c9dfe2245a7d914995d90346e29c233"
+        },
+        {
+          "source_id": "npm_integrated",
+          "commit": "262b0da145e42c94c2908213272ec3be28771206",
+          "direct_parents": [
+            "6c72cec40e3feb8d710ab55167453194f643d650"
+          ],
+          "all_commit_paths": [
+            "packages/deepviz/README.md",
+            "packages/deepviz/package.json",
+            "packages/deepviz/scripts/copy-prompts.mjs",
+            "packages/deepviz/test/test_r11_packaged_prompts.test.mjs"
+          ],
+          "product_test_workflow_schema_paths": [
+            "packages/deepviz/README.md",
+            "packages/deepviz/package.json",
+            "packages/deepviz/scripts/copy-prompts.mjs",
+            "packages/deepviz/test/test_r11_packaged_prompts.test.mjs"
+          ],
+          "commit_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/commit/262b0da145e42c94c2908213272ec3be28771206"
+        }
+      ],
+      "existing_issues": [
+        {
+          "number": 25,
+          "title": "Build and clean-install the npm tarball with usable types and exports",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/25",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        },
+        {
+          "number": 18,
+          "title": "Version safe chart-selection prompts and runnable agent examples",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/18",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        }
+      ],
+      "ready_to_receive": "FourpathassetfixRECEIVABLE/alreadycandidateintegrated262,notdefault",
+      "ready_to_merge": false,
+      "dependencies": [
+        "Actualcompletepublicnpmfoundationandcanonicalprompts/v1threeMarkdownfiles",
+        "Sharedschemaalignment728orapprovedequivalent",
+        "Helper7d8/margin5enotautomaticallyin262"
+      ],
+      "missing_gates": [
+        "Secondindependentsourcereviewerandtesterlaneatfrozenfocusedhead",
+        "Actualpackedinstalledconsumertypes/byteexports/prepacklifecycle/CI",
+        "Finalheadgatesonchosenfoundationnotonlyequalassetpaths"
+      ],
+      "next_owner": "R04+04npmfoundation/sourceownersreleasedassetpaths",
+      "scope_limits": [
+        "01five+fourpass,10nineconsumer+14harnessguards; manualtarNOTnpmci/install",
+        "Manager262274npm+9consumerareintegratorresultsnotindependentfourgates",
+        "f9=262onlyfourassetpathsnotwholepackage",
+        "RawMarkdownresourcesnotnewJSreaderAPI"
+      ],
+      "material_findings": [],
+      "current_remote_CI": null,
+      "new_focused_head": null,
+      "source_integrated_on_reported_default": false,
+      "evidence_ids": [
+        "prompts-review01",
+        "prompts-test10"
+      ],
+      "evidence_records": [
+        {
+          "id": "prompts-review01",
+          "evidence_commit": "070ec64bfda5a1b578c8fa0c0486b8eb69c87831",
+          "target_source": "f9c437286c9dfe2245a7d914995d90346e29c233",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "source review5+4tests build/types0; nottarinstalledconsumer",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/070ec64bfda5a1b578c8fa0c0486b8eb69c87831/docs/coordination/reports/R18-01-npm-prompt-review.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        },
+        {
+          "id": "prompts-test10",
+          "evidence_commit": "8504122fe924f9b3e5d7daa6af9c156b0ae4331f",
+          "target_source": "f9c437286c9dfe2245a7d914995d90346e29c233",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "manualmaterializedconsumer9pass14archiveguards; notnpmci/prepack",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/8504122fe924f9b3e5d7daa6af9c156b0ae4331f/docs/coordination/reports/R18-10-npm-prompt-consumer.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        }
+      ],
+      "independent_review_test_ids": [
+        "prompts-review01",
+        "prompts-test10"
+      ],
+      "published_independent_review_test_ids": [
+        "prompts-review01",
+        "prompts-test10"
+      ]
+    },
+    {
+      "id": "mcp",
+      "sources": [
+        {
+          "source_id": "mcp_p1",
+          "commit": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+          "direct_parents": [
+            "5340bc69b7203ad7a9166543062482d819f9b705"
+          ],
+          "all_commit_paths": [
+            "docs/agent-state/ses_de567805bffdER1GlVd0ngLgKg.md",
+            "docs/coordination/evidence/R14-18/p1-results.json",
+            "docs/coordination/reports/R14-18-mcp-json-budget.md",
+            "python/deepviz/src/deepviz/mcp_server.py",
+            "python/deepviz/src/deepviz/tools.py",
+            "python/deepviz/tests/test_r14_tool_json_boundary.py"
+          ],
+          "product_test_workflow_schema_paths": [
+            "python/deepviz/src/deepviz/mcp_server.py",
+            "python/deepviz/src/deepviz/tools.py",
+            "python/deepviz/tests/test_r14_tool_json_boundary.py"
+          ],
+          "commit_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/commit/d65dfc0fd807d0335b858476de8cdf7c6b958711"
+        },
+        {
+          "source_id": "mcp_p2",
+          "commit": "cd75c459ddba9f3d6bc0a5185b570af369fb4980",
+          "direct_parents": [
+            "d65dfc0fd807d0335b858476de8cdf7c6b958711"
+          ],
+          "all_commit_paths": [
+            "docs/agent-state/ses_de567805bffdER1GlVd0ngLgKg.md",
+            "docs/coordination/evidence/R14-18/full-python-results.json",
+            "docs/coordination/evidence/R14-18/github-prepublication-get.json",
+            "docs/coordination/evidence/R14-18/p1-publication.json",
+            "docs/coordination/evidence/R14-18/p2-results.json",
+            "docs/coordination/evidence/R14-18/tool-revenue.png",
+            "docs/coordination/reports/R14-18-mcp-json-budget.md",
+            "python/deepviz/src/deepviz/mcp_server.py",
+            "python/deepviz/tests/test_r14_mcp_resource_budget.py"
+          ],
+          "product_test_workflow_schema_paths": [
+            "python/deepviz/src/deepviz/mcp_server.py",
+            "python/deepviz/tests/test_r14_mcp_resource_budget.py"
+          ],
+          "commit_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/commit/cd75c459ddba9f3d6bc0a5185b570af369fb4980"
+        },
+        {
+          "source_id": "mcp_evidence",
+          "commit": "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23",
+          "direct_parents": [
+            "2e6968a10097dbfee0133c3ee253c1079ce303f3"
+          ],
+          "all_commit_paths": [
+            "docs/agent-state/ses_de567805bffdER1GlVd0ngLgKg.md",
+            "docs/coordination/evidence/R14-18/final-handoff.json",
+            "docs/coordination/reports/R14-18-mcp-json-budget.md"
+          ],
+          "product_test_workflow_schema_paths": [],
+          "commit_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/commit/e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23"
+        }
+      ],
+      "existing_issues": [
+        {
+          "number": 16,
+          "title": "Expose five real Deep Agents visualization tools with safe artifacts",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/16",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        },
+        {
+          "number": 17,
+          "title": "Serve visualization tools over a real stdio MCP session",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/17",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        },
+        {
+          "number": 21,
+          "title": "Prove untrusted specs, HTML values and filesystem paths stay within safe boundaries",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/21",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        }
+      ],
+      "ready_to_receive": "P2boundedsourceevidenceRECEIVABLE; completeP1callbackacceptanceBLOCKED",
+      "ready_to_merge": false,
+      "dependencies": [
+        "Pythonmodels/normalize/recommend/render/engine/output/publicpackagefoundation",
+        "SupportedMCP/LangChainSDKdeclaredpackaging/entrypoints",
+        "Resourcegenerationcontracts4/3/2mustholdatnewhead"
+      ],
+      "missing_gates": [
+        "R04minimalbarestringcallbackadmissionrepair/newsealedtoolshead",
+        "02unchangedstrictcallbackcontrolsGREEN +10affectedSDKstdio",
+        "20secondsource-reviewassignednotassumedcomplete; missingdistinctfinaltester/reviewercompletion",
+        "Finalintegratedtwo+two/outputs/build/CI/defaultacceptance"
+      ],
+      "next_owner": "R04ownsreclaimedtools/MCP;02proposal/finderretest,10transport,20review",
+      "scope_limits": [
+        "P12REDonecause,transportwrapperpassdoesnotcoverbareform",
+        "P29uniqueultimatelypassnotone9run;1mixedraceboundednotschedulerproof",
+        "128resourcesnotRSS/disk/TTL/hostlifetimememorycap",
+        "Authorfull42FAIL520ERROR5SKIP/buildmissinghatchlingnotgreen"
+      ],
+      "material_findings": [
+        {
+          "id": "R22-02-F1",
+          "severity": "P2",
+          "cause": "BareStructuredToolrun/arunstringenterson_tool_startbeforeinvaliddatarejection",
+          "state": "OPEN bysamefulltools/SDKbytesd65=e47",
+          "not_claimed": "No invalidnormalizationacceptance/remoteexfiltration/RCE/OOMclaim"
+        }
+      ],
+      "current_remote_CI": null,
+      "new_focused_head": null,
+      "source_integrated_on_reported_default": false,
+      "evidence_ids": [
+        "mcp-review02-P1",
+        "mcp-review02-P2",
+        "mcp-test10-P1",
+        "mcp-test10-P2"
+      ],
+      "evidence_records": [
+        {
+          "id": "mcp-review02-P1",
+          "evidence_commit": "2855f7a4d051297e1d9e1246fd3051d35e2a11f0",
+          "target_source": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "2fail6pass bare-stringcallbackF1OPEN",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/2855f7a4d051297e1d9e1246fd3051d35e2a11f0/docs/coordination/reports/R22-02-mcp-p1-security.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        },
+        {
+          "id": "mcp-review02-P2",
+          "evidence_commit": "7bb517e6e50454b5784e785d7ccbe585afd0780d",
+          "target_source": "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "1mixedracepass/noNEWP2blocker/F1unchangedtools bytes",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/7bb517e6e50454b5784e785d7ccbe585afd0780d/docs/coordination/reports/R25-02-mcp-p2-security.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        },
+        {
+          "id": "mcp-test10-P1",
+          "evidence_commit": "77d9b5d8a41e407bafb5bb3fdadc498db1a67f19",
+          "target_source": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "author37+own4 independentlyrun; wrapperpaths notbare-stringF1",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/77d9b5d8a41e407bafb5bb3fdadc498db1a67f19/docs/coordination/reports/R22-10-mcp-p1-transport.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        },
+        {
+          "id": "mcp-test10-P2",
+          "evidence_commit": "7cf21455a3b5523cd383732c1ed4982ffe494caf",
+          "target_source": "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "6plus3uniqueIDs ultimatelypass; initialstdioharnessassertfailretained; notone9run",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/7cf21455a3b5523cd383732c1ed4982ffe494caf/docs/coordination/reports/R25-10-mcp-p2-capacity.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        }
+      ],
+      "independent_review_test_ids": [
+        "mcp-review02-P1",
+        "mcp-review02-P2",
+        "mcp-test10-P1",
+        "mcp-test10-P2"
+      ],
+      "published_independent_review_test_ids": [
+        "mcp-review02-P1",
+        "mcp-review02-P2",
+        "mcp-test10-P1",
+        "mcp-test10-P2"
+      ]
+    },
+    {
+      "id": "svg_margin",
+      "sources": [
+        {
+          "source_id": "svg_margin",
+          "commit": "5e595a8f893955ce34a0e26553bb7bf257ea93ae",
+          "direct_parents": [
+            "ca25af486bf443949125df789f5b5fd1fda8bba8"
+          ],
+          "all_commit_paths": [
+            "docs/agent-state/ses_de5678115ffewUEpZFi8faBW8C.md",
+            "docs/coordination/evidence/R11-12/README.md",
+            "docs/coordination/evidence/R11-12/fixed-small-negative-240-svg.png",
+            "docs/coordination/evidence/R11-12/github-preflight.json",
+            "docs/coordination/evidence/R11-12/measured-aggregate-960-html.png",
+            "docs/coordination/evidence/R11-12/measured-aggregate-960-svg.png",
+            "docs/coordination/evidence/R11-12/red-green-summary.json",
+            "docs/coordination/evidence/R11-12/signed-scientific-240-html.png",
+            "docs/coordination/reports/R11-12-svg-tick-margin.md",
+            "packages/deepviz/src/renderers.ts",
+            "packages/deepviz/test/test_r11_svg_tick_margin.test.mjs",
+            "tests/browser/r11-svg-tick-margin.mjs"
+          ],
+          "product_test_workflow_schema_paths": [
+            "packages/deepviz/src/renderers.ts",
+            "packages/deepviz/test/test_r11_svg_tick_margin.test.mjs",
+            "tests/browser/r11-svg-tick-margin.mjs"
+          ],
+          "commit_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/commit/5e595a8f893955ce34a0e26553bb7bf257ea93ae"
+        }
+      ],
+      "existing_issues": [
+        {
+          "number": 15,
+          "title": "Build safe browser engine artifacts and composed dashboards in TypeScript",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/15",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        },
+        {
+          "number": 23,
+          "title": "Inspect real renderer outputs and commit reproducible visual evidence",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/23",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        },
+        {
+          "number": 32,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/32",
+          "basis": "FULLR22-12densitybugreport/fb5ca38ONE201+GET200",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        },
+        {
+          "number": 37,
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/37",
+          "basis": "FULLR22-13finitebugreport/6145d9cONE201+GET200",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        }
+      ],
+      "ready_to_receive": "NarrowmarginrepairRECEIVABLE; generalfinite/readableSVGscopeBLOCKED",
+      "ready_to_merge": false,
+      "dependencies": [
+        "Actualnpmfoundation/contract/build/publicrenderchain",
+        "Producer12actualnewfinite/readabilitysourceandgenuinebuildnotice"
+      ],
+      "missing_gates": [
+        "Stablefinitegeometry#37andreadablefulltext#32orapprovedhonestinfeasibility",
+        "13/06unchangedstrictregressionretstonactualnewcommittedsource",
+        "Secondindependentsourcereview/finalfourlanes/actualimages/zeroerrors/CI"
+      ],
+      "next_owner": "R04+exclusive12repair;13/06independentretest;13dedicatedmainQAseparate",
+      "scope_limits": [
+        "11+29narrowpassesand1403nonbarchecksnotuniversalfiniteproof",
+        "Finite06fourPASSfourRED/eightconsoleerrorsstrictzeroerrorgateFAIL",
+        "Filing#32/#37notfixorclosure;density12issourceauthornotindependentsignoff",
+        "No newfixassumedfromactiveproducer"
+      ],
+      "material_findings": [],
+      "current_remote_CI": null,
+      "new_focused_head": null,
+      "source_integrated_on_reported_default": false,
+      "evidence_ids": [
+        "svg-review13",
+        "svg-test06",
+        "svg-finite-test06",
+        "svg-density-filing12",
+        "svg-finite-filing13"
+      ],
+      "evidence_records": [
+        {
+          "id": "svg-review13",
+          "evidence_commit": "38ce71e50ce59e58dc647417de26e547d5e42d5a",
+          "target_source": "5e595a8f893955ce34a0e26553bb7bf257ea93ae",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "11+29passnarrowmarginplus1pass1REDinheritedfinite",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/38ce71e50ce59e58dc647417de26e547d5e42d5a/docs/coordination/reports/R17-13-svg-tick-review.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        },
+        {
+          "id": "svg-test06",
+          "evidence_commit": "d96be8ec330e7d61ec5f205fb744bddfc537e301",
+          "target_source": "5e595a8f893955ce34a0e26553bb7bf257ea93ae",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "33fixtures66artifacts1403checks pass, observererrataretained",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/d96be8ec330e7d61ec5f205fb744bddfc537e301/docs/coordination/reports/R18-06-svg-other-kind-test.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        },
+        {
+          "id": "svg-finite-test06",
+          "evidence_commit": "8564528b0f998470a84431e08fa640dd0b622cb5",
+          "target_source": "5e595a8f893955ce34a0e26553bb7bf257ea93ae",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "4pass4fail8consoleerrors, nofinitefix",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/8564528b0f998470a84431e08fa640dd0b622cb5/docs/coordination/reports/R24-06-finite-nonbar-acceptance.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        },
+        {
+          "id": "svg-density-filing12",
+          "evidence_commit": "fb5ca38ac20e632f3991caa661334f64725dce26",
+          "target_source": "5e595a8f893955ce34a0e26553bb7bf257ea93ae",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "specificissue32HTTP201GET200; sourceauthornotindependentsignoff",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/fb5ca38ac20e632f3991caa661334f64725dce26/docs/coordination/reports/R22-12-density-bug.md",
+          "evidence_kind": "bug_filing_receipt_not_signoff",
+          "count_as_published_independent_report": false
+        },
+        {
+          "id": "svg-finite-filing13",
+          "evidence_commit": "6145d9c0746771e980884ed5f1280d216c369a41",
+          "target_source": "5e595a8f893955ce34a0e26553bb7bf257ea93ae",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "specificissue37HTTP201GET200; nofix/closure",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/6145d9c0746771e980884ed5f1280d216c369a41/docs/coordination/reports/R22-13-finite-svg-bug.md",
+          "evidence_kind": "bug_filing_receipt_not_signoff",
+          "count_as_published_independent_report": false
+        }
+      ],
+      "independent_review_test_ids": [
+        "svg-review13",
+        "svg-test06",
+        "svg-finite-test06"
+      ],
+      "published_independent_review_test_ids": [
+        "svg-review13",
+        "svg-test06",
+        "svg-finite-test06"
+      ]
+    },
+    {
+      "id": "dense_sum",
+      "sources": [
+        {
+          "source_id": "dense_origin",
+          "commit": "d5b68c470416f93127c8187e8111d0d27d20b108",
+          "direct_parents": [
+            "5340bc69b7203ad7a9166543062482d819f9b705"
+          ],
+          "all_commit_paths": [
+            "python/deepviz/src/deepviz/engines.py",
+            "python/deepviz/src/deepviz/render.py",
+            "python/deepviz/tests/test_r12_table_budget.py"
+          ],
+          "product_test_workflow_schema_paths": [
+            "python/deepviz/src/deepviz/engines.py",
+            "python/deepviz/src/deepviz/render.py",
+            "python/deepviz/tests/test_r12_table_budget.py"
+          ],
+          "commit_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/commit/d5b68c470416f93127c8187e8111d0d27d20b108"
+        },
+        {
+          "source_id": "dense_integrated",
+          "commit": "1c721bb6497746641b897eb2eb938cfad52068d2",
+          "direct_parents": [
+            "5340bc69b7203ad7a9166543062482d819f9b705"
+          ],
+          "all_commit_paths": [
+            "python/deepviz/src/deepviz/engines.py",
+            "python/deepviz/src/deepviz/render.py",
+            "python/deepviz/tests/test_r12_table_budget.py"
+          ],
+          "product_test_workflow_schema_paths": [
+            "python/deepviz/src/deepviz/engines.py",
+            "python/deepviz/src/deepviz/render.py",
+            "python/deepviz/tests/test_r12_table_budget.py"
+          ],
+          "commit_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/commit/1c721bb6497746641b897eb2eb938cfad52068d2"
+        },
+        {
+          "source_id": "sum_origin",
+          "commit": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+          "direct_parents": [
+            "6d0e72ebef4b622f8dec2bce2bd07cc23e7a81ce"
+          ],
+          "all_commit_paths": [
+            "packages/deepviz/src/normalize.ts",
+            "packages/deepviz/test/test_r07_finite_overflow.test.mjs",
+            "python/deepviz/src/deepviz/normalize.py",
+            "python/deepviz/tests/test_r07_finite_overflow.py"
+          ],
+          "product_test_workflow_schema_paths": [
+            "packages/deepviz/src/normalize.ts",
+            "packages/deepviz/test/test_r07_finite_overflow.test.mjs",
+            "python/deepviz/src/deepviz/normalize.py",
+            "python/deepviz/tests/test_r07_finite_overflow.py"
+          ],
+          "commit_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/commit/ec9f669eff28cd5351da142765b7755e3b2f484f"
+        },
+        {
+          "source_id": "sum_integrated",
+          "commit": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+          "direct_parents": [
+            "1c721bb6497746641b897eb2eb938cfad52068d2"
+          ],
+          "all_commit_paths": [
+            "packages/deepviz/src/normalize.ts",
+            "packages/deepviz/test/test_r07_finite_overflow.test.mjs",
+            "python/deepviz/src/deepviz/normalize.py",
+            "python/deepviz/tests/test_r07_finite_overflow.py"
+          ],
+          "product_test_workflow_schema_paths": [
+            "packages/deepviz/src/normalize.ts",
+            "packages/deepviz/test/test_r07_finite_overflow.test.mjs",
+            "python/deepviz/src/deepviz/normalize.py",
+            "python/deepviz/tests/test_r07_finite_overflow.py"
+          ],
+          "commit_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/commit/7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6"
+        }
+      ],
+      "existing_issues": [
+        {
+          "number": 21,
+          "title": "Prove untrusted specs, HTML values and filesystem paths stay within safe boundaries",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/21",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        },
+        {
+          "number": 8,
+          "title": "Reduce large streams before bounded record materialization",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/8",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        },
+        {
+          "number": 22,
+          "title": "Measure 10 through 10M input rows on the bounded streaming path",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/22",
+          "basis": "Read dated2026-11-26 docs/process/issues.json; no current API refresh",
+          "relation": "existing work parent; not a dedicated new defect or closure claim",
+          "current_remote_state": null
+        }
+      ],
+      "ready_to_receive": "DenseP1sourceRECEIVABLE; SUMuniversalaccuracyclaimBLOCKED",
+      "ready_to_merge": false,
+      "dependencies": [
+        "Pythonrender/engines/normalize/models/publicoutputfoundationabsentonmain",
+        "Densepreflightmustprecedeallnative/figure/outputallocations",
+        "AnynewnormalizerheadneedsaffectedSUM/ownership/meanrevalidation"
+      ],
+      "missing_gates": [
+        "Denseadditionalindependentsourcereview/finaltestergatesatnewrenderhead",
+        "R13-01-F1exactprefixrepairorhonestcontractfindingdispositionwithoutoraclewaiver",
+        "Affectednon-authorvalue/state/artifact/cost/genuinefinalheadCI/defaultgates"
+      ],
+      "next_owner": "R04dense/renderintegration;16prefixsource;01finder/02state/15numeric/20artifactindependent",
+      "scope_limits": [
+        "10Kheaderinclusivecells/16MiBestimatenotOSRSSor finalartifactceiling",
+        "Static4SUMpathsec9=7bcand3densepathsd5=1cnotfreshfinalruntimeacceptance",
+        "SUM15/20passingboundedfixturesnotnegationof01counterexample",
+        "Manager7bcfull36FAIL3043PASS5SKIP9deselectedhistoricalnotPMrerun"
+      ],
+      "material_findings": [
+        {
+          "id": "R13-01-F1",
+          "severity": "P2",
+          "cause": "SmallcompensationresiduallostBEFOREexactoverflowpromotion;0instead1/minsubnormal",
+          "state": "OPEN perreview+manageraccepteddisposition",
+          "evidence": "Python2RED65PASS/TS2RED61PASS;fourtestsONEcause"
+        }
+      ],
+      "current_remote_CI": null,
+      "new_focused_head": null,
+      "source_integrated_on_reported_default": false,
+      "evidence_ids": [
+        "dense-test05",
+        "sum-review01",
+        "sum-review02",
+        "sum-test15",
+        "sum-test20"
+      ],
+      "evidence_records": [
+        {
+          "id": "dense-test05",
+          "evidence_commit": "90627e28c3f4ea7ccbc1932794e17049773de4c2",
+          "target_source": "1c721bb6497746641b897eb2eb938cfad52068d2",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "30+8pass one nonauthor lane;preallocation+2unmockedrejects+images",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/90627e28c3f4ea7ccbc1932794e17049773de4c2/docs/coordination/reports/R19-05-budget-retest.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        },
+        {
+          "id": "sum-review01",
+          "evidence_commit": "8dae3381e6caa0c99d6f032c2d2d318d5cf2a5ce",
+          "target_source": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "Python2RED65pass/Node2RED61pass,oneP2prefixcauseremains",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/8dae3381e6caa0c99d6f032c2d2d318d5cf2a5ce/docs/coordination/reports/R13-01-sum-review.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        },
+        {
+          "id": "sum-review02",
+          "evidence_commit": "21fc394048755a1df20fb774c85d50d0458bbb89",
+          "target_source": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "3Python5TSpassboundedstate/securitynotrounding",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/21fc394048755a1df20fb774c85d50d0458bbb89/docs/coordination/reports/R16-02-sum-state-security.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        },
+        {
+          "id": "sum-test15",
+          "evidence_commit": "55a9a3b2198317a324983be41197f534e0a2b796",
+          "target_source": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "23Python23TS17Fractionfixturespass; notuniversalfastpathproof",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/55a9a3b2198317a324983be41197f534e0a2b796/docs/coordination/reports/R16-15-sum-independent-test.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        },
+        {
+          "id": "sum-test20",
+          "evidence_commit": "03c321426e2bc6469dd8f2066bedd8614b29e53e",
+          "target_source": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+          "publication_status": "published_per_read_full_MAIN_report",
+          "scope": "18pass5adapters6browser0errors;safeordinarylabelsnotPlotlyfix",
+          "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/03c321426e2bc6469dd8f2066bedd8614b29e53e/docs/coordination/reports/R16-20-sum-artifact-fidelity.md",
+          "evidence_kind": "non_author_source_review_or_test",
+          "count_as_published_independent_report": true
+        }
+      ],
+      "independent_review_test_ids": [
+        "dense-test05",
+        "sum-review01",
+        "sum-review02",
+        "sum-test15",
+        "sum-test20"
+      ],
+      "published_independent_review_test_ids": [
+        "dense-test05",
+        "sum-review01",
+        "sum-review02",
+        "sum-test15",
+        "sum-test20"
+      ]
+    }
+  ],
+  "next_product_PR_order": [
+    {
+      "priority": 1,
+      "slice": "ExistingPR33minimalMappingrepair",
+      "owner": "R04",
+      "source_state": "NewimmutableheadREQUIRED_NOTsuppliedhere",
+      "dependencies": [],
+      "acceptance": "Allfouraffected01/11review17/15test+actualnewheadCI?merge/defaultancestry?QA13/#30decision",
+      "created_new_PR_here": false
+    },
+    {
+      "priority": 2,
+      "slice": "Dependency-completePythonbounded-ingestion/packagefoundation",
+      "owner": "R04withsupport21",
+      "source_state": "Extractminimumusablefullmodule/prereqsnotisolated5bahunk; excludeunpublished16successors",
+      "dependencies": [
+        "fixedcontract",
+        "owned_cleanupgates",
+        "meanonlyifchosenwithindependentgates",
+        "knownscalarGraphQL/prefixcorrectnessdisposition"
+      ],
+      "acceptance": "Actualfocusedheadsource/import/ownedlifetime/math/packagedAPItests/output/CI/two+two",
+      "created_new_PR_here": false
+    },
+    {
+      "priority": 3,
+      "slice": "Dependency-completenpmfoundationhelper/prompts",
+      "owner": "R04withsupport04",
+      "source_state": "Intentional7d8helper+f9fourassetpaths+canonicalprompts;262sourceisnotallthosefixes",
+      "dependencies": [
+        "sharedschema728prerequisiteorapprovedequivalent",
+        "actualnpmpublicexportcompileclosure",
+        "generalSVGfinite37/density32gatesifscopeclaimsSVG"
+      ],
+      "acceptance": "Frozenheadtwo+two/buildtypes/stricthelper/model-schema/packedinstalledconsumer/actualoutput/CI",
+      "created_new_PR_here": false
+    },
+    {
+      "priority": 4,
+      "slice": "FirstPythonMatplotlibstaticrender/publicentrypoint;toolsMCPsubsequent",
+      "owner": "R04withsupport06",
+      "source_state": "Newminimaldependencycompleteheadnotprovided;actualsourceextractionrecipeR30-06assignmentnotassumedcompleted",
+      "dependencies": [
+        "usablePythonfoundation",
+        "densepreflight",
+        "relevantSUMprefixacceptance",
+        "publicAPI/CLI/assets/outputmanifestclosure"
+      ],
+      "acceptance": "Literalbarline/count/zeroaxisPNG+SVGopened/publicAPI+CLI/packageconsumer/two+two/CI;MCPonlyaftercallbackF1andfoundation",
+      "created_new_PR_here": false
+    }
+  ],
+  "single_executable_next_owner_action": "R04repair/freezeMappingreplacementof998androuteaffectedfouractualheadgatesNOW; inparallelusemissinggatesforthenextminimumusablefoundationwithoutwaitingthispacket/wholetoolkit900",
+  "no_global_completion_claim": true,
+  "safety_counts": {
+    "API_queries": 0,
+    "API_writes": 0,
+    "current_CI_queries": 0,
+    "issue_census": 0,
+    "CI_log_downloads": 0,
+    "report_progress_poll_loops": 0,
+    "all_branch_inventories": 0,
+    "product_tests": 0,
+    "builds": 0,
+    "installs": 0,
+    "spawns": 0,
+    "source_config_oracle_writes": 0
+  },
+  "issue_map_snapshot_sha256": "1bb471ca88bde2f8def4c3ea5a51e1614f9c404afd3f98b8d38427a55891624a"
+}

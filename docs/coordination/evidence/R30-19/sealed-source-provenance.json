@@ -1,0 +1,2744 @@
+{
+  "captured_utc": "2026-11-27T16:10:41.427290+00:00",
+  "scope": "NAMEDSEALEDLOCALGitobjectsONLY; no branch enumeration/remote/API/currentCI/reportprogresspoll/test/build/import. Commitavailabilitynotremotepublicationorapproval.",
+  "sources": {
+    "strict_contract": {
+      "sha": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "parents": [
+        "0ae2cf26426822135fc10d337fcacf580b7ed833"
+      ],
+      "subject": "fix: merge-ready strict numeric ChartSpec contract slice",
+      "all_commit_paths": [
+        {
+          "path": ".github/workflows/chart-contract.yml",
+          "additions": "34",
+          "deletions": "0",
+          "Git_blob_sha256": "ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227",
+          "Git_blob_bytes": 1051,
+          "source_or_test": true
+        },
+        {
+          "path": "docs/verification/r22-contract/README.md",
+          "additions": "28",
+          "deletions": "0",
+          "Git_blob_sha256": "f83f3e84a78d9a88c4a96d7df489f19e7fb4a6739c9e662d781f10f06670b3a6",
+          "Git_blob_bytes": 2893,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/verification/r22-contract/red-green-summary.json",
+          "additions": "114",
+          "deletions": "0",
+          "Git_blob_sha256": "e3db9381970aa74f9a9f9ede2c87712dcd47636c34520fb3984ee39107bf1937",
+          "Git_blob_bytes": 5057,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/verification/r22-contract/validation-output.json",
+          "additions": "225",
+          "deletions": "0",
+          "Git_blob_sha256": "3896de0d87545af60fc63bdee608b202055ea55d84dc7f49d1334ab729d02a0b",
+          "Git_blob_bytes": 4915,
+          "source_or_test": false
+        },
+        {
+          "path": "python/deepviz/src/deepviz/models.py",
+          "additions": "11",
+          "deletions": "0",
+          "Git_blob_sha256": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+          "Git_blob_bytes": 2982,
+          "source_or_test": true
+        },
+        {
+          "path": "schemas/chart-spec.schema.json",
+          "additions": "190",
+          "deletions": "0",
+          "Git_blob_sha256": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d",
+          "Git_blob_bytes": 4078,
+          "source_or_test": true
+        },
+        {
+          "path": "tests/test_models.py",
+          "additions": "66",
+          "deletions": "0",
+          "Git_blob_sha256": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32",
+          "Git_blob_bytes": 2684,
+          "source_or_test": true
+        },
+        {
+          "path": "tests/test_numeric_schema.py",
+          "additions": "59",
+          "deletions": "0",
+          "Git_blob_sha256": "b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3",
+          "Git_blob_bytes": 2343,
+          "source_or_test": true
+        }
+      ]
+    },
+    "owned_cleanup": {
+      "sha": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+      "parents": [
+        "ec9f669eff28cd5351da142765b7755e3b2f484f"
+      ],
+      "subject": "fix: unwind owned normalization adapters without closing borrowed input",
+      "all_commit_paths": [
+        {
+          "path": "python/deepviz/src/deepviz/normalize.py",
+          "additions": "78",
+          "deletions": "66",
+          "Git_blob_sha256": "eef44a7df71926932fc14b33ff47225903b30824c2435e74b9707b49ed357f2b",
+          "Git_blob_bytes": 35631,
+          "source_or_test": true
+        },
+        {
+          "path": "python/deepviz/tests/test_r17_normalizer_boundaries.py",
+          "additions": "87",
+          "deletions": "0",
+          "Git_blob_sha256": "4451d287cfba3cf2e18a3c5174341eeee30436b0304d6e6591c83125a0629068",
+          "Git_blob_bytes": 3139,
+          "source_or_test": true
+        }
+      ]
+    },
+    "mean": {
+      "sha": "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19",
+      "parents": [
+        "79232fb2f402bf21d455fbc021f1c238d19abe80"
+      ],
+      "subject": "fix: preserve representable mean values with bounded exact numerators",
+      "all_commit_paths": [
+        {
+          "path": "packages/deepviz/src/normalize.ts",
+          "additions": "18",
+          "deletions": "9",
+          "Git_blob_sha256": "7e10c7a686044532ffe21b9fcc79aabed1c5d1ed953fdee12be4b2de3eec9c15",
+          "Git_blob_bytes": 30489,
+          "source_or_test": true
+        },
+        {
+          "path": "packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs",
+          "additions": "42",
+          "deletions": "0",
+          "Git_blob_sha256": "39c2440f23e152ae9f331b227a646050a7a33377bdd1385d7fc30241b6edf8c1",
+          "Git_blob_bytes": 2288,
+          "source_or_test": true
+        },
+        {
+          "path": "python/deepviz/src/deepviz/normalize.py",
+          "additions": "6",
+          "deletions": "11",
+          "Git_blob_sha256": "f3cc6e78e188ed97f62133a954154dbfdd416128c97cd4b154144ae62f778296",
+          "Git_blob_bytes": 35309,
+          "source_or_test": true
+        },
+        {
+          "path": "python/deepviz/tests/test_r17_normalizer_boundaries.py",
+          "additions": "52",
+          "deletions": "0",
+          "Git_blob_sha256": "95e9bd99773fcc0729215dc4605e78aad35158c68579fe7f31c6516bcb8a8a11",
+          "Git_blob_bytes": 5665,
+          "source_or_test": true
+        }
+      ]
+    },
+    "helper": {
+      "sha": "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57",
+      "parents": [
+        "5340bc69b7203ad7a9166543062482d819f9b705"
+      ],
+      "subject": "fix: reject explicit null specs at npm helper boundaries",
+      "all_commit_paths": [
+        {
+          "path": "docs/agent-state/ses_de56782e8ffentAvzUUfMncFRA.md",
+          "additions": "114",
+          "deletions": "0",
+          "Git_blob_sha256": "1fe1fe03cb9f50b817b05589ace8dbbd94ddc83145a0f0870e42aad1682fb892",
+          "Git_blob_bytes": 25334,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R14-07/README.md",
+          "additions": "42",
+          "deletions": "0",
+          "Git_blob_sha256": "b4b5ed56e80e0234780f1d9c3c77951102dcb7515054bdd80e5ab1093e26e86c",
+          "Git_blob_bytes": 4354,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R14-07/commands.json",
+          "additions": "217",
+          "deletions": "0",
+          "Git_blob_sha256": "e0727e316fb76478dfc1fe6d7dfbfc81a12badaf9a239290878d059ce41bf117",
+          "Git_blob_bytes": 4860,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R14-07/dashboard-wide.png",
+          "additions": "-",
+          "deletions": "-",
+          "Git_blob_sha256": "0d0dfbb521d953e205ce81345d2bb612981d0412514f7fa5533df78bfdafc102",
+          "Git_blob_bytes": 17058,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R14-07/omitted-default.png",
+          "additions": "-",
+          "deletions": "-",
+          "Git_blob_sha256": "630896f4c026a759075735ef042a49b49ba05785925340546521636c09754221",
+          "Git_blob_bytes": 12849,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R14-07/run-summary.json",
+          "additions": "717",
+          "deletions": "0",
+          "Git_blob_sha256": "337ca788370d871fef517f8e8a95166a256aacc1e1fc85b910b9235d6c5ca150",
+          "Git_blob_bytes": 24188,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/reports/R14-07-helper-null.md",
+          "additions": "80",
+          "deletions": "0",
+          "Git_blob_sha256": "976b6ce74821b19554be356ce80a06c7310701314df323875a15ce52b7241c7c",
+          "Git_blob_bytes": 14176,
+          "source_or_test": false
+        },
+        {
+          "path": "packages/deepviz/src/render.ts",
+          "additions": "1",
+          "deletions": "1",
+          "Git_blob_sha256": "71ab2701ef63fbc37999447a62a5a06a04404d690bd0fb3e0ea5f765433efa4b",
+          "Git_blob_bytes": 11340,
+          "source_or_test": true
+        },
+        {
+          "path": "packages/deepviz/test/test_r07_tool_spec_null.test.mjs",
+          "additions": "97",
+          "deletions": "0",
+          "Git_blob_sha256": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227",
+          "Git_blob_bytes": 4129,
+          "source_or_test": true
+        }
+      ]
+    },
+    "npm_prompts": {
+      "sha": "f9c437286c9dfe2245a7d914995d90346e29c233",
+      "parents": [
+        "ca25af486bf443949125df789f5b5fd1fda8bba8"
+      ],
+      "subject": "fix: distribute canonical versioned npm prompts",
+      "all_commit_paths": [
+        {
+          "path": "packages/deepviz/README.md",
+          "additions": "19",
+          "deletions": "0",
+          "Git_blob_sha256": "3ae10b8d7fa27aaff60fe15e1664886ecdda4edeb5eba8d260480d81c2139a80",
+          "Git_blob_bytes": 16616,
+          "source_or_test": true
+        },
+        {
+          "path": "packages/deepviz/package.json",
+          "additions": "5",
+          "deletions": "2",
+          "Git_blob_sha256": "f8ce42fc3643693effd1e39e44f3b0379d203b1d5208705d7eb154239664c3fc",
+          "Git_blob_bytes": 943,
+          "source_or_test": true
+        },
+        {
+          "path": "packages/deepviz/scripts/copy-prompts.mjs",
+          "additions": "8",
+          "deletions": "0",
+          "Git_blob_sha256": "2e29160390a79c62b13c20992ef88c639126a8bad9bee80b327d5b81e6aa06bd",
+          "Git_blob_bytes": 362,
+          "source_or_test": true
+        },
+        {
+          "path": "packages/deepviz/test/test_r11_packaged_prompts.test.mjs",
+          "additions": "41",
+          "deletions": "0",
+          "Git_blob_sha256": "ec5fb98f80fc2adfe8b3a40fecc82007d4b90f173cc6d2343328d7ce57abb234",
+          "Git_blob_bytes": 2000,
+          "source_or_test": true
+        }
+      ]
+    },
+    "npm_integrated": {
+      "sha": "262b0da145e42c94c2908213272ec3be28771206",
+      "parents": [
+        "6c72cec40e3feb8d710ab55167453194f643d650"
+      ],
+      "subject": "fix: distribute canonical versioned npm prompts",
+      "all_commit_paths": [
+        {
+          "path": "packages/deepviz/README.md",
+          "additions": "19",
+          "deletions": "0",
+          "Git_blob_sha256": "3ae10b8d7fa27aaff60fe15e1664886ecdda4edeb5eba8d260480d81c2139a80",
+          "Git_blob_bytes": 16616,
+          "source_or_test": true
+        },
+        {
+          "path": "packages/deepviz/package.json",
+          "additions": "5",
+          "deletions": "2",
+          "Git_blob_sha256": "f8ce42fc3643693effd1e39e44f3b0379d203b1d5208705d7eb154239664c3fc",
+          "Git_blob_bytes": 943,
+          "source_or_test": true
+        },
+        {
+          "path": "packages/deepviz/scripts/copy-prompts.mjs",
+          "additions": "8",
+          "deletions": "0",
+          "Git_blob_sha256": "2e29160390a79c62b13c20992ef88c639126a8bad9bee80b327d5b81e6aa06bd",
+          "Git_blob_bytes": 362,
+          "source_or_test": true
+        },
+        {
+          "path": "packages/deepviz/test/test_r11_packaged_prompts.test.mjs",
+          "additions": "41",
+          "deletions": "0",
+          "Git_blob_sha256": "ec5fb98f80fc2adfe8b3a40fecc82007d4b90f173cc6d2343328d7ce57abb234",
+          "Git_blob_bytes": 2000,
+          "source_or_test": true
+        }
+      ]
+    },
+    "mcp_p1": {
+      "sha": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+      "parents": [
+        "5340bc69b7203ad7a9166543062482d819f9b705"
+      ],
+      "subject": "fix: validate tool JSON before SDK decoding and callback bookkeeping",
+      "all_commit_paths": [
+        {
+          "path": "docs/agent-state/ses_de567805bffdER1GlVd0ngLgKg.md",
+          "additions": "15",
+          "deletions": "0",
+          "Git_blob_sha256": "7e7bf1e1346f9278913edd943278e72e1591c6eadd2e0e5113858134062e3c21",
+          "Git_blob_bytes": 2984,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R14-18/p1-results.json",
+          "additions": "19",
+          "deletions": "0",
+          "Git_blob_sha256": "cb908bb72864edbb07869ec52f211d409b7da2a3f642df6873e68297514a1cf2",
+          "Git_blob_bytes": 2508,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/reports/R14-18-mcp-json-budget.md",
+          "additions": "40",
+          "deletions": "0",
+          "Git_blob_sha256": "2251baf2bf590ff007c450cbb5f7c3ec75753aac743c051118745e2651f56821",
+          "Git_blob_bytes": 8732,
+          "source_or_test": false
+        },
+        {
+          "path": "python/deepviz/src/deepviz/mcp_server.py",
+          "additions": "11",
+          "deletions": "1",
+          "Git_blob_sha256": "77b3ff80e52b88b79e322a15fd9db2a39eec9a1dbd8505480fca0cb54724fcce",
+          "Git_blob_bytes": 5616,
+          "source_or_test": true
+        },
+        {
+          "path": "python/deepviz/src/deepviz/tools.py",
+          "additions": "39",
+          "deletions": "23",
+          "Git_blob_sha256": "11273c5f5b0ff2eee16e09c6c727e560582a43fcae723bb315b6ef80d5a68495",
+          "Git_blob_bytes": 9974,
+          "source_or_test": true
+        },
+        {
+          "path": "python/deepviz/tests/test_r14_tool_json_boundary.py",
+          "additions": "178",
+          "deletions": "0",
+          "Git_blob_sha256": "231d43801dec500ab6da237c9a232b86e6169718fe05fc9b2b5f5b1ede905a4b",
+          "Git_blob_bytes": 8718,
+          "source_or_test": true
+        }
+      ]
+    },
+    "mcp_p2": {
+      "sha": "cd75c459ddba9f3d6bc0a5185b570af369fb4980",
+      "parents": [
+        "d65dfc0fd807d0335b858476de8cdf7c6b958711"
+      ],
+      "subject": "fix: bound MCP artifact issuance with concurrent pre-render reservations",
+      "all_commit_paths": [
+        {
+          "path": "docs/agent-state/ses_de567805bffdER1GlVd0ngLgKg.md",
+          "additions": "10",
+          "deletions": "0",
+          "Git_blob_sha256": "fc9ab46d23758c8cc9b7f83057d73fd5f66ce7ba0b6a6933a8c8b4e0d38452aa",
+          "Git_blob_bytes": 5816,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R14-18/full-python-results.json",
+          "additions": "2327",
+          "deletions": "0",
+          "Git_blob_sha256": "b3e3b1a8715f077994052277e897efd4207e3aff455635c83135d916f0ad7a22",
+          "Git_blob_bytes": 88822,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R14-18/github-prepublication-get.json",
+          "additions": "105",
+          "deletions": "0",
+          "Git_blob_sha256": "3f18e4a144f461be20c67a0f6f2a5df19d9748d3e7aaca6b0780b864208ddd23",
+          "Git_blob_bytes": 2718,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R14-18/p1-publication.json",
+          "additions": "34",
+          "deletions": "0",
+          "Git_blob_sha256": "e32f1d6e3128f476ad903fe7f916e3033e1ea3bfdeb7cee5580a5a6f9cefe8fa",
+          "Git_blob_bytes": 1312,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R14-18/p2-results.json",
+          "additions": "83",
+          "deletions": "0",
+          "Git_blob_sha256": "43fffae8af4b038b6109d5b8d85600ac7c19b69db0b5b6fd971b5fd8480b602d",
+          "Git_blob_bytes": 2961,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R14-18/tool-revenue.png",
+          "additions": "-",
+          "deletions": "-",
+          "Git_blob_sha256": "8ec571cf95db35785db44c26a742b02e73dbae61f0c053b3fbcf9dec99333ffb",
+          "Git_blob_bytes": 12793,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/reports/R14-18-mcp-json-budget.md",
+          "additions": "48",
+          "deletions": "0",
+          "Git_blob_sha256": "f8116ce2eecb64d895bbc83e3981366f2fb5d5a2ff1c90e62c813fc0ecae8af4",
+          "Git_blob_bytes": 18447,
+          "source_or_test": false
+        },
+        {
+          "path": "python/deepviz/src/deepviz/mcp_server.py",
+          "additions": "40",
+          "deletions": "19",
+          "Git_blob_sha256": "9f1628e04749c3c3d2357607ac4cc0021f74e1119c6237aa36077a0fd67bf480",
+          "Git_blob_bytes": 6729,
+          "source_or_test": true
+        },
+        {
+          "path": "python/deepviz/tests/test_r14_mcp_resource_budget.py",
+          "additions": "164",
+          "deletions": "0",
+          "Git_blob_sha256": "0406f524d22879e24606c594d7250124f0e298c7b47b05ddf50f39da55a18d9d",
+          "Git_blob_bytes": 7504,
+          "source_or_test": true
+        }
+      ]
+    },
+    "mcp_evidence": {
+      "sha": "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23",
+      "parents": [
+        "2e6968a10097dbfee0133c3ee253c1079ce303f3"
+      ],
+      "subject": "docs: finalize MCP producer remote receipt and ownership handback",
+      "all_commit_paths": [
+        {
+          "path": "docs/agent-state/ses_de567805bffdER1GlVd0ngLgKg.md",
+          "additions": "2",
+          "deletions": "0",
+          "Git_blob_sha256": "e08ab379f6201adb58984aba53b15c331160607342107ac7606f55021715a094",
+          "Git_blob_bytes": 6939,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R14-18/final-handoff.json",
+          "additions": "51",
+          "deletions": "0",
+          "Git_blob_sha256": "41c75054517e79ebd4e3b9f3eb0382677bd3d3945ff0feaa42cc0644badf9df7",
+          "Git_blob_bytes": 2523,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/reports/R14-18-mcp-json-budget.md",
+          "additions": "4",
+          "deletions": "0",
+          "Git_blob_sha256": "957f59ca5e4b23a7fe10e66ca6de2485a6f721460bceeda764ee39fc658a6644",
+          "Git_blob_bytes": 22379,
+          "source_or_test": false
+        }
+      ]
+    },
+    "svg_margin": {
+      "sha": "5e595a8f893955ce34a0e26553bb7bf257ea93ae",
+      "parents": [
+        "ca25af486bf443949125df789f5b5fd1fda8bba8"
+      ],
+      "subject": "fix: reserve native SVG numeric tick margins",
+      "all_commit_paths": [
+        {
+          "path": "docs/agent-state/ses_de5678115ffewUEpZFi8faBW8C.md",
+          "additions": "110",
+          "deletions": "0",
+          "Git_blob_sha256": "4ad9ea4283463fcdb95d20a23f7194ea593934d169782ba844466be191760bb0",
+          "Git_blob_bytes": 23763,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R11-12/README.md",
+          "additions": "33",
+          "deletions": "0",
+          "Git_blob_sha256": "5f916ae92907991a3cb8cc53035115226fe48cdb113b2181f07b1ba7788aba47",
+          "Git_blob_bytes": 2140,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R11-12/fixed-small-negative-240-svg.png",
+          "additions": "-",
+          "deletions": "-",
+          "Git_blob_sha256": "170c98843f2aee735b38e160e529978ada78bb24d8b38dd3d4064d69b95a2c57",
+          "Git_blob_bytes": 7969,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R11-12/github-preflight.json",
+          "additions": "20",
+          "deletions": "0",
+          "Git_blob_sha256": "97b3e8ff47920a40b3ef859b9e4f7a0415e2c7c72af3212616e9c5ee07145786",
+          "Git_blob_bytes": 508,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R11-12/measured-aggregate-960-html.png",
+          "additions": "-",
+          "deletions": "-",
+          "Git_blob_sha256": "b8f1a6d4cee76853787567517ab21c2f184311d5182cc8f5be46888eca862f70",
+          "Git_blob_bytes": 14815,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R11-12/measured-aggregate-960-svg.png",
+          "additions": "-",
+          "deletions": "-",
+          "Git_blob_sha256": "acfd7addc117e7361f84a29aae0e118115443639ee697c284bed4a7e24d0f4b0",
+          "Git_blob_bytes": 8258,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R11-12/red-green-summary.json",
+          "additions": "1880",
+          "deletions": "0",
+          "Git_blob_sha256": "726f07d78f09bc3dd757f9c346315d20aa2170bb66288925c3ff9b9cb7c12369",
+          "Git_blob_bytes": 52893,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R11-12/signed-scientific-240-html.png",
+          "additions": "-",
+          "deletions": "-",
+          "Git_blob_sha256": "f168816095e9569c8ef09ba294de5f69e8c7f06ee898457a997d116cfcb5bb3e",
+          "Git_blob_bytes": 14640,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/reports/R11-12-svg-tick-margin.md",
+          "additions": "60",
+          "deletions": "0",
+          "Git_blob_sha256": "bfa0b6b634d5ef0ee1819a7d2f37f4d5da6ed174b8cdfc393fadaf9bbad9171c",
+          "Git_blob_bytes": 9864,
+          "source_or_test": false
+        },
+        {
+          "path": "packages/deepviz/src/renderers.ts",
+          "additions": "7",
+          "deletions": "4",
+          "Git_blob_sha256": "be34bcb2be9e44459cb30d145386c3606933bcbdea389ba2fd3fca8d738fac80",
+          "Git_blob_bytes": 21621,
+          "source_or_test": true
+        },
+        {
+          "path": "packages/deepviz/test/test_r11_svg_tick_margin.test.mjs",
+          "additions": "60",
+          "deletions": "0",
+          "Git_blob_sha256": "5e17c10d824b612c56cd4e50880b1463a2d7560cdbbad68fd9041623a24cf18c",
+          "Git_blob_bytes": 3576,
+          "source_or_test": true
+        },
+        {
+          "path": "tests/browser/r11-svg-tick-margin.mjs",
+          "additions": "119",
+          "deletions": "0",
+          "Git_blob_sha256": "0923ca70aa9f34ab6594aa367fef22bc1c8fd104895eb015c2e52378bf8871a7",
+          "Git_blob_bytes": 8208,
+          "source_or_test": true
+        }
+      ]
+    },
+    "dense_integrated": {
+      "sha": "1c721bb6497746641b897eb2eb938cfad52068d2",
+      "parents": [
+        "5340bc69b7203ad7a9166543062482d819f9b705"
+      ],
+      "subject": "fix: preflight dense table expansion before renderer allocation",
+      "all_commit_paths": [
+        {
+          "path": "python/deepviz/src/deepviz/engines.py",
+          "additions": "36",
+          "deletions": "0",
+          "Git_blob_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225",
+          "Git_blob_bytes": 44039,
+          "source_or_test": true
+        },
+        {
+          "path": "python/deepviz/src/deepviz/render.py",
+          "additions": "5",
+          "deletions": "0",
+          "Git_blob_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+          "Git_blob_bytes": 11637,
+          "source_or_test": true
+        },
+        {
+          "path": "python/deepviz/tests/test_r12_table_budget.py",
+          "additions": "156",
+          "deletions": "0",
+          "Git_blob_sha256": "cb2f6d17c6820003dddf54fa7f753ef6f734deff243118602c41f6b6c4bc0fe8",
+          "Git_blob_bytes": 7446,
+          "source_or_test": true
+        }
+      ]
+    },
+    "sum_integrated": {
+      "sha": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+      "parents": [
+        "1c721bb6497746641b897eb2eb938cfad52068d2"
+      ],
+      "subject": "fix: retain bounded finite sums after transient overflow",
+      "all_commit_paths": [
+        {
+          "path": "packages/deepviz/src/normalize.ts",
+          "additions": "28",
+          "deletions": "3",
+          "Git_blob_sha256": "2c730b13f6360fa2e75c66d03ea051ffdb5c253d4922546f51cd8fd60e742c7f",
+          "Git_blob_bytes": 30169,
+          "source_or_test": true
+        },
+        {
+          "path": "packages/deepviz/test/test_r07_finite_overflow.test.mjs",
+          "additions": "95",
+          "deletions": "0",
+          "Git_blob_sha256": "72c909dfe855c107e6205683b7a3c36de269c56a39f4e999c4ad055118a93fcc",
+          "Git_blob_bytes": 4706,
+          "source_or_test": true
+        },
+        {
+          "path": "python/deepviz/src/deepviz/normalize.py",
+          "additions": "21",
+          "deletions": "1",
+          "Git_blob_sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+          "Git_blob_bytes": 34886,
+          "source_or_test": true
+        },
+        {
+          "path": "python/deepviz/tests/test_r07_finite_overflow.py",
+          "additions": "123",
+          "deletions": "0",
+          "Git_blob_sha256": "cbb18b1ab0107ab4cfd4dfff1515b6c6afc5f4495b4a9b56be090dfb2bce610f",
+          "Git_blob_bytes": 5370,
+          "source_or_test": true
+        }
+      ]
+    },
+    "sum_origin": {
+      "sha": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+      "parents": [
+        "6d0e72ebef4b622f8dec2bce2bd07cc23e7a81ce"
+      ],
+      "subject": "fix: retain bounded finite sums after transient overflow",
+      "all_commit_paths": [
+        {
+          "path": "packages/deepviz/src/normalize.ts",
+          "additions": "28",
+          "deletions": "3",
+          "Git_blob_sha256": "2c730b13f6360fa2e75c66d03ea051ffdb5c253d4922546f51cd8fd60e742c7f",
+          "Git_blob_bytes": 30169,
+          "source_or_test": true
+        },
+        {
+          "path": "packages/deepviz/test/test_r07_finite_overflow.test.mjs",
+          "additions": "95",
+          "deletions": "0",
+          "Git_blob_sha256": "72c909dfe855c107e6205683b7a3c36de269c56a39f4e999c4ad055118a93fcc",
+          "Git_blob_bytes": 4706,
+          "source_or_test": true
+        },
+        {
+          "path": "python/deepviz/src/deepviz/normalize.py",
+          "additions": "21",
+          "deletions": "1",
+          "Git_blob_sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+          "Git_blob_bytes": 34886,
+          "source_or_test": true
+        },
+        {
+          "path": "python/deepviz/tests/test_r07_finite_overflow.py",
+          "additions": "123",
+          "deletions": "0",
+          "Git_blob_sha256": "cbb18b1ab0107ab4cfd4dfff1515b6c6afc5f4495b4a9b56be090dfb2bce610f",
+          "Git_blob_bytes": 5370,
+          "source_or_test": true
+        }
+      ]
+    },
+    "dense_origin": {
+      "sha": "d5b68c470416f93127c8187e8111d0d27d20b108",
+      "parents": [
+        "5340bc69b7203ad7a9166543062482d819f9b705"
+      ],
+      "subject": "fix: preflight dense table expansion before renderer allocation",
+      "all_commit_paths": [
+        {
+          "path": "python/deepviz/src/deepviz/engines.py",
+          "additions": "36",
+          "deletions": "0",
+          "Git_blob_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225",
+          "Git_blob_bytes": 44039,
+          "source_or_test": true
+        },
+        {
+          "path": "python/deepviz/src/deepviz/render.py",
+          "additions": "5",
+          "deletions": "0",
+          "Git_blob_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+          "Git_blob_bytes": 11637,
+          "source_or_test": true
+        },
+        {
+          "path": "python/deepviz/tests/test_r12_table_budget.py",
+          "additions": "156",
+          "deletions": "0",
+          "Git_blob_sha256": "cb2f6d17c6820003dddf54fa7f753ef6f734deff243118602c41f6b6c4bc0fe8",
+          "Git_blob_bytes": 7446,
+          "source_or_test": true
+        }
+      ]
+    },
+    "reported_main": {
+      "sha": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+      "parents": [
+        "b9f7c1768ca9e99e045aa7115431fb8ddde0006a"
+      ],
+      "subject": "build: establish Python package and shared chart contracts",
+      "all_commit_paths": [
+        {
+          "path": "LICENSE",
+          "additions": "21",
+          "deletions": "0",
+          "Git_blob_sha256": "afbb59a0c0fccdea7ecc9140e4e762455dc06abea4f02d9cf5324c8fb23b42fd",
+          "Git_blob_bytes": 1077,
+          "source_or_test": false
+        },
+        {
+          "path": "README.md",
+          "additions": "3",
+          "deletions": "0",
+          "Git_blob_sha256": "2497e600ecd5a35af571f0f3e6f2550ce3a49b9322a607e02e6b97aa8c41d40d",
+          "Git_blob_bytes": 199,
+          "source_or_test": false
+        },
+        {
+          "path": "pyproject.toml",
+          "additions": "42",
+          "deletions": "0",
+          "Git_blob_sha256": "c80640f3f3049b9734360abd7bb1b5699449d7bad31f3fcde77c3e2b38a53053",
+          "Git_blob_bytes": 1259,
+          "source_or_test": false
+        },
+        {
+          "path": "python/deepviz/src/deepviz/models.py",
+          "additions": "69",
+          "deletions": "0",
+          "Git_blob_sha256": "9705c4e7809ea03405ef2180f976869fc5f13e0fc63a45190929bd0c4241b461",
+          "Git_blob_bytes": 2486,
+          "source_or_test": true
+        }
+      ]
+    },
+    "candidate_checkpoint": {
+      "sha": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "parents": [
+        "262b0da145e42c94c2908213272ec3be28771206"
+      ],
+      "subject": "docs: checkpoint focused green contract PR and reviewed npm integration",
+      "all_commit_paths": [
+        {
+          "path": "RESUME.md",
+          "additions": "2",
+          "deletions": "0",
+          "Git_blob_sha256": "1ce7bc6510b03c3224836a4ab3d14dcfec9a50d03e6ea47e7f812995f4699498",
+          "Git_blob_bytes": 6810,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/PROJECT_STATE.md",
+          "additions": "12",
+          "deletions": "0",
+          "Git_blob_sha256": "30c72d66a9ecfef8c94df05a7b1445cd662b0103412d393d6684af5643175590",
+          "Git_blob_bytes": 43424,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/agent-state/ses_de56ad930fferPKGibj5Mc304B.md",
+          "additions": "16",
+          "deletions": "0",
+          "Git_blob_sha256": "ea0422ef87782a6ce05133acc271643582de3f304dfe94fcac3e76792e7a8517",
+          "Git_blob_bytes": 36692,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/C17-live-slots.md",
+          "additions": "6",
+          "deletions": "0",
+          "Git_blob_sha256": "98aef6a073ab349baff8ee0126ad6add75f9164c986d3378e59bb383cd7d6531",
+          "Git_blob_bytes": 19504,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R22-focused-pr-body.md",
+          "additions": "27",
+          "deletions": "0",
+          "Git_blob_sha256": "02b9bb9ec66cc30492ef0999c4b939e8976648d1e9f2e34f61b55a0b0f06db90",
+          "Git_blob_bytes": 3128,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R22-focused-pr.json",
+          "additions": "36",
+          "deletions": "0",
+          "Git_blob_sha256": "25c6123967f8524d9194803c3028ed5e2d4e15b82a8cc6f2b5be7718b589f4e2",
+          "Git_blob_bytes": 4271,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R24-npm-integration/consumer-consumer.stdout.log",
+          "additions": "64",
+          "deletions": "0",
+          "Git_blob_sha256": "49c38951fd895ed96404f3dd0fcab936f4741799e956a38dd21fd093a904d4ec",
+          "Git_blob_bytes": 2297,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R24-npm-integration/consumer-receipt.json",
+          "additions": "74",
+          "deletions": "0",
+          "Git_blob_sha256": "863dda72751f5a28b2ee3b24cee3be12e4bb7cd750d6ca52d38ce8d013a8364b",
+          "Git_blob_bytes": 4731,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R24-npm-integration/gates-commands.json",
+          "additions": "114",
+          "deletions": "0",
+          "Git_blob_sha256": "70dbda518f4de07e3a71fbcf54814e760ab8e44414d8814d6279453a3e05f2b8",
+          "Git_blob_bytes": 4272,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R24-npm-integration/gates-npm-test.stdout.log",
+          "additions": "301",
+          "deletions": "0",
+          "Git_blob_sha256": "0c3fe74598567493cd048e2232f23391cccb887335de5f455e48c368b4e79e0a",
+          "Git_blob_bytes": 25436,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R24-npm-integration/integration.json",
+          "additions": "46",
+          "deletions": "0",
+          "Git_blob_sha256": "daae00c51d928fa55ee9641bd2ef54d188c63bff123f94bbe0699baa5f7b04d5",
+          "Git_blob_bytes": 1558,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/evidence/R24-pr-checks.json",
+          "additions": "166",
+          "deletions": "0",
+          "Git_blob_sha256": "2d530be1ab82f84861d8b3d35b66143290c2152514fc32ec4c16444dfaaab73e",
+          "Git_blob_bytes": 6595,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/reports/R22-focused-contract.md",
+          "additions": "42",
+          "deletions": "0",
+          "Git_blob_sha256": "210f361ded917b16fb7ae3409e5f18f08555f494d711b671b67678eabb853c91",
+          "Git_blob_bytes": 9206,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/reports/R24-reviewed-npm-integration.md",
+          "additions": "26",
+          "deletions": "0",
+          "Git_blob_sha256": "cf3605dd4479d2c57b6b8979b6a9133b280ceefd2faa787c2ecd7179e82b60d6",
+          "Git_blob_bytes": 5654,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/tasks/R23-count-and-svg-producer-releases.md",
+          "additions": "22",
+          "deletions": "0",
+          "Git_blob_sha256": "8f1cd69782b80fffcd82f5d1a17696bf35fbe2cc8fed0801d695ef6787e20475",
+          "Git_blob_bytes": 5345,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/tasks/R24-focused-pr33-head.md",
+          "additions": "22",
+          "deletions": "0",
+          "Git_blob_sha256": "3f0a6afa83212ce4d257d29fbbbc507a9bfd303d40e2bda2d8539f3895b166b9",
+          "Git_blob_bytes": 4594,
+          "source_or_test": false
+        },
+        {
+          "path": "docs/coordination/tasks/R27-manager-queue-and-plotly-release.md",
+          "additions": "25",
+          "deletions": "0",
+          "Git_blob_sha256": "bed4b8d7ae838ae074f0c60c0b861d8bd4dffc55ebd2c22f4916e5cfde7cf5d3",
+          "Git_blob_bytes": 7492,
+          "source_or_test": false
+        }
+      ]
+    }
+  },
+  "path_equivalence": [
+    {
+      "name": "ec9to7bc_SUM_source_tests_exact",
+      "a": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+      "b": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+      "files": [
+        {
+          "path": "python/deepviz/src/deepviz/normalize.py",
+          "identical": true,
+          "a_sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+          "b_sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2"
+        },
+        {
+          "path": "packages/deepviz/src/normalize.ts",
+          "identical": true,
+          "a_sha256": "2c730b13f6360fa2e75c66d03ea051ffdb5c253d4922546f51cd8fd60e742c7f",
+          "b_sha256": "2c730b13f6360fa2e75c66d03ea051ffdb5c253d4922546f51cd8fd60e742c7f"
+        },
+        {
+          "path": "python/deepviz/tests/test_r07_finite_overflow.py",
+          "identical": true,
+          "a_sha256": "cbb18b1ab0107ab4cfd4dfff1515b6c6afc5f4495b4a9b56be090dfb2bce610f",
+          "b_sha256": "cbb18b1ab0107ab4cfd4dfff1515b6c6afc5f4495b4a9b56be090dfb2bce610f"
+        },
+        {
+          "path": "packages/deepviz/test/test_r07_finite_overflow.test.mjs",
+          "identical": true,
+          "a_sha256": "72c909dfe855c107e6205683b7a3c36de269c56a39f4e999c4ad055118a93fcc",
+          "b_sha256": "72c909dfe855c107e6205683b7a3c36de269c56a39f4e999c4ad055118a93fcc"
+        }
+      ]
+    },
+    {
+      "name": "d5to1c_dense_source_tests_exact",
+      "a": "d5b68c470416f93127c8187e8111d0d27d20b108",
+      "b": "1c721bb6497746641b897eb2eb938cfad52068d2",
+      "files": [
+        {
+          "path": "python/deepviz/src/deepviz/engines.py",
+          "identical": true,
+          "a_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225",
+          "b_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225"
+        },
+        {
+          "path": "python/deepviz/src/deepviz/render.py",
+          "identical": true,
+          "a_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+          "b_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+        },
+        {
+          "path": "python/deepviz/tests/test_r12_table_budget.py",
+          "identical": true,
+          "a_sha256": "cb2f6d17c6820003dddf54fa7f753ef6f734deff243118602c41f6b6c4bc0fe8",
+          "b_sha256": "cb2f6d17c6820003dddf54fa7f753ef6f734deff243118602c41f6b6c4bc0fe8"
+        }
+      ]
+    },
+    {
+      "name": "cd75toe47_product_tests_exact",
+      "a": "cd75c459ddba9f3d6bc0a5185b570af369fb4980",
+      "b": "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23",
+      "files": [
+        {
+          "path": "python/deepviz/src/deepviz/tools.py",
+          "identical": true,
+          "a_sha256": "11273c5f5b0ff2eee16e09c6c727e560582a43fcae723bb315b6ef80d5a68495",
+          "b_sha256": "11273c5f5b0ff2eee16e09c6c727e560582a43fcae723bb315b6ef80d5a68495"
+        },
+        {
+          "path": "python/deepviz/src/deepviz/mcp_server.py",
+          "identical": true,
+          "a_sha256": "9f1628e04749c3c3d2357607ac4cc0021f74e1119c6237aa36077a0fd67bf480",
+          "b_sha256": "9f1628e04749c3c3d2357607ac4cc0021f74e1119c6237aa36077a0fd67bf480"
+        },
+        {
+          "path": "python/deepviz/tests/test_r14_tool_json_boundary.py",
+          "identical": true,
+          "a_sha256": "231d43801dec500ab6da237c9a232b86e6169718fe05fc9b2b5f5b1ede905a4b",
+          "b_sha256": "231d43801dec500ab6da237c9a232b86e6169718fe05fc9b2b5f5b1ede905a4b"
+        },
+        {
+          "path": "python/deepviz/tests/test_r14_mcp_resource_budget.py",
+          "identical": true,
+          "a_sha256": "0406f524d22879e24606c594d7250124f0e298c7b47b05ddf50f39da55a18d9d",
+          "b_sha256": "0406f524d22879e24606c594d7250124f0e298c7b47b05ddf50f39da55a18d9d"
+        }
+      ]
+    },
+    {
+      "name": "d65toe47_tools_exact_callbackFinding_statically_applicable",
+      "a": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+      "b": "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23",
+      "files": [
+        {
+          "path": "python/deepviz/src/deepviz/tools.py",
+          "identical": true,
+          "a_sha256": "11273c5f5b0ff2eee16e09c6c727e560582a43fcae723bb315b6ef80d5a68495",
+          "b_sha256": "11273c5f5b0ff2eee16e09c6c727e560582a43fcae723bb315b6ef80d5a68495"
+        }
+      ]
+    },
+    {
+      "name": "f9to262_four_asset_paths_exact_NOT_whole_tree",
+      "a": "f9c437286c9dfe2245a7d914995d90346e29c233",
+      "b": "262b0da145e42c94c2908213272ec3be28771206",
+      "files": [
+        {
+          "path": "packages/deepviz/README.md",
+          "identical": true,
+          "a_sha256": "3ae10b8d7fa27aaff60fe15e1664886ecdda4edeb5eba8d260480d81c2139a80",
+          "b_sha256": "3ae10b8d7fa27aaff60fe15e1664886ecdda4edeb5eba8d260480d81c2139a80"
+        },
+        {
+          "path": "packages/deepviz/package.json",
+          "identical": true,
+          "a_sha256": "f8ce42fc3643693effd1e39e44f3b0379d203b1d5208705d7eb154239664c3fc",
+          "b_sha256": "f8ce42fc3643693effd1e39e44f3b0379d203b1d5208705d7eb154239664c3fc"
+        },
+        {
+          "path": "packages/deepviz/scripts/copy-prompts.mjs",
+          "identical": true,
+          "a_sha256": "2e29160390a79c62b13c20992ef88c639126a8bad9bee80b327d5b81e6aa06bd",
+          "b_sha256": "2e29160390a79c62b13c20992ef88c639126a8bad9bee80b327d5b81e6aa06bd"
+        },
+        {
+          "path": "packages/deepviz/test/test_r11_packaged_prompts.test.mjs",
+          "identical": true,
+          "a_sha256": "ec5fb98f80fc2adfe8b3a40fecc82007d4b90f173cc6d2343328d7ce57abb234",
+          "b_sha256": "ec5fb98f80fc2adfe8b3a40fecc82007d4b90f173cc6d2343328d7ce57abb234"
+        }
+      ]
+    },
+    {
+      "name": "262to3eab_four_asset_paths_exact_NOT_default",
+      "a": "262b0da145e42c94c2908213272ec3be28771206",
+      "b": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "files": [
+        {
+          "path": "packages/deepviz/README.md",
+          "identical": true,
+          "a_sha256": "3ae10b8d7fa27aaff60fe15e1664886ecdda4edeb5eba8d260480d81c2139a80",
+          "b_sha256": "3ae10b8d7fa27aaff60fe15e1664886ecdda4edeb5eba8d260480d81c2139a80"
+        },
+        {
+          "path": "packages/deepviz/package.json",
+          "identical": true,
+          "a_sha256": "f8ce42fc3643693effd1e39e44f3b0379d203b1d5208705d7eb154239664c3fc",
+          "b_sha256": "f8ce42fc3643693effd1e39e44f3b0379d203b1d5208705d7eb154239664c3fc"
+        },
+        {
+          "path": "packages/deepviz/scripts/copy-prompts.mjs",
+          "identical": true,
+          "a_sha256": "2e29160390a79c62b13c20992ef88c639126a8bad9bee80b327d5b81e6aa06bd",
+          "b_sha256": "2e29160390a79c62b13c20992ef88c639126a8bad9bee80b327d5b81e6aa06bd"
+        },
+        {
+          "path": "packages/deepviz/test/test_r11_packaged_prompts.test.mjs",
+          "identical": true,
+          "a_sha256": "ec5fb98f80fc2adfe8b3a40fecc82007d4b90f173cc6d2343328d7ce57abb234",
+          "b_sha256": "ec5fb98f80fc2adfe8b3a40fecc82007d4b90f173cc6d2343328d7ce57abb234"
+        }
+      ]
+    },
+    {
+      "name": "5ba_vs_c1b_changedNormalizer_doNOTborrow_finalTests",
+      "a": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+      "b": "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19",
+      "files": [
+        {
+          "path": "python/deepviz/src/deepviz/normalize.py",
+          "identical": false,
+          "a_sha256": "eef44a7df71926932fc14b33ff47225903b30824c2435e74b9707b49ed357f2b",
+          "b_sha256": "f3cc6e78e188ed97f62133a954154dbfdd416128c97cd4b154144ae62f778296"
+        }
+      ]
+    }
+  ],
+  "task_reported_default": {
+    "sha": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+    "local_commits": 2,
+    "local_tracked_paths": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "docs/superpowers/plans/2026-11-26-deepviz-plan.md",
+      "docs/superpowers/specs/2026-11-26-deepviz-design.md",
+      "pyproject.toml",
+      "python/deepviz/src/deepviz/models.py"
+    ],
+    "live_remote_verified_here": false
+  },
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180^{commit}"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%H%n%P%n%s",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--numstat",
+        "-r",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:.github/workflows/chart-contract.yml"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:docs/verification/r22-contract/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:docs/verification/r22-contract/red-green-summary.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:docs/verification/r22-contract/validation-output.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:schemas/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:tests/test_models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:tests/test_numeric_schema.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "5ba860305dcc86ac2f95f01705b984d2b40f2799^{commit}"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%H%n%P%n%s",
+        "5ba860305dcc86ac2f95f01705b984d2b40f2799"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--numstat",
+        "-r",
+        "5ba860305dcc86ac2f95f01705b984d2b40f2799"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5ba860305dcc86ac2f95f01705b984d2b40f2799:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5ba860305dcc86ac2f95f01705b984d2b40f2799:python/deepviz/tests/test_r17_normalizer_boundaries.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19^{commit}"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%H%n%P%n%s",
+        "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--numstat",
+        "-r",
+        "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19:packages/deepviz/src/normalize.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19:packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19:python/deepviz/tests/test_r17_normalizer_boundaries.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57^{commit}"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%H%n%P%n%s",
+        "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--numstat",
+        "-r",
+        "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57:docs/agent-state/ses_de56782e8ffentAvzUUfMncFRA.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57:docs/coordination/evidence/R14-07/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57:docs/coordination/evidence/R14-07/commands.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57:docs/coordination/evidence/R14-07/dashboard-wide.png"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57:docs/coordination/evidence/R14-07/omitted-default.png"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57:docs/coordination/evidence/R14-07/run-summary.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57:docs/coordination/reports/R14-07-helper-null.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57:packages/deepviz/src/render.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57:packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "f9c437286c9dfe2245a7d914995d90346e29c233^{commit}"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%H%n%P%n%s",
+        "f9c437286c9dfe2245a7d914995d90346e29c233"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--numstat",
+        "-r",
+        "f9c437286c9dfe2245a7d914995d90346e29c233"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "f9c437286c9dfe2245a7d914995d90346e29c233:packages/deepviz/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "f9c437286c9dfe2245a7d914995d90346e29c233:packages/deepviz/package.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "f9c437286c9dfe2245a7d914995d90346e29c233:packages/deepviz/scripts/copy-prompts.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "f9c437286c9dfe2245a7d914995d90346e29c233:packages/deepviz/test/test_r11_packaged_prompts.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "262b0da145e42c94c2908213272ec3be28771206^{commit}"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%H%n%P%n%s",
+        "262b0da145e42c94c2908213272ec3be28771206"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--numstat",
+        "-r",
+        "262b0da145e42c94c2908213272ec3be28771206"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/package.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/scripts/copy-prompts.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/test_r11_packaged_prompts.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "d65dfc0fd807d0335b858476de8cdf7c6b958711^{commit}"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%H%n%P%n%s",
+        "d65dfc0fd807d0335b858476de8cdf7c6b958711"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--numstat",
+        "-r",
+        "d65dfc0fd807d0335b858476de8cdf7c6b958711"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "d65dfc0fd807d0335b858476de8cdf7c6b958711:docs/agent-state/ses_de567805bffdER1GlVd0ngLgKg.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "d65dfc0fd807d0335b858476de8cdf7c6b958711:docs/coordination/evidence/R14-18/p1-results.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "d65dfc0fd807d0335b858476de8cdf7c6b958711:docs/coordination/reports/R14-18-mcp-json-budget.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "d65dfc0fd807d0335b858476de8cdf7c6b958711:python/deepviz/src/deepviz/mcp_server.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "d65dfc0fd807d0335b858476de8cdf7c6b958711:python/deepviz/src/deepviz/tools.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "d65dfc0fd807d0335b858476de8cdf7c6b958711:python/deepviz/tests/test_r14_tool_json_boundary.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "cd75c459ddba9f3d6bc0a5185b570af369fb4980^{commit}"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%H%n%P%n%s",
+        "cd75c459ddba9f3d6bc0a5185b570af369fb4980"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--numstat",
+        "-r",
+        "cd75c459ddba9f3d6bc0a5185b570af369fb4980"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "cd75c459ddba9f3d6bc0a5185b570af369fb4980:docs/agent-state/ses_de567805bffdER1GlVd0ngLgKg.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "cd75c459ddba9f3d6bc0a5185b570af369fb4980:docs/coordination/evidence/R14-18/full-python-results.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "cd75c459ddba9f3d6bc0a5185b570af369fb4980:docs/coordination/evidence/R14-18/github-prepublication-get.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "cd75c459ddba9f3d6bc0a5185b570af369fb4980:docs/coordination/evidence/R14-18/p1-publication.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "cd75c459ddba9f3d6bc0a5185b570af369fb4980:docs/coordination/evidence/R14-18/p2-results.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "cd75c459ddba9f3d6bc0a5185b570af369fb4980:docs/coordination/evidence/R14-18/tool-revenue.png"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "cd75c459ddba9f3d6bc0a5185b570af369fb4980:docs/coordination/reports/R14-18-mcp-json-budget.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "cd75c459ddba9f3d6bc0a5185b570af369fb4980:python/deepviz/src/deepviz/mcp_server.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "cd75c459ddba9f3d6bc0a5185b570af369fb4980:python/deepviz/tests/test_r14_mcp_resource_budget.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23^{commit}"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%H%n%P%n%s",
+        "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--numstat",
+        "-r",
+        "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23:docs/agent-state/ses_de567805bffdER1GlVd0ngLgKg.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23:docs/coordination/evidence/R14-18/final-handoff.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23:docs/coordination/reports/R14-18-mcp-json-budget.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "5e595a8f893955ce34a0e26553bb7bf257ea93ae^{commit}"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%H%n%P%n%s",
+        "5e595a8f893955ce34a0e26553bb7bf257ea93ae"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--numstat",
+        "-r",
+        "5e595a8f893955ce34a0e26553bb7bf257ea93ae"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5e595a8f893955ce34a0e26553bb7bf257ea93ae:docs/agent-state/ses_de5678115ffewUEpZFi8faBW8C.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5e595a8f893955ce34a0e26553bb7bf257ea93ae:docs/coordination/evidence/R11-12/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5e595a8f893955ce34a0e26553bb7bf257ea93ae:docs/coordination/evidence/R11-12/fixed-small-negative-240-svg.png"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5e595a8f893955ce34a0e26553bb7bf257ea93ae:docs/coordination/evidence/R11-12/github-preflight.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5e595a8f893955ce34a0e26553bb7bf257ea93ae:docs/coordination/evidence/R11-12/measured-aggregate-960-html.png"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5e595a8f893955ce34a0e26553bb7bf257ea93ae:docs/coordination/evidence/R11-12/measured-aggregate-960-svg.png"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5e595a8f893955ce34a0e26553bb7bf257ea93ae:docs/coordination/evidence/R11-12/red-green-summary.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5e595a8f893955ce34a0e26553bb7bf257ea93ae:docs/coordination/evidence/R11-12/signed-scientific-240-html.png"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5e595a8f893955ce34a0e26553bb7bf257ea93ae:docs/coordination/reports/R11-12-svg-tick-margin.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5e595a8f893955ce34a0e26553bb7bf257ea93ae:packages/deepviz/src/renderers.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5e595a8f893955ce34a0e26553bb7bf257ea93ae:packages/deepviz/test/test_r11_svg_tick_margin.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5e595a8f893955ce34a0e26553bb7bf257ea93ae:tests/browser/r11-svg-tick-margin.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "1c721bb6497746641b897eb2eb938cfad52068d2^{commit}"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%H%n%P%n%s",
+        "1c721bb6497746641b897eb2eb938cfad52068d2"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--numstat",
+        "-r",
+        "1c721bb6497746641b897eb2eb938cfad52068d2"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "1c721bb6497746641b897eb2eb938cfad52068d2:python/deepviz/src/deepviz/engines.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "1c721bb6497746641b897eb2eb938cfad52068d2:python/deepviz/src/deepviz/render.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "1c721bb6497746641b897eb2eb938cfad52068d2:python/deepviz/tests/test_r12_table_budget.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6^{commit}"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%H%n%P%n%s",
+        "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--numstat",
+        "-r",
+        "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6:packages/deepviz/src/normalize.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6:packages/deepviz/test/test_r07_finite_overflow.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6:python/deepviz/tests/test_r07_finite_overflow.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "ec9f669eff28cd5351da142765b7755e3b2f484f^{commit}"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%H%n%P%n%s",
+        "ec9f669eff28cd5351da142765b7755e3b2f484f"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--numstat",
+        "-r",
+        "ec9f669eff28cd5351da142765b7755e3b2f484f"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "ec9f669eff28cd5351da142765b7755e3b2f484f:packages/deepviz/src/normalize.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "ec9f669eff28cd5351da142765b7755e3b2f484f:packages/deepviz/test/test_r07_finite_overflow.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "ec9f669eff28cd5351da142765b7755e3b2f484f:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "ec9f669eff28cd5351da142765b7755e3b2f484f:python/deepviz/tests/test_r07_finite_overflow.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "d5b68c470416f93127c8187e8111d0d27d20b108^{commit}"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%H%n%P%n%s",
+        "d5b68c470416f93127c8187e8111d0d27d20b108"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--numstat",
+        "-r",
+        "d5b68c470416f93127c8187e8111d0d27d20b108"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "d5b68c470416f93127c8187e8111d0d27d20b108:python/deepviz/src/deepviz/engines.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "d5b68c470416f93127c8187e8111d0d27d20b108:python/deepviz/src/deepviz/render.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "d5b68c470416f93127c8187e8111d0d27d20b108:python/deepviz/tests/test_r12_table_budget.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "0ae2cf26426822135fc10d337fcacf580b7ed833^{commit}"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%H%n%P%n%s",
+        "0ae2cf26426822135fc10d337fcacf580b7ed833"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--numstat",
+        "-r",
+        "0ae2cf26426822135fc10d337fcacf580b7ed833"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "0ae2cf26426822135fc10d337fcacf580b7ed833:LICENSE"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "0ae2cf26426822135fc10d337fcacf580b7ed833:README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "0ae2cf26426822135fc10d337fcacf580b7ed833:pyproject.toml"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "0ae2cf26426822135fc10d337fcacf580b7ed833:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "3eab699b61850a20e91132e16caf8c589085f9ee^{commit}"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%H%n%P%n%s",
+        "3eab699b61850a20e91132e16caf8c589085f9ee"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--numstat",
+        "-r",
+        "3eab699b61850a20e91132e16caf8c589085f9ee"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:RESUME.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:docs/PROJECT_STATE.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:docs/agent-state/ses_de56ad930fferPKGibj5Mc304B.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:docs/coordination/C17-live-slots.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:docs/coordination/evidence/R22-focused-pr-body.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:docs/coordination/evidence/R22-focused-pr.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:docs/coordination/evidence/R24-npm-integration/consumer-consumer.stdout.log"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:docs/coordination/evidence/R24-npm-integration/consumer-receipt.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:docs/coordination/evidence/R24-npm-integration/gates-commands.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:docs/coordination/evidence/R24-npm-integration/gates-npm-test.stdout.log"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:docs/coordination/evidence/R24-npm-integration/integration.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:docs/coordination/evidence/R24-pr-checks.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:docs/coordination/reports/R22-focused-contract.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:docs/coordination/reports/R24-reviewed-npm-integration.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:docs/coordination/tasks/R23-count-and-svg-producer-releases.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:docs/coordination/tasks/R24-focused-pr33-head.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:docs/coordination/tasks/R27-manager-queue-and-plotly-release.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "ec9f669eff28cd5351da142765b7755e3b2f484f:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "ec9f669eff28cd5351da142765b7755e3b2f484f:packages/deepviz/src/normalize.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6:packages/deepviz/src/normalize.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "ec9f669eff28cd5351da142765b7755e3b2f484f:python/deepviz/tests/test_r07_finite_overflow.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6:python/deepviz/tests/test_r07_finite_overflow.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "ec9f669eff28cd5351da142765b7755e3b2f484f:packages/deepviz/test/test_r07_finite_overflow.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6:packages/deepviz/test/test_r07_finite_overflow.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "d5b68c470416f93127c8187e8111d0d27d20b108:python/deepviz/src/deepviz/engines.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "1c721bb6497746641b897eb2eb938cfad52068d2:python/deepviz/src/deepviz/engines.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "d5b68c470416f93127c8187e8111d0d27d20b108:python/deepviz/src/deepviz/render.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "1c721bb6497746641b897eb2eb938cfad52068d2:python/deepviz/src/deepviz/render.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "d5b68c470416f93127c8187e8111d0d27d20b108:python/deepviz/tests/test_r12_table_budget.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "1c721bb6497746641b897eb2eb938cfad52068d2:python/deepviz/tests/test_r12_table_budget.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "cd75c459ddba9f3d6bc0a5185b570af369fb4980:python/deepviz/src/deepviz/tools.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23:python/deepviz/src/deepviz/tools.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "cd75c459ddba9f3d6bc0a5185b570af369fb4980:python/deepviz/src/deepviz/mcp_server.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23:python/deepviz/src/deepviz/mcp_server.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "cd75c459ddba9f3d6bc0a5185b570af369fb4980:python/deepviz/tests/test_r14_tool_json_boundary.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23:python/deepviz/tests/test_r14_tool_json_boundary.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "cd75c459ddba9f3d6bc0a5185b570af369fb4980:python/deepviz/tests/test_r14_mcp_resource_budget.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23:python/deepviz/tests/test_r14_mcp_resource_budget.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "d65dfc0fd807d0335b858476de8cdf7c6b958711:python/deepviz/src/deepviz/tools.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23:python/deepviz/src/deepviz/tools.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "f9c437286c9dfe2245a7d914995d90346e29c233:packages/deepviz/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "f9c437286c9dfe2245a7d914995d90346e29c233:packages/deepviz/package.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/package.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "f9c437286c9dfe2245a7d914995d90346e29c233:packages/deepviz/scripts/copy-prompts.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/scripts/copy-prompts.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "f9c437286c9dfe2245a7d914995d90346e29c233:packages/deepviz/test/test_r11_packaged_prompts.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/test_r11_packaged_prompts.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/package.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/package.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/scripts/copy-prompts.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/scripts/copy-prompts.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "262b0da145e42c94c2908213272ec3be28771206:packages/deepviz/test/test_r11_packaged_prompts.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:packages/deepviz/test/test_r11_packaged_prompts.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5ba860305dcc86ac2f95f01705b984d2b40f2799:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "0ae2cf26426822135fc10d337fcacf580b7ed833"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-list",
+        "--count",
+        "0ae2cf26426822135fc10d337fcacf580b7ed833"
+      ],
+      "exit": 0
+    }
+  ],
+  "all_command_exits": 0,
+  "API_calls": 0,
+  "product_tests": 0,
+  "metadata_classifier_correction": {
+    "corrected_utc": "2026-11-27T16:19:06.861394+00:00",
+    "initial_check_failure": "verification-initial-failed.json",
+    "diagnosis": "classifier-diagnosis.json",
+    "changes": [
+      {
+        "source_id": "strict_contract",
+        "path": "tests/test_models.py",
+        "old": false,
+        "new": true
+      },
+      {
+        "source_id": "strict_contract",
+        "path": "tests/test_numeric_schema.py",
+        "old": false,
+        "new": true
+      },
+      {
+        "source_id": "svg_margin",
+        "path": "tests/browser/r11-svg-tick-margin.mjs",
+        "old": false,
+        "new": true
+      }
+    ],
+    "all_Git_blob_bytes_hashes_parent_pathlists_unchanged": true,
+    "no_new_Git_tests_or_APIcalls": true
+  }
+}

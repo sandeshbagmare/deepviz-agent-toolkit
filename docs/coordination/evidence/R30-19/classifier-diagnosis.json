@@ -1,0 +1,20 @@
+{
+  "diagnosed_utc": "2026-11-27T16:18:23.082692+00:00",
+  "initial_checker": "38PASS1FAIL/exit1, retained verification-initial-failed.json",
+  "failed_check": "SVGmargin3productPaths12total_Density32Finite37StrictErrorsOpen",
+  "subconditions": {
+    "whole_commit_paths12": true,
+    "classified_product_tests3": false,
+    "issues32and37": true,
+    "exact_REDcounts_phrase": true,
+    "notfixes": true,
+    "blocked": true
+  },
+  "classified_paths": [
+    "packages/deepviz/src/renderers.ts",
+    "packages/deepviz/test/test_r11_svg_tick_margin.test.mjs"
+  ],
+  "actual_test_path_omitted_by_metadata_prefix": "tests/browser/r11-svg-tick-margin.mjs",
+  "cause": "Metadata classifier source_or_test admitted python/,packages/,schemas/,.github/ but omitted top-leveltests/. Actualsource/allcommitpathlist/report already correctlyincludedbrowserfile. No product/test/reportresult changed.",
+  "next_correction": "Include tests/ in metadata classification and pairedJSONONLY; preserve initialREDreceipt and rerun fullOFFLINEconsistencychecker, no producttest/API/CI/reportpoll."
+}
