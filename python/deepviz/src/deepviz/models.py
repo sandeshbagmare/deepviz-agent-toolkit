@@ -1,6 +1,7 @@
 """Versioned, execution-free contracts shared by all rendering adapters."""
 from __future__ import annotations
 
+from collections.abc import Mapping
 from dataclasses import dataclass, field
 from typing import Any, Literal
 
@@ -38,7 +39,7 @@ class ChartSpec(BaseModel):
     @model_validator(mode="before")
     @classmethod
     def preserve_json_numeric_types(cls, value: Any) -> Any:
-        if isinstance(value, dict):
+        if isinstance(value, Mapping):
             for key in ("version", "max_points", "width", "height", "columns"):
                 if key in value and (
                     isinstance(value[key], bool) or not isinstance(value[key], (int, float))
