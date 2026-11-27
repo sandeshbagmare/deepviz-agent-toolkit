@@ -1,0 +1,71 @@
+{
+  "source": "C:/Users/bagma/AppData/Local/Temp/opencode/r20-08-antv-color-scale-ses_de56782e6ffeVWDIuY3v01kkBt",
+  "head": "1c721bb6497746641b897eb2eb938cfad52068d2",
+  "commands": [
+    {
+      "name": "full-ruff",
+      "exe": "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+      "args": [
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "."
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r20-08-antv-color-scale-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "start": "2026-11-27T15:51:42.546Z",
+      "end": "2026-11-27T15:51:43.067Z",
+      "exit": 0,
+      "error": null
+    },
+    {
+      "name": "full-mypy",
+      "exe": "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+      "args": [
+        "-m",
+        "mypy"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r20-08-antv-color-scale-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "start": "2026-11-27T15:51:43.075Z",
+      "end": "2026-11-27T15:52:09.542Z",
+      "exit": 0,
+      "error": null
+    },
+    {
+      "name": "full-pytest-install-tests-excluded",
+      "exe": "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+      "args": [
+        "-m",
+        "pytest",
+        "--ignore=tests/test_packaging_regressions.py",
+        "-q",
+        "--basetemp",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r20-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\verify-all1\\pytest-temp",
+        "--junitxml",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r20-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\verify-all1\\full.xml"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r20-08-antv-color-scale-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "start": "2026-11-27T15:52:09.546Z",
+      "end": "2026-11-27T16:03:42.638Z",
+      "exit": 1,
+      "error": null
+    },
+    {
+      "name": "build-no-isolation",
+      "exe": "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+      "args": [
+        "-m",
+        "build",
+        "--no-isolation",
+        "--outdir",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r20-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\verify-all1\\dist"
+      ],
+      "cwd": "C:/Users/bagma/AppData/Local/Temp/opencode/r20-08-antv-color-scale-ses_de56782e6ffeVWDIuY3v01kkBt",
+      "start": "2026-11-27T16:03:42.641Z",
+      "end": "2026-11-27T16:03:43.147Z",
+      "exit": 1,
+      "error": null
+    }
+  ],
+  "omitted": "tests/test_packaging_regressions.py: existing fixture calls pip install/build isolation, forbidden in this lane. Optional browser tests use their existing opt-in policy. All scale tests enabled, no -m or -k filter."
+}

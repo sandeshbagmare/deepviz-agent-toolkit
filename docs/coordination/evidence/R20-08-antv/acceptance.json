@@ -1,0 +1,1736 @@
+{
+  "producer": "role08",
+  "session": "ses_de56782e6ffeVWDIuY3v01kkBt",
+  "source_commit": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+  "base": "1c721bb6497746641b897eb2eb938cfad52068d2",
+  "source_branch": "fix/r20-antv-color-scale",
+  "acceptance_scope": "21 bounded fixtures in Chromium, real G2 5.4.8 CDN, 1200x900 viewport; standalone 900x480, dashboard 1050x480. Producer verification only.",
+  "identity": {
+    "head": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+    "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+    "status": "?? docs/agent-state/ses_de56782e6ffeVWDIuY3v01kkBt.md\n?? docs/coordination/reports/R20-08-antv-color-scale.md\n",
+    "modules": [
+      {
+        "name": "deepviz",
+        "path": "python/deepviz/src/deepviz/__init__.py",
+        "working_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "head_git_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+      },
+      {
+        "name": "deepviz.models",
+        "path": "python/deepviz/src/deepviz/models.py",
+        "working_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "head_git_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+      },
+      {
+        "name": "deepviz.engines",
+        "path": "python/deepviz/src/deepviz/engines.py",
+        "working_sha256": "d519700c20007009ffffb6e8343696c30335949b0df798aa4a83ac8b0025fc29",
+        "head_git_sha256": "d519700c20007009ffffb6e8343696c30335949b0df798aa4a83ac8b0025fc29"
+      },
+      {
+        "name": "deepviz.render",
+        "path": "python/deepviz/src/deepviz/render.py",
+        "working_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+        "head_git_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+      },
+      {
+        "name": "deepviz.normalize",
+        "path": "python/deepviz/src/deepviz/normalize.py",
+        "working_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+        "head_git_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+      }
+    ]
+  },
+  "versions": {
+    "node": "v26.13.1",
+    "playwright": "1.65.1",
+    "chromium": "159.0.8154.6"
+  },
+  "red_browser": {
+    "cases": 21,
+    "checks": 245,
+    "passed": 191,
+    "failed": 54,
+    "skipped": 0
+  },
+  "label_clip_red": {
+    "cases": 21,
+    "checks": 254,
+    "passed": 253,
+    "failed": 1,
+    "skipped": 0
+  },
+  "frozen_browser": {
+    "cases": 21,
+    "checks": 254,
+    "passed": 254,
+    "failed": 0,
+    "skipped": 0
+  },
+  "checks": [
+    {
+      "id": "pie",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "literal-category-values",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "literal-category-values",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "literal-category-values",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "literal-category-values",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "literal-category-values",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "treemap-widths-preserve-values",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "literal-category-values",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "treemap-widths-preserve-values",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "literal-category-values",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "visible-quantitative-legend-covers-literal-extent",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "visible-legend-labels-stay-inside-real-canvas",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "literal-ordered-grid-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "actual-painted-cell-centers-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "visible-quantitative-legend-covers-literal-extent",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "visible-legend-labels-stay-inside-real-canvas",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "literal-ordered-grid-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "actual-painted-cell-centers-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "visible-quantitative-legend-covers-literal-extent",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "visible-legend-labels-stay-inside-real-canvas",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "literal-ordered-grid-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "actual-painted-cell-centers-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "visible-quantitative-legend-covers-literal-extent",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "visible-legend-labels-stay-inside-real-canvas",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "literal-ordered-grid-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "visible-quantitative-legend-covers-literal-extent",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "visible-legend-labels-stay-inside-real-canvas",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "literal-ordered-grid-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "visible-quantitative-legend-covers-literal-extent",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "visible-legend-labels-stay-inside-real-canvas",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "literal-ordered-grid-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "visible-quantitative-legend-covers-literal-extent",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "visible-legend-labels-stay-inside-real-canvas",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "literal-ordered-grid-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "actual-painted-cell-centers-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "visible-quantitative-legend-covers-literal-extent",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "visible-legend-labels-stay-inside-real-canvas",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "literal-ordered-grid-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "actual-painted-cell-centers-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "visible-quantitative-legend-covers-literal-extent",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "visible-legend-labels-stay-inside-real-canvas",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "literal-ordered-grid-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "actual-painted-cell-centers-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "line",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "line",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "line",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "line",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "line",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "line",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "line",
+      "name": "three-original-fixed-blue-points",
+      "pass": true
+    },
+    {
+      "id": "line",
+      "name": "literal-1-to-2-numeric-x-spacing",
+      "pass": true
+    },
+    {
+      "id": "scatter",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "scatter",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "scatter",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "scatter",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "scatter",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "scatter",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "scatter",
+      "name": "three-original-fixed-blue-points",
+      "pass": true
+    },
+    {
+      "id": "scatter",
+      "name": "literal-1-to-2-numeric-x-spacing",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "three-independent-native-chart-containers",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "child-theme-backgrounds-preserved",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "parent-theme-background-preserved",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light/pie",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light/pie",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light/pie",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light/pie",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light/treemap",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light/treemap",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light/treemap",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light/treemap",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "line-control-has-connected-plus-point-marks",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "three-independent-native-chart-containers",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "child-theme-backgrounds-preserved",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "parent-theme-background-preserved",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark/pie",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark/pie",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark/pie",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark/pie",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark/treemap",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark/treemap",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark/treemap",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark/treemap",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "line-control-has-connected-plus-point-marks",
+      "pass": true
+    }
+  ],
+  "assets": [
+    "{\"bytes\": 1083414, \"sha256\": \"7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412\", \"status\": 200, \"url\": \"https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js\"}"
+  ],
+  "preservation": [
+    {
+      "id": "pie",
+      "before_after_all_mark_bboxes_identical": true,
+      "original_production_png_sha256": "35f2cff2434da3518a515838c8561dccfbf633008440512d7cea97ff1dc6f426",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "pie-single",
+      "before_after_all_mark_bboxes_identical": true,
+      "original_production_png_sha256": "ad98e0456d3ab4fb078d493df9e2c2c3d7c5ecde733362e26ed3359ff04903ab",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "sunburst",
+      "before_after_all_mark_bboxes_identical": true,
+      "original_production_png_sha256": "f9c4ac21f6551b8a769ee0d3a8a4fc6f131a481e16b711c269c56fdafa8d95ec",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "sunburst-single",
+      "before_after_all_mark_bboxes_identical": true,
+      "original_production_png_sha256": "fc3486ab7f2cdb9c88a2fffb49b14c8db6bef1a61130edae676f2ac6f1c4d0ec",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "treemap",
+      "before_after_all_mark_bboxes_identical": true,
+      "original_production_png_sha256": "88c23733230777efc53af6c542537f7311e02dc1b12fca4650e468767ed73479",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "treemap-single",
+      "before_after_all_mark_bboxes_identical": true,
+      "original_production_png_sha256": "24f6aa1c55f9859d42a796199577d2096880aa2fa272d9820ceeff1d05087913",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "gauge",
+      "before_after_all_mark_bboxes_identical": true,
+      "original_production_png_sha256": "53853b757757fa8e99422e724affb8eda95a033120d1902c8de80f4f3db3261c",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "heatmap-negative",
+      "before_after_all_mark_bboxes_identical": false,
+      "original_production_png_sha256": "4792be4d0b5b8fd7cb6958ca3adc94dd97ea647cdebdbccf343a1fe32a81cdef",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "heatmap-positive",
+      "before_after_all_mark_bboxes_identical": true,
+      "original_production_png_sha256": "02c0612a0d855843d1460b0a9c861c80ef8adae43237143574ac1d439db892fe",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "heatmap-signed",
+      "before_after_all_mark_bboxes_identical": true,
+      "original_production_png_sha256": "be6648f711aa061d893072d72b2e8d6783c2eac5910838e121b2ed69df968068",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "heatmap-constant",
+      "before_after_all_mark_bboxes_identical": true,
+      "original_production_png_sha256": "2b9beea50dd1a64f368e34ea1a4b37b36ea331a45a1583ca3265a2e004e1d2aa",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "heatmap-zero",
+      "before_after_all_mark_bboxes_identical": true,
+      "original_production_png_sha256": "31cfeeb21cd198afc51d3d4e4e97a6334933743c39ada0096902d29fd8fcf091",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "before_after_all_mark_bboxes_identical": false,
+      "original_production_png_sha256": "aa6fe9ffef6347cb86523acadc3aac4eb0666f55ff3f0f23b881d7e863967683",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "before_after_all_mark_bboxes_identical": false,
+      "original_production_png_sha256": "c8c6203086e2aebc6a2c5d9f6e913efdbdb8efdd1a0f567d6292281a4c79a2a0",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "before_after_all_mark_bboxes_identical": false,
+      "original_production_png_sha256": "3b1d8e2dd53a74a084b7d2cc22b328181fe37ef01123f42e29c082680df3a6b1",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "heatmap-missing",
+      "before_after_all_mark_bboxes_identical": false,
+      "original_production_png_sha256": "4c2cb9af8034aa4361e8dccdf1d5213855e6d09f23eb0baf8f8a4292b60311ba",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "before_after_all_mark_bboxes_identical": true,
+      "original_production_png_sha256": "0a782903e0adbe3897974721077a0506aa2d7c94ad63c33e5136e14508728874",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "line",
+      "before_after_all_mark_bboxes_identical": true,
+      "original_production_png_sha256": "0aafa18446ba81af711245b51d003b12840ad109ace094deac4800443dca5782",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "scatter",
+      "before_after_all_mark_bboxes_identical": true,
+      "original_production_png_sha256": "84ecbb8c14c5e5a02e036e882c74863d966083e88bbf00c759e56033c9e90537",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "dashboard-light",
+      "before_after_all_mark_bboxes_identical": true,
+      "original_production_png_sha256": "0a079cccb5f85bd2a928302bb02c86cb500c48ce207de3a2358ebe5c71a7b81c",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    },
+    {
+      "id": "dashboard-dark",
+      "before_after_all_mark_bboxes_identical": true,
+      "original_production_png_sha256": "cf0f4f1db86baf9769087772642a378ecee4286e7ca93f09aff3fb6d636c5f65",
+      "observer_and_unobserved_pixels_identical": true,
+      "frozen_commit_and_visually_opened_green2_pixels_identical": true
+    }
+  ],
+  "broader_attempt": {
+    "source": "pre-label-alignment minimal dirty _antv on base1c721; NOT frozen3185 full-suite verification",
+    "exit": 1,
+    "passed": 2520,
+    "failed": 41,
+    "errors": 520,
+    "skipped": 5,
+    "seconds": 689.88,
+    "filters": "Only tests/test_packaging_regressions.py excluded: five cases invoke prohibited pip install/build-isolation fixtures. No -k/-m or scale exclusion.",
+    "failure_index": [
+      {
+        "class": "python.deepviz.tests.test_backend_antv",
+        "name": "test_dashboard_duplicate_titles_get_unique_containers_and_independent_options"
+      },
+      {
+        "class": "python.deepviz.tests.test_n17_boundaries",
+        "name": "test_n17_dashboard_serialization_order_observation"
+      },
+      {
+        "class": "tests.gallery.test_generate_gallery",
+        "name": "test_cli_other_known_cases_use_actual_public_render[line-numeric-counts0]"
+      },
+      {
+        "class": "tests.gallery.test_generate_gallery",
+        "name": "test_cli_other_known_cases_use_actual_public_render[dashboard-mixed-counts1]"
+      },
+      {
+        "class": "tests.gallery.test_generate_gallery",
+        "name": "test_invalid_engine_keeps_honest_partial_manifest"
+      },
+      {
+        "class": "tests.gallery.test_generate_gallery",
+        "name": "test_missing_installed_dependency_is_not_reported_as_success"
+      },
+      {
+        "class": "tests.gallery.test_generate_gallery",
+        "name": "test_default_cli_attempts_all_fifteen_combinations_without_skipping_missing_backends"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-records]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-nested_json]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-graphql]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-columns]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-light-csv]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-records]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-nested_json]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-graphql]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-columns]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[vega-dashboard-dark-csv]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-records]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-nested_json]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-graphql]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-columns]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-light-csv]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-records]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-nested_json]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-graphql]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-columns]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-line-dark-csv]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-records]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-nested_json]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-graphql]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-columns]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-light-csv]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-records]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-nested_json]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-graphql]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-columns]"
+      },
+      {
+        "class": "tests.test_acceptance_matrix",
+        "name": "test_engine_kind_theme_source_acceptance[echarts-area-dark-csv]"
+      },
+      {
+        "class": "tests.test_n11_resource_policy",
+        "name": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii]"
+      },
+      {
+        "class": "tests.test_n11_resource_policy",
+        "name": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte]"
+      },
+      {
+        "class": "tests.test_n11_resource_policy",
+        "name": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte]"
+      },
+      {
+        "class": "tests.test_n11_resource_policy",
+        "name": "test_flattened_multibyte_key_at_64kib_is_preserved"
+      }
+    ],
+    "errors_by_class": {
+      "tests.gallery.test_generate_gallery": 3,
+      "tests.test_cross_language_contract": 186,
+      "tests.test_n12_authoritative_parity": 106,
+      "tests.test_n12_contract_edges": 225
+    },
+    "skip_index": [
+      {
+        "class": "python.deepviz.tests.test_mcp_transport",
+        "name": "test_stdio_registered_artifact_symlink_swap_cannot_read_outside_output_root",
+        "reason": "Host does not permit symlink creation: [WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r20-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\\\verify-all1\\\\pytest-temp\\\\test_stdio_registered_artifact0\\\\secret.html' -> 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r20-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\\\verify-all1\\\\pytest-temp\\\\test_stdio_registered_artifact0\\\\symlink-probe'"
+      },
+      {
+        "class": "python.deepviz.tests.test_n17_boundaries",
+        "name": "test_n17_symlink_outside_data_directory_is_rejected",
+        "reason": "Host cannot create symlinks: [WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r20-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\\\verify-all1\\\\pytest-temp\\\\test_n17_symlink_outside_data_0\\\\outside.json' -> 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r20-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\\\verify-all1\\\\pytest-temp\\\\test_n17_symlink_outside_data_0\\\\allowed\\\\escape.json'"
+      },
+      {
+        "class": "python.deepviz.tests.test_render",
+        "name": "test_browser_executes_all_native_kinds[plotly]",
+        "reason": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+      },
+      {
+        "class": "python.deepviz.tests.test_render",
+        "name": "test_browser_executes_all_native_kinds[echarts]",
+        "reason": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+      },
+      {
+        "class": "python.deepviz.tests.test_render",
+        "name": "test_browser_executes_all_native_kinds[antv]",
+        "reason": "Set DEEPVIZ_BROWSER_TESTS=1 for installed Chromium + pinned CDN integration checks"
+      }
+    ],
+    "not_claimed_baseline": "Full failures were not independently rerun on clean base and are not all classified as baseline.",
+    "distribution": "build --no-isolation exit1: hatchling.build unavailable; no install attempted, no build success claim"
+  },
+  "raw_evidence": [
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r20-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\verify-all1\\full.xml",
+      "bytes": 1699025,
+      "sha256": "a2c57375f923c955e0a3f46198309af654262fac8b907c23a0848f193b480c4a"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r20-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\verify-all1\\full-pytest-install-tests-excluded.stdout.log",
+      "bytes": 1156822,
+      "sha256": "9fad41165bc8988453033bb408b196ed4065be11c3e617e0dffb2f0f00d41cdf"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r20-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\verify-all1\\build-no-isolation.stderr.log",
+      "bytes": 305,
+      "sha256": "39d5284ea29fe43322915748bc42e56be57f9167c96588f3b581dc159490fe54"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r20-08-antv-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts\\frozen-source\\generated\\browser-results.json",
+      "bytes": 456895,
+      "sha256": "76f2721e7f6916a596e63d9988731df217d9021170005c560d7db6840fccf310"
+    }
+  ],
+  "limits": [
+    "Not independent review or tester signoff",
+    "Not a full-suite/CI/release pass or issue closure",
+    "No npm/Python distribution build acceptance",
+    "No universal finite-number/browser/kind/interaction/accessibility or 10M-memory claim",
+    "R04 must integrate function-only and obtain independent06 frozen-source retest"
+  ]
+}

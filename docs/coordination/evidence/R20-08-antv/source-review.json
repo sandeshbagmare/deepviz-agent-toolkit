@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-27T16:15:43.217Z",
+  "head": "1c721bb6497746641b897eb2eb938cfad52068d2",
+  "base": "1c721bb6497746641b897eb2eb938cfad52068d2",
+  "branch": "fix/r20-antv-color-scale",
+  "status": " M python/deepviz/src/deepviz/engines.py\n?? docs/agent-state/ses_de56782e6ffeVWDIuY3v01kkBt.md\n?? docs/coordination/reports/R20-08-antv-color-scale.md\n?? python/deepviz/tests/test_r20_antv_color_scale.py\n?? tests/browser/r20-antv-color-scale.cjs\n",
+  "recentLog": "1c721bb fix: preflight dense table expansion before renderer allocation\n5340bc6 docs: release disjoint producers and enforce completion refill\nca25af4 docs: checkpoint R04 integration and current rolling ownership\n3aa521a fix: report SVG inspector as structure only\n6d0e72e fix: preserve dashboard child chart themes\n",
+  "outsideAntvIdentical": true,
+  "secretPatternMatches": 0,
+  "files": [
+    {
+      "path": "python/deepviz/src/deepviz/engines.py",
+      "bytes": 44787,
+      "working_sha256": "d519700c20007009ffffb6e8343696c30335949b0df798aa4a83ac8b0025fc29",
+      "git_lf_sha256": "d519700c20007009ffffb6e8343696c30335949b0df798aa4a83ac8b0025fc29"
+    },
+    {
+      "path": "python/deepviz/tests/test_r20_antv_color_scale.py",
+      "bytes": 9982,
+      "working_sha256": "a40317240262535b77530f416c90e23f66e2eaba6094309f3aaeb510e9e8a299",
+      "git_lf_sha256": "a40317240262535b77530f416c90e23f66e2eaba6094309f3aaeb510e9e8a299"
+    },
+    {
+      "path": "tests/browser/r20-antv-color-scale.cjs",
+      "bytes": 14447,
+      "working_sha256": "7099808e852770137f3565a99e96bccf45962b2f042d41402ba4777dfea0f668",
+      "git_lf_sha256": "7099808e852770137f3565a99e96bccf45962b2f042d41402ba4777dfea0f668"
+    }
+  ],
+  "diff": "diff --git a/python/deepviz/src/deepviz/engines.py b/python/deepviz/src/deepviz/engines.py\nindex a366259..d3e437e 100644\n--- a/python/deepviz/src/deepviz/engines.py\n+++ b/python/deepviz/src/deepviz/engines.py\n@@ -634,7 +634,7 @@ def _antv(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) ->\n     if spec.color:\n         encode[\"color\"] = \"_color\"\n         result[\"scale\"] = {\"color\": {\"range\": PALETTE}}\n-    else:\n+    elif kind not in {\"pie\", \"sunburst\", \"treemap\", \"gauge\"}:\n         result[\"style\"] = {\"fill\": PALETTE[0], \"stroke\": PALETTE[0]}\n     if temporal_x:\n         result.setdefault(\"scale\", {})[\"x\"] = {\"type\": \"time\"}\n@@ -680,7 +680,17 @@ def _antv(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) ->\n         result[\"data\"] = _histogram(data)\n     elif kind == \"heatmap\":\n         encode[\"color\"] = \"_heat\"\n-        result.pop(\"scale\", None)\n+        low = min((row[\"_heat\"] for row in data), default=0)\n+        high = max((row[\"_heat\"] for row in data), default=1)\n+        if low == high:\n+            padding = abs(low) * .05 or 1\n+            low = low - padding if math.isfinite(low - padding) else low\n+            high = high + padding if math.isfinite(high + padding) else high\n+        # Avoid G2's inferred sequential domain, which loses negative extents.\n+        result[\"scale\"] = {\"color\": {\"type\": \"linear\", \"domain\": [low, high],\n+                                     \"range\": [\"#ffffd9\", \"#081d58\"], \"nice\": False}}\n+        result[\"legend\"] = {\"color\": {\"data\": [{\"value\": low}, {\"value\": high}],\n+                                       \"labelTextAlign\": \"start\"}}\n         result.pop(\"style\", None)\n     elif kind == \"box\":\n         result[\"data\"] = [{\"_x\": b[\"name\"], \"_y\": b[\"stats\"]} for b in _boxes(data)]\n",
+  "diffCheckExit": 0
+}

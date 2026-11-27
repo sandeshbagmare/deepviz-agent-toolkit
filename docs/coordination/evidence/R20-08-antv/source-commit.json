@@ -1,0 +1,109 @@
+{
+  "at": "2026-11-27T16:18:08.883Z",
+  "branch": "fix/r20-antv-color-scale",
+  "base": "1c721bb6497746641b897eb2eb938cfad52068d2",
+  "head": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+  "message": "fix: honor AntV categorical colors and heatmap extents",
+  "commands": [
+    {
+      "exe": "git",
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0
+    },
+    {
+      "exe": "git",
+      "args": [
+        "branch",
+        "--show-current"
+      ],
+      "exit": 0
+    },
+    {
+      "exe": "git",
+      "args": [
+        "diff",
+        "--cached",
+        "--name-only"
+      ],
+      "exit": 0
+    },
+    {
+      "exe": "git",
+      "args": [
+        "show",
+        ":python/deepviz/src/deepviz/engines.py"
+      ],
+      "exit": 0
+    },
+    {
+      "exe": "git",
+      "args": [
+        "show",
+        ":python/deepviz/tests/test_r20_antv_color_scale.py"
+      ],
+      "exit": 0
+    },
+    {
+      "exe": "git",
+      "args": [
+        "show",
+        ":tests/browser/r20-antv-color-scale.cjs"
+      ],
+      "exit": 0
+    },
+    {
+      "exe": "git",
+      "args": [
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit": 0
+    },
+    {
+      "exe": "git",
+      "args": [
+        "commit",
+        "-m",
+        "fix: honor AntV categorical colors and heatmap extents"
+      ],
+      "exit": 0
+    },
+    {
+      "exe": "git",
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0
+    },
+    {
+      "exe": "git",
+      "args": [
+        "show",
+        "--format=",
+        "--name-only",
+        "3185e0d9936c7d6f1a9d30b94089b804d75fe991"
+      ],
+      "exit": 0
+    },
+    {
+      "exe": "git",
+      "args": [
+        "status",
+        "--short"
+      ],
+      "exit": 0
+    }
+  ],
+  "commitOutput": "[fix/r20-antv-color-scale 3185e0d] fix: honor AntV categorical colors and heatmap extents\n 3 files changed, 348 insertions(+), 2 deletions(-)\n create mode 100644 python/deepviz/tests/test_r20_antv_color_scale.py\n create mode 100644 tests/browser/r20-antv-color-scale.cjs\n",
+  "status": "?? docs/agent-state/ses_de56782e6ffeVWDIuY3v01kkBt.md\n?? docs/coordination/reports/R20-08-antv-color-scale.md\n",
+  "files": [
+    "python/deepviz/src/deepviz/engines.py",
+    "python/deepviz/tests/test_r20_antv_color_scale.py",
+    "tests/browser/r20-antv-color-scale.cjs"
+  ]
+}
