@@ -108,3 +108,14 @@ summary={'source_sha':subprocess.check_output(['git','rev-parse','HEAD'],text=Tr
 print(json.dumps(summary,indent=2))
 sys.exit(1 if mismatches else 0)
 ```
+
+### Owned documentation commit checkpoint
+
+- Exact3pathstageONLYownactual-IDnote/newR10report/publicationreceipt; fullstageddiffreviewed/whitespace0/credentialpatternscanPASS/receiptJSONparsed. `git commit -m 'docs: publish helper regression handoff and verified push receipt'` exit0 → **`ee30c8a600ab1610477341894922ade6e5bad7f6`**,3files199insertions, childofpublishedregression4a585cd. Ownbranchoneaheadatthischeckpoint. Production/schema diffvsexact6d0baseexit0; onlyownuntrackedartifacts.
+- Next executable action: nonforcepushsameownedbranchagainandreadbackexactee30c8aSHA; savefinalMAINreceipt andhandR04theunfixedstrictREDsourceboundary.
+
+## Completed ee30c8a publication — recovery reconciliation
+
+- Previously started synchronous push finished **exit0**: `git push origin agents/r10-09-helper-null-fix:agents/r10-09-helper-null-fix`, advanced4a585cd→**ee30c8a600ab1610477341894922ade6e5bad7f6**. Immediate`git ls-remote --heads origin refs/heads/agents/r10-09-helper-null-fix`exit0confirmedexactSHA; raw`push-handoff.log`and`remote-handoff.txt`retained. No shell remainsinflight; no duplicatepush/suiterunneeded.
+- R13same-IDrecoveryreadfullcommon+09andownnote/report; nativeIDreconfirmed. ONE boundedreconciliation`git rev-parse HEAD; git status --short --branch; git log -2 --oneline`, savedreadbackfile andfreshownbranch`ls-remote`exit0againconfirmedequalexactee30c8a; onlyownuntrackedartifacts. Production/schema diffagainst6d0baseexit0.
+- Rootexplicitlyrespectsno-production-editsconstraintandnotifiedR04toarrangeeligibleproducertransfer. Continuedownscope: immutableREDtesthash+positivecontrolhandoffandNEWportableindependentretestrecipe, NEW`reports/R13-09-helper-null-handoff.md`/`evidence/R13-09/`/`tests/r13_probes/role09/`. No test/suite replay, sourcefix orGREENclaim. Decision/sourceownerR04; fullCI/900remainunmet.

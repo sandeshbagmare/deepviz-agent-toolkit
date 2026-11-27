@@ -69,3 +69,21 @@
 - Nonforce `git push -u origin agents/r10-09-helper-null-fix:agents/r10-09-helper-null-fix`exit0; `git ls-remote --heads origin refs/heads/agents/r10-09-helper-null-fix`exit0 independentlyconfirmedexact **4a585cd2ab683421a19c217d3373478b88e49379**, matcheslocalcommit. Newownbranchonly, noissue/PR/sharedcandidatewrites. CompactMAINreceipt`docs/coordination/evidence/R10-09/publication.json`, rawownpush/readbacklogs.
 - REDhandoffpublished, NOTproducerfix: higherpriorityno-production-editsretainsrender.tsunchanged; strictnewtest31pass5fail/fullnpm277pass5fail. Build/types/schema+689corepassesareboundedonly. No finalsource/CI/browser/scale/integrationorindependenceclaimaftertestauthorship.
 - Currentaction: separateownreport/note/firstreceiptcheckpointcommit+ownnonforcepush/readback. ProductnextactionR04: applyundefined-onlyhelperdefault, rerun36newtests/fullnpm/build/type/schema/wrapper, obtainnon-authorreview/testing. DoNOTintegrateREDtestbranchalone.
+
+- Documentationcheckpointcommit **ee30c8a600ab1610477341894922ade6e5bad7f6**,3ownedpaths/199insertions/exactallowlist+fullstagedreview/whitespace0/secretpatternscanPASS. Parentpublished4a585cd; no production/schema diff; ownuntrackedartifactsonly. Nextnonforceownpush/readbackthenfinalMAINreceipt; stillREDunfixed/higherpriorityno-production-edits.
+
+## R13-09 recovery — actual ee30c8a publication saved FIRST
+
+- R10secondnonforceownpushcompletedexit0advanced4a585cd→**ee30c8a600ab1610477341894922ade6e5bad7f6**; immediatels-remotereadbackexit0/exactSHAmatch. Savedlogs`push-handoff.log`/`remote-handoff.txt`; noshellinflight, noduplicatepush/suiteneeded.
+- ReadfullMAINR13common+09/currentcanonical/ownnote/R10report; nativemoveconfirmedsameIDandEXISTINGownworktree. ONEboundedgitreconciliationHEAD/branch/last2commits/savedreceipt+freshlsremoteexit0confirmedee30c8aactualremote; onlyownuntrackedartifacts, production/schemadiffbase6d0exit0.
+- RootrespectsdeveloperTESTERno-production-editsandrequestsR04expliciteligibleproducertransfer. No editsrender.ts, source/oracle/sharedGit/PR/issues/spawning. Strict36newtests31pass5nullRED/fullnpm277pass5RED/core689passremainEXISTINGevidence, NOTrerunorfixclaim.
+- NEWownR13report/evidence/probepaths; prepareimmutabletesthash/positivecontrols/minimalundefined-onlyproposal+portableindependentretestrecipeforfutureeligibleproducercommit. FullCI/900unmet. DecisionownerR04.
+- Next executable action: addNEWown`tests/r13_probes/role09/`read-onlyretest/provenanceentrypoint, validateitsharnesswithoutreplayingfinishedsuite, thenexplicitpathcommit/nonforceownpush/readback.
+
+### R13 executable recipe / new preflight controls
+
+- AddedONLYNEW`tests/r13_probes/role09/retest-helper-null.ps1`, SHA25608a907df5755fb927f17478e6f85621ca23759070a1a2955399037f7b345179e. Exactcleancommit+immutabletest/schemahashchecks; defaultplanallNOT_RUN; actualfutureRunrejectsknownunfixedsource, newownevidence/cache/PYTHONPATH/buildpublicorigin/fullaffectedgates/exitsfailfast. No sourceedits/installs/Gitwrites.
+- NEWpreflightcontrols3PASS: sameeeplanexit0/9NOT_RUN, sameee-Runexit1expectedKnownunfixedrender.ts, wrongfullSHAexit1expectedExactcandidatemismatch; futureevidencedirabsent. Combinedcollector0, **productsuitesexecuted0**. Ownraw`artifacts/r13-09-20261127/`; detailedcommandsinNEW R13report. Executor/futurecandidateGREENNOTtested/claimed.
+- Immutableoriginaltesthashunchanged; existing31pass5RED/full277pass5RED/core689resultsretainednoreplay. NextfreshsafeGitHubidentitythenexplicitown6pathcheckpointcommit/push/readback; R04eligibleproducertransfer/fixneeded.
+
+- R13freshsafeGET/user2026-11-27T14:00:02.390834UTC200expected`sandeshbagmare`, expectedcredential-freeorigininternallyverified/GCMmemoryonly/noAPIwrites. Currentactionexplicit6ownedpathstage/fullreview/hash+secretscanthencommit/push/readback, noothersourcechanges.

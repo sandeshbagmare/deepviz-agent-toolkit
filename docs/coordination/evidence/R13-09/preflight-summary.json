@@ -1,0 +1,27 @@
+{
+  "owner_session": "ses_de56782e5ffe3H1lUAoxrBtEhx",
+  "branch": "agents/r10-09-helper-null-fix",
+  "recovered_publication_sha": "ee30c8a600ab1610477341894922ade6e5bad7f6",
+  "recovered_push_exit": 0,
+  "recovery_readback_exit": 0,
+  "recovery_remote_sha": "ee30c8a600ab1610477341894922ade6e5bad7f6",
+  "source_boundary": "Tester prohibited from production edits; root respects it; R04 must record eligible-producer transfer",
+  "immutable_regression_commit": "4a585cd2ab683421a19c217d3373478b88e49379",
+  "immutable_regression_sha256": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227",
+  "recipe_path": "tests/r13_probes/role09/retest-helper-null.ps1",
+  "recipe_sha256": "08a907df5755fb927f17478e6f85621ca23759070a1a2955399037f7b345179e",
+  "new_recipe_controls": [
+    {"control": "clean exact ee30c8a plan only", "exit": 0, "asserted_status": "PLAN_ONLY_NOT_EXECUTED", "gates_not_run": 9, "known_unfixed": true},
+    {"control": "known unfixed source -Run refused before any product command", "exit": 1, "expected_nonzero": true, "asserted_message": "Known unfixed render.ts"},
+    {"control": "wrong exact 40-character SHA refused", "exit": 1, "expected_nonzero": true, "asserted_message": "Exact candidate SHA mismatch"}
+  ],
+  "control_collector_exit": 0,
+  "new_controls_passed": 3,
+  "product_suites_executed_during_recovery": 0,
+  "future_evidence_directory_created": false,
+  "publication_auth_get": {"observed_utc": "2026-11-27T14:00:02.390834+00:00", "http": 200, "login": "sandeshbagmare", "origin_expected_https": true, "credentials_persisted": false, "api_writes": false},
+  "retained_R10_results_not_reexecuted": {"new_regression": {"passed": 31, "failed_null": 5, "skipped": 0}, "full_npm": {"passed": 277, "failed_null": 5, "skipped": 0}, "focused_core_parity": {"passed": 689, "failed": 0, "skipped": 0}},
+  "not_claimed": ["source fix", "producer GREEN", "future recipe executor successfully exercised", "final independent approval", "full CI green", "900 legitimate resolved issues"],
+  "decision_owner": "R04",
+  "next_action": "R04 records eligible source producer transfer, receives minimal undefined-only helper-defaulting commit and runs immutable tests/full gates against exact new clean source."
+}
