@@ -1,0 +1,537 @@
+{
+  "review": "R44-04 FIRST actualdd1 schema SOURCE1 follow-up; incremental to own FULLR39analysis",
+  "session": "ses_de5678314ffeuDXtC7RfGsbD6V",
+  "observed_utc": "2026-11-27T17:30:08.141258+00:00",
+  "source": "dd1c4080095c7e739582dc5c631bc419047c48d2",
+  "parent": "31cff73ab057c3fed69bd400ac005f2f11609027",
+  "own_base": "850e42efa0038b85b292cd742d8c1b4db84798bd",
+  "changed_paths_exact": [
+    "M\tpython/deepviz/src/deepviz/models.py",
+    "M\tschemas/chart-spec.schema.json",
+    "A\ttests/dashboard_schema_oracle.py",
+    "A\ttests/test_dashboard_schema.py"
+  ],
+  "prior_FULL_source_analysis_reused_honestly": {
+    "report": "R39-04-dashboard-schema-source-review.md",
+    "published_commit": "850e42efa0038b85b292cd742d8c1b4db84798bd",
+    "published_manifest_sha256": "ff304a6f67f6293b6de18ceb7d7e56eb3f329ce27061c93dd60fb65b8284e85e",
+    "old_config_source": "728bbac47b747501ad27f40525220317ea218064",
+    "actualdd1model_matches_prior_reference_SHA256": "be2cb15f6f91f2de4b9ebd4e283ea677e9e39490932db3ecd9934f2d6c1e4a1f",
+    "not_prior_approval_carried_without_actualhead_checks": true
+  },
+  "actualmodel_config_rawbytes_identical728": true,
+  "all_other_model_bytes_AST_exact_parent31cff": true,
+  "all_class_method_bytes_AST_exact_parent": {
+    "ChartSpec.preserve_json_numeric_types": {
+      "bytes_sha256": "963f416e26c6e6001f5ced303acc7dab213668d73793ab4855f25b689cdbbee4",
+      "AST_sha256": "33527473c1260de747db1d323418cbd2d2ffed73b13c71976a85a6ad93b715e3",
+      "line_start": 51,
+      "line_end": 60
+    },
+    "ChartSpec.check_dashboard": {
+      "bytes_sha256": "9b9261190daf3da5a36b846b64fef9facafe5ddac7d5476f1b4fdff947852eba",
+      "AST_sha256": "b50cdb9e831f2faac2357c0e4003e3c026ca1b9009c31446e96dc1cdbbd83397",
+      "line_start": 62,
+      "line_end": 70
+    },
+    "Artifact.to_dict": {
+      "bytes_sha256": "0e0041064fc990d71d377783b9e3c167e9dca78fae71532a82c9c884f498cff7",
+      "AST_sha256": "b4a78bcb260761d25052865be7666fd46bd4bea437445c695797f509ee7dc792",
+      "line_start": 91,
+      "line_end": 93
+    }
+  },
+  "Mapping_import_guard_FULL_read_retained": true,
+  "canonical_schema_only4semantic_compositionkeys_vs_parent": true,
+  "canonical_schema_semantically_identical728": true,
+  "canonical_schema_rawbytes_NOT_identical728_due_order_only": true,
+  "canonical_sortedserialization_identical728bytes": true,
+  "model_and_canonical_pair_only": "actualdd1tree has NO packages/ npm schema. Do NOT claimnpmcopyalreadyderived/shipped or raise missingcopyasthismodel-onlyslice regression. Future08npm must derive from approved pair.",
+  "oracle_copied_raw_unchanged_from155": {
+    "path": "tests/dashboard_schema_oracle.py",
+    "original_path": "tests/r33_probes/role14/dashboard_schema_oracle.py",
+    "ref": "155e42786ecfcdd8e04aed215c0751cd20ec3331",
+    "sha256_git_bytes": "935c768e6e9bba81f425d11ba709c5bafbeffaec60a92c87e32fb746708501ea",
+    "fullsource_read": true,
+    "literal_raw_cases": 17,
+    "standalone36_samecases_not_added_to118distinct": true,
+    "executed": false
+  },
+  "FULL118_pytest_source_declarations_NOT_RUN": {
+    "tests/test_dashboard_schema.py": 36,
+    "tests/test_models.py": 30,
+    "tests/test_native_mapping.py": 42,
+    "tests/test_numeric_schema.py": 10
+  },
+  "total_declared_pytest_cases_NOT_RUN": 118,
+  "newpytest_source_review": "48lines: literalCASES imports; runtime_json17 and generated+publishedRAW17; checkoutimport1/exportequality1. Does NOT validate model_dump in place ofraw; no swallowedunexpected exceptions or weakened expected values. Full191line standaloneoracle unchanged/main-guarded not autoexecuted onCASESimport.",
+  "tests_old82_bytes_equal_parent": true,
+  "files_source_proof": [
+    {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "blob_oid": "d827fb36a996cd281c9004bf79deaa6bf2cc75c2",
+      "bytes": 3532,
+      "sha256_git_bytes": "be2cb15f6f91f2de4b9ebd4e283ea677e9e39490932db3ecd9934f2d6c1e4a1f",
+      "lines": 93
+    },
+    {
+      "path": "schemas/chart-spec.schema.json",
+      "blob_oid": "1a805052a8f97a40827a727b278dd3ce22295f37",
+      "bytes": 4975,
+      "sha256_git_bytes": "35b5a2786db65051ff8f0289901424d74a7b2a9df87fc6c59342ced5834cd18d",
+      "lines": 237
+    },
+    {
+      "path": "tests/dashboard_schema_oracle.py",
+      "blob_oid": "ca919b8d63f0a8bc175051220fcefdfde9ae2767",
+      "bytes": 10378,
+      "sha256_git_bytes": "935c768e6e9bba81f425d11ba709c5bafbeffaec60a92c87e32fb746708501ea",
+      "lines": 191
+    },
+    {
+      "path": "tests/test_dashboard_schema.py",
+      "blob_oid": "78b81cdf5395babe4bbeb895e4e54390ca4749ae",
+      "bytes": 1723,
+      "sha256_git_bytes": "f9df72f075a16fc3a4917098a27c6528a730c5f3485d74b704492ad49cbf66e1",
+      "lines": 48,
+      "declarations_read_not_run": [
+        {
+          "name": "test_runtime_honors_literal_dashboard_json",
+          "line": 19,
+          "declared_cases_NOT_EXECUTED": 17
+        },
+        {
+          "name": "test_generated_and_published_schema_honor_raw_dashboard_json",
+          "line": 30,
+          "declared_cases_NOT_EXECUTED": 17
+        },
+        {
+          "name": "test_contract_imports_the_model_in_this_checkout",
+          "line": 39,
+          "declared_cases_NOT_EXECUTED": 1
+        },
+        {
+          "name": "test_published_dashboard_schema_is_the_actual_model_export",
+          "line": 45,
+          "declared_cases_NOT_EXECUTED": 1
+        }
+      ]
+    },
+    {
+      "path": "tests/test_models.py",
+      "blob_oid": "77441bcb9a10f80f7c24ca42e3bfc8c4ada45a30",
+      "bytes": 2684,
+      "sha256_git_bytes": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32",
+      "lines": 66,
+      "declarations_read_not_run": [
+        {
+          "name": "test_invalid_schema_values_fail_closed",
+          "line": 16,
+          "declared_cases_NOT_EXECUTED": 15
+        },
+        {
+          "name": "test_executable_and_remote_schema_fields_are_not_supported",
+          "line": 22,
+          "declared_cases_NOT_EXECUTED": 5
+        },
+        {
+          "name": "test_defaults_are_bounded_and_serializable",
+          "line": 27,
+          "declared_cases_NOT_EXECUTED": 1
+        },
+        {
+          "name": "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans",
+          "line": 38,
+          "declared_cases_NOT_EXECUTED": 6
+        },
+        {
+          "name": "test_json_integer_semantics_allow_integral_floats",
+          "line": 43,
+          "declared_cases_NOT_EXECUTED": 1
+        },
+        {
+          "name": "test_dashboard_requires_children_and_rejects_nesting",
+          "line": 47,
+          "declared_cases_NOT_EXECUTED": 1
+        },
+        {
+          "name": "test_artifact_metadata_does_not_share_mutable_defaults",
+          "line": 58,
+          "declared_cases_NOT_EXECUTED": 1
+        }
+      ],
+      "byte_identical_parent": true
+    },
+    {
+      "path": "tests/test_native_mapping.py",
+      "blob_oid": "1bcb2e6d99277e0ceb683eb13c0bbbb8277e52ad",
+      "bytes": 2012,
+      "sha256_git_bytes": "4f06bc1ad9cdc021f5081f5c59b10081783439e2fa95b69287d079e5dc82bb94",
+      "lines": 45,
+      "declarations_read_not_run": [
+        {
+          "name": "test_supported_mappings_reject_the_same_numeric_coercions",
+          "line": 16,
+          "declared_cases_NOT_EXECUTED": 30
+        },
+        {
+          "name": "test_supported_mappings_preserve_defaults_and_integral_numbers",
+          "line": 27,
+          "declared_cases_NOT_EXECUTED": 4
+        },
+        {
+          "name": "test_nested_mapping_children_cannot_bypass_the_numeric_guard",
+          "line": 37,
+          "declared_cases_NOT_EXECUTED": 6
+        },
+        {
+          "name": "test_nested_integral_mapping_children_remain_valid",
+          "line": 43,
+          "declared_cases_NOT_EXECUTED": 2
+        }
+      ],
+      "byte_identical_parent": true
+    },
+    {
+      "path": "tests/test_numeric_schema.py",
+      "blob_oid": "1485a1685d1cc87b9b902e3df7a67472681039bf",
+      "bytes": 2343,
+      "sha256_git_bytes": "b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3",
+      "lines": 59,
+      "declarations_read_not_run": [
+        {
+          "name": "test_model_import_is_this_checkout_not_an_installed_sibling",
+          "line": 14,
+          "declared_cases_NOT_EXECUTED": 1
+        },
+        {
+          "name": "test_published_schema_is_the_actual_model_export",
+          "line": 18,
+          "declared_cases_NOT_EXECUTED": 1
+        },
+        {
+          "name": "test_numeric_json_types_and_bounds_agree",
+          "line": 31,
+          "declared_cases_NOT_EXECUTED": 5
+        },
+        {
+          "name": "test_numeric_child_validation_is_not_bypassed_by_dashboard",
+          "line": 50,
+          "declared_cases_NOT_EXECUTED": 3
+        }
+      ],
+      "byte_identical_parent": true
+    },
+    {
+      "path": "README.md",
+      "blob_oid": "acc069bf9fa21b780585e4bf69fcfd7c223cd15a",
+      "bytes": 199,
+      "sha256_git_bytes": "2497e600ecd5a35af571f0f3e6f2550ce3a49b9322a607e02e6b97aa8c41d40d",
+      "lines": 3
+    },
+    {
+      "path": ".github/workflows/chart-contract.yml",
+      "blob_oid": "337f3c587eeacd4fd10003fc5776a7329909f0b5",
+      "bytes": 1051,
+      "sha256_git_bytes": "ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227",
+      "lines": 34
+    }
+  ],
+  "composition_source_disposition": "models.py20-32 retains requiredkind in if/nestednot, required/min1dashboard, elsemax0, chartsarray/max24/localref. FULLruntimeMapping53-60 and check_dashboard63-70 read. No unexpectedlogic outsideconfig; no new materialgap/counterexample warranted.",
+  "actual_head_scope": "dd1contains model/schema/tests/docs only, not old728render/CLI/TS/NPMruntime; priorconnectedanalysis is context, not claimedshippedcode/oldmatrixexecution.",
+  "must_fix_findings": [],
+  "verdict": "NO MUST-FIX in ACTUALdd1 source/model-canonicalpair/testchanges; genuine source1 review ONLY, notCI/test/PR/merge/main/v1/humanapproval",
+  "producer_remote_PR_CI_status": "notobserved; initial17:22remoteabsent is userdatedcontext, no currentpublicationclaim",
+  "executions": {
+    "product_runtime_tests": 0,
+    "old82": 0,
+    "old36_oracle": 0,
+    "NEW_counterexample": 0,
+    "browser_matrix_scale": 0,
+    "build_install": 0,
+    "API": 0,
+    "source_schema_config_oldoracle_env_shared_default_writes": 0,
+    "spawn_poll": 0
+  },
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2^"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff-tree",
+        "--no-commit-id",
+        "--name-status",
+        "-r",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "728bbac47b747501ad27f40525220317ea218064:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:schemas/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:schemas/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "728bbac47b747501ad27f40525220317ea218064:schemas/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2",
+        "--",
+        "packages"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:tests/dashboard_schema_oracle.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "155e42786ecfcdd8e04aed215c0751cd20ec3331:tests/r33_probes/role14/dashboard_schema_oracle.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:schemas/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:schemas/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:tests/dashboard_schema_oracle.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:tests/dashboard_schema_oracle.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:tests/test_dashboard_schema.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:tests/test_dashboard_schema.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:tests/test_models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:tests/test_models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:tests/test_models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:tests/test_native_mapping.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:tests/test_native_mapping.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:tests/test_native_mapping.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:tests/test_numeric_schema.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:tests/test_numeric_schema.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "31cff73ab057c3fed69bd400ac005f2f11609027:tests/test_numeric_schema.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:.github/workflows/chart-contract.yml"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2:.github/workflows/chart-contract.yml"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "850e42efa0038b85b292cd742d8c1b4db84798bd:docs/coordination/evidence/R39-04/source-review.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0
+    }
+  ]
+}
