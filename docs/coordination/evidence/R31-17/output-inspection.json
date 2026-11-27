@@ -1,0 +1,201 @@
+{
+  "source": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+  "real_mapping_observations": 109,
+  "accepted_actual_JSON_outputs": 8,
+  "strict_rejections": 100,
+  "deliberately_wrong_acceptance_detected": 1,
+  "all109_inputs_unchanged": true,
+  "samples_opened": [
+    {
+      "variant": "layered",
+      "child": false,
+      "literal_json": "{}",
+      "expected": true,
+      "schema_accepted": true,
+      "model_accepted": true,
+      "serialized_json": "{\"version\":1,\"kind\":\"bar\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":2000,\"width\":900,\"height\":520,\"theme\":\"light\",\"charts\":[],\"columns\":2}",
+      "serialized_value": {
+        "version": 1,
+        "kind": "bar",
+        "title": "Visualization",
+        "description": "",
+        "x": null,
+        "y": null,
+        "color": null,
+        "size": null,
+        "data_path": null,
+        "format": "auto",
+        "aggregation": "auto",
+        "max_points": 2000,
+        "width": 900,
+        "height": 520,
+        "theme": "light",
+        "charts": [],
+        "columns": 2
+      },
+      "input_unchanged_including_backing_identity_and_numeric_types": true
+    },
+    {
+      "variant": "TupleMapping",
+      "child": true,
+      "literal_json": "{\"kind\": \"dashboard\", \"charts\": [{}]}",
+      "expected": true,
+      "schema_accepted": true,
+      "model_accepted": true,
+      "serialized_json": "{\"version\":1,\"kind\":\"dashboard\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":2000,\"width\":900,\"height\":520,\"theme\":\"light\",\"charts\":[{\"version\":1,\"kind\":\"bar\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":2000,\"width\":900,\"height\":520,\"theme\":\"light\",\"charts\":[],\"columns\":2}],\"columns\":2}",
+      "serialized_value": {
+        "version": 1,
+        "kind": "dashboard",
+        "title": "Visualization",
+        "description": "",
+        "x": null,
+        "y": null,
+        "color": null,
+        "size": null,
+        "data_path": null,
+        "format": "auto",
+        "aggregation": "auto",
+        "max_points": 2000,
+        "width": 900,
+        "height": 520,
+        "theme": "light",
+        "charts": [
+          {
+            "version": 1,
+            "kind": "bar",
+            "title": "Visualization",
+            "description": "",
+            "x": null,
+            "y": null,
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "auto",
+            "max_points": 2000,
+            "width": 900,
+            "height": 520,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          }
+        ],
+        "columns": 2
+      },
+      "input_unchanged_including_backing_identity_and_numeric_types": true
+    },
+    {
+      "variant": "layered",
+      "child": true,
+      "literal_json": "{\"kind\": \"dashboard\", \"charts\": [{\"version\": \"1\"}]}",
+      "expected": false,
+      "schema_accepted": false,
+      "model_accepted": false,
+      "errors": [
+        {
+          "type": "value_error",
+          "loc": [
+            "charts",
+            0
+          ],
+          "msg": "Value error, version must be a JSON number, not a string or boolean"
+        }
+      ],
+      "input_unchanged_including_backing_identity_and_numeric_types": true
+    },
+    {
+      "variant": "TupleMapping",
+      "child": false,
+      "literal_json": "{\"version\": \"1\"}",
+      "expected": false,
+      "schema_accepted": false,
+      "model_accepted": false,
+      "errors": [
+        {
+          "type": "value_error",
+          "loc": [],
+          "msg": "Value error, version must be a JSON number, not a string or boolean"
+        }
+      ],
+      "input_unchanged_including_backing_identity_and_numeric_types": true
+    }
+  ],
+  "calibration_actual": [
+    {
+      "variant": "layered",
+      "child": true,
+      "literal_json": "{\"kind\": \"dashboard\", \"charts\": [{\"width\": \"900\"}]}",
+      "expected": true,
+      "schema_accepted": false,
+      "model_accepted": false,
+      "errors": [
+        {
+          "type": "value_error",
+          "loc": [
+            "charts",
+            0
+          ],
+          "msg": "Value error, width must be a JSON number, not a string or boolean"
+        }
+      ],
+      "input_unchanged_including_backing_identity_and_numeric_types": true
+    }
+  ],
+  "actual_numeric_schema": {
+    "version": {
+      "const": 1,
+      "default": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "max_points": {
+      "default": 2000,
+      "maximum": 100000,
+      "minimum": 10,
+      "title": "Max Points",
+      "type": "integer"
+    },
+    "width": {
+      "default": 900,
+      "maximum": 4096,
+      "minimum": 240,
+      "title": "Width",
+      "type": "integer"
+    },
+    "height": {
+      "default": 520,
+      "maximum": 4096,
+      "minimum": 200,
+      "title": "Height",
+      "type": "integer"
+    },
+    "columns": {
+      "default": 2,
+      "maximum": 6,
+      "minimum": 1,
+      "title": "Columns",
+      "type": "integer"
+    }
+  },
+  "actual_defaults": {
+    "version": 1,
+    "kind": "bar",
+    "title": "Visualization",
+    "description": "",
+    "x": null,
+    "y": null,
+    "color": null,
+    "size": null,
+    "data_path": null,
+    "format": "auto",
+    "aggregation": "auto",
+    "max_points": 2000,
+    "width": 900,
+    "height": 520,
+    "theme": "light",
+    "charts": [],
+    "columns": 2
+  },
+  "all_JUnit_failures_errors_skips": 0,
+  "schema_extra_properties": false
+}
