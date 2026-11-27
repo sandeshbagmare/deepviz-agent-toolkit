@@ -288,3 +288,35 @@ Firststandard `PYTHONPATH=proposal/src python -c importdeepviz.models` resolvedM
 - Readinessreview/probes/evidence commit9566872da8d0733c3412c0d2e83ff4037fe5278b nonforcepush0/actualremoteSHAreadback0 at15:14:15UTC; safeGETuser200 expected, memory-onlycredential, ancestorcheck. Receipt evidence/R22-01/publication.json. Scope NEWnested7, exacte44/parent/main source/CI1 prerequisite only; no source/workflow/oracle/API/sharedwrites.
 - Actual NEW parent3RED/4pass -> e44 7pass/0skip; schema/default/hash/importproof; main Ruff I001/explicit classification0; mypy1source0. No original30/role11 run, no SUM/npm/full product; actual FOCUSED head none, final approval false.
 - Currentaction: receipt-only docs checkpoint then final exact readback. One executable nextaction R04: prepare/publish real focused #30 head from freshmain with complete30 tests+CI1, then notify SAME reviewer for exacthead final review; root reviews completion and refills next useful disjoint work.
+
+
+## R22 final actual remote readback / handoff
+
+- Final OWNremote tip d9e4dccec65fc2c5bad601e3efcb5d359e5127d9 observed15:18:05UTC: safeGETuser200expected, nonforcepush0, actualexactremoteSHAreadback0. Initial review9566872 and final receipt-only d9e4dcc genuine. MAIN evidence/R22-01/publication-final.json/final-readback.json exact receipts.
+- Finalreadback0: ownworktree clean, production/existingoracle/SUM diffempty, evidence hashes and executedprobe Gitbytes exact. Actual outcome readiness only: e44 no extra numericruntimefinding in scope; CI1 main test prerequisite; NEW parent3RED4pass/e44 7pass. No focusedhead/PR/merge/CI/issueclosure/finalapproval.
+- Durable report docs/coordination/reports/R22-01-contract-review.md, evidence/R22-01/, probes tests/r22_probes/role01/, OWN branch agents/r10-01-correctness-regressions. No source/workflow/oracle/API/sharedwrites/install/spawn.
+- Currentaction: genuine scoped R22 handoff. One executable nextaction R04/root: prepare actualfocused #30 head from freshmain with complete30tests+CI1, then supply immutable head for SAME reviewer final review; review completion/decision and refill next useful disjoint work.
+
+
+## R24 SAME-ID helper-null independent review PRE-WORK
+
+- ActualID ses_de5678335ffeI7xJrod5l25Q0Q nativeconfirmed; FULLR24common+01/currentMAINAGENTS/canonical/ownnote/worktreeAGENTS/RESUME+STATEread. Ownexistingbranch agents/r10-01-correctness-regressions CLEAN HEAD d9e4dccec65fc2c5bad601e3efcb5d359e5127d9. Exactreviewsource7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57 parent5340bc69b7203ad7a9166543062482d819f9b705 verified. One-line helperfix plus97lineNEWoriginalauthororacle/two producttestpaths; fullcommit9paths includes OWNauthornotes/evidence, not allsource. No producerdirtysnapshotused.
+- Allowedonly NEWMAIN reports/R24-01-helper-null-review.md/evidence/R24-01/, NEWtests/r24_probes/role01/ ifgenuinemissingboundary, ownnote/ignoredGitblob snapshots/OWNbranch smallmeaningfulcommit/nonforcepush/exactremoteSHA. No production/originaloracle/workflow/APIwrites/sharedstaging/install/spawn.05ownstheunchanged36+40matrix; no duplicatematrix/fullnpm/core689/browser/SUM/npmoldfixture replay.
+- Goal: fullminimaldiff+fivepublichelpercallers/schema/inputshapes and omitteddefault vs explicitnull/false/zero/arrays/extras/dashboard/engine/dataauthority/errorcompatibility. Sourceonlyreviewallowed andwillbelabeled; runtimeclaimonlywithactualsource/build/importproof. No tinyprobe unless concreteuncoveredinvariantfound; no padding.
+- Retain #30actualfocusedreviewer assignment: R22e44readiness/CI1 alreadyhandedback, no actualFOCUSEDSHA/PR/workflowprovidedhere. Uponactualroot/R04immutablehead checkpointthisshortreview andverifyALLfocusedpaths+affectedstrictcontrols; noidleheadpoll/approvalinvented.
+- Currentaction savespreworkbeforeGitobjectmaterialization/fullsourceandtestdiffread. One executable nextaction: git diff 5340bc6 7d8ccdc -- packages/deepviz/src/render.ts packages/deepviz/test/test_r07_tool_spec_null.test.mjs; readcreateTools/validateSpec/types/index/schema andcallers beforedecisiononnewtests. No productpassclaimed.
+
+
+## R24 full minimal diff / connected source checkpoint
+
+- ActualGitobjects7d8(parent5340), fullpackage2pathdiffread + entire97lineoriginalauthororacle.09commitpaths includesauthornotes/evidence; no broadsourceclaim. Actual11capturedfiles verified; onlyrender.ts/newauthororacle differ,9connectedfiles byte-identicalparent. One-lineexactbyte substitution `input.spec??{}` -> `input.spec === undefined ? {} : input.spec`; schemas package/canonicalEXACTbytes. No build/moduleimport/tests run by01, zero runtimepassclaims.
+- Sourcecallchain reviewed: five browserEngines map/sameclosure fromrenderers6 -> createToolsrender133-142 -> render113-114 -> buildRendererSpec49-71 -> validateSpecmodels64-96 before normalization. Null now reachesisObject rejectionmodels49-50/68; omitted/undefineddefault{}, false/0/[] remainmalformedanduncoerced, extrasforbidden; validdashboard/mappings unchanged. Allnon-nullJSONvalues followidenticalpath; data remainsinput.data, engines/options trustedhostclosure, wrapper/unknownspecerrors unchanged exceptnullnowrejectsValidationError.
+- Source-only conclusion no mustfix inone-linehelperrepair, exactlyaddresses demonstratednull-schema mismatch withoutbroadenedJSONacceptance. OriginalauthororacleREADcoversnull/primitive/default/mapped/dashboardchecks;05ownstheadditional40matrixbutitscoverage/resultswerenotread/executed/borrowedhere. Sourcecallchainshowsremainingwrapper/data/engine/errorbranchesunchanged. No genuineuncoveredcase requiringNEWprobe; nonecreated/nopadding. No runtime/browsers/05results borrowed; fulltoolkit/otherdefectsnotapproved.
+- #30actualfocusedreview retained; noimmutablefocusedhead suppliedhere/noidlepolling/finalsignoff. Currentaction savecompactsource-onlyreport+staticdiff/hashes/ownedcheckpointthenmeaningfulOWNpublication. Next executableaction gitdiffcachedcheck after explicitownedstaging, nonforceOWNpush/exactSHA; R04/rootnotifyactualfocusedheadfornextallpaths+strictcontrols review.
+
+
+## R24 source-only review pre-publication checkpoint
+
+- Compactreport MAIN reports/R24-01-helper-null-review.md/evidence/R24-01 saved. Exact7d8vs5340 fulltwo-pathpackage diff/contextreview,11Gitblobhashes/9unchangedconnected/oneexactbyte-substitution/schemabytes proof. Source-only no mustfix in one-lineJSONnullrepair;0build/import/tests/browser/05results borrowed; no NEWpaddingprobe/oracle/sourceedits.
+- Review preservesundefinedomissiondefault/nullrejection/false0arrays/extras/dashboard/mapping/dataenginehostauthority/errorcompatibility. Runtime/build/package/05independentmatrix/CI/finalhead remainunverified. #30actualfocusedreview1retained, currentimmutableheadNOTsuppliedhere; noidleheadpolling.
+- Currentaction explicitOWNpaths scan/stage/diffcheck/meaningfulsource-reviewcommit/nonforceOWNpush/exactSHA. No publicationSHA predicted. Next executableaction gitdiffcachedcheck and commit; then ROOT/R04notifyreal#30head for ALLpaths+strictcontrols nextreview.
