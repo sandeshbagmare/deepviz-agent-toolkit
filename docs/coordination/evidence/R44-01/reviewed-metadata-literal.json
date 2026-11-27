@@ -1,0 +1,49 @@
+{
+  "if": {
+    "properties": {
+      "kind": {
+        "const": "dashboard"
+      }
+    },
+    "required": [
+      "kind"
+    ]
+  },
+  "then": {
+    "required": [
+      "charts"
+    ],
+    "properties": {
+      "charts": {
+        "minItems": 1
+      }
+    }
+  },
+  "else": {
+    "properties": {
+      "charts": {
+        "maxItems": 0
+      }
+    }
+  },
+  "allOf": [
+    {
+      "properties": {
+        "charts": {
+          "items": {
+            "not": {
+              "properties": {
+                "kind": {
+                  "const": "dashboard"
+                }
+              },
+              "required": [
+                "kind"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

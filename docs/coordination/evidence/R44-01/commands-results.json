@@ -1,0 +1,52 @@
+{
+  "source": "dd1c4080095c7e739582dc5c631bc419047c48d2",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "dd1c4080095c7e739582dc5c631bc419047c48d2^"
+      ],
+      "exit": 0,
+      "actual": "31cff73ab057c3fed69bd400ac005f2f11609027"
+    },
+    {
+      "argv": [
+        "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+        "capture_r44.py"
+      ],
+      "exit": 1,
+      "kind": "reviewer initializer assumption FileNotFoundError, after snapshot, before product execution"
+    },
+    {
+      "argv": [
+        "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+        "prove_origin.py first attempt"
+      ],
+      "exit": 1,
+      "kind": "OWN helper checkpoint string SyntaxError before execution"
+    },
+    {
+      "argv": [
+        "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R44-01\\prove_origin.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R44-01\\static_review.py"
+      ],
+      "exit": 0
+    }
+  ],
+  "scanner_rejected_requests_before_execution": 2,
+  "all17_rawGitfiles_reverified": true,
+  "product_import_calls": 0,
+  "pytest_or_portable_oracle_run": 0,
+  "NEWcounterexamples": 0,
+  "product_lint_mypy_export_runtime": "NOTRUN source-only task, acceptance lanes own fresh gates, no borrowed authorpasses",
+  "genuine_SOURCE2_verdict": "no new mustfix onlyexactdd1",
+  "product_remote_PR_CI_main_approval": false
+}

@@ -434,3 +434,30 @@ Firststandard `PYTHONPATH=proposal/src python -c importdeepviz.models` resolvedM
 - MAINfinalreportR38-01-mean-source-review/evidenceR38-01 complete: no NEWmustfix ONLYc1b Pythonmean source. FULLnormalize776lines/new21produceroracles/6publiccallerpathsread. ExactGit/rawhashf3cc6e.../16files/parent79232/P1ancestor5ba8600 verified; ASTonlychangedadd+finish,30othersunchanged/32unitcoverage. Numerator/singledivision/subnormal/overflow/validdenominator/null/count/weighted-other/signedzero/budget/lifetime inspected. Not546/prefixSUM/scalar/GraphQL/TS/main/wholebranchapproval.
 - 0productimports/calls/pytest/benchmarks/newprobes; no materialgap=no runtimepadding. Initialguessed5ba69originexit128beforetests correctedviaactualGitlog+ancestorproof. TWOreport-shellguardrejectionsbeforeexecution, boundedprosewritescomplete; readbackcaughtappendnewlinejoinandfixedONLYownedreport. No source/originaloracle/config/schema/install/env/API/shared/spawn/jobpollwrites.
 - Currentaction ONEmeaningfulOWNexplicitpathscommit/nonforcepush/exactremoteSHA thenpromptreturn. NextR04: combinegenuine11+05/TSacceptancewiththisnarrowPythonmeanSOURCEclear forintendeddependency-completePR/preserveactualmainfixes. Integrated/new546headrequiresownaffectedgates; no oldgate/Mappingreplay/statusloop.
+
+
+## Actual OWN scoped publication
+
+Review commit **fe871dcfb5e9cfed413424cb8af0348d99feb202** NONFORCEpushed2026-11-27T17:08:40.620740+00:00; push0/exactactualremoteSHAreadback0/expectedfreshGETuser200, credentials memory-only. MAIN evidence/R38-01/publication.json/final-readback.json retain actual receipts. Own worktree clean;8published evidence hashes verified/source-oracle-config-schema diff0. Narrow c1b Python mean SOURCE clear; productruntime/tests0, no546/main/TS/runtime/CI/humanapproval claim. NextR04 consumegenuine affected gates andadvance dependency-completeusablePR, notwholebranchmerge.
+
+
+## R44 dashboard schema independent SOURCE2 PRE-WORK
+
+- SAMEID ses_de5678335ffeI7xJrod5l25Q0Q/OWNbranch agents/r10-01-correctness-regressions CLEANfe871dcfb5e9cfed413424cb8af0348d99feb202. FULLcurrentMAIN R44packet15lines/common+01/currentAGENTS/R42central23lines/canonical/ownnote read. Priorc1bSOURCEreviewcomplete/0runtimeacceptedNARROWONLY; known11meanF1meansNOfulldataapproval. No Mapping/mean/oldmatrixreplay/currentjobinterruption.
+- ExactNEWlocalSOURCEdd1c4080095c7e739582dc5c631bc419047c48d2 parentactualmain31cff73ab057c3fed69bd400ac005f2f11609027 verifiedGitobject. RootreportedremoteABSENT17:22; no publication/PR/CIclaimed. Reviewer01SOURCE2 independentof04; R04author118/Ruffmypy/schemafreshnessareNOTourpasses/approval. Inspectfull14lineconfig/canonical47linechange/fullmodel/callers/original82/new36/17rawliteraloracles; config-onlyASTexceptmetadataexact31cff andmetadata728equivalenceMUSTproveourselves.
+- AllowedONLYNEWreports/R44-01-dashboard-schema-source-review.md/evidenceR44-01/ownnote/centralstatusrole01MAIN+OWNcopy/OWNbranchmeaningfulsource-reviewcommit/nonforce/exactremoteSHA. No production/schema/config/originaloracle/deps/install/env/API/shared/defaultwrites/spawn/poll/oldmatrices. NEWstrictcounterexampleONLYrealuncoveredgap, no runtimepadding or borrowing14/20tests.
+- Currentaction savedpreworkBEFOREsubstantiveinspection. Next executableaction actualdd1Gitdiff/tree/sourcehashcapture thenfullconditional/default-kind/missing-empty/nested/malformedchildren/extra/numeric/integralJSON/nativeMapping/raw17oraclesread; staticequivalenceproofandboundedcounterexampleONLYifconcretegap. EstimateUNKNOWNuntilsourceproof/readcomplete; fullreleaseforecastR04/rootonly.
+
+
+### R44 origin/actual-main namespace checkpoint
+
+- InitialcapturecopiedALL17actualdd1Gitblobs/diffthenreviewerassumed__init__.pyinunchanged-filelist→FileNotFoundErrorexit1BEFOREproductexecution. Readactual17-fileGit tree: actualmainnamespace packagehasmodels.pyONLY, no initializer/render/tools in BOTHparent31cff+dd1; notnewmissingmodulefinding. CorrectALL17rawGitbyteidentity/original82testfiles/workflow/pyprojectsameparentnowverified. Exact728metadatareference resolvedfromGitlog728bbac47b747501ad27f40525220317ea218064; no copyingwholeoldmodel.
+- Currentaction fullcurrentmodel/canonical/newraw17fixtures+original82/currentconsumerCIread, outsideconfigASTproof against31cff andcompositionvalueAST728 independently.0runtime/tests. Next action staticproofandgenuinegapanalysisonexactdd1; forecastUNKNOWNuntilsourceconclusion.
+
+## R44 actual source-equivalence checkpoint
+
+- FULL dd1 model93/canonical237/newraworacle191/newpytest48/original82 files/workflow34/pyproject42 read. Independent static checks0: ENTIREmodule AST+raw outside config20-32 EXACT31cff; extra-forbid/fields/defaults/Mapping/validators/dataclasses unchanged. Fullconfig AST EXACT728bbac47b747501ad27f40525220317ea218064; four metadata keys canonical-literal equal; entire remainder schemaJSON EXACTparent.
+- Entire portable oracle bytes EXACT155e427/published935c768e6e9bba81f425d11ba709c5bafbeffaec60a92c87e32fb746708501ea.17RAWliteral decisions inspected,5positive12negative; never model_dump-derived. Newpytest defines34semantic+2guards; original82bytesunchanged. Author118 is NOT our runtime pass.
+- 0productimports/calls/pytest/portable-oracle runs/probes; no material source gap, no new counterexample/padding. Source-only no-mustfixdd1; notCI/PR/publication/main/fulltoolkit approval. Current ONLYown centralrole01 MAIN+OWN records exactsource/results/blockerR04/next/estimateUNKNOWN.
+- Harness history: initial initializer assumption FileNotFoundError1; recovery-helper escaped-newline SyntaxError1; both BEFORE product execution. Two combined-write tool requests scanner-rejected BEFOREexecution; smaller static helper/central writes succeeded. Product/source/oracles unchanged, failures retained not relabeled passes.
+- Next: finalize owned report/evidence, one meaningful scoped OWN commit/nonforcepush/exactSHA, prompt handoff. R04 combines actual04source+14/20tests+exactCI for usable schemaPR/merge; no borrowed approval/oldmatrix/CIpoll. Known11meanF1 remains separate from prior c1bsource-clear.

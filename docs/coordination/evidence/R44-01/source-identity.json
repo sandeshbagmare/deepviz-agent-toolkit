@@ -1,0 +1,119 @@
+{
+  "source": "dd1c4080095c7e739582dc5c631bc419047c48d2",
+  "actual_parent": "31cff73ab057c3fed69bd400ac005f2f11609027",
+  "raw_snapshot_exact_Git_LF": true,
+  "files": {
+    ".github/workflows/chart-contract.yml": {
+      "sha256": "ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227",
+      "bytes": 1051,
+      "lines": 34
+    },
+    ".gitignore": {
+      "sha256": "3bebcceee3a15392de8f9a36815347d9a999e21fe58efe576ef28b9664b00e77",
+      "bytes": 205,
+      "lines": 18
+    },
+    "LICENSE": {
+      "sha256": "afbb59a0c0fccdea7ecc9140e4e762455dc06abea4f02d9cf5324c8fb23b42fd",
+      "bytes": 1077,
+      "lines": 21
+    },
+    "README.md": {
+      "sha256": "2497e600ecd5a35af571f0f3e6f2550ce3a49b9322a607e02e6b97aa8c41d40d",
+      "bytes": 199,
+      "lines": 3
+    },
+    "docs/superpowers/plans/2026-11-26-deepviz-plan.md": {
+      "sha256": "9d941cd545a8a37ddbf6d9395d882ba25360318b35ff93d36ed1556f3668d834",
+      "bytes": 3191,
+      "lines": 47
+    },
+    "docs/superpowers/specs/2026-11-26-deepviz-design.md": {
+      "sha256": "715ef120ba4700ea28ef5dbd1d975cd80cf3cc5b659e64fc9e6cd231c664a973",
+      "bytes": 3206,
+      "lines": 25
+    },
+    "docs/verification/r22-contract/README.md": {
+      "sha256": "f83f3e84a78d9a88c4a96d7df489f19e7fb4a6739c9e662d781f10f06670b3a6",
+      "bytes": 2893,
+      "lines": 28
+    },
+    "docs/verification/r22-contract/red-green-summary.json": {
+      "sha256": "e3db9381970aa74f9a9f9ede2c87712dcd47636c34520fb3984ee39107bf1937",
+      "bytes": 5057,
+      "lines": 114
+    },
+    "docs/verification/r22-contract/validation-output.json": {
+      "sha256": "3896de0d87545af60fc63bdee608b202055ea55d84dc7f49d1334ab729d02a0b",
+      "bytes": 4915,
+      "lines": 225
+    },
+    "pyproject.toml": {
+      "sha256": "c80640f3f3049b9734360abd7bb1b5699449d7bad31f3fcde77c3e2b38a53053",
+      "bytes": 1259,
+      "lines": 42
+    },
+    "python/deepviz/src/deepviz/models.py": {
+      "sha256": "be2cb15f6f91f2de4b9ebd4e283ea677e9e39490932db3ecd9934f2d6c1e4a1f",
+      "bytes": 3532,
+      "lines": 93
+    },
+    "schemas/chart-spec.schema.json": {
+      "sha256": "35b5a2786db65051ff8f0289901424d74a7b2a9df87fc6c59342ced5834cd18d",
+      "bytes": 4975,
+      "lines": 237
+    },
+    "tests/dashboard_schema_oracle.py": {
+      "sha256": "935c768e6e9bba81f425d11ba709c5bafbeffaec60a92c87e32fb746708501ea",
+      "bytes": 10378,
+      "lines": 191
+    },
+    "tests/test_dashboard_schema.py": {
+      "sha256": "f9df72f075a16fc3a4917098a27c6528a730c5f3485d74b704492ad49cbf66e1",
+      "bytes": 1723,
+      "lines": 48
+    },
+    "tests/test_models.py": {
+      "sha256": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32",
+      "bytes": 2684,
+      "lines": 66
+    },
+    "tests/test_native_mapping.py": {
+      "sha256": "4f06bc1ad9cdc021f5081f5c59b10081783439e2fa95b69287d079e5dc82bb94",
+      "bytes": 2012,
+      "lines": 45
+    },
+    "tests/test_numeric_schema.py": {
+      "sha256": "b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3",
+      "bytes": 2343,
+      "lines": 59
+    }
+  },
+  "changed_paths": [
+    "M\tpython/deepviz/src/deepviz/models.py",
+    "M\tschemas/chart-spec.schema.json",
+    "A\ttests/dashboard_schema_oracle.py",
+    "A\ttests/test_dashboard_schema.py"
+  ],
+  "original82_workflow_pyproject_unchanged": {
+    "tests/test_models.py": "exact parent Git bytes",
+    "tests/test_numeric_schema.py": "exact parent Git bytes",
+    "tests/test_native_mapping.py": "exact parent Git bytes",
+    ".github/workflows/chart-contract.yml": "exact parent Git bytes",
+    "pyproject.toml": "exact parent Git bytes"
+  },
+  "actual_main_module_shape": "namespace package model only; __init__/render/tools absent in BOTH parent+new; not new regression",
+  "composition_provenance_commit": "728bbac47b747501ad27f40525220317ea218064",
+  "own_proof_helper_parse_error_before_execution": {
+    "exit": 1,
+    "cause": "missing escaped newline in OWN checkpoint literal, corrected before any helper execution"
+  },
+  "product_runtime_calls": 0,
+  "remote_publication_PR_CI_unverified": true,
+  "initial_capture_error": {
+    "exit": 1,
+    "kind": "FileNotFoundError",
+    "cause": "reviewer assumed initializer file, actual main is namespace package",
+    "before_product_execution": true
+  }
+}
