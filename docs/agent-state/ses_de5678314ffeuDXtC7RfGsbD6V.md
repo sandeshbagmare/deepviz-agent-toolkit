@@ -2,6 +2,9 @@
 
 ## R10 SAME-ID continuation — active 2026-11-27
 
+- **Latest R10 status:** code/test checkpoint `2d9d2c15894ab9a5859d95060cd4fd3bba875061` actually non-force pushed to own `agents/r10-04-utf8-field-envelope` (exit0), exact ls-remoteSHAreadback0/matchtrue at2026-11-27T02:47:31.1591472UTC; ownworktreeclean. NEWPython104pass/TS105pass/scopedlint-types0; originalN11still4RED22pass, notfullgreen. Receipt-only own-docs follow-up next; finalMAINreceipt after its actualpush, no predictedSHA.
+- Durable R10report `docs/coordination/reports/R10-04-utf8-field-envelope.md`, compactsource/checks `docs/coordination/evidence/R10-04/utf8-envelope-checkpoint.json`, actualfirstpublication `docs/coordination/evidence/R10-04/publication-receipt.json`. No production/existingtest/policyedit, no PR/issue/sharedbranchwrite, noinstalls. NextR04action: inspect publishedNEWtests and arrange non-author review/rerun after16handback.
+
 - Latest assignment read FULL MAIN `tasks/R10-rolling-agile-sdlc.md` common+04, own R03 report/note, PROJECT_STATE/RESUME/AGENTS. Native session_move reconfirmed actual ID `ses_de5678314ffeuDXtC7RfGsbD6V`. No spawning; root alone handles rolling18–22 admission, POC=point of contact.
 - Goal: publish portable NEW literal UTF-8 field/cell/composite/array-index/early-consumption/state controls with explicit Python/TS envelopes on checkpoint `3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab`, not moving MAIN or modifying normalizers16-owned/existing tests/policy. Preserve R03 baseline.
 - Planned own branch/worktree: `agents/r10-04-utf8-field-envelope`, NEW `C:/Users/bagma/AppData/Local/Temp/opencode/r10-04-utf8-field-envelope-ses_de5678314ffeuDXtC7RfGsbD6V`. Object3aa exists; own branch absent (`show-ref` exit1 expected), destination absent. R03 remains detached0c5 with only preserved own untracked probes; MAIN independently advanced to ca25af4 per worktree enumeration, not our test source.
@@ -15,6 +18,7 @@
 - Current action/next executable action: create NEW literal shared fixtures plus Python/TS boundary/state tests under `tests/r10_probes/role04/`, then run isolated checks using own source and read-only shared tooling. No source/policy/existing-oracle modification.
 - R10firstchecks: NEWPython104pass0skip0.84s/Ruff0; mypy1twoNEWdict-item inference errors(nested/array assignment after scalar-only rowinference). NEWTS105pass0skip685.6573ms/build0/types0; stateabortreservoir273/group137sourceyields,1iteration/notexhausted/closed. Next own-only rowtypeannotation +state diagnostics, then rerun/retain exact evidence. Existing source/oracles untouched.
 - R10finalchecks: NEWPython104pass0fail0skip1.42s/Ruff0/mypy0(onefile), NEWTS105pass0fail0skip1868.5154ms/build0/types0. Pythonstateaborts273reservoir/273group, TS273/137; positivecontrolsconsume512retain10anddiscloseloss. OriginalN11still22pass4fail0skip1.45s(exit1), N21TS23pass0skip2132.6926ms(exit0). Production/schema/existingN11diffagainst3aa0. Currentaction: compactsanitizedevidence,explicitownstagedscope/credentialscan,smallhonestcommit/nonforceownpush/remoteSHAreadback; nofinalacceptance.
+- R10commitcheckpoint: sevenexplicitownfiles, stagedwhitespace0/scope+credentialscan0(no matches), stagedNEWtest/reportdiffread. Own commit `2d9d2c15894ab9a5859d95060cd4fd3bba875061` exit0,7files623insertions, ownworktreeclean. Push/readback NOTyetexecuted. Nextaction: `git -c credential.interactive=false push -u origin agents/r10-04-utf8-field-envelope` nonforce, then compare actual`ls-remote`SHA; no sharedbranchwrite.
 
 ## Final handoff checkpoint — 2026-11-27
 

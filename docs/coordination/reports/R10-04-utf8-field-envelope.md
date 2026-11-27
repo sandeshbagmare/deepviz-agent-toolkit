@@ -1,6 +1,6 @@
 # R10-04 — portable UTF-8 field-envelope regressions
 
-**Status:** NEW regression validation complete on checkpoint; own-branch publication receipt pending actual execution. No production/policy/existing-oracle fix, final acceptance or whole-suite green claimed. Date2026-11-27.
+**Status:** NEW regression checkpoint **published** as `2d9d2c15894ab9a5859d95060cd4fd3bba875061`; non-force own push0and exact remote-SHA readback0at02:47:31UTC. This report's receipt-only follow-up does not change tested code. No production/policy/existing-oracle fix, final acceptance or whole-suite green claimed. Date2026-11-27.
 
 ## Owner, source and scope
 
@@ -46,6 +46,8 @@ First Python run104pass0skip0.84s/Ruff0; initial mypy1from two NEW probe-local d
 ## Publication, limits and next action
 
 - Publication plan (NOT an executed claim yet): stage only explicit owned files, inspect staged diff/whitespace/scope and credential scan, small meaningful commit, non-force push only own branch, verify remote SHA and save actual MAIN receipt. R04aloneintegrates/issues/PRs.
+- Executed prepublication: seven explicit own files staged; staged whitespace check0, exact-path/credential-prefix/large-file/JSON checks0; full NEW-test/report staged diff inspected. No credential match or out-of-scope file. `git commit -m "test: add portable UTF-8 field-envelope regressions"` exit0created `2d9d2c15894ab9a5859d95060cd4fd3bba875061`,7files623insertions, own worktree clean. No push yet; this is not remote publication.
+- Executed publication supersedes the earlier pending checkpoint: `git -c credential.interactive=false push -u origin agents/r10-04-utf8-field-envelope` exit0(new own branch), then `git -c credential.interactive=false ls-remote --heads origin refs/heads/agents/r10-04-utf8-field-envelope` exit0returned exact `2d9d2c15894ab9a5859d95060cd4fd3bba875061`; local/remote equality asserted and own worktree clean. Actual snapshot2026-11-27T02:47:31.1591472UTC. No PR/issue action or shared ref push. Durable machine receipt: [`../evidence/R10-04/publication-receipt.json`](../evidence/R10-04/publication-receipt.json).
 - Not run: full product suites/global lint/types, npmci/install, distributions/browser/visual gates,10Mscale/processRSS/continuous memory, non-author review/test or final CI. Finite state controls are not a memory/scale benchmark. Original fourREDpolicy positives remain uncorrected.
-- **Current action:** commit/publish this scoped tested checkpoint; authentication is verified, no local blocker.
-- **Next executable action:** explicit-path `git add -- <own seven files>` followed by staged scope/whitespace/credential checks; commit/non-force own push and actual remote SHA readback before returning. Then R04 reviews tests/policy distinction and reruns after16normalizer changes, without marking issue22or the full project complete.
+- **Current action:** publish the small receipt-only update on the same own branch; code/test/evidence identities remain those validated above. Latest final branch-ref receipt is saved in MAIN after actual readback, not predicted here.
+- **Next executable action (R04 after receipt):** inspect `git show 2d9d2c15894ab9a5859d95060cd4fd3bba875061 -- tests/r10_probes/role04` and the104/105pass versus original4RED evidence; assign genuine non-author review/testing and rerun these portable commands after16normalizer handback. R04alone decides integration/policy/issues/PRs; do not close issue22or claim full delivery.
