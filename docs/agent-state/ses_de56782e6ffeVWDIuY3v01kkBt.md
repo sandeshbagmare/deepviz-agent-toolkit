@@ -15,6 +15,7 @@
 - Authenticated read-only observation 2026-11-27T14:08:20.206Z: sandeshbagmare/repo public/push, OWN R11 branch404, issue25open, PR31open draft/unmerged head5340bc6; 12 checks (npm success/Python failures). No GitHub write yet.
 - Current action: copy compact full-green evidence + own R11 report/note, scope/secret/diffcheck, receipt commit. Next: nonforce push own R11 branch, ls-remote actual SHA, hand to R04; no integration/issues/PR writes.
 - Evidencepacketready:65sanitizedcopies/all6PNGs~156887B+index/report/noteonly; stagedcheck0/scopecredentialscan0/helpermanageroriginexpectedauthorconfirmed. All65indexblobsverified; only2tarlistlogsGitCRLF→LF,63byteidentical; indexhasrawandpublishedGitSHA256/bytes. Sourcecommitf9c4372 unchanged, recordsevidencecommitnext.
+- ACTUALpublication: sourcef9c437286c9dfe2245a7d914995d90346e29c233, evidencea1c84506b71b454e159cc44f0e359f2a5ecaf32a; ownnonforcepush0+immediate ls-remote0 exacta1c84506b71b454e159cc44f0e359f2a5ecaf32a. Branchagents/r11-08-npm-prompts, no candidate/issues/PRwrites. All4sourcepaths handed back R04; no further produceredit. SavedR11reportactualreceipt+limits+cherrypickrecipe; rootnextdisjointreservation. Notself-independent/finalCI900claim.
 - Next executableaction: writepermanentNEWtest_r11_packaged_prompts.test.mjs FIRST, ownisolatednpmci/build then strictmissingpromptREDbeforeproductionfix. Saveexactchecks/exits/bytehashes andmeaningfulcheckpoints.
 
 ## R10 SAME-ID continuation — pre-work

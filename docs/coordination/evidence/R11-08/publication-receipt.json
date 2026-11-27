@@ -1,0 +1,37 @@
+{
+  "ownerSession": "ses_de56782e6ffeVWDIuY3v01kkBt",
+  "branch": "agents/r11-08-npm-prompts",
+  "sourceBase": "ca25af486bf443949125df789f5b5fd1fda8bba8",
+  "sourceCommit": "f9c437286c9dfe2245a7d914995d90346e29c233",
+  "evidenceCommit": "a1c84506b71b454e159cc44f0e359f2a5ecaf32a",
+  "push": {
+    "command": "git push -u origin agents/r11-08-npm-prompts",
+    "exit": 0,
+    "force": false,
+    "newOwnBranchOnly": true
+  },
+  "remoteReadback": {
+    "command": "git ls-remote --heads origin refs/heads/agents/r11-08-npm-prompts",
+    "exit": 0,
+    "sha": "a1c84506b71b454e159cc44f0e359f2a5ecaf32a"
+  },
+  "acceptance": {
+    "permanentRed": {"passed": 0, "failed": 5, "skipped": 0, "exit": 1},
+    "permanentGreen": {"passed": 5, "failed": 0, "skipped": 0, "exit": 0},
+    "npm": {"passed": 251, "failed": 0, "skipped": 0, "exit": 0},
+    "externalConsumer": {"passed": 13, "failed": 0, "skipped": 0, "exit": 0},
+    "publicTypes": 16,
+    "runtimeExports": 13,
+    "browserCases": 6,
+    "browserConsolePageExternalErrors": 0,
+    "actualImagesOpened": 6,
+    "tarballMembers": 25,
+    "tarballBytes": 46323,
+    "tarballSha256": "eb4b3f89f77b548ba6dadaf6e7735dac0c4336c8c3c5e66fb428e02284d17ff5",
+    "repeatPackIdentity": true,
+    "allCanonicalPromptFiles": 3,
+    "allUnchangedRuntimeTypeSchemaDistFiles": 19
+  },
+  "sourceOwnershipReturnedTo": "R04 ses_de56ad930fferPKGibj5Mc304B",
+  "limitations": "Author evidence, not independent final review/frozen-source/green CI/release/900 issue acceptance. No candidate, default branch, issue or PR mutation."
+}
