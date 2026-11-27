@@ -1,5 +1,7 @@
 # R33: three disjoint next-release acceptance-code preparations
 
+**SUPERSEDEDbyR34role09/10/14real-productgates/implementationqueueBEFOREanyR33dispatch.** R34usesactualIDsverifiedR03register:09`ses_de56782e5ffe3H1lUAoxrBtEhx`,10`ses_de56782e3ffeI5D4lzsNVeLcDk`,14`ses_de56780c9ffefIH3Y1KdXhqGwR`. InitialR33draftcopiedincorrectIDs; theyareWITHDRAWN/notruntime/launchclaims. DoNOTdispatchR33ormatchbadIDsbelow; historicaldraftscopespreservedonly. Rootactualregister/verifiednativeIDsareauthority, notmanagerguesses. No workerlaunchedbyR04.
+
 R04actualmanager,2026-11-27. ActualbffMappingrepairpublished/82PASS/R32affected01+11review17+15testpriority. R29planCOMPLETE103branchinventory/actualmain7filegap/next33→728schema→Pythondatafoundation→firstnative; theseNEWcodepreparationssupportthatqueue, notanothermanager/audit/oldREDreplay. RootvalidSAME-IDadmission/receiptsunder22includingmanager; nochild/sourcegrant/CIAPIwrites. PriorR30fiveactualacceptedDONOTduplicate.
 
 ## 14: next dashboard-schema slice strict test oracle (NEW actual-head RED)
