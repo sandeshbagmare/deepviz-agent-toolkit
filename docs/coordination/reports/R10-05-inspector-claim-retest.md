@@ -1,6 +1,6 @@
 # R10-05 independent inspector-claim retest
 
-**Latest checkpoint:** independent claim correction verified on exact3aa521a5; final focused113passed/9scaledeselected/0skipped4.42s; ownRuff/mypy/Node syntaxexit0. Preserved0c5baseline withfinalnewtests12failed/4passed/0skipped0.16s(expectedRED). Actualnineprimitivecaptures inspected:5visible/4blankinvalid,3negativeconsoleerrors; allmetadatahonestlystructural-only. OWNbranchpublicationpending below; no invalidSVGpass or finalreleaseclaim.
+**Latest checkpoint:** independent claim correction verified on exact3aa521a5; final focused113passed/9scaledeselected/0skipped4.42s; ownRuff/mypy/Node syntaxexit0. Preserved0c5baseline withfinalnewtests12failed/4passed/0skipped0.16s(expectedRED). Actualnineprimitivecaptures inspected:5visible/4blankinvalid,3negativeconsoleerrors; allmetadatahonestlystructural-only. OWNbranch test/evidencecommit`2a33f290eef1510e712f6cebc529e0d0c356463d` actuallynonforcepushed+remoteSHAverified; no invalidSVGpass or finalreleaseclaim.
 
 ## Pre-work scope / owner / source
 
@@ -75,3 +75,11 @@ Next executable action: explicit-pathstage/inspect/whitespace+credentialpatterns
 Publication preparation exported compact5fileevidence(23,194bytes), source/oracletext equality against3aa and SHA-256 manifest checksexit0. `Copy-Item` ownnote initially failed with a nonterminatingDirectoryNotFoundException because this source checkpoint has no `docs/agent-state/`; composite shell ended0afterlaterchecks, not a successfulcopy. Ownreport/evidencecopied. Remedy is create onlyownnoteparentdir and recopy; no production/source/oracle edits or evidenceclaims lost. Currentaction remains explicitstaging/review/commit/push.
 
 Precommitcopyretry completedaftercreatingonlyownnoteparent. Staged12explicitownedfiles; reviewedstagedNEWtestdiff/stat/names. `git diff --cached --check` exit0; scopedstagedblob/credential-patternscan exit0(12files; tokens/privatekeys/credential-bearingURLs notfound). Git emitted3JSONCRLF→LF warnings; correctedownmanifest to hash normalizedstagedGitblob bytes for NEWtests/publishedevidence, withprotectedsourcehashes explicitly identified as measuredWindowsworkingtreebytes. Independentstagedmanifest/blobhashreadback exit0. No rawlogs/venv/dependencies/datasets/cache or unrelatedsource was staged. Commit/pushreceipt pending next.
+
+Localcommitobserved: `git commit -m 'test: verify structural inspector claims with real primitive controls'` exit0→`2a33f290eef1510e712f6cebc529e0d0c356463d` on `agents/r10-05-inspector-claim-retest`,12ownedfiles/654insertions. `git status --short --branch; git rev-parse HEAD; git show --stat --oneline HEAD` exit0,ownworktreeclean. Localcommitnotyetpush; next nonforceOWNpush+actualremoteSHAreadback. Sharedcandidate/default/issues/PRs unchanged bythisworker.
+
+## Actual OWN remote publication receipt
+
+`git push -u origin agents/r10-05-inspector-claim-retest:agents/r10-05-inspector-claim-retest` exit0 createdonlyOWNremote branch, noforce. Immediate `git ls-remote --heads origin refs/heads/agents/r10-05-inspector-claim-retest` exit0 returned`2a33f290eef1510e712f6cebc529e0d0c356463d`, exactlylocalHEAD; owntrackingworktreeclean. [Published test/evidence branch](https://github.com/sandeshbagmare/deepviz-agent-toolkit/tree/agents/r10-05-inspector-claim-retest). No issue/PR mutations, no sharedcandidate/defaultbranch writes. This follow-up docsreceipt preserves realpublication rather than treatinglocalcommit aspush.
+
+**Disposition / next:** bounded independent inspector-claim correction VERIFIED; no finding requiring an inspector/sourcefix inthisscope. Invalidcontrols remaininvalid/nonpainting despite structuralacceptance. R04 should independentlyreview/integrate the portableNEWtests/evidence for actualissue23, then rerunaffectedtests on its finalfrozen candidate and retain strictseparatepaint/semanticsgates. Fullrelease/CI/900acceptance remainsoutside this narrow report, notpassed.
