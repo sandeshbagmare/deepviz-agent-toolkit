@@ -1,0 +1,45 @@
+{
+  "observed_utc": "2026-11-27T14:30:34.244853+00:00",
+  "official_run_head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "actual_logged_checkout_sha": "aa66ea97c1184554613d14e873e4cc34e54453b0",
+  "head_git_tree_sha": "7aecbc5f4e8a105d296b413d7c70c662ce54794f",
+  "checkout_git_tree_sha": "7aecbc5f4e8a105d296b413d7c70c662ce54794f",
+  "same_entire_tree": true,
+  "checkout_parents": [
+    "0ae2cf26426822135fc10d337fcacf580b7ed833",
+    "5340bc69b7203ad7a9166543062482d819f9b705"
+  ],
+  "compare_status": "ahead",
+  "compare_ahead_by": 1,
+  "compare_behind_by": 0,
+  "compare_total_commits": 1,
+  "changed_files": [],
+  "product_or_workflow_changed_files": [],
+  "query_ledger": [
+    {
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/git/commits/5340bc69b7203ad7a9166543062482d819f9b705",
+      "method": "GET",
+      "http": 200,
+      "bytes": 1279,
+      "sha256": "06a9e84e09095e0a482ab61ad9254feb1280eeda8e984a14be23225f0f90a62c"
+    },
+    {
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/git/commits/aa66ea97c1184554613d14e873e4cc34e54453b0",
+      "method": "GET",
+      "http": 200,
+      "bytes": 2803,
+      "sha256": "22c48d3ca1626c1f9db70b76b5ea65693735556b2f14a53046b088fcc8e91a82"
+    },
+    {
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/compare/5340bc69b7203ad7a9166543062482d819f9b705...aa66ea97c1184554613d14e873e4cc34e54453b0?per_page=100&page=1",
+      "method": "GET",
+      "http": 200,
+      "bytes": 13135,
+      "sha256": "9ad97dfbb466c10b936e9976f36551d01dd75bee8c5ce1353175124c06163933"
+    }
+  ],
+  "collector_exit": 0,
+  "new_issue_census": 0,
+  "API_writes": 0,
+  "scope": "Boundedofficialcomparison of head versus actual completed-CI PRmerge checkout only. No PRstate/progressquery, no sourceedit or localfetch."
+}

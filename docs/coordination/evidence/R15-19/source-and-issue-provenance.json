@@ -1,0 +1,1419 @@
+{
+  "checked_utc": "2026-11-27T14:36:29.623138+00:00",
+  "committed_head": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "show",
+        "5340bc69b7203ad7a9166543062482d819f9b705:python/deepviz/src/deepviz/engines.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5340bc69b7203ad7a9166543062482d819f9b705:python/deepviz/src/deepviz/render.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5340bc69b7203ad7a9166543062482d819f9b705:python/deepviz/src/deepviz/tools.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5340bc69b7203ad7a9166543062482d819f9b705:python/deepviz/tests/test_backend_antv.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5340bc69b7203ad7a9166543062482d819f9b705:python/deepviz/tests/test_n06_tool_lifecycle.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5340bc69b7203ad7a9166543062482d819f9b705:python/deepviz/tests/test_n17_boundaries.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5340bc69b7203ad7a9166543062482d819f9b705:python/deepviz/tests/test_n09_oracle_controls.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5340bc69b7203ad7a9166543062482d819f9b705:tests/test_acceptance_matrix.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "5340bc69b7203ad7a9166543062482d819f9b705:.github/workflows/ci.yml"
+      ],
+      "exit": 0
+    }
+  ],
+  "sources": [
+    {
+      "path": "python/deepviz/src/deepviz/engines.py",
+      "git_blob_sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+      "ownworktree_equal_exceptCRLF": true,
+      "bounded_ranges": [
+        {
+          "from": 608,
+          "to": 632,
+          "lines": [
+            {
+              "line": 608,
+              "text": "    if kind == \"line\":"
+            },
+            {
+              "line": 609,
+              "text": "        groups = _groups(data)"
+            },
+            {
+              "line": 610,
+              "text": "        result[\"type\"] = \"view\""
+            },
+            {
+              "line": 611,
+              "text": "        result.pop(\"encode\")"
+            },
+            {
+              "line": 612,
+              "text": "        result.pop(\"style\", None)"
+            },
+            {
+              "line": 613,
+              "text": "        shapes = [\"point\", \"square\", \"triangle\", \"diamond\", \"hexagon\", \"bowtie\", \"cross\"]"
+            },
+            {
+              "line": 614,
+              "text": "        if spec.color:"
+            },
+            {
+              "line": 615,
+              "text": "            result[\"scale\"][\"color\"][\"domain\"] = list(groups)"
+            },
+            {
+              "line": 616,
+              "text": "            result[\"scale\"][\"shape\"] = {\"domain\": list(groups), \"range\": shapes}"
+            },
+            {
+              "line": 617,
+              "text": "        children = []"
+            },
+            {
+              "line": 618,
+              "text": "        for j, group in enumerate(groups.values()):"
+            },
+            {
+              "line": 619,
+              "text": "            encode = {\"x\": \"_x\", \"y\": \"_y\"}"
+            },
+            {
+              "line": 620,
+              "text": "            if spec.color:"
+            },
+            {
+              "line": 621,
+              "text": "                encode[\"color\"] = \"_color\""
+            },
+            {
+              "line": 622,
+              "text": "            line_style: dict = {\"lineDash\": DASHES[j % len(DASHES)], \"lineWidth\": 2}"
+            },
+            {
+              "line": 623,
+              "text": "            point_style: dict = {\"r\": 3}"
+            },
+            {
+              "line": 624,
+              "text": "            if not spec.color:"
+            },
+            {
+              "line": 625,
+              "text": "                line_style[\"stroke\"] = PALETTE[0]"
+            },
+            {
+              "line": 626,
+              "text": "                point_style[\"fill\"] = PALETTE[0]"
+            },
+            {
+              "line": 627,
+              "text": "            children.append({\"type\": \"line\", \"data\": group, \"encode\": encode,"
+            },
+            {
+              "line": 628,
+              "text": "                             \"style\": line_style, \"animate\": False})"
+            },
+            {
+              "line": 629,
+              "text": "            children.append({\"type\": \"point\", \"data\": [row for row in group if row[\"_y\"] is not None],"
+            },
+            {
+              "line": 630,
+              "text": "                             \"encode\": {**encode, **({\"shape\": \"_color\"} if spec.color else {})},"
+            },
+            {
+              "line": 631,
+              "text": "                             \"style\": point_style, \"animate\": False})"
+            },
+            {
+              "line": 632,
+              "text": "        result[\"children\"] = children"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "python/deepviz/src/deepviz/render.py",
+      "git_blob_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+      "ownworktree_equal_exceptCRLF": true,
+      "bounded_ranges": [
+        {
+          "from": 167,
+          "to": 182,
+          "lines": [
+            {
+              "line": 167,
+              "text": "            info[\"warnings\"].append(network_warning)"
+            },
+            {
+              "line": 168,
+              "text": "    root = Path(output_dir) if output_dir is not None else Path(tempfile.gettempdir()) / \"deepviz\""
+            },
+            {
+              "line": 169,
+              "text": "    root.mkdir(parents=True, exist_ok=True)"
+            },
+            {
+              "line": 170,
+              "text": "    folder = Path(tempfile.mkdtemp(prefix=\"deepviz-\", dir=root))"
+            },
+            {
+              "line": 171,
+              "text": "    paths = []"
+            },
+            {
+              "line": 172,
+              "text": "    if engine == \"matplotlib\":"
+            },
+            {
+              "line": 173,
+              "text": "        fig, notes = matplotlib_figure([(n.records, child) for n, child in zip(normalized, specs, strict=True)],"
+            },
+            {
+              "line": 174,
+              "text": "                                       chart if chart.kind == \"dashboard\" else None)"
+            },
+            {
+              "line": 175,
+              "text": "        warnings.extend(notes)"
+            },
+            {
+              "line": 176,
+              "text": "        try:"
+            },
+            {
+              "line": 177,
+              "text": "            for extension in [\"png\", \"svg\"]:"
+            },
+            {
+              "line": 178,
+              "text": "                path = folder / f\"chart.{extension}\""
+            },
+            {
+              "line": 179,
+              "text": "                fig.savefig(path, facecolor=fig.get_facecolor())"
+            },
+            {
+              "line": 180,
+              "text": "                paths.append(str(path.resolve()))"
+            },
+            {
+              "line": 181,
+              "text": "        finally:"
+            },
+            {
+              "line": 182,
+              "text": "            fig.clear()"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "python/deepviz/src/deepviz/tools.py",
+      "git_blob_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+      "ownworktree_equal_exceptCRLF": true,
+      "bounded_ranges": [
+        {
+          "from": 74,
+          "to": 98,
+          "lines": [
+            {
+              "line": 74,
+              "text": "        if isinstance(data, str):"
+            },
+            {
+              "line": 75,
+              "text": "            if len(data.encode(\"utf-8\")) > MAX_INLINE_BYTES:"
+            },
+            {
+              "line": 76,
+              "text": "                raise ValueError(\"Inline data exceeds 1 MB; configure data_dir and use a file reference\")"
+            },
+            {
+              "line": 77,
+              "text": "            try:"
+            },
+            {
+              "line": 78,
+              "text": "                data = json.loads(data)"
+            },
+            {
+              "line": 79,
+              "text": "            except json.JSONDecodeError as error:"
+            },
+            {
+              "line": 80,
+              "text": "                raise ValueError(\"Use inline JSON data or an explicit {file: relative_path} reference\") from error"
+            },
+            {
+              "line": 81,
+              "text": "            # A decoded string might otherwise be interpreted as a path by ingestion."
+            },
+            {
+              "line": 82,
+              "text": "            if isinstance(data, str):"
+            },
+            {
+              "line": 83,
+              "text": "                raise ValueError(\"Inline data must be a JSON array or object, not a file path string\")"
+            },
+            {
+              "line": 84,
+              "text": "            return self._source(data)"
+            },
+            {
+              "line": 85,
+              "text": "        try:"
+            },
+            {
+              "line": 86,
+              "text": "            encoded = json.dumps(data, allow_nan=False)"
+            },
+            {
+              "line": 87,
+              "text": "        except (TypeError, ValueError, OverflowError) as error:"
+            },
+            {
+              "line": 88,
+              "text": "            raise ValueError(\"Tool inputs must be finite JSON data or an explicit file reference\") from error"
+            },
+            {
+              "line": 89,
+              "text": "        if len(encoded.encode(\"utf-8\")) > MAX_INLINE_BYTES:"
+            },
+            {
+              "line": 90,
+              "text": "            raise ValueError(\"Inline data exceeds 1 MB; configure data_dir and use a file reference\")"
+            },
+            {
+              "line": 91,
+              "text": "        if not isinstance(data, (list, dict)):"
+            },
+            {
+              "line": 92,
+              "text": "            raise ValueError(\"Inline data must be a JSON array or object\")"
+            },
+            {
+              "line": 93,
+              "text": "        return data"
+            },
+            {
+              "line": 94,
+              "text": ""
+            },
+            {
+              "line": 95,
+              "text": "    def normalize_data(self, data: Any, spec: ChartSpec | dict[str, Any] | None = None) -> dict[str, Any]:"
+            },
+            {
+              "line": 96,
+              "text": "        \"\"\"Profile bounded rows; return counts, field types, and a reusable handle, never raw rows.\"\"\""
+            },
+            {
+              "line": 97,
+              "text": "        chart = ChartSpec.model_validate(spec) if spec is not None else _profile_spec()"
+            },
+            {
+              "line": 98,
+              "text": "        source = self._source(data)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "python/deepviz/tests/test_backend_antv.py",
+      "git_blob_sha256": "36bcd3a5a8b8e419ba6a98e2c3d80c7199c002becd40a708ad09f130b42dabc6",
+      "ownworktree_equal_exceptCRLF": true,
+      "bounded_ranges": [
+        {
+          "from": 185,
+          "to": 202,
+          "lines": [
+            {
+              "line": 185,
+              "text": "def test_dashboard_duplicate_titles_get_unique_containers_and_independent_options(tmp_path):"
+            },
+            {
+              "line": 186,
+              "text": "    children = ["
+            },
+            {
+              "line": 187,
+              "text": "        ChartSpec(kind=\"bar\", title=\"Same title\", x=\"label\", y=\"income\"),"
+            },
+            {
+              "line": 188,
+              "text": "        ChartSpec(kind=\"line\", title=\"Same title\", x=\"label\", y=\"cost\"),"
+            },
+            {
+              "line": 189,
+              "text": "        ChartSpec(kind=\"pie\", title=\"Same title\", x=\"label\", y=\"income\"),"
+            },
+            {
+              "line": 190,
+              "text": "    ]"
+            },
+            {
+              "line": 191,
+              "text": "    rows = [{\"label\": \"A\", \"income\": 9, \"cost\": 2}, {\"label\": \"B\", \"income\": 5, \"cost\": 4}]"
+            },
+            {
+              "line": 192,
+              "text": "    _, manifest, html = _render(tmp_path, rows, kind=\"dashboard\", charts=children, columns=2)"
+            },
+            {
+              "line": 193,
+              "text": "    document = _HTML(html)"
+            },
+            {
+              "line": 194,
+              "text": "    ids = [attrs[\"id\"] for _, attrs in document.elements if \"id\" in attrs]"
+            },
+            {
+              "line": 195,
+              "text": "    containers = [attrs for _, attrs in document.elements if attrs.get(\"role\") == \"img\"]"
+            },
+            {
+              "line": 196,
+              "text": "    assert len(ids) == len(set(ids)), \"Duplicate DOM IDs can render several charts into one container\""
+            },
+            {
+              "line": 197,
+              "text": "    assert len(containers) == 3"
+            },
+            {
+              "line": 198,
+              "text": "    assert len({attrs[\"id\"] for attrs in containers}) == 3"
+            },
+            {
+              "line": 199,
+              "text": "    payloads = _embedded_payloads(document)"
+            },
+            {
+              "line": 200,
+              "text": "    assert payloads == manifest[\"native_specs\"]"
+            },
+            {
+              "line": 201,
+              "text": "    assert [payload[\"type\"] for payload in payloads] == [\"interval\", \"line\", \"interval\"]"
+            },
+            {
+              "line": 202,
+              "text": "    assert [_values(payload, \"y\") for payload in payloads] == [[9, 5], [2, 4], [9, 5]]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "python/deepviz/tests/test_n06_tool_lifecycle.py",
+      "git_blob_sha256": "709d45f9f8e971cb89c407b3c044a462169684560db203b9ba491a997402f169",
+      "ownworktree_equal_exceptCRLF": true,
+      "bounded_ranges": [
+        {
+          "from": 45,
+          "to": 55,
+          "lines": [
+            {
+              "line": 45,
+              "text": "@pytest.mark.parametrize(\"encoded\", [False, True], ids=[\"python-json\", \"json-text\"])"
+            },
+            {
+              "line": 46,
+              "text": "def test_overdeep_inline_json_has_actionable_validation_error(tmp_path: Path, encoded: bool):"
+            },
+            {
+              "line": 47,
+              "text": "    \"\"\"Both parser paths must reject depth without leaking a RecursionError.\"\"\""
+            },
+            {
+              "line": 48,
+              "text": "    data = []"
+            },
+            {
+              "line": 49,
+              "text": "    for _ in range(1500):"
+            },
+            {
+              "line": 50,
+              "text": "        data = [data]"
+            },
+            {
+              "line": 51,
+              "text": "    if encoded:"
+            },
+            {
+              "line": 52,
+              "text": "        data = \"[\" * 1500 + \"]\" * 1500"
+            },
+            {
+              "line": 53,
+              "text": ""
+            },
+            {
+              "line": 54,
+              "text": "    with pytest.raises(ValueError, match=\"deep|nest\"):"
+            },
+            {
+              "line": 55,
+              "text": "        ToolSession(tmp_path).normalize_data(data)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "python/deepviz/tests/test_n17_boundaries.py",
+      "git_blob_sha256": "ece2ce5d0112eea84cd2f0d150958110ca239a8be5ffc451acad0c1a60e71a55",
+      "ownworktree_equal_exceptCRLF": true,
+      "bounded_ranges": [
+        {
+          "from": 261,
+          "to": 285,
+          "lines": [
+            {
+              "line": 261,
+              "text": "        raise ValueError(\"N17 source failure\")"
+            },
+            {
+              "line": 262,
+              "text": ""
+            },
+            {
+              "line": 263,
+              "text": "    with pytest.raises(ValueError, match=\"N17 source failure\"):"
+            },
+            {
+              "line": 264,
+              "text": "        render(source(), {\"kind\": \"dashboard\", \"charts\": [{\"x\": \"g\", \"y\": \"v\"}]}, \"echarts\", tmp_path)"
+            },
+            {
+              "line": 265,
+              "text": "    assert visits == [0, 1, 2]"
+            },
+            {
+              "line": 266,
+              "text": "    assert created and all(not path.exists() for path in created)"
+            },
+            {
+              "line": 267,
+              "text": ""
+            },
+            {
+              "line": 268,
+              "text": ""
+            },
+            {
+              "line": 269,
+              "text": "def test_n17_dashboard_serialization_order_observation(tmp_path: Path, monkeypatch) -> None:"
+            },
+            {
+              "line": 270,
+              "text": "    module = importlib.import_module(\"deepviz.render\")"
+            },
+            {
+              "line": 271,
+              "text": "    original = module.json.dumps"
+            },
+            {
+              "line": 272,
+              "text": "    serialized: list[int] = []"
+            },
+            {
+              "line": 273,
+              "text": "    row = {f\"k{index}\": index for index in range(1025)} | {\"payload\": \"x\" * 1048576}"
+            },
+            {
+              "line": 274,
+              "text": ""
+            },
+            {
+              "line": 275,
+              "text": "    def observed_dumps(value, *args, **kwargs):"
+            },
+            {
+              "line": 276,
+              "text": "        encoded = original(value, *args, **kwargs)"
+            },
+            {
+              "line": 277,
+              "text": "        if value is row:"
+            },
+            {
+              "line": 278,
+              "text": "            serialized.append(len(encoded.encode(\"utf-8\")))"
+            },
+            {
+              "line": 279,
+              "text": "        return encoded"
+            },
+            {
+              "line": 280,
+              "text": ""
+            },
+            {
+              "line": 281,
+              "text": "    monkeypatch.setattr(module.json, \"dumps\", observed_dumps)"
+            },
+            {
+              "line": 282,
+              "text": "    with pytest.raises(ValueError, match=\"1024 fields\"):"
+            },
+            {
+              "line": 283,
+              "text": "        render(iter([row]), {\"kind\": \"dashboard\", \"charts\": [{\"kind\": \"table\"}]}, \"echarts\", tmp_path)"
+            },
+            {
+              "line": 284,
+              "text": "    assert serialized and serialized[0] > 1048576"
+            },
+            {
+              "line": 285,
+              "text": "    print(f\"N17 replay order observation: invalid wide row serialized {serialized[0]} UTF-8 bytes before field rejection\")"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "python/deepviz/tests/test_n09_oracle_controls.py",
+      "git_blob_sha256": "e3801062ca3a2a552fe080620c7ec13b7f5c96c4c0a87e59fb693d0cd285bd0d",
+      "ownworktree_equal_exceptCRLF": true,
+      "bounded_ranges": [
+        {
+          "from": 30,
+          "to": 56,
+          "lines": [
+            {
+              "line": 30,
+              "text": "ANTV = _load(\"_n09_antv_helper\", \"python/deepviz/tests/test_backend_antv.py\")"
+            },
+            {
+              "line": 31,
+              "text": "PLOTLY = _load(\"_n09_plotly_helper\", \"python/deepviz/tests/test_backend_plotly.py\")"
+            },
+            {
+              "line": 32,
+              "text": "VEGA = _load(\"_n09_vega_helper\", \"python/deepviz/tests/test_backend_vega.py\")"
+            },
+            {
+              "line": 33,
+              "text": ""
+            },
+            {
+              "line": 34,
+              "text": ""
+            },
+            {
+              "line": 35,
+              "text": "@pytest.mark.parametrize(\"mutation\", [\"missing\", \"altered\", \"script\", \"event\"])"
+            },
+            {
+              "line": 36,
+              "text": "def test_n09_wrapped_svg_title_oracle_still_rejects_corruption(mutation: str) -> None:"
+            },
+            {
+              "line": 37,
+              "text": "    valid = ('<svg xmlns=\"http://www.w3.org/2000/svg\"><!-- Very longti\\ntle &amp; safe -->'"
+            },
+            {
+              "line": 38,
+              "text": "             '<path d=\"M0 0L2 2\"/><path d=\"M2 0L0 2\"/><rect width=\"2\" height=\"2\"/>'"
+            },
+            {
+              "line": 39,
+              "text": "             '<circle cx=\"1\" cy=\"1\" r=\"1\"/></svg>')"
+            },
+            {
+              "line": 40,
+              "text": "    ACCEPTANCE.assert_svg_semantics(valid, \"matplotlib\", \"Very longtitle & safe\")"
+            },
+            {
+              "line": 41,
+              "text": "    if mutation == \"missing\":"
+            },
+            {
+              "line": 42,
+              "text": "        invalid = valid.replace(\"Very longti\\ntle &amp; safe\", \"\")"
+            },
+            {
+              "line": 43,
+              "text": "    elif mutation == \"altered\":"
+            },
+            {
+              "line": 44,
+              "text": "        invalid = valid.replace(\"longti\", \"wrongti\")"
+            },
+            {
+              "line": 45,
+              "text": "    elif mutation == \"script\":"
+            },
+            {
+              "line": 46,
+              "text": "        invalid = valid.replace(\"</svg>\", \"<script>window.N09_BAD=1</script></svg>\")"
+            },
+            {
+              "line": 47,
+              "text": "    else:"
+            },
+            {
+              "line": 48,
+              "text": "        invalid = valid.replace('<rect width=\"2\"', '<rect onclick=\"bad()\" width=\"2\"')"
+            },
+            {
+              "line": 49,
+              "text": "    with pytest.raises(AssertionError):"
+            },
+            {
+              "line": 50,
+              "text": "        ACCEPTANCE.assert_svg_semantics(invalid, \"matplotlib\", \"Very longtitle & safe\")"
+            },
+            {
+              "line": 51,
+              "text": ""
+            },
+            {
+              "line": 52,
+              "text": ""
+            },
+            {
+              "line": 53,
+              "text": "def _browser_case():"
+            },
+            {
+              "line": 54,
+              "text": "    spec = ChartSpec(kind=\"bar\", title=ACCEPTANCE.TITLE, x=\"category\", y=\"y\")"
+            },
+            {
+              "line": 55,
+              "text": "    payload = {\"data\": [{\"type\": \"bar\", \"x\": [\"A\"], \"y\": [2]}], \"layout\": {}}"
+            },
+            {
+              "line": 56,
+              "text": "    manifest = {\"native_specs\": [payload]}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_acceptance_matrix.py",
+      "git_blob_sha256": "55e3100fb15f74aaf268680e6e4a68c9cf0aefe0a88dea45865c2465dbd31271",
+      "ownworktree_equal_exceptCRLF": true,
+      "bounded_ranges": [
+        {
+          "from": 306,
+          "to": 334,
+          "lines": [
+            {
+              "line": 306,
+              "text": "def assert_svg_semantics(svg: str, engine: str, title: str) -> None:"
+            },
+            {
+              "line": 307,
+              "text": "    root = ET.fromstring(svg)"
+            },
+            {
+              "line": 308,
+              "text": "    assert root.tag == \"{http://www.w3.org/2000/svg}svg\""
+            },
+            {
+              "line": 309,
+              "text": "    assert not any(node.tag.rsplit(\"}\", 1)[-1] in {\"script\", \"foreignObject\"} for node in root.iter())"
+            },
+            {
+              "line": 310,
+              "text": "    assert not any("
+            },
+            {
+              "line": 311,
+              "text": "        attribute.rsplit(\"}\", 1)[-1].lower().startswith(\"on\")"
+            },
+            {
+              "line": 312,
+              "text": "        for node in root.iter() for attribute in node.attrib"
+            },
+            {
+              "line": 313,
+              "text": "    ), \"SVG contains an executable event attribute\""
+            },
+            {
+              "line": 314,
+              "text": "    parser = ET.XMLParser(target=ET.TreeBuilder(insert_comments=True))"
+            },
+            {
+              "line": 315,
+              "text": "    full_root = ET.fromstring(svg, parser=parser)"
+            },
+            {
+              "line": 316,
+              "text": "    for node in full_root.iter():"
+            },
+            {
+              "line": 317,
+              "text": "        if node.tag is ET.Comment and node.text:"
+            },
+            {
+              "line": 318,
+              "text": "            # Matplotlib entity-escapes comment text; XML parsers deliberately"
+            },
+            {
+              "line": 319,
+              "text": "            # do not resolve entities inside comments as they do in <text>."
+            },
+            {
+              "line": 320,
+              "text": "            node.text = unescape(node.text)"
+            },
+            {
+              "line": 321,
+              "text": "    # Matplotlib exports wrapped visible title lines as separate SVG comments."
+            },
+            {
+              "line": 322,
+              "text": "    # textwrap may insert a newline inside a long token; no non-whitespace title"
+            },
+            {
+              "line": 323,
+              "text": "    # character may be lost, altered, or supplied only by an unrelated manifest."
+            },
+            {
+              "line": 324,
+              "text": "    visible = re.sub(r\"\\s+\", \"\", \"\".join(full_root.itertext()))"
+            },
+            {
+              "line": 325,
+              "text": "    assert re.sub(r\"\\s+\", \"\", title) in visible, \"SVG does not preserve the escaped chart title\""
+            },
+            {
+              "line": 326,
+              "text": "    mark_tags = {\"path\", \"rect\", \"circle\", \"polygon\", \"image\", \"text\", \"use\"}"
+            },
+            {
+              "line": 327,
+              "text": "    marks = [node for node in root.iter() if node.tag.rsplit(\"}\", 1)[-1] in mark_tags]"
+            },
+            {
+              "line": 328,
+              "text": "    assert len(marks) >= 4, \"SVG contains no meaningful visual marks\""
+            },
+            {
+              "line": 329,
+              "text": "    if engine == \"vega\":"
+            },
+            {
+              "line": 330,
+              "text": "        # Vega's compiled data-mark group, not a hand-written metadata-only SVG."
+            },
+            {
+              "line": 331,
+              "text": "        data_groups = [node for node in root.iter() if \"role-mark\" in node.attrib.get(\"class\", \"\").split()]"
+            },
+            {
+              "line": 332,
+              "text": "        assert data_groups and any("
+            },
+            {
+              "line": 333,
+              "text": "            child.tag.rsplit(\"}\", 1)[-1] in mark_tags for group in data_groups for child in group.iter()"
+            },
+            {
+              "line": 334,
+              "text": "        ), \"Vega SVG has no populated compiled data-mark group\""
+            }
+          ]
+        },
+        {
+          "from": 353,
+          "to": 377,
+          "lines": [
+            {
+              "line": 353,
+              "text": "def assert_native_xy_values(engine: str, payload: dict, chart: dict) -> None:"
+            },
+            {
+              "line": 354,
+              "text": "    \"\"\"Check actual numeric payloads, not merely native mark names or metadata.\"\"\""
+            },
+            {
+              "line": 355,
+              "text": "    spec = ChartSpec(**chart[\"spec\"])"
+            },
+            {
+              "line": 356,
+              "text": "    if spec.kind not in {\"bar\", \"line\", \"area\", \"scatter\", \"bubble\", \"geo\"}:"
+            },
+            {
+              "line": 357,
+              "text": "        return"
+            },
+            {
+              "line": 358,
+              "text": "    rows = chart[\"records\"]"
+            },
+            {
+              "line": 359,
+              "text": "    expected = [(row[spec.x], float(row[spec.y])) for row in rows]"
+            },
+            {
+              "line": 360,
+              "text": "    pairs = []"
+            },
+            {
+              "line": 361,
+              "text": "    if engine == \"plotly\":"
+            },
+            {
+              "line": 362,
+              "text": "        pairs = [pair for trace in payload[\"data\"] for pair in zip(trace[\"x\"], trace[\"y\"], strict=True)]"
+            },
+            {
+              "line": 363,
+              "text": "    elif engine == \"vega\":"
+            },
+            {
+              "line": 364,
+              "text": "        fields = [payload[\"encoding\"][key][\"field\"] for key in (\"x\", \"y\")]"
+            },
+            {
+              "line": 365,
+              "text": "        pairs = [(row[fields[0]], row[fields[1]]) for row in payload[\"data\"][\"values\"]]"
+            },
+            {
+              "line": 366,
+              "text": "    elif engine == \"echarts\":"
+            },
+            {
+              "line": 367,
+              "text": "        pairs = [tuple((point[\"value\"] if isinstance(point, dict) else point)[:2])"
+            },
+            {
+              "line": 368,
+              "text": "                 for series in payload[\"series\"] for point in series[\"data\"]]"
+            },
+            {
+              "line": 369,
+              "text": "        # ECharts category axes intentionally stringify numeric bar/line labels."
+            },
+            {
+              "line": 370,
+              "text": "        if spec.kind in {\"bar\", \"line\", \"area\"}:"
+            },
+            {
+              "line": 371,
+              "text": "            expected = [(str(x), y) for x, y in expected]"
+            },
+            {
+              "line": 372,
+              "text": "    elif engine == \"antv\":"
+            },
+            {
+              "line": 373,
+              "text": "        children = [child for child in payload.get(\"children\", []) if child.get(\"type\") == spec.kind]"
+            },
+            {
+              "line": 374,
+              "text": "        for mark in children or [payload]:"
+            },
+            {
+              "line": 375,
+              "text": "            encoding = mark[\"encode\"]"
+            },
+            {
+              "line": 376,
+              "text": "            pairs.extend((row[encoding[\"x\"]], row[encoding[\"y\"]]) for row in mark[\"data\"])"
+            },
+            {
+              "line": 377,
+              "text": "    assert Counter(pairs) == Counter(expected), \"Native visible coordinates changed a mapped observation\""
+            }
+          ]
+        },
+        {
+          "from": 429,
+          "to": 451,
+          "lines": [
+            {
+              "line": 429,
+              "text": "    manifests = [candidate for candidate in candidates if isinstance(candidate, dict) and \"native_specs\" in candidate]"
+            },
+            {
+              "line": 430,
+              "text": "    assert len(manifests) == 1"
+            },
+            {
+              "line": 431,
+              "text": "    manifest = manifests[0]"
+            },
+            {
+              "line": 432,
+              "text": "    if actual_engine != \"matplotlib\":"
+            },
+            {
+              "line": 433,
+              "text": "        assert len(manifest[\"native_specs\"]) == len(manifest[\"charts\"])"
+            },
+            {
+              "line": 434,
+              "text": "        for payload, child in zip(manifest[\"native_specs\"], manifest[\"charts\"], strict=True):"
+            },
+            {
+              "line": 435,
+              "text": "            assert_native_xy_values(actual_engine, payload, child)"
+            },
+            {
+              "line": 436,
+              "text": "    svg_paths = [path for path in paths if path.suffix == \".svg\"]"
+            },
+            {
+              "line": 437,
+              "text": "    if actual_engine == \"matplotlib\" or (actual_engine == \"vega\" and svg_paths):"
+            },
+            {
+              "line": 438,
+              "text": "        png_paths = [path for path in paths if path.suffix == \".png\"]"
+            },
+            {
+              "line": 439,
+              "text": "        assert svg_paths or png_paths, \"Static engine must produce a native rendered image\""
+            },
+            {
+              "line": 440,
+              "text": "        for path in svg_paths:"
+            },
+            {
+              "line": 441,
+              "text": "            assert_svg_semantics(path.read_text(encoding=\"utf-8\"), actual_engine, spec.title)"
+            },
+            {
+              "line": 442,
+              "text": "        for path in png_paths:"
+            },
+            {
+              "line": 443,
+              "text": "            from PIL import Image, ImageStat"
+            },
+            {
+              "line": 444,
+              "text": ""
+            },
+            {
+              "line": 445,
+              "text": "            with Image.open(path) as image:"
+            },
+            {
+              "line": 446,
+              "text": "                assert image.width >= 240 and image.height >= 200"
+            },
+            {
+              "line": 447,
+              "text": "                assert max(ImageStat.Stat(image.convert(\"RGB\")).var) > 1.0, \"Blank PNG\""
+            },
+            {
+              "line": 448,
+              "text": "        assert \"image/\" in artifact.mime_type"
+            },
+            {
+              "line": 449,
+              "text": "    else:"
+            },
+            {
+              "line": 450,
+              "text": "        html_paths = [path for path in paths if path.suffix in {\".html\", \".htm\"}]"
+            },
+            {
+              "line": 451,
+              "text": "        assert html_paths and artifact.mime_type == \"text/html\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "git_blob_sha256": "95627b755386ed8e973a1ad5804ac0326c90dc9b88e0f2852f569fe8b877b2d2",
+      "ownworktree_equal_exceptCRLF": true,
+      "bounded_ranges": [
+        {
+          "from": 23,
+          "to": 40,
+          "lines": [
+            {
+              "line": 23,
+              "text": "    name: Python ${{ matrix.python }} lint, types, unit and integration"
+            },
+            {
+              "line": 24,
+              "text": "    runs-on: ubuntu-latest"
+            },
+            {
+              "line": 25,
+              "text": "    timeout-minutes: 25"
+            },
+            {
+              "line": 26,
+              "text": "    strategy:"
+            },
+            {
+              "line": 27,
+              "text": "      fail-fast: false"
+            },
+            {
+              "line": 28,
+              "text": "      matrix:"
+            },
+            {
+              "line": 29,
+              "text": "        python: ['3.11', '3.12', '3.13']"
+            },
+            {
+              "line": 30,
+              "text": "    steps:"
+            },
+            {
+              "line": 31,
+              "text": "      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1"
+            },
+            {
+              "line": 32,
+              "text": "        with:"
+            },
+            {
+              "line": 33,
+              "text": "          persist-credentials: false"
+            },
+            {
+              "line": 34,
+              "text": "      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0"
+            },
+            {
+              "line": 35,
+              "text": "        with:"
+            },
+            {
+              "line": 36,
+              "text": "          python-version: ${{ matrix.python }}"
+            },
+            {
+              "line": 37,
+              "text": "          cache: pip"
+            },
+            {
+              "line": 38,
+              "text": "          cache-dependency-path: pyproject.toml"
+            },
+            {
+              "line": 39,
+              "text": "      - name: Install all integration dependencies (no live service credentials)"
+            },
+            {
+              "line": 40,
+              "text": "        run: python -m pip install -e '.[dev,agents,mcp,columnar]'"
+            }
+          ]
+        },
+        {
+          "from": 49,
+          "to": 70,
+          "lines": [
+            {
+              "line": 49,
+              "text": "      - name: Lint"
+            },
+            {
+              "line": 50,
+              "text": "        run: python -m ruff check . .github/tests"
+            },
+            {
+              "line": 51,
+              "text": "      - name: Typecheck package and verification scripts"
+            },
+            {
+              "line": 52,
+              "text": "        run: |"
+            },
+            {
+              "line": 53,
+              "text": "          python -m mypy"
+            },
+            {
+              "line": 54,
+              "text": "          python -m mypy scripts/export_schema.py scripts/verify_evidence.py scripts/verify_visual.py scripts/verify_scale.py"
+            },
+            {
+              "line": 55,
+              "text": "      - name: Check generated schema without changing files"
+            },
+            {
+              "line": 56,
+              "text": "        run: python scripts/export_schema.py --check"
+            },
+            {
+              "line": 57,
+              "text": "      - name: Test CI gate negative controls"
+            },
+            {
+              "line": 58,
+              "text": "        run: python -m pytest .github/tests -q --strict-markers"
+            },
+            {
+              "line": 59,
+              "text": "      - name: Unit and contract tests"
+            },
+            {
+              "line": 60,
+              "text": "        run: python -m pytest -m 'not integration and not scale' --strict-markers --junitxml=artifacts/unit.xml"
+            },
+            {
+              "line": 61,
+              "text": "      - name: Integration tests"
+            },
+            {
+              "line": 62,
+              "text": "        run: python -m pytest -m 'integration and not scale' --strict-markers --junitxml=artifacts/integration.xml"
+            },
+            {
+              "line": 63,
+              "text": "      - name: Preserve test reports for diagnosis, not as a substitute for success"
+            },
+            {
+              "line": 64,
+              "text": "        if: always()"
+            },
+            {
+              "line": 65,
+              "text": "        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2"
+            },
+            {
+              "line": 66,
+              "text": "        with:"
+            },
+            {
+              "line": 67,
+              "text": "          name: python-${{ matrix.python }}-${{ github.run_attempt }}"
+            },
+            {
+              "line": 68,
+              "text": "          path: artifacts/*.xml"
+            },
+            {
+              "line": 69,
+              "text": "          if-no-files-found: warn"
+            },
+            {
+              "line": 70,
+              "text": "          retention-days: 7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "existing_issue_body_observed_utc": "2026-11-27T01:33:07.567802+00:00",
+  "existing_issue_bodies_reused": {
+    "5": {
+      "title": "Version and validate the shared ChartSpec and artifact contracts",
+      "state": "open",
+      "labels": [
+        "type:task",
+        "area:ingestion",
+        "priority:p0"
+      ],
+      "milestone": 1,
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/5",
+      "body_excerpt": "<!-- deepviz-key: CONTRACT -->\n# CONTRACT\n\n## Outcome\nPython, TypeScript and integrations share one explicit schema and metadata contract.\n\n## Coordination\n- Suggested owner lane: core agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #1 (EPIC-FOUNDATION).\n\n## Acceptance criteria\n- [ ] Commit schema version 1 and positive/negative fixtures for declared kinds, mappings, nested charts and bounds.\n- [ ] Pydantic models and JSON Schema agree on required fields, defaults and invalid values.\n- [ ] NormalizedData and Artifact expose input/output counts, strategy, warnings and safe filesystem paths.\n- [ ] Public names/signatures match the design or carry an explicit documented decision.\n\n## Required evidence\n- Schema validation tests and exact test command\n- Fixture parity report\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not Gi"
+    },
+    "9": {
+      "title": "Render real Matplotlib static artifacts from the shared contract",
+      "state": "open",
+      "labels": [
+        "type:story",
+        "area:renderers",
+        "priority:p1"
+      ],
+      "milestone": 2,
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/9",
+      "body_excerpt": "<!-- deepviz-key: RENDER-MPL -->\n# RENDER-MPL\n\n## Outcome\nUsers obtain readable static images without browser runtime requirements.\n\n## Coordination\n- Suggested owner lane: rendering agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Supported chart kinds produce actual nonempty PNG/SVG artifacts from bounded normalized records.\n- [ ] Mapped fields, titles, units, category ordering and reduction metadata remain truthful.\n- [ ] Themes and labels remain readable; unsupported kinds and missing fields fail explicitly.\n- [ ] At least one composed/example artifact is opened and inspected; dependencies are disclosed.\n\n## Required evidence\n- Renderer unit/integration tests\n- Committed inspected PNG/SVG and dimensions\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/"
+    },
+    "11": {
+      "title": "Render validated Vega-Lite specifications and real artifacts",
+      "state": "open",
+      "labels": [
+        "type:story",
+        "area:renderers",
+        "priority:p1"
+      ],
+      "milestone": 2,
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/11",
+      "body_excerpt": "<!-- deepviz-key: RENDER-VEGA -->\n# RENDER-VEGA\n\n## Outcome\nA declarative Vega-Lite adapter preserves the shared schema semantics.\n\n## Coordination\n- Suggested owner lane: rendering agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Supported kinds emit valid Vega-Lite encodings and actual renderable output.\n- [ ] Data values and types match shared fixtures; unsupported combinations fail explicitly.\n- [ ] Optional vl-convert/runtime requirements and offline behavior are documented.\n- [ ] Inspect and commit at least one real SVG/PNG or browser screenshot, not a hand-drawn stand-in.\n\n## Required evidence\n- Spec validation/render tests\n- Committed inspected render artifact\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews"
+    },
+    "12": {
+      "title": "Render safe ECharts options and browser artifacts",
+      "state": "open",
+      "labels": [
+        "type:story",
+        "area:renderers",
+        "priority:p1"
+      ],
+      "milestone": 2,
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/12",
+      "body_excerpt": "<!-- deepviz-key: RENDER-ECHARTS -->\n# RENDER-ECHARTS\n\n## Outcome\nUsers can choose ECharts without changing data normalization or mapping semantics.\n\n## Coordination\n- Suggested owner lane: rendering agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Supported kinds emit actual ECharts options and executable browser artifacts using the legitimate runtime.\n- [ ] Fixture assertions verify series data, legends, axes and dashboard/composition behavior where supported.\n- [ ] No model-authored JavaScript callback/eval path is accepted; runtime loading is explicit.\n- [ ] Browser checks report console failures and include a committed inspected screenshot.\n\n## Required evidence\n- Option parity/security tests\n- Browser test report and screenshot\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in "
+    },
+    "13": {
+      "title": "Render real AntV G2 specifications and browser artifacts",
+      "state": "open",
+      "labels": [
+        "type:story",
+        "area:renderers",
+        "priority:p1"
+      ],
+      "milestone": 2,
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/13",
+      "body_excerpt": "<!-- deepviz-key: RENDER-ANTV -->\n# RENDER-ANTV\n\n## Outcome\nAntV G2 is a genuine fifth renderer rather than a renamed fallback engine.\n\n## Coordination\n- Suggested owner lane: rendering agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Supported kinds produce valid G2 specifications and load the actual G2 runtime.\n- [ ] Mappings, reduced values and metadata match shared fixtures and other adapters.\n- [ ] Unsupported kinds and unavailable runtime dependencies are explicit; no fake visual fallback is used.\n- [ ] An actual browser render is tested, inspected and committed as a screenshot.\n\n## Required evidence\n- G2 spec/semantic tests\n- Browser execution report and screenshot\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED rev"
+    },
+    "14": {
+      "title": "Validate shared schema fixtures and bounded normalization in TypeScript",
+      "state": "open",
+      "labels": [
+        "type:task",
+        "area:typescript",
+        "priority:p0"
+      ],
+      "milestone": 2,
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/14",
+      "body_excerpt": "<!-- deepviz-key: TS-CONTRACT -->\n# TS-CONTRACT\n\n## Outcome\nThe npm interface rejects invalid inputs consistently with the Python contract.\n\n## Coordination\n- Suggested owner lane: TypeScript agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #2 (EPIC-VISUALIZATION).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] Use the same versioned schema and shared positive/negative fixtures as Python.\n- [ ] Implement and test documented bounded normalization with truthful counts/warnings/strategy.\n- [ ] Strict TypeScript checking and unit tests cover mapping, invalid kinds and unsupported values.\n- [ ] Differences from Python semantics are explicit and tested rather than accidental.\n\n## Required evidence\n- Typecheck and unit-test commands\n- Cross-language fixture parity report\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are n"
+    },
+    "16": {
+      "title": "Expose five real Deep Agents visualization tools with safe artifacts",
+      "state": "open",
+      "labels": [
+        "type:story",
+        "area:integrations",
+        "priority:p1"
+      ],
+      "milestone": 3,
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/16",
+      "body_excerpt": "<!-- deepviz-key: TOOLS -->\n# TOOLS\n\n## Outcome\nA Deep Agent attaches actual structured tools and receives artifact metadata rather than arbitrary code execution.\n\n## Coordination\n- Suggested owner lane: integrations agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #3 (EPIC-INTEGRATIONS).\n- Depends on: #5 (CONTRACT).\n\n## Acceptance criteria\n- [ ] create_tools(output_dir) returns five renderer tools using real compatible integration APIs.\n- [ ] Tool schemas validate ChartSpec inputs and surface render/normalization errors predictably.\n- [ ] Safe output directories, bounded metadata and renderer/dependency errors are tested.\n- [ ] A real attachment and multi-tool invocation flow is demonstrated; mocks alone do not satisfy acceptance.\n\n## Required evidence\n- Integration command and package versions\n- Tool discovery/invocation transcript\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SV"
+    },
+    "17": {
+      "title": "Serve visualization tools over a real stdio MCP session",
+      "state": "open",
+      "labels": [
+        "type:story",
+        "area:integrations",
+        "priority:p1"
+      ],
+      "milestone": 3,
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/17",
+      "body_excerpt": "<!-- deepviz-key: MCP -->\n# MCP\n\n## Outcome\nMCP clients discover and call the toolkit using a genuine protocol server.\n\n## Coordination\n- Suggested owner lane: integrations agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #3 (EPIC-INTEGRATIONS).\n- Depends on: #16 (TOOLS).\n\n## Acceptance criteria\n- [ ] A stdio client initializes, lists tools and successfully calls an actual renderer tool.\n- [ ] Protocol stdout remains valid; diagnostics are not mixed into the message stream.\n- [ ] Invalid requests, unsafe paths and missing optional dependencies return structured errors.\n- [ ] CLI/entrypoint and startup instructions work from a built/installed package.\n\n## Required evidence\n- Real client/server discovery and call test\n- Installed-entrypoint smoke transcript\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED re"
+    },
+    "20": {
+      "title": "Gate Python and TypeScript changes with real lint, type, test and build CI",
+      "state": "open",
+      "labels": [
+        "type:task",
+        "area:ci",
+        "priority:p0"
+      ],
+      "milestone": 4,
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/20",
+      "body_excerpt": "<!-- deepviz-key: CI -->\n# CI\n\n## Outcome\nRemote PR checks run the same meaningful verification documented locally.\n\n## Coordination\n- Suggested owner lane: parent/core and TypeScript owners (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #4 (EPIC-DELIVERY).\n\n## Acceptance criteria\n- [ ] Workflow runs Python lint/type/unit/integration and TypeScript type/test/build/package checks as applicable.\n- [ ] Visual/security/scale smoke checks are explicit; expensive full benchmarks have a documented invocation.\n- [ ] Use minimal workflow permissions and no committed secrets; optional dependency failures are visible.\n- [ ] A remote workflow run on the proposed commit is recorded, or its real blocker stays open.\n\n## Required evidence\n- Workflow file and remote run URL/status\n- Local-to-CI command mapping\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/"
+    },
+    "21": {
+      "title": "Prove untrusted specs, HTML values and filesystem paths stay within safe boundaries",
+      "state": "open",
+      "labels": [
+        "type:task",
+        "area:security",
+        "priority:p0"
+      ],
+      "milestone": 4,
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/21",
+      "body_excerpt": "<!-- deepviz-key: SECURITY -->\n# SECURITY\n\n## Outcome\nModel-authored inputs cannot execute arbitrary code, escape output roots or overwrite unrelated files.\n\n## Coordination\n- Suggested owner lane: parent with core/rendering/TypeScript/integrations owners (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #4 (EPIC-DELIVERY).\n\n## Acceptance criteria\n- [ ] Negative tests cover script/title/cell injection, script-closing sequences and dangerous configuration values.\n- [ ] Reject traversal, absolute-path escape and arbitrary remote-URL/code execution pathways.\n- [ ] Artifact creation avoids unrelated-file overwrite and documents optional network-loaded runtimes.\n- [ ] Review dependencies, diagnostics and packaging for accidental credential disclosure.\n\n## Required evidence\n- Named negative tests and results\n- Independent security review with exact commit\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed scree"
+    },
+    "22": {
+      "title": "Measure 10 through 10M input rows on the bounded streaming path",
+      "state": "open",
+      "labels": [
+        "type:task",
+        "area:scale",
+        "priority:p1"
+      ],
+      "milestone": 4,
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/22",
+      "body_excerpt": "<!-- deepviz-key: SCALE -->\n# SCALE\n\n## Outcome\nScale claims describe measured processing and retained marks instead of promising ten million browser marks.\n\n## Coordination\n- Suggested owner lane: parent/core owner with independent testers (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #4 (EPIC-DELIVERY).\n- Depends on: #8 (STREAMING).\n\n## Acceptance criteria\n- [ ] Run and record 10, 1K, 100K, 1M and 10M input scales using a generated/streamed source.\n- [ ] Report environment, command, wall time, memory measurement method and input/output counts.\n- [ ] Verify bounded renderer payloads and disclose aggregation/sampling at every scale.\n- [ ] Failures, unavailable memory metrics and unrun engines/scales are explicit, not extrapolated as passes.\n\n## Required evidence\n- Machine-readable benchmark results and reproducible command\n- Independent tester replication or explicit limitation\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-a"
+    },
+    "23": {
+      "title": "Inspect real renderer outputs and commit reproducible visual evidence",
+      "state": "open",
+      "labels": [
+        "type:task",
+        "area:qa",
+        "priority:p0"
+      ],
+      "milestone": 4,
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/23",
+      "body_excerpt": "<!-- deepviz-key: VISUAL-QA -->\n# VISUAL-QA\n\n## Outcome\nChart correctness includes readable labels and actual browser/static renders, not just nonempty files.\n\n## Coordination\n- Suggested owner lane: parent coordinator and independent tester agents (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #4 (EPIC-DELIVERY).\n\n## Acceptance criteria\n- [ ] Generate committed SVG/PNG/screenshots for representative outputs of all five engines and a dashboard.\n- [ ] Inspect clipping, labels, legends, axes/units, accessible contrast and semantic agreement with source fixtures.\n- [ ] Browser checks detect runtime/console errors and state whether network access was required.\n- [ ] Each PR embeds committed visual evidence and identifies which exact commit/output was inspected.\n\n## Required evidence\n- Committed visual files and generation commands\n- Two independent tester reports per PR\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports,"
+    }
+  },
+  "no_new_issue_census": true
+}

@@ -1,0 +1,1077 @@
+{
+  "observed_utc": "2026-11-27T14:22:31.017116+00:00",
+  "owner": "ses_de5678052ffdJwVtlB6SX6LZrT",
+  "run_id": 45928608970,
+  "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "source_completed_snapshot_sha256": "50c4f8a87ec4da1b4be3a48b59bc725b1f71369451931a5db3f00c2bdbbe482b",
+  "private_sandbox": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r15-19-ci-logs-69d50b4c7582",
+  "query_ledger": [
+    {
+      "api_path": "/repos/sandeshbagmare/deepviz-agent-toolkit/actions/jobs/140275848725/logs",
+      "method": "GET",
+      "job_id": 140275848725,
+      "started_utc": "2026-11-27T14:22:31.017116+00:00",
+      "official_api_http": 302,
+      "redirect_followed_without_authorization": true,
+      "redirect_target_scheme": "https",
+      "signed_url_saved": false,
+      "download_http": 200,
+      "download_bytes": 374529,
+      "response_sha256": "edddb9e8d659c93b3ba211017acaf8486c33558c4d6db1c4c7ea9f6062330978",
+      "format": "text",
+      "collector_result": "savedboundednecessarysanitizedexcerpts",
+      "ended_utc": "2026-11-27T14:22:38.215334+00:00"
+    },
+    {
+      "api_path": "/repos/sandeshbagmare/deepviz-agent-toolkit/actions/jobs/140275848619/logs",
+      "method": "GET",
+      "job_id": 140275848619,
+      "started_utc": "2026-11-27T14:22:38.217334+00:00",
+      "official_api_http": 302,
+      "redirect_followed_without_authorization": true,
+      "redirect_target_scheme": "https",
+      "signed_url_saved": false,
+      "download_http": 200,
+      "download_bytes": 1602863,
+      "response_sha256": "5fcad62a8f2265aa5cb44bfa76f1ffb39f3ca50f7cd2ec28525ef4eddbafeac0",
+      "format": "text",
+      "collector_result": "savedboundednecessarysanitizedexcerpts",
+      "ended_utc": "2026-11-27T14:22:42.299391+00:00"
+    },
+    {
+      "api_path": "/repos/sandeshbagmare/deepviz-agent-toolkit/actions/jobs/140275848671/logs",
+      "method": "GET",
+      "job_id": 140275848671,
+      "started_utc": "2026-11-27T14:22:42.305404+00:00",
+      "official_api_http": 302,
+      "redirect_followed_without_authorization": true,
+      "redirect_target_scheme": "https",
+      "signed_url_saved": false,
+      "download_http": 200,
+      "download_bytes": 360398,
+      "response_sha256": "bbbfff45d15e2e9274901611f0c2be03ec4a3a68a456abcd7908a791a09a8019",
+      "format": "text",
+      "collector_result": "savedboundednecessarysanitizedexcerpts",
+      "ended_utc": "2026-11-27T14:22:45.295792+00:00"
+    }
+  ],
+  "new_issue_census_requests": 0,
+  "API_writes": 0,
+  "scope": "Threefailedcompleted-joblogs only; no runningjobpoll, no rawlog/signedURL/credential publication. HTTPSofforiginredirect withoutBearer; excerpts bounded.",
+  "collector_exit": 0,
+  "completed_utc": "2026-11-27T14:22:45.302791+00:00",
+  "initial_collector_metadata_correction": "Earlierfirstmarkerselectedwrongpytestgroup/heading; corrected fromsameprivatesanitizedlogs. Actualfirstfailedstep/assertion below.",
+  "jobs": [
+    {
+      "job_id": 140275848725,
+      "name": "Python 3.11 lint, types, unit and integration",
+      "job_conclusion": "failure",
+      "failed_steps": [
+        {
+          "number": 11,
+          "name": "Unit and contract tests",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at": "2026-11-27T02:30:20Z",
+          "completed_at": "2026-11-27T02:31:33Z"
+        }
+      ],
+      "response_bytes": 374529,
+      "response_sha256": "edddb9e8d659c93b3ba211017acaf8486c33558c4d6db1c4c7ea9f6062330978",
+      "private_sanitized_sha256": "86361a43d8d10916d5ad08790374f157a80a5d10056ca04ac58bf1c554f97f10",
+      "line_count": 4539,
+      "redaction_policy": "Auth-token literal/credential patterns and everyURLquery removed; ANSI stripped; no response headers or downloadURLs saved.",
+      "first_failure_heading_line_corrected": 829,
+      "actual_unit_command_line_corrected": 731,
+      "bounded_firstcause_representative_excerpts": [
+        {
+          "line": 134,
+          "text": "2026-11-27T02:29:39.5147744Z HEAD is now at aa66ea9 Merge 5340bc69b7203ad7a9166543062482d819f9b705 into 0ae2cf26426822135fc10d337fcacf580b7ed833"
+        },
+        {
+          "line": 731,
+          "text": "2026-11-27T02:30:20.2047333Z ##[group]Run python -m pytest -m 'not integration and not scale' --strict-markers --junitxml=artifacts/unit.xml"
+        },
+        {
+          "line": 732,
+          "text": "2026-11-27T02:30:20.2048009Z python -m pytest -m 'not integration and not scale' --strict-markers --junitxml=artifacts/unit.xml"
+        },
+        {
+          "line": 733,
+          "text": "2026-11-27T02:30:20.2079812Z shell: /usr/bin/bash -e {0}"
+        },
+        {
+          "line": 734,
+          "text": "2026-11-27T02:30:20.2079961Z env:"
+        },
+        {
+          "line": 735,
+          "text": "2026-11-27T02:30:20.2080072Z   MPLBACKEND: Agg"
+        },
+        {
+          "line": 736,
+          "text": "2026-11-27T02:30:20.2080195Z   PYTHONHASHSEED: 0"
+        },
+        {
+          "line": 737,
+          "text": "2026-11-27T02:30:20.2080311Z   CI: true"
+        },
+        {
+          "line": 829,
+          "text": "2026-11-27T02:31:32.6225381Z _ test_dashboard_duplicate_titles_get_unique_containers_and_independent_options _"
+        },
+        {
+          "line": 830,
+          "text": "2026-11-27T02:31:32.6225561Z "
+        },
+        {
+          "line": 831,
+          "text": "2026-11-27T02:31:32.6225752Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-1/test_dashboard_duplicate_title0')"
+        },
+        {
+          "line": 832,
+          "text": "2026-11-27T02:31:32.6225940Z "
+        },
+        {
+          "line": 833,
+          "text": "2026-11-27T02:31:32.6226166Z     def test_dashboard_duplicate_titles_get_unique_containers_and_independent_options(tmp_path):"
+        },
+        {
+          "line": 834,
+          "text": "2026-11-27T02:31:32.6226424Z         children = ["
+        },
+        {
+          "line": 835,
+          "text": "2026-11-27T02:31:32.6226800Z             ChartSpec(kind=\"bar\", title=\"Same title\", x=\"label\", y=\"income\"),"
+        },
+        {
+          "line": 836,
+          "text": "2026-11-27T02:31:32.6227073Z             ChartSpec(kind=\"line\", title=\"Same title\", x=\"label\", y=\"cost\"),"
+        },
+        {
+          "line": 837,
+          "text": "2026-11-27T02:31:32.6227339Z             ChartSpec(kind=\"pie\", title=\"Same title\", x=\"label\", y=\"income\"),"
+        },
+        {
+          "line": 838,
+          "text": "2026-11-27T02:31:32.6227536Z         ]"
+        },
+        {
+          "line": 839,
+          "text": "2026-11-27T02:31:32.6227784Z         rows = [{\"label\": \"A\", \"income\": 9, \"cost\": 2}, {\"label\": \"B\", \"income\": 5, \"cost\": 4}]"
+        },
+        {
+          "line": 840,
+          "text": "2026-11-27T02:31:32.6228112Z         _, manifest, html = _render(tmp_path, rows, kind=\"dashboard\", charts=children, columns=2)"
+        },
+        {
+          "line": 841,
+          "text": "2026-11-27T02:31:32.6228359Z         document = _HTML(html)"
+        },
+        {
+          "line": 842,
+          "text": "2026-11-27T02:31:32.6228582Z         ids = [attrs[\"id\"] for _, attrs in document.elements if \"id\" in attrs]"
+        },
+        {
+          "line": 843,
+          "text": "2026-11-27T02:31:32.6228883Z         containers = [attrs for _, attrs in document.elements if attrs.get(\"role\") == \"img\"]"
+        },
+        {
+          "line": 844,
+          "text": "2026-11-27T02:31:32.6229232Z         assert len(ids) == len(set(ids)), \"Duplicate DOM IDs can render several charts into one container\""
+        },
+        {
+          "line": 845,
+          "text": "2026-11-27T02:31:32.6229492Z         assert len(containers) == 3"
+        },
+        {
+          "line": 846,
+          "text": "2026-11-27T02:31:32.6229717Z         assert len({attrs[\"id\"] for attrs in containers}) == 3"
+        },
+        {
+          "line": 847,
+          "text": "2026-11-27T02:31:32.6229928Z         payloads = _embedded_payloads(document)"
+        },
+        {
+          "line": 848,
+          "text": "2026-11-27T02:31:32.6230124Z         assert payloads == manifest[\"native_specs\"]"
+        },
+        {
+          "line": 849,
+          "text": "2026-11-27T02:31:32.6230410Z >       assert [payload[\"type\"] for payload in payloads] == [\"interval\", \"line\", \"interval\"]"
+        },
+        {
+          "line": 850,
+          "text": "2026-11-27T02:31:32.6230761Z E       AssertionError: assert ['interval', ...', 'interval'] == ['interval', ...', 'interval']"
+        },
+        {
+          "line": 851,
+          "text": "2026-11-27T02:31:32.6230989Z E         "
+        },
+        {
+          "line": 852,
+          "text": "2026-11-27T02:31:32.6231138Z E         At index 1 diff: 'view' != 'line'"
+        },
+        {
+          "line": 853,
+          "text": "2026-11-27T02:31:32.6231288Z E         "
+        },
+        {
+          "line": 854,
+          "text": "2026-11-27T02:31:32.6231516Z E         Full diff: (-: missing in left side, +: extra in left side)"
+        },
+        {
+          "line": 855,
+          "text": "2026-11-27T02:31:32.6231702Z E           ["
+        },
+        {
+          "line": 856,
+          "text": "2026-11-27T02:31:32.6232200Z E               'interval',"
+        },
+        {
+          "line": 857,
+          "text": "2026-11-27T02:31:32.6232351Z E         -     'line',"
+        },
+        {
+          "line": 858,
+          "text": "2026-11-27T02:31:32.6232494Z E         ?      ^ -"
+        },
+        {
+          "line": 859,
+          "text": "2026-11-27T02:31:32.6232622Z E         +     'view',"
+        },
+        {
+          "line": 860,
+          "text": "2026-11-27T02:31:32.6232828Z E         ?      ^  +"
+        },
+        {
+          "line": 861,
+          "text": "2026-11-27T02:31:32.6233216Z E               'interval',"
+        },
+        {
+          "line": 862,
+          "text": "2026-11-27T02:31:32.6233506Z E           ]"
+        },
+        {
+          "line": 863,
+          "text": "2026-11-27T02:31:32.6233583Z "
+        },
+        {
+          "line": 864,
+          "text": "2026-11-27T02:31:32.6233811Z python/deepviz/tests/test_backend_antv.py:201: AssertionError"
+        },
+        {
+          "line": 887,
+          "text": "2026-11-27T02:31:32.6251604Z python/deepviz/src/deepviz/tools.py:86: in _source"
+        },
+        {
+          "line": 956,
+          "text": "2026-11-27T02:31:32.6266717Z E       RecursionError: maximum recursion depth exceeded while encoding a JSON object"
+        },
+        {
+          "line": 981,
+          "text": "2026-11-27T02:31:32.6272115Z python/deepviz/src/deepviz/tools.py:78: in _source"
+        },
+        {
+          "line": 1008,
+          "text": "2026-11-27T02:31:32.6277502Z E           RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string"
+        },
+        {
+          "line": 1016,
+          "text": "2026-11-27T02:31:32.6279271Z     def test_n17_dashboard_serialization_order_observation(tmp_path: Path, monkeypatch) -> None:"
+        },
+        {
+          "line": 1019,
+          "text": "2026-11-27T02:31:32.6279933Z         serialized: list[int] = []"
+        },
+        {
+          "line": 1025,
+          "text": "2026-11-27T02:31:32.6281056Z                 serialized.append(len(encoded.encode(\"utf-8\")))"
+        },
+        {
+          "line": 1031,
+          "text": "2026-11-27T02:31:32.6282531Z >       assert serialized and serialized[0] > 1048576"
+        },
+        {
+          "line": 1032,
+          "text": "2026-11-27T02:31:32.6282699Z E       assert ([])"
+        },
+        {
+          "line": 1048,
+          "text": "2026-11-27T02:31:32.6286201Z     ) -> None:"
+        },
+        {
+          "line": 1052,
+          "text": "2026-11-27T02:31:32.6287242Z >       assert_artifact(artifact, engine, spec, tmp_path, len(records))"
+        },
+        {
+          "line": 1064,
+          "text": "2026-11-27T02:31:32.6290929Z title = 'Acceptance Ω & <img src=x onerror=\"bad()\"> </title></script><script>window.__DV_XSS__=1</script>'"
+        },
+        {
+          "line": 1066,
+          "text": "2026-11-27T02:31:32.6291259Z     def assert_svg_semantics(svg: str, engine: str, title: str) -> None:"
+        },
+        {
+          "line": 1085,
+          "text": "2026-11-27T02:31:32.6296113Z >       assert re.sub(r\"\\s+\", \"\", title) in visible, \"SVG does not preserve the escaped chart title\""
+        },
+        {
+          "line": 3649,
+          "text": "2026-11-27T02:31:32.6721068Z FAILED python/deepviz/tests/test_backend_antv.py::test_dashboard_duplicate_titles_get_unique_containers_and_independent_options - AssertionError: assert ['interval', ...', 'interval'] == ['interval', ...', 'interval']"
+        },
+        {
+          "line": 3662,
+          "text": "2026-11-27T02:31:32.6730026Z FAILED python/deepviz/tests/test_n06_tool_lifecycle.py::test_overdeep_inline_json_has_actionable_validation_error[python-json] - RecursionError: maximum recursion depth exceeded while encoding a JSON object"
+        },
+        {
+          "line": 3664,
+          "text": "2026-11-27T02:31:32.6730763Z FAILED python/deepviz/tests/test_n17_boundaries.py::test_n17_dashboard_serialization_order_observation - assert ([])"
+        },
+        {
+          "line": 3665,
+          "text": "2026-11-27T02:31:32.6731145Z FAILED tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-records] - AssertionError: SVG does not preserve the escaped chart title"
+        },
+        {
+          "line": 3705,
+          "text": "2026-11-27T02:31:32.6745273Z FAILED tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-records] - AssertionError: Native visible coordinates changed a mapped observation"
+        },
+        {
+          "line": 4485,
+          "text": "2026-11-27T02:31:33.0030159Z FAILED tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii] - ValueError: Input field name exceeds 4096 UTF-8 bytes"
+        },
+        {
+          "line": 4489,
+          "text": "2026-11-27T02:31:33.0031365Z ==== 38 failed, 2456 passed, 1 skipped, 550 deselected in 72.08s (0:01:12) ====="
+        },
+        {
+          "line": 4490,
+          "text": "2026-11-27T02:31:33.5505792Z ##[error]Process completed with exit code 1."
+        }
+      ],
+      "correction": "Initialcollectorselectedearliernegativecontrolpytestgroup andtripleunderscoreheadingmissedAntVsingleunderscore; correctedfromsamealreadydownloadedlog, no duplicateGET."
+    },
+    {
+      "job_id": 140275848619,
+      "name": "Python 3.13 lint, types, unit and integration",
+      "job_conclusion": "failure",
+      "failed_steps": [
+        {
+          "number": 11,
+          "name": "Unit and contract tests",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at": "2026-11-27T02:30:23Z",
+          "completed_at": "2026-11-27T02:31:42Z"
+        }
+      ],
+      "response_bytes": 1602863,
+      "response_sha256": "5fcad62a8f2265aa5cb44bfa76f1ffb39f3ca50f7cd2ec28525ef4eddbafeac0",
+      "private_sanitized_sha256": "d53254d3b9db6c5154a87bb41b61097daafde380f8608756a86aa196d9f90c52",
+      "line_count": 15917,
+      "redaction_policy": "Auth-token literal/credential patterns and everyURLquery removed; ANSI stripped; no response headers or downloadURLs saved.",
+      "first_failure_heading_line_corrected": 818,
+      "actual_unit_command_line_corrected": 720,
+      "bounded_firstcause_representative_excerpts": [
+        {
+          "line": 134,
+          "text": "2026-11-27T02:29:39.9375636Z HEAD is now at aa66ea9 Merge 5340bc69b7203ad7a9166543062482d819f9b705 into 0ae2cf26426822135fc10d337fcacf580b7ed833"
+        },
+        {
+          "line": 720,
+          "text": "2026-11-27T02:30:23.2187599Z ##[group]Run python -m pytest -m 'not integration and not scale' --strict-markers --junitxml=artifacts/unit.xml"
+        },
+        {
+          "line": 721,
+          "text": "2026-11-27T02:30:23.2188501Z python -m pytest -m 'not integration and not scale' --strict-markers --junitxml=artifacts/unit.xml"
+        },
+        {
+          "line": 722,
+          "text": "2026-11-27T02:30:23.2221247Z shell: /usr/bin/bash -e {0}"
+        },
+        {
+          "line": 723,
+          "text": "2026-11-27T02:30:23.2221428Z env:"
+        },
+        {
+          "line": 724,
+          "text": "2026-11-27T02:30:23.2221549Z   MPLBACKEND: Agg"
+        },
+        {
+          "line": 725,
+          "text": "2026-11-27T02:30:23.2221681Z   PYTHONHASHSEED: 0"
+        },
+        {
+          "line": 726,
+          "text": "2026-11-27T02:30:23.2221807Z   CI: true"
+        },
+        {
+          "line": 818,
+          "text": "2026-11-27T02:31:41.2745455Z _ test_dashboard_duplicate_titles_get_unique_containers_and_independent_options _"
+        },
+        {
+          "line": 819,
+          "text": "2026-11-27T02:31:41.2745780Z "
+        },
+        {
+          "line": 820,
+          "text": "2026-11-27T02:31:41.2746111Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-1/test_dashboard_duplicate_title0')"
+        },
+        {
+          "line": 821,
+          "text": "2026-11-27T02:31:41.2746440Z "
+        },
+        {
+          "line": 822,
+          "text": "2026-11-27T02:31:41.2746789Z     def test_dashboard_duplicate_titles_get_unique_containers_and_independent_options(tmp_path):"
+        },
+        {
+          "line": 823,
+          "text": "2026-11-27T02:31:41.2747229Z         children = ["
+        },
+        {
+          "line": 824,
+          "text": "2026-11-27T02:31:41.2747570Z             ChartSpec(kind=\"bar\", title=\"Same title\", x=\"label\", y=\"income\"),"
+        },
+        {
+          "line": 825,
+          "text": "2026-11-27T02:31:41.2748024Z             ChartSpec(kind=\"line\", title=\"Same title\", x=\"label\", y=\"cost\"),"
+        },
+        {
+          "line": 826,
+          "text": "2026-11-27T02:31:41.2748635Z             ChartSpec(kind=\"pie\", title=\"Same title\", x=\"label\", y=\"income\"),"
+        },
+        {
+          "line": 827,
+          "text": "2026-11-27T02:31:41.2748957Z         ]"
+        },
+        {
+          "line": 828,
+          "text": "2026-11-27T02:31:41.2749303Z         rows = [{\"label\": \"A\", \"income\": 9, \"cost\": 2}, {\"label\": \"B\", \"income\": 5, \"cost\": 4}]"
+        },
+        {
+          "line": 829,
+          "text": "2026-11-27T02:31:41.2749867Z         _, manifest, html = _render(tmp_path, rows, kind=\"dashboard\", charts=children, columns=2)"
+        },
+        {
+          "line": 830,
+          "text": "2026-11-27T02:31:41.2750303Z         document = _HTML(html)"
+        },
+        {
+          "line": 831,
+          "text": "2026-11-27T02:31:41.2750662Z         ids = [attrs[\"id\"] for _, attrs in document.elements if \"id\" in attrs]"
+        },
+        {
+          "line": 832,
+          "text": "2026-11-27T02:31:41.2751187Z         containers = [attrs for _, attrs in document.elements if attrs.get(\"role\") == \"img\"]"
+        },
+        {
+          "line": 833,
+          "text": "2026-11-27T02:31:41.2751785Z         assert len(ids) == len(set(ids)), \"Duplicate DOM IDs can render several charts into one container\""
+        },
+        {
+          "line": 834,
+          "text": "2026-11-27T02:31:41.2752230Z         assert len(containers) == 3"
+        },
+        {
+          "line": 835,
+          "text": "2026-11-27T02:31:41.2752566Z         assert len({attrs[\"id\"] for attrs in containers}) == 3"
+        },
+        {
+          "line": 836,
+          "text": "2026-11-27T02:31:41.2752924Z         payloads = _embedded_payloads(document)"
+        },
+        {
+          "line": 837,
+          "text": "2026-11-27T02:31:41.2753256Z         assert payloads == manifest[\"native_specs\"]"
+        },
+        {
+          "line": 838,
+          "text": "2026-11-27T02:31:41.2753756Z >       assert [payload[\"type\"] for payload in payloads] == [\"interval\", \"line\", \"interval\"]"
+        },
+        {
+          "line": 839,
+          "text": "2026-11-27T02:31:41.2754385Z E       AssertionError: assert ['interval', ...', 'interval'] == ['interval', ...', 'interval']"
+        },
+        {
+          "line": 840,
+          "text": "2026-11-27T02:31:41.2754776Z E         "
+        },
+        {
+          "line": 841,
+          "text": "2026-11-27T02:31:41.2755029Z E         At index 1 diff: 'view' != 'line'"
+        },
+        {
+          "line": 842,
+          "text": "2026-11-27T02:31:41.2755275Z E         "
+        },
+        {
+          "line": 843,
+          "text": "2026-11-27T02:31:41.2755616Z E         Full diff: (-: missing in left side, +: extra in left side)"
+        },
+        {
+          "line": 844,
+          "text": "2026-11-27T02:31:41.2755938Z E           ["
+        },
+        {
+          "line": 845,
+          "text": "2026-11-27T02:31:41.2756496Z E               'interval',"
+        },
+        {
+          "line": 846,
+          "text": "2026-11-27T02:31:41.2756750Z E         -     'line',"
+        },
+        {
+          "line": 847,
+          "text": "2026-11-27T02:31:41.2756979Z E         ?      ^ -"
+        },
+        {
+          "line": 848,
+          "text": "2026-11-27T02:31:41.2757193Z E         +     'view',"
+        },
+        {
+          "line": 849,
+          "text": "2026-11-27T02:31:41.2757401Z E         ?      ^  +"
+        },
+        {
+          "line": 850,
+          "text": "2026-11-27T02:31:41.2757641Z E               'interval',"
+        },
+        {
+          "line": 851,
+          "text": "2026-11-27T02:31:41.2757864Z E           ]"
+        },
+        {
+          "line": 852,
+          "text": "2026-11-27T02:31:41.2757966Z "
+        },
+        {
+          "line": 853,
+          "text": "2026-11-27T02:31:41.2758305Z python/deepviz/tests/test_backend_antv.py:201: AssertionError"
+        },
+        {
+          "line": 854,
+          "text": "2026-11-27T02:31:41.2758816Z _____ test_n09_wrapped_svg_title_oracle_still_rejects_corruption[missing] ______"
+        },
+        {
+          "line": 855,
+          "text": "2026-11-27T02:31:41.2759098Z "
+        },
+        {
+          "line": 856,
+          "text": "2026-11-27T02:31:41.2759196Z mutation = 'missing'"
+        },
+        {
+          "line": 857,
+          "text": "2026-11-27T02:31:41.2759317Z "
+        },
+        {
+          "line": 858,
+          "text": "2026-11-27T02:31:41.2759569Z     @pytest.mark.parametrize(\"mutation\", [\"missing\", \"altered\", \"script\", \"event\"])"
+        },
+        {
+          "line": 859,
+          "text": "2026-11-27T02:31:41.2760139Z     def test_n09_wrapped_svg_title_oracle_still_rejects_corruption(mutation: str) -> None:"
+        },
+        {
+          "line": 860,
+          "text": "2026-11-27T02:31:41.2760738Z         valid = ('<svg xmlns=\"http://www.w3.org/2000/svg\"><!-- Very longti\\ntle &amp; safe -->'"
+        },
+        {
+          "line": 861,
+          "text": "2026-11-27T02:31:41.2761247Z                  '<path d=\"M0 0L2 2\"/><path d=\"M2 0L0 2\"/><rect width=\"2\" height=\"2\"/>'"
+        },
+        {
+          "line": 862,
+          "text": "2026-11-27T02:31:41.2761644Z                  '<circle cx=\"1\" cy=\"1\" r=\"1\"/></svg>')"
+        },
+        {
+          "line": 863,
+          "text": "2026-11-27T02:31:41.2762119Z >       ACCEPTANCE.assert_svg_semantics(valid, \"matplotlib\", \"Very longtitle & safe\")"
+        },
+        {
+          "line": 864,
+          "text": "2026-11-27T02:31:41.2762582Z "
+        },
+        {
+          "line": 865,
+          "text": "2026-11-27T02:31:41.2762953Z python/deepviz/tests/test_n09_oracle_controls.py:40: "
+        },
+        {
+          "line": 866,
+          "text": "2026-11-27T02:31:41.2763594Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "
+        },
+        {
+          "line": 867,
+          "text": "2026-11-27T02:31:41.2763881Z "
+        },
+        {
+          "line": 868,
+          "text": "2026-11-27T02:31:41.2764568Z svg = '<svg xmlns=\"http://www.w3.org/2000/svg\"><!-- Very longti\\ntle &amp; safe --><path d=\"M0 0L2 2\"/><path d=\"M2 0L0 2\"/><rect width=\"2\" height=\"2\"/><circle cx=\"1\" cy=\"1\" r=\"1\"/></svg>'"
+        },
+        {
+          "line": 869,
+          "text": "2026-11-27T02:31:41.2765459Z engine = 'matplotlib', title = 'Very longtitle & safe'"
+        },
+        {
+          "line": 870,
+          "text": "2026-11-27T02:31:41.2778861Z "
+        },
+        {
+          "line": 871,
+          "text": "2026-11-27T02:31:41.2779134Z     def assert_svg_semantics(svg: str, engine: str, title: str) -> None:"
+        },
+        {
+          "line": 872,
+          "text": "2026-11-27T02:31:41.2779524Z         root = ET.fromstring(svg)"
+        },
+        {
+          "line": 873,
+          "text": "2026-11-27T02:31:41.2779865Z         assert root.tag == \"{http://www.w3.org/2000/svg}svg\""
+        },
+        {
+          "line": 874,
+          "text": "2026-11-27T02:31:41.2780389Z         assert not any(node.tag.rsplit(\"}\", 1)[-1] in {\"script\", \"foreignObject\"} for node in root.iter())"
+        },
+        {
+          "line": 875,
+          "text": "2026-11-27T02:31:41.2780828Z         assert not any("
+        },
+        {
+          "line": 876,
+          "text": "2026-11-27T02:31:41.2781137Z             attribute.rsplit(\"}\", 1)[-1].lower().startswith(\"on\")"
+        },
+        {
+          "line": 877,
+          "text": "2026-11-27T02:31:41.2781535Z             for node in root.iter() for attribute in node.attrib"
+        },
+        {
+          "line": 878,
+          "text": "2026-11-27T02:31:41.2781909Z         ), \"SVG contains an executable event attribute\""
+        },
+        {
+          "line": 879,
+          "text": "2026-11-27T02:31:41.2782329Z         parser = ET.XMLParser(target=ET.TreeBuilder(insert_comments=True))"
+        },
+        {
+          "line": 880,
+          "text": "2026-11-27T02:31:41.2782737Z         full_root = ET.fromstring(svg, parser=parser)"
+        },
+        {
+          "line": 881,
+          "text": "2026-11-27T02:31:41.2783063Z         for node in full_root.iter():"
+        },
+        {
+          "line": 882,
+          "text": "2026-11-27T02:31:41.2783370Z             if node.tag is ET.Comment and node.text:"
+        },
+        {
+          "line": 883,
+          "text": "2026-11-27T02:31:41.2783789Z                 # Matplotlib entity-escapes comment text; XML parsers deliberately"
+        },
+        {
+          "line": 884,
+          "text": "2026-11-27T02:31:41.2784274Z                 # do not resolve entities inside comments as they do in <text>."
+        },
+        {
+          "line": 885,
+          "text": "2026-11-27T02:31:41.2784666Z                 node.text = unescape(node.text)"
+        },
+        {
+          "line": 886,
+          "text": "2026-11-27T02:31:41.2785083Z         # Matplotlib exports wrapped visible title lines as separate SVG comments."
+        },
+        {
+          "line": 887,
+          "text": "2026-11-27T02:31:41.2785612Z         # textwrap may insert a newline inside a long token; no non-whitespace title"
+        },
+        {
+          "line": 888,
+          "text": "2026-11-27T02:31:41.2786121Z         # character may be lost, altered, or supplied only by an unrelated manifest."
+        },
+        {
+          "line": 889,
+          "text": "2026-11-27T02:31:41.2786670Z         visible = re.sub(r\"\\s+\", \"\", \"\".join(full_root.itertext()))"
+        },
+        {
+          "line": 890,
+          "text": "2026-11-27T02:31:41.2787252Z >       assert re.sub(r\"\\s+\", \"\", title) in visible, \"SVG does not preserve the escaped chart title\""
+        },
+        {
+          "line": 891,
+          "text": "2026-11-27T02:31:41.2787693Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+        },
+        {
+          "line": 892,
+          "text": "2026-11-27T02:31:41.2788230Z E       AssertionError: SVG does not preserve the escaped chart title"
+        },
+        {
+          "line": 893,
+          "text": "2026-11-27T02:31:41.2788488Z "
+        },
+        {
+          "line": 894,
+          "text": "2026-11-27T02:31:41.2788842Z tests/test_acceptance_matrix.py:325: AssertionError"
+        },
+        {
+          "line": 895,
+          "text": "2026-11-27T02:31:41.2789328Z _____ test_n09_wrapped_svg_title_oracle_still_rejects_corruption[altered] ______"
+        },
+        {
+          "line": 1387,
+          "text": "2026-11-27T02:31:41.3017257Z     def test_n17_dashboard_serialization_order_observation(tmp_path: Path, monkeypatch) -> None:"
+        },
+        {
+          "line": 1390,
+          "text": "2026-11-27T02:31:41.3017908Z         serialized: list[int] = []"
+        },
+        {
+          "line": 1396,
+          "text": "2026-11-27T02:31:41.3019458Z                 serialized.append(len(encoded.encode(\"utf-8\")))"
+        },
+        {
+          "line": 1402,
+          "text": "2026-11-27T02:31:41.3020805Z >       assert serialized and serialized[0] > 1048576"
+        },
+        {
+          "line": 1403,
+          "text": "2026-11-27T02:31:41.3020977Z E       assert ([])"
+        },
+        {
+          "line": 1419,
+          "text": "2026-11-27T02:31:41.3024571Z     ) -> None:"
+        },
+        {
+          "line": 1423,
+          "text": "2026-11-27T02:31:41.3025437Z >       assert_artifact(artifact, engine, spec, tmp_path, len(records))"
+        },
+        {
+          "line": 1431,
+          "text": "2026-11-27T02:31:41.3027267Z svg = '<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\\n  \"http://www...f2b1ccbabb\">\\n   <rect x=\"53.96\" y=\"48.660645\" width=\"386.84\" height=\"188.017012\"/>\\n  </clipPath>\\n </defs>\\n</svg>\\n'"
+        },
+        {
+          "line": 1433,
+          "text": "2026-11-27T02:31:41.3028386Z title = 'Acceptance Ω & <img src=x onerror=\"bad()\"> </title></script><script>window.__DV_XSS__=1</script>'"
+        },
+        {
+          "line": 1435,
+          "text": "2026-11-27T02:31:41.3028714Z     def assert_svg_semantics(svg: str, engine: str, title: str) -> None:"
+        },
+        {
+          "line": 1454,
+          "text": "2026-11-27T02:31:41.3033726Z >       assert re.sub(r\"\\s+\", \"\", title) in visible, \"SVG does not preserve the escaped chart title\""
+        },
+        {
+          "line": 1455,
+          "text": "2026-11-27T02:31:41.3034033Z E       AssertionError: SVG does not preserve the escaped chart title"
+        },
+        {
+          "line": 1456,
+          "text": "2026-11-27T02:31:41.3034955Z E       assert 'AcceptanceΩ&<imgsrc=xonerror=\"bad()\"></title></script><script>window.__DV_XSS__=1</script>' in '2026-11-27T02:31:00.757316image/svg+xmlMatplotlibv3.11.2,https://matplotlib.org/*{stroke-linejoin:round;stroke-linecap:butt}'"
+        },
+        {
+          "line": 14239,
+          "text": "2026-11-27T02:31:41.5136288Z FAILED python/deepviz/tests/test_backend_antv.py::test_dashboard_duplicate_titles_get_unique_containers_and_independent_options - AssertionError: assert ['interval', ...', 'interval'] == ['interval', ...', 'interval']"
+        },
+        {
+          "line": 14252,
+          "text": "2026-11-27T02:31:41.5137446Z FAILED python/deepviz/tests/test_n09_oracle_controls.py::test_n09_wrapped_svg_title_oracle_still_rejects_corruption[missing] - AssertionError: SVG does not preserve the escaped chart title"
+        },
+        {
+          "line": 14298,
+          "text": "2026-11-27T02:31:41.5168305Z FAILED python/deepviz/tests/test_n17_boundaries.py::test_n17_dashboard_serialization_order_observation - assert ([])"
+        },
+        {
+          "line": 15019,
+          "text": "2026-11-27T02:31:41.5463474Z FAILED tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-records] - AssertionError: SVG does not preserve the escaped chart title"
+        },
+        {
+          "line": 15059,
+          "text": "2026-11-27T02:31:41.5477973Z FAILED tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-records] - AssertionError: Native visible coordinates changed a mapped observation"
+        },
+        {
+          "line": 15863,
+          "text": "2026-11-27T02:31:41.7037033Z FAILED tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii] - ValueError: Input field name exceeds 4096 UTF-8 bytes"
+        },
+        {
+          "line": 15867,
+          "text": "2026-11-27T02:31:41.7038827Z = 240 failed, 2254 passed, 1 skipped, 550 deselected, 4 warnings in 77.69s (0:01:17) ="
+        },
+        {
+          "line": 15868,
+          "text": "2026-11-27T02:31:42.2447107Z ##[error]Process completed with exit code 1."
+        }
+      ],
+      "correction": "Initialcollectorselectedearliernegativecontrolpytestgroup andtripleunderscoreheadingmissedAntVsingleunderscore; correctedfromsamealreadydownloadedlog, no duplicateGET."
+    },
+    {
+      "job_id": 140275848671,
+      "name": "Python 3.12 lint, types, unit and integration",
+      "job_conclusion": "failure",
+      "failed_steps": [
+        {
+          "number": 11,
+          "name": "Unit and contract tests",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at": "2026-11-27T02:30:26Z",
+          "completed_at": "2026-11-27T02:31:55Z"
+        }
+      ],
+      "response_bytes": 360398,
+      "response_sha256": "bbbfff45d15e2e9274901611f0c2be03ec4a3a68a456abcd7908a791a09a8019",
+      "private_sanitized_sha256": "9d663995241822dc475ac26b2c7aabbb87d2bbd2b0d08a063793a1c72ed14b72",
+      "line_count": 4373,
+      "redaction_policy": "Auth-token literal/credential patterns and everyURLquery removed; ANSI stripped; no response headers or downloadURLs saved.",
+      "first_failure_heading_line_corrected": 807,
+      "actual_unit_command_line_corrected": 709,
+      "bounded_firstcause_representative_excerpts": [
+        {
+          "line": 134,
+          "text": "2026-11-27T02:29:40.0297922Z HEAD is now at aa66ea9 Merge 5340bc69b7203ad7a9166543062482d819f9b705 into 0ae2cf26426822135fc10d337fcacf580b7ed833"
+        },
+        {
+          "line": 709,
+          "text": "2026-11-27T02:30:26.5695690Z ##[group]Run python -m pytest -m 'not integration and not scale' --strict-markers --junitxml=artifacts/unit.xml"
+        },
+        {
+          "line": 710,
+          "text": "2026-11-27T02:30:26.5696357Z python -m pytest -m 'not integration and not scale' --strict-markers --junitxml=artifacts/unit.xml"
+        },
+        {
+          "line": 711,
+          "text": "2026-11-27T02:30:26.5726283Z shell: /usr/bin/bash -e {0}"
+        },
+        {
+          "line": 712,
+          "text": "2026-11-27T02:30:26.5726515Z env:"
+        },
+        {
+          "line": 713,
+          "text": "2026-11-27T02:30:26.5726692Z   MPLBACKEND: Agg"
+        },
+        {
+          "line": 714,
+          "text": "2026-11-27T02:30:26.5726894Z   PYTHONHASHSEED: 0"
+        },
+        {
+          "line": 715,
+          "text": "2026-11-27T02:30:26.5727087Z   CI: true"
+        },
+        {
+          "line": 807,
+          "text": "2026-11-27T02:31:54.8862566Z _ test_dashboard_duplicate_titles_get_unique_containers_and_independent_options _"
+        },
+        {
+          "line": 808,
+          "text": "2026-11-27T02:31:54.8862976Z "
+        },
+        {
+          "line": 809,
+          "text": "2026-11-27T02:31:54.8863392Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-1/test_dashboard_duplicate_title0')"
+        },
+        {
+          "line": 810,
+          "text": "2026-11-27T02:31:54.8863819Z "
+        },
+        {
+          "line": 811,
+          "text": "2026-11-27T02:31:54.8864250Z     def test_dashboard_duplicate_titles_get_unique_containers_and_independent_options(tmp_path):"
+        },
+        {
+          "line": 812,
+          "text": "2026-11-27T02:31:54.8864691Z         children = ["
+        },
+        {
+          "line": 813,
+          "text": "2026-11-27T02:31:54.8865032Z             ChartSpec(kind=\"bar\", title=\"Same title\", x=\"label\", y=\"income\"),"
+        },
+        {
+          "line": 814,
+          "text": "2026-11-27T02:31:54.8865439Z             ChartSpec(kind=\"line\", title=\"Same title\", x=\"label\", y=\"cost\"),"
+        },
+        {
+          "line": 815,
+          "text": "2026-11-27T02:31:54.8865841Z             ChartSpec(kind=\"pie\", title=\"Same title\", x=\"label\", y=\"income\"),"
+        },
+        {
+          "line": 816,
+          "text": "2026-11-27T02:31:54.8866127Z         ]"
+        },
+        {
+          "line": 817,
+          "text": "2026-11-27T02:31:54.8866443Z         rows = [{\"label\": \"A\", \"income\": 9, \"cost\": 2}, {\"label\": \"B\", \"income\": 5, \"cost\": 4}]"
+        },
+        {
+          "line": 818,
+          "text": "2026-11-27T02:31:54.8866917Z         _, manifest, html = _render(tmp_path, rows, kind=\"dashboard\", charts=children, columns=2)"
+        },
+        {
+          "line": 819,
+          "text": "2026-11-27T02:31:54.8867288Z         document = _HTML(html)"
+        },
+        {
+          "line": 820,
+          "text": "2026-11-27T02:31:54.8867614Z         ids = [attrs[\"id\"] for _, attrs in document.elements if \"id\" in attrs]"
+        },
+        {
+          "line": 821,
+          "text": "2026-11-27T02:31:54.8868086Z         containers = [attrs for _, attrs in document.elements if attrs.get(\"role\") == \"img\"]"
+        },
+        {
+          "line": 822,
+          "text": "2026-11-27T02:31:54.8868625Z         assert len(ids) == len(set(ids)), \"Duplicate DOM IDs can render several charts into one container\""
+        },
+        {
+          "line": 823,
+          "text": "2026-11-27T02:31:54.8869293Z         assert len(containers) == 3"
+        },
+        {
+          "line": 824,
+          "text": "2026-11-27T02:31:54.8869602Z         assert len({attrs[\"id\"] for attrs in containers}) == 3"
+        },
+        {
+          "line": 825,
+          "text": "2026-11-27T02:31:54.8869928Z         payloads = _embedded_payloads(document)"
+        },
+        {
+          "line": 826,
+          "text": "2026-11-27T02:31:54.8870414Z         assert payloads == manifest[\"native_specs\"]"
+        },
+        {
+          "line": 827,
+          "text": "2026-11-27T02:31:54.8870865Z >       assert [payload[\"type\"] for payload in payloads] == [\"interval\", \"line\", \"interval\"]"
+        },
+        {
+          "line": 828,
+          "text": "2026-11-27T02:31:54.8871403Z E       AssertionError: assert ['interval', ...', 'interval'] == ['interval', ...', 'interval']"
+        },
+        {
+          "line": 829,
+          "text": "2026-11-27T02:31:54.8871764Z E         "
+        },
+        {
+          "line": 830,
+          "text": "2026-11-27T02:31:54.8872137Z E         At index 1 diff: 'view' != 'line'"
+        },
+        {
+          "line": 831,
+          "text": "2026-11-27T02:31:54.8872478Z E         "
+        },
+        {
+          "line": 832,
+          "text": "2026-11-27T02:31:54.8872802Z E         Full diff: (-: missing in left side, +: extra in left side)"
+        },
+        {
+          "line": 833,
+          "text": "2026-11-27T02:31:54.8873087Z E           ["
+        },
+        {
+          "line": 834,
+          "text": "2026-11-27T02:31:54.8873468Z E               'interval',"
+        },
+        {
+          "line": 835,
+          "text": "2026-11-27T02:31:54.8873697Z E         -     'line',"
+        },
+        {
+          "line": 836,
+          "text": "2026-11-27T02:31:54.8873909Z E         ?      ^ -"
+        },
+        {
+          "line": 837,
+          "text": "2026-11-27T02:31:54.8874113Z E         +     'view',"
+        },
+        {
+          "line": 838,
+          "text": "2026-11-27T02:31:54.8874301Z E         ?      ^  +"
+        },
+        {
+          "line": 839,
+          "text": "2026-11-27T02:31:54.8874501Z E               'interval',"
+        },
+        {
+          "line": 840,
+          "text": "2026-11-27T02:31:54.8874699Z E           ]"
+        },
+        {
+          "line": 841,
+          "text": "2026-11-27T02:31:54.8874804Z "
+        },
+        {
+          "line": 842,
+          "text": "2026-11-27T02:31:54.8875016Z python/deepviz/tests/test_backend_antv.py:201: AssertionError"
+        },
+        {
+          "line": 848,
+          "text": "2026-11-27T02:31:54.8876996Z     def test_n17_dashboard_serialization_order_observation(tmp_path: Path, monkeypatch) -> None:"
+        },
+        {
+          "line": 851,
+          "text": "2026-11-27T02:31:54.8878018Z         serialized: list[int] = []"
+        },
+        {
+          "line": 857,
+          "text": "2026-11-27T02:31:54.8879753Z                 serialized.append(len(encoded.encode(\"utf-8\")))"
+        },
+        {
+          "line": 863,
+          "text": "2026-11-27T02:31:54.8881880Z >       assert serialized and serialized[0] > 1048576"
+        },
+        {
+          "line": 864,
+          "text": "2026-11-27T02:31:54.8882146Z E       assert ([])"
+        },
+        {
+          "line": 880,
+          "text": "2026-11-27T02:31:54.8887730Z     ) -> None:"
+        },
+        {
+          "line": 884,
+          "text": "2026-11-27T02:31:54.8888939Z >       assert_artifact(artifact, engine, spec, tmp_path, len(records))"
+        },
+        {
+          "line": 896,
+          "text": "2026-11-27T02:31:54.8894123Z title = 'Acceptance Ω & <img src=x onerror=\"bad()\"> </title></script><script>window.__DV_XSS__=1</script>'"
+        },
+        {
+          "line": 898,
+          "text": "2026-11-27T02:31:54.8894644Z     def assert_svg_semantics(svg: str, engine: str, title: str) -> None:"
+        },
+        {
+          "line": 917,
+          "text": "2026-11-27T02:31:54.8902023Z >       assert re.sub(r\"\\s+\", \"\", title) in visible, \"SVG does not preserve the escaped chart title\""
+        },
+        {
+          "line": 3485,
+          "text": "2026-11-27T02:31:54.9562654Z FAILED python/deepviz/tests/test_backend_antv.py::test_dashboard_duplicate_titles_get_unique_containers_and_independent_options - AssertionError: assert ['interval', ...', 'interval'] == ['interval', ...', 'interval']"
+        },
+        {
+          "line": 3498,
+          "text": "2026-11-27T02:31:54.9564183Z FAILED python/deepviz/tests/test_n17_boundaries.py::test_n17_dashboard_serialization_order_observation - assert ([])"
+        },
+        {
+          "line": 3499,
+          "text": "2026-11-27T02:31:54.9564883Z FAILED tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-records] - AssertionError: SVG does not preserve the escaped chart title"
+        },
+        {
+          "line": 3539,
+          "text": "2026-11-27T02:31:54.9585881Z FAILED tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-records] - AssertionError: Native visible coordinates changed a mapped observation"
+        },
+        {
+          "line": 4319,
+          "text": "2026-11-27T02:31:55.1656039Z FAILED tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii] - ValueError: Input field name exceeds 4096 UTF-8 bytes"
+        },
+        {
+          "line": 4323,
+          "text": "2026-11-27T02:31:55.1659413Z ==== 36 failed, 2458 passed, 1 skipped, 550 deselected in 87.79s (0:01:27) ====="
+        },
+        {
+          "line": 4324,
+          "text": "2026-11-27T02:31:55.6888362Z ##[error]Process completed with exit code 1."
+        }
+      ],
+      "correction": "Initialcollectorselectedearliernegativecontrolpytestgroup andtripleunderscoreheadingmissedAntVsingleunderscore; correctedfromsamealreadydownloadedlog, no duplicateGET."
+    }
+  ]
+}

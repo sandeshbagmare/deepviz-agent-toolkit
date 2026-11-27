@@ -1,0 +1,51 @@
+{
+  "observed_utc": "2026-11-27T14:47:01.740269+00:00",
+  "failed_operation": "Ownprepublicationstageddiffreview capturedGitUTF8withWindowsdefaultcp1252",
+  "first_command_exit": 1,
+  "actual_harness_error": "UnicodeDecodeErrorcp1252byte0x9d, thenTypeErrorbecausereaderthreadstdoutNone",
+  "product_test_failure": false,
+  "source_changed": false,
+  "remote_push_attempted": false,
+  "preserved_staged_owned_files": true,
+  "reconciliation_commands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "974e8d7e4307e8063e77e95dfcd4e0f7aa7dd121"
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "exit": 0,
+      "stdout": "M  docs/agent-state/ses_de5678052ffdJwVtlB6SX6LZrT.md\nA  docs/coordination/evidence/R15-19/checkout-head-tree-comparison.json\nA  docs/coordination/evidence/R15-19/classified-failures-and-acceptance.json\nA  docs/coordination/evidence/R15-19/completed-run-jobs.json\nA  docs/coordination/evidence/R15-19/failed-job-log-excerpts.json\nA  docs/coordination/evidence/R15-19/publication-preflight.json\nA  docs/coordination/evidence/R15-19/source-and-issue-provenance.json\nA  docs/coordination/evidence/R15-19/verification.json\nA  docs/coordination/reports/R15-19-ci-failure-disposition.md"
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--name-only"
+      ],
+      "exit": 0,
+      "stdout": "docs/agent-state/ses_de5678052ffdJwVtlB6SX6LZrT.md\ndocs/coordination/evidence/R15-19/checkout-head-tree-comparison.json\ndocs/coordination/evidence/R15-19/classified-failures-and-acceptance.json\ndocs/coordination/evidence/R15-19/completed-run-jobs.json\ndocs/coordination/evidence/R15-19/failed-job-log-excerpts.json\ndocs/coordination/evidence/R15-19/publication-preflight.json\ndocs/coordination/evidence/R15-19/source-and-issue-provenance.json\ndocs/coordination/evidence/R15-19/verification.json\ndocs/coordination/reports/R15-19-ci-failure-disposition.md"
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit": 0,
+      "stdout": ""
+    }
+  ],
+  "next_action": "CaptureGitdiffasbytes/explicitUTF8, updateOWNreport/notefailurecheckpoint, stageexactOWNmanifestincludingfailureevidence andverifybeforecommit. No reset/discard/duplicateAPIqueries."
+}

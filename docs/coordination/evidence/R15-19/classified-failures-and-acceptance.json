@@ -1,0 +1,2517 @@
+{
+  "observed_utc": "2026-11-27T14:36:29.392315+00:00",
+  "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "actual_checkout_sha": "aa66ea97c1184554613d14e873e4cc34e54453b0",
+  "jobs": [
+    {
+      "job_id": 140275848725,
+      "name": "Python 3.11 lint, types, unit and integration",
+      "failed_case_count": 38,
+      "cluster_counts": {
+        "C01": 1,
+        "C02": 2,
+        "C03": 1,
+        "C04": 10,
+        "C05": 20,
+        "C06": 4
+      },
+      "FAILED_cases": [
+        {
+          "case": "python/deepviz/tests/test_backend_antv.py::test_dashboard_duplicate_titles_get_unique_containers_and_independent_options",
+          "error": "AssertionError: assert ['interval', ...', 'interval'] == ['interval', ...', 'interval']",
+          "line": 3649,
+          "cluster": "C01"
+        },
+        {
+          "case": "python/deepviz/tests/test_n06_tool_lifecycle.py::test_overdeep_inline_json_has_actionable_validation_error[python-json]",
+          "error": "RecursionError: maximum recursion depth exceeded while encoding a JSON object",
+          "line": 3662,
+          "cluster": "C02"
+        },
+        {
+          "case": "python/deepviz/tests/test_n06_tool_lifecycle.py::test_overdeep_inline_json_has_actionable_validation_error[json-text]",
+          "error": "RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string",
+          "line": 3663,
+          "cluster": "C02"
+        },
+        {
+          "case": "python/deepviz/tests/test_n17_boundaries.py::test_n17_dashboard_serialization_order_observation",
+          "error": "assert ([])",
+          "line": 3664,
+          "cluster": "C03"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3665,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3669,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3673,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3677,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3681,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3685,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3689,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3693,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3697,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3701,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-records]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3705,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-nested_json]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3744,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-graphql]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3783,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-columns]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3822,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-csv]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3861,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-records]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3900,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-nested_json]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3939,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-graphql]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3978,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-columns]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4017,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-csv]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4056,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-records]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4095,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-nested_json]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4134,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-graphql]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4173,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-columns]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4212,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-csv]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4251,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-records]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4290,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-nested_json]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4329,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-graphql]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4368,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-columns]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4407,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-csv]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4446,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii]",
+          "error": "ValueError: Input field name exceeds 4096 UTF-8 bytes",
+          "line": 4485,
+          "cluster": "C06"
+        },
+        {
+          "case": "tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte]",
+          "error": "ValueError: Input field name exceeds 4096 UTF-8 bytes",
+          "line": 4486,
+          "cluster": "C06"
+        },
+        {
+          "case": "tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte]",
+          "error": "ValueError: Input field name exceeds 4096 UTF-8 bytes",
+          "line": 4487,
+          "cluster": "C06"
+        },
+        {
+          "case": "tests/test_n11_resource_policy.py::test_flattened_multibyte_key_at_64kib_is_preserved",
+          "error": "ValueError: Input field name exceeds 4096 UTF-8 bytes",
+          "line": 4488,
+          "cluster": "C06"
+        }
+      ],
+      "pytest_unit_command_line": 731,
+      "first_failure_heading_line": 829,
+      "first_assertion_line": 850,
+      "first_failure_case": "python/deepviz/tests/test_backend_antv.py::test_dashboard_duplicate_titles_get_unique_containers_and_independent_options",
+      "summary_and_exit": [
+        {
+          "line": 4489,
+          "text": "2026-11-27T02:31:33.0031365Z ==== 38 failed, 2456 passed, 1 skipped, 550 deselected in 72.08s (0:01:12) ====="
+        },
+        {
+          "line": 4490,
+          "text": "2026-11-27T02:31:33.5505792Z ##[error]Process completed with exit code 1."
+        }
+      ],
+      "observed_dependency_versions": {
+        "matplotlib": "3.11.2",
+        "numpy": "2.4.6",
+        "vl-convert-python": "1.9.0.post1",
+        "plotly": "6.9.0",
+        "pytest": "9.2.0"
+      },
+      "known_step_statuses": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:37Z",
+          "completed_at": "2026-11-27T02:29:38Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:38Z",
+          "completed_at": "2026-11-27T02:29:39Z"
+        },
+        {
+          "number": 3,
+          "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:39Z",
+          "completed_at": "2026-11-27T02:29:40Z"
+        },
+        {
+          "number": 4,
+          "name": "Install all integration dependencies (no live service credentials)",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:40Z",
+          "completed_at": "2026-11-27T02:30:08Z"
+        },
+        {
+          "number": 5,
+          "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:08Z",
+          "completed_at": "2026-11-27T02:30:09Z"
+        },
+        {
+          "number": 6,
+          "name": "Build the public npm package required by Python parity tests",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:09Z",
+          "completed_at": "2026-11-27T02:30:13Z"
+        },
+        {
+          "number": 7,
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:13Z",
+          "completed_at": "2026-11-27T02:30:13Z"
+        },
+        {
+          "number": 8,
+          "name": "Typecheck package and verification scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:13Z",
+          "completed_at": "2026-11-27T02:30:18Z"
+        },
+        {
+          "number": 9,
+          "name": "Check generated schema without changing files",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:18Z",
+          "completed_at": "2026-11-27T02:30:18Z"
+        },
+        {
+          "number": 10,
+          "name": "Test CI gate negative controls",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:18Z",
+          "completed_at": "2026-11-27T02:30:20Z"
+        },
+        {
+          "number": 11,
+          "name": "Unit and contract tests",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at": "2026-11-27T02:30:20Z",
+          "completed_at": "2026-11-27T02:31:33Z"
+        },
+        {
+          "number": 12,
+          "name": "Integration tests",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-27T02:31:33Z",
+          "completed_at": "2026-11-27T02:31:33Z"
+        },
+        {
+          "number": 13,
+          "name": "Preserve test reports for diagnosis, not as a substitute for success",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:33Z",
+          "completed_at": "2026-11-27T02:31:34Z"
+        },
+        {
+          "number": 24,
+          "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-27T02:31:34Z",
+          "completed_at": "2026-11-27T02:31:34Z"
+        },
+        {
+          "number": 25,
+          "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-27T02:31:34Z",
+          "completed_at": "2026-11-27T02:31:34Z"
+        },
+        {
+          "number": 26,
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:34Z",
+          "completed_at": "2026-11-27T02:31:34Z"
+        },
+        {
+          "number": 27,
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:34Z",
+          "completed_at": "2026-11-27T02:31:34Z"
+        }
+      ]
+    },
+    {
+      "job_id": 140275848619,
+      "name": "Python 3.13 lint, types, unit and integration",
+      "failed_case_count": 240,
+      "cluster_counts": {
+        "C01": 1,
+        "C07": 204,
+        "C03": 1,
+        "C04": 10,
+        "C05": 20,
+        "C06": 4
+      },
+      "FAILED_cases": [
+        {
+          "case": "python/deepviz/tests/test_backend_antv.py::test_dashboard_duplicate_titles_get_unique_containers_and_independent_options",
+          "error": "AssertionError: assert ['interval', ...', 'interval'] == ['interval', ...', 'interval']",
+          "line": 14239,
+          "cluster": "C01"
+        },
+        {
+          "case": "python/deepviz/tests/test_n09_oracle_controls.py::test_n09_wrapped_svg_title_oracle_still_rejects_corruption[missing]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14252,
+          "cluster": "C07"
+        },
+        {
+          "case": "python/deepviz/tests/test_n09_oracle_controls.py::test_n09_wrapped_svg_title_oracle_still_rejects_corruption[altered]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14253,
+          "cluster": "C07"
+        },
+        {
+          "case": "python/deepviz/tests/test_n09_oracle_controls.py::test_n09_wrapped_svg_title_oracle_still_rejects_corruption[script]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14254,
+          "cluster": "C07"
+        },
+        {
+          "case": "python/deepviz/tests/test_n09_oracle_controls.py::test_n09_wrapped_svg_title_oracle_still_rejects_corruption[event]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14255,
+          "cluster": "C07"
+        },
+        {
+          "case": "python/deepviz/tests/test_n09_static_semantics.py::test_n09_public_static_gallery[bar-light-matplotlib]",
+          "error": "assert 'N09 bar: known values (light)' in '\\n \\n  \\n   \\n    \\n    2026-11-27T02:30:38.651631\\n    image/svg+xml\\n    \\n     \\n      Matplotlib v3.11.2, https:/...n       \\n      \\n      \\n      \\n      \\n      \\n     \\n    \\n   \\n  \\n \\n \\n  \\n   \\n  \\n \\n \\n  \\n   \\n   \\n  \\n \\n'",
+          "line": 14256,
+          "cluster": "C07"
+        },
+        {
+          "case": "python/deepviz/tests/test_n09_static_semantics.py::test_n09_public_static_gallery[bar-dark-matplotlib]",
+          "error": "assert 'N09 bar: known values (dark)' in '\\n \\n  \\n   \\n    \\n    2026-11-27T02:30:38.798164\\n    image/svg+xml\\n    \\n     \\n      Matplotlib v3.11.2, https:/...n       \\n      \\n      \\n      \\n      \\n      \\n     \\n    \\n   \\n  \\n \\n \\n  \\n   \\n  \\n \\n \\n  \\n   \\n   \\n  \\n \\n'",
+          "line": 14259,
+          "cluster": "C07"
+        },
+        {
+          "case": "python/deepviz/tests/test_n09_static_semantics.py::test_n09_public_static_gallery[line-light-matplotlib]",
+          "error": "assert 'N09 line: known values (light)' in '\\n \\n  \\n   \\n    \\n    2026-11-27T02:30:38.947138\\n    image/svg+xml\\n    \\n     \\n      Matplotlib v3.11.2, https:/... \\n     \\n     \\n      \\n       \\n      \\n      \\n      \\n      \\n      \\n     \\n    \\n   \\n  \\n \\n \\n  \\n   \\n  \\n \\n'",
+          "line": 14262,
+          "cluster": "C07"
+        },
+        {
+          "case": "python/deepviz/tests/test_n09_static_semantics.py::test_n09_public_static_gallery[line-dark-matplotlib]",
+          "error": "assert 'N09 line: known values (dark)' in '\\n \\n  \\n   \\n    \\n    2026-11-27T02:30:39.142981\\n    image/svg+xml\\n    \\n     \\n      Matplotlib v3.11.2, https:/... \\n     \\n     \\n      \\n       \\n      \\n      \\n      \\n      \\n      \\n     \\n    \\n   \\n  \\n \\n \\n  \\n   \\n  \\n \\n'",
+          "line": 14265,
+          "cluster": "C07"
+        },
+        {
+          "case": "python/deepviz/tests/test_n09_static_semantics.py::test_n09_public_static_gallery[scatter-light-matplotlib]",
+          "error": "assert 'N09 scatter: known values (light)' in '\\n \\n  \\n   \\n    \\n    2026-11-27T02:30:39.330337\\n    image/svg+xml\\n    \\n     \\n      Matplotlib v3.11.2, https:/... \\n     \\n     \\n      \\n       \\n      \\n      \\n      \\n      \\n      \\n     \\n    \\n   \\n  \\n \\n \\n  \\n   \\n  \\n \\n'",
+          "line": 14268,
+          "cluster": "C07"
+        },
+        {
+          "case": "python/deepviz/tests/test_n09_static_semantics.py::test_n09_public_static_gallery[scatter-dark-matplotlib]",
+          "error": "assert 'N09 scatter: known values (dark)' in '\\n \\n  \\n   \\n    \\n    2026-11-27T02:30:39.518692\\n    image/svg+xml\\n    \\n     \\n      Matplotlib v3.11.2, https:/... \\n     \\n     \\n      \\n       \\n      \\n      \\n      \\n      \\n      \\n     \\n    \\n   \\n  \\n \\n \\n  \\n   \\n  \\n \\n'",
+          "line": 14271,
+          "cluster": "C07"
+        },
+        {
+          "case": "python/deepviz/tests/test_n09_static_semantics.py::test_n09_public_static_gallery[area-light-matplotlib]",
+          "error": "assert 'N09 area: known values (light)' in '\\n \\n  \\n   \\n    \\n    2026-11-27T02:30:39.721044\\n    image/svg+xml\\n    \\n     \\n      Matplotlib v3.11.2, https:/... \\n     \\n     \\n      \\n       \\n      \\n      \\n      \\n      \\n      \\n     \\n    \\n   \\n  \\n \\n \\n  \\n   \\n  \\n \\n'",
+          "line": 14274,
+          "cluster": "C07"
+        },
+        {
+          "case": "python/deepviz/tests/test_n09_static_semantics.py::test_n09_public_static_gallery[area-dark-matplotlib]",
+          "error": "assert 'N09 area: known values (dark)' in '\\n \\n  \\n   \\n    \\n    2026-11-27T02:30:39.915332\\n    image/svg+xml\\n    \\n     \\n      Matplotlib v3.11.2, https:/... \\n     \\n     \\n      \\n       \\n      \\n      \\n      \\n      \\n      \\n     \\n    \\n   \\n  \\n \\n \\n  \\n   \\n  \\n \\n'",
+          "line": 14277,
+          "cluster": "C07"
+        },
+        {
+          "case": "python/deepviz/tests/test_n09_static_semantics.py::test_n09_public_static_gallery[pie-light-matplotlib]",
+          "error": "assert 'N09 pie: known values (light)' in '\\n \\n  \\n   \\n    \\n    2026-11-27T02:30:40.065948\\n    image/svg+xml\\n    \\n     \\n      Matplotlib v3.11.2, https:/...\\n     \\n     \\n     \\n     \\n     \\n     \\n     \\n     \\n     \\n     \\n     \\n     \\n     \\n     \\n    \\n   \\n  \\n \\n'",
+          "line": 14280,
+          "cluster": "C07"
+        },
+        {
+          "case": "python/deepviz/tests/test_n09_static_semantics.py::test_n09_public_static_gallery[pie-dark-matplotlib]",
+          "error": "assert 'N09 pie: known values (dark)' in '\\n \\n  \\n   \\n    \\n    2026-11-27T02:30:40.134645\\n    image/svg+xml\\n    \\n     \\n      Matplotlib v3.11.2, https:/...\\n     \\n     \\n     \\n     \\n     \\n     \\n     \\n     \\n     \\n     \\n     \\n     \\n     \\n     \\n    \\n   \\n  \\n \\n'",
+          "line": 14283,
+          "cluster": "C07"
+        },
+        {
+          "case": "python/deepviz/tests/test_n09_static_semantics.py::test_n09_public_static_gallery[heatmap-light-matplotlib]",
+          "error": "assert 'N09 heatmap: known values (light)' in '\\n \\n  \\n   \\n    \\n    2026-11-27T02:30:40.235925\\n    image/svg+xml\\n    \\n     \\n      Matplotlib v3.11.2, https:/...       \\n       \\n       \\n       \\n       \\n      \\n     \\n    \\n   \\n   \\n   \\n    \\n   \\n  \\n \\n \\n  \\n   \\n  \\n \\n'",
+          "line": 14286,
+          "cluster": "C07"
+        },
+        {
+          "case": "python/deepviz/tests/test_n09_static_semantics.py::test_n09_public_static_gallery[heatmap-dark-matplotlib]",
+          "error": "assert 'N09 heatmap: known values (dark)' in '\\n \\n  \\n   \\n    \\n    2026-11-27T02:30:40.360096\\n    image/svg+xml\\n    \\n     \\n      Matplotlib v3.11.2, https:/...       \\n       \\n       \\n       \\n       \\n      \\n     \\n    \\n   \\n   \\n   \\n    \\n   \\n  \\n \\n \\n  \\n   \\n  \\n \\n'",
+          "line": 14289,
+          "cluster": "C07"
+        },
+        {
+          "case": "python/deepviz/tests/test_n09_static_semantics.py::test_n09_public_static_gallery[dashboard-light-matplotlib]",
+          "error": "assert 'N09 dashboard: known values (light)' in '\\n \\n  \\n   \\n    \\n    2026-11-27T02:30:40.668865\\n    image/svg+xml\\n    \\n     \\n      Matplotlib v3.11.2, https:/...    \\n    \\n    \\n    \\n   \\n  \\n \\n \\n  \\n   \\n  \\n  \\n   \\n  \\n  \\n   \\n  \\n  \\n   \\n  \\n \\n \\n  \\n   \\n   \\n  \\n \\n'",
+          "line": 14292,
+          "cluster": "C07"
+        },
+        {
+          "case": "python/deepviz/tests/test_n09_static_semantics.py::test_n09_public_static_gallery[dashboard-dark-matplotlib]",
+          "error": "assert 'N09 dashboard: known values (dark)' in '\\n \\n  \\n   \\n    \\n    2026-11-27T02:30:41.188749\\n    image/svg+xml\\n    \\n     \\n      Matplotlib v3.11.2, https:/...    \\n    \\n    \\n    \\n   \\n  \\n \\n \\n  \\n   \\n  \\n  \\n   \\n  \\n  \\n   \\n  \\n  \\n   \\n  \\n \\n \\n  \\n   \\n   \\n  \\n \\n'",
+          "line": 14295,
+          "cluster": "C07"
+        },
+        {
+          "case": "python/deepviz/tests/test_n17_boundaries.py::test_n17_dashboard_serialization_order_observation",
+          "error": "assert ([])",
+          "line": 14298,
+          "cluster": "C03"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bar-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14299,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bar-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14303,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bar-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14307,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bar-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14311,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bar-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14315,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bar-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14319,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bar-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14323,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bar-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14327,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bar-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14331,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bar-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14335,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-line-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14339,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-line-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14343,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-line-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14347,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-line-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14351,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-line-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14355,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-line-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14359,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-line-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14363,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-line-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14367,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-line-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14371,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-line-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14375,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-scatter-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14379,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-scatter-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14383,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-scatter-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14387,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-scatter-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14391,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-scatter-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14395,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-scatter-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14399,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-scatter-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14403,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-scatter-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14407,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-scatter-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14411,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-scatter-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14415,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-area-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14419,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-area-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14423,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-area-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14427,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-area-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14431,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-area-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14435,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-area-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14439,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-area-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14443,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-area-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14447,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-area-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14451,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-area-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14455,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-pie-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14459,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-pie-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14463,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-pie-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14467,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-pie-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14471,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-pie-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14475,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-pie-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14479,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-pie-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14483,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-pie-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14487,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-pie-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14491,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-pie-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14495,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-heatmap-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14499,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-heatmap-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14503,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-heatmap-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14507,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-heatmap-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14511,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-heatmap-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14515,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-heatmap-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14519,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-heatmap-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14523,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-heatmap-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14527,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-heatmap-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14531,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-heatmap-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14535,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-histogram-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14539,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-histogram-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14543,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-histogram-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14547,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-histogram-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14551,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-histogram-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14555,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-histogram-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14559,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-histogram-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14563,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-histogram-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14567,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-histogram-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14571,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-histogram-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14575,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-box-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14579,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-box-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14583,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-box-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14587,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-box-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14591,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-box-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14595,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-box-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14599,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-box-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14603,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-box-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14607,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-box-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14611,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-box-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14615,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-violin-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14619,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-violin-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14623,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-violin-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14627,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-violin-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14631,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-violin-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14635,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-violin-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14639,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-violin-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14643,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-violin-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14647,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-violin-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14651,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-violin-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14655,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bubble-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14659,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bubble-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14663,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bubble-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14667,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bubble-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14671,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bubble-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14675,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bubble-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14679,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bubble-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14683,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bubble-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14687,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bubble-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14691,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-bubble-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14695,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-radar-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14699,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-radar-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14703,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-radar-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14707,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-radar-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14711,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-radar-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14715,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-radar-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14719,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-radar-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14723,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-radar-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14727,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-radar-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14731,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-radar-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14735,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-treemap-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14739,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-treemap-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14743,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-treemap-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14747,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-treemap-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14751,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-treemap-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14755,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-treemap-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14759,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-treemap-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14763,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-treemap-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14767,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-treemap-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14771,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-treemap-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14775,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-sunburst-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14779,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-sunburst-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14783,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-sunburst-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14787,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-sunburst-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14791,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-sunburst-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14795,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-sunburst-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14799,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-sunburst-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14803,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-sunburst-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14807,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-sunburst-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14811,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-sunburst-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14815,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-funnel-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14819,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-funnel-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14823,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-funnel-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14827,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-funnel-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14831,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-funnel-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14835,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-funnel-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14839,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-funnel-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14843,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-funnel-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14847,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-funnel-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14851,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-funnel-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14855,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-gauge-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14859,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-gauge-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14863,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-gauge-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14867,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-gauge-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14871,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-gauge-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14875,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-gauge-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14879,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-gauge-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14883,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-gauge-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14887,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-gauge-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14891,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-gauge-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14895,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-geo-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14899,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-geo-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14903,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-geo-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14907,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-geo-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14911,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-geo-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14915,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-geo-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14919,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-geo-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14923,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-geo-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14927,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-geo-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14931,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-geo-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14935,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-table-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14939,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-table-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14943,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-table-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14947,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-table-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14951,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-table-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14955,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-table-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14959,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-table-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14963,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-table-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14967,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-table-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14971,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-table-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14975,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-dashboard-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14979,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-dashboard-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14983,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-dashboard-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14987,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-dashboard-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14991,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-dashboard-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14995,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-dashboard-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 14999,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-dashboard-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15003,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-dashboard-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15007,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-dashboard-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15011,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[matplotlib-dashboard-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15015,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15019,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15023,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15027,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15031,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15035,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15039,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15043,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15047,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15051,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15055,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-records]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15059,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-nested_json]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15098,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-graphql]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15137,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-columns]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15176,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-csv]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15215,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-records]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15254,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-nested_json]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15293,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-graphql]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15332,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-columns]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15371,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-csv]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15410,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-records]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15449,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-nested_json]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15488,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-graphql]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15527,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-columns]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15566,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-csv]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15605,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-records]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15644,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-nested_json]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15683,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-graphql]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15722,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-columns]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15761,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-csv]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 15800,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_remaining_text_and_stream_sources_render[matplotlib-light-tsv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15839,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_remaining_text_and_stream_sources_render[matplotlib-light-jsonl]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15843,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_remaining_text_and_stream_sources_render[matplotlib-light-generator]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15847,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_remaining_text_and_stream_sources_render[matplotlib-dark-tsv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15851,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_remaining_text_and_stream_sources_render[matplotlib-dark-jsonl]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15855,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_remaining_text_and_stream_sources_render[matplotlib-dark-generator]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 15859,
+          "cluster": "C07"
+        },
+        {
+          "case": "tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii]",
+          "error": "ValueError: Input field name exceeds 4096 UTF-8 bytes",
+          "line": 15863,
+          "cluster": "C06"
+        },
+        {
+          "case": "tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte]",
+          "error": "ValueError: Input field name exceeds 4096 UTF-8 bytes",
+          "line": 15864,
+          "cluster": "C06"
+        },
+        {
+          "case": "tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte]",
+          "error": "ValueError: Input field name exceeds 4096 UTF-8 bytes",
+          "line": 15865,
+          "cluster": "C06"
+        },
+        {
+          "case": "tests/test_n11_resource_policy.py::test_flattened_multibyte_key_at_64kib_is_preserved",
+          "error": "ValueError: Input field name exceeds 4096 UTF-8 bytes",
+          "line": 15866,
+          "cluster": "C06"
+        }
+      ],
+      "pytest_unit_command_line": 720,
+      "first_failure_heading_line": 818,
+      "first_assertion_line": 839,
+      "first_failure_case": "python/deepviz/tests/test_backend_antv.py::test_dashboard_duplicate_titles_get_unique_containers_and_independent_options",
+      "summary_and_exit": [
+        {
+          "line": 15867,
+          "text": "2026-11-27T02:31:41.7038827Z = 240 failed, 2254 passed, 1 skipped, 550 deselected, 4 warnings in 77.69s (0:01:17) ="
+        },
+        {
+          "line": 15868,
+          "text": "2026-11-27T02:31:42.2447107Z ##[error]Process completed with exit code 1."
+        }
+      ],
+      "observed_dependency_versions": {
+        "matplotlib": "3.11.2",
+        "numpy": "2.5.5",
+        "vl-convert-python": "1.9.0.post1",
+        "plotly": "6.9.0",
+        "pytest": "9.2.0"
+      },
+      "known_step_statuses": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:38Z",
+          "completed_at": "2026-11-27T02:29:39Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:39Z",
+          "completed_at": "2026-11-27T02:29:40Z"
+        },
+        {
+          "number": 3,
+          "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:40Z",
+          "completed_at": "2026-11-27T02:29:41Z"
+        },
+        {
+          "number": 4,
+          "name": "Install all integration dependencies (no live service credentials)",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:41Z",
+          "completed_at": "2026-11-27T02:30:08Z"
+        },
+        {
+          "number": 5,
+          "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:08Z",
+          "completed_at": "2026-11-27T02:30:10Z"
+        },
+        {
+          "number": 6,
+          "name": "Build the public npm package required by Python parity tests",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:10Z",
+          "completed_at": "2026-11-27T02:30:13Z"
+        },
+        {
+          "number": 7,
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:13Z",
+          "completed_at": "2026-11-27T02:30:13Z"
+        },
+        {
+          "number": 8,
+          "name": "Typecheck package and verification scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:13Z",
+          "completed_at": "2026-11-27T02:30:20Z"
+        },
+        {
+          "number": 9,
+          "name": "Check generated schema without changing files",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:20Z",
+          "completed_at": "2026-11-27T02:30:21Z"
+        },
+        {
+          "number": 10,
+          "name": "Test CI gate negative controls",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:21Z",
+          "completed_at": "2026-11-27T02:30:23Z"
+        },
+        {
+          "number": 11,
+          "name": "Unit and contract tests",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at": "2026-11-27T02:30:23Z",
+          "completed_at": "2026-11-27T02:31:42Z"
+        },
+        {
+          "number": 12,
+          "name": "Integration tests",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-27T02:31:42Z",
+          "completed_at": "2026-11-27T02:31:42Z"
+        },
+        {
+          "number": 13,
+          "name": "Preserve test reports for diagnosis, not as a substitute for success",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:42Z",
+          "completed_at": "2026-11-27T02:31:43Z"
+        },
+        {
+          "number": 24,
+          "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-27T02:31:43Z",
+          "completed_at": "2026-11-27T02:31:43Z"
+        },
+        {
+          "number": 25,
+          "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-27T02:31:43Z",
+          "completed_at": "2026-11-27T02:31:43Z"
+        },
+        {
+          "number": 26,
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:43Z",
+          "completed_at": "2026-11-27T02:31:44Z"
+        },
+        {
+          "number": 27,
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:44Z",
+          "completed_at": "2026-11-27T02:31:44Z"
+        }
+      ]
+    },
+    {
+      "job_id": 140275848671,
+      "name": "Python 3.12 lint, types, unit and integration",
+      "failed_case_count": 36,
+      "cluster_counts": {
+        "C01": 1,
+        "C03": 1,
+        "C04": 10,
+        "C05": 20,
+        "C06": 4
+      },
+      "FAILED_cases": [
+        {
+          "case": "python/deepviz/tests/test_backend_antv.py::test_dashboard_duplicate_titles_get_unique_containers_and_independent_options",
+          "error": "AssertionError: assert ['interval', ...', 'interval'] == ['interval', ...', 'interval']",
+          "line": 3485,
+          "cluster": "C01"
+        },
+        {
+          "case": "python/deepviz/tests/test_n17_boundaries.py::test_n17_dashboard_serialization_order_observation",
+          "error": "assert ([])",
+          "line": 3498,
+          "cluster": "C03"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3499,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3503,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3507,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3511,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-light-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3515,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-records]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3519,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-nested_json]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3523,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-graphql]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3527,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-columns]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3531,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-csv]",
+          "error": "AssertionError: SVG does not preserve the escaped chart title",
+          "line": 3535,
+          "cluster": "C04"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-records]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3539,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-nested_json]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3578,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-graphql]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3617,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-columns]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3656,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-light-csv]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3695,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-records]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3734,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-nested_json]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3773,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-graphql]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3812,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-columns]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3851,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-line-dark-csv]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3890,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-records]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3929,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-nested_json]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 3968,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-graphql]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4007,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-columns]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4046,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-light-csv]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4085,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-records]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4124,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-nested_json]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4163,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-graphql]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4202,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-columns]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4241,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_acceptance_matrix.py::test_engine_kind_theme_source_acceptance[echarts-area-dark-csv]",
+          "error": "AssertionError: Native visible coordinates changed a mapped observation",
+          "line": 4280,
+          "cluster": "C05"
+        },
+        {
+          "case": "tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii]",
+          "error": "ValueError: Input field name exceeds 4096 UTF-8 bytes",
+          "line": 4319,
+          "cluster": "C06"
+        },
+        {
+          "case": "tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte]",
+          "error": "ValueError: Input field name exceeds 4096 UTF-8 bytes",
+          "line": 4320,
+          "cluster": "C06"
+        },
+        {
+          "case": "tests/test_n11_resource_policy.py::test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte]",
+          "error": "ValueError: Input field name exceeds 4096 UTF-8 bytes",
+          "line": 4321,
+          "cluster": "C06"
+        },
+        {
+          "case": "tests/test_n11_resource_policy.py::test_flattened_multibyte_key_at_64kib_is_preserved",
+          "error": "ValueError: Input field name exceeds 4096 UTF-8 bytes",
+          "line": 4322,
+          "cluster": "C06"
+        }
+      ],
+      "pytest_unit_command_line": 709,
+      "first_failure_heading_line": 807,
+      "first_assertion_line": 828,
+      "first_failure_case": "python/deepviz/tests/test_backend_antv.py::test_dashboard_duplicate_titles_get_unique_containers_and_independent_options",
+      "summary_and_exit": [
+        {
+          "line": 4323,
+          "text": "2026-11-27T02:31:55.1659413Z ==== 36 failed, 2458 passed, 1 skipped, 550 deselected in 87.79s (0:01:27) ====="
+        },
+        {
+          "line": 4324,
+          "text": "2026-11-27T02:31:55.6888362Z ##[error]Process completed with exit code 1."
+        }
+      ],
+      "observed_dependency_versions": {
+        "matplotlib": "3.11.2",
+        "numpy": "2.5.5",
+        "vl-convert-python": "1.9.0.post1",
+        "plotly": "6.9.0",
+        "pytest": "9.2.0"
+      },
+      "known_step_statuses": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:38Z",
+          "completed_at": "2026-11-27T02:29:38Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:38Z",
+          "completed_at": "2026-11-27T02:29:40Z"
+        },
+        {
+          "number": 3,
+          "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:40Z",
+          "completed_at": "2026-11-27T02:29:42Z"
+        },
+        {
+          "number": 4,
+          "name": "Install all integration dependencies (no live service credentials)",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:42Z",
+          "completed_at": "2026-11-27T02:30:10Z"
+        },
+        {
+          "number": 5,
+          "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:10Z",
+          "completed_at": "2026-11-27T02:30:12Z"
+        },
+        {
+          "number": 6,
+          "name": "Build the public npm package required by Python parity tests",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:12Z",
+          "completed_at": "2026-11-27T02:30:16Z"
+        },
+        {
+          "number": 7,
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:16Z",
+          "completed_at": "2026-11-27T02:30:16Z"
+        },
+        {
+          "number": 8,
+          "name": "Typecheck package and verification scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:16Z",
+          "completed_at": "2026-11-27T02:30:24Z"
+        },
+        {
+          "number": 9,
+          "name": "Check generated schema without changing files",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:24Z",
+          "completed_at": "2026-11-27T02:30:25Z"
+        },
+        {
+          "number": 10,
+          "name": "Test CI gate negative controls",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:25Z",
+          "completed_at": "2026-11-27T02:30:26Z"
+        },
+        {
+          "number": 11,
+          "name": "Unit and contract tests",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at": "2026-11-27T02:30:26Z",
+          "completed_at": "2026-11-27T02:31:55Z"
+        },
+        {
+          "number": 12,
+          "name": "Integration tests",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-27T02:31:55Z",
+          "completed_at": "2026-11-27T02:31:55Z"
+        },
+        {
+          "number": 13,
+          "name": "Preserve test reports for diagnosis, not as a substitute for success",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:55Z",
+          "completed_at": "2026-11-27T02:31:56Z"
+        },
+        {
+          "number": 24,
+          "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-27T02:31:56Z",
+          "completed_at": "2026-11-27T02:31:56Z"
+        },
+        {
+          "number": 25,
+          "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-27T02:31:56Z",
+          "completed_at": "2026-11-27T02:31:56Z"
+        },
+        {
+          "number": 26,
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:56Z",
+          "completed_at": "2026-11-27T02:31:57Z"
+        },
+        {
+          "number": 27,
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:57Z",
+          "completed_at": "2026-11-27T02:31:57Z"
+        }
+      ]
+    }
+  ],
+  "clusters": {
+    "C01": {
+      "name": "AntV dashboard line view shape assertion",
+      "issues": [
+        13,
+        23,
+        20
+      ],
+      "backlog": "R09A06/A13, existing AntV deliverable; newly precise CIoracle dependency, no newticket",
+      "owner": "R04 engines/originaltest policy owner; independent renderer tester, NOT PM or tester09/10producer",
+      "disposition": "Known view with line+pointchildren conflicts with oldtypeassertion; no prooflinevisualmissing. Preserve uniqueDOM/container/manifest/value checks, inspectnested marks rather than force sourceflatline.",
+      "acceptance": "Reproduce oldRED unchanged; assert exactly3uniquechildcontainers/nativepayloads, nestedline+pointappropriatecount andcost[2,4] vsincome[9,5], realAntVchart/browser/console0; negativewrongchild/values/ID controls. Minimalexistingoracle amendmentonly byR04afterdecision."
+    },
+    "C02": {
+      "name": "ToolSession unhandled deep JSON RecursionError",
+      "issues": [
+        16,
+        17,
+        21,
+        20
+      ],
+      "backlog": "D07 strictJSONboundary; not2newissues",
+      "owner": "R14eligible18 tools.py/mcp_server.py afterexistingcommandcheckpoint/eligibility, tester10independent; no normalize.py(16)or SDK expansion",
+      "disposition": "ActualPython3.11sourcebug: json.dumps attools.py86 andjson.loads at78raiseRecursionError before normalization; testexpectsclearValueErrordeep/nest.",
+      "acceptance": "Bothpython-json1500nest andjson-text1500nest strictRED?conciseValueErrordeep/nest on3.11/3.12/3.13; unchangedvalidUnicode/duplicate/rawbyte/file/handle/stdioresource/recoverycontrols. Bound/reject beforeSDKloss and catchdecoder+encoderrecursion, no raisingglobalrecursionlimit orxfail."
+    },
+    "C03": {
+      "name": "N17 legacy serialization-before-validation expectation",
+      "issues": [
+        21,
+        22,
+        23,
+        20
+      ],
+      "backlog": "D18 unresolvedobservation; existingR12preflightbudget",
+      "owner": "R04 render.py/engines.py serializedwithR12P1, independentboundarytester",
+      "disposition": "Actualcaptureempty whileValueError1024fields was raised; testdemandsinvalidwide rowserialize>1MiB BEFOREfieldrejection. Currentearlyvalidationappearsdesirable; confirmtruebyteallocation/control beforeoracledecision.",
+      "acceptance": "PreserveoriginalRED; requireoversizedrowrejectedbeforejson.dumps andownedfile/tempcleanup, explicitvalidsmallrowserialized/rendered positive, actualresourcepreflight25tests/peakcontrols; replaceobservationwithstrictdesiredpolicyonlyR04. No weakenbytecaporremoveguard."
+    },
+    "C04": {
+      "name": "Vega standalone child title versus parent oracle",
+      "issues": [
+        11,
+        23,
+        20
+      ],
+      "backlog": "D16, role17independentpublishedtitlecontrols",
+      "owner": "R04 originalmatrixpolicy,17independenttester; enginesremainR04",
+      "disposition": "10dashboardcases perPythonrecompilechildnativewithparenttitle, knownstrictscopeoracledefect; fullparentSVG/childtitlesrequirepositivevisiblegeometry.",
+      "acceptance": "Pairnative_specs/chartsstrictlength/index, compiledchildexpectsownliteralchildtitle; fulloutputparentANDbothchildtitles presentwithmeaningfulmarks. Role17strict40+40/browser4controls plusnegativewrongchild/metadata-only/XSS; do not removealltitlechecks."
+    },
+    "C05": {
+      "name": "ECharts numeric line area versus categorical oldoracle",
+      "issues": [
+        12,
+        23,
+        20
+      ],
+      "backlog": "D15, role03independentnumericxtypecontrols",
+      "owner": "R04 originalmatrixpolicy,03independenttester; no PMsourceedit",
+      "disposition": "20cases perPythoncompare numericnative x withstr(x) forline/area; preservevalue/time/categoricalsemantics, notsourcecoercion.",
+      "acceptance": "Kind/axis-awareexpectednumericlinearea withnonuniformspacing1,2,10 andstrictvalue/type/counts; categoricalbars/stringlabels/timecontrols remain. Original20RED?scopedmatrixGREEN andnativebrowsergeometry/console0usingpublished03recipe; no Counter-normalizationhidingerrors."
+    },
+    "C06": {
+      "name": "N11 field name 64KiB oracle versus actual4KiB policy",
+      "issues": [
+        5,
+        14,
+        22,
+        20
+      ],
+      "backlog": "D14 language-specificpolicy",
+      "owner": "R04 contract/oldtestdecision,04independentcontracttester;16normalizersreserved",
+      "disposition": "4casesperPythoninputfieldname65536Bexplicitlyrejected4096B; notmissingdependency. Existingintended4KiBPython/64KiBTSkeypolicy requiresdecision/docs notblindwidening.",
+      "acceptance": "Explicitpolicydecision; key-onlyfixturebounds4096/4097ifchosen, flattenedmultibytecase, preserve65536/65537CELLpositive/rejection, record/state/earlyconsumption/memorycontrols andcrosslanguageexplicitlimits. R04editsoldtestsafterindependentcontrols, notsourcewidening."
+    },
+    "C07": {
+      "name": "Python3.13 SVG comment-title oracle portability",
+      "issues": [
+        9,
+        23,
+        20
+      ],
+      "backlog": "R09A06/A13 actualstaticoutputs/portabletestgate, newexact3.13observationwithinexisting#9/#23/#20; NOTD19archive-lintcause",
+      "owner": "R04 originalmatrix/N09oraclepolicy, independentportableparser/visualtester; no currentproducerreleaseexpanded",
+      "disposition": "Only3.13:204fail, including4syntheticvalidcommentSVGcontrols before anymutation,14N09Matplotlibgallery,180matrix+6textstream. Comment-inclusive itertext assumptionfailsindependentofMatplotlib; preciseunderlyingCPythoncauseunverified, notprovenmissingrenderedtitle orcurrentdependencybug.",
+      "acceptance": "Reproduce4syntheticpositive-before-negativecontrols on3.11/3.12/3.13; explicitly inspectvalidatedSVGcomment.text when needed ratherthan assumeitertextincludesit, keeprealvisiblegeometry/titlegroups/escapedtext+script/eventnegativecontrols andunchangedactualrenderedPNG/SVGinspection. Do not waivetitlepresenceoracceptmanifestonly. NoPython3.13skip/pinwithoutdiagnosedreason."
+    }
+  },
+  "scope": "PMdeduplication and minimalhandoffproposal, no source/oracle/workflowedits, no issuescreated/closed or finalapproval.",
+  "product_tests_run": 0,
+  "new_census_requests": 0,
+  "total_FAILED_case_instances": 314,
+  "distinct_failed_test_nodeids": 242,
+  "total_cluster_counts": {
+    "C01": 3,
+    "C02": 2,
+    "C03": 3,
+    "C04": 30,
+    "C05": 60,
+    "C06": 12,
+    "C07": 204
+  },
+  "combined_log_channel_limit": "GitHubjoblogmergesoutput; firstassertion/traceback/runnerexitobserved, separate stderr attributionnotavailable.",
+  "prior_snapshot_mapping_correction": "C07originallycalledD19oraclefamily; actualD19isarchive-lint. CorrectedbeforepublicationtoA06/A13existing#9/#23/#20, no newticket."
+}

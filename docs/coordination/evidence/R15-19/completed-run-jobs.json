@@ -1,0 +1,1290 @@
+{
+  "observed_utc": "2026-11-27T14:20:46.727954+00:00",
+  "owner": "ses_de5678052ffdJwVtlB6SX6LZrT",
+  "authenticated_login": "sandeshbagmare",
+  "scope": "One bounded completed-run officialAPIobservation; no issuecensus/progresspoll or APIwrites.",
+  "run": {
+    "id": 45928608970,
+    "name": "Verification",
+    "event": "pull_request",
+    "status": "completed",
+    "conclusion": "failure",
+    "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+    "head_branch": "release/candidate",
+    "run_attempt": 1,
+    "run_number": 4,
+    "created_at": "2026-11-27T02:29:19Z",
+    "updated_at": "2026-11-27T02:35:06Z",
+    "run_started_at": "2026-11-27T02:29:19Z",
+    "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970",
+    "path": ".github/workflows/ci.yml",
+    "workflow_id": 431985361
+  },
+  "jobs": [
+    {
+      "id": 140275848325,
+      "name": "Raster visual regression (semantic pixel comparison)",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-27T02:29:37Z",
+      "completed_at": "2026-11-27T02:30:08Z",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848325",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "run_id": 45928608970,
+      "run_attempt": 1,
+      "check_run_url": "https://api.github.com/repos/sandeshbagmare/deepviz-agent-toolkit/check-runs/140275848325",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:38Z",
+          "completed_at": "2026-11-27T02:29:38Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:38Z",
+          "completed_at": "2026-11-27T02:29:39Z"
+        },
+        {
+          "number": 3,
+          "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:39Z",
+          "completed_at": "2026-11-27T02:29:42Z"
+        },
+        {
+          "number": 4,
+          "name": "Run python -m pip install -e '.[dev]'",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:42Z",
+          "completed_at": "2026-11-27T02:30:03Z"
+        },
+        {
+          "number": 5,
+          "name": "Compare actual Matplotlib PNG pixels to analytic silhouettes",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:03Z",
+          "completed_at": "2026-11-27T02:30:04Z"
+        },
+        {
+          "number": 6,
+          "name": "Preserve actual images and comparison report",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:04Z",
+          "completed_at": "2026-11-27T02:30:05Z"
+        },
+        {
+          "number": 11,
+          "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:05Z",
+          "completed_at": "2026-11-27T02:30:06Z"
+        },
+        {
+          "number": 12,
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:06Z",
+          "completed_at": "2026-11-27T02:30:06Z"
+        },
+        {
+          "number": 13,
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:06Z",
+          "completed_at": "2026-11-27T02:30:06Z"
+        }
+      ]
+    },
+    {
+      "id": 140275848542,
+      "name": "npm build, types and tests (Node 24)",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-27T02:29:37Z",
+      "completed_at": "2026-11-27T02:30:39Z",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848542",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "run_id": 45928608970,
+      "run_attempt": 1,
+      "check_run_url": "https://api.github.com/repos/sandeshbagmare/deepviz-agent-toolkit/check-runs/140275848542",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:38Z",
+          "completed_at": "2026-11-27T02:29:39Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:39Z",
+          "completed_at": "2026-11-27T02:29:40Z"
+        },
+        {
+          "number": 3,
+          "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:40Z",
+          "completed_at": "2026-11-27T02:29:42Z"
+        },
+        {
+          "number": 4,
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:42Z",
+          "completed_at": "2026-11-27T02:29:46Z"
+        },
+        {
+          "number": 5,
+          "name": "Run npm run build",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:46Z",
+          "completed_at": "2026-11-27T02:29:47Z"
+        },
+        {
+          "number": 6,
+          "name": "Run npm run typecheck",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:47Z",
+          "completed_at": "2026-11-27T02:29:47Z"
+        },
+        {
+          "number": 7,
+          "name": "Run npm test",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:47Z",
+          "completed_at": "2026-11-27T02:29:51Z"
+        },
+        {
+          "number": 8,
+          "name": "Install Chromium for offline renderer acceptance",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:51Z",
+          "completed_at": "2026-11-27T02:30:09Z"
+        },
+        {
+          "number": 9,
+          "name": "Run npm run test:browser",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:09Z",
+          "completed_at": "2026-11-27T02:30:36Z"
+        },
+        {
+          "number": 17,
+          "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:36Z",
+          "completed_at": "2026-11-27T02:30:36Z"
+        },
+        {
+          "number": 18,
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:36Z",
+          "completed_at": "2026-11-27T02:30:36Z"
+        },
+        {
+          "number": 19,
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:36Z",
+          "completed_at": "2026-11-27T02:30:36Z"
+        }
+      ]
+    },
+    {
+      "id": 140275848579,
+      "name": "Python and npm distribution checks (no publishing)",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-27T02:29:37Z",
+      "completed_at": "2026-11-27T02:30:28Z",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848579",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "run_id": 45928608970,
+      "run_attempt": 1,
+      "check_run_url": "https://api.github.com/repos/sandeshbagmare/deepviz-agent-toolkit/check-runs/140275848579",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:38Z",
+          "completed_at": "2026-11-27T02:29:38Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:38Z",
+          "completed_at": "2026-11-27T02:29:40Z"
+        },
+        {
+          "number": 3,
+          "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:40Z",
+          "completed_at": "2026-11-27T02:29:40Z"
+        },
+        {
+          "number": 4,
+          "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:40Z",
+          "completed_at": "2026-11-27T02:29:44Z"
+        },
+        {
+          "number": 5,
+          "name": "Run python -m pip install '.[dev]'",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:44Z",
+          "completed_at": "2026-11-27T02:30:03Z"
+        },
+        {
+          "number": 6,
+          "name": "Run python -m build",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:03Z",
+          "completed_at": "2026-11-27T02:30:05Z"
+        },
+        {
+          "number": 7,
+          "name": "Run python -m twine check --strict dist/*",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:05Z",
+          "completed_at": "2026-11-27T02:30:06Z"
+        },
+        {
+          "number": 8,
+          "name": "Check the installed wheel outside the source checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:06Z",
+          "completed_at": "2026-11-27T02:30:17Z"
+        },
+        {
+          "number": 9,
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:17Z",
+          "completed_at": "2026-11-27T02:30:22Z"
+        },
+        {
+          "number": 10,
+          "name": "Run npm run package:check",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:22Z",
+          "completed_at": "2026-11-27T02:30:23Z"
+        },
+        {
+          "number": 11,
+          "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:23Z",
+          "completed_at": "2026-11-27T02:30:25Z"
+        },
+        {
+          "number": 20,
+          "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:25Z",
+          "completed_at": "2026-11-27T02:30:25Z"
+        },
+        {
+          "number": 21,
+          "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:25Z",
+          "completed_at": "2026-11-27T02:30:25Z"
+        },
+        {
+          "number": 22,
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:25Z",
+          "completed_at": "2026-11-27T02:30:25Z"
+        },
+        {
+          "number": 23,
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:25Z",
+          "completed_at": "2026-11-27T02:30:25Z"
+        }
+      ]
+    },
+    {
+      "id": 140275848597,
+      "name": "One-pass scale 100000 records",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-27T02:30:08Z",
+      "completed_at": "2026-11-27T02:30:43Z",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848597",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "run_id": 45928608970,
+      "run_attempt": 1,
+      "check_run_url": "https://api.github.com/repos/sandeshbagmare/deepviz-agent-toolkit/check-runs/140275848597",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:09Z",
+          "completed_at": "2026-11-27T02:30:09Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:09Z",
+          "completed_at": "2026-11-27T02:30:10Z"
+        },
+        {
+          "number": 3,
+          "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:10Z",
+          "completed_at": "2026-11-27T02:30:12Z"
+        },
+        {
+          "number": 4,
+          "name": "Run python -m pip install -e '.[dev]'",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:12Z",
+          "completed_at": "2026-11-27T02:30:37Z"
+        },
+        {
+          "number": 5,
+          "name": "Assert full stream consumption, exact counts, bounded records and peak memory",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:37Z",
+          "completed_at": "2026-11-27T02:30:40Z"
+        },
+        {
+          "number": 6,
+          "name": "Preserve measured counts, elapsed time and memory methodology",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:40Z",
+          "completed_at": "2026-11-27T02:30:41Z"
+        },
+        {
+          "number": 11,
+          "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:41Z",
+          "completed_at": "2026-11-27T02:30:41Z"
+        },
+        {
+          "number": 12,
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:41Z",
+          "completed_at": "2026-11-27T02:30:41Z"
+        },
+        {
+          "number": 13,
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:41Z",
+          "completed_at": "2026-11-27T02:30:42Z"
+        }
+      ]
+    },
+    {
+      "id": 140275848619,
+      "name": "Python 3.13 lint, types, unit and integration",
+      "status": "completed",
+      "conclusion": "failure",
+      "started_at": "2026-11-27T02:29:37Z",
+      "completed_at": "2026-11-27T02:31:46Z",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848619",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "run_id": 45928608970,
+      "run_attempt": 1,
+      "check_run_url": "https://api.github.com/repos/sandeshbagmare/deepviz-agent-toolkit/check-runs/140275848619",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:38Z",
+          "completed_at": "2026-11-27T02:29:39Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:39Z",
+          "completed_at": "2026-11-27T02:29:40Z"
+        },
+        {
+          "number": 3,
+          "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:40Z",
+          "completed_at": "2026-11-27T02:29:41Z"
+        },
+        {
+          "number": 4,
+          "name": "Install all integration dependencies (no live service credentials)",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:41Z",
+          "completed_at": "2026-11-27T02:30:08Z"
+        },
+        {
+          "number": 5,
+          "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:08Z",
+          "completed_at": "2026-11-27T02:30:10Z"
+        },
+        {
+          "number": 6,
+          "name": "Build the public npm package required by Python parity tests",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:10Z",
+          "completed_at": "2026-11-27T02:30:13Z"
+        },
+        {
+          "number": 7,
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:13Z",
+          "completed_at": "2026-11-27T02:30:13Z"
+        },
+        {
+          "number": 8,
+          "name": "Typecheck package and verification scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:13Z",
+          "completed_at": "2026-11-27T02:30:20Z"
+        },
+        {
+          "number": 9,
+          "name": "Check generated schema without changing files",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:20Z",
+          "completed_at": "2026-11-27T02:30:21Z"
+        },
+        {
+          "number": 10,
+          "name": "Test CI gate negative controls",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:21Z",
+          "completed_at": "2026-11-27T02:30:23Z"
+        },
+        {
+          "number": 11,
+          "name": "Unit and contract tests",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at": "2026-11-27T02:30:23Z",
+          "completed_at": "2026-11-27T02:31:42Z"
+        },
+        {
+          "number": 12,
+          "name": "Integration tests",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-27T02:31:42Z",
+          "completed_at": "2026-11-27T02:31:42Z"
+        },
+        {
+          "number": 13,
+          "name": "Preserve test reports for diagnosis, not as a substitute for success",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:42Z",
+          "completed_at": "2026-11-27T02:31:43Z"
+        },
+        {
+          "number": 24,
+          "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-27T02:31:43Z",
+          "completed_at": "2026-11-27T02:31:43Z"
+        },
+        {
+          "number": 25,
+          "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-27T02:31:43Z",
+          "completed_at": "2026-11-27T02:31:43Z"
+        },
+        {
+          "number": 26,
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:43Z",
+          "completed_at": "2026-11-27T02:31:44Z"
+        },
+        {
+          "number": 27,
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:44Z",
+          "completed_at": "2026-11-27T02:31:44Z"
+        }
+      ]
+    },
+    {
+      "id": 140275848630,
+      "name": "One-pass scale 10 records",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-27T02:29:36Z",
+      "completed_at": "2026-11-27T02:30:06Z",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848630",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "run_id": 45928608970,
+      "run_attempt": 1,
+      "check_run_url": "https://api.github.com/repos/sandeshbagmare/deepviz-agent-toolkit/check-runs/140275848630",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:37Z",
+          "completed_at": "2026-11-27T02:29:38Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:38Z",
+          "completed_at": "2026-11-27T02:29:39Z"
+        },
+        {
+          "number": 3,
+          "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:39Z",
+          "completed_at": "2026-11-27T02:29:40Z"
+        },
+        {
+          "number": 4,
+          "name": "Run python -m pip install -e '.[dev]'",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:40Z",
+          "completed_at": "2026-11-27T02:30:03Z"
+        },
+        {
+          "number": 5,
+          "name": "Assert full stream consumption, exact counts, bounded records and peak memory",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:03Z",
+          "completed_at": "2026-11-27T02:30:03Z"
+        },
+        {
+          "number": 6,
+          "name": "Preserve measured counts, elapsed time and memory methodology",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:03Z",
+          "completed_at": "2026-11-27T02:30:04Z"
+        },
+        {
+          "number": 11,
+          "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:04Z",
+          "completed_at": "2026-11-27T02:30:04Z"
+        },
+        {
+          "number": 12,
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:04Z",
+          "completed_at": "2026-11-27T02:30:05Z"
+        },
+        {
+          "number": 13,
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:05Z",
+          "completed_at": "2026-11-27T02:30:05Z"
+        }
+      ]
+    },
+    {
+      "id": 140275848663,
+      "name": "One-pass scale 10000000 records",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-27T02:30:45Z",
+      "completed_at": "2026-11-27T02:35:05Z",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848663",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "run_id": 45928608970,
+      "run_attempt": 1,
+      "check_run_url": "https://api.github.com/repos/sandeshbagmare/deepviz-agent-toolkit/check-runs/140275848663",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:46Z",
+          "completed_at": "2026-11-27T02:30:46Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:46Z",
+          "completed_at": "2026-11-27T02:30:47Z"
+        },
+        {
+          "number": 3,
+          "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:47Z",
+          "completed_at": "2026-11-27T02:30:49Z"
+        },
+        {
+          "number": 4,
+          "name": "Run python -m pip install -e '.[dev]'",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:49Z",
+          "completed_at": "2026-11-27T02:31:13Z"
+        },
+        {
+          "number": 5,
+          "name": "Assert full stream consumption, exact counts, bounded records and peak memory",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:13Z",
+          "completed_at": "2026-11-27T02:35:03Z"
+        },
+        {
+          "number": 6,
+          "name": "Preserve measured counts, elapsed time and memory methodology",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:35:03Z",
+          "completed_at": "2026-11-27T02:35:04Z"
+        },
+        {
+          "number": 11,
+          "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:35:04Z",
+          "completed_at": "2026-11-27T02:35:04Z"
+        },
+        {
+          "number": 12,
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:35:04Z",
+          "completed_at": "2026-11-27T02:35:04Z"
+        },
+        {
+          "number": 13,
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:35:04Z",
+          "completed_at": "2026-11-27T02:35:04Z"
+        }
+      ]
+    },
+    {
+      "id": 140275848671,
+      "name": "Python 3.12 lint, types, unit and integration",
+      "status": "completed",
+      "conclusion": "failure",
+      "started_at": "2026-11-27T02:29:37Z",
+      "completed_at": "2026-11-27T02:31:59Z",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848671",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "run_id": 45928608970,
+      "run_attempt": 1,
+      "check_run_url": "https://api.github.com/repos/sandeshbagmare/deepviz-agent-toolkit/check-runs/140275848671",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:38Z",
+          "completed_at": "2026-11-27T02:29:38Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:38Z",
+          "completed_at": "2026-11-27T02:29:40Z"
+        },
+        {
+          "number": 3,
+          "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:40Z",
+          "completed_at": "2026-11-27T02:29:42Z"
+        },
+        {
+          "number": 4,
+          "name": "Install all integration dependencies (no live service credentials)",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:42Z",
+          "completed_at": "2026-11-27T02:30:10Z"
+        },
+        {
+          "number": 5,
+          "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:10Z",
+          "completed_at": "2026-11-27T02:30:12Z"
+        },
+        {
+          "number": 6,
+          "name": "Build the public npm package required by Python parity tests",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:12Z",
+          "completed_at": "2026-11-27T02:30:16Z"
+        },
+        {
+          "number": 7,
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:16Z",
+          "completed_at": "2026-11-27T02:30:16Z"
+        },
+        {
+          "number": 8,
+          "name": "Typecheck package and verification scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:16Z",
+          "completed_at": "2026-11-27T02:30:24Z"
+        },
+        {
+          "number": 9,
+          "name": "Check generated schema without changing files",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:24Z",
+          "completed_at": "2026-11-27T02:30:25Z"
+        },
+        {
+          "number": 10,
+          "name": "Test CI gate negative controls",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:25Z",
+          "completed_at": "2026-11-27T02:30:26Z"
+        },
+        {
+          "number": 11,
+          "name": "Unit and contract tests",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at": "2026-11-27T02:30:26Z",
+          "completed_at": "2026-11-27T02:31:55Z"
+        },
+        {
+          "number": 12,
+          "name": "Integration tests",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-27T02:31:55Z",
+          "completed_at": "2026-11-27T02:31:55Z"
+        },
+        {
+          "number": 13,
+          "name": "Preserve test reports for diagnosis, not as a substitute for success",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:55Z",
+          "completed_at": "2026-11-27T02:31:56Z"
+        },
+        {
+          "number": 24,
+          "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-27T02:31:56Z",
+          "completed_at": "2026-11-27T02:31:56Z"
+        },
+        {
+          "number": 25,
+          "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-27T02:31:56Z",
+          "completed_at": "2026-11-27T02:31:56Z"
+        },
+        {
+          "number": 26,
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:56Z",
+          "completed_at": "2026-11-27T02:31:57Z"
+        },
+        {
+          "number": 27,
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:57Z",
+          "completed_at": "2026-11-27T02:31:57Z"
+        }
+      ]
+    },
+    {
+      "id": 140275848725,
+      "name": "Python 3.11 lint, types, unit and integration",
+      "status": "completed",
+      "conclusion": "failure",
+      "started_at": "2026-11-27T02:29:37Z",
+      "completed_at": "2026-11-27T02:31:36Z",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848725",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "run_id": 45928608970,
+      "run_attempt": 1,
+      "check_run_url": "https://api.github.com/repos/sandeshbagmare/deepviz-agent-toolkit/check-runs/140275848725",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:37Z",
+          "completed_at": "2026-11-27T02:29:38Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:38Z",
+          "completed_at": "2026-11-27T02:29:39Z"
+        },
+        {
+          "number": 3,
+          "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:39Z",
+          "completed_at": "2026-11-27T02:29:40Z"
+        },
+        {
+          "number": 4,
+          "name": "Install all integration dependencies (no live service credentials)",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:40Z",
+          "completed_at": "2026-11-27T02:30:08Z"
+        },
+        {
+          "number": 5,
+          "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:08Z",
+          "completed_at": "2026-11-27T02:30:09Z"
+        },
+        {
+          "number": 6,
+          "name": "Build the public npm package required by Python parity tests",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:09Z",
+          "completed_at": "2026-11-27T02:30:13Z"
+        },
+        {
+          "number": 7,
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:13Z",
+          "completed_at": "2026-11-27T02:30:13Z"
+        },
+        {
+          "number": 8,
+          "name": "Typecheck package and verification scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:13Z",
+          "completed_at": "2026-11-27T02:30:18Z"
+        },
+        {
+          "number": 9,
+          "name": "Check generated schema without changing files",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:18Z",
+          "completed_at": "2026-11-27T02:30:18Z"
+        },
+        {
+          "number": 10,
+          "name": "Test CI gate negative controls",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:18Z",
+          "completed_at": "2026-11-27T02:30:20Z"
+        },
+        {
+          "number": 11,
+          "name": "Unit and contract tests",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at": "2026-11-27T02:30:20Z",
+          "completed_at": "2026-11-27T02:31:33Z"
+        },
+        {
+          "number": 12,
+          "name": "Integration tests",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-27T02:31:33Z",
+          "completed_at": "2026-11-27T02:31:33Z"
+        },
+        {
+          "number": 13,
+          "name": "Preserve test reports for diagnosis, not as a substitute for success",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:33Z",
+          "completed_at": "2026-11-27T02:31:34Z"
+        },
+        {
+          "number": 24,
+          "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-27T02:31:34Z",
+          "completed_at": "2026-11-27T02:31:34Z"
+        },
+        {
+          "number": 25,
+          "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-27T02:31:34Z",
+          "completed_at": "2026-11-27T02:31:34Z"
+        },
+        {
+          "number": 26,
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:34Z",
+          "completed_at": "2026-11-27T02:31:34Z"
+        },
+        {
+          "number": 27,
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:31:34Z",
+          "completed_at": "2026-11-27T02:31:34Z"
+        }
+      ]
+    },
+    {
+      "id": 140275848727,
+      "name": "One-pass scale 1000000 records",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-27T02:30:08Z",
+      "completed_at": "2026-11-27T02:30:45Z",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848727",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "run_id": 45928608970,
+      "run_attempt": 1,
+      "check_run_url": "https://api.github.com/repos/sandeshbagmare/deepviz-agent-toolkit/check-runs/140275848727",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:09Z",
+          "completed_at": "2026-11-27T02:30:10Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:10Z",
+          "completed_at": "2026-11-27T02:30:11Z"
+        },
+        {
+          "number": 3,
+          "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:11Z",
+          "completed_at": "2026-11-27T02:30:12Z"
+        },
+        {
+          "number": 4,
+          "name": "Run python -m pip install -e '.[dev]'",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:12Z",
+          "completed_at": "2026-11-27T02:30:27Z"
+        },
+        {
+          "number": 5,
+          "name": "Assert full stream consumption, exact counts, bounded records and peak memory",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:27Z",
+          "completed_at": "2026-11-27T02:30:42Z"
+        },
+        {
+          "number": 6,
+          "name": "Preserve measured counts, elapsed time and memory methodology",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:42Z",
+          "completed_at": "2026-11-27T02:30:43Z"
+        },
+        {
+          "number": 11,
+          "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:43Z",
+          "completed_at": "2026-11-27T02:30:44Z"
+        },
+        {
+          "number": 12,
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:44Z",
+          "completed_at": "2026-11-27T02:30:44Z"
+        },
+        {
+          "number": 13,
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:44Z",
+          "completed_at": "2026-11-27T02:30:44Z"
+        }
+      ]
+    },
+    {
+      "id": 140275848763,
+      "name": "One-pass scale 1000 records",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-27T02:29:37Z",
+      "completed_at": "2026-11-27T02:30:06Z",
+      "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848763",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "run_id": 45928608970,
+      "run_attempt": 1,
+      "check_run_url": "https://api.github.com/repos/sandeshbagmare/deepviz-agent-toolkit/check-runs/140275848763",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:37Z",
+          "completed_at": "2026-11-27T02:29:38Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:38Z",
+          "completed_at": "2026-11-27T02:29:39Z"
+        },
+        {
+          "number": 3,
+          "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:39Z",
+          "completed_at": "2026-11-27T02:29:40Z"
+        },
+        {
+          "number": 4,
+          "name": "Run python -m pip install -e '.[dev]'",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:29:40Z",
+          "completed_at": "2026-11-27T02:30:03Z"
+        },
+        {
+          "number": 5,
+          "name": "Assert full stream consumption, exact counts, bounded records and peak memory",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:03Z",
+          "completed_at": "2026-11-27T02:30:03Z"
+        },
+        {
+          "number": 6,
+          "name": "Preserve measured counts, elapsed time and memory methodology",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:03Z",
+          "completed_at": "2026-11-27T02:30:04Z"
+        },
+        {
+          "number": 11,
+          "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:04Z",
+          "completed_at": "2026-11-27T02:30:04Z"
+        },
+        {
+          "number": 12,
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:04Z",
+          "completed_at": "2026-11-27T02:30:04Z"
+        },
+        {
+          "number": 13,
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-27T02:30:04Z",
+          "completed_at": "2026-11-27T02:30:04Z"
+        }
+      ]
+    }
+  ],
+  "query_ledger": [
+    {
+      "started_utc": "2026-11-27T14:20:42.762910+00:00",
+      "ended_utc": "2026-11-27T14:20:45.101817+00:00",
+      "method": "GET",
+      "api_path": "/user",
+      "http_status": 200,
+      "response_bytes": 1464,
+      "response_sha256": "88b4c45773e9eb99e50d7fe236750747ebbd6e1d700f337eaed617798778c6f1"
+    },
+    {
+      "started_utc": "2026-11-27T14:20:45.102820+00:00",
+      "ended_utc": "2026-11-27T14:20:46.727954+00:00",
+      "method": "GET",
+      "api_path": "/repos/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970",
+      "http_status": 200,
+      "response_bytes": 14524,
+      "response_sha256": "638ccc900014bc834671fccb912832a5083d15ca909c8e71c34afd95e5549a35"
+    },
+    {
+      "started_utc": "2026-11-27T14:20:46.727954+00:00",
+      "ended_utc": "2026-11-27T14:20:48.050747+00:00",
+      "method": "GET",
+      "api_path": "/repos/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/jobs?filter=latest&per_page=100&page=1",
+      "http_status": 200,
+      "response_bytes": 35761,
+      "response_sha256": "75dc36263416b3be4f0f69a04e0f88a96595dce2f39d6d4466d786f0357e7000"
+    }
+  ],
+  "new_issue_census_requests": 0,
+  "issue_PR_mutations": 0,
+  "total_jobs": 11,
+  "job_conclusion_counts": {
+    "failure": 3,
+    "success": 8
+  },
+  "failed_job_ids": [
+    140275848619,
+    140275848671,
+    140275848725
+  ],
+  "all_returned_jobs_completed": true,
+  "completed_job_count_matches": true,
+  "collector_exit": 0
+}
