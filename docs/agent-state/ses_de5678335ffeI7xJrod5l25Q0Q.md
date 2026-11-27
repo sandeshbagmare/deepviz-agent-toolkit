@@ -105,3 +105,35 @@ Final readback verification exit0: all12 copied evidence hashes, loaded module p
 - Exact argv, test IDs, module/source/test hashes and logs: OWN worktree artifacts/local/R10-01/run-v1/summary.json (capture.py overall exit1, preserving RED). Initial pre-execution redundant Node-identity block removal command was rejected by shell scanner invalid-redirect; no write occurred, corrected own unexecuted file via here-string. It is not a source or test failure.
 - Current action: copy compact sanitized own evidence, report and note into own branch; inspect explicit staged scope/diff/whitespace/credential patterns; commit the useful strict RED tests honestly, non-force own push and actual remote SHA readback.
 - One next executable action: git diff --cached --check after explicit owned-path staging in the R10 isolated worktree, followed by non-force OWN-branch publication only after staged review.
+
+
+## R10 owned local commit checkpoint
+
+- Explicit staging/safety exit0:15owned files,72535UTF8bytes; staged paths exactly matched allowlist; staged diff inspected, git diff --cached --check exit0, credential-pattern scan0findings; production/schema diff against3aa exit0. No unrelated staged file.
+- Actual meaningful local commit: c2628b6f0dadca2ff6a6bb0369cea53bb9ea2ac2 on agents/r10-01-correctness-regressions, commit exit0. Own worktree clean after commit. Commit message explicitly knownRED; tests remain12Python/11Node failures on source checkpoint, not a green fix.
+- Remote push has NOT yet been observed; local commit is not publication. Current action: fresh authenticated GET/user and non-force OWN ref push, then exact remote-SHA readback and saved receipt.
+- Next executable action: git push origin refs/heads/agents/r10-01-correctness-regressions:refs/heads/agents/r10-01-correctness-regressions, only after expected authenticated user is reconfirmed.
+
+
+## R10 actual first publication and post-commit checkpoint
+
+- Fresh authenticated GET/user HTTP200/login sandeshbagmare immediately preceded own non-force push. git push origin refs/heads/agents/r10-01-correctness-regressions:refs/heads/agents/r10-01-correctness-regressions exit0; immediate git ls-remote --heads origin refs/heads/agents/r10-01-correctness-regressions exit0 returned EXACT c2628b6f0dadca2ff6a6bb0369cea53bb9ea2ac2 at2026-11-27T02:53:06UTC. MAIN receipt docs/coordination/evidence/R10-01/publication-first.json; no local-only push claim.
+- Actual source remains checkpoint3aa; source/test hashes unchanged. Reran published commit bytes: Python exit1/12failed21passed0skip; Node exit1/11failed19passed0skip. postcommit-proof.json saves exact commands/child exits/local raw-log hashes. Proof collector exit0 means expected RED verified, not tests green.
+- Existing145Python/246Node controls and scoped Ruff/build passes remain scope-specific earlier checks, not fullrelease/finalsource approval. No test weakened, source fix, install, issue/PR mutation or spawn.
+- Current action: publish small owned receipt checkpoint with actual first-publication evidence and updated handoff, then final non-force remote-tip readback saved in MAIN publication-final.json. Final receipt commit not yet created/pushed; no predicted SHA.
+- Next executable action: git diff --cached --check after explicit receipt-only staging in own branch; sourcefixes remainR04/16, and R04 should inspect c2628b6 tests before rerunning against a corrected immutable pin.
+
+## R13 SAME-ID recovery pre-work checkpoint
+
+- R13 commoncontract+role01 read FULL; MAIN canonical/RESUME/STATE, own MAIN note/R10report read. Native SAME ID reconfirmed ses_de5678335ffeI7xJrod5l25Q0Q. Newer R13 authority governs released scopes; no spawning/service/provider/auth changes/retry loops. Fullgoal/900createdANDresolved remain unmet.
+- Actual existing OWN branch agents/r10-01-correctness-regressions HEAD c2628b6f0dadca2ff6a6bb0369cea53bb9ea2ac2. Six receipt-only staged paths survived interruption; no commit/push after c262 observed yet. No old R10 builds/tests will be replayed. Preserved baseline source0c5 and known RED12Python/11Node remain historical facts, not rerun/finalapproval.
+- First unfinished action: finish receipt checkpoint. Last recorded readback showed source/test hashes equal Git bytes but evidence index hashes differ from staged bytes due text newline canonicalization; correct own manifest to explicitly distinguish raw working-copy versus GitLF hashes, preserve original raw evidence. Do not change production or original tests.
+- Next meaningful assignment: independent read-only review of role16 existing dirty SUM snapshot in r10-16 producer branch (HEAD6d0e72e observed in worktree listing, not yet a reviewed dirty snapshot). Inspect actual diff/callers, exact integer/ties/compensation/state/fixed-size guarantees; verify means/sampling not changed. No author/source edit/signoff or final immutable approval.
+- Allowed NEW recovery paths: own MAIN reports/R13-01-sum-review.md, evidence/R13-01/, tests/r13_probes/role01/ in own branch, own actualIDnote. Producer files and other notes READONLY. No installs/sharedGit/issuePR mutation/secrets. Authenticated expected-user verification must precede own non-force publication.
+- Current action: canonicalize own evidence hash manifest and publish unfinished six-file receipt checkpoint, then copy exact producer bytes to own ignored review snapshot with pre/post source hashes for deterministic independent tests.
+- One executable next action: read staged R10-01/index.json and compute both working-copy and Git index blob SHA256s; update only own manifest, stage explicit receipt paths, whitespace/secret check, commit and safe own push/readback.
+
+
+## R13 recovered receipt manifest correction
+
+The interrupted six-file receipt checkpoint was recovered at c2628b6 without replaying completed builds or the strict RED suite. Evidence text underwent Git CRLF-to-LF canonicalization: raw Windows file hashes and committed blob hashes differ. The corrected index explicitly records both, uses sha256 for Git index/committed bytes, and preserves raw_worktree_sha256 and raw_worktree_bytes for the measured local files. This is a provenance repair only; source/test bytes and their recorded hashes remain unchanged. No prior RED becomes GREEN.

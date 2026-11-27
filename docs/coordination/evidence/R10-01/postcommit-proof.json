@@ -1,0 +1,45 @@
+{
+  "harness_commit": "c2628b6f0dadca2ff6a6bb0369cea53bb9ea2ac2",
+  "source_checkpoint": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "tests/r10_probes/role01/test_correctness_regressions.py",
+        "-q",
+        "--tb=no",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "exit_code": 1,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R10-01\\postcommit-v1\\python.log",
+      "log_sha256": "14f035079ac153c6ab70537ffe191f43a688a7f87eb054007c6246e0c8ea4c46",
+      "results": {
+        "failed": 12,
+        "passed": 21,
+        "skipped": 0
+      }
+    },
+    {
+      "argv": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "tests/r10_probes/role01/correctness-regressions.test.mjs"
+      ],
+      "exit_code": 1,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R10-01\\postcommit-v1\\node.log",
+      "log_sha256": "f40ef58fafaf32bf7e8dd9401afb5ab053701c0712ba5190bdfa944c3f6f3e54",
+      "results": {
+        "failed": 11,
+        "passed": 19,
+        "skipped": 0
+      }
+    }
+  ],
+  "known_red": true,
+  "production_diff_exit_code": 0,
+  "tested_source_and_test_hashes_unchanged": true
+}

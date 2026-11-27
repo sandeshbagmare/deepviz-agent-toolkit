@@ -61,10 +61,27 @@ Python's test guard checks actual imports against this checkout; captured Node r
 
 Before publication, authenticated GET/user returned200/login sandeshbagmare; intended public repository and credential-free HTTPS origin were verified. Own branch lookup returned404 before writes; configured Git author was nonempty. GCM output/token stayed in captured process memory only, never terminal output, command arguments, files or Git config. Compact sanitized discovery evidence is authentication.json; no auth/config mutation or issue/PR write occurred.
 
-Publication is not yet attempted at this checkpoint. Next: explicit owned-path staging, staged-diff/whitespace/credential-pattern review, honest small commit, non-force push of OWN branch, actual remote-SHA readback, then durable MAIN receipt. Do not mistake this pre-publication checkpoint for a push receipt.
+**First actual publication verified:** meaningful test/evidence commit c2628b6f0dadca2ff6a6bb0369cea53bb9ea2ac2 was non-force pushed to agents/r10-01-correctness-regressions; push exit0 and immediate git ls-remote exit0 returned that exact SHA at2026-11-27T02:53:06UTC. Fresh authenticated GET/user again returned200/sandeshbagmare before the push. publication-first.json is the actual receipt. Explicit15-file staging, staged diff/whitespace and credential-pattern scan passed with0findings/72535UTF8bytes; no production/schema changes. A following owned receipt checkpoint records this observed publication; its final remote tip is recorded in MAIN publication-final.json only after an actual push/readback. No green CI, merge or release is implied.
 
 ## Limits and next action
 
 Not run: full Python/whole-release lint/types, package builds/clean consumers,10M/continuous memory, real browser/PNG/SVG inspection, paid providers, security/MCP acceptance or final-head remote CI. Source3aa is a checkpoint and later R04/16 fixes are unverified. No false final signoff, human approval, release, issue closure or benchmark claim.
 
-Next executable action in the OWN branch: git diff --cached --check after staging only owned paths. After publication, R04 should inspect the real commit/evidence, queue source fixes after16handback and rerun these unchanged strict oracles on an explicitly pinned corrected candidate.
+Next executable action for R04: git show c2628b6f0dadca2ff6a6bb0369cea53bb9ea2ac2 -- tests/r10_probes/role01. Inspect the real tests/evidence, queue normalizer fixes after16handback and the count-mapping fix underR04, then rerun these unchanged strict oracles on an explicitly pinned corrected candidate. Do not merge this known-RED evidence branch into the candidate unchanged.
+
+## R10 owned local commit checkpoint
+
+- Explicit staging/safety exit0:15owned files,72535UTF8bytes; staged paths exactly matched allowlist; staged diff inspected, git diff --cached --check exit0, credential-pattern scan0findings; production/schema diff against3aa exit0. No unrelated staged file.
+- Actual meaningful local commit: c2628b6f0dadca2ff6a6bb0369cea53bb9ea2ac2 on agents/r10-01-correctness-regressions, commit exit0. Own worktree clean after commit. Commit message explicitly knownRED; tests remain12Python/11Node failures on source checkpoint, not a green fix.
+- Remote push has NOT yet been observed; local commit is not publication. Current action: fresh authenticated GET/user and non-force OWN ref push, then exact remote-SHA readback and saved receipt.
+- Next executable action: git push origin refs/heads/agents/r10-01-correctness-regressions:refs/heads/agents/r10-01-correctness-regressions, only after expected authenticated user is reconfirmed.
+
+
+## Post-commit independent execution of the published test bytes
+
+At test/evidence commit c2628b6f0dadca2ff6a6bb0369cea53bb9ea2ac2, both commands were rerun: Python exit1/12failed21passed0skip; Node exit1/11failed19passed0skip. All captured source/test hashes remain identical and production diff against3aa is empty. postcommit-proof.json records exact commands/log hashes; the proof collector exit0 verifies expected RED, not passing tests. Source ownership and unresolved findings are unchanged.
+
+
+## R13 recovered receipt manifest correction
+
+The interrupted six-file receipt checkpoint was recovered at c2628b6 without replaying completed builds or the strict RED suite. Evidence text underwent Git CRLF-to-LF canonicalization: raw Windows file hashes and committed blob hashes differ. The corrected index explicitly records both, uses sha256 for Git index/committed bytes, and preserves raw_worktree_sha256 and raw_worktree_bytes for the measured local files. This is a provenance repair only; source/test bytes and their recorded hashes remain unchanged. No prior RED becomes GREEN.
