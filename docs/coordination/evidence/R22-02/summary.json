@@ -1,0 +1,107 @@
+{
+  "observed_at": "2026-11-27T15:37:43.287109+00:00",
+  "owner": "ses_de5678328ffeYCFXQhRPKd4a9h",
+  "source_commit": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+  "source_import_sdk_bytes_identical_before_after": true,
+  "initial": {
+    "tests": 8,
+    "errors": 0,
+    "failures": 2,
+    "skipped": 0,
+    "passed": 6,
+    "exit": 1,
+    "failed_test_names": [
+      "test_all_supported_call_forms_admit_before_callback[bare-run]",
+      "test_all_supported_call_forms_admit_before_callback[bare-arun]"
+    ],
+    "elapsed_seconds": 2.35
+  },
+  "final": {
+    "tests": 8,
+    "errors": 0,
+    "failures": 2,
+    "skipped": 0,
+    "passed": 6,
+    "exit": 1,
+    "failed_test_names": [
+      "test_all_supported_call_forms_admit_before_callback[bare-run]",
+      "test_all_supported_call_forms_admit_before_callback[bare-arun]"
+    ],
+    "elapsed_seconds": 1.72
+  },
+  "repeat_is_same_8_not_16_independent_cases": true,
+  "ruff_exit": 0,
+  "mypy_exit": 0,
+  "mypy_own_files": 2,
+  "findings": [
+    {
+      "id": "R22-02-F1",
+      "priority": "P2",
+      "location": "tools.py:186-196",
+      "cause": "Bare strings bypass new early admission and reach configured LangChain callbacks before later rejection",
+      "invalid_input_normalization_acceptance": false,
+      "remote_callback_or_secrets_used": false
+    }
+  ],
+  "limits": [
+    "No P2 dirty source/capacity/concurrency test",
+    "No old32/author37/stdio/fullsuite/build/browser/scale/replay",
+    "No source/SDK/cap/production/API writes, install or spawning",
+    "Not integration/final approval"
+  ],
+  "probe_working_and_gitlf_hashes": {
+    "tests/r22_probes/role02/README.md": {
+      "sha256": "b5c699731ce0fd862aa055cc24c2f4c2f2bae22d95ee821b269076cfeda315db",
+      "bytes": 3567,
+      "git_lf_sha256": "6ef22aa7bf7c1e4b34ace9aedaeddbc8051fc7fe1f6e25d41227937abe67a498"
+    },
+    "tests/r22_probes/role02/source_identity.py": {
+      "sha256": "6d0cc81fafe04dd4aa34e036d651168088051600152109e432ab838d6b304de6",
+      "bytes": 2828,
+      "git_lf_sha256": "ab43c9c2ccff2f4859b2d969d7091837615f717e2e1bca4eccf87cca6fcc9abc"
+    },
+    "tests/r22_probes/role02/test_p1_security.py": {
+      "sha256": "4e325d644e0f8548d4c3bbe054121492bd0d6bf1da0b46d7ae24b0be2f0cc8db",
+      "bytes": 8563,
+      "git_lf_sha256": "3713f6d1886f21896715f992db615d5f820e5336bbeec49027d53c93caf23ac2"
+    }
+  },
+  "local_raw_log_hashes": {
+    "security-probes.log": {
+      "sha256": "7d6f7f13bb2a6ccd9f89bc52df914e1eca9553aeaae788de1863a1f2f8c042d5",
+      "bytes": 2626
+    },
+    "security-probes.xml": {
+      "sha256": "36a5f83cc58c6d7914d51f8e920d2257f0ad91f1f1bcc5b520e24bb5d99e8999",
+      "bytes": 3181
+    },
+    "final/security-probes.log": {
+      "sha256": "fda1678b2d82c0ca2087c21055b0cb39883069777012c3907c147a1b5041758c",
+      "bytes": 2626
+    },
+    "final/security-probes.xml": {
+      "sha256": "167a922249f8c609da7e21026ee36e68417bdfcb01a7af814a02a1894001f3ee",
+      "bytes": 3181
+    },
+    "sdk-source-inspect.log": {
+      "sha256": "24c38fee0eaf6b8d25eeaa20911c0a8e32c6cf8974bb1e1bb1840e9a1197296a",
+      "bytes": 37874
+    },
+    "ruff.log": {
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+      "bytes": 42
+    },
+    "mypy.log": {
+      "sha256": "b002ffc8edb10b714c7036c6c76186cbf6b84e1b2760eaafb5e4e075cd2da941",
+      "bytes": 354
+    },
+    "final/ruff.log": {
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+      "bytes": 42
+    },
+    "final/mypy.log": {
+      "sha256": "07a5ca23e5d39b2565c0c1361f0556b8c3c75484bba05841f400436d190bb660",
+      "bytes": 90
+    }
+  }
+}

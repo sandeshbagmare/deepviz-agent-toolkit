@@ -1,0 +1,44 @@
+{
+  "observations": [
+    {
+      "case": "escaped_duplicate",
+      "raw_utf8_bytes": 49,
+      "raw_characters": 49,
+      "rejected_type": "ValueError",
+      "error": "Invalid JSON inline data: Duplicate JSON object key",
+      "callback_starts": [
+        {
+          "utf8_bytes": 49,
+          "public_marker_seen": true
+        }
+      ]
+    },
+    {
+      "case": "unicode_raw_1000001_bytes",
+      "raw_utf8_bytes": 1000001,
+      "raw_characters": 999994,
+      "rejected_type": "ValueError",
+      "error": "Inline data exceeds 1 MB; configure data_dir and use a file reference",
+      "callback_starts": [
+        {
+          "utf8_bytes": 1000001,
+          "public_marker_seen": true
+        }
+      ]
+    },
+    {
+      "case": "encoded_depth5000",
+      "raw_utf8_bytes": 10000,
+      "raw_characters": 10000,
+      "rejected_type": "ValueError",
+      "error": "Invalid JSON inline data: maximum recursion depth exceeded while decoding a JSON array from a unicode string",
+      "callback_starts": [
+        {
+          "utf8_bytes": 10000,
+          "public_marker_seen": false
+        }
+      ]
+    }
+  ],
+  "ordinary_recovery_count": 1
+}

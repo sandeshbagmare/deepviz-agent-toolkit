@@ -1,0 +1,48 @@
+[
+  {
+    "method": "run",
+    "wrapped": false,
+    "rejected": {
+      "type": "ValueError",
+      "text": "Invalid JSON inline data: Duplicate JSON object key"
+    },
+    "callback_starts": [
+      {
+        "utf8_bytes": 34,
+        "public_marker_seen": true
+      }
+    ]
+  },
+  {
+    "method": "run",
+    "wrapped": true,
+    "rejected": {
+      "type": "ValueError",
+      "text": "Invalid JSON inline data: Duplicate JSON object key"
+    },
+    "callback_starts": []
+  },
+  {
+    "method": "arun",
+    "wrapped": false,
+    "rejected": {
+      "type": "ValueError",
+      "text": "Invalid JSON inline data: Duplicate JSON object key"
+    },
+    "callback_starts": [
+      {
+        "utf8_bytes": 34,
+        "public_marker_seen": true
+      }
+    ]
+  },
+  {
+    "method": "arun",
+    "wrapped": true,
+    "rejected": {
+      "type": "ValueError",
+      "text": "Invalid JSON inline data: Duplicate JSON object key"
+    },
+    "callback_starts": []
+  }
+]

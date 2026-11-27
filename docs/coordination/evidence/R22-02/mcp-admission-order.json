@@ -1,0 +1,26 @@
+{
+  "invalid": [
+    {
+      "case": "escaped_duplicate",
+      "error": "Invalid JSON inline data: Duplicate JSON object key",
+      "sdk_preparse_calls": 0
+    },
+    {
+      "case": "unicode_raw_1000001_bytes",
+      "error": "Inline data exceeds 1 MB; configure data_dir and use a file reference",
+      "sdk_preparse_calls": 0
+    },
+    {
+      "case": "encoded_depth5000",
+      "error": "Invalid JSON inline data: maximum recursion depth exceeded while decoding a JSON array from a unicode string",
+      "sdk_preparse_calls": 0
+    },
+    {
+      "case": "escaped_file_control",
+      "error": "Invalid JSON inline data: Duplicate JSON object key",
+      "sdk_preparse_calls": 0
+    }
+  ],
+  "positive_sdk_preparse_calls": 1,
+  "method": "Read-only sys.setprofile code-entry count; no patched method/cap/SDK; no frame retained"
+}
