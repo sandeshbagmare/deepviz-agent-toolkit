@@ -1,0 +1,205 @@
+FFFF....FFFF....FFFF....FFFFFFFFFFFF........FFFF........................ [ 92%]
+......                                                                   [100%]
+================================== FAILURES ===================================
+_ test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[duplicate-bare-run] _
+python\deepviz\tests\test_r41_callback_admission.py:97: in test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers
+    assert rejected.events == [], "Invalid original JSON reached SDK callback telemetry"
+E   AssertionError: Invalid original JSON reached SDK callback telemetry
+E   assert [('start', {'...: None, ...})] == []
+E     
+E     Left contains 2 more items, first extra item: ('start', {'run_id': UUID('04100000-0000-4000-8000-000000000016'), 'parent_run_id': None, 'tags': ['r41-admission'], 'metadata': {'r41': 'local'}, ...})
+E     Use -v to get more diff
+_ test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[duplicate-bare-arun] _
+python\deepviz\tests\test_r41_callback_admission.py:97: in test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers
+    assert rejected.events == [], "Invalid original JSON reached SDK callback telemetry"
+E   AssertionError: Invalid original JSON reached SDK callback telemetry
+E   assert [('start', {'...: None, ...})] == []
+E     
+E     Left contains 2 more items, first extra item: ('start', {'run_id': UUID('04100000-0000-4000-8000-000000000016'), 'parent_run_id': None, 'tags': ['r41-admission'], 'metadata': {'r41': 'local'}, ...})
+E     Use -v to get more diff
+_ test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[duplicate-bare-invoke] _
+python\deepviz\tests\test_r41_callback_admission.py:97: in test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers
+    assert rejected.events == [], "Invalid original JSON reached SDK callback telemetry"
+E   AssertionError: Invalid original JSON reached SDK callback telemetry
+E   assert [('start', {'...: None, ...})] == []
+E     
+E     Left contains 2 more items, first extra item: ('start', {'run_id': UUID('04100000-0000-4000-8000-000000000016'), 'parent_run_id': None, 'tags': ['r41-admission'], 'metadata': {'r41': 'local'}, ...})
+E     Use -v to get more diff
+_ test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[duplicate-bare-ainvoke] _
+python\deepviz\tests\test_r41_callback_admission.py:97: in test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers
+    assert rejected.events == [], "Invalid original JSON reached SDK callback telemetry"
+E   AssertionError: Invalid original JSON reached SDK callback telemetry
+E   assert [('start', {'...: None, ...})] == []
+E     
+E     Left contains 2 more items, first extra item: ('start', {'run_id': UUID('04100000-0000-4000-8000-000000000016'), 'parent_run_id': None, 'tags': ['r41-admission'], 'metadata': {'r41': 'local'}, ...})
+E     Use -v to get more diff
+_ test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[bytes-bare-run] _
+python\deepviz\tests\test_r41_callback_admission.py:97: in test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers
+    assert rejected.events == [], "Invalid original JSON reached SDK callback telemetry"
+E   AssertionError: Invalid original JSON reached SDK callback telemetry
+E   assert [('start', {'...: None, ...})] == []
+E     
+E     Left contains 2 more items, first extra item: ('start', {'run_id': UUID('04100000-0000-4000-8000-000000000016'), 'parent_run_id': None, 'tags': ['r41-admission'], 'metadata': {'r41': 'local'}, ...})
+E     Use -v to get more diff
+_ test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[bytes-bare-arun] _
+python\deepviz\tests\test_r41_callback_admission.py:97: in test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers
+    assert rejected.events == [], "Invalid original JSON reached SDK callback telemetry"
+E   AssertionError: Invalid original JSON reached SDK callback telemetry
+E   assert [('start', {'...: None, ...})] == []
+E     
+E     Left contains 2 more items, first extra item: ('start', {'run_id': UUID('04100000-0000-4000-8000-000000000016'), 'parent_run_id': None, 'tags': ['r41-admission'], 'metadata': {'r41': 'local'}, ...})
+E     Use -v to get more diff
+_ test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[bytes-bare-invoke] _
+python\deepviz\tests\test_r41_callback_admission.py:97: in test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers
+    assert rejected.events == [], "Invalid original JSON reached SDK callback telemetry"
+E   AssertionError: Invalid original JSON reached SDK callback telemetry
+E   assert [('start', {'...: None, ...})] == []
+E     
+E     Left contains 2 more items, first extra item: ('start', {'run_id': UUID('04100000-0000-4000-8000-000000000016'), 'parent_run_id': None, 'tags': ['r41-admission'], 'metadata': {'r41': 'local'}, ...})
+E     Use -v to get more diff
+_ test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[bytes-bare-ainvoke] _
+python\deepviz\tests\test_r41_callback_admission.py:97: in test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers
+    assert rejected.events == [], "Invalid original JSON reached SDK callback telemetry"
+E   AssertionError: Invalid original JSON reached SDK callback telemetry
+E   assert [('start', {'...: None, ...})] == []
+E     
+E     Left contains 2 more items, first extra item: ('start', {'run_id': UUID('04100000-0000-4000-8000-000000000016'), 'parent_run_id': None, 'tags': ['r41-admission'], 'metadata': {'r41': 'local'}, ...})
+E     Use -v to get more diff
+_ test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[depth-bare-run] _
+python\deepviz\tests\test_r41_callback_admission.py:97: in test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers
+    assert rejected.events == [], "Invalid original JSON reached SDK callback telemetry"
+E   AssertionError: Invalid original JSON reached SDK callback telemetry
+E   assert [('start', {'...: None, ...})] == []
+E     
+E     Left contains 2 more items, first extra item: ('start', {'run_id': UUID('04100000-0000-4000-8000-000000000016'), 'parent_run_id': None, 'tags': ['r41-admission'], 'metadata': {'r41': 'local'}, ...})
+E     Use -v to get more diff
+_ test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[depth-bare-arun] _
+python\deepviz\tests\test_r41_callback_admission.py:97: in test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers
+    assert rejected.events == [], "Invalid original JSON reached SDK callback telemetry"
+E   AssertionError: Invalid original JSON reached SDK callback telemetry
+E   assert [('start', {'...: None, ...})] == []
+E     
+E     Left contains 2 more items, first extra item: ('start', {'run_id': UUID('04100000-0000-4000-8000-000000000016'), 'parent_run_id': None, 'tags': ['r41-admission'], 'metadata': {'r41': 'local'}, ...})
+E     Use -v to get more diff
+_ test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[depth-bare-invoke] _
+python\deepviz\tests\test_r41_callback_admission.py:97: in test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers
+    assert rejected.events == [], "Invalid original JSON reached SDK callback telemetry"
+E   AssertionError: Invalid original JSON reached SDK callback telemetry
+E   assert [('start', {'...: None, ...})] == []
+E     
+E     Left contains 2 more items, first extra item: ('start', {'run_id': UUID('04100000-0000-4000-8000-000000000016'), 'parent_run_id': None, 'tags': ['r41-admission'], 'metadata': {'r41': 'local'}, ...})
+E     Use -v to get more diff
+_ test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[depth-bare-ainvoke] _
+python\deepviz\tests\test_r41_callback_admission.py:97: in test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers
+    assert rejected.events == [], "Invalid original JSON reached SDK callback telemetry"
+E   AssertionError: Invalid original JSON reached SDK callback telemetry
+E   assert [('start', {'...: None, ...})] == []
+E     
+E     Left contains 2 more items, first extra item: ('start', {'run_id': UUID('04100000-0000-4000-8000-000000000016'), 'parent_run_id': None, 'tags': ['r41-admission'], 'metadata': {'r41': 'local'}, ...})
+E     Use -v to get more diff
+_ test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent[normalize_data-run] _
+python\deepviz\tests\test_r41_callback_admission.py:124: in test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent
+    assert start["inputs"] == {"data": ROWS}
+E   AssertionError: assert None == {'data': [{'label': '\u6771\u4eac \U0001f4ca', 'value': 3}, {'label': 'B', 'value': 7}]}
+_ test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent[normalize_data-arun] _
+python\deepviz\tests\test_r41_callback_admission.py:124: in test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent
+    assert start["inputs"] == {"data": ROWS}
+E   AssertionError: assert None == {'data': [{'label': '\u6771\u4eac \U0001f4ca', 'value': 3}, {'label': 'B', 'value': 7}]}
+_ test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent[normalize_data-invoke] _
+python\deepviz\tests\test_r41_callback_admission.py:124: in test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent
+    assert start["inputs"] == {"data": ROWS}
+E   AssertionError: assert None == {'data': [{'label': '\u6771\u4eac \U0001f4ca', 'value': 3}, {'label': 'B', 'value': 7}]}
+_ test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent[normalize_data-ainvoke] _
+python\deepviz\tests\test_r41_callback_admission.py:124: in test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent
+    assert start["inputs"] == {"data": ROWS}
+E   AssertionError: assert None == {'data': [{'label': '\u6771\u4eac \U0001f4ca', 'value': 3}, {'label': 'B', 'value': 7}]}
+_ test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent[recommend_chart-run] _
+python\deepviz\tests\test_r41_callback_admission.py:124: in test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent
+    assert start["inputs"] == {"data": ROWS}
+E   AssertionError: assert None == {'data': [{'label': '\u6771\u4eac \U0001f4ca', 'value': 3}, {'label': 'B', 'value': 7}]}
+_ test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent[recommend_chart-arun] _
+python\deepviz\tests\test_r41_callback_admission.py:124: in test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent
+    assert start["inputs"] == {"data": ROWS}
+E   AssertionError: assert None == {'data': [{'label': '\u6771\u4eac \U0001f4ca', 'value': 3}, {'label': 'B', 'value': 7}]}
+_ test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent[recommend_chart-invoke] _
+python\deepviz\tests\test_r41_callback_admission.py:124: in test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent
+    assert start["inputs"] == {"data": ROWS}
+E   AssertionError: assert None == {'data': [{'label': '\u6771\u4eac \U0001f4ca', 'value': 3}, {'label': 'B', 'value': 7}]}
+_ test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent[recommend_chart-ainvoke] _
+python\deepviz\tests\test_r41_callback_admission.py:124: in test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent
+    assert start["inputs"] == {"data": ROWS}
+E   AssertionError: assert None == {'data': [{'label': '\u6771\u4eac \U0001f4ca', 'value': 3}, {'label': 'B', 'value': 7}]}
+_ test_exact_original_utf8_limit_accepts_then_traces_only_canonical_data[bare-run] _
+python\deepviz\tests\test_r41_callback_admission.py:146: in test_exact_original_utf8_limit_accepts_then_traces_only_canonical_data
+    assert trace.events[0][1]["inputs"] == {"data": ROWS}
+E   AssertionError: assert None == {'data': [{'label': '\u6771\u4eac \U0001f4ca', 'value': 3}, {'label': 'B', 'value': 7}]}
+_ test_exact_original_utf8_limit_accepts_then_traces_only_canonical_data[bare-arun] _
+python\deepviz\tests\test_r41_callback_admission.py:146: in test_exact_original_utf8_limit_accepts_then_traces_only_canonical_data
+    assert trace.events[0][1]["inputs"] == {"data": ROWS}
+E   AssertionError: assert None == {'data': [{'label': '\u6771\u4eac \U0001f4ca', 'value': 3}, {'label': 'B', 'value': 7}]}
+_ test_exact_original_utf8_limit_accepts_then_traces_only_canonical_data[bare-invoke] _
+python\deepviz\tests\test_r41_callback_admission.py:146: in test_exact_original_utf8_limit_accepts_then_traces_only_canonical_data
+    assert trace.events[0][1]["inputs"] == {"data": ROWS}
+E   AssertionError: assert None == {'data': [{'label': '\u6771\u4eac \U0001f4ca', 'value': 3}, {'label': 'B', 'value': 7}]}
+_ test_exact_original_utf8_limit_accepts_then_traces_only_canonical_data[bare-ainvoke] _
+python\deepviz\tests\test_r41_callback_admission.py:146: in test_exact_original_utf8_limit_accepts_then_traces_only_canonical_data
+    assert trace.events[0][1]["inputs"] == {"data": ROWS}
+E   AssertionError: assert None == {'data': [{'label': '\u6771\u4eac \U0001f4ca', 'value': 3}, {'label': 'B', 'value': 7}]}
+_ test_original_raw_has_one_strict_decode_before_start_without_sdk_patch[bare-run] _
+python\deepviz\tests\test_r41_callback_admission.py:187: in test_original_raw_has_one_strict_decode_before_start_without_sdk_patch
+    assert trace.timeline == ["strict-decode", "json.loads", "start", "end"]
+E   AssertionError: assert ['start', 'st...loads', 'end'] == ['strict-deco...start', 'end']
+E     
+E     At index 0 diff: 'start' != 'strict-decode'
+E     Use -v to get more diff
+_ test_original_raw_has_one_strict_decode_before_start_without_sdk_patch[bare-arun] _
+python\deepviz\tests\test_r41_callback_admission.py:187: in test_original_raw_has_one_strict_decode_before_start_without_sdk_patch
+    assert trace.timeline == ["strict-decode", "json.loads", "start", "end"]
+E   AssertionError: assert ['start', 'st...loads', 'end'] == ['strict-deco...start', 'end']
+E     
+E     At index 0 diff: 'start' != 'strict-decode'
+E     Use -v to get more diff
+_ test_original_raw_has_one_strict_decode_before_start_without_sdk_patch[bare-invoke] _
+python\deepviz\tests\test_r41_callback_admission.py:187: in test_original_raw_has_one_strict_decode_before_start_without_sdk_patch
+    assert trace.timeline == ["strict-decode", "json.loads", "start", "end"]
+E   AssertionError: assert ['start', 'st...loads', 'end'] == ['strict-deco...start', 'end']
+E     
+E     At index 0 diff: 'start' != 'strict-decode'
+E     Use -v to get more diff
+_ test_original_raw_has_one_strict_decode_before_start_without_sdk_patch[bare-ainvoke] _
+python\deepviz\tests\test_r41_callback_admission.py:187: in test_original_raw_has_one_strict_decode_before_start_without_sdk_patch
+    assert trace.timeline == ["strict-decode", "json.loads", "start", "end"]
+E   AssertionError: assert ['start', 'st...loads', 'end'] == ['strict-deco...start', 'end']
+E     
+E     At index 0 diff: 'start' != 'strict-decode'
+E     Use -v to get more diff
+=========================== short test summary info ===========================
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[duplicate-bare-run]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[duplicate-bare-arun]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[duplicate-bare-invoke]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[duplicate-bare-ainvoke]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[bytes-bare-run]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[bytes-bare-arun]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[bytes-bare-invoke]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[bytes-bare-ainvoke]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[depth-bare-run]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[depth-bare-arun]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[depth-bare-invoke]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_invalid_raw_never_reaches_any_callback_and_same_tool_recovers[depth-bare-ainvoke]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent[normalize_data-run]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent[normalize_data-arun]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent[normalize_data-invoke]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent[normalize_data-ainvoke]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent[recommend_chart-run]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent[recommend_chart-arun]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent[recommend_chart-invoke]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_valid_bare_and_dict_results_and_canonical_callback_config_are_equivalent[recommend_chart-ainvoke]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_exact_original_utf8_limit_accepts_then_traces_only_canonical_data[bare-run]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_exact_original_utf8_limit_accepts_then_traces_only_canonical_data[bare-arun]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_exact_original_utf8_limit_accepts_then_traces_only_canonical_data[bare-invoke]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_exact_original_utf8_limit_accepts_then_traces_only_canonical_data[bare-ainvoke]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_original_raw_has_one_strict_decode_before_start_without_sdk_patch[bare-run]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_original_raw_has_one_strict_decode_before_start_without_sdk_patch[bare-arun]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_original_raw_has_one_strict_decode_before_start_without_sdk_patch[bare-invoke]
+FAILED python/deepviz/tests/test_r41_callback_admission.py::test_original_raw_has_one_strict_decode_before_start_without_sdk_patch[bare-ainvoke]
+28 failed, 50 passed in 3.24s

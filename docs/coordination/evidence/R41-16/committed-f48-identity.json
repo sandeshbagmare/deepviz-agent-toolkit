@@ -1,0 +1,61 @@
+{
+  "utc": "2026-11-27T17:41:28.263310+00:00",
+  "base": "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23",
+  "head": "f48c72e26000560b48f3dfd137696fa9acf17637",
+  "branch": "fix/r41-callback-admission",
+  "status": "?? docs/agent-state/ses_de567808bffdXko8hyKFRhPv77.md\n?? docs/coordination/reports/R41-16-callback-admission-implementation.md\n?? docs/coordination/status/\n",
+  "origins": {
+    "tools": {
+      "path": "python/deepviz/src/deepviz/tools.py",
+      "working_sha256": "463ee6feb88d90ac8e19e143d3cb019501ce60d0a22435fe03814464c00d5cbb",
+      "base_sha256": "11273c5f5b0ff2eee16e09c6c727e560582a43fcae723bb315b6ef80d5a68495"
+    },
+    "models": {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "working_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "base_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    "normalize": {
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "working_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+      "base_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+    },
+    "mcp_server": {
+      "path": "python/deepviz/src/deepviz/mcp_server.py",
+      "working_sha256": "9f1628e04749c3c3d2357607ac4cc0021f74e1119c6237aa36077a0fd67bf480",
+      "base_sha256": "9f1628e04749c3c3d2357607ac4cc0021f74e1119c6237aa36077a0fd67bf480"
+    },
+    "recommend": {
+      "path": "python/deepviz/src/deepviz/recommend.py",
+      "working_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+      "base_sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999"
+    },
+    "render": {
+      "path": "python/deepviz/src/deepviz/render.py",
+      "working_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+      "base_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+    }
+  },
+  "readonly_sdks": {
+    "langchain_core.tools.base": {
+      "path": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py",
+      "sha256": "239c77d07a9283ced902fb161ca0fcdb5e532a9824caaa169ab014ac41c899d4"
+    },
+    "langchain_core.tools.structured": {
+      "path": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\langchain_core\\tools\\structured.py",
+      "sha256": "f51689a1707c1ee31a173b8d8c9aaea33d994f4d95a79e6d51fe7369b2247142"
+    },
+    "mcp.server.fastmcp.utilities.func_metadata": {
+      "path": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\mcp\\server\\fastmcp\\utilities\\func_metadata.py",
+      "sha256": "c951a064ea3f1488c2f9685168ab049a31d9772c5ff06340f1b435399e1db18c"
+    }
+  },
+  "versions": {
+    "langchain-core": "1.8.5",
+    "mcp": "1.30.0",
+    "pydantic": "2.14.4",
+    "pytest": "9.2.0"
+  },
+  "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "scope": "Actual own imports first/guarded, -S then readonly installed-site .pth bootstrap for SDK runtime; no install or persistent environment change; tests are separate actual commands"
+}

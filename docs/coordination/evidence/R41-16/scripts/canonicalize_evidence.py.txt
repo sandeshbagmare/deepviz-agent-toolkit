@@ -1,0 +1,30 @@
+"""Make own durable text evidence match Git LF; retain original artifact hashes."""
+import hashlib
+import json
+from pathlib import Path
+
+OUT = Path.cwd() / "docs/coordination/evidence/R41-16"
+summary_path = OUT / "summary.json"
+summary = json.loads(summary_path.read_text(encoding="utf-8"))
+changes = []
+for relative, record in summary["files"].items():
+    path = OUT / relative
+    original = path.read_bytes()
+    assert hashlib.sha256(original).hexdigest() == record["sha256"]
+    data = original if path.suffix == ".png" else original.replace(b"\r\n", b"\n")
+    if data != original:
+        changes.append(relative)
+        path.write_bytes(data)
+    record["sha256"] = hashlib.sha256(data).hexdigest()
+    record["bytes"] = len(data)
+    record["crlf_to_lf"] = data != original
+own = Path(__file__)
+raw = own.read_bytes()
+relative = "scripts/canonicalize_evidence.py.txt"
+(OUT / relative).write_bytes(raw)
+summary["files"][relative] = {"bytes": len(raw), "sha256": hashlib.sha256(raw).hexdigest(), "raw_sha256": hashlib.sha256(raw).hexdigest(), "crlf_to_lf": False, "utf16_to_utf8": False}
+summary["durable_text_encoding"] = "UTF8/LF; original artifact hashes retained per file; original stdout/XML/native source bytes remain in unique external artifact directory"
+assert summary["files"]["original-r22/test_p1_security.py.txt"]["sha256"] == "3713f6d1886f21896715f992db615d5f820e5336bbeec49027d53c93caf23ac2"
+assert summary["files"]["original-r22/source_identity.py.txt"]["sha256"] == "ab43c9c2ccff2f4859b2d969d7091837615f717e2e1bca4eccf87cca6fcc9abc"
+summary_path.write_bytes((json.dumps(summary, indent=2) + "\n").encode())
+print(json.dumps({"changed_owned_text_files": changes, "original_two_probe_sha256_preserved": True, "product_or_test_changes": 0}, indent=2))

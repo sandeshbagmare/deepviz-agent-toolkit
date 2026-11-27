@@ -1,0 +1,100 @@
+"""One bounded public counterexample; no product/SDK/parser/registry modification."""
+import asyncio
+import hashlib
+import importlib
+import importlib.metadata
+import json
+import site
+import subprocess
+import sys
+from datetime import UTC, datetime
+from pathlib import Path
+
+ROOT, PIN, LABEL = Path(sys.argv[1]).resolve(), sys.argv[2], sys.argv[3]
+MAIN = Path(r"C:\Users\bagma\deepviz-agent-toolkit")
+ART = Path(__file__).parent
+sys.dont_write_bytecode = True
+sys.path[:0] = [str(ROOT / "python/deepviz/src"), str(MAIN / ".venv/Lib/site-packages")]
+site.addsitedir(str(MAIN / ".venv/Lib/site-packages"))
+
+
+def git(*args):
+    return subprocess.check_output(["git", *args], cwd=ROOT)
+
+
+assert git("rev-parse", "HEAD").decode().strip() == PIN
+assert not git("status", "--porcelain", "--", "python/deepviz/src")
+origins = {}
+for name in ("tools", "models", "normalize", "mcp_server", "recommend", "render"):
+    module = importlib.import_module("deepviz." + name)
+    path = Path(module.__file__).resolve()
+    assert path == ROOT / ("python/deepviz/src/deepviz/" + name + ".py")
+    blob = git("show", PIN + ":" + path.relative_to(ROOT).as_posix())
+    assert path.read_bytes() == blob
+    origins[name] = hashlib.sha256(blob).hexdigest()
+
+from langchain_core.callbacks import BaseCallbackHandler
+from deepviz.tools import create_tools
+
+
+class Trace(BaseCallbackHandler):
+    run_inline = True
+
+    def __init__(self):
+        self.events = []
+
+    def on_tool_start(self, serialized, input_str, **kwargs):
+        self.events.append("start")
+
+    def on_tool_end(self, output, **kwargs):
+        self.events.append("end")
+
+
+def call(tool, method, value):
+    trace = Trace()
+    if method in {"invoke", "ainvoke"}:
+        result = getattr(tool, method)(value, config={"callbacks": [trace]})
+    else:
+        result = getattr(tool, method)(value, callbacks=[trace])
+    if method in {"arun", "ainvoke"}:
+        result = asyncio.run(result)
+    assert trace.events == ["start", "end"]
+    return result
+
+
+observations = []
+for method in ("run", "arun", "invoke", "ainvoke"):
+    directory = ART / ("counterexample-" + LABEL) / method
+    directory.mkdir(parents=True, exist_ok=False)
+    data_dir = directory / "data"
+    data_dir.mkdir()
+    data = data_dir / "safe.json"
+    data.write_text('[{"label":"old","value":3}]', encoding="utf-8")
+    tools = {item.name: item for item in create_tools(directory / "out", data_dir=data_dir)}
+    first = tools["normalize_data"].run({"data": {"file": "safe.json"}})
+    assert first["input_count"] == 1
+    handle = first["dataset_id"]
+    data.write_text('[{"date":"2026-01-01","amount":2},{"date":"2026-01-02","amount":4}]', encoding="utf-8")
+    bare = call(tools["recommend_chart"], method, json.dumps({"dataset_id": handle}))
+    explicit = call(tools["recommend_chart"], method, {"data": {"dataset_id": handle}})
+    fresh = tools["normalize_data"].run({"data": {"dataset_id": handle}})
+    assert fresh["input_count"] == 2
+    assert explicit["input_count"] == 1 and explicit["dataset_id"] == handle
+    assert explicit["spec"]["kind"] == "bar" and explicit["spec"]["x"] == "label" and explicit["spec"]["y"] == "value"
+    assert not (directory / "out").exists()
+    observations.append({"method": method, "initial_count": first["input_count"],
+                         "mutated_file_rows": 2, "bare_count": bare["input_count"],
+                         "bare_kind": bare["spec"]["kind"], "bare_x": bare["spec"].get("x"),
+                         "bare_y": bare["spec"].get("y"), "bare_reuses_original_handle": bare["dataset_id"] == handle,
+                         "explicit_dict_count": explicit["input_count"], "explicit_dict_kind": explicit["spec"]["kind"],
+                         "fresh_normalize_count": fresh["input_count"], "callbacks_each": ["start", "end"],
+                         "output_artifacts": 0})
+
+result = {"utc": datetime.now(UTC).isoformat(), "exact_source": PIN, "own_origins_git_sha256": origins,
+          "versions": {name: importlib.metadata.version(name) for name in ("langchain-core", "pydantic")},
+          "observations": observations,
+          "scope": "AUTHOR bounded counterexample only; no source/test/SDK/parser/cache policy edits, no scale/review/CI/signoff"}
+destination = ART / ("counterexample-" + LABEL + ".json")
+assert not destination.exists()
+destination.write_bytes((json.dumps(result, indent=2) + "\n").encode())
+print(json.dumps(result, indent=2))

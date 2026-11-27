@@ -1,0 +1,52 @@
+"""Non-force publish this one OWN branch, then verify its exact remote SHA."""
+import json
+import subprocess
+import sys
+from datetime import UTC, datetime
+from pathlib import Path
+from urllib.parse import urlsplit
+
+ROOT = Path.cwd()
+BRANCH = "fix/r41-callback-admission"
+PIN = sys.argv[1]
+SUFFIX = sys.argv[2]
+
+
+def git(*args):
+    return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True, timeout=100)
+
+
+head, branch = git("rev-parse", "HEAD"), git("branch", "--show-current")
+assert head.returncode == branch.returncode == 0
+assert head.stdout.strip() == PIN and branch.stdout.strip() == BRANCH
+assert not git("status", "--porcelain", "--", "python/deepviz/src").stdout
+url = git("remote", "get-url", "origin")
+assert url.returncode == 0
+parsed = urlsplit(url.stdout.strip())
+assert parsed.scheme == "https" and parsed.hostname == "github.com"
+assert parsed.username is None and parsed.password is None and not parsed.query and not parsed.fragment
+assert parsed.path.rstrip("/").removesuffix(".git") == "/sandeshbagmare/deepviz-agent-toolkit"
+reference = "refs/heads/" + BRANCH
+before = git("ls-remote", "--heads", "origin", reference)
+assert before.returncode == 0, before.stderr
+if before.stdout.strip():
+    observed = before.stdout.split()[0]
+    ancestor = git("merge-base", "--is-ancestor", observed, PIN)
+    assert ancestor.returncode == 0, "Existing OWN remote is not an ancestor; never force"
+if before.stdout.split()[:1] == [PIN]:
+    raise RuntimeError("Already published exact SHA; do not replay a completed push")
+push = git("push", "--set-upstream", "origin", "HEAD:" + reference)
+assert push.returncode == 0, push.stderr
+after = git("ls-remote", "--heads", "origin", reference)
+assert after.returncode == 0 and after.stdout.split() == [PIN, reference]
+result = {"utc": datetime.now(UTC).isoformat(), "branch": BRANCH, "expected_sha": PIN,
+          "before_sha": before.stdout.split()[0] if before.stdout.strip() else None,
+          "push_exit": push.returncode, "remote_readback_exit": after.returncode,
+          "exact_remote_sha": after.stdout.split()[0], "force": False,
+          "scope": "OWN branch only; existing Git auth, authorized OWN --set-upstream tracking only; no API/token/environment or further unscoped config mutation"}
+destination = Path(__file__).parent / ("publication-" + SUFFIX + ".json")
+assert not destination.exists()
+destination.write_bytes((json.dumps(result, indent=2) + "\n").encode())
+print(push.stdout)
+print(push.stderr)
+print(json.dumps(result, indent=2))

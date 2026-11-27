@@ -1,0 +1,90 @@
+"""Collect only owned sanitized evidence; do not run tests or mutate production."""
+import hashlib
+import json
+import re
+import struct
+import subprocess
+import xml.etree.ElementTree as ET
+from datetime import UTC, datetime
+from pathlib import Path
+
+ART = Path(__file__).parent
+ROOT = Path.cwd()
+OUT = ROOT / "docs/coordination/evidence/R41-16"
+PIN = "f48c72e26000560b48f3dfd137696fa9acf17637"
+assert subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip() == PIN
+assert not subprocess.check_output(["git", "diff", "--name-only", PIN, "--", "python/deepviz/src", "packages"])
+OUT.mkdir(parents=True, exist_ok=False)
+records = {}
+
+
+def copy(source, relative, normalize=False):
+    original = source.read_bytes()
+    data = original
+    if normalize and original.startswith((b"\xff\xfe", b"\xfe\xff")):
+        data = original.decode("utf-16").encode("utf-8")
+    destination = OUT / relative
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    assert not destination.exists()
+    destination.write_bytes(data)
+    records[relative] = {"bytes": len(data), "sha256": hashlib.sha256(data).hexdigest(),
+                         "raw_sha256": hashlib.sha256(original).hexdigest(), "utf16_to_utf8": data != original}
+
+
+files = ["pre-red-identity.json", "committed-f48-identity.json", "source-commit.json", "publication-source.json",
+         "red.log", "red.xml", "red-final.log", "red-final.xml", "green.log", "green.xml", "committed.log", "committed.xml",
+         "connected-json.log", "connected-json.xml", "connected-tools.log", "connected-tools.xml", "original-six.log", "original-six.xml",
+         "ruff-initial.log", "mypy-initial.log", "source-commit.log", "publication-source.log",
+         "counterexample-e47.json", "counterexample-f48.json", "semantic-compatibility-gate.json",
+         "counterexample-e47.log", "counterexample-f48.log", "semantic-compatibility-gate.log"]
+for name in files:
+    copy(ART / name, name, normalize=name.endswith(".log"))
+for name in ("run_checks.py", "freeze_source.py", "publish_owned.py", "semantic_counterexample.py", "compare_counterexample.py", "collect_evidence.py"):
+    copy(ART / name, "scripts/" + name + ".txt")
+for source in sorted((ART / "original-r22").glob("*.py")):
+    copy(source, "original-r22/" + source.name + ".txt")
+for source in sorted((ART / "original-results").glob("*.json")):
+    copy(source, "original-results/" + source.name)
+
+native = []
+for number, method in ((0, "run"), (1, "arun")):
+    directory = ART / "pytest-committed" / ("test_real_sync_and_async_dict_" + str(number))
+    pngs = list(directory.rglob("chart.png"))
+    assert len(pngs) == 1
+    folder = pngs[0].parent
+    for name in ("chart.png", "chart.svg", "manifest.json"):
+        copy(folder / name, "native-" + method + "/" + name)
+    content = pngs[0].read_bytes()
+    width, height = struct.unpack(">II", content[16:24])
+    assert (width, height) == (900, 540)
+    manifest = json.loads((folder / "manifest.json").read_text(encoding="utf-8"))
+    assert manifest["charts"][0]["records"] == [{"label": "A", "value": 3}, {"label": "B", "value": 7}]
+    native.append({"method": method, "width": width, "height": height,
+                   "png_sha256": hashlib.sha256(content).hexdigest(),
+                   "actual_opened_visual_observation": "Author opened both PNGs: readable A=3/B=7, zero origin, clear title/axes/no clipping. Not browser QA."})
+
+before = json.loads((ART / "pre-red-identity.json").read_text())
+after = json.loads((ART / "committed-f48-identity.json").read_text())
+assert before["readonly_sdks"] == after["readonly_sdks"]
+assert all(before["origins"][name] == after["origins"][name] for name in ("models", "normalize", "mcp_server", "recommend", "render"))
+totals = {}
+for name in ("red", "red-final", "green", "committed", "connected-json", "connected-tools", "original-six"):
+    suites = ET.parse(ART / (name + ".xml")).getroot().findall("testsuite")
+    totals[name] = {key: sum(int(suite.get(key, "0")) for suite in suites) for key in ("tests", "failures", "errors", "skipped")}
+gate = json.loads((ART / "semantic-compatibility-gate.json").read_text())
+assert gate["gate"] == "BLOCKED" and gate["gate_exit"] == 1 and gate["violating_cases"] == 4
+summary = {"utc": datetime.now(UTC).isoformat(), "source": PIN, "status": "BLOCKED/STOP; counterexample for R04, NOT merge-ready",
+           "junit_actual_executions": totals, "strict_saved_actual_output_gate": {"exit": 1, "violating_forms": 4, "not_pytest_executions": True},
+           "author_pass_corpus_distinct_cases": 113, "independent_reviews_claimed": 0, "independent_testers_claimed": 0,
+           "sdk_source_hashes_unchanged": True, "other_five_product_modules_unchanged": True, "native_outputs": native,
+           "publication_scope_erratum": "Initial source receipt scope said no persistent-config change; --set-upstream actually sets authorized OWN branch tracking. Raw kept; helper wording corrected for next publication.",
+           "setup_config_caveat": "One setup git config core.autocrlf=false wrote common repo-local config (prior UNKNOWN); no blind restoration/further such writes, R04 disposition.",
+           "not_run_or_claimed": ["full suite", "full SDK/stdio matrix replay", "10M/scale benchmarks", "browser matrix", "distribution/npm builds", "CI green", "PR/merge/closure", "independent approval"],
+           "files": records}
+pattern = re.compile(rb"github_pat_[A-Za-z0-9]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|AKIA[A-Z0-9]{16}|-----BEGIN [A-Z ]*PRIVATE KEY-----")
+for source in OUT.rglob("*"):
+    if source.is_file() and source.suffix != ".png":
+        assert not pattern.search(source.read_bytes()), source.name
+summary["limited_credential_pattern_matches"] = 0
+(OUT / "summary.json").write_bytes((json.dumps(summary, indent=2) + "\n").encode())
+print(json.dumps({"output": str(OUT.relative_to(ROOT)), "files_copied": len(records), "status": summary["status"], "junit_totals": totals, "credential_pattern_matches": 0}, indent=2))

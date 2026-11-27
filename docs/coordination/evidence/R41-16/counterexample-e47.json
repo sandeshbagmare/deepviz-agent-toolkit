@@ -1,0 +1,91 @@
+{
+  "utc": "2026-11-27T17:51:00.939593+00:00",
+  "exact_source": "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23",
+  "own_origins_git_sha256": {
+    "tools": "11273c5f5b0ff2eee16e09c6c727e560582a43fcae723bb315b6ef80d5a68495",
+    "models": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+    "normalize": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+    "mcp_server": "9f1628e04749c3c3d2357607ac4cc0021f74e1119c6237aa36077a0fd67bf480",
+    "recommend": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+    "render": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+  },
+  "versions": {
+    "langchain-core": "1.8.5",
+    "pydantic": "2.14.4"
+  },
+  "observations": [
+    {
+      "method": "run",
+      "initial_count": 1,
+      "mutated_file_rows": 2,
+      "bare_count": 2,
+      "bare_kind": "histogram",
+      "bare_x": "amount",
+      "bare_y": null,
+      "bare_reuses_original_handle": false,
+      "explicit_dict_count": 1,
+      "explicit_dict_kind": "bar",
+      "fresh_normalize_count": 2,
+      "callbacks_each": [
+        "start",
+        "end"
+      ],
+      "output_artifacts": 0
+    },
+    {
+      "method": "arun",
+      "initial_count": 1,
+      "mutated_file_rows": 2,
+      "bare_count": 2,
+      "bare_kind": "histogram",
+      "bare_x": "amount",
+      "bare_y": null,
+      "bare_reuses_original_handle": false,
+      "explicit_dict_count": 1,
+      "explicit_dict_kind": "bar",
+      "fresh_normalize_count": 2,
+      "callbacks_each": [
+        "start",
+        "end"
+      ],
+      "output_artifacts": 0
+    },
+    {
+      "method": "invoke",
+      "initial_count": 1,
+      "mutated_file_rows": 2,
+      "bare_count": 2,
+      "bare_kind": "histogram",
+      "bare_x": "amount",
+      "bare_y": null,
+      "bare_reuses_original_handle": false,
+      "explicit_dict_count": 1,
+      "explicit_dict_kind": "bar",
+      "fresh_normalize_count": 2,
+      "callbacks_each": [
+        "start",
+        "end"
+      ],
+      "output_artifacts": 0
+    },
+    {
+      "method": "ainvoke",
+      "initial_count": 1,
+      "mutated_file_rows": 2,
+      "bare_count": 2,
+      "bare_kind": "histogram",
+      "bare_x": "amount",
+      "bare_y": null,
+      "bare_reuses_original_handle": false,
+      "explicit_dict_count": 1,
+      "explicit_dict_kind": "bar",
+      "fresh_normalize_count": 2,
+      "callbacks_each": [
+        "start",
+        "end"
+      ],
+      "output_artifacts": 0
+    }
+  ],
+  "scope": "AUTHOR bounded counterexample only; no source/test/SDK/parser/cache policy edits, no scale/review/CI/signoff"
+}

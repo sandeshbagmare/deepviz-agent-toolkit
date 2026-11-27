@@ -1,0 +1,54 @@
+"""Prove the literal four-line diff and explicitly commit only three owned paths."""
+import ast
+import hashlib
+import json
+import re
+import subprocess
+from datetime import UTC, datetime
+from pathlib import Path
+
+ROOT = Path.cwd()
+BASE = "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23"
+PATH = "python/deepviz/src/deepviz/tools.py"
+ALLOWED = {PATH, "python/deepviz/tests/test_r41_callback_admission.py", "docs/verification/r41-callback-admission/README.md"}
+
+
+def git(*args):
+    return subprocess.check_output(["git", *args], cwd=ROOT)
+
+
+assert git("rev-parse", "HEAD").decode().strip() == BASE
+assert git("branch", "--show-current").decode().strip() == "fix/r41-callback-admission"
+assert not git("diff", "--cached", "--name-only")
+base = git("show", BASE + ":" + PATH)
+needle = b'            if isinstance(tool_input, dict) and "data" in tool_input:\n'
+assert base.count(needle) == 2
+expected = base.replace(needle, b'            if isinstance(tool_input, str):\n                tool_input = {"data": tool_input}\n' + needle)
+actual = (ROOT / PATH).read_bytes()
+assert actual == expected
+ast.parse(actual)
+assert git("diff", "--name-only", BASE, "--", "python/deepviz/src", "packages").decode().splitlines() == [PATH]
+for path in ALLOWED:
+    text = (ROOT / path).read_text(encoding="utf-8")
+    assert not re.search(r"github_pat_|gh[pousr]_[A-Za-z0-9]{20,}|AKIA[A-Z0-9]{16}|-----BEGIN [A-Z ]*PRIVATE KEY-----", text)
+git("diff", "--check")
+git("add", "--", *sorted(ALLOWED))
+assert set(git("diff", "--cached", "--name-only").decode().splitlines()) == ALLOWED
+git("diff", "--cached", "--check")
+staged = {}
+for path in sorted(ALLOWED):
+    blob = git("show", ":" + path)
+    assert blob == (ROOT / path).read_bytes()
+    staged[path] = {"sha256": hashlib.sha256(blob).hexdigest(), "bytes": len(blob)}
+commit = subprocess.run(["git", "commit", "-m", "fix: admit bare JSON before tool callbacks"], cwd=ROOT, capture_output=True, text=True)
+print(commit.stdout)
+assert commit.returncode == 0, commit.stderr
+pin = git("rev-parse", "HEAD").decode().strip()
+assert git("rev-parse", "HEAD^").decode().strip() == BASE
+assert set(git("diff-tree", "--no-commit-id", "--name-only", "-r", "HEAD").decode().splitlines()) == ALLOWED
+assert not git("status", "--porcelain", "--", *sorted(ALLOWED))
+result = {"utc": datetime.now(UTC).isoformat(), "product_commit": pin, "parent": BASE, "four_additions_zero_deletions_exact_recipe": True, "unrelated_product_changes": [], "credential_pattern_matches": 0, "commit_exit": commit.returncode, "committed_files": staged}
+destination = Path(__file__).parent / "source-commit.json"
+assert not destination.exists()
+destination.write_bytes((json.dumps(result, indent=2) + "\n").encode())
+print(json.dumps(result, indent=2))

@@ -1,0 +1,114 @@
+{
+  "utc": "2026-11-27T17:53:39.138369+00:00",
+  "baseline": "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23",
+  "candidate": "f48c72e26000560b48f3dfd137696fa9acf17637",
+  "gate": "BLOCKED",
+  "gate_exit": 1,
+  "cases": 4,
+  "violating_cases": 4,
+  "violations": [
+    {
+      "method": "run",
+      "unaccepted_public_changes": {
+        "bare_count": {
+          "baseline": 2,
+          "candidate": 1
+        },
+        "bare_kind": {
+          "baseline": "histogram",
+          "candidate": "bar"
+        },
+        "bare_x": {
+          "baseline": "amount",
+          "candidate": "label"
+        },
+        "bare_y": {
+          "baseline": null,
+          "candidate": "value"
+        },
+        "bare_reuses_original_handle": {
+          "baseline": false,
+          "candidate": true
+        }
+      }
+    },
+    {
+      "method": "arun",
+      "unaccepted_public_changes": {
+        "bare_count": {
+          "baseline": 2,
+          "candidate": 1
+        },
+        "bare_kind": {
+          "baseline": "histogram",
+          "candidate": "bar"
+        },
+        "bare_x": {
+          "baseline": "amount",
+          "candidate": "label"
+        },
+        "bare_y": {
+          "baseline": null,
+          "candidate": "value"
+        },
+        "bare_reuses_original_handle": {
+          "baseline": false,
+          "candidate": true
+        }
+      }
+    },
+    {
+      "method": "invoke",
+      "unaccepted_public_changes": {
+        "bare_count": {
+          "baseline": 2,
+          "candidate": 1
+        },
+        "bare_kind": {
+          "baseline": "histogram",
+          "candidate": "bar"
+        },
+        "bare_x": {
+          "baseline": "amount",
+          "candidate": "label"
+        },
+        "bare_y": {
+          "baseline": null,
+          "candidate": "value"
+        },
+        "bare_reuses_original_handle": {
+          "baseline": false,
+          "candidate": true
+        }
+      }
+    },
+    {
+      "method": "ainvoke",
+      "unaccepted_public_changes": {
+        "bare_count": {
+          "baseline": 2,
+          "candidate": 1
+        },
+        "bare_kind": {
+          "baseline": "histogram",
+          "candidate": "bar"
+        },
+        "bare_x": {
+          "baseline": "amount",
+          "candidate": "label"
+        },
+        "bare_y": {
+          "baseline": null,
+          "candidate": "value"
+        },
+        "bare_reuses_original_handle": {
+          "baseline": false,
+          "candidate": true
+        }
+      }
+    }
+  ],
+  "decision_owner": "R04",
+  "source_action": "STOP: frozen four-line candidate, no unilateral widening or oracle weakening",
+  "scope": "Strict comparison of previously saved actual real-SDK outputs, not four new pytest executions or independent review"
+}

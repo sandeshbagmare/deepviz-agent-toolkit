@@ -1,0 +1,35 @@
+"""Strict saved-actual-output compatibility gate; never reruns or alters source."""
+import json
+from datetime import UTC, datetime
+from pathlib import Path
+
+ART = Path(__file__).parent
+before = json.loads((ART / "counterexample-e47.json").read_text(encoding="utf-8"))
+after = json.loads((ART / "counterexample-f48.json").read_text(encoding="utf-8"))
+assert before["exact_source"] == "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23"
+assert after["exact_source"] == "f48c72e26000560b48f3dfd137696fa9acf17637"
+assert before["versions"] == after["versions"]
+for name in ("models", "normalize", "mcp_server", "recommend", "render"):
+    assert before["own_origins_git_sha256"][name] == after["own_origins_git_sha256"][name]
+violations = []
+for old, new in zip(before["observations"], after["observations"], strict=True):
+    assert old["method"] == new["method"]
+    assert old["bare_count"] == 2 and old["bare_kind"] == "histogram"
+    assert old["bare_x"] == "amount" and old["bare_y"] is None and not old["bare_reuses_original_handle"]
+    assert old["explicit_dict_count"] == new["explicit_dict_count"] == 1
+    assert old["fresh_normalize_count"] == new["fresh_normalize_count"] == 2
+    assert old["output_artifacts"] == new["output_artifacts"] == 0
+    keys = ("bare_count", "bare_kind", "bare_x", "bare_y", "bare_reuses_original_handle")
+    changes = {key: {"baseline": old[key], "candidate": new[key]} for key in keys if old[key] != new[key]}
+    if changes:
+        violations.append({"method": old["method"], "unaccepted_public_changes": changes})
+result = {"utc": datetime.now(UTC).isoformat(), "baseline": before["exact_source"], "candidate": after["exact_source"],
+          "gate": "BLOCKED" if violations else "CLEAR", "gate_exit": 1 if violations else 0,
+          "cases": 4, "violating_cases": len(violations), "violations": violations,
+          "decision_owner": "R04", "source_action": "STOP: frozen four-line candidate, no unilateral widening or oracle weakening",
+          "scope": "Strict comparison of previously saved actual real-SDK outputs, not four new pytest executions or independent review"}
+path = ART / "semantic-compatibility-gate.json"
+assert not path.exists()
+path.write_bytes((json.dumps(result, indent=2) + "\n").encode())
+print(json.dumps(result, indent=2))
+raise SystemExit(result["gate_exit"])

@@ -1,0 +1,82 @@
+"""Bind every in-process check to OWN source and readonly installed packages."""
+import hashlib
+import importlib
+import importlib.metadata
+import json
+import os
+import site
+import subprocess
+import sys
+from datetime import UTC, datetime
+from pathlib import Path
+
+ROOT = Path(r"C:\Users\bagma\AppData\Local\Temp\opencode\r41-16-callback-admission-ses_de567808bffdXko8hyKFRhPv77")
+MAIN = Path(r"C:\Users\bagma\deepviz-agent-toolkit")
+ART = Path(__file__).parent
+BASE = "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23"
+PROBES = "2855f7a4d051297e1d9e1246fd3051d35e2a11f0"
+sys.dont_write_bytecode = True
+sys.path[:0] = [str(ROOT / "python/deepviz/src"), str(MAIN / ".venv/Lib/site-packages")]
+# Read the existing environment's normal .pth bootstrap (pywin32 DLL paths).
+# OWN source remains first, and every product module is checked below.
+site.addsitedir(str(MAIN / ".venv/Lib/site-packages"))
+assert Path.cwd() == ROOT
+
+
+def git(*args):
+    return subprocess.check_output(["git", *args], cwd=ROOT)
+
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+origins = {}
+for name in ("tools", "models", "normalize", "mcp_server", "recommend", "render"):
+    module = importlib.import_module("deepviz." + name)
+    path = Path(module.__file__).resolve()
+    assert path == ROOT / ("python/deepviz/src/deepviz/" + name + ".py")
+    relative = path.relative_to(ROOT).as_posix()
+    origins[name] = {"path": relative, "working_sha256": sha(path.read_bytes()), "base_sha256": sha(git("show", BASE + ":" + relative))}
+
+mode = sys.argv[1]
+if mode == "identity":
+    installed = {}
+    for name in ("langchain_core.tools.base", "langchain_core.tools.structured", "mcp.server.fastmcp.utilities.func_metadata"):
+        module = importlib.import_module(name)
+        path = Path(module.__file__).resolve()
+        assert path.is_relative_to(MAIN / ".venv/Lib/site-packages")
+        installed[name] = {"path": str(path), "sha256": sha(path.read_bytes())}
+    result = {"utc": datetime.now(UTC).isoformat(), "base": BASE, "head": git("rev-parse", "HEAD").decode().strip(), "branch": git("branch", "--show-current").decode().strip(), "status": git("status", "--porcelain").decode(), "origins": origins, "readonly_sdks": installed, "versions": {name: importlib.metadata.version(name) for name in ("langchain-core", "mcp", "pydantic", "pytest")}, "python": sys.version, "scope": "Actual own imports first/guarded, -S then readonly installed-site .pth bootstrap for SDK runtime; no install or persistent environment change; tests are separate actual commands"}
+    path = ART / (sys.argv[2] + "-identity.json")
+    assert not path.exists()
+    path.write_bytes((json.dumps(result, indent=2) + "\n").encode())
+    print(json.dumps(result, indent=2))
+elif mode in {"pytest", "original"}:
+    if mode == "original":
+        pin = sys.argv[2]
+        assert git("rev-parse", "HEAD").decode().strip() == pin and pin != BASE
+        assert not git("status", "--porcelain", "--", "python/deepviz/src")
+        for item in origins.values():
+            assert sha(git("show", pin + ":" + item["path"])) == item["working_sha256"]
+        directory = ART / "original-r22"
+        directory.mkdir(exist_ok=True)
+        for filename in ("source_identity.py", "test_p1_security.py"):
+            data = git("show", PROBES + ":tests/r22_probes/role02/" + filename)
+            path = directory / filename
+            assert not path.exists() or path.read_bytes() == data
+            path.write_bytes(data)
+            assert sha(path.read_bytes()) == sha(data)
+        # Only the original fixture's documented source identity is rebound.
+        os.environ["R22_02_SOURCE"] = str(ROOT)
+        results = ART / "original-results"
+        results.mkdir(exist_ok=False)
+        os.environ["R22_02_RESULTS"] = str(results)
+        args = [str(directory / "test_p1_security.py"), "-k", "test_all_supported_call_forms_admit_before_callback or test_bare_string_is_a_supported_public_form_with_exact_raw_limit", *sys.argv[3:]]
+        print(json.dumps({"actual_product_pin": pin, "tools_sha256": origins["tools"]["working_sha256"], "original_probe_commit": PROBES, "unchanged_test_sha256": sha((directory / "test_p1_security.py").read_bytes()), "unchanged_old_identity_sha256": sha((directory / "source_identity.py").read_bytes()), "binding_only": True}))
+    else:
+        args = sys.argv[2:]
+    import pytest
+    raise SystemExit(pytest.main(args))
+else:
+    raise ValueError(mode)
