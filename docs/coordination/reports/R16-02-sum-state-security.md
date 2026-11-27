@@ -1,4 +1,4 @@
-﻿# R16-02 independent SUM state/security review
+# R16-02 independent SUM state/security review
 
 ## What this change does
 
@@ -176,8 +176,13 @@ Safe GCM capture kept token only in process memory, never subprocess arguments/l
 At14:47:05.112594UTC four authenticated GETs HTTP200 verify expected sandeshbagmare/repo,
 PR31open/draft/unmerged at5340bc69b7203ad7a9166543062482d819f9b705; Python3.11/3.12/3.13 checks
 FAIL although other checks pass. No greenCI claim/issuecensus/issuePR mutation. Sanitized
-receipt `evidence/R16-02/github-prepublication.json`. Exact owned push/SHA receipt pending
-until actual explicit-scope commit, nonforcepush and remote readback; not inferred locally.
+receipt `evidence/R16-02/github-prepublication.json`. Actual OWN checkpoint **21fc394048755a1df20fb774c85d50d0458bbb89** published
+at14:54:26.505650UTC: nonforcepush exit0 and exact remoteSHA readback exit0. Receipt
+`evidence/R16-02/publication-21fc394.json`. It contains only OWN19files/858add;
+final stagedscan68,232B/zero credentialpatterns/whitespace0/4probeGitLFhashesmatch/
+productdiff0. No source edits/integration/finalapproval. This small actual-receipt
+follow-up will be separately committed/pushed; its actual latestSHA will be saved to MAIN after
+readback, not guessed in advance.
 
 ## Limits, decision and executable next action
 
