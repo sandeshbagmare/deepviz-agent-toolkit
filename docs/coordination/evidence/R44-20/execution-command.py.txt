@@ -1,0 +1,30 @@
+import hashlib,json,subprocess,sys
+from datetime import datetime,timezone
+from pathlib import Path
+own=Path.cwd().resolve(); evidence=own/'docs/coordination/evidence/R44-20'
+evidence.mkdir(parents=True,exist_ok=True)
+source=Path(r'C:\Users\bagma\AppData\Local\Temp\opencode\r44-20-dd1-source-ses_de567801cffeGZFlt50oYv0Dnt')
+raw=Path(r'C:\Users\bagma\AppData\Local\Temp\opencode\r44-20-schema-dd1-ses_de567801cffeGZFlt50oYv0Dnt')
+site=r'C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages'
+def save(name,data):
+    with (evidence/name).open('w',encoding='utf-8',newline='\n') as stream:json.dump(data,stream,indent=2);stream.write('\n')
+commands=[('ruff', ['ruff','check','--no-cache','--config',str(source/'pyproject.toml'),'tests/r44_probes/role20']),('mypy',['mypy','--config-file',str(source/'pyproject.toml'),'--no-incremental','--cache-dir',r'C:\Users\bagma\AppData\Local\Temp\opencode\r44-20-codecheck-ses_de567801cffeGZFlt50oYv0Dnt\mypy','--follow-imports','skip','tests/r44_probes/role20'])]
+records=[]
+for module,args in commands:
+    code='import sys,runpy;sys.path.insert(0,'+repr(site)+');sys.argv='+repr(args)+';runpy.run_module('+repr(module)+',run_name="__main__")'
+    command=[sys.executable,'-B','-I','-S','-c',code]
+    result=subprocess.run(command,capture_output=True,timeout=90)
+    (evidence/(module+'.log')).write_bytes(result.stdout+result.stderr)
+    records.append({'check':module,'command':command,'exit':result.returncode})
+    save('checks.json',records)
+    print(module+' exit='+str(result.returncode));print((result.stdout+result.stderr).decode('utf-8',errors='backslashreplace'))
+    if result.returncode:raise SystemExit(result.returncode)
+command=[sys.executable,'-B','-I','-S',str(own/'tests/r44_probes/role20/run_schema_gate.py'),'--source',str(source),'--expected-sha','dd1c4080095c7e739582dc5c631bc419047c48d2','--output',str(raw)]
+assert not raw.exists(),'Never replay/overwrite an existing gate output'
+started=datetime.now(timezone.utc).isoformat()
+result=subprocess.run(command,capture_output=True,timeout=90)
+(evidence/'gate.log').write_bytes(result.stdout+result.stderr)
+save('execution.json',{'started_utc':started,'finished_utc':datetime.now(timezone.utc).isoformat(),'command':command,'exit':result.returncode,'stdout_stderr_sha256':hashlib.sha256(result.stdout+result.stderr).hexdigest(),'output':str(raw),'environment_changed':False,'old_or_author_tests_executed':False})
+print((result.stdout+result.stderr).decode('utf-8',errors='backslashreplace'))
+print(json.dumps({'gate_shell_exit':result.returncode,'evidence':str(evidence)}))
+raise SystemExit(result.returncode)

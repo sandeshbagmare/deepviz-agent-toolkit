@@ -1,0 +1,115 @@
+{
+  "UTC": "2026-11-27T17:53:37.691710+00:00",
+  "collector_exit": 0,
+  "source": "dd1c4080095c7e739582dc5c631bc419047c48d2",
+  "junit": {
+    "tests": 99,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "pytest_stdout_seconds": 1.38,
+  "junit_suite_seconds": [
+    "1.250"
+  ],
+  "literal_rows": 28,
+  "literal_positive": 7,
+  "literal_mustreject": 21,
+  "Mapping_contexts": 12,
+  "Mapping_positive": 2,
+  "Mapping_mustreject": 10,
+  "syntax_malformed": 2,
+  "pytest_items": 99,
+  "raw_JSON_distinct_strings_across_40_contexts": 38,
+  "runtime_instance_checks": 40,
+  "runtime_syntax_reject_checks": 2,
+  "Draft202012_original_JSON_instance_checks": 80,
+  "probe_file_hashes": {
+    "literal_cases.json": {
+      "sha256": "10bb0cf2cc9f66bf8d3c5d29863bfda0a4c77b6e396fcac38d8434a175728176",
+      "bytes": 3654
+    },
+    "native_mapping_cases.json": {
+      "sha256": "f6dec9033e65011456cbc66dea59415033a842d1f5a6e6476ad9b010d5a6d420",
+      "bytes": 1680
+    },
+    "run_schema_gate.py": {
+      "sha256": "15a38e71f061ec9f1fd6ade33ab65800b0cdae05992b893fd069325106429c09",
+      "bytes": 8283
+    },
+    "test_dashboard_raw_json.py": {
+      "sha256": "6f9d61e493fe1487dc1b57f5b9bcf4498800a9c359584a75d8b88d43748ea45b",
+      "bytes": 4808
+    }
+  },
+  "all_import_origins_count": 450,
+  "all_DeepViz_imports": [
+    {
+      "module": "deepviz",
+      "origin": null
+    },
+    {
+      "module": "deepviz.models",
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-20-dd1-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\models.py"
+    }
+  ],
+  "before_after_source_proof_equal": true,
+  "source_still_clean": true,
+  "initial_runner_exit": 1,
+  "initial_runner_tests": 0,
+  "initial_runner_failure": "data-only installed namespace; guard retained, process-local namespace selected before actual model import",
+  "initial_runner_sha256": "c115dd73326b0a47f84b1ff00e75faf6f24dbbbc8158235947ad36236fb3e195",
+  "JUnit_raw_sha256": "58a86d916617e6b41a305455a0fc4d7677fa09904fbfa3235cd3aaf4d78a5b5c",
+  "JUnit_published_sha256": "cf9f0c352a23fb10a9ba4e0aa7992a18c5b13ac24a9c258daa772914a8582af2",
+  "JUnit_sanitization": "hostname attribute only; serialization by ElementTree, all99nodeids/counts/results retained",
+  "log_publication": [
+    {
+      "file": "gate-isolated.log",
+      "raw_archive": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-20-schema-dd1-isolated-ses_de567801cffeGZFlt50oYv0Dnt\\publication-raw-logs\\gate-isolated.log",
+      "raw_sha256": "c91a6b1db5af387f0f9e9f6b7467ab4a576ee130c19d32527dd18c9ee8a0044f",
+      "published_LF_sha256": "b456669f42406b85f1f365168e77a8b26a7d7fd755b02b89e4f2c0e6c4161682",
+      "line_endings_only": true
+    },
+    {
+      "file": "gate.log",
+      "raw_archive": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-20-schema-dd1-isolated-ses_de567801cffeGZFlt50oYv0Dnt\\publication-raw-logs\\gate.log",
+      "raw_sha256": "d22df362e321bca594fa43c5a2539d7aba7397b87ac9da642c0b04e21b9813e7",
+      "published_LF_sha256": "01d36ff078608d6665a5470ea06820625532d35be7f510598ffd3e47a530149f",
+      "line_endings_only": true
+    },
+    {
+      "file": "mypy-final.log",
+      "raw_archive": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-20-schema-dd1-isolated-ses_de567801cffeGZFlt50oYv0Dnt\\publication-raw-logs\\mypy-final.log",
+      "raw_sha256": "0c37c4158c91ef55c724ba017bf6465f26018199badb08e3ff13f98acdf056c2",
+      "published_LF_sha256": "f9b031e5c45aa702cd4fef028d465551cb20a2c4698e0913c7b00766b20ac4d8",
+      "line_endings_only": true
+    },
+    {
+      "file": "mypy.log",
+      "raw_archive": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-20-schema-dd1-isolated-ses_de567801cffeGZFlt50oYv0Dnt\\publication-raw-logs\\mypy.log",
+      "raw_sha256": "0c37c4158c91ef55c724ba017bf6465f26018199badb08e3ff13f98acdf056c2",
+      "published_LF_sha256": "f9b031e5c45aa702cd4fef028d465551cb20a2c4698e0913c7b00766b20ac4d8",
+      "line_endings_only": true
+    },
+    {
+      "file": "ruff-final.log",
+      "raw_archive": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-20-schema-dd1-isolated-ses_de567801cffeGZFlt50oYv0Dnt\\publication-raw-logs\\ruff-final.log",
+      "raw_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "published_LF_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "line_endings_only": false
+    },
+    {
+      "file": "ruff.log",
+      "raw_archive": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r44-20-schema-dd1-isolated-ses_de567801cffeGZFlt50oYv0Dnt\\publication-raw-logs\\ruff.log",
+      "raw_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "published_LF_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "line_endings_only": false
+    }
+  ],
+  "added_collector_tests_or_product_imports": 0,
+  "source_or_existing_oracle_changes": 0,
+  "old36_full118_Plotly9_browser_scale_build_SDK_tests_run": false,
+  "new_product_findings": 0,
+  "R35_20_V1_P2": "OPEN/R04; not a visual waiver",
+  "PR_CI_main_merge_verified": false
+}

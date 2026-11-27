@@ -1,0 +1,14 @@
+[
+  {"id":"native-root-positive-integral-number","scope":"root","raw":"{\"kind\":\"dashboard\",\"charts\":[{\"kind\":\"table\",\"charts\":[]}],\"width\":300.0}","accept":true,"expected":{"kind":"dashboard","child_count":1,"child_kind":"table","width":300}},
+  {"id":"native-child-positive-integral-number","scope":"child","raw":"{\"kind\":\"dashboard\",\"charts\":[{\"width\":300.0,\"charts\":[]}]}","accept":true,"expected":{"kind":"dashboard","child_count":1,"child_kind":"bar","child_width":300}},
+  {"id":"native-root-version-boolean","scope":"root","raw":"{\"version\":true}","accept":false},
+  {"id":"native-child-version-boolean","scope":"child","raw":"{\"kind\":\"dashboard\",\"charts\":[{\"version\":true}]}","accept":false},
+  {"id":"native-root-max-points-string","scope":"root","raw":"{\"max_points\":\"10\"}","accept":false},
+  {"id":"native-child-max-points-string","scope":"child","raw":"{\"kind\":\"dashboard\",\"charts\":[{\"max_points\":\"10\"}]}","accept":false},
+  {"id":"native-root-width-string","scope":"root","raw":"{\"width\":\"900\"}","accept":false},
+  {"id":"native-child-width-string","scope":"child","raw":"{\"kind\":\"dashboard\",\"charts\":[{\"width\":\"900\"}]}","accept":false},
+  {"id":"native-root-height-boolean","scope":"root","raw":"{\"height\":false}","accept":false},
+  {"id":"native-child-height-boolean","scope":"child","raw":"{\"kind\":\"dashboard\",\"charts\":[{\"height\":false}]}","accept":false},
+  {"id":"native-root-columns-boolean","scope":"root","raw":"{\"columns\":true}","accept":false},
+  {"id":"native-child-columns-boolean","scope":"child","raw":"{\"kind\":\"dashboard\",\"charts\":[{\"columns\":true}]}","accept":false}
+]

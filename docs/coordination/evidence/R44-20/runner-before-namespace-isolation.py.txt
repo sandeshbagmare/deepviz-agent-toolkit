@@ -1,0 +1,161 @@
+"""Isolated no-install runner proving immutable source and schema before/after."""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import importlib
+import importlib.metadata
+import json
+import subprocess
+import sys
+from datetime import UTC, datetime
+from pathlib import Path
+from typing import Any
+
+
+def digest(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+
+def git(root: Path, *args: str) -> bytes:
+    return subprocess.run(
+        ["git", *args], cwd=root, check=True, capture_output=True, timeout=30,
+    ).stdout
+
+
+def write_json(path: Path, value: Any) -> None:
+    with path.open("w", encoding="utf-8", newline="\n") as handle:
+        json.dump(value, handle, indent=2, ensure_ascii=True)
+        handle.write("\n")
+
+
+def source_proof(source: Path, expected: str) -> dict[str, Any]:
+    from deepviz.models import ChartSpec
+    from jsonschema import Draft202012Validator
+
+    assert git(source, "rev-parse", "HEAD").decode().strip() == expected
+    assert not git(source, "status", "--porcelain"), "Sealed source must remain entirely clean"
+    package = source / "python/deepviz/src/deepviz"
+    loaded: list[dict[str, Any]] = []
+    for name, module in sorted(sys.modules.copy().items()):
+        if name != "deepviz" and not name.startswith("deepviz."):
+            continue
+        filename = getattr(module, "__file__", None)
+        if filename is None:
+            paths = [str(Path(path).resolve()) for path in module.__path__]
+            assert name == "deepviz" and paths == [str(package)]
+            loaded.append({"module": name, "namespace_paths": paths})
+            continue
+        path = Path(filename).resolve()
+        relative = path.relative_to(source).as_posix()
+        working = path.read_bytes()
+        committed = git(source, "show", expected + ":" + relative)
+        assert working.replace(b"\r\n", b"\n") == committed
+        loaded.append({
+            "module": name, "origin": str(path), "git_path": relative,
+            "Git_blob": git(source, "rev-parse", expected + ":" + relative).decode().strip(),
+            "working_sha256": digest(working), "Git_LF_sha256": digest(committed),
+            "CRLF_to_Git_LF_only": working != committed,
+        })
+    assert {item["module"] for item in loaded} == {"deepviz", "deepviz.models"}
+    assert ChartSpec.__module__ == "deepviz.models"
+    schema_path = source / "schemas/chart-spec.schema.json"
+    schema_bytes = schema_path.read_bytes()
+    schema_git = git(source, "show", expected + ":schemas/chart-spec.schema.json")
+    assert schema_bytes.replace(b"\r\n", b"\n") == schema_git
+    published = json.loads(schema_bytes)
+    generated = ChartSpec.model_json_schema()
+    Draft202012Validator.check_schema(generated)
+    Draft202012Validator.check_schema(published)
+    assert generated == published
+    canonical = json.dumps(generated, sort_keys=True, separators=(",", ":")).encode()
+    return {
+        "source": expected, "clean": True, "loaded_DeepViz_modules": loaded,
+        "published_schema": {
+            "origin": str(schema_path), "working_sha256": digest(schema_bytes),
+            "Git_LF_sha256": digest(schema_git),
+            "Git_blob": git(source, "rev-parse", expected + ":schemas/chart-spec.schema.json").decode().strip(),
+            "CRLF_to_Git_LF_only": schema_bytes != schema_git,
+        },
+        "generated_published_semantically_equal": True,
+        "canonical_generated_schema_sha256": digest(canonical),
+        "validator_dialect": Draft202012Validator.META_SCHEMA["$id"],
+    }
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--source", type=Path, required=True)
+    parser.add_argument("--expected-sha", required=True)
+    parser.add_argument("--output", type=Path, required=True)
+    args = parser.parse_args()
+    source, output = args.source.resolve(), args.output.resolve()
+    assert sys.flags.isolated and sys.flags.no_site and sys.dont_write_bytecode
+    assert not output.exists(), "Use a new output directory; never overwrite a run"
+    output.mkdir(parents=True)
+    here = Path(__file__).resolve().parent
+    site_packages = Path(sys.executable).resolve().parent.parent / "Lib/site-packages"
+    assert site_packages.is_dir()
+    sys.path[:0] = [str(source / "python/deepviz/src"), str(site_packages)]
+    pytest = importlib.import_module("pytest")
+    before = source_proof(source, args.expected_sha)
+    tested_files = {
+        path.name: {"sha256": digest(path.read_bytes()), "bytes": path.stat().st_size}
+        for path in sorted(here.iterdir()) if path.suffix in (".py", ".json")
+    }
+    write_json(output / "source-before.json", before)
+    write_json(output / "tested-files.json", tested_files)
+
+    class IdentityGate:
+        def pytest_collection_finish(self, session: Any) -> None:
+            assert len(session.items) == 99, "28x3 raw + 12 Mapping + 2 syntax + 1 freshness"
+            assert source_proof(source, args.expected_sha) == before
+            write_json(output / "collected-nodeids.json", [item.nodeid for item in session.items])
+
+    arguments = [
+        str(here / "test_dashboard_raw_json.py"), "-q", "-c", str(source / "pyproject.toml"),
+        "--confcutdir=" + str(here), "--disable-plugin-autoload", "--strict-markers",
+        "-p", "no:cacheprovider", "--basetemp=" + str(output / "tmp"),
+        "--junitxml=" + str(output / "junit.xml"),
+    ]
+    write_json(output / "run-started.json", {
+        "UTC": datetime.now(UTC).isoformat(), "pytest_args": arguments,
+        "interpreter": sys.executable, "python": sys.version, "isolated_no_site_no_bytecode": True,
+        "site_packages_read_only": str(site_packages), "source_proof_before_assertions": before,
+        "environment_config_or_dependency_writes": 0,
+    })
+    code = int(pytest.main(arguments, plugins=[IdentityGate()]))
+    after = source_proof(source, args.expected_sha)
+    assert after == before
+    assert tested_files == {
+        path.name: {"sha256": digest(path.read_bytes()), "bytes": path.stat().st_size}
+        for path in sorted(here.iterdir()) if path.suffix in (".py", ".json")
+    }
+    write_json(output / "source-after.json", after)
+    origins = []
+    for name, module in sorted(sys.modules.copy().items()):
+        spec = getattr(module, "__spec__", None)
+        origins.append({"module": name, "origin": getattr(spec, "origin", None)})
+    write_json(output / "all-import-origins.json", origins)
+    versions: dict[str, str | None] = {}
+    for name in ("pytest", "pydantic", "pydantic_core", "jsonschema", "referencing", "attrs"):
+        try:
+            versions[name] = importlib.metadata.version(name)
+        except importlib.metadata.PackageNotFoundError:
+            versions[name] = None
+    write_json(output / "result.json", {
+        "UTC": datetime.now(UTC).isoformat(), "pytest_exit": code,
+        "before_after_source_and_schema_proof_equal": True, "probe_bytes_unchanged": True,
+        "versions": versions, "raw_literal_rows": 28, "native_Mapping_rows": 12,
+        "syntactically_malformed_rows": 2, "expected_pytest_items": 99,
+        "schema_truth": "handwritten raw JSON + explicit booleans/attribute constants, never model_dump",
+        "full118_or_role14_whole36_or_old_Plotly9_replayed": False,
+        "production_schema_config_env_install_API_writes": 0,
+        "visual_release_or_main_merge_approval": False,
+    })
+    print(json.dumps({"pytest_exit": code, "pre_post_source_equal": True, "output": str(output)}))
+    return code
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

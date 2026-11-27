@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "C:\Users\bagma\AppData\Local\Temp\opencode\r10-20-plotly-ses_de567801cffeGZFlt50oYv0Dnt\tests\r44_probes\role20\run_schema_gate.py", line 161, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Users\bagma\AppData\Local\Temp\opencode\r10-20-plotly-ses_de567801cffeGZFlt50oYv0Dnt\tests\r44_probes\role20\run_schema_gate.py", line 101, in main
+    before = source_proof(source, args.expected_sha)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bagma\AppData\Local\Temp\opencode\r10-20-plotly-ses_de567801cffeGZFlt50oYv0Dnt\tests\r44_probes\role20\run_schema_gate.py", line 46, in source_proof
+    assert name == "deepviz" and paths == [str(package)]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

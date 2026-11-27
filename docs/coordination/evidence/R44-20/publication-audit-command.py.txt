@@ -1,0 +1,44 @@
+import hashlib,json,re,shutil,subprocess
+from datetime import datetime,timezone
+from pathlib import Path
+own=Path.cwd().resolve(); main=Path(r'C:\Users\bagma\deepviz-agent-toolkit'); base='49f9478d2e26497cc5dfcb6d6d8daee901a1001d'; branch='agents/r10-20-plotly-literal-labels'
+evidence=own/'docs/coordination/evidence/R44-20'; tests=own/'tests/r44_probes/role20'
+source=Path(r'C:\Users\bagma\AppData\Local\Temp\opencode\r44-20-dd1-source-ses_de567801cffeGZFlt50oYv0Dnt')
+def git(root,*args):return subprocess.run(['git',*args],cwd=root,capture_output=True,check=True,timeout=40).stdout
+def sha(data):return hashlib.sha256(data).hexdigest()
+assert git(own,'rev-parse','HEAD').decode().strip()==base
+assert git(own,'branch','--show-current').decode().strip()==branch
+assert git(own,'remote','get-url','origin').decode().strip()=='https://github.com/sandeshbagmare/deepviz-agent-toolkit.git','Unexpected origin; stop without exposing credentials'
+assert git(own,'config','--get','credential.helper').decode().strip()=='manager'
+assert git(own,'config','user.name').strip() and git(own,'config','user.email').strip()
+remote=git(own,'ls-remote','--heads','origin','refs/heads/'+branch).decode().split()
+assert remote==[base,'refs/heads/'+branch],'OWN remote changed; stop without force'
+assert git(source,'rev-parse','HEAD').decode().strip()=='dd1c4080095c7e739582dc5c631bc419047c48d2' and not git(source,'status','--porcelain')
+exact={'docs/agent-state/ses_de567801cffeGZFlt50oYv0Dnt.md','docs/coordination/reports/R44-20-dashboard-schema-test.md','docs/coordination/status/role20.md'}
+def allowed(path):return path in exact or path.startswith('docs/coordination/evidence/R44-20/') or path.startswith('tests/r44_probes/role20/')
+changed=git(own,'diff',base,'--name-only').decode().splitlines()+git(own,'ls-files','--others','--exclude-standard').decode().splitlines()
+assert changed and all(allowed(path) for path in changed),[path for path in changed if not allowed(path)]
+assert not git(own,'ls-tree','-r','--name-only',base,'--','tests/r44_probes/role20','docs/coordination/evidence/R44-20','docs/coordination/reports/R44-20-dashboard-schema-test.md','docs/coordination/status/role20.md')
+proofs=json.loads((evidence/'tested-files.json').read_text())
+for name,entry in proofs.items():assert sha((tests/name).read_bytes())==entry['sha256'],name
+assert json.loads((evidence/'summary.json').read_text())['junit']=={'tests':99,'failures':0,'errors':0,'skipped':0}
+assert not git(own,'diff',base,'--','python','packages','schemas','prompts','pyproject.toml','package.json','package-lock.json','tests/r10_probes','tests/r13_probes','tests/r16_probes','tests/browser')
+paths=sorted(exact|{path.relative_to(own).as_posix() for path in evidence.iterdir()}|{path.relative_to(own).as_posix() for path in tests.iterdir()})
+patterns=[rb'gh[pousr]_[A-Za-z0-9]{20,}',rb'github_pat_[A-Za-z0-9_]{20,}',rb'(?i:Authorization)\s*[:=]\s*["\x27]?(?:Bearer|token)\s+[A-Za-z0-9_\-.]{20,}',rb'X-Amz-Signature=[0-9a-fA-F]{20,}',rb'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----']
+files={}
+for name in paths:
+ data=(own/name).read_bytes();assert len(data)<300000,name
+ assert not any(re.search(pattern,data) for pattern in patterns),'Credential or signed-URL finding; stop without content'
+ files[name]={'bytes':len(data),'working_sha256':sha(data),'Git_LF_sha256_if_text':sha(data.replace(b'\r\n',b'\n'))}
+ if not name.startswith('tests/'):
+  target=main/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(own/name,target);assert target.read_bytes()==data,name
+assert sum(entry['bytes'] for entry in files.values())<1000000
+receipt={'UTC':datetime.now(timezone.utc).isoformat(),'audit_exit':0,'OWN_branch':branch,'OWN_base':base,'OWN_remote_prewrite_sha':remote[0],'source':'dd1c4080095c7e739582dc5c631bc419047c48d2','source_clean':True,'all4executed_probe_hashes_match':True,'all_changed_and_untracked_paths_owned':True,'source_existing_oracle_changes':0,'credential_signedURL_findings':0,'API_calls':0,'origin_exact_configured_GCM':True,'fresh_API_identity_GET':False,'API_prohibition_obeyed':True,'source_PR_CI_main_publication_unverified':True,'files_excluding_this_audit':files,'new_audit_included_in_stage':True,'R35_V1_P2':'OPEN/R04; no visual approval'}
+path=evidence/'publication-audit.json';assert not path.exists()
+with path.open('w',encoding='utf-8',newline='\n') as stream:json.dump(receipt,stream,indent=2);stream.write('\n')
+shutil.copyfile(path,main/path.relative_to(own));paths.append(path.relative_to(own).as_posix());paths.sort()
+git(own,'add','--',*paths)
+staged=git(own,'diff','--cached','--name-only').decode().splitlines();assert staged==paths,(staged,paths)
+git(own,'diff','--cached','--check')
+print(git(own,'diff','--cached','--stat').decode())
+print(json.dumps({'audit_and_stage_exit':0,'exact_staged_files':len(paths),'staged_working_bytes':sum((own/name).stat().st_size for name in paths),'OWN_prewrite_remote':remote[0],'tests_still_exact':4,'source_clean':True,'production_old_oracle_changes':0,'credential_signedURL_findings':0,'API_calls':0,'UTC':receipt['UTC']}))

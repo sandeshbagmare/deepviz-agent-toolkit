@@ -1,0 +1,26 @@
+[
+  {
+    "check": "ruff",
+    "command": [
+      "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-I",
+      "-S",
+      "-c",
+      "import sys,runpy;sys.path.insert(0,'C:\\\\Users\\\\bagma\\\\deepviz-agent-toolkit\\\\.venv\\\\Lib\\\\site-packages');sys.argv=['ruff', 'check', '--no-cache', '--config', 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r44-20-dd1-source-ses_de567801cffeGZFlt50oYv0Dnt\\\\pyproject.toml', 'tests/r44_probes/role20'];runpy.run_module('ruff',run_name=\"__main__\")"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "mypy",
+    "command": [
+      "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-I",
+      "-S",
+      "-c",
+      "import sys,runpy;sys.path.insert(0,'C:\\\\Users\\\\bagma\\\\deepviz-agent-toolkit\\\\.venv\\\\Lib\\\\site-packages');sys.argv=['mypy', '--config-file', 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r44-20-dd1-source-ses_de567801cffeGZFlt50oYv0Dnt\\\\pyproject.toml', '--no-incremental', '--cache-dir', 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r44-20-codecheck-ses_de567801cffeGZFlt50oYv0Dnt\\\\mypy', '--follow-imports', 'skip', 'tests/r44_probes/role20'];runpy.run_module('mypy',run_name=\"__main__\")"
+    ],
+    "exit": 0
+  }
+]
