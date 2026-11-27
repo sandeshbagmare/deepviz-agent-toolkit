@@ -1,0 +1,151 @@
+{
+  "playwright": "1.65.1",
+  "chromium": "159.0.8154.6",
+  "cases": [
+    {
+      "name": "genuine-path",
+      "expected_visible": true,
+      "bbox": {
+        "x": 4,
+        "y": 4,
+        "width": 44,
+        "height": 44
+      },
+      "console_errors": [],
+      "nonwhite_pixels": 222,
+      "inspection": "svg_xml_structure_only_not_visual_review",
+      "svg_sha256": "9acaa309b4eeca8bfece3fa9527ec435902b15b96f739cb489e6fc2cad59c97b",
+      "png_sha256": "f23840dc3ec6802c01591a741ce2c4c85499b9d8cd67f610c75c13282b3e3d70"
+    },
+    {
+      "name": "genuine-rect",
+      "expected_visible": true,
+      "bbox": {
+        "x": 4,
+        "y": 4,
+        "width": 32,
+        "height": 20
+      },
+      "console_errors": [],
+      "nonwhite_pixels": 640,
+      "inspection": "svg_xml_structure_only_not_visual_review",
+      "svg_sha256": "1e0c826b0e66f32f6d2df69ac7a23921593d903d721cfa985f858431b74692d0",
+      "png_sha256": "c6384250103e842fc8cbeef08f0e79e2007df6bedad51bda5c9e997d85ea8119"
+    },
+    {
+      "name": "genuine-circle",
+      "expected_visible": true,
+      "bbox": {
+        "x": 12,
+        "y": 12,
+        "width": 24,
+        "height": 24
+      },
+      "console_errors": [],
+      "nonwhite_pixels": 486,
+      "inspection": "svg_xml_structure_only_not_visual_review",
+      "svg_sha256": "b38c2644e37ae112f053db4e9eacd3ea4bd77ab3bbae98120758ddf624ac7fa4",
+      "png_sha256": "eda8656965890ba8253e67bee0d24ff3e9f2432e71de922459dd1f1921700650"
+    },
+    {
+      "name": "genuine-polyline",
+      "expected_visible": true,
+      "bbox": {
+        "x": 4,
+        "y": 4,
+        "width": 44,
+        "height": 44
+      },
+      "console_errors": [],
+      "nonwhite_pixels": 316,
+      "inspection": "svg_xml_structure_only_not_visual_review",
+      "svg_sha256": "44ae746f3ce03ee5ebf0255d8e999475964d306ff2c106416c0b4f9b85b0c80e",
+      "png_sha256": "a80f09dd81db721808ed014ada7d4653899007a820f04b837bf5d5b562346620"
+    },
+    {
+      "name": "genuine-polygon",
+      "expected_visible": true,
+      "bbox": {
+        "x": 4,
+        "y": 4,
+        "width": 44,
+        "height": 44
+      },
+      "console_errors": [],
+      "nonwhite_pixels": 1026,
+      "inspection": "svg_xml_structure_only_not_visual_review",
+      "svg_sha256": "638e808daa9311f433bf03757c706deababf1db7d88db50a147e8e39c04908a6",
+      "png_sha256": "220c6f56e69f7492282928ae2b7f11643ae4322b48022fa8d155dc631390e898"
+    },
+    {
+      "name": "empty-path",
+      "expected_visible": false,
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "console_errors": [],
+      "nonwhite_pixels": 0,
+      "inspection": "svg_xml_structure_only_not_visual_review",
+      "svg_sha256": "514beb657d6a5b5e767736ac83829e7607bbdad2e5781bacfd68337164894bf0",
+      "png_sha256": "4f852cfe622067e2872424c8add5d3977db6b7d6ad84a6329f288f6d7da566fa"
+    },
+    {
+      "name": "nonnumeric-rectangle",
+      "expected_visible": false,
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "console_errors": [
+        "Error: <rect> attribute width: Expected length, \"not-a-number\"."
+      ],
+      "nonwhite_pixels": 0,
+      "inspection": "svg_xml_structure_only_not_visual_review",
+      "svg_sha256": "7001705c9fbbb9a18d5ac19e2a85baf80945daa1d34d762bfb7965480819b47c",
+      "png_sha256": "4f852cfe622067e2872424c8add5d3977db6b7d6ad84a6329f288f6d7da566fa"
+    },
+    {
+      "name": "negative-radius",
+      "expected_visible": false,
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "console_errors": [
+        "Error: <circle> attribute r: A negative value is not valid. (\"-1\")"
+      ],
+      "nonwhite_pixels": 0,
+      "inspection": "svg_xml_structure_only_not_visual_review",
+      "svg_sha256": "d3df61f6915fded2cdb816271b9ba061b23de5436f6648443554b3ff302ecb9b",
+      "png_sha256": "4f852cfe622067e2872424c8add5d3977db6b7d6ad84a6329f288f6d7da566fa"
+    },
+    {
+      "name": "invalid-points",
+      "expected_visible": false,
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "console_errors": [
+        "Error: <polyline> attribute points: Expected number, \"not-points\"."
+      ],
+      "nonwhite_pixels": 0,
+      "inspection": "svg_xml_structure_only_not_visual_review",
+      "svg_sha256": "43ff532dfbe3949b2e335019e49485c20f54ca50e2d5d595279c73db44dd8a19",
+      "png_sha256": "4f852cfe622067e2872424c8add5d3977db6b7d6ad84a6329f288f6d7da566fa"
+    }
+  ],
+  "source_commit": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "inspector_sha256": "13de6814a51647b58bf63923d9b1b9dbe8a608ebc029238b73af74e9489208c4",
+  "method": "64x64 Chromium RGB captures; nonwhite pixels counted; metadata is structural only",
+  "limitation": "Four negative SVGs remain invalid/nonpainting; their structural acceptance is not a pass."
+}

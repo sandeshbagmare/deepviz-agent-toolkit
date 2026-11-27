@@ -1,0 +1,74 @@
+{
+  "owner_session": "ses_de567830effe0E5yIwQgDACLMD",
+  "branch": "agents/r10-05-inspector-claim-retest",
+  "source_commit": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "baseline_source_commit": "0c5fa825f7058f8c5a4ab6ec9597b9fd5fd4ca43",
+  "checks": {
+    "checkpoint_pytest": {
+      "exit": 0,
+      "passed": 113,
+      "failed": 0,
+      "skipped": 0,
+      "scale_deselected": 9,
+      "seconds": 4.42
+    },
+    "new_regressions_on_baseline": {
+      "exit": 1,
+      "passed": 4,
+      "failed": 12,
+      "skipped": 0,
+      "seconds": 0.16,
+      "expected_red": true
+    },
+    "scoped_ruff": {
+      "exit": 0
+    },
+    "scoped_mypy": {
+      "exit": 0,
+      "files": 2,
+      "initial_own_fixture_optional_path_type_error": true
+    },
+    "node_syntax": {
+      "exit": 0
+    },
+    "browser_capture": {
+      "exit": 0,
+      "positive_visible": 5,
+      "negative_blank_invalid": 4,
+      "positive_console_errors": 0,
+      "negative_console_errors": 3,
+      "network_requests": 0
+    },
+    "paint_verification": {
+      "exit": 0
+    }
+  },
+  "claim": "svg_xml_structure_only_not_visual_review",
+  "limitations": [
+    "Invalid/nonpainting SVGs are not approved artifacts.",
+    "No full-suite/distribution/scale/format/MCP/DeepAgent/final-signoff claim.",
+    "Three Python CI checks failed in the bounded preflight snapshot."
+  ],
+  "protected_files_unchanged": [
+    "scripts/performance_suite.py",
+    "docs/verification/performance.md",
+    "tests/test_n09_performance_inspector.py",
+    "tests/test_performance_contract.py"
+  ],
+  "sha256": {
+    "scripts/performance_suite.py": "13de6814a51647b58bf63923d9b1b9dbe8a608ebc029238b73af74e9489208c4",
+    "docs/verification/performance.md": "a37a5be72a48778bf2a186e1af290c0bcfce5f47982f5f33bf55eeeeac1a05ac",
+    "tests/test_n09_performance_inspector.py": "1af10f9254e6d4ff4474ac0002865dec57a53676b372a8d448b994dd3bb4620d",
+    "tests/test_performance_contract.py": "8967151b8c2731c14281552db13b530354e1ac34586fa1ed1f0320d56cf00be0",
+    "tests/r10_probes/role05/capture_primitives.cjs": "00ccee0f5cf84ff50f7c49da25ff1e57d2acc657daefef9acfae819bf2472155",
+    "tests/r10_probes/role05/cases.json": "34dde7549f705984bd86eb707d877331f1bd6565e6ea1ca2d92c73c4b2149daf",
+    "tests/r10_probes/role05/README.md": "b3a749c3232406d5f8c6779e10b183fcf7b8117d754e13dc16d3c5d54906b0c0",
+    "tests/r10_probes/role05/test_inspector_claim.py": "e2a22acad5a6d411bb99d1e6d559ea39de4f5c8e6c73346d17a4bc6e5eff7a11",
+    "tests/r10_probes/role05/verify_paint.py": "a24150bb431d316fda998b9eb80464168372f862c7a315767f0faf97ba568156",
+    "docs/coordination/evidence/R10-05/github-preflight.json": "31cef0806bd83d3bfea2b4637df9611de502c4f7dfc6b39e431126b3ee53b9b8",
+    "docs/coordination/evidence/R10-05/primitive-contact.png": "3c24c3baa53435b5beed917c6e73e279dff37246dd82b2daf2fbc00471da1092",
+    "docs/coordination/evidence/R10-05/primitive-verification.json": "586d71a5d3f460b69666a14c08f8728f9f5db6e3724f9333f1984532a84691c4",
+    "docs/coordination/evidence/R10-05/visible-rectangle.svg": "1e0c826b0e66f32f6d2df69ac7a23921593d903d721cfa985f858431b74692d0"
+  },
+  "sha256_method": "Protected source hashes use measured Windows working-tree bytes. NEW tests and published evidence hashes use staged Git blob bytes; checks.json excludes itself."
+}
