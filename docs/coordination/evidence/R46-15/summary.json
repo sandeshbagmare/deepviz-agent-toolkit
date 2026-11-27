@@ -1,0 +1,134 @@
+{
+  "source_commit": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "owner_session": "ses_de56780c8ffe7LgwvwdfR5qFQD",
+  "scope": "Second independent TS546 affected acceptance only; no Python/integrated/main approval",
+  "result": "PASS115 actual fresh cases, no product failure observed",
+  "actual_runs": {
+    "affected.tap": {
+      "passed": 80,
+      "failed": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "duration_ms": 233.1644,
+      "exit": 0
+    },
+    "independent.tap": {
+      "passed": 35,
+      "failed": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "duration_ms": 488.7771,
+      "exit": 0
+    }
+  },
+  "distinct_passed": 115,
+  "failed": 0,
+  "cancelled": 0,
+  "skipped": 0,
+  "todo": 0,
+  "affected_categories": {
+    "scalar_columns": 32,
+    "scalar_sequences": 2,
+    "connection_sibling_rejection": 12,
+    "custom_wrapper_explicit_selection": 1,
+    "known_nested_GP_null_flags": 2,
+    "late_GP_error_pages": 9,
+    "business_errors_repeats": 3,
+    "exact_prefix_SUM": 16,
+    "selected_root_GP_regressions": 3
+  },
+  "affected_filter_positive_only": true,
+  "deliberately_unselected_not_Node_skips": {
+    "old_mean_cases": 21,
+    "unrelated_regressions": 27,
+    "total": 48
+  },
+  "one_fresh_affected_selection": true,
+  "one_fresh_independent_selection": true,
+  "new_independent_numeric_tests": 26,
+  "new_other_count_drain_budget_tests": 9,
+  "independent_expected": "Exact mathematical literals/binary64 bits, rational3/7 literal3fdb6db6db6db6db; no production computed oracle/no Python product or oracle",
+  "actual_output_rows": 35,
+  "budget_negative_actual": {
+    "test": "exact-SUM-state-budget",
+    "max_input_records": 512,
+    "consumed": 277,
+    "consumed_unit": "records",
+    "iterations": 1,
+    "closed": true,
+    "actual_error": {
+      "name": "ValidationError",
+      "message": "Retained normalized state exceeds 16 MiB UTF-8 JSON byte budget; lower max_points or reduce fields"
+    },
+    "expected_rejection": true
+  },
+  "late_fatal_error_actual": {
+    "test": "late-fatal-error-no-tail-overread",
+    "consumed": 34,
+    "consumed_unit": "pages",
+    "iterations": 1,
+    "closed": true,
+    "tailTouched": false,
+    "actual_error": {
+      "name": "ValidationError",
+      "message": "GraphQL response contains errors and no data"
+    },
+    "expected_rejection": true
+  },
+  "partial_error_usable_pages_actual": {
+    "test": "partial-selected-error-drain",
+    "stream": true,
+    "consumed_unit": "pages",
+    "result": {
+      "records": [
+        {
+          "g": "only",
+          "v": 5
+        }
+      ],
+      "input_count": 4,
+      "warnings": [
+        "GraphQL responses contained errors alongside usable data"
+      ],
+      "strategy": "sum"
+    },
+    "consumed": 3,
+    "iterations": 1,
+    "closed": true,
+    "input_not_mutated": true,
+    "spec_not_mutated": true
+  },
+  "max_available_input_records": 512,
+  "source_compiler_dist_import_before_after_gate_exit": 0,
+  "isolated_tsc_build_exit": 0,
+  "own_JS_syntax_exit": 0,
+  "own_Ruff_exit": 0,
+  "own_mypy_exit": 0,
+  "known_Python4field_policy_RED": "Preserved as reported/not run/not waived by TS PASS",
+  "known_Python_private_integer_accounting": "Outside TS-only gate; R04/11 proposal/producer decision, no waiver",
+  "raw_artifact_sha256": {
+    "affected.tap": "90673e1a22df987bdc6e412c9c9c642aa952bd333eda14a47312fa531da0043a",
+    "build-proof-after.json": "6ce4509c9b940018ef3aafb1c6798d70d8dc3727d4562fb979b6ac9627366a9a",
+    "build-proof-before.json": "1cf569588b5779a832b403b9b17620198eaf085bbbf25b71c183f3b3068b98d6",
+    "import-proof-affected-23720.json": "ce6790c3daa6000ab22a8d3534dbfa6219098757667ccfd0fd84d2f22f007036",
+    "import-proof-affected-34920.json": "7a1a1c29437ac4aaf3db944c96bc65e7c55fe645e6be34ac3e8ef28c070f2f65",
+    "import-proof-independent-21656.json": "217b96e27f947c56db7a5e3139fa7841b873c819d59d0078be5dafa07f6180f5",
+    "independent-actual.jsonl": "26324073c884a79114a0d84ac3185f5c79da96f4d8d230244ce1a73d4ef63dc1",
+    "independent.tap": "37296346f36e7394d9fe52a2801913bd2a207a437573360297a3c2c2c7e634e5",
+    "source-compiler-prebuild.json": "13ea0ff3a05890c2011a004a96a8d2334f761a2e42b2192969111f767b078207"
+  },
+  "product_test_failures": [],
+  "own_metadata_failures_preserved": [
+    "Initial portable collector1: naive test-call regex counted8 RegExp.test calls plus25 Node registrations as33; anchored registration count25 confirmed,48unselected definition count unchanged. No test/source/oracle edits/rerun."
+  ],
+  "limits": [
+    "No Python product/tests/expected oracle/full367/fullformats/oldmean-only/scale/10M/costbenchmark replay",
+    "No product/config/schema/oracle/caps/globalSDK/deps/install/persistentenv/API/shared/defaultwrite/spawn/poll",
+    "No borrowed10/09/producer/R39 results",
+    "No whole546 both-language/main/CI/v1 signoff; final integrated head needs actual affected gates",
+    "Expected true SUM overflow remains null with warning; expected fatal/budget rejections are passing controls",
+    "JSON zero sign lost in JSON; observed runtime binary64 bits preserve negative zero"
+  ]
+}
