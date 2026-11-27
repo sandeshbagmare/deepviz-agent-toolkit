@@ -112,3 +112,13 @@ Semanticcanonical/src/distJSONschemaequalityactuallyverified0; alloriginalhashes
 FreshmemorysafeGET/user+OWNrefHTTP200at**15:47:39UTC**, expected`sandeshbagmare`, ownremoteSTILL5bcc; `github-prepublication.json`. NoAPIwrites/no sourceoroldoracleedits. CurrentactionexplicitownedR22+ownnotestage/actualGitblobhashmanifest/scope+credential+UTF8+whitespacechecks→meaningfulOWNcommit/nonforcepush/exactactualremoteSHA. Source7dremainsdetached/notmergedintopublicationbranch; limited36+40/twobrowsercontrols, olderfullPagescreenshotfailurepreserved.
 
 Stagedpreflightactual0:37EXPLICITownedpaths(ownnote+R22report/probes/evidence),3046insertions. Scope/credentialpatterns/UTF8/whitespace0; executedNEWprobebytesEXACTstagedGitblobs/original40hash9b48. `published-bytes.json`pins34coreprobe/evidenceGitblobs(excludesnote/report/selfreference). Production/existingoracles/oldR13/R19/scripts/schemas/locks/APIpathsagainst5bccdiff0. Gitwarned4newcapturedlogsCRLF→LF; rawhashindexretainedandpublishedmanifestusesactualGitblobbytes, notnormalizedsource/test/imageclaims. NextfinalOWNnote/reportcheckpoint+manifestreadback→meaningfulOWNcommit/nonforcepush/exactSHA, noadditionaltest/build/capture.
+
+## Actual meaningful LOCAL commit
+
+`git commit -m 'test: independently verify committed helper null rejection with immutable oracles and real SVGs'` **exit0→eebacec61da32c21da01eba0faa8043687227997**,37explicitOWNpaths/3049insertions/2realPNGs+3SVGs. Finalstagedscope/hash/secret/probebytes/original40/whitespacechecks0; production/existingoracles/oldR13/R19diffagainst5bcc0. OWNtreeclean/ahead1; notpublisheduntilactualsafeOWNnonforcepush+exactSHAreadback. Testedsource7dseparate/unchanged, independent36+40notfutureHEAD/fullPagesupport/greenCI. Nextcheckexpectedcredential-freeHTTPSorigin/oldtipancestor→OWNpushonly/no sharedwrites.
+
+## ACTUAL nonforce publication / readback
+
+Expectedcredential-freeHTTPSorigin/OWNbranch/old5bccancestor/cleaneebverified. `git push origin agents/r10-05-inspector-claim-retest:agents/r10-05-inspector-claim-retest` **NONFORCEexit0** advancedONLYOWNbranch5bcc→**eebacec61da32c21da01eba0faa8043687227997**. IMMEDIATEactual`git ls-remote --heads origin refs/heads/agents/r10-05-inspector-claim-retest` **exit0returnedEXACTeebacec61da32c21da01eba0faa8043687227997**,matchedlocalHEAD/cleantrackingtree. No sharedbranch/issue/PR/sourcewrites.
+
+NextsmallOWNpublicationreceiptcheckpoint+nonforcepush/readback, thenMAINfinalnote/report/evidencecopy. Independent7d36+40/tworealopenedviewportcontrolsacceptedhere; notfullrelease/latermovingcandidate/schemafirstPR. R04reviewsbeforefuturefocusedhelperintegration; rootaloneSAME-IDrefill.
