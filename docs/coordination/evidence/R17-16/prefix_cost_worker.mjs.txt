@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {join,resolve} from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {createHash} from 'node:crypto';
+const [rootText,countText,pattern]=process.argv.slice(2),root=resolve(rootText),count=Number(countText);
+assert.ok([1000,100000].includes(count));
+const modulePath=join(root,'packages/deepviz/dist/normalize.js');
+const {normalizeStream}=await import(pathToFileURL(join(root,'packages/deepviz/dist/index.js')).href);
+const sequence={integer:[1],fraction:[0.1],residual:[1e308,1e200,1,-1e200,-1e308]}[pattern];
+// For constant values IEEE multiplication rounds the exact repeated-value total once.
+const expected=pattern==='residual'?count/5:sequence[0]*count;
+let consumed=0,peakRss=process.memoryUsage().rss,peakHeap=process.memoryUsage().heapUsed;
+const before=process.memoryUsage();
+const sample=()=>{const m=process.memoryUsage();peakRss=Math.max(peakRss,m.rss);peakHeap=Math.max(peakHeap,m.heapUsed);};
+async function* rows(){for(let i=0;i<count;i++){consumed++;if(i%10000===0)sample();yield {g:'one',v:sequence[i%sequence.length]};}}
+const start=performance.now();
+const result=await normalizeStream(rows(),{kind:'bar',x:'g',y:'v',aggregation:'sum',max_points:10});
+const elapsed=(performance.now()-start)/1000;sample();
+assert.equal(consumed,count);assert.equal(result.input_count,count);assert.equal(result.strategy,'sum');
+assert.deepEqual(result.warnings,[]);assert.equal(result.records.length,1);
+console.log(JSON.stringify({language:'typescript',root,built_sha256:createHash('sha256').update(readFileSync(modulePath)).digest('hex'),pattern,input_count:count,consumed,output_count:result.records.length,expected,result:result.records[0].v,oracle_pass:result.records[0].v===expected,elapsed_seconds:elapsed,before_bytes:before,sampled_peak_rss_bytes:peakRss,sampled_peak_heap_used_bytes:peakHeap,method:'fresh Node process; process.memoryUsage at baseline/every10000yield/finish; sampled not continuous peak or exclusive allocations/native/browser cap'}));

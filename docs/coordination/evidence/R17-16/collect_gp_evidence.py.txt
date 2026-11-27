@@ -1,0 +1,62 @@
+"""Preserve actual GP RED/GREEN, immutable oracle layout and own publication."""
+import hashlib
+import json
+import re
+import subprocess
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+root, art = Path.cwd(), Path(__file__).parent
+dest = root / "docs/coordination/evidence/R17-16"
+assert subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip() == "c5ab299a9ecfd9938e677b04ec146b180835a314"
+
+
+def digest(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def text(path):
+    data = path.read_bytes()
+    return data.decode("utf-16" if data.startswith((b"\xff\xfe", b"\xfe\xff")) else "utf-8-sig").replace("\r\n", "\n")
+
+
+runs = []
+for name, code, command in [("gp-immutable-red-node", 1, "node --test --test-reporter=tap <ART>/gp-red/tests/r15_probes/role03/graphql-pages.test.mjs"), ("gp-immutable-green-node", 0, "node --test --test-reporter=tap <ART>/gp-green/tests/r15_probes/role03/graphql-pages.test.mjs"), ("gp-own-red-node", 1, "node --test --test-reporter=tap packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs"), ("gp-own-green-node", 0, "node --test --test-reporter=tap packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs"), ("gp-npm-test", 0, "npm test")]:
+    source = art / (name + ".log")
+    content = text(source)
+    result = {"name": name, "command": command, "exit": code, "raw_log_sha256": digest(source)}
+    for field in ["tests", "pass", "fail", "skipped", "cancelled", "todo", "duration_ms"]:
+        match = re.search(r"(?m)^\S+ " + field + r" ([\d.]+)$", content)
+        assert match, (name, field)
+        result[field] = float(match[1]) if field == "duration_ms" else int(match[1])
+    result["failed_ids"] = re.findall(r"(?m)^not ok \d+ - (.*)$", content)
+    target = dest / (name + ".log")
+    target.write_text(content, encoding="utf-8")
+    result["utf8_copy_sha256"] = digest(target)
+    runs.append(result)
+for phase in ["red", "green"]:
+    path = art / ("gp-immutable-" + phase + ".xml")
+    suite = ET.parse(path).getroot().find("testsuite")
+    assert suite is not None
+    result = {key: suite.attrib[key] for key in ["tests", "errors", "failures", "skipped", "time"]}
+    result.update(name="gp-immutable-" + phase + "-python", exit=0, command="PYTHONPATH=<ART>/gp-" + phase + "/python/deepviz/src python -m pytest <ART>/gp-" + phase + "/tests/r15_probes/role03/test_graphql_pages.py -q --tb=short -p no:cacheprovider --basetemp <ART>/pytest-gp-immutable-" + phase + " --junitxml <ART>/gp-immutable-" + phase + ".xml", raw_junit_sha256=digest(path))
+    assert result["tests"] == "73" and result["failures"] == result["errors"] == result["skipped"] == "0"
+    runs.append(result)
+    name = "gp-" + phase + "-snapshot.json"
+    data = json.loads((art / name).read_text(encoding="utf-8"))
+    assert data["external_probes_verified"] == 8
+    (dest / name).write_bytes((art / name).read_bytes())
+for name in ["stage_gp_oracles.py", "collect_gp_evidence.py"]:
+    (dest / (name + ".txt")).write_bytes((art / name).read_bytes())
+files = {}
+for relative in ["python/deepviz/src/deepviz/normalize.py", "packages/deepviz/src/normalize.ts", "python/deepviz/src/deepviz/models.py", "packages/deepviz/src/models.ts", "schemas/chart-spec.schema.json", "packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs"]:
+    data = (root / relative).read_bytes()
+    assert data == subprocess.check_output(["git", "show", "HEAD:" + relative])
+    files[relative] = hashlib.sha256(data).hexdigest()
+commands = []
+for name, command in [("gp-npm-build", "npm run build"), ("gp-npm-typecheck", "npm run typecheck"), ("gp-npm-schema-check", "npm run schema:check"), ("gp-npm-pack-dry-run", "npm pack --dry-run --workspace @deepviz/agent-toolkit"), ("gp-ruff", "python -m ruff check ."), ("gp-mypy", "python -m mypy python/deepviz/src/deepviz python/deepviz/tests/test_r17_normalizer_boundaries.py --cache-dir <ART>/mypy-gp")]:
+    commands.append({"command": command, "exit": 0, "raw_log_sha256": digest(art / (name + ".log"))})
+summary = {"source_commit": "c5ab299a9ecfd9938e677b04ec146b180835a314", "red_source_commit": "efcf37097cb52aa7e831fc6ad28346e1dde2c248", "own_branch": "fix/r17-normalizer-boundaries", "status": "Scoped GP-ERR-CARRIER producer fix/retest, not final integrated independent signoff", "immutable_external_oracle_commit": "acb11f862dd211a0563fd3dd824b8e5f5493ffaf", "actual_runs": runs, "commands": commands, "committed_file_hashes": files, "publication": {"safe_identity": json.loads(text(art / "gp-github-pre-push.json")), "push_exit": 0, "readback_exit": 0, "readback": text(art / "gp-remote-readback.txt").strip(), "push_raw_log_sha256": digest(art / "gp-push.log")}, "limits": ["P2 pre-promotion SUM residual accuracy remains open at this source", "Full non-scale known failures, 4field-policy RED, Python distribution hatchling missing remain unmet", "No installs/shared environment mutation/browser/scale replay", "No 10M/current-final-head scale or CI claim", "Original independent tests copied verbatim for portable relative-import guards; producer rerun is not a fresh independent review"]}
+path = dest / "gp-verification.json"
+path.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
+print(json.dumps({"exit": 0, "path": str(path), "sha256": digest(path), "runs": len(runs), "commands": len(commands)}))

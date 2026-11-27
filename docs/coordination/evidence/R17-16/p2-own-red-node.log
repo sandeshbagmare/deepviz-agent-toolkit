@@ -1,0 +1,600 @@
+TAP version 13
+# Subtest: exact prefix SUM normal-promoted-late 1 records
+not ok 1 - exact prefix SUM normal-promoted-late 1 records
+  ---
+  duration_ms: 6.4261
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:112:69'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        {
+          g: 'one',
+    +     v: 0
+    -     v: 1
+        }
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      g: 'one'
+      v: 1
+  actual:
+    0:
+      g: 'one'
+      v: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:116:57)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.start (node:internal/test_runner/test:1262:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: exact prefix SUM normal-promoted-late 1 async
+not ok 2 - exact prefix SUM normal-promoted-late 1 async
+  ---
+  duration_ms: 0.7761
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:112:69'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        {
+          g: 'one',
+    +     v: 0
+    -     v: 1
+        }
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      g: 'one'
+      v: 1
+  actual:
+    0:
+      g: 'one'
+      v: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:116:57)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: exact prefix SUM normal-promoted-late -1 records
+not ok 3 - exact prefix SUM normal-promoted-late -1 records
+  ---
+  duration_ms: 0.5188
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:112:69'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        {
+          g: 'one',
+    +     v: 0
+    -     v: -1
+        }
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      g: 'one'
+      v: -1
+  actual:
+    0:
+      g: 'one'
+      v: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:116:57)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: exact prefix SUM normal-promoted-late -1 async
+not ok 4 - exact prefix SUM normal-promoted-late -1 async
+  ---
+  duration_ms: 0.6
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:112:69'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        {
+          g: 'one',
+    +     v: 0
+    -     v: -1
+        }
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      g: 'one'
+      v: -1
+  actual:
+    0:
+      g: 'one'
+      v: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:116:57)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: exact prefix SUM tiny-promoted-late 1 records
+not ok 5 - exact prefix SUM tiny-promoted-late 1 records
+  ---
+  duration_ms: 0.4842
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:112:69'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        {
+          g: 'one',
+    +     v: 0
+    -     v: 5e-324
+        }
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      g: 'one'
+      v: 5e-324
+  actual:
+    0:
+      g: 'one'
+      v: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:116:57)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: exact prefix SUM tiny-promoted-late 1 async
+not ok 6 - exact prefix SUM tiny-promoted-late 1 async
+  ---
+  duration_ms: 0.472
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:112:69'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        {
+          g: 'one',
+    +     v: 0
+    -     v: 5e-324
+        }
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      g: 'one'
+      v: 5e-324
+  actual:
+    0:
+      g: 'one'
+      v: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:116:57)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: exact prefix SUM tiny-promoted-late -1 records
+not ok 7 - exact prefix SUM tiny-promoted-late -1 records
+  ---
+  duration_ms: 0.4154
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:112:69'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        {
+          g: 'one',
+    +     v: 0
+    -     v: -5e-324
+        }
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      g: 'one'
+      v: -5e-324
+  actual:
+    0:
+      g: 'one'
+      v: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:116:57)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: exact prefix SUM tiny-promoted-late -1 async
+not ok 8 - exact prefix SUM tiny-promoted-late -1 async
+  ---
+  duration_ms: 1.6929
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:112:69'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        {
+          g: 'one',
+    +     v: 0
+    -     v: -5e-324
+        }
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      g: 'one'
+      v: -5e-324
+  actual:
+    0:
+      g: 'one'
+      v: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:116:57)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: exact prefix SUM normal-never-overflow 1 records
+not ok 9 - exact prefix SUM normal-never-overflow 1 records
+  ---
+  duration_ms: 0.396
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:112:69'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        {
+          g: 'one',
+    +     v: 0
+    -     v: 1
+        }
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      g: 'one'
+      v: 1
+  actual:
+    0:
+      g: 'one'
+      v: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:116:57)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: exact prefix SUM normal-never-overflow 1 async
+not ok 10 - exact prefix SUM normal-never-overflow 1 async
+  ---
+  duration_ms: 0.4648
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:112:69'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        {
+          g: 'one',
+    +     v: 0
+    -     v: 1
+        }
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      g: 'one'
+      v: 1
+  actual:
+    0:
+      g: 'one'
+      v: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:116:57)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: exact prefix SUM normal-never-overflow -1 records
+not ok 11 - exact prefix SUM normal-never-overflow -1 records
+  ---
+  duration_ms: 1.0521
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:112:69'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        {
+          g: 'one',
+    +     v: 0
+    -     v: -1
+        }
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      g: 'one'
+      v: -1
+  actual:
+    0:
+      g: 'one'
+      v: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:116:57)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: exact prefix SUM normal-never-overflow -1 async
+not ok 12 - exact prefix SUM normal-never-overflow -1 async
+  ---
+  duration_ms: 0.2496
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:112:69'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        {
+          g: 'one',
+    +     v: 0
+    -     v: -1
+        }
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      g: 'one'
+      v: -1
+  actual:
+    0:
+      g: 'one'
+      v: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:116:57)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: exact prefix SUM tiny-never-overflow 1 records
+not ok 13 - exact prefix SUM tiny-never-overflow 1 records
+  ---
+  duration_ms: 0.2146
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:112:69'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        {
+          g: 'one',
+    +     v: 0
+    -     v: 5e-324
+        }
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      g: 'one'
+      v: 5e-324
+  actual:
+    0:
+      g: 'one'
+      v: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:116:57)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: exact prefix SUM tiny-never-overflow 1 async
+not ok 14 - exact prefix SUM tiny-never-overflow 1 async
+  ---
+  duration_ms: 0.2606
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:112:69'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        {
+          g: 'one',
+    +     v: 0
+    -     v: 5e-324
+        }
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      g: 'one'
+      v: 5e-324
+  actual:
+    0:
+      g: 'one'
+      v: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:116:57)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: exact prefix SUM tiny-never-overflow -1 records
+not ok 15 - exact prefix SUM tiny-never-overflow -1 records
+  ---
+  duration_ms: 0.3361
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:112:69'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        {
+          g: 'one',
+    +     v: 0
+    -     v: -5e-324
+        }
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      g: 'one'
+      v: -5e-324
+  actual:
+    0:
+      g: 'one'
+      v: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:116:57)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: exact prefix SUM tiny-never-overflow -1 async
+not ok 16 - exact prefix SUM tiny-never-overflow -1 async
+  ---
+  duration_ms: 0.3618
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:112:69'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        {
+          g: 'one',
+    +     v: 0
+    -     v: -5e-324
+        }
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      g: 'one'
+      v: -5e-324
+  actual:
+    0:
+      g: 'one'
+      v: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:116:57)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 0
+# fail 16
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 150.0759

@@ -1,0 +1,44 @@
+"""Pin original R13 oracles verbatim and build an exact 6d0 comparison base."""
+import hashlib
+import json
+import subprocess
+from pathlib import Path
+
+root, art = Path.cwd(), Path(__file__).parent
+external = Path(r"C:\Users\bagma\AppData\Local\Temp\opencode\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q")
+base_sha = "6d0e72ebef4b622f8dec2bce2bd07cc23e7a81ce"
+probe_sha = "8dae3381e6caa0c99d6f032c2d2d318d5cf2a5ce"
+base, probes = art / "prefix-base-6d0", art / "prefix-r13-immutable"
+assert not base.exists() and not probes.exists()
+receipt = json.loads(Path(r"C:\Users\bagma\deepviz-agent-toolkit\docs\coordination\evidence\R13-01\verification.json").read_text(encoding="utf-8"))["source_and_probe_sha256"]
+items = []
+
+
+def put(path, data, kind, source):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(data)
+    assert path.read_bytes() == data
+    items.append({"path": str(path), "source": source, "kind": kind, "sha256": hashlib.sha256(data).hexdigest(), "lf_sha256": hashlib.sha256(data.replace(b"\r\n", b"\n")).hexdigest()})
+
+
+for relative, expected in receipt.items():
+    if not relative.startswith("tests/r13_probes/role01/"):
+        continue
+    data = (external / relative).read_bytes()
+    assert expected in {hashlib.sha256(data).hexdigest(), hashlib.sha256(data.replace(b"\r\n", b"\n")).hexdigest()}
+    assert data.replace(b"\r\n", b"\n") == subprocess.check_output(["git", "show", probe_sha + ":" + relative])
+    put(probes / Path(relative).name, data, "published-external-probe-UNMODIFIED", str(external / relative))
+paths = subprocess.check_output(["git", "ls-tree", "-r", "--name-only", base_sha, "--", "python/deepviz/src", "packages/deepviz/src", "packages/deepviz/tsconfig.json", "packages/deepviz/package.json", "package.json"], text=True).splitlines()
+for relative in paths:
+    put(base / relative, subprocess.check_output(["git", "show", base_sha + ":" + relative]), "exact-committed-6d0-comparison", relative)
+compiler = Path(r"C:\Users\bagma\deepviz-agent-toolkit\node_modules\typescript\bin\tsc")
+command = ["node", str(compiler), "-p", str(base / "packages/deepviz/tsconfig.json")]
+child = subprocess.run(command, capture_output=True, text=True, check=False, timeout=90)
+(art / "prefix-base-build.log").write_text(child.stdout + child.stderr, encoding="utf-8")
+assert child.returncode == 0, child.stdout + child.stderr
+for path in (base / "packages/deepviz/dist").glob("*"):
+    if path.is_file():
+        items.append({"path": str(path), "kind": "own-baseline-build-output", "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
+path = art / "prefix-oracle-identity.json"
+path.write_text(json.dumps({"base_commit": base_sha, "probe_commit": probe_sha, "compiler_sha256": hashlib.sha256(compiler.read_bytes()).hexdigest(), "build_argv": command, "build_exit": child.returncode, "probes_copied_verbatim": 5, "files": items, "limits": "Producer unchanged-oracle replay, not an independent reviewer result; no external source/test/dependency writes"}, indent=2) + "\n", encoding="utf-8")
+print(json.dumps({"exit": 0, "identity": str(path), "sha256": hashlib.sha256(path.read_bytes()).hexdigest(), "files": len(items), "probe_count": 5}))

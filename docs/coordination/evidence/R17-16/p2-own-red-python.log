@@ -1,0 +1,132 @@
+FFFFFFFFFFFFFFFF                                                         [100%]
+================================== FAILURES ===================================
+_ test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late-1-records] _
+python\deepviz\tests\test_r17_normalizer_boundaries.py:243: in test_sum_keeps_exact_residual_before_any_possible_promotion
+    assert result.records == [{"g": "one", "v": expected}]
+E   AssertionError: assert [{'g': 'one', 'v': 0.0}] == [{'g': 'one', 'v': 1.0}]
+E     
+E     At index 0 diff: {'g': 'one', 'v': 0.0} != {'g': 'one', 'v': 1.0}
+E     Use -v to get more diff
+_ test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late-1-one-pass] _
+python\deepviz\tests\test_r17_normalizer_boundaries.py:243: in test_sum_keeps_exact_residual_before_any_possible_promotion
+    assert result.records == [{"g": "one", "v": expected}]
+E   AssertionError: assert [{'g': 'one', 'v': 0.0}] == [{'g': 'one', 'v': 1.0}]
+E     
+E     At index 0 diff: {'g': 'one', 'v': 0.0} != {'g': 'one', 'v': 1.0}
+E     Use -v to get more diff
+_ test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late--1-records] _
+python\deepviz\tests\test_r17_normalizer_boundaries.py:243: in test_sum_keeps_exact_residual_before_any_possible_promotion
+    assert result.records == [{"g": "one", "v": expected}]
+E   AssertionError: assert [{'g': 'one', 'v': 0.0}] == [{'g': 'one', 'v': -1.0}]
+E     
+E     At index 0 diff: {'g': 'one', 'v': 0.0} != {'g': 'one', 'v': -1.0}
+E     Use -v to get more diff
+_ test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late--1-one-pass] _
+python\deepviz\tests\test_r17_normalizer_boundaries.py:243: in test_sum_keeps_exact_residual_before_any_possible_promotion
+    assert result.records == [{"g": "one", "v": expected}]
+E   AssertionError: assert [{'g': 'one', 'v': 0.0}] == [{'g': 'one', 'v': -1.0}]
+E     
+E     At index 0 diff: {'g': 'one', 'v': 0.0} != {'g': 'one', 'v': -1.0}
+E     Use -v to get more diff
+_ test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late-1-records] _
+python\deepviz\tests\test_r17_normalizer_boundaries.py:243: in test_sum_keeps_exact_residual_before_any_possible_promotion
+    assert result.records == [{"g": "one", "v": expected}]
+E   AssertionError: assert [{'g': 'one', 'v': 0.0}] == [{'g': 'one', 'v': 5e-324}]
+E     
+E     At index 0 diff: {'g': 'one', 'v': 0.0} != {'g': 'one', 'v': 5e-324}
+E     Use -v to get more diff
+_ test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late-1-one-pass] _
+python\deepviz\tests\test_r17_normalizer_boundaries.py:243: in test_sum_keeps_exact_residual_before_any_possible_promotion
+    assert result.records == [{"g": "one", "v": expected}]
+E   AssertionError: assert [{'g': 'one', 'v': 0.0}] == [{'g': 'one', 'v': 5e-324}]
+E     
+E     At index 0 diff: {'g': 'one', 'v': 0.0} != {'g': 'one', 'v': 5e-324}
+E     Use -v to get more diff
+_ test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late--1-records] _
+python\deepviz\tests\test_r17_normalizer_boundaries.py:243: in test_sum_keeps_exact_residual_before_any_possible_promotion
+    assert result.records == [{"g": "one", "v": expected}]
+E   AssertionError: assert [{'g': 'one', 'v': 0.0}] == [{'g': 'one', 'v': -5e-324}]
+E     
+E     At index 0 diff: {'g': 'one', 'v': 0.0} != {'g': 'one', 'v': -5e-324}
+E     Use -v to get more diff
+_ test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late--1-one-pass] _
+python\deepviz\tests\test_r17_normalizer_boundaries.py:243: in test_sum_keeps_exact_residual_before_any_possible_promotion
+    assert result.records == [{"g": "one", "v": expected}]
+E   AssertionError: assert [{'g': 'one', 'v': 0.0}] == [{'g': 'one', 'v': -5e-324}]
+E     
+E     At index 0 diff: {'g': 'one', 'v': 0.0} != {'g': 'one', 'v': -5e-324}
+E     Use -v to get more diff
+_ test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow-1-records] _
+python\deepviz\tests\test_r17_normalizer_boundaries.py:243: in test_sum_keeps_exact_residual_before_any_possible_promotion
+    assert result.records == [{"g": "one", "v": expected}]
+E   AssertionError: assert [{'g': 'one', 'v': 0.0}] == [{'g': 'one', 'v': 1.0}]
+E     
+E     At index 0 diff: {'g': 'one', 'v': 0.0} != {'g': 'one', 'v': 1.0}
+E     Use -v to get more diff
+_ test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow-1-one-pass] _
+python\deepviz\tests\test_r17_normalizer_boundaries.py:243: in test_sum_keeps_exact_residual_before_any_possible_promotion
+    assert result.records == [{"g": "one", "v": expected}]
+E   AssertionError: assert [{'g': 'one', 'v': 0.0}] == [{'g': 'one', 'v': 1.0}]
+E     
+E     At index 0 diff: {'g': 'one', 'v': 0.0} != {'g': 'one', 'v': 1.0}
+E     Use -v to get more diff
+_ test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow--1-records] _
+python\deepviz\tests\test_r17_normalizer_boundaries.py:243: in test_sum_keeps_exact_residual_before_any_possible_promotion
+    assert result.records == [{"g": "one", "v": expected}]
+E   AssertionError: assert [{'g': 'one', 'v': 0.0}] == [{'g': 'one', 'v': -1.0}]
+E     
+E     At index 0 diff: {'g': 'one', 'v': 0.0} != {'g': 'one', 'v': -1.0}
+E     Use -v to get more diff
+_ test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow--1-one-pass] _
+python\deepviz\tests\test_r17_normalizer_boundaries.py:243: in test_sum_keeps_exact_residual_before_any_possible_promotion
+    assert result.records == [{"g": "one", "v": expected}]
+E   AssertionError: assert [{'g': 'one', 'v': 0.0}] == [{'g': 'one', 'v': -1.0}]
+E     
+E     At index 0 diff: {'g': 'one', 'v': 0.0} != {'g': 'one', 'v': -1.0}
+E     Use -v to get more diff
+_ test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow-1-records] _
+python\deepviz\tests\test_r17_normalizer_boundaries.py:243: in test_sum_keeps_exact_residual_before_any_possible_promotion
+    assert result.records == [{"g": "one", "v": expected}]
+E   AssertionError: assert [{'g': 'one', 'v': 0.0}] == [{'g': 'one', 'v': 5e-324}]
+E     
+E     At index 0 diff: {'g': 'one', 'v': 0.0} != {'g': 'one', 'v': 5e-324}
+E     Use -v to get more diff
+_ test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow-1-one-pass] _
+python\deepviz\tests\test_r17_normalizer_boundaries.py:243: in test_sum_keeps_exact_residual_before_any_possible_promotion
+    assert result.records == [{"g": "one", "v": expected}]
+E   AssertionError: assert [{'g': 'one', 'v': 0.0}] == [{'g': 'one', 'v': 5e-324}]
+E     
+E     At index 0 diff: {'g': 'one', 'v': 0.0} != {'g': 'one', 'v': 5e-324}
+E     Use -v to get more diff
+_ test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow--1-records] _
+python\deepviz\tests\test_r17_normalizer_boundaries.py:243: in test_sum_keeps_exact_residual_before_any_possible_promotion
+    assert result.records == [{"g": "one", "v": expected}]
+E   AssertionError: assert [{'g': 'one', 'v': 0.0}] == [{'g': 'one', 'v': -5e-324}]
+E     
+E     At index 0 diff: {'g': 'one', 'v': 0.0} != {'g': 'one', 'v': -5e-324}
+E     Use -v to get more diff
+_ test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow--1-one-pass] _
+python\deepviz\tests\test_r17_normalizer_boundaries.py:243: in test_sum_keeps_exact_residual_before_any_possible_promotion
+    assert result.records == [{"g": "one", "v": expected}]
+E   AssertionError: assert [{'g': 'one', 'v': 0.0}] == [{'g': 'one', 'v': -5e-324}]
+E     
+E     At index 0 diff: {'g': 'one', 'v': 0.0} != {'g': 'one', 'v': -5e-324}
+E     Use -v to get more diff
+=========================== short test summary info ===========================
+FAILED python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late-1-records]
+FAILED python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late-1-one-pass]
+FAILED python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late--1-records]
+FAILED python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-promoted-late--1-one-pass]
+FAILED python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late-1-records]
+FAILED python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late-1-one-pass]
+FAILED python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late--1-records]
+FAILED python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-promoted-late--1-one-pass]
+FAILED python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow-1-records]
+FAILED python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow-1-one-pass]
+FAILED python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow--1-records]
+FAILED python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[normal-never-overflow--1-one-pass]
+FAILED python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow-1-records]
+FAILED python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow-1-one-pass]
+FAILED python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow--1-records]
+FAILED python/deepviz/tests/test_r17_normalizer_boundaries.py::test_sum_keeps_exact_residual_before_any_possible_promotion[tiny-never-overflow--1-one-pass]
+16 failed, 70 deselected in 0.66s

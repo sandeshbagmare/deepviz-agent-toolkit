@@ -1,0 +1,502 @@
+TAP version 13
+# Subtest: mean rounds once split-positive records
+ok 1 - mean rounds once split-positive records
+  ---
+  duration_ms: 7.0913
+  type: 'test'
+  ...
+# Subtest: mean rounds once split-positive async-one-pass
+ok 2 - mean rounds once split-positive async-one-pass
+  ---
+  duration_ms: 0.5913
+  type: 'test'
+  ...
+# Subtest: mean rounds once split-negative records
+ok 3 - mean rounds once split-negative records
+  ---
+  duration_ms: 0.4554
+  type: 'test'
+  ...
+# Subtest: mean rounds once split-negative async-one-pass
+ok 4 - mean rounds once split-negative async-one-pass
+  ---
+  duration_ms: 0.329
+  type: 'test'
+  ...
+# Subtest: mean rounds once overflow-tiny-tail records
+ok 5 - mean rounds once overflow-tiny-tail records
+  ---
+  duration_ms: 0.8822
+  type: 'test'
+  ...
+# Subtest: mean rounds once overflow-tiny-tail async-one-pass
+ok 6 - mean rounds once overflow-tiny-tail async-one-pass
+  ---
+  duration_ms: 0.3043
+  type: 'test'
+  ...
+# Subtest: mean rounds once late-overflow records
+ok 7 - mean rounds once late-overflow records
+  ---
+  duration_ms: 0.8285
+  type: 'test'
+  ...
+# Subtest: mean rounds once late-overflow async-one-pass
+ok 8 - mean rounds once late-overflow async-one-pass
+  ---
+  duration_ms: 1.0139
+  type: 'test'
+  ...
+# Subtest: mean rounds once constant-tiny records
+ok 9 - mean rounds once constant-tiny records
+  ---
+  duration_ms: 0.3657
+  type: 'test'
+  ...
+# Subtest: mean rounds once constant-tiny async-one-pass
+ok 10 - mean rounds once constant-tiny async-one-pass
+  ---
+  duration_ms: 0.6018
+  type: 'test'
+  ...
+# Subtest: mean rounds once tie-even records
+ok 11 - mean rounds once tie-even records
+  ---
+  duration_ms: 0.2381
+  type: 'test'
+  ...
+# Subtest: mean rounds once tie-even async-one-pass
+ok 12 - mean rounds once tie-even async-one-pass
+  ---
+  duration_ms: 0.1598
+  type: 'test'
+  ...
+# Subtest: mean rounds once positive-half-zero records
+ok 13 - mean rounds once positive-half-zero records
+  ---
+  duration_ms: 0.1829
+  type: 'test'
+  ...
+# Subtest: mean rounds once positive-half-zero async-one-pass
+ok 14 - mean rounds once positive-half-zero async-one-pass
+  ---
+  duration_ms: 0.2545
+  type: 'test'
+  ...
+# Subtest: mean rounds once negative-half-zero records
+ok 15 - mean rounds once negative-half-zero records
+  ---
+  duration_ms: 0.9566
+  type: 'test'
+  ...
+# Subtest: mean rounds once negative-half-zero async-one-pass
+ok 16 - mean rounds once negative-half-zero async-one-pass
+  ---
+  duration_ms: 0.1666
+  type: 'test'
+  ...
+# Subtest: mean rounds once wide-numerator records
+ok 17 - mean rounds once wide-numerator records
+  ---
+  duration_ms: 0.3636
+  type: 'test'
+  ...
+# Subtest: mean rounds once wide-numerator async-one-pass
+ok 18 - mean rounds once wide-numerator async-one-pass
+  ---
+  duration_ms: 0.8848
+  type: 'test'
+  ...
+# Subtest: mean rounds once prefix-residual records
+ok 19 - mean rounds once prefix-residual records
+  ---
+  duration_ms: 0.2318
+  type: 'test'
+  ...
+# Subtest: mean rounds once prefix-residual async-one-pass
+ok 20 - mean rounds once prefix-residual async-one-pass
+  ---
+  duration_ms: 0.3324
+  type: 'test'
+  ...
+# Subtest: other mean preserves tiny values and excludes booleans/null/numeric strings
+ok 21 - other mean preserves tiny values and excludes booleans/null/numeric strings
+  ---
+  duration_ms: 0.9705
+  type: 'test'
+  ...
+# Subtest: scalar column rows inferred object
+ok 22 - scalar column rows inferred object
+  ---
+  duration_ms: 0.6618
+  type: 'test'
+  ...
+# Subtest: scalar column rows inferred encoded-json
+ok 23 - scalar column rows inferred encoded-json
+  ---
+  duration_ms: 0.7857
+  type: 'test'
+  ...
+# Subtest: scalar column rows explicit-y object
+ok 24 - scalar column rows explicit-y object
+  ---
+  duration_ms: 0.2241
+  type: 'test'
+  ...
+# Subtest: scalar column rows explicit-y encoded-json
+ok 25 - scalar column rows explicit-y encoded-json
+  ---
+  duration_ms: 0.239
+  type: 'test'
+  ...
+# Subtest: scalar column records inferred object
+ok 26 - scalar column records inferred object
+  ---
+  duration_ms: 0.1653
+  type: 'test'
+  ...
+# Subtest: scalar column records inferred encoded-json
+ok 27 - scalar column records inferred encoded-json
+  ---
+  duration_ms: 0.1562
+  type: 'test'
+  ...
+# Subtest: scalar column records explicit-y object
+ok 28 - scalar column records explicit-y object
+  ---
+  duration_ms: 0.1917
+  type: 'test'
+  ...
+# Subtest: scalar column records explicit-y encoded-json
+ok 29 - scalar column records explicit-y encoded-json
+  ---
+  duration_ms: 0.19
+  type: 'test'
+  ...
+# Subtest: scalar column items inferred object
+ok 30 - scalar column items inferred object
+  ---
+  duration_ms: 0.2342
+  type: 'test'
+  ...
+# Subtest: scalar column items inferred encoded-json
+ok 31 - scalar column items inferred encoded-json
+  ---
+  duration_ms: 0.149
+  type: 'test'
+  ...
+# Subtest: scalar column items explicit-y object
+ok 32 - scalar column items explicit-y object
+  ---
+  duration_ms: 0.1043
+  type: 'test'
+  ...
+# Subtest: scalar column items explicit-y encoded-json
+ok 33 - scalar column items explicit-y encoded-json
+  ---
+  duration_ms: 0.1055
+  type: 'test'
+  ...
+# Subtest: scalar column results inferred object
+ok 34 - scalar column results inferred object
+  ---
+  duration_ms: 0.0854
+  type: 'test'
+  ...
+# Subtest: scalar column results inferred encoded-json
+ok 35 - scalar column results inferred encoded-json
+  ---
+  duration_ms: 0.1207
+  type: 'test'
+  ...
+# Subtest: scalar column results explicit-y object
+ok 36 - scalar column results explicit-y object
+  ---
+  duration_ms: 0.1133
+  type: 'test'
+  ...
+# Subtest: scalar column results explicit-y encoded-json
+ok 37 - scalar column results explicit-y encoded-json
+  ---
+  duration_ms: 0.1126
+  type: 'test'
+  ...
+# Subtest: scalar column data inferred object
+ok 38 - scalar column data inferred object
+  ---
+  duration_ms: 0.1109
+  type: 'test'
+  ...
+# Subtest: scalar column data inferred encoded-json
+ok 39 - scalar column data inferred encoded-json
+  ---
+  duration_ms: 0.0967
+  type: 'test'
+  ...
+# Subtest: scalar column data explicit-y object
+ok 40 - scalar column data explicit-y object
+  ---
+  duration_ms: 0.1004
+  type: 'test'
+  ...
+# Subtest: scalar column data explicit-y encoded-json
+ok 41 - scalar column data explicit-y encoded-json
+  ---
+  duration_ms: 0.1313
+  type: 'test'
+  ...
+# Subtest: scalar column nodes inferred object
+ok 42 - scalar column nodes inferred object
+  ---
+  duration_ms: 1.0679
+  type: 'test'
+  ...
+# Subtest: scalar column nodes inferred encoded-json
+ok 43 - scalar column nodes inferred encoded-json
+  ---
+  duration_ms: 0.1773
+  type: 'test'
+  ...
+# Subtest: scalar column nodes explicit-y object
+ok 44 - scalar column nodes explicit-y object
+  ---
+  duration_ms: 0.0875
+  type: 'test'
+  ...
+# Subtest: scalar column nodes explicit-y encoded-json
+ok 45 - scalar column nodes explicit-y encoded-json
+  ---
+  duration_ms: 0.1168
+  type: 'test'
+  ...
+# Subtest: scalar column edges inferred object
+ok 46 - scalar column edges inferred object
+  ---
+  duration_ms: 0.0858
+  type: 'test'
+  ...
+# Subtest: scalar column edges inferred encoded-json
+ok 47 - scalar column edges inferred encoded-json
+  ---
+  duration_ms: 0.1002
+  type: 'test'
+  ...
+# Subtest: scalar column edges explicit-y object
+ok 48 - scalar column edges explicit-y object
+  ---
+  duration_ms: 0.0769
+  type: 'test'
+  ...
+# Subtest: scalar column edges explicit-y encoded-json
+ok 49 - scalar column edges explicit-y encoded-json
+  ---
+  duration_ms: 0.0831
+  type: 'test'
+  ...
+# Subtest: scalar column pages inferred object
+ok 50 - scalar column pages inferred object
+  ---
+  duration_ms: 0.075
+  type: 'test'
+  ...
+# Subtest: scalar column pages inferred encoded-json
+ok 51 - scalar column pages inferred encoded-json
+  ---
+  duration_ms: 0.0823
+  type: 'test'
+  ...
+# Subtest: scalar column pages explicit-y object
+ok 52 - scalar column pages explicit-y object
+  ---
+  duration_ms: 0.0716
+  type: 'test'
+  ...
+# Subtest: scalar column pages explicit-y encoded-json
+ok 53 - scalar column pages explicit-y encoded-json
+  ---
+  duration_ms: 0.0802
+  type: 'test'
+  ...
+# Subtest: scalar sequence and nested flags survive records
+ok 54 - scalar sequence and nested flags survive records
+  ---
+  duration_ms: 0.3187
+  type: 'test'
+  ...
+# Subtest: scalar sequence and nested flags survive async-one-pass
+ok 55 - scalar sequence and nested flags survive async-one-pass
+  ---
+  duration_ms: 0.204
+  type: 'test'
+  ...
+# Subtest: connection nodes rejects disappearing scalar sibling object
+ok 56 - connection nodes rejects disappearing scalar sibling object
+  ---
+  duration_ms: 2.2781
+  type: 'test'
+  ...
+# Subtest: connection nodes rejects disappearing scalar sibling encoded-json
+ok 57 - connection nodes rejects disappearing scalar sibling encoded-json
+  ---
+  duration_ms: 0.336
+  type: 'test'
+  ...
+# Subtest: connection nodes rejects disappearing scalar sibling async-one-pass
+ok 58 - connection nodes rejects disappearing scalar sibling async-one-pass
+  ---
+  duration_ms: 0.4603
+  type: 'test'
+  ...
+# Subtest: connection nodes rejects disappearing object sibling object
+ok 59 - connection nodes rejects disappearing object sibling object
+  ---
+  duration_ms: 0.1816
+  type: 'test'
+  ...
+# Subtest: connection nodes rejects disappearing object sibling encoded-json
+ok 60 - connection nodes rejects disappearing object sibling encoded-json
+  ---
+  duration_ms: 0.2378
+  type: 'test'
+  ...
+# Subtest: connection nodes rejects disappearing object sibling async-one-pass
+ok 61 - connection nodes rejects disappearing object sibling async-one-pass
+  ---
+  duration_ms: 0.2062
+  type: 'test'
+  ...
+# Subtest: connection edges rejects disappearing scalar sibling object
+ok 62 - connection edges rejects disappearing scalar sibling object
+  ---
+  duration_ms: 0.3328
+  type: 'test'
+  ...
+# Subtest: connection edges rejects disappearing scalar sibling encoded-json
+ok 63 - connection edges rejects disappearing scalar sibling encoded-json
+  ---
+  duration_ms: 0.1884
+  type: 'test'
+  ...
+# Subtest: connection edges rejects disappearing scalar sibling async-one-pass
+ok 64 - connection edges rejects disappearing scalar sibling async-one-pass
+  ---
+  duration_ms: 0.1827
+  type: 'test'
+  ...
+# Subtest: connection edges rejects disappearing object sibling object
+ok 65 - connection edges rejects disappearing object sibling object
+  ---
+  duration_ms: 0.1402
+  type: 'test'
+  ...
+# Subtest: connection edges rejects disappearing object sibling encoded-json
+ok 66 - connection edges rejects disappearing object sibling encoded-json
+  ---
+  duration_ms: 0.1607
+  type: 'test'
+  ...
+# Subtest: connection edges rejects disappearing object sibling async-one-pass
+ok 67 - connection edges rejects disappearing object sibling async-one-pass
+  ---
+  duration_ms: 0.1418
+  type: 'test'
+  ...
+# Subtest: custom connection wrapper requires explicit selection
+ok 68 - custom connection wrapper requires explicit selection
+  ---
+  duration_ms: 0.2947
+  type: 'test'
+  ...
+# Subtest: known nested nodes connection preserves flags/nulls/metadata
+ok 69 - known nested nodes connection preserves flags/nulls/metadata
+  ---
+  duration_ms: 1.2878
+  type: 'test'
+  ...
+# Subtest: known nested edges connection preserves flags/nulls/metadata
+ok 70 - known nested edges connection preserves flags/nulls/metadata
+  ---
+  duration_ms: 0.5965
+  type: 'test'
+  ...
+# Subtest: late GraphQL error-only page rejects null data via list
+ok 71 - late GraphQL error-only page rejects null data via list
+  ---
+  duration_ms: 1.4746
+  type: 'test'
+  ...
+# Subtest: late GraphQL error-only page rejects null data via json
+ok 72 - late GraphQL error-only page rejects null data via json
+  ---
+  duration_ms: 2.7217
+  type: 'test'
+  ...
+# Subtest: late GraphQL error-only page rejects null data via async
+ok 73 - late GraphQL error-only page rejects null data via async
+  ---
+  duration_ms: 0.7635
+  type: 'test'
+  ...
+# Subtest: late GraphQL error-only page rejects missing data via list
+ok 74 - late GraphQL error-only page rejects missing data via list
+  ---
+  duration_ms: 0.5128
+  type: 'test'
+  ...
+# Subtest: late GraphQL error-only page rejects missing data via json
+ok 75 - late GraphQL error-only page rejects missing data via json
+  ---
+  duration_ms: 1.0425
+  type: 'test'
+  ...
+# Subtest: late GraphQL error-only page rejects missing data via async
+ok 76 - late GraphQL error-only page rejects missing data via async
+  ---
+  duration_ms: 0.9388
+  type: 'test'
+  ...
+# Subtest: late GraphQL error-only page rejects empty data via list
+ok 77 - late GraphQL error-only page rejects empty data via list
+  ---
+  duration_ms: 1.0341
+  type: 'test'
+  ...
+# Subtest: late GraphQL error-only page rejects empty data via json
+ok 78 - late GraphQL error-only page rejects empty data via json
+  ---
+  duration_ms: 0.7485
+  type: 'test'
+  ...
+# Subtest: late GraphQL error-only page rejects empty data via async
+ok 79 - late GraphQL error-only page rejects empty data via async
+  ---
+  duration_ms: 0.5744
+  type: 'test'
+  ...
+# Subtest: ordinary business errors preserve repeats via list
+ok 80 - ordinary business errors preserve repeats via list
+  ---
+  duration_ms: 0.2561
+  type: 'test'
+  ...
+# Subtest: ordinary business errors preserve repeats via json
+ok 81 - ordinary business errors preserve repeats via json
+  ---
+  duration_ms: 0.1168
+  type: 'test'
+  ...
+# Subtest: ordinary business errors preserve repeats via async
+ok 82 - ordinary business errors preserve repeats via async
+  ---
+  duration_ms: 0.1861
+  type: 'test'
+  ...
+1..82
+# tests 82
+# suites 0
+# pass 82
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 184.9581

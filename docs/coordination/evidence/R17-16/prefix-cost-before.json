@@ -1,0 +1,399 @@
+{
+  "status": "complete",
+  "trials": 1,
+  "fresh_processes": 12,
+  "max_count": 100000,
+  "results": [
+    {
+      "language": "python",
+      "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+      "source_sha256": "869be9c3c63f6d96f95d75bdbb5bcb00a41fe3dc86252cca5dc328915a1c095c",
+      "pattern": "integer",
+      "input_count": 1000,
+      "consumed": 1000,
+      "output_count": 1,
+      "expected": 1000.0,
+      "result": 1000,
+      "oracle_pass": true,
+      "elapsed_seconds": 0.0201563000009628,
+      "before_bytes": {
+        "working_set": 39952384,
+        "inclusive_peak_working_set": 39952384
+      },
+      "after_bytes": {
+        "working_set": 40210432,
+        "inclusive_peak_working_set": 40210432
+      },
+      "method": "fresh process, inclusive Windows PeakWorkingSetSize after timed public normalize; interpreter/imports included; not exclusive allocations/full native/browser cap",
+      "phase": "before",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\prefix_cost_worker.py",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+        "1000",
+        "integer"
+      ],
+      "exit": 0,
+      "log_sha256": "ba8b6dc2bb797db1f043fa202ead65e407269dcb5e906db9f5946be295cf0c57"
+    },
+    {
+      "language": "python",
+      "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+      "source_sha256": "869be9c3c63f6d96f95d75bdbb5bcb00a41fe3dc86252cca5dc328915a1c095c",
+      "pattern": "fraction",
+      "input_count": 1000,
+      "consumed": 1000,
+      "output_count": 1,
+      "expected": 100.0,
+      "result": 100.0,
+      "oracle_pass": true,
+      "elapsed_seconds": 0.011981999996351078,
+      "before_bytes": {
+        "working_set": 39862272,
+        "inclusive_peak_working_set": 39862272
+      },
+      "after_bytes": {
+        "working_set": 40120320,
+        "inclusive_peak_working_set": 40120320
+      },
+      "method": "fresh process, inclusive Windows PeakWorkingSetSize after timed public normalize; interpreter/imports included; not exclusive allocations/full native/browser cap",
+      "phase": "before",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\prefix_cost_worker.py",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+        "1000",
+        "fraction"
+      ],
+      "exit": 0,
+      "log_sha256": "6bf113eeb62efd7e4f28c42e9760d733924beee2189670aab873379d1e7142d2"
+    },
+    {
+      "language": "python",
+      "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+      "source_sha256": "869be9c3c63f6d96f95d75bdbb5bcb00a41fe3dc86252cca5dc328915a1c095c",
+      "pattern": "residual",
+      "input_count": 1000,
+      "consumed": 1000,
+      "output_count": 1,
+      "expected": 200.0,
+      "result": 0.0,
+      "oracle_pass": false,
+      "elapsed_seconds": 0.014820299998973496,
+      "before_bytes": {
+        "working_set": 39923712,
+        "inclusive_peak_working_set": 39923712
+      },
+      "after_bytes": {
+        "working_set": 40185856,
+        "inclusive_peak_working_set": 40185856
+      },
+      "method": "fresh process, inclusive Windows PeakWorkingSetSize after timed public normalize; interpreter/imports included; not exclusive allocations/full native/browser cap",
+      "phase": "before",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\prefix_cost_worker.py",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+        "1000",
+        "residual"
+      ],
+      "exit": 0,
+      "log_sha256": "c3ff646f14b0ad49e586d86979458be9a281c79a6ad1b988bfd0ab2e35503173"
+    },
+    {
+      "language": "python",
+      "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+      "source_sha256": "869be9c3c63f6d96f95d75bdbb5bcb00a41fe3dc86252cca5dc328915a1c095c",
+      "pattern": "integer",
+      "input_count": 100000,
+      "consumed": 100000,
+      "output_count": 1,
+      "expected": 100000.0,
+      "result": 100000,
+      "oracle_pass": true,
+      "elapsed_seconds": 1.1665558999957284,
+      "before_bytes": {
+        "working_set": 39895040,
+        "inclusive_peak_working_set": 39895040
+      },
+      "after_bytes": {
+        "working_set": 40251392,
+        "inclusive_peak_working_set": 40251392
+      },
+      "method": "fresh process, inclusive Windows PeakWorkingSetSize after timed public normalize; interpreter/imports included; not exclusive allocations/full native/browser cap",
+      "phase": "before",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\prefix_cost_worker.py",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+        "100000",
+        "integer"
+      ],
+      "exit": 0,
+      "log_sha256": "0ee98715d4d43e8952af510042d24e97199518fc8154704e48a6a234a042bb61"
+    },
+    {
+      "language": "python",
+      "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+      "source_sha256": "869be9c3c63f6d96f95d75bdbb5bcb00a41fe3dc86252cca5dc328915a1c095c",
+      "pattern": "fraction",
+      "input_count": 100000,
+      "consumed": 100000,
+      "output_count": 1,
+      "expected": 10000.0,
+      "result": 10000.0,
+      "oracle_pass": true,
+      "elapsed_seconds": 1.513637900003232,
+      "before_bytes": {
+        "working_set": 39981056,
+        "inclusive_peak_working_set": 39981056
+      },
+      "after_bytes": {
+        "working_set": 40333312,
+        "inclusive_peak_working_set": 40333312
+      },
+      "method": "fresh process, inclusive Windows PeakWorkingSetSize after timed public normalize; interpreter/imports included; not exclusive allocations/full native/browser cap",
+      "phase": "before",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\prefix_cost_worker.py",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+        "100000",
+        "fraction"
+      ],
+      "exit": 0,
+      "log_sha256": "5cc2f9041d2a38fa27b46d9af1647f470dc40a4b3e82fc211c9ebc9552b2348f"
+    },
+    {
+      "language": "python",
+      "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+      "source_sha256": "869be9c3c63f6d96f95d75bdbb5bcb00a41fe3dc86252cca5dc328915a1c095c",
+      "pattern": "residual",
+      "input_count": 100000,
+      "consumed": 100000,
+      "output_count": 1,
+      "expected": 20000.0,
+      "result": 0.0,
+      "oracle_pass": false,
+      "elapsed_seconds": 0.9734715999948094,
+      "before_bytes": {
+        "working_set": 39706624,
+        "inclusive_peak_working_set": 39706624
+      },
+      "after_bytes": {
+        "working_set": 40062976,
+        "inclusive_peak_working_set": 40062976
+      },
+      "method": "fresh process, inclusive Windows PeakWorkingSetSize after timed public normalize; interpreter/imports included; not exclusive allocations/full native/browser cap",
+      "phase": "before",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\prefix_cost_worker.py",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+        "100000",
+        "residual"
+      ],
+      "exit": 0,
+      "log_sha256": "e661297a14be17e26e02dc4107faa9cced4589570a752cc54e71423ec77c034d"
+    },
+    {
+      "language": "typescript",
+      "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+      "built_sha256": "c44e5bb46ccf19df98a4184b6eb75302fdb4d16af4e8090cbacc031e370761fc",
+      "pattern": "integer",
+      "input_count": 1000,
+      "consumed": 1000,
+      "output_count": 1,
+      "expected": 1000,
+      "result": 1000,
+      "oracle_pass": true,
+      "elapsed_seconds": 0.011108699999999999,
+      "before_bytes": {
+        "rss": 46153728,
+        "heapTotal": 8523776,
+        "heapUsed": 6117632,
+        "external": 2689578,
+        "arrayBuffers": 180303
+      },
+      "sampled_peak_rss_bytes": 50692096,
+      "sampled_peak_heap_used_bytes": 8673768,
+      "method": "fresh Node process; process.memoryUsage at baseline/every10000yield/finish; sampled not continuous peak or exclusive allocations/native/browser cap",
+      "phase": "before",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.EXE",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\prefix_cost_worker.mjs",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+        "1000",
+        "integer"
+      ],
+      "exit": 0,
+      "log_sha256": "7d989b7d9f5528b9927db785deadb59f5508e599d9b768ed55fc9659c9084fe4"
+    },
+    {
+      "language": "typescript",
+      "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+      "built_sha256": "c44e5bb46ccf19df98a4184b6eb75302fdb4d16af4e8090cbacc031e370761fc",
+      "pattern": "fraction",
+      "input_count": 1000,
+      "consumed": 1000,
+      "output_count": 1,
+      "expected": 100,
+      "result": 100,
+      "oracle_pass": true,
+      "elapsed_seconds": 0.008153800000000004,
+      "before_bytes": {
+        "rss": 46137344,
+        "heapTotal": 8523776,
+        "heapUsed": 6128512,
+        "external": 2689578,
+        "arrayBuffers": 180303
+      },
+      "sampled_peak_rss_bytes": 50556928,
+      "sampled_peak_heap_used_bytes": 8285792,
+      "method": "fresh Node process; process.memoryUsage at baseline/every10000yield/finish; sampled not continuous peak or exclusive allocations/native/browser cap",
+      "phase": "before",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.EXE",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\prefix_cost_worker.mjs",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+        "1000",
+        "fraction"
+      ],
+      "exit": 0,
+      "log_sha256": "4c3bf2d18d94688b50b7335e4e9cba27834f8ee651e784d1402f920859408edf"
+    },
+    {
+      "language": "typescript",
+      "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+      "built_sha256": "c44e5bb46ccf19df98a4184b6eb75302fdb4d16af4e8090cbacc031e370761fc",
+      "pattern": "residual",
+      "input_count": 1000,
+      "consumed": 1000,
+      "output_count": 1,
+      "expected": 200,
+      "result": 0,
+      "oracle_pass": false,
+      "elapsed_seconds": 0.0089576,
+      "before_bytes": {
+        "rss": 46166016,
+        "heapTotal": 8523776,
+        "heapUsed": 6118176,
+        "external": 2689578,
+        "arrayBuffers": 180303
+      },
+      "sampled_peak_rss_bytes": 50241536,
+      "sampled_peak_heap_used_bytes": 8342184,
+      "method": "fresh Node process; process.memoryUsage at baseline/every10000yield/finish; sampled not continuous peak or exclusive allocations/native/browser cap",
+      "phase": "before",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.EXE",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\prefix_cost_worker.mjs",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+        "1000",
+        "residual"
+      ],
+      "exit": 0,
+      "log_sha256": "ee9fa55d54255447b54741199ac4b610a3be687d57b5930813f6a00d7cac6e5d"
+    },
+    {
+      "language": "typescript",
+      "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+      "built_sha256": "c44e5bb46ccf19df98a4184b6eb75302fdb4d16af4e8090cbacc031e370761fc",
+      "pattern": "integer",
+      "input_count": 100000,
+      "consumed": 100000,
+      "output_count": 1,
+      "expected": 100000,
+      "result": 100000,
+      "oracle_pass": true,
+      "elapsed_seconds": 0.1803443,
+      "before_bytes": {
+        "rss": 46235648,
+        "heapTotal": 8523776,
+        "heapUsed": 6118176,
+        "external": 2689578,
+        "arrayBuffers": 180303
+      },
+      "sampled_peak_rss_bytes": 54050816,
+      "sampled_peak_heap_used_bytes": 8259424,
+      "method": "fresh Node process; process.memoryUsage at baseline/every10000yield/finish; sampled not continuous peak or exclusive allocations/native/browser cap",
+      "phase": "before",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.EXE",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\prefix_cost_worker.mjs",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+        "100000",
+        "integer"
+      ],
+      "exit": 0,
+      "log_sha256": "ce2569308f0b44490d643f090405833a725e818dd5509831db7d01161bc88f39"
+    },
+    {
+      "language": "typescript",
+      "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+      "built_sha256": "c44e5bb46ccf19df98a4184b6eb75302fdb4d16af4e8090cbacc031e370761fc",
+      "pattern": "fraction",
+      "input_count": 100000,
+      "consumed": 100000,
+      "output_count": 1,
+      "expected": 10000,
+      "result": 10000,
+      "oracle_pass": true,
+      "elapsed_seconds": 0.1653928,
+      "before_bytes": {
+        "rss": 46206976,
+        "heapTotal": 8523776,
+        "heapUsed": 6114000,
+        "external": 2689578,
+        "arrayBuffers": 180303
+      },
+      "sampled_peak_rss_bytes": 53354496,
+      "sampled_peak_heap_used_bytes": 8237848,
+      "method": "fresh Node process; process.memoryUsage at baseline/every10000yield/finish; sampled not continuous peak or exclusive allocations/native/browser cap",
+      "phase": "before",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.EXE",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\prefix_cost_worker.mjs",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+        "100000",
+        "fraction"
+      ],
+      "exit": 0,
+      "log_sha256": "10c6bd92d43850d9299a284bfab7ad3be1e451fbc92e4dfe2f2c665920d705a7"
+    },
+    {
+      "language": "typescript",
+      "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+      "built_sha256": "c44e5bb46ccf19df98a4184b6eb75302fdb4d16af4e8090cbacc031e370761fc",
+      "pattern": "residual",
+      "input_count": 100000,
+      "consumed": 100000,
+      "output_count": 1,
+      "expected": 20000,
+      "result": 0,
+      "oracle_pass": false,
+      "elapsed_seconds": 0.18202279999999998,
+      "before_bytes": {
+        "rss": 46247936,
+        "heapTotal": 8523776,
+        "heapUsed": 6140656,
+        "external": 2689578,
+        "arrayBuffers": 180303
+      },
+      "sampled_peak_rss_bytes": 54099968,
+      "sampled_peak_heap_used_bytes": 9403208,
+      "method": "fresh Node process; process.memoryUsage at baseline/every10000yield/finish; sampled not continuous peak or exclusive allocations/native/browser cap",
+      "phase": "before",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.EXE",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\prefix_cost_worker.mjs",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77-artifacts\\gp-green",
+        "100000",
+        "residual"
+      ],
+      "exit": 0,
+      "log_sha256": "9fd8a26ae45647caddb2d21b50b1348d4c9cff465d8b735a81632b395eaea1ad"
+    }
+  ],
+  "limits": "Local cost probes, single unrandomized trial, inclusive/sample memory only; not bounded 10M/current integrated-candidate signoff"
+}

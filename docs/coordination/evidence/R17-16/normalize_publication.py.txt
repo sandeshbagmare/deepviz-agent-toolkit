@@ -1,0 +1,46 @@
+"""Make NEW owned publication bytes match Git LF; preserve raw evidence hashes."""
+import hashlib
+import json
+import subprocess
+from pathlib import Path
+
+root = Path.cwd()
+dest = root / "docs/coordination/evidence/R17-16"
+assert subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip() == "546c25ea75ee9d8a41b3832aa639664bc9a683b5"
+manifest = dest / "gp-p2-publication-hashes.json"
+assert not manifest.exists(), "Preserve publication checkpoint"
+script = dest / "normalize_publication.py.txt"
+script.write_bytes(Path(__file__).read_bytes())
+paths = subprocess.check_output(["git", "ls-files", "--others", "--exclude-standard", "--", "docs/coordination/evidence/R17-16"], text=True).splitlines()
+assert paths and len(paths) < 40
+raw = {}
+for relative in paths:
+    path = root / relative
+    data = path.read_bytes()
+    assert b"\x00" not in data, relative
+    raw[relative] = hashlib.sha256(data).hexdigest()
+    path.write_bytes(data.replace(b"\r\n", b"\n"))
+
+
+def digest(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+for name in ["gp-verification.json", "p2-verification.json"]:
+    path = dest / name
+    content = json.loads(path.read_text(encoding="utf-8"))
+    for result in content["actual_runs"]:
+        if "utf8_copy_sha256" in result:
+            result["raw_utf8_copy_sha256_before_Git_LF"] = result["utf8_copy_sha256"]
+            result["utf8_copy_sha256"] = digest(dest / (result["name"] + ".log"))
+    if name == "p2-verification.json":
+        for phase in ["before", "after"]:
+            content["cost"]["raw_" + phase + "_sha256_before_Git_LF"] = content["cost"][phase + "_sha256"]
+            content["cost"][phase + "_sha256"] = digest(dest / ("prefix-cost-" + phase + ".json"))
+    content["publication_artifact_hashing"] = "NEW owned evidence copies normalized to Git LF. Raw source/log/fixture hashes unchanged; utf8_copy_sha256 and cost.*_sha256 name actual published LF bytes. Full raw-before/published-after hashes in gp-p2-publication-hashes.json, method normalize_publication.py.txt. No original oracle/source mutation."
+    path.write_bytes((json.dumps(content, indent=2) + "\n").encode("utf-8"))
+result = {"source_commit": "546c25ea75ee9d8a41b3832aa639664bc9a683b5", "status": "Actual NEW OWN evidence-only Git LF normalization; original sources/oracles/raw logs outside publication unchanged", "files": [{"path": relative, "raw_sha256": raw[relative], "published_lf_sha256": digest(root / relative)} for relative in paths]}
+manifest.write_bytes((json.dumps(result, indent=2) + "\n").encode("utf-8"))
+for item in result["files"]:
+    assert digest(root / item["path"]) == item["published_lf_sha256"]
+print(json.dumps({"exit": 0, "files": len(paths), "changed_publication_bytes": sum(item["raw_sha256"] != item["published_lf_sha256"] for item in result["files"]), "manifest_sha256": digest(manifest), "gp_summary_lf_sha256": digest(dest / "gp-verification.json"), "p2_summary_lf_sha256": digest(dest / "p2-verification.json"), "p2_final_snapshot_lf_sha256": digest(dest / "p2-final-snapshot.json")}))

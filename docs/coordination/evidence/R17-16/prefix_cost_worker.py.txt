@@ -1,0 +1,54 @@
+"""Fresh-process public SUM cost/oracle probe; MAX100K, never a scale signoff."""
+import ctypes
+import hashlib
+import importlib
+import json
+import sys
+import time
+from fractions import Fraction
+from pathlib import Path
+
+root, count_text, pattern = sys.argv[1:]
+root, count = Path(root).resolve(), int(count_text)
+assert count in [1000, 100000]
+sys.path.insert(0, str(root / "python/deepviz/src"))
+from deepviz import normalize
+
+sequence = {"integer": [1], "fraction": [0.1], "residual": [1e308, 1e200, 1.0, -1e200, -1e308]}[pattern]
+expected = float(sum(map(Fraction, sequence), Fraction()) * (count // len(sequence)))
+consumed = 0
+
+
+class Counters(ctypes.Structure):
+    _fields_ = [("cb", ctypes.c_ulong), ("faults", ctypes.c_ulong), *[(k, ctypes.c_size_t) for k in ["peak_ws", "ws", "peak_paged", "paged", "peak_nonpaged", "nonpaged", "pagefile", "peak_pagefile"]]]
+
+
+def memory():
+    counters = Counters()
+    counters.cb = ctypes.sizeof(counters)
+    kernel = ctypes.WinDLL("kernel32", use_last_error=True)
+    kernel.GetCurrentProcess.restype = ctypes.c_void_p
+    psapi = ctypes.WinDLL("psapi", use_last_error=True)
+    psapi.GetProcessMemoryInfo.argtypes = [ctypes.c_void_p, ctypes.POINTER(Counters), ctypes.c_ulong]
+    assert psapi.GetProcessMemoryInfo(kernel.GetCurrentProcess(), ctypes.byref(counters), counters.cb)
+    return {"working_set": counters.ws, "inclusive_peak_working_set": counters.peak_ws}
+
+
+def rows():
+    global consumed
+    for index in range(count):
+        consumed += 1
+        yield {"g": "one", "v": sequence[index % len(sequence)]}
+
+
+module = Path(importlib.import_module("deepviz.normalize").__file__).resolve()
+assert module == root / "python/deepviz/src/deepviz/normalize.py"
+before = memory()
+start = time.perf_counter()
+result = normalize(rows(), {"kind": "bar", "x": "g", "y": "v", "aggregation": "sum", "max_points": 10})
+elapsed = time.perf_counter() - start
+after = memory()
+assert consumed == result.input_count == count
+assert result.strategy == "sum" and result.warnings == [] and len(result.records) == 1
+value = result.records[0]["v"]
+print(json.dumps({"language": "python", "root": str(root), "source_sha256": hashlib.sha256(module.read_bytes()).hexdigest(), "pattern": pattern, "input_count": result.input_count, "consumed": consumed, "output_count": len(result.records), "expected": expected, "result": value, "oracle_pass": value == expected, "elapsed_seconds": elapsed, "before_bytes": before, "after_bytes": after, "method": "fresh process, inclusive Windows PeakWorkingSetSize after timed public normalize; interpreter/imports included; not exclusive allocations/full native/browser cap"}))

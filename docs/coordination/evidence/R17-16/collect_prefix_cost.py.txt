@@ -1,0 +1,32 @@
+"""One fresh process/trial per language/count/pattern/phase; no installs."""
+import hashlib
+import json
+import os
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+art = Path(__file__).parent
+phase, root = sys.argv[1:]
+assert phase in ["before", "after"]
+path = art / ("prefix-cost-" + phase + ".json")
+assert not path.exists(), "Do not replay a completed cost phase"
+results = []
+for language in ["python", "typescript"]:
+    command = [sys.executable, str(art / "prefix_cost_worker.py")] if language == "python" else [shutil.which("node"), str(art / "prefix_cost_worker.mjs")]
+    for count in [1000, 100000]:
+        for pattern in ["integer", "fraction", "residual"]:
+            argv = [*command, root, str(count), pattern]
+            child = subprocess.run(argv, capture_output=True, text=True, check=False, timeout=90, env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1"})
+            log = art / f"prefix-cost-{phase}-{language}-{count}-{pattern}.log"
+            log.write_text(child.stdout + child.stderr, encoding="utf-8")
+            assert child.returncode == 0, str(log)
+            result = json.loads(child.stdout)
+            result.update(phase=phase, argv=argv, exit=child.returncode, log_sha256=hashlib.sha256(log.read_bytes()).hexdigest())
+            assert result["oracle_pass"] == (phase == "after" or pattern != "residual")
+            results.append(result)
+            path.write_text(json.dumps({"status": "partial", "results": results}, indent=2) + "\n", encoding="utf-8")
+            print(json.dumps({key: result[key] for key in ["phase", "language", "pattern", "input_count", "output_count", "oracle_pass", "elapsed_seconds"]}), flush=True)
+path.write_text(json.dumps({"status": "complete", "trials": 1, "fresh_processes": len(results), "max_count": 100000, "results": results, "limits": "Local cost probes, single unrandomized trial, inclusive/sample memory only; not bounded 10M/current integrated-candidate signoff"}, indent=2) + "\n", encoding="utf-8")
+print(json.dumps({"exit": 0, "path": str(path), "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}))

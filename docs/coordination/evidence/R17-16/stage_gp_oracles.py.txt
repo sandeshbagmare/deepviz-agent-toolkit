@@ -1,0 +1,52 @@
+"""Stage immutable external GP oracles with exact OWN source/build bytes."""
+import hashlib
+import json
+import subprocess
+import sys
+from pathlib import Path
+
+root = Path.cwd()
+art = Path(__file__).parent
+label = sys.argv[1]
+assert label in {"gp-red", "gp-green"}
+dest = art / label
+assert not dest.exists(), "Preserve prior snapshot; do not overwrite"
+external = Path(r"C:\Users\bagma\AppData\Local\Temp\opencode\r10-03-echarts-numeric-x-ses_de5678315ffeDxQVEpE9V9WSTE")
+receipt = Path(r"C:\Users\bagma\deepviz-agent-toolkit\docs\coordination\evidence\R15-03\verification.json")
+expected = json.loads(receipt.read_text(encoding="utf-8"))["new_probe_worktree_sha256"]
+commit = "acb11f862dd211a0563fd3dd824b8e5f5493ffaf"
+head = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+assert not subprocess.check_output(["git", "diff", "HEAD", "--", "python/deepviz/src", "packages/deepviz/src"])
+items = []
+
+
+def copy(source, relative, kind, committed=None):
+    data = source.read_bytes()
+    digest = hashlib.sha256(data).hexdigest()
+    if committed is not None:
+        assert data == committed, str(source)
+    target = dest / relative
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_bytes(data)
+    assert target.read_bytes() == data
+    items.append({"kind": kind, "original": str(source), "loaded_copy": str(target), "relative": relative, "sha256": digest, "bytes": len(data)})
+
+
+for relative, digest in expected.items():
+    source = external / relative
+    assert hashlib.sha256(source.read_bytes()).hexdigest() == digest
+    blob = subprocess.check_output(["git", "-C", str(external), "show", commit + ":" + relative])
+    copy(source, relative, "unchanged-published-external-probe", blob)
+paths = subprocess.check_output(["git", "ls-tree", "-r", "--name-only", "HEAD", "--", "python/deepviz/src"], text=True).splitlines()
+for relative in paths:
+    if relative.endswith(".py"):
+        copy(root / relative, relative, "own-committed-python", subprocess.check_output(["git", "show", "HEAD:" + relative]))
+for source in (root / "packages/deepviz/dist").glob("*"):
+    if source.is_file():
+        copy(source, source.relative_to(root).as_posix(), "own-build-output")
+for relative in ["package.json", "packages/deepviz/package.json"]:
+    copy(root / relative, relative, "own-package-metadata", subprocess.check_output(["git", "show", "HEAD:" + relative]))
+result = {"label": label, "own_source_commit": head, "source_clean": True, "external_probe_commit": commit, "external_expected_hash_receipt": str(receipt), "external_probes_verified": len(expected), "fixture_root": str(dest), "files": items, "method": "Exact source/probe copy into unique portable root preserves existing relative-import/location guard, no oracle edits, no writes to external worktree, no install"}
+path = art / (label + "-snapshot.json")
+path.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+print(json.dumps({"snapshot": str(path), "fixture_root": str(dest), "probes_verified": len(expected), "files": len(items), "sha256": hashlib.sha256(path.read_bytes()).hexdigest(), "source_commit": head}))

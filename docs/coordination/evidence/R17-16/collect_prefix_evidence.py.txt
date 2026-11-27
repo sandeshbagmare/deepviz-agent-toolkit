@@ -1,0 +1,87 @@
+"""Freeze exact P2 source/test/build, strict RED/GREEN, costs and honest limits."""
+import hashlib
+import json
+import re
+import subprocess
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+root, art = Path.cwd(), Path(__file__).parent
+dest = root / "docs/coordination/evidence/R17-16"
+head = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+assert head == "546c25ea75ee9d8a41b3832aa639664bc9a683b5"
+
+
+def digest(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def text(path):
+    data = path.read_bytes()
+    return data.decode("utf-16" if data.startswith((b"\xff\xfe", b"\xfe\xff")) else "utf-8-sig").replace("\r\n", "\n")
+
+
+runs = []
+for name, code, command, totals in [
+    ("p2-own-red", 1, "python -m pytest python/deepviz/tests/test_r17_normalizer_boundaries.py -k sum_keeps_exact_residual -q --tb=short -p no:cacheprovider --basetemp <ART>/pytest-p2-own-red --junitxml <ART>/p2-own-red.xml", (16, 16)),
+    ("p2-scoped", 0, "python -m pytest python/deepviz/tests/test_r17_normalizer_boundaries.py python/deepviz/tests/test_n04_shape_policy.py python/deepviz/tests/test_normalize.py python/deepviz/tests/test_aggregation_semantics.py python/deepviz/tests/test_r07_finite_overflow.py -q --tb=short -p no:cacheprovider --basetemp <ART>/pytest-p2-scoped --junitxml <ART>/p2-scoped.xml", (239, 0)),
+    ("p2-immutable", 0, "PYTHONPATH=<OWN>/python/deepviz/src R13_BASE_PYTHONPATH=<ART>/prefix-base-6d0/python/deepviz/src python -m pytest <ART>/prefix-r13-immutable/test_sum_review.py -q --tb=short -p no:cacheprovider --basetemp <ART>/pytest-p2-immutable --junitxml <ART>/p2-immutable.xml", (67, 0)),
+    ("p2-final-gp", 0, "PYTHONPATH=<ART>/p2-final/python/deepviz/src python -m pytest <ART>/p2-final/tests/r15_probes/role03/test_graphql_pages.py -q --tb=short -p no:cacheprovider --basetemp <ART>/pytest-p2-final-gp --junitxml <ART>/p2-final-gp.xml", (73, 0)),
+    ("p2-resource-policy", 1, "python -m pytest tests/test_n11_resource_policy.py -q --tb=short -p no:cacheprovider --basetemp <ART>/pytest-p2-resource-policy --junitxml <ART>/p2-resource-policy.xml", (26, 4)),
+]:
+    xml = art / (name + ".xml")
+    suite = ET.parse(xml).getroot().find("testsuite")
+    assert suite is not None
+    result = {field: int(suite.attrib[field]) for field in ["tests", "failures", "errors", "skipped"]}
+    assert (result["tests"], result["failures"]) == totals and result["errors"] == result["skipped"] == 0
+    result.update(name=name + "-python", exit=code, command=command, seconds=float(suite.attrib["time"]), raw_junit_sha256=digest(xml), failed_ids=[case.attrib["classname"] + "::" + case.attrib["name"] for case in suite.findall("testcase") if case.find("failure") is not None])
+    log = art / (name + ("-python.log" if name != "p2-own-red" else "-python.log"))
+    result["raw_log_sha256"] = digest(log)
+    target = dest / log.name
+    target.write_text(text(log), encoding="utf-8")
+    result["utf8_copy_sha256"] = digest(target)
+    runs.append(result)
+for name, code, command, totals in [
+    ("p2-own-red-node", 1, "node --test --test-reporter=tap --test-name-pattern='exact prefix SUM' packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs", (16, 0, 16)),
+    ("p2-own-green-node", 0, "node --test --test-reporter=tap packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs", (98, 98, 0)),
+    ("p2-immutable-node", 0, "R13_TS_MODULE=<OWN>/packages/deepviz/dist/index.js R13_BASE_TS_MODULE=<ART>/prefix-base-6d0/packages/deepviz/dist/index.js node --test --test-reporter=tap <ART>/prefix-r13-immutable/sum-review.test.mjs", (63, 63, 0)),
+    ("p2-final-gp-node", 0, "node --test --test-reporter=tap <ART>/p2-final/tests/r15_probes/role03/graphql-pages.test.mjs", (73, 73, 0)),
+    ("p2-npm-test", 0, "npm test", (367, 367, 0)),
+]:
+    source = art / (name + ".log")
+    content = text(source)
+    result = {"name": name, "command": command, "exit": code, "raw_log_sha256": digest(source)}
+    for field in ["tests", "pass", "fail", "skipped", "cancelled", "todo", "duration_ms"]:
+        match = re.search(r"(?m)^\S+ " + field + r" ([\d.]+)$", content)
+        assert match, (name, field)
+        result[field] = float(match[1]) if field == "duration_ms" else int(match[1])
+    assert (result["tests"], result["pass"], result["fail"]) == totals and result["skipped"] == result["cancelled"] == result["todo"] == 0
+    result["failed_ids"] = re.findall(r"(?m)^not ok \d+ - (.*)$", content)
+    target = dest / source.name
+    target.write_text(content, encoding="utf-8")
+    result["utf8_copy_sha256"] = digest(target)
+    runs.append(result)
+for name in ["prefix-cost-before.json", "prefix-cost-after.json", "prefix-oracle-identity.json", "p2-final-snapshot.json"]:
+    (dest / name).write_bytes((art / name).read_bytes())
+for name in ["prefix_cost_worker.py", "prefix_cost_worker.mjs", "collect_prefix_cost.py", "stage_prefix_oracles.py", "collect_prefix_evidence.py"]:
+    (dest / (name + ".txt")).write_bytes((art / name).read_bytes())
+(dest / "stage_gp_final.py.txt").write_bytes((art / "stage_gp_oracles.py").read_bytes())
+files = {}
+owned = ["python/deepviz/src/deepviz/normalize.py", "packages/deepviz/src/normalize.ts", "python/deepviz/tests/test_r17_normalizer_boundaries.py", "packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs"]
+unchanged = ["python/deepviz/src/deepviz/models.py", "packages/deepviz/src/models.ts", "schemas/chart-spec.schema.json", "packages/deepviz/src/chart-spec.schema.json", "tests/test_n11_resource_policy.py"]
+for relative in owned + unchanged:
+    data = (root / relative).read_bytes()
+    assert data == subprocess.check_output(["git", "show", head + ":" + relative])
+    if relative in unchanged:
+        assert data == subprocess.check_output(["git", "show", "ec9f669eff28cd5351da142765b7755e3b2f484f:" + relative])
+    files[relative] = hashlib.sha256(data).hexdigest()
+built = {path.relative_to(root).as_posix(): digest(path) for path in (root / "packages/deepviz/dist").glob("*") if path.is_file()}
+for cost in json.loads((art / "prefix-cost-after.json").read_text())["results"]:
+    assert cost["oracle_pass"] and cost["consumed"] == cost["input_count"] and cost["output_count"] == 1
+    assert cost.get("source_sha256", files[owned[0]]) == files[owned[0]]
+    assert cost.get("built_sha256", built["packages/deepviz/dist/normalize.js"]) == built["packages/deepviz/dist/normalize.js"]
+commands = [{"command": command, "exit": 0, "raw_log_sha256": digest(art / (name + ".log"))} for name, command in [("p2-npm-build", "npm run build"), ("p2-npm-typecheck", "npm run typecheck"), ("p2-npm-schema-check", "npm run schema:check"), ("p2-npm-pack-dry-run", "npm pack --dry-run --workspace @deepviz/agent-toolkit"), ("p2-ruff", "python -m ruff check ."), ("p2-mypy", "python -m mypy python/deepviz/src/deepviz python/deepviz/tests/test_r17_normalizer_boundaries.py --cache-dir <ART>/mypy-p2")]]
+summary = {"source_commit": head, "source_parent": "c5ab299a9ecfd9938e677b04ec146b180835a314", "branch": "fix/r17-normalizer-boundaries", "source_clean": True, "scope": "P2 R13-01-F1 early exact-prefix repair; Python pure-integer/TS safe-integer fast path, one budgeted units integer/bigint; unchanged caps/models/schemas/oracles", "actual_runs": runs, "commands": commands, "committed_hashes": files, "own_built_hashes": built, "cost": {"before_sha256": digest(dest / "prefix-cost-before.json"), "after_sha256": digest(dest / "prefix-cost-after.json"), "fresh_processes": 24, "max_input": 100000, "before_residual_accuracy_failures": 4, "after_accuracy_failures": 0, "limits": "one unrandomized trial, 1group, Python inclusive peak/Node RSS+heap sampling; NOT exclusive/native/browser/10M proof. 100K residual cost Python1.956x/TS1.193x; TSfraction1.277x, disclose accuracy cost"}, "publication": {"safe_identity": json.loads(text(art / "p2-github-pre-push.json")), "push_exit": 0, "readback_exit": 0, "readback": text(art / "p2-remote-readback.txt").strip(), "push_raw_log_sha256": digest(art / "p2-push.log")}, "limits": ["Known 4 resource field-policy strict RED remain (4096B names versus 64KiB key oracles), not waived or changed; 22 resource controls pass", "Initial P1 full non-scale known failures/skips/errors retained in p1-summary; corrected schema prerequisite separately. No old renderer/whole-format/scale replay", "No npm ci/install/shared environment mutation; missing hatchling distribution build not promoted to pass", "Not 10M/final integrated candidate/CI/independent reviewer or tester signoff; no issue/PR mutation", "Python 16-case RED selected 70 others out; later 239-file subset is not the full Python suite", "External 5 R13 probes and 8 GP probes unchanged, producer rerun NOT fresh independent approval"]}
+path = dest / "p2-verification.json"
+path.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
+print(json.dumps({"exit": 0, "path": str(path), "sha256": digest(path), "runs": len(runs), "commands": len(commands), "source_commit": head}))

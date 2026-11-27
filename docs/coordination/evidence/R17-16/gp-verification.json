@@ -1,0 +1,196 @@
+{
+  "source_commit": "c5ab299a9ecfd9938e677b04ec146b180835a314",
+  "red_source_commit": "efcf37097cb52aa7e831fc6ad28346e1dde2c248",
+  "own_branch": "fix/r17-normalizer-boundaries",
+  "status": "Scoped GP-ERR-CARRIER producer fix/retest, not final integrated independent signoff",
+  "immutable_external_oracle_commit": "acb11f862dd211a0563fd3dd824b8e5f5493ffaf",
+  "actual_runs": [
+    {
+      "name": "gp-immutable-red-node",
+      "command": "node --test --test-reporter=tap <ART>/gp-red/tests/r15_probes/role03/graphql-pages.test.mjs",
+      "exit": 1,
+      "raw_log_sha256": "114130b3b596bf744bacc81b766312c6f349c4e606aceb8703fe8f53f655ac36",
+      "tests": 73,
+      "pass": 67,
+      "fail": 6,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0,
+      "duration_ms": 288.3659,
+      "failed_ids": [
+        "late-invalid-after-prefix-and-empty:error-only-response:auto:list",
+        "late-invalid-after-prefix-and-empty:error-only-response:auto:json",
+        "late-invalid-after-prefix-and-empty:error-only-no-data:auto:list",
+        "late-invalid-after-prefix-and-empty:error-only-no-data:auto:json",
+        "late-invalid-after-prefix-and-empty:error-only-empty-data:auto:list",
+        "late-invalid-after-prefix-and-empty:error-only-empty-data:auto:json"
+      ],
+      "utf8_copy_sha256": "90203a5043948bcf47bedb45782d71598a2898472a2583ba3ff82bb4bf44de9d",
+      "raw_utf8_copy_sha256_before_Git_LF": "25dee71c04d25bf71d5c36f25bbfc30ebc3bd307cbbd653aaed29b7d82fd7f21"
+    },
+    {
+      "name": "gp-immutable-green-node",
+      "command": "node --test --test-reporter=tap <ART>/gp-green/tests/r15_probes/role03/graphql-pages.test.mjs",
+      "exit": 0,
+      "raw_log_sha256": "d4d045fc72f1ec636b75fb0ca402e2aad29351baa9a0cfadc83e5ea737672685",
+      "tests": 73,
+      "pass": 73,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0,
+      "duration_ms": 213.9772,
+      "failed_ids": [],
+      "utf8_copy_sha256": "58ed0f02241f48270c0a5f2a0ea19dc00ea93f85f58c225b53e3a87c4ae5cd4f",
+      "raw_utf8_copy_sha256_before_Git_LF": "a41eb80e2f869d9c7ba4a467a5bf92078398a19f2ff51a85b928c95c922f8602"
+    },
+    {
+      "name": "gp-own-red-node",
+      "command": "node --test --test-reporter=tap packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs",
+      "exit": 1,
+      "raw_log_sha256": "8b9758d2227aeeb7f3a02ac860d1f0476b049a83fefe9d814d2eadb2e4a608bd",
+      "tests": 82,
+      "pass": 76,
+      "fail": 6,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0,
+      "duration_ms": 203.7675,
+      "failed_ids": [
+        "late GraphQL error-only page rejects null data via list",
+        "late GraphQL error-only page rejects null data via json",
+        "late GraphQL error-only page rejects missing data via list",
+        "late GraphQL error-only page rejects missing data via json",
+        "late GraphQL error-only page rejects empty data via list",
+        "late GraphQL error-only page rejects empty data via json"
+      ],
+      "utf8_copy_sha256": "2c28b85f4aeb86cd28c423d9dfc9c6a4f96e64eb3b080d7ece4ec8199d9f2344",
+      "raw_utf8_copy_sha256_before_Git_LF": "5eb346b7179daea088864457c576455119249f637f2c8f26c71d7ae8dbaec853"
+    },
+    {
+      "name": "gp-own-green-node",
+      "command": "node --test --test-reporter=tap packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs",
+      "exit": 0,
+      "raw_log_sha256": "c6189cb79bc591ed51aa388d0c6e73d4b3d741d252f2bda45e38d28cbddd0b0d",
+      "tests": 82,
+      "pass": 82,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0,
+      "duration_ms": 184.9581,
+      "failed_ids": [],
+      "utf8_copy_sha256": "adb771f51b15ade4dfc2c0b5b4f50ea83ce1b4411c7548c37e09b3da7851e7bc",
+      "raw_utf8_copy_sha256_before_Git_LF": "9b3724d8b8796ec97db8129a310c603136087dea456b6139163b9f95bb5f1f5c"
+    },
+    {
+      "name": "gp-npm-test",
+      "command": "npm test",
+      "exit": 0,
+      "raw_log_sha256": "66fec61cc4c48a6c653feee7439685d6c989cc6267bab3cd1da244477085346c",
+      "tests": 351,
+      "pass": 351,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0,
+      "duration_ms": 3801.7484,
+      "failed_ids": [],
+      "utf8_copy_sha256": "7bd374f1a14e0c671e73578a4c1d9dba051a477f4e9866f4c365d27e4f98e616",
+      "raw_utf8_copy_sha256_before_Git_LF": "c3cd13fb91861ee9788c8a3812af343556b7670c244bfdf0534c1aa1ba50642f"
+    },
+    {
+      "tests": "73",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "time": "0.858",
+      "name": "gp-immutable-red-python",
+      "exit": 0,
+      "command": "PYTHONPATH=<ART>/gp-red/python/deepviz/src python -m pytest <ART>/gp-red/tests/r15_probes/role03/test_graphql_pages.py -q --tb=short -p no:cacheprovider --basetemp <ART>/pytest-gp-immutable-red --junitxml <ART>/gp-immutable-red.xml",
+      "raw_junit_sha256": "f26196dc605aeace4ea287c0729b69cfc1f3cb7d4213264df16c573e311277b0"
+    },
+    {
+      "tests": "73",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "time": "0.626",
+      "name": "gp-immutable-green-python",
+      "exit": 0,
+      "command": "PYTHONPATH=<ART>/gp-green/python/deepviz/src python -m pytest <ART>/gp-green/tests/r15_probes/role03/test_graphql_pages.py -q --tb=short -p no:cacheprovider --basetemp <ART>/pytest-gp-immutable-green --junitxml <ART>/gp-immutable-green.xml",
+      "raw_junit_sha256": "36e1c5fdcbd422ea4f10058bc1b0dcede682b0e1843aa19628e79723230b9513"
+    }
+  ],
+  "commands": [
+    {
+      "command": "npm run build",
+      "exit": 0,
+      "raw_log_sha256": "54663bc0db3ea6b28614ed2ceb4972d5a7f39add82ae76ac81c7dc94d0f1210a"
+    },
+    {
+      "command": "npm run typecheck",
+      "exit": 0,
+      "raw_log_sha256": "9d4faa42627cce5bfbf96de4e79491b65a667227c10f83c8c032b8776432e971"
+    },
+    {
+      "command": "npm run schema:check",
+      "exit": 0,
+      "raw_log_sha256": "a56d2c024f92711d17f9b699a4ba9c10d952f2702a581b74ea60ec824b68c6b2"
+    },
+    {
+      "command": "npm pack --dry-run --workspace @deepviz/agent-toolkit",
+      "exit": 0,
+      "raw_log_sha256": "edc1151e0af111bdcd90aa1127d9573e7ef4b77cb8b60329a54a8ddf8359dc52"
+    },
+    {
+      "command": "python -m ruff check .",
+      "exit": 0,
+      "raw_log_sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    {
+      "command": "python -m mypy python/deepviz/src/deepviz python/deepviz/tests/test_r17_normalizer_boundaries.py --cache-dir <ART>/mypy-gp",
+      "exit": 0,
+      "raw_log_sha256": "f338801c86ba1cc9449bfc736adce1bdc79c2b319b89e3df10cc05c52940e450"
+    }
+  ],
+  "committed_file_hashes": {
+    "python/deepviz/src/deepviz/normalize.py": "869be9c3c63f6d96f95d75bdbb5bcb00a41fe3dc86252cca5dc328915a1c095c",
+    "packages/deepviz/src/normalize.ts": "59cae2e00f46fb99ae5a73c3dec469efb76178095049160aecbd98808cd076fd",
+    "python/deepviz/src/deepviz/models.py": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+    "packages/deepviz/src/models.ts": "d43d5ae0bef1d43f251ed71899a9b507c6575562e4403bd2e2ac02bd7caa43e6",
+    "schemas/chart-spec.schema.json": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+    "packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs": "81a5f2d229ea87b91dae3f63242da2fbc4667473c5301b33b935d34e56243019"
+  },
+  "publication": {
+    "safe_identity": {
+      "at_utc": "2026-11-27T16:17:16.495713+00:00",
+      "branch_status": 200,
+      "login": "sandeshbagmare",
+      "owned_branch": "fix/r17-normalizer-boundaries",
+      "phase": "R17-GP-fixed-pre-push",
+      "pr31_draft": true,
+      "pr31_head": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "pr31_merged": false,
+      "pr31_state": "open",
+      "pr31_status": 200,
+      "push_permission": true,
+      "remote_branch_sha": "efcf37097cb52aa7e831fc6ad28346e1dde2c248",
+      "repo": "sandeshbagmare/deepviz-agent-toolkit",
+      "repo_status": 200,
+      "user_status": 200
+    },
+    "push_exit": 0,
+    "readback_exit": 0,
+    "readback": "c5ab299a9ecfd9938e677b04ec146b180835a314\trefs/heads/fix/r17-normalizer-boundaries",
+    "push_raw_log_sha256": "c58510166997112ef38f89dacb7d9bfd93d3860a2d5fab073c405cccdbf6d55f"
+  },
+  "limits": [
+    "P2 pre-promotion SUM residual accuracy remains open at this source",
+    "Full non-scale known failures, 4field-policy RED, Python distribution hatchling missing remain unmet",
+    "No installs/shared environment mutation/browser/scale replay",
+    "No 10M/current-final-head scale or CI claim",
+    "Original independent tests copied verbatim for portable relative-import guards; producer rerun is not a fresh independent review"
+  ],
+  "publication_artifact_hashing": "NEW owned evidence copies normalized to Git LF. Raw source/log/fixture hashes unchanged; utf8_copy_sha256 and cost.*_sha256 name actual published LF bytes. Full raw-before/published-after hashes in gp-p2-publication-hashes.json, method normalize_publication.py.txt. No original oracle/source mutation."
+}

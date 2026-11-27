@@ -1,0 +1,592 @@
+TAP version 13
+# Subtest: mean rounds once split-positive records
+ok 1 - mean rounds once split-positive records
+  ---
+  duration_ms: 7.1988
+  type: 'test'
+  ...
+# Subtest: mean rounds once split-positive async-one-pass
+ok 2 - mean rounds once split-positive async-one-pass
+  ---
+  duration_ms: 0.6764
+  type: 'test'
+  ...
+# Subtest: mean rounds once split-negative records
+ok 3 - mean rounds once split-negative records
+  ---
+  duration_ms: 0.6671
+  type: 'test'
+  ...
+# Subtest: mean rounds once split-negative async-one-pass
+ok 4 - mean rounds once split-negative async-one-pass
+  ---
+  duration_ms: 0.5076
+  type: 'test'
+  ...
+# Subtest: mean rounds once overflow-tiny-tail records
+ok 5 - mean rounds once overflow-tiny-tail records
+  ---
+  duration_ms: 0.4726
+  type: 'test'
+  ...
+# Subtest: mean rounds once overflow-tiny-tail async-one-pass
+ok 6 - mean rounds once overflow-tiny-tail async-one-pass
+  ---
+  duration_ms: 0.6009
+  type: 'test'
+  ...
+# Subtest: mean rounds once late-overflow records
+ok 7 - mean rounds once late-overflow records
+  ---
+  duration_ms: 0.7663
+  type: 'test'
+  ...
+# Subtest: mean rounds once late-overflow async-one-pass
+ok 8 - mean rounds once late-overflow async-one-pass
+  ---
+  duration_ms: 1.0191
+  type: 'test'
+  ...
+# Subtest: mean rounds once constant-tiny records
+ok 9 - mean rounds once constant-tiny records
+  ---
+  duration_ms: 0.3431
+  type: 'test'
+  ...
+# Subtest: mean rounds once constant-tiny async-one-pass
+ok 10 - mean rounds once constant-tiny async-one-pass
+  ---
+  duration_ms: 0.3753
+  type: 'test'
+  ...
+# Subtest: mean rounds once tie-even records
+ok 11 - mean rounds once tie-even records
+  ---
+  duration_ms: 0.1879
+  type: 'test'
+  ...
+# Subtest: mean rounds once tie-even async-one-pass
+ok 12 - mean rounds once tie-even async-one-pass
+  ---
+  duration_ms: 0.16
+  type: 'test'
+  ...
+# Subtest: mean rounds once positive-half-zero records
+ok 13 - mean rounds once positive-half-zero records
+  ---
+  duration_ms: 0.1288
+  type: 'test'
+  ...
+# Subtest: mean rounds once positive-half-zero async-one-pass
+ok 14 - mean rounds once positive-half-zero async-one-pass
+  ---
+  duration_ms: 0.1993
+  type: 'test'
+  ...
+# Subtest: mean rounds once negative-half-zero records
+ok 15 - mean rounds once negative-half-zero records
+  ---
+  duration_ms: 0.9421
+  type: 'test'
+  ...
+# Subtest: mean rounds once negative-half-zero async-one-pass
+ok 16 - mean rounds once negative-half-zero async-one-pass
+  ---
+  duration_ms: 0.2236
+  type: 'test'
+  ...
+# Subtest: mean rounds once wide-numerator records
+ok 17 - mean rounds once wide-numerator records
+  ---
+  duration_ms: 0.4493
+  type: 'test'
+  ...
+# Subtest: mean rounds once wide-numerator async-one-pass
+ok 18 - mean rounds once wide-numerator async-one-pass
+  ---
+  duration_ms: 0.7666
+  type: 'test'
+  ...
+# Subtest: mean rounds once prefix-residual records
+ok 19 - mean rounds once prefix-residual records
+  ---
+  duration_ms: 0.9126
+  type: 'test'
+  ...
+# Subtest: mean rounds once prefix-residual async-one-pass
+ok 20 - mean rounds once prefix-residual async-one-pass
+  ---
+  duration_ms: 0.2442
+  type: 'test'
+  ...
+# Subtest: other mean preserves tiny values and excludes booleans/null/numeric strings
+ok 21 - other mean preserves tiny values and excludes booleans/null/numeric strings
+  ---
+  duration_ms: 0.6494
+  type: 'test'
+  ...
+# Subtest: scalar column rows inferred object
+ok 22 - scalar column rows inferred object
+  ---
+  duration_ms: 0.3193
+  type: 'test'
+  ...
+# Subtest: scalar column rows inferred encoded-json
+ok 23 - scalar column rows inferred encoded-json
+  ---
+  duration_ms: 0.5565
+  type: 'test'
+  ...
+# Subtest: scalar column rows explicit-y object
+ok 24 - scalar column rows explicit-y object
+  ---
+  duration_ms: 0.1958
+  type: 'test'
+  ...
+# Subtest: scalar column rows explicit-y encoded-json
+ok 25 - scalar column rows explicit-y encoded-json
+  ---
+  duration_ms: 0.1863
+  type: 'test'
+  ...
+# Subtest: scalar column records inferred object
+ok 26 - scalar column records inferred object
+  ---
+  duration_ms: 0.1392
+  type: 'test'
+  ...
+# Subtest: scalar column records inferred encoded-json
+ok 27 - scalar column records inferred encoded-json
+  ---
+  duration_ms: 0.1804
+  type: 'test'
+  ...
+# Subtest: scalar column records explicit-y object
+ok 28 - scalar column records explicit-y object
+  ---
+  duration_ms: 0.1054
+  type: 'test'
+  ...
+# Subtest: scalar column records explicit-y encoded-json
+ok 29 - scalar column records explicit-y encoded-json
+  ---
+  duration_ms: 0.1187
+  type: 'test'
+  ...
+# Subtest: scalar column items inferred object
+ok 30 - scalar column items inferred object
+  ---
+  duration_ms: 0.1521
+  type: 'test'
+  ...
+# Subtest: scalar column items inferred encoded-json
+ok 31 - scalar column items inferred encoded-json
+  ---
+  duration_ms: 0.1373
+  type: 'test'
+  ...
+# Subtest: scalar column items explicit-y object
+ok 32 - scalar column items explicit-y object
+  ---
+  duration_ms: 0.1064
+  type: 'test'
+  ...
+# Subtest: scalar column items explicit-y encoded-json
+ok 33 - scalar column items explicit-y encoded-json
+  ---
+  duration_ms: 0.1394
+  type: 'test'
+  ...
+# Subtest: scalar column results inferred object
+ok 34 - scalar column results inferred object
+  ---
+  duration_ms: 0.0948
+  type: 'test'
+  ...
+# Subtest: scalar column results inferred encoded-json
+ok 35 - scalar column results inferred encoded-json
+  ---
+  duration_ms: 0.1622
+  type: 'test'
+  ...
+# Subtest: scalar column results explicit-y object
+ok 36 - scalar column results explicit-y object
+  ---
+  duration_ms: 0.1794
+  type: 'test'
+  ...
+# Subtest: scalar column results explicit-y encoded-json
+ok 37 - scalar column results explicit-y encoded-json
+  ---
+  duration_ms: 0.1914
+  type: 'test'
+  ...
+# Subtest: scalar column data inferred object
+ok 38 - scalar column data inferred object
+  ---
+  duration_ms: 0.0995
+  type: 'test'
+  ...
+# Subtest: scalar column data inferred encoded-json
+ok 39 - scalar column data inferred encoded-json
+  ---
+  duration_ms: 0.1167
+  type: 'test'
+  ...
+# Subtest: scalar column data explicit-y object
+ok 40 - scalar column data explicit-y object
+  ---
+  duration_ms: 0.0814
+  type: 'test'
+  ...
+# Subtest: scalar column data explicit-y encoded-json
+ok 41 - scalar column data explicit-y encoded-json
+  ---
+  duration_ms: 0.1193
+  type: 'test'
+  ...
+# Subtest: scalar column nodes inferred object
+ok 42 - scalar column nodes inferred object
+  ---
+  duration_ms: 0.1603
+  type: 'test'
+  ...
+# Subtest: scalar column nodes inferred encoded-json
+ok 43 - scalar column nodes inferred encoded-json
+  ---
+  duration_ms: 0.1994
+  type: 'test'
+  ...
+# Subtest: scalar column nodes explicit-y object
+ok 44 - scalar column nodes explicit-y object
+  ---
+  duration_ms: 0.0959
+  type: 'test'
+  ...
+# Subtest: scalar column nodes explicit-y encoded-json
+ok 45 - scalar column nodes explicit-y encoded-json
+  ---
+  duration_ms: 0.143
+  type: 'test'
+  ...
+# Subtest: scalar column edges inferred object
+ok 46 - scalar column edges inferred object
+  ---
+  duration_ms: 0.1088
+  type: 'test'
+  ...
+# Subtest: scalar column edges inferred encoded-json
+ok 47 - scalar column edges inferred encoded-json
+  ---
+  duration_ms: 0.1075
+  type: 'test'
+  ...
+# Subtest: scalar column edges explicit-y object
+ok 48 - scalar column edges explicit-y object
+  ---
+  duration_ms: 0.0797
+  type: 'test'
+  ...
+# Subtest: scalar column edges explicit-y encoded-json
+ok 49 - scalar column edges explicit-y encoded-json
+  ---
+  duration_ms: 0.1002
+  type: 'test'
+  ...
+# Subtest: scalar column pages inferred object
+ok 50 - scalar column pages inferred object
+  ---
+  duration_ms: 0.083
+  type: 'test'
+  ...
+# Subtest: scalar column pages inferred encoded-json
+ok 51 - scalar column pages inferred encoded-json
+  ---
+  duration_ms: 0.0896
+  type: 'test'
+  ...
+# Subtest: scalar column pages explicit-y object
+ok 52 - scalar column pages explicit-y object
+  ---
+  duration_ms: 0.0728
+  type: 'test'
+  ...
+# Subtest: scalar column pages explicit-y encoded-json
+ok 53 - scalar column pages explicit-y encoded-json
+  ---
+  duration_ms: 0.0871
+  type: 'test'
+  ...
+# Subtest: scalar sequence and nested flags survive records
+ok 54 - scalar sequence and nested flags survive records
+  ---
+  duration_ms: 0.3417
+  type: 'test'
+  ...
+# Subtest: scalar sequence and nested flags survive async-one-pass
+ok 55 - scalar sequence and nested flags survive async-one-pass
+  ---
+  duration_ms: 0.2105
+  type: 'test'
+  ...
+# Subtest: connection nodes rejects disappearing scalar sibling object
+ok 56 - connection nodes rejects disappearing scalar sibling object
+  ---
+  duration_ms: 0.9403
+  type: 'test'
+  ...
+# Subtest: connection nodes rejects disappearing scalar sibling encoded-json
+ok 57 - connection nodes rejects disappearing scalar sibling encoded-json
+  ---
+  duration_ms: 0.2168
+  type: 'test'
+  ...
+# Subtest: connection nodes rejects disappearing scalar sibling async-one-pass
+ok 58 - connection nodes rejects disappearing scalar sibling async-one-pass
+  ---
+  duration_ms: 0.3383
+  type: 'test'
+  ...
+# Subtest: connection nodes rejects disappearing object sibling object
+ok 59 - connection nodes rejects disappearing object sibling object
+  ---
+  duration_ms: 0.1351
+  type: 'test'
+  ...
+# Subtest: connection nodes rejects disappearing object sibling encoded-json
+ok 60 - connection nodes rejects disappearing object sibling encoded-json
+  ---
+  duration_ms: 0.1418
+  type: 'test'
+  ...
+# Subtest: connection nodes rejects disappearing object sibling async-one-pass
+ok 61 - connection nodes rejects disappearing object sibling async-one-pass
+  ---
+  duration_ms: 0.1592
+  type: 'test'
+  ...
+# Subtest: connection edges rejects disappearing scalar sibling object
+ok 62 - connection edges rejects disappearing scalar sibling object
+  ---
+  duration_ms: 0.23
+  type: 'test'
+  ...
+# Subtest: connection edges rejects disappearing scalar sibling encoded-json
+ok 63 - connection edges rejects disappearing scalar sibling encoded-json
+  ---
+  duration_ms: 0.155
+  type: 'test'
+  ...
+# Subtest: connection edges rejects disappearing scalar sibling async-one-pass
+ok 64 - connection edges rejects disappearing scalar sibling async-one-pass
+  ---
+  duration_ms: 0.1493
+  type: 'test'
+  ...
+# Subtest: connection edges rejects disappearing object sibling object
+ok 65 - connection edges rejects disappearing object sibling object
+  ---
+  duration_ms: 0.1262
+  type: 'test'
+  ...
+# Subtest: connection edges rejects disappearing object sibling encoded-json
+ok 66 - connection edges rejects disappearing object sibling encoded-json
+  ---
+  duration_ms: 0.183
+  type: 'test'
+  ...
+# Subtest: connection edges rejects disappearing object sibling async-one-pass
+ok 67 - connection edges rejects disappearing object sibling async-one-pass
+  ---
+  duration_ms: 0.1496
+  type: 'test'
+  ...
+# Subtest: custom connection wrapper requires explicit selection
+ok 68 - custom connection wrapper requires explicit selection
+  ---
+  duration_ms: 0.2807
+  type: 'test'
+  ...
+# Subtest: known nested nodes connection preserves flags/nulls/metadata
+ok 69 - known nested nodes connection preserves flags/nulls/metadata
+  ---
+  duration_ms: 0.8827
+  type: 'test'
+  ...
+# Subtest: known nested edges connection preserves flags/nulls/metadata
+ok 70 - known nested edges connection preserves flags/nulls/metadata
+  ---
+  duration_ms: 0.2415
+  type: 'test'
+  ...
+# Subtest: late GraphQL error-only page rejects null data via list
+not ok 71 - late GraphQL error-only page rejects null data via list
+  ---
+  duration_ms: 2.3288
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:87:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:95:19)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: late GraphQL error-only page rejects null data via json
+not ok 72 - late GraphQL error-only page rejects null data via json
+  ---
+  duration_ms: 2.1608
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:87:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:95:19)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: late GraphQL error-only page rejects null data via async
+ok 73 - late GraphQL error-only page rejects null data via async
+  ---
+  duration_ms: 0.8926
+  type: 'test'
+  ...
+# Subtest: late GraphQL error-only page rejects missing data via list
+not ok 74 - late GraphQL error-only page rejects missing data via list
+  ---
+  duration_ms: 0.7522
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:87:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:95:19)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: late GraphQL error-only page rejects missing data via json
+not ok 75 - late GraphQL error-only page rejects missing data via json
+  ---
+  duration_ms: 1.2135
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:87:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:95:19)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: late GraphQL error-only page rejects missing data via async
+ok 76 - late GraphQL error-only page rejects missing data via async
+  ---
+  duration_ms: 0.9215
+  type: 'test'
+  ...
+# Subtest: late GraphQL error-only page rejects empty data via list
+not ok 77 - late GraphQL error-only page rejects empty data via list
+  ---
+  duration_ms: 1.405
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:87:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:95:19)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: late GraphQL error-only page rejects empty data via json
+not ok 78 - late GraphQL error-only page rejects empty data via json
+  ---
+  duration_ms: 1.292
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77\\packages\\deepviz\\test\\test_r17_normalizer_boundaries.test.mjs:87:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r17-16-normalizer-boundaries-ses_de567808bffdXko8hyKFRhPv77/packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs:95:19)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: late GraphQL error-only page rejects empty data via async
+ok 79 - late GraphQL error-only page rejects empty data via async
+  ---
+  duration_ms: 1.1182
+  type: 'test'
+  ...
+# Subtest: ordinary business errors preserve repeats via list
+ok 80 - ordinary business errors preserve repeats via list
+  ---
+  duration_ms: 0.5523
+  type: 'test'
+  ...
+# Subtest: ordinary business errors preserve repeats via json
+ok 81 - ordinary business errors preserve repeats via json
+  ---
+  duration_ms: 0.2652
+  type: 'test'
+  ...
+# Subtest: ordinary business errors preserve repeats via async
+ok 82 - ordinary business errors preserve repeats via async
+  ---
+  duration_ms: 0.5003
+  type: 'test'
+  ...
+1..82
+# tests 82
+# suites 0
+# pass 76
+# fail 6
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 203.7675
