@@ -1,0 +1,74 @@
+--- a/python/deepviz/src/deepviz/engines.py
++++ b/python/deepviz/src/deepviz/engines.py
+@@ -383,12 +383,15 @@
+ 
+ 
+ def _plotly(data: list[dict], records: list[dict], spec: ChartSpec) -> dict:
++    def literal(value: Any) -> Any:
++        return escape(value, quote=False) if isinstance(value, str) else value
++
+     kind = spec.kind
+     traces: list[dict] = []
+     if kind in {"bar", "line", "area", "scatter", "bubble"}:
+         for j, (name, group) in enumerate(_groups(data).items()):
+-            trace: dict = {"type": "bar" if kind == "bar" else "scatter", "name": name,
+-                     "x": [r["_x"] for r in group], "y": [r["_y"] for r in group],
++            trace: dict = {"type": "bar" if kind == "bar" else "scatter", "name": literal(name),
++                     "x": [literal(r["_x"]) for r in group], "y": [r["_y"] for r in group],
+                      "marker": {"color": PALETTE[j % len(PALETTE)]}}
+             if kind != "bar":
+                 trace["mode"] = "markers" if kind in {"scatter", "bubble"} else "lines+markers"
+@@ -400,7 +403,7 @@
+                 trace["marker"]["size"] = [max(4, math.sqrt(r["_size"]) * 6) for r in group]
+             traces.append(trace)
+     elif kind in {"pie", "treemap", "sunburst", "funnel"}:
+-        trace = {"type": kind, "labels": [str(r["_x"]) for r in data],
++        trace = {"type": kind, "labels": [literal(str(r["_x"])) for r in data],
+                  "values": [max(0, r["_y"]) for r in data]}
+         if kind == "funnel":
+             trace = {"type": "funnel", "y": trace["labels"], "x": trace["values"]}
+@@ -409,17 +412,17 @@
+             trace["ids"] = [str(i) for i in range(len(data))]
+         traces.append(trace)
+     elif kind in {"box", "violin"}:
+-        traces = [{"type": kind, "x": [r["_x"] for r in data], "y": [r["_y"] for r in data]}]
++        traces = [{"type": kind, "x": [literal(r["_x"]) for r in data], "y": [r["_y"] for r in data]}]
+     elif kind == "histogram":
+         hist = _histogram(data)
+         traces = [{"type": "bar", "x": [r["_x"] for r in hist], "y": [r["_y"] for r in hist],
+                    "width": [r["_right"] - r["_left"] for r in hist]}]
+     elif kind == "heatmap":
+-        traces = [{"type": "scatter", "mode": "markers", "x": [str(r["_x"]) for r in data],
+-                   "y": [str(r["_y"]) for r in data], "marker": {"symbol": "square", "size": 22,
++        traces = [{"type": "scatter", "mode": "markers", "x": [literal(str(r["_x"])) for r in data],
++                   "y": [literal(str(r["_y"])) for r in data], "marker": {"symbol": "square", "size": 22,
+                     "color": [r["_heat"] for r in data], "colorscale": "Viridis", "showscale": True}}]
+     elif kind == "radar":
+-        theta, values = [str(r["_x"]) for r in data], [r["_y"] for r in data]
++        theta, values = [literal(str(r["_x"])) for r in data], [r["_y"] for r in data]
+         traces = [{"type": "scatterpolar", "theta": theta + theta[:1], "r": values + values[:1],
+                    "fill": "toself"}]
+     elif kind == "gauge":
+@@ -428,16 +431,16 @@
+     elif kind == "geo":
+         # Cartesian longitude/latitude avoids Plotly's network-fetched topojson.
+         traces = [{"type": "scatter", "mode": "markers", "x": [r["_x"] for r in data],
+-                   "y": [r["_y"] for r in data], "text": [r["_color"] for r in data]}]
++                   "y": [r["_y"] for r in data], "text": [literal(r["_color"]) for r in data]}]
+     elif kind == "table":
+         columns = list(dict.fromkeys(key for row in records for key in row))
+-        traces = [{"type": "table", "header": {"values": [escape(c) for c in columns]},
+-                   "cells": {"values": [[escape(str(row.get(key, ""))) for row in records] for key in columns]}}]
++        traces = [{"type": "table", "header": {"values": [literal(c) for c in columns]},
++                   "cells": {"values": [[literal(str(row.get(key, ""))) for row in records] for key in columns]}}]
+     bg, fg = _colors(spec)
+-    layout: dict[str, Any] = {"title": {"text": escape(spec.title)}, "width": spec.width, "height": spec.height,
++    layout: dict[str, Any] = {"title": {"text": literal(spec.title)}, "width": spec.width, "height": spec.height,
+               "paper_bgcolor": bg, "plot_bgcolor": bg, "font": {"color": fg}, "showlegend": bool(spec.color),
+-              "xaxis": {"title": {"text": escape(spec.x or "Category")}},
+-              "yaxis": {"title": {"text": escape(spec.y or "Value")}}}
++              "xaxis": {"title": {"text": literal(spec.x or "Category")}},
++              "yaxis": {"title": {"text": literal(spec.y or "Value")}}}
+     if kind == "geo":
+         layout["xaxis"].update(range=[-180, 180], title={"text": "Longitude"})
+         layout["yaxis"].update(range=[-90, 90], title={"text": "Latitude"})

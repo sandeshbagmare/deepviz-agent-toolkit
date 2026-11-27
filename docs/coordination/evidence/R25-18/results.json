@@ -1,0 +1,66 @@
+{
+  "owner_session": "ses_de567805bffdER1GlVd0ngLgKg",
+  "base": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "status": "strict RED; proposal not applied",
+  "command": "python -m pytest tests/r25_probes/role18/test_plotly_literal_boundaries.py -q --tb=short --junitxml A/guarded-three-red.xml",
+  "exit": 1,
+  "display_seconds": 0.97,
+  "totals": {
+    "tests": "3",
+    "failures": "3",
+    "errors": "0",
+    "skipped": "0",
+    "time": "0.919"
+  },
+  "nonpassing": [
+    {
+      "id": "tests.r25_probes.role18.test_plotly_literal_boundaries::test_entity_like_categories_remain_distinct_without_coercing_coordinates",
+      "message": "AssertionError: Entity-looking source labels must not collapse into markup-looking labels\nassert ['<b>\"A\" & B<... B&lt;/b&gt;'] == ['&lt;b&gt;\"A...t;/b&amp;gt;']\n  \n  At index 0 diff: '<b>\"A\" & B</b>' != '&lt;b&gt;\"A\" &amp; B&lt;/b&gt;'\n  Use -v to get more diff"
+    },
+    {
+      "id": "tests.r25_probes.role18.test_plotly_literal_boundaries::test_noncartesian_labels_and_both_heatmap_axes_have_literal_boundaries",
+      "message": "AssertionError: [('pie', 'labels', ['<a href=\"https://example.invalid/r25\">Q & R</a>', 'safe']), ('treemap', 'labels', ['<a href=\"http...ps://example.invalid/r25\">Q & R</a>']), ('box', 'x', ['<a href=\"https://example.invalid/r25\">Q & R</a>', 'safe']), ...]\nassert [('pie', 'lab...'safe']), ...] == []\n  \n  Left contains 9 more items, first extra item: ('pie', 'labels', ['<a href=\"https://example.invalid/r25\">Q & R</a>', 'safe'])\n  Use -v to get more diff"
+    },
+    {
+      "id": "tests.r25_probes.role18.test_plotly_literal_boundaries::test_native_field_titles_and_table_cells_do_not_turn_quotes_into_entities",
+      "message": "AssertionError: {'title': ('R25 &quot;quoted&quot; &amp; &#x27;single&#x27; &lt;b&gt;title&lt;/b&gt;', 'R25 \"quoted\" &amp; \\'single\\' ...;quoted&quot; &amp; &lt;b&gt;net&lt;/b&gt;', 'amount'], ['cost \"quoted\" &amp; &lt;b&gt;net&lt;/b&gt;', 'amount']), ...}\nassert {'title': ('R...mount']), ...} == {}\n  \n  Left contains 5 more items:\n  {'axis': ('cost &quot;quoted&quot; &amp; &lt;b&gt;net&lt;/b&gt;',\n            'cost \"quoted\" &amp; &lt;b&gt;net&lt;/b&gt;'),\n[+5 more lines; full report in element text]"
+    }
+  ],
+  "xml_sha256": "c131e6afe541ac4201ff2025dc922462ac071a63ccc6f53fa44bb084e80748be",
+  "log_sha256": "3d5564374f86f9c8d7be75e4aafbb420668b8dfa880f1fbe395b0c89165e4afc",
+  "identity": {
+    "base": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+    "branch": "agents/r25-18-plotly-literal-proposal",
+    "modules": {
+      "deepviz.engines": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-18-ses_de567805bffdER1GlVd0ngLgKg\\python\\deepviz\\src\\deepviz\\engines.py",
+        "sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225",
+        "git_blob_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225",
+        "normalization": "CRLF-to-LF declared"
+      },
+      "deepviz.models": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-18-ses_de567805bffdER1GlVd0ngLgKg\\python\\deepviz\\src\\deepviz\\models.py",
+        "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "git_blob_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "normalization": "CRLF-to-LF declared"
+      }
+    }
+  },
+  "same_process_source_guard": true,
+  "checks": {
+    "own_ruff": 0,
+    "own_mypy": 0,
+    "patch_check_only": 0,
+    "production_existing_tests_schema_diff": 0
+  },
+  "own_test_sha256": "ffa0d23db02cd5f4aca61202374a51b7d3b25df0408fb28af8127d2947d8ea2a",
+  "unapplied_patch_sha256": "54f7084dc1761ef69596a9718c49442379da7ba90871a4f4e04575f36f6b65d2",
+  "limits": [
+    "No GREEN claim or browser/DOM result",
+    "No production/old-oracle changes",
+    "Old table quote-entity oracle conflict requires manager disposition",
+    "Previous mypy1 kind inference fixed only NEW typed cases; current mypy0",
+    "R27 actual full manager grant read after this command checkpoint; production starts only NEW exact7bc fix branch",
+    "No API/issues/PR/config/install/spawn"
+  ]
+}
