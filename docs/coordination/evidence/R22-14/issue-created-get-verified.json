@@ -1,0 +1,65 @@
+{
+  "verified_at_utc": "2026-11-27T15:29:29.227314+00:00",
+  "authenticated_user": "sandeshbagmare",
+  "repository": "sandeshbagmare/deepviz-agent-toolkit",
+  "marker": "deepviz-r22-ready-promise",
+  "issue_number": 35,
+  "issue_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/35",
+  "title": "Bug: synchronous browser initialization loses readiness Promise and error channel",
+  "state": "open",
+  "POST_count": 1,
+  "POST_status": 201,
+  "GET_exact_issue_status": 200,
+  "POST_record": {
+    "method": "POST",
+    "url": "https://api.github.com/repos/sandeshbagmare/deepviz-agent-toolkit/issues",
+    "at_utc": "2026-11-27T15:29:26.089967+00:00",
+    "status": 201,
+    "bytes": 9655,
+    "sha256": "1b5410746fa833b23be92e7f3850076029a1819692d08b24e74c31f1182f3ac3"
+  },
+  "GET_record": {
+    "url": "https://api.github.com/repos/sandeshbagmare/deepviz-agent-toolkit/issues/35",
+    "retrieved_at_utc": "2026-11-27T15:29:28.543640+00:00",
+    "status": 200,
+    "bytes": 9655,
+    "sha256": "1b5410746fa833b23be92e7f3850076029a1819692d08b24e74c31f1182f3ac3",
+    "next_path": null
+  },
+  "exact_returned_body_matches_planned": true,
+  "body_sha256": "02c30113a701f2a9e80d6b277f224cb8f75ef863a12661783047a2b418f72f48",
+  "body_chars": 7001,
+  "GET_title_matches": true,
+  "prewrite_read_request_records": [
+    {
+      "url": "https://api.github.com/user",
+      "retrieved_at_utc": "2026-11-27T15:29:23.688827+00:00",
+      "status": 200,
+      "bytes": 1464,
+      "sha256": "88b4c45773e9eb99e50d7fe236750747ebbd6e1d700f337eaed617798778c6f1",
+      "next_path": null
+    },
+    {
+      "url": "https://api.github.com/repos/sandeshbagmare/deepviz-agent-toolkit",
+      "retrieved_at_utc": "2026-11-27T15:29:24.156945+00:00",
+      "status": 200,
+      "bytes": 6741,
+      "sha256": "2bbfec538d30c90d84c82d053224ebdb46239b67d5995e2528daab491f341746",
+      "next_path": null
+    },
+    {
+      "url": "https://api.github.com/repos/sandeshbagmare/deepviz-agent-toolkit/issues?state=open&per_page=100&page=1",
+      "retrieved_at_utc": "2026-11-27T15:29:25.159431+00:00",
+      "status": 200,
+      "bytes": 243538,
+      "sha256": "c800480511e430497340487830350249f17e7e8b8a86ff106c328fae49d5e024",
+      "next_path": null
+    }
+  ],
+  "prewrite_open_items": 34,
+  "prewrite_open_real_issues": 32,
+  "product_source": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "original_evidence_commit": "41477a7d1b2d332dbb3790d31987d3861e4137b5",
+  "side_effect_scope": "ONE assigned readiness bug only; no labels/assignees/otherissue/comment/closure/PR/source/sharedGit writes.",
+  "limits": "Existing QA evidence reused; no test/browser/build/advisory/provider replay/fix/finalapproval/900padding."
+}

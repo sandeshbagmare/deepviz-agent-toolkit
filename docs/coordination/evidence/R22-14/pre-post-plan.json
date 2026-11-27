@@ -1,0 +1,32 @@
+{
+  "decision": "CREATE_ONE_NEW_ISSUE",
+  "marker": "deepviz-r22-ready-promise",
+  "title": "Bug: synchronous browser initialization loses readiness Promise and error channel",
+  "body_sha256": "02c30113a701f2a9e80d6b277f224cb8f75ef863a12661783047a2b418f72f48",
+  "body_chars": 7001,
+  "product_source": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "original_evidence_commit": "41477a7d1b2d332dbb3790d31987d3861e4137b5",
+  "fresh_open_pagination_complete": true,
+  "fresh_real_open_issues": 31,
+  "fresh_open_PRs": 1,
+  "duplicate_marker_hits": 0,
+  "read_parent_numbers": [
+    12,
+    13,
+    16,
+    21,
+    23
+  ],
+  "known_distinct_cause": "Loaded-G2 negative heatmap ASYNC rejection already has a readiness Promise.",
+  "maximum_POSTs": 1,
+  "allowed_POST_path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues",
+  "stop_on": [
+    "HTTP401/403/429",
+    "ambiguousPOST/networkfailure",
+    "markerfound",
+    "higherpriorityAPIban",
+    "incompletepagination/identityfailure"
+  ],
+  "scope": "Named QA14 ONE reproduced missing-readiness issue only. No labels/assignees/otherissue/closure/PR/source writes.",
+  "no_generation_tests_browser_build_advisory_replay": true
+}

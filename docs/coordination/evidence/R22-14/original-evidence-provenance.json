@@ -1,0 +1,60 @@
+{
+  "product_source": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "original_evidence_commit": "41477a7d1b2d332dbb3790d31987d3861e4137b5",
+  "checks_at_utc": "2026-11-27T15:30:47.059105+00:00",
+  "existing_own_HEAD": "49ffea65dd58dcf5432cec47cd12b7635b5d6643",
+  "original_evidence_git_bytes_verified": [
+    {
+      "file": "docs/coordination/evidence/R21-14/host-observations.json",
+      "original_commit": "41477a7d1b2d332dbb3790d31987d3861e4137b5",
+      "bytes": 24878,
+      "sha256": "be8445c42ab473310f64ffb5b89e9c6bb6e2d6d8ac961fe87bbe2df742b450ed"
+    },
+    {
+      "file": "docs/coordination/evidence/R21-14/pytest-live.log",
+      "original_commit": "41477a7d1b2d332dbb3790d31987d3861e4137b5",
+      "bytes": 2871,
+      "sha256": "330e4c48cbe3a54a9c5ef2bbc416dba1bb56de65613cd5de8df33a9d3cc62cb0"
+    },
+    {
+      "file": "docs/coordination/evidence/R21-14/quality.json",
+      "original_commit": "41477a7d1b2d332dbb3790d31987d3861e4137b5",
+      "bytes": 2470,
+      "sha256": "c829a65f010e37eb138c44b156263045c95dadde179d732e20de524a981012ff"
+    },
+    {
+      "file": "docs/coordination/evidence/R21-14/tool-artifacts.json",
+      "original_commit": "41477a7d1b2d332dbb3790d31987d3861e4137b5",
+      "bytes": 7157,
+      "sha256": "4f378aa6f8b738710b9cd8db12688e38dd4fb550afb4e50076d09547956d6151"
+    }
+  ],
+  "engines_py_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225",
+  "source_lines": [
+    787,
+    789
+  ],
+  "prior_executed_result_not_rerun": {
+    "live_exit_code": 1,
+    "strict_failed": 2,
+    "positive_passed": 8,
+    "skipped": 0,
+    "separate_oracle_controls_passed": 4,
+    "actualStructuredTools": 3,
+    "actualBrowserCases": 5,
+    "imagesOpened": 7
+  },
+  "new_test_generation_browser_build_install_advisory_calls": 0,
+  "main_authority_read_files": [
+    {
+      "file": "AGENTS.md",
+      "sha256": "9fcea0e13ca4ae50952aa94f0fdcdc34ad4f7242be86ee7721246b2c305bfa2e"
+    },
+    {
+      "file": "docs/coordination/tasks/R22-managed-incremental-delivery.md",
+      "sha256": "2cde21a1f98fd8dab1c12904aedaf54dc26aadd1858f8c69373eb52b9a096773"
+    }
+  ],
+  "scope": "NamedQA14onebuggrant; no broaderAPI/source/closure/PR/defaultgrant.",
+  "limits": "Existingexecuted7bcevidence, not movingproducer/currentCI/fixretest/signoff."
+}
