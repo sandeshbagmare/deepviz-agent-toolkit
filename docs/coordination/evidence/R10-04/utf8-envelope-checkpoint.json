@@ -1,0 +1,170 @@
+{
+  "role": "R10-04-utf8-field-envelope",
+  "owner_session": "ses_de5678314ffeuDXtC7RfGsbD6V",
+  "generated_utc": "2026-11-27T02:38:07.354937+00:00",
+  "source_checkpoint": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "branch": "agents/r10-04-utf8-field-envelope",
+  "kind": "new portable literal regression validation; not final freeze, memory or scale acceptance",
+  "python_version": "3.12.16",
+  "node_version": "v26.13.1",
+  "loaded_modules": {
+    "deepviz.normalize": {
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+    },
+    "deepviz.models": {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    }
+  },
+  "file_sha256": {
+    "packages/deepviz/src/normalize.ts": "d1b45d2a55dfd05361184a57da952a0da735e9b6d72c2491f908ef27bda22371",
+    "packages/deepviz/src/models.ts": "d43d5ae0bef1d43f251ed71899a9b507c6575562e4403bd2e2ac02bd7caa43e6",
+    "packages/deepviz/dist/normalize.js": "adb0493123fd478567212e76e2c6e52c828aeaa9eb5425c219b5b1a576689612",
+    "tests/r10_probes/role04/utf8-envelope-cases.json": "423356d34b26ba1a548659774553ae77c1b152252cf27374b6b051fa99287307",
+    "tests/r10_probes/role04/test_utf8_field_envelope.py": "f137e00c6a69f6035b4911b9a275dcc924179bc910cc5379f640a2fbf4515a61",
+    "tests/r10_probes/role04/utf8-field-envelope.test.mjs": "08a7d5b915336df03eb8ff049ce41075dbcdc576e982946abbcffda45bc0aa4c",
+    "tests/r10_probes/role04/README.md": "90309d03a668fd8a5a385ac90f2d1e8d39f3031e624cca90c610f4e949e6cc36"
+  },
+  "fixture_case_counts": {
+    "names_per_language": 72,
+    "cells_per_language": 12,
+    "early_consumption_per_language": 16,
+    "state_controls_per_language": 4,
+    "typescript_fixture_consistency": 1
+  },
+  "name_ceilings_utf8_bytes": {
+    "python": 4096,
+    "typescript": 65536
+  },
+  "both_cell_ceiling_utf8_bytes": 65536,
+  "validated": [
+    {
+      "check": "new Python regressions",
+      "exit": 0,
+      "passed": 104,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 1.42
+    },
+    {
+      "check": "new Python scoped Ruff",
+      "exit": 0
+    },
+    {
+      "check": "new Python scoped mypy",
+      "exit": 0,
+      "source_files": 1,
+      "initial_exit": 1,
+      "initial_issue": "two local dictionary inference errors in NEW probe, corrected with local row annotation only"
+    },
+    {
+      "check": "isolated TypeScript build",
+      "exit": 0
+    },
+    {
+      "check": "TypeScript noEmit typecheck",
+      "exit": 0
+    },
+    {
+      "check": "new TypeScript regressions",
+      "exit": 0,
+      "passed": 105,
+      "failed": 0,
+      "skipped": 0,
+      "milliseconds": 1868.5154
+    },
+    {
+      "check": "unchanged original N11 policy",
+      "exit": 1,
+      "passed": 22,
+      "failed": 4,
+      "skipped": 0,
+      "seconds": 1.45,
+      "failures": "three raw64KiB key positives and one composite64KiB key positive conflict with documented Python4KiB envelope"
+    },
+    {
+      "check": "unchanged original N21 policy",
+      "exit": 0,
+      "passed": 23,
+      "failed": 0,
+      "skipped": 0,
+      "milliseconds": 2132.6926
+    }
+  ],
+  "state_controls": {
+    "offered_rows": 512,
+    "payload_bytes_each": 61440,
+    "logical_payload_bytes": 31457280,
+    "positive_input_count": 512,
+    "positive_output_count": 10,
+    "sampling_loss_disclosed": true,
+    "group_overflow_values": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      503
+    ],
+    "negative_python_reservoir_pulls": 273,
+    "negative_python_group_pulls": 273,
+    "negative_ts_reservoir_yields": 273,
+    "negative_ts_group_yields": 137,
+    "negative_exhausted": false,
+    "ts_closed": true,
+    "python_closure_not_asserted": true
+  },
+  "early_consumption": {
+    "offered_rows": 80,
+    "invalid_row_1based": [
+      1,
+      41
+    ],
+    "actual_pulls_equal_invalid_row": true,
+    "tail_consumed": false
+  },
+  "raw_local_artifact_root": "artifacts/local/R10-04/",
+  "raw_local_artifact_sha256": {
+    "python-boundaries-final.log": "dbf461d3bdaf2598e95d6ce93444f2efb0ba43b203c0827e8e8f2eae0ec8a4ff",
+    "python-boundaries-final.xml": "ea5bd51d0082e9170b54ed445e098f014d8e0a8db1109d9ca2161c1f25f1c758",
+    "ruff-final.log": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+    "mypy-final.log": "94594db09076fe305d51b50210d0bc5e9d275fb814f8b42c1ed4cf3368392f9a",
+    "ts-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ts-typecheck.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ts-boundaries-final.log": "71520229af57e5b0b797e714c226b12aa31d64f2cc2a65bc47a9ff8d81f54afb",
+    "n11-checkpoint.log": "847327328dee5121fe38040c256516bba67e36354cb06bde548ad9cd75f304c4",
+    "n11-checkpoint.xml": "c8f03dfcc132c98c682cd99fd097b59b485fb72fcce2731d24679f48249af759",
+    "n21-checkpoint.log": "c9fb68fe334f01e5b83a1a24baae6f6a1ad714f5ae8c615745a384a49755faf4"
+  },
+  "github_get": {
+    "observed_utc": "2026-11-27T02:27:42.777199+00:00",
+    "user_http": 200,
+    "login": "sandeshbagmare",
+    "repo_http": 200,
+    "repository": "sandeshbagmare/deepviz-agent-toolkit",
+    "push_permission": true,
+    "issue22_http": 200,
+    "issue22_state": "open",
+    "issue30_http": 200,
+    "issue30_state": "open",
+    "note": "22 is scale/resource acceptance context;30 specifically schema numeric coercion and not claimed resolved",
+    "writes": 0,
+    "credential_handling": "captured GCM output; memory only; redirects blocked; no credential output"
+  },
+  "not_run": [
+    "full product suites",
+    "npm ci or installs",
+    "distribution/browser gates",
+    "10M scale",
+    "process RSS/continuous memory",
+    "non-author review/testing",
+    "remote CI acceptance"
+  ],
+  "publication_status": "pre-commit evidence; actual commit/push/remote SHA receipt recorded only after execution",
+  "next_action": "explicit own-path staged review and credential scan, small own-branch commit/non-force push/readback; R04 alone integration/issues/PR disposition"
+}

@@ -1,0 +1,22 @@
+{
+  "source_checkpoint": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "units": [
+    {"id": "ascii", "text": "x", "utf8_width": 1},
+    {"id": "two-byte", "text": "é", "utf8_width": 2},
+    {"id": "three-byte", "text": "界", "utf8_width": 3},
+    {"id": "four-byte", "text": "🙂", "utf8_width": 4}
+  ],
+  "names": [
+    {"bytes": 4095, "python_accepts": true, "typescript_accepts": true},
+    {"bytes": 4096, "python_accepts": true, "typescript_accepts": true},
+    {"bytes": 4097, "python_accepts": false, "typescript_accepts": true},
+    {"bytes": 65535, "python_accepts": false, "typescript_accepts": true},
+    {"bytes": 65536, "python_accepts": false, "typescript_accepts": true},
+    {"bytes": 65537, "python_accepts": false, "typescript_accepts": false}
+  ],
+  "cells": [
+    {"bytes": 65535, "accepts": true},
+    {"bytes": 65536, "accepts": true},
+    {"bytes": 65537, "accepts": false}
+  ]
+}
