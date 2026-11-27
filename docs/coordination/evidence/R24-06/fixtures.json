@@ -1,0 +1,484 @@
+[
+  {
+    "id": "line-control",
+    "kind": "line",
+    "extreme": false,
+    "xs": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "ys": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "xFractions": [
+      0,
+      0.25,
+      0.5,
+      1
+    ],
+    "yFractionsFromTop": [
+      0.75,
+      0.5,
+      0.25,
+      0
+    ],
+    "zeroFromTop": 1,
+    "width": 960,
+    "height": 520,
+    "records": [
+      {
+        "x": 1,
+        "y": 2
+      },
+      {
+        "x": 2,
+        "y": 4
+      },
+      {
+        "x": 3,
+        "y": 6
+      },
+      {
+        "x": 5,
+        "y": 8
+      }
+    ],
+    "spec": {
+      "kind": "line",
+      "title": "R24 line-control",
+      "x": "x",
+      "y": "y",
+      "aggregation": "none",
+      "width": 960,
+      "height": 520
+    }
+  },
+  {
+    "id": "line-extreme",
+    "kind": "line",
+    "extreme": true,
+    "xs": [
+      -2,
+      -1,
+      0,
+      2
+    ],
+    "ys": [
+      -1e+308,
+      -5e+307,
+      0,
+      1e+308
+    ],
+    "xFractions": [
+      0,
+      0.25,
+      0.5,
+      1
+    ],
+    "yFractionsFromTop": [
+      1,
+      0.75,
+      0.5,
+      0
+    ],
+    "zeroFromTop": 0.5,
+    "width": 960,
+    "height": 520,
+    "records": [
+      {
+        "x": -2,
+        "y": -1e+308
+      },
+      {
+        "x": -1,
+        "y": -5e+307
+      },
+      {
+        "x": 0,
+        "y": 0
+      },
+      {
+        "x": 2,
+        "y": 1e+308
+      }
+    ],
+    "spec": {
+      "kind": "line",
+      "title": "R24 line-extreme",
+      "x": "x",
+      "y": "y",
+      "aggregation": "none",
+      "width": 960,
+      "height": 520
+    }
+  },
+  {
+    "id": "area-control",
+    "kind": "area",
+    "extreme": false,
+    "xs": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "ys": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "xFractions": [
+      0,
+      0.25,
+      0.5,
+      1
+    ],
+    "yFractionsFromTop": [
+      0.75,
+      0.5,
+      0.25,
+      0
+    ],
+    "zeroFromTop": 1,
+    "width": 960,
+    "height": 520,
+    "records": [
+      {
+        "x": 1,
+        "y": 2
+      },
+      {
+        "x": 2,
+        "y": 4
+      },
+      {
+        "x": 3,
+        "y": 6
+      },
+      {
+        "x": 5,
+        "y": 8
+      }
+    ],
+    "spec": {
+      "kind": "area",
+      "title": "R24 area-control",
+      "x": "x",
+      "y": "y",
+      "aggregation": "none",
+      "width": 960,
+      "height": 520
+    }
+  },
+  {
+    "id": "area-extreme",
+    "kind": "area",
+    "extreme": true,
+    "xs": [
+      -1e+308,
+      -5e+307,
+      0,
+      1e+308
+    ],
+    "ys": [
+      -1e+308,
+      -5e+307,
+      0,
+      1e+308
+    ],
+    "xFractions": [
+      0,
+      0.25,
+      0.5,
+      1
+    ],
+    "yFractionsFromTop": [
+      1,
+      0.75,
+      0.5,
+      0
+    ],
+    "zeroFromTop": 0.5,
+    "width": 960,
+    "height": 520,
+    "records": [
+      {
+        "x": -1e+308,
+        "y": -1e+308
+      },
+      {
+        "x": -5e+307,
+        "y": -5e+307
+      },
+      {
+        "x": 0,
+        "y": 0
+      },
+      {
+        "x": 1e+308,
+        "y": 1e+308
+      }
+    ],
+    "spec": {
+      "kind": "area",
+      "title": "R24 area-extreme",
+      "x": "x",
+      "y": "y",
+      "aggregation": "none",
+      "width": 960,
+      "height": 520
+    }
+  },
+  {
+    "id": "scatter-control",
+    "kind": "scatter",
+    "extreme": false,
+    "xs": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "ys": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "xFractions": [
+      0,
+      0.25,
+      0.5,
+      1
+    ],
+    "yFractionsFromTop": [
+      0.75,
+      0.5,
+      0.25,
+      0
+    ],
+    "zeroFromTop": 1,
+    "width": 960,
+    "height": 520,
+    "records": [
+      {
+        "x": 1,
+        "y": 2
+      },
+      {
+        "x": 2,
+        "y": 4
+      },
+      {
+        "x": 3,
+        "y": 6
+      },
+      {
+        "x": 5,
+        "y": 8
+      }
+    ],
+    "spec": {
+      "kind": "scatter",
+      "title": "R24 scatter-control",
+      "x": "x",
+      "y": "y",
+      "aggregation": "none",
+      "width": 960,
+      "height": 520
+    }
+  },
+  {
+    "id": "scatter-extreme",
+    "kind": "scatter",
+    "extreme": true,
+    "xs": [
+      -1e+308,
+      -5e+307,
+      0,
+      1e+308
+    ],
+    "ys": [
+      -8,
+      -4,
+      0,
+      8
+    ],
+    "xFractions": [
+      0,
+      0.25,
+      0.5,
+      1
+    ],
+    "yFractionsFromTop": [
+      1,
+      0.75,
+      0.5,
+      0
+    ],
+    "zeroFromTop": 0.5,
+    "width": 960,
+    "height": 520,
+    "records": [
+      {
+        "x": -1e+308,
+        "y": -8
+      },
+      {
+        "x": -5e+307,
+        "y": -4
+      },
+      {
+        "x": 0,
+        "y": 0
+      },
+      {
+        "x": 1e+308,
+        "y": 8
+      }
+    ],
+    "spec": {
+      "kind": "scatter",
+      "title": "R24 scatter-extreme",
+      "x": "x",
+      "y": "y",
+      "aggregation": "none",
+      "width": 960,
+      "height": 520
+    }
+  },
+  {
+    "id": "bubble-control",
+    "kind": "bubble",
+    "extreme": false,
+    "xs": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "ys": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "xFractions": [
+      0,
+      0.25,
+      0.5,
+      1
+    ],
+    "yFractionsFromTop": [
+      0.75,
+      0.5,
+      0.25,
+      0
+    ],
+    "zeroFromTop": 1,
+    "width": 960,
+    "height": 520,
+    "records": [
+      {
+        "x": 1,
+        "y": 2,
+        "size": 1
+      },
+      {
+        "x": 2,
+        "y": 4,
+        "size": 4
+      },
+      {
+        "x": 3,
+        "y": 6,
+        "size": 9
+      },
+      {
+        "x": 5,
+        "y": 8,
+        "size": 16
+      }
+    ],
+    "spec": {
+      "kind": "bubble",
+      "title": "R24 bubble-control",
+      "x": "x",
+      "y": "y",
+      "aggregation": "none",
+      "width": 960,
+      "height": 520,
+      "size": "size"
+    }
+  },
+  {
+    "id": "bubble-extreme",
+    "kind": "bubble",
+    "extreme": true,
+    "xs": [
+      -1e+308,
+      -5e+307,
+      0,
+      1e+308
+    ],
+    "ys": [
+      -1e+308,
+      -5e+307,
+      0,
+      1e+308
+    ],
+    "xFractions": [
+      0,
+      0.25,
+      0.5,
+      1
+    ],
+    "yFractionsFromTop": [
+      1,
+      0.75,
+      0.5,
+      0
+    ],
+    "zeroFromTop": 0.5,
+    "width": 960,
+    "height": 520,
+    "records": [
+      {
+        "x": -1e+308,
+        "y": -1e+308,
+        "size": 1
+      },
+      {
+        "x": -5e+307,
+        "y": -5e+307,
+        "size": 4
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "size": 9
+      },
+      {
+        "x": 1e+308,
+        "y": 1e+308,
+        "size": 16
+      }
+    ],
+    "spec": {
+      "kind": "bubble",
+      "title": "R24 bubble-extreme",
+      "x": "x",
+      "y": "y",
+      "aggregation": "none",
+      "width": 960,
+      "height": 520,
+      "size": "size"
+    }
+  }
+]

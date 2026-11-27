@@ -1,0 +1,7080 @@
+{
+  "source_sha": "5e595a8f893955ce34a0e26553bb7bf257ea93ae",
+  "argv": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\tests\\r24_probes\\role06\\finite.test.mjs"
+  ],
+  "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4",
+  "cases": [
+    {
+      "id": "line-control",
+      "kind": "line",
+      "extreme": false,
+      "normalized": {
+        "records": [
+          {
+            "x": 1,
+            "y": 2
+          },
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 3,
+            "y": 6
+          },
+          {
+            "x": 5,
+            "y": 8
+          }
+        ],
+        "input_count": 4,
+        "warnings": [],
+        "strategy": "none"
+      },
+      "artifactReturned": true,
+      "inputAfter": [
+        {
+          "x": 1,
+          "y": 2
+        },
+        {
+          "x": 2,
+          "y": 4
+        },
+        {
+          "x": 3,
+          "y": 6
+        },
+        {
+          "x": 5,
+          "y": 8
+        }
+      ],
+      "artifact": {
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [],
+        "records": [
+          {
+            "x": 1,
+            "y": 2
+          },
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 3,
+            "y": 6
+          },
+          {
+            "x": 5,
+            "y": 8
+          }
+        ]
+      },
+      "native": {
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"R24 line-control\" viewBox=\"0 0 960 520\" width=\"960\" height=\"520\" fill=\"#374151\"><title>R24 line-control</title><g fill=\"#374151\" font-family=\"monospace\" font-size=\"12\"><path d=\"M72,65 V455 H895\" fill=\"none\" stroke=\"#374151\"/><text x=\"64\" y=\"73\" text-anchor=\"end\">8.000</text><text x=\"64\" y=\"455\" text-anchor=\"end\">0.000</text><text x=\"480\" y=\"508\" text-anchor=\"middle\">x</text><text transform=\"translate(15 260) rotate(-90)\" text-anchor=\"middle\">y</text><text class=\"category-tick\" x=\"72\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>1</title>1</text><text class=\"category-tick\" x=\"277.75\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>2</title>2</text><text class=\"category-tick\" x=\"483.5\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>3</title>3</text><text class=\"category-tick\" x=\"895\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>5</title>5</text></g><polyline class=\"mark\" points=\"72,357.5 277.75,260 483.5,162.5 895,65\" fill=\"none\" fill-opacity=\"0.25\" stroke=\"#2563eb\" stroke-dasharray=\"\" stroke-width=\"2\"/></svg>",
+        "svg_sha256": "1d80f52157fda00f8593afa4e8979fccfdfcfb78ecaa63ed10f2ff71fce01ecb",
+        "html_sha256": "7d87372401b1329cc078e7cb7e3cf491866fcd4633cbd881b4614ca9d3d702e8",
+        "marks": [
+          {
+            "tag": "polyline",
+            "attributes": {
+              "points": "72,357.5 277.75,260 483.5,162.5 895,65",
+              "fill": "none",
+              "fill-opacity": "0.25",
+              "stroke": "#2563eb",
+              "stroke-dasharray": "",
+              "stroke-width": "2"
+            }
+          }
+        ],
+        "attributes": [
+          {
+            "points": "72,357.5 277.75,260 483.5,162.5 895,65",
+            "fill": "none",
+            "fill-opacity": "0.25",
+            "stroke": "#2563eb",
+            "stroke-dasharray": "",
+            "stroke-width": "2"
+          }
+        ],
+        "points": [
+          [
+            72,
+            357.5
+          ],
+          [
+            277.75,
+            260
+          ],
+          [
+            483.5,
+            162.5
+          ],
+          [
+            895,
+            65
+          ]
+        ]
+      },
+      "state": {
+        "ready": true,
+        "deepvizErrors": [],
+        "title": "R24 line-control",
+        "width": 960,
+        "height": 520,
+        "axis": {
+          "left": 72,
+          "top": 65,
+          "bottom": 455,
+          "right": 895
+        },
+        "marks": [
+          {
+            "tag": "polyline",
+            "points": [
+              [
+                72,
+                357.5
+              ],
+              [
+                277.75,
+                260
+              ],
+              [
+                483.5,
+                162.5
+              ],
+              [
+                895,
+                65
+              ]
+            ],
+            "r": null,
+            "box": {
+              "x": 72,
+              "y": 65,
+              "width": 823,
+              "height": 292.5
+            },
+            "fill": "none",
+            "stroke": "rgb(37, 99, 235)"
+          }
+        ],
+        "points": [
+          [
+            72,
+            357.5
+          ],
+          [
+            277.75,
+            260
+          ],
+          [
+            483.5,
+            162.5
+          ],
+          [
+            895,
+            65
+          ]
+        ],
+        "ticks": [
+          {
+            "literal": "1",
+            "x": 72,
+            "box": {
+              "x": 68.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "2",
+            "x": 277.75,
+            "box": {
+              "x": 274.4453125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "3",
+            "x": 483.5,
+            "box": {
+              "x": 480.1953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "5",
+            "x": 895,
+            "box": {
+              "x": 891.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          }
+        ],
+        "textBoxes": [
+          {
+            "literal": "8.000",
+            "box": {
+              "x": 31,
+              "y": 62,
+              "width": 33.390625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "0.000",
+            "box": {
+              "x": 31,
+              "y": 444,
+              "width": 33.390625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "x",
+            "box": {
+              "x": 476.6953125,
+              "y": 497,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "y",
+            "box": {
+              "x": 4,
+              "y": 256.3046875,
+              "width": 14,
+              "height": 7
+            }
+          },
+          {
+            "literal": "11",
+            "box": {
+              "x": 68.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "22",
+            "box": {
+              "x": 274.4453125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "33",
+            "box": {
+              "x": 480.1953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "55",
+            "box": {
+              "x": 891.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          }
+        ],
+        "painted": true,
+        "textInside": true,
+        "tickOverlap": false,
+        "table": [
+          [
+            "1",
+            "2"
+          ],
+          [
+            "2",
+            "4"
+          ],
+          [
+            "3",
+            "6"
+          ],
+          [
+            "5",
+            "8"
+          ]
+        ],
+        "viewport": {
+          "x": 24,
+          "y": 125.953125,
+          "width": 960,
+          "height": 520
+        },
+        "errors": [],
+        "requests": []
+      },
+      "checks": [
+        {
+          "name": "original-input-not-mutated",
+          "pass": true,
+          "observed": [
+            {
+              "x": 1,
+              "y": 2
+            },
+            {
+              "x": 2,
+              "y": 4
+            },
+            {
+              "x": 3,
+              "y": 6
+            },
+            {
+              "x": 5,
+              "y": 8
+            }
+          ]
+        },
+        {
+          "name": "independent-normalize-preserves-literal-finite-values-and-order",
+          "pass": true,
+          "observed": {
+            "records": [
+              {
+                "x": 1,
+                "y": 2
+              },
+              {
+                "x": 2,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 6
+              },
+              {
+                "x": 5,
+                "y": 8
+              }
+            ],
+            "input_count": 4,
+            "warnings": [],
+            "strategy": "none"
+          }
+        },
+        {
+          "name": "independent-normalize-exact-count-none-no-warning",
+          "pass": true,
+          "observed": {
+            "records": [
+              {
+                "x": 1,
+                "y": 2
+              },
+              {
+                "x": 2,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 6
+              },
+              {
+                "x": 5,
+                "y": 8
+              }
+            ],
+            "input_count": 4,
+            "warnings": [],
+            "strategy": "none"
+          }
+        },
+        {
+          "name": "public-artifact-counts-none-no-warning",
+          "pass": true,
+          "observed": {
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [],
+            "records": [
+              {
+                "x": 1,
+                "y": 2
+              },
+              {
+                "x": 2,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 6
+              },
+              {
+                "x": 5,
+                "y": 8
+              }
+            ]
+          }
+        },
+        {
+          "name": "public-normalized-original-values-and-order",
+          "pass": true,
+          "observed": [
+            {
+              "x": 1,
+              "y": 2
+            },
+            {
+              "x": 2,
+              "y": 4
+            },
+            {
+              "x": 3,
+              "y": 6
+            },
+            {
+              "x": 5,
+              "y": 8
+            }
+          ]
+        },
+        {
+          "name": "native-serialization-no-NaN-or-Infinity",
+          "pass": true,
+          "observed": [
+            {
+              "points": "72,357.5 277.75,260 483.5,162.5 895,65",
+              "fill": "none",
+              "fill-opacity": "0.25",
+              "stroke": "#2563eb",
+              "stroke-dasharray": "",
+              "stroke-width": "2"
+            }
+          ]
+        },
+        {
+          "name": "native-complete-finite-coordinate-count",
+          "pass": true,
+          "observed": [
+            [
+              72,
+              357.5
+            ],
+            [
+              277.75,
+              260
+            ],
+            [
+              483.5,
+              162.5
+            ],
+            [
+              895,
+              65
+            ]
+          ]
+        },
+        {
+          "name": "zero-unexpected-browser-console-page-or-readiness-errors",
+          "pass": true,
+          "observed": {
+            "errors": [],
+            "deepvizErrors": []
+          }
+        },
+        {
+          "name": "public-html-ready-no-external-requests",
+          "pass": true,
+          "observed": []
+        },
+        {
+          "name": "root-title-and-dimensions",
+          "pass": true,
+          "observed": {
+            "title": "R24 line-control",
+            "width": 960,
+            "height": 520
+          }
+        },
+        {
+          "name": "finite-nondegenerate-quantitative-plot",
+          "pass": true,
+          "observed": {
+            "left": 72,
+            "top": 65,
+            "bottom": 455,
+            "right": 895
+          }
+        },
+        {
+          "name": "all-four-literal-points-correct-independent-finite-fractions",
+          "pass": true,
+          "observed": {
+            "actual": [
+              [
+                72,
+                357.5
+              ],
+              [
+                277.75,
+                260
+              ],
+              [
+                483.5,
+                162.5
+              ],
+              [
+                895,
+                65
+              ]
+            ],
+            "expected": [
+              [
+                72,
+                357.5
+              ],
+              [
+                277.75,
+                260
+              ],
+              [
+                483.5,
+                162.5
+              ],
+              [
+                895,
+                65
+              ]
+            ]
+          }
+        },
+        {
+          "name": "unequal-quantitative-x-gaps-1-1-2-not-collapsed",
+          "pass": true,
+          "observed": [
+            205.75,
+            205.75,
+            411.5
+          ]
+        },
+        {
+          "name": "complete-native-browser-point-count-and-real-paint",
+          "pass": true,
+          "observed": {
+            "points": [
+              [
+                72,
+                357.5
+              ],
+              [
+                277.75,
+                260
+              ],
+              [
+                483.5,
+                162.5
+              ],
+              [
+                895,
+                65
+              ]
+            ],
+            "marks": [
+              {
+                "tag": "polyline",
+                "points": [
+                  [
+                    72,
+                    357.5
+                  ],
+                  [
+                    277.75,
+                    260
+                  ],
+                  [
+                    483.5,
+                    162.5
+                  ],
+                  [
+                    895,
+                    65
+                  ]
+                ],
+                "r": null,
+                "box": {
+                  "x": 72,
+                  "y": 65,
+                  "width": 823,
+                  "height": 292.5
+                },
+                "fill": "none",
+                "stroke": "rgb(37, 99, 235)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "all-literal-table-cell-values-and-order",
+          "pass": true,
+          "observed": [
+            [
+              "1",
+              "2"
+            ],
+            [
+              "2",
+              "4"
+            ],
+            [
+              "3",
+              "6"
+            ],
+            [
+              "5",
+              "8"
+            ]
+          ]
+        },
+        {
+          "name": "all-full-literal-x-tick-labels-and-finite-alignment",
+          "pass": true,
+          "observed": [
+            {
+              "literal": "1",
+              "x": 72,
+              "box": {
+                "x": 68.6953125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            },
+            {
+              "literal": "2",
+              "x": 277.75,
+              "box": {
+                "x": 274.4453125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            },
+            {
+              "literal": "3",
+              "x": 483.5,
+              "box": {
+                "x": 480.1953125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            },
+            {
+              "literal": "5",
+              "x": 895,
+              "box": {
+                "x": 891.6953125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            }
+          ]
+        },
+        {
+          "name": "native-text-not-clipped-or-pairwise-overlapping",
+          "pass": true,
+          "observed": {
+            "text": [
+              {
+                "literal": "8.000",
+                "box": {
+                  "x": 31,
+                  "y": 62,
+                  "width": 33.390625,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "0.000",
+                "box": {
+                  "x": 31,
+                  "y": 444,
+                  "width": 33.390625,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "x",
+                "box": {
+                  "x": 476.6953125,
+                  "y": 497,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "y",
+                "box": {
+                  "x": 4,
+                  "y": 256.3046875,
+                  "width": 14,
+                  "height": 7
+                }
+              },
+              {
+                "literal": "11",
+                "box": {
+                  "x": 68.6953125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "22",
+                "box": {
+                  "x": 274.4453125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "33",
+                "box": {
+                  "x": 480.1953125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "55",
+                "box": {
+                  "x": 891.6953125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              }
+            ],
+            "tickOverlap": false
+          }
+        }
+      ],
+      "outcome": "correct-rendered"
+    },
+    {
+      "id": "line-extreme",
+      "kind": "line",
+      "extreme": true,
+      "normalized": {
+        "records": [
+          {
+            "x": -2,
+            "y": -1e+308
+          },
+          {
+            "x": -1,
+            "y": -5e+307
+          },
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 2,
+            "y": 1e+308
+          }
+        ],
+        "input_count": 4,
+        "warnings": [],
+        "strategy": "none"
+      },
+      "artifactReturned": true,
+      "inputAfter": [
+        {
+          "x": -2,
+          "y": -1e+308
+        },
+        {
+          "x": -1,
+          "y": -5e+307
+        },
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 2,
+          "y": 1e+308
+        }
+      ],
+      "artifact": {
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [],
+        "records": [
+          {
+            "x": -2,
+            "y": -1e+308
+          },
+          {
+            "x": -1,
+            "y": -5e+307
+          },
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 2,
+            "y": 1e+308
+          }
+        ]
+      },
+      "native": {
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"R24 line-extreme\" viewBox=\"0 0 960 520\" width=\"960\" height=\"520\" fill=\"#374151\"><title>R24 line-extreme</title><g fill=\"#374151\" font-family=\"monospace\" font-size=\"12\"><path d=\"M120,65 V455 H895\" fill=\"none\" stroke=\"#374151\"/><text x=\"112\" y=\"73\" text-anchor=\"end\">1.000e+308</text><text x=\"112\" y=\"455\" text-anchor=\"end\">-1.000e+308</text><text x=\"480\" y=\"508\" text-anchor=\"middle\">x</text><text transform=\"translate(15 260) rotate(-90)\" text-anchor=\"middle\">y</text><text class=\"category-tick\" x=\"120\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>-2</title>-2</text><text class=\"category-tick\" x=\"313.75\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>-1</title>-1</text><text class=\"category-tick\" x=\"507.5\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>0</title>0</text><text class=\"category-tick\" x=\"895\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>2</title>2</text></g><polyline class=\"mark\" points=\"120,455 313.75,455 507.5,455 895,NaN\" fill=\"none\" fill-opacity=\"0.25\" stroke=\"#2563eb\" stroke-dasharray=\"\" stroke-width=\"2\"/></svg>",
+        "svg_sha256": "13173bec18aecb117a75efdf3644924f40415b2862591ba924635906cb4e6a93",
+        "html_sha256": "f2ee8a631ae911511294b125ab161ed71c8bb749355d9452fb7d42808eb7aa86",
+        "marks": [
+          {
+            "tag": "polyline",
+            "attributes": {
+              "points": "120,455 313.75,455 507.5,455 895,NaN",
+              "fill": "none",
+              "fill-opacity": "0.25",
+              "stroke": "#2563eb",
+              "stroke-dasharray": "",
+              "stroke-width": "2"
+            }
+          }
+        ],
+        "attributes": [
+          {
+            "points": "120,455 313.75,455 507.5,455 895,NaN",
+            "fill": "none",
+            "fill-opacity": "0.25",
+            "stroke": "#2563eb",
+            "stroke-dasharray": "",
+            "stroke-width": "2"
+          }
+        ],
+        "points": [
+          [
+            120,
+            455
+          ],
+          [
+            313.75,
+            455
+          ],
+          [
+            507.5,
+            455
+          ],
+          [
+            895,
+            null
+          ]
+        ]
+      },
+      "state": {
+        "ready": true,
+        "deepvizErrors": [],
+        "title": "R24 line-extreme",
+        "width": 960,
+        "height": 520,
+        "axis": {
+          "left": 120,
+          "top": 65,
+          "bottom": 455,
+          "right": 895
+        },
+        "marks": [
+          {
+            "tag": "polyline",
+            "points": [],
+            "r": null,
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "fill": "none",
+            "stroke": "rgb(37, 99, 235)"
+          }
+        ],
+        "points": [],
+        "ticks": [
+          {
+            "literal": "-2",
+            "x": 120,
+            "box": {
+              "x": 113.3984375,
+              "y": 462,
+              "width": 13.59765625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "-1",
+            "x": 313.75,
+            "box": {
+              "x": 307.1484375,
+              "y": 462,
+              "width": 13.59765625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "0",
+            "x": 507.5,
+            "box": {
+              "x": 504.1953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "2",
+            "x": 895,
+            "box": {
+              "x": 891.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          }
+        ],
+        "textBoxes": [
+          {
+            "literal": "1.000e+308",
+            "box": {
+              "x": 46.015625,
+              "y": 62,
+              "width": 66.37890625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "-1.000e+308",
+            "box": {
+              "x": 39.421875,
+              "y": 444,
+              "width": 72.9765625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "x",
+            "box": {
+              "x": 476.6953125,
+              "y": 497,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "y",
+            "box": {
+              "x": 4,
+              "y": 256.3046875,
+              "width": 14,
+              "height": 7
+            }
+          },
+          {
+            "literal": "-2-2",
+            "box": {
+              "x": 113.3984375,
+              "y": 462,
+              "width": 13.59765625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "-1-1",
+            "box": {
+              "x": 307.1484375,
+              "y": 462,
+              "width": 13.59765625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "00",
+            "box": {
+              "x": 504.1953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "22",
+            "box": {
+              "x": 891.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          }
+        ],
+        "painted": false,
+        "textInside": true,
+        "tickOverlap": false,
+        "table": [
+          [
+            "-2",
+            "-1e+308"
+          ],
+          [
+            "-1",
+            "-5e+307"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "2",
+            "1e+308"
+          ]
+        ],
+        "viewport": {
+          "x": 24,
+          "y": 125.953125,
+          "width": 960,
+          "height": 520
+        },
+        "errors": [
+          {
+            "kind": "console",
+            "message": "Error: <polyline> attribute points: Expected number, \"…5 507.5,455 895,NaN\"."
+          }
+        ],
+        "requests": []
+      },
+      "checks": [
+        {
+          "name": "original-input-not-mutated",
+          "pass": true,
+          "observed": [
+            {
+              "x": -2,
+              "y": -1e+308
+            },
+            {
+              "x": -1,
+              "y": -5e+307
+            },
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 2,
+              "y": 1e+308
+            }
+          ]
+        },
+        {
+          "name": "independent-normalize-preserves-literal-finite-values-and-order",
+          "pass": true,
+          "observed": {
+            "records": [
+              {
+                "x": -2,
+                "y": -1e+308
+              },
+              {
+                "x": -1,
+                "y": -5e+307
+              },
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 2,
+                "y": 1e+308
+              }
+            ],
+            "input_count": 4,
+            "warnings": [],
+            "strategy": "none"
+          }
+        },
+        {
+          "name": "independent-normalize-exact-count-none-no-warning",
+          "pass": true,
+          "observed": {
+            "records": [
+              {
+                "x": -2,
+                "y": -1e+308
+              },
+              {
+                "x": -1,
+                "y": -5e+307
+              },
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 2,
+                "y": 1e+308
+              }
+            ],
+            "input_count": 4,
+            "warnings": [],
+            "strategy": "none"
+          }
+        },
+        {
+          "name": "public-artifact-counts-none-no-warning",
+          "pass": true,
+          "observed": {
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [],
+            "records": [
+              {
+                "x": -2,
+                "y": -1e+308
+              },
+              {
+                "x": -1,
+                "y": -5e+307
+              },
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 2,
+                "y": 1e+308
+              }
+            ]
+          }
+        },
+        {
+          "name": "public-normalized-original-values-and-order",
+          "pass": true,
+          "observed": [
+            {
+              "x": -2,
+              "y": -1e+308
+            },
+            {
+              "x": -1,
+              "y": -5e+307
+            },
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 2,
+              "y": 1e+308
+            }
+          ]
+        },
+        {
+          "name": "native-serialization-no-NaN-or-Infinity",
+          "pass": false,
+          "observed": [
+            {
+              "points": "120,455 313.75,455 507.5,455 895,NaN",
+              "fill": "none",
+              "fill-opacity": "0.25",
+              "stroke": "#2563eb",
+              "stroke-dasharray": "",
+              "stroke-width": "2"
+            }
+          ]
+        },
+        {
+          "name": "native-complete-finite-coordinate-count",
+          "pass": false,
+          "observed": [
+            [
+              120,
+              455
+            ],
+            [
+              313.75,
+              455
+            ],
+            [
+              507.5,
+              455
+            ],
+            [
+              895,
+              null
+            ]
+          ]
+        },
+        {
+          "name": "zero-unexpected-browser-console-page-or-readiness-errors",
+          "pass": false,
+          "observed": {
+            "errors": [
+              {
+                "kind": "console",
+                "message": "Error: <polyline> attribute points: Expected number, \"…5 507.5,455 895,NaN\"."
+              }
+            ],
+            "deepvizErrors": []
+          }
+        },
+        {
+          "name": "public-html-ready-no-external-requests",
+          "pass": true,
+          "observed": []
+        },
+        {
+          "name": "root-title-and-dimensions",
+          "pass": true,
+          "observed": {
+            "title": "R24 line-extreme",
+            "width": 960,
+            "height": 520
+          }
+        },
+        {
+          "name": "finite-nondegenerate-quantitative-plot",
+          "pass": true,
+          "observed": {
+            "left": 120,
+            "top": 65,
+            "bottom": 455,
+            "right": 895
+          }
+        },
+        {
+          "name": "all-four-literal-points-correct-independent-finite-fractions",
+          "pass": false,
+          "observed": {
+            "actual": [],
+            "expected": [
+              [
+                120,
+                455
+              ],
+              [
+                313.75,
+                357.5
+              ],
+              [
+                507.5,
+                260
+              ],
+              [
+                895,
+                65
+              ]
+            ]
+          }
+        },
+        {
+          "name": "unequal-quantitative-x-gaps-1-1-2-not-collapsed",
+          "pass": false,
+          "observed": []
+        },
+        {
+          "name": "complete-native-browser-point-count-and-real-paint",
+          "pass": false,
+          "observed": {
+            "points": [],
+            "marks": [
+              {
+                "tag": "polyline",
+                "points": [],
+                "r": null,
+                "box": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                },
+                "fill": "none",
+                "stroke": "rgb(37, 99, 235)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "all-literal-table-cell-values-and-order",
+          "pass": true,
+          "observed": [
+            [
+              "-2",
+              "-1e+308"
+            ],
+            [
+              "-1",
+              "-5e+307"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "2",
+              "1e+308"
+            ]
+          ]
+        },
+        {
+          "name": "all-full-literal-x-tick-labels-and-finite-alignment",
+          "pass": true,
+          "observed": [
+            {
+              "literal": "-2",
+              "x": 120,
+              "box": {
+                "x": 113.3984375,
+                "y": 462,
+                "width": 13.59765625,
+                "height": 14
+              }
+            },
+            {
+              "literal": "-1",
+              "x": 313.75,
+              "box": {
+                "x": 307.1484375,
+                "y": 462,
+                "width": 13.59765625,
+                "height": 14
+              }
+            },
+            {
+              "literal": "0",
+              "x": 507.5,
+              "box": {
+                "x": 504.1953125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            },
+            {
+              "literal": "2",
+              "x": 895,
+              "box": {
+                "x": 891.6953125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            }
+          ]
+        },
+        {
+          "name": "native-text-not-clipped-or-pairwise-overlapping",
+          "pass": true,
+          "observed": {
+            "text": [
+              {
+                "literal": "1.000e+308",
+                "box": {
+                  "x": 46.015625,
+                  "y": 62,
+                  "width": 66.37890625,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "-1.000e+308",
+                "box": {
+                  "x": 39.421875,
+                  "y": 444,
+                  "width": 72.9765625,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "x",
+                "box": {
+                  "x": 476.6953125,
+                  "y": 497,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "y",
+                "box": {
+                  "x": 4,
+                  "y": 256.3046875,
+                  "width": 14,
+                  "height": 7
+                }
+              },
+              {
+                "literal": "-2-2",
+                "box": {
+                  "x": 113.3984375,
+                  "y": 462,
+                  "width": 13.59765625,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "-1-1",
+                "box": {
+                  "x": 307.1484375,
+                  "y": 462,
+                  "width": 13.59765625,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "00",
+                "box": {
+                  "x": 504.1953125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "22",
+                "box": {
+                  "x": 891.6953125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              }
+            ],
+            "tickOverlap": false
+          }
+        },
+        {
+          "name": "actual-zero-sample-at-midpoint",
+          "pass": false
+        }
+      ],
+      "outcome": "failed-success-artifact"
+    },
+    {
+      "id": "area-control",
+      "kind": "area",
+      "extreme": false,
+      "normalized": {
+        "records": [
+          {
+            "x": 1,
+            "y": 2
+          },
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 3,
+            "y": 6
+          },
+          {
+            "x": 5,
+            "y": 8
+          }
+        ],
+        "input_count": 4,
+        "warnings": [],
+        "strategy": "none"
+      },
+      "artifactReturned": true,
+      "inputAfter": [
+        {
+          "x": 1,
+          "y": 2
+        },
+        {
+          "x": 2,
+          "y": 4
+        },
+        {
+          "x": 3,
+          "y": 6
+        },
+        {
+          "x": 5,
+          "y": 8
+        }
+      ],
+      "artifact": {
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [],
+        "records": [
+          {
+            "x": 1,
+            "y": 2
+          },
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 3,
+            "y": 6
+          },
+          {
+            "x": 5,
+            "y": 8
+          }
+        ]
+      },
+      "native": {
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"R24 area-control\" viewBox=\"0 0 960 520\" width=\"960\" height=\"520\" fill=\"#374151\"><title>R24 area-control</title><g fill=\"#374151\" font-family=\"monospace\" font-size=\"12\"><path d=\"M72,65 V455 H895\" fill=\"none\" stroke=\"#374151\"/><text x=\"64\" y=\"73\" text-anchor=\"end\">8.000</text><text x=\"64\" y=\"455\" text-anchor=\"end\">0.000</text><text x=\"480\" y=\"508\" text-anchor=\"middle\">x</text><text transform=\"translate(15 260) rotate(-90)\" text-anchor=\"middle\">y</text><text class=\"category-tick\" x=\"72\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>1</title>1</text><text class=\"category-tick\" x=\"277.75\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>2</title>2</text><text class=\"category-tick\" x=\"483.5\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>3</title>3</text><text class=\"category-tick\" x=\"895\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>5</title>5</text></g><polyline class=\"mark\" points=\"72,455 72,357.5 277.75,260 483.5,162.5 895,65 895,455\" fill=\"#2563eb\" fill-opacity=\"0.25\" stroke=\"#2563eb\" stroke-dasharray=\"\" stroke-width=\"2\"/></svg>",
+        "svg_sha256": "10a44cf64b2d41807b58560d1ddb369335181ada35f5fb3893d3ab27005cd952",
+        "html_sha256": "0b86c62652ce9d7b7e9ee24da27adaaa5ba5b45bc9397e5e148ab64af89c1c2b",
+        "marks": [
+          {
+            "tag": "polyline",
+            "attributes": {
+              "points": "72,455 72,357.5 277.75,260 483.5,162.5 895,65 895,455",
+              "fill": "#2563eb",
+              "fill-opacity": "0.25",
+              "stroke": "#2563eb",
+              "stroke-dasharray": "",
+              "stroke-width": "2"
+            }
+          }
+        ],
+        "attributes": [
+          {
+            "points": "72,455 72,357.5 277.75,260 483.5,162.5 895,65 895,455",
+            "fill": "#2563eb",
+            "fill-opacity": "0.25",
+            "stroke": "#2563eb",
+            "stroke-dasharray": "",
+            "stroke-width": "2"
+          }
+        ],
+        "points": [
+          [
+            72,
+            455
+          ],
+          [
+            72,
+            357.5
+          ],
+          [
+            277.75,
+            260
+          ],
+          [
+            483.5,
+            162.5
+          ],
+          [
+            895,
+            65
+          ],
+          [
+            895,
+            455
+          ]
+        ]
+      },
+      "state": {
+        "ready": true,
+        "deepvizErrors": [],
+        "title": "R24 area-control",
+        "width": 960,
+        "height": 520,
+        "axis": {
+          "left": 72,
+          "top": 65,
+          "bottom": 455,
+          "right": 895
+        },
+        "marks": [
+          {
+            "tag": "polyline",
+            "points": [
+              [
+                72,
+                455
+              ],
+              [
+                72,
+                357.5
+              ],
+              [
+                277.75,
+                260
+              ],
+              [
+                483.5,
+                162.5
+              ],
+              [
+                895,
+                65
+              ],
+              [
+                895,
+                455
+              ]
+            ],
+            "r": null,
+            "box": {
+              "x": 72,
+              "y": 65,
+              "width": 823,
+              "height": 390
+            },
+            "fill": "rgb(37, 99, 235)",
+            "stroke": "rgb(37, 99, 235)"
+          }
+        ],
+        "points": [
+          [
+            72,
+            455
+          ],
+          [
+            72,
+            357.5
+          ],
+          [
+            277.75,
+            260
+          ],
+          [
+            483.5,
+            162.5
+          ],
+          [
+            895,
+            65
+          ],
+          [
+            895,
+            455
+          ]
+        ],
+        "ticks": [
+          {
+            "literal": "1",
+            "x": 72,
+            "box": {
+              "x": 68.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "2",
+            "x": 277.75,
+            "box": {
+              "x": 274.4453125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "3",
+            "x": 483.5,
+            "box": {
+              "x": 480.1953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "5",
+            "x": 895,
+            "box": {
+              "x": 891.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          }
+        ],
+        "textBoxes": [
+          {
+            "literal": "8.000",
+            "box": {
+              "x": 31,
+              "y": 62,
+              "width": 33.390625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "0.000",
+            "box": {
+              "x": 31,
+              "y": 444,
+              "width": 33.390625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "x",
+            "box": {
+              "x": 476.6953125,
+              "y": 497,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "y",
+            "box": {
+              "x": 4,
+              "y": 256.3046875,
+              "width": 14,
+              "height": 7
+            }
+          },
+          {
+            "literal": "11",
+            "box": {
+              "x": 68.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "22",
+            "box": {
+              "x": 274.4453125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "33",
+            "box": {
+              "x": 480.1953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "55",
+            "box": {
+              "x": 891.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          }
+        ],
+        "painted": true,
+        "textInside": true,
+        "tickOverlap": false,
+        "table": [
+          [
+            "1",
+            "2"
+          ],
+          [
+            "2",
+            "4"
+          ],
+          [
+            "3",
+            "6"
+          ],
+          [
+            "5",
+            "8"
+          ]
+        ],
+        "viewport": {
+          "x": 24,
+          "y": 125.953125,
+          "width": 960,
+          "height": 520
+        },
+        "errors": [],
+        "requests": []
+      },
+      "capture": {
+        "file": "captures\\area-control.png",
+        "sha256": "665b7ce7492aba348473c8fc8d954eaee10ef831b78bb58b2c724387f371759d"
+      },
+      "checks": [
+        {
+          "name": "original-input-not-mutated",
+          "pass": true,
+          "observed": [
+            {
+              "x": 1,
+              "y": 2
+            },
+            {
+              "x": 2,
+              "y": 4
+            },
+            {
+              "x": 3,
+              "y": 6
+            },
+            {
+              "x": 5,
+              "y": 8
+            }
+          ]
+        },
+        {
+          "name": "independent-normalize-preserves-literal-finite-values-and-order",
+          "pass": true,
+          "observed": {
+            "records": [
+              {
+                "x": 1,
+                "y": 2
+              },
+              {
+                "x": 2,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 6
+              },
+              {
+                "x": 5,
+                "y": 8
+              }
+            ],
+            "input_count": 4,
+            "warnings": [],
+            "strategy": "none"
+          }
+        },
+        {
+          "name": "independent-normalize-exact-count-none-no-warning",
+          "pass": true,
+          "observed": {
+            "records": [
+              {
+                "x": 1,
+                "y": 2
+              },
+              {
+                "x": 2,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 6
+              },
+              {
+                "x": 5,
+                "y": 8
+              }
+            ],
+            "input_count": 4,
+            "warnings": [],
+            "strategy": "none"
+          }
+        },
+        {
+          "name": "public-artifact-counts-none-no-warning",
+          "pass": true,
+          "observed": {
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [],
+            "records": [
+              {
+                "x": 1,
+                "y": 2
+              },
+              {
+                "x": 2,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 6
+              },
+              {
+                "x": 5,
+                "y": 8
+              }
+            ]
+          }
+        },
+        {
+          "name": "public-normalized-original-values-and-order",
+          "pass": true,
+          "observed": [
+            {
+              "x": 1,
+              "y": 2
+            },
+            {
+              "x": 2,
+              "y": 4
+            },
+            {
+              "x": 3,
+              "y": 6
+            },
+            {
+              "x": 5,
+              "y": 8
+            }
+          ]
+        },
+        {
+          "name": "native-serialization-no-NaN-or-Infinity",
+          "pass": true,
+          "observed": [
+            {
+              "points": "72,455 72,357.5 277.75,260 483.5,162.5 895,65 895,455",
+              "fill": "#2563eb",
+              "fill-opacity": "0.25",
+              "stroke": "#2563eb",
+              "stroke-dasharray": "",
+              "stroke-width": "2"
+            }
+          ]
+        },
+        {
+          "name": "native-complete-finite-coordinate-count",
+          "pass": true,
+          "observed": [
+            [
+              72,
+              455
+            ],
+            [
+              72,
+              357.5
+            ],
+            [
+              277.75,
+              260
+            ],
+            [
+              483.5,
+              162.5
+            ],
+            [
+              895,
+              65
+            ],
+            [
+              895,
+              455
+            ]
+          ]
+        },
+        {
+          "name": "zero-unexpected-browser-console-page-or-readiness-errors",
+          "pass": true,
+          "observed": {
+            "errors": [],
+            "deepvizErrors": []
+          }
+        },
+        {
+          "name": "public-html-ready-no-external-requests",
+          "pass": true,
+          "observed": []
+        },
+        {
+          "name": "root-title-and-dimensions",
+          "pass": true,
+          "observed": {
+            "title": "R24 area-control",
+            "width": 960,
+            "height": 520
+          }
+        },
+        {
+          "name": "finite-nondegenerate-quantitative-plot",
+          "pass": true,
+          "observed": {
+            "left": 72,
+            "top": 65,
+            "bottom": 455,
+            "right": 895
+          }
+        },
+        {
+          "name": "all-four-literal-points-correct-independent-finite-fractions",
+          "pass": true,
+          "observed": {
+            "actual": [
+              [
+                72,
+                357.5
+              ],
+              [
+                277.75,
+                260
+              ],
+              [
+                483.5,
+                162.5
+              ],
+              [
+                895,
+                65
+              ]
+            ],
+            "expected": [
+              [
+                72,
+                357.5
+              ],
+              [
+                277.75,
+                260
+              ],
+              [
+                483.5,
+                162.5
+              ],
+              [
+                895,
+                65
+              ]
+            ]
+          }
+        },
+        {
+          "name": "unequal-quantitative-x-gaps-1-1-2-not-collapsed",
+          "pass": true,
+          "observed": [
+            205.75,
+            205.75,
+            411.5
+          ]
+        },
+        {
+          "name": "complete-native-browser-point-count-and-real-paint",
+          "pass": true,
+          "observed": {
+            "points": [
+              [
+                72,
+                455
+              ],
+              [
+                72,
+                357.5
+              ],
+              [
+                277.75,
+                260
+              ],
+              [
+                483.5,
+                162.5
+              ],
+              [
+                895,
+                65
+              ],
+              [
+                895,
+                455
+              ]
+            ],
+            "marks": [
+              {
+                "tag": "polyline",
+                "points": [
+                  [
+                    72,
+                    455
+                  ],
+                  [
+                    72,
+                    357.5
+                  ],
+                  [
+                    277.75,
+                    260
+                  ],
+                  [
+                    483.5,
+                    162.5
+                  ],
+                  [
+                    895,
+                    65
+                  ],
+                  [
+                    895,
+                    455
+                  ]
+                ],
+                "r": null,
+                "box": {
+                  "x": 72,
+                  "y": 65,
+                  "width": 823,
+                  "height": 390
+                },
+                "fill": "rgb(37, 99, 235)",
+                "stroke": "rgb(37, 99, 235)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "all-literal-table-cell-values-and-order",
+          "pass": true,
+          "observed": [
+            [
+              "1",
+              "2"
+            ],
+            [
+              "2",
+              "4"
+            ],
+            [
+              "3",
+              "6"
+            ],
+            [
+              "5",
+              "8"
+            ]
+          ]
+        },
+        {
+          "name": "all-full-literal-x-tick-labels-and-finite-alignment",
+          "pass": true,
+          "observed": [
+            {
+              "literal": "1",
+              "x": 72,
+              "box": {
+                "x": 68.6953125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            },
+            {
+              "literal": "2",
+              "x": 277.75,
+              "box": {
+                "x": 274.4453125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            },
+            {
+              "literal": "3",
+              "x": 483.5,
+              "box": {
+                "x": 480.1953125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            },
+            {
+              "literal": "5",
+              "x": 895,
+              "box": {
+                "x": 891.6953125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            }
+          ]
+        },
+        {
+          "name": "native-text-not-clipped-or-pairwise-overlapping",
+          "pass": true,
+          "observed": {
+            "text": [
+              {
+                "literal": "8.000",
+                "box": {
+                  "x": 31,
+                  "y": 62,
+                  "width": 33.390625,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "0.000",
+                "box": {
+                  "x": 31,
+                  "y": 444,
+                  "width": 33.390625,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "x",
+                "box": {
+                  "x": 476.6953125,
+                  "y": 497,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "y",
+                "box": {
+                  "x": 4,
+                  "y": 256.3046875,
+                  "width": 14,
+                  "height": 7
+                }
+              },
+              {
+                "literal": "11",
+                "box": {
+                  "x": 68.6953125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "22",
+                "box": {
+                  "x": 274.4453125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "33",
+                "box": {
+                  "x": 480.1953125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "55",
+                "box": {
+                  "x": 891.6953125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              }
+            ],
+            "tickOverlap": false
+          }
+        },
+        {
+          "name": "area-endpoints-share-literal-common-zero",
+          "pass": true,
+          "observed": {
+            "points": [
+              [
+                72,
+                455
+              ],
+              [
+                72,
+                357.5
+              ],
+              [
+                277.75,
+                260
+              ],
+              [
+                483.5,
+                162.5
+              ],
+              [
+                895,
+                65
+              ],
+              [
+                895,
+                455
+              ]
+            ],
+            "zero": 455
+          }
+        }
+      ],
+      "outcome": "correct-rendered"
+    },
+    {
+      "id": "area-extreme",
+      "kind": "area",
+      "extreme": true,
+      "normalized": {
+        "records": [
+          {
+            "x": -1e+308,
+            "y": -1e+308
+          },
+          {
+            "x": -5e+307,
+            "y": -5e+307
+          },
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 1e+308,
+            "y": 1e+308
+          }
+        ],
+        "input_count": 4,
+        "warnings": [],
+        "strategy": "none"
+      },
+      "artifactReturned": true,
+      "inputAfter": [
+        {
+          "x": -1e+308,
+          "y": -1e+308
+        },
+        {
+          "x": -5e+307,
+          "y": -5e+307
+        },
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 1e+308,
+          "y": 1e+308
+        }
+      ],
+      "artifact": {
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [],
+        "records": [
+          {
+            "x": -1e+308,
+            "y": -1e+308
+          },
+          {
+            "x": -5e+307,
+            "y": -5e+307
+          },
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 1e+308,
+            "y": 1e+308
+          }
+        ]
+      },
+      "native": {
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"R24 area-extreme\" viewBox=\"0 0 960 520\" width=\"960\" height=\"520\" fill=\"#374151\"><title>R24 area-extreme</title><g fill=\"#374151\" font-family=\"monospace\" font-size=\"12\"><path d=\"M120,65 V455 H895\" fill=\"none\" stroke=\"#374151\"/><text x=\"112\" y=\"73\" text-anchor=\"end\">1.000e+308</text><text x=\"112\" y=\"455\" text-anchor=\"end\">-1.000e+308</text><text x=\"480\" y=\"508\" text-anchor=\"middle\">x</text><text transform=\"translate(15 260) rotate(-90)\" text-anchor=\"middle\">y</text><text class=\"category-tick\" x=\"120\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>-1e+308</title>-1e+308</text><text class=\"category-tick\" x=\"120\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>-5e+307</title>-5e+307</text><text class=\"category-tick\" x=\"120\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>0</title>0</text><text class=\"category-tick\" x=\"NaN\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>1e+308</title>1e+308</text></g><polyline class=\"mark\" points=\"120,455 120,455 120,455 120,455 NaN,NaN NaN,455\" fill=\"#2563eb\" fill-opacity=\"0.25\" stroke=\"#2563eb\" stroke-dasharray=\"\" stroke-width=\"2\"/></svg>",
+        "svg_sha256": "eb6b263cf37d116386ac02fcd5a0504db5630120f2dce7c50ae0ee5610b35df2",
+        "html_sha256": "8e00094d8a2b5a7c9ad9abb0f5f4ab95358b75185ffb74de356c5e13e6be3a39",
+        "marks": [
+          {
+            "tag": "polyline",
+            "attributes": {
+              "points": "120,455 120,455 120,455 120,455 NaN,NaN NaN,455",
+              "fill": "#2563eb",
+              "fill-opacity": "0.25",
+              "stroke": "#2563eb",
+              "stroke-dasharray": "",
+              "stroke-width": "2"
+            }
+          }
+        ],
+        "attributes": [
+          {
+            "points": "120,455 120,455 120,455 120,455 NaN,NaN NaN,455",
+            "fill": "#2563eb",
+            "fill-opacity": "0.25",
+            "stroke": "#2563eb",
+            "stroke-dasharray": "",
+            "stroke-width": "2"
+          }
+        ],
+        "points": [
+          [
+            120,
+            455
+          ],
+          [
+            120,
+            455
+          ],
+          [
+            120,
+            455
+          ],
+          [
+            120,
+            455
+          ],
+          [
+            null,
+            null
+          ],
+          [
+            null,
+            455
+          ]
+        ]
+      },
+      "state": {
+        "ready": true,
+        "deepvizErrors": [],
+        "title": "R24 area-extreme",
+        "width": 960,
+        "height": 520,
+        "axis": {
+          "left": 120,
+          "top": 65,
+          "bottom": 455,
+          "right": 895
+        },
+        "marks": [
+          {
+            "tag": "polyline",
+            "points": [],
+            "r": null,
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "fill": "rgb(37, 99, 235)",
+            "stroke": "rgb(37, 99, 235)"
+          }
+        ],
+        "points": [],
+        "ticks": [
+          {
+            "literal": "-1e+308",
+            "x": 120,
+            "box": {
+              "x": 96.90625,
+              "y": 462,
+              "width": 46.5859375,
+              "height": 14
+            }
+          },
+          {
+            "literal": "-5e+307",
+            "x": 120,
+            "box": {
+              "x": 96.90625,
+              "y": 462,
+              "width": 46.5859375,
+              "height": 14
+            }
+          },
+          {
+            "literal": "0",
+            "x": 120,
+            "box": {
+              "x": 116.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "1e+308",
+            "x": null,
+            "box": {
+              "x": -19.796875,
+              "y": 462,
+              "width": 39.98828125,
+              "height": 14
+            }
+          }
+        ],
+        "textBoxes": [
+          {
+            "literal": "1.000e+308",
+            "box": {
+              "x": 46.015625,
+              "y": 62,
+              "width": 66.37890625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "-1.000e+308",
+            "box": {
+              "x": 39.421875,
+              "y": 444,
+              "width": 72.9765625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "x",
+            "box": {
+              "x": 476.6953125,
+              "y": 497,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "y",
+            "box": {
+              "x": 4,
+              "y": 256.3046875,
+              "width": 14,
+              "height": 7
+            }
+          },
+          {
+            "literal": "-1e+308-1e+308",
+            "box": {
+              "x": 96.90625,
+              "y": 462,
+              "width": 46.5859375,
+              "height": 14
+            }
+          },
+          {
+            "literal": "-5e+307-5e+307",
+            "box": {
+              "x": 96.90625,
+              "y": 462,
+              "width": 46.5859375,
+              "height": 14
+            }
+          },
+          {
+            "literal": "00",
+            "box": {
+              "x": 116.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "1e+3081e+308",
+            "box": {
+              "x": -19.796875,
+              "y": 462,
+              "width": 39.98828125,
+              "height": 14
+            }
+          }
+        ],
+        "painted": false,
+        "textInside": false,
+        "tickOverlap": true,
+        "table": [
+          [
+            "-1e+308",
+            "-1e+308"
+          ],
+          [
+            "-5e+307",
+            "-5e+307"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "1e+308",
+            "1e+308"
+          ]
+        ],
+        "viewport": {
+          "x": 24,
+          "y": 125.953125,
+          "width": 960,
+          "height": 520
+        },
+        "errors": [
+          {
+            "kind": "console",
+            "message": "Error: <text> attribute x: Expected length, \"NaN\"."
+          },
+          {
+            "kind": "console",
+            "message": "Error: <polyline> attribute points: Expected number, \"…120,455 120,455 NaN,NaN NaN,455\"."
+          }
+        ],
+        "requests": []
+      },
+      "capture": {
+        "file": "captures\\area-extreme.png",
+        "sha256": "03234921acd36364564c9fb1ff0f382b438b0f7562d09b8e18e247b48ca08873"
+      },
+      "checks": [
+        {
+          "name": "original-input-not-mutated",
+          "pass": true,
+          "observed": [
+            {
+              "x": -1e+308,
+              "y": -1e+308
+            },
+            {
+              "x": -5e+307,
+              "y": -5e+307
+            },
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1e+308,
+              "y": 1e+308
+            }
+          ]
+        },
+        {
+          "name": "independent-normalize-preserves-literal-finite-values-and-order",
+          "pass": true,
+          "observed": {
+            "records": [
+              {
+                "x": -1e+308,
+                "y": -1e+308
+              },
+              {
+                "x": -5e+307,
+                "y": -5e+307
+              },
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 1e+308,
+                "y": 1e+308
+              }
+            ],
+            "input_count": 4,
+            "warnings": [],
+            "strategy": "none"
+          }
+        },
+        {
+          "name": "independent-normalize-exact-count-none-no-warning",
+          "pass": true,
+          "observed": {
+            "records": [
+              {
+                "x": -1e+308,
+                "y": -1e+308
+              },
+              {
+                "x": -5e+307,
+                "y": -5e+307
+              },
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 1e+308,
+                "y": 1e+308
+              }
+            ],
+            "input_count": 4,
+            "warnings": [],
+            "strategy": "none"
+          }
+        },
+        {
+          "name": "public-artifact-counts-none-no-warning",
+          "pass": true,
+          "observed": {
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [],
+            "records": [
+              {
+                "x": -1e+308,
+                "y": -1e+308
+              },
+              {
+                "x": -5e+307,
+                "y": -5e+307
+              },
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 1e+308,
+                "y": 1e+308
+              }
+            ]
+          }
+        },
+        {
+          "name": "public-normalized-original-values-and-order",
+          "pass": true,
+          "observed": [
+            {
+              "x": -1e+308,
+              "y": -1e+308
+            },
+            {
+              "x": -5e+307,
+              "y": -5e+307
+            },
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1e+308,
+              "y": 1e+308
+            }
+          ]
+        },
+        {
+          "name": "native-serialization-no-NaN-or-Infinity",
+          "pass": false,
+          "observed": [
+            {
+              "points": "120,455 120,455 120,455 120,455 NaN,NaN NaN,455",
+              "fill": "#2563eb",
+              "fill-opacity": "0.25",
+              "stroke": "#2563eb",
+              "stroke-dasharray": "",
+              "stroke-width": "2"
+            }
+          ]
+        },
+        {
+          "name": "native-complete-finite-coordinate-count",
+          "pass": false,
+          "observed": [
+            [
+              120,
+              455
+            ],
+            [
+              120,
+              455
+            ],
+            [
+              120,
+              455
+            ],
+            [
+              120,
+              455
+            ],
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              455
+            ]
+          ]
+        },
+        {
+          "name": "zero-unexpected-browser-console-page-or-readiness-errors",
+          "pass": false,
+          "observed": {
+            "errors": [
+              {
+                "kind": "console",
+                "message": "Error: <text> attribute x: Expected length, \"NaN\"."
+              },
+              {
+                "kind": "console",
+                "message": "Error: <polyline> attribute points: Expected number, \"…120,455 120,455 NaN,NaN NaN,455\"."
+              }
+            ],
+            "deepvizErrors": []
+          }
+        },
+        {
+          "name": "public-html-ready-no-external-requests",
+          "pass": true,
+          "observed": []
+        },
+        {
+          "name": "root-title-and-dimensions",
+          "pass": true,
+          "observed": {
+            "title": "R24 area-extreme",
+            "width": 960,
+            "height": 520
+          }
+        },
+        {
+          "name": "finite-nondegenerate-quantitative-plot",
+          "pass": true,
+          "observed": {
+            "left": 120,
+            "top": 65,
+            "bottom": 455,
+            "right": 895
+          }
+        },
+        {
+          "name": "all-four-literal-points-correct-independent-finite-fractions",
+          "pass": false,
+          "observed": {
+            "actual": [],
+            "expected": [
+              [
+                120,
+                455
+              ],
+              [
+                313.75,
+                357.5
+              ],
+              [
+                507.5,
+                260
+              ],
+              [
+                895,
+                65
+              ]
+            ]
+          }
+        },
+        {
+          "name": "unequal-quantitative-x-gaps-1-1-2-not-collapsed",
+          "pass": false,
+          "observed": []
+        },
+        {
+          "name": "complete-native-browser-point-count-and-real-paint",
+          "pass": false,
+          "observed": {
+            "points": [],
+            "marks": [
+              {
+                "tag": "polyline",
+                "points": [],
+                "r": null,
+                "box": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                },
+                "fill": "rgb(37, 99, 235)",
+                "stroke": "rgb(37, 99, 235)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "all-literal-table-cell-values-and-order",
+          "pass": true,
+          "observed": [
+            [
+              "-1e+308",
+              "-1e+308"
+            ],
+            [
+              "-5e+307",
+              "-5e+307"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "1e+308",
+              "1e+308"
+            ]
+          ]
+        },
+        {
+          "name": "all-full-literal-x-tick-labels-and-finite-alignment",
+          "pass": false,
+          "observed": [
+            {
+              "literal": "-1e+308",
+              "x": 120,
+              "box": {
+                "x": 96.90625,
+                "y": 462,
+                "width": 46.5859375,
+                "height": 14
+              }
+            },
+            {
+              "literal": "-5e+307",
+              "x": 120,
+              "box": {
+                "x": 96.90625,
+                "y": 462,
+                "width": 46.5859375,
+                "height": 14
+              }
+            },
+            {
+              "literal": "0",
+              "x": 120,
+              "box": {
+                "x": 116.6953125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            },
+            {
+              "literal": "1e+308",
+              "x": null,
+              "box": {
+                "x": -19.796875,
+                "y": 462,
+                "width": 39.98828125,
+                "height": 14
+              }
+            }
+          ]
+        },
+        {
+          "name": "native-text-not-clipped-or-pairwise-overlapping",
+          "pass": false,
+          "observed": {
+            "text": [
+              {
+                "literal": "1.000e+308",
+                "box": {
+                  "x": 46.015625,
+                  "y": 62,
+                  "width": 66.37890625,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "-1.000e+308",
+                "box": {
+                  "x": 39.421875,
+                  "y": 444,
+                  "width": 72.9765625,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "x",
+                "box": {
+                  "x": 476.6953125,
+                  "y": 497,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "y",
+                "box": {
+                  "x": 4,
+                  "y": 256.3046875,
+                  "width": 14,
+                  "height": 7
+                }
+              },
+              {
+                "literal": "-1e+308-1e+308",
+                "box": {
+                  "x": 96.90625,
+                  "y": 462,
+                  "width": 46.5859375,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "-5e+307-5e+307",
+                "box": {
+                  "x": 96.90625,
+                  "y": 462,
+                  "width": 46.5859375,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "00",
+                "box": {
+                  "x": 116.6953125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "1e+3081e+308",
+                "box": {
+                  "x": -19.796875,
+                  "y": 462,
+                  "width": 39.98828125,
+                  "height": 14
+                }
+              }
+            ],
+            "tickOverlap": true
+          }
+        },
+        {
+          "name": "actual-zero-sample-at-midpoint",
+          "pass": false
+        },
+        {
+          "name": "area-endpoints-share-literal-common-zero",
+          "pass": false,
+          "observed": {
+            "points": [],
+            "zero": 260
+          }
+        }
+      ],
+      "outcome": "failed-success-artifact"
+    },
+    {
+      "id": "scatter-control",
+      "kind": "scatter",
+      "extreme": false,
+      "normalized": {
+        "records": [
+          {
+            "x": 1,
+            "y": 2
+          },
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 3,
+            "y": 6
+          },
+          {
+            "x": 5,
+            "y": 8
+          }
+        ],
+        "input_count": 4,
+        "warnings": [],
+        "strategy": "none"
+      },
+      "artifactReturned": true,
+      "inputAfter": [
+        {
+          "x": 1,
+          "y": 2
+        },
+        {
+          "x": 2,
+          "y": 4
+        },
+        {
+          "x": 3,
+          "y": 6
+        },
+        {
+          "x": 5,
+          "y": 8
+        }
+      ],
+      "artifact": {
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [],
+        "records": [
+          {
+            "x": 1,
+            "y": 2
+          },
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 3,
+            "y": 6
+          },
+          {
+            "x": 5,
+            "y": 8
+          }
+        ]
+      },
+      "native": {
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"R24 scatter-control\" viewBox=\"0 0 960 520\" width=\"960\" height=\"520\" fill=\"#374151\"><title>R24 scatter-control</title><g fill=\"#374151\" font-family=\"monospace\" font-size=\"12\"><path d=\"M72,65 V455 H895\" fill=\"none\" stroke=\"#374151\"/><text x=\"64\" y=\"73\" text-anchor=\"end\">8.000</text><text x=\"64\" y=\"455\" text-anchor=\"end\">0.000</text><text x=\"480\" y=\"508\" text-anchor=\"middle\">x</text><text transform=\"translate(15 260) rotate(-90)\" text-anchor=\"middle\">y</text><text class=\"category-tick\" x=\"72\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>1</title>1</text><text class=\"category-tick\" x=\"277.75\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>2</title>2</text><text class=\"category-tick\" x=\"483.5\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>3</title>3</text><text class=\"category-tick\" x=\"895\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>5</title>5</text></g><circle class=\"mark\" cx=\"72\" cy=\"357.5\" r=\"4\" fill=\"#2563eb\"><title>1: 2</title></circle><circle class=\"mark\" cx=\"277.75\" cy=\"260\" r=\"4\" fill=\"#2563eb\"><title>2: 4</title></circle><circle class=\"mark\" cx=\"483.5\" cy=\"162.5\" r=\"4\" fill=\"#2563eb\"><title>3: 6</title></circle><circle class=\"mark\" cx=\"895\" cy=\"65\" r=\"4\" fill=\"#2563eb\"><title>5: 8</title></circle></svg>",
+        "svg_sha256": "6c8ae4fd29fbc67bc140df38f73e9a6a492c9e81ed01b090b63da541ec579ff4",
+        "html_sha256": "326b904281fead7737859e9d9ab5a04a7d993926005b14a3232972682c06ecbb",
+        "marks": [
+          {
+            "tag": "circle",
+            "attributes": {
+              "cx": "72",
+              "cy": "357.5",
+              "r": "4",
+              "fill": "#2563eb"
+            }
+          },
+          {
+            "tag": "circle",
+            "attributes": {
+              "cx": "277.75",
+              "cy": "260",
+              "r": "4",
+              "fill": "#2563eb"
+            }
+          },
+          {
+            "tag": "circle",
+            "attributes": {
+              "cx": "483.5",
+              "cy": "162.5",
+              "r": "4",
+              "fill": "#2563eb"
+            }
+          },
+          {
+            "tag": "circle",
+            "attributes": {
+              "cx": "895",
+              "cy": "65",
+              "r": "4",
+              "fill": "#2563eb"
+            }
+          }
+        ],
+        "attributes": [
+          {
+            "cx": "72",
+            "cy": "357.5",
+            "r": "4",
+            "fill": "#2563eb"
+          },
+          {
+            "cx": "277.75",
+            "cy": "260",
+            "r": "4",
+            "fill": "#2563eb"
+          },
+          {
+            "cx": "483.5",
+            "cy": "162.5",
+            "r": "4",
+            "fill": "#2563eb"
+          },
+          {
+            "cx": "895",
+            "cy": "65",
+            "r": "4",
+            "fill": "#2563eb"
+          }
+        ],
+        "points": [
+          [
+            72,
+            357.5
+          ],
+          [
+            277.75,
+            260
+          ],
+          [
+            483.5,
+            162.5
+          ],
+          [
+            895,
+            65
+          ]
+        ]
+      },
+      "state": {
+        "ready": true,
+        "deepvizErrors": [],
+        "title": "R24 scatter-control",
+        "width": 960,
+        "height": 520,
+        "axis": {
+          "left": 72,
+          "top": 65,
+          "bottom": 455,
+          "right": 895
+        },
+        "marks": [
+          {
+            "tag": "circle",
+            "points": [
+              [
+                72,
+                357.5
+              ]
+            ],
+            "r": 4,
+            "box": {
+              "x": 68,
+              "y": 353.5,
+              "width": 8,
+              "height": 8
+            },
+            "fill": "rgb(37, 99, 235)",
+            "stroke": "none"
+          },
+          {
+            "tag": "circle",
+            "points": [
+              [
+                277.75,
+                260
+              ]
+            ],
+            "r": 4,
+            "box": {
+              "x": 273.75,
+              "y": 256,
+              "width": 8,
+              "height": 8
+            },
+            "fill": "rgb(37, 99, 235)",
+            "stroke": "none"
+          },
+          {
+            "tag": "circle",
+            "points": [
+              [
+                483.5,
+                162.5
+              ]
+            ],
+            "r": 4,
+            "box": {
+              "x": 479.5,
+              "y": 158.5,
+              "width": 8,
+              "height": 8
+            },
+            "fill": "rgb(37, 99, 235)",
+            "stroke": "none"
+          },
+          {
+            "tag": "circle",
+            "points": [
+              [
+                895,
+                65
+              ]
+            ],
+            "r": 4,
+            "box": {
+              "x": 891,
+              "y": 61,
+              "width": 8,
+              "height": 8
+            },
+            "fill": "rgb(37, 99, 235)",
+            "stroke": "none"
+          }
+        ],
+        "points": [
+          [
+            72,
+            357.5
+          ],
+          [
+            277.75,
+            260
+          ],
+          [
+            483.5,
+            162.5
+          ],
+          [
+            895,
+            65
+          ]
+        ],
+        "ticks": [
+          {
+            "literal": "1",
+            "x": 72,
+            "box": {
+              "x": 68.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "2",
+            "x": 277.75,
+            "box": {
+              "x": 274.4453125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "3",
+            "x": 483.5,
+            "box": {
+              "x": 480.1953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "5",
+            "x": 895,
+            "box": {
+              "x": 891.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          }
+        ],
+        "textBoxes": [
+          {
+            "literal": "8.000",
+            "box": {
+              "x": 31,
+              "y": 62,
+              "width": 33.390625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "0.000",
+            "box": {
+              "x": 31,
+              "y": 444,
+              "width": 33.390625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "x",
+            "box": {
+              "x": 476.6953125,
+              "y": 497,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "y",
+            "box": {
+              "x": 4,
+              "y": 256.3046875,
+              "width": 14,
+              "height": 7
+            }
+          },
+          {
+            "literal": "11",
+            "box": {
+              "x": 68.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "22",
+            "box": {
+              "x": 274.4453125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "33",
+            "box": {
+              "x": 480.1953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "55",
+            "box": {
+              "x": 891.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          }
+        ],
+        "painted": true,
+        "textInside": true,
+        "tickOverlap": false,
+        "table": [
+          [
+            "1",
+            "2"
+          ],
+          [
+            "2",
+            "4"
+          ],
+          [
+            "3",
+            "6"
+          ],
+          [
+            "5",
+            "8"
+          ]
+        ],
+        "viewport": {
+          "x": 24,
+          "y": 125.953125,
+          "width": 960,
+          "height": 520
+        },
+        "errors": [],
+        "requests": []
+      },
+      "checks": [
+        {
+          "name": "original-input-not-mutated",
+          "pass": true,
+          "observed": [
+            {
+              "x": 1,
+              "y": 2
+            },
+            {
+              "x": 2,
+              "y": 4
+            },
+            {
+              "x": 3,
+              "y": 6
+            },
+            {
+              "x": 5,
+              "y": 8
+            }
+          ]
+        },
+        {
+          "name": "independent-normalize-preserves-literal-finite-values-and-order",
+          "pass": true,
+          "observed": {
+            "records": [
+              {
+                "x": 1,
+                "y": 2
+              },
+              {
+                "x": 2,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 6
+              },
+              {
+                "x": 5,
+                "y": 8
+              }
+            ],
+            "input_count": 4,
+            "warnings": [],
+            "strategy": "none"
+          }
+        },
+        {
+          "name": "independent-normalize-exact-count-none-no-warning",
+          "pass": true,
+          "observed": {
+            "records": [
+              {
+                "x": 1,
+                "y": 2
+              },
+              {
+                "x": 2,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 6
+              },
+              {
+                "x": 5,
+                "y": 8
+              }
+            ],
+            "input_count": 4,
+            "warnings": [],
+            "strategy": "none"
+          }
+        },
+        {
+          "name": "public-artifact-counts-none-no-warning",
+          "pass": true,
+          "observed": {
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [],
+            "records": [
+              {
+                "x": 1,
+                "y": 2
+              },
+              {
+                "x": 2,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 6
+              },
+              {
+                "x": 5,
+                "y": 8
+              }
+            ]
+          }
+        },
+        {
+          "name": "public-normalized-original-values-and-order",
+          "pass": true,
+          "observed": [
+            {
+              "x": 1,
+              "y": 2
+            },
+            {
+              "x": 2,
+              "y": 4
+            },
+            {
+              "x": 3,
+              "y": 6
+            },
+            {
+              "x": 5,
+              "y": 8
+            }
+          ]
+        },
+        {
+          "name": "native-serialization-no-NaN-or-Infinity",
+          "pass": true,
+          "observed": [
+            {
+              "cx": "72",
+              "cy": "357.5",
+              "r": "4",
+              "fill": "#2563eb"
+            },
+            {
+              "cx": "277.75",
+              "cy": "260",
+              "r": "4",
+              "fill": "#2563eb"
+            },
+            {
+              "cx": "483.5",
+              "cy": "162.5",
+              "r": "4",
+              "fill": "#2563eb"
+            },
+            {
+              "cx": "895",
+              "cy": "65",
+              "r": "4",
+              "fill": "#2563eb"
+            }
+          ]
+        },
+        {
+          "name": "native-complete-finite-coordinate-count",
+          "pass": true,
+          "observed": [
+            [
+              72,
+              357.5
+            ],
+            [
+              277.75,
+              260
+            ],
+            [
+              483.5,
+              162.5
+            ],
+            [
+              895,
+              65
+            ]
+          ]
+        },
+        {
+          "name": "zero-unexpected-browser-console-page-or-readiness-errors",
+          "pass": true,
+          "observed": {
+            "errors": [],
+            "deepvizErrors": []
+          }
+        },
+        {
+          "name": "public-html-ready-no-external-requests",
+          "pass": true,
+          "observed": []
+        },
+        {
+          "name": "root-title-and-dimensions",
+          "pass": true,
+          "observed": {
+            "title": "R24 scatter-control",
+            "width": 960,
+            "height": 520
+          }
+        },
+        {
+          "name": "finite-nondegenerate-quantitative-plot",
+          "pass": true,
+          "observed": {
+            "left": 72,
+            "top": 65,
+            "bottom": 455,
+            "right": 895
+          }
+        },
+        {
+          "name": "all-four-literal-points-correct-independent-finite-fractions",
+          "pass": true,
+          "observed": {
+            "actual": [
+              [
+                72,
+                357.5
+              ],
+              [
+                277.75,
+                260
+              ],
+              [
+                483.5,
+                162.5
+              ],
+              [
+                895,
+                65
+              ]
+            ],
+            "expected": [
+              [
+                72,
+                357.5
+              ],
+              [
+                277.75,
+                260
+              ],
+              [
+                483.5,
+                162.5
+              ],
+              [
+                895,
+                65
+              ]
+            ]
+          }
+        },
+        {
+          "name": "unequal-quantitative-x-gaps-1-1-2-not-collapsed",
+          "pass": true,
+          "observed": [
+            205.75,
+            205.75,
+            411.5
+          ]
+        },
+        {
+          "name": "complete-native-browser-point-count-and-real-paint",
+          "pass": true,
+          "observed": {
+            "points": [
+              [
+                72,
+                357.5
+              ],
+              [
+                277.75,
+                260
+              ],
+              [
+                483.5,
+                162.5
+              ],
+              [
+                895,
+                65
+              ]
+            ],
+            "marks": [
+              {
+                "tag": "circle",
+                "points": [
+                  [
+                    72,
+                    357.5
+                  ]
+                ],
+                "r": 4,
+                "box": {
+                  "x": 68,
+                  "y": 353.5,
+                  "width": 8,
+                  "height": 8
+                },
+                "fill": "rgb(37, 99, 235)",
+                "stroke": "none"
+              },
+              {
+                "tag": "circle",
+                "points": [
+                  [
+                    277.75,
+                    260
+                  ]
+                ],
+                "r": 4,
+                "box": {
+                  "x": 273.75,
+                  "y": 256,
+                  "width": 8,
+                  "height": 8
+                },
+                "fill": "rgb(37, 99, 235)",
+                "stroke": "none"
+              },
+              {
+                "tag": "circle",
+                "points": [
+                  [
+                    483.5,
+                    162.5
+                  ]
+                ],
+                "r": 4,
+                "box": {
+                  "x": 479.5,
+                  "y": 158.5,
+                  "width": 8,
+                  "height": 8
+                },
+                "fill": "rgb(37, 99, 235)",
+                "stroke": "none"
+              },
+              {
+                "tag": "circle",
+                "points": [
+                  [
+                    895,
+                    65
+                  ]
+                ],
+                "r": 4,
+                "box": {
+                  "x": 891,
+                  "y": 61,
+                  "width": 8,
+                  "height": 8
+                },
+                "fill": "rgb(37, 99, 235)",
+                "stroke": "none"
+              }
+            ]
+          }
+        },
+        {
+          "name": "all-literal-table-cell-values-and-order",
+          "pass": true,
+          "observed": [
+            [
+              "1",
+              "2"
+            ],
+            [
+              "2",
+              "4"
+            ],
+            [
+              "3",
+              "6"
+            ],
+            [
+              "5",
+              "8"
+            ]
+          ]
+        },
+        {
+          "name": "all-full-literal-x-tick-labels-and-finite-alignment",
+          "pass": true,
+          "observed": [
+            {
+              "literal": "1",
+              "x": 72,
+              "box": {
+                "x": 68.6953125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            },
+            {
+              "literal": "2",
+              "x": 277.75,
+              "box": {
+                "x": 274.4453125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            },
+            {
+              "literal": "3",
+              "x": 483.5,
+              "box": {
+                "x": 480.1953125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            },
+            {
+              "literal": "5",
+              "x": 895,
+              "box": {
+                "x": 891.6953125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            }
+          ]
+        },
+        {
+          "name": "native-text-not-clipped-or-pairwise-overlapping",
+          "pass": true,
+          "observed": {
+            "text": [
+              {
+                "literal": "8.000",
+                "box": {
+                  "x": 31,
+                  "y": 62,
+                  "width": 33.390625,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "0.000",
+                "box": {
+                  "x": 31,
+                  "y": 444,
+                  "width": 33.390625,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "x",
+                "box": {
+                  "x": 476.6953125,
+                  "y": 497,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "y",
+                "box": {
+                  "x": 4,
+                  "y": 256.3046875,
+                  "width": 14,
+                  "height": 7
+                }
+              },
+              {
+                "literal": "11",
+                "box": {
+                  "x": 68.6953125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "22",
+                "box": {
+                  "x": 274.4453125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "33",
+                "box": {
+                  "x": 480.1953125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "55",
+                "box": {
+                  "x": 891.6953125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              }
+            ],
+            "tickOverlap": false
+          }
+        }
+      ],
+      "outcome": "correct-rendered"
+    },
+    {
+      "id": "scatter-extreme",
+      "kind": "scatter",
+      "extreme": true,
+      "normalized": {
+        "records": [
+          {
+            "x": -1e+308,
+            "y": -8
+          },
+          {
+            "x": -5e+307,
+            "y": -4
+          },
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 1e+308,
+            "y": 8
+          }
+        ],
+        "input_count": 4,
+        "warnings": [],
+        "strategy": "none"
+      },
+      "artifactReturned": true,
+      "inputAfter": [
+        {
+          "x": -1e+308,
+          "y": -8
+        },
+        {
+          "x": -5e+307,
+          "y": -4
+        },
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 1e+308,
+          "y": 8
+        }
+      ],
+      "artifact": {
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [],
+        "records": [
+          {
+            "x": -1e+308,
+            "y": -8
+          },
+          {
+            "x": -5e+307,
+            "y": -4
+          },
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 1e+308,
+            "y": 8
+          }
+        ]
+      },
+      "native": {
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"R24 scatter-extreme\" viewBox=\"0 0 960 520\" width=\"960\" height=\"520\" fill=\"#374151\"><title>R24 scatter-extreme</title><g fill=\"#374151\" font-family=\"monospace\" font-size=\"12\"><path d=\"M80,65 V455 H895\" fill=\"none\" stroke=\"#374151\"/><text x=\"72\" y=\"73\" text-anchor=\"end\">8.000</text><text x=\"72\" y=\"455\" text-anchor=\"end\">-8.000</text><text x=\"480\" y=\"508\" text-anchor=\"middle\">x</text><text transform=\"translate(15 260) rotate(-90)\" text-anchor=\"middle\">y</text><text class=\"category-tick\" x=\"80\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>-1e+308</title>-1e+308</text><text class=\"category-tick\" x=\"80\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>-5e+307</title>-5e+307</text><text class=\"category-tick\" x=\"80\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>0</title>0</text><text class=\"category-tick\" x=\"NaN\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>1e+308</title>1e+308</text></g><circle class=\"mark\" cx=\"80\" cy=\"455\" r=\"4\" fill=\"#2563eb\"><title>-1e+308: -8</title></circle><circle class=\"mark\" cx=\"80\" cy=\"357.5\" r=\"4\" fill=\"#2563eb\"><title>-5e+307: -4</title></circle><circle class=\"mark\" cx=\"80\" cy=\"260\" r=\"4\" fill=\"#2563eb\"><title>0: 0</title></circle><circle class=\"mark\" cx=\"NaN\" cy=\"65\" r=\"4\" fill=\"#2563eb\"><title>1e+308: 8</title></circle></svg>",
+        "svg_sha256": "3aedef8b3403cb407908c43945fb0cbc1ba5fa1253013ec88714f20da7bc7f3b",
+        "html_sha256": "89a3291e5404e583821b4065a74ff2f3ada8ab8000b9c6ab719fb55a59a37a1d",
+        "marks": [
+          {
+            "tag": "circle",
+            "attributes": {
+              "cx": "80",
+              "cy": "455",
+              "r": "4",
+              "fill": "#2563eb"
+            }
+          },
+          {
+            "tag": "circle",
+            "attributes": {
+              "cx": "80",
+              "cy": "357.5",
+              "r": "4",
+              "fill": "#2563eb"
+            }
+          },
+          {
+            "tag": "circle",
+            "attributes": {
+              "cx": "80",
+              "cy": "260",
+              "r": "4",
+              "fill": "#2563eb"
+            }
+          },
+          {
+            "tag": "circle",
+            "attributes": {
+              "cx": "NaN",
+              "cy": "65",
+              "r": "4",
+              "fill": "#2563eb"
+            }
+          }
+        ],
+        "attributes": [
+          {
+            "cx": "80",
+            "cy": "455",
+            "r": "4",
+            "fill": "#2563eb"
+          },
+          {
+            "cx": "80",
+            "cy": "357.5",
+            "r": "4",
+            "fill": "#2563eb"
+          },
+          {
+            "cx": "80",
+            "cy": "260",
+            "r": "4",
+            "fill": "#2563eb"
+          },
+          {
+            "cx": "NaN",
+            "cy": "65",
+            "r": "4",
+            "fill": "#2563eb"
+          }
+        ],
+        "points": [
+          [
+            80,
+            455
+          ],
+          [
+            80,
+            357.5
+          ],
+          [
+            80,
+            260
+          ],
+          [
+            null,
+            65
+          ]
+        ]
+      },
+      "state": {
+        "ready": true,
+        "deepvizErrors": [],
+        "title": "R24 scatter-extreme",
+        "width": 960,
+        "height": 520,
+        "axis": {
+          "left": 80,
+          "top": 65,
+          "bottom": 455,
+          "right": 895
+        },
+        "marks": [
+          {
+            "tag": "circle",
+            "points": [
+              [
+                80,
+                455
+              ]
+            ],
+            "r": 4,
+            "box": {
+              "x": 76,
+              "y": 451,
+              "width": 8,
+              "height": 8
+            },
+            "fill": "rgb(37, 99, 235)",
+            "stroke": "none"
+          },
+          {
+            "tag": "circle",
+            "points": [
+              [
+                80,
+                357.5
+              ]
+            ],
+            "r": 4,
+            "box": {
+              "x": 76,
+              "y": 353.5,
+              "width": 8,
+              "height": 8
+            },
+            "fill": "rgb(37, 99, 235)",
+            "stroke": "none"
+          },
+          {
+            "tag": "circle",
+            "points": [
+              [
+                80,
+                260
+              ]
+            ],
+            "r": 4,
+            "box": {
+              "x": 76,
+              "y": 256,
+              "width": 8,
+              "height": 8
+            },
+            "fill": "rgb(37, 99, 235)",
+            "stroke": "none"
+          },
+          {
+            "tag": "circle",
+            "points": [
+              [
+                0,
+                65
+              ]
+            ],
+            "r": 4,
+            "box": {
+              "x": -4,
+              "y": 61,
+              "width": 8,
+              "height": 8
+            },
+            "fill": "rgb(37, 99, 235)",
+            "stroke": "none"
+          }
+        ],
+        "points": [
+          [
+            80,
+            455
+          ],
+          [
+            80,
+            357.5
+          ],
+          [
+            80,
+            260
+          ],
+          [
+            0,
+            65
+          ]
+        ],
+        "ticks": [
+          {
+            "literal": "-1e+308",
+            "x": 80,
+            "box": {
+              "x": 56.90625,
+              "y": 462,
+              "width": 46.5859375,
+              "height": 14
+            }
+          },
+          {
+            "literal": "-5e+307",
+            "x": 80,
+            "box": {
+              "x": 56.90625,
+              "y": 462,
+              "width": 46.5859375,
+              "height": 14
+            }
+          },
+          {
+            "literal": "0",
+            "x": 80,
+            "box": {
+              "x": 76.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "1e+308",
+            "x": null,
+            "box": {
+              "x": -19.796875,
+              "y": 462,
+              "width": 39.98828125,
+              "height": 14
+            }
+          }
+        ],
+        "textBoxes": [
+          {
+            "literal": "8.000",
+            "box": {
+              "x": 39,
+              "y": 62,
+              "width": 33.390625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "-8.000",
+            "box": {
+              "x": 32.40625,
+              "y": 444,
+              "width": 39.98828125,
+              "height": 14
+            }
+          },
+          {
+            "literal": "x",
+            "box": {
+              "x": 476.6953125,
+              "y": 497,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "y",
+            "box": {
+              "x": 4,
+              "y": 256.3046875,
+              "width": 14,
+              "height": 7
+            }
+          },
+          {
+            "literal": "-1e+308-1e+308",
+            "box": {
+              "x": 56.90625,
+              "y": 462,
+              "width": 46.5859375,
+              "height": 14
+            }
+          },
+          {
+            "literal": "-5e+307-5e+307",
+            "box": {
+              "x": 56.90625,
+              "y": 462,
+              "width": 46.5859375,
+              "height": 14
+            }
+          },
+          {
+            "literal": "00",
+            "box": {
+              "x": 76.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "1e+3081e+308",
+            "box": {
+              "x": -19.796875,
+              "y": 462,
+              "width": 39.98828125,
+              "height": 14
+            }
+          }
+        ],
+        "painted": true,
+        "textInside": false,
+        "tickOverlap": true,
+        "table": [
+          [
+            "-1e+308",
+            "-8"
+          ],
+          [
+            "-5e+307",
+            "-4"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "1e+308",
+            "8"
+          ]
+        ],
+        "viewport": {
+          "x": 24,
+          "y": 125.953125,
+          "width": 960,
+          "height": 520
+        },
+        "errors": [
+          {
+            "kind": "console",
+            "message": "Error: <text> attribute x: Expected length, \"NaN\"."
+          },
+          {
+            "kind": "console",
+            "message": "Error: <circle> attribute cx: Expected length, \"NaN\"."
+          }
+        ],
+        "requests": []
+      },
+      "checks": [
+        {
+          "name": "original-input-not-mutated",
+          "pass": true,
+          "observed": [
+            {
+              "x": -1e+308,
+              "y": -8
+            },
+            {
+              "x": -5e+307,
+              "y": -4
+            },
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1e+308,
+              "y": 8
+            }
+          ]
+        },
+        {
+          "name": "independent-normalize-preserves-literal-finite-values-and-order",
+          "pass": true,
+          "observed": {
+            "records": [
+              {
+                "x": -1e+308,
+                "y": -8
+              },
+              {
+                "x": -5e+307,
+                "y": -4
+              },
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 1e+308,
+                "y": 8
+              }
+            ],
+            "input_count": 4,
+            "warnings": [],
+            "strategy": "none"
+          }
+        },
+        {
+          "name": "independent-normalize-exact-count-none-no-warning",
+          "pass": true,
+          "observed": {
+            "records": [
+              {
+                "x": -1e+308,
+                "y": -8
+              },
+              {
+                "x": -5e+307,
+                "y": -4
+              },
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 1e+308,
+                "y": 8
+              }
+            ],
+            "input_count": 4,
+            "warnings": [],
+            "strategy": "none"
+          }
+        },
+        {
+          "name": "public-artifact-counts-none-no-warning",
+          "pass": true,
+          "observed": {
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [],
+            "records": [
+              {
+                "x": -1e+308,
+                "y": -8
+              },
+              {
+                "x": -5e+307,
+                "y": -4
+              },
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 1e+308,
+                "y": 8
+              }
+            ]
+          }
+        },
+        {
+          "name": "public-normalized-original-values-and-order",
+          "pass": true,
+          "observed": [
+            {
+              "x": -1e+308,
+              "y": -8
+            },
+            {
+              "x": -5e+307,
+              "y": -4
+            },
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1e+308,
+              "y": 8
+            }
+          ]
+        },
+        {
+          "name": "native-serialization-no-NaN-or-Infinity",
+          "pass": false,
+          "observed": [
+            {
+              "cx": "80",
+              "cy": "455",
+              "r": "4",
+              "fill": "#2563eb"
+            },
+            {
+              "cx": "80",
+              "cy": "357.5",
+              "r": "4",
+              "fill": "#2563eb"
+            },
+            {
+              "cx": "80",
+              "cy": "260",
+              "r": "4",
+              "fill": "#2563eb"
+            },
+            {
+              "cx": "NaN",
+              "cy": "65",
+              "r": "4",
+              "fill": "#2563eb"
+            }
+          ]
+        },
+        {
+          "name": "native-complete-finite-coordinate-count",
+          "pass": false,
+          "observed": [
+            [
+              80,
+              455
+            ],
+            [
+              80,
+              357.5
+            ],
+            [
+              80,
+              260
+            ],
+            [
+              null,
+              65
+            ]
+          ]
+        },
+        {
+          "name": "zero-unexpected-browser-console-page-or-readiness-errors",
+          "pass": false,
+          "observed": {
+            "errors": [
+              {
+                "kind": "console",
+                "message": "Error: <text> attribute x: Expected length, \"NaN\"."
+              },
+              {
+                "kind": "console",
+                "message": "Error: <circle> attribute cx: Expected length, \"NaN\"."
+              }
+            ],
+            "deepvizErrors": []
+          }
+        },
+        {
+          "name": "public-html-ready-no-external-requests",
+          "pass": true,
+          "observed": []
+        },
+        {
+          "name": "root-title-and-dimensions",
+          "pass": true,
+          "observed": {
+            "title": "R24 scatter-extreme",
+            "width": 960,
+            "height": 520
+          }
+        },
+        {
+          "name": "finite-nondegenerate-quantitative-plot",
+          "pass": true,
+          "observed": {
+            "left": 80,
+            "top": 65,
+            "bottom": 455,
+            "right": 895
+          }
+        },
+        {
+          "name": "all-four-literal-points-correct-independent-finite-fractions",
+          "pass": false,
+          "observed": {
+            "actual": [
+              [
+                80,
+                455
+              ],
+              [
+                80,
+                357.5
+              ],
+              [
+                80,
+                260
+              ],
+              [
+                0,
+                65
+              ]
+            ],
+            "expected": [
+              [
+                80,
+                455
+              ],
+              [
+                283.75,
+                357.5
+              ],
+              [
+                487.5,
+                260
+              ],
+              [
+                895,
+                65
+              ]
+            ]
+          }
+        },
+        {
+          "name": "unequal-quantitative-x-gaps-1-1-2-not-collapsed",
+          "pass": false,
+          "observed": [
+            0,
+            0,
+            -80
+          ]
+        },
+        {
+          "name": "complete-native-browser-point-count-and-real-paint",
+          "pass": true,
+          "observed": {
+            "points": [
+              [
+                80,
+                455
+              ],
+              [
+                80,
+                357.5
+              ],
+              [
+                80,
+                260
+              ],
+              [
+                0,
+                65
+              ]
+            ],
+            "marks": [
+              {
+                "tag": "circle",
+                "points": [
+                  [
+                    80,
+                    455
+                  ]
+                ],
+                "r": 4,
+                "box": {
+                  "x": 76,
+                  "y": 451,
+                  "width": 8,
+                  "height": 8
+                },
+                "fill": "rgb(37, 99, 235)",
+                "stroke": "none"
+              },
+              {
+                "tag": "circle",
+                "points": [
+                  [
+                    80,
+                    357.5
+                  ]
+                ],
+                "r": 4,
+                "box": {
+                  "x": 76,
+                  "y": 353.5,
+                  "width": 8,
+                  "height": 8
+                },
+                "fill": "rgb(37, 99, 235)",
+                "stroke": "none"
+              },
+              {
+                "tag": "circle",
+                "points": [
+                  [
+                    80,
+                    260
+                  ]
+                ],
+                "r": 4,
+                "box": {
+                  "x": 76,
+                  "y": 256,
+                  "width": 8,
+                  "height": 8
+                },
+                "fill": "rgb(37, 99, 235)",
+                "stroke": "none"
+              },
+              {
+                "tag": "circle",
+                "points": [
+                  [
+                    0,
+                    65
+                  ]
+                ],
+                "r": 4,
+                "box": {
+                  "x": -4,
+                  "y": 61,
+                  "width": 8,
+                  "height": 8
+                },
+                "fill": "rgb(37, 99, 235)",
+                "stroke": "none"
+              }
+            ]
+          }
+        },
+        {
+          "name": "all-literal-table-cell-values-and-order",
+          "pass": true,
+          "observed": [
+            [
+              "-1e+308",
+              "-8"
+            ],
+            [
+              "-5e+307",
+              "-4"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "1e+308",
+              "8"
+            ]
+          ]
+        },
+        {
+          "name": "all-full-literal-x-tick-labels-and-finite-alignment",
+          "pass": false,
+          "observed": [
+            {
+              "literal": "-1e+308",
+              "x": 80,
+              "box": {
+                "x": 56.90625,
+                "y": 462,
+                "width": 46.5859375,
+                "height": 14
+              }
+            },
+            {
+              "literal": "-5e+307",
+              "x": 80,
+              "box": {
+                "x": 56.90625,
+                "y": 462,
+                "width": 46.5859375,
+                "height": 14
+              }
+            },
+            {
+              "literal": "0",
+              "x": 80,
+              "box": {
+                "x": 76.6953125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            },
+            {
+              "literal": "1e+308",
+              "x": null,
+              "box": {
+                "x": -19.796875,
+                "y": 462,
+                "width": 39.98828125,
+                "height": 14
+              }
+            }
+          ]
+        },
+        {
+          "name": "native-text-not-clipped-or-pairwise-overlapping",
+          "pass": false,
+          "observed": {
+            "text": [
+              {
+                "literal": "8.000",
+                "box": {
+                  "x": 39,
+                  "y": 62,
+                  "width": 33.390625,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "-8.000",
+                "box": {
+                  "x": 32.40625,
+                  "y": 444,
+                  "width": 39.98828125,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "x",
+                "box": {
+                  "x": 476.6953125,
+                  "y": 497,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "y",
+                "box": {
+                  "x": 4,
+                  "y": 256.3046875,
+                  "width": 14,
+                  "height": 7
+                }
+              },
+              {
+                "literal": "-1e+308-1e+308",
+                "box": {
+                  "x": 56.90625,
+                  "y": 462,
+                  "width": 46.5859375,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "-5e+307-5e+307",
+                "box": {
+                  "x": 56.90625,
+                  "y": 462,
+                  "width": 46.5859375,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "00",
+                "box": {
+                  "x": 76.6953125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "1e+3081e+308",
+                "box": {
+                  "x": -19.796875,
+                  "y": 462,
+                  "width": 39.98828125,
+                  "height": 14
+                }
+              }
+            ],
+            "tickOverlap": true
+          }
+        },
+        {
+          "name": "actual-zero-sample-at-midpoint",
+          "pass": true,
+          "observed": [
+            80,
+            260
+          ]
+        }
+      ],
+      "outcome": "failed-success-artifact"
+    },
+    {
+      "id": "bubble-control",
+      "kind": "bubble",
+      "extreme": false,
+      "normalized": {
+        "records": [
+          {
+            "x": 1,
+            "y": 2,
+            "size": 1
+          },
+          {
+            "x": 2,
+            "y": 4,
+            "size": 4
+          },
+          {
+            "x": 3,
+            "y": 6,
+            "size": 9
+          },
+          {
+            "x": 5,
+            "y": 8,
+            "size": 16
+          }
+        ],
+        "input_count": 4,
+        "warnings": [],
+        "strategy": "none"
+      },
+      "artifactReturned": true,
+      "inputAfter": [
+        {
+          "x": 1,
+          "y": 2,
+          "size": 1
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "size": 4
+        },
+        {
+          "x": 3,
+          "y": 6,
+          "size": 9
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "size": 16
+        }
+      ],
+      "artifact": {
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [],
+        "records": [
+          {
+            "x": 1,
+            "y": 2,
+            "size": 1
+          },
+          {
+            "x": 2,
+            "y": 4,
+            "size": 4
+          },
+          {
+            "x": 3,
+            "y": 6,
+            "size": 9
+          },
+          {
+            "x": 5,
+            "y": 8,
+            "size": 16
+          }
+        ]
+      },
+      "native": {
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"R24 bubble-control\" viewBox=\"0 0 960 520\" width=\"960\" height=\"520\" fill=\"#374151\"><title>R24 bubble-control</title><g fill=\"#374151\" font-family=\"monospace\" font-size=\"12\"><path d=\"M72,65 V455 H895\" fill=\"none\" stroke=\"#374151\"/><text x=\"64\" y=\"73\" text-anchor=\"end\">8.000</text><text x=\"64\" y=\"455\" text-anchor=\"end\">0.000</text><text x=\"480\" y=\"508\" text-anchor=\"middle\">x</text><text transform=\"translate(15 260) rotate(-90)\" text-anchor=\"middle\">y</text><text class=\"category-tick\" x=\"72\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>1</title>1</text><text class=\"category-tick\" x=\"277.75\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>2</title>2</text><text class=\"category-tick\" x=\"483.5\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>3</title>3</text><text class=\"category-tick\" x=\"895\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>5</title>5</text></g><circle class=\"mark\" cx=\"72\" cy=\"357.5\" r=\"7.5\" fill=\"#2563eb\"><title>1: 2</title></circle><circle class=\"mark\" cx=\"277.75\" cy=\"260\" r=\"15\" fill=\"#2563eb\"><title>2: 4</title></circle><circle class=\"mark\" cx=\"483.5\" cy=\"162.5\" r=\"22.5\" fill=\"#2563eb\"><title>3: 6</title></circle><circle class=\"mark\" cx=\"895\" cy=\"65\" r=\"30\" fill=\"#2563eb\"><title>5: 8</title></circle></svg>",
+        "svg_sha256": "7ed33b9d801c1fc4efe95c4e2ab62f71725e60b7397a474cc49084cb32801ef2",
+        "html_sha256": "d12a64a3e98e1e896427be49749fb01c7bebd10c7fdf74646a56b83b3fc83b04",
+        "marks": [
+          {
+            "tag": "circle",
+            "attributes": {
+              "cx": "72",
+              "cy": "357.5",
+              "r": "7.5",
+              "fill": "#2563eb"
+            }
+          },
+          {
+            "tag": "circle",
+            "attributes": {
+              "cx": "277.75",
+              "cy": "260",
+              "r": "15",
+              "fill": "#2563eb"
+            }
+          },
+          {
+            "tag": "circle",
+            "attributes": {
+              "cx": "483.5",
+              "cy": "162.5",
+              "r": "22.5",
+              "fill": "#2563eb"
+            }
+          },
+          {
+            "tag": "circle",
+            "attributes": {
+              "cx": "895",
+              "cy": "65",
+              "r": "30",
+              "fill": "#2563eb"
+            }
+          }
+        ],
+        "attributes": [
+          {
+            "cx": "72",
+            "cy": "357.5",
+            "r": "7.5",
+            "fill": "#2563eb"
+          },
+          {
+            "cx": "277.75",
+            "cy": "260",
+            "r": "15",
+            "fill": "#2563eb"
+          },
+          {
+            "cx": "483.5",
+            "cy": "162.5",
+            "r": "22.5",
+            "fill": "#2563eb"
+          },
+          {
+            "cx": "895",
+            "cy": "65",
+            "r": "30",
+            "fill": "#2563eb"
+          }
+        ],
+        "points": [
+          [
+            72,
+            357.5
+          ],
+          [
+            277.75,
+            260
+          ],
+          [
+            483.5,
+            162.5
+          ],
+          [
+            895,
+            65
+          ]
+        ]
+      },
+      "state": {
+        "ready": true,
+        "deepvizErrors": [],
+        "title": "R24 bubble-control",
+        "width": 960,
+        "height": 520,
+        "axis": {
+          "left": 72,
+          "top": 65,
+          "bottom": 455,
+          "right": 895
+        },
+        "marks": [
+          {
+            "tag": "circle",
+            "points": [
+              [
+                72,
+                357.5
+              ]
+            ],
+            "r": 7.5,
+            "box": {
+              "x": 64.5,
+              "y": 350,
+              "width": 15,
+              "height": 15
+            },
+            "fill": "rgb(37, 99, 235)",
+            "stroke": "none"
+          },
+          {
+            "tag": "circle",
+            "points": [
+              [
+                277.75,
+                260
+              ]
+            ],
+            "r": 15,
+            "box": {
+              "x": 262.75,
+              "y": 245,
+              "width": 30,
+              "height": 30
+            },
+            "fill": "rgb(37, 99, 235)",
+            "stroke": "none"
+          },
+          {
+            "tag": "circle",
+            "points": [
+              [
+                483.5,
+                162.5
+              ]
+            ],
+            "r": 22.5,
+            "box": {
+              "x": 461,
+              "y": 140,
+              "width": 45,
+              "height": 45
+            },
+            "fill": "rgb(37, 99, 235)",
+            "stroke": "none"
+          },
+          {
+            "tag": "circle",
+            "points": [
+              [
+                895,
+                65
+              ]
+            ],
+            "r": 30,
+            "box": {
+              "x": 865,
+              "y": 35,
+              "width": 60,
+              "height": 60
+            },
+            "fill": "rgb(37, 99, 235)",
+            "stroke": "none"
+          }
+        ],
+        "points": [
+          [
+            72,
+            357.5
+          ],
+          [
+            277.75,
+            260
+          ],
+          [
+            483.5,
+            162.5
+          ],
+          [
+            895,
+            65
+          ]
+        ],
+        "ticks": [
+          {
+            "literal": "1",
+            "x": 72,
+            "box": {
+              "x": 68.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "2",
+            "x": 277.75,
+            "box": {
+              "x": 274.4453125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "3",
+            "x": 483.5,
+            "box": {
+              "x": 480.1953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "5",
+            "x": 895,
+            "box": {
+              "x": 891.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          }
+        ],
+        "textBoxes": [
+          {
+            "literal": "8.000",
+            "box": {
+              "x": 31,
+              "y": 62,
+              "width": 33.390625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "0.000",
+            "box": {
+              "x": 31,
+              "y": 444,
+              "width": 33.390625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "x",
+            "box": {
+              "x": 476.6953125,
+              "y": 497,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "y",
+            "box": {
+              "x": 4,
+              "y": 256.3046875,
+              "width": 14,
+              "height": 7
+            }
+          },
+          {
+            "literal": "11",
+            "box": {
+              "x": 68.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "22",
+            "box": {
+              "x": 274.4453125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "33",
+            "box": {
+              "x": 480.1953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "55",
+            "box": {
+              "x": 891.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          }
+        ],
+        "painted": true,
+        "textInside": true,
+        "tickOverlap": false,
+        "table": [
+          [
+            "1",
+            "2",
+            "1"
+          ],
+          [
+            "2",
+            "4",
+            "4"
+          ],
+          [
+            "3",
+            "6",
+            "9"
+          ],
+          [
+            "5",
+            "8",
+            "16"
+          ]
+        ],
+        "viewport": {
+          "x": 24,
+          "y": 125.953125,
+          "width": 960,
+          "height": 520
+        },
+        "errors": [],
+        "requests": []
+      },
+      "checks": [
+        {
+          "name": "original-input-not-mutated",
+          "pass": true,
+          "observed": [
+            {
+              "x": 1,
+              "y": 2,
+              "size": 1
+            },
+            {
+              "x": 2,
+              "y": 4,
+              "size": 4
+            },
+            {
+              "x": 3,
+              "y": 6,
+              "size": 9
+            },
+            {
+              "x": 5,
+              "y": 8,
+              "size": 16
+            }
+          ]
+        },
+        {
+          "name": "independent-normalize-preserves-literal-finite-values-and-order",
+          "pass": true,
+          "observed": {
+            "records": [
+              {
+                "x": 1,
+                "y": 2,
+                "size": 1
+              },
+              {
+                "x": 2,
+                "y": 4,
+                "size": 4
+              },
+              {
+                "x": 3,
+                "y": 6,
+                "size": 9
+              },
+              {
+                "x": 5,
+                "y": 8,
+                "size": 16
+              }
+            ],
+            "input_count": 4,
+            "warnings": [],
+            "strategy": "none"
+          }
+        },
+        {
+          "name": "independent-normalize-exact-count-none-no-warning",
+          "pass": true,
+          "observed": {
+            "records": [
+              {
+                "x": 1,
+                "y": 2,
+                "size": 1
+              },
+              {
+                "x": 2,
+                "y": 4,
+                "size": 4
+              },
+              {
+                "x": 3,
+                "y": 6,
+                "size": 9
+              },
+              {
+                "x": 5,
+                "y": 8,
+                "size": 16
+              }
+            ],
+            "input_count": 4,
+            "warnings": [],
+            "strategy": "none"
+          }
+        },
+        {
+          "name": "public-artifact-counts-none-no-warning",
+          "pass": true,
+          "observed": {
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [],
+            "records": [
+              {
+                "x": 1,
+                "y": 2,
+                "size": 1
+              },
+              {
+                "x": 2,
+                "y": 4,
+                "size": 4
+              },
+              {
+                "x": 3,
+                "y": 6,
+                "size": 9
+              },
+              {
+                "x": 5,
+                "y": 8,
+                "size": 16
+              }
+            ]
+          }
+        },
+        {
+          "name": "public-normalized-original-values-and-order",
+          "pass": true,
+          "observed": [
+            {
+              "x": 1,
+              "y": 2,
+              "size": 1
+            },
+            {
+              "x": 2,
+              "y": 4,
+              "size": 4
+            },
+            {
+              "x": 3,
+              "y": 6,
+              "size": 9
+            },
+            {
+              "x": 5,
+              "y": 8,
+              "size": 16
+            }
+          ]
+        },
+        {
+          "name": "native-serialization-no-NaN-or-Infinity",
+          "pass": true,
+          "observed": [
+            {
+              "cx": "72",
+              "cy": "357.5",
+              "r": "7.5",
+              "fill": "#2563eb"
+            },
+            {
+              "cx": "277.75",
+              "cy": "260",
+              "r": "15",
+              "fill": "#2563eb"
+            },
+            {
+              "cx": "483.5",
+              "cy": "162.5",
+              "r": "22.5",
+              "fill": "#2563eb"
+            },
+            {
+              "cx": "895",
+              "cy": "65",
+              "r": "30",
+              "fill": "#2563eb"
+            }
+          ]
+        },
+        {
+          "name": "native-complete-finite-coordinate-count",
+          "pass": true,
+          "observed": [
+            [
+              72,
+              357.5
+            ],
+            [
+              277.75,
+              260
+            ],
+            [
+              483.5,
+              162.5
+            ],
+            [
+              895,
+              65
+            ]
+          ]
+        },
+        {
+          "name": "zero-unexpected-browser-console-page-or-readiness-errors",
+          "pass": true,
+          "observed": {
+            "errors": [],
+            "deepvizErrors": []
+          }
+        },
+        {
+          "name": "public-html-ready-no-external-requests",
+          "pass": true,
+          "observed": []
+        },
+        {
+          "name": "root-title-and-dimensions",
+          "pass": true,
+          "observed": {
+            "title": "R24 bubble-control",
+            "width": 960,
+            "height": 520
+          }
+        },
+        {
+          "name": "finite-nondegenerate-quantitative-plot",
+          "pass": true,
+          "observed": {
+            "left": 72,
+            "top": 65,
+            "bottom": 455,
+            "right": 895
+          }
+        },
+        {
+          "name": "all-four-literal-points-correct-independent-finite-fractions",
+          "pass": true,
+          "observed": {
+            "actual": [
+              [
+                72,
+                357.5
+              ],
+              [
+                277.75,
+                260
+              ],
+              [
+                483.5,
+                162.5
+              ],
+              [
+                895,
+                65
+              ]
+            ],
+            "expected": [
+              [
+                72,
+                357.5
+              ],
+              [
+                277.75,
+                260
+              ],
+              [
+                483.5,
+                162.5
+              ],
+              [
+                895,
+                65
+              ]
+            ]
+          }
+        },
+        {
+          "name": "unequal-quantitative-x-gaps-1-1-2-not-collapsed",
+          "pass": true,
+          "observed": [
+            205.75,
+            205.75,
+            411.5
+          ]
+        },
+        {
+          "name": "complete-native-browser-point-count-and-real-paint",
+          "pass": true,
+          "observed": {
+            "points": [
+              [
+                72,
+                357.5
+              ],
+              [
+                277.75,
+                260
+              ],
+              [
+                483.5,
+                162.5
+              ],
+              [
+                895,
+                65
+              ]
+            ],
+            "marks": [
+              {
+                "tag": "circle",
+                "points": [
+                  [
+                    72,
+                    357.5
+                  ]
+                ],
+                "r": 7.5,
+                "box": {
+                  "x": 64.5,
+                  "y": 350,
+                  "width": 15,
+                  "height": 15
+                },
+                "fill": "rgb(37, 99, 235)",
+                "stroke": "none"
+              },
+              {
+                "tag": "circle",
+                "points": [
+                  [
+                    277.75,
+                    260
+                  ]
+                ],
+                "r": 15,
+                "box": {
+                  "x": 262.75,
+                  "y": 245,
+                  "width": 30,
+                  "height": 30
+                },
+                "fill": "rgb(37, 99, 235)",
+                "stroke": "none"
+              },
+              {
+                "tag": "circle",
+                "points": [
+                  [
+                    483.5,
+                    162.5
+                  ]
+                ],
+                "r": 22.5,
+                "box": {
+                  "x": 461,
+                  "y": 140,
+                  "width": 45,
+                  "height": 45
+                },
+                "fill": "rgb(37, 99, 235)",
+                "stroke": "none"
+              },
+              {
+                "tag": "circle",
+                "points": [
+                  [
+                    895,
+                    65
+                  ]
+                ],
+                "r": 30,
+                "box": {
+                  "x": 865,
+                  "y": 35,
+                  "width": 60,
+                  "height": 60
+                },
+                "fill": "rgb(37, 99, 235)",
+                "stroke": "none"
+              }
+            ]
+          }
+        },
+        {
+          "name": "all-literal-table-cell-values-and-order",
+          "pass": true,
+          "observed": [
+            [
+              "1",
+              "2",
+              "1"
+            ],
+            [
+              "2",
+              "4",
+              "4"
+            ],
+            [
+              "3",
+              "6",
+              "9"
+            ],
+            [
+              "5",
+              "8",
+              "16"
+            ]
+          ]
+        },
+        {
+          "name": "all-full-literal-x-tick-labels-and-finite-alignment",
+          "pass": true,
+          "observed": [
+            {
+              "literal": "1",
+              "x": 72,
+              "box": {
+                "x": 68.6953125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            },
+            {
+              "literal": "2",
+              "x": 277.75,
+              "box": {
+                "x": 274.4453125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            },
+            {
+              "literal": "3",
+              "x": 483.5,
+              "box": {
+                "x": 480.1953125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            },
+            {
+              "literal": "5",
+              "x": 895,
+              "box": {
+                "x": 891.6953125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            }
+          ]
+        },
+        {
+          "name": "native-text-not-clipped-or-pairwise-overlapping",
+          "pass": true,
+          "observed": {
+            "text": [
+              {
+                "literal": "8.000",
+                "box": {
+                  "x": 31,
+                  "y": 62,
+                  "width": 33.390625,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "0.000",
+                "box": {
+                  "x": 31,
+                  "y": 444,
+                  "width": 33.390625,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "x",
+                "box": {
+                  "x": 476.6953125,
+                  "y": 497,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "y",
+                "box": {
+                  "x": 4,
+                  "y": 256.3046875,
+                  "width": 14,
+                  "height": 7
+                }
+              },
+              {
+                "literal": "11",
+                "box": {
+                  "x": 68.6953125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "22",
+                "box": {
+                  "x": 274.4453125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "33",
+                "box": {
+                  "x": 480.1953125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "55",
+                "box": {
+                  "x": 891.6953125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              }
+            ],
+            "tickOverlap": false
+          }
+        },
+        {
+          "name": "original-size-radii-retained",
+          "pass": true,
+          "observed": [
+            {
+              "tag": "circle",
+              "points": [
+                [
+                  72,
+                  357.5
+                ]
+              ],
+              "r": 7.5,
+              "box": {
+                "x": 64.5,
+                "y": 350,
+                "width": 15,
+                "height": 15
+              },
+              "fill": "rgb(37, 99, 235)",
+              "stroke": "none"
+            },
+            {
+              "tag": "circle",
+              "points": [
+                [
+                  277.75,
+                  260
+                ]
+              ],
+              "r": 15,
+              "box": {
+                "x": 262.75,
+                "y": 245,
+                "width": 30,
+                "height": 30
+              },
+              "fill": "rgb(37, 99, 235)",
+              "stroke": "none"
+            },
+            {
+              "tag": "circle",
+              "points": [
+                [
+                  483.5,
+                  162.5
+                ]
+              ],
+              "r": 22.5,
+              "box": {
+                "x": 461,
+                "y": 140,
+                "width": 45,
+                "height": 45
+              },
+              "fill": "rgb(37, 99, 235)",
+              "stroke": "none"
+            },
+            {
+              "tag": "circle",
+              "points": [
+                [
+                  895,
+                  65
+                ]
+              ],
+              "r": 30,
+              "box": {
+                "x": 865,
+                "y": 35,
+                "width": 60,
+                "height": 60
+              },
+              "fill": "rgb(37, 99, 235)",
+              "stroke": "none"
+            }
+          ]
+        }
+      ],
+      "outcome": "correct-rendered"
+    },
+    {
+      "id": "bubble-extreme",
+      "kind": "bubble",
+      "extreme": true,
+      "normalized": {
+        "records": [
+          {
+            "x": -1e+308,
+            "y": -1e+308,
+            "size": 1
+          },
+          {
+            "x": -5e+307,
+            "y": -5e+307,
+            "size": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "size": 9
+          },
+          {
+            "x": 1e+308,
+            "y": 1e+308,
+            "size": 16
+          }
+        ],
+        "input_count": 4,
+        "warnings": [],
+        "strategy": "none"
+      },
+      "artifactReturned": true,
+      "inputAfter": [
+        {
+          "x": -1e+308,
+          "y": -1e+308,
+          "size": 1
+        },
+        {
+          "x": -5e+307,
+          "y": -5e+307,
+          "size": 4
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "size": 9
+        },
+        {
+          "x": 1e+308,
+          "y": 1e+308,
+          "size": 16
+        }
+      ],
+      "artifact": {
+        "input_count": 4,
+        "output_count": 4,
+        "strategy": "none",
+        "warnings": [],
+        "records": [
+          {
+            "x": -1e+308,
+            "y": -1e+308,
+            "size": 1
+          },
+          {
+            "x": -5e+307,
+            "y": -5e+307,
+            "size": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "size": 9
+          },
+          {
+            "x": 1e+308,
+            "y": 1e+308,
+            "size": 16
+          }
+        ]
+      },
+      "native": {
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"R24 bubble-extreme\" viewBox=\"0 0 960 520\" width=\"960\" height=\"520\" fill=\"#374151\"><title>R24 bubble-extreme</title><g fill=\"#374151\" font-family=\"monospace\" font-size=\"12\"><path d=\"M120,65 V455 H895\" fill=\"none\" stroke=\"#374151\"/><text x=\"112\" y=\"73\" text-anchor=\"end\">1.000e+308</text><text x=\"112\" y=\"455\" text-anchor=\"end\">-1.000e+308</text><text x=\"480\" y=\"508\" text-anchor=\"middle\">x</text><text transform=\"translate(15 260) rotate(-90)\" text-anchor=\"middle\">y</text><text class=\"category-tick\" x=\"120\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>-1e+308</title>-1e+308</text><text class=\"category-tick\" x=\"120\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>-5e+307</title>-5e+307</text><text class=\"category-tick\" x=\"120\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>0</title>0</text><text class=\"category-tick\" x=\"NaN\" y=\"473\" text-anchor=\"middle\" font-size=\"12\"><title>1e+308</title>1e+308</text></g><circle class=\"mark\" cx=\"120\" cy=\"455\" r=\"7.5\" fill=\"#2563eb\"><title>-1e+308: -1e+308</title></circle><circle class=\"mark\" cx=\"120\" cy=\"455\" r=\"15\" fill=\"#2563eb\"><title>-5e+307: -5e+307</title></circle><circle class=\"mark\" cx=\"120\" cy=\"455\" r=\"22.5\" fill=\"#2563eb\"><title>0: 0</title></circle><circle class=\"mark\" cx=\"NaN\" cy=\"NaN\" r=\"30\" fill=\"#2563eb\"><title>1e+308: 1e+308</title></circle></svg>",
+        "svg_sha256": "f2e5806e79c333570e776bcace9129eff3ce2c4cb51a8ba94d884edfca22c754",
+        "html_sha256": "5244e6bf80ec7f70ae5473426a8c87958f9925cc9bdafdcd6121156684792b7b",
+        "marks": [
+          {
+            "tag": "circle",
+            "attributes": {
+              "cx": "120",
+              "cy": "455",
+              "r": "7.5",
+              "fill": "#2563eb"
+            }
+          },
+          {
+            "tag": "circle",
+            "attributes": {
+              "cx": "120",
+              "cy": "455",
+              "r": "15",
+              "fill": "#2563eb"
+            }
+          },
+          {
+            "tag": "circle",
+            "attributes": {
+              "cx": "120",
+              "cy": "455",
+              "r": "22.5",
+              "fill": "#2563eb"
+            }
+          },
+          {
+            "tag": "circle",
+            "attributes": {
+              "cx": "NaN",
+              "cy": "NaN",
+              "r": "30",
+              "fill": "#2563eb"
+            }
+          }
+        ],
+        "attributes": [
+          {
+            "cx": "120",
+            "cy": "455",
+            "r": "7.5",
+            "fill": "#2563eb"
+          },
+          {
+            "cx": "120",
+            "cy": "455",
+            "r": "15",
+            "fill": "#2563eb"
+          },
+          {
+            "cx": "120",
+            "cy": "455",
+            "r": "22.5",
+            "fill": "#2563eb"
+          },
+          {
+            "cx": "NaN",
+            "cy": "NaN",
+            "r": "30",
+            "fill": "#2563eb"
+          }
+        ],
+        "points": [
+          [
+            120,
+            455
+          ],
+          [
+            120,
+            455
+          ],
+          [
+            120,
+            455
+          ],
+          [
+            null,
+            null
+          ]
+        ]
+      },
+      "state": {
+        "ready": true,
+        "deepvizErrors": [],
+        "title": "R24 bubble-extreme",
+        "width": 960,
+        "height": 520,
+        "axis": {
+          "left": 120,
+          "top": 65,
+          "bottom": 455,
+          "right": 895
+        },
+        "marks": [
+          {
+            "tag": "circle",
+            "points": [
+              [
+                120,
+                455
+              ]
+            ],
+            "r": 7.5,
+            "box": {
+              "x": 112.5,
+              "y": 447.5,
+              "width": 15,
+              "height": 15
+            },
+            "fill": "rgb(37, 99, 235)",
+            "stroke": "none"
+          },
+          {
+            "tag": "circle",
+            "points": [
+              [
+                120,
+                455
+              ]
+            ],
+            "r": 15,
+            "box": {
+              "x": 105,
+              "y": 440,
+              "width": 30,
+              "height": 30
+            },
+            "fill": "rgb(37, 99, 235)",
+            "stroke": "none"
+          },
+          {
+            "tag": "circle",
+            "points": [
+              [
+                120,
+                455
+              ]
+            ],
+            "r": 22.5,
+            "box": {
+              "x": 97.5,
+              "y": 432.5,
+              "width": 45,
+              "height": 45
+            },
+            "fill": "rgb(37, 99, 235)",
+            "stroke": "none"
+          },
+          {
+            "tag": "circle",
+            "points": [
+              [
+                0,
+                0
+              ]
+            ],
+            "r": 30,
+            "box": {
+              "x": -30,
+              "y": -30,
+              "width": 60,
+              "height": 60
+            },
+            "fill": "rgb(37, 99, 235)",
+            "stroke": "none"
+          }
+        ],
+        "points": [
+          [
+            120,
+            455
+          ],
+          [
+            120,
+            455
+          ],
+          [
+            120,
+            455
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "ticks": [
+          {
+            "literal": "-1e+308",
+            "x": 120,
+            "box": {
+              "x": 96.90625,
+              "y": 462,
+              "width": 46.5859375,
+              "height": 14
+            }
+          },
+          {
+            "literal": "-5e+307",
+            "x": 120,
+            "box": {
+              "x": 96.90625,
+              "y": 462,
+              "width": 46.5859375,
+              "height": 14
+            }
+          },
+          {
+            "literal": "0",
+            "x": 120,
+            "box": {
+              "x": 116.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "1e+308",
+            "x": null,
+            "box": {
+              "x": -19.796875,
+              "y": 462,
+              "width": 39.98828125,
+              "height": 14
+            }
+          }
+        ],
+        "textBoxes": [
+          {
+            "literal": "1.000e+308",
+            "box": {
+              "x": 46.015625,
+              "y": 62,
+              "width": 66.37890625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "-1.000e+308",
+            "box": {
+              "x": 39.421875,
+              "y": 444,
+              "width": 72.9765625,
+              "height": 14
+            }
+          },
+          {
+            "literal": "x",
+            "box": {
+              "x": 476.6953125,
+              "y": 497,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "y",
+            "box": {
+              "x": 4,
+              "y": 256.3046875,
+              "width": 14,
+              "height": 7
+            }
+          },
+          {
+            "literal": "-1e+308-1e+308",
+            "box": {
+              "x": 96.90625,
+              "y": 462,
+              "width": 46.5859375,
+              "height": 14
+            }
+          },
+          {
+            "literal": "-5e+307-5e+307",
+            "box": {
+              "x": 96.90625,
+              "y": 462,
+              "width": 46.5859375,
+              "height": 14
+            }
+          },
+          {
+            "literal": "00",
+            "box": {
+              "x": 116.6953125,
+              "y": 462,
+              "width": 7,
+              "height": 14
+            }
+          },
+          {
+            "literal": "1e+3081e+308",
+            "box": {
+              "x": -19.796875,
+              "y": 462,
+              "width": 39.98828125,
+              "height": 14
+            }
+          }
+        ],
+        "painted": true,
+        "textInside": false,
+        "tickOverlap": true,
+        "table": [
+          [
+            "-1e+308",
+            "-1e+308",
+            "1"
+          ],
+          [
+            "-5e+307",
+            "-5e+307",
+            "4"
+          ],
+          [
+            "0",
+            "0",
+            "9"
+          ],
+          [
+            "1e+308",
+            "1e+308",
+            "16"
+          ]
+        ],
+        "viewport": {
+          "x": 24,
+          "y": 125.953125,
+          "width": 960,
+          "height": 520
+        },
+        "errors": [
+          {
+            "kind": "console",
+            "message": "Error: <text> attribute x: Expected length, \"NaN\"."
+          },
+          {
+            "kind": "console",
+            "message": "Error: <circle> attribute cx: Expected length, \"NaN\"."
+          },
+          {
+            "kind": "console",
+            "message": "Error: <circle> attribute cy: Expected length, \"NaN\"."
+          }
+        ],
+        "requests": []
+      },
+      "checks": [
+        {
+          "name": "original-input-not-mutated",
+          "pass": true,
+          "observed": [
+            {
+              "x": -1e+308,
+              "y": -1e+308,
+              "size": 1
+            },
+            {
+              "x": -5e+307,
+              "y": -5e+307,
+              "size": 4
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "size": 9
+            },
+            {
+              "x": 1e+308,
+              "y": 1e+308,
+              "size": 16
+            }
+          ]
+        },
+        {
+          "name": "independent-normalize-preserves-literal-finite-values-and-order",
+          "pass": true,
+          "observed": {
+            "records": [
+              {
+                "x": -1e+308,
+                "y": -1e+308,
+                "size": 1
+              },
+              {
+                "x": -5e+307,
+                "y": -5e+307,
+                "size": 4
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "size": 9
+              },
+              {
+                "x": 1e+308,
+                "y": 1e+308,
+                "size": 16
+              }
+            ],
+            "input_count": 4,
+            "warnings": [],
+            "strategy": "none"
+          }
+        },
+        {
+          "name": "independent-normalize-exact-count-none-no-warning",
+          "pass": true,
+          "observed": {
+            "records": [
+              {
+                "x": -1e+308,
+                "y": -1e+308,
+                "size": 1
+              },
+              {
+                "x": -5e+307,
+                "y": -5e+307,
+                "size": 4
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "size": 9
+              },
+              {
+                "x": 1e+308,
+                "y": 1e+308,
+                "size": 16
+              }
+            ],
+            "input_count": 4,
+            "warnings": [],
+            "strategy": "none"
+          }
+        },
+        {
+          "name": "public-artifact-counts-none-no-warning",
+          "pass": true,
+          "observed": {
+            "input_count": 4,
+            "output_count": 4,
+            "strategy": "none",
+            "warnings": [],
+            "records": [
+              {
+                "x": -1e+308,
+                "y": -1e+308,
+                "size": 1
+              },
+              {
+                "x": -5e+307,
+                "y": -5e+307,
+                "size": 4
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "size": 9
+              },
+              {
+                "x": 1e+308,
+                "y": 1e+308,
+                "size": 16
+              }
+            ]
+          }
+        },
+        {
+          "name": "public-normalized-original-values-and-order",
+          "pass": true,
+          "observed": [
+            {
+              "x": -1e+308,
+              "y": -1e+308,
+              "size": 1
+            },
+            {
+              "x": -5e+307,
+              "y": -5e+307,
+              "size": 4
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "size": 9
+            },
+            {
+              "x": 1e+308,
+              "y": 1e+308,
+              "size": 16
+            }
+          ]
+        },
+        {
+          "name": "native-serialization-no-NaN-or-Infinity",
+          "pass": false,
+          "observed": [
+            {
+              "cx": "120",
+              "cy": "455",
+              "r": "7.5",
+              "fill": "#2563eb"
+            },
+            {
+              "cx": "120",
+              "cy": "455",
+              "r": "15",
+              "fill": "#2563eb"
+            },
+            {
+              "cx": "120",
+              "cy": "455",
+              "r": "22.5",
+              "fill": "#2563eb"
+            },
+            {
+              "cx": "NaN",
+              "cy": "NaN",
+              "r": "30",
+              "fill": "#2563eb"
+            }
+          ]
+        },
+        {
+          "name": "native-complete-finite-coordinate-count",
+          "pass": false,
+          "observed": [
+            [
+              120,
+              455
+            ],
+            [
+              120,
+              455
+            ],
+            [
+              120,
+              455
+            ],
+            [
+              null,
+              null
+            ]
+          ]
+        },
+        {
+          "name": "zero-unexpected-browser-console-page-or-readiness-errors",
+          "pass": false,
+          "observed": {
+            "errors": [
+              {
+                "kind": "console",
+                "message": "Error: <text> attribute x: Expected length, \"NaN\"."
+              },
+              {
+                "kind": "console",
+                "message": "Error: <circle> attribute cx: Expected length, \"NaN\"."
+              },
+              {
+                "kind": "console",
+                "message": "Error: <circle> attribute cy: Expected length, \"NaN\"."
+              }
+            ],
+            "deepvizErrors": []
+          }
+        },
+        {
+          "name": "public-html-ready-no-external-requests",
+          "pass": true,
+          "observed": []
+        },
+        {
+          "name": "root-title-and-dimensions",
+          "pass": true,
+          "observed": {
+            "title": "R24 bubble-extreme",
+            "width": 960,
+            "height": 520
+          }
+        },
+        {
+          "name": "finite-nondegenerate-quantitative-plot",
+          "pass": true,
+          "observed": {
+            "left": 120,
+            "top": 65,
+            "bottom": 455,
+            "right": 895
+          }
+        },
+        {
+          "name": "all-four-literal-points-correct-independent-finite-fractions",
+          "pass": false,
+          "observed": {
+            "actual": [
+              [
+                120,
+                455
+              ],
+              [
+                120,
+                455
+              ],
+              [
+                120,
+                455
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "expected": [
+              [
+                120,
+                455
+              ],
+              [
+                313.75,
+                357.5
+              ],
+              [
+                507.5,
+                260
+              ],
+              [
+                895,
+                65
+              ]
+            ]
+          }
+        },
+        {
+          "name": "unequal-quantitative-x-gaps-1-1-2-not-collapsed",
+          "pass": false,
+          "observed": [
+            0,
+            0,
+            -120
+          ]
+        },
+        {
+          "name": "complete-native-browser-point-count-and-real-paint",
+          "pass": true,
+          "observed": {
+            "points": [
+              [
+                120,
+                455
+              ],
+              [
+                120,
+                455
+              ],
+              [
+                120,
+                455
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "marks": [
+              {
+                "tag": "circle",
+                "points": [
+                  [
+                    120,
+                    455
+                  ]
+                ],
+                "r": 7.5,
+                "box": {
+                  "x": 112.5,
+                  "y": 447.5,
+                  "width": 15,
+                  "height": 15
+                },
+                "fill": "rgb(37, 99, 235)",
+                "stroke": "none"
+              },
+              {
+                "tag": "circle",
+                "points": [
+                  [
+                    120,
+                    455
+                  ]
+                ],
+                "r": 15,
+                "box": {
+                  "x": 105,
+                  "y": 440,
+                  "width": 30,
+                  "height": 30
+                },
+                "fill": "rgb(37, 99, 235)",
+                "stroke": "none"
+              },
+              {
+                "tag": "circle",
+                "points": [
+                  [
+                    120,
+                    455
+                  ]
+                ],
+                "r": 22.5,
+                "box": {
+                  "x": 97.5,
+                  "y": 432.5,
+                  "width": 45,
+                  "height": 45
+                },
+                "fill": "rgb(37, 99, 235)",
+                "stroke": "none"
+              },
+              {
+                "tag": "circle",
+                "points": [
+                  [
+                    0,
+                    0
+                  ]
+                ],
+                "r": 30,
+                "box": {
+                  "x": -30,
+                  "y": -30,
+                  "width": 60,
+                  "height": 60
+                },
+                "fill": "rgb(37, 99, 235)",
+                "stroke": "none"
+              }
+            ]
+          }
+        },
+        {
+          "name": "all-literal-table-cell-values-and-order",
+          "pass": true,
+          "observed": [
+            [
+              "-1e+308",
+              "-1e+308",
+              "1"
+            ],
+            [
+              "-5e+307",
+              "-5e+307",
+              "4"
+            ],
+            [
+              "0",
+              "0",
+              "9"
+            ],
+            [
+              "1e+308",
+              "1e+308",
+              "16"
+            ]
+          ]
+        },
+        {
+          "name": "all-full-literal-x-tick-labels-and-finite-alignment",
+          "pass": false,
+          "observed": [
+            {
+              "literal": "-1e+308",
+              "x": 120,
+              "box": {
+                "x": 96.90625,
+                "y": 462,
+                "width": 46.5859375,
+                "height": 14
+              }
+            },
+            {
+              "literal": "-5e+307",
+              "x": 120,
+              "box": {
+                "x": 96.90625,
+                "y": 462,
+                "width": 46.5859375,
+                "height": 14
+              }
+            },
+            {
+              "literal": "0",
+              "x": 120,
+              "box": {
+                "x": 116.6953125,
+                "y": 462,
+                "width": 7,
+                "height": 14
+              }
+            },
+            {
+              "literal": "1e+308",
+              "x": null,
+              "box": {
+                "x": -19.796875,
+                "y": 462,
+                "width": 39.98828125,
+                "height": 14
+              }
+            }
+          ]
+        },
+        {
+          "name": "native-text-not-clipped-or-pairwise-overlapping",
+          "pass": false,
+          "observed": {
+            "text": [
+              {
+                "literal": "1.000e+308",
+                "box": {
+                  "x": 46.015625,
+                  "y": 62,
+                  "width": 66.37890625,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "-1.000e+308",
+                "box": {
+                  "x": 39.421875,
+                  "y": 444,
+                  "width": 72.9765625,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "x",
+                "box": {
+                  "x": 476.6953125,
+                  "y": 497,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "y",
+                "box": {
+                  "x": 4,
+                  "y": 256.3046875,
+                  "width": 14,
+                  "height": 7
+                }
+              },
+              {
+                "literal": "-1e+308-1e+308",
+                "box": {
+                  "x": 96.90625,
+                  "y": 462,
+                  "width": 46.5859375,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "-5e+307-5e+307",
+                "box": {
+                  "x": 96.90625,
+                  "y": 462,
+                  "width": 46.5859375,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "00",
+                "box": {
+                  "x": 116.6953125,
+                  "y": 462,
+                  "width": 7,
+                  "height": 14
+                }
+              },
+              {
+                "literal": "1e+3081e+308",
+                "box": {
+                  "x": -19.796875,
+                  "y": 462,
+                  "width": 39.98828125,
+                  "height": 14
+                }
+              }
+            ],
+            "tickOverlap": true
+          }
+        },
+        {
+          "name": "actual-zero-sample-at-midpoint",
+          "pass": false,
+          "observed": [
+            120,
+            455
+          ]
+        },
+        {
+          "name": "original-size-radii-retained",
+          "pass": true,
+          "observed": [
+            {
+              "tag": "circle",
+              "points": [
+                [
+                  120,
+                  455
+                ]
+              ],
+              "r": 7.5,
+              "box": {
+                "x": 112.5,
+                "y": 447.5,
+                "width": 15,
+                "height": 15
+              },
+              "fill": "rgb(37, 99, 235)",
+              "stroke": "none"
+            },
+            {
+              "tag": "circle",
+              "points": [
+                [
+                  120,
+                  455
+                ]
+              ],
+              "r": 15,
+              "box": {
+                "x": 105,
+                "y": 440,
+                "width": 30,
+                "height": 30
+              },
+              "fill": "rgb(37, 99, 235)",
+              "stroke": "none"
+            },
+            {
+              "tag": "circle",
+              "points": [
+                [
+                  120,
+                  455
+                ]
+              ],
+              "r": 22.5,
+              "box": {
+                "x": 97.5,
+                "y": 432.5,
+                "width": 45,
+                "height": 45
+              },
+              "fill": "rgb(37, 99, 235)",
+              "stroke": "none"
+            },
+            {
+              "tag": "circle",
+              "points": [
+                [
+                  0,
+                  0
+                ]
+              ],
+              "r": 30,
+              "box": {
+                "x": -30,
+                "y": -30,
+                "width": 60,
+                "height": 60
+              },
+              "fill": "rgb(37, 99, 235)",
+              "stroke": "none"
+            }
+          ]
+        }
+      ],
+      "outcome": "failed-success-artifact"
+    }
+  ],
+  "counts": {
+    "cases": 8,
+    "correct_rendered": 4,
+    "honest_rejections": 0,
+    "failed_success_artifacts": 4,
+    "checks": 144,
+    "failures": 32,
+    "observed_browser_errors": 8,
+    "external_requests": 0,
+    "captures": 2,
+    "harness_errors": 0,
+    "skipped": 0
+  },
+  "chromium": "159.0.8154.6",
+  "source_and_build_hashes_unchanged_after_browser": true
+}

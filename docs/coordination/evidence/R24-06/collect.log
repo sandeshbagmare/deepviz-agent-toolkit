@@ -1,0 +1,51 @@
+{
+  "observed_at": "2026-11-27T15:38:18.587Z",
+  "source_sha": "5e595a8f893955ce34a0e26553bb7bf257ea93ae",
+  "strict_command_exit": 1,
+  "counts": {
+    "cases": 8,
+    "correct_rendered": 4,
+    "honest_rejections": 0,
+    "failed_success_artifacts": 4,
+    "checks": 144,
+    "failures": 32,
+    "observed_browser_errors": 8,
+    "external_requests": 0,
+    "captures": 2,
+    "harness_errors": 0,
+    "skipped": 0
+  },
+  "source_working_git_hashes_rechecked": 11,
+  "compiled_dist_hashes_rechecked": 19,
+  "executed_test_hashes_unchanged": [
+    {
+      "file": "finite.test.mjs",
+      "bytes": 8574,
+      "sha256": "f47cdfe3f76c440e3eb42725c504b6e9501f549977bb1cbe4bf1d1fe8e9cd438"
+    },
+    {
+      "file": "fixtures.mjs",
+      "bytes": 1097,
+      "sha256": "9e99e1862dac141cf0c7a2ba19adaa92ae524d7cb53e078a7d839bd86f6e70d8"
+    },
+    {
+      "file": "identity.mjs",
+      "bytes": 3054,
+      "sha256": "c26e0fbe4dcf9f7b0c73b9b565eeb7ae829f829a0709fd096fb396c4cab80a8f"
+    },
+    {
+      "file": "oracle.mjs",
+      "bytes": 4767,
+      "sha256": "e9f853022b91cbdc3948c8ca5fccb998f14da17726d2ff57acdf12cfb3ac5544"
+    }
+  ],
+  "original_artifact_hashes_rechecked": 18,
+  "actual_published_artifacts": 12,
+  "no_product_or_browser_rerun": true,
+  "no_rebuild_or_installs": true,
+  "mandatory_zero_browser_error_gate": "FAIL: eight native SVG console parse errors retained; zero page errors is not zero browser errors",
+  "known_cause": "Role13 already demonstrated inherited finite-range overflow. No new issue filed; producer12 owns future repair.",
+  "future_committed_repair_received_or_tested": false,
+  "prior_R18_suite_replayed": false,
+  "final_candidate_approval": false
+}

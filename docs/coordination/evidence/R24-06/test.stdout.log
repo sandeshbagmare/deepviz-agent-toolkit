@@ -1,0 +1,199 @@
+TAP version 13
+# Subtest: R24 line-control: finite literal quantitative layout or clear honest rejection
+ok 1 - R24 line-control: finite literal quantitative layout or clear honest rejection
+  ---
+  duration_ms: 594.7447
+  type: 'test'
+  ...
+# Subtest: R24 line-extreme: finite literal quantitative layout or clear honest rejection
+not ok 2 - R24 line-extreme: finite literal quantitative layout or clear honest rejection
+  ---
+  duration_ms: 132.1648
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\tests\\r24_probes\\role06\\finite.test.mjs:40:31'
+  failureType: 'testCodeFailure'
+  error: |-
+    [{"name":"native-serialization-no-NaN-or-Infinity","pass":false,"observed":[{"points":"120,455 313.75,455 507.5,455 895,NaN","fill":"none","fill-opacity":"0.25","stroke":"#2563eb","stroke-dasharray":"","stroke-width":"2"}]},{"name":"native-complete-finite-coordinate-count","pass":false,"observed":[[120,455],[313.75,455],[507.5,455],[895,null]]},{"name":"zero-unexpected-browser-console-page-or-readiness-errors","pass":false,"observed":{"errors":[{"kind":"console","message":"Error: <polyline> attribute points: Expected number, \"…5 507.5,455 895,NaN\"."}],"deepvizErrors":[]}},{"name":"all-four-literal-points-correct-independent-finite-fractions","pass":false,"observed":{"actual":[],"expected":[[120,455],[313.75,357.5],[507.5,260],[895,65]]}},{"name":"unequal-quantitative-x-gaps-1-1-2-not-collapsed","pass":false,"observed":[]},{"name":"complete-native-browser-point-count-and-real-paint","pass":false,"observed":{"points":[],"marks":[{"tag":"polyline","points":[],"r":null,"box":{"x":0,"y":0,"width":0,"height":0},"fill":"none","stroke":"rgb(37, 99, 235)"}]}},{"name":"actual-zero-sample-at-midpoint","pass":false}]
+    + actual - expected
+    
+    + [
+    +   'native-serialization-no-NaN-or-Infinity',
+    +   'native-complete-finite-coordinate-count',
+    +   'zero-unexpected-browser-console-page-or-readiness-errors',
+    +   'all-four-literal-points-correct-independent-finite-fractions',
+    +   'unequal-quantitative-x-gaps-1-1-2-not-collapsed',
+    +   'complete-native-browser-point-count-and-real-paint',
+    +   'actual-zero-sample-at-midpoint'
+    + ]
+    - []
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0: 'native-serialization-no-NaN-or-Infinity'
+    1: 'native-complete-finite-coordinate-count'
+    2: 'zero-unexpected-browser-console-page-or-readiness-errors'
+    3: 'all-four-literal-points-correct-independent-finite-fractions'
+    4: 'unequal-quantitative-x-gaps-1-1-2-not-collapsed'
+    5: 'complete-native-browser-point-count-and-real-paint'
+    6: 'actual-zero-sample-at-midpoint'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4/tests/r24_probes/role06/finite.test.mjs:97:12)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: R24 area-control: finite literal quantitative layout or clear honest rejection
+ok 3 - R24 area-control: finite literal quantitative layout or clear honest rejection
+  ---
+  duration_ms: 850.0493
+  type: 'test'
+  ...
+# Subtest: R24 area-extreme: finite literal quantitative layout or clear honest rejection
+not ok 4 - R24 area-extreme: finite literal quantitative layout or clear honest rejection
+  ---
+  duration_ms: 259.0618
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\tests\\r24_probes\\role06\\finite.test.mjs:40:31'
+  failureType: 'testCodeFailure'
+  error: |-
+    [{"name":"native-serialization-no-NaN-or-Infinity","pass":false,"observed":[{"points":"120,455 120,455 120,455 120,455 NaN,NaN NaN,455","fill":"#2563eb","fill-opacity":"0.25","stroke":"#2563eb","stroke-dasharray":"","stroke-width":"2"}]},{"name":"native-complete-finite-coordinate-count","pass":false,"observed":[[120,455],[120,455],[120,455],[120,455],[null,null],[null,455]]},{"name":"zero-unexpected-browser-console-page-or-readiness-errors","pass":false,"observed":{"errors":[{"kind":"console","message":"Error: <text> attribute x: Expected length, \"NaN\"."},{"kind":"console","message":"Error: <polyline> attribute points: Expected number, \"…120,455 120,455 NaN,NaN NaN,455\"."}],"deepvizErrors":[]}},{"name":"all-four-literal-points-correct-independent-finite-fractions","pass":false,"observed":{"actual":[],"expected":[[120,455],[313.75,357.5],[507.5,260],[895,65]]}},{"name":"unequal-quantitative-x-gaps-1-1-2-not-collapsed","pass":false,"observed":[]},{"name":"complete-native-browser-point-count-and-real-paint","pass":false,"observed":{"points":[],"marks":[{"tag":"polyline","points":[],"r":null,"box":{"x":0,"y":0,"width":0,"height":0},"fill":"rgb(37, 99, 235)","stroke":"rgb(37, 99, 235)"}]}},{"name":"all-full-literal-x-tick-labels-and-finite-alignment","pass":false,"observed":[{"literal":"-1e+308","x":120,"box":{"x":96.90625,"y":462,"width":46.5859375,"height":14}},{"literal":"-5e+307","x":120,"box":{"x":96.90625,"y":462,"width":46.5859375,"height":14}},{"literal":"0","x":120,"box":{"x":116.6953125,"y":462,"width":7,"height":14}},{"literal":"1e+308","x":null,"box":{"x":-19.796875,"y":462,"width":39.98828125,"height":14}}]},{"name":"native-text-not-clipped-or-pairwise-overlapping","pass":false,"observed":{"text":[{"literal":"1.000e+308","box":{"x":46.015625,"y":62,"width":66.37890625,"height":14}},{"literal":"-1.000e+308","box":{"x":39.421875,"y":444,"width":72.9765625,"height":14}},{"literal":"x","box":{"x":476.6953125,"y":497,"width":7,"height":14}},{"literal":"y","box":{"x":4,"y":256.3046875,"width":14,"height":7}},{"literal":"-1e+308-1e+308","box":{"x":96.90625,"y":462,"width":46.5859375,"height":14}},{"literal":"-5e+307-5e+307","box":{"x":96.90625,"y":462,"width":46.5859375,"height":14}},{"literal":"00","box":{"x":116.6953125,"y":462,"width":7,"height":14}},{"literal":"1e+3081e+308","box":{"x":-19.796875,"y":462,"width":39.98828125,"height":14}}],"tickOverlap":true}},{"name":"actual-zero-sample-at-midpoint","pass":false},{"name":"area-endpoints-share-literal-common-zero","pass":false,"observed":{"points":[],"zero":260}}]
+    + actual - expected
+    
+    + [
+    +   'native-serialization-no-NaN-or-Infinity',
+    +   'native-complete-finite-coordinate-count',
+    +   'zero-unexpected-browser-console-page-or-readiness-errors',
+    +   'all-four-literal-points-correct-independent-finite-fractions',
+    +   'unequal-quantitative-x-gaps-1-1-2-not-collapsed',
+    +   'complete-native-browser-point-count-and-real-paint',
+    +   'all-full-literal-x-tick-labels-and-finite-alignment',
+    +   'native-text-not-clipped-or-pairwise-overlapping',
+    +   'actual-zero-sample-at-midpoint',
+    +   'area-endpoints-share-literal-common-zero'
+    + ]
+    - []
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0: 'native-serialization-no-NaN-or-Infinity'
+    1: 'native-complete-finite-coordinate-count'
+    2: 'zero-unexpected-browser-console-page-or-readiness-errors'
+    3: 'all-four-literal-points-correct-independent-finite-fractions'
+    4: 'unequal-quantitative-x-gaps-1-1-2-not-collapsed'
+    5: 'complete-native-browser-point-count-and-real-paint'
+    6: 'all-full-literal-x-tick-labels-and-finite-alignment'
+    7: 'native-text-not-clipped-or-pairwise-overlapping'
+    8: 'actual-zero-sample-at-midpoint'
+    9: 'area-endpoints-share-literal-common-zero'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4/tests/r24_probes/role06/finite.test.mjs:97:12)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: R24 scatter-control: finite literal quantitative layout or clear honest rejection
+ok 5 - R24 scatter-control: finite literal quantitative layout or clear honest rejection
+  ---
+  duration_ms: 172.3512
+  type: 'test'
+  ...
+# Subtest: R24 scatter-extreme: finite literal quantitative layout or clear honest rejection
+not ok 6 - R24 scatter-extreme: finite literal quantitative layout or clear honest rejection
+  ---
+  duration_ms: 183.9061
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\tests\\r24_probes\\role06\\finite.test.mjs:40:31'
+  failureType: 'testCodeFailure'
+  error: |-
+    [{"name":"native-serialization-no-NaN-or-Infinity","pass":false,"observed":[{"cx":"80","cy":"455","r":"4","fill":"#2563eb"},{"cx":"80","cy":"357.5","r":"4","fill":"#2563eb"},{"cx":"80","cy":"260","r":"4","fill":"#2563eb"},{"cx":"NaN","cy":"65","r":"4","fill":"#2563eb"}]},{"name":"native-complete-finite-coordinate-count","pass":false,"observed":[[80,455],[80,357.5],[80,260],[null,65]]},{"name":"zero-unexpected-browser-console-page-or-readiness-errors","pass":false,"observed":{"errors":[{"kind":"console","message":"Error: <text> attribute x: Expected length, \"NaN\"."},{"kind":"console","message":"Error: <circle> attribute cx: Expected length, \"NaN\"."}],"deepvizErrors":[]}},{"name":"all-four-literal-points-correct-independent-finite-fractions","pass":false,"observed":{"actual":[[80,455],[80,357.5],[80,260],[0,65]],"expected":[[80,455],[283.75,357.5],[487.5,260],[895,65]]}},{"name":"unequal-quantitative-x-gaps-1-1-2-not-collapsed","pass":false,"observed":[0,0,-80]},{"name":"all-full-literal-x-tick-labels-and-finite-alignment","pass":false,"observed":[{"literal":"-1e+308","x":80,"box":{"x":56.90625,"y":462,"width":46.5859375,"height":14}},{"literal":"-5e+307","x":80,"box":{"x":56.90625,"y":462,"width":46.5859375,"height":14}},{"literal":"0","x":80,"box":{"x":76.6953125,"y":462,"width":7,"height":14}},{"literal":"1e+308","x":null,"box":{"x":-19.796875,"y":462,"width":39.98828125,"height":14}}]},{"name":"native-text-not-clipped-or-pairwise-overlapping","pass":false,"observed":{"text":[{"literal":"8.000","box":{"x":39,"y":62,"width":33.390625,"height":14}},{"literal":"-8.000","box":{"x":32.40625,"y":444,"width":39.98828125,"height":14}},{"literal":"x","box":{"x":476.6953125,"y":497,"width":7,"height":14}},{"literal":"y","box":{"x":4,"y":256.3046875,"width":14,"height":7}},{"literal":"-1e+308-1e+308","box":{"x":56.90625,"y":462,"width":46.5859375,"height":14}},{"literal":"-5e+307-5e+307","box":{"x":56.90625,"y":462,"width":46.5859375,"height":14}},{"literal":"00","box":{"x":76.6953125,"y":462,"width":7,"height":14}},{"literal":"1e+3081e+308","box":{"x":-19.796875,"y":462,"width":39.98828125,"height":14}}],"tickOverlap":true}}]
+    + actual - expected
+    
+    + [
+    +   'native-serialization-no-NaN-or-Infinity',
+    +   'native-complete-finite-coordinate-count',
+    +   'zero-unexpected-browser-console-page-or-readiness-errors',
+    +   'all-four-literal-points-correct-independent-finite-fractions',
+    +   'unequal-quantitative-x-gaps-1-1-2-not-collapsed',
+    +   'all-full-literal-x-tick-labels-and-finite-alignment',
+    +   'native-text-not-clipped-or-pairwise-overlapping'
+    + ]
+    - []
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0: 'native-serialization-no-NaN-or-Infinity'
+    1: 'native-complete-finite-coordinate-count'
+    2: 'zero-unexpected-browser-console-page-or-readiness-errors'
+    3: 'all-four-literal-points-correct-independent-finite-fractions'
+    4: 'unequal-quantitative-x-gaps-1-1-2-not-collapsed'
+    5: 'all-full-literal-x-tick-labels-and-finite-alignment'
+    6: 'native-text-not-clipped-or-pairwise-overlapping'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4/tests/r24_probes/role06/finite.test.mjs:97:12)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: R24 bubble-control: finite literal quantitative layout or clear honest rejection
+ok 7 - R24 bubble-control: finite literal quantitative layout or clear honest rejection
+  ---
+  duration_ms: 137.9147
+  type: 'test'
+  ...
+# Subtest: R24 bubble-extreme: finite literal quantitative layout or clear honest rejection
+not ok 8 - R24 bubble-extreme: finite literal quantitative layout or clear honest rejection
+  ---
+  duration_ms: 129.9433
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\tests\\r24_probes\\role06\\finite.test.mjs:40:31'
+  failureType: 'testCodeFailure'
+  error: |-
+    [{"name":"native-serialization-no-NaN-or-Infinity","pass":false,"observed":[{"cx":"120","cy":"455","r":"7.5","fill":"#2563eb"},{"cx":"120","cy":"455","r":"15","fill":"#2563eb"},{"cx":"120","cy":"455","r":"22.5","fill":"#2563eb"},{"cx":"NaN","cy":"NaN","r":"30","fill":"#2563eb"}]},{"name":"native-complete-finite-coordinate-count","pass":false,"observed":[[120,455],[120,455],[120,455],[null,null]]},{"name":"zero-unexpected-browser-console-page-or-readiness-errors","pass":false,"observed":{"errors":[{"kind":"console","message":"Error: <text> attribute x: Expected length, \"NaN\"."},{"kind":"console","message":"Error: <circle> attribute cx: Expected length, \"NaN\"."},{"kind":"console","message":"Error: <circle> attribute cy: Expected length, \"NaN\"."}],"deepvizErrors":[]}},{"name":"all-four-literal-points-correct-independent-finite-fractions","pass":false,"observed":{"actual":[[120,455],[120,455],[120,455],[0,0]],"expected":[[120,455],[313.75,357.5],[507.5,260],[895,65]]}},{"name":"unequal-quantitative-x-gaps-1-1-2-not-collapsed","pass":false,"observed":[0,0,-120]},{"name":"all-full-literal-x-tick-labels-and-finite-alignment","pass":false,"observed":[{"literal":"-1e+308","x":120,"box":{"x":96.90625,"y":462,"width":46.5859375,"height":14}},{"literal":"-5e+307","x":120,"box":{"x":96.90625,"y":462,"width":46.5859375,"height":14}},{"literal":"0","x":120,"box":{"x":116.6953125,"y":462,"width":7,"height":14}},{"literal":"1e+308","x":null,"box":{"x":-19.796875,"y":462,"width":39.98828125,"height":14}}]},{"name":"native-text-not-clipped-or-pairwise-overlapping","pass":false,"observed":{"text":[{"literal":"1.000e+308","box":{"x":46.015625,"y":62,"width":66.37890625,"height":14}},{"literal":"-1.000e+308","box":{"x":39.421875,"y":444,"width":72.9765625,"height":14}},{"literal":"x","box":{"x":476.6953125,"y":497,"width":7,"height":14}},{"literal":"y","box":{"x":4,"y":256.3046875,"width":14,"height":7}},{"literal":"-1e+308-1e+308","box":{"x":96.90625,"y":462,"width":46.5859375,"height":14}},{"literal":"-5e+307-5e+307","box":{"x":96.90625,"y":462,"width":46.5859375,"height":14}},{"literal":"00","box":{"x":116.6953125,"y":462,"width":7,"height":14}},{"literal":"1e+3081e+308","box":{"x":-19.796875,"y":462,"width":39.98828125,"height":14}}],"tickOverlap":true}},{"name":"actual-zero-sample-at-midpoint","pass":false,"observed":[120,455]}]
+    + actual - expected
+    
+    + [
+    +   'native-serialization-no-NaN-or-Infinity',
+    +   'native-complete-finite-coordinate-count',
+    +   'zero-unexpected-browser-console-page-or-readiness-errors',
+    +   'all-four-literal-points-correct-independent-finite-fractions',
+    +   'unequal-quantitative-x-gaps-1-1-2-not-collapsed',
+    +   'all-full-literal-x-tick-labels-and-finite-alignment',
+    +   'native-text-not-clipped-or-pairwise-overlapping',
+    +   'actual-zero-sample-at-midpoint'
+    + ]
+    - []
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0: 'native-serialization-no-NaN-or-Infinity'
+    1: 'native-complete-finite-coordinate-count'
+    2: 'zero-unexpected-browser-console-page-or-readiness-errors'
+    3: 'all-four-literal-points-correct-independent-finite-fractions'
+    4: 'unequal-quantitative-x-gaps-1-1-2-not-collapsed'
+    5: 'all-full-literal-x-tick-labels-and-finite-alignment'
+    6: 'native-text-not-clipped-or-pairwise-overlapping'
+    7: 'actual-zero-sample-at-midpoint'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4/tests/r24_probes/role06/finite.test.mjs:97:12)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# {"cases":8,"correct_rendered":4,"honest_rejections":0,"failed_success_artifacts":4,"checks":144,"failures":32,"observed_browser_errors":8,"external_requests":0,"captures":2,"harness_errors":0,"skipped":0}
+1..8
+# tests 8
+# suites 0
+# pass 4
+# fail 4
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7364.3565
