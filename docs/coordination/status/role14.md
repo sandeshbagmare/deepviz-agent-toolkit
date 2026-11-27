@@ -29,3 +29,4 @@ Exact product 4429f0521612b97eee3790f0d8d0fbc3cad3f8be; parent 3185e0d9936c7d6f1
 Source diff 19 additions in engines.py lines619-741; 45 non-_antv AST nodes equal; exact evidence under reports/R52-14-antv-source1.md and evidence/R52-14/. No product tests/render/browser/build/install/CI/API/query. Existing subnormal and finite-MAX gates remain for role15/20; role18/21 span witnesses deduplicated.
 Next: role15/20 assigned exact-head independent tests; R04 owns integration/CI/PR/default. Estimate UNKNOWN.
 R49 report/probe files remain untouched and untracked from prior work. The prior dirty role14 status text was not preserved when this checkpoint was first written; main R44 status was restored before appending R52. No R49 result is counted toward this review.
+R52 own evidence publication: commit 4ef5487fb1660832c9153b0517bc0bb9912b30fc, push/ls-remote exact SHA exit0; untracked R49 files preserved. This is not PR/default/merge approval.
