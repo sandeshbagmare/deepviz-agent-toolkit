@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="3.030" timestamp="2026-11-27T21:24:49.512786+05:30" hostname="SandeshAcer"><testcase classname="tests.r22_probes.role09.test_recipe_guards" name="test_actual_fixed_public_origin_supports_import_only_package" time="2.791"><failure message="AssertionError: node:internal/modules/esm/resolve:282&#10;    return new ERR_PACKAGE_PATH_NOT_EXPORTED(&#10;           ^&#10;  &#10;[+18 more lines; full report in element text]">tests\r22_probes\role09\test_recipe_guards.py:205: in test_actual_fixed_public_origin_supports_import_only_package
+    assert done.returncode == 0, done.stdout + done.stderr
+E   AssertionError: node:internal/modules/esm/resolve:282
+E       return new ERR_PACKAGE_PATH_NOT_EXPORTED(
+E              ^
+E     
+E     Error [ERR_PACKAGE_PATH_NOT_EXPORTED]: No "exports" main defined in C:\Users\bagma\AppData\Local\Temp\opencode\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\artifacts\r22-09-20261127\public-origin-red-temp\test_actual_fixed_public_origi0\SYNTHETIC-NOT-DEEPVIZ\packages\deepviz\package.json imported from C:\Users\bagma\AppData\Local\Temp\opencode\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\artifacts\r22-09-20261127\public-origin-red-temp\test_actual_fixed_public_origi0\SYNTHETIC-NOT-DEEPVIZ\packages\deepviz\package.json
+E         at exportsNotFound (node:internal/modules/esm/resolve:282:10)
+E         at packageExportsResolve (node:internal/modules/esm/resolve:573:13)
+E         at resolveExpansion (node:internal/modules/cjs/loader:730:34)
+E         at trySelf (node:internal/modules/cjs/loader:687:10)
+E         at Module._resolveFilename (node:internal/modules/cjs/loader:1587:24)
+E         at wrapResolveFilename (node:internal/modules/cjs/loader:1145:27)
+E         at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1196:12)
+E         at require.resolve (node:internal/modules/helpers:336:31)
+E         at file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx/tests/r22_probes/role09/public-origin.mjs:8:48
+E         at ModuleJob.run (node:internal/modules/esm/module_job:569:25) {
+E       code: 'ERR_PACKAGE_PATH_NOT_EXPORTED'
+E     }
+E     
+E     Node.js v26.13.1
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['C:\\Program Files\\nodejs\\node.EXE', 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-0...n (node:internal/modules/esm/module_job:569:25) {\n  code: \'ERR_PACKAGE_PATH_NOT_EXPORTED\'\n}\n\nNode.js v26.13.1\n').returncode</failure></testcase></testsuite></testsuites>

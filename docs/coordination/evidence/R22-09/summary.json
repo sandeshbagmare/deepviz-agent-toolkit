@@ -1,0 +1,279 @@
+{
+  "classification": "Verification code TDD only, SYNTHETIC source/tool fixtures; not product/36+40/npm/scale/CI approval",
+  "source": {
+    "own_base_sha": "f219deec6172372fd41d75b13d1a323c4bc5a21d",
+    "own_branch": "agents/r10-09-helper-null-fix",
+    "native_session": "ses_de56782e5ffe3H1lUAoxrBtEhx",
+    "old_review_pin": "5d57692731949cf98bcf92a319eb25ebc85fc62b",
+    "old_recipe_sha256": "08a907df5755fb927f17478e6f85621ca23759070a1a2955399037f7b345179e",
+    "old_21_oracle_sha256": "b9c301946f9b30c6961e7549e3c66ed77be245681f020359d5920503c1200e0a",
+    "production_tested": false,
+    "immutable_fixture_test_sha256": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227",
+    "immutable_fixture_schema_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71"
+  },
+  "commands": {
+    "test": "<existing-python> -m pytest tests/r22_probes/role09/test_recipe_guards.py -q --tb=short -p no:cacheprovider --basetemp <raw>/<run>-temp --junitxml <raw>/<run>.xml",
+    "old_recipe_override": "R22_RECIPE=<unchanged tests/r13_probes/role09/retest-helper-null.ps1> for red/red2 ONLY",
+    "report_red_selection": "-k \"junit_missing or tap_totals_without or actual_tiny_node\"",
+    "posthash_red_selection": "-k failed_mutation_receipt",
+    "process_only_environment": {
+      "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+    },
+    "ruff": "<existing-python> -m ruff check tests/r22_probes/role09/recipe_guard.py tests/r22_probes/role09/test_recipe_guards.py",
+    "mypy": "<existing-python> -m mypy --follow-imports=skip <same two files>",
+    "node_syntax": "node --check tests/r22_probes/role09/public-origin.mjs",
+    "powershell_syntax": "System.Management.Automation.Language.Parser.ParseFile(<new-recipe>) returned zero errors"
+  },
+  "runs": [
+    {
+      "name": "red",
+      "exit": 1,
+      "meaning": "Fixture path setup error, NOT semantic RED",
+      "counts": {
+        "tests": 6,
+        "failures": 0,
+        "errors": 6,
+        "skipped": 0,
+        "passed": 0
+      },
+      "junit_sha256": "22a126297e9c3e304a81f58c61137a0e8cf89a8a4f9e1ceb6f35965d3e2276cf",
+      "raw_log_sha256": "266736f71a5666402dc5cab4215049a03c78649eee66d69a130143b68ba71a11"
+    },
+    {
+      "name": "red2",
+      "exit": 1,
+      "meaning": "Original four guard expectations strict RED on unchanged old recipe",
+      "counts": {
+        "tests": 6,
+        "failures": 4,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 2
+      },
+      "junit_sha256": "b88839dafb6a531a9d6f0c9cd8186b467f85717fba7342a6ed49a7ca83b55c12",
+      "raw_log_sha256": "e4d52947db01a261b3e4728002ad54ee1c9c7b6033a7c7a745367c91b83d7fcd"
+    },
+    {
+      "name": "green1",
+      "exit": 0,
+      "meaning": "First six guard outcomes on NEW replacement",
+      "counts": {
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 6
+      },
+      "junit_sha256": "d367e260172b55c16e15d654d79b69d6625cfa5053ff2f213aaba99aaf789583",
+      "raw_log_sha256": "c0daf78279aa4822af1f798e9e907c720e7f62b67a236b36171f1ad1eeaa7cec"
+    },
+    {
+      "name": "report-red",
+      "exit": 1,
+      "meaning": "Own report parser TDD RED",
+      "counts": {
+        "tests": 8,
+        "failures": 2,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 6
+      },
+      "junit_sha256": "3dd1dc97c97edd416ff51f29aa358bb2711f57bc1646723079668a5dc174bdb1",
+      "raw_log_sha256": "9af213a54144191c8a6841676a6802dd56ff521890d2e0c3eb8d7a1522289f06"
+    },
+    {
+      "name": "green2",
+      "exit": 0,
+      "meaning": "Nineteen NEW guard controls after parser correction",
+      "counts": {
+        "tests": 19,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 19
+      },
+      "junit_sha256": "5f9ad8de0f736e2df01c20bb18d8b2a59c7db009782b1070be2553d65819a3aa",
+      "raw_log_sha256": "e1bb195e311133bd7269249bb89a96704e123336f53556e8f96467b83e9ee5c6"
+    },
+    {
+      "name": "posthash-red",
+      "exit": 1,
+      "meaning": "Own failed-post-identity evidence TDD RED",
+      "counts": {
+        "tests": 1,
+        "failures": 1,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 0
+      },
+      "junit_sha256": "bb462e00c69dc4ac858a4dc119856941749e0cf629422a7b390aa5cca473eeb9",
+      "raw_log_sha256": "bcd37f428dd7eb00a99439179d3c9c90720d281a91a105efb4348f40147caa09"
+    },
+    {
+      "name": "final",
+      "exit": 0,
+      "meaning": "Final full twenty-six NEW guard tests",
+      "counts": {
+        "tests": 26,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 26
+      },
+      "junit_sha256": "ac0f617403fa77b4e1326575fe32030f5205cef5f3dadc33a98d2b17688f8940",
+      "raw_log_sha256": "b716d468adb47925c37f72fe3599c52caa4009eb47f70bd37abad7001dbc9b2b"
+    },
+    {
+      "name": "public-origin-red",
+      "exit": 1,
+      "meaning": "Actual tiny Node import-only package rejects old fixed-plan args; guard bug, not product",
+      "counts": {
+        "tests": 1,
+        "failures": 1,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 0
+      },
+      "junit_sha256": "546937a4940d7323340e3e60d32ed7f08c10a8445ecd56a7bcc87510c298efdc",
+      "raw_log_sha256": "2a5427169ddeff24633c54db4ec4ead34389df9aa31fa6e50812b38f1cb086e1"
+    },
+    {
+      "name": "final27",
+      "exit": 0,
+      "meaning": "Exact FINAL code full 27 strict guard controls",
+      "counts": {
+        "tests": 27,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 27
+      },
+      "junit_sha256": "3bf2df1b99b333d9ef46c2db43c27c96baabe72287498ac41641823f767e8fd3",
+      "raw_log_sha256": "cf62f294693b1ab238232fcd29ddaef9f45d8fcbd5d4ddb6d0bea1a0c7acd838"
+    }
+  ],
+  "final_duration_seconds": 93.87,
+  "final_test_cases": [
+    "test_source_change_after_preflight_is_rejected",
+    "test_untracked_cwd_shadow_is_rejected_even_in_plan",
+    "test_actual_four_skipped_pytests_are_not_scoped_pass",
+    "test_explicit_one_tool_succeeds_with_duplicate_path",
+    "test_plan_never_claims_execution_or_creates_evidence",
+    "test_actual_collection_error_stays_failed",
+    "test_junit_missing_incomplete_or_contradictory_totals_reject[missing]",
+    "test_junit_missing_incomplete_or_contradictory_totals_reject[malformed]",
+    "test_junit_missing_incomplete_or_contradictory_totals_reject[no-cases]",
+    "test_junit_missing_incomplete_or_contradictory_totals_reject[lying-skips]",
+    "test_junit_missing_incomplete_or_contradictory_totals_reject[below-minimum]",
+    "test_tap_totals_without_actual_case_and_plan_are_rejected",
+    "test_actual_fixed_public_origin_supports_import_only_package",
+    "test_actual_tiny_node_tap_pass_and_skip_policy[False]",
+    "test_actual_tiny_node_tap_pass_and_skip_policy[True]",
+    "test_tracked_test_config_or_runner_change_rejects[tests/test_models.py]",
+    "test_tracked_test_config_or_runner_change_rejects[pytest.ini]",
+    "test_tracked_test_config_or_runner_change_rejects[scripts/export_schema.py]",
+    "test_head_change_after_gate_rejects",
+    "test_same_test_process_rejects_foreign_module_origin",
+    "test_same_test_process_rejects_source_hash_change",
+    "test_external_verification_runner_changed_after_preflight_rejects",
+    "test_failed_mutation_receipt_records_actual_post_hash_and_dirty",
+    "test_original_preflight_gates_are_retained[wrong-head]",
+    "test_original_preflight_gates_are_retained[dirty]",
+    "test_original_preflight_gates_are_retained[wrong-test]",
+    "test_original_preflight_gates_are_retained[wrong-schema]"
+  ],
+  "quality": {
+    "ruff_exit": 0,
+    "mypy_exit": 0,
+    "mypy_files": 2,
+    "node_syntax_exit": 0,
+    "native_powershell_parse_errors": 0
+  },
+  "policy": {
+    "allowed_skips": 0,
+    "immutable_node_minimum": 36,
+    "full_npm_node_minimum": 282,
+    "core_pytest_minimum": 4,
+    "all_four_selected_python_files_required": true,
+    "actual_collection_must_equal_junit": true,
+    "core_minimum_is_not_689_baseline_claim": true
+  },
+  "actual_tiny_pytest": {
+    "positive_collected": 4,
+    "positive_passed": 4,
+    "negative_skipped": 4,
+    "negative_tests": 4,
+    "skip_recipe_rejected": true,
+    "collection_error_rejected": true,
+    "same_test_process_origin_and_raw_hash": {
+      "deepviz": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\SYNTHETIC-NOT-DEEPVIZ\\python\\deepviz\\src\\deepviz\\__init__.py",
+        "sha256": "7d1c1142fecbe42f8bfceceda5e0aedb7ff612c9a2b17285df33c203ad31ab9c"
+      },
+      "deepviz.models": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\SYNTHETIC-NOT-DEEPVIZ\\python\\deepviz\\src\\deepviz\\models.py",
+        "sha256": "7d1c1142fecbe42f8bfceceda5e0aedb7ff612c9a2b17285df33c203ad31ab9c"
+      },
+      "deepviz.normalize": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\SYNTHETIC-NOT-DEEPVIZ\\python\\deepviz\\src\\deepviz\\normalize.py",
+        "sha256": "7d1c1142fecbe42f8bfceceda5e0aedb7ff612c9a2b17285df33c203ad31ab9c"
+      }
+    }
+  },
+  "four_original_recipe_expectations": [
+    "post-preflight source mutation rejects",
+    "unexpected CWD shadow rejects even PLAN",
+    "real all-skip Pytest is not scoped pass",
+    "duplicate PATH invokes one explicit expected ToolsBin tool and positive works"
+  ],
+  "new_files_sha256": {
+    "tests/r22_probes/role09/public-origin.mjs": "468c407d0cac321ec9c349dc5910000e8c430be867cf1073bd84ff282daadb92",
+    "tests/r22_probes/role09/README.md": "203478f11a03a44d2befd64ca294e2a2b467d91a19baf7488977729c46595a25",
+    "tests/r22_probes/role09/recipe_guard.py": "0b6832ec35bfd4247d2c460e7e398a9c7573095d59c7ee539cb2b8305dd3aebc",
+    "tests/r22_probes/role09/retest-helper-null.ps1": "19a2a0b6a719336a49a3011cef991a35be5df700f23e3a33133672f07dfab6b4",
+    "tests/r22_probes/role09/test_recipe_guards.py": "3d5cff6cb411277fd6a2171dc4ae1b05aaf51bfbab827f74215800f7a8b59da6"
+  },
+  "readonly_tooling": {
+    "python": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+    "pytest": "9.2.0",
+    "node": "v26.13.1",
+    "install_or_shared_environment_change": false,
+    "native_session_confirmed": "session_move returned SAME actual ID ses_de56782e5ffe3H1lUAoxrBtEhx before publication"
+  },
+  "limits": [
+    "Original recipe and 21 oracles are unchanged; independent 21 retest of NEW published head still pending",
+    "Synthetic stub case records are explicitly fabricated solely for control-flow checks; NOT product tests/builds",
+    "Actual tiny Pytest and Node TAP controls are genuine but not DeepViz acceptance",
+    "Core minimum four with all selected files/actual count is not an expected 689-test baseline; retester must review actual count",
+    "Trusted tools may lie consistently; no compiler/native/bytecode attestation or sandbox claim",
+    "No real helper36+40/fullnpm/package builds/browser/formats/scale/CI/API write/replay; 05 owns product retest",
+    "No issue closure/final frozen product signoff/900 completion"
+  ],
+  "next_action": "Root routes actual published NEW replacement SHA to SAME-ID 21 for independent strict four-gap retest; 05/R04 retain actual product gates",
+  "supersedes": "Earlier final26 was a genuine earlier-version checkpoint; final27 is exact final-code verification after fixed --conditions=import correction",
+  "collected_utc": "2026-11-27T15:58:59.772279+00:00",
+  "final_verification_command": {
+    "argv": [
+      "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "tests/r22_probes/role09/test_recipe_guards.py",
+      "-q",
+      "--tb=short",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "artifacts/r22-09-20261127/final27-temp",
+      "--junitxml",
+      "artifacts/r22-09-20261127/final27.xml"
+    ],
+    "exit": 0,
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx",
+    "env_process_only": {
+      "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+    }
+  },
+  "production_changed": false,
+  "original_recipe_or_21_oracles_changed": false,
+  "public_entry_real_tiny_node_control": "Exact planned command resolves SYNTHETIC import-only export under fixed --conditions=import; no product build"
+}

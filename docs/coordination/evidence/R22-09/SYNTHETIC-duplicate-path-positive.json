@@ -1,0 +1,205 @@
+{
+  "status": "SCOPED_GATES_PASS_NOT_FINAL_APPROVAL",
+  "source_sha": "32bea0b6c7d5d5a9699ed3fe3c6aa3729e2c729b",
+  "candidate": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\SYNTHETIC-NOT-DEEPVIZ",
+  "known_unfixed_source": false,
+  "skip_policy": "ZERO_ALLOWED",
+  "minimum_tests": {
+    "full_npm": 282,
+    "core_selected_files": 4,
+    "immutable_regression": 36,
+    "core_parity": 4
+  },
+  "steps": [
+    {
+      "name": "build",
+      "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\explicit-tools\\npm.cmd",
+      "arguments": [
+        "run",
+        "build"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\SYNTHETIC-NOT-DEEPVIZ",
+      "state": "EXECUTED",
+      "exit": 0,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\evidence\\build.log"
+    },
+    {
+      "name": "public-origin",
+      "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\explicit-tools\\node.cmd",
+      "arguments": [
+        "--conditions=import",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r22_probes\\role09\\public-origin.mjs",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\SYNTHETIC-NOT-DEEPVIZ\\packages\\deepviz"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\SYNTHETIC-NOT-DEEPVIZ\\packages\\deepviz",
+      "state": "EXECUTED",
+      "exit": 0,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\evidence\\public-origin.log"
+    },
+    {
+      "name": "typecheck",
+      "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\explicit-tools\\npm.cmd",
+      "arguments": [
+        "run",
+        "typecheck"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\SYNTHETIC-NOT-DEEPVIZ",
+      "state": "EXECUTED",
+      "exit": 0,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\evidence\\typecheck.log"
+    },
+    {
+      "name": "immutable-regression",
+      "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\explicit-tools\\node.cmd",
+      "arguments": [
+        "--test",
+        "--test-reporter=tap",
+        "packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\SYNTHETIC-NOT-DEEPVIZ",
+      "state": "EXECUTED",
+      "exit": 0,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\evidence\\immutable-regression.log",
+      "totals": {
+        "tests": 36,
+        "pass": 36,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    },
+    {
+      "name": "full-npm",
+      "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\explicit-tools\\npm.cmd",
+      "arguments": [
+        "test"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\SYNTHETIC-NOT-DEEPVIZ",
+      "state": "EXECUTED",
+      "exit": 0,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\evidence\\full-npm.log",
+      "totals": {
+        "tests": 282,
+        "pass": 282,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    },
+    {
+      "name": "schema-check",
+      "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\explicit-tools\\npm.cmd",
+      "arguments": [
+        "run",
+        "schema:check"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\SYNTHETIC-NOT-DEEPVIZ",
+      "state": "EXECUTED",
+      "exit": 0,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\evidence\\schema-check.log"
+    },
+    {
+      "name": "python-schema-check",
+      "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+      "arguments": [
+        "scripts/export_schema.py",
+        "--check"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\SYNTHETIC-NOT-DEEPVIZ",
+      "state": "EXECUTED",
+      "exit": 0,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\evidence\\python-schema-check.log"
+    },
+    {
+      "name": "core-parity",
+      "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+      "arguments": [
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r22_probes\\role09\\recipe_guard.py",
+        "pytest",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\SYNTHETIC-NOT-DEEPVIZ",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\evidence\\source-before.json",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\evidence"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\SYNTHETIC-NOT-DEEPVIZ",
+      "state": "EXECUTED",
+      "exit": 0,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\evidence\\core-parity.log",
+      "provenance": {
+        "status": "SAME_PROCESS_ORIGIN_AND_COUNTS_VERIFIED",
+        "collected": 4,
+        "modules": {
+          "deepviz": {
+            "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\SYNTHETIC-NOT-DEEPVIZ\\python\\deepviz\\src\\deepviz\\__init__.py",
+            "sha256": "7d1c1142fecbe42f8bfceceda5e0aedb7ff612c9a2b17285df33c203ad31ab9c"
+          },
+          "deepviz.models": {
+            "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\SYNTHETIC-NOT-DEEPVIZ\\python\\deepviz\\src\\deepviz\\models.py",
+            "sha256": "7d1c1142fecbe42f8bfceceda5e0aedb7ff612c9a2b17285df33c203ad31ab9c"
+          },
+          "deepviz.normalize": {
+            "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\SYNTHETIC-NOT-DEEPVIZ\\python\\deepviz\\src\\deepviz\\normalize.py",
+            "sha256": "7d1c1142fecbe42f8bfceceda5e0aedb7ff612c9a2b17285df33c203ad31ab9c"
+          }
+        },
+        "files": [
+          "test_cross_language_contract.py",
+          "test_models.py",
+          "test_n12_authoritative_parity.py",
+          "test_schema_contract.py"
+        ],
+        "exit": 0,
+        "totals": {
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "passed": 4
+        }
+      }
+    },
+    {
+      "name": "npm-pack-dry-run",
+      "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\explicit-tools\\npm.cmd",
+      "arguments": [
+        "pack",
+        "--dry-run",
+        "--workspace",
+        "@deepviz/agent-toolkit"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\SYNTHETIC-NOT-DEEPVIZ",
+      "state": "EXECUTED",
+      "exit": 0,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\artifacts\\r22-09-20261127\\final27-temp\\test_explicit_one_tool_succeed0\\evidence\\npm-pack-dry-run.log"
+    }
+  ],
+  "source_after": {
+    "dirty": "",
+    "head": "32bea0b6c7d5d5a9699ed3fe3c6aa3729e2c729b",
+    "runner_sha256": {
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r22_probes\\role09\\public-origin.mjs": "468c407d0cac321ec9c349dc5910000e8c430be867cf1073bd84ff282daadb92",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r22_probes\\role09\\recipe_guard.py": "0b6832ec35bfd4247d2c460e7e398a9c7573095d59c7ee539cb2b8305dd3aebc",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r22_probes\\role09\\retest-helper-null.ps1": "19a2a0b6a719336a49a3011cef991a35be5df700f23e3a33133672f07dfab6b4",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r22_probes\\role09\\test_recipe_guards.py": "3d5cff6cb411277fd6a2171dc4ae1b05aaf51bfbab827f74215800f7a8b59da6"
+    },
+    "tracked_sha256": {
+      ".gitattributes": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
+      ".gitignore": "01f10dcae714f13fdacf389abd7e876fd0b710eb49f0eb223eb0b45664ed2edd",
+      "packages/deepviz/src/chart-spec.schema.json": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+      "packages/deepviz/src/render.ts": "a0e206858957376d580eb0663e15d171f9e0656feef77668d61c11feb3374ca1",
+      "packages/deepviz/test/test_r07_tool_spec_null.test.mjs": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227",
+      "pytest.ini": "b401afd8beb5d16d069ca3de2054d102a39ebbe2d251d1720d94d4170f446541",
+      "python/deepviz/src/deepviz/__init__.py": "7d1c1142fecbe42f8bfceceda5e0aedb7ff612c9a2b17285df33c203ad31ab9c",
+      "python/deepviz/src/deepviz/models.py": "7d1c1142fecbe42f8bfceceda5e0aedb7ff612c9a2b17285df33c203ad31ab9c",
+      "python/deepviz/src/deepviz/normalize.py": "7d1c1142fecbe42f8bfceceda5e0aedb7ff612c9a2b17285df33c203ad31ab9c",
+      "schemas/chart-spec.schema.json": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+      "scripts/export_schema.py": "ae184b50b2722751b7cf9b163933b714f2c5eae7b5de5b5ca234abec440fdf67",
+      "tests/test_cross_language_contract.py": "f4177f516ed27eefebce51827f9706608792348329be9bcc50547ef60bcb160b",
+      "tests/test_models.py": "f4177f516ed27eefebce51827f9706608792348329be9bcc50547ef60bcb160b",
+      "tests/test_n12_authoritative_parity.py": "f4177f516ed27eefebce51827f9706608792348329be9bcc50547ef60bcb160b",
+      "tests/test_schema_contract.py": "f4177f516ed27eefebce51827f9706608792348329be9bcc50547ef60bcb160b"
+    }
+  },
+  "EVIDENCE_CLASSIFICATION": "SYNTHETIC verification fixture only; npm/node stubs are NOT product builds or tests, tiny actual Pytest only"
+}

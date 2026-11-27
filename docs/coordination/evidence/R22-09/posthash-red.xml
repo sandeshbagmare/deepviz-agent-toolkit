@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="6.278" timestamp="2026-11-27T21:16:12.582930+05:30" hostname="SandeshAcer"><testcase classname="tests.r22_probes.role09.test_recipe_guards" name="test_failed_mutation_receipt_records_actual_post_hash_and_dirty" time="5.843"><failure message="KeyError: 'source_after'">tests\r22_probes\role09\test_recipe_guards.py:270: in test_failed_mutation_receipt_records_actual_post_hash_and_dirty
+    actual = receipt(evidence)["source_after"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'source_after'</failure></testcase></testsuite></testsuites>
