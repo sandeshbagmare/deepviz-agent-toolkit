@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="15" time="1.710" timestamp="2026-11-28T04:47:38.110691+05:30" hostname="SandeshAcer"><testcase classname="python.deepviz.tests.test_r52_tiles" name="test_r52_imports_exact_product_worktree" time="0.002" /><testcase classname="python.deepviz.tests.test_r52_tiles" name="test_treemap_tiles_have_literal_finite_proportional_edges[values0-expected0]" time="0.001" /><testcase classname="python.deepviz.tests.test_r52_tiles" name="test_treemap_tiles_have_literal_finite_proportional_edges[values1-expected1]" time="0.001"><failure message="assert [0.0, 0.0] == approx([0 ± 1....5 ± 5.0e-07])&#10;  &#10;  comparison failed. Mismatched elements: 1 / 2:&#10;  Max absolute difference: 0.5&#10;  Max relative difference: inf&#10;  Index | Obtained | Expected     &#10;  1     | 0.0      | 0.5 ± 5.0e-07">python\deepviz\tests\test_r52_tiles.py:43: in test_treemap_tiles_have_literal_finite_proportional_edges
+    assert actual == pytest.approx(literal)
+E   assert [0.0, 0.0] == approx([0 ± 1....5 ± 5.0e-07])
+E     
+E     comparison failed. Mismatched elements: 1 / 2:
+E     Max absolute difference: 0.5
+E     Max relative difference: inf
+E     Index | Obtained | Expected     
+E     1     | 0.0      | 0.5 ± 5.0e-07</failure></testcase><testcase classname="python.deepviz.tests.test_r52_tiles" name="test_treemap_tiles_have_literal_finite_proportional_edges[values2-expected2]" time="0.001" /><testcase classname="python.deepviz.tests.test_r52_tiles" name="test_treemap_tiles_have_literal_finite_proportional_edges[values3-expected3]" time="0.001"><failure message="assert [0.0, 0.0] == approx([0 ± 1...66 ± 6.7e-07])&#10;  &#10;  comparison failed. Mismatched elements: 1 / 2:&#10;  Max absolute difference: 0.6666666666666666&#10;  Max relative difference: inf&#10;  Index | Obtained | Expected                    &#10;  1     | 0.0      | 0.6666666666666666 ± 6.7e-07">python\deepviz\tests\test_r52_tiles.py:43: in test_treemap_tiles_have_literal_finite_proportional_edges
+    assert actual == pytest.approx(literal)
+E   assert [0.0, 0.0] == approx([0 ± 1...66 ± 6.7e-07])
+E     
+E     comparison failed. Mismatched elements: 1 / 2:
+E     Max absolute difference: 0.6666666666666666
+E     Max relative difference: inf
+E     Index | Obtained | Expected                    
+E     1     | 0.0      | 0.6666666666666666 ± 6.7e-07</failure></testcase><testcase classname="python.deepviz.tests.test_r52_tiles" name="test_treemap_tiles_have_literal_finite_proportional_edges[values4-expected4]" time="0.001" /><testcase classname="python.deepviz.tests.test_r52_tiles" name="test_treemap_tiles_have_literal_finite_proportional_edges[values5-expected5]" time="0.001" /><testcase classname="python.deepviz.tests.test_r52_tiles" name="test_treemap_tiles_have_literal_finite_proportional_edges[values6-expected6]" time="0.001" /><testcase classname="python.deepviz.tests.test_r52_tiles" name="test_finite_large_native_treemap_payload_preserves_values_and_serializes[vega]" time="0.002"><failure message="assert [[0.0, 0.0], [0.0, 0.0]] == [[0, 0.5], [0.5, 1]]&#10;  &#10;  At index 0 diff: [0.0, 0.0] != [0, 0.5]&#10;  Use -v to get more diff">python\deepviz\tests\test_r52_tiles.py:62: in test_finite_large_native_treemap_payload_preserves_values_and_serializes
+    assert edges == [[0, 0.5], [0.5, 1]]
+E   assert [[0.0, 0.0], [0.0, 0.0]] == [[0, 0.5], [0.5, 1]]
+E     
+E     At index 0 diff: [0.0, 0.0] != [0, 0.5]
+E     Use -v to get more diff</failure></testcase><testcase classname="python.deepviz.tests.test_r52_tiles" name="test_finite_large_native_treemap_payload_preserves_values_and_serializes[echarts]" time="0.001" /><testcase classname="python.deepviz.tests.test_r52_tiles" name="test_negative_treemap_weight_remains_visible_as_disclosed_zero[vega]" time="0.001" /><testcase classname="python.deepviz.tests.test_r52_tiles" name="test_negative_treemap_weight_remains_visible_as_disclosed_zero[echarts]" time="0.001" /><testcase classname="python.deepviz.tests.test_r52_tiles" name="test_missing_treemap_weight_has_disclosure_and_truthful_retained_count[vega]" time="1.115" /><testcase classname="python.deepviz.tests.test_r52_tiles" name="test_missing_treemap_weight_has_disclosure_and_truthful_retained_count[echarts]" time="0.007" /><testcase classname="python.deepviz.tests.test_r52_tiles" name="test_public_vega_treemap_keeps_half_widths_and_original_counts_for_large_finite_weights" time="0.039"><failure message="assert [[0.0, 0.0], [0.0, 0.0]] == [[0, 0.5], [0.5, 1]]&#10;  &#10;  At index 0 diff: [0.0, 0.0] != [0, 0.5]&#10;  Use -v to get more diff">python\deepviz\tests\test_r52_tiles.py:122: in test_public_vega_treemap_keeps_half_widths_and_original_counts_for_large_finite_weights
+    assert [[row["_left"], row["_right"]] for row in native["data"]["values"]] == [[0, .5], [.5, 1]]
+E   assert [[0.0, 0.0], [0.0, 0.0]] == [[0, 0.5], [0.5, 1]]
+E     
+E     At index 0 diff: [0.0, 0.0] != [0, 0.5]
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>

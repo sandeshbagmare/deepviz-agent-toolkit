@@ -1,0 +1,121 @@
+{
+  "source_head": "3eab699b61850a20e91132e16caf8c589085f9ee",
+  "engine": "vega",
+  "input_rows": [
+    {
+      "category": "A",
+      "value": 1e+308
+    },
+    {
+      "category": "B",
+      "value": 1e+308
+    }
+  ],
+  "artifact": {
+    "input_count": 2,
+    "output_count": 2,
+    "warnings": [
+      "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred."
+    ],
+    "paths": [
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r52-06-tiles-fix-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R52-06\\baseline-output-20261128\\deepviz-2k4ccsoq\\chart.svg",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r52-06-tiles-fix-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R52-06\\baseline-output-20261128\\deepviz-2k4ccsoq\\chart.html",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r52-06-tiles-fix-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R52-06\\baseline-output-20261128\\deepviz-2k4ccsoq\\manifest.json"
+    ]
+  },
+  "native_edges": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "native_values": [
+    1e+308,
+    1e+308
+  ],
+  "svg_rects": [
+    {
+      "x": null,
+      "x2": null,
+      "width": "851",
+      "y": null,
+      "height": "447",
+      "fill": "#ffffff"
+    }
+  ],
+  "png": {
+    "size": [
+      900,
+      520
+    ],
+    "mode": "RGBA",
+    "bbox": [
+      0,
+      23,
+      900,
+      497
+    ],
+    "extrema": [
+      [
+        0,
+        255
+      ],
+      [
+        0,
+        255
+      ],
+      [
+        0,
+        255
+      ],
+      [
+        0,
+        255
+      ]
+    ]
+  },
+  "png_path": "artifacts\\local\\R52-06\\baseline-output-20261128\\baseline-treemap.png",
+  "svg_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r52-06-tiles-fix-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R52-06\\baseline-output-20261128\\deepviz-2k4ccsoq\\chart.svg",
+  "manifest_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r52-06-tiles-fix-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R52-06\\baseline-output-20261128\\deepviz-2k4ccsoq\\manifest.json",
+  "console_errors": 0,
+  "network_requests": 0,
+  "browser_run": false,
+  "finding": "baseline finite large values retain two records but produce zero-width native geometry; PNG is a blank treemap plot with title/legend.",
+  "actual_evidence_files": {
+    "chart.svg": {
+      "bytes": 3501,
+      "sha256": "d18b8db67f72dbfe7a3db75b38c2ce0376dca9abb961e2a42bbad6739a5fc2de"
+    },
+    "baseline-treemap.png": {
+      "bytes": 25814,
+      "sha256": "2c5542c5f29e3bb3f81ceb42db6752bfae82ebad32d8cd2959fcedd6d2ad325f"
+    },
+    "manifest.json": {
+      "bytes": 3057,
+      "sha256": "ecfd8e32d17406c63d39de2b2f8210a2c7532d6c741d5d49cdd3c7f3050c5eda"
+    }
+  },
+  "strict_test": {
+    "command": "$env:PYTHONPATH=python/deepviz/src; .venv/Scripts/python.exe -B -m pytest python/deepviz/tests/test_r52_tiles.py -q --strict-markers --tb=short --basetemp=artifacts/local/R52-06/red-baseline-20261128 --junitxml=docs/coordination/evidence/R52-06/red-baseline.xml",
+    "exit_code": 1,
+    "passed": 11,
+    "failed": 4,
+    "skipped": 0,
+    "errors": 0,
+    "junit": "docs/coordination/evidence/R52-06/red-baseline.xml"
+  },
+  "scoped_checks": {
+    "ruff": "ruff check python/deepviz/tests/test_r52_tiles.py: exit 0",
+    "mypy": "mypy --follow-imports=silent python/deepviz/src/deepviz/engines.py: exit 0",
+    "git_diff_check": "git diff --check: exit 0"
+  },
+  "limitations": [
+    "No production source change; this exact output is failing baseline, not repaired candidate.",
+    "No browser execution or network/CDN test; local vl-convert generated SVG and raster.",
+    "No PR, CI, merge, remote branch publication or independent gate."
+  ]
+}
