@@ -1,0 +1,51 @@
+{
+  "utc": "2026-11-27T17:20:52.623727+00:00",
+  "audit_exit": 0,
+  "source_commit": "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19",
+  "split": {
+    "producer": 21,
+    "independent": 55
+  },
+  "cases": 76,
+  "all_228_setup_call_teardown_reports_passed": true,
+  "guarded_before_every_public_consumer": true,
+  "consumer_count": 76,
+  "source_files_raw_Gitblob_exact_after": 12,
+  "source_clean": true,
+  "executed_probe_and_wrapper_unchanged": true,
+  "negative_controls": {
+    "::test_invalid_point_budget_rejects_before_stream_consumption": {
+      "stream_yielded": 0
+    },
+    "::test_late_oversize_utf8_cell_raises_instead_of_returning_prefix": {
+      "stream_yielded": 33
+    },
+    "::test_oversize_record_is_not_silently_dropped_from_mean": {
+      "stream_yielded": 1
+    },
+    "::test_real_retained_mean_state_budget_rejects_bounded_stream": {
+      "stream_yielded": 254,
+      "advertised_input_records": 300,
+      "budget_method": "real public 16MiB retained-state guard; no patched constants or RSS claim"
+    }
+  },
+  "published_strict_fixture": {
+    "commit": "673d5f3b0702274f37c77b64de5d2befb6191298",
+    "sha256": "cf793142b104f1c48f5ab1d7885c73d305bdb849fc00d3b0976fec9b4332fe84",
+    "executed": false
+  },
+  "original_numeric_fixture": {
+    "raw_sha256": "ff32c72b798b4f8a8441faa820f7bdf13d33380be46c812fd0427d7be0cadb65",
+    "executed": false
+  },
+  "stdout_publication": {
+    "raw_sha256": "22eab819745a744a5341afec2ca37a3011ec0d6b1a566ff246b122aacb7f241c",
+    "raw_bytes": 651,
+    "published_LF_sha256": "c0d0488903a97ad088b9fe8b2f5f03558ffb1b48ed8d0353f6dd5bf00e4add04",
+    "published_LF_bytes": 634,
+    "transform": "CRCRLF/CRLF to LF only; raw original retained at unique command directory"
+  },
+  "case_results_publication": "Only76call reports exported; all228 original setup/call/teardown reports verified PASS and retained under command/gate",
+  "scope": "Independent c1b mean gate only; later546c/extracted package/currentmain/fullsuite/CI/build/browser/scale NOT approved",
+  "additional_product_executions": 0
+}
