@@ -1,0 +1,12 @@
+.F....                                                                   [100%]
+================================== FAILURES ===================================
+___ test_missing_generated_measure_is_not_filled_from_retained_numeric_size ___
+tests\r22_probes\role07\test_count_proposal_boundaries.py:43: in test_missing_generated_measure_is_not_filled_from_retained_numeric_size
+    assert [row["_y"] for row in mapped] == [0, None, None]
+E   assert [90.0, 80.0, 70.0] == [0, None, None]
+E     
+E     At index 0 diff: 90.0 != 0
+E     Use -v to get more diff
+=========================== short test summary info ===========================
+FAILED tests/r22_probes/role07/test_count_proposal_boundaries.py::test_missing_generated_measure_is_not_filled_from_retained_numeric_size
+1 failed, 5 passed in 0.37s

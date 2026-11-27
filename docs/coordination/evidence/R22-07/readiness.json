@@ -1,0 +1,153 @@
+{
+  "observed_at": "2026-11-27T15:25:49.344969+00:00",
+  "source_sha": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "status": "PROPOSAL_CHECKED_SIX_BOUNDARIES_5PASS_1STRICT_RED_SOURCE_UNCHANGED",
+  "production_patch_applied": false,
+  "commands": [
+    {
+      "label": "proposal-check-only",
+      "argv": [
+        "git",
+        "apply",
+        "--check",
+        "--",
+        "tests/r22_probes/role07/proposal/channels-count.patch"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22p07-src",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 0.06069060000299942
+    },
+    {
+      "label": "ruff-new-controls",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "tests/r22_probes/role07/test_count_proposal_boundaries.py"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22p07-src",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 0.09383339999476448
+    },
+    {
+      "label": "new-boundaries",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "tests/r22_probes/role07/test_count_proposal_boundaries.py",
+        "-p",
+        "no:cacheprovider",
+        "-q",
+        "--tb=short",
+        "--junitxml=C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22p07-run\\check-v1\\new-boundaries.xml"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22p07-src",
+      "exit": 1,
+      "expected_exit": 1,
+      "seconds": 0.7308176000078674
+    },
+    {
+      "label": "source-still-unchanged",
+      "argv": [
+        "git",
+        "diff",
+        "--exit-code",
+        "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+        "--",
+        "python",
+        "packages",
+        "schemas",
+        "prompts",
+        "pyproject.toml",
+        "package.json",
+        "package-lock.json"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22p07-src",
+      "exit": 0,
+      "expected_exit": 0,
+      "seconds": 0.06335860000399407
+    }
+  ],
+  "source_modules": {
+    "python/deepviz/src/deepviz/models.py": {
+      "loaded_from": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22p07-src\\python\\deepviz\\src\\deepviz\\models.py",
+      "bytes": 3493,
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    "python/deepviz/src/deepviz/normalize.py": {
+      "loaded_from": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22p07-src\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "bytes": 34886,
+      "sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2"
+    },
+    "python/deepviz/src/deepviz/engines.py": {
+      "loaded_from": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22p07-src\\python\\deepviz\\src\\deepviz\\engines.py",
+      "bytes": 44039,
+      "sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225"
+    },
+    "python/deepviz/src/deepviz/render.py": {
+      "loaded_from": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22p07-src\\python\\deepviz\\src\\deepviz\\render.py",
+      "bytes": 11637,
+      "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+    }
+  },
+  "immutable_oracle_commit": "76cac9d05b0b4abc94e5ff316e3de4d3bc835b79",
+  "old_matrix_replays": 0,
+  "proposal_ast": {
+    "only_changed_function": "channels",
+    "inserted_lines": 2,
+    "all_other_ast_nodes_unchanged": true,
+    "executed_or_written": false
+  },
+  "immutable_oracle_identities": {
+    "tests/r15_probes/role17/count_contract.py": {
+      "bytes": 4281,
+      "sha256": "0e0d468a5d70a3f36f8dda088ffa09e73da031952168e0ecd0cd6918b1940cd1"
+    },
+    "tests/r15_probes/role17/test_count_measure.py": {
+      "bytes": 4841,
+      "sha256": "c09f6a052afb4822e3bf06e6877d2e061810fd71d423049152c2b098f9325d54"
+    },
+    "tests/r15_probes/role17/collect_visuals.py": {
+      "bytes": 2737,
+      "sha256": "afd8a6c65809dfa858ac61d1b9ed2406ba41f709cec253d7bf0e7b9ac893c929"
+    },
+    "tests/r15_probes/role17/browser-count.cjs": {
+      "bytes": 5936,
+      "sha256": "84ca2c022efdb08624f8e082fd0d6dc8d8a22cc8ce1097f91f843aff52159eee"
+    },
+    "tests/r15_probes/role17/README.md": {
+      "bytes": 3607,
+      "sha256": "2a4d1a703da6110c54fb5e68f4a142888f95385f795031e7dddba76fbdf0aba4"
+    }
+  },
+  "new_boundary_cases": {
+    "cases": 6,
+    "passed": 5,
+    "failed": 1,
+    "errors": 0,
+    "skipped": 0,
+    "failing_case": "test_missing_generated_measure_is_not_filled_from_retained_numeric_size",
+    "scope": "Novel direct-helper fail-closed boundary, NOT valid public reducer output or new issue"
+  },
+  "owned_probe_identities": {
+    "tests/r22_probes/role07/test_count_proposal_boundaries.py": {
+      "bytes": 4381,
+      "sha256": "c29d3c0e6f517e9f6ccdd4fa1332d8f4cf58a4c3e4e4b64c9e00e5bee47d1199"
+    },
+    "tests/r22_probes/role07/proposal/channels-count.patch": {
+      "bytes": 769,
+      "sha256": "10516ba6e95ab281af0f4ef08a4fa3968f307d34358dd299086dd236d368b165"
+    },
+    "tests/r22_probes/role07/proposal/README.md": {
+      "bytes": 5621,
+      "sha256": "81c63524fca4e86e6acf4d8c4663cc7dda5e652573370c8d7c25dc9927f498c9"
+    }
+  }
+}
