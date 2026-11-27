@@ -1,0 +1,41 @@
+{
+  "baseline_commit": "0c5fa825f7058f8c5a4ab6ec9597b9fd5fd4ca43",
+  "prior_checkpoint_commit": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "recovery_observed_committed_checkpoint": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "method": "Immutable git show SHA:path bytes, canonical Git LF; no dirty/main source reads or benchmark reruns",
+  "continuity": {
+    "python/deepviz/src/deepviz/normalize.py": {
+      "baseline_git_lf_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+      "checkpoint_3aa_git_lf_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+      "checkpoint_5340_git_lf_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+      "baseline_to_3aa_equal": true,
+      "3aa_to_5340_equal": true
+    },
+    "python/deepviz/src/deepviz/models.py": {
+      "baseline_git_lf_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "checkpoint_3aa_git_lf_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "checkpoint_5340_git_lf_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "baseline_to_3aa_equal": true,
+      "3aa_to_5340_equal": true
+    },
+    "python/deepviz/src/deepviz/render.py": {
+      "baseline_git_lf_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+      "checkpoint_3aa_git_lf_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+      "checkpoint_5340_git_lf_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+      "baseline_to_3aa_equal": true,
+      "3aa_to_5340_equal": true
+    },
+    "scripts/performance_suite.py": {
+      "baseline_git_lf_sha256": "b3ddefa95c5b117e1c309cf8b63292ca92fb1cdc0023bcb13fc6cd21c249b683",
+      "checkpoint_3aa_git_lf_sha256": "13de6814a51647b58bf63923d9b1b9dbe8a608ebc029238b73af74e9489208c4",
+      "checkpoint_5340_git_lf_sha256": "13de6814a51647b58bf63923d9b1b9dbe8a608ebc029238b73af74e9489208c4",
+      "baseline_to_3aa_equal": false,
+      "3aa_to_5340_equal": true
+    }
+  },
+  "no_source_changes_3aa_to_5340_exit": 0,
+  "r10_branch_source_and_probe_unchanged_since_d931": true,
+  "new_tests_or_scale_experiments": 0,
+  "evidence_impact": "Narrow algorithm continuity reaches committed 5340 only. Timings/RSS remain actual baseline 0c5 runs. Role16 accumulator/source changes and R04 renderer-budget work require affected final frozen-source reruns; no current/final-source scale approval.",
+  "frozen_recipe": "docs/coordination/reports/R10-11-python-scale-envelope.md#frozen-final-source-rerun-recipe-prepared-not-executed"
+}

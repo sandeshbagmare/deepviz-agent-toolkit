@@ -122,3 +122,9 @@ Compared actual `git show HEAD:<evidence path>` bytes against Windows worktree c
 A small own documentation/evidence follow-up will publish this checksum distinction and the verified first publication receipt; no source/oracle changes. MAIN will then record the final exact remote tip. Original baseline remains unchanged.
 
 Follow-up manifest command initially exited1 before writes/staging because its `git show HEAD:<path>` argument incorrectly used an absolute Windows path (Git128), not a repository-relative path. Correct only this owned utility invocation to `path.relative_to(root).as_posix()`; no source/test/result change or lost publication.
+
+Corrected manifest generation exit0. Documentation-only follow-up local commit **`d931f87a4b0aa5d8da5f4297cdf93452ecb60f5d`** created exit0; exactlyfour own note/report/evidence paths, stageddiff/whitespace/credential scan0, cleanownworktree/ahead1. No production/probe Python changes from the55-passrun. Final non-force push/readback is next; no premature remote-tip claim.
+
+### R13 recovery publication pointer
+
+The saved firstunfinishedpush completed2026-11-27T13:53:20UTC: nonforceownpush0/remoteancestor0/ls-remote0/authenticatedGETref200 all confirmd931f87a4b0aa5d8da5f4297cdf93452ecb60f5d. No testsor10Mrepeated. Recoveryreport`docs/coordination/reports/R13-11-python-scale-envelope.md`; receipt`docs/coordination/evidence/R13-11/publication-d931f87.json`. See that report for latest exacttip/handoff; originalmeasurementresultsunchanged/notfinalapproval.
