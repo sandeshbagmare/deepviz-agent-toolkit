@@ -51,8 +51,22 @@ git diff --exit-code c1bf91c5439d585e2ff157752f380cfa4fe85c6d -- python\deepviz\
 git status --short --branch
 ```
 
-One checkpoint patch context mismatch was rejected atomically and corrected; no productfinding. A read for absent`tests/conftest.py`returnedfile-not-foundwhilepreparingtheindependentretestrecipe; no test/import behaviorwasassumedfromit. Neither attempt changed product/testresults.
+Two checkpoint patch context mismatches were rejected atomically and corrected; no productfinding. A read for absent`tests/conftest.py`returnedfile-not-foundwhilepreparingtheindependentretestrecipe; no test/import behaviorwasassumedfromit. Neither attempt changed product/testresults.
 
 ## R13 owned publication
 
-Pending scoped explicit-path staging/diff/whitespace/credential-pattern audit, honestREDcommit/nonforceOWNpush/actualremoteSHAreadback. OnlyactualreturnedSHAwillberecorded; no GREEN/CI/producer/finalsignoff/900claim. R04 fixes/integrates and assigns independent frozen-source retest using unchanged9cases, as described in ownR13report.
+Exact12ownedpaths staged explicitly (3NEWprobes,ownnote/NEWreport,7compactevidencefiles); stageddiffreviewed/whitespace0/credential-patternscan0,3imageand3probeSHA256smatchedJSON; production/R10testsunchanged. Commitexit0**f9087d0518e74378e810b9efe6d6630a12044399**,nonforceOWNpush0,immediatels-remotereadback0exactlocal/remotematch. Treeclean/tracking. NoGREEN/CI/producer/finalsignoff/900claim. R04 fixes/integrates and assigns independent frozen-source retest using unchanged9cases, as described in ownR13report.
+
+```powershell
+git add -- docs/agent-state/ses_de567801cffeGZFlt50oYv0Dnt.md docs/coordination/reports/R13-20-plotly-sink-discrimination.md docs/coordination/evidence/R13-20/auth-recovery.json docs/coordination/evidence/R13-20/commands.md docs/coordination/evidence/R13-20/strict-red.json docs/coordination/evidence/R13-20/strict-red.xml docs/coordination/evidence/R13-20/legend.png docs/coordination/evidence/R13-20/hover.png docs/coordination/evidence/R13-20/title.png tests/r13_probes/role20/test_plotly_sink_discrimination.py tests/r13_probes/role20/sink_browser.cjs tests/r13_probes/role20/capture_evidence.py
+git diff --cached --check
+git diff --cached --stat
+git diff --cached -- tests/r13_probes/role20/test_plotly_sink_discrimination.py tests/r13_probes/role20/sink_browser.cjs tests/r13_probes/role20/capture_evidence.py
+git commit -m "test: preserve RED Plotly legend hover and title sink controls"
+git push origin agents/r10-20-plotly-literal-labels
+git ls-remote --heads origin refs/heads/agents/r10-20-plotly-literal-labels
+git rev-parse HEAD
+git status --short --branch
+```
+
+Allexit0. `publication.json`recordsactualf9087d0push/readback; subsequentdocs-onlyreceiptpublicationdoesnotchangetestedproductionorprobeidentity. LatestfinalbranchreadbackisrecordedinownedMAINreport/note,withoutcreatingarecursiveneedtocommititsownSHA.
