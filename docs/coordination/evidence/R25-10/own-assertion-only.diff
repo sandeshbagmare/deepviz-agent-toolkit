@@ -1,0 +1,26 @@
+--- initial-own-probe
++++ final-own-probe
+@@ -7,6 +7,7 @@
+ import importlib
+ import json
+ import os
++import re
+ import sys
+ from concurrent.futures import ThreadPoolExecutor
+ from datetime import timedelta
+@@ -223,13 +224,13 @@
+                     oversized = " " * (1_000_001 - len(unicode_raw.encode("utf-8"))) + unicode_raw
+                     sentinels = [("normalize_data", '[{"v":1,"v":2}]', "Duplicate JSON"),
+                         ("recommend_chart", oversized, "Inline data exceeds"),
+-                        ("render_matplotlib", "[" * 1500 + "]" * 1500, "recursion")]
++                        ("render_matplotlib", "[" * 1500 + "]" * 1500, "deep|nest|recurs")]
+                     observed = []
+                     for tool, raw, expected in sentinels:
+                         arguments = {"data": raw, **({"spec": SPEC} if tool.startswith("render_") else {})}
+                         result = await client.call_tool(tool, arguments)
+                         message = decode_error(result)
+-                        assert result.isError and expected in message and len(message.encode("utf-8")) < 1024
++                        assert result.isError and re.search(expected, message, re.IGNORECASE) and len(message.encode("utf-8")) < 1024
+                         assert snapshot(output) == before and len((await client.list_resources()).resources) == 124
+                         observed.append({"tool": tool, "raw_utf8_bytes": len(raw.encode("utf-8")), "error": message})
+                     result = await client.call_tool("render_matplotlib", {"data": ROWS, "spec": SPEC})

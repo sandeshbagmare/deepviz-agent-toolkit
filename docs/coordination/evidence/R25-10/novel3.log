@@ -1,0 +1,48 @@
+..F                                                                      [100%]
+================================== FAILURES ===================================
+_ test_real_stdio_lifetime_capacity_failed_reservation_p1_sentinels_and_reset _
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\bagma\AppData\Local\Temp\opencode\r25-10-mcp-p2-source-ses_de56782e3ffeI5D4lzsNVeLcDk\tests\r25_probes\role10\test_resource_lifetime.py", line 290, in test_real_stdio_lifetime_capacity_failed_reservation_p1_sentinels_and_reset
+  |     asyncio.run(asyncio.wait_for(exercise(), timeout=180))
+  |   File "C:\Users\bagma\AppData\Roaming\uv\python\cpython-3.12.16-windows-x86_64-none\Lib\asyncio\runners.py", line 195, in run
+  |     return runner.run(main)
+  |            ^^^^^^^^^^^^^^^^
+  |   File "C:\Users\bagma\AppData\Roaming\uv\python\cpython-3.12.16-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+  |     return self._loop.run_until_complete(task)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\bagma\AppData\Roaming\uv\python\cpython-3.12.16-windows-x86_64-none\Lib\asyncio\base_events.py", line 691, in run_until_complete
+  |     return future.result()
+  |            ^^^^^^^^^^^^^^^
+  |   File "C:\Users\bagma\AppData\Roaming\uv\python\cpython-3.12.16-windows-x86_64-none\Lib\asyncio\tasks.py", line 520, in wait_for
+  |     return await fut
+  |            ^^^^^^^^^
+  |   File "C:\Users\bagma\AppData\Local\Temp\opencode\r25-10-mcp-p2-source-ses_de56782e3ffeI5D4lzsNVeLcDk\tests\r25_probes\role10\test_resource_lifetime.py", line 201, in exercise
+  |     async with stdio_client(params, errlog=stderr) as (read, write):
+  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\bagma\AppData\Roaming\uv\python\cpython-3.12.16-windows-x86_64-none\Lib\contextlib.py", line 231, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 183, in stdio_client
+  |     anyio.create_task_group() as tg,
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 871, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "C:\Users\bagma\AppData\Local\Temp\opencode\r25-10-mcp-p2-source-ses_de56782e3ffeI5D4lzsNVeLcDk\tests\r25_probes\role10\test_resource_lifetime.py", line 202, in exercise
+    |     async with ClientSession(read, write, read_timeout_seconds=timedelta(seconds=60)) as client:
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\mcp\shared\session.py", line 238, in __aexit__
+    |     return await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 871, in __aexit__
+    |     raise BaseExceptionGroup(
+    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "C:\Users\bagma\AppData\Local\Temp\opencode\r25-10-mcp-p2-source-ses_de56782e3ffeI5D4lzsNVeLcDk\tests\r25_probes\role10\test_resource_lifetime.py", line 232, in exercise
+      |     assert result.isError and expected in message and len(message.encode("utf-8")) < 1024
+      | AssertionError: assert (True and 'recursion' in 'Error executing tool render_matplotlib: Input is nested too deeply or cyclic')
+      |  +  where True = CallToolResult(meta=None, content=[TextContent(type='text', text='Error executing tool render_matplotlib: Input is nested too deeply or cyclic', annotations=None, meta=None)], structuredContent=None, isError=True).isError
+      +------------------------------------
+1 failed, 2 passed in 34.81s

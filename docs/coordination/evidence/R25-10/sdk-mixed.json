@@ -1,0 +1,65 @@
+{
+  "api": "SDK mixed costs",
+  "initial_engine_resources": [
+    {
+      "engine": "vega",
+      "resources": 3
+    },
+    {
+      "engine": "plotly",
+      "resources": 2
+    },
+    {
+      "engine": "antv",
+      "resources": 2
+    }
+  ],
+  "exact_final_resource_math": {
+    "matplotlib_calls": 1,
+    "vega_calls": 2,
+    "HTML_calls": 59,
+    "resources": 128
+  },
+  "failed_render_released": "Error executing tool render_matplotlib: Requested fields are missing from input: missing",
+  "denied": [
+    {
+      "engine": "matplotlib",
+      "issued_before": 126,
+      "error": "Error executing tool render_matplotlib: MCP resource capacity limit (128 per server lifetime); start a new server"
+    },
+    {
+      "engine": "vega",
+      "issued_before": 126,
+      "error": "Error executing tool render_vega: MCP resource capacity limit (128 per server lifetime); start a new server"
+    },
+    {
+      "engine": "matplotlib",
+      "issued_before": 128,
+      "error": "Error executing tool render_matplotlib: MCP resource capacity limit (128 per server lifetime); start a new server"
+    },
+    {
+      "engine": "vega",
+      "issued_before": 128,
+      "error": "Error executing tool render_vega: MCP resource capacity limit (128 per server lifetime); start a new server"
+    },
+    {
+      "engine": "echarts",
+      "issued_before": 128,
+      "error": "Error executing tool render_echarts: MCP resource capacity limit (128 per server lifetime); start a new server"
+    },
+    {
+      "engine": "plotly",
+      "issued_before": 128,
+      "error": "Error executing tool render_plotly: MCP resource capacity limit (128 per server lifetime); start a new server"
+    },
+    {
+      "engine": "antv",
+      "issued_before": 128,
+      "error": "Error executing tool render_antv: MCP resource capacity limit (128 per server lifetime); start a new server"
+    }
+  ],
+  "earliest_resource_sha256": "dcff6264d51321f10a821f6c972704ba6cb4df282332c1dee54596a84afa5088",
+  "prior_files_retained": 129,
+  "new_host_server_count": 2,
+  "caller_file_retained": true
+}

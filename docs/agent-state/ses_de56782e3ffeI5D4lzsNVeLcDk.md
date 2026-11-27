@@ -27,6 +27,14 @@
 
 ## R22 committed P1 transport refill
 
+- R25affectedstdioONLYafterownregexfix1pass0skip8.33s0;initialSDK2passesretained+author6once6pass11.04s=9uniquecasesultimatelypass,NOTsingle9GREENrun(initial2pass1harnessfail34.81s1preserved). MixedSDK4+3+2enginecostactual128/failedrelease/caller129files/earliestretained;6thread124+4actualAntV/ECharts→128restdenied. Realstdio124→failed4/3release/P1sentinels→Matplotlib4→128/all5denied/nooutputs,profile+advice2rows;secondhoststdio0→2oldURIunknown/priorfilesretained. PNGOPENEDEast11West−4/900x520/13146B/SHAdcff6264...inline==resource/manifestexactUnicode2counts. NoP1replay/sourceedit/API/install/spawn/fullgreen. Nextcompactevidence/quality→ONEOWNR25commit/pushSHA.
+
+- R25NEW3initial2pass1fail0skip34.81s/1:SDKmixed128+6threadpass;stdioownliteralrecursionmessageexpectationfailedonactualisErrorTrue`Input is nested too deeply or cyclic`(concisecorrectrejection). Preserveinitiallogs/XML/source/probe beforeownassertcorrection;noPNG/reset/3rdPASSclaim. Nextinspectsource/message→onlynewnest/deep/recursioncontractassertionfix→affectedstdioONLY,notpassed2/author6/P1replay. No production/oldoracle edits.
+
+- R25exacte47clean/CD75all11Gitbyteequal/P1tenfiles+tools+author37bytesunchanged;MCPfullchangedbutliteralstrictlist/callguardsidentical/sevenmoduleoriginscaptured. FULLauthorP2sixindependentlyonce6pass0fail0skip11.04s/0;ownRuff0/mypy0after2harnessoptional/AnyUrlfixes. Noauthor37/54/old47rerun. NextNEW3mixedSDK/race/2-processstdioonly;notP2wholegreenyet.
+
+- ActualP1payload **77d9b5d8a41e407bafb5bb3fdadc498db1a67f19**,18ownedpaths,parentbd680ca;commit0/nonforceOWNpush0/actualremoteSHA0exact/WTclean. R22receipt saved(noendlessreceiptcommit); NEW R25preworkreportreadFULLR25common/R24task22/R14-18author73 beforeP2. Exacte47/P2cd75/P1d65objectverified; nextinspectFULLP2test+source/byteequivalence thenNEWP2boundedSDKstdioresources/concurrency. Noauthor54borrowing/P1replay/source/API/env/install/spawn.
+
 - ParentR25P2queuearrivedAFTERbothP1commandscomplete: immutablee47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23/P2cd75/P1d65. FinishCURRENTownP1publicationcheckpoint(nointerrupt/replay);thenFULLR14-18+R25brief/exactP1byteequivalence→NEWP2stdio/SDKcapacity/lifetime/concurrency/resources. Author54notindependent/full42FAIL520ERROR5skip/missinghatchlingNOTGREEN. NoP2testsstarted/claimedyet.
 
 - R22NEW4pass0skip3.48s/author37once37pass0skip4.28s=41selectedpasses. Actualrun/arunSDKstdio20invalidobservations+20Unicode2rowrecoveries;precallback3rawerrors/run-arunproven;noSDK/parser/dispatchmocks. Stdio4resources/583Btext/manifest2counts/exactROWS/inlinePNG==resource;PNGOPENEDNorth7South−3/zero/readable/title900x52011807B SHA6a4ee7df...;notwholeMCP/P2/browser/provider. Trackedexactd65source/author37unchanged. Nextowncompactevidence/commands/hash/quality→scopedONEbranchcommitpushSHA;noAPIcall/install/sourcechange/spawn.

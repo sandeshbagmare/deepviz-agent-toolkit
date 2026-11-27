@@ -1,0 +1,63 @@
+{
+  "api": "SDK six-thread mixed costs",
+  "outcomes": [
+    {
+      "engine": "matplotlib",
+      "accepted": false,
+      "error": "Error executing tool render_matplotlib: MCP resource capacity limit (128 per server lifetime); start a new server"
+    },
+    {
+      "engine": "vega",
+      "accepted": false,
+      "error": "Error executing tool render_vega: MCP resource capacity limit (128 per server lifetime); start a new server"
+    },
+    {
+      "engine": "echarts",
+      "accepted": false,
+      "error": "Error executing tool render_echarts: MCP resource capacity limit (128 per server lifetime); start a new server"
+    },
+    {
+      "engine": "plotly",
+      "accepted": false,
+      "error": "Error executing tool render_plotly: MCP resource capacity limit (128 per server lifetime); start a new server"
+    },
+    {
+      "engine": "antv",
+      "accepted": true,
+      "resources": [
+        {
+          "uri": "deepviz://artifacts/deepviz-wednufrn/chart.html",
+          "mime_type": "text/html",
+          "name": "chart.html"
+        },
+        {
+          "uri": "deepviz://artifacts/deepviz-wednufrn/manifest.json",
+          "mime_type": "application/json",
+          "name": "manifest.json"
+        }
+      ]
+    },
+    {
+      "engine": "echarts",
+      "accepted": true,
+      "resources": [
+        {
+          "uri": "deepviz://artifacts/deepviz-60zqu5mv/chart.html",
+          "mime_type": "text/html",
+          "name": "chart.html"
+        },
+        {
+          "uri": "deepviz://artifacts/deepviz-60zqu5mv/manifest.json",
+          "mime_type": "application/json",
+          "name": "manifest.json"
+        }
+      ]
+    }
+  ],
+  "issued_before": 124,
+  "issued_after": 128,
+  "admitted_resources": 4,
+  "new_files": 4,
+  "earliest_and_caller_files_retained": true,
+  "earliest_resource_sha256": "9565977dc09d3ccff0201a14c4c5e115a2e6edc1d1343e3356a2c7751c78d062"
+}

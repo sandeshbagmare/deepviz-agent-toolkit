@@ -1,0 +1,290 @@
+"""Independent real MCP mixed-cost capacity, reservation and lifetime tests."""
+from __future__ import annotations
+
+import asyncio
+import base64
+import hashlib
+import importlib
+import json
+import os
+import sys
+from concurrent.futures import ThreadPoolExecutor
+from datetime import timedelta
+from pathlib import Path
+from threading import Barrier
+from typing import Any
+
+import pytest
+
+from deepviz.mcp_server import create_server
+
+ROWS = [{"category": "East", "value": 11, "note": "東京 📊"},
+        {"category": "West", "value": -4, "note": "München"}]
+SPEC = {"kind": "bar", "x": "category", "y": "value", "aggregation": "none", "title": "R25 P2 recovery"}
+COSTS = {"matplotlib": 4, "vega": 3, "echarts": 2, "plotly": 2, "antv": 2}
+
+
+def source_root() -> Path:
+    source = Path(os.environ["R25_PINNED_SOURCE"]).resolve()
+    for name in ("deepviz.mcp_server", "deepviz.tools", "deepviz.engines"):
+        origin = importlib.import_module(name).__file__
+        assert origin is not None and Path(origin).resolve().is_relative_to(source / "python/deepviz/src")
+    return source
+
+
+def digest(value: bytes) -> str:
+    return hashlib.sha256(value).hexdigest()
+
+
+def output_root(tmp_path: Path) -> Path:
+    source_root()
+    output = tmp_path / "output"
+    output.mkdir()
+    (output / "caller-owned.txt").write_bytes(b"Do not delete or rewrite caller files\n")
+    return output
+
+
+def snapshot(output: Path) -> dict[str, Any]:
+    return {"directories": sorted(str(path.relative_to(output)) for path in output.rglob("*") if path.is_dir()),
+            "files": {str(path.relative_to(output)): digest(path.read_bytes())
+                      for path in output.rglob("*") if path.is_file()}}
+
+
+def decode(content: Any) -> dict[str, Any]:
+    return json.loads(next(block.text for block in content if block.type == "text"))
+
+
+def sdk_render(server: Any, engine: str = "echarts", spec: dict[str, Any] | None = None) -> dict[str, Any]:
+    result = decode(asyncio.run(server.call_tool(f"render_{engine}", {"data": ROWS, "spec": spec or SPEC})))
+    assert result["input_count"] == result["output_count"] == 2
+    assert len(result["resources"]) == COSTS[engine]
+    return result
+
+
+def sdk_read(server: Any, uri: str) -> bytes:
+    raw = list(asyncio.run(server.read_resource(uri)))[0].content
+    return raw.encode("utf-8") if isinstance(raw, str) else raw
+
+
+def assert_count(server: Any, expected: int) -> None:
+    resources = asyncio.run(server.list_resources())
+    assert len(resources) == expected <= 128
+    assert len({str(resource.uri) for resource in resources}) == expected
+
+
+def test_sdk_mixed_cost_exact_capacity_failed_release_and_reset(tmp_path: Path) -> None:
+    pytest.importorskip("mcp")
+    from mcp.server.fastmcp.exceptions import ToolError
+
+    output = output_root(tmp_path)
+    caller = (output / "caller-owned.txt").read_bytes()
+    server = create_server(output)
+    first = sdk_render(server, "matplotlib")
+    first_uri = first["resources"][0]["uri"]
+    first_bytes = sdk_read(server, first_uri)
+    issued: list[dict[str, Any]] = []
+    for engine in ("vega", "plotly", "antv"):
+        rendered = sdk_render(server, engine)
+        for item in rendered["resources"]:
+            content = sdk_read(server, item["uri"])
+            if item["name"] == "manifest.json":
+                assert json.loads(content)["charts"][0]["records"] == ROWS
+        issued.append({"engine": engine, "resources": len(rendered["resources"])})
+    assert_count(server, 11)
+    for _ in range(56):
+        sdk_render(server)
+    assert_count(server, 123)
+    before = snapshot(output)
+    with pytest.raises(ToolError, match="missing") as failed:
+        sdk_render(server, "matplotlib", {**SPEC, "x": "missing"})
+    assert snapshot(output) == before
+    assert_count(server, 123)
+    sdk_render(server, "vega")
+    assert_count(server, 126)
+    denied = []
+    for engine in ("matplotlib", "vega"):
+        before = snapshot(output)
+        with pytest.raises(ToolError, match="capacity") as rejected:
+            sdk_render(server, engine)
+        denied.append({"engine": engine, "issued_before": 126, "error": str(rejected.value)})
+        assert snapshot(output) == before
+    sdk_render(server)
+    assert_count(server, 128)
+    before = snapshot(output)
+    for engine in COSTS:
+        with pytest.raises(ToolError, match="capacity") as rejected:
+            sdk_render(server, engine)
+        denied.append({"engine": engine, "issued_before": 128, "error": str(rejected.value)})
+        assert snapshot(output) == before
+    assert not asyncio.run(server.list_resource_templates())
+    assert sdk_read(server, first_uri) == first_bytes
+    fresh = create_server(output)
+    assert_count(fresh, 0)
+    with pytest.raises(ValueError, match="Unknown resource"):
+        sdk_read(fresh, first_uri)
+    assert snapshot(output) == before
+    sdk_render(fresh)
+    assert_count(fresh, 2)
+    assert (output / "caller-owned.txt").read_bytes() == caller
+    assert all(snapshot(output)["files"][name] == value for name, value in before["files"].items())
+    (tmp_path / "observed.json").write_text(json.dumps({"api": "SDK mixed costs", "initial_engine_resources": issued,
+        "exact_final_resource_math": {"matplotlib_calls": 1, "vega_calls": 2, "HTML_calls": 59, "resources": 128},
+        "failed_render_released": str(failed.value), "denied": denied,
+        "earliest_resource_sha256": digest(first_bytes), "prior_files_retained": len(before["files"]),
+        "new_host_server_count": 2, "caller_file_retained": True}, indent=2), encoding="utf-8")
+
+
+def test_actual_sdk_concurrent_mixed_costs_cannot_overissue(tmp_path: Path) -> None:
+    pytest.importorskip("mcp")
+    from mcp.server.fastmcp.exceptions import ToolError
+
+    output = output_root(tmp_path)
+    server = create_server(output)
+    first = sdk_render(server)
+    first_uri = first["resources"][0]["uri"]
+    first_bytes = sdk_read(server, first_uri)
+    for _ in range(61):
+        sdk_render(server)
+    assert_count(server, 124)
+    before = snapshot(output)
+    barrier = Barrier(6)
+
+    def attempt(engine: str) -> dict[str, Any]:
+        barrier.wait(timeout=20)
+        try:
+            result = sdk_render(server, engine)
+        except ToolError as rejected:
+            assert "capacity" in str(rejected)
+            return {"engine": engine, "accepted": False, "error": str(rejected)}
+        return {"engine": engine, "accepted": True, "resources": result["resources"]}
+
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        outcomes = list(pool.map(attempt, ("matplotlib", "vega", "echarts", "plotly", "antv", "echarts")))
+    accepted = [result for result in outcomes if result["accepted"]]
+    admitted = sum(len(result["resources"]) for result in accepted)
+    assert admitted in (3, 4) and 1 <= len(accepted) <= 2
+    assert_count(server, 124 + admitted)
+    after = snapshot(output)
+    assert len(after["files"]) == len(before["files"]) + admitted
+    assert all(after["files"][name] == value for name, value in before["files"].items())
+    for result in accepted:
+        for resource in result["resources"]:
+            assert sdk_read(server, resource["uri"])
+    with pytest.raises(ToolError, match="capacity"):
+        sdk_render(server)
+    assert snapshot(output) == after and sdk_read(server, first_uri) == first_bytes
+    (tmp_path / "observed.json").write_text(json.dumps({"api": "SDK six-thread mixed costs", "outcomes": outcomes,
+        "issued_before": 124, "issued_after": 124 + admitted, "admitted_resources": admitted,
+        "new_files": admitted, "earliest_and_caller_files_retained": True,
+        "earliest_resource_sha256": digest(first_bytes)}, indent=2), encoding="utf-8")
+
+
+def test_real_stdio_lifetime_capacity_failed_reservation_p1_sentinels_and_reset(tmp_path: Path) -> None:
+    pytest.importorskip("mcp")
+    from mcp import ClientSession, StdioServerParameters, types
+    from mcp.client.stdio import stdio_client
+    from mcp.shared.exceptions import McpError
+    from pydantic import AnyUrl
+
+    output = output_root(tmp_path)
+    params = StdioServerParameters(command=sys.executable,
+        args=["-m", "deepviz.mcp_server", "--output-dir", str(output)], cwd=str(tmp_path),
+        env={"PYTHONPATH": str(source_root() / "python/deepviz/src"), "PYTHONUTF8": "1",
+             "PYTHONDONTWRITEBYTECODE": "1", "MPLBACKEND": "Agg"})
+
+    async def read_bytes(client: Any, uri: str) -> bytes:
+        content = (await client.read_resource(uri)).contents[0]
+        return content.text.encode("utf-8") if isinstance(content, types.TextResourceContents) else base64.b64decode(content.blob)
+
+    async def exercise() -> None:
+        with (tmp_path / "server.stderr").open("w", encoding="utf-8") as stderr:
+            async with stdio_client(params, errlog=stderr) as (read, write):
+                async with ClientSession(read, write, read_timeout_seconds=timedelta(seconds=60)) as client:
+                    initialization = await client.initialize()
+                    assert initialization.instructions is not None
+                    assert "128" in initialization.instructions and "lifetime" in initialization.instructions
+                    first_uri = ""
+                    earliest = b""
+                    for index in range(62):
+                        result = await client.call_tool("render_echarts", {"data": ROWS, "spec": SPEC})
+                        assert not result.isError and len(decode(result.content)["resources"]) == 2
+                        if index == 0:
+                            first_uri = decode(result.content)["resources"][0]["uri"]
+                            earliest = await read_bytes(client, first_uri)
+                    assert len((await client.list_resources()).resources) == 124
+                    before = snapshot(output)
+                    failed = []
+                    for engine in ("matplotlib", "vega"):
+                        result = await client.call_tool(f"render_{engine}", {"data": ROWS, "spec": {**SPEC, "x": "missing"}})
+                        assert result.isError and "missing" in " ".join(block.text for block in result.content if block.type == "text")
+                        failed.append(decode_error(result))
+                        assert len((await client.list_resources()).resources) == 124 and snapshot(output) == before
+                    unicode_raw = json.dumps(ROWS, ensure_ascii=False)
+                    oversized = " " * (1_000_001 - len(unicode_raw.encode("utf-8"))) + unicode_raw
+                    sentinels = [("normalize_data", '[{"v":1,"v":2}]', "Duplicate JSON"),
+                        ("recommend_chart", oversized, "Inline data exceeds"),
+                        ("render_matplotlib", "[" * 1500 + "]" * 1500, "recursion")]
+                    observed = []
+                    for tool, raw, expected in sentinels:
+                        arguments = {"data": raw, **({"spec": SPEC} if tool.startswith("render_") else {})}
+                        result = await client.call_tool(tool, arguments)
+                        message = decode_error(result)
+                        assert result.isError and expected in message and len(message.encode("utf-8")) < 1024
+                        assert snapshot(output) == before and len((await client.list_resources()).resources) == 124
+                        observed.append({"tool": tool, "raw_utf8_bytes": len(raw.encode("utf-8")), "error": message})
+                    result = await client.call_tool("render_matplotlib", {"data": ROWS, "spec": SPEC})
+                    assert not result.isError
+                    info = decode(result.content)
+                    assert info["input_count"] == info["output_count"] == 2 and len(info["resources"]) == 4
+                    assert len((await client.list_resources()).resources) == 128
+                    resources = []
+                    for resource in info["resources"]:
+                        content = await read_bytes(client, resource["uri"])
+                        if resource["mime_type"] == "image/png":
+                            inline = next(block for block in result.content if isinstance(block, types.ImageContent))
+                            assert base64.b64decode(inline.data) == content
+                            (tmp_path / "recovered.png").write_bytes(content)
+                        if resource["name"] == "manifest.json":
+                            manifest = json.loads(content)
+                            assert manifest["charts"][0]["records"] == ROWS and manifest["charts"][0]["input_count"] == 2
+                            (tmp_path / "recovered-manifest.json").write_bytes(content)
+                        resources.append({**resource, "bytes": len(content), "sha256": digest(content)})
+                    full = snapshot(output)
+                    denials = []
+                    for engine in COSTS:
+                        result = await client.call_tool(f"render_{engine}", {"data": ROWS, "spec": SPEC})
+                        message = decode_error(result)
+                        assert result.isError and "capacity" in message and "128" in message and "new server" in message
+                        assert not any(isinstance(block, types.ResourceLink) for block in result.content)
+                        assert snapshot(output) == full and len((await client.list_resources()).resources) == 128
+                        denials.append({"engine": engine, "error": message})
+                    assert not (await client.list_resource_templates()).resourceTemplates
+                    assert await read_bytes(client, first_uri) == earliest
+                    normalized = await client.call_tool("normalize_data", {"data": unicode_raw})
+                    assert not normalized.isError and decode(normalized.content)["input_count"] == 2
+                    profile = decode(normalized.content)
+                    advice = await client.call_tool("recommend_chart", {"data": {"dataset_id": profile["dataset_id"]}})
+                    assert not advice.isError and decode(advice.content)["input_count"] == 2
+            # A new host-created process explicitly resets issuance, never silently expires files.
+            async with stdio_client(params, errlog=stderr) as (read, write):
+                async with ClientSession(read, write, read_timeout_seconds=timedelta(seconds=60)) as client:
+                    await client.initialize()
+                    assert not (await client.list_resources()).resources and snapshot(output) == full
+                    with pytest.raises(McpError, match="Unknown resource"):
+                        await client.read_resource(AnyUrl(first_uri))
+                    rendered = await client.call_tool("render_echarts", {"data": ROWS, "spec": SPEC})
+                    assert not rendered.isError and len((await client.list_resources()).resources) == 2
+                    after = snapshot(output)
+                    assert all(after["files"][name] == value for name, value in full["files"].items())
+                    assert (output / "caller-owned.txt").read_bytes() == b"Do not delete or rewrite caller files\n"
+        (tmp_path / "observed.json").write_text(json.dumps({"api": "real stdio lifetime", "issued_at_capacity": 128,
+            "engine_math": {"echarts_calls": 62, "matplotlib_calls": 1, "resources": 128},
+            "failed_reservations_released": failed, "P1_narrow_sentinels": observed, "at_capacity_denials": denials,
+            "earliest_resource_sha256": digest(earliest), "retained_capacity_files": len(full["files"]),
+            "new_host_process_count": 2, "caller_files_retained": True, "resources_read": resources,
+            "valid_post_capacity_profile_count": 2, "valid_post_capacity_recommend_count": 2}, indent=2), encoding="utf-8")
+
+    def decode_error(result: Any) -> str:
+        return "\n".join(block.text for block in result.content if block.type == "text")
+
+    asyncio.run(asyncio.wait_for(exercise(), timeout=180))

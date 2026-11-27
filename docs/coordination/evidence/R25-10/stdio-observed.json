@@ -1,0 +1,88 @@
+{
+  "api": "real stdio lifetime",
+  "issued_at_capacity": 128,
+  "engine_math": {
+    "echarts_calls": 62,
+    "matplotlib_calls": 1,
+    "resources": 128
+  },
+  "failed_reservations_released": [
+    "Error executing tool render_matplotlib: Requested fields are missing from input: missing",
+    "Error executing tool render_vega: Requested fields are missing from input: missing"
+  ],
+  "P1_narrow_sentinels": [
+    {
+      "tool": "normalize_data",
+      "raw_utf8_bytes": 15,
+      "error": "Invalid JSON inline data: Duplicate JSON object key"
+    },
+    {
+      "tool": "recommend_chart",
+      "raw_utf8_bytes": 1000001,
+      "error": "Inline data exceeds 1 MB; configure data_dir and use a file reference"
+    },
+    {
+      "tool": "render_matplotlib",
+      "raw_utf8_bytes": 3000,
+      "error": "Error executing tool render_matplotlib: Input is nested too deeply or cyclic"
+    }
+  ],
+  "at_capacity_denials": [
+    {
+      "engine": "matplotlib",
+      "error": "Error executing tool render_matplotlib: MCP resource capacity limit (128 per server lifetime); start a new server"
+    },
+    {
+      "engine": "vega",
+      "error": "Error executing tool render_vega: MCP resource capacity limit (128 per server lifetime); start a new server"
+    },
+    {
+      "engine": "echarts",
+      "error": "Error executing tool render_echarts: MCP resource capacity limit (128 per server lifetime); start a new server"
+    },
+    {
+      "engine": "plotly",
+      "error": "Error executing tool render_plotly: MCP resource capacity limit (128 per server lifetime); start a new server"
+    },
+    {
+      "engine": "antv",
+      "error": "Error executing tool render_antv: MCP resource capacity limit (128 per server lifetime); start a new server"
+    }
+  ],
+  "earliest_resource_sha256": "9565977dc09d3ccff0201a14c4c5e115a2e6edc1d1343e3356a2c7751c78d062",
+  "retained_capacity_files": 129,
+  "new_host_process_count": 2,
+  "caller_files_retained": true,
+  "resources_read": [
+    {
+      "uri": "deepviz://artifacts/deepviz-a1mu_t99/chart.png",
+      "mime_type": "image/png",
+      "name": "chart.png",
+      "bytes": 13146,
+      "sha256": "dcff6264d51321f10a821f6c972704ba6cb4df282332c1dee54596a84afa5088"
+    },
+    {
+      "uri": "deepviz://artifacts/deepviz-a1mu_t99/chart.svg",
+      "mime_type": "image/svg+xml",
+      "name": "chart.svg",
+      "bytes": 21203,
+      "sha256": "4c29e63d79a6bfcb6046381526be69506b7b703ebe9ffd518f58a5157c617a60"
+    },
+    {
+      "uri": "deepviz://artifacts/deepviz-a1mu_t99/chart.html",
+      "mime_type": "text/html",
+      "name": "chart.html",
+      "bytes": 1469,
+      "sha256": "042178ea0b4a6a9007b200ded8cce9a68af7f0fd089b415049797648f50cb7b0"
+    },
+    {
+      "uri": "deepviz://artifacts/deepviz-a1mu_t99/manifest.json",
+      "mime_type": "application/json",
+      "name": "manifest.json",
+      "bytes": 1078,
+      "sha256": "13e629b310964210840feeac280bea9cb12a0d0f39360b92d210e7e31f612787"
+    }
+  ],
+  "valid_post_capacity_profile_count": 2,
+  "valid_post_capacity_recommend_count": 2
+}

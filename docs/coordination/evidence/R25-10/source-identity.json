@@ -1,0 +1,161 @@
+{
+  "source": "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23",
+  "product_source": "cd75c459ddba9f3d6bc0a5185b570af369fb4980",
+  "P1_previous_source": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+  "initial_clean": true,
+  "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+  "all_product_files": [
+    {
+      "path": "python/deepviz/src/deepviz/__init__.py",
+      "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+      "bytes": 1133,
+      "e47_working_cd75_equal": true,
+      "P1_binary_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/cli.py",
+      "sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+      "bytes": 2623,
+      "e47_working_cd75_equal": true,
+      "P1_binary_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/engines.py",
+      "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+      "bytes": 42230,
+      "e47_working_cd75_equal": true,
+      "P1_binary_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/mcp_server.py",
+      "sha256": "9f1628e04749c3c3d2357607ac4cc0021f74e1119c6237aa36077a0fd67bf480",
+      "bytes": 6729,
+      "e47_working_cd75_equal": true,
+      "P1_binary_equal": false
+    },
+    {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "bytes": 3493,
+      "e47_working_cd75_equal": true,
+      "P1_binary_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+      "bytes": 33895,
+      "e47_working_cd75_equal": true,
+      "P1_binary_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/py.typed",
+      "sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+      "bytes": 46,
+      "e47_working_cd75_equal": true,
+      "P1_binary_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/recommend.py",
+      "sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+      "bytes": 4875,
+      "e47_working_cd75_equal": true,
+      "P1_binary_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/render.py",
+      "sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+      "bytes": 11313,
+      "e47_working_cd75_equal": true,
+      "P1_binary_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt",
+      "sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+      "bytes": 1086,
+      "e47_working_cd75_equal": true,
+      "P1_binary_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/tools.py",
+      "sha256": "11273c5f5b0ff2eee16e09c6c727e560582a43fcae723bb315b6ef80d5a68495",
+      "bytes": 9974,
+      "e47_working_cd75_equal": true,
+      "P1_binary_equal": true
+    }
+  ],
+  "P1_unchanged_guard_source_segments": [
+    {
+      "method": "list_tools",
+      "literal_source_segment_equal": true,
+      "sha256": "cba2a6513dd4e60a126c1923171da5b6428b1e9864b952eb1b4776ccef1f9c8c"
+    },
+    {
+      "method": "call_tool",
+      "literal_source_segment_equal": true,
+      "sha256": "50c1d3ba447741260b3bedc01d20496c87c3a9971f61f4f36e5a48cc38102387"
+    }
+  ],
+  "unchanged_author_tests": [
+    {
+      "path": "python/deepviz/tests/test_r14_tool_json_boundary.py",
+      "bytes": 8718,
+      "sha256": "231d43801dec500ab6da237c9a232b86e6169718fe05fc9b2b5f5b1ede905a4b",
+      "e47_cd75_working_equal": true,
+      "P1_binary_equal": true
+    },
+    {
+      "path": "python/deepviz/tests/test_r14_mcp_resource_budget.py",
+      "bytes": 7504,
+      "sha256": "0406f524d22879e24606c594d7250124f0e298c7b47b05ddf50f39da55a18d9d",
+      "e47_cd75_working_equal": true,
+      "P1_binary_equal": false
+    }
+  ],
+  "loaded_modules": [
+    {
+      "module": "deepviz",
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-10-mcp-p2-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\__init__.py",
+      "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+    },
+    {
+      "module": "deepviz.tools",
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-10-mcp-p2-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\tools.py",
+      "sha256": "11273c5f5b0ff2eee16e09c6c727e560582a43fcae723bb315b6ef80d5a68495"
+    },
+    {
+      "module": "deepviz.mcp_server",
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-10-mcp-p2-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\mcp_server.py",
+      "sha256": "9f1628e04749c3c3d2357607ac4cc0021f74e1119c6237aa36077a0fd67bf480"
+    },
+    {
+      "module": "deepviz.normalize",
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-10-mcp-p2-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+    },
+    {
+      "module": "deepviz.models",
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-10-mcp-p2-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\models.py",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    {
+      "module": "deepviz.render",
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-10-mcp-p2-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\render.py",
+      "sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+    },
+    {
+      "module": "deepviz.engines",
+      "origin": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r25-10-mcp-p2-source-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\engines.py",
+      "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de"
+    }
+  ],
+  "versions": {
+    "mcp": "1.30.0",
+    "langchain-core": "1.8.5",
+    "pydantic": "2.14.4",
+    "matplotlib": "3.11.2",
+    "pytest": "9.2.0"
+  },
+  "P1_evidence_carryforward_limit": "tools and all non-MCP modules binary equal; changed MCP full file not equal but strict list/call guard literal method segments equal; P2 new tests plus narrow stdio admission sentinels, not silent whole-P1 acceptance",
+  "no_installs_or_production_changes": true
+}

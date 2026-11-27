@@ -2,6 +2,13 @@
 
 ## Source-specific P1 verdict
 
+**Actual publication:** payload **77d9b5d8a41e407bafb5bb3fdadc498db1a67f19**,
+18 explicit owned paths, parentbd680ca. Commit0/non-forceOWNpush0/actual
+`git ls-remote --heads origin refs/heads/agents/r11-10-strict-mcp-boundaries`0
+returned exact77d9b5d; ownWTcleantrackingremote, productiondiffempty. No PR/issue
+or shared-branch writes. Receipt is saved without an endless receipt-only commit.
+This closes the P1 checkpoint before the queued R25 P2 work; it does not approve P2.
+
 **Bounded PASS at immutable d65dfc0fd807d0335b858476de8cdf7c6b958711**;
 no new P1 transport defect found in the selected checks. This is not whole-MCP,
 P2 capacity, integration/final-head, provider or CI approval. Security reviewer02

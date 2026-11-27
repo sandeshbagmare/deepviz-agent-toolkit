@@ -1,0 +1,190 @@
+{
+  "tested_source": "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23",
+  "source_equivalent_commit": "cd75c459ddba9f3d6bc0a5185b570af369fb4980",
+  "initial_source_clean": true,
+  "all_11_product_files_unchanged_binary_after": true,
+  "author_tests_unchanged_after": true,
+  "source_identity": "source-identity.json",
+  "own_final_probe_sha256": "428731a4296d8df5a921373ac090c73f3d6a95910070c370bc0956993fec12df",
+  "initial_probe_sha256": "113d8f9de68520ff0fb538ba79746f4e7ec43cddf385915f2a38c057ec1f97b6",
+  "passed_two_functions_AST_unchanged": [
+    "test_sdk_mixed_cost_exact_capacity_failed_release_and_reset",
+    "test_actual_sdk_concurrent_mixed_costs_cannot_overissue"
+  ],
+  "actual_commands_results": {
+    "author6": {
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 6,
+      "terminal_seconds": 11.04,
+      "XML_seconds": "10.998",
+      "exit": 0,
+      "sha256": "b88f28886860dd57612f7415866e3646f0562522c52dc0eca785d22d166caa6e",
+      "cases": [
+        {
+          "id": "python.deepviz.tests.test_r14_mcp_resource_budget.test_sdk_capacity_rejects_before_output_and_preserves_earliest_resource",
+          "status": "passed"
+        },
+        {
+          "id": "python.deepviz.tests.test_r14_mcp_resource_budget.test_capacity_reserves_the_real_artifact_count_for_static_engines[matplotlib-0]",
+          "status": "passed"
+        },
+        {
+          "id": "python.deepviz.tests.test_r14_mcp_resource_budget.test_capacity_reserves_the_real_artifact_count_for_static_engines[vega-1]",
+          "status": "passed"
+        },
+        {
+          "id": "python.deepviz.tests.test_r14_mcp_resource_budget.test_failed_render_does_not_consume_capacity_or_touch_peer_outputs",
+          "status": "passed"
+        },
+        {
+          "id": "python.deepviz.tests.test_r14_mcp_resource_budget.test_concurrent_render_reservations_do_not_overissue",
+          "status": "passed"
+        },
+        {
+          "id": "python.deepviz.tests.test_r14_mcp_resource_budget.test_real_stdio_resource_capacity_remains_readable_and_normalization_recovers",
+          "status": "passed"
+        }
+      ]
+    },
+    "novel3": {
+      "tests": 3,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 2,
+      "terminal_seconds": 34.81,
+      "XML_seconds": "34.749",
+      "exit": 1,
+      "sha256": "6a5c3a45c3a50969b4eac69f9738ea73c631109709e566b4ecc7f493cf2216a9",
+      "cases": [
+        {
+          "id": "tests.r25_probes.role10.test_resource_lifetime.test_sdk_mixed_cost_exact_capacity_failed_release_and_reset",
+          "status": "passed"
+        },
+        {
+          "id": "tests.r25_probes.role10.test_resource_lifetime.test_actual_sdk_concurrent_mixed_costs_cannot_overissue",
+          "status": "passed"
+        },
+        {
+          "id": "tests.r25_probes.role10.test_resource_lifetime.test_real_stdio_lifetime_capacity_failed_reservation_p1_sentinels_and_reset",
+          "status": "failed"
+        }
+      ]
+    },
+    "stdio-fixed": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 1,
+      "terminal_seconds": 8.33,
+      "XML_seconds": "8.287",
+      "exit": 0,
+      "sha256": "0c9d3a29578210affc742e5630d98da3e45e01e193ae9404f6c38c2f9ca7e161",
+      "cases": [
+        {
+          "id": "tests.r25_probes.role10.test_resource_lifetime.test_real_stdio_lifetime_capacity_failed_reservation_p1_sentinels_and_reset",
+          "status": "passed"
+        }
+      ]
+    }
+  },
+  "unique_selected_passed_ids": [
+    "python.deepviz.tests.test_r14_mcp_resource_budget.test_capacity_reserves_the_real_artifact_count_for_static_engines[matplotlib-0]",
+    "python.deepviz.tests.test_r14_mcp_resource_budget.test_capacity_reserves_the_real_artifact_count_for_static_engines[vega-1]",
+    "python.deepviz.tests.test_r14_mcp_resource_budget.test_concurrent_render_reservations_do_not_overissue",
+    "python.deepviz.tests.test_r14_mcp_resource_budget.test_failed_render_does_not_consume_capacity_or_touch_peer_outputs",
+    "python.deepviz.tests.test_r14_mcp_resource_budget.test_real_stdio_resource_capacity_remains_readable_and_normalization_recovers",
+    "python.deepviz.tests.test_r14_mcp_resource_budget.test_sdk_capacity_rejects_before_output_and_preserves_earliest_resource",
+    "tests.r25_probes.role10.test_resource_lifetime.test_actual_sdk_concurrent_mixed_costs_cannot_overissue",
+    "tests.r25_probes.role10.test_resource_lifetime.test_real_stdio_lifetime_capacity_failed_reservation_p1_sentinels_and_reset",
+    "tests.r25_probes.role10.test_resource_lifetime.test_sdk_mixed_cost_exact_capacity_failed_release_and_reset"
+  ],
+  "unique_selected_passed": 9,
+  "single_nine_case_green_command_claim": false,
+  "initial_own_harness_failure_preserved": true,
+  "only_failed_stdio_case_rerun": true,
+  "selected_skips": 0,
+  "resource_math": {
+    "mixed_sdk": {
+      "matplotlib": 1,
+      "vega": 2,
+      "HTML": 59,
+      "resources": 128
+    },
+    "stdio": {
+      "echarts": 62,
+      "matplotlib": 1,
+      "resources": 128
+    },
+    "actual_six_thread_start": 124,
+    "actual_six_thread_end": 128,
+    "actual_six_thread_accepted": [
+      "antv",
+      "echarts"
+    ],
+    "actual_six_thread_rejected": 4
+  },
+  "failed_reservations_released": true,
+  "earliest_bytes_and_caller_files_preserved": true,
+  "retained_capacity_files": 129,
+  "explicit_new_stdio_process_resources": 2,
+  "PNG": {
+    "path": "recovered.png",
+    "opened_and_inspected": true,
+    "dimensions": [
+      900,
+      520
+    ],
+    "bytes": 13146,
+    "sha256": "dcff6264d51321f10a821f6c972704ba6cb4df282332c1dee54596a84afa5088",
+    "literal_values": [
+      11,
+      -4
+    ],
+    "labels": [
+      "East",
+      "West"
+    ],
+    "zero_baseline": true,
+    "title": "R25 P2 recovery",
+    "inline_matches_read_resource": true
+  },
+  "actual_four_stdio_resource_bytes": [
+    13146,
+    21203,
+    1469,
+    1078
+  ],
+  "P1_new_narrow_stdio_sentinel_error_bytes": [
+    51,
+    69,
+    76
+  ],
+  "at_capacity_error_bytes": [
+    113,
+    107,
+    110,
+    109,
+    107
+  ],
+  "final_ruff_exit": 0,
+  "final_mypy_exit": 0,
+  "limits": [
+    "one observed six-thread interleaving not saturation/long-soak proof",
+    "P1 guards byte-equal within explicit scope, no old47/author37/54/unrelated suite rerun",
+    "P1/author source report baseline full42FAIL520ERROR5skip/missing hatchling remains reported not independently rerun",
+    "SDK-rendered all five artifact alternatives but not browser/CDN or all chart kinds",
+    "zero selected skips not symlink privilege proof; no symlink tests selected",
+    "no paid provider or DeepAgent planning tests selected",
+    "not main/integrated/final candidate, no CI/default/issue/PR approval",
+    "no production/existing oracle/dependency/shared environment changes; child-process-only settings",
+    "reviewer02/source reviewer20 independently own reviews; no signoff assumed"
+  ],
+  "API_requests": 0,
+  "dependency_installs": 0,
+  "paid_provider_calls": 0
+}
