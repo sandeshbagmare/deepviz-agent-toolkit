@@ -1,0 +1,275 @@
+{
+  "source": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+  "tracked_source_files_byte_verified_after": [
+    {
+      "path": "python/deepviz/src/deepviz/__init__.py",
+      "bytes": 1133,
+      "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+      "Git_working_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/cli.py",
+      "bytes": 2623,
+      "sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+      "Git_working_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/engines.py",
+      "bytes": 42230,
+      "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+      "Git_working_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/mcp_server.py",
+      "bytes": 5616,
+      "sha256": "77b3ff80e52b88b79e322a15fd9db2a39eec9a1dbd8505480fca0cb54724fcce",
+      "Git_working_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "bytes": 3493,
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "Git_working_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "bytes": 33895,
+      "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+      "Git_working_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/py.typed",
+      "bytes": 46,
+      "sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+      "Git_working_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/recommend.py",
+      "bytes": 4875,
+      "sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+      "Git_working_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/render.py",
+      "bytes": 11313,
+      "sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+      "Git_working_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt",
+      "bytes": 1086,
+      "sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+      "Git_working_equal": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/tools.py",
+      "bytes": 9974,
+      "sha256": "11273c5f5b0ff2eee16e09c6c727e560582a43fcae723bb315b6ef80d5a68495",
+      "Git_working_equal": true
+    }
+  ],
+  "sdk_module_origins": [
+    {
+      "module": "mcp.server.fastmcp.server",
+      "origin": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\mcp\\server\\fastmcp\\server.py",
+      "bytes": 54820,
+      "sha256": "1b1c8cd4f6e350f7d4f62627764ed7c0f51e85872d32aba9d9da560a2bd2c50c",
+      "existing_environment_read_only": true
+    },
+    {
+      "module": "mcp.server.fastmcp.utilities.func_metadata",
+      "origin": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\mcp\\server\\fastmcp\\utilities\\func_metadata.py",
+      "bytes": 23275,
+      "sha256": "c951a064ea3f1488c2f9685168ab049a31d9772c5ff06340f1b435399e1db18c",
+      "existing_environment_read_only": true
+    },
+    {
+      "module": "langchain_core.tools.base",
+      "origin": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py",
+      "bytes": 71607,
+      "sha256": "239c77d07a9283ced902fb161ca0fcdb5e532a9824caaa169ab014ac41c899d4",
+      "existing_environment_read_only": true
+    }
+  ],
+  "author_original_unchanged": {
+    "sha256": "231d43801dec500ab6da237c9a232b86e6169718fe05fc9b2b5f5b1ede905a4b",
+    "bytes": 8718
+  },
+  "own_probe": {
+    "path": "tests\\r22_probes\\role10\\test_transport_acceptance.py",
+    "sha256": "ec56ae1c917f3ef5fe076467901771d533eb8cd22e2ea46313ad0ad67375b2ee",
+    "bytes": 12383,
+    "executed_copy_equal": true
+  },
+  "results": {
+    "author37": {
+      "tests": 37,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "passed": 37,
+      "terminal_seconds": 4.28,
+      "XML_seconds": "4.208",
+      "exit": 0,
+      "executions": 1,
+      "xml_sha256": "692cac32a4bab5062dd51a909d87f321b67873ffd6962e4fd25d8ea4230151a6",
+      "cases": [
+        "test_duplicate_keys_rejected_before_semantic_loss[core-top]",
+        "test_duplicate_keys_rejected_before_semantic_loss[core-nested]",
+        "test_duplicate_keys_rejected_before_semantic_loss[core-file-control]",
+        "test_duplicate_keys_rejected_before_semantic_loss[session-top]",
+        "test_duplicate_keys_rejected_before_semantic_loss[session-nested]",
+        "test_duplicate_keys_rejected_before_semantic_loss[session-file-control]",
+        "test_duplicate_keys_rejected_before_semantic_loss[structured-top]",
+        "test_duplicate_keys_rejected_before_semantic_loss[structured-nested]",
+        "test_duplicate_keys_rejected_before_semantic_loss[structured-file-control]",
+        "test_duplicate_keys_rejected_before_semantic_loss[sdk-top]",
+        "test_duplicate_keys_rejected_before_semantic_loss[sdk-nested]",
+        "test_duplicate_keys_rejected_before_semantic_loss[sdk-file-control]",
+        "test_sdk_rejects_raw_oversize_before_decoding_for_every_tool[normalize_data]",
+        "test_sdk_rejects_raw_oversize_before_decoding_for_every_tool[recommend_chart]",
+        "test_sdk_rejects_raw_oversize_before_decoding_for_every_tool[render_echarts]",
+        "test_deep_data_has_concise_validation_error[1500-object-session]",
+        "test_deep_data_has_concise_validation_error[1500-object-structured]",
+        "test_deep_data_has_concise_validation_error[1500-object-sdk]",
+        "test_deep_data_has_concise_validation_error[1500-encoded-session]",
+        "test_deep_data_has_concise_validation_error[1500-encoded-structured]",
+        "test_deep_data_has_concise_validation_error[1500-encoded-sdk]",
+        "test_deep_data_has_concise_validation_error[10000-object-session]",
+        "test_deep_data_has_concise_validation_error[10000-object-structured]",
+        "test_deep_data_has_concise_validation_error[10000-object-sdk]",
+        "test_deep_data_has_concise_validation_error[10000-encoded-session]",
+        "test_deep_data_has_concise_validation_error[10000-encoded-structured]",
+        "test_deep_data_has_concise_validation_error[10000-encoded-sdk]",
+        "test_exact_raw_limit_with_unicode_is_accepted[session]",
+        "test_exact_raw_limit_with_unicode_is_accepted[structured]",
+        "test_exact_raw_limit_with_unicode_is_accepted[sdk]",
+        "test_async_structured_deep_data_is_rejected_before_callback_bookkeeping[ainvoke]",
+        "test_async_structured_deep_data_is_rejected_before_callback_bookkeeping[arun]",
+        "test_padded_encoded_file_reference_obeys_raw_byte_limit[session]",
+        "test_padded_encoded_file_reference_obeys_raw_byte_limit[structured]",
+        "test_padded_encoded_file_reference_obeys_raw_byte_limit[sdk]",
+        "test_valid_canonical_file_and_copied_handles_survive_eviction",
+        "test_real_stdio_rejects_raw_bad_requests_then_recovers"
+      ]
+    },
+    "novel4": {
+      "tests": 4,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "passed": 4,
+      "terminal_seconds": 3.48,
+      "XML_seconds": "3.450",
+      "exit": 0,
+      "executions": 1,
+      "xml_sha256": "05559e91032d3610f291e2bc1aaf0a5a0638e70ef5dbff74bc57f56bea5bcaa4",
+      "cases": [
+        "test_public_structured_run_arun_raw_admission_and_recovery[run]",
+        "test_public_structured_run_arun_raw_admission_and_recovery[arun]",
+        "test_actual_fastmcp_sdk_missing_combinations_recover_without_output",
+        "test_real_stdio_missing_admissions_then_matplotlib_resources_are_readable"
+      ]
+    }
+  },
+  "selected_total": 41,
+  "skips": 0,
+  "new_invalid_response_observations": 20,
+  "not_20_extra_pytest_tests": true,
+  "actual_responses": [
+    {
+      "file": "observed-real-FastMCP-call_tool.json",
+      "api": "real FastMCP.call_tool",
+      "error_bytes": [
+        51,
+        69,
+        108,
+        89,
+        66
+      ]
+    },
+    {
+      "file": "observed-run.json",
+      "api": "run",
+      "error_bytes": [
+        51,
+        69,
+        108,
+        52,
+        66
+      ]
+    },
+    {
+      "file": "observed-arun.json",
+      "api": "arun",
+      "error_bytes": [
+        51,
+        69,
+        108,
+        52,
+        66
+      ]
+    },
+    {
+      "file": "observed-real-stdio.json",
+      "api": "real stdio",
+      "error_bytes": [
+        51,
+        69,
+        108,
+        89,
+        66
+      ]
+    }
+  ],
+  "PNG": {
+    "path": "recovered.png",
+    "bytes": 11807,
+    "sha256": "6a4ee7df5758355b1f4629ccbc4bb00f29286ab765c7fa8ceb6cb7dd7f0945ea",
+    "dimensions": [
+      900,
+      520
+    ],
+    "opened_and_inspected": true,
+    "literal_values": [
+      7,
+      -3
+    ],
+    "category_labels": [
+      "North",
+      "South"
+    ],
+    "zero_baseline": true,
+    "title": "R22 P1 recovery",
+    "inline_and_resource_bytes_equal": true
+  },
+  "render_counts": {
+    "input": 2,
+    "output": 2,
+    "resources_read": 4,
+    "text_metadata_UTF8_bytes": 583
+  },
+  "explicit_limits": [
+    "P1 source-specific not final-head/whole-MCP approval",
+    "P2 registry capacity/lifetime/concurrency not tested or accepted; producer progress not polled",
+    "No API requests this assignment, no dependency installation, no shared environment changes",
+    "No provider/DeepAgent planning/browser/CDN/full-format/scale/build/whole-CI claims",
+    "No production, existing author test, old 47 regression probe edits or execution",
+    "Internal normalizer call count not instrumented across every MCP branch; source order and real callback nonentry/errors/no output observed",
+    "Optional MCP/LangChain/Matplotlib installed and actually used; no symlink test selected, 0 skips is not symlink privilege proof"
+  ],
+  "harness_only_setup_errors": [
+    "relative Copy-Item wrong cwd caused Ruff E902 before tests",
+    "own mypy5 type-narrowing findings before tests corrected own probe only",
+    "evidence-only PowerShell cp1252 stdin Unicode literal mangling; diagnosed actual manifest codepoints and used ASCII escapes, did not rerun or alter tests"
+  ],
+  "final_ruff_exit": 0,
+  "final_mypy_exit": 0,
+  "tracked_product_and_author_test_unchanged_after": true,
+  "frozen_source_untracked_only": [
+    "tests/r22_probes/role10/test_transport_acceptance.py"
+  ],
+  "API_requests": 0,
+  "paid_provider_calls": 0,
+  "dependency_installs": 0
+}

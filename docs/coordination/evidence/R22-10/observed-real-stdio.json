@@ -1,0 +1,90 @@
+{
+  "api": "real stdio",
+  "observations": [
+    {
+      "case": "escaped-file-key",
+      "tool": "normalize_data",
+      "input_chars": 46,
+      "raw_utf8_bytes": 46,
+      "error": "Invalid JSON inline data: Duplicate JSON object key",
+      "error_utf8_bytes": 51,
+      "rejected": true,
+      "ordinary_unicode_recovery_count": 2
+    },
+    {
+      "case": "multibyte-raw-1000001",
+      "tool": "recommend_chart",
+      "input_chars": 500101,
+      "raw_utf8_bytes": 1000001,
+      "error": "Inline data exceeds 1 MB; configure data_dir and use a file reference",
+      "error_utf8_bytes": 69,
+      "rejected": true,
+      "ordinary_unicode_recovery_count": 2
+    },
+    {
+      "case": "render-encoded-depth10000",
+      "tool": "render_matplotlib",
+      "input_chars": 20000,
+      "raw_utf8_bytes": 20000,
+      "error": "Invalid JSON inline data: maximum recursion depth exceeded while decoding a JSON array from a unicode string",
+      "error_utf8_bytes": 108,
+      "rejected": true,
+      "ordinary_unicode_recovery_count": 2
+    },
+    {
+      "case": "encoded-traversal",
+      "tool": "normalize_data",
+      "input_chars": 26,
+      "raw_utf8_bytes": 26,
+      "error": "Error executing tool normalize_data: File reference escapes the configured data directory",
+      "error_utf8_bytes": 89,
+      "rejected": true,
+      "ordinary_unicode_recovery_count": 2
+    },
+    {
+      "case": "encoded-literal-path",
+      "tool": "render_matplotlib",
+      "input_chars": 11,
+      "raw_utf8_bytes": 11,
+      "error": "Inline data must be a JSON array or object, not a file path string",
+      "error_utf8_bytes": 66,
+      "rejected": true,
+      "ordinary_unicode_recovery_count": 2
+    }
+  ],
+  "profile_and_render_input_count": 2,
+  "render_output_count": 2,
+  "text_metadata_utf8_bytes": 583,
+  "file_and_copied_handle_recovery": true,
+  "inline_png_matches_resource": true,
+  "resources": [
+    {
+      "uri": "deepviz://artifacts/deepviz-0bp78rr8/chart.png",
+      "mime_type": "image/png",
+      "name": "chart.png",
+      "bytes": 11807,
+      "sha256": "6a4ee7df5758355b1f4629ccbc4bb00f29286ab765c7fa8ceb6cb7dd7f0945ea"
+    },
+    {
+      "uri": "deepviz://artifacts/deepviz-0bp78rr8/chart.svg",
+      "mime_type": "image/svg+xml",
+      "name": "chart.svg",
+      "bytes": 18628,
+      "sha256": "c46e2a842a2d0e7d8745fa4d1a0d9edf9e3f828a600f400dc8e079e10552c90d"
+    },
+    {
+      "uri": "deepviz://artifacts/deepviz-0bp78rr8/chart.html",
+      "mime_type": "text/html",
+      "name": "chart.html",
+      "bytes": 1470,
+      "sha256": "0305a0d62f1b5eb3eedef2c79e568c0dc4f207d9d37e062dd1fef2c0c371ec71"
+    },
+    {
+      "uri": "deepviz://artifacts/deepviz-0bp78rr8/manifest.json",
+      "mime_type": "application/json",
+      "name": "manifest.json",
+      "bytes": 1079,
+      "sha256": "99f933e8504912d3445e671848a84e28f690a6f3bb961258428aaeafc1869f87"
+    }
+  ]
+}

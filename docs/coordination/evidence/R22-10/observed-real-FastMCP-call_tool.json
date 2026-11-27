@@ -1,0 +1,56 @@
+{
+  "api": "real FastMCP.call_tool",
+  "observations": [
+    {
+      "case": "escaped-file-key",
+      "tool": "normalize_data",
+      "input_chars": 46,
+      "raw_utf8_bytes": 46,
+      "error": "Invalid JSON inline data: Duplicate JSON object key",
+      "error_utf8_bytes": 51,
+      "rejected": true,
+      "ordinary_unicode_recovery_count": 2
+    },
+    {
+      "case": "multibyte-raw-1000001",
+      "tool": "recommend_chart",
+      "input_chars": 500101,
+      "raw_utf8_bytes": 1000001,
+      "error": "Inline data exceeds 1 MB; configure data_dir and use a file reference",
+      "error_utf8_bytes": 69,
+      "rejected": true,
+      "ordinary_unicode_recovery_count": 2
+    },
+    {
+      "case": "render-encoded-depth10000",
+      "tool": "render_matplotlib",
+      "input_chars": 20000,
+      "raw_utf8_bytes": 20000,
+      "error": "Invalid JSON inline data: maximum recursion depth exceeded while decoding a JSON array from a unicode string",
+      "error_utf8_bytes": 108,
+      "rejected": true,
+      "ordinary_unicode_recovery_count": 2
+    },
+    {
+      "case": "encoded-traversal",
+      "tool": "normalize_data",
+      "input_chars": 26,
+      "raw_utf8_bytes": 26,
+      "error": "Error executing tool normalize_data: File reference escapes the configured data directory",
+      "error_utf8_bytes": 89,
+      "rejected": true,
+      "ordinary_unicode_recovery_count": 2
+    },
+    {
+      "case": "encoded-literal-path",
+      "tool": "render_matplotlib",
+      "input_chars": 11,
+      "raw_utf8_bytes": 11,
+      "error": "Inline data must be a JSON array or object, not a file path string",
+      "error_utf8_bytes": 66,
+      "rejected": true,
+      "ordinary_unicode_recovery_count": 2
+    }
+  ],
+  "file_and_copied_handle_recovery": true
+}
