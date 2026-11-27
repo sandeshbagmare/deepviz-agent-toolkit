@@ -1,0 +1,210 @@
+{
+  "observed_utc": "2026-11-27T16:18:05.475857+00:00",
+  "mode": "source-only / no product imports",
+  "owner": "ses_de567801cffeGZFlt50oYv0Dnt",
+  "source": "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23",
+  "product_p1": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+  "product_p2": "cd75c459ddba9f3d6bc0a5185b570af369fb4980",
+  "base": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "own_head_at_audit": "eb98261567d05300b9c7d79af78c83f04812c853",
+  "python": "3.12.16",
+  "sealed_files": [
+    {
+      "path": "python/deepviz/src/deepviz/tools.py",
+      "blob": "ea3b00403b2d6cfda0eb39dd3a948be0c9aa84a6",
+      "sha256": "11273c5f5b0ff2eee16e09c6c727e560582a43fcae723bb315b6ef80d5a68495",
+      "bytes": 9974,
+      "lines": 207,
+      "exact_equal_p2": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/mcp_server.py",
+      "blob": "08d2fe6c50574b27acfb47b71bc76d6777b3ba07",
+      "sha256": "9f1628e04749c3c3d2357607ac4cc0021f74e1119c6237aa36077a0fd67bf480",
+      "bytes": 6729,
+      "lines": 146,
+      "exact_equal_p2": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/__init__.py",
+      "blob": "0fed1772355f25da05329fda38bd29216ab4c75f",
+      "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+      "bytes": 1133,
+      "lines": 27,
+      "exact_equal_p2": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "blob": "17877904985d496f645cd7c66305efc8305bcb5f",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "bytes": 3493,
+      "lines": 92,
+      "exact_equal_p2": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "blob": "04e15965934d37f4140f2dd6772b2e97747920ea",
+      "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+      "bytes": 33895,
+      "lines": 749,
+      "exact_equal_p2": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/recommend.py",
+      "blob": "6b1540d5ef3e5782be677cb9bcf3bddec8774661",
+      "sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+      "bytes": 4875,
+      "lines": 115,
+      "exact_equal_p2": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/render.py",
+      "blob": "c0608d8762d6f37bdb4e902205bed3b2e2bd98ba",
+      "sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+      "bytes": 11313,
+      "lines": 229,
+      "exact_equal_p2": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/engines.py",
+      "blob": "22fb9dcfb9076d3b9a608ef557a5dd6768281985",
+      "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+      "bytes": 42230,
+      "lines": 767,
+      "exact_equal_p2": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/cli.py",
+      "blob": "54d0e8e3f75e8f064a112c0bf22e9b2dda18c8e9",
+      "sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+      "bytes": 2623,
+      "lines": 60,
+      "exact_equal_p2": true
+    },
+    {
+      "path": "python/deepviz/tests/test_r14_tool_json_boundary.py",
+      "blob": "f684dc90c70c00da1e80bddd7ad1a1e8b0177c5f",
+      "sha256": "231d43801dec500ab6da237c9a232b86e6169718fe05fc9b2b5f5b1ede905a4b",
+      "bytes": 8718,
+      "lines": 178,
+      "exact_equal_p2": true
+    },
+    {
+      "path": "python/deepviz/tests/test_r14_mcp_resource_budget.py",
+      "blob": "e3407199c290449e3d1e36bd66dd9855710feb9a",
+      "sha256": "0406f524d22879e24606c594d7250124f0e298c7b47b05ddf50f39da55a18d9d",
+      "bytes": 7504,
+      "lines": 164,
+      "exact_equal_p2": true
+    },
+    {
+      "path": "pyproject.toml",
+      "blob": "9296a498b364680d3d1ebe04090eeb7b7c32d430",
+      "sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+      "bytes": 1487,
+      "lines": 49,
+      "exact_equal_p2": true
+    }
+  ],
+  "installed_sdk_files": [
+    {
+      "package": "mcp",
+      "version": "1.30.0",
+      "path": "server/fastmcp/server.py",
+      "sha256": "1b1c8cd4f6e350f7d4f62627764ed7c0f51e85872d32aba9d9da560a2bd2c50c",
+      "bytes": 54820
+    },
+    {
+      "package": "mcp",
+      "version": "1.30.0",
+      "path": "server/fastmcp/tools/base.py",
+      "sha256": "87626ba624d33218ffb7542140dc888453e33130fdefeadc8909d47bc600ca54",
+      "bytes": 4740
+    },
+    {
+      "package": "mcp",
+      "version": "1.30.0",
+      "path": "server/fastmcp/tools/tool_manager.py",
+      "sha256": "acd8c9ebfba0e8764426e60868deeaa931a012a8824e16ba4f479e4991bd2a76",
+      "bytes": 2972
+    },
+    {
+      "package": "mcp",
+      "version": "1.30.0",
+      "path": "server/fastmcp/utilities/func_metadata.py",
+      "sha256": "c951a064ea3f1488c2f9685168ab049a31d9772c5ff06340f1b435399e1db18c",
+      "bytes": 23275
+    },
+    {
+      "package": "mcp",
+      "version": "1.30.0",
+      "path": "server/fastmcp/resources/resource_manager.py",
+      "sha256": "7ffc92edfe3e86cf91af288b1e5c5799febc6c77787199c83e49976f0ce16958",
+      "bytes": 4007
+    },
+    {
+      "package": "mcp",
+      "version": "1.30.0",
+      "path": "server/fastmcp/resources/types.py",
+      "sha256": "83a6df5c534619fa0e1a2ab7ed332f1bcee4c57ae08d2815e94ccb4b833a2f3e",
+      "bytes": 7214
+    },
+    {
+      "package": "langchain-core",
+      "version": "1.8.5",
+      "path": "tools/base.py",
+      "sha256": "239c77d07a9283ced902fb161ca0fcdb5e532a9824caaa169ab014ac41c899d4",
+      "bytes": 71607
+    },
+    {
+      "package": "langchain-core",
+      "version": "1.8.5",
+      "path": "tools/structured.py",
+      "sha256": "f51689a1707c1ee31a173b8d8c9aaea33d994f4d95a79e6d51fe7369b2247142",
+      "bytes": 12097
+    }
+  ],
+  "declared_author_cases_not_executed": {
+    "python/deepviz/tests/test_r14_tool_json_boundary.py": {
+      "test_duplicate_keys_rejected_before_semantic_loss": 12,
+      "test_sdk_rejects_raw_oversize_before_decoding_for_every_tool": 3,
+      "test_deep_data_has_concise_validation_error": 12,
+      "test_exact_raw_limit_with_unicode_is_accepted": 3,
+      "test_async_structured_deep_data_is_rejected_before_callback_bookkeeping": 2,
+      "test_padded_encoded_file_reference_obeys_raw_byte_limit": 3,
+      "test_valid_canonical_file_and_copied_handles_survive_eviction": 1,
+      "test_real_stdio_rejects_raw_bad_requests_then_recovers": 1
+    },
+    "python/deepviz/tests/test_r14_mcp_resource_budget.py": {
+      "test_sdk_capacity_rejects_before_output_and_preserves_earliest_resource": 1,
+      "test_capacity_reserves_the_real_artifact_count_for_static_engines": 2,
+      "test_failed_render_does_not_consume_capacity_or_touch_peer_outputs": 1,
+      "test_concurrent_render_reservations_do_not_overissue": 1,
+      "test_real_stdio_resource_capacity_remains_readable_and_normalization_recovers": 1
+    }
+  },
+  "declared_author_case_total_not_executed": 43,
+  "tools_p1_equal_sealed": true,
+  "mcp_admission_p1_ast_equal_sealed": true,
+  "two_file_diff_sha256": "43c137868913c4a3914bcbe5d65e6941f5e189580830f3e28b890a0d413f69ea",
+  "main_snapshot_not_live_remote": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "main_snapshot_paths": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "docs/superpowers/plans/2026-11-26-deepviz-plan.md",
+    "docs/superpowers/specs/2026-11-26-deepviz-design.md",
+    "pyproject.toml",
+    "python/deepviz/src/deepviz/models.py"
+  ],
+  "dense_preflight_absent_from_sealed_render": true,
+  "known_dense_preflight_dependency": "1c721bb6497746641b897eb2eb938cfad52068d2",
+  "product_tests_executed": 0,
+  "sdk_calls": 0,
+  "stdio_calls": 0,
+  "browser_calls": 0,
+  "new_counterexamples_required": 0,
+  "production_or_existing_probe_writes": 0,
+  "api_mutations": 0,
+  "installs_or_spawns": 0
+}

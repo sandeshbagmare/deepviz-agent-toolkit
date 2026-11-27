@@ -1,0 +1,50 @@
+{
+  "owner": "ses_de567801cffeGZFlt50oYv0Dnt",
+  "source": "e47f8701ad18bd3e3bc32a84bf4b2b3ea707ed23",
+  "p1": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+  "p2": "cd75c459ddba9f3d6bc0a5185b570af369fb4980",
+  "review_kind": "independent non-author source-only",
+  "new_concrete_findings": 0,
+  "new_counterexamples": 0,
+  "existing_findings_not_closed": [
+    {
+      "id": "R22-02-F1",
+      "severity": "P2",
+      "location": "tools.py:186-196",
+      "finding": "Supported bare strings bypass the dictionary-only pre-callback guard",
+      "basis": "independent source trace plus exact unchanged P1 tools / installed BaseTool source; NOT a role20 execution result"
+    },
+    {
+      "id": "existing dense-table resource preflight prerequisite",
+      "severity": "P1 existing resource-amplification dependency",
+      "location": "sealed render.py:131-171 / tools.py:147-158",
+      "repair_dependency": "1c721bb6497746641b897eb2eb938cfad52068d2",
+      "basis": "static absence of later helper/call and exact 1c diff; no new reproduction or borrowed pass"
+    }
+  ],
+  "p2_accounting_source_invariant": "count = issued closures + in-flight reservations; after q insertions refund k-q only",
+  "file_authority": "host-configured contained data_dir; exact generated resource closures, no arbitrary URI template",
+  "resource_lifetime": "128 per server instance, no host file deletion or silent expiry; not an RSS/CPU/disk quota",
+  "minimal_release_chain": [
+    "Reviewed strict contract/schema + Python normalize foundation retaining strict _json and owned cleanup5ba",
+    "Reviewed usable public render/package foundation + dense preflight1c; gates for every exposed adapter",
+    "52b817d integration modules + lifecycle65b3fc4 + handle4a766c4, preserving later foundation repairs",
+    "P1d65 source/test hunks then P2cd75 source/test hunks; F1 repair or explicit MCP-only deferral",
+    "715c1f5 schema include + f67afac prompts include + clean final installed MCP package/CLI consumer gates"
+  ],
+  "main_planning_snapshot_not_fresh_remote": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "standalone_two_file_cherry_pick_usable": false,
+  "author_cases_source_read_not_run": 43,
+  "product_tests_executed": 0,
+  "sdk_stdio_browser_calls": 0,
+  "new_issue_api_authority": false,
+  "api_mutations_or_installs_or_spawns": 0,
+  "production_or_old_oracle_edits": 0,
+  "own_static_audit_final_exit": 0,
+  "own_helper_ruff_final_exit": 0,
+  "own_helper_mypy_final_exit": 0,
+  "runtime_tester_approval": false,
+  "final_release_or_main_merge_approval": false,
+  "owner_next_action": "R04 records this bounded source gate in ONE main-first release plan, extracts MCP after reviewed foundation and assigns F1 disposition plus frozen-head affected independent gates",
+  "role20_next_condition": "Wait for actual18 sealed repaired Plotly SHA/handoff before independent unchanged nine-case retest; do not poll or replay now"
+}
