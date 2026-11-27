@@ -1,0 +1,62 @@
+{
+  "recorded_UTC": "2026-11-27T16:06:27.003303+00:00",
+  "source": "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57",
+  "own_base": "fa0161338a69d55285d6a224aff5d1b2ef93e6b6",
+  "executed": [
+    {
+      "command": "git status --short --branch; git rev-parse HEAD; git log -3 --oneline; git cat-file -e7d8",
+      "exit": 0,
+      "result": "ownbranchfa0161clean/exactsourcepresent"
+    },
+    {
+      "command": "git diff 5340bc69b7203ad7a9166543062482d819f9b705 7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57 -- packages/deepviz",
+      "exit": 0,
+      "result": "oneexpression+NEW97linetest/twopackagepaths"
+    },
+    {
+      "command": "git ls-remote --symref origin HEAD refs/heads/main",
+      "exit": 0,
+      "result": "main0ae2cf26426822135fc10d337fcacf580b7ed833/ONCE/no poll"
+    },
+    {
+      "command": "PY -B -I OUT/inspect_git.py",
+      "exit": 0,
+      "result": "immutableGitsnapshot/hashes/publicvalidator+metadata/context/actualmaingittree"
+    },
+    {
+      "command": "PY -B -I OUT/connected_git.py",
+      "exit": 0,
+      "result": "normalizer/schemas/rendererdataauthority/oldoracles/sourceonly"
+    },
+    {
+      "command": "PY -B -I OUT/prereq_git.py",
+      "exit": 0,
+      "result": "onePythonregexSyntaxWarning/rawcontext/pathhistory;fullcommit9pathsnot2"
+    },
+    {
+      "command": "git show7d8:.github/workflows/verify.yml; git showf9:packages/deepviz/scripts/build.mjs",
+      "exit": 128,
+      "result": "separatediscoveryreadsabsent; actualci.yml/copy-prompts.mjsreadnext;no productfailure"
+    },
+    {
+      "command": "PY -B -I OUT/review_evidence.py",
+      "exit": 0,
+      "result": "exactparent/renderreplacement/6parentidenticalruntimefiles/15staticedges/schemaequal;no packageexecution"
+    },
+    {
+      "command": "one long report-write shell request",
+      "exit": null,
+      "result": "portable-scannerrejected BEFOREexecution; replacedbyplainownedreportwrite;0API/test/build"
+    }
+  ],
+  "not_run": [
+    "product import/runtime",
+    "npm install/ci/build/typecheck/test/package/browser",
+    "Python product tests",
+    "old asset/readinessmatrix",
+    "scale/advisory/provider",
+    "API mutations/issuewrites/PR/closure/default/spawn"
+  ],
+  "review_decision": "Nointroducedsource-levelmustfix;concreteprerequisitesandtestprooflimitsreported. NOT runtime/CI/package/merge/signoff.",
+  "limits": "Read/hash/sourceproof only; no tests calledskippedorpassed. DefaultSHAone-time dated, not lateractivity."
+}

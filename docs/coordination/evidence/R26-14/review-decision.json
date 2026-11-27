@@ -1,0 +1,71 @@
+{
+  "source": "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57",
+  "product_scope": "render.ts140undefined-onlydefault; connected unchangedcallers/schema/normalizer/rendererauthority. Nootherchangesapproved.",
+  "blocking_findings_introduced_by_helper_change": [],
+  "decision": "Source-onlyreviewfindstheone-expressionnullrepaircorrectandminimal. ReadyforR04integrationprep, NOTmerge/package/runtime/CIapproval.",
+  "source_traces": [
+    {
+      "case": "specomittedorexplicitundefined",
+      "proof": "render.ts140=>{};models.ts64-68acceptsobject;defaults57-61;freshspread73",
+      "result": "sameintendeddefaultbehavior"
+    },
+    {
+      "case": "specnull",
+      "proof": "render.ts140passesnull;render113-114=>buildRendererSpec49-51=>models68throwsValidationErrorbefore53normalize/artifact85",
+      "result": "newcorrectearlyreject;asyncinvoke138propagatesrejection"
+    },
+    {
+      "case": "specfalse/0/emptystring/array",
+      "proof": "render140doesnotdefault;models68isObject49-50rejects",
+      "result": "invalidprimitive/arraybehaviorunchanged"
+    },
+    {
+      "case": "extra/executable/asset/engine/pathkeys",
+      "proof": "render139toolenvelopeown-data+keyallowlist;models70-71specallowlist;engineclosurefromrenderers6andrender134;assetscapturedtrustedoptionsnotinput",
+      "result": "noauthorityexpansion"
+    },
+    {
+      "case": "data_path",
+      "proof": "models84-85nullable-string;normalize347-350safeKeyandnonemptydotparts;selected274-283in-memorypropertytraversalnotfilesystem",
+      "result": "no new filesystem/URL authority"
+    },
+    {
+      "case": "renderoutput",
+      "proof": "render109returnsHTML+paths[];scriptJson74-75/escapeHtmlrenderers21-23 unchanged;payloadguards28-37+normalizerbudgetsunchanged",
+      "result": "no change to injection/overwrite/resource/renderer policy; notfullbaselineaudit"
+    }
+  ],
+  "author_test_inspection": {
+    "file": "packages/deepviz/test/test_r07_tool_spec_null.test.mjs",
+    "lines": 97,
+    "static_named_test_count": 36,
+    "executed_here": 0,
+    "strengths": [
+      "exactfivenames10-14/nullconstructorassert18-19",
+      "invalidprimitives/extras/bounds/dashboard22-29",
+      "omitted/undefined/emptydefault33-52",
+      "mappedrecords/counts56-68/dashboardchildren71-95",
+      "noskip/xfail/assertionsremovedfromexistingtests"
+    ],
+    "limitations_not_new_product_findings": [
+      {
+        "lines": "3; package.json8-13",
+        "case": "DirectNodeinvocationcanresolveexistingdistwithdifferent/stalebytes;barepublicimportnotfreshsourceproof",
+        "gate": "rootnpmtestbuildsfirstpackage.json8; focusedconsumerrequiresactualorigin+compiled/sourcehashbefore/after/freshdistnotborrowedsibling"
+      },
+      {
+        "lines": "17-19",
+        "case": "ValidationErrorconstructoralonecannotdistinguishspec-shaperejectfromlaterValidationErrorafternormalization;nogetter/sentinelcountassert",
+        "gate": "earlyorderingverifiedfromunchangedsourcehere; nonauthorfixedheadtesterownsstrictorderingproofifrequired"
+      },
+      {
+        "lines": "52",
+        "case": "nonemptyHTMLnotpaint/browserreadinessproof",
+        "gate": "fixedheadrealoutputsseparategate;notforcedbroadmatrixforthisonelinereview"
+      }
+    ]
+  },
+  "separate_reports_not_adopted": "01review/05runtimeevidenceareseparatelanes;no borrowedpassesorhumanGitHubapproval.",
+  "tests_build_install_browser_provider_scale_APIwrites": 0,
+  "known_distinct_defects": "COUNT/readiness/Plotly/normalizer/SVGbaselineissuesremainseparateR04triage,nofixorpackagegreensignoff."
+}

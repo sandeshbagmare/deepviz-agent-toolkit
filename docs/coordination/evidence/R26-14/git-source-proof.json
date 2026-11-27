@@ -1,0 +1,226 @@
+{
+  "source_commit": "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57",
+  "base_commit": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "remote_default_once": {
+    "method": "git ls-remote --symref origin HEAD refs/heads/main",
+    "exit_code": 0,
+    "default_branch": "main",
+    "sha": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+    "recorded_utc": "2026-11-27T15:58:04.926922+00:00",
+    "limits": "Datedone-timeidentity, not liveforever/CI/mergeproof"
+  },
+  "inspected_files": [
+    {
+      "file": "package.json",
+      "bytes": 1130,
+      "sha256": "9afef0ede1cc8d66e6495f33a5d5b4bcdb8472c7dd749721b48056cf73894cc5"
+    },
+    {
+      "file": "package-lock.json",
+      "bytes": 81533,
+      "sha256": "1401922876f8b7d37e675ce044400fe5335682742dd9b30a1292243ad771d4c9"
+    },
+    {
+      "file": "packages/deepviz/package.json",
+      "bytes": 725,
+      "sha256": "7623921eb04ce66eb07771f47d02abcdfb71f6e43f94b729934de847f3256909"
+    },
+    {
+      "file": "packages/deepviz/tsconfig.json",
+      "bytes": 574,
+      "sha256": "2a202b15cdb9443825daff1589036b1dcc09f2cdb01c6274dbbcd97f7651781d"
+    },
+    {
+      "file": "packages/deepviz/src/render.ts",
+      "bytes": 11340,
+      "sha256": "71ab2701ef63fbc37999447a62a5a06a04404d690bd0fb3e0ea5f765433efa4b"
+    },
+    {
+      "file": "packages/deepviz/src/models.ts",
+      "bytes": 4737,
+      "sha256": "d43d5ae0bef1d43f251ed71899a9b507c6575562e4403bd2e2ac02bd7caa43e6"
+    },
+    {
+      "file": "packages/deepviz/src/index.ts",
+      "bytes": 135,
+      "sha256": "a4c1ebd22dfdc100e28eef28b11030d5f08bb09db0da9649c22848d3ef9a8aac"
+    },
+    {
+      "file": "packages/deepviz/src/schema.ts",
+      "bytes": 187,
+      "sha256": "8150ef7a9f4e1376818c38ec0b3a76e4c1fa92a7dec8e361e24195f6e38d0537"
+    },
+    {
+      "file": "packages/deepviz/scripts/check-package.mjs",
+      "bytes": 3250,
+      "sha256": "1f7e436182ccb6debf9a7f980c6a67c7aa27fa80bf23259cd6b527c08d27fd80"
+    },
+    {
+      "file": "packages/deepviz/scripts/check-schema.mjs",
+      "bytes": 993,
+      "sha256": "9a417cc301087503a2eb2c6088d887085336868751284bb050f75187cdff6834"
+    },
+    {
+      "file": "packages/deepviz/README.md",
+      "bytes": 15939,
+      "sha256": "f389e9919fc5358df24e3ceb9c62df72a3ddb87f95b04314936df48c208e022b"
+    },
+    {
+      "file": "packages/deepviz/test/test_r07_tool_spec_null.test.mjs",
+      "bytes": 4129,
+      "sha256": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227"
+    },
+    {
+      "file": "packages/deepviz/src/normalize.ts",
+      "bytes": 28916,
+      "sha256": "d1b45d2a55dfd05361184a57da952a0da735e9b6d72c2491f908ef27bda22371"
+    },
+    {
+      "file": "packages/deepviz/src/renderers.ts",
+      "bytes": 21334,
+      "sha256": "180cb19d8bb01e5c2fe94db7e943e8430681cffadad2251d38a03fd1de5b19d0"
+    },
+    {
+      "file": "packages/deepviz/src/chart-spec.schema.json",
+      "bytes": 4975,
+      "sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71"
+    },
+    {
+      "file": "schemas/chart-spec.schema.json",
+      "bytes": 4975,
+      "sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71"
+    },
+    {
+      "file": "packages/deepviz/test/render.test.mjs",
+      "bytes": 8840,
+      "sha256": "76db94c33522ced682becbb280149aa87035a5c02564ae5b45a7045d41ff4236"
+    },
+    {
+      "file": "packages/deepviz/test/contract.test.mjs",
+      "bytes": 9392,
+      "sha256": "2b9dc3fa3d41c7758b4cb38d9fa1a473ae3505d5eba919f6095c6d745f24fa03"
+    },
+    {
+      "file": "packages/deepviz/.gitignore",
+      "bytes": 9,
+      "sha256": "07f6a9505c1cc3abd34c7727aca904715e62fc3f8322d648a98e31787046bd1b"
+    },
+    {
+      "file": ".github/workflows/ci.yml",
+      "bytes": 7431,
+      "sha256": "95627b755386ed8e973a1ad5804ac0326c90dc9b88e0f2852f569fe8b877b2d2"
+    }
+  ],
+  "main_paths": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "docs/superpowers/plans/2026-11-26-deepviz-plan.md",
+    "docs/superpowers/specs/2026-11-26-deepviz-design.md",
+    "pyproject.toml",
+    "python/deepviz/src/deepviz/models.py"
+  ],
+  "execution": "Gitbytesonly, no package import/test/build/browser/APIwrite",
+  "completed_UTC": "2026-11-27T16:02:59.674601+00:00",
+  "verified_source_parent": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "full_commit_paths": [
+    "A\tdocs/agent-state/ses_de56782e8ffentAvzUUfMncFRA.md",
+    "A\tdocs/coordination/evidence/R14-07/README.md",
+    "A\tdocs/coordination/evidence/R14-07/commands.json",
+    "A\tdocs/coordination/evidence/R14-07/dashboard-wide.png",
+    "A\tdocs/coordination/evidence/R14-07/omitted-default.png",
+    "A\tdocs/coordination/evidence/R14-07/run-summary.json",
+    "A\tdocs/coordination/reports/R14-07-helper-null.md",
+    "M\tpackages/deepviz/src/render.ts",
+    "A\tpackages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+  ],
+  "scope_correction": "Fullcommit9paths(7producerdocs/evidence+2packagepaths); reviewedproductdiffONLYonechangedline+oneNEW97linetest. Earliercheckpoint2pathsshortformmeantpackage-only, notentirecommit.",
+  "base_equal_runtime_files": [
+    "packages/deepviz/src/index.ts",
+    "packages/deepviz/src/models.ts",
+    "packages/deepviz/src/normalize.ts",
+    "packages/deepviz/src/renderers.ts",
+    "packages/deepviz/src/schema.ts",
+    "packages/deepviz/src/chart-spec.schema.json"
+  ],
+  "duplicate_schema_bytes_equal": true,
+  "exact_single_expression_replacement_and_no_other_render_changes": true,
+  "tracked_dist_absent": true,
+  "static_local_import_closure": [
+    {
+      "file": "packages/deepviz/src/index.ts",
+      "specifier": "./models.js",
+      "target": "packages/deepviz/src/models.ts"
+    },
+    {
+      "file": "packages/deepviz/src/index.ts",
+      "specifier": "./normalize.js",
+      "target": "packages/deepviz/src/normalize.ts"
+    },
+    {
+      "file": "packages/deepviz/src/index.ts",
+      "specifier": "./render.js",
+      "target": "packages/deepviz/src/render.ts"
+    },
+    {
+      "file": "packages/deepviz/src/index.ts",
+      "specifier": "./schema.js",
+      "target": "packages/deepviz/src/schema.ts"
+    },
+    {
+      "file": "packages/deepviz/src/normalize.ts",
+      "specifier": "./models.js",
+      "target": "packages/deepviz/src/models.ts"
+    },
+    {
+      "file": "packages/deepviz/src/normalize.ts",
+      "specifier": "./models.js",
+      "target": "packages/deepviz/src/models.ts"
+    },
+    {
+      "file": "packages/deepviz/src/render.ts",
+      "specifier": "./models.js",
+      "target": "packages/deepviz/src/models.ts"
+    },
+    {
+      "file": "packages/deepviz/src/render.ts",
+      "specifier": "./models.js",
+      "target": "packages/deepviz/src/models.ts"
+    },
+    {
+      "file": "packages/deepviz/src/render.ts",
+      "specifier": "./normalize.js",
+      "target": "packages/deepviz/src/normalize.ts"
+    },
+    {
+      "file": "packages/deepviz/src/render.ts",
+      "specifier": "./renderers.js",
+      "target": "packages/deepviz/src/renderers.ts"
+    },
+    {
+      "file": "packages/deepviz/src/render.ts",
+      "specifier": "./renderers.js",
+      "target": "packages/deepviz/src/renderers.ts"
+    },
+    {
+      "file": "packages/deepviz/src/render.ts",
+      "specifier": "./schema.js",
+      "target": "packages/deepviz/src/schema.ts"
+    },
+    {
+      "file": "packages/deepviz/src/renderers.ts",
+      "specifier": "./models.js",
+      "target": "packages/deepviz/src/models.ts"
+    },
+    {
+      "file": "packages/deepviz/src/renderers.ts",
+      "specifier": "./models.js",
+      "target": "packages/deepviz/src/models.ts"
+    },
+    {
+      "file": "packages/deepviz/src/schema.ts",
+      "specifier": "./chart-spec.schema.json",
+      "target": "packages/deepviz/src/chart-spec.schema.json"
+    }
+  ]
+}

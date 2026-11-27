@@ -1,0 +1,39 @@
+{
+  "product_source": "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57",
+  "actualdefault_once": {
+    "method": "git ls-remote --symref origin HEAD refs/heads/main",
+    "exit_code": 0,
+    "default_branch": "main",
+    "sha": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+    "recorded_utc": "2026-11-27T15:58:04.926922+00:00",
+    "limits": "Datedone-timeidentity, not liveforever/CI/mergeproof"
+  },
+  "files": [
+    {
+      "file": "docs/coordination/evidence/R26-14/commands.json",
+      "bytes": 2459,
+      "sha256": "18d46a8255be98e30852c5283618e4abc40c89acd81ee1f665b73534427f0d15"
+    },
+    {
+      "file": "docs/coordination/evidence/R26-14/git-source-proof.json",
+      "bytes": 7720,
+      "sha256": "e4a3f1784255e2777908a589e2575cc0a58dc71199b9afb4426cc1fe42762efc"
+    },
+    {
+      "file": "docs/coordination/evidence/R26-14/minimum-helper-pr.json",
+      "bytes": 5124,
+      "sha256": "d1ef5df062fd5c298445a961d1e14da11bc818db3629dd6d566b64f453de5ec1"
+    },
+    {
+      "file": "docs/coordination/evidence/R26-14/review-decision.json",
+      "bytes": 3549,
+      "sha256": "5e6c04697f9e324154643de075827997142ea66ef999e4d8d5a67978753bf795"
+    },
+    {
+      "file": "docs/coordination/evidence/R26-14/reviewed-package.diff",
+      "bytes": 5351,
+      "sha256": "ccf0fbe7b964ea6741cda62d0d397d6a8b9a13bf252421b34aa4ec00a02466c9"
+    }
+  ],
+  "limits": "Sourceproof/evidenceintegrityonly;notruntime/build/package/CI/approval;ownnote/reportmutablecheckpointnotselfhashed."
+}
