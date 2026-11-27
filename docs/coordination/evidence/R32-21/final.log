@@ -1,0 +1,13 @@
+...F                                                                     [100%]
+================================== FAILURES ===================================
+___ test_duplicate_PATH_dispatches_ONE_explicit_tool_and_real_child_origin ____
+tests\r32_probes\role21\test_replacement_expectations.py:202: in test_duplicate_PATH_dispatches_ONE_explicit_tool_and_real_child_origin
+    assert "Requested candidate public package entry verified" in (evidence / "public-origin.log").read_text(encoding="utf-16")
+E   AssertionError: assert 'Requested candidate public package entry verified' in 'SYNTHETIC node test stub, no product test\nTAP version 13\nok 1 - SYNTHETIC NOT PRODUCT\nok 2 - SYNTHETIC NOT PRODUCT...PRODUCT\nok 36 - SYNTHETIC NOT PRODUCT\n1..36\n# tests 36\n# pass 36\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n'
+E    +  where 'SYNTHETIC node test stub, no product test\nTAP version 13\nok 1 - SYNTHETIC NOT PRODUCT\nok 2 - SYNTHETIC NOT PRODUCT...PRODUCT\nok 36 - SYNTHETIC NOT PRODUCT\n1..36\n# tests 36\n# pass 36\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n' = read_text(encoding='utf-16')
+E    +    where read_text = (WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn/docs/coordination/evidence/R32-21/raw/final-temp/c3/evidence') / 'public-origin.log').read_text
+=========================== short test summary info ===========================
+FAILED tests/r32_probes/role21/test_replacement_expectations.py::test_duplicate_PATH_dispatches_ONE_explicit_tool_and_real_child_origin
+1 failed, 3 passed in 33.01s
+
+STDERR:

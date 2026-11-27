@@ -1,0 +1,70 @@
+EEEE                                                                     [100%]
+=================================== ERRORS ====================================
+_ ERROR at setup of test_source_mutation_rejects_and_preserves_pre_post_receipt _
+tests\r32_probes\role21\test_replacement_expectations.py:52: in source
+    home = tmp_path_factory.mktemp("c")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\_pytest\tmpdir.py:138: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\_pytest\tmpdir.py:118: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+        ^^^^^^^^^^^^^^^^^^
+C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\_pytest\tmpdir.py:198: in getbasetemp
+    basetemp.mkdir(mode=0o700)
+..\..\..\..\Roaming\uv\python\cpython-3.12.16-windows-x86_64-none\Lib\pathlib.py:1311: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R32-21\\raw\\first-temp'
+__________ ERROR at setup of test_untracked_CWD_shadow_rejects_plan ___________
+tests\r32_probes\role21\test_replacement_expectations.py:52: in source
+    home = tmp_path_factory.mktemp("c")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\_pytest\tmpdir.py:138: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\_pytest\tmpdir.py:118: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+        ^^^^^^^^^^^^^^^^^^
+C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\_pytest\tmpdir.py:198: in getbasetemp
+    basetemp.mkdir(mode=0o700)
+..\..\..\..\Roaming\uv\python\cpython-3.12.16-windows-x86_64-none\Lib\pathlib.py:1311: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R32-21\\raw\\first-temp'
+________ ERROR at setup of test_REAL_four_skipped_Pytests_are_rejected ________
+tests\r32_probes\role21\test_replacement_expectations.py:52: in source
+    home = tmp_path_factory.mktemp("c")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\_pytest\tmpdir.py:138: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\_pytest\tmpdir.py:118: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+        ^^^^^^^^^^^^^^^^^^
+C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\_pytest\tmpdir.py:198: in getbasetemp
+    basetemp.mkdir(mode=0o700)
+..\..\..\..\Roaming\uv\python\cpython-3.12.16-windows-x86_64-none\Lib\pathlib.py:1311: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R32-21\\raw\\first-temp'
+_ ERROR at setup of test_duplicate_PATH_dispatches_ONE_explicit_tool_and_real_child_origin _
+tests\r32_probes\role21\test_replacement_expectations.py:52: in source
+    home = tmp_path_factory.mktemp("c")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\_pytest\tmpdir.py:138: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\_pytest\tmpdir.py:118: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+        ^^^^^^^^^^^^^^^^^^
+C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages\_pytest\tmpdir.py:198: in getbasetemp
+    basetemp.mkdir(mode=0o700)
+..\..\..\..\Roaming\uv\python\cpython-3.12.16-windows-x86_64-none\Lib\pathlib.py:1311: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R32-21\\raw\\first-temp'
+=========================== short test summary info ===========================
+ERROR tests/r32_probes/role21/test_replacement_expectations.py::test_source_mutation_rejects_and_preserves_pre_post_receipt
+ERROR tests/r32_probes/role21/test_replacement_expectations.py::test_untracked_CWD_shadow_rejects_plan
+ERROR tests/r32_probes/role21/test_replacement_expectations.py::test_REAL_four_skipped_Pytests_are_rejected
+ERROR tests/r32_probes/role21/test_replacement_expectations.py::test_duplicate_PATH_dispatches_ONE_explicit_tool_and_real_child_origin
+4 errors in 0.64s
+
+STDERR:

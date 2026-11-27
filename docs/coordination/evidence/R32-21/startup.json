@@ -1,0 +1,74 @@
+{
+  "utc": "2026-11-27T16:20:47.672433+00:00",
+  "owner": "ses_de5678018ffezK8JGDUaSzvcWn",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit": 0,
+      "stdout": "agents/r10-21-recovery-git-bootstrap",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "0305db8e6699d909e6e360a62dcf68274d6589ea",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "b8736c514f1bad4d0d55cc513ec6de8af9e174a2^{commit}"
+      ],
+      "exit": 0,
+      "stdout": "b8736c514f1bad4d0d55cc513ec6de8af9e174a2",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "b8736c514f1bad4d0d55cc513ec6de8af9e174a2",
+        "e549a489db289ba08cf82f97c95e6c15ec2eef2f",
+        "--",
+        "tests/r22_probes/role09/"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--heads",
+        "origin",
+        "refs/heads/agents/r10-09-helper-null-fix"
+      ],
+      "exit": 0,
+      "stdout": "e549a489db289ba08cf82f97c95e6c15ec2eef2f\trefs/heads/agents/r10-09-helper-null-fix",
+      "stderr": ""
+    }
+  ],
+  "original_oracle_SHA256": "b9c301946f9b30c6961e7549e3c66ed77be245681f020359d5920503c1200e0a",
+  "product_execution": false
+}

@@ -1,0 +1,41 @@
+{
+  "argv": [
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "tests/r32_probes/role21/test_replacement_expectations.py",
+    "-q",
+    "--tb=short",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R32-21\\raw\\first-temp",
+    "--junitxml",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R32-21\\first.xml"
+  ],
+  "started_utc": "2026-11-27T16:27:32.116567+00:00",
+  "exit": 1,
+  "counts": {
+    "tests": 4,
+    "failures": 0,
+    "errors": 4,
+    "skipped": 0
+  },
+  "probe_sha256": "3e20a59626ccd82a35a3ef23b8ac6689effb3b3bd622d018994c81cce13a646d",
+  "subject_sha256_before": {
+    "docs/coordination/evidence/R32-21/inputs/role09/retest-helper-null.ps1": "19a2a0b6a719336a49a3011cef991a35be5df700f23e3a33133672f07dfab6b4",
+    "docs/coordination/evidence/R32-21/inputs/role09/recipe_guard.py": "0b6832ec35bfd4247d2c460e7e398a9c7573095d59c7ee539cb2b8305dd3aebc",
+    "docs/coordination/evidence/R32-21/inputs/role09/public-origin.mjs": "468c407d0cac321ec9c349dc5910000e8c430be867cf1073bd84ff282daadb92",
+    "docs/coordination/evidence/R32-21/inputs/role09/README.md": "203478f11a03a44d2befd64ca294e2a2b467d91a19baf7488977729c46595a25",
+    "docs/coordination/evidence/R32-21/inputs/role09/test_recipe_guards.py": "3d5cff6cb411277fd6a2171dc4ae1b05aaf51bfbab827f74215800f7a8b59da6"
+  },
+  "subject_sha256_after": {
+    "docs/coordination/evidence/R32-21/inputs/role09/retest-helper-null.ps1": "19a2a0b6a719336a49a3011cef991a35be5df700f23e3a33133672f07dfab6b4",
+    "docs/coordination/evidence/R32-21/inputs/role09/recipe_guard.py": "0b6832ec35bfd4247d2c460e7e398a9c7573095d59c7ee539cb2b8305dd3aebc",
+    "docs/coordination/evidence/R32-21/inputs/role09/public-origin.mjs": "468c407d0cac321ec9c349dc5910000e8c430be867cf1073bd84ff282daadb92",
+    "docs/coordination/evidence/R32-21/inputs/role09/README.md": "203478f11a03a44d2befd64ca294e2a2b467d91a19baf7488977729c46595a25",
+    "docs/coordination/evidence/R32-21/inputs/role09/test_recipe_guards.py": "3d5cff6cb411277fd6a2171dc4ae1b05aaf51bfbab827f74215800f7a8b59da6"
+  },
+  "old_oracle_sha256": "b9c301946f9b30c6961e7549e3c66ed77be245681f020359d5920503c1200e0a",
+  "scope": "FOUR tiny synthetic recipe semantics, NOT DeepViz/build/npm282/core689/scale/CI"
+}

@@ -1,0 +1,15 @@
+...F                                                                     [100%]
+================================== FAILURES ===================================
+___ test_duplicate_PATH_dispatches_ONE_explicit_tool_and_real_child_origin ____
+tests\r32_probes\role21\test_replacement_expectations.py:185: in test_duplicate_PATH_dispatches_ONE_explicit_tool_and_real_child_origin
+    done, evidence = invoke(source, mode="pass", duplicate=True)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\r32_probes\role21\test_replacement_expectations.py:118: in invoke
+    where = str(Path(env["SystemRoot"]) / "System32/where.exe")
+                     ^^^^^^^^^^^^^^^^^
+E   KeyError: 'SystemRoot'
+=========================== short test summary info ===========================
+FAILED tests/r32_probes/role21/test_replacement_expectations.py::test_duplicate_PATH_dispatches_ONE_explicit_tool_and_real_child_origin
+1 failed, 3 passed in 17.67s
+
+STDERR:

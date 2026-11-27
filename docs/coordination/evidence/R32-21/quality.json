@@ -1,0 +1,26 @@
+[
+  {
+    "argv": [
+      "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+      "-m",
+      "ruff",
+      "check",
+      "tests/r32_probes/role21/test_replacement_expectations.py"
+    ],
+    "exit": 0,
+    "stdout": "All checks passed!\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+      "-m",
+      "mypy",
+      "--follow-imports=skip",
+      "tests/r32_probes/role21/test_replacement_expectations.py"
+    ],
+    "exit": 0,
+    "stdout": "Success: no issues found in 1 source file\n",
+    "stderr": ""
+  }
+]

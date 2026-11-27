@@ -1,0 +1,73 @@
+[
+  {
+    "test": "tests/r32_probes/role21/test_replacement_expectations.py::test_source_mutation_rejects_and_preserves_pre_post_receipt",
+    "evidence": "cases/c0",
+    "files": [
+      "fixture.json",
+      "commands.jsonl",
+      "tool-identity.json",
+      "dispatch.txt",
+      "evidence/source-before.json",
+      "evidence/result.json"
+    ],
+    "actual_final_fixture_HEAD": "e6de9c9bbc59fa251b7489e7267adbdfeffd689d",
+    "initial_fixture_HEAD": "e6de9c9bbc59fa251b7489e7267adbdfeffd689d",
+    "fixture_HEAD_same": true,
+    "product": false
+  },
+  {
+    "test": "tests/r32_probes/role21/test_replacement_expectations.py::test_untracked_CWD_shadow_rejects_plan",
+    "evidence": "cases/c1",
+    "files": [
+      "fixture.json",
+      "commands.jsonl",
+      "tool-identity.json"
+    ],
+    "actual_final_fixture_HEAD": "d43f5a10a044a3eb909e395e2ffbacb2f88e17da",
+    "initial_fixture_HEAD": "d43f5a10a044a3eb909e395e2ffbacb2f88e17da",
+    "fixture_HEAD_same": true,
+    "product": false
+  },
+  {
+    "test": "tests/r32_probes/role21/test_replacement_expectations.py::test_REAL_four_skipped_Pytests_are_rejected",
+    "evidence": "cases/c2",
+    "files": [
+      "fixture.json",
+      "commands.jsonl",
+      "tool-identity.json",
+      "child.json",
+      "dispatch.txt",
+      "evidence/source-before.json",
+      "evidence/result.json",
+      "evidence/python-origin.json",
+      "evidence/core-parity.xml",
+      "evidence/core-parity.log",
+      "evidence/public-origin.log"
+    ],
+    "actual_final_fixture_HEAD": "255b109d9c36c5074816abd53e9ae87b7908d4c4",
+    "initial_fixture_HEAD": "255b109d9c36c5074816abd53e9ae87b7908d4c4",
+    "fixture_HEAD_same": true,
+    "product": false
+  },
+  {
+    "test": "tests/r32_probes/role21/test_replacement_expectations.py::test_duplicate_PATH_dispatches_ONE_explicit_tool_and_real_child_origin",
+    "evidence": "cases/c3",
+    "files": [
+      "fixture.json",
+      "commands.jsonl",
+      "tool-identity.json",
+      "child.json",
+      "dispatch.txt",
+      "evidence/source-before.json",
+      "evidence/result.json",
+      "evidence/python-origin.json",
+      "evidence/core-parity.xml",
+      "evidence/core-parity.log",
+      "evidence/public-origin.log"
+    ],
+    "actual_final_fixture_HEAD": "3ea2e234519cab02bfe8728c42fe162c32927638",
+    "initial_fixture_HEAD": "3ea2e234519cab02bfe8728c42fe162c32927638",
+    "fixture_HEAD_same": true,
+    "product": false
+  }
+]

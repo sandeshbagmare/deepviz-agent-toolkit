@@ -1,0 +1,51 @@
+{
+  "kind": "precommit integrity/requirements, NOT extra tests",
+  "unchanged_tested_probe": true,
+  "all5_subject_bytes_equal_Git": true,
+  "original27_unchanged": true,
+  "no_production_old_recipe_workflow_oracle_diff": {
+    "argv": [
+      "git",
+      "diff",
+      "--exit-code",
+      "0305db8e6699d909e6e360a62dcf68274d6589ea",
+      "--",
+      "python/",
+      "packages/",
+      "schemas/",
+      "scripts/",
+      ".github/",
+      "tests/r16_probes/",
+      "tests/r13_probes/",
+      "tests/r22_probes/"
+    ],
+    "exit": 0
+  },
+  "4_requested_cases": [
+    {
+      "test": "tests/r32_probes/role21/test_replacement_expectations.py::test_source_mutation_rejects_and_preserves_pre_post_receipt",
+      "fixture_HEAD_same": true,
+      "tool_bytes_same": true
+    },
+    {
+      "test": "tests/r32_probes/role21/test_replacement_expectations.py::test_untracked_CWD_shadow_rejects_plan",
+      "fixture_HEAD_same": true,
+      "tool_bytes_same": true
+    },
+    {
+      "test": "tests/r32_probes/role21/test_replacement_expectations.py::test_REAL_four_skipped_Pytests_are_rejected",
+      "fixture_HEAD_same": true,
+      "tool_bytes_same": true
+    },
+    {
+      "test": "tests/r32_probes/role21/test_replacement_expectations.py::test_duplicate_PATH_dispatches_ONE_explicit_tool_and_real_child_origin",
+      "fixture_HEAD_same": true,
+      "tool_bytes_same": true
+    }
+  ],
+  "quality_exit_codes": [
+    0,
+    0
+  ],
+  "product_tests_builds_installs": 0
+}

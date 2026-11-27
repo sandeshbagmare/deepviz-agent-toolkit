@@ -1,0 +1,7 @@
+NPM:run build
+NODE:--conditions=import C:\Users\bagma\AppData\Local\Temp\opencode\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\docs\coordination\evidence\R32-21\inputs\role09\public-origin.mjs C:\Users\bagma\AppData\Local\Temp\opencode\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\docs\coordination\evidence\R32-21\raw\verified-temp\c3\synthetic-source\packages\deepviz
+NPM:run typecheck
+NODE:--test --test-reporter=tap packages/deepviz/test/test_r07_tool_spec_null.test.mjs
+NPM:test
+NPM:run schema:check
+NPM:pack --dry-run --workspace @deepviz/agent-toolkit

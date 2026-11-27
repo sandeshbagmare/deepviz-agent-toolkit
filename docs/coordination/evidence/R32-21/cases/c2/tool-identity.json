@@ -1,0 +1,37 @@
+{
+  "before": {
+    "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe": "d8f182560210d43baaf767d482ad1dc1207372522e91413b9d5e515a875e552d",
+    "C:\\Program Files\\nodejs\\node.EXE": "f5109dc868ec38703ad8f305e0aceece717cb60d4889873f434017af4e96cccb",
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe": "0ea8580f82337a80537fcb0d4aee36dfcac4ef27e2717598aa998309cb6fcfcc",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R32-21\\raw\\verified-temp\\c2\\explicit\\npm.cmd": "a603fc1ef6c1e4a0d02819e8132ea11f04908d9bc802a84f3aaa20165caf0869",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R32-21\\raw\\verified-temp\\c2\\explicit\\node.cmd": "133de407a0a04061990043978f6bafa8c6eadee2a78dc2f9181680c44f557890"
+  },
+  "after": {
+    "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe": "d8f182560210d43baaf767d482ad1dc1207372522e91413b9d5e515a875e552d",
+    "C:\\Program Files\\nodejs\\node.EXE": "f5109dc868ec38703ad8f305e0aceece717cb60d4889873f434017af4e96cccb",
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe": "0ea8580f82337a80537fcb0d4aee36dfcac4ef27e2717598aa998309cb6fcfcc",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R32-21\\raw\\verified-temp\\c2\\explicit\\npm.cmd": "a603fc1ef6c1e4a0d02819e8132ea11f04908d9bc802a84f3aaa20165caf0869",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R32-21\\raw\\verified-temp\\c2\\explicit\\node.cmd": "133de407a0a04061990043978f6bafa8c6eadee2a78dc2f9181680c44f557890"
+  },
+  "explicit_args": [
+    "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R32-21\\inputs\\role09\\retest-helper-null.ps1",
+    "-Candidate",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R32-21\\raw\\verified-temp\\c2\\synthetic-source",
+    "-ExpectedSha",
+    "255b109d9c36c5074816abd53e9ae87b7908d4c4",
+    "-EvidenceDirectory",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R32-21\\raw\\verified-temp\\c2\\evidence",
+    "-Python",
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+    "-ToolsBin",
+    "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R32-21\\raw\\verified-temp\\c2\\explicit",
+    "-Run"
+  ],
+  "trace": "NPM:run build\nNODE:--conditions=import C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R32-21\\inputs\\role09\\public-origin.mjs C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R32-21\\raw\\verified-temp\\c2\\synthetic-source\\packages\\deepviz\nNPM:run typecheck\nNODE:--test --test-reporter=tap packages/deepviz/test/test_r07_tool_spec_null.test.mjs\nNPM:test\nNPM:run schema:check\n",
+  "real_Node_only_public_resolution_not_product": "C:\\Program Files\\nodejs\\node.EXE"
+}
