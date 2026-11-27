@@ -192,6 +192,22 @@ def test_named_column_iterators_stay_one_pass_without_materializing_a_probe_pref
     assert result.input_count == len(consumed) == 3 and result.warnings == []
 
 
+def test_explicit_selected_column_object_keeps_root_boundary() -> None:
+    result = normalize({"outer": {"payload": [True, None, False]}}, {
+        "kind": "table", "aggregation": "none", "data_path": "outer", "y": "payload",
+    })
+    assert result.records == [{"payload": True}, {"payload": None}, {"payload": False}]
+    assert result.input_count == 3 and result.warnings == []
+
+
+def test_explicit_selected_record_array_keeps_nested_cells_and_source_order() -> None:
+    result = normalize({"outer": [{"flags": [True, None]}, {"flags": [False]}]}, {
+        "kind": "table", "aggregation": "none", "data_path": "outer",
+    })
+    assert result.records == [{"flags.0": True, "flags.1": None}, {"flags.0": False}]
+    assert result.input_count == 2 and result.warnings == []
+
+
 def test_borrowed_second_line_jsonl_parse_failure_keeps_stream_usable() -> None:
     source = io.StringIO('{"v":1}\nnot-json\n')
     try:

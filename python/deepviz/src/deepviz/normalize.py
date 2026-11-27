@@ -501,7 +501,11 @@ def _records(
             source = _select_path(source, tokens, counts)
         requested = tuple(dict.fromkeys(field for field in (spec.x, spec.y, spec.color, spec.size) if field))
         had_rows = False
-        for index, item in enumerate(_expand(source, counts)):
+        # Path matches are new roots, not ordinary rows from a record sequence.
+        expanded = _expand(source, counts) if spec.data_path is None else chain.from_iterable(
+            _expand(selected, counts) for selected in source
+        )
+        for index, item in enumerate(expanded):
             had_rows = True
             row = _flatten(item, counts) if isinstance(item, dict) or isinstance(item, Mapping) else {
                 "index": index, "value": _scalar(item, counts),
