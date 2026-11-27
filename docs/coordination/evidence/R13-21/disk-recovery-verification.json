@@ -1,0 +1,110 @@
+{
+  "source_checkpoint": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "own_recovered_commit": "088586f6af28c8db3048fddd34d1c710f5685e6a",
+  "checks": [
+    {
+      "name": "all_selected_captured_hashes_still_match",
+      "status": "pass",
+      "evidence": {
+        "files": 19,
+        "snapshot_not_repeated": true
+      }
+    },
+    {
+      "name": "disk_link_chain_reaches_exact_R13_packet",
+      "status": "pass",
+      "evidence": "PROJECT_STATE:30 -> R03-live-slots:7 -> R13task:47"
+    },
+    {
+      "name": "own_note_and_git_recover_existing_branch_and_receipt",
+      "status": "pass",
+      "evidence": "ownnote:24-27 + saved Git HEAD/log; old task-row next step is not blindly repeated"
+    },
+    {
+      "name": "higher_priority_tester_bans_win_over_user_release",
+      "status": "pass",
+      "evidence": "R13task:10 + PROJECT_STATE:9"
+    },
+    {
+      "name": "root_zero_is_pre_recovery_not_fresh_capacity",
+      "status": "pass",
+      "evidence": "R13task:8,51; root statement only, no actual current count inferred"
+    },
+    {
+      "name": "unknown_upstream_cause_not_fixed_or_lost_work",
+      "status": "pass",
+      "evidence": "R13task:9,14; saved16 quality hash+actual dirty-receipt recovery, not a service-root-cause test"
+    },
+    {
+      "name": "failing_CI_and_unmet_scope_remain_explicit",
+      "status": "pass",
+      "evidence": "PROJECT_STATE:7 + R13task:18; root-reported, no fresh CI API call"
+    },
+    {
+      "name": "immutable_R11_source_bootstrap_object_is_readable",
+      "status": "pass",
+      "evidence": {
+        "argv": [
+          "git",
+          "show",
+          "5340bc69b7203ad7a9166543062482d819f9b705:docs/coordination/tasks/R11-disjoint-producer-releases.md"
+        ],
+        "exit": 0,
+        "raw_blob_sha256": "bd360a73ef92832526a01f120455bff94bc7e1301d1e6731524d463961050216",
+        "read_only": true
+      }
+    },
+    {
+      "name": "recovered_C2_commit_preserves_unreleased_source_bytes",
+      "status": "pass",
+      "evidence": {
+        "argv": [
+          "git",
+          "diff",
+          "--name-only",
+          "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+          "088586f6af28c8db3048fddd34d1c710f5685e6a"
+        ],
+        "exit": 0,
+        "owned_paths_only": [
+          "docs/agent-state/ses_de5678018ffezK8JGDUaSzvcWn.md",
+          "docs/coordination/evidence/R10-21/capture_once.txt",
+          "docs/coordination/evidence/R10-21/publication-receipt.json",
+          "docs/coordination/evidence/R10-21/publish_owned.txt",
+          "docs/coordination/evidence/R10-21/quality-checks.json",
+          "docs/coordination/evidence/R10-21/quality_runner.txt",
+          "docs/coordination/evidence/R10-21/recovery-snapshot.json",
+          "docs/coordination/evidence/R10-21/stage-envelope.json",
+          "docs/coordination/reports/R10-21-recovery-git-bootstrap.md",
+          "tests/r10_probes/role21/test_publication_receipts.py"
+        ]
+      }
+    },
+    {
+      "name": "literal_collector_miss_preserved_not_promoted_to_task_failure",
+      "status": "pass",
+      "evidence": "direct filename absent but supporting-register route exists; no raw result rewritten"
+    },
+    {
+      "name": "root_branch_not_misrepresented_as_product_tree",
+      "status": "pass",
+      "evidence": "R13task:16 immutable source bootstrap; later eligible transfer still required"
+    },
+    {
+      "name": "live_parentage_inflight_shells_all_sibling_completion",
+      "status": "unverified",
+      "evidence": "No fresh runtime/metadata/sibling progress query. Root0/admission/failure reports are attributed. Saved root post-runtime file selected but not parsed for counts. No claim every child resumed its first unfinished command."
+    }
+  ],
+  "totals": {
+    "pass": 11,
+    "fail": 0,
+    "unverified": 1
+  },
+  "baseline_preserved": {
+    "R03": "18pass/2fail/1unknown",
+    "R10": "8pass/3fail",
+    "R13_collector": "9pass/1literal-miss"
+  },
+  "project_signoff": false
+}

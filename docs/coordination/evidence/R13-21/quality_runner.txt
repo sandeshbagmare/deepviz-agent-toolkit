@@ -1,0 +1,26 @@
+import ast
+import hashlib
+import json
+import os
+import subprocess
+from pathlib import Path
+
+ROOT = Path.cwd()
+OUT = ROOT / "docs/coordination/evidence/R13-21"
+probe = "tests/r13_probes/role21/test_recovery_semantics.py"
+PYTHON = r"C:\Users\bagma\deepviz-agent-toolkit\.venv\Scripts\python.exe"
+for path in [ROOT / probe, *OUT.glob("*.txt")]:
+    value = path.read_text(encoding="utf-8-sig")
+    path.write_text(value, encoding="utf-8", newline=chr(10))
+    if path.suffix == ".txt":
+        ast.parse(value)
+env = os.environ.copy()
+env["PYTHONDONTWRITEBYTECODE"] = "1"
+commands = []
+for argv in [[PYTHON, "-m", "pytest", probe, "-q", "--tb=short", "-p", "no:cacheprovider"], [PYTHON, "-m", "ruff", "check", probe], [PYTHON, "-m", "mypy", probe]]:
+    done = subprocess.run(argv, cwd=ROOT, env=env, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=180)
+    commands.append({"argv": argv, "exit": done.returncode, "stdout": done.stdout, "stderr": done.stderr})
+result = {"scope": "OWN NEW R13 offline controls ONLY, not production gates", "source_checkpoint": "5340bc69b7203ad7a9166543062482d819f9b705", "own_recovered_commit": "088586f6af28c8db3048fddd34d1c710f5685e6a", "probe_sha256": hashlib.sha256((ROOT / probe).read_bytes()).hexdigest(), "commands": commands, "failed_commands": sum(c["exit"] != 0 for c in commands), "preserved_prior_failure": "Initial scoped Ruff F401 unused dataclass import exit1; removed only own unused import"}
+(OUT / "quality-checks.json").write_text(json.dumps(result, indent=2) + chr(10), encoding="utf-8")
+print(json.dumps(result, indent=2))
+raise SystemExit(1 if result["failed_commands"] else 0)

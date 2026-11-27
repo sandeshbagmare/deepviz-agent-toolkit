@@ -1,0 +1,48 @@
+{
+  "scope": "OWN NEW R13 offline controls ONLY, not production gates",
+  "source_checkpoint": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "own_recovered_commit": "088586f6af28c8db3048fddd34d1c710f5685e6a",
+  "probe_sha256": "5ce9b68c18512e47c02455bbef3f4d3373790bede9f28c9aaef7ee4b13a1b18b",
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "tests/r13_probes/role21/test_recovery_semantics.py",
+        "-q",
+        "--tb=short",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "exit": 0,
+      "stdout": "................................................................         [100%]\n64 passed in 10.24s\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "tests/r13_probes/role21/test_recovery_semantics.py"
+      ],
+      "exit": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "tests/r13_probes/role21/test_recovery_semantics.py"
+      ],
+      "exit": 0,
+      "stdout": "Success: no issues found in 1 source file\n",
+      "stderr": ""
+    }
+  ],
+  "failed_commands": 0,
+  "preserved_prior_failure": "Initial scoped Ruff F401 unused dataclass import exit1; removed only own unused import"
+}

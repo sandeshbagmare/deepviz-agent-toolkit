@@ -1,0 +1,112 @@
+﻿"""One owned-branch publication, not another team/progress snapshot."""
+import base64
+import datetime as dt
+import hashlib
+import json
+import re
+import subprocess
+import sys
+import urllib.error
+import urllib.parse
+import urllib.request
+from pathlib import Path
+
+ROOT = Path.cwd()
+MAIN = Path(r"C:\Users\bagma\deepviz-agent-toolkit")
+BRANCH = "agents/r10-21-recovery-git-bootstrap"
+PIN = "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab"
+OWNER = "ses_de5678018ffezK8JGDUaSzvcWn"
+REPORT = "docs/coordination/reports/R13-21-interruption-recovery-audit.md"
+OUT = ROOT / "docs/coordination/evidence/R13-21/publication-receipt.json"
+receipt = {"owner": OWNER, "branch": BRANCH, "source_base": PIN, "observed_utc": dt.datetime.now(dt.timezone.utc).isoformat(), "scope": "owned branch only; no sibling re-query; checkpoint not project acceptance", "commands": []}
+
+def run(args):
+    done = subprocess.run(["git", *args], cwd=ROOT, capture_output=True, timeout=120)
+    receipt["commands"].append({"argv": ["git", *args], "exit": done.returncode})
+    return done.returncode, done.stdout
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+try:
+    code, branch = run(["branch", "--show-current"])
+    if code or branch.decode().strip() != BRANCH:
+        raise RuntimeError("wrong_own_branch")
+    code, head = run(["rev-parse", "HEAD"])
+    commit = head.decode().strip()
+    if code or not re.fullmatch("[0-9a-f]{40}", commit):
+        raise RuntimeError("invalid_own_commit")
+    receipt["local_commit"] = commit
+    code, _ = run(["merge-base", "--is-ancestor", PIN, commit])
+    if code:
+        raise RuntimeError("own_branch_base_mismatch")
+    code, names = run(["diff", "--name-only", PIN, commit])
+    paths = names.decode().splitlines()
+    allowed = lambda p: p == REPORT or p == "docs/coordination/reports/R10-21-recovery-git-bootstrap.md" or p == "docs/agent-state/" + OWNER + ".md" or p.startswith("docs/coordination/evidence/R10-21/") or p.startswith("tests/r10_probes/role21/") or p.startswith("docs/coordination/evidence/R13-21/") or p.startswith("tests/r13_probes/role21/")
+    if code or not paths or not all(allowed(p) for p in paths):
+        raise RuntimeError("commit_scope_mismatch")
+    receipt["owned_commit_paths"] = paths
+    code, _ = run(["diff", "--cached", "--exit-code"])
+    if code:
+        raise RuntimeError("unexpected_staged_edits")
+    origin_code, origin_bytes = run(["remote", "get-url", "origin"])
+    origin = urllib.parse.urlsplit(origin_bytes.decode().strip())
+    if origin_code or origin.scheme != "https" or origin.hostname != "github.com" or origin.username or origin.password or origin.path.rstrip("/") not in ["/sandeshbagmare/deepviz-agent-toolkit", "/sandeshbagmare/deepviz-agent-toolkit.git"]:
+        raise RuntimeError("unexpected_or_credential_bearing_origin")
+    credential = subprocess.run(["git", "-c", "credential.interactive=false", "credential", "fill"], input="protocol=https" + chr(10) + "host=github.com" + chr(10) * 2, cwd=ROOT, capture_output=True, text=True, timeout=20)
+    if credential.returncode:
+        raise RuntimeError("captured_credential_unavailable")
+    fields = dict(line.split("=", 1) for line in credential.stdout.splitlines() if "=" in line)
+    token = fields.get("password")
+    if not token:
+        raise RuntimeError("captured_credential_empty")
+    opener = urllib.request.build_opener(NoRedirect())
+    def api(path):
+        request = urllib.request.Request("https://api.github.com" + path, headers={"Authorization": "Bearer " + token, "Accept": "application/vnd.github+json", "User-Agent": "DeepViz-R13-21-owned-publisher"})
+        try:
+            with opener.open(request, timeout=45) as response:
+                data = response.read(1048577)
+                if len(data) > 1048576:
+                    raise RuntimeError("api_response_bound_exceeded")
+                return response.status, json.loads(data)
+        except urllib.error.HTTPError as error:
+            return error.code, {}
+    status, user = api("/user")
+    receipt["identity"] = {"http": status, "login": user.get("login")}
+    if status != 200 or user.get("login") != "sandeshbagmare":
+        raise RuntimeError("authenticated_identity_mismatch")
+    push_exit, _ = run(["push", "origin", "HEAD:refs/heads/" + BRANCH])
+    receipt["push_exit"] = push_exit
+    if push_exit:
+        raise RuntimeError("nonforce_owned_push_failed")
+    code, remote = run(["ls-remote", "--heads", "origin", "refs/heads/" + BRANCH])
+    parts = remote.decode().strip().split()
+    remote_sha = parts[0] if len(parts) == 2 else None
+    receipt["remote_sha_readback"] = remote_sha
+    receipt["remote_readback_exit"] = code
+    if code or remote_sha != commit or parts[1] != "refs/heads/" + BRANCH:
+        raise RuntimeError("actual_remote_readback_mismatch")
+    status, payload = api("/repos/sandeshbagmare/deepviz-agent-toolkit/contents/" + REPORT + "?ref=" + commit)
+    data = base64.b64decode(payload.get("content", "")) if status == 200 and payload.get("encoding") == "base64" else b""
+    text = data.decode("utf-8-sig") if data else ""
+    blob = hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest() if data else None
+    receipt["committed_own_report"] = {"http": status, "git_blob_matches": blob == payload.get("sha") if data else False, "sha256": hashlib.sha256(data).hexdigest() if data else None, "owner_and_source_present": OWNER in text and PIN in text, "bootstrap_proposal_present": "F13-21-1" in text}
+    if status != 200 or blob != payload.get("sha") or OWNER not in text or PIN not in text:
+        raise RuntimeError("committed_own_report_verification_failed")
+    receipt["status"] = "published-own-branch-and-remote-verified-not-signoff"
+except Exception as error:
+    receipt["status"] = "publication-blocked-or-unverified"
+    receipt["error_type"] = type(error).__name__
+    receipt["error_summary"] = str(error) if isinstance(error, RuntimeError) else "sanitized_external_error"
+finally:
+    receipt["finished_utc"] = dt.datetime.now(dt.timezone.utc).isoformat()
+    body = json.dumps(receipt, indent=2) + chr(10)
+    if "--main-only" not in sys.argv:
+        OUT.write_text(body, encoding="utf-8")
+    (MAIN / "docs/coordination/evidence/R13-21/publication-receipt.json").write_text(body, encoding="utf-8")
+    print(json.dumps(receipt, indent=2))
+raise SystemExit(0 if receipt["status"].startswith("published-") else 1)
+
+
+

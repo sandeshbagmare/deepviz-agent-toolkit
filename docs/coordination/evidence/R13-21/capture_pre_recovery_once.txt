@@ -1,0 +1,93 @@
+"""One disk-only saved-packet snapshot; no network/session/progress APIs."""
+import datetime as dt
+import hashlib
+import json
+import subprocess
+from pathlib import Path
+
+MAIN = Path(r"C:\Users\bagma\deepviz-agent-toolkit")
+OWN = Path.cwd()
+SID = "ses_de5678018ffezK8JGDUaSzvcWn"
+OUT = OWN / "docs/coordination/evidence/R13-21"
+started = dt.datetime.now(dt.timezone.utc)
+temp = Path(r"C:\Users\bagma\AppData\Local\Temp\opencode") / ("r13-21-snapshot-" + started.strftime("%Y%m%dT%H%M%S%fZ"))
+temp.mkdir(exist_ok=False)
+data = {"owner": SID, "started_utc": started.isoformat(), "source_base": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab", "snapshot_dir": str(temp), "one_bounded_saved_snapshot": True, "fresh_runtime_or_sibling_query_count": 0, "files": [], "commands": [], "assertions": [], "limits": []}
+
+def check(name, ok, evidence):
+    data["assertions"].append({"name": name, "status": "pass" if ok else "fail", "evidence": evidence})
+
+try:
+    fixed = ["AGENTS.md", "RESUME.md", "docs/PROJECT_STATE.md", "docs/coordination/STATE.md", "docs/coordination/REQUEST.md", "docs/coordination/R03-live-slots.md", "docs/coordination/C17-live-slots.md", "docs/coordination/tasks/R13-upstream-error-recovery.md", "docs/coordination/tasks/R07-producer-unblock.md", "docs/coordination/tasks/R10-rolling-agile-sdlc.md", "docs/agent-state/" + SID + ".md", "docs/agent-state/ses_de58eb849ffeOMwi2kb0VSqy3B.md", "docs/agent-state/ses_de56ad930fferPKGibj5Mc304B.md", "docs/coordination/reports/R10-21-recovery-git-bootstrap.md", "docs/coordination/evidence/R10-21/publication-receipt.json"]
+    dynamic = []
+    for pattern in ["docs/coordination/tasks/R07-*.md", "docs/coordination/tasks/R11-*.md", "docs/coordination/tasks/R12-*.md", "docs/coordination/evidence/R13-root/*.json", "docs/coordination/evidence/R13-*.json"]:
+        matches = list(MAIN.glob(pattern))
+        if len(matches) > 12:
+            raise RuntimeError("bounded_name_selection_exceeded")
+        dynamic.extend(p.relative_to(MAIN).as_posix() for p in matches)
+    selected = sorted(set(fixed + dynamic))
+    if len(selected) > 48:
+        raise RuntimeError("bounded_file_selection_exceeded")
+    texts = {}
+    total = 0
+    for name in selected:
+        path = MAIN / name
+        if not path.is_file():
+            data["files"].append({"path": name, "exists": False, "status": "selection-missing-unverified"})
+            continue
+        before = path.stat()
+        if before.st_size > 1048576:
+            data["files"].append({"path": name, "exists": True, "captured": False, "status": "size-bound-unverified"})
+            continue
+        raw = path.read_bytes()
+        after = path.stat()
+        total += len(raw)
+        if total > 8388608:
+            raise RuntimeError("bounded_total_snapshot_exceeded")
+        target = temp / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(raw)
+        texts[name] = raw.decode("utf-8-sig")
+        data["files"].append({"path": name, "exists": True, "captured": True, "bytes": len(raw), "sha256": hashlib.sha256(raw).hexdigest(), "stable_during_read": (before.st_size, before.st_mtime_ns) == (after.st_size, after.st_mtime_ns)})
+    for cwd, args in [(OWN, ["branch", "--show-current"]), (OWN, ["rev-parse", "HEAD"]), (OWN, ["status", "--porcelain=v1"]), (OWN, ["log", "-3", "--format=%H %s"]), (MAIN, ["rev-parse", "HEAD"]), (OWN, ["worktree", "list", "--porcelain"])]:
+        done = subprocess.run(["git", *args], cwd=cwd, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=30)
+        raw = done.stdout
+        filename = "git-" + str(len(data["commands"]) + 1) + ".txt"
+        (temp / filename).write_text(raw, encoding="utf-8")
+        item = {"cwd": "OWN" if cwd == OWN else "MAIN", "argv": ["git", *args], "exit": done.returncode, "sha256": hashlib.sha256(raw.encode()).hexdigest(), "output_file": filename}
+        if args[:1] in [["branch"], ["rev-parse"], ["log"]]:
+            item["value"] = raw.strip()
+        if args[:1] == ["status"]:
+            item["path_count"] = len(raw.splitlines())
+            item["all_paths_owned"] = all(line[3:].startswith(("docs/agent-state/" + SID + ".md", "docs/coordination/reports/R13-21-", "docs/coordination/evidence/R13-21/", "tests/r13_probes/role21/")) for line in raw.splitlines())
+        data["commands"].append(item)
+    packet = texts["docs/coordination/tasks/R13-upstream-error-recovery.md"]
+    note = texts["docs/agent-state/" + SID + ".md"]
+    canonical = texts["docs/PROJECT_STATE.md"]
+    check("saved_packet_names_native_identity_and_root_ownership", "ses_de58eb849ffeOMwi2kb0VSqy3B" in packet and "|21|" in packet, "R13 task:3,45")
+    check("saved_zero_is_explicitly_pre_recovery_not_current", "0 active charting subagents" in packet and "none called active" in packet, "R13 task:8,49; not our own runtime observation")
+    check("metadata_success_not_delivery_in_saved_packet", "succeeded" in packet and "NOT delivery evidence" in packet, "R13 task:8")
+    check("saved_first_unfinished_existing_branch_preserves_dirty_work", all(term in packet for term in ["FIRST unfinished", "reuse existing OWN worktree/branch", "Do not recreate", "dirty edits"]), "R13 task:14")
+    check("tester_restriction_not_overridden_by_producer_queue", "higher-priority tester prohibitions" in packet and "Do not override those" in packet and "independent tests/proposals only" in packet, "R13 task:10")
+    check("own_first_unfinished_recovered_from_saved_note", "FIRSTunfinished R10receipt now completed" in note and "088586f6af28c8db3048fddd34d1c710f5685e6a" in note, "own note + actual Git HEAD")
+    check("all_six_readonly_git_commands_exit_zero", all(c["exit"] == 0 for c in data["commands"]), "six saved Git outputs, no remote/session query")
+    check("actual_own_head_is_recovered_receipt_commit", data["commands"][0].get("value") == "agents/r10-21-recovery-git-bootstrap" and data["commands"][1].get("value") == "088586f6af28c8db3048fddd34d1c710f5685e6a", "own source not silently substituted")
+    check("canonical_links_latest_recovery_packet", "R13-upstream-error-recovery.md" in canonical, "docs/PROJECT_STATE.md")
+    check("saved_files_have_stable_per_file_reads", all(f.get("stable_during_read", True) for f in data["files"]), "not atomic multi-file snapshot")
+    data["selected_files"] = len(selected)
+    data["captured_bytes"] = total
+    data["saved_root_evidence_paths"] = [p for p in texts if "/evidence/R13" in p]
+    data["status"] = "bounded-pre-recovery-disk-snapshot-not-signoff"
+    data["limits"] = ["Root0active/parentage/CI are saved attributed observations, not independently queried now", "No sibling progress, runtime count, remote ref or CI query", "Missing guessed R07 path is selection limitation, not a finding", "Scope/permission must come from higher-priority contract, not parsed metadata"]
+except Exception as error:
+    data["status"] = "blocked"
+    data["error_type"] = type(error).__name__
+    data["sanitized_error"] = str(error) if isinstance(error, RuntimeError) else "local_harness_or_input_error"
+finally:
+    data["finished_utc"] = dt.datetime.now(dt.timezone.utc).isoformat()
+    data["totals"] = {s: sum(i["status"] == s for i in data["assertions"]) for s in ["pass", "fail"]}
+    (OUT / "pre-recovery-snapshot.json").write_text(json.dumps(data, indent=2) + chr(10), encoding="utf-8")
+    (MAIN / "docs/coordination/evidence/R13-21/pre-recovery-snapshot.json").write_bytes((OUT / "pre-recovery-snapshot.json").read_bytes())
+    print(json.dumps({k: data.get(k) for k in ["status", "started_utc", "finished_utc", "snapshot_dir", "selected_files", "captured_bytes", "saved_root_evidence_paths", "totals", "error_type", "sanitized_error"]}, indent=2))
+    print(json.dumps({"checks": data["assertions"], "git_commands": data["commands"]}, indent=2))
+raise SystemExit(2 if data["status"] == "blocked" else 1 if data["totals"]["fail"] else 0)

@@ -1,0 +1,43 @@
+"""Verify already-captured disk chain without a second recovery snapshot."""
+import hashlib
+import json
+import subprocess
+from pathlib import Path
+
+ROOT = Path.cwd()
+OUT = ROOT / "docs/coordination/evidence/R13-21"
+packet = json.loads((OUT / "pre-recovery-snapshot.json").read_text(encoding="utf-8"))
+saved = Path(packet["snapshot_dir"])
+checks = []
+def check(name, ok, evidence):
+    checks.append({"name": name, "status": "pass" if ok else "fail", "evidence": evidence})
+def text(path):
+    return (saved / path).read_text(encoding="utf-8-sig")
+captured = [f for f in packet["files"] if f.get("captured")]
+check("all_selected_captured_hashes_still_match", all(hashlib.sha256((saved / f["path"]).read_bytes()).hexdigest() == f["sha256"] for f in captured), {"files": len(captured), "snapshot_not_repeated": True})
+canonical = text("docs/PROJECT_STATE.md")
+register = text("docs/coordination/R03-live-slots.md")
+task = text("docs/coordination/tasks/R13-upstream-error-recovery.md")
+note = text("docs/agent-state/ses_de5678018ffezK8JGDUaSzvcWn.md")
+check("disk_link_chain_reaches_exact_R13_packet", "docs/coordination/R03-live-slots.md" in canonical and "tasks/R13-upstream-error-recovery.md" in register and "|21|" in task, "PROJECT_STATE:30 -> R03-live-slots:7 -> R13task:47")
+check("own_note_and_git_recover_existing_branch_and_receipt", "088586f6af28c8db3048fddd34d1c710f5685e6a" in note and "agents/r10-21-recovery-git-bootstrap" in note and packet["commands"][1]["value"] == "088586f6af28c8db3048fddd34d1c710f5685e6a", "ownnote:24-27 + saved Git HEAD/log; old task-row next step is not blindly repeated")
+check("higher_priority_tester_bans_win_over_user_release", "higher-priority tester prohibitions" in task and "Do not override those" in task and "WITHDRAWtheirsourceauthority" in canonical, "R13task:10 + PROJECT_STATE:9")
+check("root_zero_is_pre_recovery_not_fresh_capacity", "0 active charting subagents" in task and "none called active before actual tool receipt" in task and packet["fresh_runtime_or_sibling_query_count"] == 0, "R13task:8,51; root statement only, no actual current count inferred")
+check("unknown_upstream_cause_not_fixed_or_lost_work", "Exact upstream root cause is NOT established" in task and "Do not restart a responsive service" in task and "Do not recreate existing worktrees" in task, "R13task:9,14; saved16 quality hash+actual dirty-receipt recovery, not a service-root-cause test")
+check("failing_CI_and_unmet_scope_remain_explicit", "45928608970FAIL" in canonical and "900 legitimate created AND resolved issues remain unmet" in task, "PROJECT_STATE:7 + R13task:18; root-reported, no fresh CI API call")
+source = "5340bc69b7203ad7a9166543062482d819f9b705"
+args = ["git", "show", source + ":docs/coordination/tasks/R11-disjoint-producer-releases.md"]
+done = subprocess.run(args, cwd=ROOT, capture_output=True, timeout=30)
+check("immutable_R11_source_bootstrap_object_is_readable", done.returncode == 0, {"argv": args, "exit": done.returncode, "raw_blob_sha256": hashlib.sha256(done.stdout).hexdigest(), "read_only": True})
+args = ["git", "diff", "--name-only", "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab", "088586f6af28c8db3048fddd34d1c710f5685e6a"]
+done = subprocess.run(args, cwd=ROOT, capture_output=True, text=True, timeout=30)
+names = done.stdout.splitlines()
+allowed = lambda p: p == "docs/agent-state/ses_de5678018ffezK8JGDUaSzvcWn.md" or p == "docs/coordination/reports/R10-21-recovery-git-bootstrap.md" or p.startswith("docs/coordination/evidence/R10-21/") or p.startswith("tests/r10_probes/role21/")
+check("recovered_C2_commit_preserves_unreleased_source_bytes", done.returncode == 0 and bool(names) and all(allowed(p) for p in names), {"argv": args, "exit": done.returncode, "owned_paths_only": names})
+check("literal_collector_miss_preserved_not_promoted_to_task_failure", packet["totals"] == {"pass": 9, "fail": 1} and "R13errorrecovery/firstunfinishedaction" in canonical, "direct filename absent but supporting-register route exists; no raw result rewritten")
+check("root_branch_not_misrepresented_as_product_tree", "root branch is a scoped coordination branch, NOT the current product tree" in task and source in task, "R13task:16 immutable source bootstrap; later eligible transfer still required")
+checks.append({"name": "live_parentage_inflight_shells_all_sibling_completion", "status": "unverified", "evidence": "No fresh runtime/metadata/sibling progress query. Root0/admission/failure reports are attributed. Saved root post-runtime file selected but not parsed for counts. No claim every child resumed its first unfinished command."})
+result = {"source_checkpoint": source, "own_recovered_commit": "088586f6af28c8db3048fddd34d1c710f5685e6a", "checks": checks, "totals": {s: sum(c["status"] == s for c in checks) for s in ["pass", "fail", "unverified"]}, "baseline_preserved": {"R03": "18pass/2fail/1unknown", "R10": "8pass/3fail", "R13_collector": "9pass/1literal-miss"}, "project_signoff": False}
+(OUT / "disk-recovery-verification.json").write_text(json.dumps(result, indent=2) + chr(10), encoding="utf-8")
+print(json.dumps(result, indent=2))
+raise SystemExit(1 if result["totals"]["fail"] else 0)
