@@ -1,0 +1,178 @@
+{
+  "owner_actual_id": "ses_de56782e5ffe3H1lUAoxrBtEhx",
+  "source_sha": "c3ee1edbfc65406cef7fd809f5a6887471d576a5",
+  "source_tracked_clean_final": true,
+  "all_source_git_and_fresh_dist_hashes_rechecked": true,
+  "other_renderer_functions_unchanged_from_parent": true,
+  "original_oracle_only_one_setup_sha_changed": true,
+  "original_oracle": {
+    "commit": "38ce71e50ce59e58dc647417de26e547d5e42d5a",
+    "path": "tests/r17_probes/role13/finite-range-regression.mjs",
+    "sha256": "a731617b686d7d9b1bdedfdec70c45fea39e9d54f2be266d10be504a705a7202",
+    "adapter_sha256": "0c1b69d3f4a1c5c97d8e48b384934bb2a68475c0f0207f3ffdb50f4591848c92",
+    "only_change": "one setup HEAD constant 5e595a8f893955ce34a0e26553bb7bf257ea93ae -> c3ee1edbfc65406cef7fd809f5a6887471d576a5",
+    "semantic_assertions_changed": false
+  },
+  "build": {
+    "argv": [
+      "node",
+      "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\typescript\\bin\\tsc",
+      "-p",
+      "packages/deepviz/tsconfig.json"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-09-finite-c3ee-ses_de56782e5ffe3H1lUAoxrBtEhx",
+    "exit": 0
+  },
+  "typescript_version": "7.0.2",
+  "compiler_files": {
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\typescript\\bin\\tsc": "2219f428a7e55aaf1f7ad85b9b0f0cf5078aeb76ccc9a7c6036c92d48f492ffd",
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\typescript\\lib\\tsc.js": "cbdfbf11c26ed00dfc073155e316a42d6d6d8a387be61006b82fa9aa93ac572e",
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\typescript\\package.json": "3722b30210616a13a3213ded11575ba6b2dbab10c32a5ef67afca8513e27017e"
+  },
+  "runs_including_initial_harness_failure": [
+    {
+      "tests": 1,
+      "pass": 0,
+      "fail": 1,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0,
+      "log": "author-units.tap",
+      "sha256": "2ab95047f849158f9d8921ebf88d8b5e83c3e37fb9c4ccffe26aeae6db5421e2",
+      "duration_ms": 89.8103,
+      "scope": "PRE_PRODUCT_HARNESS_IMPORT_FAILURE",
+      "exit": 1
+    },
+    {
+      "tests": 13,
+      "pass": 13,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0,
+      "log": "author-units-corrected.tap",
+      "sha256": "8d5a3547ea8a5284a8b5444e97f39701abbf3d901653af6622e17c1b64ff5de6",
+      "duration_ms": 457.1004,
+      "scope": "ACTUAL_SCOPED_PRODUCT_CASES",
+      "exit": 0
+    },
+    {
+      "tests": 2,
+      "pass": 2,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0,
+      "log": "original-two-bar.tap",
+      "sha256": "e27989e0b1677a45f86c7f9c48f16417e0be8b282bb8bb61ccb84cf1ab223546",
+      "duration_ms": 348.9104,
+      "scope": "ACTUAL_SCOPED_PRODUCT_CASES",
+      "exit": 0
+    },
+    {
+      "tests": 1,
+      "pass": 1,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0,
+      "log": "bounded-browser.tap",
+      "sha256": "97ad7f6b7c9dc96417f083f534893d0d62f48723d681968e8175416f5d713d39",
+      "duration_ms": 3233.9865,
+      "scope": "ACTUAL_SCOPED_PRODUCT_CASES",
+      "exit": 0
+    }
+  ],
+  "actual_semantic_passes_across_scoped_runs": 16,
+  "one_artifact_two_browser_carriers": true,
+  "chromium": "159.0.8154.6",
+  "actual_pngs_opened_with_read_tool": [
+    "bounded-browser/signed-extreme-svg.png",
+    "bounded-browser/signed-extreme-html.png"
+  ],
+  "browser_each_carrier_errors_external_runtime": {
+    "svg": [
+      [],
+      [],
+      []
+    ],
+    "html": [
+      [],
+      [],
+      []
+    ]
+  },
+  "current_probe_sha256": {
+    "bounded-finite-browser.test.mjs": "4a862ef37655d2721539caaada89ad48ab439b2b661ade00179a7c7c374153b3",
+    "original-finite-setup-adapted.test.mjs": "0c1b69d3f4a1c5c97d8e48b384934bb2a68475c0f0207f3ffdb50f4591848c92",
+    "prepare_and_test.py": "87797fb77946bad9aaf954c035979bc2f67a6d078533922ceb124fd2978033b6",
+    "README.md": "46b23dbadaaddafe4c72df795dc17351e35729df2359335ebd7dd8f71ac57f97",
+    "source-proof.mjs": "69d05d3c665bfcea0dd31eaaecb26291d5bbd295d86afa2ea3d86ebee2b2e0e8"
+  },
+  "first_runner_and_current_differ_only_windows_preload_file_uri_setup": true,
+  "final_own_quality": {
+    "ruff": 0,
+    "mypy_one_file": 0,
+    "node_check_three_mjs": 0
+  },
+  "review": {
+    "new_material_findings": [],
+    "recommendation": "SHIP_FINITE_ONLY_SLICE_SUBJECT_TO_OTHER_PR_GATES",
+    "independent_agents": 1,
+    "not_two_gate_owners": true
+  },
+  "not_run": [
+    "density342/d017",
+    "old29/browser-all-kind-matrix",
+    "author270/fullnpm",
+    "10M/scale",
+    "other-engines",
+    "fullPython",
+    "package/install",
+    "integrated-final-head-CI",
+    "R33-consumer-code-not-written-product-not-run"
+  ],
+  "origins": [
+    {
+      "pid": 27872,
+      "source_sha": "c3ee1edbfc65406cef7fd809f5a6887471d576a5",
+      "public_entry": "file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-09-finite-c3ee-ses_de56782e5ffe3H1lUAoxrBtEhx/packages/deepviz/dist/index.js",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r34_probes\\role09\\bounded-finite-browser.test.mjs"
+      ],
+      "node": "v26.13.1",
+      "source_and_all_fresh_dist_hashes_verified_before_public_import": true
+    },
+    {
+      "pid": 40016,
+      "source_sha": "c3ee1edbfc65406cef7fd809f5a6887471d576a5",
+      "public_entry": "file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-09-finite-c3ee-ses_de56782e5ffe3H1lUAoxrBtEhx/packages/deepviz/dist/index.js",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-09-helper-null-ses_de56782e5ffe3H1lUAoxrBtEhx\\tests\\r34_probes\\role09\\original-finite-setup-adapted.test.mjs"
+      ],
+      "node": "v26.13.1",
+      "source_and_all_fresh_dist_hashes_verified_before_public_import": true
+    },
+    {
+      "pid": 41588,
+      "source_sha": "c3ee1edbfc65406cef7fd809f5a6887471d576a5",
+      "public_entry": "file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-09-finite-c3ee-ses_de56782e5ffe3H1lUAoxrBtEhx/packages/deepviz/dist/index.js",
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-09-finite-c3ee-ses_de56782e5ffe3H1lUAoxrBtEhx\\packages\\deepviz\\test\\test_r23_svg_finite_density.test.mjs"
+      ],
+      "node": "v26.13.1",
+      "source_and_all_fresh_dist_hashes_verified_before_public_import": true
+    }
+  ],
+  "publication_preflight": {
+    "own_branch": "agents/r10-09-helper-null-fix",
+    "expected_parent_and_remote": "e549a489db289ba08cf82f97c95e6c15ec2eef2f",
+    "origin_exact_expected_https_repo": true,
+    "git_author_configured": true,
+    "new_api_identity_get": "NOT_RUN_EXPLICIT_NO_API_SCOPE",
+    "no_credentials_read_or_saved": true
+  }
+}
