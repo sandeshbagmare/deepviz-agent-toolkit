@@ -1,0 +1,23 @@
+{
+  "repeat": {"id": "repeat", "measure": -3.25, "parent": {"id": "root"}},
+  "distinct": {"id": "tail", "measure": 8.5, "parent": {"id": "leaf"}},
+  "expected_five": [
+    {"id": "repeat", "measure": -3.25, "parent.id": "root"},
+    {"id": "repeat", "measure": -3.25, "parent.id": "root"},
+    {"id": "repeat", "measure": -3.25, "parent.id": "root"},
+    {"id": "tail", "measure": 8.5, "parent.id": "leaf"},
+    {"id": "repeat", "measure": -3.25, "parent.id": "root"}
+  ],
+  "successes": [
+    "nodes-auto", "edges-auto", "mixed-auto", "nested-select",
+    "siblings-select", "pages-envelope-select", "warnings-late",
+    "missing-branch-select", "all-empty"
+  ],
+  "late_faults": ["edge-without-node", "node-field-collision", "error-only-response", "error-only-no-data", "error-only-empty-data"],
+  "known_sibling_variants": ["nodes-scalar", "nodes-nested", "edges-scalar", "edges-nested"],
+  "limits": {"max_pages": 4, "valid_prefix_rows": 40, "max_expected_rows": 45},
+  "unspecified_policy": [
+    "Automatic interpretation of a pages-named object versus an ordinary nested column is a previously reported N12 inference question, not a new defect here.",
+    "Primitive scalar nodes may be legitimate toolkit scalar inputs; no object-only GraphQL node policy is invented by this suite."
+  ]
+}

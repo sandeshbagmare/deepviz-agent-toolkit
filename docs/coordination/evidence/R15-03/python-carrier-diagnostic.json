@@ -1,0 +1,171 @@
+{
+  "recorded_at": "2026-11-27T14:36:31.278061+00:00",
+  "python": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+  "version": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "identity": {
+    "deepviz.normalize": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-03-echarts-numeric-x-ses_de5678315ffeDxQVEpE9V9WSTE\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+    },
+    "deepviz.models": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-03-echarts-numeric-x-ses_de5678315ffeDxQVEpE9V9WSTE\\python\\deepviz\\src\\deepviz\\models.py",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    "pytest": {
+      "path": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\pytest\\__init__.py",
+      "sha256": "df9445a69f8fa85f8f0569c3b166fcd681117cf23ea0924752b1bb314c5d7326"
+    }
+  },
+  "expected_source": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "observations": [
+    {
+      "variant": "null-data",
+      "carrier": "direct",
+      "outcome": "rejected",
+      "error_type": "ValueError",
+      "message": "GraphQL response contains errors and no data"
+    },
+    {
+      "variant": "null-data",
+      "carrier": "list",
+      "outcome": "rejected",
+      "error_type": "ValueError",
+      "message": "GraphQL response contains errors and no data"
+    },
+    {
+      "variant": "null-data",
+      "carrier": "json",
+      "outcome": "rejected",
+      "error_type": "ValueError",
+      "message": "GraphQL response contains errors and no data"
+    },
+    {
+      "variant": "null-data",
+      "carrier": "iterator",
+      "outcome": "rejected",
+      "error_type": "ValueError",
+      "message": "GraphQL response contains errors and no data"
+    },
+    {
+      "variant": "null-data",
+      "carrier": "explicit",
+      "outcome": "rejected",
+      "error_type": "ValueError",
+      "message": "GraphQL response contains errors and no data"
+    },
+    {
+      "variant": "no-data",
+      "carrier": "direct",
+      "outcome": "rejected",
+      "error_type": "ValueError",
+      "message": "GraphQL response contains errors and no data"
+    },
+    {
+      "variant": "no-data",
+      "carrier": "list",
+      "outcome": "rejected",
+      "error_type": "ValueError",
+      "message": "GraphQL response contains errors and no data"
+    },
+    {
+      "variant": "no-data",
+      "carrier": "json",
+      "outcome": "rejected",
+      "error_type": "ValueError",
+      "message": "GraphQL response contains errors and no data"
+    },
+    {
+      "variant": "no-data",
+      "carrier": "iterator",
+      "outcome": "rejected",
+      "error_type": "ValueError",
+      "message": "GraphQL response contains errors and no data"
+    },
+    {
+      "variant": "no-data",
+      "carrier": "explicit",
+      "outcome": "rejected",
+      "error_type": "ValueError",
+      "message": "GraphQL response contains errors and no data"
+    },
+    {
+      "variant": "empty-data",
+      "carrier": "direct",
+      "outcome": "rejected",
+      "error_type": "ValueError",
+      "message": "GraphQL response contains errors and no data"
+    },
+    {
+      "variant": "empty-data",
+      "carrier": "list",
+      "outcome": "rejected",
+      "error_type": "ValueError",
+      "message": "GraphQL response contains errors and no data"
+    },
+    {
+      "variant": "empty-data",
+      "carrier": "json",
+      "outcome": "rejected",
+      "error_type": "ValueError",
+      "message": "GraphQL response contains errors and no data"
+    },
+    {
+      "variant": "empty-data",
+      "carrier": "iterator",
+      "outcome": "rejected",
+      "error_type": "ValueError",
+      "message": "GraphQL response contains errors and no data"
+    },
+    {
+      "variant": "empty-data",
+      "carrier": "explicit",
+      "outcome": "rejected",
+      "error_type": "ValueError",
+      "message": "GraphQL response contains errors and no data"
+    },
+    {
+      "variant": "N12-known-pages-wrapper-policy",
+      "carrier": "auto",
+      "outcome": "returned",
+      "records": [
+        {
+          "pages.data.feed.nodes.0.id": "one",
+          "pages.data.feed.totalCount": 987654321,
+          "pages.data.feed.pageInfo.hasNextPage": true,
+          "pages.data.feed.pageInfo.endCursor": "same-cursor"
+        },
+        {
+          "pages.data.feed.totalCount": 987654321,
+          "pages.data.feed.pageInfo.hasNextPage": true,
+          "pages.data.feed.pageInfo.endCursor": "same-cursor"
+        },
+        {
+          "pages.data.feed.nodes.0.id": "two",
+          "pages.data.feed.totalCount": 987654321,
+          "pages.data.feed.pageInfo.hasNextPage": true,
+          "pages.data.feed.pageInfo.endCursor": "same-cursor"
+        }
+      ],
+      "input_count": 3,
+      "warnings": [],
+      "strategy": "none"
+    },
+    {
+      "variant": "N12-known-pages-wrapper-policy",
+      "carrier": "explicit",
+      "outcome": "returned",
+      "records": [
+        {
+          "id": "one"
+        },
+        {
+          "id": "two"
+        }
+      ],
+      "input_count": 2,
+      "warnings": [],
+      "strategy": "none"
+    }
+  ],
+  "claim": "observed public controls; diagnostic exit0 is not full acceptance"
+}
