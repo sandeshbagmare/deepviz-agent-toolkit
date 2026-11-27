@@ -1,0 +1,918 @@
+TAP version 13
+# Subtest: R17 pairwise oracle rejects overlap but not edge contact or separate rows
+ok 1 - R17 pairwise oracle rejects overlap but not edge contact or separate rows
+  ---
+  duration_ms: 598.9574
+  type: 'test'
+  ...
+# Subtest: R17 ordinary-eight 240x200 svg: complete category labels do not overlap
+not ok 2 - R17 ordinary-eight 240x200 svg: complete category labels do not overlap
+  ---
+  duration_ms: 1238.927
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-12-svg-tick-margin-ses_de5678115ffewUEpZFi8faBW8C\\tests\\r17_probes\\role12\\category-density.test.mjs:52:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    category glyph boxes overlap: ordinary-eight-240-svg, minimum horizontal gap -0.72265625px
+    + actual - expected
+    
+    + [
+    +   {
+    +     a: 'g0',
+    +     b: 'g1',
+    +     height: 14,
+    +     width: 0.72265625
+    +   },
+    +   {
+    +     a: 'g1',
+    +     b: 'g2',
+    +     height: 14,
+    +     width: 0.72265625
+    +   },
+    +   {
+    +     a: 'g2',
+    +     b: 'g3',
+    +     height: 14,
+    +     width: 0.72265625
+    +   },
+    +   {
+    +     a: 'g3',
+    +     b: 'g4',
+    +     height: 14,
+    +     width: 0.72265625
+    +   },
+    +   {
+    +     a: 'g4',
+    +     b: 'g5',
+    +     height: 14,
+    +     width: 0.72265625
+    +   },
+    +   {
+    +     a: 'g5',
+    +     b: 'g6',
+    +     height: 14,
+    +     width: 0.72265625
+    +   },
+    +   {
+    +     a: 'g6',
+    +     b: 'g7',
+    +     height: 14,
+    +     width: 0.72265625
+    +   }
+    + ]
+    - []
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0:
+      a: 'g0'
+      b: 'g1'
+      width: 0.72265625
+      height: 14
+    1:
+      a: 'g1'
+      b: 'g2'
+      width: 0.72265625
+      height: 14
+    2:
+      a: 'g2'
+      b: 'g3'
+      width: 0.72265625
+      height: 14
+    3:
+      a: 'g3'
+      b: 'g4'
+      width: 0.72265625
+      height: 14
+    4:
+      a: 'g4'
+      b: 'g5'
+      width: 0.72265625
+      height: 14
+    5:
+      a: 'g5'
+      b: 'g6'
+      width: 0.72265625
+      height: 14
+    6:
+      a: 'g6'
+      b: 'g7'
+      width: 0.72265625
+      height: 14
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r11-12-svg-tick-margin-ses_de5678115ffewUEpZFi8faBW8C/tests/r17_probes/role12/category-density.test.mjs:123:14)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# {"stem":"ordinary-eight-240-svg","plot_left":72,"plot_width":103,"category_slot_width":12.875,"adjacent_gaps":[-0.72265625,-0.72265625,-0.72265625,-0.72265625,-0.72265625,-0.72265625,-0.72265625],"min_adjacent_gap":-0.72265625,"overlapping_pairs":[{"a":"g0","b":"g1","width":0.72265625,"height":14},{"a":"g1","b":"g2","width":0.72265625,"height":14},{"a":"g2","b":"g3","width":0.72265625,"height":14},{"a":"g3","b":"g4","width":0.72265625,"height":14},{"a":"g4","b":"g5","width":0.72265625,"height":14},{"a":"g5","b":"g6","width":0.72265625,"height":14},{"a":"g6","b":"g7","width":0.72265625,"height":14}],"clipped":0,"console_errors":0,"page_errors":0}
+# Subtest: R17 ordinary-eight 240x200 html: complete category labels do not overlap
+not ok 3 - R17 ordinary-eight 240x200 html: complete category labels do not overlap
+  ---
+  duration_ms: 385.4076
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-12-svg-tick-margin-ses_de5678115ffewUEpZFi8faBW8C\\tests\\r17_probes\\role12\\category-density.test.mjs:52:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    category glyph boxes overlap: ordinary-eight-240-html, minimum horizontal gap -0.72265625px
+    + actual - expected
+    
+    + [
+    +   {
+    +     a: 'g0',
+    +     b: 'g1',
+    +     height: 14,
+    +     width: 0.72265625
+    +   },
+    +   {
+    +     a: 'g1',
+    +     b: 'g2',
+    +     height: 14,
+    +     width: 0.72265625
+    +   },
+    +   {
+    +     a: 'g2',
+    +     b: 'g3',
+    +     height: 14,
+    +     width: 0.72265625
+    +   },
+    +   {
+    +     a: 'g3',
+    +     b: 'g4',
+    +     height: 14,
+    +     width: 0.72265625
+    +   },
+    +   {
+    +     a: 'g4',
+    +     b: 'g5',
+    +     height: 14,
+    +     width: 0.72265625
+    +   },
+    +   {
+    +     a: 'g5',
+    +     b: 'g6',
+    +     height: 14,
+    +     width: 0.72265625
+    +   },
+    +   {
+    +     a: 'g6',
+    +     b: 'g7',
+    +     height: 14,
+    +     width: 0.72265625
+    +   }
+    + ]
+    - []
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0:
+      a: 'g0'
+      b: 'g1'
+      width: 0.72265625
+      height: 14
+    1:
+      a: 'g1'
+      b: 'g2'
+      width: 0.72265625
+      height: 14
+    2:
+      a: 'g2'
+      b: 'g3'
+      width: 0.72265625
+      height: 14
+    3:
+      a: 'g3'
+      b: 'g4'
+      width: 0.72265625
+      height: 14
+    4:
+      a: 'g4'
+      b: 'g5'
+      width: 0.72265625
+      height: 14
+    5:
+      a: 'g5'
+      b: 'g6'
+      width: 0.72265625
+      height: 14
+    6:
+      a: 'g6'
+      b: 'g7'
+      width: 0.72265625
+      height: 14
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r11-12-svg-tick-margin-ses_de5678115ffewUEpZFi8faBW8C/tests/r17_probes/role12/category-density.test.mjs:123:14)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# {"stem":"ordinary-eight-240-html","plot_left":72,"plot_width":103,"category_slot_width":12.875,"adjacent_gaps":[-0.72265625,-0.72265625,-0.72265625,-0.72265625,-0.72265625,-0.72265625,-0.72265625],"min_adjacent_gap":-0.72265625,"overlapping_pairs":[{"a":"g0","b":"g1","width":0.72265625,"height":14},{"a":"g1","b":"g2","width":0.72265625,"height":14},{"a":"g2","b":"g3","width":0.72265625,"height":14},{"a":"g3","b":"g4","width":0.72265625,"height":14},{"a":"g4","b":"g5","width":0.72265625,"height":14},{"a":"g5","b":"g6","width":0.72265625,"height":14},{"a":"g6","b":"g7","width":0.72265625,"height":14}],"clipped":0,"console_errors":0,"page_errors":0}
+# Subtest: R17 ordinary-eight 960x540 svg: complete category labels do not overlap
+ok 4 - R17 ordinary-eight 960x540 svg: complete category labels do not overlap
+  ---
+  duration_ms: 175.3746
+  type: 'test'
+  ...
+# {"stem":"ordinary-eight-960-svg","plot_left":72,"plot_width":823,"category_slot_width":102.875,"adjacent_gaps":[89.27734375,89.27734375,89.27734375,89.27734375,89.27734375,89.27734375,89.27734375],"min_adjacent_gap":89.27734375,"overlapping_pairs":[],"clipped":0,"console_errors":0,"page_errors":0}
+# Subtest: R17 ordinary-eight 960x540 html: complete category labels do not overlap
+ok 5 - R17 ordinary-eight 960x540 html: complete category labels do not overlap
+  ---
+  duration_ms: 172.6593
+  type: 'test'
+  ...
+# {"stem":"ordinary-eight-960-html","plot_left":72,"plot_width":823,"category_slot_width":102.875,"adjacent_gaps":[89.27734375,89.27734375,89.27734375,89.27734375,89.27734375,89.27734375,89.27734375],"min_adjacent_gap":89.27734375,"overlapping_pairs":[],"clipped":0,"console_errors":0,"page_errors":0}
+# Subtest: R17 unicode-eight 240x200 svg: complete category labels do not overlap
+not ok 6 - R17 unicode-eight 240x200 svg: complete category labels do not overlap
+  ---
+  duration_ms: 152.164
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-12-svg-tick-margin-ses_de5678115ffewUEpZFi8faBW8C\\tests\\r17_probes\\role12\\category-density.test.mjs:52:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    category glyph boxes overlap: unicode-eight-240-svg, minimum horizontal gap -79.125px
+    + actual - expected
+    
+    + [
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2',
+    +     height: 14,
+    +     width: 79.125
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3',
+    +     height: 14,
+    +     width: 66.25
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4',
+    +     height: 14,
+    +     width: 53.375
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5',
+    +     height: 14,
+    +     width: 40.5
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6',
+    +     height: 14,
+    +     width: 27.625
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7',
+    +     height: 14,
+    +     width: 14.75
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8',
+    +     height: 14,
+    +     width: 1.875
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3',
+    +     height: 14,
+    +     width: 79.125
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4',
+    +     height: 14,
+    +     width: 66.25
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5',
+    +     height: 14,
+    +     width: 53.375
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6',
+    +     height: 14,
+    +     width: 40.5
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7',
+    +     height: 14,
+    +     width: 27.625
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8',
+    +     height: 14,
+    +     width: 14.75
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4',
+    +     height: 14,
+    +     width: 79.125
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5',
+    +     height: 14,
+    +     width: 66.25
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6',
+    +     height: 14,
+    +     width: 53.375
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7',
+    +     height: 14,
+    +     width: 40.5
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8',
+    +     height: 14,
+    +     width: 27.625
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5',
+    +     height: 14,
+    +     width: 79.125
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6',
+    +     height: 14,
+    +     width: 66.25
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7',
+    +     height: 14,
+    +     width: 53.375
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8',
+    +     height: 14,
+    +     width: 40.5
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6',
+    +     height: 14,
+    +     width: 79.125
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7',
+    +     height: 14,
+    +     width: 66.25
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8',
+    +     height: 14,
+    +     width: 53.375
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7',
+    +     height: 14,
+    +     width: 79.125
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8',
+    +     height: 14,
+    +     width: 66.25
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8',
+    +     height: 14,
+    +     width: 79.125
+    +   }
+    + ]
+    - []
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2'
+      width: 79.125
+      height: 14
+    1:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3'
+      width: 66.25
+      height: 14
+    2:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4'
+      width: 53.375
+      height: 14
+    3:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5'
+      width: 40.5
+      height: 14
+    4:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6'
+      width: 27.625
+      height: 14
+    5:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7'
+      width: 14.75
+      height: 14
+    6:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8'
+      width: 1.875
+      height: 14
+    7:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3'
+      width: 79.125
+      height: 14
+    8:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4'
+      width: 66.25
+      height: 14
+    9:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5'
+      width: 53.375
+      height: 14
+    10:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6'
+      width: 40.5
+      height: 14
+    11:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7'
+      width: 27.625
+      height: 14
+    12:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8'
+      width: 14.75
+      height: 14
+    13:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4'
+      width: 79.125
+      height: 14
+    14:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5'
+      width: 66.25
+      height: 14
+    15:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6'
+      width: 53.375
+      height: 14
+    16:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7'
+      width: 40.5
+      height: 14
+    17:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8'
+      width: 27.625
+      height: 14
+    18:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5'
+      width: 79.125
+      height: 14
+    19:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6'
+      width: 66.25
+      height: 14
+    20:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7'
+      width: 53.375
+      height: 14
+    21:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8'
+      width: 40.5
+      height: 14
+    22:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6'
+      width: 79.125
+      height: 14
+    23:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7'
+      width: 66.25
+      height: 14
+    24:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8'
+      width: 53.375
+      height: 14
+    25:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7'
+      width: 79.125
+      height: 14
+    26:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8'
+      width: 66.25
+      height: 14
+    27:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8'
+      width: 79.125
+      height: 14
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r11-12-svg-tick-margin-ses_de5678115ffewUEpZFi8faBW8C/tests/r17_probes/role12/category-density.test.mjs:123:14)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# {"stem":"unicode-eight-240-svg","plot_left":72,"plot_width":103,"category_slot_width":12.875,"adjacent_gaps":[-79.125,-79.125,-79.125,-79.125,-79.125,-79.125,-79.125],"min_adjacent_gap":-79.125,"overlapping_pairs":[{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2","width":79.125,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3","width":66.25,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4","width":53.375,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5","width":40.5,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6","width":27.625,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7","width":14.75,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8","width":1.875,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3","width":79.125,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4","width":66.25,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5","width":53.375,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6","width":40.5,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7","width":27.625,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8","width":14.75,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4","width":79.125,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5","width":66.25,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6","width":53.375,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7","width":40.5,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8","width":27.625,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5","width":79.125,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6","width":66.25,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7","width":53.375,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8","width":40.5,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6","width":79.125,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7","width":66.25,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8","width":53.375,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7","width":79.125,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8","width":66.25,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8","width":79.125,"height":14}],"clipped":0,"console_errors":0,"page_errors":0}
+# Subtest: R17 unicode-eight 240x200 html: complete category labels do not overlap
+not ok 7 - R17 unicode-eight 240x200 html: complete category labels do not overlap
+  ---
+  duration_ms: 174.8021
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-12-svg-tick-margin-ses_de5678115ffewUEpZFi8faBW8C\\tests\\r17_probes\\role12\\category-density.test.mjs:52:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    category glyph boxes overlap: unicode-eight-240-html, minimum horizontal gap -79.125px
+    + actual - expected
+    
+    + [
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2',
+    +     height: 14,
+    +     width: 79.125
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3',
+    +     height: 14,
+    +     width: 66.25
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4',
+    +     height: 14,
+    +     width: 53.375
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5',
+    +     height: 14,
+    +     width: 40.5
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6',
+    +     height: 14,
+    +     width: 27.625
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7',
+    +     height: 14,
+    +     width: 14.75
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8',
+    +     height: 14,
+    +     width: 1.875
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3',
+    +     height: 14,
+    +     width: 79.125
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4',
+    +     height: 14,
+    +     width: 66.25
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5',
+    +     height: 14,
+    +     width: 53.375
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6',
+    +     height: 14,
+    +     width: 40.5
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7',
+    +     height: 14,
+    +     width: 27.625
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8',
+    +     height: 14,
+    +     width: 14.75
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4',
+    +     height: 14,
+    +     width: 79.125
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5',
+    +     height: 14,
+    +     width: 66.25
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6',
+    +     height: 14,
+    +     width: 53.375
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7',
+    +     height: 14,
+    +     width: 40.5
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8',
+    +     height: 14,
+    +     width: 27.625
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5',
+    +     height: 14,
+    +     width: 79.125
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6',
+    +     height: 14,
+    +     width: 66.25
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7',
+    +     height: 14,
+    +     width: 53.375
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8',
+    +     height: 14,
+    +     width: 40.5
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6',
+    +     height: 14,
+    +     width: 79.125
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7',
+    +     height: 14,
+    +     width: 66.25
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8',
+    +     height: 14,
+    +     width: 53.375
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7',
+    +     height: 14,
+    +     width: 79.125
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8',
+    +     height: 14,
+    +     width: 66.25
+    +   },
+    +   {
+    +     a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7',
+    +     b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8',
+    +     height: 14,
+    +     width: 79.125
+    +   }
+    + ]
+    - []
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2'
+      width: 79.125
+      height: 14
+    1:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3'
+      width: 66.25
+      height: 14
+    2:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4'
+      width: 53.375
+      height: 14
+    3:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5'
+      width: 40.5
+      height: 14
+    4:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6'
+      width: 27.625
+      height: 14
+    5:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7'
+      width: 14.75
+      height: 14
+    6:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8'
+      width: 1.875
+      height: 14
+    7:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3'
+      width: 79.125
+      height: 14
+    8:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4'
+      width: 66.25
+      height: 14
+    9:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5'
+      width: 53.375
+      height: 14
+    10:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6'
+      width: 40.5
+      height: 14
+    11:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7'
+      width: 27.625
+      height: 14
+    12:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8'
+      width: 14.75
+      height: 14
+    13:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4'
+      width: 79.125
+      height: 14
+    14:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5'
+      width: 66.25
+      height: 14
+    15:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6'
+      width: 53.375
+      height: 14
+    16:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7'
+      width: 40.5
+      height: 14
+    17:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8'
+      width: 27.625
+      height: 14
+    18:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5'
+      width: 79.125
+      height: 14
+    19:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6'
+      width: 66.25
+      height: 14
+    20:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7'
+      width: 53.375
+      height: 14
+    21:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8'
+      width: 40.5
+      height: 14
+    22:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6'
+      width: 79.125
+      height: 14
+    23:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7'
+      width: 66.25
+      height: 14
+    24:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8'
+      width: 53.375
+      height: 14
+    25:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7'
+      width: 79.125
+      height: 14
+    26:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8'
+      width: 66.25
+      height: 14
+    27:
+      a: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7'
+      b: 'µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8'
+      width: 79.125
+      height: 14
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r11-12-svg-tick-margin-ses_de5678115ffewUEpZFi8faBW8C/tests/r17_probes/role12/category-density.test.mjs:123:14)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# {"stem":"unicode-eight-240-html","plot_left":72,"plot_width":103,"category_slot_width":12.875,"adjacent_gaps":[-79.125,-79.125,-79.125,-79.125,-79.125,-79.125,-79.125],"min_adjacent_gap":-79.125,"overlapping_pairs":[{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2","width":79.125,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3","width":66.25,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4","width":53.375,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5","width":40.5,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6","width":27.625,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7","width":14.75,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù1","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8","width":1.875,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3","width":79.125,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4","width":66.25,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5","width":53.375,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6","width":40.5,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7","width":27.625,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù2","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8","width":14.75,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4","width":79.125,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5","width":66.25,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6","width":53.375,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7","width":40.5,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù3","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8","width":27.625,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5","width":79.125,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6","width":66.25,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7","width":53.375,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù4","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8","width":40.5,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6","width":79.125,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7","width":66.25,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù5","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8","width":53.375,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7","width":79.125,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù6","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8","width":66.25,"height":14},{"a":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù7","b":"µ¥▒Σ║¼Θâ╜µ¥▒Θâ¿µö»σ║ù8","width":79.125,"height":14}],"clipped":0,"console_errors":0,"page_errors":0}
+# Subtest: R17 unicode-eight 960x540 svg: complete category labels do not overlap
+ok 8 - R17 unicode-eight 960x540 svg: complete category labels do not overlap
+  ---
+  duration_ms: 146.692
+  type: 'test'
+  ...
+# {"stem":"unicode-eight-960-svg","plot_left":72,"plot_width":823,"category_slot_width":102.875,"adjacent_gaps":[10.875,10.875,10.875,10.875,10.875,10.875,10.875],"min_adjacent_gap":10.875,"overlapping_pairs":[],"clipped":0,"console_errors":0,"page_errors":0}
+# Subtest: R17 unicode-eight 960x540 html: complete category labels do not overlap
+ok 9 - R17 unicode-eight 960x540 html: complete category labels do not overlap
+  ---
+  duration_ms: 191.5435
+  type: 'test'
+  ...
+# {"stem":"unicode-eight-960-html","plot_left":72,"plot_width":823,"category_slot_width":102.875,"adjacent_gaps":[10.875,10.875,10.875,10.875,10.875,10.875,10.875],"min_adjacent_gap":10.875,"overlapping_pairs":[],"clipped":0,"console_errors":0,"page_errors":0}
+1..9
+# tests 9
+# suites 0
+# pass 5
+# fail 4
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4141.2145

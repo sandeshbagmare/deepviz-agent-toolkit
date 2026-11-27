@@ -1,0 +1,51 @@
+# R17-12: strict category-density regression and policy proposal
+
+## Pre-work checkpoint
+
+- Owner/session: `ses_de5678115ffewUEpZFi8faBW8C`; FULL R17 common+12 read. Existing isolated branch `agents/r11-12-svg-tick-margin`, HEAD and actual own remote both `f8760257e20cc0ecdbeab98c7d729d9c06048727`; worktree clean at admission. Product source matches exact tested commit `5e595a8f893955ce34a0e26553bb7bf257ea93ae` (source diff exit0).
+- Allowed writes ONLY NEW `tests/r17_probes/role12/`, own `reports/R17-12-category-density.md`, `evidence/R17-12/`, own actual-ID note. Renderer editing handed back to R04, still effective; NO new production source/test-oracle/schema/dependency edits. No workers, installs, shared candidate/default/PR/issues writes.
+- Existing compiled renderer SHA256 `7640f5147a11e795f3f78564409adae0fb21421bf59f2b95c2d4a9b83c28c4b1` and source SHA256 `be34bcb2be9e44459cb30d145386c3606933bcbdea389ba2fd3fca8d738fac80` match R11 GREEN. Reuse these actual compiled bytes; no build/unit20-browser/fullnpm257/10M replay. R10/0c5/R11 numeric RED/GREEN evidence preserved, not claimed as a new independent run.
+- Plan/acceptance: NEW strict actual text-bbox pairwise overlap tests for ordinary eight finite positive observations at240x200 and960x540, both standalone SVG and HTML. One additional finite Unicode category fixture below existing18-character label abbreviation threshold, both dimensions/carriers, tests actual fallback glyph boxes rather than assuming numeric ASCII advance. Assert eight exact full labels/row order/mark values/ratios/zero baseline/dimensions/zero console/page/runtime/network errors; save DOM/PNG before strict no-overlap assertion. Expected RED is not acceptance GREEN; containment alone is insufficient. Open real output images and quantify per-case plot width/label boxes/gaps.
+- Current action: file-first admission checkpoint. Next executable action: write NEW portable bounded browser regression+README, run it ONCE against the matching existing build to exclusive own output, preserve real RED/positive controls and then propose a minimal honest policy for R04 decision. No source correction is authorized in R17.
+
+## New regression ready / exact next command
+
+- Wrote only NEW `tests/r17_probes/role12/category-density.test.mjs` and README. Eight browser cases (2fixtures×2dimensions×2carriers), plus one small overlap-oracle self-control for true overlap/edge contact/separate rows. Unicode labels `東京都東部支店1`…`8` are finite short branch names, below18-character existing abbreviation threshold; this measures actual browser fallback boxes, not infinite-text/ASCII-font promises.
+- Next single real command: `node --test --test-reporter=tap tests/r17_probes/role12/category-density.test.mjs`, with existing read-only N21 Playwright entry and exclusive own `artifacts/local/R17-12/density-v1/`; own per-commandTEMP/TMP. Expected4minimum-widthRED,4full-sizepositive+1oracle; actual result must be read before classification. Existing compiled bytes reused unchanged, no build/install/source edit.
+
+## Actual strict result / preserved RED
+
+- Single NEW run completed **exit1:5PASS/4FAIL/0SKIP**,4141.2145ms. Four failures are actual final pairwise non-overlap assertions, NOT setup/console/containment/value failures. Four full-size real browser positives + one overlap-oracle self-control passed. Syntax check0. No replay/build/install/10M.
+- Both SVG+HTML agree: ordinary240plot103px,slot12.875px,label bbox13.59765625px,minadjacentgap **-0.72265625px**,7overlappingpairs. Ordinary960plot823px,slot102.875px,minadjacentgap **89.27734375px**,0pairs.
+- Unicode240same103pxplot/12.875pxslot,actualglyphbbox92px,minadjacentgap **-79.125px**,all28pairsintersect. Unicode960plot823px/102.875pxslot,minadjacentgap **10.875px**,0pairs. Eight complete literal labels preserved/order correct, all8nonemptybars/1..8values/heightratios/commonzero/labelcenters/dimensionsPASS. All8browsercases:0clippedtext,0console/page/runtime/external/failedrequests. Thus containment really does NOT prove readability.
+- Per-commandownTEMP/TMP/exclusive`artifacts/local/R17-12/density-v1/`;8DOM/PNG/inputresults+identityandTAPsaved. Explicitproduct/existingoraclediffvs5eexit0; reusedrendererbuildhashstill7640f5. NextOPENactualimagesandcollectcompactportableevidence/proposalonly; no productionfix authorized.
+
+## Actual images opened / one finding, not fabricated tickets
+
+- OPENED all8actualPNGsthroughimagetool: ordinary240SVG+HTMLshowrun-togetherg0..g7, Unicode240SVG+HTMLshowseverelysuperimposedbranchlabels. Both960carrierpositivesforordinaryandUnicodeshowdistinctcompletecategorystringswith8value-orderedbars. Theseareactualbrowserrenders,notartifact-existenceapproval. Noimagewasgenerated/mocked/reusedfromanotherlane.
+- Single layout finding **R17-12-D1**: native category tick selection uses category count (`ceil(n/12)`) without available plot/actual label width. Eight categories selectall8evenwhen their slots are narrower than glyph boxes. This is different from fixed numeric tick clipping and cannot be inferred fixed by its containment gate. Existing accessible HTML chart-data disclosure is visible in screenshots, but does not make overlapping visible labels readable. No new GitHub ticket/closure here; R04 alone maps this one work item.
+
+## Minimal honest policy proposal — requires R04 decision/release
+
+1. Keep the fixed numeric label margin and current literal values/dimensions/order. Choose layout from the **remaining** horizontal plot space, not chartwidth or categorycount alone. Do not regress numeric containment to recover category space.
+2. When measured/conservatively verified full labels fit, keep the current horizontal axis (four960positives prove this bounded case works). For ordinary eight2-characterlabelsat240, a two-row stagger is a small candidate: same-row centers25.75pxapart vs13.60pxlabelwidth; its two14pxrows plus a gap plausibly fit the current65pxbottom margin. This is geometric proposal, **not implemented or browser-verified**; exact bottom/axis-title clearance and global pairwise boxes must be tested before acceptance. No smaller font or lost label is needed in this ordinary case.
+3. Do NOT assert the same trick solves the92pxUnicode labels. They need many rows; rotation also consumes bottom/side space and even90°wouldleave14pxhorizontalglyphheightagainst12.875pxslots. A bounded wrap/stagger/rotation candidate must satisfy containment/non-overlap/readable-size/fulltext and leave actual plotting area. If not feasible at the requested dimensions, return a descriptive `category density cannot fit at requested dimensions` validation failure (or an explicitly requested documented table fallback exposing every label/value), rather than a successful unreadable chart. This is a per-data feasibility decision, NOT arbitrary global minimum-width/schema expansion.
+4. HTML's accessible full-data table/explicit alternative may accompany the visual, but warnings/table alone cannot promote this chart's strict overlap RED to success. Preserve full text in labels/titles/table; do not silently hide/thin/truncate, alter categories/values or claim infinite-text fitting. Existing18-characterabbreviationis outside this regression fixture and not newly authorized by this proposal.
+5. Browser/OSfallbackfontmetrics are measured here, not universally guaranteed. A producer must pick a deterministic font/measurement strategy or conservative documented bound and verify actual standaloneSVG+HTMLin the supported environment. An unmeasured string-length estimate cannot be labeled Unicode-safe. Keep the currentREDprobeimmutableasbaseline; if explicit rejection becomes approved policy, add separate strict failure/no-output and valid-layout controls rather than turning rejection into a fake chart-pass.
+
+**Decision owner:** R04, through root's supported dispatch. No source release is inferred. Request: approve a bounded two-row strategy for ordinary finite labels plus explicit infeasibility handling for unsupported density, or provide an alternative with the same literal-data/readability acceptance gates. This producer/probe author is not an independent reviewer of its own earlier numeric fix.
+
+## Checks and exclusions
+
+- Actual new browser commandexit1/5PASS4RED0SKIP; node syntax0; unchanged production/oldoraclediff0; reusedimportedrendererhash7640f5unchanged. No new build, fullnpm257, old11unit/20numericbrowser,10M, Python, cleaninstall, remoteCI or independentreview repeated. These are explicit skips, not passes.
+- Next action: save compact exact-source browser/PNG/hash/result evidence, safe expected-accountGET, explicitownpaths meaningful honestREDcommit/nonforceownpush+actualremoteSHA. R04decision/sourcefix remains blocked on policy/release, not an excuse for source editing by this lane.
+
+## Durable evidence collection checkpoint
+
+- Collector/assertions **exit0** verified actual8caseJSON/PNG/input hashes, allnumeric/label/zero/error guards, expected4RED/4browserpositive split and unchanged committed-source/buildidentity. Collector success does NOT change testexit1. Exact renderer Gitblob from5e hashesbe34; importedbuild7640, reused unchanged. No new build/test/replay was launched.
+- OWN MAIN `evidence/R17-12/`: summary.json,8one-line exact browser observations/geometry/mark arrays,actual TAP normalized fromUTF16LE/BOMPowerShelltoUTF8/LFwithbothhashes,8actuallyopenedPNGs,README. Source/probe/toolversions/precisecommands/results/skips and one-finding owner included. `git diff --check`0. Next safe authenticatedGET/user/repo+ownbranchremote preflight, explicitownedpaths publication; no issue/PR/source changes.
+
+## Exact publication preflight
+
+- SafeGCMtokenwasreadinmemoryonlywithoutstdout/argument/logpersistence. At`2026-11-27T14:40:05.114Z`, actualauthenticatedGET/user200expected`sandeshbagmare`; expectedrepo200/pushpermissiontrue; existingissue23stillopen200. Sanitizedown`github-preflight.json`only. No APIwrites/issues/PR/sharedbranchoperation.
+- Actualownbranch`git ls-remote`exit0exactf8760257matchesexistinglocalHEAD. Explicitproduct+ALLexistingnpm/browseroraclepaths`git diff --exit-code 5e...`0; onlyNEWassignedR17paths+ownreport/note/evidencenext. NextmeaningfulhonestREDcheckpointcommit/nonforceownpush+remoteSHA; notdensityfix/acceptanceGREEN.

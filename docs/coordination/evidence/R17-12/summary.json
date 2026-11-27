@@ -1,0 +1,79 @@
+{
+  "actual_session": "ses_de5678115ffewUEpZFi8faBW8C",
+  "branch": "agents/r11-12-svg-tick-margin",
+  "observed_head": "f8760257e20cc0ecdbeab98c7d729d9c06048727",
+  "exact_source_commit": "5e595a8f893955ce34a0e26553bb7bf257ea93ae",
+  "renderer_source_sha256": "be34bcb2be9e44459cb30d145386c3606933bcbdea389ba2fd3fca8d738fac80",
+  "imported_renderer_sha256": "7640f5147a11e795f3f78564409adae0fb21421bf59f2b95c2d4a9b83c28c4b1",
+  "probe_sha256": "453ffb2218dbee8b15336dd599e03629ebb66f0c773fcf84978bfb9f754c69b1",
+  "node": "v26.13.1",
+  "chromium": "159.0.8154.6",
+  "command": "node --test --test-reporter=tap tests/r17_probes/role12/category-density.test.mjs",
+  "exit": 1,
+  "pass": 5,
+  "fail": 4,
+  "skip": 0,
+  "duration_ms": 4141.2145,
+  "browser_cases": 8,
+  "fullsize_browser_positive": 4,
+  "minwidth_strict_red": 4,
+  "oracle_self_control": 1,
+  "reused_existing_build": true,
+  "build_manifest": [
+    {
+      "path": "packages/deepviz/dist/index.js",
+      "sha256": "887a0d361250e936d43f6b5f8cac4f65a024676520ad6bcfb49ab8042e355c39",
+      "bytes": 170
+    },
+    {
+      "path": "packages/deepviz/dist/render.js",
+      "sha256": "39bcd415d119e39ef3107dee4b455778541776f3901c4ae5facbb1447fcc5388",
+      "bytes": 10905
+    },
+    {
+      "path": "packages/deepviz/dist/normalize.js",
+      "sha256": "adb0493123fd478567212e76e2c6e52c828aeaa9eb5425c219b5b1a576689612",
+      "bytes": 33924
+    },
+    {
+      "path": "packages/deepviz/dist/renderers.js",
+      "sha256": "7640f5147a11e795f3f78564409adae0fb21421bf59f2b95c2d4a9b83c28c4b1",
+      "bytes": 24352
+    },
+    {
+      "path": "packages/deepviz/dist/models.js",
+      "sha256": "936bcf189c647a45ab0063dbdff5158ca5711a374e6eae7f4a00d160d91d265e",
+      "bytes": 3538
+    },
+    {
+      "path": "packages/deepviz/dist/schema.js",
+      "sha256": "a48b8860a9bfb63d757c49fbf9ebecdc1596e3bef40dfdadaf6203351b626482",
+      "bytes": 224
+    }
+  ],
+  "syntax_check_exit": 0,
+  "production_existing_oracle_diff_exit": 0,
+  "source_edits": [],
+  "screenshots_opened": 8,
+  "native_evidence_directory": "artifacts/local/R17-12/density-v1",
+  "execution_log_sha256": "5ddffd8a6aaf0a601f7ab335c56229094289053eeb9894805a27337bfdc4e920",
+  "execution_log_encoding": "UTF16LE with BOM",
+  "normalized_committed_log_sha256": "eb8c263b4911e44b38c09c9a1168cd57f9e1b4f932155394e6a9c6e67e824253",
+  "browser_cases_sha256": "31304a6120ef41cb1497a6444e6e249d975990cf1917c88c6a938eb8ace68173",
+  "assertion_scope": "Actual axis-aligned text bbox pairwise overlap for current horizontal category axis. Containment alone is insufficient.",
+  "font_limit": "Measured Chromium/Windows fallback glyph boxes only; no universal Unicode/font or rotated-glyph guarantee.",
+  "one_layout_finding": "R17-12-D1, count-only category tick selection ignores actual plot width and glyph boxes",
+  "decision_owner": "R04 via root",
+  "no_source_release": true,
+  "not_independent_review_of_own_numeric_fix": true,
+  "skipped": [
+    "new build",
+    "npm ci/install",
+    "old R11 11-unit/20-browser",
+    "full npm257 replay",
+    "10M",
+    "Python gates",
+    "remote CI",
+    "density source fix"
+  ]
+}
