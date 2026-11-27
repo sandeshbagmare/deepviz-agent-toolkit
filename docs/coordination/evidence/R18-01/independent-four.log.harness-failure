@@ -1,0 +1,66 @@
+TAP version 13
+# Subtest: fixed URL copies ignore cwd, environment and traversal/URL argv; no unrelated cleanup
+not ok 1 - fixed URL copies ignore cwd, environment and traversal/URL argv; no unrelated cleanup
+  ---
+  duration_ms: 32.7997
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\tests\\r18_probes\\role01\\prompt-copy-review.test.mjs:49:1'
+  failureType: 'testCodeFailure'
+  error: "ENOENT: no such file or directory, mkdtemp 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R18-01\\fixtures\\copy space # % caf\x161-XXXXXX'"
+  code: 'ENOENT'
+  stack: |-
+    async mkdtemp (node:internal/fs/promises:2131:10)
+    async fixture (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q/tests/r18_probes/role01/prompt-copy-review.test.mjs:20:14)
+    async TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q/tests/r18_probes/role01/prompt-copy-review.test.mjs:50:15)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: raw policy-looking markup and placeholder text are copied without interpretation
+not ok 2 - raw policy-looking markup and placeholder text are copied without interpretation
+  ---
+  duration_ms: 7.9504
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\tests\\r18_probes\\role01\\prompt-copy-review.test.mjs:60:1'
+  failureType: 'testCodeFailure'
+  error: "ENOENT: no such file or directory, mkdtemp 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R18-01\\fixtures\\copy space # % caf\x161-XXXXXX'"
+  code: 'ENOENT'
+  stack: |-
+    async mkdtemp (node:internal/fs/promises:2131:10)
+    async fixture (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q/tests/r18_probes/role01/prompt-copy-review.test.mjs:20:14)
+    async TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q/tests/r18_probes/role01/prompt-copy-review.test.mjs:61:15)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: missing canonical system asset fails nonzero and names asset; partial copies are not success
+not ok 3 - missing canonical system asset fails nonzero and names asset; partial copies are not success
+  ---
+  duration_ms: 2.7527
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\tests\\r18_probes\\role01\\prompt-copy-review.test.mjs:69:1'
+  failureType: 'testCodeFailure'
+  error: "ENOENT: no such file or directory, mkdtemp 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R18-01\\fixtures\\copy space # % caf\x161-XXXXXX'"
+  code: 'ENOENT'
+  stack: |-
+    async mkdtemp (node:internal/fs/promises:2131:10)
+    async fixture (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q/tests/r18_probes/role01/prompt-copy-review.test.mjs:20:14)
+    async TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q/tests/r18_probes/role01/prompt-copy-review.test.mjs:70:15)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: prior metadata and source exports remain unchanged; three raw Markdown subpaths are additive
+ok 4 - prior metadata and source exports remain unchanged; three raw Markdown subpaths are additive
+  ---
+  duration_ms: 6.7071
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 1
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 338.5352
+
+--- stderr ---

@@ -1,0 +1,36 @@
+TAP version 13
+# Subtest: fixed URL copies ignore cwd, environment and traversal/URL argv; no unrelated cleanup
+ok 1 - fixed URL copies ignore cwd, environment and traversal/URL argv; no unrelated cleanup
+  ---
+  duration_ms: 459.3937
+  type: 'test'
+  ...
+# Subtest: raw policy-looking markup and placeholder text are copied without interpretation
+ok 2 - raw policy-looking markup and placeholder text are copied without interpretation
+  ---
+  duration_ms: 225.6244
+  type: 'test'
+  ...
+# Subtest: missing canonical system asset fails nonzero and names asset; partial copies are not success
+ok 3 - missing canonical system asset fails nonzero and names asset; partial copies are not success
+  ---
+  duration_ms: 1150.2826
+  type: 'test'
+  ...
+# Subtest: prior metadata and source exports remain unchanged; three raw Markdown subpaths are additive
+ok 4 - prior metadata and source exports remain unchanged; three raw Markdown subpaths are additive
+  ---
+  duration_ms: 3.6931
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2502.3726
+
+--- stderr ---

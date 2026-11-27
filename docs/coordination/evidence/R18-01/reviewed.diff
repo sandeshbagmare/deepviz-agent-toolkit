@@ -1,0 +1,113 @@
+diff --git a/packages/deepviz/README.md b/packages/deepviz/README.md
+index 4a34d74..2b3e1af 100644
+--- a/packages/deepviz/README.md
++++ b/packages/deepviz/README.md
+@@ -77,6 +77,25 @@ is nested. `validateSpec` enforces these rules at runtime as well. JavaScript
+ validation intentionally does not coerce strings into
+ numbers. Model-authored schemas cannot supply code, renderer options, or URLs.
+ 
++### Versioned raw prompts
++
++The tarball includes byte-identical copies of the canonical `prompts/v1/README.md`,
++`system.md` and `request.md`. These are raw Markdown resources, not executable
++templates or a JavaScript/browser prompt-reader API. In a Node.js ESM consumer:
++
++```js
++import { readFile } from 'node:fs/promises';
++
++const systemPrompt = await readFile(
++  new URL(import.meta.resolve('@deepviz/agent-toolkit/prompts/v1/system.md')),
++  'utf8',
++);
++```
++
++The `README.md` and `request.md` subpaths use the same versioned prefix. Rebuild
++and reinstall after changing the canonical source prompts; do not edit generated
++copies. Prompt text is guidance, not a security sandbox.
++
+ ### Contract defaults
+ 
+ `version: 1`, `kind: 'bar'`, `title: 'Visualization'`, `description: ''`,
+diff --git a/packages/deepviz/package.json b/packages/deepviz/package.json
+index a5109f6..5a0bfa5 100644
+--- a/packages/deepviz/package.json
++++ b/packages/deepviz/package.json
+@@ -7,12 +7,15 @@
+   "engines": {"node": ">=22"},
+   "exports": {
+     ".": {"types": "./dist/index.d.ts", "import": "./dist/index.js"},
+-    "./chart-spec.schema.json": "./dist/chart-spec.schema.json"
++    "./chart-spec.schema.json": "./dist/chart-spec.schema.json",
++    "./prompts/v1/README.md": "./dist/prompts/v1/README.md",
++    "./prompts/v1/system.md": "./dist/prompts/v1/system.md",
++    "./prompts/v1/request.md": "./dist/prompts/v1/request.md"
+   },
+   "main": "./dist/index.js",
+   "types": "./dist/index.d.ts",
+   "files": ["dist", "README.md", "LICENSE"],
+   "sideEffects": false,
+-  "scripts": {"build": "tsc -p tsconfig.json", "prepack": "npm run build"},
++  "scripts": {"build": "tsc -p tsconfig.json && node scripts/copy-prompts.mjs", "prepack": "npm run build"},
+   "repository": {"type": "git", "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit.git", "directory": "packages/deepviz"}
+ }
+diff --git a/packages/deepviz/scripts/copy-prompts.mjs b/packages/deepviz/scripts/copy-prompts.mjs
+new file mode 100644
+index 0000000..194b618
+--- /dev/null
++++ b/packages/deepviz/scripts/copy-prompts.mjs
+@@ -0,0 +1,8 @@
++import {copyFile, mkdir} from 'node:fs/promises';
++
++const source=new URL('../../../prompts/v1/',import.meta.url);
++const destination=new URL('../dist/prompts/v1/',import.meta.url);
++await mkdir(destination,{recursive:true});
++for(const filename of ['README.md','system.md','request.md']) {
++  await copyFile(new URL(filename,source),new URL(filename,destination));
++}
+diff --git a/packages/deepviz/test/test_r11_packaged_prompts.test.mjs b/packages/deepviz/test/test_r11_packaged_prompts.test.mjs
+new file mode 100644
+index 0000000..d327eda
+--- /dev/null
++++ b/packages/deepviz/test/test_r11_packaged_prompts.test.mjs
+@@ -0,0 +1,41 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import {readFile, mkdtemp, rmdir} from 'node:fs/promises';
++import {spawnSync} from 'node:child_process';
++import {tmpdir} from 'node:os';
++import {fileURLToPath} from 'node:url';
++import path from 'node:path';
++
++const canonical=new URL('../../../prompts/v1/',import.meta.url);
++const packaged=new URL('../dist/prompts/v1/',import.meta.url);
++const filenames=['README.md','system.md','request.md'];
++
++for(const filename of filenames) {
++  test(`R11 packaged v1/${filename} preserves canonical bytes`,async()=>{
++    const bytes=await readFile(new URL(filename,canonical));
++    assert.deepEqual(await readFile(new URL(filename,packaged)),bytes);
++  });
++}
++
++test('R11 raw versioned exports resolve to the three generated Markdown resources',async()=>{
++  const metadata=JSON.parse(await readFile(new URL('../package.json',import.meta.url),'utf8'));
++  for(const filename of filenames) {
++    assert.equal(metadata.exports[`./prompts/v1/${filename}`],`./dist/prompts/v1/${filename}`);
++  }
++  assert.deepEqual(metadata.exports['.'],{types:'./dist/index.d.ts',import:'./dist/index.js'});
++  assert.equal(metadata.exports['./chart-spec.schema.json'],'./dist/chart-spec.schema.json');
++});
++
++test('R11 prompt copy is repeatable outside the checkout cwd and preserves emitted code',async()=>{
++  const cwd=await mkdtemp(path.join(tmpdir(),'deepviz-r11-copy-'));
++  const entry=new URL('../dist/index.js',import.meta.url);
++  const before=await readFile(entry);
++  try {
++    for(let repeat=0;repeat<2;repeat++) {
++      const result=spawnSync(process.execPath,[fileURLToPath(new URL('../scripts/copy-prompts.mjs',import.meta.url))],{cwd,encoding:'utf8',timeout:10000});
++      assert.equal(result.status,0,result.stderr);
++      for(const filename of filenames) assert.deepEqual(await readFile(new URL(filename,packaged)),await readFile(new URL(filename,canonical)));
++      assert.deepEqual(await readFile(entry),before);
++    }
++  } finally {await rmdir(cwd);}
++});

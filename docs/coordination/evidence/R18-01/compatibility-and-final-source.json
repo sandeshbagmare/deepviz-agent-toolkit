@@ -1,0 +1,90 @@
+{
+  "source": "f9c437286c9dfe2245a7d914995d90346e29c233",
+  "base": "ca25af486bf443949125df789f5b5fd1fda8bba8",
+  "environment": {
+    "node": "v26.13.1",
+    "npm": "11.20.0",
+    "typescript": "7.0.2",
+    "compiler_entry_sha256": "2219f428a7e55aaf1f7ad85b9b0f0cf5078aeb76ccc9a7c6036c92d48f492ffd"
+  },
+  "unchanged_connected_files": {
+    ".gitattributes": {
+      "unchanged": true,
+      "base_sha256": "7d45bb9e938e4a673283356240bb088a966a666cb465e3d75bfe440d80471da0",
+      "reviewed_sha256": "7d45bb9e938e4a673283356240bb088a966a666cb465e3d75bfe440d80471da0"
+    },
+    "packages/deepviz/src/chart-spec.schema.json": {
+      "unchanged": true,
+      "base_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71",
+      "reviewed_sha256": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71"
+    },
+    "packages/deepviz/src/index.ts": {
+      "unchanged": true,
+      "base_sha256": "a4c1ebd22dfdc100e28eef28b11030d5f08bb09db0da9649c22848d3ef9a8aac",
+      "reviewed_sha256": "a4c1ebd22dfdc100e28eef28b11030d5f08bb09db0da9649c22848d3ef9a8aac"
+    },
+    "packages/deepviz/src/models.ts": {
+      "unchanged": true,
+      "base_sha256": "d43d5ae0bef1d43f251ed71899a9b507c6575562e4403bd2e2ac02bd7caa43e6",
+      "reviewed_sha256": "d43d5ae0bef1d43f251ed71899a9b507c6575562e4403bd2e2ac02bd7caa43e6"
+    },
+    "packages/deepviz/src/normalize.ts": {
+      "unchanged": true,
+      "base_sha256": "d1b45d2a55dfd05361184a57da952a0da735e9b6d72c2491f908ef27bda22371",
+      "reviewed_sha256": "d1b45d2a55dfd05361184a57da952a0da735e9b6d72c2491f908ef27bda22371"
+    },
+    "packages/deepviz/src/render.ts": {
+      "unchanged": true,
+      "base_sha256": "7f0a69004d570e05b45b8c6ce10c73263652d2874362960af27baed82b3996e9",
+      "reviewed_sha256": "7f0a69004d570e05b45b8c6ce10c73263652d2874362960af27baed82b3996e9"
+    },
+    "packages/deepviz/src/renderers.ts": {
+      "unchanged": true,
+      "base_sha256": "180cb19d8bb01e5c2fe94db7e943e8430681cffadad2251d38a03fd1de5b19d0",
+      "reviewed_sha256": "180cb19d8bb01e5c2fe94db7e943e8430681cffadad2251d38a03fd1de5b19d0"
+    },
+    "packages/deepviz/src/schema.ts": {
+      "unchanged": true,
+      "base_sha256": "8150ef7a9f4e1376818c38ec0b3a76e4c1fa92a7dec8e361e24195f6e38d0537",
+      "reviewed_sha256": "8150ef7a9f4e1376818c38ec0b3a76e4c1fa92a7dec8e361e24195f6e38d0537"
+    },
+    "packages/deepviz/tsconfig.json": {
+      "unchanged": true,
+      "base_sha256": "2a202b15cdb9443825daff1589036b1dcc09f2cdb01c6274dbbcd97f7651781d",
+      "reviewed_sha256": "2a202b15cdb9443825daff1589036b1dcc09f2cdb01c6274dbbcd97f7651781d"
+    },
+    "prompts/v1/README.md": {
+      "unchanged": true,
+      "base_sha256": "324cb7f88211424f577327268f36506c8c27d1793528441458e2caba83ee0bbd",
+      "reviewed_sha256": "324cb7f88211424f577327268f36506c8c27d1793528441458e2caba83ee0bbd"
+    },
+    "prompts/v1/request.md": {
+      "unchanged": true,
+      "base_sha256": "845be71cb3141d084f036472a1c5a19670be28c16bf73c4a599a3df9d534c6f2",
+      "reviewed_sha256": "845be71cb3141d084f036472a1c5a19670be28c16bf73c4a599a3df9d534c6f2"
+    },
+    "prompts/v1/system.md": {
+      "unchanged": true,
+      "base_sha256": "b11e691e8f5d89bc2fd726d284702d6675c57c1a32ec0947ec5902040fdbaba0",
+      "reviewed_sha256": "b11e691e8f5d89bc2fd726d284702d6675c57c1a32ec0947ec5902040fdbaba0"
+    }
+  },
+  "gitattributes": "* text=auto eol=lf",
+  "runtime_JS_sources_and_existing_types_unchanged": true,
+  "snapshot_source_files_verified": 42,
+  "built_dist_files_verified": 22,
+  "copy_script_sha256": "2e29160390a79c62b13c20992ef88c639126a8bad9bee80b327d5b81e6aa06bd",
+  "unchanged_permanent_five_test_sha256": "ec5fb98f80fc2adfe8b3a40fecc82007d4b90f173cc6d2343328d7ce57abb234",
+  "deletions_or_recursive_cleanup_in_new_script": false,
+  "copy_inputs": "exact three literal .md filenames relative to import.meta.url; no argv/env/spec interpolation",
+  "raw_assets_do_not_execute": "No renderer/model/HTML integration introduced; documented raw Markdown resource only",
+  "absence_behavior": "ENOENT system.md returns1; earlier README copied and later targets stale; not atomic. npm build uses && and prepack repeats build; do not bypass failed build with --ignore-scripts as normal release path",
+  "security_scope_limit": "Trusted build checkout; not symlink-resistant sandbox, not a dataset/ChartSpec path interface",
+  "not_performed": [
+    "npm ci or dependency install",
+    "npm pack/dry-run/consumer installation; role10 separate",
+    "full npm test or browser suite",
+    "SUM/Fraction rerun",
+    "Python gates/10M/RSS/whole-repository security/remote CI"
+  ]
+}

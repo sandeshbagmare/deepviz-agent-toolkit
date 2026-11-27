@@ -179,3 +179,49 @@ Raw logs/provenance: OWN artifacts/local/R13-01/new-tests-v1/summary.json, pytho
 - Reviewedsource remains ec9f669eff28cd5351da142765b7755e3b2f484f, notOWNharnessHEAD; productiondiffempty. StrictNEW results remain2failed65passedPython/2failed61passedNode0skip; no original R10 rerun or sourcefix. One remaining residual-prefix accuracy concern requiresR04/16disposition.
 - Current action: publish small actual-receipt-only checkpoint then save final actual remote-tip receipt in MAIN; no predicted SHA/finalapproval. No own background jobs.
 - Next executable action forR04: reproduce tests/r13_probes/role01/test_sum_review.py on pinnedcorrectedcandidate and disposition F1 before universalexactSUM claims; root should review realreport and refill usefuldisjointwork after completion.
+
+
+## R13 final actual readback and handoff
+
+- Final ownedbranch tip dd73e9d498295567e5b90c9d396acfa748e02751 at14:20:11UTC: fresh safeGETuser200expectedaccount, nonforcepush0 and immediate actualremoteSHAreadback0 EXACTdd73. Firstevidencecommit8dae +receiptcommitdd73 genuine, not predicted. MAIN evidence/R13-01/publication-final.json saves actual finaltip receipt; publication.json preserves first8dae receipt in Git.
+- Finalreadback exit0: all18reviewedsource/config hashes and capturedsource/probe rawhashes unchanged; all10published evidencehashes correct; OWNworktreeclean, production/schemadiffempty. ProbePython/Node working copies have CRLF spans from append; publishedGitblobs canonicalLF. Verified byte-for-byte equality after ONLY CRLFtoLF normalization; separate raw/GitSHA256s saved final-readback.json, no semantic/oracle change or unrun test advertised.
+- Finalscope outcomes remain NEWPython2failed65passed0error0skip, NEWNode2failed61passed0skip; originalR10 knownRED preserved, not replayed. One P2 inherited residual-prefix accuracy concern at Pythonnormalize628-631/TS462-465 requiresR04/16disposition; no finalapproval/fullCI/render/10M/RSS/security/900claim.
+- Durable MAIN report docs/coordination/reports/R13-01-sum-review.md, MAIN evidence/R13-01/, portabletests tests/r13_probes/role01/ on ownremote branch agents/r10-01-correctness-regressions. No backgroundjob, produceredit, othernoteedit, sharedGit, install or spawn.
+- Currentaction: submit this actual independent boundedreview handoff. One executable nextaction forR04/root: inspect gitshow8dae tests/r13_probes/role01/ and route exactFraction residual repro before claiming universalexactSUM; preserve strictRED pending scopedproducerdisposition/frozen-candidate rerun, then refill useful disjoint work.
+
+## R18 SAME-ID package review pre-work checkpoint
+
+- Actual SAME ID ses_de5678335ffeI7xJrod5l25Q0Q nativeconfirmed. FULL MAIN R18common+01/read all otherseparation, R17F1disposition, ownnote/canonical read. SUMF1 remainsOPENP2/incompleteinheritedrepair underR04/eligible16; do NOT rerun65/61SUMoracles.
+- OWN existingbranch agents/r10-01-correctness-regressions clean HEAD dd73e9d498295567e5b90c9d396acfa748e02751; R18report absent. Exact reviewed source f9c437286c9dfe2245a7d914995d90346e29c233 and base ca25af486bf443949125df789f5b5fd1fda8bba8 confirmed Gitcommits. MAIN moving7bcfb2/source not reviewpin; producer08eae425e/reportclaims are NOT independentacceptance.
+- Allowed writes: own MAIN note, NEW reports/R18-01-npm-prompt-review.md/evidence/R18-01/, NEW tests/r18_probes/role01/ onlyasneeded, own ignored unique committed-source snapshot/build. Existing OWNbranch commits/push onlyexplicitownedpaths, expectedauthenticateduserGETmemory-safe, nonforce/exactremoteSHA. No production/existingoracles/sourceediting/installs/sharedmutations/othersnotes/issuesPRwrites/spawn.
+- Goal: inspect actual4pathsdiff+connectedbuild/prepack/exports/canonicaltrustinstructions; fixedfilenameURLcopy/cwd/determinism/backwardcompat/absencebehavior/safety. Run unchanged5permanenttests ifexistingtoolsreadilyavailable; no borrowedauthor5pass/consumer13/browser6. Role10 owns independentrealpackedconsumer; do NOT duplicatepackagepack/browser.
+- Acceptance: exactGitblob/rawnewline/build/sourcehashes+commands/exits/totals/skips; actualreproswithfilelinesifmaterialfinding; source-specificnon-authorreportnotfinalcandidate/release/fullCI/900claim. Currentaction: savepreworkthen materialize exactcommitted package+canonicalprompts/base metadata into own ignoredisolation; read4paths andcallers before NEWboundedfixturetests.
+- One executable nextaction: git diff --stat ca25af4 f9c4372 -- packages/deepviz README.md; capture fullcommitteddiff and checkout exactreviewfiles READONLYusingGitobjects, notdirtysiblingbytes.
+
+## R18 exact source/build + unchanged permanent five checkpoint
+
+- Binary materialization of42committed package/canonical/config files from f9c437286c9dfe2245a7d914995d90346e29c233 into OWNignored artifacts/local/R18-01/source-f9c4372; everybyte equals Gitblob, no siblingcopy/worktree mutation. Actual4pathsdiff+allchangedfiles read, connectedrootnpm/build/prepack/tsconfig/check-package/index/publicAPIs and3canonicalprompts read. Priorca25index/TS/canonical filesunchanged.
+- Actualroot build via installed node npm-cli.js run build with readonlysharedcompilerPATH exit0. Unchanged permanentfive node --test packages/deepviz/test/test_r11_packaged_prompts.test.mjs exit0 **5passed0failed0skip**. Notauthorclaim: rawownlogs initial-verification.json/build.log/permanent-five.log. No npmci/install/pack/browser/SUMtests.
+- Canonical?emitted?Gitblob exactbytes/hashes: README1787B/324cb7f8..., system4582B/b11e691e..., request761B/845be71c... allLF/noCR, all42sourcehashes unchanged. Script fixed3filenames+import.meta.url/copyFile; no modelargs/filesystemcleanup/network/eval. No concrete mustfix established yet; startupabsence should be tested nonzero/actionable, not assume.
+- Next executable action: add minimum NEW own fixturecontrols for cwd withspaces/#/%/Unicode, fixedname/unusedarg containment + unrelatedsentinels, missingcanonicalfile failfast/nonzero partialstate disclosure, and basepublicmetadata/sourceAPI compatibility. Keep original5oracles/source untouched; role10 remains actualpackedconsumerowner.
+
+
+### R18 independent fixture harness failure, not product RED
+
+First NEWfour run exit1=3fixturefailures1metadatapass0skip. My intendedcafUnicodefixtureprefix was accidentally encoded with controlU+0016, invalid for Windows mkdtemp; no copy-script execution occurred in those3cases. Original unchangedpermanent5remainpass. Saved full failedlog+verification with .harness-failure suffix, corrected ONLY own NEWfixtureprefix to literal\u00e9. No productsource/oracle changes/installs. Next: rerun only NEW4controls on exactsame f9source, inspect real results.
+
+## R18 independent source review execution checkpoint
+
+- Actual NEW4controls exit0 **4passed0failed0skip0cancelled2502.3726ms** after owning/correcting invalidU+0016fixture typo; first3harnessfailures retained and NOT productfindings. Fixedcopyscript itself unchanged. Spaces/#/%/Unicode/cwd/two repeats/unusedargv+env/literalmarkup+CRLFbytes/unrelatedsentinels/missingrealcanonical failure/partial-state and metadata checks allobserved.
+- Missingcanonical system.md copy exits1/ENOENT names system.md; earlierREADMEcopied/laterstale remain. This is partialfailedbuild, not atomic; npm build && and prepack build propagate failure. No normalreleasepass inferred if users bypass with--ignore-scripts. Not a demonstratedmustfix in trustedbuildcontract.
+- Actual typecheck npm-cli run typecheck exit0; Node self-reference/readexact4582B system resolves exportedresource and exposes unchanged13JSexports/no readPrompt/read_prompt. This is SELFREFERENCEONLY notpackedconsumer.12connectedfiles byteequalbase includingcanonical+tsconfig+allruntimeTS+.gitattributesLF.42sourcehashes and22ownbuilt-disthashes reverified. Node26.13.1/npm11.20.0/TS7.0.2, noinstalls. Ownprobe node--check0.
+- Currentoutcome: no concrete mustfix in 4releasedpaths; fullsource/caller/repro review. Fullnpm/browser/pack/consumer/SUM/10M/RSS/CI/900 remainunverified/notreplayed; role10independentmaterializedpackage lane separate. Source-isolation hashes/actualrawlogs artifacts/local/R18-01; finalsource identity preserved.
+- Next executable action: savecompact source-specificreport+sanitizedevidence/hashes/checkpointhistory, explicitownedstaging/scan/diff, scopedmeaningfulcommit/nonforceownpush withactualexpected-userGET/exactremoteSHA. No source/existingoracle edits or sharedwrites.
+
+
+## R18 pre-publication source-review checkpoint
+
+- Full final report saved MAIN reports/R18-01-npm-prompt-review.md and24compactevidence/sourceexcerpt files in evidence/R18-01/. No mustfix found in exactf9c437286c9dfe2245a7d914995d90346e29c233 fourpaths vs ca25; scopedsourceonlynotfinalapproval. Actual5unchangedpermanentpass+4NEWpass0skip, build/typecheck/selfreference0; initial3invalidfixtureharnessfailures recorded separately.42source/22dist/12unchangedconnected hashes verified; role10tarballconsumer stillseparate/unverifiedhere.
+- Allowedonly NEW R18ownedprobe/report/evidence/ownnote copiedtoexistingownbranch; allproduction/existingoracles remainunchanged. No SUMrerun, sourceedit, install, sharedmutations, issuesPRwrites orspawn. R13F1OPENP2/R04R17 preserved.
+- Currentaction: explicitR18ownedpathstaging/whitespace+credentialpatternscan/Gitblob+rawbyteindex verification, thenmeaningfulscopedcommit and expected-userfreshGET/nonforceownpush/exactremoteSHA. No publicationSHA predicted.
+- One executable nextaction: git diff --cached --check after ownedpathstaging; ifsafe, commit R18review/probes/evidence and safeownpublication. R04reads report+10realconsumerbeforeintegration.

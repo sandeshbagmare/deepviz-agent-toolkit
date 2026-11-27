@@ -1,0 +1,46 @@
+[
+  {
+    "label": "typecheck",
+    "argv": [
+      "node",
+      "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+      "run",
+      "typecheck"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R18-01\\source-f9c4372",
+    "exit_code": 0,
+    "log_sha256": "bf02fb7b6875f84b4bd5bf92f7c043bb17f5f17265c7c0bfdc5492572bfa912d"
+  },
+  {
+    "label": "self-reference",
+    "argv": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import * as api from './dist/index.js';import {readFile} from 'node:fs/promises';let bytes=await readFile(new URL(import.meta.resolve('@deepviz/agent-toolkit/prompts/v1/system.md')));console.log(JSON.stringify({exports:Object.keys(api).sort(),promptBytes:bytes.length,promptReaderExposed:'read_prompt' in api || 'readPrompt' in api}));"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R18-01\\source-f9c4372\\packages\\deepviz",
+    "exit_code": 0,
+    "log_sha256": "da214e71a3bbb3fd2652d2558828a93aa79d5f9e9e6ef66d810820b2fe79bfac",
+    "actual": {
+      "exports": [
+        "ValidationError",
+        "buildRendererSpec",
+        "chartKinds",
+        "chartSpecSchema",
+        "createTools",
+        "defaultAssets",
+        "isObject",
+        "normalize",
+        "normalizeStream",
+        "render",
+        "renderStream",
+        "safeKey",
+        "validateSpec"
+      ],
+      "promptBytes": 4582,
+      "promptReaderExposed": false
+    },
+    "scope": "Node self-reference only, NOT packed-consumer install or role10 acceptance"
+  }
+]
