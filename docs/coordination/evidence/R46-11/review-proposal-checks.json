@@ -1,0 +1,274 @@
+{
+  "owner_session": "ses_de567811cffdTBwcb8pF5nDi9v",
+  "observed_utc": "2026-11-27T18:00:20.846902+00:00",
+  "verdict": "F1 CONFIRMED ON ACTUAL546; safe-charge proposal UNAPPLIED. Five bounded controls pass; not a production repair/GREEN/independent sourceapproval.",
+  "actual546_execution": {
+    "observed_utc": "2026-11-27T17:58:43.309714+00:00",
+    "exact_product_source": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+    "source_manifest": {
+      "source_commit": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+      "parent": "c5ab299a9ecfd9938e677b04ec146b180835a314",
+      "observed_utc": "2026-11-27T17:50:41.332485+00:00",
+      "complete_Python_package_plus_config_GitLF_sha256": {
+        "pyproject.toml": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "python/deepviz/src/deepviz/__init__.py": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "python/deepviz/src/deepviz/cli.py": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "python/deepviz/src/deepviz/engines.py": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "python/deepviz/src/deepviz/mcp_server.py": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "python/deepviz/src/deepviz/models.py": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "python/deepviz/src/deepviz/normalize.py": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "python/deepviz/src/deepviz/py.typed": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "python/deepviz/src/deepviz/recommend.py": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "python/deepviz/src/deepviz/render.py": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "python/deepviz/src/deepviz/tools.py": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb"
+      },
+      "published_unchanged_counterexample": {
+        "source_commit": "8ce82e78bf7df5b4dacd027fdc3bddb01e771357",
+        "original_path": "tests/r38_probes/role11/test_large_integer_mean.py",
+        "copied_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-11-accounting-546-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\unchanged_published_counterexample\\test_large_integer_mean.py",
+        "sha256": "d7262febf984bd0f83aa29d5a43133d5c083c56aeb97788940218493df28c226"
+      }
+    },
+    "before": {
+      "source_files": {
+        "pyproject.toml": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "python/deepviz/src/deepviz/__init__.py": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "python/deepviz/src/deepviz/cli.py": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "python/deepviz/src/deepviz/engines.py": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "python/deepviz/src/deepviz/mcp_server.py": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "python/deepviz/src/deepviz/models.py": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "python/deepviz/src/deepviz/normalize.py": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "python/deepviz/src/deepviz/py.typed": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "python/deepviz/src/deepviz/recommend.py": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "python/deepviz/src/deepviz/render.py": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "python/deepviz/src/deepviz/tools.py": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb"
+      },
+      "probe_files": {
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-11-accounting-546-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\unchanged_published_counterexample\\test_large_integer_mean.py": "d7262febf984bd0f83aa29d5a43133d5c083c56aeb97788940218493df28c226",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-11-python-scale-envelope-ses_de567811cffdTBwcb8pF5nDi9v\\tests\\r46_probes\\role11\\proposed_state_charge.py": "f6ff51caa1b548e1f85b3331e0521fa32a1b8c5a92f01bc384791c63411b77ab",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-11-python-scale-envelope-ses_de567811cffdTBwcb8pF5nDi9v\\tests\\r46_probes\\role11\\test_safe_accounting_proposal.py": "460042cba87683cd9ce1a1616f8187fae2f440d8d2e4a2e66de604445be59b8d"
+      },
+      "int_max_str_digits": 4300
+    },
+    "after": {
+      "source_files": {
+        "pyproject.toml": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+        "python/deepviz/src/deepviz/__init__.py": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+        "python/deepviz/src/deepviz/cli.py": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+        "python/deepviz/src/deepviz/engines.py": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+        "python/deepviz/src/deepviz/mcp_server.py": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+        "python/deepviz/src/deepviz/models.py": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "python/deepviz/src/deepviz/normalize.py": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+        "python/deepviz/src/deepviz/py.typed": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+        "python/deepviz/src/deepviz/recommend.py": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+        "python/deepviz/src/deepviz/render.py": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+        "python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+        "python/deepviz/src/deepviz/tools.py": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb"
+      },
+      "probe_files": {
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-11-accounting-546-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\unchanged_published_counterexample\\test_large_integer_mean.py": "d7262febf984bd0f83aa29d5a43133d5c083c56aeb97788940218493df28c226",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-11-python-scale-envelope-ses_de567811cffdTBwcb8pF5nDi9v\\tests\\r46_probes\\role11\\proposed_state_charge.py": "f6ff51caa1b548e1f85b3331e0521fa32a1b8c5a92f01bc384791c63411b77ab",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-11-python-scale-envelope-ses_de567811cffdTBwcb8pF5nDi9v\\tests\\r46_probes\\role11\\test_safe_accounting_proposal.py": "460042cba87683cd9ce1a1616f8187fae2f440d8d2e4a2e66de604445be59b8d"
+      },
+      "int_max_str_digits": 4300
+    },
+    "actual_module": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-11-accounting-546-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz\\normalize.py",
+    "deepviz_module_origins": {
+      "deepviz.models": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-11-accounting-546-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz\\models.py",
+      "deepviz.normalize": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-11-accounting-546-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "deepviz.engines": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-11-accounting-546-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz\\engines.py",
+      "deepviz.render": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-11-accounting-546-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz\\render.py",
+      "deepviz": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-11-accounting-546-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz\\__init__.py"
+    },
+    "interpreter": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+    "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+    "pytest_args": [
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-11-accounting-546-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\unchanged_published_counterexample\\test_large_integer_mean.py",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-11-python-scale-envelope-ses_de567811cffdTBwcb8pF5nDi9v\\tests\\r46_probes\\role11\\test_safe_accounting_proposal.py",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--strict-markers",
+      "--tb=short",
+      "--basetemp",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-11-accounting-546-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\pytest-six-temp",
+      "--junitxml",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-11-accounting-546-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\actual546-six.xml"
+    ],
+    "pytest_exit": 1,
+    "pytest_driver_wall_seconds": 0.5809776999958558,
+    "tests_total": 6,
+    "failed": [
+      "test_large_valid_integer_cancellation_mean_does_not_need_decimal_unit_encoding"
+    ],
+    "errors": [],
+    "skipped": [],
+    "passed": 5,
+    "observations": [
+      {
+        "kind": "literal_mean",
+        "input_count": 5,
+        "source_pulls": 5,
+        "source_iterations": 1,
+        "output_count": 1,
+        "expected_value": 2.0
+      },
+      {
+        "kind": "literal_mean",
+        "input_count": 2,
+        "source_pulls": 2,
+        "source_iterations": 1,
+        "output_count": 1,
+        "expected_value": 0.0
+      },
+      {
+        "kind": "literal_mean",
+        "input_count": 2,
+        "source_pulls": 2,
+        "source_iterations": 1,
+        "output_count": 1,
+        "expected_value": 1e+308
+      },
+      {
+        "kind": "natural_budget_rejection",
+        "source_pulls": 1003,
+        "source_iterations": 1,
+        "source_upper_bound": 1024,
+        "result_returned": false,
+        "caps_injected": false
+      }
+    ],
+    "proposal_helper_microcheck": {
+      "calls": 6144,
+      "input_bit_lengths": [
+        0,
+        1,
+        97,
+        4097,
+        14362,
+        14362
+      ],
+      "elapsed_seconds": 0.0026683999894885346,
+      "return_checksum": 10153984,
+      "method": "Sameprocess/perf_counter wall overOWNunappliedpurehelper,6fixedvaluesx1024; NOproductionrow/benchmark/scalematrix, freshprocess/peakRSS or speedup claim",
+      "proposal_applied": false
+    },
+    "limits": "Unchanged4000digitcase expectedRED on actual546; newcontrols/purehelper doNOTprove integratedproductionfix. No c1bruntime/oldmatrix/SUMaccuracy/fullformats/TS/04headcheck; no source/syslimit/caps/recordJSONpolicy changes."
+  },
+  "static_source_and_unapplied_patch_proof": {
+    "source_commit": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+    "normalizer_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+    "actual_private_store_lines": [
+      597,
+      604
+    ],
+    "mean_add_lines": [
+      640,
+      643
+    ],
+    "mean_finish_lines": [
+      676,
+      680
+    ],
+    "store_and_mean_AST_identical_c1b": true,
+    "comparison_scope": "StaticAST only, no oldc1bexecution/matrix",
+    "proposal_only_helper_and_single_numeric_size_callsite_AST_changes": true,
+    "proposal_patch_sha256": "e13665c062dddd66f5245cc767900fe8a0650236019320c3c0c5cf461de1f9fc",
+    "proposal_applied_to_any_production_or_snapshot": false
+  },
+  "results": {
+    "tests": 6,
+    "passed": 5,
+    "failed": 1,
+    "errors": 0,
+    "skipped": 0,
+    "deselected": 0,
+    "pytest_reported_seconds": 0.48,
+    "pytest_exit": 1,
+    "own_probe_ruff_exit": 0,
+    "raw_xml_sha256": "43d5871700d875d1de0f9524340c9a3d6885daedb612294077c2966faefd40e5",
+    "GitLF_xml_sha256": "c10d76042b70d0190a603a9b9bed3187a0a3c171cc6180acfe5d99b438c6747f"
+  },
+  "safe_upper_bound": {
+    "formula": "max(1,(bits*30103+99999)//100000)+int(value<0), only for type(value) is int; bounded numeric fallback repr unchanged",
+    "integer_proof_checked": "2**100000 < 10**30103",
+    "rationale": "For nonzero integer n ofbitlength b, abs(n)<2**b<10**(b*30103/100000), so decimaldigits<=ceil(b*30103/100000). max1 handleszero, +sign handlesnegative. No decimalconversionofwideprivateints.",
+    "state_policy_unchanged": "Existing anyintegerbitlength>96 trigger and128floor, actualstate/keys/caps/count/rounding/recordJSONpolicy and checkbeforeassign preserved. Estimate is conservative; maycharge a few extra bytes nearboundaries, never undercounts numericrepr. Not actualallocator/RSS proof.",
+    "tested_boundaries": "zero/sign/bool/None/floatfallback/decimalpowers1,2,9,29,30,127,128,1000; ordinary95/96/97bitactual_store128floor;4096bitstate;14362bit/4324digitinternalunitspositiveandnegative withoutdecimalconversion",
+    "bounded_helper_cost": {
+      "calls": 6144,
+      "input_bit_lengths": [
+        0,
+        1,
+        97,
+        4097,
+        14362,
+        14362
+      ],
+      "elapsed_seconds": 0.0026683999894885346,
+      "return_checksum": 10153984,
+      "method": "Sameprocess/perf_counter wall overOWNunappliedpurehelper,6fixedvaluesx1024; NOproductionrow/benchmark/scalematrix, freshprocess/peakRSS or speedup claim",
+      "proposal_applied": false
+    },
+    "not_applied": true
+  },
+  "positive_observations": [
+    {
+      "kind": "literal_mean",
+      "input_count": 5,
+      "source_pulls": 5,
+      "source_iterations": 1,
+      "output_count": 1,
+      "expected_value": 2.0
+    },
+    {
+      "kind": "literal_mean",
+      "input_count": 2,
+      "source_pulls": 2,
+      "source_iterations": 1,
+      "output_count": 1,
+      "expected_value": 0.0
+    },
+    {
+      "kind": "literal_mean",
+      "input_count": 2,
+      "source_pulls": 2,
+      "source_iterations": 1,
+      "output_count": 1,
+      "expected_value": 1e+308
+    },
+    {
+      "kind": "natural_budget_rejection",
+      "source_pulls": 1003,
+      "source_iterations": 1,
+      "source_upper_bound": 1024,
+      "result_returned": false,
+      "caps_injected": false
+    }
+  ],
+  "R45_partial_preserved": {
+    "actual_started_then_withdrawn": true,
+    "product_source": "dd1c4080095c7e739582dc5c631bc419047c48d2",
+    "files": [
+      "docs/coordination/reports/R45-11-schema-source-review.md",
+      "docs/coordination/evidence/R45-11/partial-source-proof.json"
+    ],
+    "proof_sha256": "d20ba75f7820ace1b22b6868b7b2215718ec67fa160415e43daeebc265a1da37",
+    "schema_SOURCEapproval_issued": false,
+    "pytest_tests": 0
+  },
+  "nonproduct_failures_disclosed": [
+    "First ownASTmatcher missed BoolOp condition in finish; stoppedbeforeproducttests/patchwrites. Corrected matcheronly; actualstore/meanASTsame.",
+    "First ownnewprobeRuff I001/importgroup+UP034/redundantgeneratorparens; fixedonlynewprobeformat BEFOREproductexecution, no assertion/originalprobe edit."
+  ],
+  "limits": [
+    "No sourcepatch applied to producer/ownbranch/extracted546; nosyslimit/caps/recordJSONpolicy/oracle/deps/SDK/env/APIwrites/install/spawn/poll.",
+    "Not c1bmatrix/oldscale/10M/full546/Python+TSacceptance/sourceapproval/meanaccuracybenchmark.",
+    "Helper6144calltime is sameprocessOWNproposal wall only, notstream throughput/speedup/freshRSS/10M proof.",
+    "Actual04producer remainsexclusive/working; no headpolled or awaited. Actualpublishedheadandaffectedgatesstillrequired.",
+    "If producer adopts proposed code, this proposal cannot be counted as its independent sourceapproval; unchanged strictoracleretest remainsdistinct."
+  ],
+  "next_action": "R04 deliver this material546F1reproduction+UNAPPLIEDonehelper/onecallsiteproposal to activeproducer04. Producerownsimplementation/newpermanenttests/commit/head. Reuse unchanged strictcase pluspositive/budgetoracles on actualpublishedrepairhead after thischeckpoint; noncontributor sourcegate/finalintegration/CI stillrequired."
+}
