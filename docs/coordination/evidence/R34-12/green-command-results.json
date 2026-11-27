@@ -1,0 +1,46 @@
+[
+  {
+    "name": "green-build",
+    "args": [
+      "C:/Users/bagma/AppData/Local/Temp/opencode/deepviz-n21/node_modules/typescript/bin/tsc",
+      "-p",
+      "packages/deepviz/tsconfig.json"
+    ],
+    "exit": 0,
+    "at_utc": "2026-11-27T17:33:03.848Z",
+    "error": null
+  },
+  {
+    "name": "original13-green",
+    "args": [
+      "--test",
+      "--test-reporter=tap",
+      "tests/r34_probes/role12/original13-finite-range.mjs"
+    ],
+    "exit": 0,
+    "at_utc": "2026-11-27T17:33:04.268Z",
+    "error": null
+  },
+  {
+    "name": "original12-green",
+    "args": [
+      "--test",
+      "--test-reporter=tap",
+      "tests/r34_probes/role12/original12-category-density.test.mjs"
+    ],
+    "exit": 0,
+    "at_utc": "2026-11-27T17:33:11.378Z",
+    "error": null
+  },
+  {
+    "name": "compatible-green",
+    "args": [
+      "--test",
+      "--test-reporter=tap",
+      "tests/browser/r34-svg-density-compatible.mjs"
+    ],
+    "exit": 0,
+    "at_utc": "2026-11-27T17:33:18.782Z",
+    "error": null
+  }
+]

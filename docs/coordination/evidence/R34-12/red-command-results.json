@@ -1,0 +1,46 @@
+[
+  {
+    "name": "baseline-build",
+    "args": [
+      "C:/Users/bagma/AppData/Local/Temp/opencode/deepviz-n21/node_modules/typescript/bin/tsc",
+      "-p",
+      "packages/deepviz/tsconfig.json"
+    ],
+    "exit": 0,
+    "at_utc": "2026-11-27T17:26:39.332Z",
+    "error": null
+  },
+  {
+    "name": "original13-red-control",
+    "args": [
+      "--test",
+      "--test-reporter=tap",
+      "tests/r34_probes/role12/original13-finite-range.mjs"
+    ],
+    "exit": 0,
+    "at_utc": "2026-11-27T17:26:39.782Z",
+    "error": null
+  },
+  {
+    "name": "original12-red",
+    "args": [
+      "--test",
+      "--test-reporter=tap",
+      "tests/r34_probes/role12/original12-category-density.test.mjs"
+    ],
+    "exit": 1,
+    "at_utc": "2026-11-27T17:26:44.479Z",
+    "error": null
+  },
+  {
+    "name": "compatible-red",
+    "args": [
+      "--test",
+      "--test-reporter=tap",
+      "tests/browser/r34-svg-density-compatible.mjs"
+    ],
+    "exit": 1,
+    "at_utc": "2026-11-27T17:26:53.283Z",
+    "error": null
+  }
+]

@@ -1,0 +1,90 @@
+TAP version 13
+# Subtest: R34 forty-minimum svg: readable boxes and unchanged literal measures
+not ok 1 - R34 forty-minimum svg: readable boxes and unchanged literal measures
+  ---
+  duration_ms: 856.7074
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C\\tests\\browser\\r34-svg-density-compatible.mjs:43:3'
+  failureType: 'testCodeFailure'
+  error: 'SVG category labels cannot fit at requested dimensions'
+  code: 'ERR_TEST_FAILURE'
+  name: 'ValidationError'
+  stack: |-
+    svgHtml (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/renderers.js:361:23)
+    buildNormalized (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/render.js:31:138)
+    buildRendererSpec (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/render.js:42:16)
+    render (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/render.js:105:21)
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/tests/browser/r34-svg-density-compatible.mjs:48:22)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: R34 forty-minimum html: readable boxes and unchanged literal measures
+not ok 2 - R34 forty-minimum html: readable boxes and unchanged literal measures
+  ---
+  duration_ms: 2.4918
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C\\tests\\browser\\r34-svg-density-compatible.mjs:43:3'
+  failureType: 'testCodeFailure'
+  error: 'SVG category labels cannot fit at requested dimensions'
+  code: 'ERR_TEST_FAILURE'
+  name: 'ValidationError'
+  stack: |-
+    svgHtml (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/renderers.js:361:23)
+    buildNormalized (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/render.js:31:138)
+    buildRendererSpec (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/render.js:42:16)
+    render (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/render.js:105:21)
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/tests/browser/r34-svg-density-compatible.mjs:48:22)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: R34 unicode-large-eight svg: readable boxes and unchanged literal measures
+not ok 3 - R34 unicode-large-eight svg: readable boxes and unchanged literal measures
+  ---
+  duration_ms: 1.9281
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C\\tests\\browser\\r34-svg-density-compatible.mjs:43:3'
+  failureType: 'testCodeFailure'
+  error: 'SVG category labels cannot fit at requested dimensions'
+  code: 'ERR_TEST_FAILURE'
+  name: 'ValidationError'
+  stack: |-
+    svgHtml (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/renderers.js:361:23)
+    buildNormalized (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/render.js:31:138)
+    buildRendererSpec (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/render.js:42:16)
+    render (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/render.js:105:21)
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/tests/browser/r34-svg-density-compatible.mjs:48:22)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: R34 unicode-large-eight html: readable boxes and unchanged literal measures
+not ok 4 - R34 unicode-large-eight html: readable boxes and unchanged literal measures
+  ---
+  duration_ms: 0.4378
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C\\tests\\browser\\r34-svg-density-compatible.mjs:43:3'
+  failureType: 'testCodeFailure'
+  error: 'SVG category labels cannot fit at requested dimensions'
+  code: 'ERR_TEST_FAILURE'
+  name: 'ValidationError'
+  stack: |-
+    svgHtml (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/renderers.js:361:23)
+    buildNormalized (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/render.js:31:138)
+    buildRendererSpec (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/render.js:42:16)
+    render (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/dist/render.js:105:21)
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/tests/browser/r34-svg-density-compatible.mjs:48:22)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 0
+# fail 4
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2995.3571

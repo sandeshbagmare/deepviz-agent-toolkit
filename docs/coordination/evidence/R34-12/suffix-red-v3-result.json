@@ -1,0 +1,28 @@
+{
+  "at_utc": "2026-11-27T17:53:26.662Z",
+  "results": [
+    {
+      "name": "suffix-unit-red",
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "packages/deepviz/test/test_r34_svg_density_compatible.test.mjs"
+      ],
+      "exit": 1
+    },
+    {
+      "name": "suffix-browser-red",
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "--test-name-pattern=legacy-thousand",
+        "tests/browser/r34-svg-density-compatible.mjs"
+      ],
+      "exit": 1
+    }
+  ],
+  "source_sha256": "d89475d256e49f2e7b1adb2e0ab6e059597fb4f6eca213fd434d6e0d82fb7052",
+  "browser_sha256": "29914b5ed9d58cd8d4374b11ad48fb740cc6b1f231299246c78bc0d68ad3974c",
+  "unit_sha256": "820a5a4aa4c96f504f79d8737662fcd00406c554d26f24ae53a6c02b1d686b64",
+  "old14not_replayed": true
+}

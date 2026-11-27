@@ -1,0 +1,121 @@
+{
+  "at_utc": "2026-11-27T17:59:11.633Z",
+  "source": {
+    "head": "c3ee1edbfc65406cef7fd809f5a6887471d576a5",
+    "source_sha256": "a1b1eca1b54814ad6fd59320bd243ee35ae6701d193b4639f3dc828737ea1707",
+    "dist_sha256": "beb3e4c7f878dbd1403eee615995646a3dfb89fe1cf1a7dc4d4c6f435adea40b",
+    "index_sha256": "887a0d361250e936d43f6b5f8cac4f65a024676520ad6bcfb49ab8042e355c39",
+    "browser_sha256": "29914b5ed9d58cd8d4374b11ad48fb740cc6b1f231299246c78bc0d68ad3974c",
+    "unit_sha256": "820a5a4aa4c96f504f79d8737662fcd00406c554d26f24ae53a6c02b1d686b64",
+    "all26protected_files_unchanged": true,
+    "protected_module_prefix_unchanged": true,
+    "original12_exact": true,
+    "original13_only_setup_adapter": true,
+    "all_semantic_oracles_unchanged": true
+  },
+  "results": [
+    {
+      "name": "final-build",
+      "command": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:/Users/bagma/AppData/Local/Temp/opencode/deepviz-n21/node_modules/typescript/bin/tsc",
+        "-p",
+        "packages/deepviz/tsconfig.json"
+      ],
+      "exit": 0,
+      "error": null,
+      "at_utc": "2026-11-27T17:58:49.916Z"
+    },
+    {
+      "name": "final-original13",
+      "command": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "tests/r34_probes/role12/original13-finite-range.mjs"
+      ],
+      "exit": 0,
+      "error": null,
+      "at_utc": "2026-11-27T17:58:50.434Z"
+    },
+    {
+      "name": "final-original12",
+      "command": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "tests/r34_probes/role12/original12-category-density.test.mjs"
+      ],
+      "exit": 0,
+      "error": null,
+      "at_utc": "2026-11-27T17:58:57.282Z"
+    },
+    {
+      "name": "final-compatible",
+      "command": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "tests/browser/r34-svg-density-compatible.mjs"
+      ],
+      "exit": 0,
+      "error": null,
+      "at_utc": "2026-11-27T17:59:04.228Z"
+    },
+    {
+      "name": "final-full-npm",
+      "command": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm test"
+      ],
+      "exit": 0,
+      "error": null,
+      "at_utc": "2026-11-27T17:59:09.430Z"
+    },
+    {
+      "name": "final-typecheck",
+      "command": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm run typecheck"
+      ],
+      "exit": 0,
+      "error": null,
+      "at_utc": "2026-11-27T17:59:09.905Z"
+    },
+    {
+      "name": "final-schema",
+      "command": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "node packages/deepviz/scripts/check-schema.mjs"
+      ],
+      "exit": 0,
+      "error": null,
+      "at_utc": "2026-11-27T17:59:09.980Z"
+    },
+    {
+      "name": "final-pack-dry-run",
+      "command": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm pack --dry-run --workspace @deepviz/agent-toolkit"
+      ],
+      "exit": 0,
+      "error": null,
+      "at_utc": "2026-11-27T17:59:11.627Z"
+    }
+  ],
+  "npm_ci": "NOT RUN: no installs",
+  "package_consumer": "NOT RUN: script invokes npm install --offline",
+  "python_scale_other_engines": "NOT RUN: narrow renderer assignment/no replay"
+}

@@ -1,0 +1,34 @@
+TAP version 13
+# Subtest: R34 narrow legacy thinning keeps selected numeric-suffix categories distinguishable
+not ok 1 - R34 narrow legacy thinning keeps selected numeric-suffix categories distinguishable
+  ---
+  duration_ms: 60.2567
+  type: 'test'
+  location: 'C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C\\packages\\deepviz\\test\\test_r34_svg_density_compatible.test.mjs:6:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    4 !== 5
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 5
+  actual: 4
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r34-12-svg-density-compatible-ses_de5678115ffewUEpZFi8faBW8C/packages/deepviz/test/test_r34_svg_density_compatible.test.mjs:12:10)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.start (node:internal/test_runner/test:1262:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 0
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 294.7268
