@@ -1,0 +1,13 @@
+{
+  "date_utc": "2026-11-27",
+  "phase": "First read-only bff Git evidence collector",
+  "exit": 1,
+  "product_tests_or_API_calls": 0,
+  "cause": "Own reverse-reconstruction helper used isinstance(data, Mapping), but the fully printed actual model diff uses parameter value. Import removal succeeded; guard substitution did not, so fail-closed equality assertion stopped before evidence JSON/export or any tests.",
+  "actual_diff_observed": "One Mapping import and isinstance(value, dict) to isinstance(value, Mapping), plus NEW42 tests",
+  "correction": "Change ONLY own reconstruction literal to isinstance(value, Mapping)/dict; no product/source/test/oracle write or result change. Re-read fixed immutable Git objects, not live worker progress.",
+  "discovery_limits": [
+    "Initial guessed MAIN/evidence CI path absent; correct docs/coordination/evidence file read fully",
+    "MAIN tester15 source-identity mirror absent; use explicitly named published575 Git payload, not a missing-evidence inference"
+  ]
+}

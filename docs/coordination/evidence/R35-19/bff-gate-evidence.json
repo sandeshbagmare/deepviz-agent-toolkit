@@ -1,0 +1,1174 @@
+{
+  "captured_utc": "2026-11-27T16:42:22.628811+00:00",
+  "actual_PR": 33,
+  "head": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+  "parent": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+  "base": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "source_tree_files15": [
+    {
+      "path": ".github/workflows/chart-contract.yml",
+      "Git_blob_bytes": 1051,
+      "Git_LF_sha256": "ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227"
+    },
+    {
+      "path": ".gitignore",
+      "Git_blob_bytes": 205,
+      "Git_LF_sha256": "3bebcceee3a15392de8f9a36815347d9a999e21fe58efe576ef28b9664b00e77"
+    },
+    {
+      "path": "LICENSE",
+      "Git_blob_bytes": 1077,
+      "Git_LF_sha256": "afbb59a0c0fccdea7ecc9140e4e762455dc06abea4f02d9cf5324c8fb23b42fd"
+    },
+    {
+      "path": "README.md",
+      "Git_blob_bytes": 199,
+      "Git_LF_sha256": "2497e600ecd5a35af571f0f3e6f2550ce3a49b9322a607e02e6b97aa8c41d40d"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-11-26-deepviz-plan.md",
+      "Git_blob_bytes": 3191,
+      "Git_LF_sha256": "9d941cd545a8a37ddbf6d9395d882ba25360318b35ff93d36ed1556f3668d834"
+    },
+    {
+      "path": "docs/superpowers/specs/2026-11-26-deepviz-design.md",
+      "Git_blob_bytes": 3206,
+      "Git_LF_sha256": "715ef120ba4700ea28ef5dbd1d975cd80cf3cc5b659e64fc9e6cd231c664a973"
+    },
+    {
+      "path": "docs/verification/r22-contract/README.md",
+      "Git_blob_bytes": 2893,
+      "Git_LF_sha256": "f83f3e84a78d9a88c4a96d7df489f19e7fb4a6739c9e662d781f10f06670b3a6"
+    },
+    {
+      "path": "docs/verification/r22-contract/red-green-summary.json",
+      "Git_blob_bytes": 5057,
+      "Git_LF_sha256": "e3db9381970aa74f9a9f9ede2c87712dcd47636c34520fb3984ee39107bf1937"
+    },
+    {
+      "path": "docs/verification/r22-contract/validation-output.json",
+      "Git_blob_bytes": 4915,
+      "Git_LF_sha256": "3896de0d87545af60fc63bdee608b202055ea55d84dc7f49d1334ab729d02a0b"
+    },
+    {
+      "path": "pyproject.toml",
+      "Git_blob_bytes": 1259,
+      "Git_LF_sha256": "c80640f3f3049b9734360abd7bb1b5699449d7bad31f3fcde77c3e2b38a53053"
+    },
+    {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "Git_blob_bytes": 3021,
+      "Git_LF_sha256": "8532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d"
+    },
+    {
+      "path": "schemas/chart-spec.schema.json",
+      "Git_blob_bytes": 4078,
+      "Git_LF_sha256": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d"
+    },
+    {
+      "path": "tests/test_models.py",
+      "Git_blob_bytes": 2684,
+      "Git_LF_sha256": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32"
+    },
+    {
+      "path": "tests/test_native_mapping.py",
+      "Git_blob_bytes": 2012,
+      "Git_LF_sha256": "4f06bc1ad9cdc021f5081f5c59b10081783439e2fa95b69287d079e5dc82bb94"
+    },
+    {
+      "path": "tests/test_numeric_schema.py",
+      "Git_blob_bytes": 2343,
+      "Git_LF_sha256": "b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3"
+    }
+  ],
+  "parent_repair_paths": [
+    "python/deepviz/src/deepviz/models.py",
+    "tests/test_native_mapping.py"
+  ],
+  "base_to_head_paths9": [
+    ".github/workflows/chart-contract.yml",
+    "docs/verification/r22-contract/README.md",
+    "docs/verification/r22-contract/red-green-summary.json",
+    "docs/verification/r22-contract/validation-output.json",
+    "python/deepviz/src/deepviz/models.py",
+    "schemas/chart-spec.schema.json",
+    "tests/test_models.py",
+    "tests/test_native_mapping.py",
+    "tests/test_numeric_schema.py"
+  ],
+  "exact_runtime_reconstruction": true,
+  "seven_other_PR_paths_unchanged_vs998": [
+    ".github/workflows/chart-contract.yml",
+    "docs/verification/r22-contract/README.md",
+    "docs/verification/r22-contract/red-green-summary.json",
+    "docs/verification/r22-contract/validation-output.json",
+    "schemas/chart-spec.schema.json",
+    "tests/test_models.py",
+    "tests/test_numeric_schema.py"
+  ],
+  "model_Git_LF_sha256": "8532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d",
+  "new_permanent42_test_sha256": "4f06bc1ad9cdc021f5081f5c59b10081783439e2fa95b69287d079e5dc82bb94",
+  "actual_four_distinct_lanes": [
+    {
+      "role": "review01",
+      "actual_session": "ses_de5678335ffeI7xJrod5l25Q0Q",
+      "source": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+      "evidence_commit": "a84c07c2c36a8554a9cda77bfed0390d3e3b7009",
+      "report_path": "docs/coordination/reports/R31-01-mapping-final-review.md",
+      "report_Git_blob_sha256": "e5e42d62ac6296712012a270f7c21a589e9ffb0799a216a6b0ad657946997991",
+      "report_Git_blob_lines": 50,
+      "reported_actual_test_cases": 47,
+      "scope": "42newprovided+unchangedoriginalF1+4newown;notall82replayed",
+      "verdict": "F1RESOLVED/no remainingmustfix",
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "independent_non_author": true,
+      "published_basis": "FULLMAINreportONCEreadactualnonforcepush/exactremotereceipt;15alsoactualsavedpublicationreceiptreadonce,notrootpendingprojection",
+      "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/a84c07c2c36a8554a9cda77bfed0390d3e3b7009/docs/coordination/reports/R31-01-mapping-final-review.md"
+    },
+    {
+      "role": "review11",
+      "actual_session": "ses_de567811cffdTBwcb8pF5nDi9v",
+      "source": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+      "evidence_commit": "ab4a0c53fd339315f1e457c70c6da88ab10e64d9",
+      "report_path": "docs/coordination/reports/R32-11-mapping-final-review.md",
+      "report_Git_blob_sha256": "2cc7647f462ce7a3f0ef206d4a298e63602ad0b3420c7a7c5ed9178b307c379f",
+      "report_Git_blob_lines": 74,
+      "reported_actual_test_cases": 105,
+      "scope": "82provided+13unchangedstrict+10unchangedMapping",
+      "verdict": "F1RESOLVED/sourceAPPROVE",
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "independent_non_author": true,
+      "published_basis": "FULLMAINreportONCEreadactualnonforcepush/exactremotereceipt;15alsoactualsavedpublicationreceiptreadonce,notrootpendingprojection",
+      "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/ab4a0c53fd339315f1e457c70c6da88ab10e64d9/docs/coordination/reports/R32-11-mapping-final-review.md"
+    },
+    {
+      "role": "test17",
+      "actual_session": "ses_de5678086ffeNido4phnXCJ8J4",
+      "source": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+      "evidence_commit": "91217185a70484245bd151aa0b0a5e8253b130d2",
+      "report_path": "docs/coordination/reports/R31-17-mapping-final-test.md",
+      "report_Git_blob_sha256": "d17b24c5e4f1b78ac57bb1749785fd0e19b8541683062aab1f328511dfc3a3ec",
+      "report_Git_blob_lines": 29,
+      "reported_actual_test_cases": 174,
+      "scope": "82provided/79unchanged/13newMappingTHREEcommands;109observationsnotextra tests",
+      "verdict": "PASS/no runtimeblocker",
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "independent_non_author": true,
+      "published_basis": "FULLMAINreportONCEreadactualnonforcepush/exactremotereceipt;15alsoactualsavedpublicationreceiptreadonce,notrootpendingprojection",
+      "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/91217185a70484245bd151aa0b0a5e8253b130d2/docs/coordination/reports/R31-17-mapping-final-test.md"
+    },
+    {
+      "role": "test15",
+      "actual_session": "ses_de56780c8ffe7LgwvwdfR5qFQD",
+      "source": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+      "evidence_commit": "575eb35d0d568984f7807813d96f5c2145248412",
+      "report_path": "docs/coordination/reports/R32-15-mapping-wire-final-test.md",
+      "report_Git_blob_sha256": "778c0eb0e08ed8eba74ca2d342f0e5e073b0d8f2cccef10455eacbed38800c45",
+      "report_Git_blob_lines": 122,
+      "reported_actual_test_cases": 196,
+      "scope": "82provided+74unchanged+40newnativeDISTINCT;annotation40repeatnotextra",
+      "verdict": "PASS/no materialfinding/M1WITHDRAWN",
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "independent_non_author": true,
+      "published_basis": "FULLMAINreportONCEreadactualnonforcepush/exactremotereceipt;15alsoactualsavedpublicationreceiptreadonce,notrootpendingprojection",
+      "report_permalink": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/blob/575eb35d0d568984f7807813d96f5c2145248412/docs/coordination/reports/R32-15-mapping-wire-final-test.md"
+    }
+  ],
+  "counting_limit": "Per-laneactualtestsnotglobaluniquecount;82overlapslanes.47/105/174/196notfourgatesfromauthor82.",
+  "M1": {
+    "disposition": "WITHDRAWN/RESOLVEDdocumentarymixedEOLnotruntimefinding",
+    "Git_LF_model_sha256": "8532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d",
+    "author_working_mixed_sha256": "93d1472b168feb9f1a12fa47f81e0296228459ebe006c14a4daba2637d3616ba",
+    "LF": 81,
+    "CRLF": 63,
+    "actual_mixed_to_Git_LF_byte_equality": "Provedindependentlyby11reportand15savedreceipt/portableidentity;PMdoesnotrereadproducerworktreeorretest",
+    "no_source_fix_or_runtime_replay_required": true
+  },
+  "tester15_publication": {
+    "task_at_dispatch": "Reportedpublicationinflight31lines;notcountedascompletedfromoldreport",
+    "single_report_read_actual": "41lineswithactual575commit/nonforce0/exactreadback0,notpolled",
+    "actual_saved_receipt_sha256": "1e48c58a45bb1d3a99d40541831241a8ffcd4977c520ed44e7d5ce7c44babf72",
+    "actual_saved_receipt": {
+      "owner_session": "ses_de56780c8ffe7LgwvwdfR5qFQD",
+      "date": "2026-11-27",
+      "phase": "Actual repaired PR33 final independent tester2",
+      "tested_source_commit": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+      "source_parent": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+      "main_base": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+      "PR": 33,
+      "result": "PASS actual bff native numeric Mapping/root-child/wire/schema scope; no material finding",
+      "Mapping_F1_runtime_disposition": "Independently clears in this tested scope, not waived",
+      "own_branch": "agents/r10-15-owned-input-cleanup",
+      "own_parent": "a2449226618f48e2fa4a023a92605733c745196e",
+      "commit": "575eb35d0d568984f7807813d96f5c2145248412",
+      "commit_message": "test: verify repaired Mapping contract on frozen PR33",
+      "commit_exit": 0,
+      "payload": {
+        "files": 8,
+        "insertions": 826,
+        "deletions": 0,
+        "source_or_original_oracle_changes": false
+      },
+      "push_command": "git push origin agents/r10-15-owned-input-cleanup:agents/r10-15-owned-input-cleanup",
+      "push_exit": 0,
+      "force": false,
+      "remote_readback_command": "git ls-remote --heads origin refs/heads/agents/r10-15-owned-input-cleanup",
+      "remote_readback_exit": 0,
+      "remote_sha": "575eb35d0d568984f7807813d96f5c2145248412",
+      "remote_sha_matches": true,
+      "commit_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/commit/575eb35d0d568984f7807813d96f5c2145248412",
+      "fresh_actual_bff_tests": {
+        "provided_original40": 40,
+        "provided_new_permanentMapping42": 42,
+        "unchanged_independent_wire74": 74,
+        "independent_native40": 40,
+        "distinct_passed": 196,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "timing_seconds": {
+        "provided82_plus_native40": 0.87,
+        "unchanged_wire74": 5.02,
+        "native40_final_annotation_only": 0.51
+      },
+      "native40_rerun_not_double_counted": true,
+      "old114_pass_carried_forward": false,
+      "native_actual_outputs": {
+        "literal_cases": 10,
+        "container_factories": 2,
+        "positions": 2,
+        "cases": 40,
+        "accepted": 12,
+        "rejected": 28,
+        "all_native_decoder_wire_paths_agree": true,
+        "all_input_and_backing_not_mutated": true,
+        "portable_actual_samples": 9
+      },
+      "model_Git_LF_tested_sha256": "8532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d",
+      "new_permanent_test_Git_raw_sha256": "4f06bc1ad9cdc021f5081f5c59b10081783439e2fa95b69287d079e5dc82bb94",
+      "schema_canonical_sha256": "75972780be039e8dbbbf78a93d0611d9e6a5c9ed6e57a7ecf4239c2af20d6670",
+      "schema_generated_equals_actual_committed": true,
+      "all15raw_source_Git_bytes_module_origin_before_after_verified": true,
+      "sameprocess_public82_plus_native40_import_own_bff_only": true,
+      "independent74_unique_file_loader_own_bff_no_deepviz_package": true,
+      "no_stale_editable_hooks_python_S": true,
+      "hash_clarification_M1": {
+        "resolved_not_a_product_bug": true,
+        "packet_working_mixed_EOL_hash": "93d1472b168feb9f1a12fa47f81e0296228459ebe006c14a4daba2637d3616ba",
+        "actualauthor_HEAD": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+        "total_LF": 81,
+        "CRLF": 63,
+        "CRLF_to_LF_equals_published_Git8532": true,
+        "P3_draft_withdrawn": true,
+        "not_author_test_approval_borrowing": true
+      },
+      "focused_Ruff_exit": 0,
+      "focused_mypy_exit": 0,
+      "own_three_helpers_Ruff_exit": 0,
+      "own_three_helpers_mypy_exit": 0,
+      "postrun_collector_staged_safety_whitespace_gates_exit": 0,
+      "native40_final_XML_sha256": "5aae76b639e77a957c02ca9243fdfebc34bd671a6d622c44e12065539743a70e",
+      "provided82_native40_XML_sha256": "8b352a83d9df3bb6fe084fafc08b36fd649558fe8e28679be9eb3dfd727594b9",
+      "unchanged74_XML_sha256": "f5a69e5e3eb012c110dfaca2e7f11c702ec1a293cc73437aee6ce688e5a28f57",
+      "portable_report_in_commit": "docs/coordination/reports/R32-15-mapping-wire-final-test.md",
+      "portable_evidence_in_commit": [
+        "docs/coordination/evidence/R32-15/source-identity.json",
+        "docs/coordination/evidence/R32-15/summary.json",
+        "docs/coordination/evidence/R32-15/actual-native-output.json"
+      ],
+      "own_new_helpers_in_commit": "tests/r32_probes/role15/",
+      "preserved_nonproduct_failures": "Own CASES missing type annotation(mypy1); packet-working-vs-Git hash guard1/uniform CRLF hypothesis1 later resolved mixed EOL; MAINcheckpoint patch exact-anchor typo rejected/no partial write, corrected",
+      "source_original_oracle_API_install_spawn_CIpoll_mutations": 0,
+      "chartimage": "N/A model-only source; actual model JSON outputs supplied, no fake chart",
+      "not_run": "Old67 full output collector, SUM/Fraction/cleanup/formats/scales/builds/render/TS/MCP/DeepAgent/npm; no full-toolkit or CI claim",
+      "local_python": "3.12.16 existing read-only deps",
+      "merge_or_issue_closure": false,
+      "next": "R04 reads actual-bff 01+11 reviews and17+15 tests, dispositions material findings, verifies fresh exact-head green CI then owns merge/default ancestry/QA13/#30 decision. Prompt scoped handoff, no whole-wave wait."
+    },
+    "published_portable_payload": {
+      "source-identity.json": {
+        "Git_blob_sha256": "cb94de2c1ba9525adef45c208d5bae68fe0f307bc7283aa1b12f1260629f7d5a",
+        "bytes": 3557,
+        "data": {
+          "source_commit": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+          "source_Git_raw_equal_sha256": {
+            ".github/workflows/chart-contract.yml": "ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227",
+            ".gitignore": "3bebcceee3a15392de8f9a36815347d9a999e21fe58efe576ef28b9664b00e77",
+            "LICENSE": "afbb59a0c0fccdea7ecc9140e4e762455dc06abea4f02d9cf5324c8fb23b42fd",
+            "README.md": "2497e600ecd5a35af571f0f3e6f2550ce3a49b9322a607e02e6b97aa8c41d40d",
+            "docs/superpowers/plans/2026-11-26-deepviz-plan.md": "9d941cd545a8a37ddbf6d9395d882ba25360318b35ff93d36ed1556f3668d834",
+            "docs/superpowers/specs/2026-11-26-deepviz-design.md": "715ef120ba4700ea28ef5dbd1d975cd80cf3cc5b659e64fc9e6cd231c664a973",
+            "docs/verification/r22-contract/README.md": "f83f3e84a78d9a88c4a96d7df489f19e7fb4a6739c9e662d781f10f06670b3a6",
+            "docs/verification/r22-contract/red-green-summary.json": "e3db9381970aa74f9a9f9ede2c87712dcd47636c34520fb3984ee39107bf1937",
+            "docs/verification/r22-contract/validation-output.json": "3896de0d87545af60fc63bdee608b202055ea55d84dc7f49d1334ab729d02a0b",
+            "pyproject.toml": "c80640f3f3049b9734360abd7bb1b5699449d7bad31f3fcde77c3e2b38a53053",
+            "python/deepviz/src/deepviz/models.py": "8532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d",
+            "schemas/chart-spec.schema.json": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d",
+            "tests/test_models.py": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32",
+            "tests/test_native_mapping.py": "4f06bc1ad9cdc021f5081f5c59b10081783439e2fa95b69287d079e5dc82bb94",
+            "tests/test_numeric_schema.py": "b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3"
+          },
+          "tracked_clean_before_after": true,
+          "same_process_model_relative_file": "python/deepviz/src/deepviz/models.py",
+          "loaded_deepviz_modules_own_checkout_only": true,
+          "python_S_no_editable_hooks": true,
+          "unused_resources_only_namespace_no_py_files": 1,
+          "generated_equals_committed_schema": true,
+          "schema_canonical_sha256": "75972780be039e8dbbbf78a93d0611d9e6a5c9ed6e57a7ecf4239c2af20d6670",
+          "versions": {
+            "pydantic": "2.14.4",
+            "pytest": "9.2.0",
+            "jsonschema": "4.26.0",
+            "referencing": "0.37.0"
+          },
+          "pytest_exit": 0,
+          "parent_commit": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+          "PR": 33,
+          "wire_loader_same_source_commit_no_deepviz_package_import": true,
+          "all15rawGit_before_after": true,
+          "original40tests_schema_workflow_unchanged": true,
+          "probe_sha256": {
+            "tests/r22_probes/role15/test_schema_wire.py": "c949ec8e267c2b2734a004a9db1e6230e36a225bd1688ab37703a4177793d7c9",
+            "tests/r22_probes/role15/wire_cases.py": "ac72c495bc3398742db479ea5770185e2fb1ddd713766249813eb51990a4c956",
+            "tests/r32_probes/role15/run_frozen.py": "2c15e5f5ff276199b1e08d4a11955df9f1d3866b7873a555b2a3e31ffe0a1edc",
+            "tests/r32_probes/role15/test_native_wire.py": "431d6508d18db329ae6f368f13ac4c924bc4b065b0495bb03ed59758788018c6",
+            "tests/r32_probes/role15/collect_result.py": "fef54f2056c02fd42d5c434e99a2e105edd23d7552a6f294e8cba23f10c8b9d4"
+          },
+          "hash_clarification_M1": {
+            "resolved_not_a_product_finding": true,
+            "Git_LF_tested_model_sha256": "8532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d",
+            "packet_author_working_mixed_EOL_model_sha256": "93d1472b168feb9f1a12fa47f81e0296228459ebe006c14a4daba2637d3616ba",
+            "author_working_total_LF": 81,
+            "author_working_CRLF": 63,
+            "CRLF_to_LF_equals_actual_published_Git": true,
+            "not_author_test_approval_borrowing": true
+          }
+        }
+      },
+      "summary.json": {
+        "Git_blob_sha256": "390ded462a6c7550c09fd7a94ca16e3ad02f14c6bc62328b4bb8ce07920c0271",
+        "bytes": 4244,
+        "data": {
+          "source_commit": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+          "owner_session": "ses_de56780c8ffe7LgwvwdfR5qFQD",
+          "own_branch": "agents/r10-15-owned-input-cleanup",
+          "own_parent": "a2449226618f48e2fa4a023a92605733c745196e",
+          "result": "PASS actual bff numeric Mapping/wire contract; no material finding; M1 hash encoding clarified",
+          "genuine_independent_tester": 2,
+          "no_old114_carryforward": true,
+          "actual_tests": {
+            "public82-native40/provided82-plus-native40.xml": {
+              "passed": 122,
+              "failed": 0,
+              "errors": 0,
+              "skipped": 0,
+              "class_counts": {
+                "tests.test_models": 30,
+                "tests.test_native_mapping": 42,
+                "tests.test_numeric_schema": 10,
+                "": 40
+              }
+            },
+            "independent74.xml": {
+              "passed": 74,
+              "failed": 0,
+              "errors": 0,
+              "skipped": 0,
+              "class_counts": {
+                "tests.r22_probes.role15.test_schema_wire": 74
+              }
+            },
+            "native40-final.xml": {
+              "passed": 40,
+              "failed": 0,
+              "errors": 0,
+              "skipped": 0,
+              "class_counts": {
+                "tests.r32_probes.role15.test_native_wire": 40
+              }
+            },
+            "distinct_tests": {
+              "provided_original40": 40,
+              "provided_new_mapping42": 42,
+              "unchanged_independent_wire74": 74,
+              "independent_native40": 40,
+              "total_passed": 196,
+              "failed": 0,
+              "errors": 0,
+              "skipped": 0,
+              "annotation_only_native40_rerun_not_double_counted": true
+            }
+          },
+          "native_outputs": {
+            "total": 40,
+            "accepted": 12,
+            "rejected": 28,
+            "native_containers": 2,
+            "positions": 2,
+            "literal_cases": 10,
+            "all_nonmutating": true,
+            "three_actual_paths_agree": true
+          },
+          "timing_seconds": {
+            "fresh_provided82_plus_native40": 0.87,
+            "fresh_unchanged74": 5.02,
+            "final_native40_after_annotation_only": 0.51
+          },
+          "focused_Ruff_exit": 0,
+          "focused_mypy_exit": 0,
+          "focused_mypy_files": 1,
+          "own_Ruff_exit": 0,
+          "own_mypy_exit": 0,
+          "raw_artifact_sha256": {
+            "independent74.log": "7f484d9e6bc4d1edaa3bf176d4aae8d4b206c0e3d8b59e518447188a4c913d1d",
+            "independent74.xml": "f5a69e5e3eb012c110dfaca2e7f11c702ec1a293cc73437aee6ce688e5a28f57",
+            "native40-final.log": "1a74c21bf39a6a738c8b049a0c3c81a66be714a686e6f67c7360d89e89600711",
+            "native40-final.xml": "5aae76b639e77a957c02ca9243fdfebc34bd671a6d622c44e12065539743a70e",
+            "own-mypy-final.log": "07a5ca23e5d39b2565c0c1361f0556b8c3c75484bba05841f400436d190bb660",
+            "own-ruff-final.log": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+            "postrun-gate.json": "f60ca2ffa2f797493d0727e4ce0603f02389695a63fed205b3f203a3c478e30d",
+            "provided82-native40.log": "13c6a86db661844923e1dceac2bff196f3d79c36689847bb4a64dd6a7873ad71",
+            "public82-native40/provided82-plus-native40.xml": "8b352a83d9df3bb6fe084fafc08b36fd649558fe8e28679be9eb3dfd727594b9",
+            "public82-native40/source-import-identity.json": "3da3f1adad00a30f5511d6c64149235d11865a9d55979681ea1de4d558631402",
+            "pytest-independent74/r22-source-proof0/identity.json": "3526703aae88c04caa3309e8aea6ac311de0f6a228b2c681e086c5314ffdc9f9",
+            "pytest-independent74/r22-source-proof0/same-model-generated-schema.json": "dfa78116e6531e892e505f2290d5b2d6a93c2e01942edf3e9873a451b1ef3e1d",
+            "postrun-gate-corrected.json": "f548871a9646c1dc5fff6782acba11159375760153ad170fe837de149a17ef5b",
+            "packet-working-vs-Git-hash-diagnostic.json": "63f85fc0abf066ccecd87298c03a8d24fed0a225c41932449df029b0d344c510"
+          },
+          "hash_clarification_M1_resolved": true,
+          "preserved_nonproduct_failures": [
+            "Own CASES variable typing annotation initially missing; fixed only annotation, final40 rerun not double-counted",
+            "Own postrun guard initially used packet working hash for Git bytes; uniform CRLF hypothesis false, mixed EOL provenance then actually proved"
+          ],
+          "limits": [
+            "Local Python3.12, existing read-only dependencies, no installs/API/spawn/CI polling",
+            "No production/schema/workflow/original oracle edits, no full67 output collector replay",
+            "No SUM/formats/scale/build/render/MCP/DeepAgent/npm/full-toolkit claim; model-only actual JSON evidence",
+            "R04 owns four actual-bff gates plus fresh CI and merge/default ancestry, not this tester"
+          ]
+        }
+      },
+      "actual-native-output.json": {
+        "Git_blob_sha256": "138b950b5568d9d0ac0904141a46be3a8f12e7866feb087bb0c7fa4e122a2d8d",
+        "bytes": 9679,
+        "data": {
+          "source_commit": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+          "scope": "Nine actual native Mapping output/error representatives from forty",
+          "native40_final_XML_sha256": "5aae76b639e77a957c02ca9243fdfebc34bd671a6d622c44e12065539743a70e",
+          "all40_outputs_checked": {
+            "total": 40,
+            "accepted": 12,
+            "rejected": 28,
+            "native_containers": 2,
+            "positions": 2,
+            "literal_cases": 10,
+            "all_nonmutating": true,
+            "three_actual_paths_agree": true
+          },
+          "actual_three_paths": [
+            "native Mapping -> model_validate",
+            "JSON decoder -> model_validate",
+            "model_validate_json -> model_dump_json -> schema -> roundtrip"
+          ],
+          "representatives": [
+            {
+              "factory": "mappingproxy",
+              "site": "root",
+              "literal_case": "defaults",
+              "expected_accept": true,
+              "literal_json": "{}",
+              "input_and_backing_not_mutated": true,
+              "all_three_paths_agree": true,
+              "accepted": true,
+              "actual_json": {
+                "aggregation": "auto",
+                "charts": [],
+                "color": null,
+                "columns": 2,
+                "data_path": null,
+                "description": "",
+                "format": "auto",
+                "height": 520,
+                "kind": "bar",
+                "max_points": 2000,
+                "size": null,
+                "theme": "light",
+                "title": "Visualization",
+                "version": 1,
+                "width": 900,
+                "x": null,
+                "y": null
+              },
+              "actual_json_wire": "{\"version\":1,\"kind\":\"bar\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":2000,\"width\":900,\"height\":520,\"theme\":\"light\",\"charts\":[],\"columns\":2}",
+              "roundtrip_equal": true,
+              "schema_valid": true
+            },
+            {
+              "factory": "UserDict",
+              "site": "dashboard-child",
+              "literal_case": "defaults",
+              "expected_accept": true,
+              "literal_json": "{\"kind\":\"dashboard\",\"charts\":[{}]}",
+              "input_and_backing_not_mutated": true,
+              "all_three_paths_agree": true,
+              "accepted": true,
+              "actual_json": {
+                "aggregation": "auto",
+                "charts": [
+                  {
+                    "aggregation": "auto",
+                    "charts": [],
+                    "color": null,
+                    "columns": 2,
+                    "data_path": null,
+                    "description": "",
+                    "format": "auto",
+                    "height": 520,
+                    "kind": "bar",
+                    "max_points": 2000,
+                    "size": null,
+                    "theme": "light",
+                    "title": "Visualization",
+                    "version": 1,
+                    "width": 900,
+                    "x": null,
+                    "y": null
+                  }
+                ],
+                "color": null,
+                "columns": 2,
+                "data_path": null,
+                "description": "",
+                "format": "auto",
+                "height": 520,
+                "kind": "dashboard",
+                "max_points": 2000,
+                "size": null,
+                "theme": "light",
+                "title": "Visualization",
+                "version": 1,
+                "width": 900,
+                "x": null,
+                "y": null
+              },
+              "actual_json_wire": "{\"version\":1,\"kind\":\"dashboard\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":2000,\"width\":900,\"height\":520,\"theme\":\"light\",\"charts\":[{\"version\":1,\"kind\":\"bar\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":2000,\"width\":900,\"height\":520,\"theme\":\"light\",\"charts\":[],\"columns\":2}],\"columns\":2}",
+              "roundtrip_equal": true,
+              "schema_valid": true
+            },
+            {
+              "factory": "UserDict",
+              "site": "root",
+              "literal_case": "native-integral-minima",
+              "expected_accept": true,
+              "literal_json": "{\"version\":1.0,\"max_points\":10.0,\"width\":240.0,\"height\":200.0,\"columns\":1.0}",
+              "input_and_backing_not_mutated": true,
+              "all_three_paths_agree": true,
+              "accepted": true,
+              "actual_json": {
+                "aggregation": "auto",
+                "charts": [],
+                "color": null,
+                "columns": 1,
+                "data_path": null,
+                "description": "",
+                "format": "auto",
+                "height": 200,
+                "kind": "bar",
+                "max_points": 10,
+                "size": null,
+                "theme": "light",
+                "title": "Visualization",
+                "version": 1,
+                "width": 240,
+                "x": null,
+                "y": null
+              },
+              "actual_json_wire": "{\"version\":1,\"kind\":\"bar\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":10,\"width\":240,\"height\":200,\"theme\":\"light\",\"charts\":[],\"columns\":1}",
+              "roundtrip_equal": true,
+              "schema_valid": true
+            },
+            {
+              "factory": "mappingproxy",
+              "site": "dashboard-child",
+              "literal_case": "native-upper-bounds",
+              "expected_accept": true,
+              "literal_json": "{\"kind\":\"dashboard\",\"charts\":[{\"version\":1,\"max_points\":100000,\"width\":4096,\"height\":4096,\"columns\":6}]}",
+              "input_and_backing_not_mutated": true,
+              "all_three_paths_agree": true,
+              "accepted": true,
+              "actual_json": {
+                "aggregation": "auto",
+                "charts": [
+                  {
+                    "aggregation": "auto",
+                    "charts": [],
+                    "color": null,
+                    "columns": 6,
+                    "data_path": null,
+                    "description": "",
+                    "format": "auto",
+                    "height": 4096,
+                    "kind": "bar",
+                    "max_points": 100000,
+                    "size": null,
+                    "theme": "light",
+                    "title": "Visualization",
+                    "version": 1,
+                    "width": 4096,
+                    "x": null,
+                    "y": null
+                  }
+                ],
+                "color": null,
+                "columns": 2,
+                "data_path": null,
+                "description": "",
+                "format": "auto",
+                "height": 520,
+                "kind": "dashboard",
+                "max_points": 2000,
+                "size": null,
+                "theme": "light",
+                "title": "Visualization",
+                "version": 1,
+                "width": 900,
+                "x": null,
+                "y": null
+              },
+              "actual_json_wire": "{\"version\":1,\"kind\":\"dashboard\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":2000,\"width\":900,\"height\":520,\"theme\":\"light\",\"charts\":[{\"version\":1,\"kind\":\"bar\",\"title\":\"Visualization\",\"description\":\"\",\"x\":null,\"y\":null,\"color\":null,\"size\":null,\"data_path\":null,\"format\":\"auto\",\"aggregation\":\"auto\",\"max_points\":100000,\"width\":4096,\"height\":4096,\"theme\":\"light\",\"charts\":[],\"columns\":6}],\"columns\":2}",
+              "roundtrip_equal": true,
+              "schema_valid": true
+            },
+            {
+              "factory": "UserDict",
+              "site": "root",
+              "literal_case": "version-bool",
+              "expected_accept": false,
+              "literal_json": "{\"version\":true}",
+              "input_and_backing_not_mutated": true,
+              "all_three_paths_agree": true,
+              "accepted": false,
+              "actual_errors": [
+                {
+                  "loc": [],
+                  "msg": "Value error, version must be a JSON number, not a string or boolean",
+                  "type": "value_error"
+                }
+              ]
+            },
+            {
+              "factory": "mappingproxy",
+              "site": "root",
+              "literal_case": "max-points-string",
+              "expected_accept": false,
+              "literal_json": "{\"max_points\":\"10\"}",
+              "input_and_backing_not_mutated": true,
+              "all_three_paths_agree": true,
+              "accepted": false,
+              "actual_errors": [
+                {
+                  "loc": [],
+                  "msg": "Value error, max_points must be a JSON number, not a string or boolean",
+                  "type": "value_error"
+                }
+              ]
+            },
+            {
+              "factory": "mappingproxy",
+              "site": "root",
+              "literal_case": "width-string",
+              "expected_accept": false,
+              "literal_json": "{\"width\":\"240\"}",
+              "input_and_backing_not_mutated": true,
+              "all_three_paths_agree": true,
+              "accepted": false,
+              "actual_errors": [
+                {
+                  "loc": [],
+                  "msg": "Value error, width must be a JSON number, not a string or boolean",
+                  "type": "value_error"
+                }
+              ]
+            },
+            {
+              "factory": "UserDict",
+              "site": "dashboard-child",
+              "literal_case": "height-bool",
+              "expected_accept": false,
+              "literal_json": "{\"kind\":\"dashboard\",\"charts\":[{\"height\":false}]}",
+              "input_and_backing_not_mutated": true,
+              "all_three_paths_agree": true,
+              "accepted": false,
+              "actual_errors": [
+                {
+                  "loc": [
+                    "charts",
+                    0
+                  ],
+                  "msg": "Value error, height must be a JSON number, not a string or boolean",
+                  "type": "value_error"
+                }
+              ]
+            },
+            {
+              "factory": "mappingproxy",
+              "site": "dashboard-child",
+              "literal_case": "columns-string",
+              "expected_accept": false,
+              "literal_json": "{\"kind\":\"dashboard\",\"charts\":[{\"columns\":\"1\"}]}",
+              "input_and_backing_not_mutated": true,
+              "all_three_paths_agree": true,
+              "accepted": false,
+              "actual_errors": [
+                {
+                  "loc": [
+                    "charts",
+                    0
+                  ],
+                  "msg": "Value error, columns must be a JSON number, not a string or boolean",
+                  "type": "value_error"
+                }
+              ]
+            }
+          ],
+          "chart": "N/A model-only slice; actual serialized model JSON evidence applies"
+        }
+      }
+    },
+    "MAIN_sourceidentity_missing_limit": "DirectMAINsource-identitymirrorabsent;actual575Gitpayloadexplicitlyreadandverifiedinstead.Notmissingtestgates."
+  },
+  "CI_saved_official_observation": {
+    "actual_file": "docs/coordination/evidence/R34-bff-ci-observation.json",
+    "sha256": "a3583978fe1f03364db0762e0edd1a54d929eb481489989883cb9d196e25f0e5",
+    "observed_utc": "2026-11-27T16:25:21.569751+00:00",
+    "actual_head": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+    "all_six_success": true,
+    "checks": [
+      {
+        "id": 140615203096,
+        "name": "Numeric contract / Python 3.12",
+        "head_sha": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46031214879/job/140615203096",
+        "started_at": "2026-11-27T16:09:48Z",
+        "completed_at": "2026-11-27T16:10:02Z"
+      },
+      {
+        "id": 140615203060,
+        "name": "Numeric contract / Python 3.11",
+        "head_sha": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46031214879/job/140615203060",
+        "started_at": "2026-11-27T16:09:48Z",
+        "completed_at": "2026-11-27T16:10:01Z"
+      },
+      {
+        "id": 140615202858,
+        "name": "Numeric contract / Python 3.13",
+        "head_sha": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46031214879/job/140615202858",
+        "started_at": "2026-11-27T16:09:48Z",
+        "completed_at": "2026-11-27T16:10:04Z"
+      },
+      {
+        "id": 140615182289,
+        "name": "Numeric contract / Python 3.11",
+        "head_sha": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46031209048/job/140615182289",
+        "started_at": "2026-11-27T16:09:45Z",
+        "completed_at": "2026-11-27T16:09:58Z"
+      },
+      {
+        "id": 140615181959,
+        "name": "Numeric contract / Python 3.13",
+        "head_sha": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46031209048/job/140615181959",
+        "started_at": "2026-11-27T16:09:45Z",
+        "completed_at": "2026-11-27T16:10:02Z"
+      },
+      {
+        "id": 140615181372,
+        "name": "Numeric contract / Python 3.12",
+        "head_sha": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46031209048/job/140615181372",
+        "started_at": "2026-11-27T16:09:46Z",
+        "completed_at": "2026-11-27T16:10:10Z"
+      }
+    ],
+    "pr_state_at_that_snapshot": "open",
+    "merged_at_that_snapshot": false,
+    "base_at_that_snapshot": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+    "stale_independent_reports_awaited_label": "Historical16:25capturelabel,notcurrentfourreportadmission",
+    "newCIqueriesOrReplay": 0
+  },
+  "discovery_and_collector_failure": "collector-diagnosis.json retains2missingpaths+ownliteraldata/valueassert1; correctedimmutablecollector no test/API/oraclechange",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:.github/workflows/chart-contract.yml"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:.gitignore"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:LICENSE"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:docs/superpowers/plans/2026-11-26-deepviz-plan.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:docs/superpowers/specs/2026-11-26-deepviz-design.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:docs/verification/r22-contract/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:docs/verification/r22-contract/red-green-summary.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:docs/verification/r22-contract/validation-output.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:pyproject.toml"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:schemas/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:tests/test_models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:tests/test_native_mapping.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:tests/test_numeric_schema.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "0ae2cf26426822135fc10d337fcacf580b7ed833",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:.github/workflows/chart-contract.yml"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:.github/workflows/chart-contract.yml"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:docs/verification/r22-contract/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:docs/verification/r22-contract/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:docs/verification/r22-contract/red-green-summary.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:docs/verification/r22-contract/red-green-summary.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:docs/verification/r22-contract/validation-output.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:docs/verification/r22-contract/validation-output.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:schemas/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:schemas/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:tests/test_models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:tests/test_models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:tests/test_numeric_schema.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99841ffb80e0f2ea90c753c1bf0ceff718e0e180:tests/test_numeric_schema.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "a84c07c2c36a8554a9cda77bfed0390d3e3b7009:docs/coordination/reports/R31-01-mapping-final-review.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "ab4a0c53fd339315f1e457c70c6da88ab10e64d9:docs/coordination/reports/R32-11-mapping-final-review.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "91217185a70484245bd151aa0b0a5e8253b130d2:docs/coordination/reports/R31-17-mapping-final-test.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "575eb35d0d568984f7807813d96f5c2145248412:docs/coordination/reports/R32-15-mapping-wire-final-test.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "575eb35d0d568984f7807813d96f5c2145248412:docs/coordination/evidence/R32-15/source-identity.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "575eb35d0d568984f7807813d96f5c2145248412:docs/coordination/evidence/R32-15/summary.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "575eb35d0d568984f7807813d96f5c2145248412:docs/coordination/evidence/R32-15/actual-native-output.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8:tests/test_native_mapping.py"
+      ],
+      "exit": 0
+    }
+  ],
+  "PM_product_tests": 0,
+  "APIqueries": 0,
+  "APIwrites": 0,
+  "report_progress_polls": 0,
+  "current_merge_or_default_verified_here": false,
+  "decision": "AllfouractualbffindependentmaterialgatesCLEARwithsavedsixexactheadCIgreen;R04maymergepromptlyunderitsactualunchanged-head/required-gatecheckandproveactualdefaultancestry/QA13. NoPMmerge/closureclaim."
+}
