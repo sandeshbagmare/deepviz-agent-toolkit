@@ -1,0 +1,100 @@
+{
+  "observed_at": "2026-11-27T13:52:57.798262+00:00",
+  "tested_product_commit": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "python": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+  "python_version": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "modules": {
+    "deepviz.models": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-03-echarts-numeric-x-ses_de5678315ffeDxQVEpE9V9WSTE\\python\\deepviz\\src\\deepviz\\models.py",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    "deepviz.normalize": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-03-echarts-numeric-x-ses_de5678315ffeDxQVEpE9V9WSTE\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+    },
+    "deepviz.engines": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-03-echarts-numeric-x-ses_de5678315ffeDxQVEpE9V9WSTE\\python\\deepviz\\src\\deepviz\\engines.py",
+      "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de"
+    },
+    "deepviz.render": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-03-echarts-numeric-x-ses_de5678315ffeDxQVEpE9V9WSTE\\python\\deepviz\\src\\deepviz\\render.py",
+      "sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+    },
+    "pytest": {
+      "path": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\pytest\\__init__.py",
+      "sha256": "df9445a69f8fa85f8f0569c3b166fcd681117cf23ea0924752b1bb314c5d7326"
+    }
+  },
+  "source_and_existing_oracle_diff_exit": 0,
+  "portable_tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "36",
+    "time": "0.555",
+    "timestamp": "2026-11-27T08:00:45.744685+05:30",
+    "hostname": "SandeshAcer",
+    "failed_ids": []
+  },
+  "original_matrix": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "20",
+    "skipped": "0",
+    "tests": "20",
+    "time": "1.783",
+    "timestamp": "2026-11-27T08:06:35.003522+05:30",
+    "hostname": "SandeshAcer",
+    "failed_ids": [
+      "test_engine_kind_theme_source_acceptance[echarts-line-light-records]",
+      "test_engine_kind_theme_source_acceptance[echarts-line-light-nested_json]",
+      "test_engine_kind_theme_source_acceptance[echarts-line-light-graphql]",
+      "test_engine_kind_theme_source_acceptance[echarts-line-light-columns]",
+      "test_engine_kind_theme_source_acceptance[echarts-line-light-csv]",
+      "test_engine_kind_theme_source_acceptance[echarts-line-dark-records]",
+      "test_engine_kind_theme_source_acceptance[echarts-line-dark-nested_json]",
+      "test_engine_kind_theme_source_acceptance[echarts-line-dark-graphql]",
+      "test_engine_kind_theme_source_acceptance[echarts-line-dark-columns]",
+      "test_engine_kind_theme_source_acceptance[echarts-line-dark-csv]",
+      "test_engine_kind_theme_source_acceptance[echarts-area-light-records]",
+      "test_engine_kind_theme_source_acceptance[echarts-area-light-nested_json]",
+      "test_engine_kind_theme_source_acceptance[echarts-area-light-graphql]",
+      "test_engine_kind_theme_source_acceptance[echarts-area-light-columns]",
+      "test_engine_kind_theme_source_acceptance[echarts-area-light-csv]",
+      "test_engine_kind_theme_source_acceptance[echarts-area-dark-records]",
+      "test_engine_kind_theme_source_acceptance[echarts-area-dark-nested_json]",
+      "test_engine_kind_theme_source_acceptance[echarts-area-dark-graphql]",
+      "test_engine_kind_theme_source_acceptance[echarts-area-dark-columns]",
+      "test_engine_kind_theme_source_acceptance[echarts-area-dark-csv]"
+    ]
+  },
+  "portable_external_cwd_tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "36",
+    "time": "0.543",
+    "timestamp": "2026-11-27T08:20:53.726322+05:30",
+    "hostname": "SandeshAcer",
+    "failed_ids": []
+  },
+  "new_probe_hashes": {
+    "tests/r10_probes/role03/echarts_coordinate_oracle.py": "604494853e9cde98854aa8b7918d3ca8bd0262239a1d267179ea304f2ea37da9",
+    "tests/r10_probes/role03/README.md": "7a4c6ced2c78b4e496ca4752a21ccf56b563487d63e144f0f4a92144761a8428",
+    "tests/r10_probes/role03/test_echarts_numeric_x.py": "8cd55fe0743d9bd92d1018f2e6eee6b17bce2ce3b47924a43bd74bf97bbd4806",
+    "tests/r10_probes/role03/visual_probe.py": "69d467b471aed90a0206c643753bf96ae4fe1dc37075697ac54c57604a654e2f"
+  },
+  "existing_matrix_sha256": "55e3100fb15f74aaf268680e6e4a68c9cf0aefe0a88dea45865c2465dbd31271",
+  "contact_sha256": "edb5e247e927fc7c7fcfd964dfa3e98b6d7de82dd1f4188bde11f94d6900da2c",
+  "contact_pixels": [
+    1280,
+    1203
+  ],
+  "tile_pixels": [
+    640,
+    401
+  ],
+  "claims": "independent checkpoint coordinate controls; original20 RED preserved; no final signoff"
+}

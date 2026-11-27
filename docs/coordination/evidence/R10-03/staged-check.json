@@ -1,0 +1,43 @@
+{
+  "observed_at": "2026-11-27T14:01:12.623612+00:00",
+  "branch": "agents/r10-03-echarts-numeric-x",
+  "base": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "explicit_path_count": 22,
+  "staging_exit": 0,
+  "whitespace_exit": 0,
+  "source_existing_oracle_diff_exit": 0,
+  "security_pattern_classes": [
+    "github_token",
+    "aws_access_key",
+    "private_key",
+    "url_credentials",
+    "signed_url"
+  ],
+  "security_findings": [],
+  "tested_probe_hashes_match_staged_bytes": true,
+  "staged_sha256": {
+    "docs/agent-state/ses_de5678315ffeDxQVEpE9V9WSTE.md": "ddd16d0c711ed8286b83bfde67bcc470628b419682942e1835f862b9f2fbe9e9",
+    "docs/coordination/evidence/R10-03/COMMANDS.md": "b5d96e2f1b906ca2756294ae47432ab618d67ff7264d7ae6b46b2532caa59b63",
+    "docs/coordination/evidence/R10-03/browser-results.json": "720b0e0fef1ab80f9cc668e453d82f1aee1e76b747c735737e0ee4374112a7b4",
+    "docs/coordination/evidence/R10-03/collector-recovery.log": "76e8a37619780ff4012ee5164381bf15edc2dea23594fea7fdbca0f305686773",
+    "docs/coordination/evidence/R10-03/github-identity-prepublication.json": "e80b56bc3bbfbde633bba47962e5c6ecd0b9c310b1448732e0163afc514f7969",
+    "docs/coordination/evidence/R10-03/github-identity.json": "8b9328b7d96a3c907805eac30d50b1ce0012c611b25a2ae80bdffbec0f9630af",
+    "docs/coordination/evidence/R10-03/mypy-oracle-final.log": "c2c7d53347e82c59e5d568ab9ba2ec38a8c7dffaa235270e624327aee3f006ac",
+    "docs/coordination/evidence/R10-03/mypy-oracle.log": "89ea14b0d98cd5d97ef9d53fd9f4c75fa3dd4b6851b42db839b5fded28ee47d6",
+    "docs/coordination/evidence/R10-03/mypy-product.log": "f2e382916984c188b96194e9cba29e3c84087e7bf1c2c76e0f7a31ceb87912be",
+    "docs/coordination/evidence/R10-03/native-coordinate-contact.png": "edb5e247e927fc7c7fcfd964dfa3e98b6d7de82dd1f4188bde11f94d6900da2c",
+    "docs/coordination/evidence/R10-03/original-matrix.log": "7f1f6eef7b199297090e5ecf658f1fd19342853b127ddbd6ab9215c4cb80bc79",
+    "docs/coordination/evidence/R10-03/portable-external.log": "9d987ce37571a63385d4c4d492af851afa26c76576128e76460e4ee19ed73e76",
+    "docs/coordination/evidence/R10-03/portable.log": "e3ad87edd3e491a0370268e244f0006ecb01bc8bcd8db4205d3451c7ba7c94f3",
+    "docs/coordination/evidence/R10-03/results.json": "955891cf879387a59706e63ddb7d574202448e3bb36d27fe916f8dfe3f8eb09e",
+    "docs/coordination/evidence/R10-03/ruff-final.log": "f2729ffc2c33337c37058f580150e2c770aed91f3038cd74618284f5c1dde501",
+    "docs/coordination/evidence/R10-03/visual-capture-final.log": "48839b0ae8e1f7dc9004f2937d12417644bcdd40ba52f96f883a4960f2425027",
+    "docs/coordination/evidence/R10-03/visual-generate.log": "74c1fdc20dfbf575380217925c5c06bdc1910917098e180fb5369a65fcc4e596",
+    "docs/coordination/reports/R10-03-echarts-numeric-x.md": "4e9e173e3ce999619040e5bea63dffb02d4faf15924daa0c61ab5bd5c9e93bbb",
+    "tests/r10_probes/role03/README.md": "7a4c6ced2c78b4e496ca4752a21ccf56b563487d63e144f0f4a92144761a8428",
+    "tests/r10_probes/role03/echarts_coordinate_oracle.py": "604494853e9cde98854aa8b7918d3ca8bd0262239a1d267179ea304f2ea37da9",
+    "tests/r10_probes/role03/test_echarts_numeric_x.py": "8cd55fe0743d9bd92d1018f2e6eee6b17bce2ce3b47924a43bd74bf97bbd4806",
+    "tests/r10_probes/role03/visual_probe.py": "69d467b471aed90a0206c643753bf96ae4fe1dc37075697ac54c57604a654e2f"
+  },
+  "limitations": "bounded credential-pattern scan and owned diff review, not a security audit"
+}
