@@ -1,0 +1,31 @@
+{
+  "actual_session": "ses_de5678115ffewUEpZFi8faBW8C",
+  "source": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+  "parent": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "source_review_verdict": "APPROVE narrow explicit COUNT-measure change for remaining independent integration gates; no introduced must-fix found",
+  "baseline_finding": {
+    "id": "R35-12-F1",
+    "priority": "P2",
+    "status": "OPEN",
+    "problem": "implicit string heatmap y chooses count 2/1 instead of retained coordinates N/S",
+    "introduced_by_857": false,
+    "parent_execution_claim": false,
+    "classification_basis": "guard excludes heatmap; reversing exact two added lines produces entire parent engine"
+  },
+  "independent_new_probe": {
+    "exit": 1,
+    "pass": 1,
+    "fail": 1,
+    "error": 0,
+    "skip": 0
+  },
+  "nonchannels_functions_byte_ast_identical": 24,
+  "product_modules_same_process_import_verified": 4,
+  "original_tests_changed": false,
+  "production_changed": false,
+  "author_passes_borrowed": false,
+  "full_suite_or_browser_or_ci_claim": false,
+  "merge_or_release_approval": false,
+  "r34_density_source_edits_deferred": true,
+  "next_action": "R04 dispositions baseline F1; root provides explicit post-review density continuation before any SVG source rework"
+}

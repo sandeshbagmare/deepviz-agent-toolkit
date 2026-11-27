@@ -1,0 +1,24 @@
+test_numeric_coordinate_positive (__main__.ImplicitHeatmapCoordinate.test_numeric_coordinate_positive) ... ok
+test_string_coordinate_counterexample (__main__.ImplicitHeatmapCoordinate.test_string_coordinate_counterexample) ... FAIL
+
+======================================================================
+FAIL: test_string_coordinate_counterexample (__main__.ImplicitHeatmapCoordinate.test_string_coordinate_counterexample)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\bagma\AppData\Local\Temp\opencode\r35-12-count-review-ses_de5678115ffewUEpZFi8faBW8C\docs\coordination\evidence\R35-12\heatmap_counterexample.py", line 64, in test_string_coordinate_counterexample
+    self.check_coordinates(["N", "S"])
+  File "C:\Users\bagma\AppData\Local\Temp\opencode\r35-12-count-review-ses_de5678115ffewUEpZFi8faBW8C\docs\coordination\evidence\R35-12\heatmap_counterexample.py", line 58, in check_coordinates
+    self.assertEqual([row["_y"] for row in mapped], north_values)
+AssertionError: Lists differ: [2, 1] != ['N', 'S']
+
+First differing element 0:
+2
+'N'
+
+- [2, 1]
++ ['N', 'S']
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.004s
+
+FAILED (failures=1)

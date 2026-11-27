@@ -1,0 +1,196 @@
+{
+  "source": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+  "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "script_sha256": "fd601eae625b82640d733eacf8d9a926597977f0a04af2274545e2952f359f48",
+  "no_site": true,
+  "no_bytecode_writes": true,
+  "readonly_dependencies": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages",
+  "same_process_own_module_identity": [
+    {
+      "module": "deepviz.models",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-12-count-review-ses_de5678115ffewUEpZFi8faBW8C\\python\\deepviz\\src\\deepviz\\models.py",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    {
+      "module": "deepviz.normalize",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-12-count-review-ses_de5678115ffewUEpZFi8faBW8C\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2"
+    },
+    {
+      "module": "deepviz.engines",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-12-count-review-ses_de5678115ffewUEpZFi8faBW8C\\python\\deepviz\\src\\deepviz\\engines.py",
+      "sha256": "54b9b6ced08b276b87c143334c8b54110ea7f15e52e0b283d65c911fdba6bb18"
+    },
+    {
+      "module": "deepviz.render",
+      "file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-12-count-review-ses_de5678115ffewUEpZFi8faBW8C\\python\\deepviz\\src\\deepviz\\render.py",
+      "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+    }
+  ],
+  "observations": [
+    {
+      "input": [
+        {
+          "east": "E",
+          "north": 0
+        },
+        {
+          "east": "E",
+          "north": 0
+        },
+        {
+          "east": "W",
+          "north": 1
+        }
+      ],
+      "spec": {
+        "version": 1,
+        "kind": "heatmap",
+        "title": "Visualization",
+        "description": "",
+        "x": "east",
+        "y": null,
+        "color": null,
+        "size": null,
+        "data_path": null,
+        "format": "auto",
+        "aggregation": "count",
+        "max_points": 2000,
+        "width": 900,
+        "height": 520,
+        "theme": "light",
+        "charts": [],
+        "columns": 2
+      },
+      "normalized": {
+        "records": [
+          {
+            "east": "E",
+            "north": 0,
+            "count": 2
+          },
+          {
+            "east": "W",
+            "north": 1,
+            "count": 1
+          }
+        ],
+        "input_count": 3,
+        "warnings": [],
+        "strategy": "count"
+      },
+      "channels": [
+        {
+          "_x": "E",
+          "_y": 0,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 2.0,
+          "_row": 0
+        },
+        {
+          "_x": "W",
+          "_y": 1,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 1.0,
+          "_row": 1
+        }
+      ],
+      "expected_y": [
+        0,
+        1
+      ],
+      "actual_y": [
+        0,
+        1
+      ]
+    },
+    {
+      "input": [
+        {
+          "east": "E",
+          "north": "N"
+        },
+        {
+          "east": "E",
+          "north": "N"
+        },
+        {
+          "east": "W",
+          "north": "S"
+        }
+      ],
+      "spec": {
+        "version": 1,
+        "kind": "heatmap",
+        "title": "Visualization",
+        "description": "",
+        "x": "east",
+        "y": null,
+        "color": null,
+        "size": null,
+        "data_path": null,
+        "format": "auto",
+        "aggregation": "count",
+        "max_points": 2000,
+        "width": 900,
+        "height": 520,
+        "theme": "light",
+        "charts": [],
+        "columns": 2
+      },
+      "normalized": {
+        "records": [
+          {
+            "east": "E",
+            "north": "N",
+            "count": 2
+          },
+          {
+            "east": "W",
+            "north": "S",
+            "count": 1
+          }
+        ],
+        "input_count": 3,
+        "warnings": [],
+        "strategy": "count"
+      },
+      "channels": [
+        {
+          "_x": "E",
+          "_y": 2,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 2.0,
+          "_row": 0
+        },
+        {
+          "_x": "W",
+          "_y": 1,
+          "_color": "Series",
+          "_size": 8,
+          "_heat": 1.0,
+          "_row": 1
+        }
+      ],
+      "expected_y": [
+        "N",
+        "S"
+      ],
+      "actual_y": [
+        2,
+        1
+      ]
+    }
+  ],
+  "tests": 2,
+  "failures": 1,
+  "errors": 0,
+  "skips": 0,
+  "passes": 1,
+  "classification": "Pre-existing heatmap implicit-coordinate inference bug; the two added 857 lines exclude heatmap",
+  "native_artifacts_or_browser_paint": false,
+  "production_changed": false
+}

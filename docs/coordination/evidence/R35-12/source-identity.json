@@ -1,0 +1,247 @@
+{
+  "source": "85796dbe3360fb88686f2e7188122e2da80d54c2",
+  "parent": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "review_branch": "review/r35-12-count-source",
+  "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+  "script_sha256": "f1f9cf8229cea9dd660dbcfa31c715ca72a2c6961de7bd445ad42a70074f7a94",
+  "changed_paths_exact": [
+    "python/deepviz/src/deepviz/engines.py",
+    "python/deepviz/tests/test_r23_count_channel.py"
+  ],
+  "source_files": [
+    {
+      "path": "python/deepviz/src/deepviz/engines.py",
+      "git_blob_oid": "993c1b1dc460c541cb16e166e2aff18c8fd3226f",
+      "git_sha256": "54b9b6ced08b276b87c143334c8b54110ea7f15e52e0b283d65c911fdba6bb18",
+      "git_bytes": 44141,
+      "working_sha256": "54b9b6ced08b276b87c143334c8b54110ea7f15e52e0b283d65c911fdba6bb18",
+      "working_bytes": 44141,
+      "working_equal_git_after_crlf_to_lf": true,
+      "equal_parent": false
+    },
+    {
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "git_blob_oid": "7028f7a24e92a8995859b3818f0938b4276a0726",
+      "git_sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+      "git_bytes": 34886,
+      "working_sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+      "working_bytes": 34886,
+      "working_equal_git_after_crlf_to_lf": true,
+      "equal_parent": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/render.py",
+      "git_blob_oid": "64490a82f232e0c3c51a142bd898fd7f6c7c6dbf",
+      "git_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+      "git_bytes": 11637,
+      "working_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+      "working_bytes": 11637,
+      "working_equal_git_after_crlf_to_lf": true,
+      "equal_parent": true
+    },
+    {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "git_blob_oid": "17877904985d496f645cd7c66305efc8305bcb5f",
+      "git_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "git_bytes": 3493,
+      "working_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "working_bytes": 3493,
+      "working_equal_git_after_crlf_to_lf": true,
+      "equal_parent": true
+    },
+    {
+      "path": "python/deepviz/tests/test_r23_count_channel.py",
+      "git_blob_oid": "f8edcee954e199348ba8368f05cccc11e9fdf237",
+      "git_sha256": "8270a4748ee5c5f20e9d7cce92674aefad43d7c151dd41709c702446a1b5c683",
+      "git_bytes": 5812,
+      "working_sha256": "8270a4748ee5c5f20e9d7cce92674aefad43d7c151dd41709c702446a1b5c683",
+      "working_bytes": 5812,
+      "working_equal_git_after_crlf_to_lf": true,
+      "equal_parent": false
+    }
+  ],
+  "entire_engine_equal_parent_after_reversing_exact_two_lines": true,
+  "all_nonchannels_module_ast_equal_parent": true,
+  "nonchannels_functions_verified": 24,
+  "function_proofs": [
+    {
+      "name": "_table_budget",
+      "source_line": 34,
+      "sha256": "bad0eb4009eb41abb5d9e8e5aa15ac0abe68f15f212b4d21d09448f389187b9f",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "safe_json",
+      "source_line": 64,
+      "sha256": "9532185aa8c228122d4b829e68ebd7e6433ce947330d6e7e2051225e590aa4a7",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_number",
+      "source_line": 74,
+      "sha256": "ffb90abf3b9f79fde227cdec362c4c00b2b3be177138f4d0fe27638df8ea9e98",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_number",
+      "source_line": 78,
+      "sha256": "a58c4713486312f47c3af6eca8a5636fbf32bee27b06678e4d0a3e568048b35e",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_number",
+      "source_line": 81,
+      "sha256": "0f2a554a4dc85bb5ce6c632799a29ee1c891e37c73b9ba6d0b7b1bec5c431a44",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_groups",
+      "source_line": 110,
+      "sha256": "eaf8a788b2cb8f94f0100da4a447cd866b7fe281924e6f11075ced00686b2737",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_geometry",
+      "source_line": 117,
+      "sha256": "761e79f306fe7a599a7ea04469f51b909057105626c4c90aacff3884c764d661",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_boxes",
+      "source_line": 142,
+      "sha256": "a816b42df5fde4d122a012285aee96d3d7fb79d983802f3376bd9df3755c8f0e",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_histogram_values",
+      "source_line": 151,
+      "sha256": "3a6cc763c43c405c65697ff6253b3a0a7bc4e1d6451e47480e0addef2964186b",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_histogram",
+      "source_line": 158,
+      "sha256": "cf472590f960ac5ac448042f8bc7007701f12a5a244ea9a33d37a148e6b66db9",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_tiles",
+      "source_line": 168,
+      "sha256": "075bb03d2bb80469537bf041826e94176b1eefb25e02b41966f239d562978224",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_heatmap",
+      "source_line": 180,
+      "sha256": "44e46f35ed6a28bb894ea48468f6b2966c9bdad893035b49ce37acbfc1a6487e",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_colors",
+      "source_line": 188,
+      "sha256": "04a43d8034ac605085871d5fd3650b5cc2d3b0abd5d27edb19738131bd420471",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_label_color",
+      "source_line": 192,
+      "sha256": "eed3c0a99d3a57aa1cf87f2f24e3f1150b0713ba2543a5cb143ab2579155336d",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_wrap",
+      "source_line": 199,
+      "sha256": "3534c7c8dfceba4befc18ec35e02d0326c40e11593f9f6985d95af926e0d8bde",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_fallback",
+      "source_line": 203,
+      "sha256": "123fcf0f3d59c8e3030108297828acca0a45458b83945e96e76b375890029e26",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "matplotlib_figure",
+      "source_line": 219,
+      "sha256": "093ddd4cb8a79822e8d0a5d74388e2bab00f53a050b8b93bb06655aa20c29965",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_plotly",
+      "source_line": 387,
+      "sha256": "73bef49498a81515c18094d05c017abf1edd35ae28aada0819fc6393bbb64638",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_iso_dates",
+      "source_line": 449,
+      "sha256": "8083281a3570793de4d89ea94b34402c2a6825d3593e4284b8e17540e63817b9",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_vega",
+      "source_line": 462,
+      "sha256": "701655eaa03e997b8c1c1f66e116d6baa8134cb28a2d24fbd08e869db8233fe8",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_echarts",
+      "source_line": 541,
+      "sha256": "79e7fcba9b6e804f0d72354fa5f0e0615bbefb21196119e2b368796ebcfc10f7",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "_antv",
+      "source_line": 621,
+      "sha256": "b02f7667de5d233269f3d450aeaf823a08dbdecbc537c625e4e779be1d794b37",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "native_spec",
+      "source_line": 717,
+      "sha256": "48ba0a7497df10239b3aa963ceb74c11ce01da1133b1a856df87bfef86bcfc9e",
+      "same_source_and_ast": true
+    },
+    {
+      "name": "browser_html",
+      "source_line": 739,
+      "sha256": "85d46987a758fdf6d9b818ad51c6f6ab614f5dcd6d21bb906e64e972c17192de",
+      "same_source_and_ast": true
+    }
+  ],
+  "original_new_test_static_coverage": [
+    {
+      "name": "test_count_measure_is_not_numeric_color_or_retained_size",
+      "static_parameterized_cases": 3
+    },
+    {
+      "name": "test_named_measure_remains_authoritative",
+      "static_parameterized_cases": 6
+    },
+    {
+      "name": "test_auto_count_keeps_categorical_labels_and_normalization_metadata",
+      "static_parameterized_cases": 1
+    },
+    {
+      "name": "test_scatter_auto_does_not_steal_a_field_named_count",
+      "static_parameterized_cases": 1
+    },
+    {
+      "name": "test_heatmap_count_preserves_implicit_y_coordinates",
+      "static_parameterized_cases": 2
+    },
+    {
+      "name": "test_zero_is_not_a_missing_named_observation",
+      "static_parameterized_cases": 2
+    },
+    {
+      "name": "test_absent_generated_count_does_not_fall_back_to_numeric_color",
+      "static_parameterized_cases": 1
+    }
+  ],
+  "reviewed_diff_sha256": "1871b07c59a46cc3a565ba14f92240b4b57ef48372644d77091553ba185ceff3",
+  "product_modules_imported": false,
+  "product_tests_executed": 0,
+  "sdk_import_or_browser_paint_claim": false
+}
