@@ -1,0 +1,58 @@
+{
+  "source": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "original_root_policy_test": "tests/test_n11_resource_policy.py",
+  "root_test_sha256": "1c1f6664ae221853126e39d52d01fdb0e17e75fcd074aa0923014f27889c8304",
+  "root_test_bytes_unchanged_base": true,
+  "python_caps_ast_and_source_expressions_unchanged": {
+    "_MAX_FIELDS": {
+      "ast": "Constant(value=1024)",
+      "expression": "1024"
+    },
+    "_MAX_DEPTH": {
+      "ast": "Constant(value=64)",
+      "expression": "64"
+    },
+    "_MAX_CELL_BYTES": {
+      "ast": "BinOp(left=Constant(value=64), op=Mult(), right=Constant(value=1024))",
+      "expression": "64 * 1024"
+    },
+    "_MAX_FIELD_BYTES": {
+      "ast": "BinOp(left=Constant(value=4), op=Mult(), right=Constant(value=1024))",
+      "expression": "4 * 1024"
+    },
+    "_MAX_RECORD_BYTES": {
+      "ast": "BinOp(left=Constant(value=256), op=Mult(), right=Constant(value=1024))",
+      "expression": "256 * 1024"
+    },
+    "_MAX_RETAINED_BYTES": {
+      "ast": "BinOp(left=BinOp(left=Constant(value=16), op=Mult(), right=Constant(value=1024)), op=Mult(), right=Constant(value=1024))",
+      "expression": "16 * 1024 * 1024"
+    }
+  },
+  "typescript_caps_byte_identical": [
+    "const MAX_FIELDS = 1024;",
+    "const MAX_DEPTH = 64;",
+    "const MAX_CELL_BYTES = 64 * 1024;",
+    "const MAX_RECORD_BYTES = 256 * 1024;",
+    "const MAX_RETAINED_BYTES = 16 * 1024 * 1024;"
+  ],
+  "four_known_policy_red": "test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii/key-two-byte/key-four-byte] and test_flattened_multibyte_key_at_64kib_is_preserved",
+  "conflict": "These immutable controls expect65536B keys; unchanged Python policy rejects names over4096B, including flattened names",
+  "static_only_not_rerun": true,
+  "initial_package_tests_locator_exit": 1,
+  "correct_root_tests_locator_exit": 0,
+  "collector_failures": [
+    {
+      "exit": 1,
+      "cause": "cp1252 Unicode console display"
+    },
+    {
+      "exit": 1,
+      "cause": "ast.literal_eval refuses multiplication BinOp"
+    }
+  ],
+  "corrected_ast_comparison_collector_exit": 0,
+  "originals_caps_changed": false,
+  "decision_owner": "R04",
+  "no_red_merge_or_full_suite_approval": true
+}

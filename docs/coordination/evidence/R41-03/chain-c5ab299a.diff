@@ -1,0 +1,20 @@
+diff --git a/packages/deepviz/src/normalize.ts b/packages/deepviz/src/normalize.ts
+index 1fb24db..d88a232 100644
+--- a/packages/deepviz/src/normalize.ts
++++ b/packages/deepviz/src/normalize.ts
+@@ -104,11 +104,14 @@ function* unpack(value: unknown, warn:Notice, depth = 0): Generator<unknown> {
+     for (const row of value) {
+       if (isObject(row) && Object.hasOwn(row,'node') && Object.keys(row).every(key=>['node','cursor'].includes(key))) {
+         if(row.node===null)warn('Null GraphQL/path nodes skipped');else yield* unpack(row.node,warn,depth+1);
+       }
+       else if (isObject(row) && sequenceEnvelope(row)) yield* unpack(row,warn,depth+1);
+-      else yield row;
++      else {
++        if(isObject(row))checkGraphql(row,warn);
++        yield row;
++      }
+     }
+     return;
+   }
+   if (isObject(value)) {
+     for (const key of Object.keys(value)) {stringBytes(key);safeKey(key);}

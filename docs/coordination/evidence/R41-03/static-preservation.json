@@ -1,0 +1,62 @@
+{
+  "source": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "base_before_mean": "79232fb2f402bf21d455fbc021f1c238d19abe80",
+  "changed_product_modules_only": [
+    "packages/deepviz/src/normalize.ts",
+    "python/deepviz/src/deepviz/normalize.py"
+  ],
+  "python_changed_top_level_definitions": [
+    "_expand",
+    "_records",
+    "_Reducer"
+  ],
+  "python_all_other_definitions_ast_equal": [
+    "_iterable",
+    "_json",
+    "_unique_json_object",
+    "_without_bom",
+    "_jsonl",
+    "_cell",
+    "_delimited",
+    "_text",
+    "_arrow_module",
+    "_arrow_rows",
+    "_validate_arrow_fields",
+    "_binary_rows",
+    "_path_rows",
+    "_source",
+    "_select_path",
+    "_connection",
+    "_graphql_errors",
+    "_scalar",
+    "_utf8_size",
+    "_string_bytes",
+    "_record_bytes",
+    "_check_retained_bytes",
+    "_flatten",
+    "_plan",
+    "_sum_units",
+    "normalize"
+  ],
+  "python_original_boundary_test_definitions_ast_preserved": [
+    "test_owned_jsonl_unwinds_before_downstream_exception_returns",
+    "test_borrowed_generator_is_not_closed_when_planning_raises",
+    "test_borrowed_second_line_jsonl_parse_failure_keeps_stream_usable"
+  ],
+  "identities": {
+    "python/deepviz/src/deepviz/normalize.py": {
+      "blob": "78dbe8598c1b5532f8ae12a8a5646ee1e039afe1",
+      "sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+      "bytes": 35820,
+      "lines": 785
+    },
+    "packages/deepviz/src/normalize.ts": {
+      "blob": "44424792b5697e284f6e9e45c93bc3539009aafc",
+      "sha256": "7754126f9c90d7fc5b4d84d409400fa5d58ed0b2ab785df7fd666e2b1b90452e",
+      "bytes": 30684,
+      "lines": 562
+    }
+  },
+  "product_imports_tests_probes": 0,
+  "static_not_runtime_lifetime_mean_tests": true
+}
