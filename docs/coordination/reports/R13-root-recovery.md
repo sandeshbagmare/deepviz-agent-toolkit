@@ -1,0 +1,26 @@
+# R13 root: actual interruption recovery
+
+Owner `ses_de58eb849ffeOMwi2kb0VSqy3B`, 2026-11-27. Assignment/decisions BEFORE dispatch: `../tasks/R13-upstream-error-recovery.md`; actual-ID registry/receipts: `../R03-live-slots.md`. Root owns only dispatch/own coordination records and own branch, not product source/canonical/issues/PRs.
+
+## Observed and recovered
+
+- Native session_move reconfirmed actual root. Required canonical/RESUME/STATE/own/R04/worker notes and R07/R10/R11/R12 read; Git status/log/worktree enumeration exit0, MAIN5340bc69 and all dirty work preserved. Existing root branch77cead76 is the previous publication, not a new recovery commit.
+- Restart and pre-dispatch admission commands `opencode api get /api/session/active` each exited0, ONLYroot. Honest pre-refill shortfall0, not old22-running assumption. Bounded22metadata reads exit0 verified every child parent=thisroot; unfinished notes override naive metadata-success interpretations.
+- `opencode api get /api/info` exit0/2.3.0/responding. Bounded1.5MB raw-log classifier exit0:62upstream/95connection/6timeout/32historicalturn-limit keyword matches,0rate-limit matches. Raw log not printed/published; counts are historical-tail observations, NOT proof of one exact present root cause. No service restart/provider/model/credential/config changes or state deletion. SAME-ID recovery is the bounded retry test.
+- User explicitly reaffirmed recoverALL. All22 supported SAME-ID calls (R04+01–21) actually accepted;0rejections/0newdescendants/0canceled revivals. Reservation scopes saved first, actual receipts immediately saved. No successful transport permanence or product completion inferred. One bounded post-dispatch runtime reconciliation pending at this write.
+- Read actual09/10 tester higher-priority no-production restrictions, respected them. R04 requested to record explicit helper/MCP source transfer to eligible general producers AFTER current commands. Existing08/12/16/R04source ownership preserved. No root product edits or weakening of tests.
+- Fresh authenticated GET-only observation13:47:39UTC exit0: actualcandidate/PRhead5340bc69, PR31draft/open/unmerged, Verification45928608970FAILURE. Compact receipt `../evidence/R13-root/remote-observation.json`; no token/headers recorded.900real created AND resolved criterion remains unmet.
+
+## Next executable action
+
+Post-recovery reconciliation ACTUALLY exited0 at **2026-11-27T13:51:34.096768+00:00**:22active charting subagents+root23, all22parentlinks=thisroot,0missing/unknown IDs/0newdescendants. Every expected child was running. Receipt `../evidence/R13-root/post-recovery-runtime.json` is a bounded dispatch/capacity observation, not progress polling, final product verification or proof upstream errors cannot recur.
+
+Next: route actual count/remote/source blockers to R04; publish only reviewed OWN recovery packet on existing root branch with explicit staging/non-force push/exact remote-SHA readback. Maintain mandatory completion→evidence review→decision→useful admitted refill, no child progress polls or duplicate running shell/scale/build jobs. Below18refill takes priority. Final product gates/independent final reports remain open.
+
+## Existing interrupted OWN publication draft
+
+Read-only OWN worktree status/log/stageddiff inspection exit0 found9already-staged root-owned coordination paths from the earlier interrupted redirect-publication step. No source or another worker's paths staged. The unstaged ROSTER correction preserves original historical budget/C19 content versus the old staged version; inspect and retain current working historical text, not the stale index rewrite. This is investigated existing work, not authorization to reset/unstage/discard it. The recovery snapshot will include only explicitly reviewed root paths plus new R13 brief/report/runtime/remote evidence, verify byte copies/JSON/current policy/whitespace/credential heuristics and history preservation, then one meaningful OWN-branch commit and non-force push. Existing R10 evidence hashes remain dated snapshots, not relabeled current hashes.
+
+First snapshot guard ACTUALLY exited1 BEFORE any file copy: MAIN ROSTER's historical tail differs from own HEAD. Read-only exact diff exit0 identified two preexisting MAIN historical changes (old C17 budget paragraph/C19 row); own working ROSTER tail exactly matches own HEAD. **Do not remove or overwrite those MAIN historical changes.** Exclude ROSTER from MAIN copying; retain already-existing own-branch narrow redirect/current working historical tail for scoped publication. Other12owned paths may be copied after this provenance guard; include the own ROSTER separately in verification. This is a root snapshot scope correction, not a product failure or a hidden successful copy.
+
+Corrected snapshot command ACTUALLY exited0:12explicitowned files byte-copied/read-back, own ROSTER separately verified identical historical tail to own HEAD, MAIN ROSTER hash unchanged and MAIN index untouched. R13 brief includes immutable candidate5340 R11 bootstrap link/`git show` recipe rather than copying an unowned source-owner brief into the root commit. Next scoped packet/staged verification and actual publication; no current commit/push predicted.

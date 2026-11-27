@@ -1,5 +1,15 @@
 # Completion-wave agent roster and ownership
 
+## CURRENT routing override — historical roster only
+
+R04 **`ses_de56ad930fferPKGibj5Mc304B`** owns product/source/sharedcandidate/default integration/canonical/issues/PRs; root **`ses_de58eb849ffeOMwi2kb0VSqy3B`** owns supported own-child dispatch and `R03-live-slots.md`, its own coordination branch and this explicitly authorized narrow recovery redirect. Read MAIN `../PROJECT_STATE.md`, `../../AGENTS.md`, `tasks/R10-rolling-agile-sdlc.md`, own actual-ID note, then current `C17-live-slots.md`/`R03-live-slots.md` plus runtime. Older C00/C17/R02/22-total/active/reserved labels BELOW are preserved history, NOT live ownership or launch authority.
+
+User requires **rolling18–22active subagents, target22includingR04**, mainroot separate (max23team sessions). Each actual completion triggers evidence/decision review and immediate useful admission/resume/refill; below18takespriority, never wait for a batch or leave actionable freed slots idle. No filler, progress polls, canceled-session restart, nested spawning or unsupported parentage bypass. Each agent's OWN scoped GitHub branch is allowed under R10; shared integration/issue/PR writes remain R04-only. Real receipts establish capacity, not these old roster rows. Original production/900legitimatecreatedANDresolvedissues remain, POC=pointofcontact.
+
+## Latest restart ownership — 2026-11-27
+
+The tables and launch union below are historical, not live activity. The new recovery root `ses_de58eb849ffeOMwi2kb0VSqy3B` found only itself active and could not resume historical C17 through the supported child-only tool. After recording `tasks/R02-coordinator-succession.md` and one-slot admission, it actually launched R02 `ses_de588aa3bffeOdCphxK9WVUZEK` and recorded the returned ID immediately. R02 now owns the ongoing C17-role product/Git/GitHub/checkpoint/live-register/worker dispatch. Root owns recovery history and its own note only; it does not launch other workers. Historical sessions, canceled roles, worktrees and attestations remain preserved. Actual present worker IDs/states must come from `C17-live-slots.md` plus runtime, never this roster. Hard 22 total still applies.
+
 Updated: 2026-11-27. C00 edits this historical roster; C17 owns its separate live product slot register. Session runtime, not this table alone, determines whether a worker is active. All role briefs include `BRIEF.md`; each worker persists its exact assignment in its report before acting.
 
 ## Launch budget
