@@ -1,0 +1,40 @@
+{
+  "owner_session": "ses_de567808bffdXko8hyKFRhPv77",
+  "source_commit": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+  "probe_branch_base": "0e0748a93c7c9ba9e0d5e7b6dbc0aa4f07873afa",
+  "source_tree": "clean detached exact ec9 consumer checkout; imports and TS build from that checkout, not moving candidate",
+  "source_sha256": {
+    "python/deepviz/src/deepviz/normalize.py": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+    "packages/deepviz/src/normalize.ts": "2c730b13f6360fa2e75c66d03ea051ffdb5c253d4922546f51cd8fd60e742c7f",
+    "packages/deepviz/dist/normalize.js": "52d718460e6501ca84a3ef8c9a5b9da92eb4c2b71109bd73a3b9351db85501e5"
+  },
+  "build": {"command": "node <readonly-existing-typescript>/bin/tsc -p <ec9-source>/packages/deepviz/tsconfig.json", "exit": 0},
+  "python": {
+    "command": "python -m pytest tests/r16_probes/role16/test_mean_scalar_followups.py -q --tb=short -p no:cacheprovider --basetemp <own>/pytest-red --junitxml <own>/python-red.xml",
+    "exit": 1, "total": 31, "passed": 12, "failed": 19, "errors": 0, "skipped": 0, "pytest_seconds": 0.86,
+    "failure_families": {"representable_subnormal_mean": 8, "wrapper_named_scalar_column": 10, "explicit_path_to_column_object": 1}
+  },
+  "typescript": {
+    "command": "node --test tests/r16_probes/role16/mean-scalar-followups.test.mjs",
+    "exit": 1, "total": 31, "passed": 23, "failed": 8, "cancelled": 0, "skipped": 0, "duration_ms": 285.8979,
+    "failure_families": {"representable_subnormal_mean": 8}
+  },
+  "ruff": {"command": "python -m ruff check tests/r16_probes/role16", "exit": 0},
+  "raw_local_artifacts_sha256": {
+    "python-red.log": "6d2462a3db54733339fccb5f8877153c94479207e262da11d6e93ccaecf477fe",
+    "python-red.xml": "73d727431c00af9e3b0545d7b0121aee0a4de835f5a3324294802aa282c190ed",
+    "ruff.log": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+    "typescript-red.log": "dbe47f1a7570a16efedfe9234c9aeb12f18b7ec94dc290c9bbadbb92ff35fffc"
+  },
+  "raw_probe_sha256": {
+    "tests/r16_probes/role16/test_mean_scalar_followups.py": "cf793142b104f1c48f5ab1d7885c73d305bdb849fc00d3b0976fec9b4332fe84",
+    "tests/r16_probes/role16/mean-scalar-followups.test.mjs": "9d308809bfa7a0174f43cd91cea4707ef3d3bc670f24eec142c137bab8c8cb84",
+    "tests/r16_probes/role16/README.md": "14db671cb86c99f412c55217ab319c29b8e9a96debd9998a226d0c572fac236b"
+  },
+  "oracles": "Fraction.from_float sum/count plus separately asserted literal binary64 expected means; no private reducer/algorithm oracle. JS same literals; exact counts/warnings/finite JSON records.",
+  "additional_shape_finding": "Python data_path='outer' for {outer:{payload:[1,2]}} plus y='payload' treats selected object as record and reports missing payload after flattening; TS returns [{payload:1},{payload:2}]. Explicit scalar-array path, record-wrapper, custom top-level column and two explicit columns pass both languages.",
+  "contract_limits": "C17 object-of-columnarrays preserve names or clearly reject ambiguity, not silently strip. Null-only reserved GraphQL shapes/nested arrays/streamed scalar-column page semantics not asserted by these tests; no universal correctly-rounded mean/SUM, scale or lifecycle proof.",
+  "production_diff": "NONE; R16 proposal-only authority honored through command checkpoint. R17 NEW R04 release arrived and was fully read only after current command/results checkpoint.",
+  "next_producer_order": "NEW exact ec9 isolated fix/r17-normalizer-boundaries: P1 owned-adapter finally + non-owning BOM iteration, unchanged15 R10/R13 strict controls; then bounded mean/scalar/GraphQL; then P2 exact-prefix SUM cost/design and strict01RED preservation. No source edit without eligible R17 grant.",
+  "not_run": ["old suites/SUM tests/independent64 ownership tests", "full Python/npm/whole-release gates", "100K/1M/10M scale", "browser/render/distributions/CI/900issue completion"]
+}
