@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="4" time="4.548" timestamp="2026-11-27T21:02:08.153616+05:30" hostname="SandeshAcer"><testcase classname="tests.r22_probes.role21.test_frozen_scale_envelope" name="test_metadata_rejects_skips_wrong_counts_and_source[wronghash]" time="1.029" /><testcase classname="tests.r22_probes.role21.test_frozen_scale_envelope" name="test_explicit_tracked_or_ignored_data_is_frozen[tracked]" time="1.483"><failure message="ValueError: Unexpected or missing untracked input">tests\r22_probes\role21\test_frozen_scale_envelope.py:247: in test_explicit_tracked_or_ignored_data_is_frozen
+    before = module.freeze(candidate, pin, allowed)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\r22_probes\role21\frozen_scale_envelope.py:63: in freeze
+    require(untracked == set(allowed_inputs), "Unexpected or missing untracked input")
+tests\r22_probes\role21\frozen_scale_envelope.py:28: in require
+    raise ValueError(message)
+E   ValueError: Unexpected or missing untracked input</failure></testcase><testcase classname="tests.r22_probes.role21.test_frozen_scale_envelope" name="test_explicit_tracked_or_ignored_data_is_frozen[ignored]" time="0.768"><failure message="ValueError: Unexpected or missing untracked input">tests\r22_probes\role21\test_frozen_scale_envelope.py:247: in test_explicit_tracked_or_ignored_data_is_frozen
+    before = module.freeze(candidate, pin, allowed)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\r22_probes\role21\frozen_scale_envelope.py:63: in freeze
+    require(untracked == set(allowed_inputs), "Unexpected or missing untracked input")
+tests\r22_probes\role21\frozen_scale_envelope.py:28: in require
+    raise ValueError(message)
+E   ValueError: Unexpected or missing untracked input</failure></testcase><testcase classname="tests.r22_probes.role21.test_frozen_scale_envelope" name="test_report_integer_fields_do_not_accept_float_counts" time="0.992"><failure message="Failed: DID NOT RAISE ValueError">tests\r22_probes\role21\test_frozen_scale_envelope.py:259: in test_report_integer_fields_do_not_accept_float_counts
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError</failure></testcase></testsuite></testsuites>

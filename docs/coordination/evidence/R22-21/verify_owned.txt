@@ -1,0 +1,32 @@
+"""Only NEW R22 fixture tests; no product, original oracle, build or scale run."""
+import datetime as dt
+import hashlib
+import json
+import os
+import subprocess
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+root = Path.cwd()
+out = root / "docs/coordination/evidence/R22-21"
+base = Path(r"C:\Users\bagma\AppData\Local\Temp\opencode") / ("r22-21-final-" + dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%S%fZ"))
+py = r"C:\Users\bagma\deepviz-agent-toolkit\.venv\Scripts\python.exe"
+probe = "tests/r22_probes/role21/test_frozen_scale_envelope.py"
+env = os.environ.copy()
+env["PYTHONDONTWRITEBYTECODE"] = "1"
+commands = []
+for argv in [
+    [py, "-m", "pytest", probe, "-q", "--tb=short", "-p", "no:cacheprovider", "--basetemp", str(base), "--junitxml", str(out / "final-controls.xml")],
+    [py, "-m", "ruff", "check", "tests/r22_probes/role21"],
+    [py, "-m", "mypy", "tests/r22_probes/role21"],
+]:
+    done = subprocess.run(argv, cwd=root, env=env, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=180)
+    commands.append({"argv": argv, "exit": done.returncode, "stdout": done.stdout, "stderr": done.stderr})
+suites = list(ET.parse(out / "final-controls.xml").getroot().iter("testsuite"))
+counts = {key: sum(int(s.get(key, "0")) for s in suites) for key in ["tests", "failures", "errors", "skipped"]}
+counts["passed"] = counts["tests"] - counts["failures"] - counts["errors"] - counts["skipped"]
+code = {p.as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in Path("tests/r22_probes/role21").glob("*") if p.is_file()}
+result = {"commands": commands, "junit_counts": counts, "code_sha256": code, "fixtures": str(base), "synthetic_not_product_or_measurement": True, "same_process_import_attestation": False}
+(out / "quality-checks.json").write_text(json.dumps(result, indent=2) + chr(10), encoding="utf-8")
+print(json.dumps(result, indent=2))
+raise SystemExit(next((c["exit"] for c in commands if c["exit"]), 0))

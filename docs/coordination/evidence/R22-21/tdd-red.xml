@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.758" timestamp="2026-11-27T20:53:52.300477+05:30" hostname="SandeshAcer"><testcase classname="tests.r22_probes.role21.test_frozen_scale_envelope" name="test_clean_plan_executes_nothing_and_is_not_green" time="0.492"><failure message="AssertionError: NEW frozen-source envelope not implemented&#10;assert False&#10; +  where False = is_file()&#10; +    where is_file = WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn/tests/r22_probes/role21/frozen_scale_envelope.py').is_file">candidate = WindowsPath('C:/Users/bagma/AppData/Local/Temp/pytest-of-bagma/pytest-1941/test_clean_plan_executes_nothi0/tiny-candidate')
+tmp_path = WindowsPath('C:/Users/bagma/AppData/Local/Temp/pytest-of-bagma/pytest-1941/test_clean_plan_executes_nothi0')
+
+    def test_clean_plan_executes_nothing_and_is_not_green(candidate, tmp_path):
+&gt;       module = api()
+                 ^^^^^
+
+tests\r22_probes\role21\test_frozen_scale_envelope.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert ENVELOPE.is_file(), "NEW frozen-source envelope not implemented"
+E       AssertionError: NEW frozen-source envelope not implemented
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('C:/Users/bagma/AppData/Local/Temp/opencode/r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn/tests/r22_probes/role21/frozen_scale_envelope.py').is_file
+
+tests\r22_probes\role21\test_frozen_scale_envelope.py:16: AssertionError</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,61 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "tests/r22_probes/role21/test_frozen_scale_envelope.py",
+        "-q",
+        "--tb=short",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z",
+        "--junitxml",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R22-21\\final-controls.xml"
+      ],
+      "exit": 0,
+      "stdout": ".......................................                                  [100%]\n39 passed in 62.16s (0:01:02)\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "tests/r22_probes/role21"
+      ],
+      "exit": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "tests/r22_probes/role21"
+      ],
+      "exit": 0,
+      "stdout": "Success: no issues found in 2 source files\n",
+      "stderr": ""
+    }
+  ],
+  "junit_counts": {
+    "tests": 39,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 39
+  },
+  "code_sha256": {
+    "tests/r22_probes/role21/frozen_scale_envelope.py": "8d5b31dbbe4570ec68a70f2a243230b4cf2627dd381490603673e6ab9a1c96a3",
+    "tests/r22_probes/role21/README.md": "753aadfc0399401ea95fb899a46c6756b61d212bc50cd84b4d1fa44337b5d2b9",
+    "tests/r22_probes/role21/test_frozen_scale_envelope.py": "d8afde9abff3f3cd8f32fe351bbcbc816b6b34be16a72b2d3e3641783fc064a8"
+  },
+  "fixtures": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z",
+  "synthetic_not_product_or_measurement": true,
+  "same_process_import_attestation": false
+}

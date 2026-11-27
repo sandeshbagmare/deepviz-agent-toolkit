@@ -1,0 +1,978 @@
+{
+  "all_synthetic_metadata_not_measured": true,
+  "fixture_count": 8,
+  "receipts": [
+    {
+      "fixture": "test_fixed_child_command_check0",
+      "synthetic_not_DeepViz": true,
+      "not_measurement": true,
+      "receipt": {
+        "status": "REJECTED_NOT_SCALE_APPROVAL",
+        "commands_executed": 1,
+        "commands_executed_scope": "fixed performance command only; Git preflight still runs",
+        "command": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-s",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check0\\tiny-candidate\\scripts\\performance_suite.py",
+          "--source-root",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check0\\tiny-candidate",
+          "--counts",
+          "10",
+          "1000",
+          "100000",
+          "1000000",
+          "10000000",
+          "--cases",
+          "numeric_sample",
+          "category_sum",
+          "category_mean",
+          "--max-points",
+          "2000",
+          "--repeats",
+          "2",
+          "--render-counts",
+          "--max-peak-growth-mib",
+          "64",
+          "--timeout",
+          "600",
+          "--output",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check0\\evidence\\matrix.json"
+        ],
+        "before": {
+          "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check0\\tiny-candidate",
+          "head": "984cdc986faab45d67be021e3b9b6d27bd1958c0",
+          "git_tree": "12273c8be947200e25ef46ec8d9bd7a6c4fc810f",
+          "files": {
+            ".gitattributes": {
+              "git_blob": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+              "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+            },
+            ".gitignore": {
+              "git_blob": "21a9dcc4cd8ca15c0a66064d0f7ed228553f30e6",
+              "sha256": "9e091a010ee28082b628eb207c3ccd47b34c2c24b9e5362e3c3609898c3cd585"
+            },
+            "pyproject.toml": {
+              "git_blob": "3720b5f2355a4039162024d978aeefb742f86a3b",
+              "sha256": "72a76bc35b89106ed5f7b0cd2c9f7422eebf2b957efaf6f6b84ec46e6b39248e"
+            },
+            "python/deepviz/src/deepviz/__init__.py": {
+              "git_blob": "0dc90109ba177c361eee8a122207ebe26eed3f34",
+              "sha256": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304"
+            },
+            "python/deepviz/src/deepviz/models.py": {
+              "git_blob": "58dd5dca8549675e571390b072615fc285aba2f4",
+              "sha256": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb"
+            },
+            "python/deepviz/src/deepviz/normalize.py": {
+              "git_blob": "edeebb362c80c73f837e91fcb17e98db569682e3",
+              "sha256": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+            },
+            "scripts/performance_suite.py": {
+              "git_blob": "17394800811bd3e8d67025d690a3cbf3502639ea",
+              "sha256": "53e890b7a35c4426106c0a998aae3f03ad4a9336881d86d8865e764d55ed8c84"
+            },
+            "tests/test_sentinel.py": {
+              "git_blob": "fe7f467d28266eccf7a0017624f7ab7fbccf5c61",
+              "sha256": "6b22cfeaa44584912c45bf166ac157a077119f09fb58195073d44f6b6cdc9ddc"
+            }
+          },
+          "allowed_inputs": {},
+          "untracked_paths": [],
+          "python_sha256": {
+            "python/deepviz/src/deepviz/__init__.py": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304",
+            "python/deepviz/src/deepviz/models.py": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb",
+            "python/deepviz/src/deepviz/normalize.py": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+          },
+          "reported_dirty_paths": []
+        },
+        "envelope_sha256": "8d5b31dbbe4570ec68a70f2a243230b4cf2627dd381490603673e6ab9a1c96a3",
+        "measurement_verified": false,
+        "module_origin_limit": "Same-process imported module paths/bytecode are not attested by this external envelope; the frozen child loader must reject wrong origins.",
+        "scope": "External provenance and worker counts only; values/loss/OS memory/measurement truth need independent gates",
+        "exit": 0,
+        "error": " | ValueError: Tracked source dirty"
+      }
+    },
+    {
+      "fixture": "test_fixed_child_command_check1",
+      "synthetic_not_DeepViz": true,
+      "not_measurement": true,
+      "receipt": {
+        "status": "REJECTED_NOT_SCALE_APPROVAL",
+        "commands_executed": 1,
+        "commands_executed_scope": "fixed performance command only; Git preflight still runs",
+        "command": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-s",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check1\\tiny-candidate\\scripts\\performance_suite.py",
+          "--source-root",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check1\\tiny-candidate",
+          "--counts",
+          "10",
+          "1000",
+          "100000",
+          "1000000",
+          "10000000",
+          "--cases",
+          "numeric_sample",
+          "category_sum",
+          "category_mean",
+          "--max-points",
+          "2000",
+          "--repeats",
+          "2",
+          "--render-counts",
+          "--max-peak-growth-mib",
+          "64",
+          "--timeout",
+          "600",
+          "--output",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check1\\evidence\\matrix.json"
+        ],
+        "before": {
+          "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check1\\tiny-candidate",
+          "head": "ced4fe7d269e34fcb8923d21dfeb158e3abadf54",
+          "git_tree": "7603d0d9a0676fb1b9e9f43305355ba1e568a96b",
+          "files": {
+            ".gitattributes": {
+              "git_blob": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+              "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+            },
+            ".gitignore": {
+              "git_blob": "21a9dcc4cd8ca15c0a66064d0f7ed228553f30e6",
+              "sha256": "9e091a010ee28082b628eb207c3ccd47b34c2c24b9e5362e3c3609898c3cd585"
+            },
+            "pyproject.toml": {
+              "git_blob": "3720b5f2355a4039162024d978aeefb742f86a3b",
+              "sha256": "72a76bc35b89106ed5f7b0cd2c9f7422eebf2b957efaf6f6b84ec46e6b39248e"
+            },
+            "python/deepviz/src/deepviz/__init__.py": {
+              "git_blob": "0dc90109ba177c361eee8a122207ebe26eed3f34",
+              "sha256": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304"
+            },
+            "python/deepviz/src/deepviz/models.py": {
+              "git_blob": "58dd5dca8549675e571390b072615fc285aba2f4",
+              "sha256": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb"
+            },
+            "python/deepviz/src/deepviz/normalize.py": {
+              "git_blob": "edeebb362c80c73f837e91fcb17e98db569682e3",
+              "sha256": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+            },
+            "scripts/performance_suite.py": {
+              "git_blob": "3332eb66c3d063f4c19a4abfff33be810597e6de",
+              "sha256": "fde6db3146d256801604ec11baee50599dbf262abbaa428f29139b6497462440"
+            },
+            "tests/test_sentinel.py": {
+              "git_blob": "fe7f467d28266eccf7a0017624f7ab7fbccf5c61",
+              "sha256": "6b22cfeaa44584912c45bf166ac157a077119f09fb58195073d44f6b6cdc9ddc"
+            }
+          },
+          "allowed_inputs": {},
+          "untracked_paths": [],
+          "python_sha256": {
+            "python/deepviz/src/deepviz/__init__.py": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304",
+            "python/deepviz/src/deepviz/models.py": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb",
+            "python/deepviz/src/deepviz/normalize.py": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+          },
+          "reported_dirty_paths": []
+        },
+        "envelope_sha256": "8d5b31dbbe4570ec68a70f2a243230b4cf2627dd381490603673e6ab9a1c96a3",
+        "measurement_verified": false,
+        "module_origin_limit": "Same-process imported module paths/bytecode are not attested by this external envelope; the frozen child loader must reject wrong origins.",
+        "scope": "External provenance and worker counts only; values/loss/OS memory/measurement truth need independent gates",
+        "exit": 0,
+        "error": " | ValueError: Tracked source dirty"
+      }
+    },
+    {
+      "fixture": "test_fixed_child_command_check2",
+      "synthetic_not_DeepViz": true,
+      "not_measurement": true,
+      "receipt": {
+        "status": "REJECTED_NOT_SCALE_APPROVAL",
+        "commands_executed": 1,
+        "commands_executed_scope": "fixed performance command only; Git preflight still runs",
+        "command": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-s",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check2\\tiny-candidate\\scripts\\performance_suite.py",
+          "--source-root",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check2\\tiny-candidate",
+          "--counts",
+          "10",
+          "1000",
+          "100000",
+          "1000000",
+          "10000000",
+          "--cases",
+          "numeric_sample",
+          "category_sum",
+          "category_mean",
+          "--max-points",
+          "2000",
+          "--repeats",
+          "2",
+          "--render-counts",
+          "--max-peak-growth-mib",
+          "64",
+          "--timeout",
+          "600",
+          "--output",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check2\\evidence\\matrix.json"
+        ],
+        "before": {
+          "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check2\\tiny-candidate",
+          "head": "993b1f5235020d8f81c5223edc63dd431b2f17c7",
+          "git_tree": "94a0675eaad515f6d55be10a84f708aa8ea4f5b2",
+          "files": {
+            ".gitattributes": {
+              "git_blob": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+              "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+            },
+            ".gitignore": {
+              "git_blob": "21a9dcc4cd8ca15c0a66064d0f7ed228553f30e6",
+              "sha256": "9e091a010ee28082b628eb207c3ccd47b34c2c24b9e5362e3c3609898c3cd585"
+            },
+            "pyproject.toml": {
+              "git_blob": "3720b5f2355a4039162024d978aeefb742f86a3b",
+              "sha256": "72a76bc35b89106ed5f7b0cd2c9f7422eebf2b957efaf6f6b84ec46e6b39248e"
+            },
+            "python/deepviz/src/deepviz/__init__.py": {
+              "git_blob": "0dc90109ba177c361eee8a122207ebe26eed3f34",
+              "sha256": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304"
+            },
+            "python/deepviz/src/deepviz/models.py": {
+              "git_blob": "58dd5dca8549675e571390b072615fc285aba2f4",
+              "sha256": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb"
+            },
+            "python/deepviz/src/deepviz/normalize.py": {
+              "git_blob": "edeebb362c80c73f837e91fcb17e98db569682e3",
+              "sha256": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+            },
+            "scripts/performance_suite.py": {
+              "git_blob": "afd548ca5b4b6aa77d29d470f934da63e58f971a",
+              "sha256": "e4fb2ed4e8244a493365480eaa8028edf50aaaf3a5f22f3572bf702bf73bcf9e"
+            },
+            "tests/test_sentinel.py": {
+              "git_blob": "fe7f467d28266eccf7a0017624f7ab7fbccf5c61",
+              "sha256": "6b22cfeaa44584912c45bf166ac157a077119f09fb58195073d44f6b6cdc9ddc"
+            }
+          },
+          "allowed_inputs": {},
+          "untracked_paths": [],
+          "python_sha256": {
+            "python/deepviz/src/deepviz/__init__.py": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304",
+            "python/deepviz/src/deepviz/models.py": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb",
+            "python/deepviz/src/deepviz/normalize.py": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+          },
+          "reported_dirty_paths": []
+        },
+        "envelope_sha256": "8d5b31dbbe4570ec68a70f2a243230b4cf2627dd381490603673e6ab9a1c96a3",
+        "measurement_verified": false,
+        "module_origin_limit": "Same-process imported module paths/bytecode are not attested by this external envelope; the frozen child loader must reject wrong origins.",
+        "scope": "External provenance and worker counts only; values/loss/OS memory/measurement truth need independent gates",
+        "exit": 0,
+        "error": " | ValueError: HEAD changed or wrong source"
+      }
+    },
+    {
+      "fixture": "test_fixed_child_command_check3",
+      "synthetic_not_DeepViz": true,
+      "not_measurement": true,
+      "receipt": {
+        "status": "REJECTED_NOT_SCALE_APPROVAL",
+        "commands_executed": 1,
+        "commands_executed_scope": "fixed performance command only; Git preflight still runs",
+        "command": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-s",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check3\\tiny-candidate\\scripts\\performance_suite.py",
+          "--source-root",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check3\\tiny-candidate",
+          "--counts",
+          "10",
+          "1000",
+          "100000",
+          "1000000",
+          "10000000",
+          "--cases",
+          "numeric_sample",
+          "category_sum",
+          "category_mean",
+          "--max-points",
+          "2000",
+          "--repeats",
+          "2",
+          "--render-counts",
+          "--max-peak-growth-mib",
+          "64",
+          "--timeout",
+          "600",
+          "--output",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check3\\evidence\\matrix.json"
+        ],
+        "before": {
+          "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check3\\tiny-candidate",
+          "head": "49a69b20c71851d743a5a58fe7794bbc6c3ae304",
+          "git_tree": "b5bdffb1d017e6985e7cc4fa06b104e6d0317095",
+          "files": {
+            ".gitattributes": {
+              "git_blob": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+              "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+            },
+            ".gitignore": {
+              "git_blob": "21a9dcc4cd8ca15c0a66064d0f7ed228553f30e6",
+              "sha256": "9e091a010ee28082b628eb207c3ccd47b34c2c24b9e5362e3c3609898c3cd585"
+            },
+            "pyproject.toml": {
+              "git_blob": "3720b5f2355a4039162024d978aeefb742f86a3b",
+              "sha256": "72a76bc35b89106ed5f7b0cd2c9f7422eebf2b957efaf6f6b84ec46e6b39248e"
+            },
+            "python/deepviz/src/deepviz/__init__.py": {
+              "git_blob": "0dc90109ba177c361eee8a122207ebe26eed3f34",
+              "sha256": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304"
+            },
+            "python/deepviz/src/deepviz/models.py": {
+              "git_blob": "58dd5dca8549675e571390b072615fc285aba2f4",
+              "sha256": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb"
+            },
+            "python/deepviz/src/deepviz/normalize.py": {
+              "git_blob": "edeebb362c80c73f837e91fcb17e98db569682e3",
+              "sha256": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+            },
+            "scripts/performance_suite.py": {
+              "git_blob": "23e34fc0c16599cd870cd69b91ddcf6eabd3c99f",
+              "sha256": "f9a71359cfb594fb93a03fbc162c11a4097882c7aeb1a4ef9cd292a63d59ef55"
+            },
+            "tests/test_sentinel.py": {
+              "git_blob": "fe7f467d28266eccf7a0017624f7ab7fbccf5c61",
+              "sha256": "6b22cfeaa44584912c45bf166ac157a077119f09fb58195073d44f6b6cdc9ddc"
+            }
+          },
+          "allowed_inputs": {},
+          "untracked_paths": [],
+          "python_sha256": {
+            "python/deepviz/src/deepviz/__init__.py": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304",
+            "python/deepviz/src/deepviz/models.py": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb",
+            "python/deepviz/src/deepviz/normalize.py": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+          },
+          "reported_dirty_paths": []
+        },
+        "envelope_sha256": "8d5b31dbbe4570ec68a70f2a243230b4cf2627dd381490603673e6ab9a1c96a3",
+        "measurement_verified": false,
+        "module_origin_limit": "Same-process imported module paths/bytecode are not attested by this external envelope; the frozen child loader must reject wrong origins.",
+        "scope": "External provenance and worker counts only; values/loss/OS memory/measurement truth need independent gates",
+        "exit": 0,
+        "after": {
+          "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check3\\tiny-candidate",
+          "head": "49a69b20c71851d743a5a58fe7794bbc6c3ae304",
+          "git_tree": "b5bdffb1d017e6985e7cc4fa06b104e6d0317095",
+          "files": {
+            ".gitattributes": {
+              "git_blob": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+              "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+            },
+            ".gitignore": {
+              "git_blob": "21a9dcc4cd8ca15c0a66064d0f7ed228553f30e6",
+              "sha256": "9e091a010ee28082b628eb207c3ccd47b34c2c24b9e5362e3c3609898c3cd585"
+            },
+            "pyproject.toml": {
+              "git_blob": "3720b5f2355a4039162024d978aeefb742f86a3b",
+              "sha256": "72a76bc35b89106ed5f7b0cd2c9f7422eebf2b957efaf6f6b84ec46e6b39248e"
+            },
+            "python/deepviz/src/deepviz/__init__.py": {
+              "git_blob": "0dc90109ba177c361eee8a122207ebe26eed3f34",
+              "sha256": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304"
+            },
+            "python/deepviz/src/deepviz/models.py": {
+              "git_blob": "58dd5dca8549675e571390b072615fc285aba2f4",
+              "sha256": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb"
+            },
+            "python/deepviz/src/deepviz/normalize.py": {
+              "git_blob": "edeebb362c80c73f837e91fcb17e98db569682e3",
+              "sha256": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+            },
+            "scripts/performance_suite.py": {
+              "git_blob": "23e34fc0c16599cd870cd69b91ddcf6eabd3c99f",
+              "sha256": "f9a71359cfb594fb93a03fbc162c11a4097882c7aeb1a4ef9cd292a63d59ef55"
+            },
+            "tests/test_sentinel.py": {
+              "git_blob": "fe7f467d28266eccf7a0017624f7ab7fbccf5c61",
+              "sha256": "6b22cfeaa44584912c45bf166ac157a077119f09fb58195073d44f6b6cdc9ddc"
+            }
+          },
+          "allowed_inputs": {},
+          "untracked_paths": [],
+          "python_sha256": {
+            "python/deepviz/src/deepviz/__init__.py": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304",
+            "python/deepviz/src/deepviz/models.py": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb",
+            "python/deepviz/src/deepviz/normalize.py": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+          },
+          "reported_dirty_paths": []
+        },
+        "error": " | ValueError: Worker skipped/failed or wrong source"
+      }
+    },
+    {
+      "fixture": "test_fixed_child_command_check4",
+      "synthetic_not_DeepViz": true,
+      "not_measurement": true,
+      "receipt": {
+        "status": "PROVENANCE_AND_COUNTS_PASS_NOT_SCALE_APPROVAL",
+        "commands_executed": 1,
+        "commands_executed_scope": "fixed performance command only; Git preflight still runs",
+        "command": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-s",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check4\\tiny-candidate\\scripts\\performance_suite.py",
+          "--source-root",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check4\\tiny-candidate",
+          "--counts",
+          "10",
+          "1000",
+          "100000",
+          "1000000",
+          "10000000",
+          "--cases",
+          "numeric_sample",
+          "category_sum",
+          "category_mean",
+          "--max-points",
+          "2000",
+          "--repeats",
+          "2",
+          "--render-counts",
+          "--max-peak-growth-mib",
+          "64",
+          "--timeout",
+          "600",
+          "--output",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check4\\evidence\\matrix.json"
+        ],
+        "before": {
+          "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check4\\tiny-candidate",
+          "head": "28cd101ec0c763fadbffd013bf43bd0ef3ffbb4a",
+          "git_tree": "efb19b3fb67d20099d816c81f2d4682169c84888",
+          "files": {
+            ".gitattributes": {
+              "git_blob": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+              "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+            },
+            ".gitignore": {
+              "git_blob": "21a9dcc4cd8ca15c0a66064d0f7ed228553f30e6",
+              "sha256": "9e091a010ee28082b628eb207c3ccd47b34c2c24b9e5362e3c3609898c3cd585"
+            },
+            "pyproject.toml": {
+              "git_blob": "3720b5f2355a4039162024d978aeefb742f86a3b",
+              "sha256": "72a76bc35b89106ed5f7b0cd2c9f7422eebf2b957efaf6f6b84ec46e6b39248e"
+            },
+            "python/deepviz/src/deepviz/__init__.py": {
+              "git_blob": "0dc90109ba177c361eee8a122207ebe26eed3f34",
+              "sha256": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304"
+            },
+            "python/deepviz/src/deepviz/models.py": {
+              "git_blob": "58dd5dca8549675e571390b072615fc285aba2f4",
+              "sha256": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb"
+            },
+            "python/deepviz/src/deepviz/normalize.py": {
+              "git_blob": "edeebb362c80c73f837e91fcb17e98db569682e3",
+              "sha256": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+            },
+            "scripts/performance_suite.py": {
+              "git_blob": "b750e0987ac23acf197a6551cdc930dded581a38",
+              "sha256": "077fd1afb8fd61627e5252b854969ba8f356d5d702d0357b940d9ead6cb583f4"
+            },
+            "tests/test_sentinel.py": {
+              "git_blob": "fe7f467d28266eccf7a0017624f7ab7fbccf5c61",
+              "sha256": "6b22cfeaa44584912c45bf166ac157a077119f09fb58195073d44f6b6cdc9ddc"
+            }
+          },
+          "allowed_inputs": {},
+          "untracked_paths": [],
+          "python_sha256": {
+            "python/deepviz/src/deepviz/__init__.py": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304",
+            "python/deepviz/src/deepviz/models.py": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb",
+            "python/deepviz/src/deepviz/normalize.py": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+          },
+          "reported_dirty_paths": []
+        },
+        "envelope_sha256": "8d5b31dbbe4570ec68a70f2a243230b4cf2627dd381490603673e6ab9a1c96a3",
+        "measurement_verified": false,
+        "module_origin_limit": "Same-process imported module paths/bytecode are not attested by this external envelope; the frozen child loader must reject wrong origins.",
+        "scope": "External provenance and worker counts only; values/loss/OS memory/measurement truth need independent gates",
+        "exit": 0,
+        "after": {
+          "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_fixed_child_command_check4\\tiny-candidate",
+          "head": "28cd101ec0c763fadbffd013bf43bd0ef3ffbb4a",
+          "git_tree": "efb19b3fb67d20099d816c81f2d4682169c84888",
+          "files": {
+            ".gitattributes": {
+              "git_blob": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+              "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+            },
+            ".gitignore": {
+              "git_blob": "21a9dcc4cd8ca15c0a66064d0f7ed228553f30e6",
+              "sha256": "9e091a010ee28082b628eb207c3ccd47b34c2c24b9e5362e3c3609898c3cd585"
+            },
+            "pyproject.toml": {
+              "git_blob": "3720b5f2355a4039162024d978aeefb742f86a3b",
+              "sha256": "72a76bc35b89106ed5f7b0cd2c9f7422eebf2b957efaf6f6b84ec46e6b39248e"
+            },
+            "python/deepviz/src/deepviz/__init__.py": {
+              "git_blob": "0dc90109ba177c361eee8a122207ebe26eed3f34",
+              "sha256": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304"
+            },
+            "python/deepviz/src/deepviz/models.py": {
+              "git_blob": "58dd5dca8549675e571390b072615fc285aba2f4",
+              "sha256": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb"
+            },
+            "python/deepviz/src/deepviz/normalize.py": {
+              "git_blob": "edeebb362c80c73f837e91fcb17e98db569682e3",
+              "sha256": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+            },
+            "scripts/performance_suite.py": {
+              "git_blob": "b750e0987ac23acf197a6551cdc930dded581a38",
+              "sha256": "077fd1afb8fd61627e5252b854969ba8f356d5d702d0357b940d9ead6cb583f4"
+            },
+            "tests/test_sentinel.py": {
+              "git_blob": "fe7f467d28266eccf7a0017624f7ab7fbccf5c61",
+              "sha256": "6b22cfeaa44584912c45bf166ac157a077119f09fb58195073d44f6b6cdc9ddc"
+            }
+          },
+          "allowed_inputs": {},
+          "untracked_paths": [],
+          "python_sha256": {
+            "python/deepviz/src/deepviz/__init__.py": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304",
+            "python/deepviz/src/deepviz/models.py": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb",
+            "python/deepviz/src/deepviz/normalize.py": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+          },
+          "reported_dirty_paths": []
+        },
+        "workers_checked": 20,
+        "report_sha256": "3bf6e31e8881ea043d7b1f4c3fd358db6b5864a8ca093b74a7860dca18ca4a30"
+      }
+    },
+    {
+      "fixture": "test_large_report_is_bounded_b0",
+      "synthetic_not_DeepViz": true,
+      "not_measurement": true,
+      "receipt": {
+        "status": "REJECTED_NOT_SCALE_APPROVAL",
+        "commands_executed": 1,
+        "commands_executed_scope": "fixed performance command only; Git preflight still runs",
+        "command": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-s",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_large_report_is_bounded_b0\\tiny-candidate\\scripts\\performance_suite.py",
+          "--source-root",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_large_report_is_bounded_b0\\tiny-candidate",
+          "--counts",
+          "10",
+          "1000",
+          "100000",
+          "1000000",
+          "10000000",
+          "--cases",
+          "numeric_sample",
+          "category_sum",
+          "category_mean",
+          "--max-points",
+          "2000",
+          "--repeats",
+          "2",
+          "--render-counts",
+          "--max-peak-growth-mib",
+          "64",
+          "--timeout",
+          "600",
+          "--output",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_large_report_is_bounded_b0\\evidence\\matrix.json"
+        ],
+        "before": {
+          "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_large_report_is_bounded_b0\\tiny-candidate",
+          "head": "aca4cf3096fb999dad2af7b8cf254062a0096910",
+          "git_tree": "bdbcba9935e2a411e059da7ae5b1d95b4de2d033",
+          "files": {
+            ".gitattributes": {
+              "git_blob": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+              "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+            },
+            ".gitignore": {
+              "git_blob": "21a9dcc4cd8ca15c0a66064d0f7ed228553f30e6",
+              "sha256": "9e091a010ee28082b628eb207c3ccd47b34c2c24b9e5362e3c3609898c3cd585"
+            },
+            "pyproject.toml": {
+              "git_blob": "3720b5f2355a4039162024d978aeefb742f86a3b",
+              "sha256": "72a76bc35b89106ed5f7b0cd2c9f7422eebf2b957efaf6f6b84ec46e6b39248e"
+            },
+            "python/deepviz/src/deepviz/__init__.py": {
+              "git_blob": "0dc90109ba177c361eee8a122207ebe26eed3f34",
+              "sha256": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304"
+            },
+            "python/deepviz/src/deepviz/models.py": {
+              "git_blob": "58dd5dca8549675e571390b072615fc285aba2f4",
+              "sha256": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb"
+            },
+            "python/deepviz/src/deepviz/normalize.py": {
+              "git_blob": "edeebb362c80c73f837e91fcb17e98db569682e3",
+              "sha256": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+            },
+            "scripts/performance_suite.py": {
+              "git_blob": "cda47af02d551a5e5e46fb73e3a1752e7e3a9ccd",
+              "sha256": "8ce8aa6eaf5a7af3a68ba47de72e198186dc4348f91fd3b70ebfcdac3ae090cf"
+            },
+            "tests/test_sentinel.py": {
+              "git_blob": "fe7f467d28266eccf7a0017624f7ab7fbccf5c61",
+              "sha256": "6b22cfeaa44584912c45bf166ac157a077119f09fb58195073d44f6b6cdc9ddc"
+            }
+          },
+          "allowed_inputs": {},
+          "untracked_paths": [],
+          "python_sha256": {
+            "python/deepviz/src/deepviz/__init__.py": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304",
+            "python/deepviz/src/deepviz/models.py": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb",
+            "python/deepviz/src/deepviz/normalize.py": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+          },
+          "reported_dirty_paths": []
+        },
+        "envelope_sha256": "8d5b31dbbe4570ec68a70f2a243230b4cf2627dd381490603673e6ab9a1c96a3",
+        "measurement_verified": false,
+        "module_origin_limit": "Same-process imported module paths/bytecode are not attested by this external envelope; the frozen child loader must reject wrong origins.",
+        "scope": "External provenance and worker counts only; values/loss/OS memory/measurement truth need independent gates",
+        "exit": 0,
+        "after": {
+          "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_large_report_is_bounded_b0\\tiny-candidate",
+          "head": "aca4cf3096fb999dad2af7b8cf254062a0096910",
+          "git_tree": "bdbcba9935e2a411e059da7ae5b1d95b4de2d033",
+          "files": {
+            ".gitattributes": {
+              "git_blob": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+              "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+            },
+            ".gitignore": {
+              "git_blob": "21a9dcc4cd8ca15c0a66064d0f7ed228553f30e6",
+              "sha256": "9e091a010ee28082b628eb207c3ccd47b34c2c24b9e5362e3c3609898c3cd585"
+            },
+            "pyproject.toml": {
+              "git_blob": "3720b5f2355a4039162024d978aeefb742f86a3b",
+              "sha256": "72a76bc35b89106ed5f7b0cd2c9f7422eebf2b957efaf6f6b84ec46e6b39248e"
+            },
+            "python/deepviz/src/deepviz/__init__.py": {
+              "git_blob": "0dc90109ba177c361eee8a122207ebe26eed3f34",
+              "sha256": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304"
+            },
+            "python/deepviz/src/deepviz/models.py": {
+              "git_blob": "58dd5dca8549675e571390b072615fc285aba2f4",
+              "sha256": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb"
+            },
+            "python/deepviz/src/deepviz/normalize.py": {
+              "git_blob": "edeebb362c80c73f837e91fcb17e98db569682e3",
+              "sha256": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+            },
+            "scripts/performance_suite.py": {
+              "git_blob": "cda47af02d551a5e5e46fb73e3a1752e7e3a9ccd",
+              "sha256": "8ce8aa6eaf5a7af3a68ba47de72e198186dc4348f91fd3b70ebfcdac3ae090cf"
+            },
+            "tests/test_sentinel.py": {
+              "git_blob": "fe7f467d28266eccf7a0017624f7ab7fbccf5c61",
+              "sha256": "6b22cfeaa44584912c45bf166ac157a077119f09fb58195073d44f6b6cdc9ddc"
+            }
+          },
+          "allowed_inputs": {},
+          "untracked_paths": [],
+          "python_sha256": {
+            "python/deepviz/src/deepviz/__init__.py": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304",
+            "python/deepviz/src/deepviz/models.py": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb",
+            "python/deepviz/src/deepviz/normalize.py": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+          },
+          "reported_dirty_paths": []
+        },
+        "error": " | ValueError: Worker report exceeds 4 MiB"
+      }
+    },
+    {
+      "fixture": "test_nonzero_child_exit_never_0",
+      "synthetic_not_DeepViz": true,
+      "not_measurement": true,
+      "receipt": {
+        "status": "REJECTED_NOT_SCALE_APPROVAL",
+        "commands_executed": 1,
+        "commands_executed_scope": "fixed performance command only; Git preflight still runs",
+        "command": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-s",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_nonzero_child_exit_never_0\\tiny-candidate\\scripts\\performance_suite.py",
+          "--source-root",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_nonzero_child_exit_never_0\\tiny-candidate",
+          "--counts",
+          "10",
+          "1000",
+          "100000",
+          "1000000",
+          "10000000",
+          "--cases",
+          "numeric_sample",
+          "category_sum",
+          "category_mean",
+          "--max-points",
+          "2000",
+          "--repeats",
+          "2",
+          "--render-counts",
+          "--max-peak-growth-mib",
+          "64",
+          "--timeout",
+          "600",
+          "--output",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_nonzero_child_exit_never_0\\evidence\\matrix.json"
+        ],
+        "before": {
+          "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_nonzero_child_exit_never_0\\tiny-candidate",
+          "head": "417ed4944fbd10db32dfb2d4de007f48552ba78b",
+          "git_tree": "1fa63d8dd1a2f7c3fe58ddfe3e67759fe9a38870",
+          "files": {
+            ".gitattributes": {
+              "git_blob": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+              "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+            },
+            ".gitignore": {
+              "git_blob": "21a9dcc4cd8ca15c0a66064d0f7ed228553f30e6",
+              "sha256": "9e091a010ee28082b628eb207c3ccd47b34c2c24b9e5362e3c3609898c3cd585"
+            },
+            "pyproject.toml": {
+              "git_blob": "3720b5f2355a4039162024d978aeefb742f86a3b",
+              "sha256": "72a76bc35b89106ed5f7b0cd2c9f7422eebf2b957efaf6f6b84ec46e6b39248e"
+            },
+            "python/deepviz/src/deepviz/__init__.py": {
+              "git_blob": "0dc90109ba177c361eee8a122207ebe26eed3f34",
+              "sha256": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304"
+            },
+            "python/deepviz/src/deepviz/models.py": {
+              "git_blob": "58dd5dca8549675e571390b072615fc285aba2f4",
+              "sha256": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb"
+            },
+            "python/deepviz/src/deepviz/normalize.py": {
+              "git_blob": "edeebb362c80c73f837e91fcb17e98db569682e3",
+              "sha256": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+            },
+            "scripts/performance_suite.py": {
+              "git_blob": "55707d8e49858551285c201a79fbbf7651b1a8b2",
+              "sha256": "2879db526b8e5fbb384f408761af9aaacfd7bbc0972dc62c6d1fd387df8a7707"
+            },
+            "tests/test_sentinel.py": {
+              "git_blob": "fe7f467d28266eccf7a0017624f7ab7fbccf5c61",
+              "sha256": "6b22cfeaa44584912c45bf166ac157a077119f09fb58195073d44f6b6cdc9ddc"
+            }
+          },
+          "allowed_inputs": {},
+          "untracked_paths": [],
+          "python_sha256": {
+            "python/deepviz/src/deepviz/__init__.py": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304",
+            "python/deepviz/src/deepviz/models.py": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb",
+            "python/deepviz/src/deepviz/normalize.py": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+          },
+          "reported_dirty_paths": []
+        },
+        "envelope_sha256": "8d5b31dbbe4570ec68a70f2a243230b4cf2627dd381490603673e6ab9a1c96a3",
+        "measurement_verified": false,
+        "module_origin_limit": "Same-process imported module paths/bytecode are not attested by this external envelope; the frozen child loader must reject wrong origins.",
+        "scope": "External provenance and worker counts only; values/loss/OS memory/measurement truth need independent gates",
+        "exit": 3,
+        "error": "ValueError: Child command failed | ValueError: Child execution did not succeed",
+        "after": {
+          "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_nonzero_child_exit_never_0\\tiny-candidate",
+          "head": "417ed4944fbd10db32dfb2d4de007f48552ba78b",
+          "git_tree": "1fa63d8dd1a2f7c3fe58ddfe3e67759fe9a38870",
+          "files": {
+            ".gitattributes": {
+              "git_blob": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+              "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+            },
+            ".gitignore": {
+              "git_blob": "21a9dcc4cd8ca15c0a66064d0f7ed228553f30e6",
+              "sha256": "9e091a010ee28082b628eb207c3ccd47b34c2c24b9e5362e3c3609898c3cd585"
+            },
+            "pyproject.toml": {
+              "git_blob": "3720b5f2355a4039162024d978aeefb742f86a3b",
+              "sha256": "72a76bc35b89106ed5f7b0cd2c9f7422eebf2b957efaf6f6b84ec46e6b39248e"
+            },
+            "python/deepviz/src/deepviz/__init__.py": {
+              "git_blob": "0dc90109ba177c361eee8a122207ebe26eed3f34",
+              "sha256": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304"
+            },
+            "python/deepviz/src/deepviz/models.py": {
+              "git_blob": "58dd5dca8549675e571390b072615fc285aba2f4",
+              "sha256": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb"
+            },
+            "python/deepviz/src/deepviz/normalize.py": {
+              "git_blob": "edeebb362c80c73f837e91fcb17e98db569682e3",
+              "sha256": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+            },
+            "scripts/performance_suite.py": {
+              "git_blob": "55707d8e49858551285c201a79fbbf7651b1a8b2",
+              "sha256": "2879db526b8e5fbb384f408761af9aaacfd7bbc0972dc62c6d1fd387df8a7707"
+            },
+            "tests/test_sentinel.py": {
+              "git_blob": "fe7f467d28266eccf7a0017624f7ab7fbccf5c61",
+              "sha256": "6b22cfeaa44584912c45bf166ac157a077119f09fb58195073d44f6b6cdc9ddc"
+            }
+          },
+          "allowed_inputs": {},
+          "untracked_paths": [],
+          "python_sha256": {
+            "python/deepviz/src/deepviz/__init__.py": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304",
+            "python/deepviz/src/deepviz/models.py": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb",
+            "python/deepviz/src/deepviz/normalize.py": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+          },
+          "reported_dirty_paths": []
+        }
+      }
+    },
+    {
+      "fixture": "test_report_missing_is_never_a0",
+      "synthetic_not_DeepViz": true,
+      "not_measurement": true,
+      "receipt": {
+        "status": "REJECTED_NOT_SCALE_APPROVAL",
+        "commands_executed": 1,
+        "commands_executed_scope": "fixed performance command only; Git preflight still runs",
+        "command": [
+          "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-s",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_report_missing_is_never_a0\\tiny-candidate\\scripts\\performance_suite.py",
+          "--source-root",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_report_missing_is_never_a0\\tiny-candidate",
+          "--counts",
+          "10",
+          "1000",
+          "100000",
+          "1000000",
+          "10000000",
+          "--cases",
+          "numeric_sample",
+          "category_sum",
+          "category_mean",
+          "--max-points",
+          "2000",
+          "--repeats",
+          "2",
+          "--render-counts",
+          "--max-peak-growth-mib",
+          "64",
+          "--timeout",
+          "600",
+          "--output",
+          "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_report_missing_is_never_a0\\evidence\\matrix.json"
+        ],
+        "before": {
+          "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_report_missing_is_never_a0\\tiny-candidate",
+          "head": "4ee6da08759672efb9b715a9cc9d57d2d5eda04d",
+          "git_tree": "cf815d015219e15beab4afb34b6adb5694208332",
+          "files": {
+            ".gitattributes": {
+              "git_blob": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+              "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+            },
+            ".gitignore": {
+              "git_blob": "21a9dcc4cd8ca15c0a66064d0f7ed228553f30e6",
+              "sha256": "9e091a010ee28082b628eb207c3ccd47b34c2c24b9e5362e3c3609898c3cd585"
+            },
+            "pyproject.toml": {
+              "git_blob": "3720b5f2355a4039162024d978aeefb742f86a3b",
+              "sha256": "72a76bc35b89106ed5f7b0cd2c9f7422eebf2b957efaf6f6b84ec46e6b39248e"
+            },
+            "python/deepviz/src/deepviz/__init__.py": {
+              "git_blob": "0dc90109ba177c361eee8a122207ebe26eed3f34",
+              "sha256": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304"
+            },
+            "python/deepviz/src/deepviz/models.py": {
+              "git_blob": "58dd5dca8549675e571390b072615fc285aba2f4",
+              "sha256": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb"
+            },
+            "python/deepviz/src/deepviz/normalize.py": {
+              "git_blob": "edeebb362c80c73f837e91fcb17e98db569682e3",
+              "sha256": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+            },
+            "scripts/performance_suite.py": {
+              "git_blob": "07b8b0e93848916e8d753423c6aba3918ea39aba",
+              "sha256": "fb21305516d3665fe567949e3b61c224465ebd1d2096622dd8f7e3e973c3ebea"
+            },
+            "tests/test_sentinel.py": {
+              "git_blob": "fe7f467d28266eccf7a0017624f7ab7fbccf5c61",
+              "sha256": "6b22cfeaa44584912c45bf166ac157a077119f09fb58195073d44f6b6cdc9ddc"
+            }
+          },
+          "allowed_inputs": {},
+          "untracked_paths": [],
+          "python_sha256": {
+            "python/deepviz/src/deepviz/__init__.py": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304",
+            "python/deepviz/src/deepviz/models.py": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb",
+            "python/deepviz/src/deepviz/normalize.py": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+          },
+          "reported_dirty_paths": []
+        },
+        "envelope_sha256": "8d5b31dbbe4570ec68a70f2a243230b4cf2627dd381490603673e6ab9a1c96a3",
+        "measurement_verified": false,
+        "module_origin_limit": "Same-process imported module paths/bytecode are not attested by this external envelope; the frozen child loader must reject wrong origins.",
+        "scope": "External provenance and worker counts only; values/loss/OS memory/measurement truth need independent gates",
+        "exit": 0,
+        "after": {
+          "root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-21-final-20261127T154115376890Z\\test_report_missing_is_never_a0\\tiny-candidate",
+          "head": "4ee6da08759672efb9b715a9cc9d57d2d5eda04d",
+          "git_tree": "cf815d015219e15beab4afb34b6adb5694208332",
+          "files": {
+            ".gitattributes": {
+              "git_blob": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+              "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+            },
+            ".gitignore": {
+              "git_blob": "21a9dcc4cd8ca15c0a66064d0f7ed228553f30e6",
+              "sha256": "9e091a010ee28082b628eb207c3ccd47b34c2c24b9e5362e3c3609898c3cd585"
+            },
+            "pyproject.toml": {
+              "git_blob": "3720b5f2355a4039162024d978aeefb742f86a3b",
+              "sha256": "72a76bc35b89106ed5f7b0cd2c9f7422eebf2b957efaf6f6b84ec46e6b39248e"
+            },
+            "python/deepviz/src/deepviz/__init__.py": {
+              "git_blob": "0dc90109ba177c361eee8a122207ebe26eed3f34",
+              "sha256": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304"
+            },
+            "python/deepviz/src/deepviz/models.py": {
+              "git_blob": "58dd5dca8549675e571390b072615fc285aba2f4",
+              "sha256": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb"
+            },
+            "python/deepviz/src/deepviz/normalize.py": {
+              "git_blob": "edeebb362c80c73f837e91fcb17e98db569682e3",
+              "sha256": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+            },
+            "scripts/performance_suite.py": {
+              "git_blob": "07b8b0e93848916e8d753423c6aba3918ea39aba",
+              "sha256": "fb21305516d3665fe567949e3b61c224465ebd1d2096622dd8f7e3e973c3ebea"
+            },
+            "tests/test_sentinel.py": {
+              "git_blob": "fe7f467d28266eccf7a0017624f7ab7fbccf5c61",
+              "sha256": "6b22cfeaa44584912c45bf166ac157a077119f09fb58195073d44f6b6cdc9ddc"
+            }
+          },
+          "allowed_inputs": {},
+          "untracked_paths": [],
+          "python_sha256": {
+            "python/deepviz/src/deepviz/__init__.py": "22946ae8d80d99fd5841ef91ce9fdb2bebd6e9cfbe07882a0dc0d31a295d5304",
+            "python/deepviz/src/deepviz/models.py": "9d57cca02be9b77546c3f126a1d1d6cd1fc26a9dafb157525fd114681f50f2bb",
+            "python/deepviz/src/deepviz/normalize.py": "fb7dc6b624af8844678e381fb813b39793d2fd19d4bc5aa64d3f01db79de0b40"
+          },
+          "reported_dirty_paths": []
+        },
+        "error": " | ValueError: Missing worker report"
+      }
+    }
+  ]
+}

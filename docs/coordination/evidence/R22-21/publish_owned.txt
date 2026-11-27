@@ -1,0 +1,55 @@
+"""Git-only scoped non-force publication; no API, tokens or user-identity claims."""
+import datetime as dt
+import json
+import re
+import subprocess
+from pathlib import Path
+from urllib.parse import urlsplit
+
+root = Path.cwd()
+main = Path(r"C:\Users\bagma\deepviz-agent-toolkit")
+branch = "agents/r10-21-recovery-git-bootstrap"
+base = "5d57692731949cf98bcf92a319eb25ebc85fc62b"
+report = "docs/coordination/reports/R22-21-frozen-source-envelope.md"
+receipt = {"owner": "ses_de5678018ffezK8JGDUaSzvcWn", "branch": branch, "base": base,
+           "started_utc": dt.datetime.now(dt.timezone.utc).isoformat(), "commands": [], "API_used": False}
+
+def git(*args):
+    done = subprocess.run(["git", *args], cwd=root, capture_output=True, text=True, timeout=120)
+    receipt["commands"].append({"argv": ["git", *args], "exit": done.returncode})
+    if done.returncode:
+        raise RuntimeError("Git command failed: " + args[0])
+    return done.stdout.strip()
+
+try:
+    if git("branch", "--show-current") != branch:
+        raise RuntimeError("Wrong own branch")
+    tip = git("rev-parse", "HEAD")
+    if not re.fullmatch("[0-9a-f]{40}", tip):
+        raise RuntimeError("Invalid own tip")
+    receipt["local_commit"] = tip
+    git("merge-base", "--is-ancestor", base, tip)
+    paths = git("diff", "--name-only", base, tip).splitlines()
+    allowed = lambda p: p == report or p == "docs/agent-state/ses_de5678018ffezK8JGDUaSzvcWn.md" or p.startswith("tests/r22_probes/role21/") or p.startswith("docs/coordination/evidence/R22-21/")
+    if not paths or not all(allowed(p) for p in paths) or git("status", "--porcelain=v1"):
+        raise RuntimeError("Scope mismatch or dirty own tree")
+    receipt["owned_paths"] = paths
+    origin = urlsplit(git("remote", "get-url", "origin"))
+    if origin.scheme != "https" or origin.hostname != "github.com" or origin.username or origin.password or origin.path.rstrip("/") not in {"/sandeshbagmare/deepviz-agent-toolkit", "/sandeshbagmare/deepviz-agent-toolkit.git"}:
+        raise RuntimeError("Unexpected origin")
+    git("push", "origin", "HEAD:refs/heads/" + branch)
+    fields = git("ls-remote", "--heads", "origin", "refs/heads/" + branch).split()
+    if fields != [tip, "refs/heads/" + branch]:
+        raise RuntimeError("Remote readback mismatch")
+    receipt["remote_sha_readback"] = fields[0]
+    receipt["status"] = "OWN_NONFORCE_PUBLISHED_EXACT_SHA_NOT_PRODUCT_APPROVAL"
+except (RuntimeError, subprocess.SubprocessError) as error:
+    receipt["status"] = "PUBLICATION_UNVERIFIED"
+    receipt["error"] = str(error)
+finally:
+    receipt["finished_utc"] = dt.datetime.now(dt.timezone.utc).isoformat()
+    path = main / "docs/coordination/evidence/R22-21/publication-receipt.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(receipt, indent=2) + chr(10), encoding="utf-8")
+    print(json.dumps(receipt, indent=2))
+raise SystemExit(0 if receipt["status"].startswith("OWN_NONFORCE") else 1)
