@@ -1,0 +1,78 @@
+{
+  "method": "10 original production screenshots actually opened through image reader; source files and captures were not edited or re-rendered",
+  "opened_count": 10,
+  "source_SHA": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+  "images": [
+    {
+      "id": "pie",
+      "path": "actual/pie.png",
+      "sha256": "35f2cff2434da3518a515838c8561dccfbf633008440512d7cea97ff1dc6f426",
+      "opened_via_actual_image_reader": true,
+      "observation": "Opened actual production PNG: Alpha/Beta/Gamma blue/teal/orange wedges agree with all three visible legend keys; Beta largest, Gamma smallest; no uniform fixed blue."
+    },
+    {
+      "id": "sunburst",
+      "path": "actual/sunburst.png",
+      "sha256": "f9c4ac21f6551b8a769ee0d3a8a4fc6f131a481e16b711c269c56fdafa8d95ec",
+      "opened_via_actual_image_reader": true,
+      "observation": "Opened actual production PNG: blue/teal/orange one-level ring agrees with legend and relative 12/31/7 proportions; disclosed flat-record hierarchy remains."
+    },
+    {
+      "id": "treemap",
+      "path": "actual/treemap.png",
+      "sha256": "88c23733230777efc53af6c542537f7311e02dc1b12fca4650e468767ed73479",
+      "opened_via_actual_image_reader": true,
+      "observation": "Opened actual production PNG: ordered blue/teal/orange tiles match legend; widths track 12/31/7; full chart and labels visible."
+    },
+    {
+      "id": "gauge",
+      "path": "actual/gauge.png",
+      "sha256": "53853b757757fa8e99422e724affb8eda95a033120d1902c8de80f4f3db3261c",
+      "opened_via_actual_image_reader": true,
+      "observation": "Opened actual production PNG: Value37 blue segment and Remaining63 teal segment match visible two-item legend on the semicircle; declared clamped 0-100 policy retained."
+    },
+    {
+      "id": "heatmap-negative",
+      "path": "actual/heatmap-negative.png",
+      "sha256": "4792be4d0b5b8fd7cb6958ca3adc94dd97ea647cdebdbccf343a1fe32a81cdef",
+      "opened_via_actual_image_reader": true,
+      "observation": "Opened actual production PNG: real Mon/AM pale cell and Tue/PM dark cell; visible numeric endpoints -7 and -2, no blank region or suppressed legend."
+    },
+    {
+      "id": "heatmap-signed",
+      "path": "actual/heatmap-signed.png",
+      "sha256": "be6648f711aa061d893072d72b2e8d6783c2eac5910838e121b2ed69df968068",
+      "opened_via_actual_image_reader": true,
+      "observation": "Opened actual production PNG: unequal cells and visible full -7/2 endpoints; original signed lower bound retained, no erroneous -2 lower endpoint."
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "path": "actual/heatmap-finite-extent.png",
+      "sha256": "c8c6203086e2aebc6a2c5d9f6e913efdbdb8efdd1a0f567d6292281a4c79a2a0",
+      "opened_via_actual_image_reader": true,
+      "observation": "Opened actual production PNG: both cells visible; complete -1000000000000 and -1e-12 labels fit inside canvas; no clipped minus/leading digits."
+    },
+    {
+      "id": "heatmap-zero",
+      "path": "actual/heatmap-zero.png",
+      "sha256": "31cfeeb21cd198afc51d3d4e4e97a6334933743c39ada0096902d29fd8fcf091",
+      "opened_via_actual_image_reader": true,
+      "observation": "Opened actual production PNG: two equal grey cells for zero values, visible padded -1/1 legend; not fabricated nonzero data."
+    },
+    {
+      "id": "heatmap-missing",
+      "path": "actual/heatmap-missing.png",
+      "sha256": "4c2cb9af8034aa4361e8dccdf1d5213855e6d09f23eb0baf8f8a4292b60311ba",
+      "opened_via_actual_image_reader": true,
+      "observation": "Opened actual production PNG: two valid cells only, full -7/-2 legend and explicit one-omitted warning; original three-record metadata retained."
+    },
+    {
+      "id": "dashboard-dark",
+      "path": "actual/dashboard-dark.png",
+      "sha256": "cf0f4f1db86baf9769087772642a378ecee4286e7ca93f09aff3fb6d636c5f65",
+      "opened_via_actual_image_reader": true,
+      "observation": "Opened actual production PNG: dark parent, genuine light pie child and dark line/treemap; correct category colors and connected cost2/8/5 with points; independent titles/containers. Muted tick-label contrast remains outside a full WCAG audit."
+    }
+  ],
+  "limits": "Other11 fixture images were measured/captured, not claimed visually opened; no complete WCAG/all-extents/all-kinds/main-release approval"
+}

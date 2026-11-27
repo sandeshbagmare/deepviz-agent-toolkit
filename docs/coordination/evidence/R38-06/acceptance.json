@@ -1,0 +1,4484 @@
+{
+  "collected_at": "2026-11-27T17:06:03.578308+00:00",
+  "source_SHA": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+  "method": "Saved measurements only; no product import, rerender, browser replay or HTML changes",
+  "unit_totals": {
+    "tests": 21,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "browser_totals": {
+    "cases": 21,
+    "checks": 254,
+    "passed": 254,
+    "failed": 0,
+    "skipped": 0
+  },
+  "actual_navigations": 42,
+  "errors": [],
+  "request_failures": [],
+  "exact_real_CDN_asset": {
+    "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+    "bytes": 1083414,
+    "sha256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412",
+    "responses": 42
+  },
+  "node": "v26.13.1",
+  "playwright": "1.65.1",
+  "chromium": "159.0.8154.6",
+  "all_21_HTML_hashes_unchanged": true,
+  "all_21_observer_pairs_RGB_identical": true,
+  "all_7_source_test_hashes_rechecked": true,
+  "source_worktree_clean": true,
+  "checks": [
+    {
+      "id": "pie",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "literal-category-values",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "pie",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "literal-category-values",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "pie-single",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "literal-category-values",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "sunburst",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "literal-category-values",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "sunburst-single",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "literal-category-values",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "treemap",
+      "name": "treemap-widths-preserve-values",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "literal-category-values",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "treemap-single",
+      "name": "treemap-widths-preserve-values",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "literal-category-values",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "gauge",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "visible-quantitative-legend-covers-literal-extent",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "visible-legend-labels-stay-inside-real-canvas",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "literal-ordered-grid-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-negative",
+      "name": "actual-painted-cell-centers-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "visible-quantitative-legend-covers-literal-extent",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "visible-legend-labels-stay-inside-real-canvas",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "literal-ordered-grid-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-positive",
+      "name": "actual-painted-cell-centers-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "visible-quantitative-legend-covers-literal-extent",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "visible-legend-labels-stay-inside-real-canvas",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "literal-ordered-grid-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-signed",
+      "name": "actual-painted-cell-centers-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "visible-quantitative-legend-covers-literal-extent",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "visible-legend-labels-stay-inside-real-canvas",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant",
+      "name": "literal-ordered-grid-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "visible-quantitative-legend-covers-literal-extent",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "visible-legend-labels-stay-inside-real-canvas",
+      "pass": true
+    },
+    {
+      "id": "heatmap-zero",
+      "name": "literal-ordered-grid-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "visible-quantitative-legend-covers-literal-extent",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "visible-legend-labels-stay-inside-real-canvas",
+      "pass": true
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "name": "literal-ordered-grid-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "visible-quantitative-legend-covers-literal-extent",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "visible-legend-labels-stay-inside-real-canvas",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "literal-ordered-grid-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "name": "actual-painted-cell-centers-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "visible-quantitative-legend-covers-literal-extent",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "visible-legend-labels-stay-inside-real-canvas",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "literal-ordered-grid-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "name": "actual-painted-cell-centers-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "visible-quantitative-legend-covers-literal-extent",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "visible-legend-labels-stay-inside-real-canvas",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "literal-ordered-grid-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-missing",
+      "name": "actual-painted-cell-centers-differ",
+      "pass": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "name": "literal-quantitative-values",
+      "pass": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "name": "exact-number-of-positive-area-cells",
+      "pass": true
+    },
+    {
+      "id": "heatmap-all-missing",
+      "name": "actual-cell-colors-distinct-iff-values-differ",
+      "pass": true
+    },
+    {
+      "id": "line",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "line",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "line",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "line",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "line",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "line",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "line",
+      "name": "three-original-fixed-blue-points",
+      "pass": true
+    },
+    {
+      "id": "line",
+      "name": "literal-1-to-2-numeric-x-spacing",
+      "pass": true
+    },
+    {
+      "id": "scatter",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "scatter",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "scatter",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "scatter",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "scatter",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "scatter",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "scatter",
+      "name": "three-original-fixed-blue-points",
+      "pass": true
+    },
+    {
+      "id": "scatter",
+      "name": "literal-1-to-2-numeric-x-spacing",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "three-independent-native-chart-containers",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "child-theme-backgrounds-preserved",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "parent-theme-background-preserved",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light/pie",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light/pie",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light/pie",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light/pie",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light/treemap",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light/treemap",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light/treemap",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light/treemap",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "dashboard-light",
+      "name": "line-control-has-connected-plus-point-marks",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "unmodified-public-html-ready",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "zero-console-or-page-errors",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "real-exact-CDN-bytes",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "observation-preserves-readiness",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "native-payload-equals-public-manifest",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "literal-public-input-records-unchanged",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "three-independent-native-chart-containers",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "child-theme-backgrounds-preserved",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "parent-theme-background-preserved",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark/pie",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark/pie",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark/pie",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark/pie",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark/treemap",
+      "name": "one-positive-area-mark-per-ordered-category",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark/treemap",
+      "name": "actual-categorical-fills-distinct",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark/treemap",
+      "name": "visible-legend-preserves-ordered-labels",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark/treemap",
+      "name": "actual-fills-match-actual-legend-colors",
+      "pass": true
+    },
+    {
+      "id": "dashboard-dark",
+      "name": "line-control-has-connected-plus-point-marks",
+      "pass": true
+    }
+  ],
+  "cases": [
+    {
+      "id": "pie",
+      "literal_expected": [
+        [
+          "Alpha",
+          12
+        ],
+        [
+          "Beta",
+          31
+        ],
+        [
+          "Gamma",
+          7
+        ]
+      ],
+      "artifact_input_count": 3,
+      "artifact_output_count": 3,
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "f097cc48f399c2c82b52b4742b802414218103f68cdc7f3f37d0de40b88a568b",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#1783FF",
+              "stroke": "#1783FF",
+              "fillColor": "#1783ff",
+              "box": {
+                "x": 408.1630859375,
+                "y": 55,
+                "width": 204.09500000000003,
+                "height": 204.5
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#00C9C9",
+              "stroke": "#00C9C9",
+              "fillColor": "#00c9c9",
+              "box": {
+                "x": 203.66333018040143,
+                "y": 129.163,
+                "width": 409,
+                "height": 334.837144106667
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#F0884D",
+              "stroke": "#F0884D",
+              "fillColor": "#f0884d",
+              "box": {
+                "x": 250.60608593749998,
+                "y": 55,
+                "width": 157.55700000000002,
+                "height": 204.5
+              }
+            }
+          ],
+          "legend": [
+            {
+              "label": "Alpha",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#1783FF",
+                "stroke": "",
+                "fillColor": "#1783ff",
+                "box": {
+                  "x": 812.326171875,
+                  "y": 58.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            },
+            {
+              "label": "Beta",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#00C9C9",
+                "stroke": "",
+                "fillColor": "#00c9c9",
+                "box": {
+                  "x": 812.326171875,
+                  "y": 81.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            },
+            {
+              "label": "Gamma",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#F0884D",
+                "stroke": "",
+                "fillColor": "#f0884d",
+                "box": {
+                  "x": 812.326171875,
+                  "y": 104.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            }
+          ],
+          "ticks": [],
+          "samples": [
+            {
+              "x": 510,
+              "y": 157,
+              "rgba": [
+                23,
+                131,
+                255,
+                242
+              ]
+            },
+            {
+              "x": 408,
+              "y": 297,
+              "rgba": [
+                0,
+                201,
+                201,
+                242
+              ]
+            },
+            {
+              "x": 329,
+              "y": 157,
+              "rgba": [
+                240,
+                136,
+                77,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pie-single",
+      "literal_expected": [
+        [
+          "Only",
+          1
+        ]
+      ],
+      "artifact_input_count": 1,
+      "artifact_output_count": 1,
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "f1334fcd7b56406a0eeb0c044ce4c775e85ce9567eee899ee36eff2fae4ce302",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#1783FF",
+              "stroke": "#1783FF",
+              "fillColor": "#1783ff",
+              "box": {
+                "x": 212.6630859375,
+                "y": 55,
+                "width": 409,
+                "height": 408.9999990220049
+              }
+            }
+          ],
+          "legend": [
+            {
+              "label": "Only",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#1783FF",
+                "stroke": "",
+                "fillColor": "#1783ff",
+                "box": {
+                  "x": 830.326171875,
+                  "y": 58.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            }
+          ],
+          "ticks": [],
+          "samples": [
+            {
+              "x": 417,
+              "y": 259,
+              "rgba": [
+                23,
+                131,
+                255,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sunburst",
+      "literal_expected": [
+        [
+          "Alpha",
+          12
+        ],
+        [
+          "Beta",
+          31
+        ],
+        [
+          "Gamma",
+          7
+        ]
+      ],
+      "artifact_input_count": 3,
+      "artifact_output_count": 3,
+      "warnings": [
+        "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "accdb189d39b9c09ca5e5a925eb9a8fbac5b873f593b91a6e309779d6489b854",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#1783FF",
+              "stroke": "#1783FF",
+              "fillColor": "#1783ff",
+              "box": {
+                "x": 408.1720859375,
+                "y": 55,
+                "width": 204.086,
+                "height": 198.71300000000002
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#00C9C9",
+              "stroke": "#00C9C9",
+              "fillColor": "#00c9c9",
+              "box": {
+                "x": 203.66333018040143,
+                "y": 129.163,
+                "width": 409,
+                "height": 334.837144106667
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#F0884D",
+              "stroke": "#F0884D",
+              "fillColor": "#f0884d",
+              "box": {
+                "x": 250.60608593749998,
+                "y": 55,
+                "width": 157.548,
+                "height": 145.834
+              }
+            }
+          ],
+          "legend": [
+            {
+              "label": "Alpha",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#1783FF",
+                "stroke": "",
+                "fillColor": "#1783ff",
+                "box": {
+                  "x": 812.326171875,
+                  "y": 58.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            },
+            {
+              "label": "Beta",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#00C9C9",
+                "stroke": "",
+                "fillColor": "#00c9c9",
+                "box": {
+                  "x": 812.326171875,
+                  "y": 81.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            },
+            {
+              "label": "Gamma",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#F0884D",
+                "stroke": "",
+                "fillColor": "#f0884d",
+                "box": {
+                  "x": 812.326171875,
+                  "y": 104.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            }
+          ],
+          "ticks": [],
+          "samples": [
+            {
+              "x": 510,
+              "y": 154,
+              "rgba": [
+                23,
+                131,
+                255,
+                242
+              ]
+            },
+            {
+              "x": 408,
+              "y": 297,
+              "rgba": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "x": 329,
+              "y": 128,
+              "rgba": [
+                240,
+                136,
+                77,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sunburst-single",
+      "literal_expected": [
+        [
+          "Only",
+          1
+        ]
+      ],
+      "artifact_input_count": 1,
+      "artifact_output_count": 1,
+      "warnings": [
+        "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "040e1fa6cf26cf5349e29c6771d3306877ce7f6249b8c38030841d034a424d49",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#1783FF",
+              "stroke": "#1783FF",
+              "fillColor": "#1783ff",
+              "box": {
+                "x": 212.6630859375,
+                "y": 55,
+                "width": 409,
+                "height": 408.9999990220049
+              }
+            }
+          ],
+          "legend": [
+            {
+              "label": "Only",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#1783FF",
+                "stroke": "",
+                "fillColor": "#1783ff",
+                "box": {
+                  "x": 830.326171875,
+                  "y": 58.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            }
+          ],
+          "ticks": [],
+          "samples": [
+            {
+              "x": 417,
+              "y": 259,
+              "rgba": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "treemap",
+      "literal_expected": [
+        [
+          "Alpha",
+          12
+        ],
+        [
+          "Beta",
+          31
+        ],
+        [
+          "Gamma",
+          7
+        ]
+      ],
+      "artifact_input_count": 3,
+      "artifact_output_count": 3,
+      "warnings": [
+        "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "b7c3aac24a6d0b0cc79d74a63af5e4eeca81baf817e55a6405eb48b11d328ae5",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "#1783FF",
+              "stroke": "#1783FF",
+              "fillColor": "#1783ff",
+              "box": {
+                "x": 16,
+                "y": 82,
+                "width": 208.32,
+                "height": 382
+              }
+            },
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "#00C9C9",
+              "stroke": "#00C9C9",
+              "fillColor": "#00c9c9",
+              "box": {
+                "x": 224.32,
+                "y": 82,
+                "width": 538.1600000000001,
+                "height": 382
+              }
+            },
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "#F0884D",
+              "stroke": "#F0884D",
+              "fillColor": "#f0884d",
+              "box": {
+                "x": 762.48,
+                "y": 82,
+                "width": 121.51999999999998,
+                "height": 382
+              }
+            }
+          ],
+          "legend": [
+            {
+              "label": "Alpha",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#1783FF",
+                "stroke": "",
+                "fillColor": "#1783ff",
+                "box": {
+                  "x": 16,
+                  "y": 58.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            },
+            {
+              "label": "Beta",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#00C9C9",
+                "stroke": "",
+                "fillColor": "#00c9c9",
+                "box": {
+                  "x": 75.69140625,
+                  "y": 58.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            },
+            {
+              "label": "Gamma",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#F0884D",
+                "stroke": "",
+                "fillColor": "#f0884d",
+                "box": {
+                  "x": 129.376953125,
+                  "y": 58.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            }
+          ],
+          "ticks": [],
+          "samples": [
+            {
+              "x": 120,
+              "y": 273,
+              "rgba": [
+                23,
+                131,
+                255,
+                242
+              ]
+            },
+            {
+              "x": 493,
+              "y": 273,
+              "rgba": [
+                0,
+                201,
+                201,
+                242
+              ]
+            },
+            {
+              "x": 823,
+              "y": 273,
+              "rgba": [
+                240,
+                136,
+                77,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "treemap-single",
+      "literal_expected": [
+        [
+          "Only",
+          1
+        ]
+      ],
+      "artifact_input_count": 1,
+      "artifact_output_count": 1,
+      "warnings": [
+        "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "5fe0fddf1e7eaa93dcb350a1f0eac1c4cb023b18701ec80fd28f24ea05cf178d",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "#1783FF",
+              "stroke": "#1783FF",
+              "fillColor": "#1783ff",
+              "box": {
+                "x": 16,
+                "y": 82,
+                "width": 868,
+                "height": 382
+              }
+            }
+          ],
+          "legend": [
+            {
+              "label": "Only",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#1783FF",
+                "stroke": "",
+                "fillColor": "#1783ff",
+                "box": {
+                  "x": 16,
+                  "y": 58.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            }
+          ],
+          "ticks": [],
+          "samples": [
+            {
+              "x": 450,
+              "y": 273,
+              "rgba": [
+                23,
+                131,
+                255,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gauge",
+      "literal_expected": [
+        [
+          "Value",
+          37
+        ],
+        [
+          "Remaining",
+          63
+        ]
+      ],
+      "artifact_input_count": 1,
+      "artifact_output_count": 1,
+      "warnings": [
+        "Gauge uses the first mapped y value on a fixed 0\u2013100 scale; displayed fill is clamped.",
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "50b7055605d5b2c130f7b2763d375d2f7b17c3e262b186bd000ba639c968ec4e",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#1783FF",
+              "stroke": "#1783FF",
+              "fillColor": "#1783ff",
+              "box": {
+                "x": 259,
+                "y": 97.71600000011478,
+                "width": 134.09500000000003,
+                "height": 175.26999999988521
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#00C9C9",
+              "stroke": "#00C9C9",
+              "fillColor": "#00c9c9",
+              "box": {
+                "x": 374.16200000000003,
+                "y": 81.99959559819341,
+                "width": 266.83799999999997,
+                "height": 190.98640440184772
+              }
+            }
+          ],
+          "legend": [
+            {
+              "label": "Value",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#1783FF",
+                "stroke": "",
+                "fillColor": "#1783ff",
+                "box": {
+                  "x": 16,
+                  "y": 58.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            },
+            {
+              "label": "Remaining",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#00C9C9",
+                "stroke": "",
+                "fillColor": "#00c9c9",
+                "box": {
+                  "x": 74.80078125,
+                  "y": 58.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            }
+          ],
+          "ticks": [],
+          "samples": [
+            {
+              "x": 326,
+              "y": 185,
+              "rgba": [
+                23,
+                131,
+                255,
+                242
+              ]
+            },
+            {
+              "x": 508,
+              "y": 177,
+              "rgba": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heatmap-negative",
+      "literal_expected": [
+        -7,
+        -2
+      ],
+      "artifact_input_count": 2,
+      "artifact_output_count": 2,
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "22cb9b3c609b93a0232c662d8701f5fec1378e2a44de084c21818cd0b100c5fd",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "rgba(255, 255, 217, 1)",
+              "stroke": "rgba(255, 255, 217, 1)",
+              "fillColor": "#ffffd9",
+              "box": {
+                "x": 70,
+                "y": 120,
+                "width": 406.99999992001085,
+                "height": 147
+              }
+            },
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "rgba(8, 29, 88, 1)",
+              "stroke": "rgba(8, 29, 88, 1)",
+              "fillColor": "#081d58",
+              "box": {
+                "x": 476.99999992001085,
+                "y": 267,
+                "width": 406.99999992001085,
+                "height": 147
+              }
+            }
+          ],
+          "legend": [],
+          "ticks": [
+            {
+              "node": "text",
+              "className": "title-text g2-legend-title",
+              "text": "_heat",
+              "fill": "#2C3542",
+              "fillColor": "#2c3542",
+              "box": {
+                "x": 16,
+                "y": 55,
+                "width": 31.029296875,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "-7",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 21.8349609375,
+                "y": 91,
+                "width": 11.669921875,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "-2",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 210.1650390625,
+                "y": 91,
+                "width": 11.669921875,
+                "height": 15
+              }
+            }
+          ],
+          "samples": [
+            {
+              "x": 273,
+              "y": 194,
+              "rgba": [
+                255,
+                255,
+                217,
+                242
+              ]
+            },
+            {
+              "x": 680,
+              "y": 341,
+              "rgba": [
+                8,
+                30,
+                89,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heatmap-positive",
+      "literal_expected": [
+        2,
+        7
+      ],
+      "artifact_input_count": 2,
+      "artifact_output_count": 2,
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "ecc3b313071e6b7bb18185d425e33b795285344277e24346465b667dd266b0f9",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "rgba(255, 255, 217, 1)",
+              "stroke": "rgba(255, 255, 217, 1)",
+              "fillColor": "#ffffd9",
+              "box": {
+                "x": 70,
+                "y": 120,
+                "width": 406.99999992001085,
+                "height": 147
+              }
+            },
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "rgba(8, 29, 88, 1)",
+              "stroke": "rgba(8, 29, 88, 1)",
+              "fillColor": "#081d58",
+              "box": {
+                "x": 476.99999992001085,
+                "y": 267,
+                "width": 406.99999992001085,
+                "height": 147
+              }
+            }
+          ],
+          "legend": [],
+          "ticks": [
+            {
+              "node": "text",
+              "className": "title-text g2-legend-title",
+              "text": "_heat",
+              "fill": "#2C3542",
+              "fillColor": "#2c3542",
+              "box": {
+                "x": 16,
+                "y": 55,
+                "width": 31.029296875,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "2",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 19.8369140625,
+                "y": 91,
+                "width": 7.673828125,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "7",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 212.1630859375,
+                "y": 91,
+                "width": 7.673828125,
+                "height": 15
+              }
+            }
+          ],
+          "samples": [
+            {
+              "x": 273,
+              "y": 194,
+              "rgba": [
+                255,
+                255,
+                217,
+                242
+              ]
+            },
+            {
+              "x": 680,
+              "y": 341,
+              "rgba": [
+                8,
+                30,
+                89,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heatmap-signed",
+      "literal_expected": [
+        -7,
+        2
+      ],
+      "artifact_input_count": 2,
+      "artifact_output_count": 2,
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "975b6314c845c023ab19c3b310c0d086d10f3ec6ea171cab3672b8d372d1ab22",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "rgba(255, 255, 217, 1)",
+              "stroke": "rgba(255, 255, 217, 1)",
+              "fillColor": "#ffffd9",
+              "box": {
+                "x": 70,
+                "y": 120,
+                "width": 406.99999992001085,
+                "height": 147
+              }
+            },
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "rgba(8, 29, 88, 1)",
+              "stroke": "rgba(8, 29, 88, 1)",
+              "fillColor": "#081d58",
+              "box": {
+                "x": 476.99999992001085,
+                "y": 267,
+                "width": 406.99999992001085,
+                "height": 147
+              }
+            }
+          ],
+          "legend": [],
+          "ticks": [
+            {
+              "node": "text",
+              "className": "title-text g2-legend-title",
+              "text": "_heat",
+              "fill": "#2C3542",
+              "fillColor": "#2c3542",
+              "box": {
+                "x": 16,
+                "y": 55,
+                "width": 31.029296875,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "-7",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 19.8369140625,
+                "y": 91,
+                "width": 11.669921875,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "2",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 212.1630859375,
+                "y": 91,
+                "width": 7.673828125,
+                "height": 15
+              }
+            }
+          ],
+          "samples": [
+            {
+              "x": 273,
+              "y": 194,
+              "rgba": [
+                255,
+                255,
+                217,
+                242
+              ]
+            },
+            {
+              "x": 680,
+              "y": 341,
+              "rgba": [
+                8,
+                30,
+                89,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heatmap-constant",
+      "literal_expected": [
+        1,
+        1
+      ],
+      "artifact_input_count": 2,
+      "artifact_output_count": 2,
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "257dd051b2b08ec3db8a4d55163becda3298b3b172592f057165615497a0e4c8",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "rgba(132, 142, 153, 1)",
+              "stroke": "rgba(132, 142, 153, 1)",
+              "fillColor": "#848e99",
+              "box": {
+                "x": 70,
+                "y": 120,
+                "width": 406.99999992001085,
+                "height": 147
+              }
+            },
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "rgba(132, 142, 153, 1)",
+              "stroke": "rgba(132, 142, 153, 1)",
+              "fillColor": "#848e99",
+              "box": {
+                "x": 476.99999992001085,
+                "y": 267,
+                "width": 406.99999992001085,
+                "height": 147
+              }
+            }
+          ],
+          "legend": [],
+          "ticks": [
+            {
+              "node": "text",
+              "className": "title-text g2-legend-title",
+              "text": "_heat",
+              "fill": "#2C3542",
+              "fillColor": "#2c3542",
+              "box": {
+                "x": 16,
+                "y": 55,
+                "width": 31.029296875,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "0.95",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 28.177734375,
+                "y": 91,
+                "width": 24.35546875,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "1.05",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 203.822265625,
+                "y": 91,
+                "width": 24.35546875,
+                "height": 15
+              }
+            }
+          ],
+          "samples": [
+            {
+              "x": 273,
+              "y": 194,
+              "rgba": [
+                132,
+                142,
+                153,
+                242
+              ]
+            },
+            {
+              "x": 680,
+              "y": 341,
+              "rgba": [
+                132,
+                142,
+                153,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heatmap-zero",
+      "literal_expected": [
+        0,
+        0
+      ],
+      "artifact_input_count": 2,
+      "artifact_output_count": 2,
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "0ff463662cc13a311c9b747dd1d82e4ea2b6942b743f10fd2bc5ac986b62f2aa",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "rgba(132, 142, 153, 1)",
+              "stroke": "rgba(132, 142, 153, 1)",
+              "fillColor": "#848e99",
+              "box": {
+                "x": 70,
+                "y": 120,
+                "width": 406.99999992001085,
+                "height": 147
+              }
+            },
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "rgba(132, 142, 153, 1)",
+              "stroke": "rgba(132, 142, 153, 1)",
+              "fillColor": "#848e99",
+              "box": {
+                "x": 476.99999992001085,
+                "y": 267,
+                "width": 406.99999992001085,
+                "height": 147
+              }
+            }
+          ],
+          "legend": [],
+          "ticks": [
+            {
+              "node": "text",
+              "className": "title-text g2-legend-title",
+              "text": "_heat",
+              "fill": "#2C3542",
+              "fillColor": "#2c3542",
+              "box": {
+                "x": 16,
+                "y": 55,
+                "width": 31.029296875,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "-1",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 19.8369140625,
+                "y": 91,
+                "width": 11.669921875,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "1",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 212.1630859375,
+                "y": 91,
+                "width": 7.673828125,
+                "height": 15
+              }
+            }
+          ],
+          "samples": [
+            {
+              "x": 273,
+              "y": 194,
+              "rgba": [
+                132,
+                142,
+                153,
+                242
+              ]
+            },
+            {
+              "x": 680,
+              "y": 341,
+              "rgba": [
+                132,
+                142,
+                153,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "literal_expected": [
+        -3,
+        -3
+      ],
+      "artifact_input_count": 2,
+      "artifact_output_count": 2,
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "4a5de9b5cbb04c06b9d33097ed61c60aa1b8cf88320e9dbdec0bb43acb3e55f3",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "rgba(132, 142, 153, 1)",
+              "stroke": "rgba(132, 142, 153, 1)",
+              "fillColor": "#848e99",
+              "box": {
+                "x": 70,
+                "y": 120,
+                "width": 406.99999992001085,
+                "height": 147
+              }
+            },
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "rgba(132, 142, 153, 1)",
+              "stroke": "rgba(132, 142, 153, 1)",
+              "fillColor": "#848e99",
+              "box": {
+                "x": 476.99999992001085,
+                "y": 267,
+                "width": 406.99999992001085,
+                "height": 147
+              }
+            }
+          ],
+          "legend": [],
+          "ticks": [
+            {
+              "node": "text",
+              "className": "title-text g2-legend-title",
+              "text": "_heat",
+              "fill": "#2C3542",
+              "fillColor": "#2c3542",
+              "box": {
+                "x": 16,
+                "y": 55,
+                "width": 31.029296875,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "-3.15",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 30.17578125,
+                "y": 91,
+                "width": 28.3515625,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "-2.85",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 201.82421875,
+                "y": 91,
+                "width": 28.3515625,
+                "height": 15
+              }
+            }
+          ],
+          "samples": [
+            {
+              "x": 273,
+              "y": 194,
+              "rgba": [
+                132,
+                142,
+                153,
+                242
+              ]
+            },
+            {
+              "x": 680,
+              "y": 341,
+              "rgba": [
+                132,
+                142,
+                153,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "literal_expected": [
+        -1000000000000.0,
+        -1e-12
+      ],
+      "artifact_input_count": 2,
+      "artifact_output_count": 2,
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "cefea682a2603b65cf9438caf56c4beec3391eb450298ada6af88c18f1bd503b",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "rgba(255, 255, 217, 1)",
+              "stroke": "rgba(255, 255, 217, 1)",
+              "fillColor": "#ffffd9",
+              "box": {
+                "x": 70,
+                "y": 120,
+                "width": 406.99999992001085,
+                "height": 147
+              }
+            },
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "rgba(8, 29, 88, 1)",
+              "stroke": "rgba(8, 29, 88, 1)",
+              "fillColor": "#081d58",
+              "box": {
+                "x": 476.99999992001085,
+                "y": 267,
+                "width": 406.99999992001085,
+                "height": 147
+              }
+            }
+          ],
+          "legend": [],
+          "ticks": [
+            {
+              "node": "text",
+              "className": "title-text g2-legend-title",
+              "text": "_heat",
+              "fill": "#2C3542",
+              "fillColor": "#2c3542",
+              "box": {
+                "x": 16,
+                "y": 55,
+                "width": 31.029296875,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "-1000000000000",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 33.84375,
+                "y": 91,
+                "width": 91.755859375,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "-1e-12",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 198.15625,
+                "y": 91,
+                "width": 35.6875,
+                "height": 15
+              }
+            }
+          ],
+          "samples": [
+            {
+              "x": 273,
+              "y": 194,
+              "rgba": [
+                255,
+                255,
+                217,
+                242
+              ]
+            },
+            {
+              "x": 680,
+              "y": 341,
+              "rgba": [
+                8,
+                30,
+                89,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "literal_expected": [
+        -1e-06,
+        -1e-09
+      ],
+      "artifact_input_count": 2,
+      "artifact_output_count": 2,
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "8177f1ddf5d893fa50558077e2dab5358a3e3c913676db2250dd4b8bd0f19d53",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "rgba(255, 255, 217, 1)",
+              "stroke": "rgba(255, 255, 217, 1)",
+              "fillColor": "#ffffd9",
+              "box": {
+                "x": 70,
+                "y": 120,
+                "width": 406.99999992001085,
+                "height": 147
+              }
+            },
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "rgba(8, 29, 88, 1)",
+              "stroke": "rgba(8, 29, 88, 1)",
+              "fillColor": "#081d58",
+              "box": {
+                "x": 476.99999992001085,
+                "y": 267,
+                "width": 406.99999992001085,
+                "height": 147
+              }
+            }
+          ],
+          "legend": [],
+          "ticks": [
+            {
+              "node": "text",
+              "className": "title-text g2-legend-title",
+              "text": "_heat",
+              "fill": "#2C3542",
+              "fillColor": "#2c3542",
+              "box": {
+                "x": 16,
+                "y": 55,
+                "width": 31.029296875,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "-0.000001",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 30.5068359375,
+                "y": 91,
+                "width": 55.046875,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "-1e-9",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 201.4931640625,
+                "y": 91,
+                "width": 29.013671875,
+                "height": 15
+              }
+            }
+          ],
+          "samples": [
+            {
+              "x": 273,
+              "y": 194,
+              "rgba": [
+                255,
+                255,
+                217,
+                242
+              ]
+            },
+            {
+              "x": 680,
+              "y": 341,
+              "rgba": [
+                8,
+                30,
+                89,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heatmap-missing",
+      "literal_expected": [
+        -7,
+        -2
+      ],
+      "artifact_input_count": 3,
+      "artifact_output_count": 3,
+      "warnings": [
+        "1 heatmap records with missing/non-numeric color values omitted from geometry.",
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "99edbd989f6a74f3d3831249219d189b1b03f4943b2c099941502e60c72cab33",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "rgba(255, 255, 217, 1)",
+              "stroke": "rgba(255, 255, 217, 1)",
+              "fillColor": "#ffffd9",
+              "box": {
+                "x": 70,
+                "y": 120,
+                "width": 406.99999992001085,
+                "height": 147
+              }
+            },
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "rgba(8, 29, 88, 1)",
+              "stroke": "rgba(8, 29, 88, 1)",
+              "fillColor": "#081d58",
+              "box": {
+                "x": 476.99999992001085,
+                "y": 267,
+                "width": 406.99999992001085,
+                "height": 147
+              }
+            }
+          ],
+          "legend": [],
+          "ticks": [
+            {
+              "node": "text",
+              "className": "title-text g2-legend-title",
+              "text": "_heat",
+              "fill": "#2C3542",
+              "fillColor": "#2c3542",
+              "box": {
+                "x": 16,
+                "y": 55,
+                "width": 31.029296875,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "-7",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 21.8349609375,
+                "y": 91,
+                "width": 11.669921875,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "-2",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 210.1650390625,
+                "y": 91,
+                "width": 11.669921875,
+                "height": 15
+              }
+            }
+          ],
+          "samples": [
+            {
+              "x": 273,
+              "y": 194,
+              "rgba": [
+                255,
+                255,
+                217,
+                242
+              ]
+            },
+            {
+              "x": 680,
+              "y": 341,
+              "rgba": [
+                8,
+                30,
+                89,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heatmap-all-missing",
+      "literal_expected": [],
+      "artifact_input_count": 2,
+      "artifact_output_count": 2,
+      "warnings": [
+        "2 heatmap records with missing/non-numeric color values omitted from geometry.",
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "358ff214556262016583d7067feff51942cb0440d8e9de2531ce3f566e5c2f1b",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [],
+          "legend": [],
+          "ticks": [
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "0",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 19.8369140625,
+                "y": 72,
+                "width": 7.673828125,
+                "height": 15
+              }
+            },
+            {
+              "node": "text",
+              "className": "axis-label-item",
+              "text": "1",
+              "fill": "#1D2129",
+              "fillColor": "#1d2129",
+              "box": {
+                "x": 212.1630859375,
+                "y": 72,
+                "width": 7.673828125,
+                "height": 15
+              }
+            }
+          ],
+          "samples": []
+        }
+      ]
+    },
+    {
+      "id": "line",
+      "literal_expected": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "artifact_input_count": 3,
+      "artifact_output_count": 3,
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "0e27cd26a06d636c6c886b6da80451e572554830aec47a65398492f66d25e3f6",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "",
+              "stroke": "#386cb0",
+              "fillColor": "#010203",
+              "box": {
+                "x": 58.673828125,
+                "y": 55,
+                "width": 825.326,
+                "height": 359
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#386cb0",
+              "stroke": "#1783FF",
+              "fillColor": "#386cb0",
+              "box": {
+                "x": 55.673828125,
+                "y": 411,
+                "width": 6,
+                "height": 6
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#386cb0",
+              "stroke": "#1783FF",
+              "fillColor": "#386cb0",
+              "box": {
+                "x": 330.78255217460946,
+                "y": 52,
+                "width": 6,
+                "height": 6
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#386cb0",
+              "stroke": "#1783FF",
+              "fillColor": "#386cb0",
+              "box": {
+                "x": 881.0000002738284,
+                "y": 231.5,
+                "width": 6,
+                "height": 6
+              }
+            }
+          ],
+          "legend": [],
+          "ticks": [],
+          "samples": [
+            {
+              "x": 471,
+              "y": 235,
+              "rgba": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "x": 59,
+              "y": 414,
+              "rgba": [
+                56,
+                108,
+                176,
+                255
+              ]
+            },
+            {
+              "x": 334,
+              "y": 55,
+              "rgba": [
+                56,
+                108,
+                176,
+                255
+              ]
+            },
+            {
+              "x": 884,
+              "y": 235,
+              "rgba": [
+                56,
+                108,
+                176,
+                255
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scatter",
+      "literal_expected": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "artifact_input_count": 3,
+      "artifact_output_count": 3,
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "4fbbf69eed87d645cf7260a250e2f38dd554aed7cb0a7980144c07acc9198c27",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 900,
+          "height": 480,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#386cb0",
+              "stroke": "#386cb0",
+              "fillColor": "#386cb0",
+              "box": {
+                "x": 55.673828125,
+                "y": 411,
+                "width": 6,
+                "height": 6
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#386cb0",
+              "stroke": "#386cb0",
+              "fillColor": "#386cb0",
+              "box": {
+                "x": 330.78255217460946,
+                "y": 52,
+                "width": 6,
+                "height": 6
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#386cb0",
+              "stroke": "#386cb0",
+              "fillColor": "#386cb0",
+              "box": {
+                "x": 881.0000002738284,
+                "y": 231.5,
+                "width": 6,
+                "height": 6
+              }
+            }
+          ],
+          "legend": [],
+          "ticks": [],
+          "samples": [
+            {
+              "x": 59,
+              "y": 414,
+              "rgba": [
+                56,
+                108,
+                176,
+                255
+              ]
+            },
+            {
+              "x": 334,
+              "y": 55,
+              "rgba": [
+                56,
+                108,
+                176,
+                255
+              ]
+            },
+            {
+              "x": 884,
+              "y": 235,
+              "rgba": [
+                56,
+                108,
+                176,
+                255
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dashboard-light",
+      "literal_expected": [
+        12,
+        31,
+        7
+      ],
+      "artifact_input_count": 3,
+      "artifact_output_count": 9,
+      "warnings": [
+        "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "561eb0a58157e2dba9d0b8a5a1530ae724b74f12b97e63ddb3c42fee1c187741",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 337,
+          "height": 420,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#1783FF",
+              "stroke": "#1783FF",
+              "fillColor": "#1783ff",
+              "box": {
+                "x": 126.66308593749999,
+                "y": 118.83699999999999,
+                "width": 110.44399999999997,
+                "height": 110.66300000000001
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#00C9C9",
+              "stroke": "#00C9C9",
+              "fillColor": "#00c9c9",
+              "box": {
+                "x": 15.999818826650781,
+                "y": 158.96900000000005,
+                "width": 221.32600000000002,
+                "height": 181.19448267369512
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#F0884D",
+              "stroke": "#F0884D",
+              "fillColor": "#f0884d",
+              "box": {
+                "x": 41.40308593749998,
+                "y": 118.83699999999999,
+                "width": 85.26000000000002,
+                "height": 110.66300000000001
+              }
+            }
+          ],
+          "legend": [
+            {
+              "label": "Alpha",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#1783FF",
+                "stroke": "",
+                "fillColor": "#1783ff",
+                "box": {
+                  "x": 249.326171875,
+                  "y": 58.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            },
+            {
+              "label": "Beta",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#00C9C9",
+                "stroke": "",
+                "fillColor": "#00c9c9",
+                "box": {
+                  "x": 249.326171875,
+                  "y": 81.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            },
+            {
+              "label": "Gamma",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#F0884D",
+                "stroke": "",
+                "fillColor": "#f0884d",
+                "box": {
+                  "x": 249.326171875,
+                  "y": 104.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            }
+          ],
+          "ticks": [],
+          "samples": [
+            {
+              "x": 182,
+              "y": 174,
+              "rgba": [
+                23,
+                131,
+                255,
+                242
+              ]
+            },
+            {
+              "x": 127,
+              "y": 250,
+              "rgba": [
+                0,
+                201,
+                201,
+                242
+              ]
+            },
+            {
+              "x": 84,
+              "y": 174,
+              "rgba": [
+                240,
+                136,
+                77,
+                242
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chart-1",
+          "width": 337,
+          "height": 420,
+          "background": "rgb(23, 27, 38)",
+          "marks": [
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "",
+              "stroke": "#386cb0",
+              "fillColor": "#010203",
+              "box": {
+                "x": 102.39482812499999,
+                "y": 55,
+                "width": 174.88399999999996,
+                "height": 299
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#386cb0",
+              "stroke": "#1783FF",
+              "fillColor": "#386cb0",
+              "box": {
+                "x": 99.39485672515072,
+                "y": 351,
+                "width": 6,
+                "height": 6
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#386cb0",
+              "stroke": "#1783FF",
+              "fillColor": "#386cb0",
+              "box": {
+                "x": 186.83691392545214,
+                "y": 52,
+                "width": 6,
+                "height": 6
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#386cb0",
+              "stroke": "#1783FF",
+              "fillColor": "#386cb0",
+              "box": {
+                "x": 274.2789711257535,
+                "y": 201.5,
+                "width": 6,
+                "height": 6
+              }
+            }
+          ],
+          "legend": [],
+          "ticks": [],
+          "samples": [
+            {
+              "x": 190,
+              "y": 205,
+              "rgba": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "x": 102,
+              "y": 354,
+              "rgba": [
+                56,
+                108,
+                176,
+                255
+              ]
+            },
+            {
+              "x": 190,
+              "y": 55,
+              "rgba": [
+                56,
+                108,
+                176,
+                255
+              ]
+            },
+            {
+              "x": 277,
+              "y": 205,
+              "rgba": [
+                56,
+                108,
+                176,
+                255
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chart-2",
+          "width": 337,
+          "height": 420,
+          "background": "rgb(23, 27, 38)",
+          "marks": [
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "#1783FF",
+              "stroke": "#1783FF",
+              "fillColor": "#1783ff",
+              "box": {
+                "x": 16,
+                "y": 82,
+                "width": 73.2,
+                "height": 322
+              }
+            },
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "#00C9C9",
+              "stroke": "#00C9C9",
+              "fillColor": "#00c9c9",
+              "box": {
+                "x": 89.19999999999999,
+                "y": 82,
+                "width": 189.10000000000002,
+                "height": 322
+              }
+            },
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "#F0884D",
+              "stroke": "#F0884D",
+              "fillColor": "#f0884d",
+              "box": {
+                "x": 278.29999999999995,
+                "y": 82,
+                "width": 42.700000000000045,
+                "height": 322
+              }
+            }
+          ],
+          "legend": [
+            {
+              "label": "Alpha",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#1783FF",
+                "stroke": "",
+                "fillColor": "#1783ff",
+                "box": {
+                  "x": 16,
+                  "y": 58.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            },
+            {
+              "label": "Beta",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#00C9C9",
+                "stroke": "",
+                "fillColor": "#00c9c9",
+                "box": {
+                  "x": 75.69140625,
+                  "y": 58.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            },
+            {
+              "label": "Gamma",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#F0884D",
+                "stroke": "",
+                "fillColor": "#f0884d",
+                "box": {
+                  "x": 129.376953125,
+                  "y": 58.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            }
+          ],
+          "ticks": [],
+          "samples": [
+            {
+              "x": 53,
+              "y": 243,
+              "rgba": [
+                23,
+                131,
+                255,
+                242
+              ]
+            },
+            {
+              "x": 184,
+              "y": 243,
+              "rgba": [
+                0,
+                201,
+                201,
+                242
+              ]
+            },
+            {
+              "x": 300,
+              "y": 243,
+              "rgba": [
+                240,
+                136,
+                77,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dashboard-dark",
+      "literal_expected": [
+        12,
+        31,
+        7
+      ],
+      "artifact_input_count": 3,
+      "artifact_output_count": 9,
+      "warnings": [
+        "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred.",
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ],
+      "html_sha256_unchanged": "690befe12dcce7e5eb5d564d7ad674609d36fcec700586e9adbca266a87712d9",
+      "unobserved_observed_RGB_identical": true,
+      "native_charts": [
+        {
+          "id": "chart-0",
+          "width": 337,
+          "height": 420,
+          "background": "rgb(255, 255, 255)",
+          "marks": [
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#1783FF",
+              "stroke": "#1783FF",
+              "fillColor": "#1783ff",
+              "box": {
+                "x": 126.66308593749999,
+                "y": 118.83699999999999,
+                "width": 110.44399999999997,
+                "height": 110.66300000000001
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#00C9C9",
+              "stroke": "#00C9C9",
+              "fillColor": "#00c9c9",
+              "box": {
+                "x": 15.999818826650781,
+                "y": 158.96900000000005,
+                "width": 221.32600000000002,
+                "height": 181.19448267369512
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#F0884D",
+              "stroke": "#F0884D",
+              "fillColor": "#f0884d",
+              "box": {
+                "x": 41.40308593749998,
+                "y": 118.83699999999999,
+                "width": 85.26000000000002,
+                "height": 110.66300000000001
+              }
+            }
+          ],
+          "legend": [
+            {
+              "label": "Alpha",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#1783FF",
+                "stroke": "",
+                "fillColor": "#1783ff",
+                "box": {
+                  "x": 249.326171875,
+                  "y": 58.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            },
+            {
+              "label": "Beta",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#00C9C9",
+                "stroke": "",
+                "fillColor": "#00c9c9",
+                "box": {
+                  "x": 249.326171875,
+                  "y": 81.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            },
+            {
+              "label": "Gamma",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#F0884D",
+                "stroke": "",
+                "fillColor": "#f0884d",
+                "box": {
+                  "x": 249.326171875,
+                  "y": 104.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            }
+          ],
+          "ticks": [],
+          "samples": [
+            {
+              "x": 182,
+              "y": 174,
+              "rgba": [
+                23,
+                131,
+                255,
+                242
+              ]
+            },
+            {
+              "x": 127,
+              "y": 250,
+              "rgba": [
+                0,
+                201,
+                201,
+                242
+              ]
+            },
+            {
+              "x": 84,
+              "y": 174,
+              "rgba": [
+                240,
+                136,
+                77,
+                242
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chart-1",
+          "width": 337,
+          "height": 420,
+          "background": "rgb(23, 27, 38)",
+          "marks": [
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "",
+              "stroke": "#386cb0",
+              "fillColor": "#010203",
+              "box": {
+                "x": 102.39482812499999,
+                "y": 55,
+                "width": 174.88399999999996,
+                "height": 299
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#386cb0",
+              "stroke": "#1783FF",
+              "fillColor": "#386cb0",
+              "box": {
+                "x": 99.39485672515072,
+                "y": 351,
+                "width": 6,
+                "height": 6
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#386cb0",
+              "stroke": "#1783FF",
+              "fillColor": "#386cb0",
+              "box": {
+                "x": 186.83691392545214,
+                "y": 52,
+                "width": 6,
+                "height": 6
+              }
+            },
+            {
+              "node": "path",
+              "className": "element",
+              "fill": "#386cb0",
+              "stroke": "#1783FF",
+              "fillColor": "#386cb0",
+              "box": {
+                "x": 274.2789711257535,
+                "y": 201.5,
+                "width": 6,
+                "height": 6
+              }
+            }
+          ],
+          "legend": [],
+          "ticks": [],
+          "samples": [
+            {
+              "x": 190,
+              "y": 205,
+              "rgba": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "x": 102,
+              "y": 354,
+              "rgba": [
+                56,
+                108,
+                176,
+                255
+              ]
+            },
+            {
+              "x": 190,
+              "y": 55,
+              "rgba": [
+                56,
+                108,
+                176,
+                255
+              ]
+            },
+            {
+              "x": 277,
+              "y": 205,
+              "rgba": [
+                56,
+                108,
+                176,
+                255
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chart-2",
+          "width": 337,
+          "height": 420,
+          "background": "rgb(23, 27, 38)",
+          "marks": [
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "#1783FF",
+              "stroke": "#1783FF",
+              "fillColor": "#1783ff",
+              "box": {
+                "x": 16,
+                "y": 82,
+                "width": 73.2,
+                "height": 322
+              }
+            },
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "#00C9C9",
+              "stroke": "#00C9C9",
+              "fillColor": "#00c9c9",
+              "box": {
+                "x": 89.19999999999999,
+                "y": 82,
+                "width": 189.10000000000002,
+                "height": 322
+              }
+            },
+            {
+              "node": "rect",
+              "className": "element",
+              "fill": "#F0884D",
+              "stroke": "#F0884D",
+              "fillColor": "#f0884d",
+              "box": {
+                "x": 278.29999999999995,
+                "y": 82,
+                "width": 42.700000000000045,
+                "height": 322
+              }
+            }
+          ],
+          "legend": [
+            {
+              "label": "Alpha",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#1783FF",
+                "stroke": "",
+                "fillColor": "#1783ff",
+                "box": {
+                  "x": 16,
+                  "y": 58.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            },
+            {
+              "label": "Beta",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#00C9C9",
+                "stroke": "",
+                "fillColor": "#00c9c9",
+                "box": {
+                  "x": 75.69140625,
+                  "y": 58.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            },
+            {
+              "label": "Gamma",
+              "marker": {
+                "node": "path",
+                "className": "legend-category-item-marker g2-legend-marker",
+                "fill": "#F0884D",
+                "stroke": "",
+                "fillColor": "#f0884d",
+                "box": {
+                  "x": 129.376953125,
+                  "y": 58.5,
+                  "width": 8,
+                  "height": 8
+                }
+              }
+            }
+          ],
+          "ticks": [],
+          "samples": [
+            {
+              "x": 53,
+              "y": 243,
+              "rgba": [
+                23,
+                131,
+                255,
+                242
+              ]
+            },
+            {
+              "x": 184,
+              "y": 243,
+              "rgba": [
+                0,
+                201,
+                201,
+                242
+              ]
+            },
+            {
+              "x": 300,
+              "y": 243,
+              "rgba": [
+                240,
+                136,
+                77,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "id": "pie",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\pie-production.png",
+      "bytes": 31913,
+      "sha256": "35f2cff2434da3518a515838c8561dccfbf633008440512d7cea97ff1dc6f426"
+    },
+    {
+      "id": "pie",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\pie-observed.png",
+      "bytes": 31913,
+      "sha256": "35f2cff2434da3518a515838c8561dccfbf633008440512d7cea97ff1dc6f426"
+    },
+    {
+      "id": "pie-single",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\pie-single-production.png",
+      "bytes": 29725,
+      "sha256": "ad98e0456d3ab4fb078d493df9e2c2c3d7c5ecde733362e26ed3359ff04903ab"
+    },
+    {
+      "id": "pie-single",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\pie-single-observed.png",
+      "bytes": 29725,
+      "sha256": "ad98e0456d3ab4fb078d493df9e2c2c3d7c5ecde733362e26ed3359ff04903ab"
+    },
+    {
+      "id": "sunburst",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\sunburst-production.png",
+      "bytes": 38516,
+      "sha256": "f9c4ac21f6551b8a769ee0d3a8a4fc6f131a481e16b711c269c56fdafa8d95ec"
+    },
+    {
+      "id": "sunburst",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\sunburst-observed.png",
+      "bytes": 38516,
+      "sha256": "f9c4ac21f6551b8a769ee0d3a8a4fc6f131a481e16b711c269c56fdafa8d95ec"
+    },
+    {
+      "id": "sunburst-single",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\sunburst-single-production.png",
+      "bytes": 36338,
+      "sha256": "fc3486ab7f2cdb9c88a2fffb49b14c8db6bef1a61130edae676f2ac6f1c4d0ec"
+    },
+    {
+      "id": "sunburst-single",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\sunburst-single-observed.png",
+      "bytes": 36338,
+      "sha256": "fc3486ab7f2cdb9c88a2fffb49b14c8db6bef1a61130edae676f2ac6f1c4d0ec"
+    },
+    {
+      "id": "treemap",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\treemap-production.png",
+      "bytes": 26419,
+      "sha256": "88c23733230777efc53af6c542537f7311e02dc1b12fca4650e468767ed73479"
+    },
+    {
+      "id": "treemap",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\treemap-observed.png",
+      "bytes": 26419,
+      "sha256": "88c23733230777efc53af6c542537f7311e02dc1b12fca4650e468767ed73479"
+    },
+    {
+      "id": "treemap-single",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\treemap-single-production.png",
+      "bytes": 27569,
+      "sha256": "24f6aa1c55f9859d42a796199577d2096880aa2fa272d9820ceeff1d05087913"
+    },
+    {
+      "id": "treemap-single",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\treemap-single-observed.png",
+      "bytes": 27569,
+      "sha256": "24f6aa1c55f9859d42a796199577d2096880aa2fa272d9820ceeff1d05087913"
+    },
+    {
+      "id": "gauge",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\gauge-production.png",
+      "bytes": 32996,
+      "sha256": "53853b757757fa8e99422e724affb8eda95a033120d1902c8de80f4f3db3261c"
+    },
+    {
+      "id": "gauge",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\gauge-observed.png",
+      "bytes": 32996,
+      "sha256": "53853b757757fa8e99422e724affb8eda95a033120d1902c8de80f4f3db3261c"
+    },
+    {
+      "id": "heatmap-negative",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-negative-production.png",
+      "bytes": 30236,
+      "sha256": "4792be4d0b5b8fd7cb6958ca3adc94dd97ea647cdebdbccf343a1fe32a81cdef"
+    },
+    {
+      "id": "heatmap-negative",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-negative-observed.png",
+      "bytes": 30236,
+      "sha256": "4792be4d0b5b8fd7cb6958ca3adc94dd97ea647cdebdbccf343a1fe32a81cdef"
+    },
+    {
+      "id": "heatmap-positive",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-positive-production.png",
+      "bytes": 29694,
+      "sha256": "02c0612a0d855843d1460b0a9c861c80ef8adae43237143574ac1d439db892fe"
+    },
+    {
+      "id": "heatmap-positive",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-positive-observed.png",
+      "bytes": 29694,
+      "sha256": "02c0612a0d855843d1460b0a9c861c80ef8adae43237143574ac1d439db892fe"
+    },
+    {
+      "id": "heatmap-signed",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-signed-production.png",
+      "bytes": 29318,
+      "sha256": "be6648f711aa061d893072d72b2e8d6783c2eac5910838e121b2ed69df968068"
+    },
+    {
+      "id": "heatmap-signed",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-signed-observed.png",
+      "bytes": 29318,
+      "sha256": "be6648f711aa061d893072d72b2e8d6783c2eac5910838e121b2ed69df968068"
+    },
+    {
+      "id": "heatmap-constant",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-constant-production.png",
+      "bytes": 29604,
+      "sha256": "2b9beea50dd1a64f368e34ea1a4b37b36ea331a45a1583ca3265a2e004e1d2aa"
+    },
+    {
+      "id": "heatmap-constant",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-constant-observed.png",
+      "bytes": 29604,
+      "sha256": "2b9beea50dd1a64f368e34ea1a4b37b36ea331a45a1583ca3265a2e004e1d2aa"
+    },
+    {
+      "id": "heatmap-zero",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-zero-production.png",
+      "bytes": 27909,
+      "sha256": "31cfeeb21cd198afc51d3d4e4e97a6334933743c39ada0096902d29fd8fcf091"
+    },
+    {
+      "id": "heatmap-zero",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-zero-observed.png",
+      "bytes": 27909,
+      "sha256": "31cfeeb21cd198afc51d3d4e4e97a6334933743c39ada0096902d29fd8fcf091"
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-constant-negative-production.png",
+      "bytes": 32523,
+      "sha256": "aa6fe9ffef6347cb86523acadc3aac4eb0666f55ff3f0f23b881d7e863967683"
+    },
+    {
+      "id": "heatmap-constant-negative",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-constant-negative-observed.png",
+      "bytes": 32523,
+      "sha256": "aa6fe9ffef6347cb86523acadc3aac4eb0666f55ff3f0f23b881d7e863967683"
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-finite-extent-production.png",
+      "bytes": 30526,
+      "sha256": "c8c6203086e2aebc6a2c5d9f6e913efdbdb8efdd1a0f567d6292281a4c79a2a0"
+    },
+    {
+      "id": "heatmap-finite-extent",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-finite-extent-observed.png",
+      "bytes": 30526,
+      "sha256": "c8c6203086e2aebc6a2c5d9f6e913efdbdb8efdd1a0f567d6292281a4c79a2a0"
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-tiny-negative-production.png",
+      "bytes": 31642,
+      "sha256": "3b1d8e2dd53a74a084b7d2cc22b328181fe37ef01123f42e29c082680df3a6b1"
+    },
+    {
+      "id": "heatmap-tiny-negative",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-tiny-negative-observed.png",
+      "bytes": 31642,
+      "sha256": "3b1d8e2dd53a74a084b7d2cc22b328181fe37ef01123f42e29c082680df3a6b1"
+    },
+    {
+      "id": "heatmap-missing",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-missing-production.png",
+      "bytes": 32636,
+      "sha256": "4c2cb9af8034aa4361e8dccdf1d5213855e6d09f23eb0baf8f8a4292b60311ba"
+    },
+    {
+      "id": "heatmap-missing",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-missing-observed.png",
+      "bytes": 32636,
+      "sha256": "4c2cb9af8034aa4361e8dccdf1d5213855e6d09f23eb0baf8f8a4292b60311ba"
+    },
+    {
+      "id": "heatmap-all-missing",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-all-missing-production.png",
+      "bytes": 30387,
+      "sha256": "0a782903e0adbe3897974721077a0506aa2d7c94ad63c33e5136e14508728874"
+    },
+    {
+      "id": "heatmap-all-missing",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\heatmap-all-missing-observed.png",
+      "bytes": 30387,
+      "sha256": "0a782903e0adbe3897974721077a0506aa2d7c94ad63c33e5136e14508728874"
+    },
+    {
+      "id": "line",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\line-production.png",
+      "bytes": 37901,
+      "sha256": "0aafa18446ba81af711245b51d003b12840ad109ace094deac4800443dca5782"
+    },
+    {
+      "id": "line",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\line-observed.png",
+      "bytes": 37901,
+      "sha256": "0aafa18446ba81af711245b51d003b12840ad109ace094deac4800443dca5782"
+    },
+    {
+      "id": "scatter",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\scatter-production.png",
+      "bytes": 27400,
+      "sha256": "84ecbb8c14c5e5a02e036e882c74863d966083e88bbf00c759e56033c9e90537"
+    },
+    {
+      "id": "scatter",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\scatter-observed.png",
+      "bytes": 27400,
+      "sha256": "84ecbb8c14c5e5a02e036e882c74863d966083e88bbf00c759e56033c9e90537"
+    },
+    {
+      "id": "dashboard-light",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\dashboard-light-production.png",
+      "bytes": 59049,
+      "sha256": "0a079cccb5f85bd2a928302bb02c86cb500c48ce207de3a2358ebe5c71a7b81c"
+    },
+    {
+      "id": "dashboard-light",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\dashboard-light-observed.png",
+      "bytes": 59049,
+      "sha256": "0a079cccb5f85bd2a928302bb02c86cb500c48ce207de3a2358ebe5c71a7b81c"
+    },
+    {
+      "id": "dashboard-dark",
+      "mode": "production",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\dashboard-dark-production.png",
+      "bytes": 58085,
+      "sha256": "cf0f4f1db86baf9769087772642a378ecee4286e7ca93f09aff3fb6d636c5f65"
+    },
+    {
+      "id": "dashboard-dark",
+      "mode": "observed",
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\screenshots\\dashboard-dark-observed.png",
+      "bytes": 58085,
+      "sha256": "cf0f4f1db86baf9769087772642a378ecee4286e7ca93f09aff3fb6d636c5f65"
+    }
+  ],
+  "raw_browser_result": {
+    "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R38-06\\once-20261127T170215\\generated\\browser-results.json",
+    "sha256": "1c1d4ff59c43141fdfe78109c5a1c2ee1aade05bbd3aa458c73c9ee65ed1d53e"
+  },
+  "image_reader_OPEN_status": "PENDING; actual PNGs copied unchanged for model inspection, not approval"
+}

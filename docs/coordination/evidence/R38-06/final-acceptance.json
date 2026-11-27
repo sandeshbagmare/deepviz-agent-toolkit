@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-11-27T17:11:37.686395+00:00",
+  "classification": "Independent bounded AntV acceptance PASS at exact3185, not integrated/main/CI approval",
+  "source_SHA": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+  "unit": {
+    "tests": 21,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "browser": {
+    "cases": 21,
+    "checks": 254,
+    "passed": 254,
+    "failed": 0,
+    "skipped": 0
+  },
+  "real_navigations": 42,
+  "exact_real_G2_responses": {
+    "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+    "bytes": 1083414,
+    "sha256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412",
+    "responses": 42
+  },
+  "console_page_request_harness_errors": 0,
+  "HTML_hashes_unchanged": 21,
+  "RGB_identical_observer_pairs": 21,
+  "actual_original_PNGs_opened": 10,
+  "source_and_original_oracles_untouched": true,
+  "isolated_source_clean": true,
+  "probe_AST_and_JSON_parse_only_exit": 0,
+  "probe_hashes": [
+    {
+      "file": "tests/r38_probes/role06/collect.py",
+      "sha256": "df73f723ddfffd3b7f0480c91e011f898138347a8a3f4603b026aa17aae97c50",
+      "bytes": 7123
+    },
+    {
+      "file": "tests/r38_probes/role06/consume.py",
+      "sha256": "d3e6b2a784fcdca6a4731a366a10dd493293653ec98308e0240b3bf71440a0df",
+      "bytes": 3611
+    },
+    {
+      "file": "tests/r38_probes/role06/README.md",
+      "sha256": "ec2fdc75680a764ce5ab221e433286521d3e95947ffffe0c31767c24d1f65fd3",
+      "bytes": 4574
+    }
+  ],
+  "old_matrices_scale_fullnpm_or_builds": 0,
+  "installs_persistent_env_API_or_shared_source_writes": 0,
+  "no_final_integrated_approval": true,
+  "next_owner": "R04 integration/independent second gate/reviews/actual affected CI"
+}
