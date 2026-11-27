@@ -1,0 +1,366 @@
+{
+  "source": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "collector_head": "438e1cece2f59578c91b0e0fed13bac26001a734",
+  "strict_test_exit": 1,
+  "tests": 3,
+  "failed": 3,
+  "passed": 0,
+  "skipped": 0,
+  "suite_elapsed_s": 9.589,
+  "cases": [
+    {
+      "sink": "legend",
+      "observed": {
+        "before": {
+          "x": [
+            1,
+            2,
+            4
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "trace_name": "<a href=\"https://example.invalid/r13-legend\">R13 legend</a>",
+          "legend_text": [
+            "R13 legend"
+          ],
+          "native_title": [
+            "R13 isolated legend"
+          ],
+          "hover_text": [],
+          "anchors": [
+            "<a xlink:show=\"new\" target=\"_blank\" xlink:href=\"https://example.invalid/r13-legend\" style=\"cursor:pointer\">R13 legend</a>"
+          ],
+          "handlers": [],
+          "mark_centers": [
+            {
+              "x": 142.6999969482422,
+              "y": 519.84375
+            },
+            {
+              "x": 373.8999938964844,
+              "y": 388.59375
+            },
+            {
+              "x": 836.2999877929688,
+              "y": 257.34375
+            }
+          ]
+        },
+        "hover_states": [],
+        "native_json_bytes": 485,
+        "html_bytes": 4858879,
+        "errors": [],
+        "blocked": [],
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1"
+      },
+      "html_local_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r13-20-sinks-ses_de567801cffeGZFlt50oYv0Dnt\\test_plotly_isolated_sink_lite0\\artifacts\\deepviz-wqo5t0e6\\chart.html",
+      "html": {
+        "bytes": 4858879,
+        "sha256": "b0fa6ccfdd2c2917299e9f776bc0c87eddb700f32a68ea3dfc805da07fce83ac"
+      },
+      "image_local_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r13-20-sinks-ses_de567801cffeGZFlt50oYv0Dnt\\test_plotly_isolated_sink_lite0\\browser.png",
+      "image": {
+        "bytes": 29887,
+        "sha256": "c720d73eb8678f9d4456d06cb1480fbf385e82cd38c927338ab46d00d4143cd5"
+      }
+    },
+    {
+      "sink": "hover",
+      "observed": {
+        "before": {
+          "x": [
+            -120,
+            -60,
+            120
+          ],
+          "y": [
+            10,
+            20,
+            35
+          ],
+          "trace_text": [
+            "<a href=\"https://example.invalid/r13-hover\">R13 hover</a>",
+            "<b>R13 \"hover\" & text</b>",
+            "<img src=\"R13-inert:\" onerror=\"\">"
+          ],
+          "legend_text": [
+            "trace 0"
+          ],
+          "native_title": [
+            "R13 isolated hover"
+          ],
+          "hover_text": [],
+          "anchors": [],
+          "handlers": [],
+          "mark_centers": [
+            {
+              "x": 234,
+              "y": 371.92376708984375
+            },
+            {
+              "x": 368,
+              "y": 355.26373291015625
+            },
+            {
+              "x": 770,
+              "y": 330.26373291015625
+            }
+          ]
+        },
+        "hover_states": [
+          {
+            "x": [
+              -120,
+              -60,
+              120
+            ],
+            "y": [
+              10,
+              20,
+              35
+            ],
+            "trace_text": [
+              "<a href=\"https://example.invalid/r13-hover\">R13 hover</a>",
+              "<b>R13 \"hover\" & text</b>",
+              "<img src=\"R13-inert:\" onerror=\"\">"
+            ],
+            "legend_text": [
+              "trace 0"
+            ],
+            "native_title": [
+              "R13 isolated hover"
+            ],
+            "hover_text": [
+              "(\u2212120, 10)R13 hover"
+            ],
+            "anchors": [
+              "<a xlink:show=\"new\" target=\"_blank\" xlink:href=\"https://example.invalid/r13-hover\" style=\"cursor:pointer\">R13 hover</a>"
+            ],
+            "handlers": [],
+            "mark_centers": [
+              {
+                "x": 234,
+                "y": 371.92376708984375
+              },
+              {
+                "x": 368,
+                "y": 355.26373291015625
+              },
+              {
+                "x": 770,
+                "y": 330.26373291015625
+              }
+            ]
+          },
+          {
+            "x": [
+              -120,
+              -60,
+              120
+            ],
+            "y": [
+              10,
+              20,
+              35
+            ],
+            "trace_text": [
+              "<a href=\"https://example.invalid/r13-hover\">R13 hover</a>",
+              "<b>R13 \"hover\" & text</b>",
+              "<img src=\"R13-inert:\" onerror=\"\">"
+            ],
+            "legend_text": [
+              "trace 0"
+            ],
+            "native_title": [
+              "R13 isolated hover"
+            ],
+            "hover_text": [
+              "(\u221260, 20)R13 \"hover\" & text"
+            ],
+            "anchors": [],
+            "handlers": [],
+            "mark_centers": [
+              {
+                "x": 234,
+                "y": 371.92376708984375
+              },
+              {
+                "x": 368,
+                "y": 355.26373291015625
+              },
+              {
+                "x": 770,
+                "y": 330.26373291015625
+              }
+            ]
+          },
+          {
+            "x": [
+              -120,
+              -60,
+              120
+            ],
+            "y": [
+              10,
+              20,
+              35
+            ],
+            "trace_text": [
+              "<a href=\"https://example.invalid/r13-hover\">R13 hover</a>",
+              "<b>R13 \"hover\" & text</b>",
+              "<img src=\"R13-inert:\" onerror=\"\">"
+            ],
+            "legend_text": [
+              "trace 0"
+            ],
+            "native_title": [
+              "R13 isolated hover"
+            ],
+            "hover_text": [
+              "(120, 35)<img src=\"R13-inert:\" onerror=\"\">"
+            ],
+            "anchors": [],
+            "handlers": [],
+            "mark_centers": [
+              {
+                "x": 234,
+                "y": 371.92376708984375
+              },
+              {
+                "x": 368,
+                "y": 355.26373291015625
+              },
+              {
+                "x": 770,
+                "y": 330.26373291015625
+              }
+            ]
+          }
+        ],
+        "native_json_bytes": 568,
+        "html_bytes": 4859024,
+        "errors": [],
+        "blocked": [],
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1"
+      },
+      "html_local_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r13-20-sinks-ses_de567801cffeGZFlt50oYv0Dnt\\test_plotly_isolated_sink_lite1\\artifacts\\deepviz-zxeft89n\\chart.html",
+      "html": {
+        "bytes": 4859024,
+        "sha256": "fd07d7df8757aa67266eb1f223e04cb39ef14842dcee8a3f8265563228eb2f33"
+      },
+      "image_local_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r13-20-sinks-ses_de567801cffeGZFlt50oYv0Dnt\\test_plotly_isolated_sink_lite1\\browser.png",
+      "image": {
+        "bytes": 28877,
+        "sha256": "39879a673ebf720d17616fe929a9e1b911d32c80932b44ca41e9cb56e55e76f7"
+      }
+    },
+    {
+      "sink": "title",
+      "observed": {
+        "before": {
+          "x": [
+            "2026-02-01",
+            "2026-02-02",
+            "2026-02-04"
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "trace_name": "Series",
+          "legend_text": [],
+          "native_title": [
+            "<a href=&quot;https://example.invalid/r13-title&quot;>R13 &quot;title&quot; & 'quote'</a>"
+          ],
+          "hover_text": [],
+          "anchors": [],
+          "handlers": [],
+          "mark_centers": [
+            {
+              "x": 145.75,
+              "y": 519.84375
+            },
+            {
+              "x": 395.25,
+              "y": 388.59375
+            },
+            {
+              "x": 894.25,
+              "y": 257.34375
+            }
+          ]
+        },
+        "hover_states": [],
+        "native_json_bytes": 595,
+        "html_bytes": 4859200,
+        "errors": [],
+        "blocked": [],
+        "browser": "159.0.8154.6",
+        "node": "v26.13.1",
+        "playwright": "1.65.1"
+      },
+      "html_local_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r13-20-sinks-ses_de567801cffeGZFlt50oYv0Dnt\\test_plotly_isolated_sink_lite2\\artifacts\\deepviz-iwbb1jw9\\chart.html",
+      "html": {
+        "bytes": 4859200,
+        "sha256": "0a28077381a082bd5575addf2eb47f79ea713bfb636d383804785f8a20d614eb"
+      },
+      "image_local_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r13-20-sinks-ses_de567801cffeGZFlt50oYv0Dnt\\test_plotly_isolated_sink_lite2\\browser.png",
+      "image": {
+        "bytes": 43636,
+        "sha256": "92b49855e38ebb21a8dff647580df2b1d630b5b2f928c49a16a37a4c1eaf1621"
+      }
+    }
+  ],
+  "production_modules": {
+    "deepviz.engines": {
+      "file": "python/deepviz/src/deepviz/engines.py",
+      "git_blob": "22fb9dcfb9076d3b9a608ef557a5dd6768281985",
+      "bytes": 42230,
+      "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de"
+    },
+    "deepviz.render": {
+      "file": "python/deepviz/src/deepviz/render.py",
+      "git_blob": "c0608d8762d6f37bdb4e902205bed3b2e2bd98ba",
+      "bytes": 11313,
+      "sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+    },
+    "deepviz.normalize": {
+      "file": "python/deepviz/src/deepviz/normalize.py",
+      "git_blob": "04e15965934d37f4140f2dd6772b2e97747920ea",
+      "bytes": 33895,
+      "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+    },
+    "deepviz.models": {
+      "file": "python/deepviz/src/deepviz/models.py",
+      "git_blob": "17877904985d496f645cd7c66305efc8305bcb5f",
+      "bytes": 3493,
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    }
+  },
+  "inherited_r10_test_blobs_unchanged": {
+    "tests/r10_probes/role20/test_plotly_literal_labels.py": "253acaa55deb2056143e4cae15c548e8d43e7175",
+    "tests/r10_probes/role20/browser_assertions.cjs": "02931e7f670aeabf61fc03adf7c66d20cd1b7a65"
+  },
+  "new_probes": {
+    "capture_evidence.py": {
+      "bytes": 4012,
+      "sha256": "3a8470736034188c9502c45258cc98d7d139a6f52c036d4d525b2683865cc1a4"
+    },
+    "sink_browser.cjs": {
+      "bytes": 3517,
+      "sha256": "d437736de487d7f372b25d0d41355543f7c8333e9d6a0096d0532cece21c1a62"
+    },
+    "test_plotly_sink_discrimination.py": {
+      "bytes": 4631,
+      "sha256": "a3d6851f0d6f43cd0fb79ac1f4e8b2db0e3d1e63e932844a11cb0bc5ebf5f99d"
+    }
+  }
+}
