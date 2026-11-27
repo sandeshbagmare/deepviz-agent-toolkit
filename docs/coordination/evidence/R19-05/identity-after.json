@@ -1,0 +1,107 @@
+{
+  "source_commit": "1c721bb6497746641b897eb2eb938cfad52068d2",
+  "source_worktree_clean": true,
+  "modules": {
+    "python/deepviz/src/deepviz/render.py": {
+      "actual_import_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r19-05-source-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\src\\deepviz\\render.py",
+      "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+      "git_blob_exact": true,
+      "unchanged_since_before": true
+    },
+    "python/deepviz/src/deepviz/engines.py": {
+      "actual_import_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r19-05-source-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\src\\deepviz\\engines.py",
+      "sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225",
+      "git_blob_exact": true,
+      "unchanged_since_before": true
+    },
+    "python/deepviz/src/deepviz/normalize.py": {
+      "actual_import_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r19-05-source-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+      "git_blob_exact": true,
+      "unchanged_since_before": true
+    },
+    "python/deepviz/src/deepviz/models.py": {
+      "actual_import_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r19-05-source-ses_de567830effe0E5yIwQgDACLMD\\python\\deepviz\\src\\deepviz\\models.py",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "git_blob_exact": true,
+      "unchanged_since_before": true
+    }
+  },
+  "all_old_r13_probes": {
+    "tests/r13_probes/role05/README.md": {
+      "published_git_blob_sha256": "e51e7b42d98abe02bfb07b790b6b71df27ff275f9cbbdd2ac85fd7aad1ef525d",
+      "immutable_after": true
+    },
+    "tests/r13_probes/role05/budget_probe.py": {
+      "published_git_blob_sha256": "368b3d54356ffd6f1c47be39f3d74467e8fd2e5d08774ee03b004f3783b08afe",
+      "immutable_after": true
+    },
+    "tests/r13_probes/role05/capture_small.cjs": {
+      "published_git_blob_sha256": "d444ce6732ac8a8cca5617f044a6ecc249e9b2383b1df52ce10387b6aa8f5482",
+      "immutable_after": true
+    },
+    "tests/r13_probes/role05/collect_public.py": {
+      "published_git_blob_sha256": "d1da501a508ac4f9c475379d8f31ca95f6f259b1c95a33ffa89c2fb331e26c02",
+      "immutable_after": true
+    },
+    "tests/r13_probes/role05/test_preoutput_budget.py": {
+      "published_git_blob_sha256": "6fd94ab5fcac8fde5d66072ad55dd2b193df74e2e886b71abc5d6b08db416e03",
+      "immutable_after": true
+    }
+  },
+  "negative_events_verified": 20,
+  "test_totals": {
+    "unchanged-r13": {
+      "passed": 30,
+      "failed": 0,
+      "skipped": 0,
+      "case_names": [
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-matplotlib-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-matplotlib-dashboard]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-plotly-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-plotly-dashboard]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-vega-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-vega-dashboard]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-echarts-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-echarts-dashboard]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-antv-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[new-output-antv-dashboard]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-matplotlib-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-matplotlib-dashboard]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-plotly-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-plotly-dashboard]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-vega-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-vega-dashboard]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-echarts-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-echarts-dashboard]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-antv-table]",
+        "test_oversized_public_render_rejects_before_any_output_allocation[caller-files-antv-dashboard]",
+        "test_small_public_render_preserves_values_counts_warnings_and_caller_files[matplotlib-small-table]",
+        "test_small_public_render_preserves_values_counts_warnings_and_caller_files[matplotlib-small-dashboard]",
+        "test_small_public_render_preserves_values_counts_warnings_and_caller_files[plotly-small-table]",
+        "test_small_public_render_preserves_values_counts_warnings_and_caller_files[plotly-small-dashboard]",
+        "test_small_public_render_preserves_values_counts_warnings_and_caller_files[vega-small-table]",
+        "test_small_public_render_preserves_values_counts_warnings_and_caller_files[vega-small-dashboard]",
+        "test_small_public_render_preserves_values_counts_warnings_and_caller_files[echarts-small-table]",
+        "test_small_public_render_preserves_values_counts_warnings_and_caller_files[echarts-small-dashboard]",
+        "test_small_public_render_preserves_values_counts_warnings_and_caller_files[antv-small-table]",
+        "test_small_public_render_preserves_values_counts_warnings_and_caller_files[antv-small-dashboard]"
+      ]
+    },
+    "novel-boundaries": {
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "case_names": [
+        "test_public_header_inclusive_cell_boundary_without_dense_generation[99-100-1-10000-True]",
+        "test_public_header_inclusive_cell_boundary_without_dense_generation[136-73-1-10001-False]",
+        "test_public_header_inclusive_cell_boundary_without_dense_generation[49-100-2-10000-True]",
+        "test_public_non_table_accessible_text_budget_precedes_native_and_output[matplotlib]",
+        "test_public_non_table_accessible_text_budget_precedes_native_and_output[plotly]",
+        "test_public_non_table_accessible_text_budget_precedes_native_and_output[vega]",
+        "test_public_non_table_accessible_text_budget_precedes_native_and_output[echarts]",
+        "test_public_non_table_accessible_text_budget_precedes_native_and_output[antv]"
+      ]
+    }
+  }
+}

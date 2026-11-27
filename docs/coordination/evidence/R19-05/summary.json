@@ -1,0 +1,235 @@
+{
+  "source_commit": "1c721bb6497746641b897eb2eb938cfad52068d2",
+  "actual_rejections": [
+    {
+      "scope": "table",
+      "engine": "echarts",
+      "source_rows": 128,
+      "source_compact_json_bytes": 1957,
+      "error": {
+        "type": "ValueError",
+        "message": "Dense table exceeds 10000 cell budget (including headers)"
+      },
+      "output_created": false,
+      "caller_files_unchanged": true,
+      "files_before": {
+        "chart.html": "a889cdb782c5254a8b24107a22e09f147346b0cea697b7b2b11ed0ce787c90dd",
+        "manifest.json": "6314d57e2d43c3168f3cc1fca9c0248b9ac32fa424c2e8234d3b0672f2a7c693"
+      },
+      "files_after": {
+        "chart.html": "a889cdb782c5254a8b24107a22e09f147346b0cea697b7b2b11ed0ce787c90dd",
+        "manifest.json": "6314d57e2d43c3168f3cc1fca9c0248b9ac32fa424c2e8234d3b0672f2a7c693"
+      }
+    },
+    {
+      "scope": "dashboard",
+      "engine": "echarts",
+      "source_rows": 80,
+      "source_compact_json_bytes": 1181,
+      "error": {
+        "type": "ValueError",
+        "message": "Dense table exceeds 10000 cell budget (including headers)"
+      },
+      "output_created": false,
+      "caller_files_unchanged": true,
+      "files_before": {
+        "chart.html": "a889cdb782c5254a8b24107a22e09f147346b0cea697b7b2b11ed0ce787c90dd",
+        "manifest.json": "6314d57e2d43c3168f3cc1fca9c0248b9ac32fa424c2e8234d3b0672f2a7c693"
+      },
+      "files_after": {
+        "chart.html": "a889cdb782c5254a8b24107a22e09f147346b0cea697b7b2b11ed0ce787c90dd",
+        "manifest.json": "6314d57e2d43c3168f3cc1fca9c0248b9ac32fa424c2e8234d3b0672f2a7c693"
+      }
+    }
+  ],
+  "small_renders": [
+    {
+      "engine": "matplotlib",
+      "scope": "table",
+      "input_counts": [
+        3
+      ],
+      "output_counts": [
+        3
+      ],
+      "strategy": "none",
+      "warnings": [],
+      "png_size": [
+        900,
+        520
+      ]
+    },
+    {
+      "engine": "matplotlib",
+      "scope": "dashboard",
+      "input_counts": [
+        3,
+        3
+      ],
+      "output_counts": [
+        3,
+        3
+      ],
+      "strategy": "dashboard:none,none",
+      "warnings": [],
+      "png_size": [
+        900,
+        520
+      ]
+    },
+    {
+      "engine": "plotly",
+      "scope": "table",
+      "input_counts": [
+        3
+      ],
+      "output_counts": [
+        3
+      ],
+      "strategy": "none",
+      "warnings": []
+    },
+    {
+      "engine": "plotly",
+      "scope": "dashboard",
+      "input_counts": [
+        3,
+        3
+      ],
+      "output_counts": [
+        3,
+        3
+      ],
+      "strategy": "dashboard:none,none",
+      "warnings": []
+    },
+    {
+      "engine": "vega",
+      "scope": "table",
+      "input_counts": [
+        3
+      ],
+      "output_counts": [
+        3
+      ],
+      "strategy": "none",
+      "warnings": []
+    },
+    {
+      "engine": "vega",
+      "scope": "dashboard",
+      "input_counts": [
+        3,
+        3
+      ],
+      "output_counts": [
+        3,
+        3
+      ],
+      "strategy": "dashboard:none,none",
+      "warnings": []
+    },
+    {
+      "engine": "echarts",
+      "scope": "table",
+      "input_counts": [
+        3
+      ],
+      "output_counts": [
+        3
+      ],
+      "strategy": "none",
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    },
+    {
+      "engine": "echarts",
+      "scope": "dashboard",
+      "input_counts": [
+        3,
+        3
+      ],
+      "output_counts": [
+        3,
+        3
+      ],
+      "strategy": "dashboard:none,none",
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    },
+    {
+      "engine": "antv",
+      "scope": "table",
+      "input_counts": [
+        3
+      ],
+      "output_counts": [
+        3
+      ],
+      "strategy": "none",
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    },
+    {
+      "engine": "antv",
+      "scope": "dashboard",
+      "input_counts": [
+        3,
+        3
+      ],
+      "output_counts": [
+        3,
+        3
+      ],
+      "strategy": "dashboard:none,none",
+      "warnings": [
+        "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+      ]
+    }
+  ],
+  "limits": "No memory/latency measurement or later-head/full-release signoff.",
+  "owner_session": "ses_de567830effe0E5yIwQgDACLMD",
+  "publication_branch_base": "771cd9e3ef0a359b34cf9c9a5f894810b407f3d5",
+  "exact_target_clean_and_module_gitblob_identity_before_after": true,
+  "old_r13_probe_files_immutable": 5,
+  "unchanged_r13_tests": {
+    "passed": 30,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 3.06,
+    "exit": 0
+  },
+  "novel_boundary_tests": {
+    "passed": 8,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 0.54,
+    "exit": 0
+  },
+  "all_20_resource_rejections_before_all_allocation_tripwires": true,
+  "all_20_caller_roots_and_files_preserved": true,
+  "quality": {
+    "ruff_exit": 0,
+    "mypy_exit": 0,
+    "mypy_new_files": 2,
+    "old_r13_diff_exit": 0,
+    "node_syntax_exit": 0,
+    "actual_unmocked_collector_exit": 0,
+    "static_browser_exit": 0
+  },
+  "boundary_policy_notes": [
+    "Exact10000 includes header and is allowed at public boundary for single and combined panels; safe native test stop, no dense generation.",
+    "10001 including header rejected before native/output.",
+    "Non-table accessible escaped field-name estimate exceeds16MiB with1056cells; rejection precedes native/figure/output across5engines.",
+    "Declared builder estimate is not RSS/latency/finalfile-size guarantee; no measuredmemory/latency claimed."
+  ],
+  "scope_limitations": [
+    "Independent exact1c scoped acceptance, NOT latermovingHEAD/fullrelease/finalgreenCI.",
+    "No fullsuite/inspector113/scale/formats/MCP/DeepAgent/build replay.",
+    "Browser only2static companion controls, notall5CDNruntimes.",
+    "No production/existingtest/R13probe/environment/sharedbranch/issue/PR/spawn changes."
+  ]
+}
