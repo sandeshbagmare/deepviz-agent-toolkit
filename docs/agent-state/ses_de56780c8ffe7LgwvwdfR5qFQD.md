@@ -33,3 +33,22 @@
 - No R10old43replay/production/existingoracle/install/spawn/issue/PR/sharedbranchwrites.
 - Evidence R13report+summary, rawlocalartifactsuntracked; actualpublicationreceiptMAIN-only
   aftercommands. NextR04/16guaranteedownedunwindwithborrowedpreservation, freshindependentretest.
+
+## R16 non-author committed SUM testing — scoped pass
+
+- Full MAIN R16common+15/currentcanonical/ownnote/sourcehandback read and prework
+  checkpoint saved. Reused own branch8a10108; NEW separate cleanDETACHED exact
+  ec9f669eff28cd5351da142765b7755e3b2f484f source consumer, no branchsourceintegration.
+- Independently unchanged23Py23pass2.37s/23TS23pass889.057ms,zero failures/skips,
+  exits0/freshTScompile0. Actual23source/config/author-test raw Gitblob equality
+  before+after, actual Python import,19fresh compiled files/hash/source-map proof.
+- NEW17literalbinary64Fraction-oracle fixtures five public modes each, final17pass
+  0fail/error/skip2.71s/exit0; Ruff0/mypy0(2files)/Node syntax0. Exactbits/inputtransport/
+  count/exhaustion/warnings/finiteJSON including promotion/ties/groups/otherbucket/
+  ±trueoverflow.85mode executions NOT85tests/issues; max42rows, no universalfastpathclaim.
+- Own initial model_dump/dataclass harness17errors, Ruff1/mypy3errors and UTF16log
+  reader failure preserved/corrected only in NEW probe/reader, not product bugs.
+- No production/existing-oracle edits/installs/spawns/old64ownership replay/fullsuite/
+  NEWmean/scale/perf/gallery/package-consumer checks. Prior cleanup RED unresolved.
+- NEW report/evidence/tests allowed only, publication receipt MAIN aftercommands.
+  NextR04integration/disposition/frozen-source gates; not final head/whole-project signoff.
