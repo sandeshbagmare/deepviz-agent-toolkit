@@ -68,3 +68,9 @@
 - Old R10/R13PlotlystrictRED/proposal remains immutable and **separately queued R04**; safeR16labels do not fix or waive it. None of those9cases replayed/edited.
 - Currentaction: stage/publicationonlyOWNNEWR16test/evidence/report/note, preserve cleanec9source and originaloracles; exactscopedreview/whitespace/credentialscan then meaningfulOWNcommit/nonforcepush/actualremoteSHA.
 - Next executable action after publication belongsR04: review this source-specific18passresult together with distinct15/02/11reports, decide whether to integrate committedec9, then run independently sourced final-candidate gates/visualacceptance as required. Do not promote this to wholeprojectGREEN.
+
+## Actual scoped publication
+
+- Exact16ownedpaths staged/reviewed; whitespaceexit0/credentialpatternfindings0;4inspectedPNGhashes+3publishedprobehashesmatchJSON, XML18pass/0fail/0error/0skip and6browserzeroerror arraysconfirmed. Reconstructed executedtestbytes frompublishedguardedtestmatch executedSHA9d43fa80 exactly: onlynullablefilenameguardchanged after once-onlyrun. Production/existingR10/R13oraclesunchanged, cleanec9consumerstillclean.
+- `git commit -m "test: verify finite SUM promotion artifacts across five adapters"`exit0 → **03c321426e2bc6469dd8f2066bedd8614b29e53e**. `git push origin agents/r10-20-plotly-literal-labels`exit0(nonforce); immediate`git ls-remote --heads origin refs/heads/agents/r10-20-plotly-literal-labels`exit0exactremote03c3214matcheslocalHEAD. Ownbranchclean/tracking. No sharedcandidate/issue/PRwrite.
+- This publishes genuineindependentcommittedec9artifactfidelity evidence/probes, not a producerfix/finalheadsignoff. NextR04reviews distinctindependentlanes+integratesonlywithappropriateevidence; Plotlyproposal/REDremainsseparatequeuedwork.
