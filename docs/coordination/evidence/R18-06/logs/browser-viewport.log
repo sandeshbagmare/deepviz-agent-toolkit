@@ -1,0 +1,422 @@
+line-positive-240 svg: 0/20 failed
+line-positive-240 html: 0/22 failed
+line-positive-960 svg: 0/20 failed
+line-positive-960 html: 0/22 failed
+scatter-positive-240 svg: 0/20 failed
+scatter-positive-240 html: 0/22 failed
+scatter-positive-960 svg: 0/20 failed
+scatter-positive-960 html: 0/22 failed
+area-positive-240 svg: 0/21 failed
+area-positive-240 html: 0/23 failed
+area-positive-960 svg: 0/21 failed
+area-positive-960 html: 0/23 failed
+bubble-positive-240 svg: 0/20 failed
+bubble-positive-240 html: 0/22 failed
+bubble-positive-960 svg: 0/20 failed
+bubble-positive-960 html: 0/22 failed
+line-negative-240 svg: 1/20 failed
+line-negative-240 html: 1/22 failed
+line-negative-960 svg: 0/20 failed
+line-negative-960 html: 0/22 failed
+scatter-negative-240 svg: 1/20 failed
+scatter-negative-240 html: 1/22 failed
+scatter-negative-960 svg: 0/20 failed
+scatter-negative-960 html: 0/22 failed
+area-negative-240 svg: 1/21 failed
+area-negative-240 html: 1/23 failed
+area-negative-960 svg: 0/21 failed
+area-negative-960 html: 0/23 failed
+bubble-negative-240 svg: 1/20 failed
+bubble-negative-240 html: 1/22 failed
+bubble-negative-960 svg: 0/20 failed
+bubble-negative-960 html: 0/22 failed
+line-scientific-240 svg: 0/20 failed
+line-scientific-240 html: 0/22 failed
+line-scientific-960 svg: 0/20 failed
+line-scientific-960 html: 0/22 failed
+scatter-scientific-240 svg: 0/20 failed
+scatter-scientific-240 html: 0/22 failed
+scatter-scientific-960 svg: 0/20 failed
+scatter-scientific-960 html: 0/22 failed
+area-scientific-240 svg: 0/21 failed
+area-scientific-240 html: 0/23 failed
+area-scientific-960 svg: 0/21 failed
+area-scientific-960 html: 0/23 failed
+bubble-scientific-240 svg: 0/20 failed
+bubble-scientific-240 html: 0/22 failed
+bubble-scientific-960 svg: 0/20 failed
+bubble-scientific-960 html: 0/22 failed
+pie-scientific-240 svg: 1/11 failed
+pie-scientific-240 html: 1/16 failed
+{
+  "source_sha": "5e595a8f893955ce34a0e26553bb7bf257ea93ae",
+  "counts": {
+    "artifacts": 50,
+    "checks": 1047,
+    "failures": 10,
+    "negative_controls": 7,
+    "negative_controls_failed": 1,
+    "unsupported": 0,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "id": "line-negative-240",
+      "format": "svg",
+      "name": "quantitative-x-gap-ratios-1-2-4",
+      "pass": false,
+      "observed": [
+        10.142860412597656,
+        20.28571319580078,
+        40.57142639160156
+      ]
+    },
+    {
+      "id": "line-negative-240",
+      "format": "html",
+      "name": "quantitative-x-gap-ratios-1-2-4",
+      "pass": false,
+      "observed": [
+        10.142860412597656,
+        20.28571319580078,
+        40.57142639160156
+      ]
+    },
+    {
+      "id": "scatter-negative-240",
+      "format": "svg",
+      "name": "quantitative-x-gap-ratios-1-2-4",
+      "pass": false,
+      "observed": [
+        10.142860412597656,
+        20.28571319580078,
+        40.57142639160156
+      ]
+    },
+    {
+      "id": "scatter-negative-240",
+      "format": "html",
+      "name": "quantitative-x-gap-ratios-1-2-4",
+      "pass": false,
+      "observed": [
+        10.142860412597656,
+        20.28571319580078,
+        40.57142639160156
+      ]
+    },
+    {
+      "id": "area-negative-240",
+      "format": "svg",
+      "name": "quantitative-x-gap-ratios-1-2-4",
+      "pass": false,
+      "observed": [
+        10.142860412597656,
+        20.28571319580078,
+        40.57142639160156
+      ]
+    },
+    {
+      "id": "area-negative-240",
+      "format": "html",
+      "name": "quantitative-x-gap-ratios-1-2-4",
+      "pass": false,
+      "observed": [
+        10.142860412597656,
+        20.28571319580078,
+        40.57142639160156
+      ]
+    },
+    {
+      "id": "bubble-negative-240",
+      "format": "svg",
+      "name": "quantitative-x-gap-ratios-1-2-4",
+      "pass": false,
+      "observed": [
+        10.142860412597656,
+        20.28571319580078,
+        40.57142639160156
+      ]
+    },
+    {
+      "id": "bubble-negative-240",
+      "format": "html",
+      "name": "quantitative-x-gap-ratios-1-2-4",
+      "pass": false,
+      "observed": [
+        10.142860412597656,
+        20.28571319580078,
+        40.57142639160156
+      ]
+    },
+    {
+      "id": "pie-scientific-240",
+      "format": "svg",
+      "name": "pie-radius-center-proportions-unshifted",
+      "pass": false,
+      "observed": [
+        {
+          "values": [
+            120,
+            120,
+            120,
+            65,
+            55,
+            55,
+            0,
+            0,
+            1,
+            172.30810839623345,
+            103.00406530937789
+          ],
+          "expected": [
+            120,
+            120,
+            120,
+            65,
+            55,
+            55,
+            0,
+            0,
+            1,
+            172.30810839623345,
+            103.00406530937789
+          ],
+          "pass": true
+        },
+        {
+          "values": [
+            120,
+            120,
+            172.30810839623345,
+            103.00406530937789,
+            55,
+            55,
+            0,
+            0,
+            1,
+            119.99999999999999,
+            175
+          ],
+          "expected": [
+            120,
+            120,
+            172.30810839623345,
+            103.00406530937789,
+            55,
+            55,
+            0,
+            0,
+            1,
+            120,
+            175
+          ],
+          "pass": true
+        },
+        {
+          "values": [
+            120,
+            120,
+            119.99999999999999,
+            175,
+            55,
+            55,
+            0,
+            1,
+            1,
+            120.00000000000004,
+            65
+          ],
+          "expected": [
+            120,
+            120,
+            120,
+            175,
+            55,
+            55,
+            0,
+            0,
+            1,
+            119.99999999999999,
+            65
+          ],
+          "pass": false
+        }
+      ]
+    },
+    {
+      "id": "pie-scientific-240",
+      "format": "html",
+      "name": "pie-radius-center-proportions-unshifted",
+      "pass": false,
+      "observed": [
+        {
+          "values": [
+            120,
+            120,
+            120,
+            65,
+            55,
+            55,
+            0,
+            0,
+            1,
+            172.30810839623345,
+            103.00406530937789
+          ],
+          "expected": [
+            120,
+            120,
+            120,
+            65,
+            55,
+            55,
+            0,
+            0,
+            1,
+            172.30810839623345,
+            103.00406530937789
+          ],
+          "pass": true
+        },
+        {
+          "values": [
+            120,
+            120,
+            172.30810839623345,
+            103.00406530937789,
+            55,
+            55,
+            0,
+            0,
+            1,
+            119.99999999999999,
+            175
+          ],
+          "expected": [
+            120,
+            120,
+            172.30810839623345,
+            103.00406530937789,
+            55,
+            55,
+            0,
+            0,
+            1,
+            120,
+            175
+          ],
+          "pass": true
+        },
+        {
+          "values": [
+            120,
+            120,
+            119.99999999999999,
+            175,
+            55,
+            55,
+            0,
+            1,
+            1,
+            120.00000000000004,
+            65
+          ],
+          "expected": [
+            120,
+            120,
+            120,
+node : node:internal/modules/run_main:111
+At line:1 char:151
++ ... up\run.txt; node tests\r18_probes\role06\browser.mjs $run *> artifact ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (node:internal/modules/run_main:111:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Oracle corruption control failed
+
+1 !== 0
+
+    at file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4/tes
+ts/r18_probes/role06/browser.mjs:98:8 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.13.1
+            175,
+            55,
+            55,
+            0,
+            0,
+            1,
+            119.99999999999999,
+            65
+          ],
+          "pass": false
+        }
+      ]
+    }
+  ],
+  "negativeControls": [
+    {
+      "name": "blank",
+      "rejected": false,
+      "failures": [
+        "oracle unexpectedly threw: TypeError: Cannot read properties of undefined (reading 'fill')"
+      ]
+    },
+    {
+      "name": "wrongValue",
+      "rejected": true,
+      "failures": [
+        "all-literal-point-values-order-and-scale"
+      ]
+    },
+    {
+      "name": "ordinalX",
+      "rejected": true,
+      "failures": [
+        "all-literal-point-values-order-and-scale",
+        "quantitative-x-gap-ratios-1-2-4",
+        "x-ticks-align-actual-point-centers"
+      ]
+    },
+    {
+      "name": "wrongZero",
+      "rejected": true,
+      "failures": [
+        "area-common-literal-zero-baseline"
+      ]
+    },
+    {
+      "name": "missingTick",
+      "rejected": true,
+      "failures": [
+        "literal-extreme-y-ticks",
+        "both-extreme-tick-bboxes-visible"
+      ]
+    },
+    {
+      "name": "clippedTick",
+      "rejected": true,
+      "failures": [
+        "all-native-text-inside-svg",
+        "both-extreme-tick-bboxes-visible"
+      ]
+    },
+    {
+      "name": "browserError",
+      "rejected": true,
+      "failures": [
+        "browser-errors"
+      ]
+    }
+  ]
+}

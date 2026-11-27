@@ -1,0 +1,76 @@
+{
+  "source_sha": "5e595a8f893955ce34a0e26553bb7bf257ea93ae",
+  "counts": {
+    "artifacts": 50,
+    "checks": 1047,
+    "failures": 0,
+    "negative_controls": 7,
+    "negative_controls_failed": 0,
+    "unsupported": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "negativeControls": [
+    {
+      "name": "blank",
+      "rejected": true,
+      "failures": [
+        "nonblank-visible-painted-marks",
+        "native-mark-count",
+        "native-polyline-not-fallback",
+        "polyline-full-vertex-count",
+        "area-common-literal-zero-baseline",
+        "area-visible-fill-and-stroke",
+        "all-literal-point-values-order-and-scale",
+        "quantitative-x-gap-ratios-1-2-4",
+        "x-ticks-align-actual-point-centers"
+      ]
+    },
+    {
+      "name": "wrongValue",
+      "rejected": true,
+      "failures": [
+        "all-literal-point-values-order-and-scale"
+      ]
+    },
+    {
+      "name": "ordinalX",
+      "rejected": true,
+      "failures": [
+        "all-literal-point-values-order-and-scale",
+        "quantitative-x-gap-ratios-1-2-4",
+        "x-ticks-align-actual-point-centers"
+      ]
+    },
+    {
+      "name": "wrongZero",
+      "rejected": true,
+      "failures": [
+        "area-common-literal-zero-baseline"
+      ]
+    },
+    {
+      "name": "missingTick",
+      "rejected": true,
+      "failures": [
+        "literal-extreme-y-ticks",
+        "both-extreme-tick-bboxes-visible"
+      ]
+    },
+    {
+      "name": "clippedTick",
+      "rejected": true,
+      "failures": [
+        "all-native-text-inside-svg",
+        "both-extreme-tick-bboxes-visible"
+      ]
+    },
+    {
+      "name": "browserError",
+      "rejected": true,
+      "failures": [
+        "browser-errors"
+      ]
+    }
+  ]
+}

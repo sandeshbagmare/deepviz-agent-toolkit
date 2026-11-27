@@ -1,0 +1,28 @@
+svg goto-start
+svg goto-done 58.46179999999981
+svg DOM {
+  contentType: 'image/svg+xml',
+  svg: true,
+  node: 'function',
+  ready: null,
+  fonts: 'loaded',
+  pointIterable: 'function'
+}
+svg ERROR page.screenshot: Timeout 5000ms exceeded.
+Call log:
+[2m  - taking page screenshot[22m
+[2m  - waiting for fonts to load...[22m
+[2m  - fonts loaded[22m
+
+    at C:\Users\bagma\AppData\Local\Temp\opencode\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\tests\r18_probes\role06\navigation-control.mjs:19:18 5096.9361
+html goto-start
+html goto-done 121.23379999999997
+html DOM {
+  contentType: 'text/html',
+  svg: true,
+  node: 'function',
+  ready: true,
+  fonts: 'loaded',
+  pointIterable: 'function'
+}
+html screenshot-done 223.9925000000003

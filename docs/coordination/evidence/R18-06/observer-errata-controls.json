@@ -1,0 +1,424 @@
+{
+  "source_sha": "5e595a8f893955ce34a0e26553bb7bf257ea93ae",
+  "controls": [
+    {
+      "name": "blank",
+      "rejected": true,
+      "failures": [
+        "nonblank-visible-painted-marks",
+        "native-mark-count",
+        "native-polyline-not-fallback",
+        "polyline-full-vertex-count",
+        "area-common-literal-zero-baseline",
+        "area-visible-fill-and-stroke",
+        "all-literal-point-values-order-and-scale",
+        "quantitative-x-gap-ratios-1-2-4",
+        "x-ticks-align-actual-point-centers"
+      ]
+    },
+    {
+      "name": "wrongValue",
+      "rejected": true,
+      "failures": [
+        "all-literal-point-values-order-and-scale"
+      ]
+    },
+    {
+      "name": "ordinalX",
+      "rejected": true,
+      "failures": [
+        "all-literal-point-values-order-and-scale",
+        "quantitative-x-gap-ratios-1-2-4",
+        "x-ticks-align-actual-point-centers"
+      ]
+    },
+    {
+      "name": "wrongZero",
+      "rejected": true,
+      "failures": [
+        "area-common-literal-zero-baseline"
+      ]
+    },
+    {
+      "name": "missingTick",
+      "rejected": true,
+      "failures": [
+        "literal-extreme-y-ticks",
+        "both-extreme-tick-bboxes-visible"
+      ]
+    },
+    {
+      "name": "clippedTick",
+      "rejected": true,
+      "failures": [
+        "all-native-text-inside-svg",
+        "both-extreme-tick-bboxes-visible"
+      ]
+    },
+    {
+      "name": "browserError",
+      "rejected": true,
+      "failures": [
+        "browser-errors"
+      ]
+    }
+  ],
+  "original_browser_report_sha256": "08b398fdc6de38a434a622e25f2b84dd8a6a1d1f78d445ca91fe8a3c741d43fe",
+  "original_browser_counts": {
+    "artifacts": 50,
+    "checks": 1047,
+    "failures": 10,
+    "negative_controls": 7,
+    "negative_controls_failed": 1,
+    "unsupported": 0,
+    "skipped": 0
+  },
+  "original_observer_failures": [
+    {
+      "id": "line-negative-240",
+      "format": "svg",
+      "name": "quantitative-x-gap-ratios-1-2-4",
+      "pass": false,
+      "observed": [
+        10.142860412597656,
+        20.28571319580078,
+        40.57142639160156
+      ]
+    },
+    {
+      "id": "line-negative-240",
+      "format": "html",
+      "name": "quantitative-x-gap-ratios-1-2-4",
+      "pass": false,
+      "observed": [
+        10.142860412597656,
+        20.28571319580078,
+        40.57142639160156
+      ]
+    },
+    {
+      "id": "scatter-negative-240",
+      "format": "svg",
+      "name": "quantitative-x-gap-ratios-1-2-4",
+      "pass": false,
+      "observed": [
+        10.142860412597656,
+        20.28571319580078,
+        40.57142639160156
+      ]
+    },
+    {
+      "id": "scatter-negative-240",
+      "format": "html",
+      "name": "quantitative-x-gap-ratios-1-2-4",
+      "pass": false,
+      "observed": [
+        10.142860412597656,
+        20.28571319580078,
+        40.57142639160156
+      ]
+    },
+    {
+      "id": "area-negative-240",
+      "format": "svg",
+      "name": "quantitative-x-gap-ratios-1-2-4",
+      "pass": false,
+      "observed": [
+        10.142860412597656,
+        20.28571319580078,
+        40.57142639160156
+      ]
+    },
+    {
+      "id": "area-negative-240",
+      "format": "html",
+      "name": "quantitative-x-gap-ratios-1-2-4",
+      "pass": false,
+      "observed": [
+        10.142860412597656,
+        20.28571319580078,
+        40.57142639160156
+      ]
+    },
+    {
+      "id": "bubble-negative-240",
+      "format": "svg",
+      "name": "quantitative-x-gap-ratios-1-2-4",
+      "pass": false,
+      "observed": [
+        10.142860412597656,
+        20.28571319580078,
+        40.57142639160156
+      ]
+    },
+    {
+      "id": "bubble-negative-240",
+      "format": "html",
+      "name": "quantitative-x-gap-ratios-1-2-4",
+      "pass": false,
+      "observed": [
+        10.142860412597656,
+        20.28571319580078,
+        40.57142639160156
+      ]
+    },
+    {
+      "id": "pie-scientific-240",
+      "format": "svg",
+      "name": "pie-radius-center-proportions-unshifted",
+      "pass": false,
+      "observed": [
+        {
+          "values": [
+            120,
+            120,
+            120,
+            65,
+            55,
+            55,
+            0,
+            0,
+            1,
+            172.30810839623345,
+            103.00406530937789
+          ],
+          "expected": [
+            120,
+            120,
+            120,
+            65,
+            55,
+            55,
+            0,
+            0,
+            1,
+            172.30810839623345,
+            103.00406530937789
+          ],
+          "pass": true
+        },
+        {
+          "values": [
+            120,
+            120,
+            172.30810839623345,
+            103.00406530937789,
+            55,
+            55,
+            0,
+            0,
+            1,
+            119.99999999999999,
+            175
+          ],
+          "expected": [
+            120,
+            120,
+            172.30810839623345,
+            103.00406530937789,
+            55,
+            55,
+            0,
+            0,
+            1,
+            120,
+            175
+          ],
+          "pass": true
+        },
+        {
+          "values": [
+            120,
+            120,
+            119.99999999999999,
+            175,
+            55,
+            55,
+            0,
+            1,
+            1,
+            120.00000000000004,
+            65
+          ],
+          "expected": [
+            120,
+            120,
+            120,
+            175,
+            55,
+            55,
+            0,
+            0,
+            1,
+            119.99999999999999,
+            65
+          ],
+          "pass": false
+        }
+      ]
+    },
+    {
+      "id": "pie-scientific-240",
+      "format": "html",
+      "name": "pie-radius-center-proportions-unshifted",
+      "pass": false,
+      "observed": [
+        {
+          "values": [
+            120,
+            120,
+            120,
+            65,
+            55,
+            55,
+            0,
+            0,
+            1,
+            172.30810839623345,
+            103.00406530937789
+          ],
+          "expected": [
+            120,
+            120,
+            120,
+            65,
+            55,
+            55,
+            0,
+            0,
+            1,
+            172.30810839623345,
+            103.00406530937789
+          ],
+          "pass": true
+        },
+        {
+          "values": [
+            120,
+            120,
+            172.30810839623345,
+            103.00406530937789,
+            55,
+            55,
+            0,
+            0,
+            1,
+            119.99999999999999,
+            175
+          ],
+          "expected": [
+            120,
+            120,
+            172.30810839623345,
+            103.00406530937789,
+            55,
+            55,
+            0,
+            0,
+            1,
+            120,
+            175
+          ],
+          "pass": true
+        },
+        {
+          "values": [
+            120,
+            120,
+            119.99999999999999,
+            175,
+            55,
+            55,
+            0,
+            1,
+            1,
+            120.00000000000004,
+            65
+          ],
+          "expected": [
+            120,
+            120,
+            120,
+            175,
+            55,
+            55,
+            0,
+            0,
+            1,
+            119.99999999999999,
+            65
+          ],
+          "pass": false
+        }
+      ]
+    }
+  ],
+  "original_negative_controls": [
+    {
+      "name": "blank",
+      "rejected": false,
+      "failures": [
+        "oracle unexpectedly threw: TypeError: Cannot read properties of undefined (reading 'fill')"
+      ]
+    },
+    {
+      "name": "wrongValue",
+      "rejected": true,
+      "failures": [
+        "all-literal-point-values-order-and-scale"
+      ]
+    },
+    {
+      "name": "ordinalX",
+      "rejected": true,
+      "failures": [
+        "all-literal-point-values-order-and-scale",
+        "quantitative-x-gap-ratios-1-2-4",
+        "x-ticks-align-actual-point-centers"
+      ]
+    },
+    {
+      "name": "wrongZero",
+      "rejected": true,
+      "failures": [
+        "area-common-literal-zero-baseline"
+      ]
+    },
+    {
+      "name": "missingTick",
+      "rejected": true,
+      "failures": [
+        "literal-extreme-y-ticks",
+        "both-extreme-tick-bboxes-visible"
+      ]
+    },
+    {
+      "name": "clippedTick",
+      "rejected": true,
+      "failures": [
+        "all-native-text-inside-svg",
+        "both-extreme-tick-bboxes-visible"
+      ]
+    },
+    {
+      "name": "browserError",
+      "rejected": true,
+      "failures": [
+        "browser-errors"
+      ]
+    }
+  ],
+  "reassessment": {
+    "original_file": "browser-report-viewport.json",
+    "original_sha256": "08b398fdc6de38a434a622e25f2b84dd8a6a1d1f78d445ca91fe8a3c741d43fe",
+    "no_browser_rerun": true,
+    "original_checks": 1047,
+    "original_failures": 10,
+    "original_negative_control_failures": 1,
+    "observer_errata": [
+      "1e-6 dimensionless x-gap tolerance falsely rejected SVGPointList float32 ratio3.9999984956; 1e-4 tolerance and original 0.02pixel independent literal geometry check both retained.",
+      "Exact semicircle large-arc flag can be0 or1 because finite scientific total division is slightly above0.5; actual radius/center/endpoints/fractions remain independently checked.",
+      "Blank mutation exposed own optional-mark access TypeError; explicit failures now preserved instead of throwing."
+    ]
+  }
+}

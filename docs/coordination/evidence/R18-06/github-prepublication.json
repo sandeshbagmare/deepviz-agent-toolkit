@@ -1,0 +1,102 @@
+{
+  "observed_at": "2026-11-27T15:02:03.148150+00:00",
+  "expected_user_http": 200,
+  "expected_user_verified": true,
+  "login": "sandeshbagmare",
+  "repository_http": 200,
+  "repository": "sandeshbagmare/deepviz-agent-toolkit",
+  "visibility": "public",
+  "default_branch": "main",
+  "PR31": {
+    "http": 200,
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "head_sha": "6c72cec40e3feb8d710ab55167453194f643d650"
+  },
+  "checks_http": 200,
+  "checks": [
+    {
+      "name": "evidence",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "One-pass scale 100000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Python and npm distribution checks (no publishing)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "npm build, types and tests (Node 24)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Python 3.11 lint, types, unit and integration",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "name": "Python 3.12 lint, types, unit and integration",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "name": "One-pass scale 10 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "One-pass scale 1000000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "One-pass scale 10000000 records",
+      "status": "in_progress",
+      "conclusion": null
+    },
+    {
+      "name": "Python 3.13 lint, types, unit and integration",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "name": "One-pass scale 1000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Raster visual regression (semantic pixel comparison)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "evidence",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "issues": [
+    {
+      "number": 23,
+      "http": 200,
+      "state": "open",
+      "title": "Inspect real renderer outputs and commit reproducible visual evidence"
+    },
+    {
+      "number": 26,
+      "http": 200,
+      "state": "open",
+      "title": "Enforce evidence-bearing PRs with two reviewer and two tester reports"
+    }
+  ],
+  "credentials_in_memory_only": true,
+  "API_mutations": false,
+  "publication_scope": "Only agents/r10-06-native-kind-browser OWN test/evidence paths; not shared candidate/issues/PRs"
+}
