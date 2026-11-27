@@ -1,0 +1,1294 @@
+{
+  "not_product_or_scale": true,
+  "reviewed_input_hashes": [
+    {
+      "path": "docs/coordination/reports/R13-09-helper-null-handoff.md",
+      "matches_exact_reviewed_git_blob": true
+    },
+    {
+      "path": "tests/r13_probes/role09/retest-helper-null.ps1",
+      "matches_exact_reviewed_git_blob": true
+    },
+    {
+      "path": "docs/coordination/reports/R10-11-python-scale-envelope.md",
+      "matches_exact_reviewed_git_blob": true
+    },
+    {
+      "path": "docs/coordination/reports/R13-11-python-scale-envelope.md",
+      "matches_exact_reviewed_git_blob": true
+    },
+    {
+      "path": "tests/r10_probes/role11/verify_scale_receipt.py",
+      "matches_exact_reviewed_git_blob": true
+    },
+    {
+      "path": "tests/r10_probes/role11/test_receipt_validator.py",
+      "matches_exact_reviewed_git_blob": true
+    },
+    {
+      "path": "tests/r10_probes/role11/test_scale_envelope.py",
+      "matches_exact_reviewed_git_blob": true
+    },
+    {
+      "path": "scripts/performance_suite.py",
+      "matches_exact_reviewed_git_blob": true
+    },
+    {
+      "path": "packages/deepviz/package.json",
+      "matches_exact_reviewed_git_blob": true
+    },
+    {
+      "path": "package.json",
+      "matches_exact_reviewed_git_blob": true
+    },
+    {
+      "path": "packages/deepviz/test/test_r07_tool_spec_null.test.mjs",
+      "matches_exact_reviewed_git_blob": true
+    },
+    {
+      "path": "schemas/chart-spec.schema.json",
+      "matches_exact_reviewed_git_blob": true
+    },
+    {
+      "path": "packages/deepviz/src/chart-spec.schema.json",
+      "matches_exact_reviewed_git_blob": true
+    },
+    {
+      "path": "packages/deepviz/src/render.ts",
+      "matches_exact_reviewed_git_blob": true
+    },
+    {
+      "path": "scripts/export_schema.py",
+      "matches_exact_reviewed_git_blob": true
+    },
+    {
+      "path": "pyproject.toml",
+      "matches_exact_reviewed_git_blob": true
+    }
+  ],
+  "observations": [
+    {
+      "case": "test09_explicit_tool_shadow_us0",
+      "kind": "ACTUAL_RECEIPT_FROM_SYNTHETIC_FIXTURE_ONLY_NOT_PRODUCT",
+      "recipe_receipt": {
+        "status": "HARNESS_ERROR_NOT_A_PRODUCT_PASS",
+        "source_sha": "c8e8b50529dfb6a588f26b07edbb1f2ae8fcbcf8",
+        "candidate": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_explicit_tool_shadow_us0\\synthetic-source",
+        "immutable_test_sha256": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227",
+        "render_source_sha256": "a4b41c9dc62ebd8e051e0643800a7007f6539483dbfb9846bc2c7d0454e15147",
+        "known_unfixed_source": false,
+        "steps": [
+          {
+            "name": "build",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "build"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_explicit_tool_shadow_us0\\synthetic-source",
+            "state": "NOT_RUN"
+          },
+          {
+            "name": "public-origin",
+            "executable": "node",
+            "arguments": [
+              "--input-type=module",
+              "--eval",
+              "import {realpathSync} from 'node:fs';import {fileURLToPath} from 'node:url';import assert from 'node:assert/strict';const resolved=realpathSync(fileURLToPath(import.meta.resolve('@deepviz/agent-toolkit')));assert.equal(resolved,realpathSync(process.argv[1]));console.log(resolved);",
+              "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_explicit_tool_shadow_us0\\synthetic-source\\packages\\deepviz\\dist\\index.js"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_explicit_tool_shadow_us0\\synthetic-source\\packages\\deepviz",
+            "state": "NOT_RUN"
+          },
+          {
+            "name": "typecheck",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "typecheck"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_explicit_tool_shadow_us0\\synthetic-source",
+            "state": "NOT_RUN"
+          },
+          {
+            "name": "immutable-regression",
+            "executable": "node",
+            "arguments": [
+              "--test",
+              "packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_explicit_tool_shadow_us0\\synthetic-source",
+            "state": "NOT_RUN"
+          },
+          {
+            "name": "full-npm",
+            "executable": "npm.cmd",
+            "arguments": [
+              "test"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_explicit_tool_shadow_us0\\synthetic-source",
+            "state": "NOT_RUN"
+          },
+          {
+            "name": "schema-check",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "schema:check"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_explicit_tool_shadow_us0\\synthetic-source",
+            "state": "NOT_RUN"
+          },
+          {
+            "name": "python-schema-check",
+            "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_explicit_tool_shadow_us0\\owned-tools\\python.cmd",
+            "arguments": [
+              "scripts/export_schema.py",
+              "--check"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_explicit_tool_shadow_us0\\synthetic-source",
+            "state": "NOT_RUN"
+          },
+          {
+            "name": "core-parity",
+            "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_explicit_tool_shadow_us0\\owned-tools\\python.cmd",
+            "arguments": [
+              "-m",
+              "pytest",
+              "tests/test_models.py",
+              "tests/test_schema_contract.py",
+              "tests/test_cross_language_contract.py",
+              "tests/test_n12_authoritative_parity.py",
+              "-q"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_explicit_tool_shadow_us0\\synthetic-source",
+            "state": "NOT_RUN"
+          },
+          {
+            "name": "npm-pack-dry-run",
+            "executable": "npm.cmd",
+            "arguments": [
+              "pack",
+              "--dry-run",
+              "--workspace",
+              "@deepviz/agent-toolkit"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_explicit_tool_shadow_us0\\synthetic-source",
+            "state": "NOT_RUN"
+          }
+        ]
+      },
+      "raw_sha256": "e8156f2aa61b2c728b5074c23ca7f7344ff9d455a9b0764e70cbb25440ef6db0"
+    },
+    {
+      "case": "test09_noop_trusted_build_does0",
+      "kind": "ACTUAL_RECEIPT_FROM_SYNTHETIC_FIXTURE_ONLY_NOT_PRODUCT",
+      "recipe_receipt": {
+        "status": "SCOPED_GATES_PASS_NOT_FINAL_APPROVAL",
+        "source_sha": "14a6ca77bf9a68b59c867331a7debfa1023c91db",
+        "candidate": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\synthetic-source",
+        "immutable_test_sha256": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227",
+        "render_source_sha256": "a4b41c9dc62ebd8e051e0643800a7007f6539483dbfb9846bc2c7d0454e15147",
+        "known_unfixed_source": false,
+        "steps": [
+          {
+            "name": "build",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "build"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\new-external-evidence\\build.log"
+          },
+          {
+            "name": "public-origin",
+            "executable": "node",
+            "arguments": [
+              "--input-type=module",
+              "--eval",
+              "import {realpathSync} from 'node:fs';import {fileURLToPath} from 'node:url';import assert from 'node:assert/strict';const resolved=realpathSync(fileURLToPath(import.meta.resolve('@deepviz/agent-toolkit')));assert.equal(resolved,realpathSync(process.argv[1]));console.log(resolved);",
+              "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\synthetic-source\\packages\\deepviz\\dist\\index.js"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\synthetic-source\\packages\\deepviz",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\new-external-evidence\\public-origin.log"
+          },
+          {
+            "name": "typecheck",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "typecheck"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\new-external-evidence\\typecheck.log"
+          },
+          {
+            "name": "immutable-regression",
+            "executable": "node",
+            "arguments": [
+              "--test",
+              "packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\new-external-evidence\\immutable-regression.log"
+          },
+          {
+            "name": "full-npm",
+            "executable": "npm.cmd",
+            "arguments": [
+              "test"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\new-external-evidence\\full-npm.log"
+          },
+          {
+            "name": "schema-check",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "schema:check"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\new-external-evidence\\schema-check.log"
+          },
+          {
+            "name": "python-schema-check",
+            "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\owned-tools\\python.cmd",
+            "arguments": [
+              "scripts/export_schema.py",
+              "--check"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\new-external-evidence\\python-schema-check.log"
+          },
+          {
+            "name": "core-parity",
+            "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\owned-tools\\python.cmd",
+            "arguments": [
+              "-m",
+              "pytest",
+              "tests/test_models.py",
+              "tests/test_schema_contract.py",
+              "tests/test_cross_language_contract.py",
+              "tests/test_n12_authoritative_parity.py",
+              "-q"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\new-external-evidence\\core-parity.log"
+          },
+          {
+            "name": "npm-pack-dry-run",
+            "executable": "npm.cmd",
+            "arguments": [
+              "pack",
+              "--dry-run",
+              "--workspace",
+              "@deepviz/agent-toolkit"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_noop_trusted_build_does0\\new-external-evidence\\npm-pack-dry-run.log"
+          }
+        ],
+        "built_render_sha256": "0501009f7869ea7aa5ddb5995ce113d817dd167b3c64cef4b133d8562ae47d3d"
+      },
+      "raw_sha256": "b0733d36db1331cb88238f51cc749089fe8226fdb7829b96ddd7e04fa5ceb459"
+    },
+    {
+      "case": "test09_noop_trusted_build_does0",
+      "synthetic_tiny_pytest_log": "SYNTHETIC STUB: no product tests or compiler executed\r\n",
+      "raw_sha256": "b15e26387acdb55add1221465afc8aa5cd1957cccf885d8a02a2cc3f91ee7d82"
+    },
+    {
+      "case": "test09_real_tiny_collection_er0",
+      "kind": "ACTUAL_RECEIPT_FROM_SYNTHETIC_FIXTURE_ONLY_NOT_PRODUCT",
+      "recipe_receipt": {
+        "status": "GATE_FAILURE_REMAINING_STEPS_NOT_RUN",
+        "source_sha": "3d79aa788db48578379f191dcb72983b20a8aa29",
+        "candidate": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\synthetic-source",
+        "immutable_test_sha256": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227",
+        "render_source_sha256": "a4b41c9dc62ebd8e051e0643800a7007f6539483dbfb9846bc2c7d0454e15147",
+        "known_unfixed_source": false,
+        "steps": [
+          {
+            "name": "build",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "build"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\new-external-evidence\\build.log"
+          },
+          {
+            "name": "public-origin",
+            "executable": "node",
+            "arguments": [
+              "--input-type=module",
+              "--eval",
+              "import {realpathSync} from 'node:fs';import {fileURLToPath} from 'node:url';import assert from 'node:assert/strict';const resolved=realpathSync(fileURLToPath(import.meta.resolve('@deepviz/agent-toolkit')));assert.equal(resolved,realpathSync(process.argv[1]));console.log(resolved);",
+              "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\synthetic-source\\packages\\deepviz\\dist\\index.js"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\synthetic-source\\packages\\deepviz",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\new-external-evidence\\public-origin.log"
+          },
+          {
+            "name": "typecheck",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "typecheck"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\new-external-evidence\\typecheck.log"
+          },
+          {
+            "name": "immutable-regression",
+            "executable": "node",
+            "arguments": [
+              "--test",
+              "packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\new-external-evidence\\immutable-regression.log"
+          },
+          {
+            "name": "full-npm",
+            "executable": "npm.cmd",
+            "arguments": [
+              "test"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\new-external-evidence\\full-npm.log"
+          },
+          {
+            "name": "schema-check",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "schema:check"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\new-external-evidence\\schema-check.log"
+          },
+          {
+            "name": "python-schema-check",
+            "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+            "arguments": [
+              "scripts/export_schema.py",
+              "--check"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\new-external-evidence\\python-schema-check.log"
+          },
+          {
+            "name": "core-parity",
+            "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+            "arguments": [
+              "-m",
+              "pytest",
+              "tests/test_models.py",
+              "tests/test_schema_contract.py",
+              "tests/test_cross_language_contract.py",
+              "tests/test_n12_authoritative_parity.py",
+              "-q"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 2,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\new-external-evidence\\core-parity.log"
+          },
+          {
+            "name": "npm-pack-dry-run",
+            "executable": "npm.cmd",
+            "arguments": [
+              "pack",
+              "--dry-run",
+              "--workspace",
+              "@deepviz/agent-toolkit"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\synthetic-source",
+            "state": "NOT_RUN"
+          }
+        ]
+      },
+      "raw_sha256": "7870fe9767e3cba6ef80f5d74b77caee4187e18829e17cc3aa2741cefa744325"
+    },
+    {
+      "case": "test09_real_tiny_collection_er0",
+      "synthetic_tiny_pytest_log": "\r\n=================================== ERRORS ====================================\r\n____________________ ERROR collecting tests/test_models.py ____________________\r\nC:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\_pytest\\python.py:528: in importtestmodule\r\n    mod = import_path(\r\nC:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\_pytest\\pathlib.py:640: in import_path\r\n    importlib.import_module(module_name)\r\n..\\..\\..\\..\\..\\..\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\Lib\\importlib\\__init__.py:90: in import_module\r\n    return _bootstrap._gcd_import(name[level:], package, level)\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n<frozen importlib._bootstrap>:1387: in _gcd_import\r\n    ???\r\n<frozen importlib._bootstrap>:1360: in _find_and_load\r\n    ???\r\n<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked\r\n    ???\r\n<frozen importlib._bootstrap>:935: in _load_unlocked\r\n    ???\r\nC:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\_pytest\\assertion\\rewrite.py:176: in exec_module\r\n    source_hash, co = _rewrite_test(fn, self.config)\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nC:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\_pytest\\assertion\\rewrite.py:339: in _rewrite_test\r\n    tree = ast.parse(source, filename=strfn)\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n..\\..\\..\\..\\..\\..\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\Lib\\ast.py:52: in parse\r\n    return compile(source, filename, mode, flags,\r\nE     File \"C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\synthetic-source\\tests\\test_models.py\", line 1\r\nE       def invalid syntax\r\nE                   ^^^^^^\r\nE   SyntaxError: expected '('\r\n=========================== short test summary info ===========================\r\nERROR tests/test_models.py\r\n!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\r\n1 error in 0.63s\r\n",
+      "raw_sha256": "f209c7f6392c4a6578a099879a2058c7ed069a3bfd1e31350c398fc515434e10"
+    },
+    {
+      "case": "test09_real_tiny_collection_er0",
+      "synthetic_tiny_junit": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites name=\"pytest tests\"><testsuite name=\"pytest\" errors=\"1\" failures=\"0\" skipped=\"0\" tests=\"1\" time=\"0.547\" timestamp=\"2026-11-27T20:22:57.215437+05:30\" hostname=\"SandeshAcer\"><testcase classname=\"\" name=\"tests.test_models\" time=\"0.000\"><error message=\"collection failure\">C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\_pytest\\python.py:528: in importtestmodule\n    mod = import_path(\nC:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\_pytest\\pathlib.py:640: in import_path\n    importlib.import_module(module_name)\n..\\..\\..\\..\\..\\..\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\Lib\\importlib\\__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import\n    ???\n&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load\n    ???\n&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked\n    ???\n&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked\n    ???\nC:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\_pytest\\assertion\\rewrite.py:176: in exec_module\n    source_hash, co = _rewrite_test(fn, self.config)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nC:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\_pytest\\assertion\\rewrite.py:339: in _rewrite_test\n    tree = ast.parse(source, filename=strfn)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n..\\..\\..\\..\\..\\..\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\Lib\\ast.py:52: in parse\n    return compile(source, filename, mode, flags,\nE     File \"C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_collection_er0\\synthetic-source\\tests\\test_models.py\", line 1\nE       def invalid syntax\nE                   ^^^^^^\nE   SyntaxError: expected '('</error></testcase></testsuite></testsuites>",
+      "sha256": "d0fee3299dbcc86c591ebb41c9f936c9a86724b7c1f213da5b39e5374b1a2aec"
+    },
+    {
+      "case": "test09_real_tiny_pass_does_not0",
+      "kind": "ACTUAL_RECEIPT_FROM_SYNTHETIC_FIXTURE_ONLY_NOT_PRODUCT",
+      "recipe_receipt": {
+        "status": "SCOPED_GATES_PASS_NOT_FINAL_APPROVAL",
+        "source_sha": "590635a3ee61b657ad6af04e634157c8c969b4cd",
+        "candidate": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\synthetic-source",
+        "immutable_test_sha256": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227",
+        "render_source_sha256": "a4b41c9dc62ebd8e051e0643800a7007f6539483dbfb9846bc2c7d0454e15147",
+        "known_unfixed_source": false,
+        "steps": [
+          {
+            "name": "build",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "build"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\new-external-evidence\\build.log"
+          },
+          {
+            "name": "public-origin",
+            "executable": "node",
+            "arguments": [
+              "--input-type=module",
+              "--eval",
+              "import {realpathSync} from 'node:fs';import {fileURLToPath} from 'node:url';import assert from 'node:assert/strict';const resolved=realpathSync(fileURLToPath(import.meta.resolve('@deepviz/agent-toolkit')));assert.equal(resolved,realpathSync(process.argv[1]));console.log(resolved);",
+              "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\synthetic-source\\packages\\deepviz\\dist\\index.js"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\synthetic-source\\packages\\deepviz",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\new-external-evidence\\public-origin.log"
+          },
+          {
+            "name": "typecheck",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "typecheck"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\new-external-evidence\\typecheck.log"
+          },
+          {
+            "name": "immutable-regression",
+            "executable": "node",
+            "arguments": [
+              "--test",
+              "packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\new-external-evidence\\immutable-regression.log"
+          },
+          {
+            "name": "full-npm",
+            "executable": "npm.cmd",
+            "arguments": [
+              "test"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\new-external-evidence\\full-npm.log"
+          },
+          {
+            "name": "schema-check",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "schema:check"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\new-external-evidence\\schema-check.log"
+          },
+          {
+            "name": "python-schema-check",
+            "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+            "arguments": [
+              "scripts/export_schema.py",
+              "--check"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\new-external-evidence\\python-schema-check.log"
+          },
+          {
+            "name": "core-parity",
+            "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+            "arguments": [
+              "-m",
+              "pytest",
+              "tests/test_models.py",
+              "tests/test_schema_contract.py",
+              "tests/test_cross_language_contract.py",
+              "tests/test_n12_authoritative_parity.py",
+              "-q"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\new-external-evidence\\core-parity.log"
+          },
+          {
+            "name": "npm-pack-dry-run",
+            "executable": "npm.cmd",
+            "arguments": [
+              "pack",
+              "--dry-run",
+              "--workspace",
+              "@deepviz/agent-toolkit"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pass_does_not0\\new-external-evidence\\npm-pack-dry-run.log"
+          }
+        ]
+      },
+      "raw_sha256": "b5df054e94c4421e9323dda5a483a82e168d26d71fef273daea3f21cf5428d24"
+    },
+    {
+      "case": "test09_real_tiny_pass_does_not0",
+      "synthetic_tiny_pytest_log": "....                                                                     [100%]\r\n4 passed in 0.23s\r\n",
+      "raw_sha256": "72a6e2d5593e51ee7d897e01e9e4515b2b081532d5c0c2609db9cfdfcb72d1c5"
+    },
+    {
+      "case": "test09_real_tiny_pass_does_not0",
+      "synthetic_tiny_junit": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites name=\"pytest tests\"><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"4\" time=\"0.092\" timestamp=\"2026-11-27T20:22:49.726346+05:30\" hostname=\"SandeshAcer\"><testcase classname=\"tests.test_models\" name=\"test_synthetic_only\" time=\"0.001\" /><testcase classname=\"tests.test_schema_contract\" name=\"test_synthetic_only\" time=\"0.001\" /><testcase classname=\"tests.test_cross_language_contract\" name=\"test_synthetic_only\" time=\"0.001\" /><testcase classname=\"tests.test_n12_authoritative_parity\" name=\"test_synthetic_only\" time=\"0.001\" /></testsuite></testsuites>",
+      "sha256": "38412ec85190835d4c41869905edb127191c45a7a8519467f89ec1a6c40e10e3"
+    },
+    {
+      "case": "test09_real_tiny_pytest_skips_0",
+      "kind": "ACTUAL_RECEIPT_FROM_SYNTHETIC_FIXTURE_ONLY_NOT_PRODUCT",
+      "recipe_receipt": {
+        "status": "SCOPED_GATES_PASS_NOT_FINAL_APPROVAL",
+        "source_sha": "498aa1d6cca23c380d85aa23bd8c81aaad6e3dfd",
+        "candidate": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\synthetic-source",
+        "immutable_test_sha256": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227",
+        "render_source_sha256": "a4b41c9dc62ebd8e051e0643800a7007f6539483dbfb9846bc2c7d0454e15147",
+        "known_unfixed_source": false,
+        "steps": [
+          {
+            "name": "build",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "build"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\new-external-evidence\\build.log"
+          },
+          {
+            "name": "public-origin",
+            "executable": "node",
+            "arguments": [
+              "--input-type=module",
+              "--eval",
+              "import {realpathSync} from 'node:fs';import {fileURLToPath} from 'node:url';import assert from 'node:assert/strict';const resolved=realpathSync(fileURLToPath(import.meta.resolve('@deepviz/agent-toolkit')));assert.equal(resolved,realpathSync(process.argv[1]));console.log(resolved);",
+              "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\synthetic-source\\packages\\deepviz\\dist\\index.js"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\synthetic-source\\packages\\deepviz",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\new-external-evidence\\public-origin.log"
+          },
+          {
+            "name": "typecheck",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "typecheck"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\new-external-evidence\\typecheck.log"
+          },
+          {
+            "name": "immutable-regression",
+            "executable": "node",
+            "arguments": [
+              "--test",
+              "packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\new-external-evidence\\immutable-regression.log"
+          },
+          {
+            "name": "full-npm",
+            "executable": "npm.cmd",
+            "arguments": [
+              "test"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\new-external-evidence\\full-npm.log"
+          },
+          {
+            "name": "schema-check",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "schema:check"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\new-external-evidence\\schema-check.log"
+          },
+          {
+            "name": "python-schema-check",
+            "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+            "arguments": [
+              "scripts/export_schema.py",
+              "--check"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\new-external-evidence\\python-schema-check.log"
+          },
+          {
+            "name": "core-parity",
+            "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+            "arguments": [
+              "-m",
+              "pytest",
+              "tests/test_models.py",
+              "tests/test_schema_contract.py",
+              "tests/test_cross_language_contract.py",
+              "tests/test_n12_authoritative_parity.py",
+              "-q"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\new-external-evidence\\core-parity.log"
+          },
+          {
+            "name": "npm-pack-dry-run",
+            "executable": "npm.cmd",
+            "arguments": [
+              "pack",
+              "--dry-run",
+              "--workspace",
+              "@deepviz/agent-toolkit"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\new-external-evidence\\npm-pack-dry-run.log"
+          }
+        ]
+      },
+      "raw_sha256": "d302433c0c373141f99fbe23fb1763da007c1fcd50c5514291fb1d76a07d85aa"
+    },
+    {
+      "case": "test09_real_tiny_pytest_skips_0",
+      "synthetic_tiny_pytest_log": "ssss                                                                     [100%]\r\n4 skipped in 0.13s\r\n",
+      "raw_sha256": "e876263afe7d14c384288cf8e6dcd044d8f8d15cee77e5f6854cdf2242285f18"
+    },
+    {
+      "case": "test09_real_tiny_pytest_skips_0",
+      "synthetic_tiny_junit": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites name=\"pytest tests\"><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"4\" tests=\"4\" time=\"0.047\" timestamp=\"2026-11-27T20:22:44.736570+05:30\" hostname=\"SandeshAcer\"><testcase classname=\"tests.test_models\" name=\"test_synthetic_only\" time=\"0.000\"><skipped type=\"pytest.skip\" message=\"Synthetic dependency unavailable\">C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\synthetic-source\\tests\\test_models.py:3: Synthetic dependency unavailable</skipped></testcase><testcase classname=\"tests.test_schema_contract\" name=\"test_synthetic_only\" time=\"0.000\"><skipped type=\"pytest.skip\" message=\"Synthetic dependency unavailable\">C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\synthetic-source\\tests\\test_schema_contract.py:3: Synthetic dependency unavailable</skipped></testcase><testcase classname=\"tests.test_cross_language_contract\" name=\"test_synthetic_only\" time=\"0.000\"><skipped type=\"pytest.skip\" message=\"Synthetic dependency unavailable\">C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\synthetic-source\\tests\\test_cross_language_contract.py:3: Synthetic dependency unavailable</skipped></testcase><testcase classname=\"tests.test_n12_authoritative_parity\" name=\"test_synthetic_only\" time=\"0.000\"><skipped type=\"pytest.skip\" message=\"Synthetic dependency unavailable\">C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_real_tiny_pytest_skips_0\\synthetic-source\\tests\\test_n12_authoritative_parity.py:3: Synthetic dependency unavailable</skipped></testcase></testsuite></testsuites>",
+      "sha256": "296320b0a8c6cbe6141681f34b60ec215c2982feba657773be730474ac5ebd3c"
+    },
+    {
+      "case": "test09_rejects_source_changed_0",
+      "kind": "ACTUAL_RECEIPT_FROM_SYNTHETIC_FIXTURE_ONLY_NOT_PRODUCT",
+      "recipe_receipt": {
+        "status": "SCOPED_GATES_PASS_NOT_FINAL_APPROVAL",
+        "source_sha": "05c6e5ef988fda781e8e40b3520f2bd07859a09a",
+        "candidate": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\synthetic-source",
+        "immutable_test_sha256": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227",
+        "render_source_sha256": "a4b41c9dc62ebd8e051e0643800a7007f6539483dbfb9846bc2c7d0454e15147",
+        "known_unfixed_source": false,
+        "steps": [
+          {
+            "name": "build",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "build"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\new-external-evidence\\build.log"
+          },
+          {
+            "name": "public-origin",
+            "executable": "node",
+            "arguments": [
+              "--input-type=module",
+              "--eval",
+              "import {realpathSync} from 'node:fs';import {fileURLToPath} from 'node:url';import assert from 'node:assert/strict';const resolved=realpathSync(fileURLToPath(import.meta.resolve('@deepviz/agent-toolkit')));assert.equal(resolved,realpathSync(process.argv[1]));console.log(resolved);",
+              "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\synthetic-source\\packages\\deepviz\\dist\\index.js"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\synthetic-source\\packages\\deepviz",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\new-external-evidence\\public-origin.log"
+          },
+          {
+            "name": "typecheck",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "typecheck"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\new-external-evidence\\typecheck.log"
+          },
+          {
+            "name": "immutable-regression",
+            "executable": "node",
+            "arguments": [
+              "--test",
+              "packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\new-external-evidence\\immutable-regression.log"
+          },
+          {
+            "name": "full-npm",
+            "executable": "npm.cmd",
+            "arguments": [
+              "test"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\new-external-evidence\\full-npm.log"
+          },
+          {
+            "name": "schema-check",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "schema:check"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\new-external-evidence\\schema-check.log"
+          },
+          {
+            "name": "python-schema-check",
+            "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\owned-tools\\python.cmd",
+            "arguments": [
+              "scripts/export_schema.py",
+              "--check"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\new-external-evidence\\python-schema-check.log"
+          },
+          {
+            "name": "core-parity",
+            "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\owned-tools\\python.cmd",
+            "arguments": [
+              "-m",
+              "pytest",
+              "tests/test_models.py",
+              "tests/test_schema_contract.py",
+              "tests/test_cross_language_contract.py",
+              "tests/test_n12_authoritative_parity.py",
+              "-q"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\new-external-evidence\\core-parity.log"
+          },
+          {
+            "name": "npm-pack-dry-run",
+            "executable": "npm.cmd",
+            "arguments": [
+              "pack",
+              "--dry-run",
+              "--workspace",
+              "@deepviz/agent-toolkit"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_rejects_source_changed_0\\new-external-evidence\\npm-pack-dry-run.log"
+          }
+        ]
+      },
+      "raw_sha256": "f1ac32d1cd4bb8db323062c4526e735c39eed35060190407668fbc373bd06af1"
+    },
+    {
+      "case": "test09_rejects_source_changed_0",
+      "synthetic_tiny_pytest_log": "SYNTHETIC STUB: no product tests or compiler executed\r\n",
+      "raw_sha256": "b15e26387acdb55add1221465afc8aa5cd1957cccf885d8a02a2cc3f91ee7d82"
+    },
+    {
+      "case": "test09_trusted_zero_exit_stub_0",
+      "kind": "ACTUAL_RECEIPT_FROM_SYNTHETIC_FIXTURE_ONLY_NOT_PRODUCT",
+      "recipe_receipt": {
+        "status": "SCOPED_GATES_PASS_NOT_FINAL_APPROVAL",
+        "source_sha": "4bdbec1b9e69a26a30274707861518381e678a97",
+        "candidate": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\synthetic-source",
+        "immutable_test_sha256": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227",
+        "render_source_sha256": "a4b41c9dc62ebd8e051e0643800a7007f6539483dbfb9846bc2c7d0454e15147",
+        "known_unfixed_source": false,
+        "steps": [
+          {
+            "name": "build",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "build"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\new-external-evidence\\build.log"
+          },
+          {
+            "name": "public-origin",
+            "executable": "node",
+            "arguments": [
+              "--input-type=module",
+              "--eval",
+              "import {realpathSync} from 'node:fs';import {fileURLToPath} from 'node:url';import assert from 'node:assert/strict';const resolved=realpathSync(fileURLToPath(import.meta.resolve('@deepviz/agent-toolkit')));assert.equal(resolved,realpathSync(process.argv[1]));console.log(resolved);",
+              "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\synthetic-source\\packages\\deepviz\\dist\\index.js"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\synthetic-source\\packages\\deepviz",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\new-external-evidence\\public-origin.log"
+          },
+          {
+            "name": "typecheck",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "typecheck"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\new-external-evidence\\typecheck.log"
+          },
+          {
+            "name": "immutable-regression",
+            "executable": "node",
+            "arguments": [
+              "--test",
+              "packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\new-external-evidence\\immutable-regression.log"
+          },
+          {
+            "name": "full-npm",
+            "executable": "npm.cmd",
+            "arguments": [
+              "test"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\new-external-evidence\\full-npm.log"
+          },
+          {
+            "name": "schema-check",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "schema:check"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\new-external-evidence\\schema-check.log"
+          },
+          {
+            "name": "python-schema-check",
+            "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\owned-tools\\python.cmd",
+            "arguments": [
+              "scripts/export_schema.py",
+              "--check"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\new-external-evidence\\python-schema-check.log"
+          },
+          {
+            "name": "core-parity",
+            "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\owned-tools\\python.cmd",
+            "arguments": [
+              "-m",
+              "pytest",
+              "tests/test_models.py",
+              "tests/test_schema_contract.py",
+              "tests/test_cross_language_contract.py",
+              "tests/test_n12_authoritative_parity.py",
+              "-q"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\new-external-evidence\\core-parity.log"
+          },
+          {
+            "name": "npm-pack-dry-run",
+            "executable": "npm.cmd",
+            "arguments": [
+              "pack",
+              "--dry-run",
+              "--workspace",
+              "@deepviz/agent-toolkit"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_0\\new-external-evidence\\npm-pack-dry-run.log"
+          }
+        ]
+      },
+      "raw_sha256": "ab8078ec48a4042432ab233a15c21857aa8bda80523061f20c2f4489369beee5"
+    },
+    {
+      "case": "test09_trusted_zero_exit_stub_0",
+      "synthetic_tiny_pytest_log": "SYNTHETIC STUB: no product tests or compiler executed\r\n",
+      "raw_sha256": "b15e26387acdb55add1221465afc8aa5cd1957cccf885d8a02a2cc3f91ee7d82"
+    },
+    {
+      "case": "test09_trusted_zero_exit_stub_1",
+      "kind": "ACTUAL_RECEIPT_FROM_SYNTHETIC_FIXTURE_ONLY_NOT_PRODUCT",
+      "recipe_receipt": {
+        "status": "SCOPED_GATES_PASS_NOT_FINAL_APPROVAL",
+        "source_sha": "54ebfc19be32468065ac3d9723eedd5bc31a0fd5",
+        "candidate": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\synthetic-source",
+        "immutable_test_sha256": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227",
+        "render_source_sha256": "a4b41c9dc62ebd8e051e0643800a7007f6539483dbfb9846bc2c7d0454e15147",
+        "known_unfixed_source": false,
+        "steps": [
+          {
+            "name": "build",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "build"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\new-external-evidence\\build.log"
+          },
+          {
+            "name": "public-origin",
+            "executable": "node",
+            "arguments": [
+              "--input-type=module",
+              "--eval",
+              "import {realpathSync} from 'node:fs';import {fileURLToPath} from 'node:url';import assert from 'node:assert/strict';const resolved=realpathSync(fileURLToPath(import.meta.resolve('@deepviz/agent-toolkit')));assert.equal(resolved,realpathSync(process.argv[1]));console.log(resolved);",
+              "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\synthetic-source\\packages\\deepviz\\dist\\index.js"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\synthetic-source\\packages\\deepviz",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\new-external-evidence\\public-origin.log"
+          },
+          {
+            "name": "typecheck",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "typecheck"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\new-external-evidence\\typecheck.log"
+          },
+          {
+            "name": "immutable-regression",
+            "executable": "node",
+            "arguments": [
+              "--test",
+              "packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\new-external-evidence\\immutable-regression.log"
+          },
+          {
+            "name": "full-npm",
+            "executable": "npm.cmd",
+            "arguments": [
+              "test"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\new-external-evidence\\full-npm.log"
+          },
+          {
+            "name": "schema-check",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "schema:check"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\new-external-evidence\\schema-check.log"
+          },
+          {
+            "name": "python-schema-check",
+            "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\owned-tools\\python.cmd",
+            "arguments": [
+              "scripts/export_schema.py",
+              "--check"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\new-external-evidence\\python-schema-check.log"
+          },
+          {
+            "name": "core-parity",
+            "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\owned-tools\\python.cmd",
+            "arguments": [
+              "-m",
+              "pytest",
+              "tests/test_models.py",
+              "tests/test_schema_contract.py",
+              "tests/test_cross_language_contract.py",
+              "tests/test_n12_authoritative_parity.py",
+              "-q"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\new-external-evidence\\core-parity.log"
+          },
+          {
+            "name": "npm-pack-dry-run",
+            "executable": "npm.cmd",
+            "arguments": [
+              "pack",
+              "--dry-run",
+              "--workspace",
+              "@deepviz/agent-toolkit"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_1\\new-external-evidence\\npm-pack-dry-run.log"
+          }
+        ]
+      },
+      "raw_sha256": "00edd81a7ad1f7c663e3daf3a709287ecc6612c7d5c304cd718e96b7daad15eb"
+    },
+    {
+      "case": "test09_trusted_zero_exit_stub_1",
+      "synthetic_tiny_pytest_log": "SYNTHETIC STUB: no product tests or compiler executed\r\nSYNTHETIC structured test totals are not all-pass\r\n",
+      "raw_sha256": "8965d342a030dcba746ef78f942528a1944813f12f465b9ff8852842af4404e2"
+    },
+    {
+      "case": "test09_trusted_zero_exit_stub_2",
+      "kind": "ACTUAL_RECEIPT_FROM_SYNTHETIC_FIXTURE_ONLY_NOT_PRODUCT",
+      "recipe_receipt": {
+        "status": "SCOPED_GATES_PASS_NOT_FINAL_APPROVAL",
+        "source_sha": "621305a9448dec20a53ff0e80ad63d179a47950f",
+        "candidate": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\synthetic-source",
+        "immutable_test_sha256": "08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227",
+        "render_source_sha256": "a4b41c9dc62ebd8e051e0643800a7007f6539483dbfb9846bc2c7d0454e15147",
+        "known_unfixed_source": false,
+        "steps": [
+          {
+            "name": "build",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "build"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\new-external-evidence\\build.log"
+          },
+          {
+            "name": "public-origin",
+            "executable": "node",
+            "arguments": [
+              "--input-type=module",
+              "--eval",
+              "import {realpathSync} from 'node:fs';import {fileURLToPath} from 'node:url';import assert from 'node:assert/strict';const resolved=realpathSync(fileURLToPath(import.meta.resolve('@deepviz/agent-toolkit')));assert.equal(resolved,realpathSync(process.argv[1]));console.log(resolved);",
+              "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\synthetic-source\\packages\\deepviz\\dist\\index.js"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\synthetic-source\\packages\\deepviz",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\new-external-evidence\\public-origin.log"
+          },
+          {
+            "name": "typecheck",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "typecheck"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\new-external-evidence\\typecheck.log"
+          },
+          {
+            "name": "immutable-regression",
+            "executable": "node",
+            "arguments": [
+              "--test",
+              "packages/deepviz/test/test_r07_tool_spec_null.test.mjs"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\new-external-evidence\\immutable-regression.log"
+          },
+          {
+            "name": "full-npm",
+            "executable": "npm.cmd",
+            "arguments": [
+              "test"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\new-external-evidence\\full-npm.log"
+          },
+          {
+            "name": "schema-check",
+            "executable": "npm.cmd",
+            "arguments": [
+              "run",
+              "schema:check"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\new-external-evidence\\schema-check.log"
+          },
+          {
+            "name": "python-schema-check",
+            "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\owned-tools\\python.cmd",
+            "arguments": [
+              "scripts/export_schema.py",
+              "--check"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\new-external-evidence\\python-schema-check.log"
+          },
+          {
+            "name": "core-parity",
+            "executable": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\owned-tools\\python.cmd",
+            "arguments": [
+              "-m",
+              "pytest",
+              "tests/test_models.py",
+              "tests/test_schema_contract.py",
+              "tests/test_cross_language_contract.py",
+              "tests/test_n12_authoritative_parity.py",
+              "-q"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\new-external-evidence\\core-parity.log"
+          },
+          {
+            "name": "npm-pack-dry-run",
+            "executable": "npm.cmd",
+            "arguments": [
+              "pack",
+              "--dry-run",
+              "--workspace",
+              "@deepviz/agent-toolkit"
+            ],
+            "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\synthetic-source",
+            "state": "EXECUTED",
+            "exit": 0,
+            "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z\\test09_trusted_zero_exit_stub_2\\new-external-evidence\\npm-pack-dry-run.log"
+          }
+        ]
+      },
+      "raw_sha256": "f4ed98f3ba1db7905476f3e1ee26fd4e5b6759e83a50b0de16e6d82f176e60b8"
+    },
+    {
+      "case": "test09_trusted_zero_exit_stub_2",
+      "synthetic_tiny_pytest_log": "SYNTHETIC STUB: no product tests or compiler executed\r\nSYNTHETIC structured test totals are not all-pass\r\n",
+      "raw_sha256": "8965d342a030dcba746ef78f942528a1944813f12f465b9ff8852842af4404e2"
+    }
+  ],
+  "quality_probe_hash": "b9c301946f9b30c6961e7549e3c66ed77be245681f020359d5920503c1200e0a",
+  "strict_red_not_promoted": {
+    "tests": 27,
+    "failures": 5,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 22
+  }
+}

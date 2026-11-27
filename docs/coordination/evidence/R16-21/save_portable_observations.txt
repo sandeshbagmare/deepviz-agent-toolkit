@@ -1,0 +1,29 @@
+﻿import hashlib
+import json
+from pathlib import Path
+
+ROOT = Path.cwd()
+OUT = ROOT / "docs/coordination/evidence/R16-21"
+q = json.loads((OUT / "quality-checks.json").read_text())
+base = Path(q["fixtures"])
+items = []
+for case in sorted(base.glob("test09*")):
+    for name in ["result.json", "core-parity.log"]:
+        path = case / "new-external-evidence" / name
+        if path.is_file():
+            raw = path.read_bytes()
+            if name.endswith(".json"):
+                value = json.loads(raw.decode("utf-8-sig"))
+                items.append({"case": case.name, "kind": "ACTUAL_RECEIPT_FROM_SYNTHETIC_FIXTURE_ONLY_NOT_PRODUCT", "recipe_receipt": value, "raw_sha256": hashlib.sha256(raw).hexdigest()})
+            else:
+                text = raw.decode("utf-16") if raw.startswith(b"\xff\xfe") else raw.decode("utf-8-sig")
+                items.append({"case": case.name, "synthetic_tiny_pytest_log": text, "raw_sha256": hashlib.sha256(raw).hexdigest()})
+    xml = case / "tiny-pytest.xml"
+    if xml.is_file():
+        items.append({"case": case.name, "synthetic_tiny_junit": xml.read_text(), "sha256": hashlib.sha256(xml.read_bytes()).hexdigest()})
+inputs = json.loads((OUT / "immutable-inputs.json").read_text())
+checks = [{"path": f["source_path"], "matches_exact_reviewed_git_blob": hashlib.sha256((ROOT / f["saved_path"]).read_bytes()).hexdigest() == f["sha256"]} for f in inputs["files"]]
+assert all(c["matches_exact_reviewed_git_blob"] for c in checks)
+result = {"not_product_or_scale": True, "reviewed_input_hashes": checks, "observations": items, "quality_probe_hash": q["probe_sha256"], "strict_red_not_promoted": q["junit_counts"]}
+(OUT / "portable-observations.json").write_text(json.dumps(result, indent=2) + chr(10), encoding="utf-8")
+print(json.dumps({"observation_items": len(items), "immutable_hashes_verified": len(checks), "strict_counts": q["junit_counts"], "bytes": (OUT / "portable-observations.json").stat().st_size, "not_product": True}, indent=2))

@@ -1,0 +1,30 @@
+﻿import ast
+import hashlib
+import json
+import re
+import subprocess
+from pathlib import Path
+
+ROOT = Path.cwd()
+OUT = ROOT / "docs/coordination/evidence/R16-21"
+names = subprocess.run(["git", "diff", "--cached", "--name-only"], capture_output=True, text=True, check=True).stdout.splitlines()
+allowed = lambda p: p == "docs/agent-state/ses_de5678018ffezK8JGDUaSzvcWn.md" or p == "docs/coordination/reports/R16-21-retest-provenance-review.md" or p.startswith("docs/coordination/evidence/R16-21/") or p.startswith("tests/r16_probes/role21/")
+assert names and all(allowed(p) for p in names)
+blobs = {p: subprocess.run(["git", "show", ":" + p], capture_output=True, check=True).stdout for p in names}
+assert sum(len(b) for b in blobs.values()) < 2 * 1024**2 and max(len(b) for b in blobs.values()) < 256 * 1024
+patterns = re.compile(rb"gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----")
+assert not any(patterns.search(b) for b in blobs.values())
+scripts = [p for p in names if p.endswith((".py", ".txt"))]
+for p in scripts:
+    ast.parse(blobs[p].decode("utf-8-sig"))
+q = json.loads(blobs["docs/coordination/evidence/R16-21/quality-checks.json"])
+test = "tests/r16_probes/role21/test_retest_preflight.py"
+assert hashlib.sha256(blobs[test]).hexdigest() == q["probe_sha256"]
+assert q["junit_counts"] == {"tests": 27, "failures": 5, "errors": 0, "skipped": 0, "passed": 22}
+manifest = json.loads(blobs["docs/coordination/evidence/R16-21/immutable-inputs.json"])
+assert all(hashlib.sha256(blobs[f["saved_path"]]).hexdigest() == f["sha256"] for f in manifest["files"])
+diff = subprocess.run(["git", "diff", "--cached", "--check"], capture_output=True, text=True)
+assert diff.returncode == 0, diff.stdout
+result = {"owned_paths_only": True, "files": len(names), "bytes": sum(len(b) for b in blobs.values()), "heuristic_secret_pattern_hits": 0, "ast_parse_count": len(scripts), "tested_probe_matches_staged_bytes": True, "all_16_reviewed_GitLF_inputs_match": True, "staged_diff_check_exit": diff.returncode, "sha256": {p: hashlib.sha256(b).hexdigest() for p, b in blobs.items()}, "strict_controls": q["junit_counts"], "limitations": "Heuristic secret scan, not complete security proof. Five intentional RED retained, not product pass."}
+(OUT / "stage-envelope.json").write_text(json.dumps(result, indent=2) + chr(10), encoding="utf-8")
+print(json.dumps(result, indent=2))

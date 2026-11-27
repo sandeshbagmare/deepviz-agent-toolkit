@@ -1,0 +1,80 @@
+{
+  "scope": "NEW fixture recipe controls ONLY; not product or scale",
+  "probe_sha256": "b9c301946f9b30c6961e7549e3c66ed77be245681f020359d5920503c1200e0a",
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "tests/r16_probes/role21/test_retest_preflight.py",
+        "-q",
+        "--tb=short",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z",
+        "--junitxml",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R16-21\\final-controls.xml"
+      ],
+      "exit": 1,
+      "stdout": ".....FF.......F......FF....                                              [100%]\n================================== FAILURES ===================================\n_________________ test09_rejects_untracked_cwd_import_shadow __________________\ntests\\r16_probes\\role21\\test_retest_preflight.py:162: in test09_rejects_untracked_cwd_import_shadow\n    assert done.returncode != 0, \"Actual preflight accepted an untracked package that shadows PYTHONPATH\"\nE   AssertionError: Actual preflight accepted an untracked package that shadows PYTHONPATH\nE   assert 0 != 0\nE    +  where 0 = CompletedProcess(args=['C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe', '-NoProfile', '-ExecutionPoli...\\\\synthetic-source\",\\n                      \"state\":  \"NOT_RUN\"\\n                  }\\n              ]\\n}\\n', stderr='').returncode\n________________ test09_rejects_source_changed_after_preflight ________________\ntests\\r16_probes\\role21\\test_retest_preflight.py:172: in test09_rejects_source_changed_after_preflight\n    assert receipt[\"status\"] != \"SCOPED_GATES_PASS_NOT_FINAL_APPROVAL\", receipt\nE   AssertionError: {'status': 'SCOPED_GATES_PASS_NOT_FINAL_APPROVAL', 'source_sha': '05c6e5ef988fda781e8e40b3520f2bd07859a09a', 'candidat...0\\\\synthetic-source', 'immutable_test_sha256': '08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227', ...}\nE   assert 'SCOPED_GATES_PASS_NOT_FINAL_APPROVAL' != 'SCOPED_GATES_PASS_NOT_FINAL_APPROVAL'\n______________ test11_rejects_tracked_harness_change_during_run _______________\ntests\\r16_probes\\role21\\test_retest_preflight.py:224: in test11_rejects_tracked_harness_change_during_run\n    with pytest.raises(AssertionError, match=\"Source changed\"):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   Failed: DID NOT RAISE AssertionError\n__________ test09_explicit_tool_shadow_uses_one_resolved_executable ___________\ntests\\r16_probes\\role21\\test_retest_preflight.py:293: in test09_explicit_tool_shadow_uses_one_resolved_executable\n    assert all(step[\"state\"] == \"EXECUTED\" for step in receipt[\"steps\"]), receipt\nE   AssertionError: {'status': 'HARNESS_ERROR_NOT_A_PRODUCT_PASS', 'source_sha': 'c8e8b50529dfb6a588f26b07edbb1f2ae8fcbcf8', 'candidate': ...0\\\\synthetic-source', 'immutable_test_sha256': '08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227', ...}\nE   assert False\nE    +  where False = all(<generator object test09_explicit_tool_shadow_uses_one_resolved_executable.<locals>.<genexpr> at 0x000001EB751D2740>)\n___________ test09_real_tiny_pytest_skips_are_not_scoped_gate_pass ____________\ntests\\r16_probes\\role21\\test_retest_preflight.py:306: in test09_real_tiny_pytest_skips_are_not_scoped_gate_pass\n    assert receipt[\"status\"] != \"SCOPED_GATES_PASS_NOT_FINAL_APPROVAL\", receipt\nE   AssertionError: {'status': 'SCOPED_GATES_PASS_NOT_FINAL_APPROVAL', 'source_sha': '498aa1d6cca23c380d85aa23bd8c81aaad6e3dfd', 'candidat...0\\\\synthetic-source', 'immutable_test_sha256': '08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227', ...}\nE   assert 'SCOPED_GATES_PASS_NOT_FINAL_APPROVAL' != 'SCOPED_GATES_PASS_NOT_FINAL_APPROVAL'\n=========================== short test summary info ===========================\nFAILED tests/r16_probes/role21/test_retest_preflight.py::test09_rejects_untracked_cwd_import_shadow\nFAILED tests/r16_probes/role21/test_retest_preflight.py::test09_rejects_source_changed_after_preflight\nFAILED tests/r16_probes/role21/test_retest_preflight.py::test11_rejects_tracked_harness_change_during_run\nFAILED tests/r16_probes/role21/test_retest_preflight.py::test09_explicit_tool_shadow_uses_one_resolved_executable\nFAILED tests/r16_probes/role21/test_retest_preflight.py::test09_real_tiny_pytest_skips_are_not_scoped_gate_pass\n5 failed, 22 passed in 51.04s\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "tests/r16_probes/role21/test_retest_preflight.py"
+      ],
+      "exit": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "tests/r16_probes/role21/test_retest_preflight.py"
+      ],
+      "exit": 0,
+      "stdout": "Success: no issues found in 1 source file\n",
+      "stderr": ""
+    }
+  ],
+  "junit_counts": {
+    "tests": 27,
+    "failures": 5,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 22
+  },
+  "strict_red": [
+    {
+      "test": "test09_rejects_untracked_cwd_import_shadow",
+      "message": "AssertionError: Actual preflight accepted an untracked package that shadows PYTHONPATH\nassert 0 != 0\n +  where 0 = CompletedProcess(args=['C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe', '-NoProfile', '-ExecutionPoli...\\\\synthetic-source\",\\n                      \"state\":  \"NOT_RUN\"\\n                  }\\n              ]\\n}\\n', stderr='').returncode"
+    },
+    {
+      "test": "test09_rejects_source_changed_after_preflight",
+      "message": "AssertionError: {'status': 'SCOPED_GATES_PASS_NOT_FINAL_APPROVAL', 'source_sha': '05c6e5ef988fda781e8e40b3520f2bd07859a09a', 'candidat...0\\\\synthetic-source', 'immutable_test_sha256': '08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227', ...}\nassert 'SCOPED_GATES_PASS_NOT_FINAL_APPROVAL' != 'SCOPED_GATES_PASS_NOT_FINAL_APPROVAL'"
+    },
+    {
+      "test": "test11_rejects_tracked_harness_change_during_run",
+      "message": "Failed: DID NOT RAISE AssertionError"
+    },
+    {
+      "test": "test09_explicit_tool_shadow_uses_one_resolved_executable",
+      "message": "AssertionError: {'status': 'HARNESS_ERROR_NOT_A_PRODUCT_PASS', 'source_sha': 'c8e8b50529dfb6a588f26b07edbb1f2ae8fcbcf8', 'candidate': ...0\\\\synthetic-source', 'immutable_test_sha256': '08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227', ...}\nassert False\n +  where False = all(<generator object test09_explicit_tool_shadow_uses_one_resolved_executable.<locals>.<genexpr> at 0x000001EB751D2740>)"
+    },
+    {
+      "test": "test09_real_tiny_pytest_skips_are_not_scoped_gate_pass",
+      "message": "AssertionError: {'status': 'SCOPED_GATES_PASS_NOT_FINAL_APPROVAL', 'source_sha': '498aa1d6cca23c380d85aa23bd8c81aaad6e3dfd', 'candidat...0\\\\synthetic-source', 'immutable_test_sha256': '08be1d15661d6bd5bf87bdcec7db11ba3097d9eee294db654369564716e32227', ...}\nassert 'SCOPED_GATES_PASS_NOT_FINAL_APPROVAL' != 'SCOPED_GATES_PASS_NOT_FINAL_APPROVAL'"
+    }
+  ],
+  "fixtures": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r16-21-final-20261127T145208876013Z",
+  "intentional_recipe_gaps_not_green": true,
+  "frozen_source_signoff": false
+}

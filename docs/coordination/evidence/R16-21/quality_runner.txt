@@ -1,0 +1,37 @@
+﻿"""Run only NEW tiny recipe controls, recording intentional RED accurately."""
+import datetime as dt
+import hashlib
+import json
+import os
+import subprocess
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+ROOT = Path.cwd()
+OUT = ROOT / "docs/coordination/evidence/R16-21"
+PY = r"C:\Users\bagma\deepviz-agent-toolkit\.venv\Scripts\python.exe"
+PROBE = "tests/r16_probes/role21/test_retest_preflight.py"
+p = ROOT / PROBE
+p.write_text(p.read_text(encoding="utf-8-sig").rstrip() + chr(10), encoding="utf-8", newline=chr(10))
+env = os.environ.copy()
+env["PYTHONDONTWRITEBYTECODE"] = "1"
+tag = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+base = Path(r"C:\Users\bagma\AppData\Local\Temp\opencode") / ("r16-21-final-" + tag)
+args = [
+    [PY, "-m", "pytest", PROBE, "-q", "--tb=short", "-p", "no:cacheprovider", "--basetemp", str(base), "--junitxml", str(OUT / "final-controls.xml")],
+    [PY, "-m", "ruff", "check", PROBE],
+    [PY, "-m", "mypy", PROBE],
+]
+commands = []
+for argv in args:
+    done = subprocess.run(argv, cwd=ROOT, env=env, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=150)
+    commands.append({"argv": argv, "exit": done.returncode, "stdout": done.stdout, "stderr": done.stderr})
+root = ET.parse(OUT / "final-controls.xml").getroot()
+suites = [root] if root.tag == "testsuite" else list(root.iter("testsuite"))
+counts = {k: sum(int(s.get(k, "0")) for s in suites) for k in ["tests", "failures", "errors", "skipped"]}
+counts["passed"] = counts["tests"] - counts["failures"] - counts["errors"] - counts["skipped"]
+red = [{"test": t.get("name"), "message": t.find("failure").get("message")} for t in root.iter("testcase") if t.find("failure") is not None]
+result = {"scope": "NEW fixture recipe controls ONLY; not product or scale", "probe_sha256": hashlib.sha256(p.read_bytes()).hexdigest(), "commands": commands, "junit_counts": counts, "strict_red": red, "fixtures": str(base), "intentional_recipe_gaps_not_green": True, "frozen_source_signoff": False}
+(OUT / "quality-checks.json").write_text(json.dumps(result, indent=2) + chr(10), encoding="utf-8")
+print(json.dumps(result, indent=2))
+raise SystemExit(commands[0]["exit"] or commands[1]["exit"] or commands[2]["exit"])

@@ -1,0 +1,22 @@
+﻿from pathlib import Path
+p = Path("tests/r16_probes/role21/test_retest_preflight.py")
+s = p.read_text(encoding="utf-8-sig")
+old = "mode: str = \"zero\", cwd: Path | None = None)"
+new = "mode: str = \"zero\", cwd: Path | None = None, duplicate_path: bool = False)"
+assert old in s
+s = s.replace(old, new, 1)
+old = "    env[\"R16_FIXTURE_SOURCE\"]"
+new = "    if not duplicate_path:\n        git_exe = shutil.which(\"git\")\n        assert git_exe is not None\n        windows = Path(os.environ[\"SystemRoot\"])\n        env[\"PATH\"] = os.pathsep.join([str(Path(git_exe).parent), str(windows / \"System32\"), str(windows)])\n    env[\"R16_FIXTURE_SOURCE\"]"
+assert old in s
+s = s.replace(old, new, 1)
+old = "    receipt = result(evidence)\n    assert receipt[\"status\"] !="
+new = "    receipt = result(evidence)\n    assert all(step[\"state\"] == \"EXECUTED\" for step in receipt[\"steps\"]), receipt\n    assert receipt[\"status\"] !="
+assert s.count(old) == 2
+s = s.replace(old, new)
+old = "    assert receipt.get(\"built_render_sha256\") == before"
+new = "    assert all(step[\"state\"] == \"EXECUTED\" for step in receipt[\"steps\"]), receipt\n    assert receipt.get(\"built_render_sha256\") == before"
+assert old in s
+s = s.replace(old, new, 1)
+s += "\n\ndef test09_explicit_tool_shadow_uses_one_resolved_executable(fixture_repo: Path) -> None:\n    done, evidence = invoke09(fixture_repo, execute=True, duplicate_path=True)\n    receipt = result(evidence)\n    assert all(step[\"state\"] == \"EXECUTED\" for step in receipt[\"steps\"]), receipt\n    assert done.returncode == 0, done.stderr\n"
+p.write_text(s, encoding="utf-8", newline="\n")
+print("OWNfixturepatched_PATHboundary_and_nonvacuous9stepassertions")

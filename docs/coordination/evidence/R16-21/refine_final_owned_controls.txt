@@ -1,0 +1,17 @@
+﻿from pathlib import Path
+p = Path("tests/r16_probes/role21/test_retest_preflight.py")
+s = p.read_text()
+old = "    git(root, \"add\", \".\")\n"
+new = "    write(root, \"pytest.ini\", \"[pytest]\\naddopts = --junitxml=\" + str(root.parent / \"tiny-pytest.xml\").replace(\\\"\\\\\\\", \\\"/\\\") + \"\\n\")\n    git(root, \"add\", \".\")\n"
+new = "    write(root, \"pytest.ini\", \"[pytest]\\naddopts = --junitxml=\" + (root.parent / \"tiny-pytest.xml\").as_posix() + \"\\n\")\n    git(root, \"add\", \".\")\n"
+assert old in s
+s = s.replace(old, new, 1)
+start = s.index("def test09_trusted_zero_exit_stub_has_no_structured_totals_check")
+end = s.index("@pytest.mark.parametrize(\"case\", [\"normalizer-change\", \"commit-change\"])", start)
+part = s[start:end]
+part = part.replace("assert receipt[\"status\"] != \"SCOPED_GATES_PASS_NOT_FINAL_APPROVAL\", receipt", "assert receipt[\"status\"] == \"SCOPED_GATES_PASS_NOT_FINAL_APPROVAL\", receipt")
+part = part.replace("assert done.returncode != 0", "assert done.returncode == 0")
+s = s[:start] + part + s[end:]
+s += "\n\ndef test11_wrong_import_origin_is_rejected_in_actual_worker_loader(fixture_repo: Path) -> None:\n    write(fixture_repo, \"foreign/deepviz/__init__.py\", \"# Synthetic wrong checkout package\\n\")\n    write(fixture_repo, \"foreign/deepviz/models.py\", \"ChartSpec = object\\n\")\n    write(fixture_repo, \"foreign/deepviz/normalize.py\", \"def normalize(*args): return None\\n\")\n    code = (\"import importlib.util,sys;from pathlib import Path;\"\n            \"s=importlib.util.spec_from_file_location(\\\"actual_runner\\\",sys.argv[1]);\"\n            \"m=importlib.util.module_from_spec(s);s.loader.exec_module(m);\"\n            \"sys.path[:0]=[sys.argv[2],sys.argv[3]];\"\n            \"m.load_api(Path(sys.argv[4]))\")\n    done = run([str(PYTHON), \"-c\", code, str(PERFORMANCE),\n                str(fixture_repo / \"foreign\"), str(fixture_repo / \"python/deepviz/src\"),\n                str(fixture_repo)], fixture_repo.parent)\n    assert done.returncode != 0\n    assert \"Refusing source outside requested checkout\" in done.stderr\n\n\ndef test09_git_LF_worktree_control_matches_raw_hashes(fixture_repo: Path) -> None:\n    git_blob = subprocess.run([\"git\", \"-C\", str(fixture_repo), \"show\", \"HEAD:\" + REGRESSION], capture_output=True, check=True).stdout\n    assert hashlib.sha256(git_blob).hexdigest() == hashlib.sha256((fixture_repo / REGRESSION).read_bytes()).hexdigest()\n"
+p.write_text(s.rstrip() + "\n", encoding="utf-8", newline="\n")
+print("OWNfixture_JUnit_ini_noop_trustlimit_characterization_and_origin_controls")

@@ -1,0 +1,97 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {createTools, validateSpec, ValidationError} from '@deepviz/agent-toolkit';
+
+// Null is an explicitly invalid ChartSpec, not an omitted JavaScript argument.
+// A null-coalescing helper default is the production bug these tests catch.
+const rows = [{category: 'A', value: 2}, {category: 'B', value: 3}];
+const tools = createTools();
+
+test('R07 public helper coverage contains all five named engines', () => {
+  assert.deepEqual(tools.map(tool => tool.name).sort(), [
+    'render_antv', 'render_echarts', 'render_plotly', 'render_svg', 'render_vega',
+  ]);
+});
+
+for (const tool of tools) {
+  test(`R07 ${tool.name}: explicit null spec rejects instead of rendering defaults`, async () => {
+    assert.throws(() => validateSpec(null), ValidationError);
+    await assert.rejects(() => tool.invoke({data: rows, spec: null}), ValidationError);
+  });
+
+  test(`R07 ${tool.name}: other invalid spec values remain rejected`, async () => {
+    for (const spec of [
+      true, false, 0, '', [], {width: 239}, {width: '900'},
+      {kind: 'dashboard', charts: []},
+      {kind: 'dashboard', charts: [{kind: 'dashboard', charts: [{}]}]},
+      {expression: 'datum.value'},
+    ]) {
+      await assert.rejects(() => tool.invoke({data: rows, spec}), ValidationError);
+    }
+  });
+
+  for (const [label, input] of [
+    ['omitted spec', {data: rows}],
+    ['explicit undefined spec', {data: rows, spec: undefined}],
+    ['empty valid spec', {data: rows, spec: {}}],
+  ]) {
+    test(`R07 ${tool.name}: ${label} preserves default chart behavior`, async () => {
+      const result = await tool.invoke(input);
+      const chart = result.renderer_spec.chart_spec;
+      assert.equal(`render_${result.engine}`, tool.name);
+      assert.equal(result.mime_type, 'text/html');
+      assert.equal(result.input_count, 2);
+      assert.equal(result.output_count, 2);
+      assert.equal(chart.kind, 'bar');
+      assert.equal(chart.title, 'Visualization');
+      assert.equal(chart.theme, 'light');
+      assert.equal(chart.max_points, 2000);
+      assert.equal(chart.width, 900);
+      assert.equal(chart.height, 520);
+      assert.deepEqual(chart.charts, []);
+      assert.ok(result.html.length > 0);
+    });
+  }
+
+  test(`R07 ${tool.name}: explicit mapped chart preserves requested fields and values`, async () => {
+    const result = await tool.invoke({
+      data: rows,
+      spec: {kind: 'bar', x: 'category', y: 'value', title: 'Explicit R07', aggregation: 'none'},
+    });
+    const chart = result.renderer_spec.chart_spec;
+    assert.equal(chart.title, 'Explicit R07');
+    assert.equal(chart.x, 'category');
+    assert.equal(chart.y, 'value');
+    assert.equal(chart.aggregation, 'none');
+    assert.deepEqual(result.renderer_spec.normalized.records, rows);
+    assert.equal(result.input_count, 2);
+    assert.equal(result.output_count, 2);
+  });
+
+  test(`R07 ${tool.name}: valid dashboard retains child titles, values and defaults`, async () => {
+    const result = await tool.invoke({
+      data: rows,
+      spec: {
+        kind: 'dashboard', title: 'R07 Dashboard', columns: 2,
+        charts: [
+          {kind: 'bar', title: 'Bars', x: 'category', y: 'value', aggregation: 'none'},
+          {kind: 'line', title: 'Trend', x: 'category', y: 'value', aggregation: 'none'},
+        ],
+      },
+    });
+    const children = result.renderer_spec.children;
+    assert.equal(result.renderer_spec.chart_spec.kind, 'dashboard');
+    assert.equal(result.renderer_spec.chart_spec.title, 'R07 Dashboard');
+    assert.equal(result.input_count, 2);
+    assert.equal(result.output_count, 4);
+    assert.equal(result.strategy, 'dashboard');
+    assert.deepEqual(children.map(child => child.chart_spec.title), ['Bars', 'Trend']);
+    assert.deepEqual(children.map(child => child.chart_spec.kind), ['bar', 'line']);
+    for (const child of children) {
+      assert.deepEqual(child.normalized.records, rows);
+      assert.equal(child.chart_spec.max_points, 2000);
+      assert.equal(child.chart_spec.theme, 'light');
+      assert.deepEqual(child.chart_spec.charts, []);
+    }
+  });
+}
