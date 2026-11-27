@@ -1,0 +1,1219 @@
+{
+  "records_commit": "e4c9af55b4e2702ba03a7d3cbea8b3664117d5de",
+  "copied_manifest_scope": "original local copied bytes, before Git attribute normalization; not an assertion that every Git blob has identical line endings",
+  "committed_manifest_scope": "actual e4c9af5 Git blob bytes below",
+  "evidence_entries_verified": 145,
+  "line_ending_only_differences": 5,
+  "differences": [
+    {
+      "path": "density-full-npm.log",
+      "copy_sha256": "0cf4f51d25b80515c0e0456ad0c8b3bf50b57c2114e3ec86bf93be0a7ec74714",
+      "git_sha256": "01d061aff91a1536087ea9277a41c4db01c9b1a61652890dada3cd1c39ba8a0b",
+      "crlf_to_lf_only": true
+    },
+    {
+      "path": "density-pack.log",
+      "copy_sha256": "490175648ae67d093d32b2022f0411f3c866a2ea1f06cf53ba5d11653095f908",
+      "git_sha256": "94045ae30051a681cec8ec73089040cd254be0c729909ea67b96853a54fb27dc",
+      "crlf_to_lf_only": true
+    },
+    {
+      "path": "density-schema.log",
+      "copy_sha256": "1c263fc644f4ddd61d1631b9203f913febb9721bd11f6f809b610115749524fa",
+      "git_sha256": "0c64d5c14cd713d9b6f64e6b741588ce40545de95b683c609267c864f4b1b604",
+      "crlf_to_lf_only": true
+    },
+    {
+      "path": "density-typecheck.log",
+      "copy_sha256": "f4e727dbd47ef22b6bd29cca67059181d987d1e0eea80bfa120b241ce1f4ef81",
+      "git_sha256": "cf1dc8706090b0b12cd55b819fead5906b284e56f78b95de0562c437e817c4e3",
+      "crlf_to_lf_only": true
+    },
+    {
+      "path": "finite-full-npm.log",
+      "copy_sha256": "2a504b691fddf4dafa71c1b5f2264d3f7bbbcc2c7471d343b5dda590a34f9458",
+      "git_sha256": "34e460b614dde64ff76590bb44e8efbde25dcafce85e894f7f88d8369b8d89a9",
+      "crlf_to_lf_only": true
+    }
+  ],
+  "no_substantive_evidence_change": true,
+  "functional_source_unchanged": [
+    {
+      "path": "packages/deepviz/src/renderers.ts",
+      "sha256": "09e7bff388fb51b4d53ba5e97d0e258af04a7c105fa8b7dff8ac0b687d91e449",
+      "equal_density_functional_commit": true
+    },
+    {
+      "path": "packages/deepviz/test/test_r23_svg_finite_density.test.mjs",
+      "sha256": "c1943b9f07817d7f9848ec854204e6fa3a9fa12238b08f90ec426444c12ceb05",
+      "equal_density_functional_commit": true
+    },
+    {
+      "path": "tests/browser/r23-svg-finite-density.mjs",
+      "sha256": "e3bcd4f85651fc0366e76d39a96290df4ce7d9439f2de6b3cb595d47596c6e55",
+      "equal_density_functional_commit": true
+    }
+  ],
+  "entries": [
+    {
+      "path": "density-full-npm.log",
+      "copied_local_sha256": "0cf4f51d25b80515c0e0456ad0c8b3bf50b57c2114e3ec86bf93be0a7ec74714",
+      "copied_local_bytes": 33635,
+      "committed_sha256": "01d061aff91a1536087ea9277a41c4db01c9b1a61652890dada3cd1c39ba8a0b",
+      "committed_bytes": 33266,
+      "git_blob_oid": "7a0e1740fc76fb3e17e90beacac2570e86a9313a"
+    },
+    {
+      "path": "density-green-v1/build.log",
+      "copied_local_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copied_local_bytes": 0,
+      "committed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "committed_bytes": 0,
+      "git_blob_oid": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "density-green-v1/new-browser.log",
+      "copied_local_sha256": "8c5dae2d532f278305295b2a9b33036c10c190396684769af664874d8b3af1e4",
+      "copied_local_bytes": 3923,
+      "committed_sha256": "8c5dae2d532f278305295b2a9b33036c10c190396684769af664874d8b3af1e4",
+      "committed_bytes": 3923,
+      "git_blob_oid": "80599d644df1cb4d2c0accd1aed405895269c032"
+    },
+    {
+      "path": "density-green-v1/new-units.log",
+      "copied_local_sha256": "2ef738023d855e2f411a90d9b39b9dce859a640f64b4cec82e87aaa1663c0b59",
+      "copied_local_bytes": 3549,
+      "committed_sha256": "2ef738023d855e2f411a90d9b39b9dce859a640f64b4cec82e87aaa1663c0b59",
+      "committed_bytes": 3549,
+      "git_blob_oid": "8f9001d4b4c31af959429f60f1fcadcedd330bf7"
+    },
+    {
+      "path": "density-green-v1/observations/density-ordinary-240-html.html",
+      "copied_local_sha256": "00dea29122f2b87382130f7a628cb6f77e2b16c8ab7ad7f31a9be18e73c09072",
+      "copied_local_bytes": 8184,
+      "committed_sha256": "00dea29122f2b87382130f7a628cb6f77e2b16c8ab7ad7f31a9be18e73c09072",
+      "committed_bytes": 8184,
+      "git_blob_oid": "ca060f552f35f02e9bd21ded0883da8a93549538"
+    },
+    {
+      "path": "density-green-v1/observations/density-ordinary-240-html.json",
+      "copied_local_sha256": "4c75de11cd172a4fbca1e7f7fc6802623b1a21a0260d0c4fe82231cb17960ce0",
+      "copied_local_bytes": 4511,
+      "committed_sha256": "4c75de11cd172a4fbca1e7f7fc6802623b1a21a0260d0c4fe82231cb17960ce0",
+      "committed_bytes": 4511,
+      "git_blob_oid": "5110bd891c64262a16a22c9a749488404fa183f9"
+    },
+    {
+      "path": "density-green-v1/observations/density-ordinary-240-html.png",
+      "copied_local_sha256": "3cb279dc034e2b5a089f39b81f09289adb90e5a75191239e82019d7e53ec488c",
+      "copied_local_bytes": 13183,
+      "committed_sha256": "3cb279dc034e2b5a089f39b81f09289adb90e5a75191239e82019d7e53ec488c",
+      "committed_bytes": 13183,
+      "git_blob_oid": "d72f6bae26dfb75542a252c66571fa2b2a2ddaaf"
+    },
+    {
+      "path": "density-green-v1/observations/density-ordinary-240-svg.json",
+      "copied_local_sha256": "341373fdc2e7a5214ee597045f3dacd4ba9d9928968f22bdcf7a764cf8b14855",
+      "copied_local_bytes": 4511,
+      "committed_sha256": "341373fdc2e7a5214ee597045f3dacd4ba9d9928968f22bdcf7a764cf8b14855",
+      "committed_bytes": 4511,
+      "git_blob_oid": "65f42c97d3e17dd40998b7a51132c6617b9ab5dc"
+    },
+    {
+      "path": "density-green-v1/observations/density-ordinary-240-svg.png",
+      "copied_local_sha256": "e85fb31035e53986d636d1363b5f43b111c475fae10f5f60cb1ea400681d8d01",
+      "copied_local_bytes": 8565,
+      "committed_sha256": "e85fb31035e53986d636d1363b5f43b111c475fae10f5f60cb1ea400681d8d01",
+      "committed_bytes": 8565,
+      "git_blob_oid": "01a7b0f75a05fefd20baf5487b6bf22cc60f1c02"
+    },
+    {
+      "path": "density-green-v1/observations/density-ordinary-240-svg.svg",
+      "copied_local_sha256": "d7ed54b27211622887d296e2a69daef32efba6a615d46e1ae386ed0d016a499d",
+      "copied_local_bytes": 2295,
+      "committed_sha256": "d7ed54b27211622887d296e2a69daef32efba6a615d46e1ae386ed0d016a499d",
+      "committed_bytes": 2295,
+      "git_blob_oid": "587d72281b3aa9da941d5be6e6a4ceb1797026b2"
+    },
+    {
+      "path": "density-green-v1/observations/density-ordinary-960-html.html",
+      "copied_local_sha256": "2f45c7b7f17e50e62cb379975bf00f806786626d3944c2437e0260575edce3ca",
+      "copied_local_bytes": 8422,
+      "committed_sha256": "2f45c7b7f17e50e62cb379975bf00f806786626d3944c2437e0260575edce3ca",
+      "committed_bytes": 8422,
+      "git_blob_oid": "e90dce57f03e25e0c4eec55be2fab95ab2f5967e"
+    },
+    {
+      "path": "density-green-v1/observations/density-ordinary-960-html.json",
+      "copied_local_sha256": "9366f119c2c6b6f24b1913c1a2c3060980e2517078e15c8944ffd3c8af29a435",
+      "copied_local_bytes": 4634,
+      "committed_sha256": "9366f119c2c6b6f24b1913c1a2c3060980e2517078e15c8944ffd3c8af29a435",
+      "committed_bytes": 4634,
+      "git_blob_oid": "a34e9a2cea261cc921e3438d06b6d1df96d29b59"
+    },
+    {
+      "path": "density-green-v1/observations/density-ordinary-960-html.png",
+      "copied_local_sha256": "4a5a03e55e493b0f44e071f479bc0ad798251e96f24acca996e50c33a78b8cb0",
+      "copied_local_bytes": 12928,
+      "committed_sha256": "4a5a03e55e493b0f44e071f479bc0ad798251e96f24acca996e50c33a78b8cb0",
+      "committed_bytes": 12928,
+      "git_blob_oid": "28d7c52b030dc41d6fac3a9a46430b0728212b4a"
+    },
+    {
+      "path": "density-green-v1/observations/density-ordinary-960-svg.json",
+      "copied_local_sha256": "843cc425b5472b4e91b43f21211c8763730e08631219a7b2a273a2535ccd3c26",
+      "copied_local_bytes": 4634,
+      "committed_sha256": "843cc425b5472b4e91b43f21211c8763730e08631219a7b2a273a2535ccd3c26",
+      "committed_bytes": 4634,
+      "git_blob_oid": "e634b6ac178c054773bb451d7c24f6365628364a"
+    },
+    {
+      "path": "density-green-v1/observations/density-ordinary-960-svg.png",
+      "copied_local_sha256": "a0d19dad6ac97c68df90d72881ec3c081a95beb97f3549bcbbc56c764e800220",
+      "copied_local_bytes": 8298,
+      "committed_sha256": "a0d19dad6ac97c68df90d72881ec3c081a95beb97f3549bcbbc56c764e800220",
+      "committed_bytes": 8298,
+      "git_blob_oid": "b7ab552c9f0222a429324086d1bb8fa9226ace63"
+    },
+    {
+      "path": "density-green-v1/observations/density-ordinary-960-svg.svg",
+      "copied_local_sha256": "b27f9868fb9b1eb58510790639cbc750291373c38e495a5d0d4a5cabc9852775",
+      "copied_local_bytes": 2414,
+      "committed_sha256": "b27f9868fb9b1eb58510790639cbc750291373c38e495a5d0d4a5cabc9852775",
+      "committed_bytes": 2414,
+      "git_blob_oid": "c0fa7daea720db44eed9ed2a4409d1e6777d89d6"
+    },
+    {
+      "path": "density-green-v1/observations/density-unicode-960-html.html",
+      "copied_local_sha256": "0a21aaa6448d87d25b48a38e6a1c6f9bfe61286a6e0897b1045c8b4806a5e976",
+      "copied_local_bytes": 9542,
+      "committed_sha256": "0a21aaa6448d87d25b48a38e6a1c6f9bfe61286a6e0897b1045c8b4806a5e976",
+      "committed_bytes": 9542,
+      "git_blob_oid": "cd75d364c4e59acc342a19f735a39b3168d16207"
+    },
+    {
+      "path": "density-green-v1/observations/density-unicode-960-html.json",
+      "copied_local_sha256": "771b98b6a449fee02a6576c66c1f58cb28de6b1d5faad62c6c03ce2e0c206361",
+      "copied_local_bytes": 4945,
+      "committed_sha256": "771b98b6a449fee02a6576c66c1f58cb28de6b1d5faad62c6c03ce2e0c206361",
+      "committed_bytes": 4945,
+      "git_blob_oid": "d47b3f7f78b6467ab2a85f9241f8cf4bb57d7af8"
+    },
+    {
+      "path": "density-green-v1/observations/density-unicode-960-html.png",
+      "copied_local_sha256": "04f66976be15ee3b624120d36260723c48af6e6b4ed27034ebf6f8e4f91f95c1",
+      "copied_local_bytes": 19140,
+      "committed_sha256": "04f66976be15ee3b624120d36260723c48af6e6b4ed27034ebf6f8e4f91f95c1",
+      "committed_bytes": 19140,
+      "git_blob_oid": "6e492af2352f7a818d79aa84707606376d123403"
+    },
+    {
+      "path": "density-green-v1/observations/density-unicode-960-svg.json",
+      "copied_local_sha256": "122cf23e287919ccb074e88ba43d7c08dca7883ca4bde8e708efabf7fe09cc54",
+      "copied_local_bytes": 4945,
+      "committed_sha256": "122cf23e287919ccb074e88ba43d7c08dca7883ca4bde8e708efabf7fe09cc54",
+      "committed_bytes": 4945,
+      "git_blob_oid": "acec189072947ced52c808b5941b396aeb894935"
+    },
+    {
+      "path": "density-green-v1/observations/density-unicode-960-svg.png",
+      "copied_local_sha256": "338d74f36a6407cf9c48b40b7c6052c0d74cc0d35432c11560f3614a0fa66570",
+      "copied_local_bytes": 14490,
+      "committed_sha256": "338d74f36a6407cf9c48b40b7c6052c0d74cc0d35432c11560f3614a0fa66570",
+      "committed_bytes": 14490,
+      "git_blob_oid": "e19f2650a3b59aaf24b7fb5b6c1333264f58f967"
+    },
+    {
+      "path": "density-green-v1/observations/density-unicode-960-svg.svg",
+      "copied_local_sha256": "d2865701cb8ea36c8150f3040229b17be31d392172b106e9cff4aea15fba1e5f",
+      "copied_local_bytes": 2894,
+      "committed_sha256": "d2865701cb8ea36c8150f3040229b17be31d392172b106e9cff4aea15fba1e5f",
+      "committed_bytes": 2894,
+      "git_blob_oid": "9e04c4a4888dfd3f8ed51b7e8d3203ca15488a0b"
+    },
+    {
+      "path": "density-green-v1/observations/finite-area-html.html",
+      "copied_local_sha256": "a33b22758fe951c34767847e94942a10294419669f8369d7d0fc9e4d2ff129d7",
+      "copied_local_bytes": 4585,
+      "committed_sha256": "a33b22758fe951c34767847e94942a10294419669f8369d7d0fc9e4d2ff129d7",
+      "committed_bytes": 4585,
+      "git_blob_oid": "6fe779cc4c5ba3d436dedcfb7ef41ac2ce299f75"
+    },
+    {
+      "path": "density-green-v1/observations/finite-area-html.json",
+      "copied_local_sha256": "955ff1e68c4e2ce2e157ba4ccd5c720f1e0dad67d7afde41a6857640814ba6d4",
+      "copied_local_bytes": 1722,
+      "committed_sha256": "955ff1e68c4e2ce2e157ba4ccd5c720f1e0dad67d7afde41a6857640814ba6d4",
+      "committed_bytes": 1722,
+      "git_blob_oid": "c7915cd9afef620a31f84fef08c4057ed28d645e"
+    },
+    {
+      "path": "density-green-v1/observations/finite-area-html.png",
+      "copied_local_sha256": "813eb3ec903a2cbcd2880d08b486a01879a5459f64ab6ce28abb297c64d416b0",
+      "copied_local_bytes": 13440,
+      "committed_sha256": "813eb3ec903a2cbcd2880d08b486a01879a5459f64ab6ce28abb297c64d416b0",
+      "committed_bytes": 13440,
+      "git_blob_oid": "69d0db3d2d2a33d158e73f243f7dfc0f58acc196"
+    },
+    {
+      "path": "density-green-v1/observations/finite-area-svg.json",
+      "copied_local_sha256": "3469843158b7a784d03c642289c24d488dada61b29525a77d1dd324b98b067b3",
+      "copied_local_bytes": 1722,
+      "committed_sha256": "3469843158b7a784d03c642289c24d488dada61b29525a77d1dd324b98b067b3",
+      "committed_bytes": 1722,
+      "git_blob_oid": "e85cf31aed672501eed226cca0537f770ae7f4f5"
+    },
+    {
+      "path": "density-green-v1/observations/finite-area-svg.png",
+      "copied_local_sha256": "b263e6ad7b8c41b0f28b37cf99cabd86c856ed474c662f2962c32fdb93b5095f",
+      "copied_local_bytes": 8865,
+      "committed_sha256": "b263e6ad7b8c41b0f28b37cf99cabd86c856ed474c662f2962c32fdb93b5095f",
+      "committed_bytes": 8865,
+      "git_blob_oid": "646ab9e554647a843717237d04439af4678bf55e"
+    },
+    {
+      "path": "density-green-v1/observations/finite-area-svg.svg",
+      "copied_local_sha256": "a0d4ffac90f66de03d40421aa087cc435420e49449778aea53a5df16ac298249",
+      "copied_local_bytes": 904,
+      "committed_sha256": "a0d4ffac90f66de03d40421aa087cc435420e49449778aea53a5df16ac298249",
+      "committed_bytes": 904,
+      "git_blob_oid": "6c9b7825188c2798fe1979fbeaa7eae1c30e5216"
+    },
+    {
+      "path": "density-green-v1/observations/finite-bar-html.html",
+      "copied_local_sha256": "130aacc4539a6a7fd5cbf82b9113112d9a3c036a78d83201c38dd2da4af8def3",
+      "copied_local_bytes": 4798,
+      "committed_sha256": "130aacc4539a6a7fd5cbf82b9113112d9a3c036a78d83201c38dd2da4af8def3",
+      "committed_bytes": 4798,
+      "git_blob_oid": "d422344056f852e50482d086b8f2afc8971c0bb7"
+    },
+    {
+      "path": "density-green-v1/observations/finite-bar-html.json",
+      "copied_local_sha256": "c452c6793486102129224e045ad009a090a515ff9c0342f9ec6c7c7269ead3be",
+      "copied_local_bytes": 1914,
+      "committed_sha256": "c452c6793486102129224e045ad009a090a515ff9c0342f9ec6c7c7269ead3be",
+      "committed_bytes": 1914,
+      "git_blob_oid": "1ea303a1bb527dd381c0c4d30a0a83606327fe87"
+    },
+    {
+      "path": "density-green-v1/observations/finite-bar-html.png",
+      "copied_local_sha256": "3c93245fc9d80d737be16cafed98c7ad424fa0b399f252c5cd21957414af1e45",
+      "copied_local_bytes": 12003,
+      "committed_sha256": "3c93245fc9d80d737be16cafed98c7ad424fa0b399f252c5cd21957414af1e45",
+      "committed_bytes": 12003,
+      "git_blob_oid": "3cd6e5e626178bbef1d2184b796fa43c7fede4eb"
+    },
+    {
+      "path": "density-green-v1/observations/finite-bar-svg.json",
+      "copied_local_sha256": "5a9c0d797071f12843ab0ad44cb2a9afde2f2bacee79f8dfc458b9242f813678",
+      "copied_local_bytes": 1914,
+      "committed_sha256": "5a9c0d797071f12843ab0ad44cb2a9afde2f2bacee79f8dfc458b9242f813678",
+      "committed_bytes": 1914,
+      "git_blob_oid": "aa985a3e55388c9b12c8a0be7cd996ecaac23b56"
+    },
+    {
+      "path": "density-green-v1/observations/finite-bar-svg.png",
+      "copied_local_sha256": "d7aaf5a164ecc19e03642f7ce0180af97f4dad97db0d2b030de8967ed233a5a8",
+      "copied_local_bytes": 7391,
+      "committed_sha256": "d7aaf5a164ecc19e03642f7ce0180af97f4dad97db0d2b030de8967ed233a5a8",
+      "committed_bytes": 7391,
+      "git_blob_oid": "4ea2fd956853c1d8cc8ce7e93d019a76d384a119"
+    },
+    {
+      "path": "density-green-v1/observations/finite-bar-svg.svg",
+      "copied_local_sha256": "23c8e9ec12b109f0ffd1c72d66e88d3b36206607152bd8608cdaeed6121cec95",
+      "copied_local_bytes": 971,
+      "committed_sha256": "23c8e9ec12b109f0ffd1c72d66e88d3b36206607152bd8608cdaeed6121cec95",
+      "committed_bytes": 971,
+      "git_blob_oid": "93342e6b6301ebbe847c86e56ab9c8c2a002ae5e"
+    },
+    {
+      "path": "density-green-v1/observations/finite-bubble-html.html",
+      "copied_local_sha256": "25720165838e02386b02982fe67dbca767423667b74b2fc4292c8a2743b75fae",
+      "copied_local_bytes": 4733,
+      "committed_sha256": "25720165838e02386b02982fe67dbca767423667b74b2fc4292c8a2743b75fae",
+      "committed_bytes": 4733,
+      "git_blob_oid": "8e67c0ff9d1b32aac2100bddde9f9aea9b348d44"
+    },
+    {
+      "path": "density-green-v1/observations/finite-bubble-html.json",
+      "copied_local_sha256": "339b3bf6d4f6ef88b84fd0f64a7b75a80a9c449247edc1a759c9947800ea40e4",
+      "copied_local_bytes": 1856,
+      "committed_sha256": "339b3bf6d4f6ef88b84fd0f64a7b75a80a9c449247edc1a759c9947800ea40e4",
+      "committed_bytes": 1856,
+      "git_blob_oid": "e5716a8deedd8bef080576d92cb44d801f915e34"
+    },
+    {
+      "path": "density-green-v1/observations/finite-bubble-html.png",
+      "copied_local_sha256": "1178239b3ea22775657e71c0c371ef1ccb66b705d8b07bfe64ed7d945e7eac91",
+      "copied_local_bytes": 13744,
+      "committed_sha256": "1178239b3ea22775657e71c0c371ef1ccb66b705d8b07bfe64ed7d945e7eac91",
+      "committed_bytes": 13744,
+      "git_blob_oid": "93f5f14959f2f859c1597ab0adedebcdad54049a"
+    },
+    {
+      "path": "density-green-v1/observations/finite-bubble-svg.json",
+      "copied_local_sha256": "7d15e78986d23046b8f84b63b3a2ecf1f1991dd9db7a172505f74ee0ee7db270",
+      "copied_local_bytes": 1856,
+      "committed_sha256": "7d15e78986d23046b8f84b63b3a2ecf1f1991dd9db7a172505f74ee0ee7db270",
+      "committed_bytes": 1856,
+      "git_blob_oid": "a8bccfb298c2e30d191b6fd4e13f8c975ab6fe75"
+    },
+    {
+      "path": "density-green-v1/observations/finite-bubble-svg.png",
+      "copied_local_sha256": "4357ae5e379030c9219d249262903e2396154abf123c40063c8389715fcd3e51",
+      "copied_local_bytes": 9192,
+      "committed_sha256": "4357ae5e379030c9219d249262903e2396154abf123c40063c8389715fcd3e51",
+      "committed_bytes": 9192,
+      "git_blob_oid": "f322000eaff0cfc8160a8d4e2ba91c66287755be"
+    },
+    {
+      "path": "density-green-v1/observations/finite-bubble-svg.svg",
+      "copied_local_sha256": "6dbda9f90406e87e36069685c6846a6e54321d2318fa30b2a2442627195c5f8e",
+      "copied_local_bytes": 939,
+      "committed_sha256": "6dbda9f90406e87e36069685c6846a6e54321d2318fa30b2a2442627195c5f8e",
+      "committed_bytes": 939,
+      "git_blob_oid": "8bde8e13b73eb08cda4cae48000d7723cc71428e"
+    },
+    {
+      "path": "density-green-v1/observations/finite-line-html.html",
+      "copied_local_sha256": "7610b5b04b51a6387a96e4ce15efceeec5922d20fdcf5c0b48228476f0928596",
+      "copied_local_bytes": 4547,
+      "committed_sha256": "7610b5b04b51a6387a96e4ce15efceeec5922d20fdcf5c0b48228476f0928596",
+      "committed_bytes": 4547,
+      "git_blob_oid": "3ae08c10da705f968de856f35790badf9e087063"
+    },
+    {
+      "path": "density-green-v1/observations/finite-line-html.json",
+      "copied_local_sha256": "8d6c8616b5398d037bd8529918321f722ac0d42fcee457ec75e3640cd0b12301",
+      "copied_local_bytes": 1703,
+      "committed_sha256": "8d6c8616b5398d037bd8529918321f722ac0d42fcee457ec75e3640cd0b12301",
+      "committed_bytes": 1703,
+      "git_blob_oid": "31f931e7db97fcc8d653a0d2180326ea7e058d16"
+    },
+    {
+      "path": "density-green-v1/observations/finite-line-html.png",
+      "copied_local_sha256": "1cf41c9cafa72d26cf191d41d908f9fc19f87ce178827c2ce4d49f73aa93aa06",
+      "copied_local_bytes": 13330,
+      "committed_sha256": "1cf41c9cafa72d26cf191d41d908f9fc19f87ce178827c2ce4d49f73aa93aa06",
+      "committed_bytes": 13330,
+      "git_blob_oid": "48fc9495242cd38b4966353c81533f6cca037c53"
+    },
+    {
+      "path": "density-green-v1/observations/finite-line-svg.json",
+      "copied_local_sha256": "77c6782d6a36385c11d3d9b43839e14b12836c8939ab11997275562a483519e2",
+      "copied_local_bytes": 1703,
+      "committed_sha256": "77c6782d6a36385c11d3d9b43839e14b12836c8939ab11997275562a483519e2",
+      "committed_bytes": 1703,
+      "git_blob_oid": "686467d8c4d9e9ff7aea71378923ec95e81e7a13"
+    },
+    {
+      "path": "density-green-v1/observations/finite-line-svg.png",
+      "copied_local_sha256": "a15813259c0caea697d49733539f2d283b2ad8727b3e00b53929acf0c9672480",
+      "copied_local_bytes": 8740,
+      "committed_sha256": "a15813259c0caea697d49733539f2d283b2ad8727b3e00b53929acf0c9672480",
+      "committed_bytes": 8740,
+      "git_blob_oid": "bc9ab81c9e48c63804261c635d0d10832f1c260a"
+    },
+    {
+      "path": "density-green-v1/observations/finite-line-svg.svg",
+      "copied_local_sha256": "4195ca8a22ace28e921b19ab810f1287afcc13186147d60d63cf9ef51e30582a",
+      "copied_local_bytes": 885,
+      "committed_sha256": "4195ca8a22ace28e921b19ab810f1287afcc13186147d60d63cf9ef51e30582a",
+      "committed_bytes": 885,
+      "git_blob_oid": "1768201f5055ccd60e30711f7c10c8d0a096bc31"
+    },
+    {
+      "path": "density-green-v1/observations/finite-scatter-html.html",
+      "copied_local_sha256": "f3e334bb6eaba3f79a6ed5dc2a8c47ac53a5a90caa0fc1138b6ba6f6b187adb4",
+      "copied_local_bytes": 4730,
+      "committed_sha256": "f3e334bb6eaba3f79a6ed5dc2a8c47ac53a5a90caa0fc1138b6ba6f6b187adb4",
+      "committed_bytes": 4730,
+      "git_blob_oid": "589cb3409ed5ab8594556957707cbc6f50ffdfee"
+    },
+    {
+      "path": "density-green-v1/observations/finite-scatter-html.json",
+      "copied_local_sha256": "e272687f6454a6131b50dafb1662b86cbddf7cf905e46030f719ff5a42a20270",
+      "copied_local_bytes": 1854,
+      "committed_sha256": "e272687f6454a6131b50dafb1662b86cbddf7cf905e46030f719ff5a42a20270",
+      "committed_bytes": 1854,
+      "git_blob_oid": "d113022f9b91c108ed53a2e91c7d68aa1b592fcd"
+    },
+    {
+      "path": "density-green-v1/observations/finite-scatter-html.png",
+      "copied_local_sha256": "91e9e0d644095a532215cb5163971eff31737c10cf6bbc2f162f4e2a4b5c63cc",
+      "copied_local_bytes": 12198,
+      "committed_sha256": "91e9e0d644095a532215cb5163971eff31737c10cf6bbc2f162f4e2a4b5c63cc",
+      "committed_bytes": 12198,
+      "git_blob_oid": "ab13bccb2329bbcc342828ed77e5c341875b1a00"
+    },
+    {
+      "path": "density-green-v1/observations/finite-scatter-svg.json",
+      "copied_local_sha256": "a66979aeacb19090ddd60edc6048abd4ccf138578f60392556a6bb2e419df37d",
+      "copied_local_bytes": 1854,
+      "committed_sha256": "a66979aeacb19090ddd60edc6048abd4ccf138578f60392556a6bb2e419df37d",
+      "committed_bytes": 1854,
+      "git_blob_oid": "dc237d2b4656298b54898d688b15e0f9e85e3646"
+    },
+    {
+      "path": "density-green-v1/observations/finite-scatter-svg.png",
+      "copied_local_sha256": "151b6bd3a0ffd69d890ef0a8370fa208403d25223cfbfa9db119bda11bc58891",
+      "copied_local_bytes": 7607,
+      "committed_sha256": "151b6bd3a0ffd69d890ef0a8370fa208403d25223cfbfa9db119bda11bc58891",
+      "committed_bytes": 7607,
+      "git_blob_oid": "ff53c44180d557f337986b806b4b30cd365de1dc"
+    },
+    {
+      "path": "density-green-v1/observations/finite-scatter-svg.svg",
+      "copied_local_sha256": "589edf9bd32e2c9ab71be37ba1d500cfd7ddfff958bfc47f6bcf613ecdaba240",
+      "copied_local_bytes": 937,
+      "committed_sha256": "589edf9bd32e2c9ab71be37ba1d500cfd7ddfff958bfc47f6bcf613ecdaba240",
+      "committed_bytes": 937,
+      "git_blob_oid": "3c8f4c217fa94b0843124e9fc8ebd18ced10a1f6"
+    },
+    {
+      "path": "density-green-v1/observations/identity.json",
+      "copied_local_sha256": "28d9cc9e9ed1bc14acd09265946090419879223a299b23aa53183ddf488b993a",
+      "copied_local_bytes": 367,
+      "committed_sha256": "28d9cc9e9ed1bc14acd09265946090419879223a299b23aa53183ddf488b993a",
+      "committed_bytes": 367,
+      "git_blob_oid": "1e1781001c7545a3644f9f28c52be63d68f441e7"
+    },
+    {
+      "path": "density-green-v1/receipt.json",
+      "copied_local_sha256": "072538e49aa1144561cb2e49a3c56a4a303193b8852e17ff077f70a0370a128a",
+      "copied_local_bytes": 1195,
+      "committed_sha256": "072538e49aa1144561cb2e49a3c56a4a303193b8852e17ff077f70a0370a128a",
+      "committed_bytes": 1195,
+      "git_blob_oid": "674610ee964465b170f49d1a271adb2203ab5d33"
+    },
+    {
+      "path": "density-pack.log",
+      "copied_local_sha256": "490175648ae67d093d32b2022f0411f3c866a2ea1f06cf53ba5d11653095f908",
+      "copied_local_bytes": 1728,
+      "committed_sha256": "94045ae30051a681cec8ec73089040cd254be0c729909ea67b96853a54fb27dc",
+      "committed_bytes": 1678,
+      "git_blob_oid": "9e16589f4c7a0b69d562576de7f0f0b3b93a6cb4"
+    },
+    {
+      "path": "density-red-v1/new-density-browser.tap.log",
+      "copied_local_sha256": "c5241b11b36ef549d8a2e783fe68ee1ed5e9b8c780909ce2162cb03654b6ad89",
+      "copied_local_bytes": 3797,
+      "committed_sha256": "c5241b11b36ef549d8a2e783fe68ee1ed5e9b8c780909ce2162cb03654b6ad89",
+      "committed_bytes": 3797,
+      "git_blob_oid": "4dd745e54305f9ca1af2133e0c1c56a983545dae"
+    },
+    {
+      "path": "density-red-v1/new-density-units.tap.log",
+      "copied_local_sha256": "210c3bf81814a27c32d78b57df600c5bc467f2640227696a3617971da0d60581",
+      "copied_local_bytes": 5699,
+      "committed_sha256": "210c3bf81814a27c32d78b57df600c5bc467f2640227696a3617971da0d60581",
+      "committed_bytes": 5699,
+      "git_blob_oid": "a1dc7c36e5c703c048f1bdca3f095235ed75f583"
+    },
+    {
+      "path": "density-red-v1/observations/density-ordinary-240-html.html",
+      "copied_local_sha256": "e399b45659834bd396ea1cc7b182ec6f0dde684ec5505f5534d2060169b7f85b",
+      "copied_local_bytes": 8184,
+      "committed_sha256": "e399b45659834bd396ea1cc7b182ec6f0dde684ec5505f5534d2060169b7f85b",
+      "committed_bytes": 8184,
+      "git_blob_oid": "ad427163631bf518fade09d761af0e3b34154bc4"
+    },
+    {
+      "path": "density-red-v1/observations/density-ordinary-240-html.json",
+      "copied_local_sha256": "0d4999270bc0acb4f7cc54ede86ed13c3b7637dd68ca96454192bd5b33037876",
+      "copied_local_bytes": 4511,
+      "committed_sha256": "0d4999270bc0acb4f7cc54ede86ed13c3b7637dd68ca96454192bd5b33037876",
+      "committed_bytes": 4511,
+      "git_blob_oid": "fd605bd5914e69ffb3d777687ada3ca6d4490aae"
+    },
+    {
+      "path": "density-red-v1/observations/density-ordinary-240-html.png",
+      "copied_local_sha256": "51e7cd70edd4f5bd098afb348169b901d998036d1434573dddc90cf7ba36439e",
+      "copied_local_bytes": 12855,
+      "committed_sha256": "51e7cd70edd4f5bd098afb348169b901d998036d1434573dddc90cf7ba36439e",
+      "committed_bytes": 12855,
+      "git_blob_oid": "7a7d995174c607ad705b0a7982b063a862921361"
+    },
+    {
+      "path": "density-red-v1/observations/density-ordinary-240-svg.json",
+      "copied_local_sha256": "9dd7f57f52bec37b6dec497ca39a210aadf28a480216860b4439f41ba09fcd61",
+      "copied_local_bytes": 4511,
+      "committed_sha256": "9dd7f57f52bec37b6dec497ca39a210aadf28a480216860b4439f41ba09fcd61",
+      "committed_bytes": 4511,
+      "git_blob_oid": "56cb2dcba69ac7c8486375ed46ecce6387df17db"
+    },
+    {
+      "path": "density-red-v1/observations/density-ordinary-240-svg.png",
+      "copied_local_sha256": "6b4b7362206d36fa2b2011e2ced41e05673756721aa076cf53bac3248665245d",
+      "copied_local_bytes": 8230,
+      "committed_sha256": "6b4b7362206d36fa2b2011e2ced41e05673756721aa076cf53bac3248665245d",
+      "committed_bytes": 8230,
+      "git_blob_oid": "6d2eb08295c2b88ef7e4881e34eb52531ff858c4"
+    },
+    {
+      "path": "density-red-v1/observations/density-ordinary-240-svg.svg",
+      "copied_local_sha256": "16e8e5357c0282adefaa7b22d0c91f3de730d79423d00aaec708ab41bde5fdd2",
+      "copied_local_bytes": 2295,
+      "committed_sha256": "16e8e5357c0282adefaa7b22d0c91f3de730d79423d00aaec708ab41bde5fdd2",
+      "committed_bytes": 2295,
+      "git_blob_oid": "00fd6011ab44d17631205aaf5f1876e3b2baa028"
+    },
+    {
+      "path": "density-red-v1/observations/density-ordinary-960-html.html",
+      "copied_local_sha256": "ebebf97eacebadac574c19a6c8fdc301c2f989bc107819f67ae0e8c3ca399bd6",
+      "copied_local_bytes": 8422,
+      "committed_sha256": "ebebf97eacebadac574c19a6c8fdc301c2f989bc107819f67ae0e8c3ca399bd6",
+      "committed_bytes": 8422,
+      "git_blob_oid": "ab71454b346f529b57576d51bdb97a17dd527963"
+    },
+    {
+      "path": "density-red-v1/observations/density-ordinary-960-html.json",
+      "copied_local_sha256": "76d7fe51583f18be06f8dbd1711d5da7d374e642fedff0bd607fe3afc8a889d7",
+      "copied_local_bytes": 4634,
+      "committed_sha256": "76d7fe51583f18be06f8dbd1711d5da7d374e642fedff0bd607fe3afc8a889d7",
+      "committed_bytes": 4634,
+      "git_blob_oid": "650a7c7dd8cc0149a417bb75058e85fdf9697bd5"
+    },
+    {
+      "path": "density-red-v1/observations/density-ordinary-960-html.png",
+      "copied_local_sha256": "4a5a03e55e493b0f44e071f479bc0ad798251e96f24acca996e50c33a78b8cb0",
+      "copied_local_bytes": 12928,
+      "committed_sha256": "4a5a03e55e493b0f44e071f479bc0ad798251e96f24acca996e50c33a78b8cb0",
+      "committed_bytes": 12928,
+      "git_blob_oid": "28d7c52b030dc41d6fac3a9a46430b0728212b4a"
+    },
+    {
+      "path": "density-red-v1/observations/density-ordinary-960-svg.json",
+      "copied_local_sha256": "843cc425b5472b4e91b43f21211c8763730e08631219a7b2a273a2535ccd3c26",
+      "copied_local_bytes": 4634,
+      "committed_sha256": "843cc425b5472b4e91b43f21211c8763730e08631219a7b2a273a2535ccd3c26",
+      "committed_bytes": 4634,
+      "git_blob_oid": "e634b6ac178c054773bb451d7c24f6365628364a"
+    },
+    {
+      "path": "density-red-v1/observations/density-ordinary-960-svg.png",
+      "copied_local_sha256": "a0d19dad6ac97c68df90d72881ec3c081a95beb97f3549bcbbc56c764e800220",
+      "copied_local_bytes": 8298,
+      "committed_sha256": "a0d19dad6ac97c68df90d72881ec3c081a95beb97f3549bcbbc56c764e800220",
+      "committed_bytes": 8298,
+      "git_blob_oid": "b7ab552c9f0222a429324086d1bb8fa9226ace63"
+    },
+    {
+      "path": "density-red-v1/observations/density-ordinary-960-svg.svg",
+      "copied_local_sha256": "b27f9868fb9b1eb58510790639cbc750291373c38e495a5d0d4a5cabc9852775",
+      "copied_local_bytes": 2414,
+      "committed_sha256": "b27f9868fb9b1eb58510790639cbc750291373c38e495a5d0d4a5cabc9852775",
+      "committed_bytes": 2414,
+      "git_blob_oid": "c0fa7daea720db44eed9ed2a4409d1e6777d89d6"
+    },
+    {
+      "path": "density-red-v1/observations/density-unicode-960-html.html",
+      "copied_local_sha256": "c2777f73915fbb300d7e11b51de6bff9f7cbd2bb7590a69558d120ce3a3db0c9",
+      "copied_local_bytes": 9542,
+      "committed_sha256": "c2777f73915fbb300d7e11b51de6bff9f7cbd2bb7590a69558d120ce3a3db0c9",
+      "committed_bytes": 9542,
+      "git_blob_oid": "c5d95ddb237566478c7b98904cc0acdb603921e6"
+    },
+    {
+      "path": "density-red-v1/observations/density-unicode-960-html.json",
+      "copied_local_sha256": "0cac52de7b61e573439fb366acbcaff45429180a38f959add695cc4513b9e829",
+      "copied_local_bytes": 4945,
+      "committed_sha256": "0cac52de7b61e573439fb366acbcaff45429180a38f959add695cc4513b9e829",
+      "committed_bytes": 4945,
+      "git_blob_oid": "ac34657e9a875c5a8e0cfe5905c6af144251885b"
+    },
+    {
+      "path": "density-red-v1/observations/density-unicode-960-html.png",
+      "copied_local_sha256": "06b0bcd3bf9c8d8e94ecd6de193826b593fa541721a237ad8bd613e4e631b789",
+      "copied_local_bytes": 16024,
+      "committed_sha256": "06b0bcd3bf9c8d8e94ecd6de193826b593fa541721a237ad8bd613e4e631b789",
+      "committed_bytes": 16024,
+      "git_blob_oid": "b72b71833bf5a40dc55e15fb8839603b1c526f0a"
+    },
+    {
+      "path": "density-red-v1/observations/density-unicode-960-svg.json",
+      "copied_local_sha256": "2cbc3fb26944dd227d61538579a70ba3b3bc3c2dc98adc9eb54ef6a87f90bdd8",
+      "copied_local_bytes": 4945,
+      "committed_sha256": "2cbc3fb26944dd227d61538579a70ba3b3bc3c2dc98adc9eb54ef6a87f90bdd8",
+      "committed_bytes": 4945,
+      "git_blob_oid": "90ab31f26b20c5a80f59bd3c669b050b9762d658"
+    },
+    {
+      "path": "density-red-v1/observations/density-unicode-960-svg.png",
+      "copied_local_sha256": "f4f0aae480081e88df9878093fdf401e94369cddfd1d20b5ddd0c0fa5ab12c35",
+      "copied_local_bytes": 11380,
+      "committed_sha256": "f4f0aae480081e88df9878093fdf401e94369cddfd1d20b5ddd0c0fa5ab12c35",
+      "committed_bytes": 11380,
+      "git_blob_oid": "ebb9344c30bfe224c0c690185eafca9a3877d304"
+    },
+    {
+      "path": "density-red-v1/observations/density-unicode-960-svg.svg",
+      "copied_local_sha256": "1402d4c5caed17673a6ccd1cbff816c1503eb196b934d3812ce9466a1e402826",
+      "copied_local_bytes": 2894,
+      "committed_sha256": "1402d4c5caed17673a6ccd1cbff816c1503eb196b934d3812ce9466a1e402826",
+      "committed_bytes": 2894,
+      "git_blob_oid": "6fad0aa08920dd5a243d34afc556e0d103ef5562"
+    },
+    {
+      "path": "density-red-v1/observations/identity.json",
+      "copied_local_sha256": "90146d47b25b884f53c2e6da4370d7773041d300fe23fcf05ee115a1293b6702",
+      "copied_local_bytes": 367,
+      "committed_sha256": "90146d47b25b884f53c2e6da4370d7773041d300fe23fcf05ee115a1293b6702",
+      "committed_bytes": 367,
+      "git_blob_oid": "69203881cb7c389f6305bf8dd378d582303e91f8"
+    },
+    {
+      "path": "density-red-v1/receipt.json",
+      "copied_local_sha256": "3c5b2c634941d022ca689c0d749935fffe18de69812e85f4454c01d22b6af04f",
+      "copied_local_bytes": 1371,
+      "committed_sha256": "3c5b2c634941d022ca689c0d749935fffe18de69812e85f4454c01d22b6af04f",
+      "committed_bytes": 1371,
+      "git_blob_oid": "b70ef315f912aed692eaa389707c420c4c715070"
+    },
+    {
+      "path": "density-schema.log",
+      "copied_local_sha256": "1c263fc644f4ddd61d1631b9203f913febb9721bd11f6f809b610115749524fa",
+      "copied_local_bytes": 291,
+      "committed_sha256": "0c64d5c14cd713d9b6f64e6b741588ce40545de95b683c609267c864f4b1b604",
+      "committed_bytes": 278,
+      "git_blob_oid": "a02afd180b310f0fe8994b6df5401e3963ccd3cd"
+    },
+    {
+      "path": "density-source-publication.json",
+      "copied_local_sha256": "f0c43d2f06406876267ac777516da28f75f7546edaa1a1f2b03f585b6ec407cd",
+      "copied_local_bytes": 1212,
+      "committed_sha256": "f0c43d2f06406876267ac777516da28f75f7546edaa1a1f2b03f585b6ec407cd",
+      "committed_bytes": 1212,
+      "git_blob_oid": "bfe34713328309decb38f1150b94d0185501c104"
+    },
+    {
+      "path": "density-typecheck.log",
+      "copied_local_sha256": "f4e727dbd47ef22b6bd29cca67059181d987d1e0eea80bfa120b241ce1f4ef81",
+      "copied_local_bytes": 67,
+      "committed_sha256": "cf1dc8706090b0b12cd55b819fead5906b284e56f78b95de0562c437e817c4e3",
+      "committed_bytes": 63,
+      "git_blob_oid": "23d7774b9a9cf2b26aa162c40f9e31153e627294"
+    },
+    {
+      "path": "finite-browser-v1/browser.tap.log",
+      "copied_local_sha256": "d83bd08cd36d373213c7370f004c1cc826bd107bb10d6378a463fd581ebad817",
+      "copied_local_bytes": 2399,
+      "committed_sha256": "d83bd08cd36d373213c7370f004c1cc826bd107bb10d6378a463fd581ebad817",
+      "committed_bytes": 2399,
+      "git_blob_oid": "27f292c3041672304262a8da4116aec0a736991d"
+    },
+    {
+      "path": "finite-browser-v1/command.json",
+      "copied_local_sha256": "dc39b90efde45be27f786d7f79957b5859b7f16c736926938f5608eaee8dc77e",
+      "copied_local_bytes": 466,
+      "committed_sha256": "dc39b90efde45be27f786d7f79957b5859b7f16c736926938f5608eaee8dc77e",
+      "committed_bytes": 466,
+      "git_blob_oid": "35c3e70abdbc890cd363bdc1e7d399b9695ab3ee"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-area-html.html",
+      "copied_local_sha256": "e9d8ca38eaadd72c24cae950f61969d95a7405e2ab7aa0fe088119fd6d1f8871",
+      "copied_local_bytes": 4585,
+      "committed_sha256": "e9d8ca38eaadd72c24cae950f61969d95a7405e2ab7aa0fe088119fd6d1f8871",
+      "committed_bytes": 4585,
+      "git_blob_oid": "3c9999402516984f39a51831e8ed27fd3b838f2b"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-area-html.json",
+      "copied_local_sha256": "b289bc409670114d0f01cba40fbd90d29d2175633f6ae2187e3031f69014ded2",
+      "copied_local_bytes": 1722,
+      "committed_sha256": "b289bc409670114d0f01cba40fbd90d29d2175633f6ae2187e3031f69014ded2",
+      "committed_bytes": 1722,
+      "git_blob_oid": "d9997d94d6d013612895add3359a53a14b0fe0c8"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-area-html.png",
+      "copied_local_sha256": "813eb3ec903a2cbcd2880d08b486a01879a5459f64ab6ce28abb297c64d416b0",
+      "copied_local_bytes": 13440,
+      "committed_sha256": "813eb3ec903a2cbcd2880d08b486a01879a5459f64ab6ce28abb297c64d416b0",
+      "committed_bytes": 13440,
+      "git_blob_oid": "69d0db3d2d2a33d158e73f243f7dfc0f58acc196"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-area-svg.json",
+      "copied_local_sha256": "3469843158b7a784d03c642289c24d488dada61b29525a77d1dd324b98b067b3",
+      "copied_local_bytes": 1722,
+      "committed_sha256": "3469843158b7a784d03c642289c24d488dada61b29525a77d1dd324b98b067b3",
+      "committed_bytes": 1722,
+      "git_blob_oid": "e85cf31aed672501eed226cca0537f770ae7f4f5"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-area-svg.png",
+      "copied_local_sha256": "b263e6ad7b8c41b0f28b37cf99cabd86c856ed474c662f2962c32fdb93b5095f",
+      "copied_local_bytes": 8865,
+      "committed_sha256": "b263e6ad7b8c41b0f28b37cf99cabd86c856ed474c662f2962c32fdb93b5095f",
+      "committed_bytes": 8865,
+      "git_blob_oid": "646ab9e554647a843717237d04439af4678bf55e"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-area-svg.svg",
+      "copied_local_sha256": "a0d4ffac90f66de03d40421aa087cc435420e49449778aea53a5df16ac298249",
+      "copied_local_bytes": 904,
+      "committed_sha256": "a0d4ffac90f66de03d40421aa087cc435420e49449778aea53a5df16ac298249",
+      "committed_bytes": 904,
+      "git_blob_oid": "6c9b7825188c2798fe1979fbeaa7eae1c30e5216"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-bar-html.html",
+      "copied_local_sha256": "086ffe47cd727caa510ba69f0bf73ddd765fda55eb0b76a42cc5993753bea60b",
+      "copied_local_bytes": 4798,
+      "committed_sha256": "086ffe47cd727caa510ba69f0bf73ddd765fda55eb0b76a42cc5993753bea60b",
+      "committed_bytes": 4798,
+      "git_blob_oid": "3751ced9d9730af5e8258f0b7d5eb2acddb8952c"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-bar-html.json",
+      "copied_local_sha256": "77aa663c3c3b372d508901ea106f6b08914db2255f5de7c175f09801798df738",
+      "copied_local_bytes": 1914,
+      "committed_sha256": "77aa663c3c3b372d508901ea106f6b08914db2255f5de7c175f09801798df738",
+      "committed_bytes": 1914,
+      "git_blob_oid": "9c0009a5a5a4431c838d8a0ea90fa679ae951e8d"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-bar-html.png",
+      "copied_local_sha256": "3c93245fc9d80d737be16cafed98c7ad424fa0b399f252c5cd21957414af1e45",
+      "copied_local_bytes": 12003,
+      "committed_sha256": "3c93245fc9d80d737be16cafed98c7ad424fa0b399f252c5cd21957414af1e45",
+      "committed_bytes": 12003,
+      "git_blob_oid": "3cd6e5e626178bbef1d2184b796fa43c7fede4eb"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-bar-svg.json",
+      "copied_local_sha256": "5a9c0d797071f12843ab0ad44cb2a9afde2f2bacee79f8dfc458b9242f813678",
+      "copied_local_bytes": 1914,
+      "committed_sha256": "5a9c0d797071f12843ab0ad44cb2a9afde2f2bacee79f8dfc458b9242f813678",
+      "committed_bytes": 1914,
+      "git_blob_oid": "aa985a3e55388c9b12c8a0be7cd996ecaac23b56"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-bar-svg.png",
+      "copied_local_sha256": "d7aaf5a164ecc19e03642f7ce0180af97f4dad97db0d2b030de8967ed233a5a8",
+      "copied_local_bytes": 7391,
+      "committed_sha256": "d7aaf5a164ecc19e03642f7ce0180af97f4dad97db0d2b030de8967ed233a5a8",
+      "committed_bytes": 7391,
+      "git_blob_oid": "4ea2fd956853c1d8cc8ce7e93d019a76d384a119"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-bar-svg.svg",
+      "copied_local_sha256": "23c8e9ec12b109f0ffd1c72d66e88d3b36206607152bd8608cdaeed6121cec95",
+      "copied_local_bytes": 971,
+      "committed_sha256": "23c8e9ec12b109f0ffd1c72d66e88d3b36206607152bd8608cdaeed6121cec95",
+      "committed_bytes": 971,
+      "git_blob_oid": "93342e6b6301ebbe847c86e56ab9c8c2a002ae5e"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-bubble-html.html",
+      "copied_local_sha256": "20e8376f5cded9bb268d0a831ae0a785d974061cba50bd5a4888b49a0ab24dad",
+      "copied_local_bytes": 4733,
+      "committed_sha256": "20e8376f5cded9bb268d0a831ae0a785d974061cba50bd5a4888b49a0ab24dad",
+      "committed_bytes": 4733,
+      "git_blob_oid": "7b08f0f611ce164211a799cb79f1dd2cc1252431"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-bubble-html.json",
+      "copied_local_sha256": "e8a6baf7ae3089b7f2f0ecacb77cf57e1ec85dd7ac4e174bf29e96e3066e70c8",
+      "copied_local_bytes": 1856,
+      "committed_sha256": "e8a6baf7ae3089b7f2f0ecacb77cf57e1ec85dd7ac4e174bf29e96e3066e70c8",
+      "committed_bytes": 1856,
+      "git_blob_oid": "59635aee0534e94c158ec91d43a3aebef747cc12"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-bubble-html.png",
+      "copied_local_sha256": "1178239b3ea22775657e71c0c371ef1ccb66b705d8b07bfe64ed7d945e7eac91",
+      "copied_local_bytes": 13744,
+      "committed_sha256": "1178239b3ea22775657e71c0c371ef1ccb66b705d8b07bfe64ed7d945e7eac91",
+      "committed_bytes": 13744,
+      "git_blob_oid": "93f5f14959f2f859c1597ab0adedebcdad54049a"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-bubble-svg.json",
+      "copied_local_sha256": "7d15e78986d23046b8f84b63b3a2ecf1f1991dd9db7a172505f74ee0ee7db270",
+      "copied_local_bytes": 1856,
+      "committed_sha256": "7d15e78986d23046b8f84b63b3a2ecf1f1991dd9db7a172505f74ee0ee7db270",
+      "committed_bytes": 1856,
+      "git_blob_oid": "a8bccfb298c2e30d191b6fd4e13f8c975ab6fe75"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-bubble-svg.png",
+      "copied_local_sha256": "4357ae5e379030c9219d249262903e2396154abf123c40063c8389715fcd3e51",
+      "copied_local_bytes": 9192,
+      "committed_sha256": "4357ae5e379030c9219d249262903e2396154abf123c40063c8389715fcd3e51",
+      "committed_bytes": 9192,
+      "git_blob_oid": "f322000eaff0cfc8160a8d4e2ba91c66287755be"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-bubble-svg.svg",
+      "copied_local_sha256": "6dbda9f90406e87e36069685c6846a6e54321d2318fa30b2a2442627195c5f8e",
+      "copied_local_bytes": 939,
+      "committed_sha256": "6dbda9f90406e87e36069685c6846a6e54321d2318fa30b2a2442627195c5f8e",
+      "committed_bytes": 939,
+      "git_blob_oid": "8bde8e13b73eb08cda4cae48000d7723cc71428e"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-line-html.html",
+      "copied_local_sha256": "26e1105df692f94473f2ef7cc2df8e6aa5de6ba0c8f8e70d73d0cd82aa4cfe84",
+      "copied_local_bytes": 4547,
+      "committed_sha256": "26e1105df692f94473f2ef7cc2df8e6aa5de6ba0c8f8e70d73d0cd82aa4cfe84",
+      "committed_bytes": 4547,
+      "git_blob_oid": "c3abb9b759b2dbd21541fd5a3f7ffa36b0862918"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-line-html.json",
+      "copied_local_sha256": "6ec70dcba0e31439085dce0b34580789c992a3f5472ee7c2c261543d64b9714c",
+      "copied_local_bytes": 1703,
+      "committed_sha256": "6ec70dcba0e31439085dce0b34580789c992a3f5472ee7c2c261543d64b9714c",
+      "committed_bytes": 1703,
+      "git_blob_oid": "e687f14270c6273e182ef640c80be98951df6395"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-line-html.png",
+      "copied_local_sha256": "1cf41c9cafa72d26cf191d41d908f9fc19f87ce178827c2ce4d49f73aa93aa06",
+      "copied_local_bytes": 13330,
+      "committed_sha256": "1cf41c9cafa72d26cf191d41d908f9fc19f87ce178827c2ce4d49f73aa93aa06",
+      "committed_bytes": 13330,
+      "git_blob_oid": "48fc9495242cd38b4966353c81533f6cca037c53"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-line-svg.json",
+      "copied_local_sha256": "77c6782d6a36385c11d3d9b43839e14b12836c8939ab11997275562a483519e2",
+      "copied_local_bytes": 1703,
+      "committed_sha256": "77c6782d6a36385c11d3d9b43839e14b12836c8939ab11997275562a483519e2",
+      "committed_bytes": 1703,
+      "git_blob_oid": "686467d8c4d9e9ff7aea71378923ec95e81e7a13"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-line-svg.png",
+      "copied_local_sha256": "a15813259c0caea697d49733539f2d283b2ad8727b3e00b53929acf0c9672480",
+      "copied_local_bytes": 8740,
+      "committed_sha256": "a15813259c0caea697d49733539f2d283b2ad8727b3e00b53929acf0c9672480",
+      "committed_bytes": 8740,
+      "git_blob_oid": "bc9ab81c9e48c63804261c635d0d10832f1c260a"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-line-svg.svg",
+      "copied_local_sha256": "4195ca8a22ace28e921b19ab810f1287afcc13186147d60d63cf9ef51e30582a",
+      "copied_local_bytes": 885,
+      "committed_sha256": "4195ca8a22ace28e921b19ab810f1287afcc13186147d60d63cf9ef51e30582a",
+      "committed_bytes": 885,
+      "git_blob_oid": "1768201f5055ccd60e30711f7c10c8d0a096bc31"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-scatter-html.html",
+      "copied_local_sha256": "e0e21930b5371f29e57f435e126ffcf399b34453c93c38037fda4677dc960b48",
+      "copied_local_bytes": 4730,
+      "committed_sha256": "e0e21930b5371f29e57f435e126ffcf399b34453c93c38037fda4677dc960b48",
+      "committed_bytes": 4730,
+      "git_blob_oid": "e566798f21f1fab07d55e7ec361f7902c07dd406"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-scatter-html.json",
+      "copied_local_sha256": "83d01ded204a7d6946fbb9a8cb2bcf0841fba5542f6e519d9a1136e94a2dc65e",
+      "copied_local_bytes": 1854,
+      "committed_sha256": "83d01ded204a7d6946fbb9a8cb2bcf0841fba5542f6e519d9a1136e94a2dc65e",
+      "committed_bytes": 1854,
+      "git_blob_oid": "993035eef93619e87da66f4b758132a25e473764"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-scatter-html.png",
+      "copied_local_sha256": "91e9e0d644095a532215cb5163971eff31737c10cf6bbc2f162f4e2a4b5c63cc",
+      "copied_local_bytes": 12198,
+      "committed_sha256": "91e9e0d644095a532215cb5163971eff31737c10cf6bbc2f162f4e2a4b5c63cc",
+      "committed_bytes": 12198,
+      "git_blob_oid": "ab13bccb2329bbcc342828ed77e5c341875b1a00"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-scatter-svg.json",
+      "copied_local_sha256": "a66979aeacb19090ddd60edc6048abd4ccf138578f60392556a6bb2e419df37d",
+      "copied_local_bytes": 1854,
+      "committed_sha256": "a66979aeacb19090ddd60edc6048abd4ccf138578f60392556a6bb2e419df37d",
+      "committed_bytes": 1854,
+      "git_blob_oid": "dc237d2b4656298b54898d688b15e0f9e85e3646"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-scatter-svg.png",
+      "copied_local_sha256": "151b6bd3a0ffd69d890ef0a8370fa208403d25223cfbfa9db119bda11bc58891",
+      "copied_local_bytes": 7607,
+      "committed_sha256": "151b6bd3a0ffd69d890ef0a8370fa208403d25223cfbfa9db119bda11bc58891",
+      "committed_bytes": 7607,
+      "git_blob_oid": "ff53c44180d557f337986b806b4b30cd365de1dc"
+    },
+    {
+      "path": "finite-browser-v1/observations/finite-scatter-svg.svg",
+      "copied_local_sha256": "589edf9bd32e2c9ab71be37ba1d500cfd7ddfff958bfc47f6bcf613ecdaba240",
+      "copied_local_bytes": 937,
+      "committed_sha256": "589edf9bd32e2c9ab71be37ba1d500cfd7ddfff958bfc47f6bcf613ecdaba240",
+      "committed_bytes": 937,
+      "git_blob_oid": "3c8f4c217fa94b0843124e9fc8ebd18ced10a1f6"
+    },
+    {
+      "path": "finite-browser-v1/observations/identity.json",
+      "copied_local_sha256": "f88b44ba1edba9318f6a60cb5e0a47c829d8728b72e37f53ded7dd29a047c9f3",
+      "copied_local_bytes": 367,
+      "committed_sha256": "f88b44ba1edba9318f6a60cb5e0a47c829d8728b72e37f53ded7dd29a047c9f3",
+      "committed_bytes": 367,
+      "git_blob_oid": "4a58bb95064b373b2d07de30bc8f628b0a4420cf"
+    },
+    {
+      "path": "finite-full-npm.log",
+      "copied_local_sha256": "2a504b691fddf4dafa71c1b5f2264d3f7bbbcc2c7471d343b5dda590a34f9458",
+      "copied_local_bytes": 26105,
+      "committed_sha256": "34e460b614dde64ff76590bb44e8efbde25dcafce85e894f7f88d8369b8d89a9",
+      "committed_bytes": 25808,
+      "git_blob_oid": "3de04df017a7527a29cedc5ab1fd048223e3056e"
+    },
+    {
+      "path": "finite-green-v1/build.log",
+      "copied_local_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copied_local_bytes": 0,
+      "committed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "committed_bytes": 0,
+      "git_blob_oid": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "finite-green-v1/new-finite-tests.log",
+      "copied_local_sha256": "e990c06d41605ce10654fa0e56d21921808b8945d857c112643547f6958c5663",
+      "copied_local_bytes": 2608,
+      "committed_sha256": "e990c06d41605ce10654fa0e56d21921808b8945d857c112643547f6958c5663",
+      "committed_bytes": 2608,
+      "git_blob_oid": "3e98bbaffebf0473488935d61aad199b3fda25a9"
+    },
+    {
+      "path": "finite-green-v1/receipt.json",
+      "copied_local_sha256": "d0589b4a39ba69119f77c50da1724c19777ed2774564711ae058f79b27bb49f1",
+      "copied_local_bytes": 965,
+      "committed_sha256": "d0589b4a39ba69119f77c50da1724c19777ed2774564711ae058f79b27bb49f1",
+      "committed_bytes": 965,
+      "git_blob_oid": "55596f4c01a3a0ea255d0aaed51c9b411da51581"
+    },
+    {
+      "path": "finite-prepublication.json",
+      "copied_local_sha256": "1c68709240498842308553b2c824551ec8908fe5a4a83b6532bc2e4957ee11e2",
+      "copied_local_bytes": 532,
+      "committed_sha256": "1c68709240498842308553b2c824551ec8908fe5a4a83b6532bc2e4957ee11e2",
+      "committed_bytes": 532,
+      "git_blob_oid": "fd01d256bca9f3d8cf6588ab5e9d6720b467cb1a"
+    },
+    {
+      "path": "finite-red-v1/build.log",
+      "copied_local_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copied_local_bytes": 0,
+      "committed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "committed_bytes": 0,
+      "git_blob_oid": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "finite-red-v1/new-finite-tests.log",
+      "copied_local_sha256": "d28df659e5112cc97374bc845fa5d7b67a6f41f51474680616aaaf6521b27090",
+      "copied_local_bytes": 28491,
+      "committed_sha256": "d28df659e5112cc97374bc845fa5d7b67a6f41f51474680616aaaf6521b27090",
+      "committed_bytes": 28491,
+      "git_blob_oid": "6274ae82144ab76c5d1776f983ded0f35869d028"
+    },
+    {
+      "path": "finite-red-v1/receipt.json",
+      "copied_local_sha256": "026f63e6142316642ea87c8930a5b6da9e6994a479f081e9785c9ad8a7a81330",
+      "copied_local_bytes": 1114,
+      "committed_sha256": "026f63e6142316642ea87c8930a5b6da9e6994a479f081e9785c9ad8a7a81330",
+      "committed_bytes": 1114,
+      "git_blob_oid": "21897dd8dcf0af02bce5f6a255d4113b15d3d2f2"
+    },
+    {
+      "path": "immutable-oracles-v1/bar13-setup-adapter.mjs",
+      "copied_local_sha256": "0c1b69d3f4a1c5c97d8e48b384934bb2a68475c0f0207f3ffdb50f4591848c92",
+      "copied_local_bytes": 1585,
+      "committed_sha256": "0c1b69d3f4a1c5c97d8e48b384934bb2a68475c0f0207f3ffdb50f4591848c92",
+      "committed_bytes": 1585,
+      "git_blob_oid": "b26706524a7085c9890fc2bfee23c6cffedf5c5a"
+    },
+    {
+      "path": "immutable-oracles-v1/bar13.tap.log",
+      "copied_local_sha256": "ae6071bfe974f9095b9bf021074d1c759e7083dc46316aab9cd1bf0966b63b06",
+      "copied_local_bytes": 572,
+      "committed_sha256": "ae6071bfe974f9095b9bf021074d1c759e7083dc46316aab9cd1bf0966b63b06",
+      "committed_bytes": 572,
+      "git_blob_oid": "16f52cb7601defbbd8673e7a052c8563f507e0d3"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/identity.json",
+      "copied_local_sha256": "05a70c9303a0e91f0d088302921e836d98e8a20afcd2be06f674d5eea444fc14",
+      "copied_local_bytes": 650,
+      "committed_sha256": "05a70c9303a0e91f0d088302921e836d98e8a20afcd2be06f674d5eea444fc14",
+      "committed_bytes": 650,
+      "git_blob_oid": "c7df7b90f27231c85169c273fe1b191af0434ca7"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/ordinary-eight-240-html.html",
+      "copied_local_sha256": "1b8a1d682fed78ec1ed9c9bf0d979d29cfc4ac310890908ef2551511dc376007",
+      "copied_local_bytes": 8219,
+      "committed_sha256": "1b8a1d682fed78ec1ed9c9bf0d979d29cfc4ac310890908ef2551511dc376007",
+      "committed_bytes": 8219,
+      "git_blob_oid": "0dc301c3b291c9ca93ca70eaff8f3385a4f996f2"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/ordinary-eight-240-html.json",
+      "copied_local_sha256": "e545df632b202a67e8d83cd42a75e95ce59a517e459118776598bbc1bf6762f7",
+      "copied_local_bytes": 7256,
+      "committed_sha256": "e545df632b202a67e8d83cd42a75e95ce59a517e459118776598bbc1bf6762f7",
+      "committed_bytes": 7256,
+      "git_blob_oid": "7662e9636f341b537d11194bfe8a81e46b37f2c9"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/ordinary-eight-240-html.png",
+      "copied_local_sha256": "1bbde6a8f9e7179b495ff59b9dd6656234283cf27e39909f3b5c136961191baf",
+      "copied_local_bytes": 14457,
+      "committed_sha256": "1bbde6a8f9e7179b495ff59b9dd6656234283cf27e39909f3b5c136961191baf",
+      "committed_bytes": 14457,
+      "git_blob_oid": "bbf3378e575b9f7461d4d21cc9f0fc3a133e53b2"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/ordinary-eight-240-svg.json",
+      "copied_local_sha256": "43f01efb6b4f6a73f2bd352202ec1c66884a3f98a8b7fdbf7c6f1c5dafa6908d",
+      "copied_local_bytes": 7255,
+      "committed_sha256": "43f01efb6b4f6a73f2bd352202ec1c66884a3f98a8b7fdbf7c6f1c5dafa6908d",
+      "committed_bytes": 7255,
+      "git_blob_oid": "1fd3754aa53ae958052d02e52f178c2981772449"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/ordinary-eight-240-svg.png",
+      "copied_local_sha256": "e85fb31035e53986d636d1363b5f43b111c475fae10f5f60cb1ea400681d8d01",
+      "copied_local_bytes": 8565,
+      "committed_sha256": "e85fb31035e53986d636d1363b5f43b111c475fae10f5f60cb1ea400681d8d01",
+      "committed_bytes": 8565,
+      "git_blob_oid": "01a7b0f75a05fefd20baf5487b6bf22cc60f1c02"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/ordinary-eight-240-svg.svg",
+      "copied_local_sha256": "181e6c762e84c27cc9c08699331f377a4ec02060cc4e932737f7fdd1509a15ae",
+      "copied_local_bytes": 2305,
+      "committed_sha256": "181e6c762e84c27cc9c08699331f377a4ec02060cc4e932737f7fdd1509a15ae",
+      "committed_bytes": 2305,
+      "git_blob_oid": "70f436e4a9918b837091dfc09c9b3f5955d8a549"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/ordinary-eight-960-html.html",
+      "copied_local_sha256": "360358eae1fd947f62066b871e3b57bf424f2082149348273b46e9a72ac93c9c",
+      "copied_local_bytes": 8457,
+      "committed_sha256": "360358eae1fd947f62066b871e3b57bf424f2082149348273b46e9a72ac93c9c",
+      "committed_bytes": 8457,
+      "git_blob_oid": "3e3a15be015140a276321af45c625afc6222f734"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/ordinary-eight-960-html.json",
+      "copied_local_sha256": "6dc60394a1210eab33555c00469e9a193bccc34351f9d5bd5ad70d09c7e0a56d",
+      "copied_local_bytes": 7382,
+      "committed_sha256": "6dc60394a1210eab33555c00469e9a193bccc34351f9d5bd5ad70d09c7e0a56d",
+      "committed_bytes": 7382,
+      "git_blob_oid": "8999c101d68d7ec3481ba93133e2afa8ac814b71"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/ordinary-eight-960-html.png",
+      "copied_local_sha256": "94acd28d226afa1aa000521a1a2b35fffefbcd94245fc26a1f1296b77a89e4ee",
+      "copied_local_bytes": 14189,
+      "committed_sha256": "94acd28d226afa1aa000521a1a2b35fffefbcd94245fc26a1f1296b77a89e4ee",
+      "committed_bytes": 14189,
+      "git_blob_oid": "d90109e28b48f1b290657d85b2db7e5e5e62743a"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/ordinary-eight-960-svg.json",
+      "copied_local_sha256": "f5a09460ecfd19cc0b4c0558ac19b165ce62dcb0e02a23b477c576be767f019c",
+      "copied_local_bytes": 7381,
+      "committed_sha256": "f5a09460ecfd19cc0b4c0558ac19b165ce62dcb0e02a23b477c576be767f019c",
+      "committed_bytes": 7381,
+      "git_blob_oid": "3f41ffa40f441e12ba7e557a39727bc118020d33"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/ordinary-eight-960-svg.png",
+      "copied_local_sha256": "a0d19dad6ac97c68df90d72881ec3c081a95beb97f3549bcbbc56c764e800220",
+      "copied_local_bytes": 8298,
+      "committed_sha256": "a0d19dad6ac97c68df90d72881ec3c081a95beb97f3549bcbbc56c764e800220",
+      "committed_bytes": 8298,
+      "git_blob_oid": "b7ab552c9f0222a429324086d1bb8fa9226ace63"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/ordinary-eight-960-svg.svg",
+      "copied_local_sha256": "62def5989dc284e88e113a8a2fba22364228618258737443a12b86209de7b7d5",
+      "copied_local_bytes": 2424,
+      "committed_sha256": "62def5989dc284e88e113a8a2fba22364228618258737443a12b86209de7b7d5",
+      "committed_bytes": 2424,
+      "git_blob_oid": "1c25bf0d4aa8016c58abfea79dd2506e2243da7d"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/unicode-eight-960-html.html",
+      "copied_local_sha256": "ca825252840edc765f5a5ff68329604491ed3afb3a1f1f42d2bc884849f27b9f",
+      "copied_local_bytes": 9570,
+      "committed_sha256": "ca825252840edc765f5a5ff68329604491ed3afb3a1f1f42d2bc884849f27b9f",
+      "committed_bytes": 9570,
+      "git_blob_oid": "08e3c71ff0c3eb3fa95802ced96029eabb990ba1"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/unicode-eight-960-html.json",
+      "copied_local_sha256": "e47dcb7697675d60e020e81eeafb55c5c9682eb8689b61df045ceacbed165007",
+      "copied_local_bytes": 7740,
+      "committed_sha256": "e47dcb7697675d60e020e81eeafb55c5c9682eb8689b61df045ceacbed165007",
+      "committed_bytes": 7740,
+      "git_blob_oid": "a46c58c9e1bcfb1c88e2a1fd56f5c4392eab8a3b"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/unicode-eight-960-html.png",
+      "copied_local_sha256": "9402acdf977b8fda31e34839b0fa540d5ccf554844cbf285673b9e1ad2b20801",
+      "copied_local_bytes": 20122,
+      "committed_sha256": "9402acdf977b8fda31e34839b0fa540d5ccf554844cbf285673b9e1ad2b20801",
+      "committed_bytes": 20122,
+      "git_blob_oid": "efeb783020267b0ca446caa898b5082d57df084f"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/unicode-eight-960-svg.json",
+      "copied_local_sha256": "24ee81b7b8823d2ca7271816c9f5afa385e5b4d296f455923a1500f1bfa82342",
+      "copied_local_bytes": 7739,
+      "committed_sha256": "24ee81b7b8823d2ca7271816c9f5afa385e5b4d296f455923a1500f1bfa82342",
+      "committed_bytes": 7739,
+      "git_blob_oid": "bc10159e9c9b53201804f59340725ddc9f009d47"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/unicode-eight-960-svg.png",
+      "copied_local_sha256": "338d74f36a6407cf9c48b40b7c6052c0d74cc0d35432c11560f3614a0fa66570",
+      "copied_local_bytes": 14490,
+      "committed_sha256": "338d74f36a6407cf9c48b40b7c6052c0d74cc0d35432c11560f3614a0fa66570",
+      "committed_bytes": 14490,
+      "git_blob_oid": "e19f2650a3b59aaf24b7fb5b6c1333264f58f967"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-observations/unicode-eight-960-svg.svg",
+      "copied_local_sha256": "f8fc2dae9c492adc62159acf46d32a48274b0c4a277fd74b94697cfee55aeaad",
+      "copied_local_bytes": 2902,
+      "committed_sha256": "f8fc2dae9c492adc62159acf46d32a48274b0c4a277fd74b94697cfee55aeaad",
+      "committed_bytes": 2902,
+      "git_blob_oid": "1352decc9347d093bd95a5563558b409ff56a9c6"
+    },
+    {
+      "path": "immutable-oracles-v1/density12-setup-adapter.mjs",
+      "copied_local_sha256": "2fbaa11f894e7bf1d6779192e24c3e1e8676e809c425ea271ab9b1ffe9246367",
+      "copied_local_bytes": 9233,
+      "committed_sha256": "2fbaa11f894e7bf1d6779192e24c3e1e8676e809c425ea271ab9b1ffe9246367",
+      "committed_bytes": 9233,
+      "git_blob_oid": "95b15134eb2c815f216c0790936149016d38815e"
+    },
+    {
+      "path": "immutable-oracles-v1/density12.tap.log",
+      "copied_local_sha256": "a94135ff4ebebfeadee393eb88e659c925df11d6592f32c595ac83ac92afba57",
+      "copied_local_bytes": 6673,
+      "committed_sha256": "a94135ff4ebebfeadee393eb88e659c925df11d6592f32c595ac83ac92afba57",
+      "committed_bytes": 6673,
+      "git_blob_oid": "e6692cd2916b84d7b6d1b6785ab0d1b88d40f17d"
+    },
+    {
+      "path": "immutable-oracles-v1/receipt.json",
+      "copied_local_sha256": "e345bf76efd2de935dc240e5e04fb0a0ff16dd548d6d1b597e85fe5a7d99190f",
+      "copied_local_bytes": 1812,
+      "committed_sha256": "e345bf76efd2de935dc240e5e04fb0a0ff16dd548d6d1b597e85fe5a7d99190f",
+      "committed_bytes": 1812,
+      "git_blob_oid": "bb3978d45e9c64c1dfda3bfb90f8a232c8a1d051"
+    }
+  ]
+}
