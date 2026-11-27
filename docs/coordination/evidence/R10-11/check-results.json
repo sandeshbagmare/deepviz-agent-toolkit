@@ -1,0 +1,60 @@
+{
+  "observed_utc": "2026-11-27T02:41:28.907890+00:00",
+  "source_commit": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "branch": "agents/r10-11-python-scale-envelope",
+  "commands": {
+    "pytest": "python -m pytest tests/r10_probes/role11 tests/test_performance_contract.py -m 'not scale' -q --strict-markers",
+    "ruff": "python -m ruff check tests/r10_probes/role11",
+    "mypy": "python -m mypy tests/r10_probes/role11",
+    "receipt_cli": "python tests/r10_probes/role11/verify_scale_receipt.py docs/coordination/evidence/R10-11/baseline-0c5fa82.json --expected-sha 0c5fa825f7058f8c5a4ab6ec9597b9fd5fd4ca43"
+  },
+  "exits": {
+    "pytest": 0,
+    "ruff": 0,
+    "mypy": 0,
+    "receipt_cli": 0
+  },
+  "pytest": {
+    "passed": 55,
+    "deselected": 9,
+    "skipped": 0,
+    "failed": 0,
+    "elapsed_seconds": 4.25
+  },
+  "new_tests": 25,
+  "existing_contract_tests": 30,
+  "harness_red": {
+    "failed": 1,
+    "deselected": 12,
+    "reason": "Expected own verifier missing before implementation"
+  },
+  "first_envelope": {
+    "passed": 11,
+    "failed": 1,
+    "reason": "Own injected 2200-byte fixture exceeded 2157 retained bytes; corrected to 2100 after instrumented stage trace; strict pre-native assertion unchanged"
+  },
+  "log_sha256": {
+    "receipt-red.log": "004d37d30cc8dc350d907be6c160fa933baed66fab686de6f4e89ecf1d25a5e4",
+    "envelope-first.log": "d09a262ef7ceba699de90291c08334d4e223ff2abb76124d775ae141c905f364",
+    "focused.log": "af60cc4690965b46dd906392bf40942b9bb3abde2300898d02091eb40535ae60",
+    "focused.xml": "c52fbc3bd350d8db043b594f2a538cc33e3e26d382f6064f57edcca95395c059",
+    "ruff.log": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+    "mypy.log": "f6af9a428ef63a271aa2234de6ce89a03776a74b2b986ece71bae5015648259c"
+  },
+  "exclusions": [
+    "No 10M rerun",
+    "No full suite/build/package/browser/final-source acceptance",
+    "Small injected dashboard thresholds, not physical 64/32MiB stress"
+  ],
+  "source_python_sha256": {
+    "python/deepviz/src/deepviz/__init__.py": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+    "python/deepviz/src/deepviz/cli.py": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+    "python/deepviz/src/deepviz/engines.py": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+    "python/deepviz/src/deepviz/mcp_server.py": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+    "python/deepviz/src/deepviz/models.py": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+    "python/deepviz/src/deepviz/normalize.py": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+    "python/deepviz/src/deepviz/recommend.py": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+    "python/deepviz/src/deepviz/render.py": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+    "python/deepviz/src/deepviz/tools.py": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb"
+  }
+}

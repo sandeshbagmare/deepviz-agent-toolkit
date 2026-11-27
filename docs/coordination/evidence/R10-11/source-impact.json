@@ -1,0 +1,33 @@
+{
+  "baseline_commit": "0c5fa825f7058f8c5a4ab6ec9597b9fd5fd4ca43",
+  "checkpoint_commit": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "source_continuity": {
+    "python/deepviz/src/deepviz/normalize.py": {
+      "baseline_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+      "checkpoint_sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+      "identical_bytes": true
+    },
+    "python/deepviz/src/deepviz/models.py": {
+      "baseline_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "checkpoint_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+      "identical_bytes": true
+    },
+    "python/deepviz/src/deepviz/render.py": {
+      "baseline_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+      "checkpoint_sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+      "identical_bytes": true
+    }
+  },
+  "changed_tracked_paths": [
+    "docs/verification/performance.md",
+    "python/deepviz/src/deepviz/engines.py",
+    "python/deepviz/tests/test_r02_chart_background.py",
+    "scripts/performance_suite.py"
+  ],
+  "changed_harness_functions": [
+    "inspect_artifact"
+  ],
+  "unchanged_normalization_worker_logic": true,
+  "checkpoint_harness_sha256": "13de6814a51647b58bf63923d9b1b9dbe8a608ebc029238b73af74e9489208c4",
+  "impact": "Narrow algorithm continuity only. Earlier timing/RSS are not a fresh checkpoint experiment. Pending role16 numerical accumulator changes require final frozen-source rerun; renderer/theme/inspector acceptance is separate."
+}
