@@ -1,0 +1,23 @@
+[
+  {
+    "label": "build",
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "args": [
+      "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+      "run",
+      "build"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt",
+    "exit": 0
+  },
+  {
+    "label": "permanent-regression",
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "args": [
+      "--test",
+      "packages/deepviz/test/test_r11_packaged_prompts.test.mjs"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt",
+    "exit": 0
+  }
+]

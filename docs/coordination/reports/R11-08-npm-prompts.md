@@ -1,0 +1,56 @@
+# R11-08 canonical raw npm prompt distribution
+
+## Pre-work ownership / release / source identity
+
+- Owner SAME-ID `ses_de56782e6ffeVWDIuY3v01kkBt`. Read MAIN `tasks/R11-disjoint-producer-releases.md` FULLcommon+08. No spawning; existing22cap admission/reservation is root-owned. R04 alone integrates/sharedpublishes/issues/PRs; source author is not an independent final reviewer.
+- Exact released base **`ca25af486bf443949125df789f5b5fd1fda8bba8`** verified by `git show --no-patch --format=%H%n%s ca25...` exit0; product bytes3aa521a. Planned NEW branch `agents/r11-08-npm-prompts` in unique approved-temp worktree. Never switch MAIN/R10 or copy dirty sibling source.
+- Released production paths ONLY `packages/deepviz/package.json` (build/publish/exports), NEW `packages/deepviz/scripts/copy-prompts.mjs`, NEW `packages/deepviz/test/test_r11_packaged_prompts.test.mjs`, `packages/deepviz/README.md` (raw prompt usage only). Own note, this NEW report and `docs/coordination/evidence/R11-08/` allowed. NO rootprompts/rootpackage/lock/dependencies/index/render/normalizers/schema edits. Ask before expanding.
+- Canonical decision/approved design: copy EXACT bytes of root `prompts/v1/{README,system,request}.md` into generated `dist/prompts/v1` during build; explicit rawversioned subpath exports, documented `import.meta.resolve`+Node fs reading, no new runtime/browser reader API. Repeated build/pack must preserve identical prompt/tar bytes.
+
+## Prior command finished before producer work
+
+R10 launched once, completed/checkpointed before any R11production edits: ownnpmci/build/types/fullnpm246pass0skip/schema/packagecheck/dryrun/actualpack0; strict externalconsumer7pass2missingpromptFAIL0skip; nativeESM+5engines6browsercases0errors,16types0.22member43,022BtarSHA256d448f453b95d0a9456d088629d2c60d3598fd53602740e49654b32b645c9d321. Nointerrupt/duplicate/poll. R10 scoped26file credential/diffchecks0, commit+nonforcepush+readback all0, remote **`b0b0a864b42d36c91e9a503b158edf4b24b1efb4`** at `agents/r10-08-npm-packed-consumer`. R03/R10 reports, probes, worktrees, RED and receipts preserved.
+
+## Inline TDD / acceptance plan
+
+1. New permanent regression first: build emits all3canonical resources; actualtarball/rawexport installedconsumer reads all3exactbytes and repeatedpackidentical. Run against unmodified source and record genuine missing-resource RED.
+2. Minimal4path fix only: append deterministic copy script after tsc, explicit3exports, short raw-resource README usage; canonicalrootfiles unchanged. Focused GREEN then source-byte scoped commit.
+3. Own isolated npmci state, build/typecheck/fullnpm/schema/packagecheck/dryrun+actualpack, external materialized consumer all3rawexports/16types/13runtime/schema and realChromium module+fiveengine artifacts unchanged. Compare production TS/schema/canonicalprompt bytes againstca25base, repeat tarhash, inspect actual screenshots.
+4. Scope/secret/whitespace/diffcheck; meaningful owncommit/nonforcepush/actualremoteSHA; ownMAINreceipt/report/evidence with exactcommands/results/skips/limits. No release/CI/issueclosure or self-independent-review claims.
+
+## R13 recovery — resumed first unfinished action
+
+Read MAIN R13common+08, R11fullcommon+08, latestcanonical and ownnote/report. Existing own `agents/r11-08-npm-prompts` worktree reused, NOT recreated. `git status --short --branch` exit0 clean; `git log -3 --oneline` exit0 confirms exactca25base. Native session_move returned same actualID and existing worktree. Once-startedcommand reconciliation: last R11command was completed worktreeadd exit0; no R11install/build/test process ever started, so no pending process to duplicate. R10b0b0a86publication/RED alreadyfinished and not replayed.
+
+Current action: recovery checkpoint saved; write NEW permanent prompt regression BEFORE package/script/README implementation. No R11test/install/sourceedit yet. No auth/provider/service/config changes; fullgreenCI/900issuegoal remains unmet.
+
+Permanent regression written first (5tests:3canonicalbyte copies,3explicitexports in1test, cwd-independent repeatedcopy/codepreservation). Production package/script/README still unmodified. Own external `<r11-artifact-root>\run-red.mjs <own-r11-source>` launched once, background `sh_21d48f564001jSN0OcJtG2uDHz` /PID31012; it records ownisolated npmci(no lifecycle depscripts), baselinebuild and expectednewregressionRED. Await automaticcompletion; no duplicate/poll. Artifact root `C:\Users\bagma\AppData\Local\Temp\opencode\r11-08-npm-prompts-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts`.
+
+## Genuine permanent RED observed before implementation
+
+Automaticcompletion: `run-red.mjs <own-r11-source>` exit0 collector, **NOT a testpass**. Exact `red/commands.json`: `node <npm-cli> ci --ignore-scripts --no-audit --no-fund` exit0 (OWNr11node_modules only); unchangedbaseline `npm run build` exit0; `node --test packages/deepviz/test/test_r11_packaged_prompts.test.mjs` **exit1,0pass/5fail/0skip/0cancelled,242.4874ms**. Actually read full81linefailurelog:3missingdistpromptENOENT, absentexplicitREADMEexport, missingcopyhelper; all are required missingfeatures, not hidden harnessfailures. Source/lock/canonicalprompt fingerprints retained in `red/source-hashes.json`; baselineproductsource stillca25. Now authorize minimal implementation alreadyreleased, no added scope.
+
+## Focused GREEN / minimal four-path implementation
+
+- Appended `node scripts/copy-prompts.mjs` aftertsc, added3explicitrawexports;8line standard-library copyhelper uses import.meta URLs/fixed3names, no inputcode/network/credential/workspacecwd dependency or broad cleanup. Rootcanonical3files remain single truth/unchanged. PackageREADME documents rawresource read via import.meta.resolve+Nodefs, not invented runtimeAPI.
+- Fresh `focused-green/commands.json`: buildexit0; permanentregression **exit0,5pass/0fail/0skip/0cancelled,448.1244ms**; full13lineoutput actuallyread. Repeatedcopy2times from unique unrelatedcwd preserves codeandall3bytes; no existingtests/weakenedoracles.
+- `git diff --exit-code -- package.json package-lock.json prompts schemas packages/deepviz/src` exit0. Reviewed4releasedpathsdiff; fullnpm/pack/browser/consumer stillpending, no final successclaim. Nextsmallsourcecommit records exact tested bytes before full acceptance run.
+
+## Full acceptance receipt — producer evidence (not independent final review)
+
+- Source commit `f9c437286c9dfe2245a7d914995d90346e29c233`, exact parent/base `ca25af486bf443949125df789f5b5fd1fda8bba8`; current source/worktree clean before and after. `verify-green.mjs` ran once in fresh external output `...artifacts\full-green1`, recorded **20** argv/cwd/exit entries; no interrupt, duplicate or poll. Product source protected diff and source-clean-after both exit0.
+- Own R11 npmci state was established before RED: `npm ci --ignore-scripts --no-audit --no-fund` exit0 in own isolated worktree, no shared install/lock change. Node v26.13.1; npm11.20.0 (`npm-cli` SHA256 `3ce7cba6f5128dd5f54c98b6a5036b0f850496878cc2e21044b675fe3c594e3e`); TypeScript7.0.2; Playwright1.65.1. Dependency lifecycle scripts were disabled only for install/consumer; project build/prepack scripts ran normally.
+- Build/typecheck/lint/full `npm test`/schema/package-check/dry-run/actual pack all exit0. Full npm output: **251 passed /0 failed /0 skipped /0 cancelled**,4342.9048ms. This is producer-source evidence, not independent final CI/reviewer signoff.
+- Two actual packs, each **25 members**, were byte-identical: tarball **46,323B**, SHA256 **`eb4b3f89f77b548ba6dadaf6e7735dac0c4336c8c3c5e66fb428e02284d17ff5`**. Members include `package/dist/prompts/v1/{README.md,system.md,request.md}` and no source/test/node_modules members. Full member list and both tarballs remain at external artifact root.
+- Clean external consumer install exit0, materialized (not symlink/workspace fallback). Dist members and bytes matched source build; all **13 runtime exports** remained exact. Raw prompt consumer: **13 passed /0 failed /0 skipped**,189.0173ms; all three `import.meta.resolve('@deepviz/agent-toolkit/prompts/v1/*.md')` paths resolved to installed files, SHA256 matched canonical bytes, dynamic import rejected Markdown as `ERR_UNKNOWN_FILE_EXTENSION`, and no prompt reader API was added. Existing R10 consumer tests also passed7 core+2 prompt presence plus the raw tests; strict external types `skipLibCheck:false` exit0 with the existing16 public types.
+- Real Chromium159.0.8154.6 consumer/browser controls: **6 cases passed**, zero console/page/external requests. Module/SVG native bars measured 156/390 (**2/5**) with common baseline455; Vega SVG, ECharts canvas, AntV canvas and Plotly SVG rendered. All six saved PNGs were opened: Alpha/Beta labels, 2/5 bars and zero baseline visible. This remains a bounded two-row light-theme visual check, not universal engine/dashboard/10M approval.
+- Source production byte checks: exact `package.json`, new copy script, new permanent test, packageREADME changed; root `prompts/v1/{README,system,request}.md`, `package-lock.json`, root package, schemas and all `packages/deepviz/src` bytes unchanged from base. Scope/staged credential scan exit0 before source commit. No normalizer/render/schema/dependency update.
+- Authenticated read-only GitHub observation at `2026-11-27T14:08:20.206Z`: login `sandeshbagmare`, repository public/push permission, own R11 remote branch **404/not yet pushed**, issue25 open, PR31 open/draft/unmerged at head `5340bc69b7203ad7a9166543062482d819f9b705`; 12 head checks observed, npm distribution check success but Python checks failure. No GitHub write performed by this observation.
+
+Current action: compact evidence/report/note checkpoint after full green; stage only four released source paths plus own R11 report/note/evidence, inspect, and commit receipt. No candidate/issue/PR mutation.
+
+Compact packet: **65** sanitized artifact/probe copies (~156,887bytes) plus evidence-index, ownreport andnote only. All6actualPNGs included; tarballs/node_modules/HTML stay external. Staged whitespacecheck0; scope+credential scan0; expectedGithelpermanager/HTTPSorigin/configuredauthor reconfirmed. Git normalizes only `full-green1/tar-list{1,2}.stdout.log` CRLF→LF: all65files read back from the Git index, those2normalizations explicitlyverified, other63byte-identical; indexrecords originalartifactsha256 AND publishedGitSha256/bytes. No secret data saved.
+
+Next executable action: `git push -u origin agents/r11-08-npm-prompts` non-force, then `git ls-remote --heads origin refs/heads/agents/r11-08-npm-prompts`; record actual remote SHA and handoff to R04 for integration/independent review.
+
+Next executable action: add released permanent `packages/deepviz/test/test_r11_packaged_prompts.test.mjs`, own-isolated npmci/build then run the NEW regression once against unchangedpackage/script source and retain genuine missing-prompt RED.

@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+const source=process.argv[2];
+const output=fileURLToPath(new URL('./red/',import.meta.url));
+assert.ok(source&&!existsSync(output),'Require source and fresh red output');
+mkdirSync(output);
+const npm=path.join(path.dirname(process.execPath),'node_modules/npm/bin/npm-cli.js');
+const env={...process.env,npm_config_cache:path.join(output,'npm-cache'),npm_config_audit:'false',npm_config_fund:'false',npm_config_update_notifier:'false'};
+const commands=[];
+function run(label,args){const start=new Date().toISOString();const result=spawnSync(process.execPath,args,{cwd:source,env,encoding:'utf8',timeout:240000,maxBuffer:16*1024*1024});writeFileSync(path.join(output,label+'.stdout.log'),result.stdout??'');writeFileSync(path.join(output,label+'.stderr.log'),result.stderr??'');commands.push({label,executable:process.execPath,args,cwd:source,start,exit:result.status});writeFileSync(path.join(output,'commands.json'),JSON.stringify(commands,null,2));console.log(label+':exit'+result.status);return result.status;}
+assert.equal(run('npm-ci',[npm,'ci','--ignore-scripts','--no-audit','--no-fund']),0);
+assert.equal(run('baseline-build',[npm,'run','build']),0);
+assert.equal(run('permanent-regression-red',['--test','packages/deepviz/test/test_r11_packaged_prompts.test.mjs']),1);
+const files=['package.json','package-lock.json','packages/deepviz/package.json',...['README.md','system.md','request.md'].map(name=>'prompts/v1/'+name)];
+writeFileSync(path.join(output,'source-hashes.json'),JSON.stringify(files.map(name=>({name,sha256:createHash('sha256').update(readFileSync(path.join(source,name))).digest('hex')})),null,2));
+console.log('Observed expected RED before production implementation');

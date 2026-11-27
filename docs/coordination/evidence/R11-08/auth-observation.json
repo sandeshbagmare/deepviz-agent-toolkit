@@ -1,0 +1,106 @@
+{
+  "date": "2026-11-27T14:08:20.206Z",
+  "ownerSession": "ses_de56782e6ffeVWDIuY3v01kkBt",
+  "writesPerformed": false,
+  "observations": [
+    {
+      "resource": "/user",
+      "status": 200,
+      "login": "sandeshbagmare"
+    },
+    {
+      "resource": "/repos/sandeshbagmare/deepviz-agent-toolkit",
+      "status": 200,
+      "fullName": "sandeshbagmare/deepviz-agent-toolkit",
+      "visibility": "public",
+      "pushPermission": true
+    },
+    {
+      "resource": "OWN branch",
+      "status": 404,
+      "sha": null
+    },
+    {
+      "resource": "issue25",
+      "status": 200,
+      "title": "Build and clean-install the npm tarball with usable types and exports",
+      "state": "open"
+    },
+    {
+      "resource": "PR31",
+      "status": 200,
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "5340bc69b7203ad7a9166543062482d819f9b705"
+    },
+    {
+      "resource": "PR31 head check runs",
+      "status": 200,
+      "head": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "totalCount": 12,
+      "checks": [
+        {
+          "name": "One-pass scale 1000 records",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "One-pass scale 1000000 records",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Python 3.11 lint, types, unit and integration",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "name": "Python 3.12 lint, types, unit and integration",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "name": "One-pass scale 10000000 records",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "One-pass scale 10 records",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Python 3.13 lint, types, unit and integration",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "name": "One-pass scale 100000 records",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Python and npm distribution checks (no publishing)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "npm build, types and tests (Node 24)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Raster visual regression (semantic pixel comparison)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "evidence",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ]
+}
