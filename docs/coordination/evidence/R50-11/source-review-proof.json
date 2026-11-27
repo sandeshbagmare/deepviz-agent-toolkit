@@ -1,0 +1,116 @@
+{
+  "observed_utc": "2026-11-27T19:01:44.247437+00:00",
+  "owner_session": "ses_de567811cffdTBwcb8pF5nDi9v",
+  "actual_product": "96b819aee5b01ba88b5a609b587331a528aaa070",
+  "parent": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "complete_immutable_snapshot_files": {
+    "pyproject.toml": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f",
+    "python/deepviz/src/deepviz/__init__.py": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+    "python/deepviz/src/deepviz/cli.py": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+    "python/deepviz/src/deepviz/engines.py": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+    "python/deepviz/src/deepviz/mcp_server.py": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+    "python/deepviz/src/deepviz/models.py": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+    "python/deepviz/src/deepviz/normalize.py": "b64814a6406857d9c9a1078fb759725a65a4a91d0db033c765d015df018dc6fd",
+    "python/deepviz/src/deepviz/py.typed": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3",
+    "python/deepviz/src/deepviz/recommend.py": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+    "python/deepviz/src/deepviz/render.py": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+    "python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+    "python/deepviz/src/deepviz/tools.py": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+    "python/deepviz/tests/n13_browser_verify.cjs": "241e7881992c9c3c3ac7938663c8604d858a22bbecb3f043fecbdcd8a9520d7e",
+    "python/deepviz/tests/test_aggregation_semantics.py": "1388b4a41e76de429828bb3e655217cba34ab50edd0983b48d770f6e392e0312",
+    "python/deepviz/tests/test_backend_antv.py": "36bcd3a5a8b8e419ba6a98e2c3d80c7199c002becd40a708ad09f130b42dabc6",
+    "python/deepviz/tests/test_backend_plotly.py": "a36c75526fbaade06750eb03ba83dce8019840e9baefc0cca0d8eb3d194d40f5",
+    "python/deepviz/tests/test_backend_vega.py": "7edd9b1d62419e182afb797edb63ae9ddd03cc1339a661aa13da68f73f034b62",
+    "python/deepviz/tests/test_graphql_contract.py": "1514b43b86f209fbdb7a3a63bd73950fe26cc1a0f67c9c96150a8aa20bf695dd",
+    "python/deepviz/tests/test_integrations.py": "947bbc90d5c4b1e2b9de189b90487a6c22607cce1be0afd3d2980db8743d3372",
+    "python/deepviz/tests/test_mcp_transport.py": "c5eaa43b02c31449d242f2c20236889a68f9b84a2932758813f6ee869df3ed79",
+    "python/deepviz/tests/test_n04_format_guards.py": "9aa70c9893f2eb626a0cfd62062fda71d33e90d285c4cb2596f92776fed03224",
+    "python/deepviz/tests/test_n04_normalize_regressions.py": "4ce0b2d59d045aa402f7f031028fd406ac67db8d8835f882f547e5edc687b5fa",
+    "python/deepviz/tests/test_n04_shape_policy.py": "53aeb381a5c426e61fc212910ec258a9c27814fbff48af5d7688f105f4430fec",
+    "python/deepviz/tests/test_n05_assets_and_replay.py": "b7b28e61080255f7cceee1818356f9eb43b44a09e79e25fb22115ab92c09e51b",
+    "python/deepviz/tests/test_n05_renderer_regressions.py": "cad917655c31b18d4dc4594034fe583113e7bbedc3a6e6ec7289a6aecf911cf9",
+    "python/deepviz/tests/test_n06_encoded_handles.py": "dd1816c0bd13871761bf9148a2358a77b4c87360efb44effa69ca679a8959990",
+    "python/deepviz/tests/test_n06_mcp_validation.py": "b415e606af5884020617f98ba6f1ea5a5344b20453d37b34336a147ae31c4664",
+    "python/deepviz/tests/test_n06_tool_lifecycle.py": "709d45f9f8e971cb89c407b3c044a462169684560db203b9ba491a997402f169",
+    "python/deepviz/tests/test_n09_dashboard_theme_regression.py": "3c7f34c613ce37f93bca5da967341939abf01c386f0fc4b0daee257f08c6434f",
+    "python/deepviz/tests/test_n09_oracle_controls.py": "e3801062ca3a2a552fe080620c7ec13b7f5c96c4c0a87e59fb693d0cd285bd0d",
+    "python/deepviz/tests/test_n09_static_semantics.py": "3f45669246ef8f56145085e45e95a35da2eb90e420fccf6827b5e03fc0525dc2",
+    "python/deepviz/tests/test_n09_vega_area_regression.py": "a3ff19717fdc112155fa0bf0fd7482db8441d7eee8699cb239fbbda33076694c",
+    "python/deepviz/tests/test_n13_transport_acceptance.py": "bcfeaca4d6e16e65244bf77c39ba83ffed39307535d0c4064fce12fac199601b",
+    "python/deepviz/tests/test_n17_boundaries.py": "ece2ce5d0112eea84cd2f0d150958110ca239a8be5ffc451acad0c1a60e71a55",
+    "python/deepviz/tests/test_n19_format_regressions.py": "3d90ad4bf0947d67fff4933329bdae29879a008a18a01b7f298ca88ebd5714ff",
+    "python/deepviz/tests/test_n19_formats.py": "6ad373d9efc779fc4c58af3cdbf2bdbcead5e632af50667624c04d81ac5b8973",
+    "python/deepviz/tests/test_normalize.py": "7ccda1fe47bba9310d183b9fed2fd2d85f70a275478053726f3c7b5533da13a5",
+    "python/deepviz/tests/test_r02_chart_background.py": "d56df0ecc703bf93b1e6dc03740b2d041abc7b1fc7cc8dc9550173dc46861b7e",
+    "python/deepviz/tests/test_r07_finite_overflow.py": "cbb18b1ab0107ab4cfd4dfff1515b6c6afc5f4495b4a9b56be090dfb2bce610f",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py": "78f38d6a1fccd31ffa7825975aea02abe4b6f615598c4bac8149b5482d8b8580",
+    "python/deepviz/tests/test_r45_numeric_state_accounting.py": "34604385d55a252a722626547f956e403ef7cb4bb7e136e68b14af64379cc633",
+    "python/deepviz/tests/test_render.py": "385b6938046b6264f43d07b03085936f299b66fc4bd1ddb07aadbb25b8fdb452"
+  },
+  "snapshot_file_count": 42,
+  "all_file_hashes_and_bytes_match_git_after_final_test": true,
+  "normalize_ast_scope": "Only top-level private _state_number_bytes helper and _Reducer._store changed. Other top-level functions/classes and all other _Reducer methods AST equal546. Replacing helper call with len(repr(...)) restores exact546 _store AST.",
+  "original_published_probe_git_identical_sha256": "d7262febf984bd0f83aa29d5a43133d5c083c56aeb97788940218493df28c226",
+  "own_new_probe_sha256": "1d0e6b904c250478d410b02fbea7a49ec71a0b165363881b6879f3aae1134f44",
+  "imported_modules_verified_snapshot": {
+    "deepviz.models": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r50-11-accounting-96-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz\\models.py",
+    "deepviz.normalize": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r50-11-accounting-96-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz\\normalize.py",
+    "deepviz.engines": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r50-11-accounting-96-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz\\engines.py",
+    "deepviz.render": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r50-11-accounting-96-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz\\render.py",
+    "deepviz": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r50-11-accounting-96-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\source\\python\\deepviz\\src\\deepviz\\__init__.py"
+  },
+  "digit_limit_before_after": {
+    "before": 4300,
+    "after": 4300
+  },
+  "final_acceptance": {
+    "pytest_total": 17,
+    "passed": 17,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "deselected": 0,
+    "pytest_exit": 0,
+    "wall_seconds": 0.472072799995658,
+    "Ruff_probe_exit": 0
+  },
+  "scope_by_test": {
+    "unchanged_published_mean_zero_probe": 1,
+    "role11_native_and_stream_cancellation_strategies_signs": 8,
+    "ordinary_mean_signed_promoted_sum": 3,
+    "natural_budget_early_rejection": 1,
+    "borrowed_lifetime": 1,
+    "overflow_other_bucket_weight_sum_count": 3
+  },
+  "budget_calibration": {
+    "first_unmodified_attempt": {
+      "tests": 17,
+      "passed": 16,
+      "failed": 1,
+      "pytest_exit": 1,
+      "test": "test_natural_retained_budget_rejects_before_1024th_row_without_replay",
+      "cause": "Initial fixture carried546 natural retained-data rejection at1003 pulls. Exact96 conservative accounting correctly rejects at1001, so the 1003 expectation failed. Preserved initial result."
+    },
+    "actual_96_final": {
+      "input_bound": 1024,
+      "pulls_before_rejection": 1001,
+      "one_pass_iterations": 1,
+      "result_returned": false,
+      "natural_error": "Normalized retained data exceeds 16777216 bytes",
+      "cap_changed_or_injected": false
+    },
+    "historical_actual546_earlier_bounded_control": {
+      "product_pin": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+      "rows_pulled_before_natural_budget_rejection": 1003,
+      "iterations": 1,
+      "no_result": true,
+      "evidence": "R46-11/review-proposal-checks.json actual546 six-test own output; no546 rerun now"
+    }
+  },
+  "546_F1_reference": {
+    "exact_source": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+    "known_result": "Unchanged4000-digit counterexample failed 1 of6; five bounded controls passed in prior R46-11 run. This is prior exact evidence, not rerun or counted as current17."
+  },
+  "borrowed_lifetime": "Caller-owned generator remains open and usable after planning error; caller closes it and observes finally cleanup.",
+  "limits": "No producer91, old118, broad matrix, c1b/546 runtime replay, 10M, performance/RSS, source/global/cap/oracle/dependency edits, install, CI/main merge or QA claim."
+}
