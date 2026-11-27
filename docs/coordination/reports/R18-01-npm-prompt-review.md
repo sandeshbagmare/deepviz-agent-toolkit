@@ -129,5 +129,16 @@ workers spawned. The900 criterion and final-candidate acceptance remain unmet.
 
 **Next action:** R04 reads this source-specific report together with role10's
 actual materialized-consumer result before integrating the four-path fix; rerun
-appropriate gates on its exact frozen integration commit. Own scoped publication
-will be claimed only after an actual non-force push and exact remote-SHA readback.
+appropriate gates on its exact frozen integration commit.
+
+## Actual scoped publication
+
+Independent review/probes/evidence commit
+**070ec64bfda5a1b578c8fa0c0486b8eb69c87831** was non-force pushed to the OWN
+`agents/r10-01-correctness-regressions` branch at14:52:49UTC. Push exit0 and
+immediate actual remote-SHA readback exit0 confirmed that exact SHA. Fresh safe
+authenticated GET/user200 verified expected sandeshbagmare; credential remained
+in process memory, not args/logs/files. `evidence/R18-01/publication.json` is
+the sanitized actual receipt. This publishes a scoped review, not candidate
+approval or packed-consumer verification. A small actual-receipt-only checkpoint
+follows; its finaltip will be recorded in MAIN only after actual push/readback.

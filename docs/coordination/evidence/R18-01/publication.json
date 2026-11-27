@@ -1,0 +1,36 @@
+{
+  "utc": "2026-11-27T14:52:49.676482+00:00",
+  "authenticated_login": "sandeshbagmare",
+  "authenticated_GET_user_status": 200,
+  "branch": "agents/r10-01-correctness-regressions",
+  "commit": "070ec64bfda5a1b578c8fa0c0486b8eb69c87831",
+  "reviewed_source": "f9c437286c9dfe2245a7d914995d90346e29c233",
+  "base": "ca25af486bf443949125df789f5b5fd1fda8bba8",
+  "push_argv": [
+    "git",
+    "push",
+    "origin",
+    "refs/heads/agents/r10-01-correctness-regressions:refs/heads/agents/r10-01-correctness-regressions"
+  ],
+  "push_exit_code": 0,
+  "force": false,
+  "remote_before": "dd73e9d498295567e5b90c9d396acfa748e02751",
+  "remote_readback_exit_code": 0,
+  "remote_sha": "070ec64bfda5a1b578c8fa0c0486b8eb69c87831",
+  "remote_ref": "refs/heads/agents/r10-01-correctness-regressions",
+  "verified": true,
+  "scope": "NEW independent npm prompt source-review tests/report/evidence only; production unchanged",
+  "unchanged_permanent_tests": {
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0
+  },
+  "new_independent_fixture_tests": {
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0
+  },
+  "SUM_oracles_rerun": false,
+  "packed_consumer_verified_by_this_review": false,
+  "final_candidate_approval": false
+}

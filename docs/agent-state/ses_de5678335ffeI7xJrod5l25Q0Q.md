@@ -225,3 +225,10 @@ First NEWfour run exit1=3fixturefailures1metadatapass0skip. My intendedcafUnicod
 - Allowedonly NEW R18ownedprobe/report/evidence/ownnote copiedtoexistingownbranch; allproduction/existingoracles remainunchanged. No SUMrerun, sourceedit, install, sharedmutations, issuesPRwrites orspawn. R13F1OPENP2/R04R17 preserved.
 - Currentaction: explicitR18ownedpathstaging/whitespace+credentialpatternscan/Gitblob+rawbyteindex verification, thenmeaningfulscopedcommit and expected-userfreshGET/nonforceownpush/exactremoteSHA. No publicationSHA predicted.
 - One executable nextaction: git diff --cached --check after ownedpathstaging; ifsafe, commit R18review/probes/evidence and safeownpublication. R04reads report+10realconsumerbeforeintegration.
+
+
+## R18 actual owned publication / receipt checkpoint
+
+- IndependentR18review/probes/evidence commit070ec64bfda5a1b578c8fa0c0486b8eb69c87831 nonforcepush0/actualexactremoteSHAreadback0 at14:52:49UTC. FreshsafeGETuser200expected sandeshbagmare, memory-onlyGCMtoken, branchancestorverifieddd73; no config/provider/servicechanges or sharedwrites. Actualreceipt evidence/R18-01/publication.json.
+- Scope reviewedf9c4372 vs ca25, no concrete mustfix in4paths; actual5unchanged+4NEWpassed/0skip, build/typecheck/selfreference0. No productsource/oldoracle/SUMrerun. Role10packconsumer/CI/finalcandidate/fullgoal remainunverifiedhere; R13F1OPENP2/R17unchanged.
+- Currentaction: publish4file actualreceipt-onlycheckpoint then finalactualremoteSHA receipt savedMAIN. One executable nextaction forR04: read R18-01 source report+10realpackageconsumer before integrating exactf9fourpaths; rootreviewdecision/refillusefuldisjointwork after genuinecompletion.
