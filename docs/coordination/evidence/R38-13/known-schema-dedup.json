@@ -1,0 +1,65 @@
+{
+  "actual_tested_default": "31cff73ab057c3fed69bd400ac005f2f11609027",
+  "API_writes": 0,
+  "new_issues": 0,
+  "new_comments": 0,
+  "HTTP_receipts": [
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/5",
+      "status": 200,
+      "utc": "2026-11-27T17:05:41.073361+00:00",
+      "link": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/5/comments?per_page=100&page=1",
+      "status": 200,
+      "utc": "2026-11-27T17:05:41.433891+00:00",
+      "link": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/30",
+      "status": 200,
+      "utc": "2026-11-27T17:05:41.875652+00:00",
+      "link": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/30/comments?per_page=100&page=1",
+      "status": 200,
+      "utc": "2026-11-27T17:05:42.234439+00:00",
+      "link": null
+    }
+  ],
+  "issues": [
+    {
+      "number": 5,
+      "title": "Version and validate the shared ChartSpec and artifact contracts",
+      "body": "<!-- deepviz-key: CONTRACT -->\n# CONTRACT\n\n## Outcome\nPython, TypeScript and integrations share one explicit schema and metadata contract.\n\n## Coordination\n- Suggested owner lane: core agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #1 (EPIC-FOUNDATION).\n\n## Acceptance criteria\n- [ ] Commit schema version 1 and positive/negative fixtures for declared kinds, mappings, nested charts and bounds.\n- [ ] Pydantic models and JSON Schema agree on required fields, defaults and invalid values.\n- [ ] NormalizedData and Artifact expose input/output counts, strategy, warnings and safe filesystem paths.\n- [ ] Public names/signatures match the design or carry an explicit documented decision.\n\n## Required evidence\n- Schema validation tests and exact test command\n- Fixture parity report\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "state": "open",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/5",
+      "comments": [],
+      "comment_pages_complete": true
+    },
+    {
+      "number": 30,
+      "title": "Bug: Python chart schema coerces strings and booleans unlike JSON Schema",
+      "body": "## Reproduction\n\nThe generated JSON Schema declares numeric fields, but the Python runtime accepted numeric strings and JSON booleans through Pydantic coercion:\n\n```python\nChartSpec.model_validate({\"width\": \"900\"})\nChartSpec.model_validate({\"version\": True})\nChartSpec.model_validate({\"columns\": True})\n```\n\nThis diverges from JSON Schema and a schema-validating TypeScript consumer.\n\n## Acceptance criteria\n\n- Reject string values for numeric schema fields and booleans for version/columns.\n- Continue to accept mathematically integral JSON numeric values, such as `900.0`, consistent with JSON Schema integer semantics.\n- Preserve valid defaults and all existing bounds.\n- Add regression tests and run lint/type checks.\n\n## Observed test evidence\n\nBefore fix: `python -m pytest tests/test_models.py -q`: **6 failed, 24 passed** (all six failures were unexpected acceptance).\n\nAfter adding a before-validator: full current checkout suite `python -m pytest -q`: **30 passed**; Ruff and mypy passed for the changed implementation/tests. This evidence concerns the schema-only branch, not the unfinished integrated product.\n\nLeave open until the reviewed release PR merges the fix.\n",
+      "state": "open",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/30",
+      "comments": [
+        {
+          "id": 7223568185,
+          "body": "PR #33 is now ACTUALLY merged at **31cff73ab057c3fed69bd400ac005f2f11609027** on default `main`. Fresh official PR/ref readback, fetched origin/main and git ancestor checks verify reviewed head bff9384d1ebe5c8f6f8f0f994300264b32bb98d8 is included; main tree equals the reviewed bff tree exactly. Actual main now has 5 commits/15 tracked files. Two genuine exact-head source reviews and two independent tests cleared; all six bff contract CI jobs succeeded. See PR33 final acceptance table/report snapshot. Dedicated actual-mainQA13 is now source-triggered at the REAL merged SHA; this issue remains OPEN until that acceptance. Post-merge CI has not been observed yet. This delivers the model/schema slice, not the complete toolkit/v1/900 goal.",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/30#issuecomment-7223568185"
+        }
+      ],
+      "comment_pages_complete": true
+    }
+  ],
+  "initial_broad_search_receipt_complete": false,
+  "recovery_only_known_5_30": true,
+  "decision": "No new issue/comment. #30 narrow numeric coercion acceptance is independently PASS on actual mergedmain31cff, supporting manager closure decision. Keep known broader #5/dashboard-schema728 incompleteness separately OPEN; 3strictRED retained. No claim global issue search receipts complete after initial collector printing failure."
+}

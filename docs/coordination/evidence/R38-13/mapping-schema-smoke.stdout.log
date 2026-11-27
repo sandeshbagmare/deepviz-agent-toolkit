@@ -1,0 +1,79 @@
+....FFF                                                                  [100%]
+================================== FAILURES ===================================
+_ test_known_728_invalid_dashboard_forms_must_be_rejected_by_published_schema[{"kind":"dashboard","charts":[]}] _
+
+wire = '{"kind":"dashboard","charts":[]}'
+
+    @pytest.mark.parametrize("wire", [
+        '{"kind":"dashboard","charts":[]}',
+        '{"charts":[{}]}',
+        '{"kind":"dashboard","charts":[{"kind":"dashboard","charts":[{}]}]}',
+    ])
+    def test_known_728_invalid_dashboard_forms_must_be_rejected_by_published_schema(wire):
+        """Retain actual known RED; this is not a numeric-coercion regression or xfail."""
+        value = json.loads(wire)
+        with pytest.raises(ValidationError):
+            ChartSpec.model_validate_json(wire)
+        schema_accepts = SCHEMA.is_valid(value)
+        OBSERVATIONS.append({
+            "known_728_literal_wire": wire, "runtime_rejects": True,
+            "schema_accepts": schema_accepts,
+        })
+>       assert not schema_accepts, "Known dashboard-schema constraints are still absent from this main slice"
+E       AssertionError: Known dashboard-schema constraints are still absent from this main slice
+E       assert not True
+
+..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r38_probes\role13\test_merged_mapping.py:90: AssertionError
+_ test_known_728_invalid_dashboard_forms_must_be_rejected_by_published_schema[{"charts":[{}]}] _
+
+wire = '{"charts":[{}]}'
+
+    @pytest.mark.parametrize("wire", [
+        '{"kind":"dashboard","charts":[]}',
+        '{"charts":[{}]}',
+        '{"kind":"dashboard","charts":[{"kind":"dashboard","charts":[{}]}]}',
+    ])
+    def test_known_728_invalid_dashboard_forms_must_be_rejected_by_published_schema(wire):
+        """Retain actual known RED; this is not a numeric-coercion regression or xfail."""
+        value = json.loads(wire)
+        with pytest.raises(ValidationError):
+            ChartSpec.model_validate_json(wire)
+        schema_accepts = SCHEMA.is_valid(value)
+        OBSERVATIONS.append({
+            "known_728_literal_wire": wire, "runtime_rejects": True,
+            "schema_accepts": schema_accepts,
+        })
+>       assert not schema_accepts, "Known dashboard-schema constraints are still absent from this main slice"
+E       AssertionError: Known dashboard-schema constraints are still absent from this main slice
+E       assert not True
+
+..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r38_probes\role13\test_merged_mapping.py:90: AssertionError
+_ test_known_728_invalid_dashboard_forms_must_be_rejected_by_published_schema[{"kind":"dashboard","charts":[{"kind":"dashboard","charts":[{}]}]}] _
+
+wire = '{"kind":"dashboard","charts":[{"kind":"dashboard","charts":[{}]}]}'
+
+    @pytest.mark.parametrize("wire", [
+        '{"kind":"dashboard","charts":[]}',
+        '{"charts":[{}]}',
+        '{"kind":"dashboard","charts":[{"kind":"dashboard","charts":[{}]}]}',
+    ])
+    def test_known_728_invalid_dashboard_forms_must_be_rejected_by_published_schema(wire):
+        """Retain actual known RED; this is not a numeric-coercion regression or xfail."""
+        value = json.loads(wire)
+        with pytest.raises(ValidationError):
+            ChartSpec.model_validate_json(wire)
+        schema_accepts = SCHEMA.is_valid(value)
+        OBSERVATIONS.append({
+            "known_728_literal_wire": wire, "runtime_rejects": True,
+            "schema_accepts": schema_accepts,
+        })
+>       assert not schema_accepts, "Known dashboard-schema constraints are still absent from this main slice"
+E       AssertionError: Known dashboard-schema constraints are still absent from this main slice
+E       assert not True
+
+..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r38_probes\role13\test_merged_mapping.py:90: AssertionError
+=========================== short test summary info ===========================
+FAILED ..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r38_probes\role13\test_merged_mapping.py::test_known_728_invalid_dashboard_forms_must_be_rejected_by_published_schema[{"kind":"dashboard","charts":[]}]
+FAILED ..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r38_probes\role13\test_merged_mapping.py::test_known_728_invalid_dashboard_forms_must_be_rejected_by_published_schema[{"charts":[{}]}]
+FAILED ..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r38_probes\role13\test_merged_mapping.py::test_known_728_invalid_dashboard_forms_must_be_rejected_by_published_schema[{"kind":"dashboard","charts":[{"kind":"dashboard","charts":[{}]}]}]
+3 failed, 4 passed in 0.18s

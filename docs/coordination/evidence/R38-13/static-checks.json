@@ -1,0 +1,58 @@
+{
+  "actual_source": "31cff73ab057c3fed69bd400ac005f2f11609027",
+  "checks": [
+    {
+      "name": "main-ruff",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\ruff.exe",
+        "check",
+        "--no-cache",
+        "."
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r26-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "elapsed_seconds": 0.09583740000380203,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "name": "main-mypy",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\mypy.exe",
+        "--cache-dir",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r38-13-mypy-cache-ses_de56780caffekQ9gdZ58EgQwb5"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r26-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "elapsed_seconds": 5.1361547999986215,
+      "stdout": "Success: no issues found in 1 source file\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "ruff-version",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\ruff.exe",
+        "--version"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r26-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "elapsed_seconds": 0.04802090000885073,
+      "stdout": "ruff 0.17.6\n",
+      "stderr": ""
+    },
+    {
+      "name": "mypy-version",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\mypy.exe",
+        "--version"
+      ],
+      "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r26-13-main-31cff73-ses_de56780caffekQ9gdZ58EgQwb5",
+      "exit": 0,
+      "elapsed_seconds": 0.5287221000035061,
+      "stdout": "mypy 2.4.1 (compiled: yes)\r\n",
+      "stderr": ""
+    }
+  ],
+  "own_cache_outside_source": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r38-13-mypy-cache-ses_de56780caffekQ9gdZ58EgQwb5",
+  "no_installs_or_shared_config_change": true
+}

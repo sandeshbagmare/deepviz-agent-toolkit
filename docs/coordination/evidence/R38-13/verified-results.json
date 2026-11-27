@@ -1,0 +1,287 @@
+{
+  "actual_source": "31cff73ab057c3fed69bd400ac005f2f11609027",
+  "ALL82_original_tests_executed_once": true,
+  "six_original_numeric_RED_now_PASS": true,
+  "retained30_unchanged_assertions": true,
+  "source_still_clean": true,
+  "phases": [
+    {
+      "phase": "shipped82",
+      "exit": 0,
+      "totals": {
+        "tests": 82,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "passed": 82,
+      "JUnit_case_count": 82,
+      "JUnit_failure_names": [],
+      "pytest_version": "9.2.0",
+      "pydantic_version": "2.14.4",
+      "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+      "observations": []
+    },
+    {
+      "phase": "retained30",
+      "exit": 0,
+      "totals": {
+        "tests": 30,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "passed": 30,
+      "JUnit_case_count": 30,
+      "JUnit_failure_names": [],
+      "pytest_version": "9.2.0",
+      "pydantic_version": "2.14.4",
+      "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+      "observations": [
+        {
+          "wire": "{\"version\":\"1\"}",
+          "schema_accepts": false,
+          "model_accepts": false
+        },
+        {
+          "wire": "{\"version\":true}",
+          "schema_accepts": false,
+          "model_accepts": false
+        },
+        {
+          "wire": "{\"columns\":\"2\"}",
+          "schema_accepts": false,
+          "model_accepts": false
+        },
+        {
+          "wire": "{\"columns\":true}",
+          "schema_accepts": false,
+          "model_accepts": false
+        },
+        {
+          "wire": "{\"width\":\"900\"}",
+          "schema_accepts": false,
+          "model_accepts": false
+        },
+        {
+          "wire": "{\"width\":true}",
+          "schema_accepts": false,
+          "model_accepts": false
+        },
+        {
+          "wire": "{\"height\":\"520\"}",
+          "schema_accepts": false,
+          "model_accepts": false
+        },
+        {
+          "wire": "{\"height\":true}",
+          "schema_accepts": false,
+          "model_accepts": false
+        },
+        {
+          "wire": "{\"max_points\":\"2000\"}",
+          "schema_accepts": false,
+          "model_accepts": false
+        },
+        {
+          "wire": "{\"max_points\":true}",
+          "schema_accepts": false,
+          "model_accepts": false
+        },
+        {
+          "valid_public_model_json": {
+            "version": 1,
+            "kind": "bar",
+            "title": "QA <literal> & \u6771\u4eac",
+            "description": "",
+            "x": null,
+            "y": null,
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "auto",
+            "max_points": 2000,
+            "width": 900,
+            "height": 520,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          }
+        }
+      ]
+    },
+    {
+      "phase": "mapping-schema-smoke",
+      "exit": 1,
+      "totals": {
+        "tests": 7,
+        "failures": 3,
+        "errors": 0,
+        "skipped": 0
+      },
+      "passed": 4,
+      "JUnit_case_count": 7,
+      "JUnit_failure_names": [
+        "test_known_728_invalid_dashboard_forms_must_be_rejected_by_published_schema[{\"kind\":\"dashboard\",\"charts\":[]}]",
+        "test_known_728_invalid_dashboard_forms_must_be_rejected_by_published_schema[{\"charts\":[{}]}]",
+        "test_known_728_invalid_dashboard_forms_must_be_rejected_by_published_schema[{\"kind\":\"dashboard\",\"charts\":[{\"kind\":\"dashboard\",\"charts\":[{}]}]}]"
+      ],
+      "pytest_version": "9.2.0",
+      "pydantic_version": "2.14.4",
+      "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+      "observations": [
+        {
+          "mixed_mapping_factories": [
+            "UserDict",
+            "mappingproxy"
+          ],
+          "actual_json_output": {
+            "version": 1,
+            "kind": "dashboard",
+            "title": "Visualization",
+            "description": "",
+            "x": null,
+            "y": null,
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "auto",
+            "max_points": 10,
+            "width": 4096,
+            "height": 4096,
+            "theme": "light",
+            "charts": [
+              {
+                "version": 1,
+                "kind": "bar",
+                "title": "<literal> & \u6771\u4eac",
+                "description": "",
+                "x": null,
+                "y": null,
+                "color": null,
+                "size": null,
+                "data_path": null,
+                "format": "auto",
+                "aggregation": "auto",
+                "max_points": 2000,
+                "width": 240,
+                "height": 200,
+                "theme": "light",
+                "charts": [],
+                "columns": 2
+              }
+            ],
+            "columns": 1
+          },
+          "input_unchanged": true
+        },
+        {
+          "mixed_mapping_factories": [
+            "mappingproxy",
+            "UserDict"
+          ],
+          "actual_json_output": {
+            "version": 1,
+            "kind": "dashboard",
+            "title": "Visualization",
+            "description": "",
+            "x": null,
+            "y": null,
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "auto",
+            "max_points": 10,
+            "width": 4096,
+            "height": 4096,
+            "theme": "light",
+            "charts": [
+              {
+                "version": 1,
+                "kind": "bar",
+                "title": "<literal> & \u6771\u4eac",
+                "description": "",
+                "x": null,
+                "y": null,
+                "color": null,
+                "size": null,
+                "data_path": null,
+                "format": "auto",
+                "aggregation": "auto",
+                "max_points": 2000,
+                "width": 240,
+                "height": 200,
+                "theme": "light",
+                "charts": [],
+                "columns": 2
+              }
+            ],
+            "columns": 1
+          },
+          "input_unchanged": true
+        },
+        {
+          "invalid_mapping_location": "root",
+          "literal_input": {
+            "kind": "dashboard",
+            "charts": [
+              {
+                "width": 900.0,
+                "columns": 2
+              }
+            ],
+            "version": true
+          },
+          "actual_error": {
+            "type": "value_error",
+            "loc": [],
+            "msg": "Value error, version must be a JSON number, not a string or boolean"
+          },
+          "input_unchanged": true
+        },
+        {
+          "invalid_mapping_location": "child",
+          "literal_input": {
+            "kind": "dashboard",
+            "charts": [
+              {
+                "width": 900.0,
+                "columns": "2"
+              }
+            ],
+            "version": 1
+          },
+          "actual_error": {
+            "type": "value_error",
+            "loc": [
+              "charts",
+              0
+            ],
+            "msg": "Value error, columns must be a JSON number, not a string or boolean"
+          },
+          "input_unchanged": true
+        },
+        {
+          "known_728_literal_wire": "{\"kind\":\"dashboard\",\"charts\":[]}",
+          "runtime_rejects": true,
+          "schema_accepts": true
+        },
+        {
+          "known_728_literal_wire": "{\"charts\":[{}]}",
+          "runtime_rejects": true,
+          "schema_accepts": true
+        },
+        {
+          "known_728_literal_wire": "{\"kind\":\"dashboard\",\"charts\":[{\"kind\":\"dashboard\",\"charts\":[{}]}]}",
+          "runtime_rejects": true,
+          "schema_accepts": true
+        }
+      ]
+    }
+  ],
+  "product_test_replays": 0,
+  "validation_is_saved_artifact_integrity_not_additional_product_tests": true
+}

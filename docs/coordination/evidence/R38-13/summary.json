@@ -1,0 +1,200 @@
+{
+  "tested_actual_default": "31cff73ab057c3fed69bd400ac005f2f11609027",
+  "merge_source": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+  "official_freeze_utc": "2026-11-27T16:51:34.279523+00:00",
+  "source_clean": true,
+  "tracked_files": 15,
+  "merge_parents": [
+    "0ae2cf26426822135fc10d337fcacf580b7ed833",
+    "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8"
+  ],
+  "merge_tree_equals_bff": true,
+  "numeric_issue30_acceptance": "PASS, closure decision R04 only",
+  "broader_dashboard_schema_issue5": "KNOWN INCOMPLETE; 3strictRED retained pending separate728slice",
+  "phases": [
+    {
+      "name": "shipped82",
+      "exit": 0,
+      "totals": {
+        "tests": 82,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "passed": 82,
+      "elapsed_seconds_outer": 4.001264000005904
+    },
+    {
+      "name": "retained30",
+      "exit": 0,
+      "totals": {
+        "tests": 30,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "passed": 30,
+      "elapsed_seconds_outer": 3.4544741999998223
+    },
+    {
+      "name": "mapping-schema-smoke",
+      "exit": 1,
+      "totals": {
+        "tests": 7,
+        "failures": 3,
+        "errors": 0,
+        "skipped": 0
+      },
+      "passed": 4,
+      "elapsed_seconds_outer": 3.399463400011882
+    }
+  ],
+  "formerly_failed_OWN_case_names_now_PASS": [
+    "test_json_numeric_types_agree_with_schema[version-true]",
+    "test_json_numeric_types_agree_with_schema[columns-\"2\"]",
+    "test_json_numeric_types_agree_with_schema[columns-true]",
+    "test_json_numeric_types_agree_with_schema[width-\"900\"]",
+    "test_json_numeric_types_agree_with_schema[height-\"520\"]",
+    "test_json_numeric_types_agree_with_schema[max_points-\"2000\"]"
+  ],
+  "actual_new_test_count": 119,
+  "actual_total_passed": 116,
+  "actual_total_failed": 3,
+  "actual_total_skipped": 0,
+  "own_provenance_guard_passes_in_30": 3,
+  "numeric_failures_remaining": 0,
+  "whole_schema_green": false,
+  "setup_proof": "Same-process exact HEAD/model origin/ALL15Git+raw hashes/original runner+probe/new adapter hash beforeafter; namespace confined; ONLY actual deepviz.models imported",
+  "unchanged_originals": "all82shippedtests equal bff; unchangedOWNrunner+30 equal published312; no assertions changed",
+  "main_ruff_exit": 0,
+  "main_mypy_exit": 0,
+  "main_mypy_files": 1,
+  "tools": {
+    "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+    "pydantic": "2.14.4",
+    "pytest": "9.2.0",
+    "ruff": "0.17.6",
+    "mypy": "2.4.1"
+  },
+  "source_hashes_raw_and_Git_LF": [
+    {
+      "path": ".github/workflows/chart-contract.yml",
+      "raw_sha256": "69e97a6b11f754bf31a5856c2b83d35feb26da5e125a01945c8491d375ba61ad",
+      "Git_LF_sha256": "ac27444ce397af321184423bff8e3df9d278340d705977b501484bc20446d227",
+      "raw_bytes": 1085,
+      "git_bytes": 1051
+    },
+    {
+      "path": ".gitignore",
+      "raw_sha256": "7dcc06f91893f9703d15fe96817d2f9149e0b320bada22a765a1ef1e42f1040d",
+      "Git_LF_sha256": "3bebcceee3a15392de8f9a36815347d9a999e21fe58efe576ef28b9664b00e77",
+      "raw_bytes": 223,
+      "git_bytes": 205
+    },
+    {
+      "path": "LICENSE",
+      "raw_sha256": "d1a39f6cb061116b63283c8f2238f33e2b360d3414641ab998538a73260c4eab",
+      "Git_LF_sha256": "afbb59a0c0fccdea7ecc9140e4e762455dc06abea4f02d9cf5324c8fb23b42fd",
+      "raw_bytes": 1098,
+      "git_bytes": 1077
+    },
+    {
+      "path": "README.md",
+      "raw_sha256": "f22763432a078847c7af1c53e8330594e60923cb3691294b7c7134f62c830a65",
+      "Git_LF_sha256": "2497e600ecd5a35af571f0f3e6f2550ce3a49b9322a607e02e6b97aa8c41d40d",
+      "raw_bytes": 202,
+      "git_bytes": 199
+    },
+    {
+      "path": "docs/superpowers/plans/2026-11-26-deepviz-plan.md",
+      "raw_sha256": "56c402faa7b5519dec62b3619bc40ebbf972d07dd8de0d68bc2556c49dd05c2a",
+      "Git_LF_sha256": "9d941cd545a8a37ddbf6d9395d882ba25360318b35ff93d36ed1556f3668d834",
+      "raw_bytes": 3238,
+      "git_bytes": 3191
+    },
+    {
+      "path": "docs/superpowers/specs/2026-11-26-deepviz-design.md",
+      "raw_sha256": "0574c46eb494c163539b1f64b54550c31df1542abce26891496db463890ce623",
+      "Git_LF_sha256": "715ef120ba4700ea28ef5dbd1d975cd80cf3cc5b659e64fc9e6cd231c664a973",
+      "raw_bytes": 3231,
+      "git_bytes": 3206
+    },
+    {
+      "path": "docs/verification/r22-contract/README.md",
+      "raw_sha256": "ac650ad61f8039a3fc7f7df3cb5bf3ab4be241682cec6bb995492bf2ee8921ff",
+      "Git_LF_sha256": "f83f3e84a78d9a88c4a96d7df489f19e7fb4a6739c9e662d781f10f06670b3a6",
+      "raw_bytes": 2921,
+      "git_bytes": 2893
+    },
+    {
+      "path": "docs/verification/r22-contract/red-green-summary.json",
+      "raw_sha256": "1aad554008de66088d9d0e9085ed48dab57c326905f2a9924eb4ee41a60758c0",
+      "Git_LF_sha256": "e3db9381970aa74f9a9f9ede2c87712dcd47636c34520fb3984ee39107bf1937",
+      "raw_bytes": 5171,
+      "git_bytes": 5057
+    },
+    {
+      "path": "docs/verification/r22-contract/validation-output.json",
+      "raw_sha256": "776d0cecdb6a9f133cc96076cb60bc652dc20120933c2fb1bd28045dfdf29c15",
+      "Git_LF_sha256": "3896de0d87545af60fc63bdee608b202055ea55d84dc7f49d1334ab729d02a0b",
+      "raw_bytes": 5140,
+      "git_bytes": 4915
+    },
+    {
+      "path": "pyproject.toml",
+      "raw_sha256": "59272015ea328698d8f030051c2d460a66c83625f6bc5005ffa16382403a31ef",
+      "Git_LF_sha256": "c80640f3f3049b9734360abd7bb1b5699449d7bad31f3fcde77c3e2b38a53053",
+      "raw_bytes": 1301,
+      "git_bytes": 1259
+    },
+    {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "raw_sha256": "e4c86a977a7003d3d4e5d557a3bdfb25ccee155608d36207f3af24da2e3981d3",
+      "Git_LF_sha256": "8532ec73be4a212d822aab2ee5b021e9d56a7cc266ddbd9ae111ed8310b7262d",
+      "raw_bytes": 3102,
+      "git_bytes": 3021
+    },
+    {
+      "path": "schemas/chart-spec.schema.json",
+      "raw_sha256": "cf316116251e52a121a74d24f35f99b15794ee0997278010d97181c8c1908b81",
+      "Git_LF_sha256": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d",
+      "raw_bytes": 4268,
+      "git_bytes": 4078
+    },
+    {
+      "path": "tests/test_models.py",
+      "raw_sha256": "7b0590a4260fa03804733dffce32d58469ca7f58d1cce70200936fa7519d76d2",
+      "Git_LF_sha256": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32",
+      "raw_bytes": 2750,
+      "git_bytes": 2684
+    },
+    {
+      "path": "tests/test_native_mapping.py",
+      "raw_sha256": "6f478c62d41d2e3af1d24bb3ec7480b37a27c16cd1c1111be37731e326c80a15",
+      "Git_LF_sha256": "4f06bc1ad9cdc021f5081f5c59b10081783439e2fa95b69287d079e5dc82bb94",
+      "raw_bytes": 2057,
+      "git_bytes": 2012
+    },
+    {
+      "path": "tests/test_numeric_schema.py",
+      "raw_sha256": "afa1300dad464f73630aa85ddc5892bbca8245ea5f379d0b6f4df205ccaae9ff",
+      "Git_LF_sha256": "b23a0724c36cd47727e65c5b4942da1f7ee86b3d4b80d403d598e8c150c541e3",
+      "raw_bytes": 2402,
+      "git_bytes": 2343
+    }
+  ],
+  "new_issues": 0,
+  "new_comments": 0,
+  "API_mutations": 0,
+  "product_replays": 0,
+  "metadata_collector_failure": "Initial read-only collector cp1252 U+2192 printing failure1, partial search not claimed complete; bounded4GET200 #5/#30 recovery saved before UTF8 printing, no product replay",
+  "limitations": [
+    "Windows/Python3.12local only; no local3.11/3.13/Linux or postmerge remote CI observation",
+    "Renderer/CLI/MCP/DeepAgents/npm/streaming implementations absent at this15filemain, not borrowed or called regressions",
+    "No package builds/cleaninstall/networkCDN/browser/scale/10M executed",
+    "Actual schema/model JSON/errors are contract output, not rendered chart artifacts",
+    "This is one frozen default observation, no claim remote main remained unchanged later",
+    "No fulltoolkit/v1/900 completion or independent-review count inferred"
+  ],
+  "next_action": "R04 consume exact-source numeric PASS and decide #30 closure; retain #5/dashboard728 strictRED and advance gated next usable product slice. QA13 runs no next default iteration until actual merge/new useful manager grant."
+}

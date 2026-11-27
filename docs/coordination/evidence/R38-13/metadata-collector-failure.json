@@ -1,0 +1,9 @@
+{
+  "command": "project venv python.exe - (initial read-only schema/dashboard issue search collector)",
+  "exit": 1,
+  "failure": "UnicodeEncodeError: cp1252 cannot encode U+2192 while printing an existing issue27 comment",
+  "evidence_source": "Actual preceding native shell result/traceback; not a new product failure or a complete saved API receipt",
+  "product_test_replays": 0,
+  "API_writes": 0,
+  "recovery_scope": "ONLY explicit existing issues5 and30 body/comments, UTF8 child/save before print; no repeated broad search/default/CI queries"
+}

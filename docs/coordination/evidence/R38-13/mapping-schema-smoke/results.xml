@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="7" time="0.149" timestamp="2026-11-27T22:30:37.478802+05:30" hostname="SandeshAcer"><testcase classname="test_merged_mapping" name="test_mixed_mapping_root_and_child_literal_json_roundtrip_without_mutation[UserDict-mappingproxy]" time="0.002" /><testcase classname="test_merged_mapping" name="test_mixed_mapping_root_and_child_literal_json_roundtrip_without_mutation[mappingproxy-UserDict]" time="0.001" /><testcase classname="test_merged_mapping" name="test_mixed_mapping_failure_preserves_root_and_child_inputs[root]" time="0.001" /><testcase classname="test_merged_mapping" name="test_mixed_mapping_failure_preserves_root_and_child_inputs[child]" time="0.001" /><testcase classname="test_merged_mapping" name="test_known_728_invalid_dashboard_forms_must_be_rejected_by_published_schema[{&quot;kind&quot;:&quot;dashboard&quot;,&quot;charts&quot;:[]}]" time="0.001"><failure message="AssertionError: Known dashboard-schema constraints are still absent from this main slice&#10;assert not True">wire = '{"kind":"dashboard","charts":[]}'
+
+    @pytest.mark.parametrize("wire", [
+        '{"kind":"dashboard","charts":[]}',
+        '{"charts":[{}]}',
+        '{"kind":"dashboard","charts":[{"kind":"dashboard","charts":[{}]}]}',
+    ])
+    def test_known_728_invalid_dashboard_forms_must_be_rejected_by_published_schema(wire):
+        """Retain actual known RED; this is not a numeric-coercion regression or xfail."""
+        value = json.loads(wire)
+        with pytest.raises(ValidationError):
+            ChartSpec.model_validate_json(wire)
+        schema_accepts = SCHEMA.is_valid(value)
+        OBSERVATIONS.append({
+            "known_728_literal_wire": wire, "runtime_rejects": True,
+            "schema_accepts": schema_accepts,
+        })
+&gt;       assert not schema_accepts, "Known dashboard-schema constraints are still absent from this main slice"
+E       AssertionError: Known dashboard-schema constraints are still absent from this main slice
+E       assert not True
+
+..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r38_probes\role13\test_merged_mapping.py:90: AssertionError</failure></testcase><testcase classname="test_merged_mapping" name="test_known_728_invalid_dashboard_forms_must_be_rejected_by_published_schema[{&quot;charts&quot;:[{}]}]" time="0.002"><failure message="AssertionError: Known dashboard-schema constraints are still absent from this main slice&#10;assert not True">wire = '{"charts":[{}]}'
+
+    @pytest.mark.parametrize("wire", [
+        '{"kind":"dashboard","charts":[]}',
+        '{"charts":[{}]}',
+        '{"kind":"dashboard","charts":[{"kind":"dashboard","charts":[{}]}]}',
+    ])
+    def test_known_728_invalid_dashboard_forms_must_be_rejected_by_published_schema(wire):
+        """Retain actual known RED; this is not a numeric-coercion regression or xfail."""
+        value = json.loads(wire)
+        with pytest.raises(ValidationError):
+            ChartSpec.model_validate_json(wire)
+        schema_accepts = SCHEMA.is_valid(value)
+        OBSERVATIONS.append({
+            "known_728_literal_wire": wire, "runtime_rejects": True,
+            "schema_accepts": schema_accepts,
+        })
+&gt;       assert not schema_accepts, "Known dashboard-schema constraints are still absent from this main slice"
+E       AssertionError: Known dashboard-schema constraints are still absent from this main slice
+E       assert not True
+
+..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r38_probes\role13\test_merged_mapping.py:90: AssertionError</failure></testcase><testcase classname="test_merged_mapping" name="test_known_728_invalid_dashboard_forms_must_be_rejected_by_published_schema[{&quot;kind&quot;:&quot;dashboard&quot;,&quot;charts&quot;:[{&quot;kind&quot;:&quot;dashboard&quot;,&quot;charts&quot;:[{}]}]}]" time="0.001"><failure message="AssertionError: Known dashboard-schema constraints are still absent from this main slice&#10;assert not True">wire = '{"kind":"dashboard","charts":[{"kind":"dashboard","charts":[{}]}]}'
+
+    @pytest.mark.parametrize("wire", [
+        '{"kind":"dashboard","charts":[]}',
+        '{"charts":[{}]}',
+        '{"kind":"dashboard","charts":[{"kind":"dashboard","charts":[{}]}]}',
+    ])
+    def test_known_728_invalid_dashboard_forms_must_be_rejected_by_published_schema(wire):
+        """Retain actual known RED; this is not a numeric-coercion regression or xfail."""
+        value = json.loads(wire)
+        with pytest.raises(ValidationError):
+            ChartSpec.model_validate_json(wire)
+        schema_accepts = SCHEMA.is_valid(value)
+        OBSERVATIONS.append({
+            "known_728_literal_wire": wire, "runtime_rejects": True,
+            "schema_accepts": schema_accepts,
+        })
+&gt;       assert not schema_accepts, "Known dashboard-schema constraints are still absent from this main slice"
+E       AssertionError: Known dashboard-schema constraints are still absent from this main slice
+E       assert not True
+
+..\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\tests\r38_probes\role13\test_merged_mapping.py:90: AssertionError</failure></testcase></testsuite></testsuites>
