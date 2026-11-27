@@ -1,0 +1,458 @@
+{
+  "role": "R22-04-owned-unwind-review",
+  "session": "ses_de5678314ffeuDXtC7RfGsbD6V",
+  "source_kind": "local committed partial source; not16 final handoff or claimed remote publication",
+  "target_commit": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+  "target_parent": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+  "target_changed_paths": [
+    "python/deepviz/src/deepviz/normalize.py",
+    "python/deepviz/tests/test_r17_normalizer_boundaries.py"
+  ],
+  "reviewed_full_diff": "normalize.py +78/-66 (144 changed lines) plus NEW unchanged87lineauthor P1test; full connected adapters/callers/source lifetime reviewed",
+  "target_checkout": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-04-source5ba-ses_de5678314ffeuDXtC7RfGsbD6V",
+  "target_checkout_clean_before_after": true,
+  "source_git_byte_identity_before_after_same_process": {
+    "target": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-04-external-run-ses_de5678314ffeuDXtC7RfGsbD6V",
+    "modules": {
+      "python/deepviz/src/deepviz/__init__.py": {
+        "real_import_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-04-source5ba-ses_de5678314ffeuDXtC7RfGsbD6V\\python\\deepviz\\src\\deepviz\\__init__.py",
+        "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+      },
+      "python/deepviz/src/deepviz/models.py": {
+        "real_import_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-04-source5ba-ses_de5678314ffeuDXtC7RfGsbD6V\\python\\deepviz\\src\\deepviz\\models.py",
+        "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+      },
+      "python/deepviz/src/deepviz/normalize.py": {
+        "real_import_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-04-source5ba-ses_de5678314ffeuDXtC7RfGsbD6V\\python\\deepviz\\src\\deepviz\\normalize.py",
+        "sha256": "eef44a7df71926932fc14b33ff47225903b30824c2435e74b9707b49ed357f2b"
+      },
+      "python/deepviz/src/deepviz/render.py": {
+        "real_import_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-04-source5ba-ses_de5678314ffeuDXtC7RfGsbD6V\\python\\deepviz\\src\\deepviz\\render.py",
+        "sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+      },
+      "python/deepviz/src/deepviz/engines.py": {
+        "real_import_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-04-source5ba-ses_de5678314ffeuDXtC7RfGsbD6V\\python\\deepviz\\src\\deepviz\\engines.py",
+        "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de"
+      }
+    },
+    "tests_and_config": {
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-04-source5ba-ses_de5678314ffeuDXtC7RfGsbD6V\\python\\deepviz\\tests\\test_r17_normalizer_boundaries.py": {
+        "git_object": "5ba860305dcc86ac2f95f01705b984d2b40f2799:python/deepviz/tests/test_r17_normalizer_boundaries.py",
+        "sha256": "4451d287cfba3cf2e18a3c5174341eeee30436b0304d6e6591c83125a0629068"
+      },
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-04-utf8-field-envelope-ses_de5678314ffeuDXtC7RfGsbD6V\\artifacts\\local\\R22-04\\immutable-original\\test_r13_original_reducer_ownership.py": {
+        "git_object": "8a10108752567f6d0faac700240c4acf77b32556:tests/r13_probes/role15/test_reducer_source_ownership.py",
+        "sha256": "5a9ebaba4968381624d20f646afbd8105531be4bfd179fe56fa5accb7118314e"
+      },
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-04-source5ba-ses_de5678314ffeuDXtC7RfGsbD6V\\pyproject.toml": {
+        "git_object": "5ba860305dcc86ac2f95f01705b984d2b40f2799:pyproject.toml",
+        "sha256": "51b3c90fbf70162de674c63a239aa419ea95958355579ae931d9047540b2ca3f"
+      },
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-04-utf8-field-envelope-ses_de5678314ffeuDXtC7RfGsbD6V\\tests\\r22_probes\\role04\\provenance_guard.py": {
+        "sha256": "23ca379a05d9d8e4839c08a9b0e3a9e81148b63a24e98ed2d27d3c57182f86cc"
+      },
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-04-utf8-field-envelope-ses_de5678314ffeuDXtC7RfGsbD6V\\tests\\r22_probes\\role04\\test_owned_unwind_review.py": {
+        "sha256": "017be32f3c395a4389d8b7068283172bedef5a85a74afdc50500c7c4ae28559c"
+      }
+    }
+  },
+  "same_process_identity_equal": true,
+  "same_process_receipt_sha256": "6ff8f65424ae833bf7ab6354068f4c23297283d02f49f6911860791b49fa7188",
+  "publication_branch": "agents/r10-04-utf8-field-envelope",
+  "prior_own_head_remote": "9be3dc01d6808e3beaf16f387e49673176069510",
+  "own_product_originaltests_schema_unchanged_diff_exit": 0,
+  "execution": {
+    "pytest_exit": 0,
+    "tests": 18,
+    "passed": 18,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 4.6,
+    "author_file_execution_count": 1,
+    "unchanged_author_cases": 5,
+    "unchanged_original_failure_cases": 4,
+    "new_independent_cases": 9,
+    "ruff_exit": 0,
+    "mypy_exit": 0,
+    "own_python_files": 2,
+    "cwd_external_to_both_source_and_test_tree": true
+  },
+  "environment": {
+    "os_name": "nt",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.16",
+    "pytest": "9.2.0",
+    "pyarrow": "26.0.1",
+    "venv": "existing MAIN dev venv read-only; no install/environment change"
+  },
+  "original_oracle": {
+    "commit": "8a10108752567f6d0faac700240c4acf77b32556",
+    "path": "tests/r13_probes/role15/test_reducer_source_ownership.py",
+    "sha256": "5a9ebaba4968381624d20f646afbd8105531be4bfd179fe56fa5accb7118314e",
+    "expectations": "byte-exact entire original copy; selected only four unchanged original reducer guard cases",
+    "known_original_result": "R13-15 baseline4 genuine ownership failures with17positive; not rerun as21matrix here",
+    "current_four_results": [
+      {
+        "name": "test_reducer_state_guard_releases_owned_source_after_valid_prefix[csv]",
+        "class": "",
+        "seconds": 0.651,
+        "properties": {
+          "error_stage": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}",
+          "handles_closed_before_test_cleanup": "[true]",
+          "rename_before_test_cleanup": "null",
+          "rename_after_test_cleanup": "null"
+        },
+        "passed": true,
+        "verified_original_invariants": {
+          "prefix_rows": 32,
+          "actual_reducer_input_count": 256,
+          "owned_closed_before_cleanup": true,
+          "windows_rename_before_cleanup": true,
+          "windows_rename_after_cleanup": true
+        }
+      },
+      {
+        "name": "test_reducer_state_guard_releases_owned_source_after_valid_prefix[jsonl]",
+        "class": "",
+        "seconds": 0.441,
+        "properties": {
+          "error_stage": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}",
+          "handles_closed_before_test_cleanup": "[true]",
+          "rename_before_test_cleanup": "null",
+          "rename_after_test_cleanup": "null"
+        },
+        "passed": true,
+        "verified_original_invariants": {
+          "prefix_rows": 32,
+          "actual_reducer_input_count": 256,
+          "owned_closed_before_cleanup": true,
+          "windows_rename_before_cleanup": true,
+          "windows_rename_after_cleanup": true
+        }
+      },
+      {
+        "name": "test_reducer_state_guard_releases_owned_source_after_valid_prefix[arrow]",
+        "class": "",
+        "seconds": 1.032,
+        "properties": {
+          "error_stage": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}",
+          "handles_closed_before_test_cleanup": "[true]",
+          "rename_before_test_cleanup": "null",
+          "rename_after_test_cleanup": "null"
+        },
+        "passed": true,
+        "verified_original_invariants": {
+          "prefix_rows": 32,
+          "actual_reducer_input_count": 256,
+          "owned_closed_before_cleanup": true,
+          "windows_rename_before_cleanup": true,
+          "windows_rename_after_cleanup": true
+        }
+      },
+      {
+        "name": "test_reducer_state_guard_releases_owned_source_after_valid_prefix[parquet]",
+        "class": "",
+        "seconds": 0.661,
+        "properties": {
+          "error_stage": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}",
+          "handles_closed_before_test_cleanup": "[true]",
+          "rename_before_test_cleanup": "null",
+          "rename_after_test_cleanup": "null"
+        },
+        "passed": true,
+        "verified_original_invariants": {
+          "prefix_rows": 32,
+          "actual_reducer_input_count": 256,
+          "owned_closed_before_cleanup": true,
+          "windows_rename_before_cleanup": true,
+          "windows_rename_after_cleanup": true
+        }
+      }
+    ]
+  },
+  "case_results": [
+    {
+      "name": "test_owned_jsonl_unwinds_before_downstream_exception_returns[plan]",
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "seconds": 0.015,
+      "properties": {},
+      "passed": true
+    },
+    {
+      "name": "test_owned_jsonl_unwinds_before_downstream_exception_returns[late-flatten]",
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "seconds": 0.01,
+      "properties": {},
+      "passed": true
+    },
+    {
+      "name": "test_owned_jsonl_unwinds_before_downstream_exception_returns[selected-path-plan]",
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "seconds": 0.02,
+      "properties": {},
+      "passed": true
+    },
+    {
+      "name": "test_borrowed_generator_is_not_closed_when_planning_raises",
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "seconds": 0.003,
+      "properties": {},
+      "passed": true
+    },
+    {
+      "name": "test_borrowed_second_line_jsonl_parse_failure_keeps_stream_usable",
+      "class": "python.deepviz.tests.test_r17_normalizer_boundaries",
+      "seconds": 0.001,
+      "properties": {},
+      "passed": true
+    },
+    {
+      "name": "test_reducer_state_guard_releases_owned_source_after_valid_prefix[csv]",
+      "class": "",
+      "seconds": 0.651,
+      "properties": {
+        "error_stage": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}",
+        "handles_closed_before_test_cleanup": "[true]",
+        "rename_before_test_cleanup": "null",
+        "rename_after_test_cleanup": "null"
+      },
+      "passed": true,
+      "verified_original_invariants": {
+        "prefix_rows": 32,
+        "actual_reducer_input_count": 256,
+        "owned_closed_before_cleanup": true,
+        "windows_rename_before_cleanup": true,
+        "windows_rename_after_cleanup": true
+      }
+    },
+    {
+      "name": "test_reducer_state_guard_releases_owned_source_after_valid_prefix[jsonl]",
+      "class": "",
+      "seconds": 0.441,
+      "properties": {
+        "error_stage": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}",
+        "handles_closed_before_test_cleanup": "[true]",
+        "rename_before_test_cleanup": "null",
+        "rename_after_test_cleanup": "null"
+      },
+      "passed": true,
+      "verified_original_invariants": {
+        "prefix_rows": 32,
+        "actual_reducer_input_count": 256,
+        "owned_closed_before_cleanup": true,
+        "windows_rename_before_cleanup": true,
+        "windows_rename_after_cleanup": true
+      }
+    },
+    {
+      "name": "test_reducer_state_guard_releases_owned_source_after_valid_prefix[arrow]",
+      "class": "",
+      "seconds": 1.032,
+      "properties": {
+        "error_stage": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}",
+        "handles_closed_before_test_cleanup": "[true]",
+        "rename_before_test_cleanup": "null",
+        "rename_after_test_cleanup": "null"
+      },
+      "passed": true,
+      "verified_original_invariants": {
+        "prefix_rows": 32,
+        "actual_reducer_input_count": 256,
+        "owned_closed_before_cleanup": true,
+        "windows_rename_before_cleanup": true,
+        "windows_rename_after_cleanup": true
+      }
+    },
+    {
+      "name": "test_reducer_state_guard_releases_owned_source_after_valid_prefix[parquet]",
+      "class": "",
+      "seconds": 0.661,
+      "properties": {
+        "error_stage": "{\"frames\": [\"normalize\", \"add\", \"_check_retained_bytes\"], \"input_count\": 256, \"prefix_rows\": 32}",
+        "handles_closed_before_test_cleanup": "[true]",
+        "rename_before_test_cleanup": "null",
+        "rename_after_test_cleanup": "null"
+      },
+      "passed": true,
+      "verified_original_invariants": {
+        "prefix_rows": 32,
+        "actual_reducer_input_count": 256,
+        "owned_closed_before_cleanup": true,
+        "windows_rename_before_cleanup": true,
+        "windows_rename_after_cleanup": true
+      }
+    },
+    {
+      "name": "test_owned_success_closes_once_preserves_rows_then_allows_windows_unlink[csv]",
+      "class": "",
+      "seconds": 0.013,
+      "properties": {},
+      "passed": true
+    },
+    {
+      "name": "test_owned_success_closes_once_preserves_rows_then_allows_windows_unlink[jsonl]",
+      "class": "",
+      "seconds": 0.013,
+      "properties": {},
+      "passed": true
+    },
+    {
+      "name": "test_late_actual_parser_failure_unwinds_only_owned_file_and_keeps_original_cause[owned-csv]",
+      "class": "",
+      "seconds": 0.015,
+      "properties": {
+        "close_before_caller_cleanup": "1",
+        "retained_traceback": "True",
+        "parser_cause_type": "Error"
+      },
+      "passed": true
+    },
+    {
+      "name": "test_late_actual_parser_failure_unwinds_only_owned_file_and_keeps_original_cause[owned-jsonl]",
+      "class": "",
+      "seconds": 0.014,
+      "properties": {
+        "close_before_caller_cleanup": "1",
+        "retained_traceback": "True",
+        "parser_cause_type": "JSONDecodeError"
+      },
+      "passed": true
+    },
+    {
+      "name": "test_late_actual_parser_failure_unwinds_only_owned_file_and_keeps_original_cause[borrowed-csv]",
+      "class": "",
+      "seconds": 0.015,
+      "properties": {
+        "close_before_caller_cleanup": "0",
+        "retained_traceback": "True",
+        "parser_cause_type": "Error"
+      },
+      "passed": true
+    },
+    {
+      "name": "test_late_actual_parser_failure_unwinds_only_owned_file_and_keeps_original_cause[borrowed-jsonl]",
+      "class": "",
+      "seconds": 0.014,
+      "properties": {
+        "close_before_caller_cleanup": "0",
+        "retained_traceback": "True",
+        "parser_cause_type": "JSONDecodeError"
+      },
+      "passed": true
+    },
+    {
+      "name": "test_same_read_exception_object_propagates_after_prefix_without_caller_close[owned]",
+      "class": "",
+      "seconds": 0.012,
+      "properties": {
+        "same_exception_object": "True",
+        "delivered_before_fault": "40",
+        "close_before_caller_cleanup": "1"
+      },
+      "passed": true
+    },
+    {
+      "name": "test_same_read_exception_object_propagates_after_prefix_without_caller_close[borrowed]",
+      "class": "",
+      "seconds": 0.018,
+      "properties": {
+        "same_exception_object": "True",
+        "delivered_before_fault": "40",
+        "close_before_caller_cleanup": "0"
+      },
+      "passed": true
+    },
+    {
+      "name": "test_plain_borrowed_iterator_exception_is_not_replaced_or_explicitly_closed",
+      "class": "",
+      "seconds": 0.002,
+      "properties": {},
+      "passed": true
+    }
+  ],
+  "finite_original_fixtures": [
+    {
+      "path": "artifacts/local/R22-04/pytest-once/r13-bounded-sources0/unique.arrow",
+      "bytes": 17695768,
+      "sha256": "c796d4439137dd61d59ed7eb37928de42f527f140d7e994557832fcfe8153477"
+    },
+    {
+      "path": "artifacts/local/R22-04/pytest-once/r13-bounded-sources0/unique.csv",
+      "bytes": 17691214,
+      "sha256": "b2eaf01193b3597cb9f79918e36c9514312580d73a8f9f5e224dfd8fa3e4db67"
+    },
+    {
+      "path": "artifacts/local/R22-04/pytest-once/r13-bounded-sources0/unique.jsonl",
+      "bytes": 17694450,
+      "sha256": "2bdf76d979e28b7fe1f6aa5e0ac1cb8fec224b2432bad702990788ac647350d0"
+    },
+    {
+      "path": "artifacts/local/R22-04/pytest-once/r13-bounded-sources0/unique.parquet",
+      "bytes": 836514,
+      "sha256": "6fe542b00cd4ed13718fbf42a2645b731fb2223581e5fff52d20c202f613eb85"
+    }
+  ],
+  "maximum_original_fixture_bytes": 17695768,
+  "independent_controls": "owned CSV/JSONL success exact3rows and one close; late actual malformed CSV/JSONL after40rows xowned/borrowed with retained traceback and parsercause; exactsame EIO object after40rows xowned/borrowed; plain borrowed iterator sameexception/zeroexplicitclose. Real Windows rename/unlink before owned testcleanup; borrowed0close before explicitcallerclose1; synthetic unrelated caller file remains.",
+  "read_only_review": {
+    "no_ExitStack_or_iterclose_symbol_at_target": true,
+    "actual_owned_contexts": "_path_rows232 with realpathstream; _binary_rows210/216 ParquetFile/Arrowstream contexts",
+    "adapter_root_lifetime": "_records484-486 retains internal source before selectedpath; finally518-521 closes onlyadapter root; source is data bypasses callerclose",
+    "outer_scope": "normalize719-755 finallyrows.close spans prefix/plan/reduce/reservoir; exhaustedgenerator.close is harmless",
+    "borrowed_stream_fix": "_without_bom94-96 explicit for-loop does not forwardclose to callerstream; only library-created parsergenerator is closed",
+    "borrowed_arrow_review": "_arrow_rows forbatch does not forwardclose to callerRecordBatchReader; runtimeborrowedArrownotpartofthisnew9subset",
+    "scope": "no record/count/reduction/loss policy changed in inspected diff"
+  },
+  "new_product_failure_observed": false,
+  "disposition": "Narrow P1 subset fixed: original four actual reducer guard resource invariants now PASS plus5author/9independent controls; no uncovered blocker in this finite review. Not whole16/final candidate signoff.",
+  "launch_error": {
+    "initial_pytest_exit": 4,
+    "tests_executed": 0,
+    "cause": "PowerShell --basetemp=(Join-Path...) split into empty --basetemp= and path; same junitxml transport issue",
+    "minimal_argv_repro_exit": 0,
+    "corrected_argv_diag_exit": 0,
+    "xml_and_sessionstart_receipt_absent_before_corrected_execution": true,
+    "fix": "separate --basetemp $base --junitxml $xml; no source/test edits or author replay"
+  },
+  "accidental_search_limit": "One broad read-only text search returned short R17-16 report snippets; not followed/polled/used as results. Frozen source/originalR13Git bytes alone supply this review/test evidence.",
+  "git_publication_preflight": {
+    "expected_https_origin_verified": true,
+    "existing_own_remote_exact_previous_SHA": "9be3dc01d6808e3beaf16f387e49673176069510",
+    "credential_helper": "manager",
+    "git_author_configured": true,
+    "api_calls": 0,
+    "fresh_authenticated_GET_user": "NOT performed: explicit assignment API prohibition",
+    "no_auth_changes_or_credentials_captured": true
+  },
+  "tested_own_file_sha256": {
+    "tests/r22_probes/role04/provenance_guard.py": "23ca379a05d9d8e4839c08a9b0e3a9e81148b63a24e98ed2d27d3c57182f86cc",
+    "tests/r22_probes/role04/test_owned_unwind_review.py": "017be32f3c395a4389d8b7068283172bedef5a85a74afdc50500c7c4ae28559c",
+    "tests/r22_probes/role04/README.md": "a12bb1b942f98621fa9b78e6deea225a69e61e893725a746d5e2d427c6755bba"
+  },
+  "raw_local_root": "artifacts/local/R22-04/",
+  "raw_artifact_sha256": {
+    "ruff-initial.log": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+    "mypy-initial.log": "07a5ca23e5d39b2565c0c1361f0556b8c3c75484bba05841f400436d190bb660",
+    "lint-type-initial-exits.json": "42d2ce03ccd2480020f09f4d163815acc822d244b4a520a83b25346707321d35",
+    "preexecution-source-test-proof.json": "bcfd86251cfaff2c34cad76d0321b28868fdb3bb756f0e878e8dda417026a867",
+    "owned-unwind-once.log": "3da7e1388abc0b1622dc05aa8ae726435b00dc9413d669ff65d06250efa48743",
+    "once-command-exits.json": "9a1c8cdcb45dce8d0b1c613f957baaf57cfdfa852d05d7a4e762eb92147ae1da",
+    "owned-unwind-executed.log": "749e676950c9736052edb7faf4237e574118f40e65ab6a32e59178db0284387c",
+    "owned-unwind-executed.xml": "95ce4f4f644f58da6b8955e1d07cd94b8bb2eda0821a582700e0f898b81d8e72",
+    "executed-command-exits.json": "c9230e47545cc73ee8ece4487de8cff9f90f6cde57780ae3ffb59a99404bc0f2",
+    "same-process-before-after.json": "6ff8f65424ae833bf7ab6354068f4c23297283d02f49f6911860791b49fa7188",
+    "immutable-original/test_r13_original_reducer_ownership.py": "5a9ebaba4968381624d20f646afbd8105531be4bfd179fe56fa5accb7118314e"
+  },
+  "limits": [
+    "local immutable5ba only, not16 remote/final progress/candidate",
+    "author5cases once/original4only+NEW9, no broad21/43/64 replay",
+    "borrowedArrowfuturebatch semantics code-reviewed not independentlyrerun here",
+    "EIO is explicit deterministic fault injection, not actualdiskfailure",
+    "no runtimecloseerror-policychange/no producer source edit",
+    "no fullsuites/10M/RSS/TypeScript/SUM/recommendation/browser/render/npm/build/API/workflows/provider/spawn",
+    "no issue/PR/CI/release/signoff/900 claim"
+  ],
+  "next_action": "Small exactownedpublication/nonforcepush/readback; R04 may use this source-specificP1subset independently while waiting actual16completehandoff and finalfrozen-sourcegates"
+}
