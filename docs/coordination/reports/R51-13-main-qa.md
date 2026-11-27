@@ -29,6 +29,12 @@ The pytest plus literal-oracle commands above executed **154 test invocations** 
 
 Commands and evidence hashes: `evidence/R51-13/commands.json`, `summary.json`, `source-freeze.json`, `integrity.json`; source/test logs and raw generated JSON in the same directory. Own branch publication and actual remote SHA are recorded in the final publication addendum after the push/readback.
 
+## OWN-branch publication addendum
+
+- Sanitized owned report, probe and exact-source test evidence were committed on `agents/r10-13-ci-negative-controls` as **`cce9dc8590c8c36f8732592ec5113dd185404ca4`** (`test: verify merged main schema contract`). `git push origin agents/r10-13-ci-negative-controls` exited0; immediate `git ls-remote --heads origin agents/r10-13-ci-negative-controls` exited0 and returned the exact same SHA. Local `HEAD` matched and post-push `git status --short --branch` showed clean branch. No force push.
+- Before the push, authenticated read-only `GET /user` returned200 for `sandeshbagmare`; credential remained in memory and was not logged. No issue, PR, default branch, or CI API/write action was made. Raw sanitized command/identity receipt: `evidence/R51-13/publication.json`.
+- This is an owned feature-branch checkpoint only, not a PR, merge, live-default reread, remote CI result, or toolkit approval.
+
 ## Assignment, exact source, and boundaries
 
 - Owner: role13 actual ID `ses_de56780caffekQ9gdZ58EgQwb5`; SAME session, OWN branch `agents/r10-13-ci-negative-controls`, observed clean at **98b5888faf073181277b32fa780f31df3ef6195f**. No new child, spawn, polling, production/source fix, PR/merge/close authority.

@@ -1,0 +1,71 @@
+{
+  "branch": "agents/r10-13-ci-negative-controls",
+  "base_before_publication": "98b5888faf073181277b32fa780f31df3ef6195f",
+  "commit": "cce9dc8590c8c36f8732592ec5113dd185404ca4",
+  "commit_subject": "test: verify merged main schema contract",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--heads",
+        "origin",
+        "agents/r10-13-ci-negative-controls"
+      ],
+      "exit": 0,
+      "stdout": "98b5888faf073181277b32fa780f31df3ef6195f\trefs/heads/agents/r10-13-ci-negative-controls",
+      "purpose": "confirm exact owned remote baseline before publication"
+    },
+    {
+      "argv": [
+        "git",
+        "push",
+        "origin",
+        "agents/r10-13-ci-negative-controls"
+      ],
+      "exit": 0,
+      "stdout": "98b5888..cce9dc8  agents/r10-13-ci-negative-controls -> agents/r10-13-ci-negative-controls"
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--heads",
+        "origin",
+        "agents/r10-13-ci-negative-controls"
+      ],
+      "exit": 0,
+      "stdout": "cce9dc8590c8c36f8732592ec5113dd185404ca4\trefs/heads/agents/r10-13-ci-negative-controls"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "cce9dc8590c8c36f8732592ec5113dd185404ca4"
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--short",
+        "--branch"
+      ],
+      "exit": 0,
+      "stdout": "## agents/r10-13-ci-negative-controls...origin/agents/r10-13-ci-negative-controls"
+    }
+  ],
+  "read_only_identity_check": {
+    "method": "authenticated GET https://api.github.com/user",
+    "status": 200,
+    "login": "sandeshbagmare",
+    "token_persisted_or_printed": false
+  },
+  "scope": "OWN branch only; no PR/default/issue/CI mutation or query; no force push",
+  "limitations": [
+    "does not prove remote workflow/CI",
+    "does not read current main after QA"
+  ]
+}
