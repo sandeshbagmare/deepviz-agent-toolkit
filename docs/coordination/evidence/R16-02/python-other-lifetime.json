@@ -1,0 +1,11 @@
+{
+  "unique_input_groups": 1000,
+  "rows": 4000,
+  "output_records": 10,
+  "traced_current_bytes": 736342,
+  "traced_peak_bytes": 989325,
+  "warnings": [
+    "Group cardinality exceeded max_points=10; first 9 groups are exact and all non-retained groups contribute to the final other bucket (including weighted mean)."
+  ],
+  "method": "CPython tracemalloc public grouped stream; memory observed not a process-heap cap"
+}

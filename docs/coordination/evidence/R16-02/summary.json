@@ -1,0 +1,128 @@
+{
+  "observed_at": "2026-11-27T14:50:23.695171+00:00",
+  "owner": "ses_de5678328ffeYCFXQhRPKd4a9h",
+  "source_commit": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+  "unchanged_before_after_source_and_compiled": true,
+  "python_final": {
+    "tests": 3,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "passed": 3,
+    "pytest_elapsed_seconds": 2.77,
+    "exit": 0
+  },
+  "typescript_final": {
+    "tests": 5,
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0,
+    "elapsed_ms": 4439.0683,
+    "exit": 0
+  },
+  "initial_runs_overlap_final_not_extra_coverage": {
+    "python": {
+      "passed": 2,
+      "failed": 1,
+      "exit": 1,
+      "reason": "Own test assumed Pydantic model_dump on dataclass; fixed own JSON serialization only"
+    },
+    "typescript": {
+      "passed": 4,
+      "failed": 1,
+      "exit": 1,
+      "reason": "Own sync test supplied generator to JSON sync normalizer; changed sync fixture only to record array. No early-read claim for preloaded array."
+    }
+  },
+  "focused_tools": {
+    "ts_build_exit": 0,
+    "ruff_exit": 0,
+    "mypy_exit": 0,
+    "mypy_own_files": 2
+  },
+  "test_names_python": [
+    "test_promotion_rejects_before_exhausting_a_public_near_budget_stream",
+    "test_eviction_other_and_fresh_calls_do_not_keep_a_promoted_state_per_unknown_key",
+    "test_input_integer_repr_guard_stops_before_growing_existing_fallback"
+  ],
+  "test_names_typescript": [
+    "incremental promotion admission near 16MiB: sync",
+    "incremental promotion admission near 16MiB: stream",
+    "one other bucket does not promote once per unknown category or leak exact state",
+    "non-JSON BigInt after established promotion rejects instead of entering internal integer state",
+    "compiled normalizer has its own immutable source map, not shared producer build"
+  ],
+  "probes_and_readme_working_hashes": {
+    "tests/r16_probes/role02/README.md": {
+      "sha256": "4134c1f23fe870702f9713cf56985c3ae323bbd0e3e3d901c8cad8ae89d9da2c",
+      "bytes": 3972,
+      "git_lf_sha256": "d8fd7063e757865ff295eb191967179060d8b82409f130f2c3ec8ac623c16f54"
+    },
+    "tests/r16_probes/role02/source_identity.py": {
+      "sha256": "34272666bbe3ca381f904dc508744647e770ed0142551436086af70fa4e08981",
+      "bytes": 2285,
+      "git_lf_sha256": "a2b4da27dd440abbcc23d154530d8cb6820c5e82ea77a41162ec9ef598bbbcaa"
+    },
+    "tests/r16_probes/role02/test_sum_state_security.mjs": {
+      "sha256": "3c4127a5d79ed2e2c634578aa431fda679038a591b9ceffc0bfb0c92aced0a9b",
+      "bytes": 4301,
+      "git_lf_sha256": "bbf68a606726c13520dde407f99125f044ce10f05fa3259568815757070ebfba"
+    },
+    "tests/r16_probes/role02/test_sum_state_security.py": {
+      "sha256": "44e15b7f395cded5ca4009cd03b638fcdab91bc617c355202e4d32d487f58fe2",
+      "bytes": 5138,
+      "git_lf_sha256": "0f632f728dd7c52c8e69913f122695ef2fd4c07acb79417a0aa35d18ff79d6a6"
+    }
+  },
+  "local_raw_log_hashes": {
+    "python-probes.log": {
+      "sha256": "68870306ca2dc0384352fb911a534ead84032b53f00bc66daa5245938bbcba14",
+      "bytes": 1162,
+      "git_lf_sha256": "68870306ca2dc0384352fb911a534ead84032b53f00bc66daa5245938bbcba14"
+    },
+    "python-probes.xml": {
+      "sha256": "4e3448eca35c294bc03ac8ecc8a57eaf45f0d3d34ed33d32801ad495615a1556",
+      "bytes": 1151,
+      "git_lf_sha256": "57b0a35e893ec25516375480d56ead86046dfecc1604cdb7dfb8f9de100182d9"
+    },
+    "typescript-probes.log": {
+      "sha256": "d098037a484df1c78032ac0833ef230575380d5c82adea482698749970f281ef",
+      "bytes": 3904,
+      "git_lf_sha256": "d098037a484df1c78032ac0833ef230575380d5c82adea482698749970f281ef"
+    },
+    "final/python-probes.log": {
+      "sha256": "6656e0bb69599f1880629d12935d13295648b4a925f1638ca0316a2616cd2b84",
+      "bytes": 202,
+      "git_lf_sha256": "6656e0bb69599f1880629d12935d13295648b4a925f1638ca0316a2616cd2b84"
+    },
+    "final/python-probes.xml": {
+      "sha256": "effd5aeddedcc695478ef82f8a9bf05988fd9bde7b14f6ddcc976b8b6f416cf2",
+      "bytes": 742,
+      "git_lf_sha256": "effd5aeddedcc695478ef82f8a9bf05988fd9bde7b14f6ddcc976b8b6f416cf2"
+    },
+    "final/typescript-probes.log": {
+      "sha256": "3cc15b7df1ea486ab8e15f0e9d5d8f99ec1f7bd2e935089c720281e5088165fe",
+      "bytes": 2422,
+      "git_lf_sha256": "3cc15b7df1ea486ab8e15f0e9d5d8f99ec1f7bd2e935089c720281e5088165fe"
+    },
+    "ruff-initial.log": {
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+      "bytes": 42,
+      "git_lf_sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    "mypy-initial.log": {
+      "sha256": "07a5ca23e5d39b2565c0c1361f0556b8c3c75484bba05841f400436d190bb660",
+      "bytes": 90,
+      "git_lf_sha256": "07a5ca23e5d39b2565c0c1361f0556b8c3c75484bba05841f400436d190bb660"
+    }
+  },
+  "disposition": "No new security/state-boundedness blocker established within exact scope; not final approval/integration/author signoff",
+  "limits": [
+    "No V8 heap or OS RSS measurements",
+    "Python tracemalloc only; no universal 16MiB process cap",
+    "No 2^53-count/OOM/privatecap patches/source edits/installs",
+    "No author23/old32MCP/fullsuite/fullscale/performance/value-oracle/browser replay",
+    "Python arbitrary ints not subject to float-only2151bit argument; disabled repr guard mode untested",
+    "Full goal/900/greenCI unmet"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "observed_at": "2026-11-27T14:47:05.112594+00:00",
+  "identity": "sandeshbagmare",
+  "repository": "sandeshbagmare/deepviz-agent-toolkit",
+  "pr31": {
+    "head": "5340bc69b7203ad7a9166543062482d819f9b705",
+    "state": "open",
+    "draft": true,
+    "merged": false
+  },
+  "checks": [
+    {
+      "name": "One-pass scale 1000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "One-pass scale 1000000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Python 3.11 lint, types, unit and integration",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "name": "Python 3.12 lint, types, unit and integration",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "name": "One-pass scale 10000000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "One-pass scale 10 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Python 3.13 lint, types, unit and integration",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "name": "One-pass scale 100000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Python and npm distribution checks (no publishing)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "npm build, types and tests (Node 24)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Raster visual regression (semantic pixel comparison)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "evidence",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "http_gets": [
+    {
+      "path": "/user",
+      "status": 200
+    },
+    {
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit",
+      "status": 200
+    },
+    {
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/pulls/31",
+      "status": 200
+    },
+    {
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/commits/5340bc69b7203ad7a9166543062482d819f9b705/check-runs?per_page=100",
+      "status": 200
+    }
+  ],
+  "api_writes": 0,
+  "scope": "Fresh identity before owned branch publication; no issue/PR mutation or progress polling"
+}

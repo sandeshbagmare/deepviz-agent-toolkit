@@ -1,0 +1,15 @@
+{
+  "method": "Independent Fraction/integer bound calculation, no production helper invocation or source mutation",
+  "maximum_finite_binary64_units_bits": 2098,
+  "js_safe_count_maximum": 9007199254740991,
+  "conservative_seed_plus_future_term_bound_bits": 2151,
+  "conservative_seed_explanation": "First promotion follows at least two observations; at most three finite seed terms plus remaining <=N-2 inputs gives <=N+1 terms",
+  "bound_condition": "Internal previous/correction/input seed terms finite binary64. It is a representation bound, not accuracy/rounding/heap proof.",
+  "payload_bits_to_bytes_ceiling": 269,
+  "typescript_reserved_bytes_per_promoted_group": 512,
+  "cpython_int_getsizeof_at_bound": 312,
+  "binary_string_characters_at_bound": 2151,
+  "decimal_string_characters_at_bound": 648,
+  "cpython_decimal_string_getsizeof_at_bound": 689,
+  "limitations": "No V8 object heap size measured; CPython object size cannot justify V8 header/allocator cost. 512B retained charge is not an RSS cap. Conversion temporaries and caller inputs are extra. Safe count maximum not physically exercised."
+}
