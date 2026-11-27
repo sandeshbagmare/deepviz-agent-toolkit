@@ -1,0 +1,51 @@
+{
+  "branch": "fix/r14-mcp-json-budget",
+  "head": "2e6968a10097dbfee0133c3ee253c1079ce303f3",
+  "status": "",
+  "remote": "2e6968a10097dbfee0133c3ee253c1079ce303f3\trefs/heads/fix/r14-mcp-json-budget",
+  "files": {
+    "python/deepviz/src/deepviz/mcp_server.py": {
+      "sha256": "9f1628e04749c3c3d2357607ac4cc0021f74e1119c6237aa36077a0fd67bf480",
+      "bytes": 6729
+    },
+    "python/deepviz/tests/test_r14_mcp_resource_budget.py": {
+      "sha256": "0406f524d22879e24606c594d7250124f0e298c7b47b05ddf50f39da55a18d9d",
+      "bytes": 7504
+    },
+    "docs/coordination/reports/R14-18-mcp-json-budget.md": {
+      "sha256": "957f59ca5e4b23a7fe10e66ca6de2485a6f721460bceeda764ee39fc658a6644",
+      "bytes": 22379
+    },
+    "docs/agent-state/ses_de567805bffdER1GlVd0ngLgKg.md": {
+      "sha256": "e08ab379f6201adb58984aba53b15c331160607342107ac7606f55021715a094",
+      "bytes": 6939
+    },
+    "docs/coordination/evidence/R14-18/p2-results.json": {
+      "sha256": "f680533ad9561fb1d70b85eca258a0b44ee8a6d50a8cf946f704fdde3b77e1a9",
+      "bytes": 3044
+    },
+    "docs/coordination/evidence/R14-18/p2-publication.json": {
+      "sha256": "bc71f5771bafb6031ff0442fc6710d9e788d10a9b41fadaf3cad79e6a0926c81",
+      "bytes": 2427
+    },
+    "docs/coordination/evidence/R14-18/capacity-alpha-beta.png": {
+      "sha256": "7f2888bcb4dd7176e1ee8e31d6fb7fb0b1624bcef5a2da6de98996126ec0f906",
+      "bytes": 12150
+    },
+    "docs/coordination/evidence/R14-18/full-python-results.json": {
+      "sha256": "154e49a307af961ff92c1b0aacc0edd4442c4fbcc88c147309c11f9f8c70230e",
+      "bytes": 91149
+    }
+  },
+  "head_before_final_receipt": "2e6968a10097dbfee0133c3ee253c1079ce303f3",
+  "source_ready_commit": "cd75c459ddba9f3d6bc0a5185b570af369fb4980",
+  "source_files_unchanged_since_source_ready": [],
+  "evidence_files_changed_in_last_commit": [
+    "docs/agent-state/ses_de567805bffdER1GlVd0ngLgKg.md",
+    "docs/coordination/evidence/R14-18/capacity-alpha-beta.png",
+    "docs/coordination/evidence/R14-18/p2-publication.json",
+    "docs/coordination/reports/R14-18-mcp-json-budget.md"
+  ],
+  "working_tree_before_final_receipt": " M docs/agent-state/ses_de567805bffdER1GlVd0ngLgKg.md\n M docs/coordination/reports/R14-18-mcp-json-budget.md\n?? docs/coordination/evidence/R14-18/final-handoff.json\n",
+  "receipt_note": "Source-ready cd75; final evidence-only receipt captures previously observed2e6968a remote. Final evidence commit SHA is returned to MAIN after non-force push/readback; no self-referential hash claimed."
+}

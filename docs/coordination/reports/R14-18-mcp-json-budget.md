@@ -13,6 +13,10 @@
 
 **Executable next action (root/R04):** accept source ownership handback; dispatch independent02/10 on this immutable source/qualified final evidence head; integrate only the2released source files +2NEWregression files with provenance, preserving current MAIN actual-ID/history/other-owner changes. Run current-candidate tests after building own npm prerequisite using its authorized build lane. The `_json(text, location)` helper signature on current MAIN was read-only rechecked compatible, but no validation is transferred across pins. Producer source edits end here; no background command remains.
 
+## Final evidence receipt
+
+Evidence-only follow-up **2e6968a10097dbfee0133c3ee253c1079ce303f3** was pushed non-force and read back at the same remote SHA. Source-ready head remains **cd75c459ddba9f3d6bc0a5185b570af369fb4980**; no source/test bytes changed afterward. `evidence/R14-18/final-handoff.json` records exact branch/head/remote and file hashes. This is the final producer checkpoint; source ownership is handed back to R04/root for independent02/10 retests and integration.
+
 ## Latest checkpoint — own gates complete; product acceptance still blocked
 
 - P1 published and remote-verified: **d65dfc0fd807d0335b858476de8cdf7c6b958711**.
