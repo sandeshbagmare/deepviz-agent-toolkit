@@ -103,3 +103,15 @@ for(const carrier of ['list','json','async'])test(`ordinary business errors pres
   const result=carrier==='async'?await normalizeStream(rows(),spec):normalize(carrier==='json'?JSON.stringify(source):source,spec);
   assert.equal(result.input_count,2);assert.deepEqual(result.records,expected);assert.deepEqual(result.warnings,[]);
 });
+
+for(const [name,values,expected] of [
+  ['normal-promoted-late',[1e308,1e200,1,-1e200,1e308,-1e308,-1e308],1],
+  ['tiny-promoted-late',[1e308,1,Number.MIN_VALUE,-1,1e308,-1e308,-1e308],Number.MIN_VALUE],
+  ['normal-never-overflow',[1e308,1e200,1,-1e200,-1e308],1],
+  ['tiny-never-overflow',[1e308,1,Number.MIN_VALUE,-1,-1e308],Number.MIN_VALUE],
+])for(const sign of [1,-1])for(const carrier of ['records','async'])test(`exact prefix SUM ${name} ${sign} ${carrier}`,async()=>{
+  const rows=values.map(v=>({g:'one',v:sign*v})),spec={kind:'bar',x:'g',y:'v',aggregation:'sum'};
+  async function* source(){yield* rows;}
+  const result=carrier==='records'?normalize(rows,spec):await normalizeStream(source(),spec);
+  assert.equal(result.input_count,values.length);assert.deepEqual(result.records,[{g:'one',v:sign*expected}]);assert.deepEqual(result.warnings,[]);
+});

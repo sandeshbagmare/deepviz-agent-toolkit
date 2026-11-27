@@ -477,19 +477,17 @@ class Reducer {
         this.reserve(512);group.cost+=512;group.exact=sumUnits(value);group.value=0;
         return;
       }
-      if(group.value===null) group.value=value;
-      else if(this.strategy==='sum') {
-        let previous=group.value,total=previous+value;
-        if(this.strategy==='sum' && !Number.isFinite(total)) {
-          // <=2151 bits for finite doubles and a safe-integer count; charge before retaining.
+      if(this.strategy==='sum') {
+        const previous=group.value??0,total=previous+value;
+        if(Number.isSafeInteger(previous) && Number.isSafeInteger(value) && Number.isSafeInteger(total)) group.value=total;
+        else {
+          // Promote the still-exact prefix before any rounding; <=2151 bits, charged first.
           this.reserve(512);group.cost+=512;
-          group.exact=sumUnits(previous)+sumUnits(group.correction)+sumUnits(value);
-          return;
+          group.exact=sumUnits(previous)+sumUnits(value);group.value=0;
         }
-        // Carry a bounded Neumaier correction with the group, including when it overflows into other.
-        group.correction=Number.isFinite(total)?group.correction+(Math.abs(previous)>=Math.abs(value)?(previous-total)+value:(value-total)+previous):0;
-        group.value=total;
+        return;
       }
+      if(group.value===null) group.value=value;
       else group.value=this.strategy==='min'?Math.min(group.value,value):this.strategy==='max'?Math.max(group.value,value):group.value+value;
       if(!Number.isFinite(group.value)) this.notice('Non-finite numeric values replaced with null');
       return;

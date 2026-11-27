@@ -641,25 +641,21 @@ class _Reducer:
             # One budgeted exact numerator avoids both overflow and subnormal double rounding.
             self._store(state, (state[1] or 0) + _sum_units(value), exponent=-1074)
             return
-        if self.strategy == "sum" and exponent == -1074:
-            self._store(state, state[1] + _sum_units(value), exponent=-1074)
-            return
         previous = state[1]
+        if self.strategy == "sum":
+            if exponent == -1074:
+                total = previous + _sum_units(value)
+            elif type(value) is int and (previous is None or type(previous) is int):
+                # Pure integer prefixes are already exact and keep their existing policy.
+                self._store(state, (previous or 0) + value)
+                return
+            else:
+                # Promote the still-exact prefix BEFORE a float can round away a residual.
+                total = _sum_units(previous if previous is not None else 0) + _sum_units(value)
+            self._store(state, total, exponent=-1074)
+            return
         if previous is None:
             total = value
-        elif self.strategy == "sum":
-            total = previous + value
-            if self.strategy == "sum" and isinstance(total, float) and not math.isfinite(total):
-                # Promote only overflowing sums; one budgeted integer, never a partial/input list.
-                units = _sum_units(previous) + _sum_units(correction) + _sum_units(value)
-                self._store(state, units, exponent=-1074)
-                return
-            if not isinstance(total, float) or math.isfinite(total):
-                # Neumaier compensation also survives transfer into the other bucket.
-                correction += (
-                    (previous - total) + value if abs(previous) >= abs(value)
-                    else (value - total) + previous
-                )
         elif self.strategy == "min":
             total = min(previous, value)
         else:

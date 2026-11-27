@@ -219,3 +219,26 @@ def test_borrowed_second_line_jsonl_parse_failure_keeps_stream_usable() -> None:
         assert source.readline() == '{"v":1}\n'
     finally:
         source.close()
+
+
+@pytest.mark.parametrize("iterator", [False, True], ids=["records", "one-pass"])
+@pytest.mark.parametrize("sign", [1, -1])
+@pytest.mark.parametrize("values,expected", [
+    ([1e308, 1e200, 1.0, -1e200, 1e308, -1e308, -1e308], 1.0),
+    ([1e308, 1.0, math.ulp(0.0), -1.0, 1e308, -1e308, -1e308], math.ulp(0.0)),
+    ([1e308, 1e200, 1.0, -1e200, -1e308], 1.0),
+    ([1e308, 1.0, math.ulp(0.0), -1.0, -1e308], math.ulp(0.0)),
+], ids=["normal-promoted-late", "tiny-promoted-late", "normal-never-overflow", "tiny-never-overflow"])
+def test_sum_keeps_exact_residual_before_any_possible_promotion(
+    values: list[float], expected: float, sign: int, iterator: bool,
+) -> None:
+    values = [sign * value for value in values]
+    expected *= sign
+    assert float(sum(map(Fraction, values), Fraction())) == expected
+    records = [{"g": "one", "v": value} for value in values]
+    result = normalize(iter(records) if iterator else records, {
+        "kind": "bar", "x": "g", "y": "v", "aggregation": "sum",
+    })
+    assert result.input_count == len(values)
+    assert result.records == [{"g": "one", "v": expected}]
+    assert result.warnings == []
