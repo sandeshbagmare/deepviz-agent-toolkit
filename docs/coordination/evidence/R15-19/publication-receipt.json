@@ -1,0 +1,44 @@
+{
+  "observed_utc": "2026-11-27T14:49:06.557559+00:00",
+  "branch": "agents/r10-19-real-backlog-commits",
+  "base": "974e8d7e4307e8063e77e95dfcd4e0f7aa7dd121",
+  "commit_argv": [
+    "git",
+    "commit",
+    "-m",
+    "docs: disposition actual Verification matrix failures",
+    "-m",
+    "Refs #20, #27. Audit completed run 45928608970: actual 38/36/240 failures, first AntV view assertion, 314 failure instances deduplicated to seven existing-issue acceptance groups. No source/workflow edits, issue closure or CI-green claim."
+  ],
+  "commit_exit": 0,
+  "staged_owned_paths_count": 11,
+  "author_configured": true,
+  "scope": "Scopedprocess/evidence only; no product/workflow/sourcepaths, issuePRmutation, rerun/poll/newcensus or finalacceptance.",
+  "meaningful_commit_sha": "b9534eab21fa13a37cb8f383b6691596355ef2b1",
+  "push_argv": [
+    "git",
+    "push",
+    "origin",
+    "HEAD:refs/heads/agents/r10-19-real-backlog-commits"
+  ],
+  "push_exit": 0,
+  "non_force": true,
+  "verified_utc": "2026-11-27T14:49:13.688997+00:00",
+  "ls_remote_argv": [
+    "git",
+    "ls-remote",
+    "--heads",
+    "origin",
+    "refs/heads/agents/r10-19-real-backlog-commits"
+  ],
+  "ls_remote_exit": 0,
+  "actual_remote_sha": "b9534eab21fa13a37cb8f383b6691596355ef2b1",
+  "remote_matches": true,
+  "own_status_exit": 0,
+  "own_status_porcelain": "",
+  "own_worktree_clean": true,
+  "final_diff_check_exit": 0,
+  "product_tests_run": 0,
+  "new_issue_census": 0,
+  "issues_PRs_mutated": 0
+}

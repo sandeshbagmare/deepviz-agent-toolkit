@@ -6,7 +6,7 @@
 - **314 failure instances → 242 distinct node IDs → seven disposition groups**, all linkedtoexistingissues. Newpreciseconditions:3.11deepJSONRecursionError(2),3.13comment-titleportableoracle(204). No new tickets orsource/workflowchanges.
 - ActualcheckoutPRmerge`aa66ea97` andofficialhead have **identicalGit tree7aecbc5f**; notanunattributedmerge-vs-headfailure.
 - **R04:** retainR12preallocationpriority; coordinateeligible18'sD07boundaryfix, then narrowevidence-backedoracle/policyrepairswithstrictnegatives and3.11–3.13retests.09/10remaintesters; no workflowbypassor3.13skip/pinjustified. Globalgreen/full900remainunmet.
-- Process-evidence check **51pass/0fail/exit0**14:43:28UTC; this is evidence-integrity only, **zero producttests orindependentfinalapprovals**. OWNpublicationreceipt below will recordactualSHA, notassumeapush.
+- Process-evidence check **51pass/0fail/exit0**14:43:28UTC; actualpublished-tree check **27pass/0fail/exit0**14:50:05UTC. These are evidence-integrity only, **zero producttests orindependentfinalapprovals**. MeaningfulOWNcommit **`b9534eab21fa13a37cb8f383b6691596355ef2b1`**, non-forcepush0/actualremoteSHAreadback0 at14:49:13UTC; narrowreceiptcheckpoint follows, notassumedrelease.
 
 ## Pre-work checkpoint — 2026-11-27, 14:18UTC
 
@@ -88,3 +88,13 @@ Next executable action: freshsafeGET/user+OWNremote974preflight, explicitNEWownR
 ### Prepublication harness failure retained — 14:47UTC
 
 Fresh14:46:09UTC GET/userHTTP200expectedlogin / ownremote974exact`ls-remote`0 / noauthmutation. Firstexplicitstagingcommand **exit1**, afterOWNfilescopied+staged: GitUTF8diffcapturedwithWindowsdefaultcp1252 caused`UnicodeDecodeError`byte0x9d, then`TypeError`onmissingstdout. This is an **ownPMreviewharness error**, not producttestfailure or successfulcompletedstage-review; no commit/pushattempt. Reconciliation14:47:01UTC readonlyhead/status/cachedpaths/whitespacecommands **all0**, preservednineownedstagedfiles, no source/workflowpaths. `publication-staging-failure.json`. Next: correct only own subprocess decodingtoexplicitUTF8/bytes, restageexplicitOWNupdatedreport/note/evidence, reviewactualfullcachedbytes/credentialpatterns beforecommit. No reset/discard/duplicateAPIcollection.
+
+## Actual OWN publication and persisted-tree evidence — 14:50UTC
+
+Correctedbytes/explicitUTF8stagedreview **exit0**, exact11ownedpaths/330,505inputbytes+manifest; cachedwhitespace0/credential+signedURLpatterns0. Earliercp1252stage-reviewfailure retainedunchanged, no productfailureerased. Existingauthorvalidated/OWNbranch974remotechecked, explicitmanifestexcludessource/workflow/othernotes/rootcanonical.
+
+Actualmeaningfulcommit **b9534eab21fa13a37cb8f383b6691596355ef2b1** (`docs: disposition actual Verification matrix failures`, honestRefs#20/#27), commit0 / **non-forcepush0** / `git ls-remote --heads origin refs/heads/agents/r10-19-real-backlog-commits` **0/exactb9534ea at14:49:13UTC**. Elevenownedfiles, no source/workflow/issuePRmutations/newcensus. `publication-receipt.json` fullsafecommands/exits.
+
+ActualpublishedGittreeverification14:50:05UTC **exit0:27pass/0fail**: counts314/242/seven,38/36/240, C02deepJSON2/C07commentoracle204, expectedhead/failure/11jobs/3fail8success, actualmerge-headsametree, redirect/secretlimits, IntegrationSKIP/notapproval/900gap, originalcp1252failurepreserved, no productsource/workflowdelta, ownworktreeclean. **3exactbytefiles/8CRLF→GitLF-only** eachhashrecorded. `published-content-verification.json`. This is **publishedPMdeliverable**, not productgreen orsourcefix.
+
+Next executable action: publishonlynarrowfourfileOWNreceipt/note/report/publishedverificationcheckpoint, finalremoteSHAreadback/cleanstatus; recordpostpushreceiptinMAINwithoutinfiniteselfreceiptcommits. Thenroot/R04reviewtheactualfailurehandoff, applyexistingeligibleownership/acceptance, obtainfuturefinalsourcegates; PMdoesnotdispatchorcloseanything.
