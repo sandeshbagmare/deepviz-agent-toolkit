@@ -52,3 +52,23 @@
   NEWmean/scale/perf/gallery/package-consumer checks. Prior cleanup RED unresolved.
 - NEW report/evidence/tests allowed only, publication receipt MAIN aftercommands.
   NextR04integration/disposition/frozen-source gates; not final head/whole-project signoff.
+
+## R22 tester2 schema/wire e44 preflight, not focused-PR signoff
+
+- FULLMAINR22common+15/currentcanonical/AGENTS/ownnote/nativeSAMEID/prework saved.
+  Reviewer11+01/tester17+15genuine, replacesqueued09; no new IDs/spawns.
+- NEWcleanDETACHEDe44f667ed494fa272f97792ef99942a364ebca24 sourceconsumer;
+  all13trackedGitrawbytes before/after/exacttrustedmodelsfileimport/no MAINdeepviz
+  package. Actualgenerated==committedDraft202012 schema canonical75972780... .
+- NEW74tests74pass0fail0error0skip2.93s/Ruff0/mypy0(2files).67literal wires
+  19accepted48rejected +1schema equality +3invalidJSONschemaN/A +3mutation controls.
+  Explicitapprovedoracle, same-modelschema/wire/roundtrip, distinct17directPydantic.
+- Initial74pass4.12s,2OWNtyping errors fixed; metadata22positivehandcountwrong→
+  actual19diagnosticXML/correctedcollector0. Earlier53literalestimate→67; no source/
+  expected-outcome/oracle changes. Rawinitialfailures preserved/notproductfindings.
+- No API/source/workflow/oldoracles/install/spawn/SUM/scale/replay/sharedbranch.
+  RenderN/Acontractslice, noTSate44/latermodel/full-product/CIclaim. OwnNEWr22
+  tests/report/evidence/ownnote publication only. ActualfocusedheadPENDING:
+  source/import/test-byteproof and freshUNCHANGED74mandatorybeforePRsignoff.
+- NextR04 supplies actualfocusedhead; rootreview/refill notidlewait/poll. Detailed
+  MAINreport/checkpoints and portableNEWtests; publicationreceiptMAINaftercommands.
