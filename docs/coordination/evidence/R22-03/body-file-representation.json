@@ -1,0 +1,23 @@
+{
+  "files": {
+    "issue-body.md": {
+      "raw_worktree_sha256": "316526c0450dad3453b31cf5519cd588f459c8ffdf981cbc4e58d5852a76e591",
+      "canonical_api_text_sha256": "316526c0450dad3453b31cf5519cd588f459c8ffdf981cbc4e58d5852a76e591",
+      "raw_bytes": 5724,
+      "crlf_count": 0,
+      "lf_count": 102
+    },
+    "issue-readback.md": {
+      "raw_worktree_sha256": "26e1d5eddc910870e705eaaa2b240cedc68bb78841150fe980bf6c4b85f3ae64",
+      "canonical_api_text_sha256": "316526c0450dad3453b31cf5519cd588f459c8ffdf981cbc4e58d5852a76e591",
+      "raw_bytes": 5826,
+      "crlf_count": 102,
+      "lf_count": 102
+    }
+  },
+  "canonical_body_text_exactly_equals_get_readback": true,
+  "first_assembly_exit": 1,
+  "cause": "OWN collector conflated canonical API text hash with Windows CRLF saved-file bytes",
+  "body_files_rewritten": false,
+  "api_post_repeated": false
+}
