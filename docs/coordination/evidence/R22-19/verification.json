@@ -1,0 +1,222 @@
+{
+  "verified_utc": "2026-11-27T15:12:21.253901+00:00",
+  "scope": "Offlineactualpubliccommentreceipt/factual/scope/idempotency/sanitization and OWNpublicationpre-copy state ONLY.0producttests/newcensus/newissues/closures/PRmutations.2authorizedcommentsarealreadypublic, notreplayed.",
+  "passed": 38,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "collector0_bothpubliccommentsverified",
+      "pass": true
+    },
+    {
+      "name": "freshlogin_repo_main_expected",
+      "pass": true
+    },
+    {
+      "name": "exactly2POST_8GET_all201_200",
+      "pass": true
+    },
+    {
+      "name": "POSTonly20_27commentroute_onetimeeach",
+      "pass": true
+    },
+    {
+      "name": "zeroForbiddenOperations_counts",
+      "pass": true
+    },
+    {
+      "name": "noUnknownPendingPOST_no403429_noRetry",
+      "pass": true
+    },
+    {
+      "name": "20createdOnce201_thenGET200_exactIDURL_author",
+      "pass": true
+    },
+    {
+      "name": "20fullTerminalMarkerCheck_beforePost_noDuplicate",
+      "pass": true
+    },
+    {
+      "name": "20exactDraftPOSTandGETbodySHA",
+      "pass": true
+    },
+    {
+      "name": "20marker_exactonce_readback_andOPENunchangedbody",
+      "pass": true
+    },
+    {
+      "name": "20actualGETfollowsPOST_noWaitPoll",
+      "pass": true
+    },
+    {
+      "name": "20URLdurableinReportandOwnnote",
+      "pass": true
+    },
+    {
+      "name": "27createdOnce201_thenGET200_exactIDURL_author",
+      "pass": true
+    },
+    {
+      "name": "27fullTerminalMarkerCheck_beforePost_noDuplicate",
+      "pass": true
+    },
+    {
+      "name": "27exactDraftPOSTandGETbodySHA",
+      "pass": true
+    },
+    {
+      "name": "27marker_exactonce_readback_andOPENunchangedbody",
+      "pass": true
+    },
+    {
+      "name": "27actualGETfollowsPOST_noWaitPoll",
+      "pass": true
+    },
+    {
+      "name": "27URLdurableinReportandOwnnote",
+      "pass": true
+    },
+    {
+      "name": "draft45pass0fail_witnessnotproducttests",
+      "pass": true
+    },
+    {
+      "name": "originalcheckerRED42_2retained_noterased",
+      "pass": true
+    },
+    {
+      "name": "secretSignedURLscan docs/coordination/reports/R22-19-public-ci-triage.md",
+      "pass": true
+    },
+    {
+      "name": "Markdownwhitespacefences docs/coordination/reports/R22-19-public-ci-triage.md",
+      "pass": true
+    },
+    {
+      "name": "secretSignedURLscan docs/agent-state/ses_de5678052ffdJwVtlB6SX6LZrT.md",
+      "pass": true
+    },
+    {
+      "name": "Markdownwhitespacefences docs/agent-state/ses_de5678052ffdJwVtlB6SX6LZrT.md",
+      "pass": true
+    },
+    {
+      "name": "secretSignedURLscan docs/coordination/evidence/R22-19/comment-action-receipt.json",
+      "pass": true
+    },
+    {
+      "name": "secretSignedURLscan docs/coordination/evidence/R22-19/discovery.json",
+      "pass": true
+    },
+    {
+      "name": "secretSignedURLscan docs/coordination/evidence/R22-19/draft-verification-failed.json",
+      "pass": true
+    },
+    {
+      "name": "secretSignedURLscan docs/coordination/evidence/R22-19/draft-verification.json",
+      "pass": true
+    },
+    {
+      "name": "secretSignedURLscan docs/coordination/evidence/R22-19/issue-20-comment.md",
+      "pass": true
+    },
+    {
+      "name": "Markdownwhitespacefences docs/coordination/evidence/R22-19/issue-20-comment.md",
+      "pass": true
+    },
+    {
+      "name": "secretSignedURLscan docs/coordination/evidence/R22-19/issue-27-comment.md",
+      "pass": true
+    },
+    {
+      "name": "Markdownwhitespacefences docs/coordination/evidence/R22-19/issue-27-comment.md",
+      "pass": true
+    },
+    {
+      "name": "readonly git branch --show-current",
+      "pass": true
+    },
+    {
+      "name": "readonly git rev-parse HEAD",
+      "pass": true
+    },
+    {
+      "name": "readonly git status --porcelain",
+      "pass": true
+    },
+    {
+      "name": "readonly git diff --cached --name-only",
+      "pass": true
+    },
+    {
+      "name": "readonly git diff --check",
+      "pass": true
+    },
+    {
+      "name": "own37branchClean_indexEmpty_preCopy",
+      "pass": true
+    }
+  ],
+  "readonly_git_commands": [
+    {
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit": 0,
+      "stdout": "agents/r10-19-real-backlog-commits"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "37a27cdfbb0d500cc4e2642bb403d68a145fbb21"
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit": 0,
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--name-only"
+      ],
+      "exit": 0,
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0,
+      "stdout": ""
+    }
+  ],
+  "prepublication_file_hashes": {
+    "docs/coordination/reports/R22-19-public-ci-triage.md": "19bd0c9b708417411fb59f36f915e3040891b2d719afa2ac69bfdab93692d2a3",
+    "docs/agent-state/ses_de5678052ffdJwVtlB6SX6LZrT.md": "856aa8ab98a64bbc755737a1435bb54da726227e03b7ed0143965921c6aa0225",
+    "docs/coordination/evidence/R22-19/comment-action-receipt.json": "e42e14cb1f8d6bb62ed88b7b01a7f1e33c19a180a33013ca5f0857f86ca968ff",
+    "docs/coordination/evidence/R22-19/discovery.json": "5afe74581bcd791c1238fe3e65d9399547d1d088887c118c927ee2cc53131d65",
+    "docs/coordination/evidence/R22-19/draft-verification-failed.json": "6e3e63d3814432e6e566116af4a2d43626af0756ef38fd6ebca6c0c8bc8333fc",
+    "docs/coordination/evidence/R22-19/draft-verification.json": "db79be53b7c268e4d458892cded84cc0581fe0e22db1ff978ce20aa017f0d4ee",
+    "docs/coordination/evidence/R22-19/issue-20-comment.md": "d9c03d729bd6b625d7e3fca5609461e14b93cc2abea3de269f4d22e784654955",
+    "docs/coordination/evidence/R22-19/issue-27-comment.md": "d787ebdf2712dea5af8b153d3b9c7fcdc4eee56b1018cf5a3c57a805326836c2"
+  },
+  "actual_comment_urls": [
+    "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/20#issuecomment-7221697848",
+    "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/27#issuecomment-7221698876"
+  ]
+}

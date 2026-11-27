@@ -1,0 +1,142 @@
+{
+  "owner": "ses_de5678052ffdJwVtlB6SX6LZrT",
+  "observed_start_utc": "2026-11-27T15:01:02.689270+00:00",
+  "scope": "Currentidentity/repo and ONLYexistingissues20/27bodies+completecomments forauthorizedR22idempotenttriage. No globalissuecensus/PR/check/log/testqueries or writes.",
+  "issue_targets": {
+    "20": {
+      "issue_number": 20,
+      "marker": "deepviz-r22-ci-45928608970",
+      "issue": {
+        "number": 20,
+        "title": "Gate Python and TypeScript changes with real lint, type, test and build CI",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/20",
+        "comments": 0,
+        "created_at": "2026-11-26T17:57:48Z",
+        "updated_at": "2026-11-26T17:57:49Z"
+      },
+      "issue_body_sanitized": "<!-- deepviz-key: CI -->\n# CI\n\n## Outcome\nRemote PR checks run the same meaningful verification documented locally.\n\n## Coordination\n- Suggested owner lane: parent/core and TypeScript owners (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #4 (EPIC-DELIVERY).\n\n## Acceptance criteria\n- [ ] Workflow runs Python lint/type/unit/integration and TypeScript type/test/build/package checks as applicable.\n- [ ] Visual/security/scale smoke checks are explicit; expensive full benchmarks have a documented invocation.\n- [ ] Use minimal workflow permissions and no committed secrets; optional dependency failures are visible.\n- [ ] A remote workflow run on the proposed commit is recorded, or its real blocker stays open.\n\n## Required evidence\n- Workflow file and remote run URL/status\n- Local-to-CI command mapping\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "issue_body_sha256": "593668abd152ef54c5e2058fcf4504c3f6718b203605f4902eddba7b48e61c9f",
+      "issue_body_redacted": false,
+      "comment_pages": [
+        {
+          "page": 1,
+          "returned": 0
+        }
+      ],
+      "comment_metadata": [],
+      "marker_matches": [],
+      "complete_comments_pagination": true,
+      "returned_comments": 0,
+      "observed_issue_comment_count": 0,
+      "duplicate_markers_found": 0
+    },
+    "27": {
+      "issue_number": 27,
+      "marker": "deepviz-r22-sdlc-triage",
+      "issue": {
+        "number": 27,
+        "title": "Publish a traceable backlog, evidence policy and honest completion tracker",
+        "state": "open",
+        "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/27",
+        "comments": 0,
+        "created_at": "2026-11-26T17:58:16Z",
+        "updated_at": "2026-11-26T17:58:16Z"
+      },
+      "issue_body_sanitized": "<!-- deepviz-key: PROCESS -->\n# PROCESS\n\n## Outcome\nThe team can map the design to real issues and distinguish planned, implemented, verified and released work.\n\n## Coordination\n- Suggested owner lane: PM/process agent (not a claim of GitHub assignment).\n- Initial status: planned; no implementation or independent verification evidence recorded by this seed.\n- Parent epic: #4 (EPIC-DELIVERY).\n\n## Acceptance criteria\n- [ ] Create distinct scoped epics/stories/tasks with labels, milestones, dependencies and acceptance criteria.\n- [ ] Commit issue mapping and review/test/visual evidence policy under docs/process only.\n- [ ] Document GitHub secondary content limits and the single-author approval restriction from primary sources.\n- [ ] Leave every issue open until parent-supplied implementation and independent review/test evidence meets acceptance.\n- [ ] Record requested 900 created/resolved issues as unmet rather than padding, duplicating or inventing closures.\n\n## Required evidence\n- Remote issue/milestone/label snapshot\n- Process-doc commit and parent-provided verification before closure\n\n## Closure and merge gate\nKeep this issue open until a verified deliverable satisfies every acceptance criterion and the parent coordinator supplies evidence. Do not close on code existence or a claimed pass. Every merged PR requires two independent reviewer-agent reports, two independent tester-agent reports, and committed screenshots/SVG/PNG embedded in the PR body. Agent reports/comments are not GitHub APPROVED reviews. No empty duplicate tickets or invented completions.\n\n## Source of scope\n- docs/superpowers/specs/2026-11-26-deepviz-design.md\n- docs/superpowers/plans/2026-11-26-deepviz-plan.md\n- docs/process/backlog.json\n",
+      "issue_body_sha256": "cbfae1ddeb95dd15e7eced5112323e1054596b66a1d6567e1e5521f6610b76a1",
+      "issue_body_redacted": false,
+      "comment_pages": [
+        {
+          "page": 1,
+          "returned": 0
+        }
+      ],
+      "comment_metadata": [],
+      "marker_matches": [],
+      "complete_comments_pagination": true,
+      "returned_comments": 0,
+      "observed_issue_comment_count": 0,
+      "duplicate_markers_found": 0
+    }
+  },
+  "query_ledger": [
+    {
+      "started_utc": "2026-11-27T15:01:03.330038+00:00",
+      "method": "GET",
+      "api_path": "/user",
+      "http_status": 200,
+      "ended_utc": "2026-11-27T15:01:03.931511+00:00",
+      "response_bytes": 1464,
+      "response_sha256": "88b4c45773e9eb99e50d7fe236750747ebbd6e1d700f337eaed617798778c6f1"
+    },
+    {
+      "started_utc": "2026-11-27T15:01:03.933023+00:00",
+      "method": "GET",
+      "api_path": "/repos/sandeshbagmare/deepviz-agent-toolkit",
+      "http_status": 200,
+      "ended_utc": "2026-11-27T15:01:05.509903+00:00",
+      "response_bytes": 6802,
+      "response_sha256": "430e4cf384be176bb77e55230a207a70daf9b14cd48bd2fc39249406f1e9294c"
+    },
+    {
+      "started_utc": "2026-11-27T15:01:05.511904+00:00",
+      "method": "GET",
+      "api_path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/20",
+      "http_status": 200,
+      "ended_utc": "2026-11-27T15:01:06.101010+00:00",
+      "response_bytes": 6765,
+      "response_sha256": "bb740c688ffa10959d886382888e5627e2e4f64a900b9560c31c17e121511173"
+    },
+    {
+      "started_utc": "2026-11-27T15:01:06.103509+00:00",
+      "method": "GET",
+      "api_path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/20/comments?per_page=100&page=1",
+      "http_status": 200,
+      "ended_utc": "2026-11-27T15:01:06.569251+00:00",
+      "response_bytes": 2,
+      "response_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "started_utc": "2026-11-27T15:01:06.571260+00:00",
+      "method": "GET",
+      "api_path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/27",
+      "http_status": 200,
+      "ended_utc": "2026-11-27T15:01:07.103946+00:00",
+      "response_bytes": 6966,
+      "response_sha256": "656bb04a76d98b483c104a615893e1f9ef85d11ab992020421ae3600f88f6e6c"
+    },
+    {
+      "started_utc": "2026-11-27T15:01:07.105946+00:00",
+      "method": "GET",
+      "api_path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/27/comments?per_page=100&page=1",
+      "http_status": 200,
+      "ended_utc": "2026-11-27T15:01:07.549196+00:00",
+      "response_bytes": 2,
+      "response_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  ],
+  "new_issue_census_requests": 0,
+  "POST_requests": 0,
+  "git_credential_helper_exit": 0,
+  "existing_manager_configured": true,
+  "authenticated_login": "sandeshbagmare",
+  "repository": {
+    "id": 1473492568,
+    "full_name": "sandeshbagmare/deepviz-agent-toolkit",
+    "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit",
+    "default_branch": "main",
+    "private": false,
+    "archived": false,
+    "disabled": false,
+    "permissions": {
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
+    }
+  },
+  "observed_complete_utc": "2026-11-27T15:01:07.551166+00:00",
+  "collector_exit": 0
+}
