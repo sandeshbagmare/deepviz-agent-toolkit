@@ -1,0 +1,505 @@
+{
+  "verified_utc": "2026-11-27T17:24:39.149670+00:00",
+  "product": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "kind": "Independent SOURCE review +staticprovenance/evidencechecks, NOT runtime tests",
+  "passed": 40,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Exact546pin",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact 546c25e-functional.diff",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact 7ab5462-functional.diff",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact a7363be-functional.diff",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact c1b0b29-functional.diff",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact c5ab299-functional.diff",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact README.md",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact tests/test_n11_resource_policy.py",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact packages/deepviz/README.md",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact packages/deepviz/src/index.ts",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact packages/deepviz/src/models.ts",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact packages/deepviz/src/normalize.ts",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact packages/deepviz/src/renderers.ts",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact python/deepviz/tests/test_r17_normalizer_boundaries.py",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact python/deepviz/src/deepviz/models.py",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact python/deepviz/src/deepviz/normalize.py",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact python/deepviz/src/deepviz/render.py",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact python/deepviz/src/deepviz/tools.py",
+      "pass": true
+    },
+    {
+      "name": "SnapshotExact python/deepviz/src/deepviz/__init__.py",
+      "pass": true
+    },
+    {
+      "name": "FullFunctionalDiff c1b0b29",
+      "pass": true
+    },
+    {
+      "name": "FullFunctionalDiff a7363be",
+      "pass": true
+    },
+    {
+      "name": "FullFunctionalDiff 7ab5462",
+      "pass": true
+    },
+    {
+      "name": "FullFunctionalDiff c5ab299",
+      "pass": true
+    },
+    {
+      "name": "FullFunctionalDiff 546c25e",
+      "pass": true
+    },
+    {
+      "name": "InterveningefcfEvidenceOnly",
+      "pass": true
+    },
+    {
+      "name": "ImmutableOriginalOracleModelSchema tests/test_n11_resource_policy.py",
+      "pass": true
+    },
+    {
+      "name": "ImmutableOriginalOracleModelSchema python/deepviz/src/deepviz/models.py",
+      "pass": true
+    },
+    {
+      "name": "ImmutableOriginalOracleModelSchema packages/deepviz/src/models.ts",
+      "pass": true
+    },
+    {
+      "name": "ImmutableOriginalOracleModelSchema schemas/chart-spec.schema.json",
+      "pass": true
+    },
+    {
+      "name": "PythonCapsUnchanged4096Field64KiBCell",
+      "pass": true
+    },
+    {
+      "name": "TSCapsUnchanged",
+      "pass": true
+    },
+    {
+      "name": "Cost24AuthorProcesses_OneTrial100KLimit",
+      "pass": true
+    },
+    {
+      "name": "CostCountsOneOutputOnce_AllExit0_NotAllBaselineOraclePass",
+      "pass": true
+    },
+    {
+      "name": "ProducerP2ManifestMatchesReviewedPyTS",
+      "pass": true
+    },
+    {
+      "name": "TimingCostRegressionDisclosed",
+      "pass": true
+    },
+    {
+      "name": "NoBorrowedTestsOrWaivedK1",
+      "pass": true
+    },
+    {
+      "name": "NoInventedCounterexampleShipApproval",
+      "pass": true
+    },
+    {
+      "name": "R42CentralExactUTCProductOwner",
+      "pass": true
+    },
+    {
+      "name": "OWNclean47BeforePublication",
+      "pass": true
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:tests/test_n11_resource_policy.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:packages/deepviz/README.md"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:packages/deepviz/src/index.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:packages/deepviz/src/models.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:packages/deepviz/src/normalize.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:packages/deepviz/src/renderers.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:python/deepviz/tests/test_r17_normalizer_boundaries.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:python/deepviz/src/deepviz/render.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:python/deepviz/src/deepviz/tools.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:python/deepviz/src/deepviz/__init__.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "c1b0b29^",
+        "c1b0b29",
+        "--",
+        "python/deepviz/src/deepviz/normalize.py",
+        "packages/deepviz/src/normalize.ts",
+        "python/deepviz/tests/test_r17_normalizer_boundaries.py",
+        "packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "c1b0b29",
+        "a7363be",
+        "--",
+        "python/deepviz/src/deepviz/normalize.py",
+        "packages/deepviz/src/normalize.ts",
+        "python/deepviz/tests/test_r17_normalizer_boundaries.py",
+        "packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "a7363be",
+        "7ab5462",
+        "--",
+        "python/deepviz/src/deepviz/normalize.py",
+        "packages/deepviz/src/normalize.ts",
+        "python/deepviz/tests/test_r17_normalizer_boundaries.py",
+        "packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "7ab5462",
+        "c5ab299",
+        "--",
+        "python/deepviz/src/deepviz/normalize.py",
+        "packages/deepviz/src/normalize.ts",
+        "python/deepviz/tests/test_r17_normalizer_boundaries.py",
+        "packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "c5ab299",
+        "546c25e",
+        "--",
+        "python/deepviz/src/deepviz/normalize.py",
+        "packages/deepviz/src/normalize.ts",
+        "python/deepviz/tests/test_r17_normalizer_boundaries.py",
+        "packages/deepviz/test/test_r17_normalizer_boundaries.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "7ab5462",
+        "efcf370",
+        "--",
+        "python/deepviz/src/deepviz/normalize.py",
+        "packages/deepviz/src/normalize.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "ec9f669:tests/test_n11_resource_policy.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:tests/test_n11_resource_policy.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "ec9f669:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "ec9f669:packages/deepviz/src/models.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:packages/deepviz/src/models.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "ec9f669:schemas/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "546c25ea75ee9d8a41b3832aa639664bc9a683b5:schemas/chart-spec.schema.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c1b0b29:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c1b0b29:packages/deepviz/src/normalize.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit": 0
+    }
+  ],
+  "cost_ratios_author_not_rerun": {
+    "python_integer": {
+      "before_seconds": 1.1665558999957284,
+      "after_seconds": 0.8004331000120146,
+      "ratio": 0.6861506594025589,
+      "author_only": true
+    },
+    "python_fraction": {
+      "before_seconds": 1.513637900003232,
+      "after_seconds": 1.2838257999974303,
+      "ratio": 0.8481723402900316,
+      "author_only": true
+    },
+    "python_residual": {
+      "before_seconds": 0.9734715999948094,
+      "after_seconds": 1.9037001999968197,
+      "ratio": 1.9555785705581656,
+      "author_only": true
+    },
+    "typescript_integer": {
+      "before_seconds": 0.1803443,
+      "after_seconds": 0.15142150000000001,
+      "ratio": 0.8396245403930149,
+      "author_only": true
+    },
+    "typescript_fraction": {
+      "before_seconds": 0.1653928,
+      "after_seconds": 0.2111568,
+      "ratio": 1.2766988647631579,
+      "author_only": true
+    },
+    "typescript_residual": {
+      "before_seconds": 0.18202279999999998,
+      "after_seconds": 0.2172423,
+      "ratio": 1.1934894969201661,
+      "author_only": true
+    }
+  },
+  "runtime_tests": 0,
+  "runtime_builds_installs_API_spawns_polls": 0,
+  "known_four_field_policy_RED": "OPEN4096Bvs65536Bcontract;R04decision;no cap/oraclechange",
+  "new_material_findings": 0,
+  "source_verdict": "PASS scopednormalizer546changes;no fullreleaseapproval",
+  "initial_failures": "Preworkscannerreject/noexecution; resourcepathguess snapshot1 recoveredreadonly; evidence/policyabsentinsource546 resolved from bbd/MAINrespectively"
+}
