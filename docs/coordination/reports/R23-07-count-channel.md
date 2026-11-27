@@ -1,5 +1,7 @@
 # R23-07 COUNT channel repair — function-only producer
 
+**DELIVERED source commit:85796dbe3360fb88686f2e7188122e2da80d54c2** onOWN`fix/r23-count-channel`, firstverifiedremoteevidencetip**2114e7faf8a5d7b7320572b8a38622bb27da8219**. R04integrationunitONLY85796db(twofunctionlines+NEWpermanenttest), authorchecksnotindependentapproval. Durableevidence`../evidence/R23-07/`; publication0/nonforce/exactremoteSHAverified. ReportbelowpreservesactualTDD/checkpoint/failurehistory; laterreceipt-onlycommitdoesnotchangeanysource/testbytes.
+
 ## Pre-work ownership / TDD checkpoint — 2026-11-27
 
 - SAMEactual07 `ses_de56782e8ffentAvzUUfMncFRA`; FULLR04R23release22lines+rootR24/common+07 read AFTERfinishedR22proposalcheckpoint. ExplicitgrantNEWownbranch **fix/r23-count-channel**, immutablebase **7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6**. No existingjobtointerrupt; R22sourceunchanged/ownproposal+1RED5PASSpreserved; earlierR14source7d8/helperreturnedR04/05retest accepted.
@@ -49,3 +51,20 @@ Firstoutputrunner**exit1**: only NEWoutputprobeRuffI001import-order, genuineprod
 - Next executableaction: explicitOWNpathstaging/audit/credential/whitespace/sourceboundaries, meaningfulR23evidencecommit+nonforceOWNpush/exactremoteSHAreceipt; parallelR22archivepublicationonlyownpaths. No sourceblocker/unstartedsourcejob, no issue/PR/APIwrites/defaultbranchchanges/spawns/installs.
 
 R23evidencepre-stageaudit**exit0/18ownedfiles207949bytes**, allJSON/AST/PNGexactcopy/credentials0/whitespace0/protectedproductionunchanged. SeparateR22archiveauditcaughtONLYNEWproposalcontrol'sextrablankEOF; exactexecutedsnapshotpreserved/removeonefinalLF+ASTequivalence, notproduction/oracleweakening. Re-stageupdatedownnotes/reportswithfailurehonestlydisclosedbeforepublication; no source/testreplaynecessary.
+
+## Committed packet; safe publication preflight stopped
+
+- SourceONLYcommit**85796db** remainsintegrationunit. Meaningfulevidencecommit**2114e7faf8a5d7b7320572b8a38622bb27da8219**/18paths1406insertions onOWNfix/r23-count-channel; completepacket/sourcebackedtestsopenimages. SeparateR22archive**40e43d7050eca42971cb99dac4af9dd4391a442f**/8paths; exactEOF1LF+ASTequivalenceaudit0. Bothworktreesclean, no sharedsourceoperations.
+- BOTHsanitizedOWNpublicationpreflights**exit1** (the helperintentionallydidnotlogcredentials/rawauth). **ReadbackBEFOREanyretry:** `git ls-remote --heads origin refs/heads/fix/r23-count-channel` andR22equivalent**exit0/EMPTY**, remoteoriginexactexpectedrepo/bothOWNtreesclean. Thusneitherbranchwaspublished, no uncertainpushreplay/successclaim.
+- Next executableaction: oneboundedread-onlysanitizedGCM/APIpreflightdiagnostictoidentifyfailedgate/HTTPstatus (credentialsinmemory, no secrets/logs); thenONLYifexpectedidentity/permissionsverifiedresumeOWNnonforcepublication. No producttestregression/sourceblocker; publicationpendingnotfinaldelivery.
+
+Read-onlydiagnostic**exit0**: GCM0/tokenpresentinmemory, GET/user**HTTP200/expectedloginMATCH**; failedgatewasOPTIONALGET`/pulls/30`**HTTP404**, NOTauth/source/pushfailure. CannotinferPR/checkstatefromtaskprose; preserve404/limit. UpdatedOWNpublisherallowONLYthisexplicitoptional404(nohead/check/signoffclaim), retainingstrictidentity/remote/path/ancestry/nonforce/exactSHAchecks. Bothbranchesalreadyverifiedabsent. NextcontinueOWNpublicationwithoutdependingonunavailableunrelatedPR; no tool/protocol/APIbypass/noissuePRwrites.
+
+## Verified OWN publication / R04 handback
+
+- ActualOWNpublisher**exit0**, GET/userHTTP200expectedidentity, **nonforcepush0/live`ls-remote`0/exactSHA2114e7faf8a5d7b7320572b8a38622bb27da8219** at16:10:10UTC. Beforebranchabsent, afterOWNbranchcontains85796dbsource+2114evidenceONLY; receipt`evidence/R23-07/publication.json`. ReferencedPR30stillGET404; **no PR/head/check/finalCI/independentapprovalclaim**. No shared/default/PR/issue/APIwrites; credentialsinmemoryonly.
+- SeparatehistoricalR22archivepublish**exit0**/nonforce/remote**40e43d7050eca42971cb99dac4af9dd4391a442f** verified16:10:05UTC. Itsproposalremainsunapplied/R22productsourceexact7bc; nonewproductionfinding. EOF-onlyarchivebytechange/ASTequivalenceandallfailedchecksfullyrecorded.
+- Finaldurablereceipt-onlycommitstagesONLYownnotes/reports/evidence, preservesexactsource85796db/permanenttest8270a474/unmodifiedimmutable17/_antv; finalOWNtipreadbackwillbeseparatelysavedinMAINnoteandactualreturn(notself-referentialfabricatedSHA). No checkreplay/sourcechangesneededforreceiptcommit.
+- **Decision:** boundedproducerrepairacceptedbyitsunchangedsemanticoracles; **R04 now hasactualsourcecommit85796db to normalcherry-pick/review/testatthenewintegrationpin**, keeping08_antvfunctiondelta. Independentreviewer/tester+actualintegratedfullgates/CIremainrequired, notself-approvedhere. No issueclosures/newtickets/scaleclaim.
+- **Blockers/limits:** nosourceblocker; fullsuite/scale/npm/distribution/CI/independentQAoutofscope/notrun; ECharts/G2actualnativevalues+HTMLnotbrowser/CDNacceptance; threeoptinallkindbrowserskips+85allkindrenderdeselections+oneobsoleteidentitydeselectionexplicit. PreservedoldRED/R22proposalnevermodifiedintogreenclaims.
+- **Next executableaction forR04:** normalcherry-pick**85796dbe3360fb88686f2e7188122e2da80d54c2**, independentlyverifyfullfunction-onlydiff+16permanent/unchanged17semantic55+freshactualmoduleGitbytesandboundedpaintusingportable`tests/r23_probes/role07/README.md`fromthisevidencebranch. Rootreviewsreport+actualreceiptsanddispatchesnextmeaningfulSAME07scope; thisworkerdoesnotspawn/poll/orinventfollowupsourceauthority.
