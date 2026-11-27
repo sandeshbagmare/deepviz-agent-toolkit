@@ -1,0 +1,2057 @@
+[
+  {
+    "case": "legend",
+    "observed_native_DOM": {
+      "before": {
+        "x": [
+          1,
+          2,
+          4
+        ],
+        "y": [
+          3,
+          7,
+          11
+        ],
+        "trace_name": "&lt;a href=\"https://example.invalid/r13-legend\"&gt;R13 legend&lt;/a&gt;",
+        "legend_text": [
+          "<a href=\"https://example.invalid/r13-legend\">R13 legend</a>"
+        ],
+        "native_title": [
+          "R13 isolated legend"
+        ],
+        "hover_text": [],
+        "anchors": [],
+        "handlers": [],
+        "mark_centers": [
+          {
+            "x": 126.94999694824219,
+            "y": 519.84375
+          },
+          {
+            "x": 263.6499938964844,
+            "y": 388.59375
+          },
+          {
+            "x": 537.0499877929688,
+            "y": 257.34375
+          }
+        ]
+      },
+      "hover_states": [],
+      "native_json_bytes": 497,
+      "html_bytes": 4858891,
+      "errors": [],
+      "blocked": [],
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1"
+    },
+    "manifest": {
+      "engine": "plotly",
+      "charts": [
+        {
+          "engine": "plotly",
+          "requested_kind": "line",
+          "rendered_kind": "line",
+          "spec": {
+            "version": 1,
+            "kind": "line",
+            "title": "R13 isolated legend",
+            "description": "",
+            "x": "x",
+            "y": "value",
+            "color": "label",
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "none",
+            "max_points": 10,
+            "width": 1000,
+            "height": 480,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          },
+          "records": [
+            {
+              "x": 1,
+              "value": 3,
+              "label": "<a href=\"https://example.invalid/r13-legend\">R13 legend</a>"
+            },
+            {
+              "x": 2,
+              "value": 7,
+              "label": "<a href=\"https://example.invalid/r13-legend\">R13 legend</a>"
+            },
+            {
+              "x": 4,
+              "value": 11,
+              "label": "<a href=\"https://example.invalid/r13-legend\">R13 legend</a>"
+            }
+          ],
+          "input_count": 3,
+          "output_count": 3,
+          "strategy": "none",
+          "warnings": []
+        }
+      ],
+      "warnings": [],
+      "native_specs": [
+        {
+          "data": [
+            {
+              "type": "scatter",
+              "name": "&lt;a href=\"https://example.invalid/r13-legend\"&gt;R13 legend&lt;/a&gt;",
+              "x": [
+                1,
+                2,
+                4
+              ],
+              "y": [
+                3.0,
+                7.0,
+                11.0
+              ],
+              "marker": {
+                "color": "#386cb0",
+                "symbol": "circle"
+              },
+              "mode": "lines+markers",
+              "line": {
+                "dash": "solid"
+              }
+            }
+          ],
+          "layout": {
+            "title": {
+              "text": "R13 isolated legend"
+            },
+            "width": 1000,
+            "height": 480,
+            "paper_bgcolor": "#ffffff",
+            "plot_bgcolor": "#ffffff",
+            "font": {
+              "color": "#202938"
+            },
+            "showlegend": true,
+            "xaxis": {
+              "title": {
+                "text": "x"
+              }
+            },
+            "yaxis": {
+              "title": {
+                "text": "value"
+              }
+            }
+          }
+        }
+      ],
+      "strategy": "none",
+      "accessible_path": "chart.html"
+    }
+  },
+  {
+    "case": "hover",
+    "observed_native_DOM": {
+      "before": {
+        "x": [
+          -120,
+          -60,
+          120
+        ],
+        "y": [
+          10,
+          20,
+          35
+        ],
+        "trace_text": [
+          "&lt;a href=\"https://example.invalid/r13-hover\"&gt;R13 hover&lt;/a&gt;",
+          "&lt;b&gt;R13 \"hover\" &amp; text&lt;/b&gt;",
+          "&lt;img src=\"R13-inert:\" onerror=\"\"&gt;"
+        ],
+        "legend_text": [
+          "trace 0"
+        ],
+        "native_title": [
+          "R13 isolated hover"
+        ],
+        "hover_text": [],
+        "anchors": [],
+        "handlers": [],
+        "mark_centers": [
+          {
+            "x": 234,
+            "y": 371.92376708984375
+          },
+          {
+            "x": 368,
+            "y": 355.26373291015625
+          },
+          {
+            "x": 770,
+            "y": 330.26373291015625
+          }
+        ]
+      },
+      "hover_states": [
+        {
+          "x": [
+            -120,
+            -60,
+            120
+          ],
+          "y": [
+            10,
+            20,
+            35
+          ],
+          "trace_text": [
+            "&lt;a href=\"https://example.invalid/r13-hover\"&gt;R13 hover&lt;/a&gt;",
+            "&lt;b&gt;R13 \"hover\" &amp; text&lt;/b&gt;",
+            "&lt;img src=\"R13-inert:\" onerror=\"\"&gt;"
+          ],
+          "legend_text": [
+            "trace 0"
+          ],
+          "native_title": [
+            "R13 isolated hover"
+          ],
+          "hover_text": [
+            "(\u2212120, 10)<a href=\"https://example.invalid/r13-hover\">R13 hover</a>"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "mark_centers": [
+            {
+              "x": 234,
+              "y": 371.92376708984375
+            },
+            {
+              "x": 368,
+              "y": 355.26373291015625
+            },
+            {
+              "x": 770,
+              "y": 330.26373291015625
+            }
+          ]
+        },
+        {
+          "x": [
+            -120,
+            -60,
+            120
+          ],
+          "y": [
+            10,
+            20,
+            35
+          ],
+          "trace_text": [
+            "&lt;a href=\"https://example.invalid/r13-hover\"&gt;R13 hover&lt;/a&gt;",
+            "&lt;b&gt;R13 \"hover\" &amp; text&lt;/b&gt;",
+            "&lt;img src=\"R13-inert:\" onerror=\"\"&gt;"
+          ],
+          "legend_text": [
+            "trace 0"
+          ],
+          "native_title": [
+            "R13 isolated hover"
+          ],
+          "hover_text": [
+            "(\u221260, 20)<b>R13 \"hover\" & text</b>"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "mark_centers": [
+            {
+              "x": 234,
+              "y": 371.92376708984375
+            },
+            {
+              "x": 368,
+              "y": 355.26373291015625
+            },
+            {
+              "x": 770,
+              "y": 330.26373291015625
+            }
+          ]
+        },
+        {
+          "x": [
+            -120,
+            -60,
+            120
+          ],
+          "y": [
+            10,
+            20,
+            35
+          ],
+          "trace_text": [
+            "&lt;a href=\"https://example.invalid/r13-hover\"&gt;R13 hover&lt;/a&gt;",
+            "&lt;b&gt;R13 \"hover\" &amp; text&lt;/b&gt;",
+            "&lt;img src=\"R13-inert:\" onerror=\"\"&gt;"
+          ],
+          "legend_text": [
+            "trace 0"
+          ],
+          "native_title": [
+            "R13 isolated hover"
+          ],
+          "hover_text": [
+            "(120, 35)<img src=\"R13-inert:\" onerror=\"\">"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "mark_centers": [
+            {
+              "x": 234,
+              "y": 371.92376708984375
+            },
+            {
+              "x": 368,
+              "y": 355.26373291015625
+            },
+            {
+              "x": 770,
+              "y": 330.26373291015625
+            }
+          ]
+        }
+      ],
+      "native_json_bytes": 602,
+      "html_bytes": 4859058,
+      "errors": [],
+      "blocked": [],
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1"
+    },
+    "manifest": {
+      "engine": "plotly",
+      "charts": [
+        {
+          "engine": "plotly",
+          "requested_kind": "geo",
+          "rendered_kind": "geo",
+          "spec": {
+            "version": 1,
+            "kind": "geo",
+            "title": "R13 isolated hover",
+            "description": "",
+            "x": "x",
+            "y": "value",
+            "color": "label",
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "none",
+            "max_points": 10,
+            "width": 1000,
+            "height": 480,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          },
+          "records": [
+            {
+              "x": -120,
+              "value": 10,
+              "label": "<a href=\"https://example.invalid/r13-hover\">R13 hover</a>"
+            },
+            {
+              "x": -60,
+              "value": 20,
+              "label": "<b>R13 \"hover\" & text</b>"
+            },
+            {
+              "x": 120,
+              "value": 35,
+              "label": "<img src=\"R13-inert:\" onerror=\"\">"
+            }
+          ],
+          "input_count": 3,
+          "output_count": 3,
+          "strategy": "none",
+          "warnings": [
+            "Geographic coordinates use longitude=x, latitude=y without a basemap (offline coordinate plot)."
+          ]
+        }
+      ],
+      "warnings": [
+        "Geographic coordinates use longitude=x, latitude=y without a basemap (offline coordinate plot)."
+      ],
+      "native_specs": [
+        {
+          "data": [
+            {
+              "type": "scatter",
+              "mode": "markers",
+              "x": [
+                -120,
+                -60,
+                120
+              ],
+              "y": [
+                10.0,
+                20.0,
+                35.0
+              ],
+              "text": [
+                "&lt;a href=\"https://example.invalid/r13-hover\"&gt;R13 hover&lt;/a&gt;",
+                "&lt;b&gt;R13 \"hover\" &amp; text&lt;/b&gt;",
+                "&lt;img src=\"R13-inert:\" onerror=\"\"&gt;"
+              ]
+            }
+          ],
+          "layout": {
+            "title": {
+              "text": "R13 isolated hover"
+            },
+            "width": 1000,
+            "height": 480,
+            "paper_bgcolor": "#ffffff",
+            "plot_bgcolor": "#ffffff",
+            "font": {
+              "color": "#202938"
+            },
+            "showlegend": true,
+            "xaxis": {
+              "title": {
+                "text": "Longitude"
+              },
+              "range": [
+                -180,
+                180
+              ]
+            },
+            "yaxis": {
+              "title": {
+                "text": "Latitude"
+              },
+              "range": [
+                -90,
+                90
+              ]
+            }
+          }
+        }
+      ],
+      "strategy": "none",
+      "accessible_path": "chart.html"
+    }
+  },
+  {
+    "case": "title",
+    "observed_native_DOM": {
+      "before": {
+        "x": [
+          "2026-02-01",
+          "2026-02-02",
+          "2026-02-04"
+        ],
+        "y": [
+          3,
+          7,
+          11
+        ],
+        "trace_name": "Series",
+        "legend_text": [],
+        "native_title": [
+          "<a href=\"https://example.invalid/r13-title\">R13 \"title\" & 'quote'</a>"
+        ],
+        "hover_text": [],
+        "anchors": [],
+        "handlers": [],
+        "mark_centers": [
+          {
+            "x": 145.75,
+            "y": 519.84375
+          },
+          {
+            "x": 395.25,
+            "y": 388.59375
+          },
+          {
+            "x": 894.25,
+            "y": 257.34375
+          }
+        ]
+      },
+      "hover_states": [],
+      "native_json_bytes": 539,
+      "html_bytes": 4859144,
+      "errors": [],
+      "blocked": [],
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1"
+    },
+    "manifest": {
+      "engine": "plotly",
+      "charts": [
+        {
+          "engine": "plotly",
+          "requested_kind": "line",
+          "rendered_kind": "line",
+          "spec": {
+            "version": 1,
+            "kind": "line",
+            "title": "<a href=\"https://example.invalid/r13-title\">R13 \"title\" & 'quote'</a>",
+            "description": "",
+            "x": "x",
+            "y": "value",
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "none",
+            "max_points": 10,
+            "width": 1000,
+            "height": 480,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          },
+          "records": [
+            {
+              "x": "2026-02-01",
+              "value": 3
+            },
+            {
+              "x": "2026-02-02",
+              "value": 7
+            },
+            {
+              "x": "2026-02-04",
+              "value": 11
+            }
+          ],
+          "input_count": 3,
+          "output_count": 3,
+          "strategy": "none",
+          "warnings": []
+        }
+      ],
+      "warnings": [],
+      "native_specs": [
+        {
+          "data": [
+            {
+              "type": "scatter",
+              "name": "Series",
+              "x": [
+                "2026-02-01",
+                "2026-02-02",
+                "2026-02-04"
+              ],
+              "y": [
+                3.0,
+                7.0,
+                11.0
+              ],
+              "marker": {
+                "color": "#386cb0",
+                "symbol": "circle"
+              },
+              "mode": "lines+markers",
+              "line": {
+                "dash": "solid"
+              }
+            }
+          ],
+          "layout": {
+            "title": {
+              "text": "&lt;a href=\"https://example.invalid/r13-title\"&gt;R13 \"title\" &amp; 'quote'&lt;/a&gt;"
+            },
+            "width": 1000,
+            "height": 480,
+            "paper_bgcolor": "#ffffff",
+            "plot_bgcolor": "#ffffff",
+            "font": {
+              "color": "#202938"
+            },
+            "showlegend": false,
+            "xaxis": {
+              "title": {
+                "text": "x"
+              }
+            },
+            "yaxis": {
+              "title": {
+                "text": "value"
+              }
+            }
+          }
+        }
+      ],
+      "strategy": "none",
+      "accessible_path": "chart.html"
+    }
+  },
+  {
+    "case": "categorical-chart",
+    "observed_native_DOM": {
+      "charts": [
+        {
+          "x": [
+            "&lt;a href=\"https://example.invalid/r10-20\"&gt;R10 safe link&lt;/a&gt;",
+            "&lt;img src=\"R10-inert:\" onerror=\"\"&gt;",
+            "&lt;b&gt;R10 literal label&lt;/b&gt;"
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "text": [
+            "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+            "<img src=\"R10-inert:\" onerror=\"\">",
+            "<b>R10 literal label</b>",
+            "0",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "<b>R10 literal series</b>",
+            "R10 categorical literal-label control",
+            "x",
+            "value"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "missing_literal_strings": [],
+          "mark_count": 3,
+          "mark_centers": [
+            {
+              "x": 198.33499908447266,
+              "y": 447.5037536621094
+            },
+            {
+              "x": 395.00001525878906,
+              "y": 406.0487518310547
+            },
+            {
+              "x": 591.6650085449219,
+              "y": 364.59375
+            }
+          ]
+        }
+      ],
+      "table_cells": [
+        "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+        "3",
+        "<b>R10 literal series</b>",
+        "<img src=\"R10-inert:\" onerror=\"\">",
+        "7",
+        "<b>R10 literal series</b>",
+        "<b>R10 literal label</b>",
+        "11",
+        "<b>R10 literal series</b>"
+      ],
+      "payload_json_bytes": 613,
+      "errors": [],
+      "blocked": [],
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "html_bytes": 4859136,
+      "source_modules": {
+        "deepviz.engines": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\engines.py",
+        "deepviz.render": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\render.py",
+        "deepviz.normalize": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\normalize.py"
+      }
+    },
+    "manifest": {
+      "engine": "plotly",
+      "charts": [
+        {
+          "engine": "plotly",
+          "requested_kind": "bar",
+          "rendered_kind": "bar",
+          "spec": {
+            "version": 1,
+            "kind": "bar",
+            "title": "R10 categorical literal-label control",
+            "description": "",
+            "x": "x",
+            "y": "value",
+            "color": "series",
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "none",
+            "max_points": 10,
+            "width": 900,
+            "height": 420,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          },
+          "records": [
+            {
+              "x": "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+              "value": 3,
+              "series": "<b>R10 literal series</b>"
+            },
+            {
+              "x": "<img src=\"R10-inert:\" onerror=\"\">",
+              "value": 7,
+              "series": "<b>R10 literal series</b>"
+            },
+            {
+              "x": "<b>R10 literal label</b>",
+              "value": 11,
+              "series": "<b>R10 literal series</b>"
+            }
+          ],
+          "input_count": 3,
+          "output_count": 3,
+          "strategy": "none",
+          "warnings": []
+        }
+      ],
+      "warnings": [],
+      "native_specs": [
+        {
+          "data": [
+            {
+              "type": "bar",
+              "name": "&lt;b&gt;R10 literal series&lt;/b&gt;",
+              "x": [
+                "&lt;a href=\"https://example.invalid/r10-20\"&gt;R10 safe link&lt;/a&gt;",
+                "&lt;img src=\"R10-inert:\" onerror=\"\"&gt;",
+                "&lt;b&gt;R10 literal label&lt;/b&gt;"
+              ],
+              "y": [
+                3.0,
+                7.0,
+                11.0
+              ],
+              "marker": {
+                "color": "#386cb0"
+              }
+            }
+          ],
+          "layout": {
+            "title": {
+              "text": "R10 categorical literal-label control"
+            },
+            "width": 900,
+            "height": 420,
+            "paper_bgcolor": "#ffffff",
+            "plot_bgcolor": "#ffffff",
+            "font": {
+              "color": "#202938"
+            },
+            "showlegend": true,
+            "xaxis": {
+              "title": {
+                "text": "x"
+              }
+            },
+            "yaxis": {
+              "title": {
+                "text": "value"
+              }
+            }
+          }
+        }
+      ],
+      "strategy": "none",
+      "accessible_path": "chart.html"
+    }
+  },
+  {
+    "case": "categorical-dashboard",
+    "observed_native_DOM": {
+      "charts": [
+        {
+          "x": [
+            "&lt;a href=\"https://example.invalid/r10-20\"&gt;R10 safe link&lt;/a&gt;",
+            "&lt;img src=\"R10-inert:\" onerror=\"\"&gt;",
+            "&lt;b&gt;R10 literal label&lt;/b&gt;"
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "text": [
+            "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+            "<img src=\"R10-inert:\" onerror=\"\">",
+            "<b>R10 literal label</b>",
+            "0",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "<b>R10 literal series</b>",
+            "R10 categorical literal-label control",
+            "x",
+            "value"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "missing_literal_strings": [],
+          "mark_count": 3,
+          "mark_centers": [
+            {
+              "x": 131.3349952697754,
+              "y": 447.5037536621094
+            },
+            {
+              "x": 194,
+              "y": 406.0487518310547
+            },
+            {
+              "x": 256.6649932861328,
+              "y": 364.59375
+            }
+          ]
+        },
+        {
+          "x": [
+            "&lt;a href=\"https://example.invalid/r10-20\"&gt;R10 safe link&lt;/a&gt;",
+            "&lt;img src=\"R10-inert:\" onerror=\"\"&gt;",
+            "&lt;b&gt;R10 literal label&lt;/b&gt;"
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "text": [
+            "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+            "<img src=\"R10-inert:\" onerror=\"\">",
+            "<b>R10 literal label</b>",
+            "0",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "<b>R10 literal series</b>",
+            "R10 categorical literal-label control",
+            "x",
+            "value"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "missing_literal_strings": [],
+          "mark_count": 3,
+          "mark_centers": [
+            {
+              "x": 641.3350219726562,
+              "y": 447.5037536621094
+            },
+            {
+              "x": 704,
+              "y": 406.0487518310547
+            },
+            {
+              "x": 766.6649780273438,
+              "y": 364.59375
+            }
+          ]
+        }
+      ],
+      "table_cells": [
+        "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+        "3",
+        "<b>R10 literal series</b>",
+        "<img src=\"R10-inert:\" onerror=\"\">",
+        "7",
+        "<b>R10 literal series</b>",
+        "<b>R10 literal label</b>",
+        "11",
+        "<b>R10 literal series</b>",
+        "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+        "3",
+        "<b>R10 literal series</b>",
+        "<img src=\"R10-inert:\" onerror=\"\">",
+        "7",
+        "<b>R10 literal series</b>",
+        "<b>R10 literal label</b>",
+        "11",
+        "<b>R10 literal series</b>"
+      ],
+      "payload_json_bytes": 1225,
+      "errors": [],
+      "blocked": [],
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "html_bytes": 4860763,
+      "source_modules": {
+        "deepviz.engines": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\engines.py",
+        "deepviz.render": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\render.py",
+        "deepviz.normalize": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\normalize.py"
+      }
+    },
+    "manifest": {
+      "engine": "plotly",
+      "charts": [
+        {
+          "engine": "plotly",
+          "requested_kind": "bar",
+          "rendered_kind": "bar",
+          "spec": {
+            "version": 1,
+            "kind": "bar",
+            "title": "R10 categorical literal-label control",
+            "description": "",
+            "x": "x",
+            "y": "value",
+            "color": "series",
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "none",
+            "max_points": 10,
+            "width": 490,
+            "height": 420,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          },
+          "records": [
+            {
+              "x": "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+              "value": 3,
+              "series": "<b>R10 literal series</b>"
+            },
+            {
+              "x": "<img src=\"R10-inert:\" onerror=\"\">",
+              "value": 7,
+              "series": "<b>R10 literal series</b>"
+            },
+            {
+              "x": "<b>R10 literal label</b>",
+              "value": 11,
+              "series": "<b>R10 literal series</b>"
+            }
+          ],
+          "input_count": 3,
+          "output_count": 3,
+          "strategy": "none",
+          "warnings": []
+        },
+        {
+          "engine": "plotly",
+          "requested_kind": "bar",
+          "rendered_kind": "bar",
+          "spec": {
+            "version": 1,
+            "kind": "bar",
+            "title": "R10 categorical literal-label control",
+            "description": "",
+            "x": "x",
+            "y": "value",
+            "color": "series",
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "none",
+            "max_points": 10,
+            "width": 490,
+            "height": 420,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          },
+          "records": [
+            {
+              "x": "<a href=\"https://example.invalid/r10-20\">R10 safe link</a>",
+              "value": 3,
+              "series": "<b>R10 literal series</b>"
+            },
+            {
+              "x": "<img src=\"R10-inert:\" onerror=\"\">",
+              "value": 7,
+              "series": "<b>R10 literal series</b>"
+            },
+            {
+              "x": "<b>R10 literal label</b>",
+              "value": 11,
+              "series": "<b>R10 literal series</b>"
+            }
+          ],
+          "input_count": 3,
+          "output_count": 3,
+          "strategy": "none",
+          "warnings": []
+        }
+      ],
+      "warnings": [],
+      "native_specs": [
+        {
+          "data": [
+            {
+              "type": "bar",
+              "name": "&lt;b&gt;R10 literal series&lt;/b&gt;",
+              "x": [
+                "&lt;a href=\"https://example.invalid/r10-20\"&gt;R10 safe link&lt;/a&gt;",
+                "&lt;img src=\"R10-inert:\" onerror=\"\"&gt;",
+                "&lt;b&gt;R10 literal label&lt;/b&gt;"
+              ],
+              "y": [
+                3.0,
+                7.0,
+                11.0
+              ],
+              "marker": {
+                "color": "#386cb0"
+              }
+            }
+          ],
+          "layout": {
+            "title": {
+              "text": "R10 categorical literal-label control"
+            },
+            "width": 490,
+            "height": 420,
+            "paper_bgcolor": "#ffffff",
+            "plot_bgcolor": "#ffffff",
+            "font": {
+              "color": "#202938"
+            },
+            "showlegend": true,
+            "xaxis": {
+              "title": {
+                "text": "x"
+              }
+            },
+            "yaxis": {
+              "title": {
+                "text": "value"
+              }
+            }
+          }
+        },
+        {
+          "data": [
+            {
+              "type": "bar",
+              "name": "&lt;b&gt;R10 literal series&lt;/b&gt;",
+              "x": [
+                "&lt;a href=\"https://example.invalid/r10-20\"&gt;R10 safe link&lt;/a&gt;",
+                "&lt;img src=\"R10-inert:\" onerror=\"\"&gt;",
+                "&lt;b&gt;R10 literal label&lt;/b&gt;"
+              ],
+              "y": [
+                3.0,
+                7.0,
+                11.0
+              ],
+              "marker": {
+                "color": "#386cb0"
+              }
+            }
+          ],
+          "layout": {
+            "title": {
+              "text": "R10 categorical literal-label control"
+            },
+            "width": 490,
+            "height": 420,
+            "paper_bgcolor": "#ffffff",
+            "plot_bgcolor": "#ffffff",
+            "font": {
+              "color": "#202938"
+            },
+            "showlegend": true,
+            "xaxis": {
+              "title": {
+                "text": "x"
+              }
+            },
+            "yaxis": {
+              "title": {
+                "text": "value"
+              }
+            }
+          }
+        }
+      ],
+      "strategy": "dashboard:none,none",
+      "accessible_path": "chart.html"
+    }
+  },
+  {
+    "case": "numeric-chart",
+    "observed_native_DOM": {
+      "charts": [
+        {
+          "x": [
+            1,
+            2,
+            4
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "text": [
+            "1",
+            "1.5",
+            "2",
+            "2.5",
+            "3",
+            "3.5",
+            "4",
+            "4",
+            "6",
+            "8",
+            "10",
+            "R10 numeric literal-label control",
+            "x",
+            "value"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "missing_literal_strings": [],
+          "mark_count": 3,
+          "mark_centers": [
+            {
+              "x": 140.75,
+              "y": 462.84375
+            },
+            {
+              "x": 360.25,
+              "y": 358.59375
+            },
+            {
+              "x": 799.25,
+              "y": 254.34375
+            }
+          ]
+        }
+      ],
+      "table_cells": [
+        "1",
+        "3",
+        "2",
+        "7",
+        "4",
+        "11"
+      ],
+      "payload_json_bytes": 424,
+      "errors": [],
+      "blocked": [],
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "html_bytes": 4858591,
+      "source_modules": {
+        "deepviz.engines": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\engines.py",
+        "deepviz.render": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\render.py",
+        "deepviz.normalize": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\normalize.py"
+      }
+    },
+    "manifest": {
+      "engine": "plotly",
+      "charts": [
+        {
+          "engine": "plotly",
+          "requested_kind": "line",
+          "rendered_kind": "line",
+          "spec": {
+            "version": 1,
+            "kind": "line",
+            "title": "R10 numeric literal-label control",
+            "description": "",
+            "x": "x",
+            "y": "value",
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "none",
+            "max_points": 10,
+            "width": 900,
+            "height": 420,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          },
+          "records": [
+            {
+              "x": 1,
+              "value": 3
+            },
+            {
+              "x": 2,
+              "value": 7
+            },
+            {
+              "x": 4,
+              "value": 11
+            }
+          ],
+          "input_count": 3,
+          "output_count": 3,
+          "strategy": "none",
+          "warnings": []
+        }
+      ],
+      "warnings": [],
+      "native_specs": [
+        {
+          "data": [
+            {
+              "type": "scatter",
+              "name": "Series",
+              "x": [
+                1,
+                2,
+                4
+              ],
+              "y": [
+                3.0,
+                7.0,
+                11.0
+              ],
+              "marker": {
+                "color": "#386cb0",
+                "symbol": "circle"
+              },
+              "mode": "lines+markers",
+              "line": {
+                "dash": "solid"
+              }
+            }
+          ],
+          "layout": {
+            "title": {
+              "text": "R10 numeric literal-label control"
+            },
+            "width": 900,
+            "height": 420,
+            "paper_bgcolor": "#ffffff",
+            "plot_bgcolor": "#ffffff",
+            "font": {
+              "color": "#202938"
+            },
+            "showlegend": false,
+            "xaxis": {
+              "title": {
+                "text": "x"
+              }
+            },
+            "yaxis": {
+              "title": {
+                "text": "value"
+              }
+            }
+          }
+        }
+      ],
+      "strategy": "none",
+      "accessible_path": "chart.html"
+    }
+  },
+  {
+    "case": "numeric-dashboard",
+    "observed_native_DOM": {
+      "charts": [
+        {
+          "x": [
+            1,
+            2,
+            4
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "text": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "4",
+            "6",
+            "8",
+            "10",
+            "R10 numeric literal-label control",
+            "x",
+            "value"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "missing_literal_strings": [],
+          "mark_count": 3,
+          "mark_centers": [
+            {
+              "x": 120.25,
+              "y": 462.84375
+            },
+            {
+              "x": 216.75,
+              "y": 358.59375
+            },
+            {
+              "x": 409.75,
+              "y": 254.34375
+            }
+          ]
+        },
+        {
+          "x": [
+            1,
+            2,
+            4
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "text": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "4",
+            "6",
+            "8",
+            "10",
+            "R10 numeric literal-label control",
+            "x",
+            "value"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "missing_literal_strings": [],
+          "mark_count": 3,
+          "mark_centers": [
+            {
+              "x": 630.25,
+              "y": 462.84375
+            },
+            {
+              "x": 726.75,
+              "y": 358.59375
+            },
+            {
+              "x": 919.75,
+              "y": 254.34375
+            }
+          ]
+        }
+      ],
+      "table_cells": [
+        "1",
+        "3",
+        "2",
+        "7",
+        "4",
+        "11",
+        "1",
+        "3",
+        "2",
+        "7",
+        "4",
+        "11"
+      ],
+      "payload_json_bytes": 847,
+      "errors": [],
+      "blocked": [],
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "html_bytes": 4859689,
+      "source_modules": {
+        "deepviz.engines": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\engines.py",
+        "deepviz.render": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\render.py",
+        "deepviz.normalize": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\normalize.py"
+      }
+    },
+    "manifest": {
+      "engine": "plotly",
+      "charts": [
+        {
+          "engine": "plotly",
+          "requested_kind": "line",
+          "rendered_kind": "line",
+          "spec": {
+            "version": 1,
+            "kind": "line",
+            "title": "R10 numeric literal-label control",
+            "description": "",
+            "x": "x",
+            "y": "value",
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "none",
+            "max_points": 10,
+            "width": 490,
+            "height": 420,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          },
+          "records": [
+            {
+              "x": 1,
+              "value": 3
+            },
+            {
+              "x": 2,
+              "value": 7
+            },
+            {
+              "x": 4,
+              "value": 11
+            }
+          ],
+          "input_count": 3,
+          "output_count": 3,
+          "strategy": "none",
+          "warnings": []
+        },
+        {
+          "engine": "plotly",
+          "requested_kind": "line",
+          "rendered_kind": "line",
+          "spec": {
+            "version": 1,
+            "kind": "line",
+            "title": "R10 numeric literal-label control",
+            "description": "",
+            "x": "x",
+            "y": "value",
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "none",
+            "max_points": 10,
+            "width": 490,
+            "height": 420,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          },
+          "records": [
+            {
+              "x": 1,
+              "value": 3
+            },
+            {
+              "x": 2,
+              "value": 7
+            },
+            {
+              "x": 4,
+              "value": 11
+            }
+          ],
+          "input_count": 3,
+          "output_count": 3,
+          "strategy": "none",
+          "warnings": []
+        }
+      ],
+      "warnings": [],
+      "native_specs": [
+        {
+          "data": [
+            {
+              "type": "scatter",
+              "name": "Series",
+              "x": [
+                1,
+                2,
+                4
+              ],
+              "y": [
+                3.0,
+                7.0,
+                11.0
+              ],
+              "marker": {
+                "color": "#386cb0",
+                "symbol": "circle"
+              },
+              "mode": "lines+markers",
+              "line": {
+                "dash": "solid"
+              }
+            }
+          ],
+          "layout": {
+            "title": {
+              "text": "R10 numeric literal-label control"
+            },
+            "width": 490,
+            "height": 420,
+            "paper_bgcolor": "#ffffff",
+            "plot_bgcolor": "#ffffff",
+            "font": {
+              "color": "#202938"
+            },
+            "showlegend": false,
+            "xaxis": {
+              "title": {
+                "text": "x"
+              }
+            },
+            "yaxis": {
+              "title": {
+                "text": "value"
+              }
+            }
+          }
+        },
+        {
+          "data": [
+            {
+              "type": "scatter",
+              "name": "Series",
+              "x": [
+                1,
+                2,
+                4
+              ],
+              "y": [
+                3.0,
+                7.0,
+                11.0
+              ],
+              "marker": {
+                "color": "#386cb0",
+                "symbol": "circle"
+              },
+              "mode": "lines+markers",
+              "line": {
+                "dash": "solid"
+              }
+            }
+          ],
+          "layout": {
+            "title": {
+              "text": "R10 numeric literal-label control"
+            },
+            "width": 490,
+            "height": 420,
+            "paper_bgcolor": "#ffffff",
+            "plot_bgcolor": "#ffffff",
+            "font": {
+              "color": "#202938"
+            },
+            "showlegend": false,
+            "xaxis": {
+              "title": {
+                "text": "x"
+              }
+            },
+            "yaxis": {
+              "title": {
+                "text": "value"
+              }
+            }
+          }
+        }
+      ],
+      "strategy": "dashboard:none,none",
+      "accessible_path": "chart.html"
+    }
+  },
+  {
+    "case": "time-chart",
+    "observed_native_DOM": {
+      "charts": [
+        {
+          "x": [
+            "2026-01-01",
+            "2026-01-02",
+            "2026-01-04"
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "text": [
+            "00:00Jan 1, 2026",
+            "12:00",
+            "00:00Jan 2, 2026",
+            "12:00",
+            "00:00Jan 3, 2026",
+            "12:00",
+            "00:00Jan 4, 2026",
+            "4",
+            "6",
+            "8",
+            "10",
+            "R10 time literal-label control",
+            "x",
+            "value"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "missing_literal_strings": [],
+          "mark_count": 3,
+          "mark_centers": [
+            {
+              "x": 140.75,
+              "y": 462.84375
+            },
+            {
+              "x": 360.25,
+              "y": 358.59375
+            },
+            {
+              "x": 799.25,
+              "y": 254.34375
+            }
+          ]
+        }
+      ],
+      "table_cells": [
+        "2026-01-01",
+        "3",
+        "2026-01-02",
+        "7",
+        "2026-01-04",
+        "11"
+      ],
+      "payload_json_bytes": 454,
+      "errors": [],
+      "blocked": [],
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "html_bytes": 4858633,
+      "source_modules": {
+        "deepviz.engines": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\engines.py",
+        "deepviz.render": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\render.py",
+        "deepviz.normalize": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\normalize.py"
+      }
+    },
+    "manifest": {
+      "engine": "plotly",
+      "charts": [
+        {
+          "engine": "plotly",
+          "requested_kind": "line",
+          "rendered_kind": "line",
+          "spec": {
+            "version": 1,
+            "kind": "line",
+            "title": "R10 time literal-label control",
+            "description": "",
+            "x": "x",
+            "y": "value",
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "none",
+            "max_points": 10,
+            "width": 900,
+            "height": 420,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          },
+          "records": [
+            {
+              "x": "2026-01-01",
+              "value": 3
+            },
+            {
+              "x": "2026-01-02",
+              "value": 7
+            },
+            {
+              "x": "2026-01-04",
+              "value": 11
+            }
+          ],
+          "input_count": 3,
+          "output_count": 3,
+          "strategy": "none",
+          "warnings": []
+        }
+      ],
+      "warnings": [],
+      "native_specs": [
+        {
+          "data": [
+            {
+              "type": "scatter",
+              "name": "Series",
+              "x": [
+                "2026-01-01",
+                "2026-01-02",
+                "2026-01-04"
+              ],
+              "y": [
+                3.0,
+                7.0,
+                11.0
+              ],
+              "marker": {
+                "color": "#386cb0",
+                "symbol": "circle"
+              },
+              "mode": "lines+markers",
+              "line": {
+                "dash": "solid"
+              }
+            }
+          ],
+          "layout": {
+            "title": {
+              "text": "R10 time literal-label control"
+            },
+            "width": 900,
+            "height": 420,
+            "paper_bgcolor": "#ffffff",
+            "plot_bgcolor": "#ffffff",
+            "font": {
+              "color": "#202938"
+            },
+            "showlegend": false,
+            "xaxis": {
+              "title": {
+                "text": "x"
+              }
+            },
+            "yaxis": {
+              "title": {
+                "text": "value"
+              }
+            }
+          }
+        }
+      ],
+      "strategy": "none",
+      "accessible_path": "chart.html"
+    }
+  },
+  {
+    "case": "time-dashboard",
+    "observed_native_DOM": {
+      "charts": [
+        {
+          "x": [
+            "2026-01-01",
+            "2026-01-02",
+            "2026-01-04"
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "text": [
+            "Jan 12026",
+            "Jan 2",
+            "Jan 3",
+            "Jan 4",
+            "4",
+            "6",
+            "8",
+            "10",
+            "R10 time literal-label control",
+            "x",
+            "value"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "missing_literal_strings": [],
+          "mark_count": 3,
+          "mark_centers": [
+            {
+              "x": 120.25,
+              "y": 462.84375
+            },
+            {
+              "x": 216.75,
+              "y": 358.59375
+            },
+            {
+              "x": 409.75,
+              "y": 254.34375
+            }
+          ]
+        },
+        {
+          "x": [
+            "2026-01-01",
+            "2026-01-02",
+            "2026-01-04"
+          ],
+          "y": [
+            3,
+            7,
+            11
+          ],
+          "text": [
+            "Jan 12026",
+            "Jan 2",
+            "Jan 3",
+            "Jan 4",
+            "4",
+            "6",
+            "8",
+            "10",
+            "R10 time literal-label control",
+            "x",
+            "value"
+          ],
+          "anchors": [],
+          "handlers": [],
+          "missing_literal_strings": [],
+          "mark_count": 3,
+          "mark_centers": [
+            {
+              "x": 630.25,
+              "y": 462.84375
+            },
+            {
+              "x": 726.75,
+              "y": 358.59375
+            },
+            {
+              "x": 919.75,
+              "y": 254.34375
+            }
+          ]
+        }
+      ],
+      "table_cells": [
+        "2026-01-01",
+        "3",
+        "2026-01-02",
+        "7",
+        "2026-01-04",
+        "11",
+        "2026-01-01",
+        "3",
+        "2026-01-02",
+        "7",
+        "2026-01-04",
+        "11"
+      ],
+      "payload_json_bytes": 907,
+      "errors": [],
+      "blocked": [],
+      "browser": "159.0.8154.6",
+      "node": "v26.13.1",
+      "playwright": "1.65.1",
+      "html_bytes": 4859785,
+      "source_modules": {
+        "deepviz.engines": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\engines.py",
+        "deepviz.render": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\render.py",
+        "deepviz.normalize": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt\\python\\deepviz\\src\\deepviz\\normalize.py"
+      }
+    },
+    "manifest": {
+      "engine": "plotly",
+      "charts": [
+        {
+          "engine": "plotly",
+          "requested_kind": "line",
+          "rendered_kind": "line",
+          "spec": {
+            "version": 1,
+            "kind": "line",
+            "title": "R10 time literal-label control",
+            "description": "",
+            "x": "x",
+            "y": "value",
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "none",
+            "max_points": 10,
+            "width": 490,
+            "height": 420,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          },
+          "records": [
+            {
+              "x": "2026-01-01",
+              "value": 3
+            },
+            {
+              "x": "2026-01-02",
+              "value": 7
+            },
+            {
+              "x": "2026-01-04",
+              "value": 11
+            }
+          ],
+          "input_count": 3,
+          "output_count": 3,
+          "strategy": "none",
+          "warnings": []
+        },
+        {
+          "engine": "plotly",
+          "requested_kind": "line",
+          "rendered_kind": "line",
+          "spec": {
+            "version": 1,
+            "kind": "line",
+            "title": "R10 time literal-label control",
+            "description": "",
+            "x": "x",
+            "y": "value",
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "none",
+            "max_points": 10,
+            "width": 490,
+            "height": 420,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          },
+          "records": [
+            {
+              "x": "2026-01-01",
+              "value": 3
+            },
+            {
+              "x": "2026-01-02",
+              "value": 7
+            },
+            {
+              "x": "2026-01-04",
+              "value": 11
+            }
+          ],
+          "input_count": 3,
+          "output_count": 3,
+          "strategy": "none",
+          "warnings": []
+        }
+      ],
+      "warnings": [],
+      "native_specs": [
+        {
+          "data": [
+            {
+              "type": "scatter",
+              "name": "Series",
+              "x": [
+                "2026-01-01",
+                "2026-01-02",
+                "2026-01-04"
+              ],
+              "y": [
+                3.0,
+                7.0,
+                11.0
+              ],
+              "marker": {
+                "color": "#386cb0",
+                "symbol": "circle"
+              },
+              "mode": "lines+markers",
+              "line": {
+                "dash": "solid"
+              }
+            }
+          ],
+          "layout": {
+            "title": {
+              "text": "R10 time literal-label control"
+            },
+            "width": 490,
+            "height": 420,
+            "paper_bgcolor": "#ffffff",
+            "plot_bgcolor": "#ffffff",
+            "font": {
+              "color": "#202938"
+            },
+            "showlegend": false,
+            "xaxis": {
+              "title": {
+                "text": "x"
+              }
+            },
+            "yaxis": {
+              "title": {
+                "text": "value"
+              }
+            }
+          }
+        },
+        {
+          "data": [
+            {
+              "type": "scatter",
+              "name": "Series",
+              "x": [
+                "2026-01-01",
+                "2026-01-02",
+                "2026-01-04"
+              ],
+              "y": [
+                3.0,
+                7.0,
+                11.0
+              ],
+              "marker": {
+                "color": "#386cb0",
+                "symbol": "circle"
+              },
+              "mode": "lines+markers",
+              "line": {
+                "dash": "solid"
+              }
+            }
+          ],
+          "layout": {
+            "title": {
+              "text": "R10 time literal-label control"
+            },
+            "width": 490,
+            "height": 420,
+            "paper_bgcolor": "#ffffff",
+            "plot_bgcolor": "#ffffff",
+            "font": {
+              "color": "#202938"
+            },
+            "showlegend": false,
+            "xaxis": {
+              "title": {
+                "text": "x"
+              }
+            },
+            "yaxis": {
+              "title": {
+                "text": "value"
+              }
+            }
+          }
+        }
+      ],
+      "strategy": "dashboard:none,none",
+      "accessible_path": "chart.html"
+    }
+  }
+]

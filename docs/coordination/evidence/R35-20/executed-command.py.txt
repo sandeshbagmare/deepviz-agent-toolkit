@@ -1,0 +1,80 @@
+import hashlib,importlib,json,os,subprocess,sys,time
+from datetime import datetime,timezone
+from importlib.metadata import version
+from pathlib import Path
+own=Path.cwd().resolve()
+source=Path(r'C:\Users\bagma\AppData\Local\Temp\opencode\r35-20-fb0-source-ses_de567801cffeGZFlt50oYv0Dnt').resolve()
+site=Path(r'C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages')
+raw=Path(r'C:\Users\bagma\AppData\Local\Temp\opencode\r35-20-nine-fb0-ses_de567801cffeGZFlt50oYv0Dnt')
+assert not raw.exists(),'Unique once-only acceptance destination already exists; do not replay'
+raw.mkdir()
+sys.dont_write_bytecode=True
+sys.path.insert(0,str(site))
+sys.path.insert(0,str(source/'python/deepviz/src'))
+PIN='fb0d22e13b89a26eb7df0f6ed008770ecb9e1c35'
+PROBES={
+ 'tests/r10_probes/role20/test_plotly_literal_labels.py':'c1bf91c5439d585e2ff157752f380cfa4fe85c6d',
+ 'tests/r10_probes/role20/browser_assertions.cjs':'c1bf91c5439d585e2ff157752f380cfa4fe85c6d',
+ 'tests/r13_probes/role20/test_plotly_sink_discrimination.py':'f9087d0518e74378e810b9efe6d6630a12044399',
+ 'tests/r13_probes/role20/sink_browser.cjs':'f9087d0518e74378e810b9efe6d6630a12044399',
+}
+def git(root,*args):
+ return subprocess.run(['git',*args],cwd=root,capture_output=True,check=True,timeout=30).stdout
+def sha(data):return hashlib.sha256(data).hexdigest()
+def proof():
+ assert git(source,'rev-parse','HEAD').decode().strip()==PIN
+ assert not git(source,'status','--porcelain')
+ modules=[]
+ for name in ('engines','render','normalize','models'):
+  module=importlib.import_module('deepviz.'+name)
+  filename=Path(module.__file__).resolve()
+  relative=filename.relative_to(source).as_posix()
+  assert relative=='python/deepviz/src/deepviz/'+name+'.py'
+  actual=filename.read_bytes()
+  normalized=actual.replace(b'\r\n',b'\n')
+  expected=git(source,'show',PIN+':'+relative)
+  assert normalized==expected,relative
+  blob=hashlib.sha1(b'blob '+str(len(normalized)).encode()+b'\0'+normalized).hexdigest()
+  assert git(source,'rev-parse',PIN+':'+relative).decode().strip()==blob
+  modules.append({'module':module.__name__,'origin':str(filename),'git_path':relative,'git_blob':blob,'raw_sha256':sha(actual),'git_lf_sha256':sha(normalized),'working_CRLF_to_Git_LF_only':actual!=normalized})
+ probes=[]
+ for path,commit in PROBES.items():
+  actual=(own/path).read_bytes()
+  expected=git(own,'show',commit+':'+path)
+  assert actual==expected,path
+  probes.append({'path':path,'published_commit':commit,'git_blob':git(own,'rev-parse',commit+':'+path).decode().strip(),'sha256':sha(actual),'bytes':len(actual),'raw_bytes_exact_published':True})
+ return {'source_head':PIN,'clean':True,'source_modules':modules,'unchanged_probes':probes}
+before=proof()
+assert not git(source,'diff','94319d679661a169856fb0a0ec0e9de5cbd6986f',PIN,'--','python/deepviz/src','python/deepviz/tests','tests/browser')
+(raw/'before.json').write_text(json.dumps(before,indent=2)+'\n',encoding='utf-8')
+started=datetime.now(timezone.utc).isoformat()
+(raw/'run-started.json').write_text(json.dumps({'source':PIN,'started_utc':started,'test_execution_budget':1,'expected_cases':9})+'\n',encoding='utf-8')
+import pytest
+class IdentityGate:
+ def __init__(self):self.nodeids=[]
+ def pytest_collection_finish(self,session):
+  assert len(session.items)==9,[item.nodeid for item in session.items]
+  first=0
+  second=0
+  for item in session.items:
+   path=Path(item.module.__file__).resolve()
+   assert path in (own/'tests/r10_probes/role20/test_plotly_literal_labels.py',own/'tests/r13_probes/role20/test_plotly_sink_discrimination.py')
+   assert item.module.render is importlib.import_module('deepviz.render').render
+   assert item.module.ChartSpec is importlib.import_module('deepviz.models').ChartSpec
+   first+=path.name=='test_plotly_literal_labels.py'
+   second+=path.name=='test_plotly_sink_discrimination.py'
+  assert (first,second)==(6,3)
+  assert proof()==before
+  self.nodeids=[item.nodeid for item in session.items]
+gate=IdentityGate()
+args=[str(own/'tests/r10_probes/role20/test_plotly_literal_labels.py'),str(own/'tests/r13_probes/role20/test_plotly_sink_discrimination.py'),'-q','-c',str(source/'pyproject.toml'),'--strict-markers','--basetemp='+str(raw/'cases'),'--junitxml='+str(raw/'nine.xml'),'-p','no:cacheprovider']
+print(json.dumps({'source_before_assertions':PIN,'clean':True,'loaded_source_blobs':[item['git_blob'] for item in before['source_modules']],'unchanged_raw_probes':4,'pytest_args':args,'semantic_oracle_changes':0}),flush=True)
+timer=time.perf_counter()
+code=int(pytest.main(args,plugins=[gate]))
+elapsed=time.perf_counter()-timer
+after=proof()
+assert after==before
+receipt={'source':PIN,'product_source':'94319d679661a169856fb0a0ec0e9de5cbd6986f','prerequisite':'72244399d3606046621afd6b11aaf19894d1460b','own_head':git(own,'rev-parse','HEAD').decode().strip(),'started_utc':started,'finished_utc':datetime.now(timezone.utc).isoformat(),'elapsed_seconds_including_pytest_startup':elapsed,'pytest_exit':code,'collected_cases':gate.nodeids,'collection_count':len(gate.nodeids),'python':sys.version.split()[0],'versions':{name:version(name) for name in ('pytest','plotly','pydantic','numpy','playwright')},'before':before,'after':after,'same_process_pre_and_post_source_and_probes_equal':True,'test_assertion_or_fixture_edits':0,'new_test_files':0,'actual_browser_execution_owned_by_original_nine_tests':True,'raw_root':str(raw),'pytest_args':args,'paid_calls_or_installs_or_api_writes_or_author_test_execution':0,'coverage_limit':'Nine originals have accessible tables and quote/ampersand title, not explicit Omega/entity-spelling/native kind=table controls; no broader independent approval'}
+(raw/'run-receipt.json').write_text(json.dumps(receipt,indent=2)+'\n',encoding='utf-8')
+print(json.dumps({'source_after':PIN,'pytest_exit':code,'collected_cases':len(gate.nodeids),'pre_post_identity_equal':True,'raw_root':str(raw),'elapsed_seconds':elapsed}),flush=True)
+raise SystemExit(code)

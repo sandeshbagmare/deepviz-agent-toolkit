@@ -1,0 +1,94 @@
+import hashlib,importlib,json,shutil,struct,subprocess,sys,xml.etree.ElementTree as ET
+from datetime import datetime,timezone
+from importlib.metadata import PackageNotFoundError,distribution,version
+from pathlib import Path
+own=Path.cwd().resolve()
+evidence=own/'docs/coordination/evidence/R35-20'
+raw=Path(r'C:\Users\bagma\AppData\Local\Temp\opencode\r35-20-nine-fb0-ses_de567801cffeGZFlt50oYv0Dnt')
+before=json.loads((raw/'before.json').read_text(encoding='utf-8'))
+source=Path(before['source_modules'][0]['origin']).parents[4]
+sys.dont_write_bytecode=True
+sys.path.insert(0,r'C:\Users\bagma\deepviz-agent-toolkit\.venv\Lib\site-packages')
+sys.path.insert(0,str(source/'python/deepviz/src'))
+def sha(data):return hashlib.sha256(data).hexdigest()
+def git(root,*args):return subprocess.run(['git',*args],cwd=root,capture_output=True,check=True,timeout=30).stdout
+def save(name,value):
+ target=evidence/name
+ assert not target.exists(),str(target)
+ target.write_text(json.dumps(value,indent=2,ensure_ascii=True)+'\n',encoding='utf-8')
+assert git(source,'rev-parse','HEAD').decode().strip()==before['source_head']
+assert not git(source,'status','--porcelain')
+for entry in before['source_modules']:
+ module=importlib.import_module(entry['module'])
+ actual=Path(module.__file__).resolve()
+ assert str(actual)==entry['origin']
+ data=actual.read_bytes()
+ assert sha(data)==entry['raw_sha256']
+ assert data.replace(b'\r\n',b'\n')==git(source,'show',before['source_head']+':'+entry['git_path'])
+ assert git(source,'rev-parse',before['source_head']+':'+entry['git_path']).decode().strip()==entry['git_blob']
+for entry in before['unchanged_probes']:
+ data=(own/entry['path']).read_bytes()
+ assert sha(data)==entry['sha256']
+ assert data==git(own,'show',entry['published_commit']+':'+entry['path'])
+assert not (raw/'run-receipt.json').exists(),'Original metadata tail failed; do not invent its receipt'
+xml_raw=(raw/'nine.xml').read_bytes()
+xml_root=ET.fromstring(xml_raw)
+suite=xml_root.find('testsuite')
+assert suite is not None
+assert {key:int(suite.attrib[key]) for key in ('tests','failures','errors','skipped')}=={'tests':9,'failures':0,'errors':0,'skipped':0}
+case_names=[case.attrib['name'] for case in suite.findall('testcase')]
+assert len(case_names)==9
+for node in xml_root.iter():
+ if 'hostname' in node.attrib:node.attrib['hostname']='redacted-host'
+xml_safe=ET.tostring(xml_root,encoding='utf-8',xml_declaration=True)
+(evidence/'nine.xml').write_bytes(xml_safe)
+opened={'categorical-chart','categorical-dashboard','legend','hover','title','numeric-chart','time-dashboard'}
+case_packets=[]
+artifacts=[]
+plot_count=0
+snapshot_count=0
+for case in sorted((raw/'cases').iterdir()):
+ request=json.loads((case/'request.json').read_text(encoding='utf-8'))
+ observed=json.loads((case/'browser.json').read_text(encoding='utf-8'))
+ assert observed['errors']==[] and observed['blocked']==[]
+ key=request['sink'] if 'sink' in request else request['family']+('-dashboard' if request['child_count']==2 else '-chart')
+ expected_name='test_plotly_isolated_sink_literal_text['+key+']' if 'sink' in request else 'test_plotly_literal_labels_and_coordinate_controls['+key+']'
+ assert expected_name in case_names
+ states=observed['charts'] if 'charts' in observed else [observed['before'],*observed['hover_states']]
+ assert all(not state['anchors'] and not state['handlers'] for state in states)
+ plot_count+=len(observed['charts']) if 'charts' in observed else 1
+ snapshot_count+=len(states)
+ manifests=list((case/'artifacts').glob('**/manifest.json'))
+ assert len(manifests)==1
+ manifest=json.loads(manifests[0].read_text(encoding='utf-8'))
+ assert manifest['engine']=='plotly'
+ assert all(chart['input_count']==chart['output_count']==3 for chart in manifest['charts'])
+ html=Path(request['html'])
+ png=case/'browser.png'
+ png_raw=png.read_bytes()
+ assert png_raw[:8]==b'\x89PNG\r\n\x1a\n'
+ dimensions=struct.unpack('>II',png_raw[16:24])
+ gaps=[]
+ for state in states:
+  centers=state['mark_centers']
+  gaps.append((centers[1]['x']-centers[0]['x'])/(centers[2]['x']-centers[1]['x']))
+ row={'case':key,'junit_name':expected_name,'original_browser_json_sha256':sha((case/'browser.json').read_bytes()),'html_bytes':html.stat().st_size,'html_sha256':sha(html.read_bytes()),'manifest_sha256':sha(manifests[0].read_bytes()),'png_sha256':sha(png_raw),'png_bytes':len(png_raw),'png_dimensions':dimensions,'png_actually_opened_by_agent':key in opened,'native_gap_ratios':gaps,'manifest_charts':len(manifest['charts']),'native_snapshots':len(states),'console_or_page_errors':0,'unexpected_requests':0,'active_anchors':0,'handler_attributes':0}
+ artifacts.append(row)
+ case_packets.append({'case':key,'observed_native_DOM':observed,'manifest':manifest})
+ if key in opened:shutil.copyfile(png,evidence/(key+'.png'))
+assert len(artifacts)==9 and {row['case'] for row in artifacts}=={'categorical-chart','categorical-dashboard','numeric-chart','numeric-dashboard','time-chart','time-dashboard','legend','hover','title'}
+assert plot_count==12 and snapshot_count==15
+assert len({(item['observed_native_DOM']['browser'],item['observed_native_DOM']['node'],item['observed_native_DOM']['playwright']) for item in case_packets})==1
+observed_version=case_packets[0]['observed_native_DOM']
+versions={name:version(name) for name in ('pytest','plotly','pydantic','numpy')}
+try:versions['python_playwright_distribution']=version('playwright')
+except PackageNotFoundError:versions['python_playwright_distribution']=None
+asset=Path(distribution('plotly').locate_file('plotly/package_data/plotly.min.js'))
+asset_data=asset.read_bytes() if asset.is_file() else None
+started=json.loads((raw/'run-started.json').read_text(encoding='utf-8'))
+save('source-before.json',before)
+save('native-dom-and-manifests.json',case_packets)
+save('artifact-hashes.json',artifacts)
+save('recovered-receipt.json',{'source':before['source_head'],'product_source':'94319d679661a169856fb0a0ec0e9de5cbd6986f','prerequisite':'72244399d3606046621afd6b11aaf19894d1460b','own_branch_head_before_work':'f84f82d9278ef86078785c95d1611246f723d14e','started_utc':started['started_utc'],'recovery_utc':datetime.now(timezone.utc).isoformat(),'recovery_is_evidence_only_not_test_or_browser_execution':True,'fresh_extra_test_runs':0,'original_command_overall_exit':1,'actual_pytest_return_before_metadata_tail':0,'actual_pytest_summary':'9 passed in 25.50s','junit':{'tests':9,'failures':0,'errors':0,'skipped':0,'suite_seconds':float(suite.attrib['time']),'raw_xml_sha256':sha(xml_raw),'published_xml_sha256':sha(xml_safe),'sanitization':'hostname only; XML serialization may change representation, case IDs/counts/results unchanged'},'case_ids':case_names,'run_receipt_not_written_originally':True,'tail_error':'OWN receipt metadata queried Python playwright distribution; missing, despite successful Node Playwright browser execution','same_process_post_proof_succeeded_before_tail_error_as_proven_by_saved_command_control_flow_and_traceback':True,'fresh_recovery_source_probes_origins_and_all_bytes_reverified':True,'pre_post_source_clean':True,'source_proof':before,'runtime_versions':{**versions,'browser':observed_version['browser'],'node':observed_version['node'],'node_playwright':observed_version['playwright'],'python':sys.version.split()[0]},'installed_plotly_inline_asset':{'path':str(asset),'bytes':len(asset_data) if asset_data is not None else None,'sha256':sha(asset_data) if asset_data is not None else None,'readonly':True},'native_browser_cases':9,'native_plots':plot_count,'native_snapshots_including_geo_hovers':snapshot_count,'active_anchor_total':0,'handler_attribute_total':0,'console_or_page_error_total':0,'unexpected_request_total':0,'network_policy':'Original unchanged helpers allow only exact own file:// document and abort/record every other request; all blocked arrays empty. Self-contained installed Plotly runtime, no CDN request/fulfillment/health claim.','actually_opened_pngs':sorted(opened),'semantic_assertion_or_fixture_changes':0,'old_raw_probe_files_changed':0,'new_test_files':0,'author_test_execution':0,'production_edits':0,'dependency_installs_or_API_writes':0,'visual_finding':{'id':'R35-20-V1','severity':'P2','evidence':['categorical-chart.png','categorical-dashboard.png'],'finding':'Native categorical labels have complete literal textContent but visibly clipped lower portions at fixed 420px chart frame; no measured DOM bbox claim','status':'R04 disposition required; nine original automated PASS is not full visual acceptance'},'coverage_limit':'Original nine do not include explicit Omega/entity-spelling/native kind=table fixture. Accessible HTML tables and literal quote/ampersand title are checked. No author coverage borrowed.','release_or_issue_closure_approval':False})
+assert not git(source,'status','--porcelain')
+print(json.dumps({'collector_exit':0,'tests_read_not_rerun':9,'tests_passed':9,'browser_cases_read':9,'plots':plot_count,'snapshots':snapshot_count,'errors_unexpected_requests_anchors_handlers':0,'images_actually_opened_and_copied':7,'source_clean':True,'visual_finding':'R35-20-V1 P2 categorical labels visibly clipped','output':str(evidence)}))
