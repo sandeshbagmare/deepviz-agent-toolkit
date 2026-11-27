@@ -1,0 +1,12 @@
+commit ba171160de0895f785807e895b4b4cb14dff970e
+Author:     sandeshbagmare <sandeshbagmare@users.noreply.github.com>
+AuthorDate: Thu Nov 26 23:44:24 2026 +0530
+Commit:     sandeshbagmare <sandeshbagmare@users.noreply.github.com>
+CommitDate: Fri Nov 27 00:08:03 2026 +0530
+
+    feat: normalize heterogeneous inputs with bounded streaming reductions
+
+ python/deepviz/src/deepviz/normalize.py | 566 ++++++++++++++++++++++++++++++++
+ python/deepviz/tests/test_normalize.py  | 437 ++++++++++++++++++++++++
+ scripts/benchmark_scale.py              | 114 +++++++
+ 3 files changed, 1117 insertions(+)

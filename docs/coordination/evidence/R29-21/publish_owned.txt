@@ -1,0 +1,34 @@
+"""R29 own Git-only publication, never tests/builds/API/default mutation."""
+import datetime as dt,json,re,subprocess
+from pathlib import Path
+from urllib.parse import urlsplit
+root=Path.cwd();main=Path(r"C:\Users\bagma\deepviz-agent-toolkit")
+branch="agents/r10-21-recovery-git-bootstrap";base="e2df3e0e42a8094aaebb62ebd0fb878fd128c2ee"
+receipt={"started_utc":dt.datetime.now(dt.timezone.utc).isoformat(),"branch":branch,"base":base,"commands":[],"API_used":False,"product_tests_builds_installs_run":0}
+def git(*args):
+    d=subprocess.run(["git",*args],cwd=root,capture_output=True,text=True,timeout=120)
+    receipt["commands"].append({"argv":["git",*args],"exit":d.returncode})
+    if d.returncode:raise RuntimeError("Git command failed: "+args[0])
+    return d.stdout.strip()
+try:
+    if git("branch","--show-current")!=branch or git("status","--porcelain=v1"):raise RuntimeError("Wrong branch or dirty tree")
+    tip=git("rev-parse","HEAD");git("merge-base","--is-ancestor",base,tip)
+    if not re.fullmatch("[0-9a-f]{40}",tip):raise RuntimeError("Invalid tip")
+    paths=git("diff","--name-only",base,tip).splitlines()
+    allowed=lambda p:p=="docs/agent-state/ses_de5678018ffezK8JGDUaSzvcWn.md" or p=="docs/coordination/reports/R29-21-python-foundation-plan.md" or p.startswith("docs/coordination/evidence/R29-21/")
+    if not paths or not all(allowed(p) for p in paths):raise RuntimeError("Scope mismatch")
+    origin=urlsplit(git("remote","get-url","origin"))
+    if origin.scheme!="https" or origin.hostname!="github.com" or origin.username or origin.password or origin.path.rstrip("/") not in {"/sandeshbagmare/deepviz-agent-toolkit","/sandeshbagmare/deepviz-agent-toolkit.git"}:raise RuntimeError("Unexpected origin")
+    receipt.update(local_commit=tip,owned_paths=paths)
+    git("push","origin","HEAD:refs/heads/"+branch)
+    remote=git("ls-remote","--heads","origin","refs/heads/"+branch).split()
+    if remote!=[tip,"refs/heads/"+branch]:raise RuntimeError("Remote mismatch")
+    receipt.update(remote_sha_readback=remote[0],status="OWN_STATIC_PLAN_PUBLISHED_EXACT_SHA_NOT_PACKAGE_APPROVAL")
+except (RuntimeError,subprocess.SubprocessError) as e:
+    receipt.update(status="PUBLICATION_UNVERIFIED",error=str(e))
+finally:
+    receipt["finished_utc"]=dt.datetime.now(dt.timezone.utc).isoformat()
+    (main/"docs/coordination/evidence/R29-21").mkdir(parents=True,exist_ok=True)
+    (main/"docs/coordination/evidence/R29-21/publication-receipt.json").write_text(json.dumps(receipt,indent=2)+chr(10),encoding="utf-8")
+    print(json.dumps(receipt,indent=2))
+raise SystemExit(0 if receipt["status"].startswith("OWN_STATIC") else 1)

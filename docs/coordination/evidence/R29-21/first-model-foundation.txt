@@ -1,0 +1,12 @@
+commit 715c1f5ca0c13c276110c64d2af8c21deca881ea
+Author:     sandeshbagmare <sandeshbagmare@users.noreply.github.com>
+AuthorDate: Thu Nov 26 23:34:40 2026 +0530
+Commit:     sandeshbagmare <sandeshbagmare@users.noreply.github.com>
+CommitDate: Thu Nov 26 23:34:40 2026 +0530
+
+    fix: ship canonical schema in Python distribution
+
+ .../superpowers/specs/2026-11-26-deepviz-design.md |   2 +-
+ pyproject.toml                                     |   6 +
+ schemas/chart-spec.schema.json                     | 190 +++++++++++++++++++++
+ 3 files changed, 197 insertions(+), 1 deletion(-)

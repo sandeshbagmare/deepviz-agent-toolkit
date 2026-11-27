@@ -1,0 +1,12 @@
+commit 7c62cc1afc25e413846a94ab25fbac1ea45926e5
+Author:     sandeshbagmare <sandeshbagmare@users.noreply.github.com>
+AuthorDate: Thu Nov 26 23:51:40 2026 +0530
+Commit:     sandeshbagmare <sandeshbagmare@users.noreply.github.com>
+CommitDate: Fri Nov 27 00:08:03 2026 +0530
+
+    feat: render five native engines with bounded dashboards and accessible data alternatives
+
+ python/deepviz/src/deepviz/engines.py | 635 ++++++++++++++++++++++++++++++++++
+ python/deepviz/src/deepviz/render.py  | 130 +++++++
+ python/deepviz/tests/test_render.py   | 419 ++++++++++++++++++++++
+ 3 files changed, 1184 insertions(+)

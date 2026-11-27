@@ -1,0 +1,1150 @@
+{
+  "AST_import_edges": [
+    {
+      "file": "cli.py",
+      "line": 2,
+      "level": 0,
+      "module": "__future__",
+      "names": [
+        "annotations"
+      ]
+    },
+    {
+      "file": "cli.py",
+      "line": 4,
+      "imports": [
+        "argparse"
+      ]
+    },
+    {
+      "file": "cli.py",
+      "line": 5,
+      "imports": [
+        "json"
+      ]
+    },
+    {
+      "file": "cli.py",
+      "line": 6,
+      "level": 0,
+      "module": "pathlib",
+      "names": [
+        "Path"
+      ]
+    },
+    {
+      "file": "cli.py",
+      "line": 7,
+      "level": 0,
+      "module": "typing",
+      "names": [
+        "Any"
+      ]
+    },
+    {
+      "file": "cli.py",
+      "line": 9,
+      "level": 1,
+      "module": "models",
+      "names": [
+        "ChartSpec"
+      ]
+    },
+    {
+      "file": "cli.py",
+      "line": 10,
+      "level": 1,
+      "module": "tools",
+      "names": [
+        "ENGINES",
+        "ToolSession"
+      ]
+    },
+    {
+      "file": "cli.py",
+      "line": 33,
+      "level": 1,
+      "module": "mcp_server",
+      "names": [
+        "create_server"
+      ]
+    },
+    {
+      "file": "engines.py",
+      "line": 8,
+      "level": 0,
+      "module": "__future__",
+      "names": [
+        "annotations"
+      ]
+    },
+    {
+      "file": "engines.py",
+      "line": 10,
+      "imports": [
+        "json"
+      ]
+    },
+    {
+      "file": "engines.py",
+      "line": 11,
+      "imports": [
+        "math"
+      ]
+    },
+    {
+      "file": "engines.py",
+      "line": 12,
+      "imports": [
+        "textwrap"
+      ]
+    },
+    {
+      "file": "engines.py",
+      "line": 13,
+      "level": 0,
+      "module": "collections",
+      "names": [
+        "defaultdict"
+      ]
+    },
+    {
+      "file": "engines.py",
+      "line": 14,
+      "level": 0,
+      "module": "datetime",
+      "names": [
+        "UTC",
+        "datetime"
+      ]
+    },
+    {
+      "file": "engines.py",
+      "line": 15,
+      "level": 0,
+      "module": "html",
+      "names": [
+        "escape"
+      ]
+    },
+    {
+      "file": "engines.py",
+      "line": 16,
+      "level": 0,
+      "module": "importlib.resources",
+      "names": [
+        "files"
+      ]
+    },
+    {
+      "file": "engines.py",
+      "line": 17,
+      "level": 0,
+      "module": "typing",
+      "names": [
+        "Any",
+        "overload"
+      ]
+    },
+    {
+      "file": "engines.py",
+      "line": 19,
+      "imports": [
+        "numpy"
+      ]
+    },
+    {
+      "file": "engines.py",
+      "line": 21,
+      "level": 1,
+      "module": "models",
+      "names": [
+        "ChartSpec"
+      ]
+    },
+    {
+      "file": "engines.py",
+      "line": 220,
+      "level": 0,
+      "module": "matplotlib.backends.backend_agg",
+      "names": [
+        "FigureCanvasAgg"
+      ]
+    },
+    {
+      "file": "engines.py",
+      "line": 221,
+      "level": 0,
+      "module": "matplotlib.dates",
+      "names": [
+        "AutoDateLocator",
+        "ConciseDateFormatter"
+      ]
+    },
+    {
+      "file": "engines.py",
+      "line": 222,
+      "level": 0,
+      "module": "matplotlib.figure",
+      "names": [
+        "Figure"
+      ]
+    },
+    {
+      "file": "engines.py",
+      "line": 378,
+      "level": 0,
+      "module": "matplotlib.text",
+      "names": [
+        "Text"
+      ]
+    },
+    {
+      "file": "engines.py",
+      "line": 773,
+      "level": 0,
+      "module": "plotly.offline",
+      "names": [
+        "get_plotlyjs",
+        "get_plotlyjs_version"
+      ]
+    },
+    {
+      "file": "engines.py",
+      "line": 333,
+      "level": 0,
+      "module": "matplotlib.patches",
+      "names": [
+        "Rectangle"
+      ]
+    },
+    {
+      "file": "mcp_server.py",
+      "line": 2,
+      "level": 0,
+      "module": "__future__",
+      "names": [
+        "annotations"
+      ]
+    },
+    {
+      "file": "mcp_server.py",
+      "line": 4,
+      "imports": [
+        "argparse"
+      ]
+    },
+    {
+      "file": "mcp_server.py",
+      "line": 5,
+      "imports": [
+        "base64"
+      ]
+    },
+    {
+      "file": "mcp_server.py",
+      "line": 6,
+      "imports": [
+        "json"
+      ]
+    },
+    {
+      "file": "mcp_server.py",
+      "line": 7,
+      "imports": [
+        "mimetypes"
+      ]
+    },
+    {
+      "file": "mcp_server.py",
+      "line": 8,
+      "level": 0,
+      "module": "collections.abc",
+      "names": [
+        "Sequence"
+      ]
+    },
+    {
+      "file": "mcp_server.py",
+      "line": 9,
+      "level": 0,
+      "module": "pathlib",
+      "names": [
+        "Path"
+      ]
+    },
+    {
+      "file": "mcp_server.py",
+      "line": 10,
+      "level": 0,
+      "module": "typing",
+      "names": [
+        "Any"
+      ]
+    },
+    {
+      "file": "mcp_server.py",
+      "line": 12,
+      "level": 0,
+      "module": "pydantic",
+      "names": [
+        "AnyUrl",
+        "BaseModel"
+      ]
+    },
+    {
+      "file": "mcp_server.py",
+      "line": 14,
+      "level": 1,
+      "module": "models",
+      "names": [
+        "ChartSpec",
+        "Engine"
+      ]
+    },
+    {
+      "file": "mcp_server.py",
+      "line": 15,
+      "level": 1,
+      "module": "tools",
+      "names": [
+        "ENGINES",
+        "MAX_ARTIFACT_BYTES",
+        "NormalizeInput",
+        "RecommendInput",
+        "RenderInput",
+        "ToolSession"
+      ]
+    },
+    {
+      "file": "mcp_server.py",
+      "line": 21,
+      "level": 0,
+      "module": "mcp.server.fastmcp",
+      "names": [
+        "FastMCP"
+      ]
+    },
+    {
+      "file": "mcp_server.py",
+      "line": 22,
+      "level": 0,
+      "module": "mcp.types",
+      "names": [
+        "ContentBlock",
+        "ImageContent",
+        "ResourceLink",
+        "TextContent"
+      ]
+    },
+    {
+      "file": "mcp_server.py",
+      "line": 23,
+      "level": 0,
+      "module": "mcp.types",
+      "names": [
+        "Tool"
+      ]
+    },
+    {
+      "file": "models.py",
+      "line": 2,
+      "level": 0,
+      "module": "__future__",
+      "names": [
+        "annotations"
+      ]
+    },
+    {
+      "file": "models.py",
+      "line": 4,
+      "level": 0,
+      "module": "dataclasses",
+      "names": [
+        "dataclass",
+        "field"
+      ]
+    },
+    {
+      "file": "models.py",
+      "line": 5,
+      "level": 0,
+      "module": "typing",
+      "names": [
+        "Any",
+        "Literal"
+      ]
+    },
+    {
+      "file": "models.py",
+      "line": 7,
+      "level": 0,
+      "module": "pydantic",
+      "names": [
+        "BaseModel",
+        "ConfigDict",
+        "Field",
+        "model_validator"
+      ]
+    },
+    {
+      "file": "models.py",
+      "line": 91,
+      "level": 0,
+      "module": "dataclasses",
+      "names": [
+        "asdict"
+      ]
+    },
+    {
+      "file": "normalize.py",
+      "line": 27,
+      "level": 0,
+      "module": "__future__",
+      "names": [
+        "annotations"
+      ]
+    },
+    {
+      "file": "normalize.py",
+      "line": 29,
+      "imports": [
+        "csv"
+      ]
+    },
+    {
+      "file": "normalize.py",
+      "line": 30,
+      "imports": [
+        "io"
+      ]
+    },
+    {
+      "file": "normalize.py",
+      "line": 31,
+      "imports": [
+        "json"
+      ]
+    },
+    {
+      "file": "normalize.py",
+      "line": 32,
+      "imports": [
+        "math"
+      ]
+    },
+    {
+      "file": "normalize.py",
+      "line": 33,
+      "imports": [
+        "random"
+      ]
+    },
+    {
+      "file": "normalize.py",
+      "line": 34,
+      "imports": [
+        "re"
+      ]
+    },
+    {
+      "file": "normalize.py",
+      "line": 35,
+      "level": 0,
+      "module": "collections",
+      "names": [
+        "Counter"
+      ]
+    },
+    {
+      "file": "normalize.py",
+      "line": 36,
+      "level": 0,
+      "module": "collections.abc",
+      "names": [
+        "Iterable",
+        "Iterator",
+        "Mapping"
+      ]
+    },
+    {
+      "file": "normalize.py",
+      "line": 37,
+      "level": 0,
+      "module": "datetime",
+      "names": [
+        "date",
+        "datetime",
+        "time"
+      ]
+    },
+    {
+      "file": "normalize.py",
+      "line": 38,
+      "level": 0,
+      "module": "decimal",
+      "names": [
+        "Decimal"
+      ]
+    },
+    {
+      "file": "normalize.py",
+      "line": 39,
+      "level": 0,
+      "module": "itertools",
+      "names": [
+        "chain",
+        "islice",
+        "zip_longest"
+      ]
+    },
+    {
+      "file": "normalize.py",
+      "line": 40,
+      "level": 0,
+      "module": "numbers",
+      "names": [
+        "Integral",
+        "Real"
+      ]
+    },
+    {
+      "file": "normalize.py",
+      "line": 41,
+      "level": 0,
+      "module": "pathlib",
+      "names": [
+        "Path"
+      ]
+    },
+    {
+      "file": "normalize.py",
+      "line": 42,
+      "level": 0,
+      "module": "typing",
+      "names": [
+        "Any"
+      ]
+    },
+    {
+      "file": "normalize.py",
+      "line": 44,
+      "level": 1,
+      "module": "models",
+      "names": [
+        "ChartSpec",
+        "NormalizedData"
+      ]
+    },
+    {
+      "file": "normalize.py",
+      "line": 163,
+      "imports": [
+        "pyarrow"
+      ]
+    },
+    {
+      "file": "normalize.py",
+      "line": 206,
+      "imports": [
+        "pyarrow.parquet"
+      ]
+    },
+    {
+      "file": "recommend.py",
+      "line": 2,
+      "level": 0,
+      "module": "__future__",
+      "names": [
+        "annotations"
+      ]
+    },
+    {
+      "file": "recommend.py",
+      "line": 4,
+      "imports": [
+        "math"
+      ]
+    },
+    {
+      "file": "recommend.py",
+      "line": 5,
+      "level": 0,
+      "module": "datetime",
+      "names": [
+        "datetime"
+      ]
+    },
+    {
+      "file": "recommend.py",
+      "line": 6,
+      "level": 0,
+      "module": "typing",
+      "names": [
+        "Any",
+        "Literal"
+      ]
+    },
+    {
+      "file": "recommend.py",
+      "line": 8,
+      "level": 1,
+      "module": "models",
+      "names": [
+        "ChartKind",
+        "ChartSpec",
+        "NormalizedData"
+      ]
+    },
+    {
+      "file": "render.py",
+      "line": 2,
+      "level": 0,
+      "module": "__future__",
+      "names": [
+        "annotations"
+      ]
+    },
+    {
+      "file": "render.py",
+      "line": 4,
+      "imports": [
+        "json"
+      ]
+    },
+    {
+      "file": "render.py",
+      "line": 5,
+      "imports": [
+        "math"
+      ]
+    },
+    {
+      "file": "render.py",
+      "line": 6,
+      "imports": [
+        "tempfile"
+      ]
+    },
+    {
+      "file": "render.py",
+      "line": 7,
+      "imports": [
+        "xml.etree.ElementTree"
+      ]
+    },
+    {
+      "file": "render.py",
+      "line": 8,
+      "level": 0,
+      "module": "collections.abc",
+      "names": [
+        "Iterator",
+        "Mapping"
+      ]
+    },
+    {
+      "file": "render.py",
+      "line": 9,
+      "level": 0,
+      "module": "datetime",
+      "names": [
+        "date",
+        "datetime",
+        "time"
+      ]
+    },
+    {
+      "file": "render.py",
+      "line": 10,
+      "level": 0,
+      "module": "decimal",
+      "names": [
+        "Decimal"
+      ]
+    },
+    {
+      "file": "render.py",
+      "line": 11,
+      "level": 0,
+      "module": "numbers",
+      "names": [
+        "Integral",
+        "Real"
+      ]
+    },
+    {
+      "file": "render.py",
+      "line": 12,
+      "level": 0,
+      "module": "pathlib",
+      "names": [
+        "Path"
+      ]
+    },
+    {
+      "file": "render.py",
+      "line": 13,
+      "level": 0,
+      "module": "typing",
+      "names": [
+        "Any"
+      ]
+    },
+    {
+      "file": "render.py",
+      "line": 15,
+      "level": 1,
+      "module": "engines",
+      "names": [
+        "ENGINES",
+        "_colors",
+        "_fallback",
+        "_geometry",
+        "_table_budget",
+        "browser_html",
+        "channels",
+        "matplotlib_figure",
+        "native_spec"
+      ]
+    },
+    {
+      "file": "render.py",
+      "line": 26,
+      "level": 1,
+      "module": "models",
+      "names": [
+        "Artifact",
+        "ChartSpec"
+      ]
+    },
+    {
+      "file": "render.py",
+      "line": 96,
+      "level": 1,
+      "module": "normalize",
+      "names": [
+        "normalize"
+      ]
+    },
+    {
+      "file": "render.py",
+      "line": 190,
+      "imports": [
+        "vl_convert"
+      ]
+    },
+    {
+      "file": "tools.py",
+      "line": 2,
+      "level": 0,
+      "module": "__future__",
+      "names": [
+        "annotations"
+      ]
+    },
+    {
+      "file": "tools.py",
+      "line": 4,
+      "imports": [
+        "json"
+      ]
+    },
+    {
+      "file": "tools.py",
+      "line": 5,
+      "imports": [
+        "shutil"
+      ]
+    },
+    {
+      "file": "tools.py",
+      "line": 6,
+      "imports": [
+        "tempfile"
+      ]
+    },
+    {
+      "file": "tools.py",
+      "line": 7,
+      "level": 0,
+      "module": "collections",
+      "names": [
+        "OrderedDict"
+      ]
+    },
+    {
+      "file": "tools.py",
+      "line": 8,
+      "level": 0,
+      "module": "pathlib",
+      "names": [
+        "Path",
+        "PureWindowsPath"
+      ]
+    },
+    {
+      "file": "tools.py",
+      "line": 9,
+      "level": 0,
+      "module": "typing",
+      "names": [
+        "Any"
+      ]
+    },
+    {
+      "file": "tools.py",
+      "line": 10,
+      "level": 0,
+      "module": "uuid",
+      "names": [
+        "uuid4"
+      ]
+    },
+    {
+      "file": "tools.py",
+      "line": 12,
+      "level": 0,
+      "module": "pydantic",
+      "names": [
+        "BaseModel",
+        "ConfigDict",
+        "Field"
+      ]
+    },
+    {
+      "file": "tools.py",
+      "line": 14,
+      "level": 1,
+      "module": "models",
+      "names": [
+        "ChartSpec",
+        "Engine"
+      ]
+    },
+    {
+      "file": "tools.py",
+      "line": 15,
+      "level": 1,
+      "module": "recommend",
+      "names": [
+        "Goal",
+        "profile",
+        "recommend"
+      ]
+    },
+    {
+      "file": "tools.py",
+      "line": 99,
+      "level": 1,
+      "module": "normalize",
+      "names": [
+        "normalize"
+      ]
+    },
+    {
+      "file": "tools.py",
+      "line": 141,
+      "level": 1,
+      "module": "render",
+      "names": [
+        "render"
+      ]
+    },
+    {
+      "file": "tools.py",
+      "line": 178,
+      "level": 0,
+      "module": "langchain_core.tools",
+      "names": [
+        "StructuredTool"
+      ]
+    },
+    {
+      "file": "__init__.py",
+      "line": 2,
+      "level": 0,
+      "module": "__future__",
+      "names": [
+        "annotations"
+      ]
+    },
+    {
+      "file": "__init__.py",
+      "line": 4,
+      "level": 0,
+      "module": "importlib.resources",
+      "names": [
+        "files"
+      ]
+    },
+    {
+      "file": "__init__.py",
+      "line": 5,
+      "level": 0,
+      "module": "pathlib",
+      "names": [
+        "Path"
+      ]
+    },
+    {
+      "file": "__init__.py",
+      "line": 6,
+      "level": 0,
+      "module": "typing",
+      "names": [
+        "Any"
+      ]
+    },
+    {
+      "file": "__init__.py",
+      "line": 8,
+      "level": 1,
+      "module": "models",
+      "names": [
+        "Artifact",
+        "ChartSpec",
+        "NormalizedData"
+      ]
+    },
+    {
+      "file": "__init__.py",
+      "line": 9,
+      "level": 1,
+      "module": "normalize",
+      "names": [
+        "normalize"
+      ]
+    },
+    {
+      "file": "__init__.py",
+      "line": 10,
+      "level": 1,
+      "module": "render",
+      "names": [
+        "render"
+      ]
+    },
+    {
+      "file": "__init__.py",
+      "line": 25,
+      "level": 1,
+      "module": "tools",
+      "names": [
+        "create_tools"
+      ]
+    }
+  ],
+  "metadata": {
+    "build-system": {
+      "requires": [
+        "hatchling>=1.27"
+      ],
+      "build-backend": "hatchling.build"
+    },
+    "project": {
+      "name": "deepviz-agent-toolkit",
+      "version": "0.1.0",
+      "description": "Bounded, schema-driven visualization tools for Deep Agents and MCP",
+      "readme": "README.md",
+      "requires-python": ">=3.11",
+      "license": "MIT",
+      "dependencies": [
+        "pydantic>=2.10,<3",
+        "numpy>=1.26",
+        "matplotlib>=3.9",
+        "plotly>=6,<7",
+        "vl-convert-python>=1.7"
+      ],
+      "optional-dependencies": {
+        "agents": [
+          "deepagents>=0.3",
+          "langchain-core>=1,<2"
+        ],
+        "mcp": [
+          "mcp>=1.12,<2"
+        ],
+        "columnar": [
+          "pyarrow>=19"
+        ],
+        "dev": [
+          "pytest>=8",
+          "pytest-cov>=6",
+          "ruff>=0.11",
+          "mypy>=1.15",
+          "build>=1.2",
+          "twine>=6",
+          "pillow>=11",
+          "jsonschema>=4.23",
+          "httpx>=0.28"
+        ]
+      },
+      "scripts": {
+        "deepviz": "deepviz.cli:main",
+        "deepviz-mcp": "deepviz.mcp_server:main"
+      }
+    },
+    "tool": {
+      "hatch": {
+        "build": {
+          "targets": {
+            "wheel": {
+              "packages": [
+                "python/deepviz/src/deepviz"
+              ],
+              "force-include": {
+                "schemas/chart-spec.schema.json": "deepviz/resources/chart-spec.schema.json",
+                "prompts/v1": "deepviz/resources/prompts/v1"
+              }
+            }
+          }
+        }
+      },
+      "pytest": {
+        "ini_options": {
+          "testpaths": [
+            "python/deepviz/tests",
+            "tests"
+          ],
+          "markers": [
+            "scale: large dataset benchmark",
+            "integration: external adapter integrations"
+          ]
+        }
+      },
+      "ruff": {
+        "target-version": "py311",
+        "line-length": 110,
+        "lint": {
+          "select": [
+            "E4",
+            "E7",
+            "E9",
+            "F",
+            "I",
+            "B",
+            "UP"
+          ],
+          "isort": {
+            "known-first-party": [
+              "deepviz"
+            ]
+          }
+        }
+      },
+      "mypy": {
+        "python_version": "3.11",
+        "ignore_missing_imports": true,
+        "check_untyped_defs": true,
+        "files": [
+          "python/deepviz/src/deepviz"
+        ]
+      }
+    }
+  },
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "log",
+        "--format=%H %s",
+        "--reverse",
+        "0ae2cf26426822135fc10d337fcacf580b7ed833..3eab699b61850a20e91132e16caf8c589085f9ee",
+        "--",
+        "python/deepviz/src",
+        "pyproject.toml",
+        "schemas/chart-spec.schema.json"
+      ],
+      "exit": 0,
+      "saved": "foundation-history.txt"
+    },
+    {
+      "argv": [
+        "git",
+        "log",
+        "-8",
+        "--format=%H %s",
+        "3eab699b61850a20e91132e16caf8c589085f9ee"
+      ],
+      "exit": 0,
+      "saved": "candidate-tip.txt"
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "3eab699b61850a20e91132e16caf8c589085f9ee",
+        "--",
+        "prompts",
+        "python/deepviz/tests",
+        "tests",
+        "docs/process"
+      ],
+      "exit": 0,
+      "saved": "assets.txt"
+    },
+    {
+      "argv": [
+        "git",
+        "log",
+        "--format=%H %s",
+        "3eab699b61850a20e91132e16caf8c589085f9ee",
+        "--",
+        "pyproject.toml",
+        "python/deepviz/src/deepviz/__init__.py",
+        "python/deepviz/src/deepviz/cli.py"
+      ],
+      "exit": 0,
+      "saved": "metadata-history.txt"
+    }
+  ],
+  "local_site_entries_read_only_not_imported": {
+    "hatchling": [],
+    "build": [
+      "build",
+      "build-1.6.1.dist-info"
+    ],
+    "pydantic": [
+      "pydantic",
+      "pydantic-2.14.4.dist-info",
+      "pydantic_core",
+      "pydantic_core-2.50.5.dist-info",
+      "pydantic_settings",
+      "pydantic_settings-2.16.3.dist-info"
+    ],
+    "numpy": [
+      "numpy",
+      "numpy-2.5.5.dist-info",
+      "numpy.libs"
+    ],
+    "matplotlib": [
+      "matplotlib",
+      "matplotlib-3.11.2.dist-info"
+    ],
+    "plotly": [
+      "plotly",
+      "plotly-6.9.0.dist-info"
+    ],
+    "vl_convert": [
+      "vl_convert",
+      "vl_convert_python-1.9.0.post1.dist-info"
+    ],
+    "mcp": [
+      "mcp",
+      "mcp-1.30.0.dist-info"
+    ],
+    "langchain_core": [
+      "langchain_core",
+      "langchain_core-1.8.5.dist-info"
+    ],
+    "pyarrow": [
+      "pyarrow",
+      "pyarrow-26.0.1.dist-info",
+      "pyarrow.libs"
+    ]
+  },
+  "hatchling_import_or_build_executed": false,
+  "packages_proven_installed_by_listing": false
+}

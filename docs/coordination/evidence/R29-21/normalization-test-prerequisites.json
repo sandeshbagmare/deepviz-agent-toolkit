@@ -1,0 +1,260 @@
+[
+  {
+    "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+    "path": "scripts/benchmark_scale.py",
+    "git_show_exit": 0,
+    "sha256": "70f22dba76e64ff86d4f20935a5685413f6c984a93c6658f7dc0bda5f54a126c",
+    "imports": [
+      {
+        "line": 12,
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ]
+      },
+      {
+        "line": 19,
+        "module": "collections.abc",
+        "names": [
+          "Iterator"
+        ]
+      },
+      {
+        "line": 20,
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ]
+      },
+      {
+        "line": 21,
+        "module": "time",
+        "names": [
+          "perf_counter"
+        ]
+      },
+      {
+        "line": 22,
+        "module": "typing",
+        "names": [
+          "Any"
+        ]
+      },
+      {
+        "line": 56,
+        "module": "deepviz.normalize",
+        "names": [
+          "normalize"
+        ]
+      },
+      {
+        "line": 28,
+        "module": "ctypes",
+        "names": [
+          "wintypes"
+        ]
+      }
+    ]
+  },
+  {
+    "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+    "path": "python/deepviz/tests/test_aggregation_semantics.py",
+    "git_show_exit": 0,
+    "sha256": "1388b4a41e76de429828bb3e655217cba34ab50edd0983b48d770f6e392e0312",
+    "imports": [
+      {
+        "line": 5,
+        "module": "collections",
+        "names": [
+          "defaultdict"
+        ]
+      },
+      {
+        "line": 9,
+        "module": "deepviz.models",
+        "names": [
+          "ChartSpec"
+        ]
+      },
+      {
+        "line": 10,
+        "module": "deepviz.normalize",
+        "names": [
+          "normalize"
+        ]
+      }
+    ]
+  },
+  {
+    "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+    "path": "python/deepviz/tests/test_n04_format_guards.py",
+    "git_show_exit": 0,
+    "sha256": "9aa70c9893f2eb626a0cfd62062fda71d33e90d285c4cb2596f92776fed03224",
+    "imports": [
+      {
+        "line": 7,
+        "module": "deepviz.normalize",
+        "names": [
+          "normalize"
+        ]
+      }
+    ]
+  },
+  {
+    "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+    "path": "python/deepviz/tests/test_n04_normalize_regressions.py",
+    "git_show_exit": 0,
+    "sha256": "4ce0b2d59d045aa402f7f031028fd406ac67db8d8835f882f547e5edc687b5fa",
+    "imports": [
+      {
+        "line": 8,
+        "module": "deepviz.normalize",
+        "names": [
+          "normalize"
+        ]
+      }
+    ]
+  },
+  {
+    "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+    "path": "python/deepviz/tests/test_n04_shape_policy.py",
+    "git_show_exit": 0,
+    "sha256": "53aeb381a5c426e61fc212910ec258a9c27814fbff48af5d7688f105f4430fec",
+    "imports": [
+      {
+        "line": 5,
+        "module": "deepviz.normalize",
+        "names": [
+          "normalize"
+        ]
+      }
+    ]
+  },
+  {
+    "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+    "path": "python/deepviz/tests/test_n19_format_regressions.py",
+    "git_show_exit": 0,
+    "sha256": "3d90ad4bf0947d67fff4933329bdae29879a008a18a01b7f298ca88ebd5714ff",
+    "imports": [
+      {
+        "line": 2,
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ]
+      },
+      {
+        "line": 4,
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ]
+      },
+      {
+        "line": 5,
+        "module": "typing",
+        "names": [
+          "Any"
+        ]
+      },
+      {
+        "line": 8,
+        "module": "test_n19_formats",
+        "names": [
+          "ARROW_FORMS",
+          "RAW",
+          "_columnar_source"
+        ]
+      },
+      {
+        "line": 10,
+        "module": "deepviz.normalize",
+        "names": [
+          "normalize"
+        ]
+      }
+    ]
+  },
+  {
+    "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+    "path": "python/deepviz/tests/test_n19_formats.py",
+    "git_show_exit": 0,
+    "sha256": "6ad373d9efc779fc4c58af3cdbf2bdbcead5e632af50667624c04d81ac5b8973",
+    "imports": [
+      {
+        "line": 2,
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ]
+      },
+      {
+        "line": 9,
+        "module": "datetime",
+        "names": [
+          "UTC",
+          "date",
+          "datetime",
+          "timedelta"
+        ]
+      },
+      {
+        "line": 10,
+        "module": "decimal",
+        "names": [
+          "Decimal"
+        ]
+      },
+      {
+        "line": 11,
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ]
+      },
+      {
+        "line": 12,
+        "module": "typing",
+        "names": [
+          "Any"
+        ]
+      },
+      {
+        "line": 16,
+        "module": "deepviz.normalize",
+        "names": [
+          "normalize"
+        ]
+      }
+    ]
+  },
+  {
+    "source_commit": "3eab699b61850a20e91132e16caf8c589085f9ee",
+    "path": "python/deepviz/tests/test_r07_finite_overflow.py",
+    "git_show_exit": 0,
+    "sha256": "cbb18b1ab0107ab4cfd4dfff1515b6c6afc5f4495b4a9b56be090dfb2bce610f",
+    "imports": [
+      {
+        "line": 5,
+        "module": "fractions",
+        "names": [
+          "Fraction"
+        ]
+      },
+      {
+        "line": 6,
+        "module": "itertools",
+        "names": [
+          "permutations"
+        ]
+      },
+      {
+        "line": 10,
+        "module": "deepviz",
+        "names": [
+          "normalize"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,25 @@
+commit 52b817d29eb1fc55538f5b7f8f30d1356e584223
+Author:     sandeshbagmare <sandeshbagmare@users.noreply.github.com>
+AuthorDate: Thu Nov 26 23:48:13 2026 +0530
+Commit:     sandeshbagmare <sandeshbagmare@users.noreply.github.com>
+CommitDate: Fri Nov 27 00:08:04 2026 +0530
+
+    feat: add bounded agent tools and resource-backed MCP integration
+    
+    Add seven real StructuredTools, a profile/recommend/render flow, safe file references and fresh outputs, stdio MCP image/resource delivery, CLI, packaged prompt loading, and source-install examples. Integration suite: 35 passed against real peer ingestion/render sources via a test-only import overlay; no live provider calls.
+
+ README.md                                 | 323 +++++++++++++++++++++++++++++-
+ examples/deep_agent.py                    |  34 ++++
+ examples/mcp-config.json                  |  15 ++
+ examples/mcp_client.py                    |  57 ++++++
+ examples/multi_tool_flow.py               |  33 +++
+ prompts/v1/README.md                      |  18 ++
+ prompts/v1/request.md                     |  13 ++
+ prompts/v1/system.md                      |  52 +++++
+ python/deepviz/src/deepviz/__init__.py    |  27 +++
+ python/deepviz/src/deepviz/cli.py         |  60 ++++++
+ python/deepviz/src/deepviz/mcp_server.py  |  95 +++++++++
+ python/deepviz/src/deepviz/recommend.py   | 115 +++++++++++
+ python/deepviz/src/deepviz/tools.py       | 182 +++++++++++++++++
+ python/deepviz/tests/test_integrations.py | 318 +++++++++++++++++++++++++++++
+ 14 files changed, 1341 insertions(+), 1 deletion(-)

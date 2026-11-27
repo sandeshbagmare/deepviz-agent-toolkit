@@ -1,0 +1,25 @@
+{
+  "kind": "static file/TOML/AST assertions, NOT tests or product execution",
+  "assertions": {
+    "main_exactly_7_files": true,
+    "main_no_package_initializer": true,
+    "main_only_python_models": true,
+    "main_no_schema": true,
+    "candidate_has_9_source_modules": true,
+    "all_internal_AST_edges_resolve_in_candidate": true,
+    "declared_CLI_modules_both_absent_main": true,
+    "declared_CLI_modules_both_present_candidate": true,
+    "pyarrow_import_is_lazy": true,
+    "hatchling_directory_listing_absent": true,
+    "build_backend_is_hatchling": true,
+    "candidate_wheel_force_include_inputs_exist": true,
+    "candidate_typing_and_plotly_license_present": true,
+    "normalizer_imports_only_models_internally": true
+  },
+  "true": 14,
+  "false": 0,
+  "product_tests_run": 0,
+  "builds_run": 0,
+  "installs_run": 0,
+  "envelope_replays": 0
+}

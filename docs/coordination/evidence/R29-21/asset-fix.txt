@@ -1,0 +1,13 @@
+commit 7698c03461a3e88a8fa47ac714532a9bb1170568
+Author:     sandeshbagmare <sandeshbagmare@users.noreply.github.com>
+AuthorDate: Fri Nov 27 01:30:44 2026 +0530
+Commit:     sandeshbagmare <sandeshbagmare@users.noreply.github.com>
+CommitDate: Fri Nov 27 01:41:50 2026 +0530
+
+    fix: patch renderer assets and close dashboard replay files
+
+ python/deepviz/src/deepviz/engines.py              | 16 +++--
+ python/deepviz/src/deepviz/render.py               |  9 ++-
+ .../src/deepviz/resources/plotly-js-LICENSE.txt    | 21 ++++++
+ python/deepviz/tests/test_n05_assets_and_replay.py | 78 ++++++++++++++++++++++
+ 4 files changed, 118 insertions(+), 6 deletions(-)

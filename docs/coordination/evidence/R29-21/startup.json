@@ -1,0 +1,73 @@
+{
+  "utc": "2026-11-27T15:57:51.308244+00:00",
+  "owner": "ses_de5678018ffezK8JGDUaSzvcWn",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit": 0,
+      "stdout": "agents/r10-21-recovery-git-bootstrap",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "e2df3e0e42a8094aaebb62ebd0fb878fd128c2ee",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "log",
+        "-3",
+        "--oneline"
+      ],
+      "exit": 0,
+      "stdout": "e2df3e0 docs: checkpoint actual frozen-envelope publication\n0b5476f test: guard frozen scale runner and input provenance\n5d57692 docs: checkpoint actual recipe review publication",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "3eab699^{commit}"
+      ],
+      "exit": 0,
+      "stdout": "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--symref",
+        "origin",
+        "HEAD",
+        "refs/heads/main"
+      ],
+      "exit": 0,
+      "stdout": "ref: refs/heads/main\tHEAD\n0ae2cf26426822135fc10d337fcacf580b7ed833\tHEAD\n0ae2cf26426822135fc10d337fcacf580b7ed833\trefs/heads/main",
+      "stderr": ""
+    }
+  ],
+  "scope": "Static Python dependency plan only",
+  "remote_main_read_once": true
+}
