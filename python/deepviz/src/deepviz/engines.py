@@ -27,6 +27,38 @@ LINESTYLES = ["-", "--", "-.", ":"]
 DASHES = [[], [6, 3], [2, 2], [6, 2, 2, 2], [10, 2], [2, 4], [8, 2, 2, 2, 2, 2], [10, 3, 1, 3]]
 ECHARTS_URL = "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js"
 ANTV_URL = "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js"
+_MAX_TABLE_CELLS = 10_000
+_MAX_TABLE_BYTES = 16 * 1024 * 1024
+
+
+def _table_budget(tables: list[list[dict]]) -> None:
+    """Bound expanded header/body cells before allocating native or HTML tables.
+
+    Across the request, reserve 256 structural bytes per cell plus six bytes per
+    UTF-8 text byte. Column names may be repeated for every native text mark.
+    This conservative planning allowance is not an RSS or final-file-size bound.
+    Scan only existing keys/values, never the dense row-by-column product.
+    """
+    cells = estimated_bytes = 0
+    for records in tables:
+        columns: set[str] = set()
+        for row in records:
+            for key in row:
+                columns.add(key)
+                if cells + (len(records) + 1) * len(columns) > _MAX_TABLE_CELLS:
+                    raise ValueError(f"Dense table exceeds {_MAX_TABLE_CELLS} cell budget (including headers)")
+        table_cells = (len(records) + 1) * len(columns)
+        cells += table_cells
+        estimated_bytes += table_cells * 256
+        for key in columns:
+            estimated_bytes += 6 * len(key.encode("utf-8")) * (len(records) + 1)
+            if estimated_bytes > _MAX_TABLE_BYTES:
+                raise ValueError(f"Dense table exceeds {_MAX_TABLE_BYTES} estimated byte budget")
+        for row in records:
+            for value in row.values():
+                estimated_bytes += 6 * len(str(value).encode("utf-8"))
+                if estimated_bytes > _MAX_TABLE_BYTES:
+                    raise ValueError(f"Dense table exceeds {_MAX_TABLE_BYTES} estimated byte budget")
 
 
 def safe_json(value: Any) -> str:
@@ -184,6 +216,7 @@ def _fallback(engine: str, kind: str) -> tuple[str, list[str]]:
 
 def matplotlib_figure(charts: list[tuple[list[dict], ChartSpec]], dashboard: ChartSpec | None = None):
     """Return an Agg figure: the same artists back both PNG and SVG."""
+    _table_budget([records for records, spec in charts if spec.kind == "table"])
     from matplotlib.backends.backend_agg import FigureCanvasAgg
     from matplotlib.dates import AutoDateLocator, ConciseDateFormatter
     from matplotlib.figure import Figure
@@ -683,6 +716,8 @@ def native_spec(engine: str, records: list[dict], spec: ChartSpec) -> tuple[dict
     """Build only the selected engine's native declarative payload."""
     if engine not in ENGINES or engine == "matplotlib":
         raise ValueError(f"No JSON spec for engine {engine!r}")
+    if spec.kind == "table":
+        _table_budget([records])
     kind, warnings = _fallback(engine, spec.kind)
     if spec.kind == "geo" and engine == "plotly":
         warnings.append("Geographic coordinates use longitude=x, latitude=y without a basemap (offline coordinate plot).")
@@ -708,6 +743,7 @@ def browser_html(
     Static PNG/SVG outputs receive the same companion HTML with a relative image
     path. Only a concise summary is aria-described; tables stay navigable tables.
     """
+    _table_budget([info.get("records", []) for info in metadata] if metadata else [])
     bg, fg = _colors(parent)
     cards = []
     for i, spec in enumerate(specs):
