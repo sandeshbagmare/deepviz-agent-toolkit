@@ -1,0 +1,114 @@
+{
+  "product_source": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "commands": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "-I",
+        "tests/r21_probes/role14/generate_tools.py",
+        "--repository",
+        ".",
+        "--out",
+        "OWN_NEW_GENERATION"
+      ],
+      "exit_code": 0,
+      "actualStructuredTools": 3,
+      "sourcefiles": 11,
+      "importedSnapshotModules": 7
+    },
+    {
+      "command": [
+        "node",
+        "tests/r21_probes/role14/offline_host.mjs",
+        "--manifest",
+        "OWN_GENERATION/tool-artifacts.json",
+        "--deps-root",
+        "EXISTING_DEPS",
+        "--prior-inventory",
+        "docs/coordination/evidence/R10-14/offline-manifest.json",
+        "--out",
+        "OWN_NEW_BROWSER"
+      ],
+      "exit_code": 0,
+      "cases": 5,
+      "meaning": "Observer completion, NOT denial UX pass"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-I",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "tests/r21_probes/role14/test_live_host.py",
+        "--host-evidence",
+        "OWN_BROWSER/host-observations.json",
+        "--basetemp",
+        "OWN_NEW_TEMP"
+      ],
+      "exit_code": 1,
+      "failed": 2,
+      "passed": 8,
+      "skipped": 0,
+      "seconds": 0.25,
+      "xfail": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-I",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "tests/r21_probes/role14/test_oracle_controls.py",
+        "--basetemp",
+        "OWN_NEW_TEMP"
+      ],
+      "exit_code": 0,
+      "passed": 4,
+      "skipped": 0,
+      "seconds": 0.04
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "tests/r21_probes/role14"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "mypy",
+        "--cache-dir",
+        "OWN_CACHE",
+        "tests/r21_probes/role14/generate_tools.py",
+        "tests/r21_probes/role14/host_contract.py"
+      ],
+      "exit_code": 0,
+      "sourcefiles": 2
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "tests/r21_probes/role14/offline_host.mjs"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "limits": "Narrow independent source-specific RED/positive evidence only; no install/build/provider/CI/all-offline/final signoff."
+}

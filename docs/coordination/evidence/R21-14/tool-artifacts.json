@@ -1,0 +1,215 @@
+{
+  "source_commit": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "source_files": [
+    {
+      "file": "python/deepviz/src/deepviz/__init__.py",
+      "bytes": 1133,
+      "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+    },
+    {
+      "file": "python/deepviz/src/deepviz/cli.py",
+      "bytes": 2623,
+      "sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf"
+    },
+    {
+      "file": "python/deepviz/src/deepviz/engines.py",
+      "bytes": 44039,
+      "sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225"
+    },
+    {
+      "file": "python/deepviz/src/deepviz/mcp_server.py",
+      "bytes": 5395,
+      "sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95"
+    },
+    {
+      "file": "python/deepviz/src/deepviz/models.py",
+      "bytes": 3493,
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    {
+      "file": "python/deepviz/src/deepviz/normalize.py",
+      "bytes": 34886,
+      "sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2"
+    },
+    {
+      "file": "python/deepviz/src/deepviz/py.typed",
+      "bytes": 46,
+      "sha256": "18e2737d3fbe23959768fee885442595442c40880655d261db0fa22f9756faf3"
+    },
+    {
+      "file": "python/deepviz/src/deepviz/recommend.py",
+      "bytes": 4875,
+      "sha256": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999"
+    },
+    {
+      "file": "python/deepviz/src/deepviz/render.py",
+      "bytes": 11637,
+      "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+    },
+    {
+      "file": "python/deepviz/src/deepviz/resources/plotly-js-LICENSE.txt",
+      "bytes": 1086,
+      "sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7"
+    },
+    {
+      "file": "python/deepviz/src/deepviz/tools.py",
+      "bytes": 9383,
+      "sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb"
+    }
+  ],
+  "imported_own_modules": [
+    "deepviz",
+    "deepviz.engines",
+    "deepviz.models",
+    "deepviz.normalize",
+    "deepviz.recommend",
+    "deepviz.render",
+    "deepviz.tools"
+  ],
+  "python_version": "3.12.16",
+  "langchain_core_version": "1.8.5",
+  "rows": [
+    {
+      "label": "A & B",
+      "value": 3
+    },
+    {
+      "label": "C < D",
+      "value": 9
+    }
+  ],
+  "spec": {
+    "kind": "bar",
+    "x": "label",
+    "y": "value",
+    "aggregation": "none",
+    "title": "Offline <literal> & host",
+    "width": 700,
+    "height": 340
+  },
+  "artifacts": [
+    {
+      "engine": "echarts",
+      "tool_name": "render_echarts",
+      "tool_adapter": "StructuredTool",
+      "tool_response": {
+        "paths": [
+          "tool-artifacts/echarts-i52w765z/deepviz-6twae4o6/chart.html",
+          "tool-artifacts/echarts-i52w765z/deepviz-6twae4o6/manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "echarts",
+        "input_count": 2,
+        "output_count": 2,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html": "tool-artifacts/echarts-i52w765z/deepviz-6twae4o6/chart.html",
+      "external_scripts": [
+        "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js"
+      ],
+      "images": [],
+      "files": [
+        {
+          "file": "tool-artifacts/echarts-i52w765z/deepviz-6twae4o6/chart.html",
+          "bytes": 2800,
+          "sha256": "a7099158fd859470a52523f553f9ffcfff4bd6e349b8bec4e8e7d1e448cf81cd"
+        },
+        {
+          "file": "tool-artifacts/echarts-i52w765z/deepviz-6twae4o6/manifest.json",
+          "bytes": 2599,
+          "sha256": "3aea0ee1c3b0f885f8fb96421a213c6018005f1725ee171d425a1c5b970eeb61"
+        }
+      ]
+    },
+    {
+      "engine": "antv",
+      "tool_name": "render_antv",
+      "tool_adapter": "StructuredTool",
+      "tool_response": {
+        "paths": [
+          "tool-artifacts/antv-7xjcvr2y/deepviz-p4l_n9wp/chart.html",
+          "tool-artifacts/antv-7xjcvr2y/deepviz-p4l_n9wp/manifest.json"
+        ],
+        "mime_type": "text/html",
+        "engine": "antv",
+        "input_count": 2,
+        "output_count": 2,
+        "strategy": "none",
+        "warnings": [
+          "HTML requires network access to load its exact-version pinned browser library from jsDelivr."
+        ]
+      },
+      "html": "tool-artifacts/antv-7xjcvr2y/deepviz-p4l_n9wp/chart.html",
+      "external_scripts": [
+        "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js"
+      ],
+      "images": [],
+      "files": [
+        {
+          "file": "tool-artifacts/antv-7xjcvr2y/deepviz-p4l_n9wp/chart.html",
+          "bytes": 2645,
+          "sha256": "fc9001eecbf2db3f875349fe5082234f2b1190856d6827882397a95fa61dfee4"
+        },
+        {
+          "file": "tool-artifacts/antv-7xjcvr2y/deepviz-p4l_n9wp/manifest.json",
+          "bytes": 2179,
+          "sha256": "b7b126a6ca66941c257b496ee574c1d6a456c89d1747177eb74013ff88a2ab4b"
+        }
+      ]
+    },
+    {
+      "engine": "matplotlib",
+      "tool_name": "render_matplotlib",
+      "tool_adapter": "StructuredTool",
+      "tool_response": {
+        "paths": [
+          "tool-artifacts/matplotlib-5px6be50/deepviz-8cqqn8aq/chart.png",
+          "tool-artifacts/matplotlib-5px6be50/deepviz-8cqqn8aq/chart.svg",
+          "tool-artifacts/matplotlib-5px6be50/deepviz-8cqqn8aq/chart.html",
+          "tool-artifacts/matplotlib-5px6be50/deepviz-8cqqn8aq/manifest.json"
+        ],
+        "mime_type": "image/png",
+        "engine": "matplotlib",
+        "input_count": 2,
+        "output_count": 2,
+        "strategy": "none",
+        "warnings": []
+      },
+      "html": "tool-artifacts/matplotlib-5px6be50/deepviz-8cqqn8aq/chart.html",
+      "external_scripts": [],
+      "images": [
+        "chart.svg"
+      ],
+      "files": [
+        {
+          "file": "tool-artifacts/matplotlib-5px6be50/deepviz-8cqqn8aq/chart.png",
+          "bytes": 9927,
+          "sha256": "4fc0dd096b99fe8f42d3daa454c6f041d94172d6f3f622904f988801ff0af811"
+        },
+        {
+          "file": "tool-artifacts/matplotlib-5px6be50/deepviz-8cqqn8aq/chart.svg",
+          "bytes": 21828,
+          "sha256": "7bdb054a9fc5e17763353e4e49398b2a7ca0dd942e2c5f95384e9fc9430309bb"
+        },
+        {
+          "file": "tool-artifacts/matplotlib-5px6be50/deepviz-8cqqn8aq/chart.html",
+          "bytes": 1506,
+          "sha256": "67427ff37f8a2ad555cc0c832607b57a65a625bdb248bcbd9e11fc49750173c0"
+        },
+        {
+          "file": "tool-artifacts/matplotlib-5px6be50/deepviz-8cqqn8aq/manifest.json",
+          "bytes": 1013,
+          "sha256": "91c8ae3bd820faaf23d56ed219a230152f0e81e2614ca0e0924eb0128576108c"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Direct invocation of real create_tools StructuredTools intended for Deep Agent attachment; no LLM/provider/DeepAgent-model run.",
+    "Rendered bytes are unchanged; source materialized from exact immutable Git objects, no package build or install.",
+    "Tool artifact creation success is not a browser-runtime readiness claim."
+  ]
+}

@@ -1,0 +1,596 @@
+{
+  "source_commit": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "tool_adapter": "Actual create_tools StructuredTool.invoke, no LLM/provider",
+  "browser": {
+    "version": "159.0.8154.6",
+    "playwright": "1.65.1",
+    "serviceWorkers": "block",
+    "offline_context": true
+  },
+  "runtime_inventory": [
+    {
+      "engine": "echarts",
+      "package": "echarts",
+      "version": "6.1.0",
+      "sha256": "b66b25aeb4df84e33199dc21694014d336d222cbd9deb0e5a7c14bd6aa0d0fd0",
+      "bytes": 1121883,
+      "mode": "EXISTING exact local runtime bytes supplied at emitted URL; not live CDN health"
+    },
+    {
+      "engine": "antv",
+      "package": "@antv/g2",
+      "version": "5.4.8",
+      "sha256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412",
+      "bytes": 1083414,
+      "mode": "EXISTING exact local runtime bytes supplied at emitted URL; not live CDN health"
+    }
+  ],
+  "cases": [
+    {
+      "id": "echarts-denied",
+      "engine": "echarts",
+      "mode": "denied",
+      "html_sha256": "a7099158fd859470a52523f553f9ffcfff4bd6e349b8bec4e8e7d1e448cf81cd",
+      "host_promise_discovery": "observer-timeout-no-promise",
+      "naive_await_ready_outcome": "fulfilled",
+      "host_observation_ms": 1521.4391999999998,
+      "state": {
+        "readyType": "undefined",
+        "readyThenType": "undefined",
+        "renderError": null,
+        "visibleErrorText": [],
+        "chartText": "",
+        "chartChildren": 0,
+        "chartGraphics": 0,
+        "loadingIndicators": 0,
+        "bodyText": "Offline <literal> & host\nOffline <literal> & host\n\nbar chart. 2 displayed records from 2 input records. Reduction strategy: none.\n\nHTML requires network access to load its exact-version pinned browser library from jsDelivr.\nView chart data (2 records)",
+        "title": "Offline <literal> & host",
+        "literalElements": 0,
+        "tableCells": [
+          "A & B",
+          "3",
+          "C < D",
+          "9"
+        ],
+        "tableHeaders": [
+          {
+            "text": "label",
+            "scope": "col"
+          },
+          {
+            "text": "value",
+            "scope": "col"
+          }
+        ],
+        "tableCaption": "Data for Offline <literal> & host",
+        "summaryText": "View chart data (2 records)",
+        "detailsOpen": false,
+        "embeddedSpec": [
+          {
+            "animation": false,
+            "backgroundColor": "#ffffff",
+            "color": [
+              "#386cb0",
+              "#b85c00",
+              "#2a9d73",
+              "#c44964",
+              "#8861a9",
+              "#a67c42"
+            ],
+            "title": {
+              "text": "Offline <literal> & host",
+              "textStyle": {
+                "color": "#202938"
+              }
+            },
+            "textStyle": {
+              "color": "#202938"
+            },
+            "tooltip": {
+              "trigger": "item",
+              "renderMode": "richText"
+            },
+            "legend": {
+              "show": false,
+              "top": 30,
+              "textStyle": {
+                "color": "#202938"
+              }
+            },
+            "grid": {
+              "containLabel": true,
+              "left": 50,
+              "right": 30,
+              "top": 65,
+              "bottom": 55
+            },
+            "xAxis": {
+              "type": "category",
+              "data": [
+                "A & B",
+                "C < D"
+              ],
+              "name": "label",
+              "nameLocation": "middle",
+              "nameGap": 30
+            },
+            "yAxis": {
+              "type": "value",
+              "name": "value"
+            },
+            "series": [
+              {
+                "type": "bar",
+                "name": "Series",
+                "data": [
+                  [
+                    "A & B",
+                    3
+                  ],
+                  [
+                    "C < D",
+                    9
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "images": [],
+        "echartsValues": null
+      },
+      "blocked": [
+        "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js"
+      ],
+      "local_runtime_supplied": [],
+      "resource_failures": [
+        {
+          "url": "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js",
+          "error": "net::ERR_FAILED"
+        }
+      ],
+      "expected_fixture_ERR_FAILED": [
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "unexpected_console_errors": [],
+      "page_errors": [
+        "ReferenceError: echarts is not defined"
+      ],
+      "unexpected_requests": [],
+      "initial_accessible_snapshot": "- heading \"Offline <literal> & host\" [level=1]\n- main:\n  - heading \"Offline <literal> & host\" [level=2]\n  - img \"Offline <literal> & host\"\n  - paragraph: \"bar chart. 2 displayed records from 2 input records. Reduction strategy: none.\"\n  - list:\n    - listitem: HTML requires network access to load its exact-version pinned browser library from jsDelivr.\n  - group: View chart data (2 records)",
+      "keyboard_opened_accessible_snapshot": "- heading \"Offline <literal> & host\" [level=1]\n- main:\n  - heading \"Offline <literal> & host\" [level=2]\n  - img \"Offline <literal> & host\"\n  - paragraph: \"bar chart. 2 displayed records from 2 input records. Reduction strategy: none.\"\n  - list:\n    - listitem: HTML requires network access to load its exact-version pinned browser library from jsDelivr.\n  - group:\n    - text: View chart data (2 records)\n    - table \"Data for Offline <literal> & host\":\n      - caption: Data for Offline <literal> & host\n      - rowgroup:\n        - row \"label value\":\n          - columnheader \"label\"\n          - columnheader \"value\"\n      - rowgroup:\n        - row \"A & B 3\":\n          - cell \"A & B\"\n          - cell \"3\"\n        - row \"C < D 9\":\n          - cell \"C < D\"\n          - cell \"9\"",
+      "screenshot": "echarts-denied.png",
+      "fallback_screenshot": "echarts-denied-fallback-open.png",
+      "classification": "EXPECTED-INTERACTIVE-FAILURE; failure/readiness UX evaluated separately"
+    },
+    {
+      "id": "antv-denied",
+      "engine": "antv",
+      "mode": "denied",
+      "html_sha256": "fc9001eecbf2db3f875349fe5082234f2b1190856d6827882397a95fa61dfee4",
+      "host_promise_discovery": "observer-timeout-no-promise",
+      "naive_await_ready_outcome": "fulfilled",
+      "host_observation_ms": 1513.8608999999988,
+      "state": {
+        "readyType": "undefined",
+        "readyThenType": "undefined",
+        "renderError": null,
+        "visibleErrorText": [],
+        "chartText": "",
+        "chartChildren": 0,
+        "chartGraphics": 0,
+        "loadingIndicators": 0,
+        "bodyText": "Offline <literal> & host\nOffline <literal> & host\n\nbar chart. 2 displayed records from 2 input records. Reduction strategy: none.\n\nHTML requires network access to load its exact-version pinned browser library from jsDelivr.\nView chart data (2 records)",
+        "title": "Offline <literal> & host",
+        "literalElements": 0,
+        "tableCells": [
+          "A & B",
+          "3",
+          "C < D",
+          "9"
+        ],
+        "tableHeaders": [
+          {
+            "text": "label",
+            "scope": "col"
+          },
+          {
+            "text": "value",
+            "scope": "col"
+          }
+        ],
+        "tableCaption": "Data for Offline <literal> & host",
+        "summaryText": "View chart data (2 records)",
+        "detailsOpen": false,
+        "embeddedSpec": [
+          {
+            "type": "interval",
+            "data": [
+              {
+                "_x": "A & B",
+                "_y": 3,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 3,
+                "_row": 0
+              },
+              {
+                "_x": "C < D",
+                "_y": 9,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 9,
+                "_row": 1
+              }
+            ],
+            "encode": {
+              "x": "_x",
+              "y": "_y"
+            },
+            "animate": false,
+            "theme": "light",
+            "title": "Offline <literal> & host",
+            "tooltip": false,
+            "axis": {
+              "x": {
+                "title": "label",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              },
+              "y": {
+                "title": "value",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              }
+            },
+            "style": {
+              "fill": "#386cb0",
+              "stroke": "#386cb0"
+            }
+          }
+        ],
+        "images": [],
+        "echartsValues": null
+      },
+      "blocked": [
+        "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js"
+      ],
+      "local_runtime_supplied": [],
+      "resource_failures": [
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+          "error": "net::ERR_FAILED"
+        }
+      ],
+      "expected_fixture_ERR_FAILED": [
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "unexpected_console_errors": [],
+      "page_errors": [
+        "ReferenceError: G2 is not defined"
+      ],
+      "unexpected_requests": [],
+      "initial_accessible_snapshot": "- heading \"Offline <literal> & host\" [level=1]\n- main:\n  - heading \"Offline <literal> & host\" [level=2]\n  - img \"Offline <literal> & host\"\n  - paragraph: \"bar chart. 2 displayed records from 2 input records. Reduction strategy: none.\"\n  - list:\n    - listitem: HTML requires network access to load its exact-version pinned browser library from jsDelivr.\n  - group: View chart data (2 records)",
+      "keyboard_opened_accessible_snapshot": "- heading \"Offline <literal> & host\" [level=1]\n- main:\n  - heading \"Offline <literal> & host\" [level=2]\n  - img \"Offline <literal> & host\"\n  - paragraph: \"bar chart. 2 displayed records from 2 input records. Reduction strategy: none.\"\n  - list:\n    - listitem: HTML requires network access to load its exact-version pinned browser library from jsDelivr.\n  - group:\n    - text: View chart data (2 records)\n    - table \"Data for Offline <literal> & host\":\n      - caption: Data for Offline <literal> & host\n      - rowgroup:\n        - row \"label value\":\n          - columnheader \"label\"\n          - columnheader \"value\"\n      - rowgroup:\n        - row \"A & B 3\":\n          - cell \"A & B\"\n          - cell \"3\"\n        - row \"C < D 9\":\n          - cell \"C < D\"\n          - cell \"9\"",
+      "screenshot": "antv-denied.png",
+      "fallback_screenshot": "antv-denied-fallback-open.png",
+      "classification": "EXPECTED-INTERACTIVE-FAILURE; failure/readiness UX evaluated separately"
+    },
+    {
+      "id": "matplotlib-static-offline",
+      "engine": "matplotlib",
+      "mode": "static-offline",
+      "html_sha256": "67427ff37f8a2ad555cc0c832607b57a65a625bdb248bcbd9e11fc49750173c0",
+      "host_promise_discovery": "not-applicable-static",
+      "naive_await_ready_outcome": "not-applicable-static",
+      "host_observation_ms": 0.0010000000002037268,
+      "state": {
+        "readyType": "undefined",
+        "readyThenType": "undefined",
+        "renderError": null,
+        "visibleErrorText": [],
+        "chartText": null,
+        "chartChildren": null,
+        "chartGraphics": 0,
+        "loadingIndicators": 0,
+        "bodyText": "Offline <literal> & host\nOffline <literal> & host\n\nbar chart. 2 displayed records from 2 input records. Reduction strategy: none.\n\nView chart data (2 records)",
+        "title": "Offline <literal> & host",
+        "literalElements": 0,
+        "tableCells": [
+          "A & B",
+          "3",
+          "C < D",
+          "9"
+        ],
+        "tableHeaders": [
+          {
+            "text": "label",
+            "scope": "col"
+          },
+          {
+            "text": "value",
+            "scope": "col"
+          }
+        ],
+        "tableCaption": "Data for Offline <literal> & host",
+        "summaryText": "View chart data (2 records)",
+        "detailsOpen": false,
+        "embeddedSpec": null,
+        "images": [
+          {
+            "complete": true,
+            "width": 672,
+            "height": 326,
+            "alt": "Offline <literal> & host. Chart data and reduction details follow."
+          }
+        ],
+        "echartsValues": null
+      },
+      "blocked": [],
+      "local_runtime_supplied": [],
+      "resource_failures": [],
+      "expected_fixture_ERR_FAILED": [],
+      "unexpected_console_errors": [],
+      "page_errors": [],
+      "unexpected_requests": [],
+      "initial_accessible_snapshot": "- heading \"Offline <literal> & host\" [level=1]\n- figure:\n  - img \"Offline <literal> & host. Chart data and reduction details follow.\"\n- main:\n  - heading \"Offline <literal> & host\" [level=2]\n  - paragraph: \"bar chart. 2 displayed records from 2 input records. Reduction strategy: none.\"\n  - group: View chart data (2 records)",
+      "keyboard_opened_accessible_snapshot": "- heading \"Offline <literal> & host\" [level=1]\n- figure:\n  - img \"Offline <literal> & host. Chart data and reduction details follow.\"\n- main:\n  - heading \"Offline <literal> & host\" [level=2]\n  - paragraph: \"bar chart. 2 displayed records from 2 input records. Reduction strategy: none.\"\n  - group:\n    - text: View chart data (2 records)\n    - table \"Data for Offline <literal> & host\":\n      - caption: Data for Offline <literal> & host\n      - rowgroup:\n        - row \"label value\":\n          - columnheader \"label\"\n          - columnheader \"value\"\n      - rowgroup:\n        - row \"A & B 3\":\n          - cell \"A & B\"\n          - cell \"3\"\n        - row \"C < D 9\":\n          - cell \"C < D\"\n          - cell \"9\"",
+      "screenshot": "matplotlib-static-offline.png",
+      "fallback_screenshot": "matplotlib-static-offline-fallback-open.png",
+      "classification": "REAL-POSITIVE-CONTROL"
+    },
+    {
+      "id": "echarts-existing-local-runtime",
+      "engine": "echarts",
+      "mode": "existing-local-runtime",
+      "html_sha256": "a7099158fd859470a52523f553f9ffcfff4bd6e349b8bec4e8e7d1e448cf81cd",
+      "host_promise_discovery": "promise-present",
+      "naive_await_ready_outcome": "fulfilled",
+      "host_observation_ms": 24.539999999999054,
+      "state": {
+        "readyType": "object",
+        "readyThenType": "function",
+        "renderError": null,
+        "visibleErrorText": [],
+        "chartText": "valuelabel0246810A & BC < DOffline <literal> & host",
+        "chartChildren": 1,
+        "chartGraphics": 1,
+        "loadingIndicators": 0,
+        "bodyText": "Offline <literal> & host\nOffline <literal> & host\nvalue\nlabel\n0\n2\n4\n6\n8\n10\nA & B\nC < D\nOffline <literal> & host\n\nbar chart. 2 displayed records from 2 input records. Reduction strategy: none.\n\nHTML requires network access to load its exact-version pinned browser library from jsDelivr.\nView chart data (2 records)",
+        "title": "Offline <literal> & host",
+        "literalElements": 0,
+        "tableCells": [
+          "A & B",
+          "3",
+          "C < D",
+          "9"
+        ],
+        "tableHeaders": [
+          {
+            "text": "label",
+            "scope": "col"
+          },
+          {
+            "text": "value",
+            "scope": "col"
+          }
+        ],
+        "tableCaption": "Data for Offline <literal> & host",
+        "summaryText": "View chart data (2 records)",
+        "detailsOpen": false,
+        "embeddedSpec": [
+          {
+            "animation": false,
+            "backgroundColor": "#ffffff",
+            "color": [
+              "#386cb0",
+              "#b85c00",
+              "#2a9d73",
+              "#c44964",
+              "#8861a9",
+              "#a67c42"
+            ],
+            "title": {
+              "text": "Offline <literal> & host",
+              "textStyle": {
+                "color": "#202938"
+              }
+            },
+            "textStyle": {
+              "color": "#202938"
+            },
+            "tooltip": {
+              "trigger": "item",
+              "renderMode": "richText"
+            },
+            "legend": {
+              "show": false,
+              "top": 30,
+              "textStyle": {
+                "color": "#202938"
+              }
+            },
+            "grid": {
+              "containLabel": true,
+              "left": 50,
+              "right": 30,
+              "top": 65,
+              "bottom": 55
+            },
+            "xAxis": {
+              "type": "category",
+              "data": [
+                "A & B",
+                "C < D"
+              ],
+              "name": "label",
+              "nameLocation": "middle",
+              "nameGap": 30
+            },
+            "yAxis": {
+              "type": "value",
+              "name": "value"
+            },
+            "series": [
+              {
+                "type": "bar",
+                "name": "Series",
+                "data": [
+                  [
+                    "A & B",
+                    3
+                  ],
+                  [
+                    "C < D",
+                    9
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "images": [],
+        "echartsValues": [
+          [
+            "A & B",
+            3
+          ],
+          [
+            "C < D",
+            9
+          ]
+        ]
+      },
+      "blocked": [],
+      "local_runtime_supplied": [
+        {
+          "url": "https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js",
+          "sha256": "b66b25aeb4df84e33199dc21694014d336d222cbd9deb0e5a7c14bd6aa0d0fd0"
+        }
+      ],
+      "resource_failures": [],
+      "expected_fixture_ERR_FAILED": [],
+      "unexpected_console_errors": [],
+      "page_errors": [],
+      "unexpected_requests": [],
+      "initial_accessible_snapshot": "- heading \"Offline <literal> & host\" [level=1]\n- main:\n  - heading \"Offline <literal> & host\" [level=2]\n  - img \"Offline <literal> & host\":\n    - img: value label 0 2 4 6 8 10 A & B C < D Offline <literal> & host\n  - paragraph: \"bar chart. 2 displayed records from 2 input records. Reduction strategy: none.\"\n  - list:\n    - listitem: HTML requires network access to load its exact-version pinned browser library from jsDelivr.\n  - group: View chart data (2 records)",
+      "keyboard_opened_accessible_snapshot": "- heading \"Offline <literal> & host\" [level=1]\n- main:\n  - heading \"Offline <literal> & host\" [level=2]\n  - img \"Offline <literal> & host\":\n    - img: value label 0 2 4 6 8 10 A & B C < D Offline <literal> & host\n  - paragraph: \"bar chart. 2 displayed records from 2 input records. Reduction strategy: none.\"\n  - list:\n    - listitem: HTML requires network access to load its exact-version pinned browser library from jsDelivr.\n  - group:\n    - text: View chart data (2 records)\n    - table \"Data for Offline <literal> & host\":\n      - caption: Data for Offline <literal> & host\n      - rowgroup:\n        - row \"label value\":\n          - columnheader \"label\"\n          - columnheader \"value\"\n      - rowgroup:\n        - row \"A & B 3\":\n          - cell \"A & B\"\n          - cell \"3\"\n        - row \"C < D 9\":\n          - cell \"C < D\"\n          - cell \"9\"",
+      "screenshot": "echarts-existing-local-runtime.png",
+      "fallback_screenshot": "echarts-existing-local-runtime-fallback-open.png",
+      "classification": "REAL-POSITIVE-CONTROL"
+    },
+    {
+      "id": "antv-existing-local-runtime",
+      "engine": "antv",
+      "mode": "existing-local-runtime",
+      "html_sha256": "fc9001eecbf2db3f875349fe5082234f2b1190856d6827882397a95fa61dfee4",
+      "host_promise_discovery": "promise-present",
+      "naive_await_ready_outcome": "fulfilled",
+      "host_observation_ms": 27.74669999999969,
+      "state": {
+        "readyType": "object",
+        "readyThenType": "function",
+        "renderError": null,
+        "visibleErrorText": [],
+        "chartText": "",
+        "chartChildren": 1,
+        "chartGraphics": 1,
+        "loadingIndicators": 0,
+        "bodyText": "Offline <literal> & host\nOffline <literal> & host\n\nbar chart. 2 displayed records from 2 input records. Reduction strategy: none.\n\nHTML requires network access to load its exact-version pinned browser library from jsDelivr.\nView chart data (2 records)",
+        "title": "Offline <literal> & host",
+        "literalElements": 0,
+        "tableCells": [
+          "A & B",
+          "3",
+          "C < D",
+          "9"
+        ],
+        "tableHeaders": [
+          {
+            "text": "label",
+            "scope": "col"
+          },
+          {
+            "text": "value",
+            "scope": "col"
+          }
+        ],
+        "tableCaption": "Data for Offline <literal> & host",
+        "summaryText": "View chart data (2 records)",
+        "detailsOpen": false,
+        "embeddedSpec": [
+          {
+            "type": "interval",
+            "data": [
+              {
+                "_x": "A & B",
+                "_y": 3,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 3,
+                "_row": 0
+              },
+              {
+                "_x": "C < D",
+                "_y": 9,
+                "_color": "Series",
+                "_size": 8,
+                "_heat": 9,
+                "_row": 1
+              }
+            ],
+            "encode": {
+              "x": "_x",
+              "y": "_y"
+            },
+            "animate": false,
+            "theme": "light",
+            "title": "Offline <literal> & host",
+            "tooltip": false,
+            "axis": {
+              "x": {
+                "title": "label",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              },
+              "y": {
+                "title": "value",
+                "labelFill": "#202938",
+                "titleFill": "#202938"
+              }
+            },
+            "style": {
+              "fill": "#386cb0",
+              "stroke": "#386cb0"
+            }
+          }
+        ],
+        "images": [],
+        "echartsValues": null
+      },
+      "blocked": [],
+      "local_runtime_supplied": [
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js",
+          "sha256": "7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412"
+        }
+      ],
+      "resource_failures": [],
+      "expected_fixture_ERR_FAILED": [],
+      "unexpected_console_errors": [],
+      "page_errors": [],
+      "unexpected_requests": [],
+      "initial_accessible_snapshot": "- heading \"Offline <literal> & host\" [level=1]\n- main:\n  - heading \"Offline <literal> & host\" [level=2]\n  - img \"Offline <literal> & host\"\n  - paragraph: \"bar chart. 2 displayed records from 2 input records. Reduction strategy: none.\"\n  - list:\n    - listitem: HTML requires network access to load its exact-version pinned browser library from jsDelivr.\n  - group: View chart data (2 records)",
+      "keyboard_opened_accessible_snapshot": "- heading \"Offline <literal> & host\" [level=1]\n- main:\n  - heading \"Offline <literal> & host\" [level=2]\n  - img \"Offline <literal> & host\"\n  - paragraph: \"bar chart. 2 displayed records from 2 input records. Reduction strategy: none.\"\n  - list:\n    - listitem: HTML requires network access to load its exact-version pinned browser library from jsDelivr.\n  - group:\n    - text: View chart data (2 records)\n    - table \"Data for Offline <literal> & host\":\n      - caption: Data for Offline <literal> & host\n      - rowgroup:\n        - row \"label value\":\n          - columnheader \"label\"\n          - columnheader \"value\"\n      - rowgroup:\n        - row \"A & B 3\":\n          - cell \"A & B\"\n          - cell \"3\"\n        - row \"C < D 9\":\n          - cell \"C < D\"\n          - cell \"9\"",
+      "screenshot": "antv-existing-local-runtime.png",
+      "fallback_screenshot": "antv-existing-local-runtime-fallback-open.png",
+      "classification": "REAL-POSITIVE-CONTROL"
+    }
+  ],
+  "limits": [
+    "The denial fixture aborts exact external URLs intentionally; ERR_FAILED is expected resource evidence, not live outage.",
+    "No payload/HTML/bootstrap/fake library replacement. Local positive supplies only preexisting hash-verified real runtime bytes.",
+    "Bounded host1500ms ready-promise discovery is an observer deadline, not a public product timeout contract.",
+    "No end-to-end DeepAgent model/provider run, all-engine/kind/CDN-health claim."
+  ]
+}
