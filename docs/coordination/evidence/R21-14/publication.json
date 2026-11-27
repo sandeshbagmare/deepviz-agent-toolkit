@@ -1,0 +1,32 @@
+{
+  "product_source": "7bcfb2dcbf99f9deb44a2b5558373bd3aaccd0e6",
+  "branch": "agents/r10-14-assets-offline-provenance",
+  "content_commit": "41477a7d1b2d332dbb3790d31987d3861e4137b5",
+  "remote_before": "5cf1f70bf7bc3b09cf7165a47de5cb50fc16f54c",
+  "authenticated_login": "sandeshbagmare",
+  "GET_user_status": 200,
+  "identity_verified_at_utc": "2026-11-27T15:04:35.512885+00:00",
+  "credential_storage": "ExistingGCMmemoryonly, neverargs/files/logs",
+  "push_command": [
+    "git",
+    "push",
+    "origin",
+    "HEAD:refs/heads/agents/r10-14-assets-offline-provenance"
+  ],
+  "push_exit_code": 0,
+  "force": false,
+  "owned_paths": 29,
+  "sharedGit_issues_PR_or_production_writes": false,
+  "live_oracle_result": "2failed8passed0skip; separate4oraclecontrolsPASS; notgreen",
+  "limits": "Exactsource evidence checkpoint/knownP2readinessbug; no productionfix/LLM/CDNhealth/universaloffline/finalCI/900issues claims.",
+  "remote_readback_command": [
+    "git",
+    "ls-remote",
+    "--heads",
+    "origin",
+    "refs/heads/agents/r10-14-assets-offline-provenance"
+  ],
+  "remote_readback_exit_code": 0,
+  "remote_sha": "41477a7d1b2d332dbb3790d31987d3861e4137b5",
+  "remote_checked_at_utc": "2026-11-27T15:04:41.849330+00:00"
+}
