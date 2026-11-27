@@ -1,0 +1,912 @@
+{
+  "original_probe_sha256": "9b4846c4858ae6f098567245fcce1cc9b4c396ee75cb9315d898bea0bdb1fbde",
+  "direct_null_accepted": false,
+  "mismatches": [],
+  "observations": [
+    {
+      "tool": "render_vega",
+      "id": "spec-omitted",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ]
+      },
+      "accepted": true,
+      "schema_accepted": true
+    },
+    {
+      "tool": "render_vega",
+      "id": "spec-empty",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {}
+      },
+      "accepted": true,
+      "schema_accepted": true
+    },
+    {
+      "tool": "render_vega",
+      "id": "spec-null",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": null
+      },
+      "accepted": false,
+      "error": "ValidationError: ChartSpec must be an object",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_vega",
+      "id": "spec-boolean",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": true
+      },
+      "accepted": false,
+      "error": "ValidationError: ChartSpec must be an object",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_vega",
+      "id": "valid-dashboard",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": [
+            {}
+          ]
+        }
+      },
+      "accepted": true,
+      "schema_accepted": true
+    },
+    {
+      "tool": "render_vega",
+      "id": "empty-dashboard",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": []
+        }
+      },
+      "accepted": false,
+      "error": "ValidationError: A dashboard requires at least one chart",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_vega",
+      "id": "nested-dashboard",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": [
+            {
+              "kind": "dashboard",
+              "charts": [
+                {}
+              ]
+            }
+          ]
+        }
+      },
+      "accepted": false,
+      "error": "ValidationError: Nested dashboards are not supported",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_vega",
+      "id": "child-extra",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": [
+            {
+              "expression": "datum.value"
+            }
+          ]
+        }
+      },
+      "accepted": false,
+      "error": "ValidationError: Unknown ChartSpec property: expression",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_echarts",
+      "id": "spec-omitted",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ]
+      },
+      "accepted": true,
+      "schema_accepted": true
+    },
+    {
+      "tool": "render_echarts",
+      "id": "spec-empty",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {}
+      },
+      "accepted": true,
+      "schema_accepted": true
+    },
+    {
+      "tool": "render_echarts",
+      "id": "spec-null",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": null
+      },
+      "accepted": false,
+      "error": "ValidationError: ChartSpec must be an object",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_echarts",
+      "id": "spec-boolean",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": true
+      },
+      "accepted": false,
+      "error": "ValidationError: ChartSpec must be an object",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_echarts",
+      "id": "valid-dashboard",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": [
+            {}
+          ]
+        }
+      },
+      "accepted": true,
+      "schema_accepted": true
+    },
+    {
+      "tool": "render_echarts",
+      "id": "empty-dashboard",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": []
+        }
+      },
+      "accepted": false,
+      "error": "ValidationError: A dashboard requires at least one chart",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_echarts",
+      "id": "nested-dashboard",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": [
+            {
+              "kind": "dashboard",
+              "charts": [
+                {}
+              ]
+            }
+          ]
+        }
+      },
+      "accepted": false,
+      "error": "ValidationError: Nested dashboards are not supported",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_echarts",
+      "id": "child-extra",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": [
+            {
+              "expression": "datum.value"
+            }
+          ]
+        }
+      },
+      "accepted": false,
+      "error": "ValidationError: Unknown ChartSpec property: expression",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_antv",
+      "id": "spec-omitted",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ]
+      },
+      "accepted": true,
+      "schema_accepted": true
+    },
+    {
+      "tool": "render_antv",
+      "id": "spec-empty",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {}
+      },
+      "accepted": true,
+      "schema_accepted": true
+    },
+    {
+      "tool": "render_antv",
+      "id": "spec-null",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": null
+      },
+      "accepted": false,
+      "error": "ValidationError: ChartSpec must be an object",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_antv",
+      "id": "spec-boolean",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": true
+      },
+      "accepted": false,
+      "error": "ValidationError: ChartSpec must be an object",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_antv",
+      "id": "valid-dashboard",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": [
+            {}
+          ]
+        }
+      },
+      "accepted": true,
+      "schema_accepted": true
+    },
+    {
+      "tool": "render_antv",
+      "id": "empty-dashboard",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": []
+        }
+      },
+      "accepted": false,
+      "error": "ValidationError: A dashboard requires at least one chart",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_antv",
+      "id": "nested-dashboard",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": [
+            {
+              "kind": "dashboard",
+              "charts": [
+                {}
+              ]
+            }
+          ]
+        }
+      },
+      "accepted": false,
+      "error": "ValidationError: Nested dashboards are not supported",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_antv",
+      "id": "child-extra",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": [
+            {
+              "expression": "datum.value"
+            }
+          ]
+        }
+      },
+      "accepted": false,
+      "error": "ValidationError: Unknown ChartSpec property: expression",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_plotly",
+      "id": "spec-omitted",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ]
+      },
+      "accepted": true,
+      "schema_accepted": true
+    },
+    {
+      "tool": "render_plotly",
+      "id": "spec-empty",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {}
+      },
+      "accepted": true,
+      "schema_accepted": true
+    },
+    {
+      "tool": "render_plotly",
+      "id": "spec-null",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": null
+      },
+      "accepted": false,
+      "error": "ValidationError: ChartSpec must be an object",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_plotly",
+      "id": "spec-boolean",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": true
+      },
+      "accepted": false,
+      "error": "ValidationError: ChartSpec must be an object",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_plotly",
+      "id": "valid-dashboard",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": [
+            {}
+          ]
+        }
+      },
+      "accepted": true,
+      "schema_accepted": true
+    },
+    {
+      "tool": "render_plotly",
+      "id": "empty-dashboard",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": []
+        }
+      },
+      "accepted": false,
+      "error": "ValidationError: A dashboard requires at least one chart",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_plotly",
+      "id": "nested-dashboard",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": [
+            {
+              "kind": "dashboard",
+              "charts": [
+                {}
+              ]
+            }
+          ]
+        }
+      },
+      "accepted": false,
+      "error": "ValidationError: Nested dashboards are not supported",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_plotly",
+      "id": "child-extra",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": [
+            {
+              "expression": "datum.value"
+            }
+          ]
+        }
+      },
+      "accepted": false,
+      "error": "ValidationError: Unknown ChartSpec property: expression",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_svg",
+      "id": "spec-omitted",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ]
+      },
+      "accepted": true,
+      "schema_accepted": true
+    },
+    {
+      "tool": "render_svg",
+      "id": "spec-empty",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {}
+      },
+      "accepted": true,
+      "schema_accepted": true
+    },
+    {
+      "tool": "render_svg",
+      "id": "spec-null",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": null
+      },
+      "accepted": false,
+      "error": "ValidationError: ChartSpec must be an object",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_svg",
+      "id": "spec-boolean",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": true
+      },
+      "accepted": false,
+      "error": "ValidationError: ChartSpec must be an object",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_svg",
+      "id": "valid-dashboard",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": [
+            {}
+          ]
+        }
+      },
+      "accepted": true,
+      "schema_accepted": true
+    },
+    {
+      "tool": "render_svg",
+      "id": "empty-dashboard",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": []
+        }
+      },
+      "accepted": false,
+      "error": "ValidationError: A dashboard requires at least one chart",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_svg",
+      "id": "nested-dashboard",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": [
+            {
+              "kind": "dashboard",
+              "charts": [
+                {}
+              ]
+            }
+          ]
+        }
+      },
+      "accepted": false,
+      "error": "ValidationError: Nested dashboards are not supported",
+      "schema_accepted": false
+    },
+    {
+      "tool": "render_svg",
+      "id": "child-extra",
+      "input": {
+        "data": [
+          {
+            "category": "A",
+            "value": 2
+          },
+          {
+            "category": "B",
+            "value": 3
+          }
+        ],
+        "spec": {
+          "kind": "dashboard",
+          "charts": [
+            {
+              "expression": "datum.value"
+            }
+          ]
+        }
+      },
+      "accepted": false,
+      "error": "ValidationError: Unknown ChartSpec property: expression",
+      "schema_accepted": false
+    }
+  ]
+}

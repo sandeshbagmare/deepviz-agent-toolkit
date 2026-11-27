@@ -1,0 +1,95 @@
+{
+  "at": "2026-11-27T15:12:15.971924+00:00",
+  "login": "sandeshbagmare",
+  "user_http": 200,
+  "repository": "sandeshbagmare/deepviz-agent-toolkit",
+  "repo_http": 200,
+  "producer_ref": {
+    "http": 200,
+    "sha": "59a30a55f21cfb02173d7868f07829c6e6346a0a"
+  },
+  "own_ref": {
+    "http": 200,
+    "sha": "5bcc533acd48cf08f5feedc715d63c58d57728b8"
+  },
+  "pr31": {
+    "http": 200,
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "head": "6c72cec40e3feb8d710ab55167453194f643d650"
+  },
+  "checks_http": 200,
+  "checks": [
+    {
+      "name": "evidence",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "One-pass scale 100000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Python and npm distribution checks (no publishing)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "npm build, types and tests (Node 24)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Python 3.11 lint, types, unit and integration",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "name": "Python 3.12 lint, types, unit and integration",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "name": "One-pass scale 10 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "One-pass scale 1000000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "One-pass scale 10000000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Python 3.13 lint, types, unit and integration",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "name": "One-pass scale 1000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Raster visual regression (semantic pixel comparison)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "evidence",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "issue30": {
+    "http": 200,
+    "state": "open"
+  },
+  "scope": "Read-only snapshot. Exact7d helper fix target separate from schema-first-slice/main/currenthead. No API mutations."
+}

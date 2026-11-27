@@ -1,0 +1,74 @@
+[
+  {
+    "name": "fresh-build",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\typescript\\bin\\tsc",
+      "-p",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-05-helper-ses_de567830effe0E5yIwQgDACLMD\\packages\\deepviz\\tsconfig.json"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-05-helper-ses_de567830effe0E5yIwQgDACLMD",
+    "exit": 0,
+    "expected_exit": 0
+  },
+  {
+    "name": "wrong-origin-refused",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "--input-type=module",
+      "--eval",
+      "import '@deepviz/agent-toolkit';throw new Error('API sentinel should be unreachable')"
+    ],
+    "cwd": "C:\\Users\\bagma\\deepviz-agent-toolkit\\packages\\deepviz",
+    "exit": 1,
+    "expected_exit": 1
+  },
+  {
+    "name": "wrong-origin-refused-fileuri",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "--input-type=module",
+      "--eval",
+      "import '@deepviz/agent-toolkit';throw new Error('API sentinel should be unreachable')"
+    ],
+    "cwd": "C:\\Users\\bagma\\deepviz-agent-toolkit\\packages\\deepviz",
+    "exit": 1,
+    "expected_exit": 1
+  },
+  {
+    "name": "immutable36",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "--test",
+      "--test-reporter=tap",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-05-helper-ses_de567830effe0E5yIwQgDACLMD\\packages\\deepviz\\test\\test_r07_tool_spec_null.test.mjs"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-05-helper-ses_de567830effe0E5yIwQgDACLMD",
+    "exit": 0,
+    "expected_exit": 0
+  },
+  {
+    "name": "original40",
+    "argv": [
+      "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-c",
+      "import hashlib,importlib,pathlib,runpy;r=pathlib.Path('C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r22-05-helper-ses_de567830effe0E5yIwQgDACLMD\\\\python\\\\deepviz\\\\src');m=importlib.import_module('deepviz.models');t=importlib.import_module('deepviz.tools');assert pathlib.Path(m.__file__).is_relative_to(r);assert pathlib.Path(t.__file__).is_relative_to(r);p=pathlib.Path('C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r22-05-helper-ses_de567830effe0E5yIwQgDACLMD\\\\tests\\\\r22_probes\\\\role05\\\\probe_tool_schema_refs.py');assert hashlib.sha256(p.read_bytes()).hexdigest()=='9b4846c4858ae6f098567245fcce1cc9b4c396ee75cb9315d898bea0bdb1fbde';print('Python-before-original40-origins:',m.__file__,t.__file__);runpy.run_path(str(p),run_name='__main__')"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-05-helper-ses_de567830effe0E5yIwQgDACLMD",
+    "exit": 0,
+    "expected_exit": 0
+  },
+  {
+    "name": "python-import-origin",
+    "argv": [
+      "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-c",
+      "import importlib,pathlib;m=importlib.import_module('deepviz.models');t=importlib.import_module('deepviz.tools');r=pathlib.Path('C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r22-05-helper-ses_de567830effe0E5yIwQgDACLMD\\\\python\\\\deepviz\\\\src');assert pathlib.Path(m.__file__).is_relative_to(r);assert pathlib.Path(t.__file__).is_relative_to(r);print(m.__file__);print(t.__file__)"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-05-helper-ses_de567830effe0E5yIwQgDACLMD",
+    "exit": 0,
+    "expected_exit": 0
+  }
+]

@@ -1,0 +1,17 @@
+file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-05-inspector-ses_de567830effe0E5yIwQgDACLMD/tests/r22_probes/role05/guard-imports.mjs:30
+        throw new Error('R22 public package resolved outside own fresh build');
+              ^
+
+Error: R22 public package resolved outside own fresh build
+    at resolve (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-05-inspector-ses_de567830effe0E5yIwQgDACLMD/tests/r22_probes/role05/guard-imports.mjs:30:15)
+    at nextStep (node:internal/modules/customization_hooks:189:26)
+    at resolveWithHooks (node:internal/modules/customization_hooks:417:10)
+    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:754:16)
+    at #resolve (node:internal/modules/esm/loader:690:17)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:277:33)
+    at ModuleJob.link (node:internal/modules/esm/module_job:389:17)
+    at new ModuleJob (node:internal/modules/esm/module_job:368:26)
+    at node:internal/modules/esm/loader:224:19
+
+Node.js v26.13.1
