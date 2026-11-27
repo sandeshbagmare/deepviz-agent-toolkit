@@ -1,0 +1,31 @@
+{
+  "source_checkpoint": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "branch": "agents/r10-14-assets-offline-provenance",
+  "content_commit": "9bcf27dd0888778a6826fbd1f3203bc4652cec40",
+  "expected_login": "sandeshbagmare",
+  "authenticated_login": "sandeshbagmare",
+  "authenticated_GET_user_status": 200,
+  "identity_verified_at_utc": "2026-11-27T14:01:18.399923+00:00",
+  "remote_before": null,
+  "push_command": [
+    "git",
+    "push",
+    "--set-upstream",
+    "origin",
+    "HEAD:refs/heads/agents/r10-14-assets-offline-provenance"
+  ],
+  "push_exit_code": 0,
+  "force": false,
+  "git_shared_branch_or_issue_PR_writes": false,
+  "limits": "Scoped source-specific evidence publication only; not final release, CI approval, all-offline or issue-closure evidence.",
+  "remote_readback_command": [
+    "git",
+    "ls-remote",
+    "--heads",
+    "origin",
+    "refs/heads/agents/r10-14-assets-offline-provenance"
+  ],
+  "remote_readback_exit_code": 0,
+  "remote_sha": "9bcf27dd0888778a6826fbd1f3203bc4652cec40",
+  "remote_checked_at_utc": "2026-11-27T14:01:26.514324+00:00"
+}
