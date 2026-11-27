@@ -1,0 +1,265 @@
+{
+  "checked_source": "f9c437286c9dfe2245a7d914995d90346e29c233",
+  "one_fresh_build_pack": true,
+  "repeated_build_or_pack": false,
+  "successful_consumer": {
+    "tests": 9,
+    "pass": 9,
+    "fail": 0,
+    "skip": 0,
+    "exit": 0,
+    "duration_ms": 219.1332
+  },
+  "public_namespace_exports": 13,
+  "public_type_exports": [
+    "Aggregation",
+    "Artifact",
+    "AssetName",
+    "BrowserEngine",
+    "ChartKind",
+    "ChartSpec",
+    "ChartSpecInput",
+    "DataFormat",
+    "DataRecord",
+    "Engine",
+    "HtmlArtifact",
+    "NormalizedData",
+    "RenderOptions",
+    "RenderTool",
+    "RendererResult",
+    "Scalar"
+  ],
+  "external_typecheck_exit": 0,
+  "declaration_paths_inside_materialized": true,
+  "invalid_types": {
+    "diagnostics": [
+      "invalid ChartKind",
+      "matplotlib not BrowserEngine"
+    ],
+    "TS2322_count": 2,
+    "observed_TypeScript7_exit": 1,
+    "initial_harness_expected_exit": 2,
+    "compiler_was_correct_no_replay": true
+  },
+  "negative_consumer_controls": {
+    "changed-system": {
+      "expected_rejection_exit": 1,
+      "actual_exit": 1,
+      "sha256": "54cdd35f3d26e7256dca9e30709827520863615c48b410302e210835539db73f",
+      "tests": "9",
+      "pass": "8",
+      "fail": "1",
+      "skipped": "0",
+      "duration_ms": "222.8659"
+    },
+    "missing-request": {
+      "expected_rejection_exit": 1,
+      "actual_exit": 1,
+      "sha256": "347860460f1af0a87b319cb8eae2e2425c5b7128880dbbc6afa0e4a576beabb3",
+      "tests": "9",
+      "pass": "7",
+      "fail": "2",
+      "skipped": "0",
+      "duration_ms": "154.9087"
+    },
+    "export-outside": {
+      "expected_rejection_exit": 1,
+      "actual_exit": 1,
+      "sha256": "681c1fb41c29cf628f1fcf7a40ecb8897e761cb3adb1290209887bdcb9506840",
+      "tests": "9",
+      "pass": "6",
+      "fail": "3",
+      "skipped": "0",
+      "duration_ms": "187.9966"
+    },
+    "extra-public-export": {
+      "expected_rejection_exit": 1,
+      "actual_exit": 1,
+      "sha256": "b83500d4cee5569595e2a6c40ddc1740d166e540bb712ab20cc09a44fbf584c8",
+      "tests": "9",
+      "pass": "8",
+      "fail": "1",
+      "skipped": "0",
+      "duration_ms": "150.557"
+    }
+  },
+  "own_extraction_harness_tests": {
+    "tests": 14,
+    "pass": 14,
+    "fail": 0,
+    "skip": 0,
+    "exit": 0,
+    "seconds": 0.14,
+    "xml_sha256": "d65a959629e9fcd1376cf4f839b3679da3e0851836d577579b5c91937606dda4"
+  },
+  "initial_harness_setup_failures": [
+    "Ruff1 unused assignment; mypy4 typing errors; corrected only own harness",
+    "First Node8pass1fail from incorrect inline-schema assertion, corrected own test to canonical $ref/$defs",
+    "Second wrapper expected invalid TypeScript7 exit2 but observed correct diagnostics with exit1; corrected harness expectation without redoing actual compilation"
+  ],
+  "final_ruff_exit": 0,
+  "final_mypy_exit": 0,
+  "final_mypy_files": 2,
+  "source_worktree_clean": true,
+  "source_tracked_files_git_equal": 40,
+  "packed_members": 25,
+  "tarball_sha256": "eb4b3f89f77b548ba6dadaf6e7735dac0c4336c8c3c5e66fb428e02284d17ff5",
+  "source_maps": [
+    {
+      "name": "index.js.map",
+      "source_paths_only": [
+        "../src/index.ts"
+      ],
+      "embedded_source_content": false
+    },
+    {
+      "name": "models.js.map",
+      "source_paths_only": [
+        "../src/models.ts"
+      ],
+      "embedded_source_content": false
+    },
+    {
+      "name": "normalize.js.map",
+      "source_paths_only": [
+        "../src/normalize.ts"
+      ],
+      "embedded_source_content": false
+    },
+    {
+      "name": "render.js.map",
+      "source_paths_only": [
+        "../src/render.ts"
+      ],
+      "embedded_source_content": false
+    },
+    {
+      "name": "renderers.js.map",
+      "source_paths_only": [
+        "../src/renderers.ts"
+      ],
+      "embedded_source_content": false
+    },
+    {
+      "name": "schema.js.map",
+      "source_paths_only": [
+        "../src/schema.ts"
+      ],
+      "embedded_source_content": false
+    }
+  ],
+  "raw_log_hashes": {
+    "build": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-10-npm-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\consumer-run-1g0fwr73\\build.stdout",
+      "bytes": 95,
+      "sha256": "5b43a785fe9d85c473479959018c0911372c9bed4cfabaea0a2ab6c719fc3e47"
+    },
+    "changed-system": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-10-npm-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\consumer-run-1g0fwr73\\changed-system.stdout",
+      "bytes": 126914,
+      "sha256": "54cdd35f3d26e7256dca9e30709827520863615c48b410302e210835539db73f",
+      "tests": "9",
+      "pass": "8",
+      "fail": "1",
+      "skipped": "0",
+      "duration_ms": "222.8659"
+    },
+    "checkout": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-10-npm-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\consumer-run-1g0fwr73\\checkout.stdout",
+      "bytes": 71,
+      "sha256": "b63f9dc5334bae9af94f2102e1d5065285345c5c3268b8309b72232a64f94d10"
+    },
+    "corrected-positive-node-tests": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-10-npm-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\consumer-run-1g0fwr73\\corrected-positive-node-tests.stdout",
+      "bytes": 2296,
+      "sha256": "410603269e0350904c85b436376dcf7d04dbc3c231468eafe04e78cb150cfaf6",
+      "tests": "9",
+      "pass": "9",
+      "fail": "0",
+      "skipped": "0",
+      "duration_ms": "219.1332"
+    },
+    "export-outside": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-10-npm-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\consumer-run-1g0fwr73\\export-outside.stdout",
+      "bytes": 6477,
+      "sha256": "681c1fb41c29cf628f1fcf7a40ecb8897e761cb3adb1290209887bdcb9506840",
+      "tests": "9",
+      "pass": "6",
+      "fail": "3",
+      "skipped": "0",
+      "duration_ms": "187.9966"
+    },
+    "external-types": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-10-npm-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\consumer-run-1g0fwr73\\external-types.stdout",
+      "bytes": 8133,
+      "sha256": "edafaa6fdf487b65a154c49f0b5fd58689b059aac37717f132991a355d8507fe"
+    },
+    "extra-public-export": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-10-npm-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\consumer-run-1g0fwr73\\extra-public-export.stdout",
+      "bytes": 3972,
+      "sha256": "b83500d4cee5569595e2a6c40ddc1740d166e540bb712ab20cc09a44fbf584c8",
+      "tests": "9",
+      "pass": "8",
+      "fail": "1",
+      "skipped": "0",
+      "duration_ms": "150.557"
+    },
+    "missing-request": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-10-npm-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\consumer-run-1g0fwr73\\missing-request.stdout",
+      "bytes": 5052,
+      "sha256": "347860460f1af0a87b319cb8eae2e2425c5b7128880dbbc6afa0e4a576beabb3",
+      "tests": "9",
+      "pass": "7",
+      "fail": "2",
+      "skipped": "0",
+      "duration_ms": "154.9087"
+    },
+    "node-version": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-10-npm-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\consumer-run-1g0fwr73\\node-version.stdout",
+      "bytes": 10,
+      "sha256": "0952ac29553d47b95c85fbf587c27c72a18cf9af40de9bdc0fe9a98aa17d1445"
+    },
+    "pack": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-10-npm-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\consumer-run-1g0fwr73\\pack.stdout",
+      "bytes": 2856,
+      "sha256": "a7494223c296019c5073a83f6286e6a7f62947750c5737580ea8160890084525"
+    },
+    "positive-node-tests": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-10-npm-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\consumer-run-1g0fwr73\\positive-node-tests.stdout",
+      "bytes": 1860,
+      "sha256": "66f88efb0728ee0b03233427911c1d4550fff69b0906a191f8f4a85e92a661b6"
+    },
+    "source-clean-after": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-10-npm-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\consumer-run-1g0fwr73\\source-clean-after.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source-clean-before": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-10-npm-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\consumer-run-1g0fwr73\\source-clean-before.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source-sha": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-10-npm-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\consumer-run-1g0fwr73\\source-sha.stdout",
+      "bytes": 41,
+      "sha256": "d0bb957c894194e7e8a1b09e08ec44a2f7916688f5625d3b348721deafb10e76"
+    },
+    "strict-negative-types": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r18-10-npm-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\consumer-run-1g0fwr73\\strict-negative-types.stdout",
+      "bytes": 391,
+      "sha256": "1e072a9837271f628038b2e35498970fa3c5831bd53341ae54dc766baba76ad3"
+    }
+  },
+  "independence": {
+    "author_source_non_author_tester": true,
+    "author_results_borrowed": false,
+    "author_test_suite_not_rerun": true,
+    "workspace_runtime_or_ts_aliases": false,
+    "materialized_installed_package": true,
+    "manual_unpack_not_npm_install": true,
+    "dependency_installs": false,
+    "shared_environment_changes": false,
+    "production_edits": false,
+    "browser_or_provider_claims": false
+  }
+}
