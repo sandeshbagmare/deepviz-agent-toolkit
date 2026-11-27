@@ -78,3 +78,35 @@
 - R32 genuineFINAL NEW4strictcases4PASS0FAIL0ERROR0SKIP26.41s/pytest0; probe57b0464286a0d277dc0f5ff9b747c4cd6337095cc776b9bb20a2504e14586120. ALL5b873subjectrawhashesbefore/afterexact/originalb9unchanged. Actual4skipPytestexit0 rejected; duplicatePATHrealwhere2rogues/ONEexplicitdispatch9steps+actual4passsameprocessPID/modulehashaudit+realNodefixedpublicresolution. Compact4casereceipts/JUnit/childaudit/tools/source snapshots captured; fourfixtureHEADbeforeafterequal. SYNTHETICTAP36/282/stubbuild NOTproduct/689/10M/CI. Current scopedquality/reportreview; next OWNpublication/remoteproof/R04decision; historicaloldrecipe unchanged.
 - R32 prepublication: FULLfinal101linereviewreadback/4cases exactb873 verified; scopedRuff0/mypy0onefile;5sourceGitbytes/rawhashbeforeafter/old27b9/4fixtureHEAD/toolhashintegrity0; untouchedproduction/old09/oracles/workflowGitdiff0. AddedonlyconsumerREADME+rawevidence-preservingattributes+NEWownGitpublisher, testedprobe57b046unchanged/no rerunneeded. Four NEWreplacementbehaviorsrecommendacceptedONLYboundedtrustscope; oldrecipe/fifthrole11findingnotclosed, actualproduct05/R04gatesremain. NextOWNscope-stage/commit/nonforceSHA/readback/actualreceipthandoff.
 - R32 ACTUALC18d12f266ae8d5baed3743d53807347a761817449 commit0/63OWNnewprobe/report/evidence/note;16:37:17-16:37:26UTCnonforcepush0/remoteSHA0exactC1. Tested57b046 unchanged4PASS26.41s/scopedRuff0/mypy0,5subjectGitrawhashes+oldb9unchanged;62payloads232987B+stage-integrity/noembeddedGitlinks/rawruntimeunstaged/heuristicsecret0. NextONLY3ownedactualreceiptpathsC2nonforce/readback thenMAINhandoff; no product/CI/fifthfindingclosure.
+- R32 FINAL C2c7abbdbaa797bac8467dbc9254428c10fc0d17a3 commit0/only3receiptpaths;16:38:02-16:38:10UTCnonforcepush0/remoteSHA0exactC2. C2embedsC18d12f266actualreceipt; currentC2receiptMAIN-only. FourgenuineindependentNEW09semantics4PASS0fail0error0skip26.41s/57b046/scopedRuff0/mypy0; all5b873subjectraws+originalb9unchanged; threeOWNharnessfailurehistoryretained. SYNTHETICstubs/tiny4Pytest+actualNodepublicresolution NOTproduct/689/282/10M/CI. NEXTroot/R04 dispositionverifiedNEWrecipeonly, retainactual05productacceptance/fifthfindingseparate. Scopecomplete/no runningcommand/spawn/poll/production/oracle/API writes.
+
+## R38 unique-source coverage PRE-WORK
+SAME-ID ses_de5678018ffezK8JGDUaSzvcWn; OWN branch c7abbdbaa797bac8467dbc9254428c10fc0d17a3 clean.
+FULLMAIN R38common+21/AGENTS51/canonical191/OWNnote/RESUME52/STATE68 read; nativeID reconfirmed.
+Use EXISTING103branch snapshot SHA540d45be07d62c30db87b8dfb6eb50dfccaf6d86dd85847b2df55a9dbc83a764 ONLY.
+NOTnewinventory/refenumeration/fetch/manager/releaseplan. Exactsourceunit3eab699b61850a20e91132e16caf8c589085f9ee.
+ONE FULLrecommend.py+CLI/toolsconnected review; R21-04-fidelity FULL71read/no defect in its finite subset.
+Allowed NEWreport/evidenceR38-21/ownnote/OWNbranch ONLY; no source/config/oracle/env/APIwrites/install/spawn/poll.
+Current preworksaved; next fullsource, dedupstoredexactblob/path/diffunits and actualFULLreport scopes,
+byteequivalence/findings/requiredPRdependencies/UNREVIEWEDgaps. Root official16:45 proofmain31cff/PR33merged attributed.
+Top-packetAntVextra is NOT silently completed; directuser21recommend-unit scope governs this handoff.
+Oneoversizedshellscanner rejection BEFOREexecution and oneguessedreportpathabsent recorded, not product failures.
+No runtime/baseline/syntheticguard replay. R04 owns all adoption/PR/priority/assignment decisions.
+- R38 COHERENTsourcecheckpoint:FULLrecommend115/CLI60/tools191 READ, recommendationunit13-115+consumerflowsreviewed; models92/render234/normalize660-769/initializer27context only. All7PythonGitblobs7bc==3eab proven, NOTfresh24R21test/currentmain/latesttoolsapproval. No NEWrecommend defect; oldcallbackF1/#21parent separate, preserve main31cffMappingguard (candidateold dictguardmustnotreplace). R38report/provenance saved; zero runtimetests/guards. LatestFULLR39packet23/currentAGENTS/ownnote read, SAMEalreadyrunning/noslot; next AntV3185 independentSOURCE+frozen103coverage atNEW R39paths, linkR38notrelabel.
+
+## R39 PRE-WORK
+SAME21ses_de5678018ffezK8JGDUaSzvcWn; OWNbasec7abbdbaa797bac8467dbc9254428c10fc0d17a3.
+FULLR39common+21/AGENTS/ownnote read. SAMEalreadyrunning/noextra slot. R38recommend coherent
+FULLunit checkpoint saved; link it, no replay/relabel. Now independent AntV3185e0d9936c7d6f1a9d30b94089b804d75fe991
+FULL_antv+connectednumeric/legend/native/HTML/theme/safety/protectedcode/tiny/MAX/null/JSON.
+No author21/254borrowedpasses; preserveknownviewRED; strictNEWcounterexampleonlyrealgap.
+Existing103map dedupGitblob/path/diff coverage only, notnewinventory/refenumeration/fetch/manager.
+Allowed NEWreport/evidenceR39-21/ownnote/OWNbranch and preserveactualR38checkpoint.
+No source/config/oracle/env/install/API/sharedwrites/spawn/poll/deletion/assignmentauthority.
+Next fullsource review+exactunits?realFULLreportscopes/findings/deps/UNREVIEWEDgaps; meaningful
+OWNnonforcepublication/exactremoteSHA/promptONEhandoff. PriorlongshellscannerrejectedBEFOREexecution.
+Zero product/baseline/syntheticguard runs. No main/v1approval.
+
+R39 NEW F1/P2 OPEN at exact3185 engines681-693: [-1e308,+1e308] finite heatmap domain produces numericupperNaN and invalidRGBA in actualG2scale0.5.2. Pythonfrozen-native generation0; strictSDK2cases1PASS1FAIL0skip/exit1. Negative[-7,-2]control0/1correct. G2wrapper4-6delegates directly, runtime explicitdomain/range preserved. NOTbrowser/author21/254claim. No sourcefix. Next actualG2wrapperconfirmation, protectedbyteproof+coverageledger.
+- R39 FINALSOURCEcheckpoint: FULLengines813/_antv619-722+numeric/geometry/native725-744/HTML747-813 and producer174+162read; outside_antvraw22otherfuncsexactparent1c, R38render/modelscontextequal. NEWF1/P2OPEN actualG25.4.8factory?1e308mapsupperNaN/invalidRGBA; twoUNIQUEcases1PASS1FAIL0skip/Node1, Python-B-Snativegeneration0/frozen9Gitfiles5imports; directSDK+factorySAMEcasesnot4. LatestR42FULL23/independent17FULL39+174proof/actualblankPNGOPENED, publisheda399F1PNGJSONGitexact;4subnormalvalues0cells/ready0errors, rootcauseunconfirmed/no17replay/borrowedpasses. SourceREQUESTCHANGESbothcounterexamplesnotassumedseparatetickets; author06/08boundedgreensnotwaiver/viewREDretained.
+- R39 actualSOURCEcoveragefromexisting103/98ONLY:43paths116blobs(91tip25historical)/112diffunits;301identity+62bindingGitmetadatareads0, NOTproducttests/newinventory. EightFULLsource-reports read+exactGitfunction/scopeshashes;5wholefilematchesONLY3code+2config,27SCOPEDnotfull,84UNREVIEWEDinledger/laterheadsUNKNOWN. R38fullrecommend115+CLI/toolscontextunitlinkednotrelabelled/replayed. R42ONLYrole21central MAIN+OWNownerconfirmed, UNKNOWNproductioneffort/R04soledecisionowner. New reports153+54/evidenceJSON/script/sourcebytes ready; currentmeaningfulOWNpublish/hash/scope/Gitreadback thenpromptONEhandoff, no source/config/oracle/API/install/env/spawn/poll/branchfetch/manageractivity.

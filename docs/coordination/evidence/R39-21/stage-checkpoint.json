@@ -1,0 +1,133 @@
+{
+  "utc": "2026-11-27T17:40:48.845817+00:00",
+  "branch": "agents/r10-21-recovery-git-bootstrap",
+  "base": "c7abbdbaa797bac8467dbc9254428c10fc0d17a3",
+  "GCM_expected_username_verified_memory_only": true,
+  "API_used": false,
+  "own_remote_before": "c7abbdbaa797bac8467dbc9254428c10fc0d17a3",
+  "explicit_owned_path_count": 49,
+  "owned_paths": [
+    "docs/agent-state/ses_de5678018ffezK8JGDUaSzvcWn.md",
+    "docs/coordination/evidence/R38-21/.gitattributes",
+    "docs/coordination/evidence/R38-21/inputs/__init__.py",
+    "docs/coordination/evidence/R38-21/inputs/cli.py",
+    "docs/coordination/evidence/R38-21/inputs/models.py",
+    "docs/coordination/evidence/R38-21/inputs/normalize.py",
+    "docs/coordination/evidence/R38-21/inputs/recommend.py",
+    "docs/coordination/evidence/R38-21/inputs/render.py",
+    "docs/coordination/evidence/R38-21/inputs/tools.py",
+    "docs/coordination/evidence/R38-21/inventory-input.json",
+    "docs/coordination/evidence/R38-21/recommend-unit-provenance.json",
+    "docs/coordination/evidence/R38-21/startup-Git.json",
+    "docs/coordination/evidence/R39-21/.gitattributes",
+    "docs/coordination/evidence/R39-21/R38-17-evidence-read.json",
+    "docs/coordination/evidence/R39-21/README.md",
+    "docs/coordination/evidence/R39-21/bind_review_coverage.py",
+    "docs/coordination/evidence/R39-21/collect_existing_units.py",
+    "docs/coordination/evidence/R39-21/coverage-summary.json",
+    "docs/coordination/evidence/R39-21/extent-scale-counterexample.cjs",
+    "docs/coordination/evidence/R39-21/extent-scale-counterexample.initial.json",
+    "docs/coordination/evidence/R39-21/extent-scale-counterexample.json",
+    "docs/coordination/evidence/R39-21/independent-R38-17-F1.json",
+    "docs/coordination/evidence/R39-21/independent17-published-byte-proof.json",
+    "docs/coordination/evidence/R39-21/inputs/python/deepviz/src/deepviz/__init__.py",
+    "docs/coordination/evidence/R39-21/inputs/python/deepviz/src/deepviz/cli.py",
+    "docs/coordination/evidence/R39-21/inputs/python/deepviz/src/deepviz/engines.py",
+    "docs/coordination/evidence/R39-21/inputs/python/deepviz/src/deepviz/mcp_server.py",
+    "docs/coordination/evidence/R39-21/inputs/python/deepviz/src/deepviz/models.py",
+    "docs/coordination/evidence/R39-21/inputs/python/deepviz/src/deepviz/normalize.py",
+    "docs/coordination/evidence/R39-21/inputs/python/deepviz/src/deepviz/recommend.py",
+    "docs/coordination/evidence/R39-21/inputs/python/deepviz/src/deepviz/render.py",
+    "docs/coordination/evidence/R39-21/inputs/python/deepviz/src/deepviz/tools.py",
+    "docs/coordination/evidence/R39-21/inputs/python/deepviz/tests/test_r20_antv_color_scale.py",
+    "docs/coordination/evidence/R39-21/inputs/tests/browser/r20-antv-color-scale.cjs",
+    "docs/coordination/evidence/R39-21/main31cff-source-proof.json",
+    "docs/coordination/evidence/R39-21/native-extent-inputs.json",
+    "docs/coordination/evidence/R39-21/native_extent_probe.py",
+    "docs/coordination/evidence/R39-21/prepublication-verification.json",
+    "docs/coordination/evidence/R39-21/protected-source-proof.json",
+    "docs/coordination/evidence/R39-21/publish_owned.txt",
+    "docs/coordination/evidence/R39-21/review-scope-specifications.json",
+    "docs/coordination/evidence/R39-21/runtime-source-manifest.json",
+    "docs/coordination/evidence/R39-21/source-manifest.json",
+    "docs/coordination/evidence/R39-21/source-review-coverage.json",
+    "docs/coordination/evidence/R39-21/source-startup.json",
+    "docs/coordination/evidence/R39-21/source-unit-identities.json",
+    "docs/coordination/reports/R38-21-branch-source-coverage.md",
+    "docs/coordination/reports/R39-21-antv-source-and-coverage.md",
+    "docs/coordination/status/role21.md"
+  ],
+  "secret_matches": 0,
+  "source_verdict": "REQUEST_CHANGES",
+  "unique_product_counterexample_cases": 2,
+  "product_passes": 1,
+  "product_failures": 1,
+  "skips": 0,
+  "45structural_checks_not_product_tests": true,
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--name-only"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "credential.interactive=false",
+        "ls-remote",
+        "--heads",
+        "origin",
+        "refs/heads/agents/r10-21-recovery-git-bootstrap"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "c7abbdbaa797bac8467dbc9254428c10fc0d17a3"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-files",
+        "--others",
+        "--exclude-standard"
+      ],
+      "exit": 0
+    }
+  ]
+}

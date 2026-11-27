@@ -1,0 +1,32 @@
+{
+  "kind": "Local exact named object equality, NOT fresh remote observation",
+  "bff_main_tree_rows": [
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%T",
+        "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8"
+      ],
+      "exit": 0,
+      "tree": "c9975876bc57abf98a06ca77a656c525621d3f8d"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%T",
+        "31cff73ab057c3fed69bd400ac005f2f11609027"
+      ],
+      "exit": 0,
+      "tree": "c9975876bc57abf98a06ca77a656c525621d3f8d"
+    }
+  ],
+  "equal": true,
+  "root_official_observation_path": "docs/coordination/evidence/R38-root/official-observation.json",
+  "root_observation_sha256": "dbebe685ac178daeca12e239ba76f2c4b8ff47386e2ad9f7bd24ad3657b193c8",
+  "root_observed_utc": "2026-11-27T16:45:10Z",
+  "API_calls_here": 0
+}

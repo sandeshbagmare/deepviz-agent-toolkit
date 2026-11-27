@@ -1,0 +1,184 @@
+{
+  "source_commit": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+  "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+  "modules": {
+    "deepviz": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R39-21\\inputs\\python\\deepviz\\src\\deepviz\\__init__.py",
+      "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+    },
+    "deepviz.models": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R39-21\\inputs\\python\\deepviz\\src\\deepviz\\models.py",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    "deepviz.normalize": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R39-21\\inputs\\python\\deepviz\\src\\deepviz\\normalize.py",
+      "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+    },
+    "deepviz.render": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R39-21\\inputs\\python\\deepviz\\src\\deepviz\\render.py",
+      "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+    },
+    "deepviz.engines": {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-21-recovery-git-bootstrap-ses_de5678018ffezK8JGDUaSzvcWn\\docs\\coordination\\evidence\\R39-21\\inputs\\python\\deepviz\\src\\deepviz\\engines.py",
+      "sha256": "d519700c20007009ffffb6e8343696c30335949b0df798aa4a83ac8b0025fc29"
+    }
+  },
+  "cases": [
+    {
+      "name": "negative_control",
+      "literal_values": [
+        -7.0,
+        -2.0
+      ],
+      "native": {
+        "type": "cell",
+        "data": [
+          {
+            "_x": "A",
+            "_y": "AM",
+            "_color": "-7.0",
+            "_size": 8,
+            "_heat": -7.0,
+            "_row": 0
+          },
+          {
+            "_x": "B",
+            "_y": "PM",
+            "_color": "-2.0",
+            "_size": 8,
+            "_heat": -2.0,
+            "_row": 1
+          }
+        ],
+        "encode": {
+          "x": "_x",
+          "y": "_y",
+          "color": "_heat"
+        },
+        "animate": false,
+        "theme": "light",
+        "title": "Visualization",
+        "tooltip": false,
+        "axis": {
+          "x": {
+            "title": "x",
+            "labelFill": "#202938",
+            "titleFill": "#202938"
+          },
+          "y": {
+            "title": "y",
+            "labelFill": "#202938",
+            "titleFill": "#202938"
+          }
+        },
+        "scale": {
+          "color": {
+            "type": "linear",
+            "domain": [
+              -7.0,
+              -2.0
+            ],
+            "range": [
+              "#ffffd9",
+              "#081d58"
+            ],
+            "nice": false
+          }
+        },
+        "legend": {
+          "color": {
+            "data": [
+              {
+                "value": -7.0
+              },
+              {
+                "value": -2.0
+              }
+            ],
+            "labelTextAlign": "start"
+          }
+        }
+      },
+      "warnings": [],
+      "input_count": 2
+    },
+    {
+      "name": "opposite_finite_MAX",
+      "literal_values": [
+        -1e+308,
+        1e+308
+      ],
+      "native": {
+        "type": "cell",
+        "data": [
+          {
+            "_x": "A",
+            "_y": "AM",
+            "_color": "-1e+308",
+            "_size": 8,
+            "_heat": -1e+308,
+            "_row": 0
+          },
+          {
+            "_x": "B",
+            "_y": "PM",
+            "_color": "1e+308",
+            "_size": 8,
+            "_heat": 1e+308,
+            "_row": 1
+          }
+        ],
+        "encode": {
+          "x": "_x",
+          "y": "_y",
+          "color": "_heat"
+        },
+        "animate": false,
+        "theme": "light",
+        "title": "Visualization",
+        "tooltip": false,
+        "axis": {
+          "x": {
+            "title": "x",
+            "labelFill": "#202938",
+            "titleFill": "#202938"
+          },
+          "y": {
+            "title": "y",
+            "labelFill": "#202938",
+            "titleFill": "#202938"
+          }
+        },
+        "scale": {
+          "color": {
+            "type": "linear",
+            "domain": [
+              -1e+308,
+              1e+308
+            ],
+            "range": [
+              "#ffffd9",
+              "#081d58"
+            ],
+            "nice": false
+          }
+        },
+        "legend": {
+          "color": {
+            "data": [
+              {
+                "value": -1e+308
+              },
+              {
+                "value": 1e+308
+              }
+            ],
+            "labelTextAlign": "start"
+          }
+        }
+      },
+      "warnings": [],
+      "input_count": 2
+    }
+  ]
+}

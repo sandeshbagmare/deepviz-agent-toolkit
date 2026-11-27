@@ -1,0 +1,170 @@
+[
+  {
+    "id": "bff-source01",
+    "report": "docs/coordination/reports/R31-01-mapping-final-review.md",
+    "published_report_commit": "a84c07c2c36a8554a9cda77bfed0390d3e3b7009",
+    "target_source": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+    "full_files": [
+      "python/deepviz/src/deepviz/models.py",
+      "schemas/chart-spec.schema.json",
+      ".github/workflows/chart-contract.yml"
+    ],
+    "scoped_paths": {},
+    "functions": {},
+    "findings": [
+      "R25-01-F1 RESOLVED on exactbff only"
+    ],
+    "kind": "independent historical SOURCE review",
+    "acceptance_transfer": "NONE: source scope only; changed callers/dependencies/head require affected gates"
+  },
+  {
+    "id": "bff-source11",
+    "report": "docs/coordination/reports/R32-11-mapping-final-review.md",
+    "published_report_commit": "ab4a0c53fd339315f1e457c70c6da88ab10e64d9",
+    "target_source": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+    "full_files": [
+      "python/deepviz/src/deepviz/models.py",
+      "schemas/chart-spec.schema.json",
+      ".github/workflows/chart-contract.yml"
+    ],
+    "scoped_paths": {},
+    "functions": {},
+    "findings": [
+      "R25-11-F1 RESOLVED on exactbff only"
+    ],
+    "kind": "independent historical SOURCE review",
+    "acceptance_transfer": "NONE: source scope only; changed callers/dependencies/head require affected gates"
+  },
+  {
+    "id": "helper-source01",
+    "report": "docs/coordination/reports/R24-01-helper-null-review.md",
+    "published_report_commit": "26db4af34ded1ff1432132d1c8be3c74ca118ea0",
+    "target_source": "7d8ccdce22430a9ddf3a14a9e64bf15b2373ae57",
+    "full_files": [],
+    "scoped_paths": {
+      "packages/deepviz/src/render.ts": "createRenderTools133-142; one undefined-only-default change; connected113-114/49-55/models64-96; NOT full renderer review"
+    },
+    "functions": {},
+    "findings": [],
+    "kind": "independent historical SOURCE review",
+    "acceptance_transfer": "NONE: source scope only; changed callers/dependencies/head require affected gates"
+  },
+  {
+    "id": "prompts-source01",
+    "report": "docs/coordination/reports/R18-01-npm-prompt-review.md",
+    "published_report_commit": "070ec64bfda5a1b578c8fa0c0486b8eb69c87831",
+    "target_source": "f9c437286c9dfe2245a7d914995d90346e29c233",
+    "full_files": [
+      "packages/deepviz/scripts/copy-prompts.mjs"
+    ],
+    "scoped_paths": {
+      "packages/deepviz/package.json": "exports/build9-19 only; unchanged runtime metadata proof, not full npm approval",
+      "packages/deepviz/README.md": "80-97 packaged prompts example/claims"
+    },
+    "functions": {},
+    "findings": [],
+    "kind": "independent historical SOURCE review",
+    "acceptance_transfer": "NONE: source scope only; changed callers/dependencies/head require affected gates"
+  },
+  {
+    "id": "owned-cleanup-source04",
+    "report": "docs/coordination/reports/R22-04-owned-unwind-review.md",
+    "published_report_commit": "b235fc6422426df9bdeadae18174240ce9ec922c",
+    "target_source": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
+    "full_files": [],
+    "scoped_paths": {},
+    "functions": {
+      "python/deepviz/src/deepviz/normalize.py": [
+        "_without_bom",
+        "_jsonl",
+        "_delimited",
+        "_path_rows",
+        "_binary_rows",
+        "_source",
+        "_records",
+        "_select_path",
+        "_expand",
+        "_arrow_rows",
+        "normalize"
+      ]
+    },
+    "findings": [],
+    "kind": "independent historical SOURCE review",
+    "acceptance_transfer": "NONE: source scope only; changed callers/dependencies/head require affected gates"
+  },
+  {
+    "id": "MCP-P1-source02",
+    "report": "docs/coordination/reports/R22-02-mcp-p1-security.md",
+    "published_report_commit": "2855f7a4d051297e1d9e1246fd3051d35e2a11f0",
+    "target_source": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+    "full_files": [],
+    "scoped_paths": {
+      "python/deepviz/src/deepviz/tools.py": "P1 strict encoded/raw UTF8/canonical refs/precallback methods24-29/73-163/186-196 and callers",
+      "python/deepviz/src/deepviz/mcp_server.py": "P1 admission48-53/contained resource reads65-85; NOT P2 concurrency"
+    },
+    "functions": {},
+    "findings": [
+      "R22-02-F1 OPEN on d65/exact unchanged wrapper scope; callback bare-string leak"
+    ],
+    "kind": "independent historical SOURCE review",
+    "acceptance_transfer": "NONE: source scope only; changed callers/dependencies/head require affected gates"
+  },
+  {
+    "id": "R38-own-recommend",
+    "report": "docs/coordination/reports/R38-21-branch-source-coverage.md",
+    "published_report_commit": null,
+    "target_source": "3eab699b61850a20e91132e16caf8c589085f9ee",
+    "full_files": [
+      "python/deepviz/src/deepviz/recommend.py"
+    ],
+    "scoped_paths": {
+      "python/deepviz/src/deepviz/cli.py": "recommend input/goal/dispatch16-26,37-55; mcp/render commands context not full feature approval"
+    },
+    "functions": {
+      "python/deepviz/src/deepviz/tools.py": [
+        "_profile_spec",
+        "ToolSession._source",
+        "ToolSession.normalize_data",
+        "ToolSession.recommend_chart",
+        "create_tools"
+      ]
+    },
+    "findings": [],
+    "kind": "DIRECT FULL recommendation unit SOURCE review by21 this task",
+    "acceptance_transfer": "NONE: source scope only; changed callers/dependencies/head require affected gates"
+  },
+  {
+    "id": "R39-own-AntV",
+    "report": "docs/coordination/reports/R39-21-antv-source-and-coverage.md",
+    "published_report_commit": null,
+    "target_source": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+    "full_files": [],
+    "scoped_paths": {},
+    "functions": {
+      "python/deepviz/src/deepviz/engines.py": [
+        "_antv",
+        "safe_json",
+        "_number",
+        "channels",
+        "_groups",
+        "_geometry",
+        "_boxes",
+        "_histogram_values",
+        "_histogram",
+        "_tiles",
+        "_iso_dates",
+        "_colors",
+        "_fallback",
+        "_table_budget",
+        "native_spec",
+        "browser_html"
+      ]
+    },
+    "findings": [
+      "R39-21-F1 OPEN/P2 opposite finite span; own realG2factory counterexample",
+      "R38-17-F1 OPEN/P2 subnormal blank public output; independent17proof no replay"
+    ],
+    "kind": "DIRECT FULL AntV function+connected SOURCE review by21 this task; REQUEST CHANGES",
+    "acceptance_transfer": "NONE: source scope only; changed callers/dependencies/head require affected gates"
+  }
+]

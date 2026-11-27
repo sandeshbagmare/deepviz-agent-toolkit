@@ -1,0 +1,73 @@
+{
+  "source_commit": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+  "node": "v26.13.1",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "g2_version": "5.4.8",
+  "scale_version": "0.5.2",
+  "native_input_sha256": "10af415fb17cb21e7eebd0f3177f2a34165ef59fa8d490db74ee77f35d476266",
+  "dependency_before": {
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\@antv\\g2\\package.json": "fbf2d44b7366584a35621d421aecf7c913ec0c496d257a8157b9809e95676820",
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\@antv\\scale\\package.json": "3c6d9c8c9e3ccf89c8a1d2b0f777f0bc3d89fc55cfaaaf1b459bd505d1f51910",
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\@antv\\g2\\lib\\scale\\linear.js": "b48d6a59e98dadf38850a3b21b481ca4152da8d4593ccda0253e8adaf4014644",
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\@antv\\scale\\lib\\scales\\linear.js": "df8ea670d5c198c78301b33c830f34b0669137f143edd806db64aabebd9314e2",
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\@antv\\scale\\lib\\scales\\continuous.js": "8e2c24417304faff1a8d0e48d0a246b5bc727deb05b75c775e5eb26025ae8261",
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\@antv\\scale\\lib\\utils\\normalize.js": "610be02a9628975ad6ca9094bd8ea0b499e2bfef31d4f7a15c933c032d50ea49"
+  },
+  "dependency_after": {
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\@antv\\g2\\package.json": "fbf2d44b7366584a35621d421aecf7c913ec0c496d257a8157b9809e95676820",
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\@antv\\scale\\package.json": "3c6d9c8c9e3ccf89c8a1d2b0f777f0bc3d89fc55cfaaaf1b459bd505d1f51910",
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\@antv\\g2\\lib\\scale\\linear.js": "b48d6a59e98dadf38850a3b21b481ca4152da8d4593ccda0253e8adaf4014644",
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\@antv\\scale\\lib\\scales\\linear.js": "df8ea670d5c198c78301b33c830f34b0669137f143edd806db64aabebd9314e2",
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\@antv\\scale\\lib\\scales\\continuous.js": "8e2c24417304faff1a8d0e48d0a246b5bc727deb05b75c775e5eb26025ae8261",
+    "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\@antv\\scale\\lib\\utils\\normalize.js": "610be02a9628975ad6ca9094bd8ea0b499e2bfef31d4f7a15c933c032d50ea49"
+  },
+  "cases": [
+    {
+      "name": "negative_control",
+      "literal_values": [
+        -7,
+        -2
+      ],
+      "domain": [
+        -7,
+        -2
+      ],
+      "mapped": [
+        0,
+        1
+      ],
+      "colors": [
+        "rgba(255, 255, 217, 1)",
+        "rgba(8, 29, 88, 1)"
+      ],
+      "passed": true
+    },
+    {
+      "name": "opposite_finite_MAX",
+      "literal_values": [
+        -1e+308,
+        1e+308
+      ],
+      "domain": [
+        -1e+308,
+        1e+308
+      ],
+      "mapped": [
+        0,
+        "NaN"
+      ],
+      "colors": [
+        "rgba(255, 255, 217, 1)",
+        "rgba(NaN, NaN, NaN, NaN)"
+      ],
+      "passed": false
+    }
+  ],
+  "counts": {
+    "cases": 2,
+    "passed": 1,
+    "failed": 1,
+    "skipped": 0
+  },
+  "limits": "Actual existing G2 scale dependency with actual frozen adapter payload; NOT full G2 browser/paint/254 tests"
+}
