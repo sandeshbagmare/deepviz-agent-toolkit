@@ -1,0 +1,48 @@
+{
+  "source_commit": "355637ca3de44afb69b7ee0c80999affaf0816bd",
+  "parent": "f80d0eab281cf7352e130ddfbb953002cca3d3b1",
+  "previous_product_source": "9531dab2b4d629c6fffdff9b7dc7dfcebb3def03",
+  "normalizer_dependency": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "model_schema_pair": "dd1c4080095c7e739582dc5c631bc419047c48d2",
+  "product_paths": [
+    "python/deepviz/src/deepviz/models.py",
+    "schemas/chart-spec.schema.json",
+    "python/deepviz/src/deepviz/resources/chart-spec.schema.json",
+    "tests/test_r34_packaged_dashboard_contract.py",
+    "README.md"
+  ],
+  "own_status": "docs/coordination/status/role07.md",
+  "exact_dependency_and_mirror": [
+    {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "source_path": "python/deepviz/src/deepviz/models.py",
+      "source_commit": "dd1c4080095c7e739582dc5c631bc419047c48d2",
+      "git_blob": "d827fb36a996cd281c9004bf79deaa6bf2cc75c2",
+      "old_raw_sha256": "e4c86a977a7003d3d4e5d557a3bdfb25ccee155608d36207f3af24da2e3981d3",
+      "new_raw_sha256": "be2cb15f6f91f2de4b9ebd4e283ea677e9e39490932db3ecd9934f2d6c1e4a1f",
+      "bytes": 3532
+    },
+    {
+      "path": "schemas/chart-spec.schema.json",
+      "source_path": "schemas/chart-spec.schema.json",
+      "source_commit": "dd1c4080095c7e739582dc5c631bc419047c48d2",
+      "git_blob": "1a805052a8f97a40827a727b278dd3ce22295f37",
+      "old_raw_sha256": "cf316116251e52a121a74d24f35f99b15794ee0997278010d97181c8c1908b81",
+      "new_raw_sha256": "35b5a2786db65051ff8f0289901424d74a7b2a9df87fc6c59342ced5834cd18d",
+      "bytes": 4975
+    },
+    {
+      "path": "python/deepviz/src/deepviz/resources/chart-spec.schema.json",
+      "source_path": "schemas/chart-spec.schema.json",
+      "source_commit": "dd1c4080095c7e739582dc5c631bc419047c48d2",
+      "git_blob": "1a805052a8f97a40827a727b278dd3ce22295f37",
+      "old_raw_sha256": "ecd85be393444b7ff5bd9fcbb99cae4c900fad570d961476e1bcd4e443c6f65d",
+      "new_raw_sha256": "35b5a2786db65051ff8f0289901424d74a7b2a9df87fc6c59342ced5834cd18d",
+      "bytes": 4975
+    }
+  ],
+  "no_own_model_schema_normalizer_caps_runtime_guard_or_private_accounting_changes": true,
+  "index_scope_secret_and_whitespace_exit": 0,
+  "source_clean": true,
+  "main_delivery_target": "usable Python data-foundation PR; R04 ONLY; actual number UNKNOWN"
+}
