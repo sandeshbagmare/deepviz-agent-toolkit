@@ -1,0 +1,23 @@
+{
+  "owner_session": "ses_de5678086ffeNido4phnXCJ8J4",
+  "branch": "agents/r10-17-vega-visible-title",
+  "tested_product_source_sha": "e44f667ed494fa272f97792ef99942a364ebca24",
+  "meaningful_commit": "c46f4cf9a9d08eaddec458bb263a4638b5d9ebaa",
+  "subject": "test: independently verify strict numeric contract slice",
+  "commit_exit": 0,
+  "owned_paths": 13,
+  "push_command": "git push origin agents/r10-17-vega-visible-title",
+  "push_exit": 0,
+  "push_kind": "non-force OWN branch only",
+  "readback_command": "git ls-remote --heads origin refs/heads/agents/r10-17-vega-visible-title",
+  "readback_exit": 0,
+  "actual_remote_sha": "c46f4cf9a9d08eaddec458bb263a4638b5d9ebaa",
+  "exact_local_match": true,
+  "contract_result": "e44 immutable source: 79 passed / 0 failed / 0 errors / 0 skipped; exit0; 0.36s",
+  "scoped_ruff_exit": 0,
+  "focused_pr_head_supplied": false,
+  "final_focused_pr_approval": "BLOCKED: R04 must supply actual focused head, byte-verify it and receive a fresh source-specific retest",
+  "source_production_or_original_oracle_edits": 0,
+  "issue_pr_shared_default_writes": 0,
+  "limitations": "Preflight tester evidence only; no renderer/browser/scale/full-suite/CI/release or 900-issue completion claim. Existing worker branch contains unrelated historical COUNT RED work; do not wholesale merge it into focused #30 PR."
+}

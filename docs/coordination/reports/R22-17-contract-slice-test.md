@@ -40,3 +40,13 @@
 - Explicit12OWNpaths staged/diffread, `git diff --cached --check`0. Git warned compactconsole CRLF→LF; normalized ONLYthat3-line evidence copy (3CRbytesremoved), raw local console/hash retained, final7artifact inventory **18,970B**. Actual staged/working bytes now identical; all7artifactSHA256verified. No test/model content changed or test rerun.
 - Scoped stagedaudit **12paths/73,917B**, JSON/PythonAST parse0/credential-patternfindings0/whitespace0/protectedsource+workflow+schema+originalmodel/matrixdiff0. Own `precommit-checks.json` accurately describes paths BEFOREits addition/finalcheckpointupdates, not self-referential; no general security/CI approval implied.
 - Firstunfinishedaction synconlyOWNreport/note,stageonlytheseupdates+ownauditJSON, final13-path boundary/credential/whitespace check, meaningfulOWNcommit thennonforcepush/exactremoteSHAreadback. Narrow79casee44preflight is unchanged; actualfocusedheadstillunsupplied, sourcebyteproof+retest pending and no finalsignoff.
+
+## Meaningful local commit, publication pending
+
+- Final13OWNstagedpaths/boundary/credentialpatterns/whitespacechecks0; `git commit -m "test: independently verify strict numeric contract slice"` **exit0**, meaningful **`c46f4cf9a9d08eaddec458bb263a4638b5d9ebaa`** (13files/849insertions); ownWTclean/ahead1. Actual tested model remains exact e44, not this test/evidencecommit or a hypothetical focused PR head. No source/originaloracles edits.
+- Next executable action `git push origin agents/r10-17-vega-visible-title` NONFORCE then `git ls-remote --heads origin refs/heads/agents/r10-17-vega-visible-title` require exactc46f4cf; localcommitnotpublishedyet. No need to rerun unchanged79casebaseline; focused-head followup still explicit.
+
+## Actual OWN publication and handoff
+
+- `git push origin agents/r10-17-vega-visible-title` **exit0/nonforce** advanced6df1aab→**c46f4cf9a9d08eaddec458bb263a4638b5d9ebaa**; immediate `git ls-remote --heads origin refs/heads/agents/r10-17-vega-visible-title` **exit0**, remote exact local SHA, ownWTclean. [Publication receipt](../evidence/R22-17/publication-receipt.json). No issue/PR/shared/default writes and no completed79case rerun.
+- Worker publication complete; no pending own test command. R04 next action: create/announce actual focused #30 head from fresh main with only minimal dependency-complete source/tests/CI, then supply exact head to reviewer/tester lanes. This branch is not that focused PR; do not claim c46f4cf as source fix or focused approval. Current preflight remains e44 **79PASS** and final focused approval BLOCKED pending actual head/byteproof/retest.
