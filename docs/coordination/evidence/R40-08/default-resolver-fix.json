@@ -1,0 +1,80 @@
+{
+  "scope": "R40 npm materialized public-consumer TypeScript compiler resolver follow-up",
+  "sourceBase": "656f4f35e5e72d16cdb5ebf557b7d64607eaaa43",
+  "baselineEvidenceCommit": "c1e1f20e92d69f44fedd9c7d9d272234d8e7d697",
+  "productCommit": "aa421822ea016b59cca674bdb547598c0c64d6d0",
+  "productBranch": "feat/r40-npm-foundation",
+  "remoteBranchTipReadback": "aa421822ea016b59cca674bdb547598c0c64d6d0",
+  "authenticationObservation": {
+    "githubUserEndpointStatus": 200,
+    "expectedLoginMatched": true,
+    "credentialPersisted": false
+  },
+  "publication": {
+    "prePushRemoteTip": "c1e1f20e92d69f44fedd9c7d9d272234d8e7d697",
+    "gitPushExit": 0,
+    "gitLsRemoteExit": 0,
+    "forcePush": false
+  },
+  "redGreen": {
+    "frozenBaseline": "c1e1f20e92d69f44fedd9c7d9d272234d8e7d697",
+    "expectedRedExit": 1,
+    "tests": 5,
+    "pass": 4,
+    "fail": 1,
+    "skipped": 0,
+    "failure": "ERR_PACKAGE_PATH_NOT_EXPORTED resolving typescript/bin/tsc; regression assertion requires exported TypeScript package metadata"
+  },
+  "freshCandidateGates": {
+    "candidate": "fresh Git archive at production 656f plus only the two authored checker/test changes",
+    "testRunnerSource": "aa421822ea016b59cca674bdb547598c0c64d6d0",
+    "dependencyHandling": "existing read-only TypeScript 7.0.2 junction; no install or dependency copy",
+    "installPerformed": false,
+    "commands": {
+      "npm run build": 0,
+      "npm run typecheck": 0,
+      "npm run schema:check": 0,
+      "npm test": 0,
+      "npm pack --dry-run --workspace @deepviz/agent-toolkit": 0,
+      "npm pack --workspace @deepviz/agent-toolkit": 0,
+      "materialized tarball consumer and strict type checks": 0,
+      "native Chromium pages": 0
+    },
+    "npmTests": {
+      "tests": 437,
+      "pass": 437,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "tarball": {
+      "files": 25,
+      "bytes": 47847,
+      "sha256": "0804cf7f55b4037f9ff95b9f870b8781aff319d6fa7602580326d31170e55b3b"
+    },
+    "materializedConsumerCommands": 5,
+    "browser": {
+      "version": "159.0.8154.6",
+      "pages": 2,
+      "consoleOrPageErrors": 0,
+      "unexpectedRequests": 0,
+      "screenshotsOpened": 2
+    },
+    "sourceWorktreeProductionTreeUnchanged": true
+  },
+  "externalDetailedEvidence": {
+    "expectedRed": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts/red-regression.json",
+    "fullGateRun": "C:/Users/bagma/AppData/Local/Temp/opencode/r40-08-npm-foundation-ses_de56782e6ffeVWDIuY3v01kkBt-artifacts/final-gates-2.json",
+    "finalFocusedTest": "node --test packages/deepviz/test/test_r40_foundation.test.mjs — 5 pass, 0 fail, 0 skipped"
+  },
+  "remainingBlockers": [
+    "Strict Python exporter property-order check remains RED and requires R04 disposition.",
+    "No clean-installed consumer, Node 22/24 execution, or current remote CI was run for this follow-up.",
+    "Independent source reviews, independent package tests, density integration, and PR/main merge remain required."
+  ],
+  "notClaimed": [
+    "The GitHub Node 22/24 materialized-consumer CI failure is not claimed fixed until fresh remote CI verifies the published commit.",
+    "No clean-install or release approval is claimed."
+  ]
+}
