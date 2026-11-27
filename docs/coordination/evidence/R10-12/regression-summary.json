@@ -1,0 +1,200 @@
+{
+  "source_commit": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "branch": "agents/r10-12-typescript-scale-envelope",
+  "node": "v26.13.1",
+  "browser": "159.0.8154.6",
+  "module_fingerprints": [
+    {
+      "name": "index",
+      "source_sha256": "a4c1ebd22dfdc100e28eef28b11030d5f08bb09db0da9649c22848d3ef9a8aac",
+      "imported_build_sha256": "887a0d361250e936d43f6b5f8cac4f65a024676520ad6bcfb49ab8042e355c39"
+    },
+    {
+      "name": "models",
+      "source_sha256": "d43d5ae0bef1d43f251ed71899a9b507c6575562e4403bd2e2ac02bd7caa43e6",
+      "imported_build_sha256": "936bcf189c647a45ab0063dbdff5158ca5711a374e6eae7f4a00d160d91d265e"
+    },
+    {
+      "name": "normalize",
+      "source_sha256": "d1b45d2a55dfd05361184a57da952a0da735e9b6d72c2491f908ef27bda22371",
+      "imported_build_sha256": "adb0493123fd478567212e76e2c6e52c828aeaa9eb5425c219b5b1a576689612"
+    },
+    {
+      "name": "render",
+      "source_sha256": "7f0a69004d570e05b45b8c6ce10c73263652d2874362960af27baed82b3996e9",
+      "imported_build_sha256": "39bcd415d119e39ef3107dee4b455778541776f3901c4ae5facbb1447fcc5388"
+    },
+    {
+      "name": "renderers",
+      "source_sha256": "180cb19d8bb01e5c2fe94db7e943e8430681cffadad2251d38a03fd1de5b19d0",
+      "imported_build_sha256": "d0a10b871c8768c386bddebb971610e8b770902f29d3d0780008b8af658bf905"
+    },
+    {
+      "name": "schema",
+      "source_sha256": "8150ef7a9f4e1376818c38ec0b3a76e4c1fa92a7dec8e361e24195f6e38d0537",
+      "imported_build_sha256": "a48b8860a9bfb63d757c49fbf9ebecdc1596e3bef40dfdadaf6203351b626482"
+    }
+  ],
+  "test_sha256": "aeea4d196c42c29aa2aa7a467fe618f204391a78f7b6a2eeec526f96daf0101f",
+  "new_regression": {
+    "exit": 1,
+    "pass": 2,
+    "fail": 4,
+    "skip": 0
+  },
+  "existing_npm": {
+    "exit": 0,
+    "pass": 246,
+    "fail": 0,
+    "skip": 0
+  },
+  "build": 0,
+  "typecheck": 0,
+  "schema_check": 0,
+  "source_changed": false,
+  "scale_rerun": false,
+  "results": [
+    {
+      "name": "small-positive",
+      "carrier": "html",
+      "input_sha256": "a38bc02af8d93647ec98e37a30537a0d3e5abc0468004b79028f154f67f79447",
+      "png_sha256": "542c904d04bd88ee9592071576dc19facc605b303821979cc68bc0b7f5865c72",
+      "marks": 8,
+      "clipped": [],
+      "console_errors": [],
+      "page_errors": [],
+      "external_requests": []
+    },
+    {
+      "name": "small-positive",
+      "carrier": "svg",
+      "input_sha256": "5d8020cb21666fbdeb0d9de0c0a66288b565cf19a1c7ae6b03634a520df5b698",
+      "png_sha256": "9145a7c645cbad95bc53a4f7e59312fcc4c151af5973d40fd9ab8bfb6b090480",
+      "marks": 8,
+      "clipped": [],
+      "console_errors": [],
+      "page_errors": [],
+      "external_requests": []
+    },
+    {
+      "name": "measured-aggregate",
+      "carrier": "html",
+      "input_sha256": "d29f0cac5ba7cda6c3f655f2ad73fdbd59faf03c6f8d8aa9eb19f439650e21c2",
+      "png_sha256": "23ba2cb840902b58db01c437f40b38e73395aaf31391d0c9f47acb17672ca2c3",
+      "marks": 8,
+      "clipped": [
+        {
+          "text": "6.250e+12",
+          "x": -8.21875,
+          "y": 58,
+          "right": 57.44921875,
+          "bottom": 77,
+          "width": 65.66796875,
+          "height": 19,
+          "font_size": 14,
+          "display": "block",
+          "visibility": "visible"
+        }
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "external_requests": []
+    },
+    {
+      "name": "measured-aggregate",
+      "carrier": "svg",
+      "input_sha256": "68b0fd7a5e96384b34023a66180af8f932d6a1451efe33847413d4905a69604f",
+      "png_sha256": "eb9ae4c282ca6078a8739f6941b01640746dab435227bd19cc5f20fb7ad15913",
+      "marks": 8,
+      "clipped": [
+        {
+          "text": "6.250e+12",
+          "x": -11.125,
+          "y": 59,
+          "right": 57,
+          "bottom": 76,
+          "width": 68.125,
+          "height": 17,
+          "font_size": 16,
+          "display": "block",
+          "visibility": "visible"
+        }
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "external_requests": []
+    },
+    {
+      "name": "signed-long-exponent",
+      "carrier": "html",
+      "input_sha256": "61b39e77fdfddb2717dba54719f7eab4ce601a16731b4cc127947911d3413d60",
+      "png_sha256": "5ca5e095c7d9f43b15ed83973600b9b7e3db4418fe765b4096869c0d187a86b6",
+      "marks": 8,
+      "clipped": [
+        {
+          "text": "9.999e+120",
+          "x": -15.765625,
+          "y": 58,
+          "right": 57.44921875,
+          "bottom": 77,
+          "width": 73.21484375,
+          "height": 19,
+          "font_size": 14,
+          "display": "block",
+          "visibility": "visible"
+        },
+        {
+          "text": "-9.999e+120",
+          "x": -21.375,
+          "y": 460,
+          "right": 57.4384765625,
+          "bottom": 479,
+          "width": 78.8134765625,
+          "height": 19,
+          "font_size": 14,
+          "display": "block",
+          "visibility": "visible"
+        }
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "external_requests": []
+    },
+    {
+      "name": "signed-long-exponent",
+      "carrier": "svg",
+      "input_sha256": "49fc6be8eb40c1ec991bf725dc4987909c3620c2e3dada14e1429b97813c6e3b",
+      "png_sha256": "27b8823a1734a8620b1894d974778295477af4b427ebdb2e998690ee68453ff3",
+      "marks": 8,
+      "clipped": [
+        {
+          "text": "9.999e+120",
+          "x": -19.125,
+          "y": 59,
+          "right": 57,
+          "bottom": 76,
+          "width": 76.125,
+          "height": 17,
+          "font_size": 16,
+          "display": "block",
+          "visibility": "visible"
+        },
+        {
+          "text": "-9.999e+120",
+          "x": -24.453125,
+          "y": 461,
+          "right": 57,
+          "bottom": 478,
+          "width": 81.453125,
+          "height": 17,
+          "font_size": 16,
+          "display": "block",
+          "visibility": "visible"
+        }
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "external_requests": []
+    }
+  ]
+}
