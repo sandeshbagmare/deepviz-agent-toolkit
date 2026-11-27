@@ -581,6 +581,13 @@ def _sum_units(value: int | float) -> int:
     return numerator << (1074 - (denominator.bit_length() - 1))
 
 
+def _state_number_bytes(value: int | float) -> int:
+    if type(value) is int:
+        # 2**3 < 10 gives a conservative decimal-size bound without formatting.
+        return value.bit_length() // 3 + 1 + (value < 0)
+    return len(repr(value))
+
+
 class _Reducer:
     """Keep at most limit group states; no set of overflow keys is retained."""
 
@@ -597,7 +604,7 @@ class _Reducer:
     def _store(self, state: list[Any], value: Any, correction: Any = 0, exponent: int = 0) -> None:
         size = 128
         if any(isinstance(item, int) and item.bit_length() > 96 for item in (state[0], value, correction)):
-            size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+            size = max(size, sum(_state_number_bytes(item) for item in (state[0], value, correction, exponent)))
         retained = self.retained_bytes + size - state[4]
         _check_retained_bytes(retained)
         self.retained_bytes = retained

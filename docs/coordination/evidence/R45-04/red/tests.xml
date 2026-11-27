@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="12" skipped="0" tests="19" time="0.599" timestamp="2026-11-27T23:20:05.029358+05:30" hostname="SandeshAcer"><testcase classname="python.deepviz.tests.test_r45_numeric_state_accounting" name="test_accepted_large_integer_cancellation_avoids_private_decimal_encoding[native-positive-first-mean]" time="0.005"><failure message="ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit">python\deepviz\tests\test_r45_numeric_state_accounting.py:45: in test_accepted_large_integer_cancellation_avoids_private_decimal_encoding
+    result = normalize(
+python\deepviz\src\deepviz\normalize.py:737: in normalize
+    reducer.add(row)
+python\deepviz\src\deepviz\normalize.py:642: in add
+    self._store(state, (state[1] or 0) + _sum_units(value), exponent=-1074)
+python\deepviz\src\deepviz\normalize.py:600: in _store
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:600: in &lt;genexpr&gt;
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                             ^^^^^^^^^^
+E   ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit</failure></testcase><testcase classname="python.deepviz.tests.test_r45_numeric_state_accounting" name="test_accepted_large_integer_cancellation_avoids_private_decimal_encoding[native-positive-first-sum]" time="0.003"><failure message="ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit">python\deepviz\tests\test_r45_numeric_state_accounting.py:45: in test_accepted_large_integer_cancellation_avoids_private_decimal_encoding
+    result = normalize(
+python\deepviz\src\deepviz\normalize.py:737: in normalize
+    reducer.add(row)
+python\deepviz\src\deepviz\normalize.py:655: in add
+    self._store(state, total, exponent=-1074)
+python\deepviz\src\deepviz\normalize.py:600: in _store
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:600: in &lt;genexpr&gt;
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                             ^^^^^^^^^^
+E   ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit</failure></testcase><testcase classname="python.deepviz.tests.test_r45_numeric_state_accounting" name="test_accepted_large_integer_cancellation_avoids_private_decimal_encoding[native-negative-first-mean]" time="0.002"><failure message="ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit">python\deepviz\tests\test_r45_numeric_state_accounting.py:45: in test_accepted_large_integer_cancellation_avoids_private_decimal_encoding
+    result = normalize(
+python\deepviz\src\deepviz\normalize.py:737: in normalize
+    reducer.add(row)
+python\deepviz\src\deepviz\normalize.py:642: in add
+    self._store(state, (state[1] or 0) + _sum_units(value), exponent=-1074)
+python\deepviz\src\deepviz\normalize.py:600: in _store
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:600: in &lt;genexpr&gt;
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                             ^^^^^^^^^^
+E   ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit</failure></testcase><testcase classname="python.deepviz.tests.test_r45_numeric_state_accounting" name="test_accepted_large_integer_cancellation_avoids_private_decimal_encoding[native-negative-first-sum]" time="0.003"><failure message="ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit">python\deepviz\tests\test_r45_numeric_state_accounting.py:45: in test_accepted_large_integer_cancellation_avoids_private_decimal_encoding
+    result = normalize(
+python\deepviz\src\deepviz\normalize.py:737: in normalize
+    reducer.add(row)
+python\deepviz\src\deepviz\normalize.py:655: in add
+    self._store(state, total, exponent=-1074)
+python\deepviz\src\deepviz\normalize.py:600: in _store
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:600: in &lt;genexpr&gt;
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                             ^^^^^^^^^^
+E   ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit</failure></testcase><testcase classname="python.deepviz.tests.test_r45_numeric_state_accounting" name="test_accepted_large_integer_cancellation_avoids_private_decimal_encoding[one-pass-positive-first-mean]" time="0.003"><failure message="ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit">python\deepviz\tests\test_r45_numeric_state_accounting.py:45: in test_accepted_large_integer_cancellation_avoids_private_decimal_encoding
+    result = normalize(
+python\deepviz\src\deepviz\normalize.py:737: in normalize
+    reducer.add(row)
+python\deepviz\src\deepviz\normalize.py:642: in add
+    self._store(state, (state[1] or 0) + _sum_units(value), exponent=-1074)
+python\deepviz\src\deepviz\normalize.py:600: in _store
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:600: in &lt;genexpr&gt;
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                             ^^^^^^^^^^
+E   ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit</failure></testcase><testcase classname="python.deepviz.tests.test_r45_numeric_state_accounting" name="test_accepted_large_integer_cancellation_avoids_private_decimal_encoding[one-pass-positive-first-sum]" time="0.003"><failure message="ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit">python\deepviz\tests\test_r45_numeric_state_accounting.py:45: in test_accepted_large_integer_cancellation_avoids_private_decimal_encoding
+    result = normalize(
+python\deepviz\src\deepviz\normalize.py:737: in normalize
+    reducer.add(row)
+python\deepviz\src\deepviz\normalize.py:655: in add
+    self._store(state, total, exponent=-1074)
+python\deepviz\src\deepviz\normalize.py:600: in _store
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:600: in &lt;genexpr&gt;
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                             ^^^^^^^^^^
+E   ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit</failure></testcase><testcase classname="python.deepviz.tests.test_r45_numeric_state_accounting" name="test_accepted_large_integer_cancellation_avoids_private_decimal_encoding[one-pass-negative-first-mean]" time="0.003"><failure message="ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit">python\deepviz\tests\test_r45_numeric_state_accounting.py:45: in test_accepted_large_integer_cancellation_avoids_private_decimal_encoding
+    result = normalize(
+python\deepviz\src\deepviz\normalize.py:737: in normalize
+    reducer.add(row)
+python\deepviz\src\deepviz\normalize.py:642: in add
+    self._store(state, (state[1] or 0) + _sum_units(value), exponent=-1074)
+python\deepviz\src\deepviz\normalize.py:600: in _store
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:600: in &lt;genexpr&gt;
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                             ^^^^^^^^^^
+E   ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit</failure></testcase><testcase classname="python.deepviz.tests.test_r45_numeric_state_accounting" name="test_accepted_large_integer_cancellation_avoids_private_decimal_encoding[one-pass-negative-first-sum]" time="0.003"><failure message="ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit">python\deepviz\tests\test_r45_numeric_state_accounting.py:45: in test_accepted_large_integer_cancellation_avoids_private_decimal_encoding
+    result = normalize(
+python\deepviz\src\deepviz\normalize.py:737: in normalize
+    reducer.add(row)
+python\deepviz\src\deepviz\normalize.py:655: in add
+    self._store(state, total, exponent=-1074)
+python\deepviz\src\deepviz\normalize.py:600: in _store
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:600: in &lt;genexpr&gt;
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                             ^^^^^^^^^^
+E   ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit</failure></testcase><testcase classname="python.deepviz.tests.test_r45_numeric_state_accounting" name="test_private_charge_preserves_literal_numeric_and_count_results[mean-values0-3.0]" time="0.001" /><testcase classname="python.deepviz.tests.test_r45_numeric_state_accounting" name="test_private_charge_preserves_literal_numeric_and_count_results[sum-values1--4]" time="0.001" /><testcase classname="python.deepviz.tests.test_r45_numeric_state_accounting" name="test_private_charge_preserves_literal_numeric_and_count_results[mean-values2--1.0]" time="0.001" /><testcase classname="python.deepviz.tests.test_r45_numeric_state_accounting" name="test_private_charge_preserves_literal_numeric_and_count_results[sum-values3-1e+308]" time="0.001" /><testcase classname="python.deepviz.tests.test_r45_numeric_state_accounting" name="test_private_charge_preserves_literal_numeric_and_count_results[count-values4-4]" time="0.001" /><testcase classname="python.deepviz.tests.test_r45_numeric_state_accounting" name="test_large_integer_state_moves_to_other_without_losing_count_or_weight[mean-2.0]" time="0.002"><failure message="ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit">python\deepviz\tests\test_r45_numeric_state_accounting.py:85: in test_large_integer_state_moves_to_other_without_losing_count_or_weight
+    result = normalize(
+python\deepviz\src\deepviz\normalize.py:737: in normalize
+    reducer.add(row)
+python\deepviz\src\deepviz\normalize.py:642: in add
+    self._store(state, (state[1] or 0) + _sum_units(value), exponent=-1074)
+python\deepviz\src\deepviz\normalize.py:600: in _store
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:600: in &lt;genexpr&gt;
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                             ^^^^^^^^^^
+E   ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit</failure></testcase><testcase classname="python.deepviz.tests.test_r45_numeric_state_accounting" name="test_large_integer_state_moves_to_other_without_losing_count_or_weight[sum-6]" time="0.003" /><testcase classname="python.deepviz.tests.test_r45_numeric_state_accounting" name="test_large_integer_state_moves_to_other_without_losing_count_or_weight[count-4]" time="0.002" /><testcase classname="python.deepviz.tests.test_r45_numeric_state_accounting" name="test_private_wide_state_is_charged_then_releases_its_budget_on_cancellation" time="0.001"><failure message="ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit">python\deepviz\tests\test_r45_numeric_state_accounting.py:106: in test_private_wide_state_is_charged_then_releases_its_budget_on_cancellation
+    reducer._store(state, wide, exponent=-1074)
+python\deepviz\src\deepviz\normalize.py:600: in _store
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:600: in &lt;genexpr&gt;
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                             ^^^^^^^^^^
+E   ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit</failure></testcase><testcase classname="python.deepviz.tests.test_r45_numeric_state_accounting" name="test_private_oversize_charge_rejects_before_retaining_or_mutating_state" time="0.010"><failure message="AssertionError: Regex pattern did not match.&#10;  Expected regex: 'Normalized retained data exceeds'&#10;  Actual message: 'Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit'">python\deepviz\tests\test_r45_numeric_state_accounting.py:123: in test_private_oversize_charge_rejects_before_retaining_or_mutating_state
+    with pytest.raises(ValueError, match="Normalized retained data exceeds"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: Regex pattern did not match.
+E     Expected regex: 'Normalized retained data exceeds'
+E     Actual message: 'Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit'</failure></testcase><testcase classname="docs.coordination.evidence.R45-04.test_original_large_integer_mean" name="test_large_valid_integer_cancellation_mean_does_not_need_decimal_unit_encoding" time="0.002"><failure message="ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit">docs\coordination\evidence\R45-04\test_original_large_integer_mean.py:12: in test_large_valid_integer_cancellation_mean_does_not_need_decimal_unit_encoding
+    result = normalize(iter(rows), {"x": "g", "y": "v", "aggregation": "mean", "max_points": 10})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:737: in normalize
+    reducer.add(row)
+python\deepviz\src\deepviz\normalize.py:642: in add
+    self._store(state, (state[1] or 0) + _sum_units(value), exponent=-1074)
+python\deepviz\src\deepviz\normalize.py:600: in _store
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+python\deepviz\src\deepviz\normalize.py:600: in &lt;genexpr&gt;
+    size = max(size, sum(len(repr(item)) for item in (state[0], value, correction, exponent)))
+                             ^^^^^^^^^^
+E   ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit</failure></testcase></testsuite></testsuites>

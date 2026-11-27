@@ -1,0 +1,162 @@
+{
+  "utc": "2026-11-27T18:01:27.631347+00:00",
+  "base": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
+  "normalizer_sha256": "b64814a6406857d9c9a1078fb759725a65a4a91d0db033c765d015df018dc6fd",
+  "normalizer_base_sha256": "34b88b4b959349593e9eac4e996c4996d311f9249daed1ee024606afd1af8dfc",
+  "exact8added1removed_privatehelper_callsite_only": true,
+  "restoring_removedhelper_and_onecall_yields_entire_parentbytes": true,
+  "protected_functions_AST_exact": [
+    "_iterable",
+    "_json",
+    "_unique_json_object",
+    "_without_bom",
+    "_jsonl",
+    "_cell",
+    "_delimited",
+    "_text",
+    "_arrow_module",
+    "_arrow_rows",
+    "_validate_arrow_fields",
+    "_binary_rows",
+    "_path_rows",
+    "_source",
+    "_select_path",
+    "_connection",
+    "_graphql_errors",
+    "_expand",
+    "_scalar",
+    "_utf8_size",
+    "_string_bytes",
+    "_record_bytes",
+    "_check_retained_bytes",
+    "_flatten",
+    "_records",
+    "_plan",
+    "_sum_units",
+    "_Reducer.__init__",
+    "_Reducer.add",
+    "_Reducer.finish",
+    "normalize"
+  ],
+  "all_caps_public_record_JSON_scalar_schema_TS_lifetime_arithmetic_untouched": true,
+  "formula_proof": "For b=3k+r,r in0..2, 2**b=8**k*2**r <10**(k+1). Decimaldigits<=b//3+1, includingzero; addonefornegative. Nativeinteger bit_length/sign only, no private integerdecimalbuffer. Nonintegerrepr remains legacy.",
+  "small_representable_independent_repr_upperbound_cases": 8194,
+  "bool_float_legacy_checks": 6,
+  "wide_state_unit_numerator_bits": 14362,
+  "wide_state_digit_bound_literal": 4324,
+  "conservative_charge_disclosure": "May reject near retainedlimit earlier than exactdecimalcount; never lowers oldnativeintegerdecimalcharge. Existing128fastpath/96bitgate/check-beforeassign/release/16MiBcapunchanged. Payloadaccounting is NOT processRSS.",
+  "cost_method": "ValueallocatedBEFOREtracemalloc/time;1000privatehelpercalls perbitwidth; costs are only thishelper, NOT ingestion/rowJSON/arithmetic/groupmemory/processRSS/10Mproof. Lastprivateintegerbounded16MiBallocation, no decimalformat.",
+  "cost_samples": [
+    {
+      "input_bits": 0,
+      "charge_upper_bound": 1,
+      "calls": 1000,
+      "elapsed_seconds": 0.003346800003782846,
+      "traced_peak_bytes_helper_loop_only": 112
+    },
+    {
+      "input_bits": 96,
+      "charge_upper_bound": 33,
+      "calls": 1000,
+      "elapsed_seconds": 0.0028707000019494444,
+      "traced_peak_bytes_helper_loop_only": 112
+    },
+    {
+      "input_bits": 1075,
+      "charge_upper_bound": 359,
+      "calls": 1000,
+      "elapsed_seconds": 0.004199699993478134,
+      "traced_peak_bytes_helper_loop_only": 160
+    },
+    {
+      "input_bits": 2098,
+      "charge_upper_bound": 700,
+      "calls": 1000,
+      "elapsed_seconds": 0.004600000000209548,
+      "traced_peak_bytes_helper_loop_only": 160
+    },
+    {
+      "input_bits": 14362,
+      "charge_upper_bound": 4788,
+      "calls": 1000,
+      "elapsed_seconds": 0.004789599988725968,
+      "traced_peak_bytes_helper_loop_only": 160
+    },
+    {
+      "input_bits": 134217729,
+      "charge_upper_bound": 44739244,
+      "calls": 1000,
+      "elapsed_seconds": 0.004961800004821271,
+      "traced_peak_bytes_helper_loop_only": 160
+    }
+  ],
+  "author_tests": {
+    "RED": {
+      "tests": 19,
+      "failed": 12,
+      "passed": 7,
+      "exit": 1
+    },
+    "GREEN": {
+      "tests": 19,
+      "passed": 19,
+      "exit": 0
+    },
+    "unchanged_affected": {
+      "tests": 72,
+      "passed": 72,
+      "exit": 0
+    },
+    "unique_green_cases": 91,
+    "errors": 0,
+    "skips": 0
+  },
+  "source_hash_and_test_hashes_after": {
+    "source": "b64814a6406857d9c9a1078fb759725a65a4a91d0db033c765d015df018dc6fd",
+    "tests": {
+      "python/deepviz/tests/test_r45_numeric_state_accounting.py": "34604385d55a252a722626547f956e403ef7cb4bb7e136e68b14af64379cc633",
+      "docs/coordination/evidence/R45-04/test_original_large_integer_mean.py": "d7262febf984bd0f83aa29d5a43133d5c083c56aeb97788940218493df28c226"
+    }
+  },
+  "ruff_relevant_exit": 0,
+  "mypy_normalizer_exit": 0,
+  "limits": "Authoronly. Fullsuite/formatmatrix/4knownfield-policyRED/TS/build/package/browser/10M/CI/main not rerun/cleared; independentnewheadgatesafterpublishedheadR04.",
+  "OWN_console_encoding_lossless_UTF16_to_UTF8": [
+    {
+      "file": "green-console.txt",
+      "original_UTF16_sha256": "2c975653f0dd43151f0674f9362342862ea31d223b6affa31d722cf13dd5e3dc",
+      "same_text_no_result_or_test_change": true,
+      "OWN_UTF8_before_Git_EOL_normalization_sha256": "fc14f6cf2f820ba9d2432f81773ad03c33cbd88d854158bdb5a2fc288b1eb306",
+      "actual_staged_UTF8_sha256": "88631fdeb9a9b378776c216fcdd610b8a696dd03bbb20d40f3c2ba63f06397bf"
+    },
+    {
+      "file": "mypy.txt",
+      "original_UTF16_sha256": "94594db09076fe305d51b50210d0bc5e9d275fb814f8b42c1ed4cf3368392f9a",
+      "same_text_no_result_or_test_change": true,
+      "OWN_UTF8_before_Git_EOL_normalization_sha256": "8e63ae22e8213e327a5e9cbd584067681681bd8ef7f25c869877887ccdcfc4ff",
+      "actual_staged_UTF8_sha256": "5d4b6d285b77932e3d08212c3b4974d0a803f98ec60408ac6ccf6a063fa6c19e"
+    },
+    {
+      "file": "red-console.txt",
+      "original_UTF16_sha256": "0929debe830f24eee3e1004a24fb719a8c352db36df56d62cadbcb4fdce52809",
+      "same_text_no_result_or_test_change": true,
+      "OWN_UTF8_before_Git_EOL_normalization_sha256": "e249577f649c3b1a25921cae014cce834f6ff36e9167e0d5b8f3ba0a50ceccdb",
+      "actual_staged_UTF8_sha256": "cc3af42290da93c25ff210899eb416da8cd5dc909fc80b45d4bf5f852f83e770"
+    },
+    {
+      "file": "regressions-console.txt",
+      "original_UTF16_sha256": "401ad9fb5b4deda7438f665306312282fb78153ff0ab60178d85fb3bed5381d1",
+      "same_text_no_result_or_test_change": true,
+      "OWN_UTF8_before_Git_EOL_normalization_sha256": "365b75f8471ebe60c48fdd81af6590f22a60fb3d267d105911757c1cfdeb42e1",
+      "actual_staged_UTF8_sha256": "ac485d3800e237f4fa12c4a1d907f13a0e31f289c4629ebee16c35dd8ac900ce"
+    },
+    {
+      "file": "ruff.txt",
+      "original_UTF16_sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+      "same_text_no_result_or_test_change": true,
+      "OWN_UTF8_before_Git_EOL_normalization_sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+      "actual_staged_UTF8_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    }
+  ],
+  "R48_main_delivery_target": "Complete Python data-package PRslice: bounded exactnumeric reducer atop546; privateintegerreprblocker removed asauthor91scopedcases. ActualdataPRnumberUNKNOWN. R04owns freshheadgates then07dependency integration/requiredPR/CI/main."
+}
