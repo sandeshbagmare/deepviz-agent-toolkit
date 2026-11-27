@@ -222,14 +222,27 @@ export function svgHtml(data:NormalizedData,spec:ChartSpec,m:ChartMapping):strin
   const minTick=min.toPrecision(4),maxTick=max.toPrecision(4);
   // 12px monospace ticks: reserve 8px per ASCII glyph plus title/gap space, also in standalone SVG.
   const left=spec.kind==='pie'?pad:Math.max(pad,32+Math.max(minTick.length,maxTick.length)*8),w=width-left-pad;
-  const py=(value:number)=>pad+h-(value-min)/(max-min)*h;
+  const fraction=(value:number,low:number,high:number):number=> {
+    if(low===high)return 0;
+    // Normalize before an overflowing subtraction; keep close same-sign differences intact.
+    const divisor=low<0 && high>Number.MAX_VALUE+low?Math.max(-low,high):1;
+    const result=(value/divisor-low/divisor)/(high/divisor-low/divisor);
+    if(!Number.isFinite(result))throw new ValidationError('SVG numeric range cannot be represented at requested dimensions');
+    return result;
+  };
+  const zeroY=pad+h-fraction(0,min,max)*h;
+  const py=(value:number)=> {
+    const position=pad+h-fraction(value,min,max)*h;
+    if(!Number.isFinite(position) || value!==0 && position===zeroY)throw new ValidationError('SVG numeric range cannot be represented at requested dimensions');
+    return position;
+  };
   const numericX=['scatter','bubble'].includes(spec.kind) || ['line','area'].includes(spec.kind) && rows.every(row=>typeof row[x]==='number');
   if(numericX) requireNumeric(rows,x);
   const xv=rows.map(row=>Number(row[x]??0));
   let xmin=Infinity,xmax=-Infinity;
   for(const value of xv) { xmin=Math.min(xmin,value);xmax=Math.max(xmax,value); }
   const categories=m.color || numericX?[...new Set(rows.map(row=>row[x]))]:rows.map(row=>row[x]);
-  const px=(i:number)=>numericX?left+(xv[i]!-xmin)/(xmax-xmin||1)*w:left+((m.color?categories.indexOf(rows[i]?.[x]):i)+0.5)*w/Math.max(1,categories.length);
+  const px=(i:number)=>numericX?left+fraction(xv[i]!,xmin,xmax)*w:left+((m.color?categories.indexOf(rows[i]?.[x]):i)+0.5)*w/Math.max(1,categories.length);
   const palette=spec.theme==='dark'?['#60a5fa','#fbbf24','#34d399','#f472b6','#c4b5fd','#fb923c']:['#2563eb','#b45309','#047857','#be185d','#7c3aed','#c2410c'];
   const groups=m.color?[...new Set(rows.map(row=>row[m.color!]))]:[null];
   const groupIndex=(row:DataRecord)=>m.color?groups.indexOf(row[m.color]):0;
@@ -262,7 +275,7 @@ export function svgHtml(data:NormalizedData,spec:ChartSpec,m:ChartMapping):strin
   const stride=Math.max(1,Math.ceil(categories.length/12));
   const shortLabel=(value:unknown)=>{const text=String(value??'');return text.length>18?`${text.slice(0,9)}…${text.slice(-8)}`:text;};
   const ticks=categories.map((value,i)=>({value,i})).filter(({i})=>i%stride===0 || i===categories.length-1).map(({value,i})=>{
-    const position=numericX?left+(Number(value)-xmin)/(xmax-xmin||1)*w:m.color?left+(i+0.5)*w/Math.max(1,categories.length):px(i);
+    const position=numericX?left+fraction(Number(value),xmin,xmax)*w:m.color?left+(i+0.5)*w/Math.max(1,categories.length):px(i);
     return `<text class="category-tick" x="${position}" y="${pad+h+18}" text-anchor="middle" font-size="12"><title>${escapeHtml(value)}</title>${escapeHtml(shortLabel(value))}</text>`;
   }).join('');
   const axis=spec.kind==='pie'?'':`<g fill="${textColor}" font-family="monospace" font-size="12"><path d="M${left},${pad} V${pad+h} H${left+w}" fill="none" stroke="${textColor}"/><text x="${left-8}" y="${pad+8}" text-anchor="end">${escapeHtml(maxTick)}</text><text x="${left-8}" y="${pad+h}" text-anchor="end">${escapeHtml(minTick)}</text><text x="${width/2}" y="${height-12}" text-anchor="middle">${escapeHtml(x)}</text><text transform="translate(15 ${height/2}) rotate(-90)" text-anchor="middle">${escapeHtml(y)}</text>${ticks}</g>`;
