@@ -186,11 +186,15 @@ def create_tools(output_dir: str | Path | None = None, *, data_dir: str | Path |
     class ValidatedTool(StructuredTool):
         # LangChain formats inputs for callbacks before invoking our function.
         def run(self, tool_input: str | dict[str, Any], *args: Any, **kwargs: Any) -> Any:
+            if isinstance(tool_input, str):
+                tool_input = {"data": tool_input}
             if isinstance(tool_input, dict) and "data" in tool_input:
                 tool_input = {**tool_input, "data": _inline_data(tool_input["data"])}
             return super().run(tool_input, *args, **kwargs)
 
         async def arun(self, tool_input: str | dict[str, Any], *args: Any, **kwargs: Any) -> Any:
+            if isinstance(tool_input, str):
+                tool_input = {"data": tool_input}
             if isinstance(tool_input, dict) and "data" in tool_input:
                 tool_input = {**tool_input, "data": _inline_data(tool_input["data"])}
             return await super().arun(tool_input, *args, **kwargs)
