@@ -2,6 +2,8 @@
 
 **Result:** knownR03-01COUNTmappingP1independentlyreproducedonexactpublished5340acrossPythonfiveadapters/bar,line,bubble: literalcounts2/3/1become90/80/70nativevalues/paint. NEW55casecommand**15failed/40passed/0skip**; oneadditionaldisjointchannel/sizecheck**1failed/55deselected/0skip**; nofinal56casererunclaimed. TSpublic28pass. ActualMatplotlib/VegaandinteractivePlotlyimagesOPENED; strictPlotlyCOUNTbad/controlgood,0consoleerrors. No source/existingoraclefix; permanentREDforR04futurecorrected-sourcenon-authorretest. Reports/probesnotfinalsignoff.
 
+**Actualmeaningfulpublication:** OWNbranch`agents/r10-17-vega-visible-title`published **`76cac9d05b0b4abc94e5ff316e3de4d3bc835b79`**, nonforcepush0/immediateexactremoteSHAreadback0. [Publication receipt](../evidence/R15-17/publication-receipt.json). Testedproductsource5340distinctfromtest/evidencecommit. Docs-onlyreceiptcheckpointnext; nofinalsignoff.
+
 ## Pre-work checkpoint (2026-11-27)
 
 - Owner SAME-ID `ses_de5678086ffeNido4phnXCJ8J4`; native session_move reconfirmed. Read fullR15common+17, R03-01knowncountfinding, MAINcanonical/RESUME/STATE and OWNactual-IDnote. Rootreserved/admitted SAME-IDrefill; no worker spawning or newdescendant.
@@ -54,3 +56,13 @@
 - FinalownRuff0/browserCJSsyntax0/TSparityMJSsyntax0; protectedPython+TSsource/existingmatrixdiffagainst5340emptyexit0. ExplicitOWN25pathstagingexit0; actualstagedprobe+report/evidencediffinspected,`git diff --cached --check`exit0. Stagedbytecredential-patternscan0findings; JSON/PythonASTparsed; actualstaged2nativeSVGnodes/attributes/hrefscheckedinert.16preindexartifactworkinghashesverified; 4nativePNGs+2SVGbytesremainexact.
 - Gitnormalized6ownJSONCRLF→LF; `index.json`explicitlydescribesoriginalworkingevidencehashes, stagedbytehashesareinown`precommit-checks.json`(25auditedfiles/243243bytesBEFOREthisledger/finalreportnoteupdates). No secret-patternscan/generalXMLshapecheckpromotedtosecuritysignoff. Dependencybundles/rawsourcearchive/raw5MBHTMLnotstaged.
 - Nextunfinishedaction syncOWNreport/noteprecommitcheckpoint,stageonlytheseupdates+auditJSON, finalowned26pathboundary/whitespace/credentialcheck, meaningfulOWNcommitthen**nonforceOWNpush+exactremoteSHAreadback**. Publicationstillpending; completedchecksnotreplayed/relabelledasnewsource/final56-suitepass.
+
+## Local meaningful commit, push pending
+
+- Final26ownedstagedpaths/boundary/credentialpatterns/whitespacechecks0; `git commit -m "test: expose count measure fidelity across five native adapters"` **exit0**, meaningfulcommit **`76cac9d05b0b4abc94e5ff316e3de4d3bc835b79`**,26files/1793insertionswithactualopenednativePNG+SVG+strictREDprobes/evidence. OWNWTclean/ahead1. Source/existingoraclesunchanged; testedsourceexact5340, notrelabeledasnewproductioncommit.
+- Nextunfinishedaction `git push origin agents/r10-17-vega-visible-title` NONFORCE, then`git ls-remote --heads origin refs/heads/agents/r10-17-vega-visible-title`requireexact76cac9d. Localcommitnotpublication;push/readbackpending.
+
+## Actual meaningful publication
+
+- `git push origin agents/r10-17-vega-visible-title` **exit0/nonforce**, ownbranch1148→**76cac9d05b0b4abc94e5ff316e3de4d3bc835b79**; immediate`git ls-remote --heads origin refs/heads/agents/r10-17-vega-visible-title` **exit0/exactlocalSHA match**. No issue/PR/sharedbranchoperations, installs or completedtestsrepeated. OriginalbaselineREDretained, not sourcefix/CIclaim.
+- NextworkeractionpublishONLYownreceipt/report/notecheckpointonce, thenfinalOWNremoteHEADreadbackandMAINsavewithoutselfreferentialcommitloop. **ProductnextactionR04:** `git show 76cac9d:tests/r15_probes/role17/test_count_measure.py`, inspectliteral56caseproposal, repairsharedcountmeasuremappinginR04authorizedsource, thenrequestnewsourceidentity/non-authorstrictsemantic+actualpaintretest. No weakening to90/80/70, no droppingSUMnone/explicit-y/categorical/size/retainedkey/metadata controls. ExistingR03-01P1#2istherootcause; no newtickets orfinalacceptance.
