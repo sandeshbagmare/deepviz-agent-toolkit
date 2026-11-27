@@ -1,0 +1,17 @@
+{
+  "owner_session": "ses_de567830effe0E5yIwQgDACLMD",
+  "branch": "agents/r10-05-inspector-claim-retest",
+  "source_checkpoint": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "tested_source_bytes_exactly_match_checkpoint": true,
+  "execution_merge_head": "a439d4d463a51115cc9139dbd5561eeab592f553",
+  "test_evidence_commit": "0a5a5faff2336ca147947ea9ed3d4b0b5fc35d0a",
+  "push_command": "git push origin agents/r10-05-inspector-claim-retest:agents/r10-05-inspector-claim-retest",
+  "non_force_push_exit": 0,
+  "readback_command": "git ls-remote --heads origin refs/heads/agents/r10-05-inspector-claim-retest",
+  "readback_exit": 0,
+  "observed_remote_sha": "0a5a5faff2336ca147947ea9ed3d4b0b5fc35d0a",
+  "matched_actual_local_head": true,
+  "tests": { "passed": 10, "failed": 20, "skipped": 0, "exit": 1 },
+  "scope": "Strict baseline REDs and real small positive outputs; no production/existing-test edits, shared branch/issue/PR writes or final signoff.",
+  "next_action": "Wait for actual R04 committed budget fix, then independently rerun the same strict NEW tests against that pin, never dirty source."
+}
