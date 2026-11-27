@@ -1,0 +1,83 @@
+{
+  "owner_session": "ses_de567805bffdER1GlVd0ngLgKg",
+  "base": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "p1_commit": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+  "branch": "fix/r14-mcp-json-budget",
+  "source_sha256": {
+    "tools.py": "11273c5f5b0ff2eee16e09c6c727e560582a43fcae723bb315b6ef80d5a68495",
+    "mcp_server.py": "9f1628e04749c3c3d2357607ac4cc0021f74e1119c6237aa36077a0fd67bf480"
+  },
+  "test_sha256": {
+    "test_r14_tool_json_boundary.py": "231d43801dec500ab6da237c9a232b86e6169718fe05fc9b2b5f5b1ede905a4b",
+    "test_r14_mcp_resource_budget.py": "0406f524d22879e24606c594d7250124f0e298c7b47b05ddf50f39da55a18d9d"
+  },
+  "junit_suites": {
+    "p2-red": {
+      "totals": {
+        "tests": "4",
+        "failures": "4",
+        "errors": "0",
+        "skipped": "0",
+        "time": "7.367"
+      },
+      "xml_sha256": "109b55f1f6e911ff2d68342197d8ca39bcca63a6f203984b9289af29d9465403"
+    },
+    "p2-first-fix": {
+      "totals": {
+        "tests": "41",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "10.402"
+      },
+      "xml_sha256": "3df7db4c11116dca29f73d293fbe14e03c76ab6b3102af469b6177eccbfe008d"
+    },
+    "own-final43": {
+      "totals": {
+        "tests": "43",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "12.898"
+      },
+      "xml_sha256": "b265bc7a52f77b068145165b32f1c92aa83690f1cd6636236f9d7b454a160135"
+    }
+  },
+  "final_own_tests": {
+    "passed": 43,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "display_seconds": 12.96,
+    "exit": 0,
+    "command": "python -m pytest python/deepviz/tests/test_r14_tool_json_boundary.py python/deepviz/tests/test_r14_mcp_resource_budget.py -q --tb=short --junitxml A/own-final43.xml --basetemp A/own-final43"
+  },
+  "final_checks": {
+    "full_ruff": 0,
+    "full_mypy": {
+      "exit": 0,
+      "files": 9
+    },
+    "own_mypy": {
+      "exit": 0,
+      "files": 4
+    }
+  },
+  "capacity_policy": {
+    "issued_artifact_resources": 128,
+    "lifetime": "one server instance; no eviction or expiry",
+    "reservation": "before render, lock protected; 4 matplotlib,3 Vega,2 other resources",
+    "failure": "release unused slots only; successful registrations remain charged",
+    "files": "never delete successful host artifacts at quota; earlier resources stay readable",
+    "recovery": "normalization still works at capacity; new host-created server starts a new grant"
+  },
+  "scope_limits": [
+    "full repository run failed and all567 nonpassing case IDs retained separately",
+    "43 includes direct/StructuredTool sync+async/MCP SDK+realstdio capacity/data controls",
+    "staticMatplotlib4 andVega3 paths tested and each resource read",
+    "no new independent reviewer approval",
+    "build blocked missing hatchling; no installs",
+    "new-source clean gallery provenance rerun pending after commit",
+    "no final CI/scale/browser/provider/900-issue acceptance"
+  ]
+}

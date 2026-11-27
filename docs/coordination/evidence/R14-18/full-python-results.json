@@ -1,0 +1,2327 @@
+{
+  "stage": "dirty P2 full repository run, not final pass",
+  "base": "5340bc69b7203ad7a9166543062482d819f9b705",
+  "p1_commit": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+  "command": "python -m pytest -q --tb=short -rs --junitxml A/full-python.xml --basetemp A/full-python",
+  "exit": 1,
+  "display_seconds": 705.06,
+  "xml_totals": {
+    "name": "pytest",
+    "errors": "520",
+    "failures": "42",
+    "skipped": "5",
+    "tests": "3088",
+    "time": "704.236",
+    "timestamp": "2026-11-27T20:18:28.512117+05:30",
+    "hostname": "SandeshAcer"
+  },
+  "xml_sha256": "5dcb2e525a4bb4811c0949083809e566bb33619405540db437e4f781682fbd13",
+  "log_sha256": "cdb5533d4a37d3bd4b3ab09951744a7a3b349dd1618d6c86ff600fdefbf28b26",
+  "source_sha256": {
+    "tools": "11273c5f5b0ff2eee16e09c6c727e560582a43fcae723bb315b6ef80d5a68495",
+    "mcp_server": "9f1628e04749c3c3d2357607ac4cc0021f74e1119c6237aa36077a0fd67bf480",
+    "models": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+    "normalize": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+    "engines": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+    "render": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+  },
+  "counts_by_class": {
+    "failure": {
+      "python.deepviz.tests.test_backend_antv": 1,
+      "python.deepviz.tests.test_n17_boundaries": 1,
+      "python.deepviz.tests.test_r14_mcp_resource_budget": 1,
+      "tests.gallery.test_generate_gallery": 5,
+      "tests.test_acceptance_matrix": 30,
+      "tests.test_n11_resource_policy": 4
+    },
+    "error": {
+      "tests.gallery.test_generate_gallery": 3,
+      "tests.test_cross_language_contract": 186,
+      "tests.test_n12_authoritative_parity": 106,
+      "tests.test_n12_contract_edges": 225
+    },
+    "skipped": {
+      "python.deepviz.tests.test_mcp_transport": 1,
+      "python.deepviz.tests.test_n17_boundaries": 1,
+      "python.deepviz.tests.test_render": 3
+    }
+  },
+  "all_nonpassing_case_ids": [
+    {
+      "kind": "failure",
+      "id": "python.deepviz.tests.test_backend_antv::test_dashboard_duplicate_titles_get_unique_containers_and_independent_options"
+    },
+    {
+      "kind": "skipped",
+      "id": "python.deepviz.tests.test_mcp_transport::test_stdio_registered_artifact_symlink_swap_cannot_read_outside_output_root"
+    },
+    {
+      "kind": "skipped",
+      "id": "python.deepviz.tests.test_n17_boundaries::test_n17_symlink_outside_data_directory_is_rejected"
+    },
+    {
+      "kind": "failure",
+      "id": "python.deepviz.tests.test_n17_boundaries::test_n17_dashboard_serialization_order_observation"
+    },
+    {
+      "kind": "failure",
+      "id": "python.deepviz.tests.test_r14_mcp_resource_budget::test_sdk_capacity_rejects_before_output_and_preserves_earliest_resource"
+    },
+    {
+      "kind": "skipped",
+      "id": "python.deepviz.tests.test_render::test_browser_executes_all_native_kinds[plotly]"
+    },
+    {
+      "kind": "skipped",
+      "id": "python.deepviz.tests.test_render::test_browser_executes_all_native_kinds[echarts]"
+    },
+    {
+      "kind": "skipped",
+      "id": "python.deepviz.tests.test_render::test_browser_executes_all_native_kinds[antv]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.gallery.test_generate_gallery::test_cli_produces_real_native_bar_and_v1_manifest"
+    },
+    {
+      "kind": "error",
+      "id": "tests.gallery.test_generate_gallery::test_source_commit_and_portable_snapshots_match_actual_checkout"
+    },
+    {
+      "kind": "error",
+      "id": "tests.gallery.test_generate_gallery::test_existing_output_is_never_reused_or_changed"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.gallery.test_generate_gallery::test_cli_other_known_cases_use_actual_public_render[line-numeric-counts0]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.gallery.test_generate_gallery::test_cli_other_known_cases_use_actual_public_render[dashboard-mixed-counts1]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.gallery.test_generate_gallery::test_invalid_engine_keeps_honest_partial_manifest"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.gallery.test_generate_gallery::test_missing_installed_dependency_is_not_reported_as_success"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.gallery.test_generate_gallery::test_default_cli_attempts_all_fifteen_combinations_without_skipping_missing_backends"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-light-records]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-light-nested_json]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-light-graphql]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-light-columns]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-light-csv]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-records]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-nested_json]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-graphql]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-columns]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[vega-dashboard-dark-csv]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-light-records]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-light-nested_json]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-light-graphql]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-light-columns]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-light-csv]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-dark-records]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-dark-nested_json]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-dark-graphql]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-dark-columns]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-line-dark-csv]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-light-records]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-light-nested_json]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-light-graphql]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-light-columns]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-light-csv]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-dark-records]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-dark-nested_json]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-dark-graphql]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-dark-columns]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_acceptance_matrix::test_engine_kind_theme_source_acceptance[echarts-area-dark-csv]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[defaults]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-bar]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-line]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-scatter]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-area]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-pie]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-heatmap]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-histogram]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-box]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-violin]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-bubble]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-radar]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-treemap]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-sunburst]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-funnel]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-gauge]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-geo]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-table]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-dashboard]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-unknown]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-case-sensitive]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-empty]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[kind-bool]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[version-one]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[version-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[version-true-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[version-false]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[version-string]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[version-future]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[version-zero]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[version-fraction]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[version-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[unknown-field]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[unknown-code]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[unknown-expression]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[unknown-javascript]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[unknown-sql]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[unknown-url]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[unknown-prototype]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[unknown-constructor]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[unknown-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[unknown-camelcase]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[input-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[input-array]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[input-string]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[input-number]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[input-bool]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[format-auto]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[format-json]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[format-jsonl]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[format-csv]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[format-tsv]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[format-parquet]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[format-arrow]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[format-unknown]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[format-case-sensitive]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[format-empty]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[format-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[format-number]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[aggregation-auto]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[aggregation-none]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[aggregation-sample]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[aggregation-sum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[aggregation-mean]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[aggregation-count]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[aggregation-min]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[aggregation-max]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[aggregation-unknown]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[aggregation-case-sensitive]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[aggregation-empty]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[aggregation-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[aggregation-bool]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[theme-light]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[theme-dark]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[theme-unknown]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[theme-case-sensitive]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[theme-empty]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[theme-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[theme-bool]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[max-points-min]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[max-points-max]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[max-points-below]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[max-points-above]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[max-points-fraction]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[max-points-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[max-points-string-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[max-points-decimal-string-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[max-points-string-below]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[max-points-string-above]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[max-points-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[max-points-bool]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[width-min]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[width-max]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[width-below]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[width-above]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[width-fraction]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[width-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[width-string-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[width-decimal-string-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[width-whitespace-string-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[width-string-below]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[width-string-above]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[width-fraction-string]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[width-exponent-string]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[width-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[width-bool]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[width-empty-string]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[width-array]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[width-object]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[height-min]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[height-max]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[height-below]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[height-above]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[height-fraction]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[height-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[height-string-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[height-decimal-string-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[height-string-below]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[height-string-above]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[height-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[height-bool]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[columns-min]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[columns-max]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[columns-below]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[columns-above]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[columns-fraction]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[columns-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[columns-string-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[columns-decimal-string-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[columns-true-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[columns-false]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[columns-string-below]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[columns-string-above]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[columns-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[charts-empty]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[dashboard-missing-children]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[dashboard-empty-children]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[non-dashboard-children]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[default-kind-children]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[dashboard-child-defaults]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[dashboard-nested]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[dashboard-nested-empty]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[dashboard-child-unknown-field]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[dashboard-child-unknown-kind]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[dashboard-child-width-below]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[dashboard-child-string-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[dashboard-child-version-true-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[dashboard-child-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[dashboard-child-bool]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[dashboard-child-array]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[dashboard-child-string]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[dashboard-child-non-dashboard-children]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[charts-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[charts-object]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[charts-string]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[charts-bool]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[dashboard-max-children]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[dashboard-too-many-children]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[title-empty]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[title-unicode]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[title-data-not-code]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[title-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[title-number]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[title-bool]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[description-empty]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[description-unicode]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[description-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[description-number]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[description-bool]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[all-mappings]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[all-mappings-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[all-mappings-empty]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[x-number]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[y-bool]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[color-array]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[size-object]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[data-path-number]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[title-ascii-at-limit]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[title-ascii-over-limit]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[title-astral-at-limit]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[title-astral-over-limit]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[description-ascii-at-limit]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[description-ascii-over-limit]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[description-astral-at-limit]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_cross_language_contract::test_public_npm_validator_matches_python[description-astral-over-limit]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_n11_resource_policy::test_exact_64kib_utf8_key_or_cell_is_preserved[key-ascii]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_n11_resource_policy::test_exact_64kib_utf8_key_or_cell_is_preserved[key-two-byte]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_n11_resource_policy::test_exact_64kib_utf8_key_or_cell_is_preserved[key-four-byte]"
+    },
+    {
+      "kind": "failure",
+      "id": "tests.test_n11_resource_policy::test_flattened_multibyte_key_at_64kib_is_preserved"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[defaults]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[nullable-mapping]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[version-integral-number]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[version-boolean-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[version-string-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[extra-expression-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[extra-proto-key-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[null-charts-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[empty-dashboard]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[non-dashboard-child]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[nested-dashboard]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[dashboard-24]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[dashboard-25]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[dashboard-child-defaults]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[dashboard-child-extra]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[dashboard-child-numeric-string]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[max_points-minimum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[max_points-maximum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[max_points-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[max_points-below]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[max_points-above]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[max_points-fraction]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[max_points-string]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[max_points-boolean]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[max_points-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[width-minimum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[width-maximum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[width-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[width-below]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[width-above]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[width-fraction]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[width-string]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[width-boolean]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[width-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[height-minimum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[height-maximum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[height-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[height-below]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[height-above]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[height-fraction]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[height-string]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[height-boolean]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[height-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[columns-minimum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[columns-maximum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[columns-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[columns-below]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[columns-above]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[columns-fraction]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[columns-string]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[columns-boolean]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[columns-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[title-unicode-500]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[title-unicode-501]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[description-unicode-2000]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_acceptance_and_complete_defaults[description-unicode-2001]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_schema_export_matches_python"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[categorical-auto-sum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[count-does-not-infer-measure-name]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[count-explicit-measure-includes-null-and-boolean]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[boolean-measure-not-numeric]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[all-null-group-is-null-not-zero]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[missing-value-filled-with-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[missing-entire-requested-field-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[heatmap-groups-coordinate-pair]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[heatmap-no-color-counts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[heatmap-identical-coordinates-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[record-array-keeps-parent-id-and-items]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[record-nested-array-flattens]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[graphql-error-empty-data-not-error-records]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[graphql-errors-null-data-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[graphql-partial-data-keeps-rows]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[graphql-partial-errors-survive-explicit-data-path]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[nested-record-key-order-does-not-change-graphql-inference]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[graphql-nested-pages-skip-null-no-server-total-count]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[graphql-ambiguous-sibling-requires-path]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[data-path-broadcast-missing-branch]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[data-path-selects-array-index]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[data-path-empty-broadcast-is-empty]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[data-path-missing-index-is-error]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[auto-jsonl-records]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[explicit-jsonl-with-path]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[csv-whitespace-numeric-and-missing]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[csv-nonfinite-values-null-and-disclosed]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[boolean-and-number-groups-stay-distinct]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[finite-sum-overflow-null-and-disclosed]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[finite-mean-avoids-intermediate-overflow]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[sum-preserves-small-cancellation-residual]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[columns-explicit-raw]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[columns-unequal-length-rejected]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[overflow-weighted-mean-and-retained-group-update]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_normalization_independent_oracles[overflow-label-avoids-source-category-collision]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_discloses_important_data_loss[boolean-measure-not-numeric]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_discloses_important_data_loss[all-null-group-is-null-not-zero]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_discloses_important_data_loss[missing-value-filled-with-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_discloses_important_data_loss[graphql-partial-data-keeps-rows]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_discloses_important_data_loss[graphql-partial-errors-survive-explicit-data-path]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_discloses_important_data_loss[graphql-nested-pages-skip-null-no-server-total-count]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_discloses_important_data_loss[data-path-broadcast-missing-branch]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_discloses_important_data_loss[csv-nonfinite-values-null-and-disclosed]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_discloses_important_data_loss[boolean-and-number-groups-stay-distinct]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_discloses_important_data_loss[finite-sum-overflow-null-and-disclosed]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_discloses_important_data_loss[overflow-weighted-mean-and-retained-group-update]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_public_npm_discloses_important_data_loss[overflow-label-avoids-source-category-collision]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_npm_sample_matches_its_stream_and_repeat_not_python_rng"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_authoritative_parity::test_n12_nonfinite_direct_values_null_in_both_languages"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[omitted-kind-and-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[omitted-kind-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[omitted-kind-nonempty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[omitted-kind-null-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[dashboard-missing-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[dashboard-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[dashboard-null-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[dashboard-child-default-kind]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[dashboard-child-explicit-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-omitted-kind-nonempty-grandchildren]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-omitted-kind-null-grandchildren]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-dashboard-omits-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-null-kind]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-empty-kind]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-array]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-boolean]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-number]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-string]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[bar-omitted-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[bar-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[bar-unexpected-child]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[line-omitted-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[line-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[line-unexpected-child]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[scatter-omitted-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[scatter-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[scatter-unexpected-child]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[area-omitted-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[area-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[area-unexpected-child]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[pie-omitted-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[pie-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[pie-unexpected-child]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[heatmap-omitted-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[heatmap-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[heatmap-unexpected-child]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[histogram-omitted-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[histogram-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[histogram-unexpected-child]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[box-omitted-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[box-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[box-unexpected-child]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[violin-omitted-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[violin-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[violin-unexpected-child]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[bubble-omitted-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[bubble-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[bubble-unexpected-child]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[radar-omitted-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[radar-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[radar-unexpected-child]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[treemap-omitted-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[treemap-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[treemap-unexpected-child]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[sunburst-omitted-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[sunburst-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[sunburst-unexpected-child]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[funnel-omitted-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[funnel-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[funnel-unexpected-child]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[gauge-omitted-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[gauge-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[gauge-unexpected-child]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[geo-omitted-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[geo-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[geo-unexpected-child]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[table-omitted-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[table-empty-charts]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[table-unexpected-child]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[dashboard-1-default-children]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[dashboard-23-default-children]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[dashboard-24-default-children]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[dashboard-25-default-children]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[nested-dashboard-at-child-0]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[nested-dashboard-at-child-11]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[nested-dashboard-at-child-23]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[composition-depth-1]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[composition-depth-2]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[composition-depth-3]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[composition-depth-8]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-version-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-version-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-version-fractional]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-version-fractional]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-version-true]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-version-true]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-version-false]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-version-false]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-version-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-version-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-version-integer-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-version-integer-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-version-decimal-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-version-decimal-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-version-whitespace-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-version-whitespace-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-max_points-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-max_points-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-max_points-fractional]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-max_points-fractional]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-max_points-true]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-max_points-true]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-max_points-false]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-max_points-false]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-max_points-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-max_points-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-max_points-integer-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-max_points-integer-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-max_points-decimal-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-max_points-decimal-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-max_points-whitespace-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-max_points-whitespace-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-width-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-width-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-width-fractional]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-width-fractional]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-width-true]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-width-true]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-width-false]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-width-false]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-width-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-width-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-width-integer-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-width-integer-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-width-decimal-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-width-decimal-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-width-whitespace-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-width-whitespace-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-height-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-height-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-height-fractional]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-height-fractional]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-height-true]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-height-true]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-height-false]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-height-false]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-height-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-height-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-height-integer-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-height-integer-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-height-decimal-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-height-decimal-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-height-whitespace-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-height-whitespace-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-columns-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-columns-integral-float]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-columns-fractional]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-columns-fractional]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-columns-true]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-columns-true]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-columns-false]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-columns-false]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-columns-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-columns-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-columns-integer-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-columns-integer-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-columns-decimal-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-columns-decimal-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-columns-whitespace-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-columns-whitespace-text]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-title-astral-codepoints-499]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-title-astral-codepoints-500]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-title-astral-codepoints-501]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-title-combining-codepoints-499]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-title-combining-codepoints-500]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-title-combining-codepoints-501]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-title-zwj-codepoints-499]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-title-zwj-codepoints-500]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-title-zwj-codepoints-501]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-description-astral-codepoints-1999]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-description-astral-codepoints-2000]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-description-astral-codepoints-2001]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-description-combining-codepoints-1999]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-description-combining-codepoints-2000]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-description-combining-codepoints-2001]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-description-zwj-codepoints-1999]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-description-zwj-codepoints-2000]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-description-zwj-codepoints-2001]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-x-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-x-empty]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-x-numeric]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-x-boolean]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-y-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-y-empty]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-y-numeric]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-y-boolean]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-color-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-color-empty]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-color-numeric]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-color-boolean]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-size-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-size-empty]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-size-numeric]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-size-boolean]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-data_path-null]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-data_path-empty]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-data_path-numeric]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-data_path-boolean]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-max_points-maximum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-max_points-above-maximum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-max_points-below-minimum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-width-maximum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-width-above-maximum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-width-below-minimum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-height-maximum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-height-above-maximum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-height-below-minimum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-columns-maximum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-columns-above-maximum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-columns-below-minimum]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-unknown-property]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-unknown-property]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-proto-property]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-proto-property]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-constructor-property]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-constructor-property]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-bad-format]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-bad-format]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-bad-theme]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-bad-theme]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[root-bad-title]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_declared_raw_and_default_edges_agree[child-bad-title]"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_schema_copies_defaults_and_public_source_identity"
+    },
+    {
+      "kind": "error",
+      "id": "tests.test_n12_contract_edges::test_n12_recursive_defaults_do_not_alias_or_mutate_inputs"
+    }
+  ],
+  "limits": [
+    "517 missing local npm dist setup errors; no installs or borrowed build",
+    "3 gallery errors and5 gallery failures reject dirty source-vs-HEAD; clean postcommit retest pending",
+    "one new test SDK unknown-resource exception assumption corrected to actual ValueError; production unchanged",
+    "36 other failures preserved unchanged",
+    "5 skips:2 Windows1314 symlink plus3 opt-in browser",
+    "author run, not independent approval"
+  ]
+}

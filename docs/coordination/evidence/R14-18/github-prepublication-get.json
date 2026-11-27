@@ -1,0 +1,105 @@
+{
+  "observed_at_utc": "2026-11-27T14:51:36.285686+00:00",
+  "authenticated_login": "sandeshbagmare",
+  "origin_exact_https": true,
+  "own_remote_branch_absent": true,
+  "local_branch": "fix/r14-mcp-json-budget",
+  "local_p1_commit": "d65dfc0fd807d0335b858476de8cdf7c6b958711",
+  "http": [
+    {
+      "path": "/user",
+      "status": 200
+    },
+    {
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/git/ref/heads/fix/r14-mcp-json-budget",
+      "status": 404
+    },
+    {
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/issues/21",
+      "status": 200
+    },
+    {
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/pulls/31",
+      "status": 200
+    },
+    {
+      "path": "/repos/sandeshbagmare/deepviz-agent-toolkit/commits/5340bc69b7203ad7a9166543062482d819f9b705/check-runs",
+      "status": 200
+    }
+  ],
+  "issue21": {
+    "state": "open",
+    "html_url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/issues/21"
+  },
+  "pr31": {
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705"
+  },
+  "check_runs": [
+    {
+      "name": "One-pass scale 1000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "One-pass scale 1000000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Python 3.11 lint, types, unit and integration",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "name": "Python 3.12 lint, types, unit and integration",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "name": "One-pass scale 10000000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "One-pass scale 10 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Python 3.13 lint, types, unit and integration",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "name": "One-pass scale 100000 records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Python and npm distribution checks (no publishing)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "npm build, types and tests (Node 24)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Raster visual regression (semantic pixel comparison)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "evidence",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "api_writes": false,
+  "credential_stored": false,
+  "configuration_changes": false
+}
