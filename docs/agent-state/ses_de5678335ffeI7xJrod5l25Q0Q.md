@@ -137,3 +137,37 @@ Final readback verification exit0: all12 copied evidence hashes, loaded module p
 ## R13 recovered receipt manifest correction
 
 The interrupted six-file receipt checkpoint was recovered at c2628b6 without replaying completed builds or the strict RED suite. Evidence text underwent Git CRLF-to-LF canonicalization: raw Windows file hashes and committed blob hashes differ. The corrected index explicitly records both, uses sha256 for Git index/committed bytes, and preserves raw_worktree_sha256 and raw_worktree_bytes for the measured local files. This is a provenance repair only; source/test bytes and their recorded hashes remain unchanged. No prior RED becomes GREEN.
+
+
+## R13 recovered publication and stable dirty-source snapshot
+
+- Finished six-file owned receipt commit727ab589ad05e6fcd0d326183a9aaa85d9c8922c. Safe fresh GET/user200 sandeshbagmare; non-force own push0, actual ls-remote0 exact727ab58 at13:53:40UTC. MAIN R10-01/publication-final.json is real receipt. Raw-versus-GitLF manifest repaired explicitly; completed tests/builds NOT replayed.
+- Producer16 actual HEAD ec9f669eff28cd5351da142765b7755e3b2f484f; reviewed DIRTY bytes captured READONLY into own ignored snapshot C:\Users\bagma\AppData\Local\Temp\opencode\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\artifacts\local\R13-01\dirty-snapshot. Pre/post copy hashes match for all17source/config files; only changed source paths:. Snapshot/provenance JSON and exactdiff in own artifacts/local/R13-01. Producer may subsequently change/commit; no final immutable/source approval is implied.
+- Current action: inspect exact SUMdiff/callers and add novel own independent Fraction/tie/compensation/state/mean/sample controls against this snapshot. No producer files or notes modified.
+- Next executable action: build own copied TS snapshot to own artifact dist with existing read-only compiler, then run only NEW R13 invariants with captured module/source hashes.
+
+
+## Source-identity correction at actual snapshot capture
+
+The producer committed while the initial dirty diff was being read. Actual snapshot capture at13:57:55UTC observed CLEAN producer HEAD ec9f669eff28cd5351da142765b7755e3b2f484f, not6d0+dirty. All17copied source/config hashes match that committed source exactly. The folder name dirty-snapshot is historical only; corrected snapshot.json records CLEANec9f669e and releasedbase6d0. Reviewdiff is now6d0→ec9, not empty HEAD→HEAD. Earlier pre-capture dirty observations remain dated; no final candidate/source approval is claimed. Base-source copies corrected to6d0for unchanged-path comparisons; neither producer nor original tests modified.
+
+
+R13 harness failure: initial isolated TS compile exited2/TS2307 because my snapshot omitted chart-spec.schema.json. No new correctness tests ran and no production failure is inferred. Copied the exact18th schema asset READONLY and verified its bytes against ec9f669e Git object; no installs/source changes. Next: corrected snapshot-only TS compilation then novel invariants.
+
+## R13 concrete compensation concern - root/R04 handoff
+
+Exact reviewed source ec9f669eff28cd5351da142765b7755e3b2f484f is clean at snapshot, all18file hashes committed-identical, NOT finalcandidate. NEW independent Fraction oracle suites: Python exit1 2failed62passed0errors0skip1.24s; Node exit1 2failed59passed0skip421.9259ms; scopedRuff0. These are one residual-loss family, not4issues. Actual RED logs read back.
+
+Concrete repro in BOTH: sum([1e308,1e200,1,-1e200,1e308,-1e308,-1e308]) returns0 with no warning versus exactFraction1. Identical multiset ordered [1e308,1e308,-1e308,-1e308,1e200,1,-1e200] returns1. Subnormal twin with middle1/residual5e-324 returns0 instead of5e-324. The two-double prefix state loses the residual BEFORE overflow; new promotion normalize.py:628-631/normalize.ts:462-465 can only copy the already-rounded correction (unchanged compensation lines640-645/474). This extends existing compensation accuracy limitations, not a newly introduced catastrophic regression. New strict tests retainRED; producer/R04 must disposition exact-prefix guarantees versus limitation, not claim universal exactSUM.
+
+Passing controls:20signed even/odd ties,32deterministic random postpromotion exactFraction cases,3compensation-carry cases,2order controls, Python3pureinteger cases96/512/4096bits, single-integer retained-state shape/charge, unchanged mean/sample output versus originalbase; Node16385asyncinput consumption/oneoutput. No unbounded partial-list observed; bytebudget is notRSS guarantee. Initialmissing-schema harnesserror corrected; no provider/source/oldoracle changes.
+
+Raw logs/provenance: OWN artifacts/local/R13-01/new-tests-v1/summary.json, python.log, node.log; portable NEW files tests/r13_probes/role01/. Current action: additional independent fixed-state/resource and trueoverflow sanity checks, finalize compact actionable reviewer handoff and safe own publication. Next executable action: compare sourceec9 bytehash and budget behavior against frozen snapshot then save report/evidence; no producer editing.
+
+
+## R13 final strict result / pre-publication checkpoint
+
+- Exact clean producer source ec9f669eff28cd5351da142765b7755e3b2f484f;18frozen hashes reverified. Initialdirtyobservation corrected explicitly. Final NEW Python exit1/2failed65passed0errors0skips1.84s; NEW Node exit1/2failed61passed0skip403.4767ms; ownRuff0. Baseline same2repros warnednull; reviewedsource returnswrong0/no warning. This is1remaining inherited compensation-prefix concern, not4newissues and nottieconversion regression. No finalapproval.
+- Scoped positive controls: exactties/postpromotion/carry/int/statecharge/budget/nullwarning/mean/sample/count fixtures. Full suites, old R10 RED suites,10M/RSS/browser/security/CI not rerun and unverified. Fullgoal/900unmet. Report docs/coordination/reports/R13-01-sum-review.md; compact own evidence/R13-01/; source/probe raw logs own artifacts/local/R13-01.
+- R10 receipt genuinely finished/published727ab58 with exact remoteSHA readback and safe identity check. R13 tests/report/evidence publication not attempted yet. Current action explicit owned staging/diff/credential/whitespace check, honest knownRED commit and safe nonforce ownpush/readback. No source/existingoracle/othersnotes edits, install, auth/provider/servicechanges or spawn.
+- Next executable action: git diff --cached --check after explicit R13 owned-path staging, then scopedcommit/safepush; root/R04 must disposition F1 before exactSUM claim.

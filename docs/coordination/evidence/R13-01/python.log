@@ -1,0 +1,22 @@
+.......................................................F.F.........      [100%]
+================================== FAILURES ===================================
+________ test_sum_equals_independent_exact_oracle[pre-promotion-unit] _________
+tests\r13_probes\role01\test_sum_review.py:28: in test_sum_equals_independent_exact_oracle
+    assert result.records == [{"g": "a", "v": expected}]
+E   AssertionError: assert [{'g': 'a', 'v': 0.0}] == [{'g': 'a', 'v': 1.0}]
+E     
+E     At index 0 diff: {'g': 'a', 'v': 0.0} != {'g': 'a', 'v': 1.0}
+E     Use -v to get more diff
+______ test_sum_equals_independent_exact_oracle[pre-promotion-subnormal] ______
+tests\r13_probes\role01\test_sum_review.py:28: in test_sum_equals_independent_exact_oracle
+    assert result.records == [{"g": "a", "v": expected}]
+E   AssertionError: assert [{'g': 'a', 'v': 0.0}] == [{'g': 'a', 'v': 5e-324}]
+E     
+E     At index 0 diff: {'g': 'a', 'v': 0.0} != {'g': 'a', 'v': 5e-324}
+E     Use -v to get more diff
+=========================== short test summary info ===========================
+FAILED tests/r13_probes/role01/test_sum_review.py::test_sum_equals_independent_exact_oracle[pre-promotion-unit]
+FAILED tests/r13_probes/role01/test_sum_review.py::test_sum_equals_independent_exact_oracle[pre-promotion-subnormal]
+2 failed, 65 passed in 1.84s
+
+--- stderr ---

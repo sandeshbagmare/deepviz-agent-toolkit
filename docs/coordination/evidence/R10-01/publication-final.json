@@ -1,0 +1,35 @@
+{
+  "utc": "2026-11-27T13:53:40.757347+00:00",
+  "authenticated_login": "sandeshbagmare",
+  "authenticated_get_user_status": 200,
+  "repository": "sandeshbagmare/deepviz-agent-toolkit",
+  "branch": "agents/r10-01-correctness-regressions",
+  "source_checkpoint": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "local_commit": "727ab589ad05e6fcd0d326183a9aaa85d9c8922c",
+  "push_argv": [
+    "git",
+    "push",
+    "origin",
+    "refs/heads/agents/r10-01-correctness-regressions:refs/heads/agents/r10-01-correctness-regressions"
+  ],
+  "push_exit_code": 0,
+  "force": false,
+  "known_red": true,
+  "tests": {
+    "python_failed": 12,
+    "python_passed": 21,
+    "node_failed": 11,
+    "node_passed": 19
+  },
+  "remote_verified": true,
+  "remote_readback_argv": [
+    "git",
+    "ls-remote",
+    "--heads",
+    "origin",
+    "refs/heads/agents/r10-01-correctness-regressions"
+  ],
+  "remote_readback_exit_code": 0,
+  "remote_sha": "727ab589ad05e6fcd0d326183a9aaa85d9c8922c",
+  "remote_ref": "refs/heads/agents/r10-01-correctness-regressions"
+}

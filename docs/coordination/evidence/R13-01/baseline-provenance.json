@@ -1,0 +1,35 @@
+{
+  "base_source": "6d0e72ebef4b622f8dec2bce2bd07cc23e7a81ce",
+  "reviewed_source": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+  "base_python_same_repro": [
+    {
+      "name": "pre-promotion-unit",
+      "expected": 1.0,
+      "actual": null
+    },
+    {
+      "name": "pre-promotion-subnormal",
+      "expected": 5e-324,
+      "actual": null
+    }
+  ],
+  "base_typescript_same_repro": [
+    {
+      "name": "pre-promotion-unit",
+      "expected": 1,
+      "actual": null
+    },
+    {
+      "name": "pre-promotion-subnormal",
+      "expected": 5e-324,
+      "actual": null
+    }
+  ],
+  "classification": "partial repair of baseline warned-null; newly returned zero still inaccurate, not a new precision regression",
+  "reviewed_snapshot_hashes_unchanged": true,
+  "original_diff_source_paths": [
+    "python/deepviz/src/deepviz/normalize.py",
+    "packages/deepviz/src/normalize.ts"
+  ],
+  "unmodified_ts_source_matches_original_own_dist": true
+}

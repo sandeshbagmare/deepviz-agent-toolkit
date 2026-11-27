@@ -1,0 +1,116 @@
+diff --git a/packages/deepviz/src/normalize.ts b/packages/deepviz/src/normalize.ts
+index 298b036..9998269 100644
+--- a/packages/deepviz/src/normalize.ts
++++ b/packages/deepviz/src/normalize.ts
+@@ -327,10 +327,28 @@ function flatten(value: unknown, warn: Notice,index:number): {row:DataRecord,cos
+   return {row:result,cost};
+ }
+ 
++const sumBits=new DataView(new ArrayBuffer(8));
++function sumUnits(value:number):bigint {
++  sumBits.setFloat64(0,value);
++  const bits=sumBits.getBigUint64(0),exponent=Number((bits>>52n)&2047n),fraction=bits&((1n<<52n)-1n);
++  const units=(exponent===0?fraction:fraction|(1n<<52n))<<BigInt(Math.max(0,exponent-1));
++  return bits>>63n?-units:units;
++}
++function sumFromUnits(units:bigint):number {
++  const negative=units<0n,magnitude=negative?-units:units;
++  const shift=Math.max(0,magnitude.toString(2).length-53);
++  let rounded=magnitude>>BigInt(shift);
++  if(shift) {
++    const remainder=magnitude-(rounded<<BigInt(shift)),half=1n<<BigInt(shift-1);
++    if(remainder>half || (remainder===half && (rounded&1n)!==0n))rounded++;
++  }
++  return (negative?-1:1)*Number(rounded)*2**(shift-1074);
++}
++
+ class Reducer {
+   private records: {row:DataRecord,index:number,cost:number}[]=[];
+-  private groups=new Map<string,{row:DataRecord,count:number,value:number|null,correction:number,exponent:number,cost:number}>();
+-  private other:{row:DataRecord,count:number,value:number|null,correction:number,exponent:number,cost:number}|null=null;
++  private groups=new Map<string,{row:DataRecord,count:number,value:number|null,correction:number,exponent:number,cost:number,exact?:bigint}>();
++  private other:{row:DataRecord,count:number,value:number|null,correction:number,exponent:number,cost:number,exact?:bigint}|null=null;
+   private warnings=new Set<string>();
+   private count=0;
+   private random=0x12345678;
+@@ -436,10 +454,17 @@ class Reducer {
+       let value=row[this.measure];
+       if(typeof value!=='number') {if(value!==null && value!==undefined)this.notice('Non-numeric measure values excluded from reduction');return;}
+       group.count++;
++      if(group.exact!==undefined) {group.exact+=sumUnits(value);return;}
+       if(this.strategy==='mean' && group.exponent)value*=2**-group.exponent;
+       if(group.value===null) group.value=value;
+       else if(this.strategy==='sum' || this.strategy==='mean') {
+         let previous=group.value,total=previous+value;
++        if(this.strategy==='sum' && !Number.isFinite(total)) {
++          // <=2151 bits for finite doubles and a safe-integer count; charge before retaining.
++          this.reserve(512);group.cost+=512;
++          group.exact=sumUnits(previous)+sumUnits(group.correction)+sumUnits(value);
++          return;
++        }
+         if(this.strategy==='mean' && !Number.isFinite(total)) {
+           // A finite mean can have an overflowing numerator: scale every term together.
+           previous*=0.5;value*=0.5;group.correction*=0.5;group.exponent++;
+@@ -486,7 +511,7 @@ class Reducer {
+     if(grouped) {
+       this.groups.clear();this.other=null;
+       for(const group of states) {
+-        const value=group.value===null?null:this.strategy==='mean'?
++        const value=group.value===null?null:group.exact!==undefined?sumFromUnits(group.exact):this.strategy==='mean'?
+           (group.value/group.count+group.correction/group.count)*2**group.exponent:
+           group.value+(this.strategy==='sum'?group.correction:0);
+         if(value!==null && !Number.isFinite(value))this.notice('Non-finite numeric values replaced with null');
+diff --git a/python/deepviz/src/deepviz/normalize.py b/python/deepviz/src/deepviz/normalize.py
+index 04e1596..7028f7a 100644
+--- a/python/deepviz/src/deepviz/normalize.py
++++ b/python/deepviz/src/deepviz/normalize.py
+@@ -553,6 +553,12 @@ def _plan(spec: ChartSpec, prefix: list[dict[str, Any]]) -> tuple[str, list[str]
+     return strategy, groups, measure
+ 
+ 
++def _sum_units(value: int | float) -> int:
++    """Represent a finite number as integer multiples of the smallest subnormal."""
++    numerator, denominator = value.as_integer_ratio()
++    return numerator << (1074 - (denominator.bit_length() - 1))
++
++
+ class _Reducer:
+     """Keep at most limit group states; no set of overflow keys is retained."""
+ 
+@@ -609,6 +615,9 @@ class _Reducer:
+             return
+         state[0] += 1
+         correction, exponent = state[2:4]
++        if self.strategy == "sum" and exponent == -1074:
++            self._store(state, state[1] + _sum_units(value), exponent=-1074)
++            return
+         if self.strategy == "mean" and exponent:
+             value = math.ldexp(value, -exponent)
+         previous = state[1]
+@@ -616,6 +625,11 @@ class _Reducer:
+             total = value
+         elif self.strategy in {"sum", "mean"}:
+             total = previous + value
++            if self.strategy == "sum" and isinstance(total, float) and not math.isfinite(total):
++                # Promote only overflowing sums; one budgeted integer, never a partial/input list.
++                units = _sum_units(previous) + _sum_units(correction) + _sum_units(value)
++                self._store(state, units, exponent=-1074)
++                return
+             if self.strategy == "mean" and isinstance(total, float) and not math.isfinite(total):
+                 # Scale the numerator by powers of two; the finite mean need not overflow.
+                 previous = math.ldexp(previous, -1)
+@@ -639,7 +653,13 @@ class _Reducer:
+         def result(state: list[Any]) -> Any:
+             value = state[1]
+             if self.strategy == "sum" and value is not None:
+-                value += state[2]
++                if state[3] == -1074:
++                    try:
++                        value = value / (1 << 1074)
++                    except OverflowError:
++                        value = math.inf
++                else:
++                    value += state[2]
+             elif self.strategy == "mean" and value is not None:
+                 try:
+                     value = math.ldexp(value / state[0] + state[2] / state[0], state[3])

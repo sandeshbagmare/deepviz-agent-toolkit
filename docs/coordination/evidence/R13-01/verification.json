@@ -1,0 +1,89 @@
+{
+  "producer_source": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+  "reviewer_harness_head": "727ab589ad05e6fcd0d326183a9aaa85d9c8922c",
+  "snapshot_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R13-01\\dirty-snapshot",
+  "commands": [
+    {
+      "label": "python",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "tests/r13_probes/role01/test_sum_review.py",
+        "-q",
+        "--tb=short",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R13-01\\final-execution\\python.xml"
+      ],
+      "exit_code": 1,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R13-01\\final-execution\\python.log",
+      "log_sha256": "99929b86790622dde779250253285f035f6225e1cfc45cc91e5c64682fb4b14a",
+      "tests": {
+        "total": 67,
+        "failed": 2,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 65
+      },
+      "failure_ids": [
+        "test_sum_equals_independent_exact_oracle[pre-promotion-unit]",
+        "test_sum_equals_independent_exact_oracle[pre-promotion-subnormal]"
+      ]
+    },
+    {
+      "label": "node",
+      "argv": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "tests/r13_probes/role01/sum-review.test.mjs"
+      ],
+      "exit_code": 1,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R13-01\\final-execution\\node.log",
+      "log_sha256": "52b7083d15f3143c0a14156d59b60a8f907239a6d3f728fb4f46a6da109bdbf6",
+      "tests": {
+        "tests": 63,
+        "pass": 61,
+        "fail": 2,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "failure_ids": [
+        "exact independent oracle pre-promotion-unit",
+        "exact independent oracle pre-promotion-subnormal"
+      ]
+    },
+    {
+      "label": "ruff",
+      "argv": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "tests/r13_probes/role01"
+      ],
+      "exit_code": 0,
+      "log": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R13-01\\final-execution\\ruff.log",
+      "log_sha256": "86c6a4e03a772515f99191dda4d70020b3b1e0679438b0e0889c9bbb93db0413"
+    }
+  ],
+  "no_prior_test_replay": true,
+  "loaded_paths": {
+    "python_normalize": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R13-01\\dirty-snapshot\\python\\deepviz\\src\\deepviz\\normalize.py",
+    "ts_module": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R13-01\\dirty-snapshot\\packages\\deepviz\\dist\\index.js",
+    "baseline_python": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R13-01\\base-source\\python\\deepviz\\src",
+    "baseline_ts": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\packages\\deepviz\\dist\\index.js"
+  },
+  "source_and_probe_sha256": {
+    "artifacts/local/R13-01/dirty-snapshot/python/deepviz/src/deepviz/normalize.py": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+    "artifacts/local/R13-01/dirty-snapshot/packages/deepviz/src/normalize.ts": "2c730b13f6360fa2e75c66d03ea051ffdb5c253d4922546f51cd8fd60e742c7f",
+    "artifacts/local/R13-01/dirty-snapshot/packages/deepviz/dist/normalize.js": "52d718460e6501ca84a3ef8c9a5b9da92eb4c2b71109bd73a3b9351db85501e5",
+    "tests/r13_probes/role01/exact-cases.json": "6e4aed8bd72c84e51a162fdb5698a263f0304a2b7085d52882507333334078fa",
+    "tests/r13_probes/role01/make_exact_cases.py": "d16616610a9e8e87d88a2ebcc4734d38bdb9e76d2bf4dccde2953aba7d1a6548",
+    "tests/r13_probes/role01/README.md": "e5f645d214a069f5f9d056ba255bd6677099564752d6f76cf89715b7f9871e64",
+    "tests/r13_probes/role01/sum-review.test.mjs": "5e80958a94f4f50869caedbd2e2b4c88135d459c05e55a9779f29fc02b49aeff",
+    "tests/r13_probes/role01/test_sum_review.py": "4edba9ea8ece963937706824b8ab9e69fffa100cdd656c84a5edfe488fc60d62"
+  },
+  "overall": "RED"
+}

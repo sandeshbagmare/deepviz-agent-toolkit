@@ -1,0 +1,36 @@
+{
+  "utc": "2026-11-27T13:57:55.001509+00:00",
+  "producer_branch": "agents/r10-16-finite-overflow-fix",
+  "producer_head": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+  "producer_dirty_status": "## agents/r10-16-finite-overflow-fix",
+  "review_type": "started as dirty read; producer committed before snapshot capture; stable snapshot matches committed ec9f669e bytes, NOT final-candidate signoff",
+  "pre_post_copy_hashes_identical": true,
+  "snapshot_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R13-01\\dirty-snapshot",
+  "source_sha256": {
+    "python/deepviz/src/deepviz/cli.py": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf",
+    "python/deepviz/src/deepviz/engines.py": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de",
+    "python/deepviz/src/deepviz/mcp_server.py": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95",
+    "python/deepviz/src/deepviz/models.py": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+    "python/deepviz/src/deepviz/normalize.py": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2",
+    "python/deepviz/src/deepviz/recommend.py": "74daaf467a20948526fd0027fd20ab5e9da6ac2029a169d15415b3d35d345999",
+    "python/deepviz/src/deepviz/render.py": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56",
+    "python/deepviz/src/deepviz/tools.py": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb",
+    "python/deepviz/src/deepviz/__init__.py": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671",
+    "packages/deepviz/src/index.ts": "a4c1ebd22dfdc100e28eef28b11030d5f08bb09db0da9649c22848d3ef9a8aac",
+    "packages/deepviz/src/models.ts": "d43d5ae0bef1d43f251ed71899a9b507c6575562e4403bd2e2ac02bd7caa43e6",
+    "packages/deepviz/src/normalize.ts": "2c730b13f6360fa2e75c66d03ea051ffdb5c253d4922546f51cd8fd60e742c7f",
+    "packages/deepviz/src/render.ts": "7f0a69004d570e05b45b8c6ce10c73263652d2874362960af27baed82b3996e9",
+    "packages/deepviz/src/renderers.ts": "180cb19d8bb01e5c2fe94db7e943e8430681cffadad2251d38a03fd1de5b19d0",
+    "packages/deepviz/src/schema.ts": "8150ef7a9f4e1376818c38ec0b3a76e4c1fa92a7dec8e361e24195f6e38d0537",
+    "packages/deepviz/tsconfig.json": "2a202b15cdb9443825daff1589036b1dcc09f2cdb01c6274dbbcd97f7651781d",
+    "packages/deepviz/package.json": "7623921eb04ce66eb07771f47d02abcdfb71f6e43f94b729934de847f3256909",
+    "packages/deepviz/src/chart-spec.schema.json": "3bfc9e4e4351e1d51984a62dcc67ed42eda6a02d61eb718f511a5451d11c4a71"
+  },
+  "changed_source_paths": [
+    "python/deepviz/src/deepviz/normalize.py",
+    "packages/deepviz/src/normalize.ts"
+  ],
+  "reviewer_session": "ses_de5678335ffeI7xJrod5l25Q0Q",
+  "producer_released_base": "6d0e72ebef4b622f8dec2bce2bd07cc23e7a81ce",
+  "snapshot_matches_committed_source": true
+}
