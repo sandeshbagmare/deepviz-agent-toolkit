@@ -1,0 +1,66 @@
+{
+  "checkpoint": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "mode": "source",
+  "pytest": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "1",
+    "tests": "26",
+    "time": "26.809",
+    "timestamp": "2026-11-27T08:22:30.995235+05:30",
+    "hostname": "SandeshAcer"
+  },
+  "passed": 25,
+  "skipped": 1,
+  "pytest_exit": 0,
+  "mypy_exit": 0,
+  "mypy_source_files": 9,
+  "scoped_ruff_exit": 0,
+  "diff_check_exit": 0,
+  "mode_guard": {
+    "requested_mode": "installed",
+    "editable_runtime": true,
+    "expected_rejection_exit": 1,
+    "expected_rejection_observed": true,
+    "chart_generated": false
+  },
+  "prior_harness_failure": {
+    "first_guard_misclassified_editable_main_as_installed": true,
+    "excluded_artifact": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-10-stdio-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\mode-guard\\run-8_3egfi5\\summary.json",
+    "permanent_negative_control_red": "1 failed,1.06s,exit1; editable accepted",
+    "fix": "Own harness rejects editable metadata and requires installed distribution module root",
+    "green_in_final_suite": true
+  },
+  "files": [
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-10-stdio-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\pytest-final\\pytest-run-l7ky8xjh\\summary.json",
+      "bytes": 7739,
+      "sha256": "b665941257b6c311fb0a29e3679c8255af6cf9bace4b7d846828d93843d25f28"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-10-stdio-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\focused-final.log",
+      "bytes": 706,
+      "sha256": "196d9160045f2e1b48448b653e5842adc29785b57fa401be2964fb413dfcbe60"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-10-stdio-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\focused-final.xml",
+      "bytes": 5371,
+      "sha256": "1b4381a5649b3783ac66f0c5f6d749035e80db836cc220df26159f802bebe9f8"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-10-stdio-ses_de56782e3ffeI5D4lzsNVeLcDk\\tests\\r10_probes\\role10\\test_portable_lifecycle.py",
+      "bytes": 20954,
+      "sha256": "0f26f21ea53b27867f1c83b55db5ab1fb47502318d73b29d031ef5f69a77392a"
+    },
+    {
+      "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-10-stdio-artifacts-ses_de56782e3ffeI5D4lzsNVeLcDk\\pytest-final\\pytest-run-l7ky8xjh\\mcp\\retrieved\\matplotlib\\chart.png",
+      "bytes": 13175,
+      "sha256": "d3dade86050f50be938ebb476f46c59e753307da258cc090d789761c77ea6f4b"
+    }
+  ],
+  "visual_inspection": "Opened original source-mode retrieved PNG: Alpha7/Beta11/Gamma-3, readable axes/negative bar; no browser/all-kind signoff.",
+  "current_clean_wheel": "No announced current checkpoint wheel/consumer receipt at bounded role07 prework read; not run",
+  "provider_calls": 0,
+  "source_edits": false
+}

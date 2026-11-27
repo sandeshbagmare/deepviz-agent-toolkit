@@ -1,0 +1,229 @@
+{
+  "identity": {
+    "mode": "source",
+    "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+    "declared_checkpoint": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+    "modules": {
+      "deepviz": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-10-stdio-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\__init__.py",
+        "name": "__init__.py",
+        "bytes": 1133,
+        "sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+      },
+      "deepviz.tools": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-10-stdio-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\tools.py",
+        "name": "tools.py",
+        "bytes": 9383,
+        "sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb"
+      },
+      "deepviz.mcp_server": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-10-stdio-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\mcp_server.py",
+        "name": "mcp_server.py",
+        "bytes": 5395,
+        "sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95"
+      },
+      "deepviz.models": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-10-stdio-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\models.py",
+        "name": "models.py",
+        "bytes": 3493,
+        "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+      },
+      "deepviz.engines": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-10-stdio-ses_de56782e3ffeI5D4lzsNVeLcDk\\python\\deepviz\\src\\deepviz\\engines.py",
+        "name": "engines.py",
+        "bytes": 42230,
+        "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de"
+      }
+    },
+    "versions": {
+      "mcp": "1.30.0",
+      "deepagents": "0.7.42",
+      "langchain-core": "1.8.5",
+      "langgraph": "1.2.24",
+      "deepviz-agent-toolkit": "0.1.0"
+    },
+    "probe": {
+      "name": "test_portable_lifecycle.py",
+      "bytes": 20954,
+      "sha256": "0f26f21ea53b27867f1c83b55db5ab1fb47502318d73b29d031ef5f69a77392a"
+    },
+    "provider_calls": 0,
+    "distribution_editable": true,
+    "git_head": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab"
+  },
+  "mcp": {
+    "servers": [
+      {
+        "server": "first",
+        "processes": 1,
+        "exit_code": 0,
+        "jsonrpc_stdout_lines": 73,
+        "shutdown": "SDK closed stdin; server exited 0"
+      },
+      {
+        "server": "restart",
+        "processes": 1,
+        "exit_code": 0,
+        "jsonrpc_stdout_lines": 4,
+        "shutdown": "SDK closed stdin; server exited 0"
+      },
+      {
+        "server": "configured",
+        "processes": 1,
+        "exit_code": 0,
+        "jsonrpc_stdout_lines": 11,
+        "shutdown": "SDK closed stdin; server exited 0"
+      }
+    ],
+    "resources": [
+      {
+        "engine": "matplotlib",
+        "name": "chart.png",
+        "bytes": 13175,
+        "sha256": "d3dade86050f50be938ebb476f46c59e753307da258cc090d789761c77ea6f4b"
+      },
+      {
+        "engine": "matplotlib",
+        "name": "chart.svg",
+        "bytes": 23388,
+        "sha256": "1116172bdb27c55a2d7c40d87ac8c17411fdcd42ea300f9337b20842454ba3af"
+      },
+      {
+        "engine": "matplotlib",
+        "name": "chart.html",
+        "bytes": 1431,
+        "sha256": "847defa314970ee539c4aaaf8a52f738b14103b51330877233577f158c09b340"
+      },
+      {
+        "engine": "matplotlib",
+        "name": "manifest.json",
+        "bytes": 1091,
+        "sha256": "84f5602aa5a26b4be14ddd5c7ddabf70ce30da1ca438b474dab5fabe81f4eeb5"
+      },
+      {
+        "engine": "plotly",
+        "name": "chart.html",
+        "bytes": 4858446,
+        "sha256": "8f2b666501d5aae0472d4b5df25b4b93d66c7ce5f884b8e7a7669af2b5e6d00d"
+      },
+      {
+        "engine": "plotly",
+        "name": "manifest.json",
+        "bytes": 1957,
+        "sha256": "108c717563410ae0ff87931d0e381c85ea239c751c7a0969fef5917945a403a1"
+      },
+      {
+        "engine": "vega",
+        "name": "chart.svg",
+        "bytes": 9612,
+        "sha256": "ce5cccf8eb17f1a571eb8a1f3067b30594f3ecfc433defd64991e06f7a9edea9"
+      },
+      {
+        "engine": "vega",
+        "name": "chart.html",
+        "bytes": 1431,
+        "sha256": "847defa314970ee539c4aaaf8a52f738b14103b51330877233577f158c09b340"
+      },
+      {
+        "engine": "vega",
+        "name": "manifest.json",
+        "bytes": 2594,
+        "sha256": "4d56f12188728328815753541a03a2746346358ebcd1728c1f93fadc71d18d2c"
+      },
+      {
+        "engine": "echarts",
+        "name": "chart.html",
+        "bytes": 2705,
+        "sha256": "def7af5fe722b1d9cc132380b7fc78007db3c689b278a747dc12d06dd9d06d6f"
+      },
+      {
+        "engine": "echarts",
+        "name": "manifest.json",
+        "bytes": 2764,
+        "sha256": "fda14703108808af411827fc4b3bcaf773bef18d7be620a5a96c9ed2739355d5"
+      },
+      {
+        "engine": "antv",
+        "name": "chart.html",
+        "bytes": 2614,
+        "sha256": "983411fdc752492308d064d512a9d87507f8ec485a020f93c18e4a563f178bf5"
+      },
+      {
+        "engine": "antv",
+        "name": "manifest.json",
+        "bytes": 2424,
+        "sha256": "9323afb5a769afd37cb5d53c8aa3be5f133ec683266a5af8b0c2caa398e8791b"
+      }
+    ],
+    "initial_resource_count": 13,
+    "denied_operations": [
+      "missing-handle",
+      "no-default-file-authority",
+      "no-default-file-authority",
+      "no-default-file-authority",
+      "no-default-file-authority",
+      "no-default-file-authority",
+      "no-default-file-authority",
+      "caller-cannot-choose-output",
+      "evicted-handle-normalize_data",
+      "evicted-handle-recommend_chart",
+      "evicted-handle-render_echarts",
+      "deleted-registered-artifact",
+      "cross-session-stale-handle",
+      "cross-session-stale-resource",
+      "configured-root-escape-or-string",
+      "configured-root-escape-or-string",
+      "configured-root-escape-or-string",
+      "configured-root-escape-or-string",
+      "configured-root-escape-or-string",
+      "configured-root-escape-or-string",
+      "stale-file-render"
+    ],
+    "copied_handle_survived_eviction": true,
+    "stale_file_policy": "recommend uses cached profile; rendering rechecks the original file",
+    "symlink_controls": "Not in this portable probe; prior Windows WinError1314 skips retained"
+  },
+  "deep_agent": {
+    "tool_messages": [
+      {
+        "name": "normalize_data",
+        "status": "success",
+        "actual_content_bytes": 363
+      },
+      {
+        "name": "recommend_chart",
+        "status": "success",
+        "actual_content_bytes": 557
+      },
+      {
+        "name": "render_matplotlib",
+        "status": "success",
+        "actual_content_bytes": 966
+      },
+      {
+        "name": "render_plotly",
+        "status": "success",
+        "actual_content_bytes": 540
+      },
+      {
+        "name": "render_vega",
+        "status": "success",
+        "actual_content_bytes": 739
+      },
+      {
+        "name": "render_echarts",
+        "status": "success",
+        "actual_content_bytes": 637
+      },
+      {
+        "name": "render_antv",
+        "status": "success",
+        "actual_content_bytes": 628
+      }
+    ],
+    "model": "deterministic-local; actual framework and tools",
+    "provider_calls": 0,
+    "host_widget": false
+  }
+}
