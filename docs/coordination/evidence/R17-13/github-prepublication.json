@@ -1,0 +1,113 @@
+{
+  "observed_utc": "2026-11-27T14:50:43.288598+00:00",
+  "authenticated_get_user_status": 200,
+  "authenticated_login": "sandeshbagmare",
+  "repo_get_status": 200,
+  "push_permission": true,
+  "pr_get_status": 200,
+  "pr31": {
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "head": "5340bc69b7203ad7a9166543062482d819f9b705"
+  },
+  "check_runs_get_status": 200,
+  "check_runs": [
+    {
+      "name": "One-pass scale 1000 records",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848763"
+    },
+    {
+      "name": "One-pass scale 1000000 records",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848727"
+    },
+    {
+      "name": "Python 3.11 lint, types, unit and integration",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848725"
+    },
+    {
+      "name": "Python 3.12 lint, types, unit and integration",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848671"
+    },
+    {
+      "name": "One-pass scale 10000000 records",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848663"
+    },
+    {
+      "name": "One-pass scale 10 records",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848630"
+    },
+    {
+      "name": "Python 3.13 lint, types, unit and integration",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848619"
+    },
+    {
+      "name": "One-pass scale 100000 records",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848597"
+    },
+    {
+      "name": "Python and npm distribution checks (no publishing)",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848579"
+    },
+    {
+      "name": "npm build, types and tests (Node 24)",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848542"
+    },
+    {
+      "name": "Raster visual regression (semantic pixel comparison)",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608970/job/140275848325"
+    },
+    {
+      "name": "evidence",
+      "head_sha": "5340bc69b7203ad7a9166543062482d819f9b705",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/45928608969/job/140275771039"
+    }
+  ],
+  "own_remote_prepublication": {
+    "argv": [
+      "git",
+      "ls-remote",
+      "--heads",
+      "origin",
+      "refs/heads/agents/r10-13-ci-negative-controls"
+    ],
+    "exit": 0,
+    "sha": "1317dd12a00b128edf2bac7479500a513e5859a3"
+  },
+  "scope": "GET-only metadata; no logs/count inference/shared writes/issues/PR mutations. Credentials memory-only. Expected owned branch tip equals1317dd1."
+}

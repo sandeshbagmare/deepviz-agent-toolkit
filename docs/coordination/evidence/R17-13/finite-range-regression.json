@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "C:\\Program Files\\nodejs\\node.EXE",
+    "--test",
+    "--test-reporter=tap",
+    "tests/r17_probes/role13/finite-range-regression.mjs"
+  ],
+  "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5",
+  "source_commit": "5e595a8f893955ce34a0e26553bb7bf257ea93ae",
+  "exit": 1,
+  "passed": 1,
+  "failed": 1,
+  "skipped": 0,
+  "source_expression": "const py=(value:number)=>pad+h-(value-min)/(max-min)*h;",
+  "expression_equal_in_parent_and_current": true,
+  "classification": "Concrete existing finite-range geometry defect, not introduced by reviewed tick-margin diff. Strict red is retained, no expected-failure waiver/source edit.",
+  "raw_log_sha256": "15b7c9d0c7a996217b1874f3870ee3a9c228ba3e98923b9efadbea87cd7ec333",
+  "raw_log_bytes": 2571,
+  "output": "TAP version 13\n# Subtest: R17 finite signed 1e+200: two visible bars with finite common-baseline geometry\nok 1 - R17 finite signed 1e+200: two visible bars with finite common-baseline geometry\n  ---\n  duration_ms: 11.3946\n  type: 'test'\n  ...\n# Subtest: R17 finite signed 1e+308: two visible bars with finite common-baseline geometry\nnot ok 2 - R17 finite signed 1e+308: two visible bars with finite common-baseline geometry\n  ---\n  duration_ms: 1.5385\n  type: 'test'\n  location: 'C:\\\\Users\\\\bagma\\\\AppData\\\\Local\\\\Temp\\\\opencode\\\\r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5\\\\tests\\\\r17_probes\\\\role13\\\\finite-range-regression.mjs:13:3'\n  failureType: 'testCodeFailure'\n  error: 'two finite accepted measurements must not produce invalid SVG coordinates'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n  actual: '<svg xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Visualization\" viewBox=\"0 0 240 200\" width=\"240\" height=\"200\" fill=\"#374151\"><title>Visualization</title><g fill=\"#374151\" font-family=\"monospace\" font-size=\"12\"><path d=\"M120,65 V135 H175\" fill=\"none\" stroke=\"#374151\"/><text x=\"112\" y=\"73\" text-anchor=\"end\">1.000e+308</text><text x=\"112\" y=\"135\" text-anchor=\"end\">-1.000e+308</text><text x=\"120\" y=\"188\" text-anchor=\"middle\">group</text><text transform=\"translate(15 100) rotate(-90)\" text-anchor=\"middle\">value</text><text class=\"category-tick\" x=\"133.75\" y=\"153\" text-anchor=\"middle\" font-size=\"12\"><title>negative</title>negative</text><text class=\"category-tick\" x=\"161.25\" y=\"153\" text-anchor=\"middle\" font-size=\"12\"><title>positive</title>positive</text></g><rect class=\"mark\" x=\"122.75\" y=\"135\" width=\"22\" height=\"0\" fill=\"#2563eb\"><title>negative: -1e+308</title></rect><rect class=\"mark\" x=\"150.25\" y=\"NaN\" width=\"22\" height=\"NaN\" fill=\"#2563eb\"><title>positive: 1e+308</title></rect></svg>'\n  operator: 'doesNotMatch'\n  stack: |-\n    TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r10-13-ci-negative-controls-ses_de56780caffekQ9gdZ58EgQwb5/tests/r17_probes/role13/finite-range-regression.mjs:19:12)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:974:18)\n    Test.postRun (node:internal/test_runner/test:1542:19)\n    Test.run (node:internal/test_runner/test:1467:12)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n1..2\n# tests 2\n# suites 0\n# pass 1\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 201.4248\n"
+}
