@@ -1,0 +1,16 @@
+{
+  "branch": "agents/r11-10-strict-mcp-boundaries",
+  "payload_commit": "6cba2d49eb4de82d5df64f790803e23c08f07b9d",
+  "base": "ca25af486bf443949125df789f5b5fd1fda8bba8",
+  "commit_exit": 0,
+  "nonforce_push_exit": 0,
+  "remote_readback_exit": 0,
+  "remote_sha_at_payload_publication": "6cba2d49eb4de82d5df64f790803e23c08f07b9d",
+  "worktree_clean_after_payload_push": true,
+  "production_source_diff_empty": true,
+  "tester_only": true,
+  "issue_or_pr_writes": false,
+  "strict_acceptance": {"passed": 14, "failed": 47, "skipped": 0, "exit": 1},
+  "existing_focused": {"passed": 77, "failed": 0, "skipped": 1, "exit": 0},
+  "limitation": "Proposed128 resource cap is not an existing guarantee or implemented fix. Windows WinError1314 symlink test remains unverified. Eligible producer ownership transfer required by R04."
+}
