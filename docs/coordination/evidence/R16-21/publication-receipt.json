@@ -1,0 +1,160 @@
+{
+  "owner": "ses_de5678018ffezK8JGDUaSzvcWn",
+  "branch": "agents/r10-21-recovery-git-bootstrap",
+  "source_base": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "observed_utc": "2026-11-27T14:57:37.772824+00:00",
+  "scope": "owned branch only; no sibling re-query; checkpoint not project acceptance",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+        "a6da7228cfa4881292bf0ed27a630e6a0d3facf0"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+        "a6da7228cfa4881292bf0ed27a630e6a0d3facf0"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--exit-code"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "push",
+        "origin",
+        "HEAD:refs/heads/agents/r10-21-recovery-git-bootstrap"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--heads",
+        "origin",
+        "refs/heads/agents/r10-21-recovery-git-bootstrap"
+      ],
+      "exit": 0
+    }
+  ],
+  "local_commit": "a6da7228cfa4881292bf0ed27a630e6a0d3facf0",
+  "owned_commit_paths": [
+    "docs/agent-state/ses_de5678018ffezK8JGDUaSzvcWn.md",
+    "docs/coordination/evidence/R10-21/capture_once.txt",
+    "docs/coordination/evidence/R10-21/publication-receipt.json",
+    "docs/coordination/evidence/R10-21/publish_owned.txt",
+    "docs/coordination/evidence/R10-21/quality-checks.json",
+    "docs/coordination/evidence/R10-21/quality_runner.txt",
+    "docs/coordination/evidence/R10-21/recovery-snapshot.json",
+    "docs/coordination/evidence/R10-21/stage-envelope.json",
+    "docs/coordination/evidence/R13-21/capture_pre_recovery_once.txt",
+    "docs/coordination/evidence/R13-21/disk-recovery-verification.json",
+    "docs/coordination/evidence/R13-21/pre-recovery-snapshot.json",
+    "docs/coordination/evidence/R13-21/publication-receipt.json",
+    "docs/coordination/evidence/R13-21/publish_owned.txt",
+    "docs/coordination/evidence/R13-21/quality-checks.json",
+    "docs/coordination/evidence/R13-21/quality_runner.txt",
+    "docs/coordination/evidence/R13-21/recovered-C2-publication.json",
+    "docs/coordination/evidence/R13-21/stage-envelope.json",
+    "docs/coordination/evidence/R13-21/verify_saved_disk.txt",
+    "docs/coordination/evidence/R16-21/check_staged_payload.txt",
+    "docs/coordination/evidence/R16-21/collect_immutable_inputs.txt",
+    "docs/coordination/evidence/R16-21/fifth-controls.xml",
+    "docs/coordination/evidence/R16-21/final-controls.xml",
+    "docs/coordination/evidence/R16-21/first-controls.xml",
+    "docs/coordination/evidence/R16-21/fourth-controls.xml",
+    "docs/coordination/evidence/R16-21/immutable-inputs.json",
+    "docs/coordination/evidence/R16-21/inputs/product/package.json",
+    "docs/coordination/evidence/R16-21/inputs/product/packages/deepviz/package.json",
+    "docs/coordination/evidence/R16-21/inputs/product/pyproject.toml",
+    "docs/coordination/evidence/R16-21/inputs/product/scripts/export_schema.py",
+    "docs/coordination/evidence/R16-21/inputs/product/scripts/performance_suite.py",
+    "docs/coordination/evidence/R16-21/inputs/role09/docs/coordination/reports/R13-09-helper-null-handoff.md",
+    "docs/coordination/evidence/R16-21/inputs/role09/packages/deepviz/src/chart-spec.schema.json",
+    "docs/coordination/evidence/R16-21/inputs/role09/packages/deepviz/src/render.ts",
+    "docs/coordination/evidence/R16-21/inputs/role09/packages/deepviz/test/test_r07_tool_spec_null.test.mjs",
+    "docs/coordination/evidence/R16-21/inputs/role09/schemas/chart-spec.schema.json",
+    "docs/coordination/evidence/R16-21/inputs/role09_recipe/tests/r13_probes/role09/retest-helper-null.ps1",
+    "docs/coordination/evidence/R16-21/inputs/role11/docs/coordination/reports/R10-11-python-scale-envelope.md",
+    "docs/coordination/evidence/R16-21/inputs/role11/docs/coordination/reports/R13-11-python-scale-envelope.md",
+    "docs/coordination/evidence/R16-21/inputs/role11/tests/r10_probes/role11/test_receipt_validator.py",
+    "docs/coordination/evidence/R16-21/inputs/role11/tests/r10_probes/role11/test_scale_envelope.py",
+    "docs/coordination/evidence/R16-21/inputs/role11/tests/r10_probes/role11/verify_scale_receipt.py",
+    "docs/coordination/evidence/R16-21/portable-observations.json",
+    "docs/coordination/evidence/R16-21/publish_owned.txt",
+    "docs/coordination/evidence/R16-21/quality-checks.json",
+    "docs/coordination/evidence/R16-21/quality_runner.txt",
+    "docs/coordination/evidence/R16-21/real-skips.xml",
+    "docs/coordination/evidence/R16-21/refine_final_owned_controls.txt",
+    "docs/coordination/evidence/R16-21/refine_owned_controls.txt",
+    "docs/coordination/evidence/R16-21/repair_owned_fixture.txt",
+    "docs/coordination/evidence/R16-21/save_portable_observations.txt",
+    "docs/coordination/evidence/R16-21/second-controls.xml",
+    "docs/coordination/evidence/R16-21/stage-envelope.json",
+    "docs/coordination/evidence/R16-21/third-controls.xml",
+    "docs/coordination/reports/R10-21-recovery-git-bootstrap.md",
+    "docs/coordination/reports/R13-21-interruption-recovery-audit.md",
+    "docs/coordination/reports/R16-21-retest-provenance-review.md",
+    "tests/r10_probes/role21/test_publication_receipts.py",
+    "tests/r13_probes/role21/test_recovery_semantics.py",
+    "tests/r16_probes/role21/test_retest_preflight.py"
+  ],
+  "identity": {
+    "http": 200,
+    "login": "sandeshbagmare"
+  },
+  "push_exit": 0,
+  "remote_sha_readback": "a6da7228cfa4881292bf0ed27a630e6a0d3facf0",
+  "remote_readback_exit": 0,
+  "committed_own_report": {
+    "http": 200,
+    "git_blob_matches": true,
+    "sha256": "0b100ae950a20b6ed56d7f1007d7caa48a9e56ce98e1fb1bdc5f2e10c84c043f",
+    "owner_and_source_present": true,
+    "independent_recipe_findings_present": true
+  },
+  "status": "published-own-branch-and-remote-verified-not-signoff",
+  "finished_utc": "2026-11-27T14:57:47.407077+00:00"
+}
