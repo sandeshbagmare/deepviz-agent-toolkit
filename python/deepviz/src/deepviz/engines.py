@@ -723,7 +723,8 @@ def browser_html(
                        for row in records)
         graph = "" if image else (
             f'<div id="chart-{i}" role="img" aria-label="{escape(spec.title, quote=True)}" '
-            f'aria-describedby="chart-summary-{i}" style="width:100%;height:{spec.height}px"></div>')
+            f'aria-describedby="chart-summary-{i}" '
+            f'style="width:100%;height:{spec.height}px;background:{_colors(spec)[0]}"></div>')
         cards.append(f'<section><h2>{escape(spec.title)}</h2>{graph}'
                      f'<p id="chart-summary-{i}">{escape(summary)}</p>'
                      f'{"<ul>" + warnings + "</ul>" if warnings else ""}'
