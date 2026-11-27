@@ -1,6 +1,6 @@
 # R17-13 — independent native SVG tick-margin review
 
-Status: INDEPENDENT REVIEW / TARGETED RETEST COMPLETE; OWN PUBLICATION NEXT, 2026-11-27. Narrow tick fix acceptable; inherited finite-range RED and known category-density issue remain. Not final-head signoff.
+Status: INDEPENDENT REVIEW / TARGETED RETEST / OWN PUBLICATION COMPLETE, 2026-11-27. Narrow tick fix acceptable; inherited finite-range RED and known category-density issue remain. Not final-head signoff.
 
 **What this change does:** `5e595a8` reserves native SVG horizontal space for the formatted numeric endpoints and sets a consistent 12px monospace axis font. Marks, axes and ticks all use the revised left edge; data, dimensions, vertical zero and pie geometry are unchanged.
 
@@ -86,3 +86,9 @@ Current blocker: inherited finite-range failure needs R04 owner disposition; doe
 ## Owned publication preflight
 
 Explicit16OWNpaths staged/reviewed, 2NEWmjs syntaxchecks0, JSONparse/scope/credentialpatternchecks0, stagedwhitespace0. Geometrysummary losslessly condensed to43lines (all28cases/hashpairs/values retained); no observation/evidence deleted or test rerun. Sourceconsumer stillcleanexact5e, publishedbranchbase1317dd1; no sharedsource/workflow/existingoraclepaths staged. Next meaningfulOWNprobe/reviewcommit and nonforcepush/readback; publication not yet claimed.
+
+## Actual OWN publication / handoff
+
+- Commit **`38ce71e50ce59e58dc647417de26e547d5e42d5a`**, `test: independently verify SVG tick fix and expose finite-range overflow`: explicit16OWNpaths only (2NEWmjs+README, ownnote/report,7JSONs,4openedPNGs). One preflight printed hardcoded8JSONs; actualdynamicprecommit verified **7JSONs**, allparse. No test/source/oracle changes hidden by that corrected diagnostic count.
+- `git push --porcelain origin agents/r10-13-ci-negative-controls:agents/r10-13-ci-negative-controls` **exit0**, nonforce1317dd1→38ce71e. Immediate `git ls-remote --heads origin refs/heads/agents/r10-13-ci-negative-controls` **exit0**, exact **`38ce71e50ce59e58dc647417de26e547d5e42d5a`**. Immutable [review/probe/evidence checkpoint](https://github.com/sandeshbagmare/deepviz-agent-toolkit/tree/38ce71e50ce59e58dc647417de26e547d5e42d5a). Product source reviewed remains5e595a8, not this documentation/probe branch HEAD.
+- Next small OWNdocumentation followup publishes this actualpublicationreceipt; finalreadback savedOWNMAINafterpush. R04next remains integrate/narrowreviewdisposition, keepdensity+stable-scaleREDopen and reservegenuinefinal-headgates. No sharedpush/PR/issue/sourceedit, testreplay, fourfinalsignoffs or production/900completionclaimed.

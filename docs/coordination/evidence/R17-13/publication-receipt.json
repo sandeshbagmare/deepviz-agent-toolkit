@@ -1,0 +1,33 @@
+{
+  "session": "ses_de56780caffekQ9gdZ58EgQwb5",
+  "branch": "agents/r10-13-ci-negative-controls",
+  "published_review_commit": "38ce71e50ce59e58dc647417de26e547d5e42d5a",
+  "reviewed_product_source": "5e595a8f893955ce34a0e26553bb7bf257ea93ae",
+  "own_branch_previous_tip": "1317dd12a00b128edf2bac7479500a513e5859a3",
+  "evidence_source": "Immediately preceding actual push and ls-remote tool outputs; not inferred from local commit.",
+  "push": {
+    "command": "git push --porcelain origin agents/r10-13-ci-negative-controls:agents/r10-13-ci-negative-controls",
+    "exit": 0,
+    "nonforce": true,
+    "result": "1317dd1..38ce71e"
+  },
+  "readback": {
+    "command": "git ls-remote --heads origin refs/heads/agents/r10-13-ci-negative-controls",
+    "exit": 0,
+    "actual_remote_sha": "38ce71e50ce59e58dc647417de26e547d5e42d5a"
+  },
+  "scoped_paths": 16,
+  "actual_json_count_in_review_commit": 7,
+  "own_results": {
+    "unchanged_author_unit_run": {"exit": 0, "passed": 11, "failed": 0, "skipped": 0},
+    "new_browser_and_format_run": {"exit": 0, "passed": 29, "failed": 0, "skipped": 0, "browser_cases": 28},
+    "new_finite_range_regression": {"exit": 1, "passed": 1, "failed": 1, "skipped": 0}
+  },
+  "disposition": "Narrow tick-margin change acceptable in bounded cases; inherited finite-range overflow and known category density remain open. R04 owns integration and production-source disposition.",
+  "no_source_or_existing_oracle_workflow_changes": true,
+  "no_full_suite_scale_old31controls_replay": true,
+  "not_final_integrated_head_signoff": true,
+  "remote_metadata": "Fresh GET PR31 draft/unmerged head5340; all3 Python jobs failed. Not a 5e source final CI approval.",
+  "auth": "Expected GET/user200 sandeshbagmare verified before write; credentials captured only in memory.",
+  "final_receipt_policy": "This actual immutable publication receipt is published in an OWN documentation followup. Final followup remoteSHA saved to OWN MAIN note/report after readback, without recursive commits."
+}
