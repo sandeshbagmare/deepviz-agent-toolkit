@@ -1,0 +1,16 @@
+{
+  "read_only_url": "https://api.github.com/repos/sandeshbagmare/deepviz-agent-toolkit/issues/30",
+  "read_via": "functions.webfetch actual returned issue object; HTTP status not exposed by tool, not invented",
+  "observed_state": "open",
+  "title": "Bug: Python chart schema coerces strings and booleans unlike JSON Schema",
+  "comments_observed": 0,
+  "acceptance": [
+    "Reject string values for numeric schema fields and booleans for version/columns.",
+    "Continue to accept mathematically integral JSON numeric values, such as 900.0, consistent with JSON Schema integer semantics.",
+    "Preserve valid defaults and all existing bounds.",
+    "Add regression tests and run lint/type checks."
+  ],
+  "closure_condition": "Leave open until the reviewed release PR merges the fix.",
+  "API_writes": 0,
+  "source": "Read response during this R22 task, not a claim of later current state"
+}

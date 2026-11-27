@@ -1,0 +1,25 @@
+I001 [*] Import block is un-sorted or un-formatted
+ --> tests\test_models.py:2:1
+  |
+1 |   """Trust-boundary tests for the shared, execution-free chart contract."""
+2 | / from dataclasses import asdict
+3 | |
+4 | | import pytest
+5 | | from pydantic import ValidationError
+6 | |
+7 | | from deepviz.models import Artifact, ChartSpec, NormalizedData
+  | |______________________________________________________________^
+help: Organize imports
+  |
+4 | import pytest
+  - from pydantic import ValidationError
+  -
+5 | from deepviz.models import Artifact, ChartSpec, NormalizedData
+6 + from pydantic import ValidationError
+7 |
+  |
+
+Found 1 error.
+[*] 1 fixable with `--fix`.
+
+--- stderr ---

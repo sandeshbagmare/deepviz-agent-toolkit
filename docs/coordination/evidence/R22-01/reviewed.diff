@@ -1,0 +1,46 @@
+diff --git a/python/deepviz/src/deepviz/models.py b/python/deepviz/src/deepviz/models.py
+index 7f09721..e6e6818 100644
+--- a/python/deepviz/src/deepviz/models.py
++++ b/python/deepviz/src/deepviz/models.py
+@@ -35,6 +35,17 @@ class ChartSpec(BaseModel):
+     charts: list[ChartSpec] = Field(default_factory=list, max_length=24)
+     columns: int = Field(default=2, ge=1, le=6)
+ 
++    @model_validator(mode="before")
++    @classmethod
++    def preserve_json_numeric_types(cls, value: Any) -> Any:
++        if isinstance(value, dict):
++            for key in ("version", "max_points", "width", "height", "columns"):
++                if key in value and (
++                    isinstance(value[key], bool) or not isinstance(value[key], (int, float))
++                ):
++                    raise ValueError(f"{key} must be a JSON number, not a string or boolean")
++        return value
++
+     @model_validator(mode="after")
+     def check_dashboard(self) -> ChartSpec:
+         if self.kind == "dashboard" and not self.charts:
+diff --git a/tests/test_models.py b/tests/test_models.py
+index b228187..2a8d9cc 100644
+--- a/tests/test_models.py
++++ b/tests/test_models.py
+@@ -32,6 +32,19 @@ def test_defaults_are_bounded_and_serializable():
+     assert ChartSpec.model_validate_json(spec.model_dump_json()) == spec
+ 
+ 
++@pytest.mark.parametrize("key,value", [
++    ("width", "900"), ("height", "520"), ("columns", "2"),
++    ("max_points", "2000"), ("version", True), ("columns", True),
++])
++def test_json_schema_numeric_types_do_not_coerce_strings_or_booleans(key, value):
++    with pytest.raises(ValidationError):
++        ChartSpec.model_validate({key: value})
++
++
++def test_json_integer_semantics_allow_integral_floats():
++    assert ChartSpec.model_validate({"width": 900.0}).width == 900
++
++
+ def test_dashboard_requires_children_and_rejects_nesting():
+     with pytest.raises(ValidationError, match="requires at least one"):
+         ChartSpec(kind="dashboard")

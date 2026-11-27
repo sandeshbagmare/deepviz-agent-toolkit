@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="7" time="0.346" timestamp="2026-11-27T20:37:07.508626+05:30" hostname="SandeshAcer"><testcase classname="tests.r22_probes.role01.test_nested_numeric_contract" name="test_generated_contract_matches_historical_schema_without_new_fields" time="0.011" /><testcase classname="tests.r22_probes.role01.test_nested_numeric_contract" name="test_nested_json_objects_cannot_bypass_numeric_schema_types[width-900]" time="0.003"><failure message="Failed: DID NOT RAISE ValidationError">key = 'width', value = '900'
+
+    @pytest.mark.parametrize("key,value", [("width", "900"), ("columns", True), ("version", True)])
+    def test_nested_json_objects_cannot_bypass_numeric_schema_types(key: str, value: object) -&gt; None:
+        payload = {"kind": "dashboard", "charts": [{"kind": "bar", key: value}]}
+        assert not VALIDATOR.is_valid(payload)
+&gt;       with pytest.raises(ValidationError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValidationError
+
+..\..\..\..\tests\r22_probes\role01\test_nested_numeric_contract.py:37: Failed</failure></testcase><testcase classname="tests.r22_probes.role01.test_nested_numeric_contract" name="test_nested_json_objects_cannot_bypass_numeric_schema_types[columns-True]" time="0.001"><failure message="Failed: DID NOT RAISE ValidationError">key = 'columns', value = True
+
+    @pytest.mark.parametrize("key,value", [("width", "900"), ("columns", True), ("version", True)])
+    def test_nested_json_objects_cannot_bypass_numeric_schema_types(key: str, value: object) -&gt; None:
+        payload = {"kind": "dashboard", "charts": [{"kind": "bar", key: value}]}
+        assert not VALIDATOR.is_valid(payload)
+&gt;       with pytest.raises(ValidationError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValidationError
+
+..\..\..\..\tests\r22_probes\role01\test_nested_numeric_contract.py:37: Failed</failure></testcase><testcase classname="tests.r22_probes.role01.test_nested_numeric_contract" name="test_nested_json_objects_cannot_bypass_numeric_schema_types[version-True]" time="0.001"><failure message="Failed: DID NOT RAISE ValidationError">key = 'version', value = True
+
+    @pytest.mark.parametrize("key,value", [("width", "900"), ("columns", True), ("version", True)])
+    def test_nested_json_objects_cannot_bypass_numeric_schema_types(key: str, value: object) -&gt; None:
+        payload = {"kind": "dashboard", "charts": [{"kind": "bar", key: value}]}
+        assert not VALIDATOR.is_valid(payload)
+&gt;       with pytest.raises(ValidationError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValidationError
+
+..\..\..\..\tests\r22_probes\role01\test_nested_numeric_contract.py:37: Failed</failure></testcase><testcase classname="tests.r22_probes.role01.test_nested_numeric_contract" name="test_nested_integral_json_numbers_remain_valid_and_defaults_remain_bounded" time="0.001" /><testcase classname="tests.r22_probes.role01.test_nested_numeric_contract" name="test_nested_extra_executable_key_is_rejected_not_inherited_as_an_option" time="0.001" /><testcase classname="tests.r22_probes.role01.test_nested_numeric_contract" name="test_markup_like_labels_remain_literal_data_not_an_invented_rejection_policy" time="0.001" /></testsuite></testsuites>

@@ -1,0 +1,38 @@
+{
+  "utc": "2026-11-27T15:11:20.352111+00:00",
+  "proposal": "e44f667ed494fa272f97792ef99942a364ebca24",
+  "parent": "715c1f5ca0c13c276110c64d2af8c21deca881ea",
+  "main": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "source_snapshot_files_verified": 12,
+  "minimum_context_files_verified": 3,
+  "actual_tests": {
+    "parent": {
+      "tests": 7,
+      "failures": 3,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 4
+    },
+    "proposal": {
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 7
+    }
+  },
+  "readiness_finding": "R22-01-CI1: original complete test file needs accurate firstparty lintclassification on defaultmain",
+  "original_30_tests_run_by_role01": false,
+  "source_or_existing_oracle_modified": false,
+  "FOCUSED_head": null,
+  "final_head_approval": false,
+  "api_writes": 0,
+  "commands_skipped": [
+    "dependency installation",
+    "oldSUM/npmfixtures",
+    "fulltoolkit tests",
+    "original30 matrix (11 lane)",
+    "distributionbuild/browser/scale",
+    "actualfocusedhead/workflow/CI not supplied"
+  ]
+}

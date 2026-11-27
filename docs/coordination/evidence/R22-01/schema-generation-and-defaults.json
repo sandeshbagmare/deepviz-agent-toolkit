@@ -1,0 +1,66 @@
+[
+  {
+    "label": "parent-715",
+    "argv": [
+      "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+      "-S",
+      "-c",
+      "import deepviz.models as m,hashlib,json;from pathlib import Path;p=Path(m.__file__);schema=m.ChartSpec.model_json_schema();canonical=(json.dumps(schema,indent=2,sort_keys=True)+'\\n').encode();print(json.dumps({'model_path':str(p),'model_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'schema':schema,'schema_canonical_sha256':hashlib.sha256(canonical).hexdigest(),'default':m.ChartSpec().model_dump(mode='json')}))"
+    ],
+    "exit_code": 0,
+    "model_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R22-01\\parent-715\\python\\deepviz\\src\\deepviz\\models.py",
+    "model_sha256": "9705c4e7809ea03405ef2180f976869fc5f13e0fc63a45190929bd0c4241b461",
+    "schema_canonical_sha256": "f5f0316b592f78f5dc058fce123cd9a7c683d2259685f56524724af27880135a",
+    "default": {
+      "version": 1,
+      "kind": "bar",
+      "title": "Visualization",
+      "description": "",
+      "x": null,
+      "y": null,
+      "color": null,
+      "size": null,
+      "data_path": null,
+      "format": "auto",
+      "aggregation": "auto",
+      "max_points": 2000,
+      "width": 900,
+      "height": 520,
+      "theme": "light",
+      "charts": [],
+      "columns": 2
+    }
+  },
+  {
+    "label": "proposal-e44",
+    "argv": [
+      "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+      "-S",
+      "-c",
+      "import deepviz.models as m,hashlib,json;from pathlib import Path;p=Path(m.__file__);schema=m.ChartSpec.model_json_schema();canonical=(json.dumps(schema,indent=2,sort_keys=True)+'\\n').encode();print(json.dumps({'model_path':str(p),'model_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'schema':schema,'schema_canonical_sha256':hashlib.sha256(canonical).hexdigest(),'default':m.ChartSpec().model_dump(mode='json')}))"
+    ],
+    "exit_code": 0,
+    "model_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R22-01\\proposal-e44\\python\\deepviz\\src\\deepviz\\models.py",
+    "model_sha256": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+    "schema_canonical_sha256": "f5f0316b592f78f5dc058fce123cd9a7c683d2259685f56524724af27880135a",
+    "default": {
+      "version": 1,
+      "kind": "bar",
+      "title": "Visualization",
+      "description": "",
+      "x": null,
+      "y": null,
+      "color": null,
+      "size": null,
+      "data_path": null,
+      "format": "auto",
+      "aggregation": "auto",
+      "max_points": 2000,
+      "width": 900,
+      "height": 520,
+      "theme": "light",
+      "charts": [],
+      "columns": 2
+    }
+  }
+]

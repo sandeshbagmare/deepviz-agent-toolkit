@@ -1,0 +1,29 @@
+[
+  {
+    "label": "main-context-ruff",
+    "argv": [
+      "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+      "-m",
+      "ruff",
+      "check",
+      ".",
+      "--no-cache"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R22-01\\minimal-main-context",
+    "exit_code": 1,
+    "log_sha256": "df16a37e8e19f24c03061df5dd5f8e50703721939c0b13e623a1d6734898bbf7",
+    "scope": "exactmainpyproject+unchangede44modelandoriginaltests, no actualfocusedPRhead"
+  },
+  {
+    "label": "main-context-mypy",
+    "argv": [
+      "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+      "-m",
+      "mypy"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R22-01\\minimal-main-context",
+    "exit_code": 0,
+    "log_sha256": "48a39d99948f2562a22b7819baaa3fe06e9369167bf0b3a6e8abae9c43ada23b",
+    "scope": "exactmainpyproject+unchangede44modelandoriginaltests, no actualfocusedPRhead"
+  }
+]

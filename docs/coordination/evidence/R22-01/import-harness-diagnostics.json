@@ -1,0 +1,18 @@
+{
+  "kind": "readiness harness import isolation failure, not product result",
+  "command": [
+    "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+    "-c",
+    "import deepviz.models as m,sys,pydantic,jsonschema; print(m.__file__);print(sys.version);print(pydantic.__version__);print(jsonschema.__file__)"
+  ],
+  "PYTHONPATH": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R22-01\\proposal-e44\\python\\deepviz\\src",
+  "observed_from_actual_tool_stdout": {
+    "deepviz.models.__file__": "C:/Users/bagma/deepviz-agent-toolkit/python/deepviz/src/deepviz/models.py",
+    "python": "3.12.16",
+    "pydantic": "2.14.4",
+    "jsonschema": "C:/Users/bagma/deepviz-agent-toolkit/.venv/Lib/site-packages/jsonschema/__init__.py"
+  },
+  "tests_executed_with_wrong_source": 0,
+  "diagnosis": "historical deepviz namespace has no __init__; later installed editable regular package overrides an earlier namespace search path",
+  "correction": "Python -S with process-local PYTHONPATH=snapshot source + explicit readonly .venv site-packages; bypass .pth editable hook; assert actual model path+SHA before tests"
+}

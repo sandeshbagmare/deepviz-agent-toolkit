@@ -1,0 +1,84 @@
+[
+  {
+    "label": "parent-715",
+    "source": "715c1f5ca0c13c276110c64d2af8c21deca881ea",
+    "argv": [
+      "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+      "-S",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--junitxml",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R22-01\\parent-715-nested.xml",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\tests\\r22_probes\\role01\\test_nested_numeric_contract.py"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R22-01\\parent-715",
+    "exit_code": 1,
+    "totals": {
+      "tests": 7,
+      "failures": 3,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 4
+    },
+    "module": {
+      "model": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R22-01\\parent-715\\python\\deepviz\\src\\deepviz\\models.py",
+      "sha256": "9705c4e7809ea03405ef2180f976869fc5f13e0fc63a45190929bd0c4241b461",
+      "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+      "versions": {
+        "pydantic": "2.14.4",
+        "pytest": "9.2.0",
+        "jsonschema": "4.26.0",
+        "ruff": "0.17.6",
+        "mypy": "2.4.1"
+      }
+    },
+    "log_sha256": "e355660a92016fa10bd30c0774b90afe0238608774c47e19578d10ef99c9b0ae",
+    "junit_sha256": "0edb108ac1e6887c09d88141dfe05b8392dc04e593ba61858b42fcd6a54b539a",
+    "probe_sha256": "54a9bbdfb773d7c81e0179483f763d06bf2dd76949abdd867f7004f75c29db0f",
+    "expected_source_from": "exact Git blob, not copied target self-oracle"
+  },
+  {
+    "label": "proposal-e44",
+    "source": "e44f667ed494fa272f97792ef99942a364ebca24",
+    "argv": [
+      "C:/Users/bagma/deepviz-agent-toolkit/.venv/Scripts/python.exe",
+      "-S",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--junitxml",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R22-01\\proposal-e44-nested.xml",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\tests\\r22_probes\\role01\\test_nested_numeric_contract.py"
+    ],
+    "cwd": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R22-01\\proposal-e44",
+    "exit_code": 0,
+    "totals": {
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 7
+    },
+    "module": {
+      "model": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-01-correctness-ses_de5678335ffeI7xJrod5l25Q0Q\\artifacts\\local\\R22-01\\proposal-e44\\python\\deepviz\\src\\deepviz\\models.py",
+      "sha256": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+      "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+      "versions": {
+        "pydantic": "2.14.4",
+        "pytest": "9.2.0",
+        "jsonschema": "4.26.0",
+        "ruff": "0.17.6",
+        "mypy": "2.4.1"
+      }
+    },
+    "log_sha256": "278114d87bf87a2357333d883f1c84d06f64a0e3d629be04a09d7a6e9164bcbf",
+    "junit_sha256": "644381cafdf08d6325b7cd004064cb82442fe4d527a0fba08e6f2fbc87fd71b8",
+    "probe_sha256": "54a9bbdfb773d7c81e0179483f763d06bf2dd76949abdd867f7004f75c29db0f",
+    "expected_source_from": "exact Git blob, not copied target self-oracle"
+  }
+]

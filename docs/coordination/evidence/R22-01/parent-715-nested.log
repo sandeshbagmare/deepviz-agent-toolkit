@@ -1,0 +1,48 @@
+.FFF...                                                                  [100%]
+================================== FAILURES ===================================
+___ test_nested_json_objects_cannot_bypass_numeric_schema_types[width-900] ____
+
+key = 'width', value = '900'
+
+    @pytest.mark.parametrize("key,value", [("width", "900"), ("columns", True), ("version", True)])
+    def test_nested_json_objects_cannot_bypass_numeric_schema_types(key: str, value: object) -> None:
+        payload = {"kind": "dashboard", "charts": [{"kind": "bar", key: value}]}
+        assert not VALIDATOR.is_valid(payload)
+>       with pytest.raises(ValidationError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValidationError
+
+..\..\..\..\tests\r22_probes\role01\test_nested_numeric_contract.py:37: Failed
+__ test_nested_json_objects_cannot_bypass_numeric_schema_types[columns-True] __
+
+key = 'columns', value = True
+
+    @pytest.mark.parametrize("key,value", [("width", "900"), ("columns", True), ("version", True)])
+    def test_nested_json_objects_cannot_bypass_numeric_schema_types(key: str, value: object) -> None:
+        payload = {"kind": "dashboard", "charts": [{"kind": "bar", key: value}]}
+        assert not VALIDATOR.is_valid(payload)
+>       with pytest.raises(ValidationError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValidationError
+
+..\..\..\..\tests\r22_probes\role01\test_nested_numeric_contract.py:37: Failed
+__ test_nested_json_objects_cannot_bypass_numeric_schema_types[version-True] __
+
+key = 'version', value = True
+
+    @pytest.mark.parametrize("key,value", [("width", "900"), ("columns", True), ("version", True)])
+    def test_nested_json_objects_cannot_bypass_numeric_schema_types(key: str, value: object) -> None:
+        payload = {"kind": "dashboard", "charts": [{"kind": "bar", key: value}]}
+        assert not VALIDATOR.is_valid(payload)
+>       with pytest.raises(ValidationError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValidationError
+
+..\..\..\..\tests\r22_probes\role01\test_nested_numeric_contract.py:37: Failed
+=========================== short test summary info ===========================
+FAILED ..\..\..\..\tests\r22_probes\role01\test_nested_numeric_contract.py::test_nested_json_objects_cannot_bypass_numeric_schema_types[width-900]
+FAILED ..\..\..\..\tests\r22_probes\role01\test_nested_numeric_contract.py::test_nested_json_objects_cannot_bypass_numeric_schema_types[columns-True]
+FAILED ..\..\..\..\tests\r22_probes\role01\test_nested_numeric_contract.py::test_nested_json_objects_cannot_bypass_numeric_schema_types[version-True]
+3 failed, 4 passed in 0.38s
+
+--- stderr ---

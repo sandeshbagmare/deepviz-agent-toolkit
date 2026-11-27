@@ -1,0 +1,190 @@
+{
+  "$defs": {
+    "ChartSpec": {
+      "additionalProperties": false,
+      "description": "Map normalized record fields to a bounded chart or composed dashboard.",
+      "properties": {
+        "aggregation": {
+          "default": "auto",
+          "enum": [
+            "auto",
+            "none",
+            "sample",
+            "sum",
+            "mean",
+            "count",
+            "min",
+            "max"
+          ],
+          "title": "Aggregation",
+          "type": "string"
+        },
+        "charts": {
+          "items": {
+            "$ref": "#/$defs/ChartSpec"
+          },
+          "maxItems": 24,
+          "title": "Charts",
+          "type": "array"
+        },
+        "color": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Color"
+        },
+        "columns": {
+          "default": 2,
+          "maximum": 6,
+          "minimum": 1,
+          "title": "Columns",
+          "type": "integer"
+        },
+        "data_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Data Path"
+        },
+        "description": {
+          "default": "",
+          "maxLength": 2000,
+          "title": "Description",
+          "type": "string"
+        },
+        "format": {
+          "default": "auto",
+          "enum": [
+            "auto",
+            "json",
+            "jsonl",
+            "csv",
+            "tsv",
+            "parquet",
+            "arrow"
+          ],
+          "title": "Format",
+          "type": "string"
+        },
+        "height": {
+          "default": 520,
+          "maximum": 4096,
+          "minimum": 200,
+          "title": "Height",
+          "type": "integer"
+        },
+        "kind": {
+          "default": "bar",
+          "enum": [
+            "bar",
+            "line",
+            "scatter",
+            "area",
+            "pie",
+            "heatmap",
+            "histogram",
+            "box",
+            "violin",
+            "bubble",
+            "radar",
+            "treemap",
+            "sunburst",
+            "funnel",
+            "gauge",
+            "geo",
+            "table",
+            "dashboard"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "max_points": {
+          "default": 2000,
+          "maximum": 100000,
+          "minimum": 10,
+          "title": "Max Points",
+          "type": "integer"
+        },
+        "size": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Size"
+        },
+        "theme": {
+          "default": "light",
+          "enum": [
+            "light",
+            "dark"
+          ],
+          "title": "Theme",
+          "type": "string"
+        },
+        "title": {
+          "default": "Visualization",
+          "maxLength": 500,
+          "title": "Title",
+          "type": "string"
+        },
+        "version": {
+          "const": 1,
+          "default": 1,
+          "title": "Version",
+          "type": "integer"
+        },
+        "width": {
+          "default": 900,
+          "maximum": 4096,
+          "minimum": 240,
+          "title": "Width",
+          "type": "integer"
+        },
+        "x": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "X"
+        },
+        "y": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Y"
+        }
+      },
+      "title": "ChartSpec",
+      "type": "object"
+    }
+  },
+  "$ref": "#/$defs/ChartSpec"
+}
