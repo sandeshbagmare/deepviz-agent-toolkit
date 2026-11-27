@@ -327,10 +327,28 @@ function flatten(value: unknown, warn: Notice,index:number): {row:DataRecord,cos
   return {row:result,cost};
 }
 
+const sumBits=new DataView(new ArrayBuffer(8));
+function sumUnits(value:number):bigint {
+  sumBits.setFloat64(0,value);
+  const bits=sumBits.getBigUint64(0),exponent=Number((bits>>52n)&2047n),fraction=bits&((1n<<52n)-1n);
+  const units=(exponent===0?fraction:fraction|(1n<<52n))<<BigInt(Math.max(0,exponent-1));
+  return bits>>63n?-units:units;
+}
+function sumFromUnits(units:bigint):number {
+  const negative=units<0n,magnitude=negative?-units:units;
+  const shift=Math.max(0,magnitude.toString(2).length-53);
+  let rounded=magnitude>>BigInt(shift);
+  if(shift) {
+    const remainder=magnitude-(rounded<<BigInt(shift)),half=1n<<BigInt(shift-1);
+    if(remainder>half || (remainder===half && (rounded&1n)!==0n))rounded++;
+  }
+  return (negative?-1:1)*Number(rounded)*2**(shift-1074);
+}
+
 class Reducer {
   private records: {row:DataRecord,index:number,cost:number}[]=[];
-  private groups=new Map<string,{row:DataRecord,count:number,value:number|null,correction:number,exponent:number,cost:number}>();
-  private other:{row:DataRecord,count:number,value:number|null,correction:number,exponent:number,cost:number}|null=null;
+  private groups=new Map<string,{row:DataRecord,count:number,value:number|null,correction:number,exponent:number,cost:number,exact?:bigint}>();
+  private other:{row:DataRecord,count:number,value:number|null,correction:number,exponent:number,cost:number,exact?:bigint}|null=null;
   private warnings=new Set<string>();
   private count=0;
   private random=0x12345678;
@@ -436,10 +454,17 @@ class Reducer {
       let value=row[this.measure];
       if(typeof value!=='number') {if(value!==null && value!==undefined)this.notice('Non-numeric measure values excluded from reduction');return;}
       group.count++;
+      if(group.exact!==undefined) {group.exact+=sumUnits(value);return;}
       if(this.strategy==='mean' && group.exponent)value*=2**-group.exponent;
       if(group.value===null) group.value=value;
       else if(this.strategy==='sum' || this.strategy==='mean') {
         let previous=group.value,total=previous+value;
+        if(this.strategy==='sum' && !Number.isFinite(total)) {
+          // <=2151 bits for finite doubles and a safe-integer count; charge before retaining.
+          this.reserve(512);group.cost+=512;
+          group.exact=sumUnits(previous)+sumUnits(group.correction)+sumUnits(value);
+          return;
+        }
         if(this.strategy==='mean' && !Number.isFinite(total)) {
           // A finite mean can have an overflowing numerator: scale every term together.
           previous*=0.5;value*=0.5;group.correction*=0.5;group.exponent++;
@@ -486,7 +511,7 @@ class Reducer {
     if(grouped) {
       this.groups.clear();this.other=null;
       for(const group of states) {
-        const value=group.value===null?null:this.strategy==='mean'?
+        const value=group.value===null?null:group.exact!==undefined?sumFromUnits(group.exact):this.strategy==='mean'?
           (group.value/group.count+group.correction/group.count)*2**group.exponent:
           group.value+(this.strategy==='sum'?group.correction:0);
         if(value!==null && !Number.isFinite(value))this.notice('Non-finite numeric values replaced with null');
