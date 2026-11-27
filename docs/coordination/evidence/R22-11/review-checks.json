@@ -1,0 +1,434 @@
+{
+  "observed_utc": "2026-11-27T15:12:07.763013+00:00",
+  "owner_session": "ses_de567811cffdTBwcb8pF5nDi9v",
+  "type": "Independent first-slice readiness, NOT review/approval of a future PR head",
+  "own_starting_sha": "4a0f7dfbf19e57f78e2e54c6d893c0912e3d97e3",
+  "base_main": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+  "reference_model": "715c1f5ca0c13c276110c64d2af8c21deca881ea",
+  "candidate_source": "e44f667ed494fa272f97792ef99942a364ebca24",
+  "existing_test_source": "e44f667ed494fa272f97792ef99942a364ebca24:tests/test_models.py",
+  "results": {
+    "existing_e44_contract": {
+      "passed": 30,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "failure_case_names": [],
+      "junit_sha256": "35a9cdb33d425d7b004176ebf01b9dda821936f3b4c87d9c68b226197bd40d6c"
+    },
+    "parent_model_with_e44_regressions": {
+      "passed": 24,
+      "failed": 6,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "failure_case_names": [
+        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[width-900]",
+        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[height-520]",
+        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[columns-2]",
+        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[max_points-2000]",
+        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[version-True]",
+        "test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[columns-True]"
+      ],
+      "junit_sha256": "eff0f89fff2ed5ade333f93c0c36a9246991d96a13df56651d0729141d46b83e"
+    },
+    "independent_gap_controls": {
+      "passed": 13,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "failure_case_names": [],
+      "junit_sha256": "393fb4cc52fdd3c308135795d74ea961e3f869ef969ddd59d533edd1213e9e3d"
+    }
+  },
+  "source_before_after_identity": {
+    "baseline": {
+      "label": "baseline",
+      "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+      "pydantic": "2.14.4",
+      "pytest": "9.2.0",
+      "command": "python stdin driver, process-local sys.path filter exact MAIN editable source only, pytest.main([tests/test_models.py,-q,-p,no:cacheprovider,--strict-markers,--basetemp,<unique>,--junitxml,<unique>])",
+      "process_only_removed_sys_path": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\python\\deepviz\\src"
+      ],
+      "pytest_exit": 1,
+      "source_before": {
+        "sha256": {
+          "python/deepviz/src/deepviz/models.py": "9705c4e7809ea03405ef2180f976869fc5f13e0fc63a45190929bd0c4241b461",
+          "tests/test_models.py": "2f15dc277a6298780a6ab32076d642fe8491222cfc2c051fdbf33c0d18afe81b",
+          "pyproject.toml": "8f3270bc16f4b14a0024c7e2bfb293d263265880a23830c1da8c3f2f4e290169",
+          "schemas/chart-spec.schema.json": "f5f0316b592f78f5dc058fce123cd9a7c683d2259685f56524724af27880135a"
+        },
+        "models_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-11-first-slice-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\baseline\\python\\deepviz\\src\\deepviz\\models.py",
+        "models_module_sha256": "9705c4e7809ea03405ef2180f976869fc5f13e0fc63a45190929bd0c4241b461",
+        "models_commit": "715c1f5ca0c13c276110c64d2af8c21deca881ea",
+        "file_origins": {
+          "python/deepviz/src/deepviz/models.py": "715c1f5ca0c13c276110c64d2af8c21deca881ea",
+          "tests/test_models.py": "e44f667ed494fa272f97792ef99942a364ebca24",
+          "pyproject.toml": "715c1f5ca0c13c276110c64d2af8c21deca881ea",
+          "schemas/chart-spec.schema.json": "715c1f5ca0c13c276110c64d2af8c21deca881ea"
+        },
+        "snapshot_dirty_paths": []
+      },
+      "source_after": {
+        "sha256": {
+          "python/deepviz/src/deepviz/models.py": "9705c4e7809ea03405ef2180f976869fc5f13e0fc63a45190929bd0c4241b461",
+          "tests/test_models.py": "2f15dc277a6298780a6ab32076d642fe8491222cfc2c051fdbf33c0d18afe81b",
+          "pyproject.toml": "8f3270bc16f4b14a0024c7e2bfb293d263265880a23830c1da8c3f2f4e290169",
+          "schemas/chart-spec.schema.json": "f5f0316b592f78f5dc058fce123cd9a7c683d2259685f56524724af27880135a"
+        },
+        "models_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-11-first-slice-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\baseline\\python\\deepviz\\src\\deepviz\\models.py",
+        "models_module_sha256": "9705c4e7809ea03405ef2180f976869fc5f13e0fc63a45190929bd0c4241b461",
+        "models_commit": "715c1f5ca0c13c276110c64d2af8c21deca881ea",
+        "file_origins": {
+          "python/deepviz/src/deepviz/models.py": "715c1f5ca0c13c276110c64d2af8c21deca881ea",
+          "tests/test_models.py": "e44f667ed494fa272f97792ef99942a364ebca24",
+          "pyproject.toml": "715c1f5ca0c13c276110c64d2af8c21deca881ea",
+          "schemas/chart-spec.schema.json": "715c1f5ca0c13c276110c64d2af8c21deca881ea"
+        },
+        "snapshot_dirty_paths": []
+      }
+    },
+    "candidate": {
+      "label": "candidate",
+      "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+      "pydantic": "2.14.4",
+      "pytest": "9.2.0",
+      "command": "python stdin driver, process-local sys.path filter exact MAIN editable source only, pytest.main([tests/test_models.py,-q,-p,no:cacheprovider,--strict-markers,--basetemp,<unique>,--junitxml,<unique>])",
+      "process_only_removed_sys_path": [
+        "C:\\Users\\bagma\\deepviz-agent-toolkit\\python\\deepviz\\src"
+      ],
+      "pytest_exit": 0,
+      "source_before": {
+        "sha256": {
+          "python/deepviz/src/deepviz/models.py": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+          "tests/test_models.py": "2f15dc277a6298780a6ab32076d642fe8491222cfc2c051fdbf33c0d18afe81b",
+          "pyproject.toml": "8f3270bc16f4b14a0024c7e2bfb293d263265880a23830c1da8c3f2f4e290169",
+          "schemas/chart-spec.schema.json": "f5f0316b592f78f5dc058fce123cd9a7c683d2259685f56524724af27880135a"
+        },
+        "models_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-11-first-slice-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\candidate\\python\\deepviz\\src\\deepviz\\models.py",
+        "models_module_sha256": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+        "models_commit": "e44f667ed494fa272f97792ef99942a364ebca24",
+        "file_origins": {
+          "python/deepviz/src/deepviz/models.py": "e44f667ed494fa272f97792ef99942a364ebca24",
+          "tests/test_models.py": "e44f667ed494fa272f97792ef99942a364ebca24",
+          "pyproject.toml": "e44f667ed494fa272f97792ef99942a364ebca24",
+          "schemas/chart-spec.schema.json": "e44f667ed494fa272f97792ef99942a364ebca24"
+        },
+        "snapshot_dirty_paths": []
+      },
+      "source_after": {
+        "sha256": {
+          "python/deepviz/src/deepviz/models.py": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+          "tests/test_models.py": "2f15dc277a6298780a6ab32076d642fe8491222cfc2c051fdbf33c0d18afe81b",
+          "pyproject.toml": "8f3270bc16f4b14a0024c7e2bfb293d263265880a23830c1da8c3f2f4e290169",
+          "schemas/chart-spec.schema.json": "f5f0316b592f78f5dc058fce123cd9a7c683d2259685f56524724af27880135a"
+        },
+        "models_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-11-first-slice-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\candidate\\python\\deepviz\\src\\deepviz\\models.py",
+        "models_module_sha256": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+        "models_commit": "e44f667ed494fa272f97792ef99942a364ebca24",
+        "file_origins": {
+          "python/deepviz/src/deepviz/models.py": "e44f667ed494fa272f97792ef99942a364ebca24",
+          "tests/test_models.py": "e44f667ed494fa272f97792ef99942a364ebca24",
+          "pyproject.toml": "e44f667ed494fa272f97792ef99942a364ebca24",
+          "schemas/chart-spec.schema.json": "e44f667ed494fa272f97792ef99942a364ebca24"
+        },
+        "snapshot_dirty_paths": []
+      }
+    }
+  },
+  "actual_contract_outputs": {
+    "baseline": {
+      "actual_models_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-11-first-slice-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\baseline\\python\\deepviz\\src\\deepviz\\models.py",
+      "actual_models_sha256": "9705c4e7809ea03405ef2180f976869fc5f13e0fc63a45190929bd0c4241b461",
+      "generated_schema_equals_persisted": true,
+      "generated_schema_canonical_sha256": "75972780be039e8dbbbf78a93d0611d9e6a5c9ed6e57a7ecf4239c2af20d6670",
+      "samples": [
+        {
+          "input_json": "{}",
+          "accepted": true,
+          "output": {
+            "version": 1,
+            "kind": "bar",
+            "title": "Visualization",
+            "description": "",
+            "x": null,
+            "y": null,
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "auto",
+            "max_points": 2000,
+            "width": 900,
+            "height": 520,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          }
+        },
+        {
+          "input_json": "{\"width\": 900.0, \"height\": 520.0, \"version\": 1.0, \"columns\": 2.0, \"max_points\": 2000.0}",
+          "accepted": true,
+          "output": {
+            "version": 1,
+            "kind": "bar",
+            "title": "Visualization",
+            "description": "",
+            "x": null,
+            "y": null,
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "auto",
+            "max_points": 2000,
+            "width": 900,
+            "height": 520,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          }
+        },
+        {
+          "input_json": "{\"width\": \"900\"}",
+          "accepted": true,
+          "output": {
+            "version": 1,
+            "kind": "bar",
+            "title": "Visualization",
+            "description": "",
+            "x": null,
+            "y": null,
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "auto",
+            "max_points": 2000,
+            "width": 900,
+            "height": 520,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          }
+        },
+        {
+          "input_json": "{\"version\": true}",
+          "accepted": true,
+          "output": {
+            "version": 1,
+            "kind": "bar",
+            "title": "Visualization",
+            "description": "",
+            "x": null,
+            "y": null,
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "auto",
+            "max_points": 2000,
+            "width": 900,
+            "height": 520,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          }
+        },
+        {
+          "input_json": "{\"columns\": true}",
+          "accepted": true,
+          "output": {
+            "version": 1,
+            "kind": "bar",
+            "title": "Visualization",
+            "description": "",
+            "x": null,
+            "y": null,
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "auto",
+            "max_points": 2000,
+            "width": 900,
+            "height": 520,
+            "theme": "light",
+            "charts": [],
+            "columns": 1
+          }
+        }
+      ],
+      "source_bytes_unchanged": true,
+      "kind": "Schema-validation output, not renderer/browser artifact"
+    },
+    "candidate": {
+      "actual_models_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-11-first-slice-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\candidate\\python\\deepviz\\src\\deepviz\\models.py",
+      "actual_models_sha256": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+      "generated_schema_equals_persisted": true,
+      "generated_schema_canonical_sha256": "75972780be039e8dbbbf78a93d0611d9e6a5c9ed6e57a7ecf4239c2af20d6670",
+      "samples": [
+        {
+          "input_json": "{}",
+          "accepted": true,
+          "output": {
+            "version": 1,
+            "kind": "bar",
+            "title": "Visualization",
+            "description": "",
+            "x": null,
+            "y": null,
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "auto",
+            "max_points": 2000,
+            "width": 900,
+            "height": 520,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          }
+        },
+        {
+          "input_json": "{\"width\": 900.0, \"height\": 520.0, \"version\": 1.0, \"columns\": 2.0, \"max_points\": 2000.0}",
+          "accepted": true,
+          "output": {
+            "version": 1,
+            "kind": "bar",
+            "title": "Visualization",
+            "description": "",
+            "x": null,
+            "y": null,
+            "color": null,
+            "size": null,
+            "data_path": null,
+            "format": "auto",
+            "aggregation": "auto",
+            "max_points": 2000,
+            "width": 900,
+            "height": 520,
+            "theme": "light",
+            "charts": [],
+            "columns": 2
+          }
+        },
+        {
+          "input_json": "{\"width\": \"900\"}",
+          "accepted": false,
+          "error_types": [
+            "value_error"
+          ],
+          "message": "Value error, width must be a JSON number, not a string or boolean"
+        },
+        {
+          "input_json": "{\"version\": true}",
+          "accepted": false,
+          "error_types": [
+            "value_error"
+          ],
+          "message": "Value error, version must be a JSON number, not a string or boolean"
+        },
+        {
+          "input_json": "{\"columns\": true}",
+          "accepted": false,
+          "error_types": [
+            "value_error"
+          ],
+          "message": "Value error, columns must be a JSON number, not a string or boolean"
+        }
+      ],
+      "source_bytes_unchanged": true,
+      "kind": "Schema-validation output, not renderer/browser artifact"
+    }
+  },
+  "minimal_path_proposal": {
+    "source": "e44f667ed494fa272f97792ef99942a364ebca24",
+    "base_main": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+    "base_model_equals_e44_parent": true,
+    "new_complete_test_file_lines": 67,
+    "model_added_lines": 11,
+    "proposed_paths": [
+      "python/deepviz/src/deepviz/models.py",
+      "tests/test_models.py"
+    ],
+    "test_proposal_difference": "Import-only reorder/grouping for existing main Ruff config; all AST function/class bodies and decorators identical",
+    "test_ast_bodies_unchanged": true,
+    "test_original_sha256": "2f15dc277a6298780a6ab32076d642fe8491222cfc2c051fdbf33c0d18afe81b",
+    "proposed_test_utf8_lf_sha256": "90b1675f1a2f44d8c66bc9db68f93f2b01c463511d98c586d88da314b1ffdc32",
+    "model_e44_sha256": "94824d6f8f151881c0cf21dc85126c18cbb0e98bfb66ab9b4699c98e82293170",
+    "main_config_ruff_original_exit": 1,
+    "main_config_ruff_import_only_proposal_exit": 0,
+    "ruff_stdout": "All checks passed!",
+    "no_existing_source_or_test_written": true,
+    "pyproject_runtime_change_required": false,
+    "optional_alternative": "Add only [tool.ruff.lint.isort] known-first-party=[deepviz], not schema force-include; three paths instead of two",
+    "ci_required_separately": "R04 must add a focused real model/test/schema-output gate; no current main workflow exists; no fulltoolkit approval"
+  },
+  "finding": {
+    "id": "R22-11-F1",
+    "severity": "Focused lint gate prerequisite",
+    "description": "Exact e44 full test file has one I001 under unchanged main Ruff config; e44 parent adds known-first-party which main lacks",
+    "actual_original_exit": 1,
+    "proposal_only_exit": 0,
+    "resolution_options": [
+      "Two source/test paths: add whole test file, import-only reorder, unchanged AST bodies; exact e44 model",
+      "Or three source/test/config paths: exact files plus ONLY isort known-first-party setting, no missing-schema force-include"
+    ],
+    "actual_focused_head_resolution": "Pending actual focused head from R04"
+  },
+  "static_checks": {
+    "ruff_e44_config_actual_source_original_tests_own_probe_exit": 0,
+    "ruff_exact_main_config_original_e44_tests_exit": 1,
+    "ruff_exact_main_config_import_only_stdin_proposal_exit": 0,
+    "mypy_exact_model_with_main_config_exit": 0,
+    "mypy_exact_model_plus_own_probe_with_main_config_exit": 0
+  },
+  "harness_errors_preserved": [
+    {
+      "kind": "Source guard rejected accidental MAIN editable regular-package import before any pytest",
+      "initial_baseline_exit": 1,
+      "initial_candidate_exit": 1,
+      "product_test_result": false,
+      "correction": "Remove exactly MAIN editable source from process sys.path only; no shared environment/source files changed"
+    },
+    {
+      "kind": "Ruff config basename mismatch before lint: main-pyproject.toml interpreted as flat Ruff file",
+      "exit": 2,
+      "product_lint_result": false,
+      "correction": "Same immutable bytes stored under main-config/pyproject.toml"
+    }
+  ],
+  "source_and_output_limits": [
+    "No current7bc models/dashboard source used",
+    "Only Python3.12.16/Pydantic2.14.4 observed; range floor/multiple Python CI not yet tested here",
+    "No renderer exists on main; JSON/schema outputs inspected, no visual/browser claim",
+    "No distribution/npm/build/scale/1M/10M/fulltoolkit runs",
+    "No focused PR/head/required check/merge/closure/final-green approval",
+    "Own probe source-identity/schema fixtures are reviewer-only; do not blindly import its external snapshot setup into main CI"
+  ],
+  "new_probe": {
+    "path": "tests/r22_probes/role11/test_numeric_contract_slice.py",
+    "sha256": "dca048bdc3f374b598bed19e6123a5f2ba758e710e6445589fc2a482142c8e5b",
+    "cases": 13
+  },
+  "raw_log_sha256": {
+    "baseline-contract.log": "298a45d3a623d1e080aa2471284d7804442414055f815467c9e06c1803f1eb2d",
+    "candidate-contract.log": "298a45d3a623d1e080aa2471284d7804442414055f815467c9e06c1803f1eb2d",
+    "baseline-r2-contract.log": "17c9d42286a9093e7f67e1663b2dc9988912a25725179d155371df3e1213d9e0",
+    "candidate-r2-contract.log": "de3ea57a629462ea2d4db96f4e6d8569b32f7f1b51c1a43212f5ca564c83ff54",
+    "own-gap.log": "5c9ae5c2a5b305fa12b2ee336bdb0ae6942c1f43118c52935b767ba3241c1b7b",
+    "ruff-e44.log": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+    "ruff-main-config.log": "cb14d3f508e405a7054c09821a824e0d04eb49d6ad3ae038879638dd4cb97804",
+    "ruff-main-config-r2.log": "62628acd8ad1c29cf48bf959b3cf99fdd752ebe806f604ee0e9f3225e3bd8d20",
+    "mypy-model.log": "94594db09076fe305d51b50210d0bc5e9d275fb814f8b42c1ed4cf3368392f9a",
+    "mypy-model-own.log": "07a5ca23e5d39b2565c0c1361f0556b8c3c75484bba05841f400436d190bb660"
+  },
+  "raw_artifact_root": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r22-11-first-slice-ses_de567811cffdTBwcb8pF5nDi9v-artifacts",
+  "actual_read_only_issue_main_receipt": "docs/coordination/evidence/R22-11/issue30-main-readback.json",
+  "next_action": "R04 builds smallest complete focused PR with own honest CI; supply exact focused head for genuine two-reviewer/two-tester source-specific gates before merge"
+}

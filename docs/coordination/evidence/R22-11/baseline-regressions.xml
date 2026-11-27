@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="30" time="0.329" timestamp="2026-11-27T20:32:24.712575+05:30" hostname="SandeshAcer"><testcase classname="tests.test_models" name="test_invalid_schema_values_fail_closed[kind-arbitrary-code]" time="0.002" /><testcase classname="tests.test_models" name="test_invalid_schema_values_fail_closed[version-2]" time="0.001" /><testcase classname="tests.test_models" name="test_invalid_schema_values_fail_closed[max_points-0]" time="0.001" /><testcase classname="tests.test_models" name="test_invalid_schema_values_fail_closed[max_points-100001]" time="0.001" /><testcase classname="tests.test_models" name="test_invalid_schema_values_fail_closed[width-1]" time="0.001" /><testcase classname="tests.test_models" name="test_invalid_schema_values_fail_closed[width-5000]" time="0.001" /><testcase classname="tests.test_models" name="test_invalid_schema_values_fail_closed[height-1]" time="0.001" /><testcase classname="tests.test_models" name="test_invalid_schema_values_fail_closed[height-5000]" time="0.001" /><testcase classname="tests.test_models" name="test_invalid_schema_values_fail_closed[theme-injected]" time="0.001" /><testcase classname="tests.test_models" name="test_invalid_schema_values_fail_closed[format-pickle]" time="0.001" /><testcase classname="tests.test_models" name="test_invalid_schema_values_fail_closed[aggregation-eval]" time="0.001" /><testcase classname="tests.test_models" name="test_invalid_schema_values_fail_closed[columns-0]" time="0.001" /><testcase classname="tests.test_models" name="test_invalid_schema_values_fail_closed[columns-7]" time="0.001" /><testcase classname="tests.test_models" name="test_invalid_schema_values_fail_closed[title-value13]" time="0.001" /><testcase classname="tests.test_models" name="test_invalid_schema_values_fail_closed[description-value14]" time="0.001" /><testcase classname="tests.test_models" name="test_executable_and_remote_schema_fields_are_not_supported[code]" time="0.000" /><testcase classname="tests.test_models" name="test_executable_and_remote_schema_fields_are_not_supported[expression]" time="0.001" /><testcase classname="tests.test_models" name="test_executable_and_remote_schema_fields_are_not_supported[javascript]" time="0.001" /><testcase classname="tests.test_models" name="test_executable_and_remote_schema_fields_are_not_supported[sql]" time="0.001" /><testcase classname="tests.test_models" name="test_executable_and_remote_schema_fields_are_not_supported[url]" time="0.001" /><testcase classname="tests.test_models" name="test_defaults_are_bounded_and_serializable" time="0.001" /><testcase classname="tests.test_models" name="test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[width-900]" time="0.001"><failure message="Failed: DID NOT RAISE ValidationError">key = 'width', value = '900'
+
+    @pytest.mark.parametrize("key,value", [
+        ("width", "900"), ("height", "520"), ("columns", "2"),
+        ("max_points", "2000"), ("version", True), ("columns", True),
+    ])
+    def test_json_schema_numeric_types_do_not_coerce_strings_or_booleans(key, value):
+&gt;       with pytest.raises(ValidationError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValidationError
+
+tests\test_models.py:40: Failed</failure></testcase><testcase classname="tests.test_models" name="test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[height-520]" time="0.001"><failure message="Failed: DID NOT RAISE ValidationError">key = 'height', value = '520'
+
+    @pytest.mark.parametrize("key,value", [
+        ("width", "900"), ("height", "520"), ("columns", "2"),
+        ("max_points", "2000"), ("version", True), ("columns", True),
+    ])
+    def test_json_schema_numeric_types_do_not_coerce_strings_or_booleans(key, value):
+&gt;       with pytest.raises(ValidationError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValidationError
+
+tests\test_models.py:40: Failed</failure></testcase><testcase classname="tests.test_models" name="test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[columns-2]" time="0.001"><failure message="Failed: DID NOT RAISE ValidationError">key = 'columns', value = '2'
+
+    @pytest.mark.parametrize("key,value", [
+        ("width", "900"), ("height", "520"), ("columns", "2"),
+        ("max_points", "2000"), ("version", True), ("columns", True),
+    ])
+    def test_json_schema_numeric_types_do_not_coerce_strings_or_booleans(key, value):
+&gt;       with pytest.raises(ValidationError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValidationError
+
+tests\test_models.py:40: Failed</failure></testcase><testcase classname="tests.test_models" name="test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[max_points-2000]" time="0.001"><failure message="Failed: DID NOT RAISE ValidationError">key = 'max_points', value = '2000'
+
+    @pytest.mark.parametrize("key,value", [
+        ("width", "900"), ("height", "520"), ("columns", "2"),
+        ("max_points", "2000"), ("version", True), ("columns", True),
+    ])
+    def test_json_schema_numeric_types_do_not_coerce_strings_or_booleans(key, value):
+&gt;       with pytest.raises(ValidationError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValidationError
+
+tests\test_models.py:40: Failed</failure></testcase><testcase classname="tests.test_models" name="test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[version-True]" time="0.001"><failure message="Failed: DID NOT RAISE ValidationError">key = 'version', value = True
+
+    @pytest.mark.parametrize("key,value", [
+        ("width", "900"), ("height", "520"), ("columns", "2"),
+        ("max_points", "2000"), ("version", True), ("columns", True),
+    ])
+    def test_json_schema_numeric_types_do_not_coerce_strings_or_booleans(key, value):
+&gt;       with pytest.raises(ValidationError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValidationError
+
+tests\test_models.py:40: Failed</failure></testcase><testcase classname="tests.test_models" name="test_json_schema_numeric_types_do_not_coerce_strings_or_booleans[columns-True]" time="0.001"><failure message="Failed: DID NOT RAISE ValidationError">key = 'columns', value = True
+
+    @pytest.mark.parametrize("key,value", [
+        ("width", "900"), ("height", "520"), ("columns", "2"),
+        ("max_points", "2000"), ("version", True), ("columns", True),
+    ])
+    def test_json_schema_numeric_types_do_not_coerce_strings_or_booleans(key, value):
+&gt;       with pytest.raises(ValidationError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValidationError
+
+tests\test_models.py:40: Failed</failure></testcase><testcase classname="tests.test_models" name="test_json_integer_semantics_allow_integral_floats" time="0.000" /><testcase classname="tests.test_models" name="test_dashboard_requires_children_and_rejects_nesting" time="0.001" /><testcase classname="tests.test_models" name="test_artifact_metadata_does_not_share_mutable_defaults" time="0.001" /></testsuite></testsuites>
