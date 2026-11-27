@@ -1,0 +1,112 @@
+{
+  "source_commit": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "pytest_exit": 1,
+  "counts": {
+    "tests": 32,
+    "failures": 10,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 22
+  },
+  "pytest_stdout_seconds": 8.31,
+  "junit_seconds": "8.260",
+  "failed_cases": [
+    {
+      "case": "test_tool_decoders_reject_duplicate_keys_before_semantic_loss[data-field-direct]",
+      "class": "tests.r10_probes.role02.test_parser_contract",
+      "type": null
+    },
+    {
+      "case": "test_tool_decoders_reject_duplicate_keys_before_semantic_loss[data-field-structured-tool]",
+      "class": "tests.r10_probes.role02.test_parser_contract",
+      "type": null
+    },
+    {
+      "case": "test_tool_decoders_reject_duplicate_keys_before_semantic_loss[data-field-mcp-sdk]",
+      "class": "tests.r10_probes.role02.test_parser_contract",
+      "type": null
+    },
+    {
+      "case": "test_tool_decoders_reject_duplicate_keys_before_semantic_loss[file-control-key-direct]",
+      "class": "tests.r10_probes.role02.test_parser_contract",
+      "type": null
+    },
+    {
+      "case": "test_tool_decoders_reject_duplicate_keys_before_semantic_loss[file-control-key-structured-tool]",
+      "class": "tests.r10_probes.role02.test_parser_contract",
+      "type": null
+    },
+    {
+      "case": "test_tool_decoders_reject_duplicate_keys_before_semantic_loss[file-control-key-mcp-sdk]",
+      "class": "tests.r10_probes.role02.test_parser_contract",
+      "type": null
+    },
+    {
+      "case": "test_inline_raw_byte_limit_precedes_sdk_json_preprocessing[row-data-mcp-sdk]",
+      "class": "tests.r10_probes.role02.test_parser_contract",
+      "type": null
+    },
+    {
+      "case": "test_inline_raw_byte_limit_precedes_sdk_json_preprocessing[file-reference-mcp-sdk]",
+      "class": "tests.r10_probes.role02.test_parser_contract",
+      "type": null
+    },
+    {
+      "case": "test_real_stdio_enforces_the_raw_inline_byte_limit[row-data]",
+      "class": "tests.r10_probes.role02.test_parser_contract",
+      "type": null
+    },
+    {
+      "case": "test_real_stdio_enforces_the_raw_inline_byte_limit[file-reference]",
+      "class": "tests.r10_probes.role02.test_parser_contract",
+      "type": null
+    }
+  ],
+  "novel_trust_control_passes": 14,
+  "raw_inline_cap_bytes": 1000000,
+  "tested_raw_bytes": {
+    "row-data": 1000036,
+    "file-reference": 1000022
+  },
+  "first_overlapping_run": {
+    "exit": 1,
+    "passed": 22,
+    "failed": 8,
+    "skipped": 0,
+    "seconds": 6.75
+  },
+  "verification": {
+    "ruff_initial_exit": 1,
+    "ruff_final_exit": 0,
+    "mypy_initial_exit": 1,
+    "mypy_final_exit": 0,
+    "mypy_own_files": 4
+  },
+  "not_run": [
+    "full pytest",
+    "full repository lint/types",
+    "builds",
+    "npm",
+    "browser labels",
+    "10M scale",
+    "paid model",
+    "symlink privilege test"
+  ],
+  "raw_artifacts_kept_outside_git": {
+    "final-pytest.log": {
+      "sha256": "bfcfef57d9d52e983554492e36e37f7ae49d07606584962fc1100b04246bc572",
+      "bytes": 22748
+    },
+    "final-junit.xml": {
+      "sha256": "a9298351beed2b0ddf8a2796f01a48f2a65f2d63c9a0b664380ef211b1b3aee6",
+      "bytes": 17333
+    }
+  },
+  "probe_hashes": {
+    "tests/r10_probes/role02/conftest.py": "e2e938cfa6d441157445b50825f4c2d210fb11f28824859ed69cc08951a1d8b6",
+    "tests/r10_probes/role02/source_identity.py": "3f934e8e6c84e02f8363c69959a3845526b14672f86a4b3a3169251fdc9a25b6",
+    "tests/r10_probes/role02/test_parser_contract.py": "f72d9d308e7cd41edb58337b29adc7c1d3caa5482a3dabda96f0e9e8e24b5a10",
+    "tests/r10_probes/role02/test_trust_controls.py": "d269f6d0622c49038165e2ad0468301bd60b44abaa8652b5833dcd5ee8fb91d1"
+  },
+  "limits": "Finite local policy/control probes only. No memory-exhaustion exploit, no script execution, no final-source signoff."
+}

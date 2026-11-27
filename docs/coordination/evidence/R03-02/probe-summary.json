@@ -1,0 +1,207 @@
+{
+  "source": {
+    "expected_commit": "0c5fa825f7058f8c5a4ab6ec9597b9fd5fd4ca43",
+    "modules": {
+      "deepviz.models": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r03-02-security-ses_de5678328ffeYCFXQhRPKd4a9h\\python\\deepviz\\src\\deepviz\\models.py",
+        "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+      },
+      "deepviz.normalize": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r03-02-security-ses_de5678328ffeYCFXQhRPKd4a9h\\python\\deepviz\\src\\deepviz\\normalize.py",
+        "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+      },
+      "deepviz.tools": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r03-02-security-ses_de5678328ffeYCFXQhRPKd4a9h\\python\\deepviz\\src\\deepviz\\tools.py",
+        "sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb"
+      },
+      "deepviz.mcp_server": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r03-02-security-ses_de5678328ffeYCFXQhRPKd4a9h\\python\\deepviz\\src\\deepviz\\mcp_server.py",
+        "sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95"
+      },
+      "deepviz.engines": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r03-02-security-ses_de5678328ffeYCFXQhRPKd4a9h\\python\\deepviz\\src\\deepviz\\engines.py",
+        "sha256": "a4cabd2c0fdff2ec067e3090378460a0832b931946e26aa9e2cef682cd9d53f3"
+      },
+      "deepviz.render": {
+        "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r03-02-security-ses_de5678328ffeYCFXQhRPKd4a9h\\python\\deepviz\\src\\deepviz\\render.py",
+        "sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+      }
+    },
+    "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe",
+    "dependencies": {
+      "mcp": "1.30.0",
+      "langchain-core": "1.8.5",
+      "pydantic": "2.14.4"
+    }
+  },
+  "duplicates": {
+    "input": "[{\"name\":\"original\",\"name\":\"replacement\",\"value\":1}]",
+    "normalizer": {
+      "status": "rejected",
+      "error_type": "ValueError",
+      "message": "Duplicate JSON object key"
+    },
+    "structured_tool": {
+      "status": "accepted",
+      "value": {
+        "dataset_id": "11b24d9827b14c89ad73a99b16728530",
+        "input_count": 1,
+        "output_count": 1,
+        "strategy": "none",
+        "warnings": [],
+        "profile": {
+          "fields": [
+            "name",
+            "value"
+          ],
+          "numeric_fields": [
+            "value"
+          ],
+          "temporal_fields": [],
+          "categorical_fields": [
+            "name"
+          ],
+          "nonnegative_fields": [
+            "value"
+          ],
+          "positive_total_fields": [
+            "value"
+          ],
+          "fields_truncated": false,
+          "profiled_rows": 1
+        }
+      }
+    },
+    "cached_records": [
+      {
+        "name": "replacement",
+        "value": 1
+      }
+    ]
+  },
+  "sparse_tables": [
+    {
+      "input_count": 64,
+      "output_count": 64,
+      "inline_bytes": 812,
+      "union_fields": 64,
+      "graphic_cells": 4160,
+      "native_json_bytes": 438727,
+      "adapter_seconds": 0.2887181999976747,
+      "tracemalloc_current": 1791502,
+      "tracemalloc_peak": 1811860
+    },
+    {
+      "input_count": 128,
+      "output_count": 128,
+      "inline_bytes": 1700,
+      "union_fields": 128,
+      "graphic_cells": 16512,
+      "native_json_bytes": 1761145,
+      "adapter_seconds": 1.2595579999979236,
+      "tracemalloc_current": 7112250,
+      "tracemalloc_peak": 7156324
+    },
+    {
+      "input_count": 256,
+      "output_count": 256,
+      "inline_bytes": 3620,
+      "union_fields": 256,
+      "graphic_cells": 65792,
+      "native_json_bytes": 7090925,
+      "adapter_seconds": 3.989791799998784,
+      "tracemalloc_current": 28397498,
+      "tracemalloc_peak": 28492468
+    }
+  ],
+  "mcp": {
+    "checkpoints": [
+      {
+        "render_calls": 16,
+        "registered_resources": 32,
+        "tracemalloc_current": 284008,
+        "tracemalloc_peak": 359773
+      },
+      {
+        "render_calls": 32,
+        "registered_resources": 64,
+        "tracemalloc_current": 479994,
+        "tracemalloc_peak": 566171
+      },
+      {
+        "render_calls": 64,
+        "registered_resources": 128,
+        "tracemalloc_current": 871961,
+        "tracemalloc_peak": 950910
+      }
+    ],
+    "old_resource_still_readable": true,
+    "duplicate_input_summary": {
+      "dataset_id": "855f7ba583f746a7b040cc572d68e7e9",
+      "input_count": 1,
+      "output_count": 1,
+      "strategy": "none",
+      "warnings": [],
+      "profile": {
+        "fields": [
+          "name",
+          "value"
+        ],
+        "numeric_fields": [
+          "value"
+        ],
+        "temporal_fields": [],
+        "categorical_fields": [
+          "name"
+        ],
+        "nonnegative_fields": [
+          "value"
+        ],
+        "positive_total_fields": [
+          "value"
+        ],
+        "fields_truncated": false,
+        "profiled_rows": 1
+      }
+    },
+    "duplicate_cached_records": [
+      {
+        "name": "replacement",
+        "value": 1
+      }
+    ]
+  },
+  "deep_input": {
+    "64": {
+      "status": "accepted",
+      "value": {
+        "dataset_id": "281b1292f71740a8a4ccd92edf10c88a",
+        "input_count": 0,
+        "output_count": 0,
+        "strategy": "sample",
+        "warnings": [],
+        "profile": {
+          "fields": [],
+          "numeric_fields": [],
+          "temporal_fields": [],
+          "categorical_fields": [],
+          "nonnegative_fields": [],
+          "positive_total_fields": [],
+          "fields_truncated": false,
+          "profiled_rows": 0
+        }
+      }
+    },
+    "1500": {
+      "status": "rejected",
+      "error_type": "ValueError",
+      "message": "Input is nested too deeply or cyclic"
+    },
+    "10000": {
+      "status": "rejected",
+      "error_type": "RecursionError",
+      "message": "maximum recursion depth exceeded while decoding a JSON array from a unicode string"
+    }
+  }
+}

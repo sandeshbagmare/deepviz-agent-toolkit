@@ -1,0 +1,36 @@
+{
+  "observed_at": "2026-11-27T02:38:14.104730+00:00",
+  "tested_git_head": "3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab",
+  "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+  "modules": {
+    "models": {
+      "path": "python/deepviz/src/deepviz/models.py",
+      "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    "normalize": {
+      "path": "python/deepviz/src/deepviz/normalize.py",
+      "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83"
+    },
+    "tools": {
+      "path": "python/deepviz/src/deepviz/tools.py",
+      "sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb"
+    },
+    "mcp_server": {
+      "path": "python/deepviz/src/deepviz/mcp_server.py",
+      "sha256": "3d1e44d323a76d0e2adcf37a7d5951e7716f8883c792dc9046fabe7cdb655d95"
+    },
+    "engines": {
+      "path": "python/deepviz/src/deepviz/engines.py",
+      "sha256": "a8a27279e2c9f1601eacd4047da601159202ab65a5faea5efeca98294d4f85de"
+    },
+    "render": {
+      "path": "python/deepviz/src/deepviz/render.py",
+      "sha256": "5d74fdb673a0fc923d49388a379d0ac3ac6b3998c465e120e3b51302a9bc1b56"
+    }
+  },
+  "dependencies": {
+    "mcp": "1.30.0",
+    "pydantic": "2.14.4",
+    "langchain-core": "1.8.5"
+  }
+}

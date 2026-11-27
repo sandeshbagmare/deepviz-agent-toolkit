@@ -1,0 +1,93 @@
+{
+  "source_pythonpath": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r03-02-security-ses_de5678328ffeYCFXQhRPKd4a9h\\python\\deepviz\\src",
+  "transport": "actual SDK stdio subprocess",
+  "cases": [
+    {
+      "case": "duplicate_keys",
+      "input": "[{\"name\":\"original\",\"name\":\"replacement\",\"value\":1}]",
+      "is_error": false,
+      "warnings": [],
+      "cached_records": [
+        {
+          "name": "replacement",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "case": "parent_traversal",
+      "is_error": true,
+      "message": "Error executing tool normalize_data: File reference escapes the configured data directory",
+      "traceback_exposed": false
+    },
+    {
+      "case": "windows_absolute",
+      "is_error": true,
+      "message": "Error executing tool normalize_data: File references must be relative to the configured data directory; no URLs",
+      "traceback_exposed": false
+    },
+    {
+      "case": "remote_url",
+      "is_error": true,
+      "message": "Error executing tool normalize_data: File references must be relative to the configured data directory; no URLs",
+      "traceback_exposed": false
+    },
+    {
+      "case": "raw_path",
+      "is_error": true,
+      "message": "Error executing tool normalize_data: Use inline JSON data or an explicit {file: relative_path} reference",
+      "traceback_exposed": false
+    },
+    {
+      "case": "encoded_traversal",
+      "is_error": true,
+      "message": "Error executing tool normalize_data: File reference escapes the configured data directory",
+      "traceback_exposed": false
+    },
+    {
+      "case": "expired_handle",
+      "is_error": true,
+      "message": "Error executing tool normalize_data: Unknown or expired dataset_id; normalize the source again",
+      "traceback_exposed": false
+    },
+    {
+      "case": "deep_json",
+      "is_error": true,
+      "message": "Error executing tool normalize_data: maximum recursion depth exceeded while decoding a JSON array from a unicode string",
+      "traceback_exposed": false
+    }
+  ],
+  "recovery_after_errors": {
+    "is_error": false,
+    "result": {
+      "dataset_id": "9aba8c0fa55c4f7ab15a9379b57934eb",
+      "input_count": 1,
+      "output_count": 1,
+      "strategy": "sample",
+      "warnings": [],
+      "profile": {
+        "fields": [
+          "x",
+          "y"
+        ],
+        "numeric_fields": [
+          "y"
+        ],
+        "temporal_fields": [],
+        "categorical_fields": [
+          "x"
+        ],
+        "nonnegative_fields": [
+          "y"
+        ],
+        "positive_total_fields": [
+          "y"
+        ],
+        "fields_truncated": false,
+        "profiled_rows": 1
+      }
+    }
+  },
+  "sentinel_unchanged": true,
+  "resource_count": 2
+}
