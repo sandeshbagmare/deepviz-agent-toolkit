@@ -1,0 +1,149 @@
+{
+  "scope": "Own R04 execution evidence staged checkpoint; UTF-16 logs are preserved byte-identical, text attributes normalize CRLF JSON/XML. Original raw SHA assertions refer to capture bytes, not LF Git blobs. No source/PNG identity mismatch concealed.",
+  "files": [
+    {
+      "path": "docs/coordination/evidence/R04-inspector-green.log",
+      "capture_working_file_sha256": "630968d9ec2385761bf352be78fe2e5210857ae21ff3e1a5ddfabc97aa590a76",
+      "published_git_blob_sha256": "630968d9ec2385761bf352be78fe2e5210857ae21ff3e1a5ddfabc97aa590a76",
+      "capture_bytes": 394,
+      "published_bytes": 394,
+      "relation": "byte-identical"
+    },
+    {
+      "path": "docs/coordination/evidence/R04-inspector-integrated-green.log",
+      "capture_working_file_sha256": "40f8d768e89a71dfaf661a6f93182920cec20aa427c4a40c190fcaf0bbb1144d",
+      "published_git_blob_sha256": "40f8d768e89a71dfaf661a6f93182920cec20aa427c4a40c190fcaf0bbb1144d",
+      "capture_bytes": 394,
+      "published_bytes": 394,
+      "relation": "byte-identical"
+    },
+    {
+      "path": "docs/coordination/evidence/R04-inspector-red.log",
+      "capture_working_file_sha256": "153fbdfdf3f5dc5bbf5f87e9a144cef17702965818575e255e43f0d1dc2e6ff7",
+      "published_git_blob_sha256": "153fbdfdf3f5dc5bbf5f87e9a144cef17702965818575e255e43f0d1dc2e6ff7",
+      "capture_bytes": 6154,
+      "published_bytes": 6154,
+      "relation": "byte-identical"
+    },
+    {
+      "path": "docs/coordination/evidence/R04-inspector-ruff.log",
+      "capture_working_file_sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+      "published_git_blob_sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+      "capture_bytes": 42,
+      "published_bytes": 42,
+      "relation": "byte-identical"
+    },
+    {
+      "path": "docs/coordination/evidence/R04-publication.json",
+      "capture_working_file_sha256": "0b8984bc30a4b20230e26dcc514c057f0bc03cbf91660efb0c2c53698d71c3ec",
+      "published_git_blob_sha256": "5c2d813c97965ecc7669854e7d317356e67327e52b34b77ebb6528bc133979ec",
+      "capture_bytes": 1908,
+      "published_bytes": 1856,
+      "relation": "Git text CRLF-to-LF normalization"
+    },
+    {
+      "path": "docs/coordination/evidence/R04-pytest-failure-index-6d0e72e.json",
+      "capture_working_file_sha256": "6d9159768db7e095417c281da0a8316aae871542a4f069325a4a7f3d7a600c27",
+      "published_git_blob_sha256": "23e71c6d2b3c790b27cbd88230f0cbe7e72dbdfe51cea6833b563580de1ce060",
+      "capture_bytes": 23503,
+      "published_bytes": 23254,
+      "relation": "Git text CRLF-to-LF normalization"
+    },
+    {
+      "path": "docs/coordination/evidence/R04-pytest-full-6d0e72e.log",
+      "capture_working_file_sha256": "ba72a43b8d0acec1a15b6547f5f0bfa112852666872ff109a3fc8147f0ff998b",
+      "published_git_blob_sha256": "ba72a43b8d0acec1a15b6547f5f0bfa112852666872ff109a3fc8147f0ff998b",
+      "capture_bytes": 90020,
+      "published_bytes": 90020,
+      "relation": "byte-identical"
+    },
+    {
+      "path": "docs/coordination/evidence/R04-pytest-full-6d0e72e.xml",
+      "capture_working_file_sha256": "eb28807e477f615b4db540ec8b5dfdc56815d81f324582158cbd09b45320143e",
+      "published_git_blob_sha256": "5b5a891bbfcad2a4f948ddf0617527496d16432b34ec36f773876263b2d4eb97",
+      "capture_bytes": 499953,
+      "published_bytes": 499428,
+      "relation": "Git text CRLF-to-LF normalization"
+    },
+    {
+      "path": "docs/coordination/evidence/R04-remote-prepublication.json",
+      "capture_working_file_sha256": "4de2414e8e57a3892ad9c2b7af383d47865bca4b7df5327997c87c7d2e87a594",
+      "published_git_blob_sha256": "f3abf5be62d7ec5dc743759e649db28c83267613700f03d8b4bb5cb046abe68a",
+      "capture_bytes": 597,
+      "published_bytes": 581,
+      "relation": "Git text CRLF-to-LF normalization"
+    },
+    {
+      "path": "docs/coordination/evidence/R04-theme-focused.log",
+      "capture_working_file_sha256": "20e4510217761fc2a6edf2bf719a970bb79667f0df4bde46e754e7f66a915a8b",
+      "published_git_blob_sha256": "20e4510217761fc2a6edf2bf719a970bb79667f0df4bde46e754e7f66a915a8b",
+      "capture_bytes": 204,
+      "published_bytes": 204,
+      "relation": "byte-identical"
+    },
+    {
+      "path": "docs/coordination/evidence/R04-theme-integrated-capture.log",
+      "capture_working_file_sha256": "fd04931c385d01e528b89a6130abd017c4863e9d1911d20d9484023c0eef85c9",
+      "published_git_blob_sha256": "fd04931c385d01e528b89a6130abd017c4863e9d1911d20d9484023c0eef85c9",
+      "capture_bytes": 674,
+      "published_bytes": 674,
+      "relation": "byte-identical"
+    },
+    {
+      "path": "docs/coordination/evidence/R04-theme-integrated-focused.log",
+      "capture_working_file_sha256": "372bb1490ee30587e8b69334f3fdce90f70ed9dc03063717776ecebb7d65adc5",
+      "published_git_blob_sha256": "372bb1490ee30587e8b69334f3fdce90f70ed9dc03063717776ecebb7d65adc5",
+      "capture_bytes": 204,
+      "published_bytes": 204,
+      "relation": "byte-identical"
+    },
+    {
+      "path": "docs/coordination/evidence/R04-theme-integrated-generation.log",
+      "capture_working_file_sha256": "e133ac6b1d5e55823e63c5aca829eae42ca49ee836c2c8941fd0a1f2a953bd09",
+      "published_git_blob_sha256": "e133ac6b1d5e55823e63c5aca829eae42ca49ee836c2c8941fd0a1f2a953bd09",
+      "capture_bytes": 1724,
+      "published_bytes": 1724,
+      "relation": "byte-identical"
+    },
+    {
+      "path": "docs/coordination/evidence/R04-theme-integrated-mypy.log",
+      "capture_working_file_sha256": "78f4eddeecec3ff5f4e648b8876206c11c8e0de446e84cf14aa1e97fd122d67c",
+      "published_git_blob_sha256": "78f4eddeecec3ff5f4e648b8876206c11c8e0de446e84cf14aa1e97fd122d67c",
+      "capture_bytes": 90,
+      "published_bytes": 90,
+      "relation": "byte-identical"
+    },
+    {
+      "path": "docs/coordination/evidence/R04-theme-integrated-ruff.log",
+      "capture_working_file_sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+      "published_git_blob_sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+      "capture_bytes": 42,
+      "published_bytes": 42,
+      "relation": "byte-identical"
+    },
+    {
+      "path": "docs/coordination/evidence/R04-theme-integrated-summary.json",
+      "capture_working_file_sha256": "0ceba4f21e074de1c58d7a871ac3fe8e8b667cdfb42676d81f6e4323b452f8d6",
+      "published_git_blob_sha256": "dd120168bfdb777680f405bb9d5b082716ad1c721c4c5ce3f185b21bbf76d9c7",
+      "capture_bytes": 3601,
+      "published_bytes": 3499,
+      "relation": "Git text CRLF-to-LF normalization"
+    },
+    {
+      "path": "docs/coordination/evidence/R04-theme-module-identity.log",
+      "capture_working_file_sha256": "bdbb3ea1ec35227d4bfcc5dbf7fab6b3a0c43b773c7b18bf6e14e15c5d7e312f",
+      "published_git_blob_sha256": "bdbb3ea1ec35227d4bfcc5dbf7fab6b3a0c43b773c7b18bf6e14e15c5d7e312f",
+      "capture_bytes": 1448,
+      "published_bytes": 1448,
+      "relation": "byte-identical"
+    },
+    {
+      "path": "docs/verification/artifacts/r04-dashboard-theme/antv-dashboard-mixed.png",
+      "capture_working_file_sha256": "a9aa2db2cf1ba9dde0ac231c31568157b607ae295d1335a545c712f7cc331735",
+      "published_git_blob_sha256": "a9aa2db2cf1ba9dde0ac231c31568157b607ae295d1335a545c712f7cc331735",
+      "capture_bytes": 38734,
+      "published_bytes": 38734,
+      "relation": "byte-identical"
+    }
+  ]
+}

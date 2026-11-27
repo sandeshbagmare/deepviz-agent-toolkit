@@ -1,31 +1,77 @@
 # C17 live slot register
 
-Updated 2026-11-27; C17 owns this file. Hard22 global INCLUDING C00/C17/all workers at every level. C18 completed and freed its slot; C17 now has full22-inclusive admission authority. Query actual active endpoint before each launch. Idle sessions preserved, not inferred complete. No worker may spawn. N01-N20 actually launched:20 children +2 reserved coordinator slots. Latest returned completion N01 is idle with changes-required report, eligible for final-candidate recheck only after fixes. Reports are `docs/coordination/reports/<matching task filename>`.
+## Latest R10 and actual candidate push
+
+R04nonforcepush **340e5c5→3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab** exit0, immediate`git ls-remote`exit0exactSHA. Partialproductcheckpoint,publishedNOTgreen/release/merge; docscheckpointfollows. LatestR10rolling18–22activechartingsubagents/target22inclR04+rootseparate; rootadmission/actualresumes/returns in**R03-live-slots.md**, datedall21snapshotnotlivecount. Everyagentownscopedbranch/meaningfulcommits/nonforcepush/remoteSHAreadbackNOWauthorized; R04exclusivesharedcandidate/defaultintegration/issues/PRs. R10newprobes/reports/currentverification only exceptexplicitR07source09/16. Rootpointofcontact;fullproduction/900legitimatecreatedANDresolvedissuesunchanged. Nofiller/nospawning/no historicalbypass. R03-20Plotlyanchor/R03-12TSclippedtickretainedR04sourcefollowups; newnormalizer/cleanupfindingsqueueafter16handback.
+
+## Latest product milestone and publication — 2026-11-27
+
+R04productHEAD**3aa521a5d41e8f5cfcb21a5efc008bb3ff2cfcab**: theme6d0e72e/inheritedproducer50cf2e6; inspector3aa521a/producer7a0cde3. Scopechecks inR04report. Root POINT OF CONTACT/dispatchonly; fullproduction/commits/900legitimatecreatedANDresolvedissues unchanged. R08withdrawndraftgrantsno blanket21publication. R04publishesmeaningfulscopedcheckpointnonforce+remoteSHAreadbacknow; PRdraft/mergegatesunchanged. Dated22subagents+root snapshotNOTclaimall21stillrunning afterreturns; rootR03supportregisterauthoritativelyrecordsactualresumes/returns. R07releasesONLY09helpernull/16normalizers inisolatedbranches;01normalizer/15cleanupqueuedAFTER16handback, enginescountmappingR04retained. RootauthorizednarrowhistoricalSTATE/ROSTERredirects; R04BRIEF/MAINbootstrapupdated. NootherGitHub/sourceauthoritydelegated.
+
+## Current R04 ownership and linked root dispatch — 2026-11-27
+
+This section supersedes dated ownership/budgets/activity below; preserve them as provenance. R02 reached an observed external100-model-turn runtimecap. Saved pre-write succession `tasks/R04-coordinator-rotation.md` assigns R04 `ses_de56ad930fferPKGibj5Mc304B` exclusive product/source/sharedcandidateGit/GitHub/canonical/mainC17register; actual native session-move confirmed and acceptance saved in `docs/agent-state/ses_de56ad930fferPKGibj5Mc304B.md`. Root `ses_de58eb849ffeOMwi2kb0VSqy3B` owns supported own-child dispatch ONLY and supporting **`R03-live-slots.md`**, the authoritative per-worker reservations/actual-returned-ID feed. R04/workers never spawn; no historical/canceled/API-parentage bypass.
+
+Latest user rule `tasks/R05-22-subagents.md`: **22 ACTIVE SUBAGENTS INCLUDINGR04**, plus mainroot=23sessionsmaximum; R04+21actual useful workers. This replaces older22-total/18–20 wording; no old count is active. Root's supported parallel launch returned all21 IDs; authenticated observation01:23:17UTC independently matched all titles/parentIDs to root; `evidence/R03-dispatch-classified.json` classified **22 actual charting subagents + root**, with one unrelated top-level guard proxy excluded. `R03-live-slots.md` contains exact role/ID map and launch receipt. Worker note adoption/product acceptance remains unverified until reports; no new capacity or launches. R04 does not interfere with unrelated user sessions.
+
+Current product source independently observed `release/candidate` at `0c5fa825f7058f8c5a4ab6ec9597b9fd5fd4ca43`,47ahead of local tracking. Preserved dirty main notes/artifacts; inherited theme worktree branch `fix/r02-dashboard-theme` contains only modified `engines.py`+NEW`test_r02_chart_background.py`. Saved6RED genuine; lastGREENprocess4ZEROtests due nonexistent path, NOT pass. Next corrected focused tests/actual AntVimage/lint/types, scoped commit/integration only after green. R04 execution `reports/R04-integration.md`; no final acceptance implied.
+
+## Restart admission — R02 succession, 2026-11-27
+
+**This section supersedes historical activity counts below.** Root `ses_de58eb849ffeOMwi2kb0VSqy3B` observed only itself from a fresh successful `opencode api get /api/session/active` immediately before this reservation. Historical C17's supported resume was rejected as not this session's child; zero workers resumed and no ownership bypass attempted. Explicit pre-write succession: `tasks/R02-coordinator-succession.md`.
+
+The one reserved R02 product-coordinator slot **actually launched** through the supported subagent tool and returned `ses_de588aa3bffeOdCphxK9WVUZEK`. Root + successor = 2 admitted sessions from this action under hard 22, not a claim about future worker activity. Root has recorded this actual ID and now transfers ongoing exclusive C17-role register/product/shared-checkpoint/dispatch ownership to R02. Root will not edit this register or dispatch product workers further. No historical/canceled sessions were relaunched. All historical IDs/notes/worktrees below are preserved, not presumed completed or active.
+
+| Slot | Actual session | Assignment | Observed/dispatch state |
+| --- | --- | --- | --- |
+| Recovery root | `ses_de58eb849ffeOMwi2kb0VSqy3B` | own recovery notes; R02 one-slot handoff | running in latest admission endpoint |
+| R02 / successor C17 role | `ses_de588aa3bffeOdCphxK9WVUZEK` | `tasks/R02-coordinator-succession.md` | actual native session-move ID confirmed; ownership accepted in own actual-ID note; source/runtime/remote reconciliation next |
+
+R02 acknowledgment: exclusive ongoing successor C17-role ownership accepted; first durable checkpoint is `docs/agent-state/ses_de588aa3bffeOdCphxK9WVUZEK.md`. Root's recovery-history files remain root-owned. No new workers admitted by this acknowledgment; historical activity below is not live evidence.
+
+Current local source observed: `release/candidate` at `5d061c5b7ea539d435ec299550651c5b02d8bd20`; existing dirty files preserved. No current product/remote pass is implied. R02 must read repository rules, save its own actual-ID acceptance and reconcile runtime/source/remote before further dispatch.
+
+## CURRENT20:08:32UTC — supersedes preserved historical rows below
+
+ALL90/100turn caps REVOKED; unlimited rolling work,18–20workers plus coordinators, hard22across levels. Temporary union19N-workers listed in C17-unlimited-rolling-steering.md+C00/C17+C19=22unique maximum. C00's grandchild resume rejected, zero launched/no bypass; C00 owns only direct-child C19 audit. No N04/N16/C18/new IDs admitted.
+
+Eleven saved integrated-wave resumes ACTUALLY returned matching existing IDs: N06 ses_de6d6a352ffed1CW0Vmdytkx9w; N03 ses_de6d75294ffeDUGYOhaHp1pgH3; N18 ses_de6d35898ffeRXd361GiG9aGSO; N11 ses_de6d4ff6bffe8vUW9GONL49CgM; N12 ses_de6d4cdf2ffetpl2cqXB9EO1jQ; N01 ses_de6da09ecffeMwVLSxt0fA4s3K; N13 ses_de6d497afffeA74IE17jywReN7; N08 ses_de6d5a886ffeRm14K2JOMnTpSa; N17 ses_de6d39a86ffee58AlO2c44vVZy; N19 ses_de6d31bccffePlhZK7dUXIRcXl; N20 ses_de6d276b7ffebCKRKCWGI02iCv. Actual authenticatedCLI20:08:32UTC16running confirms all11+C00/C17/N05/N10/C19(actual ses_de686baa5ffe9Rru3OaEZDdr7g). EvidenceC17-active-after-eleven-resumes.json, not projection. N09/N14/N15/N21 returned complete during dispatch; N02/N07 idle. These six union members are eligible for fresh meaningful rolling scopes after reservation; no worker spawns.
+
+Six rolling resumes ACTUALLY returned matching existingIDs: N02ses_de6d9dcf1ffe5D9TNNF3B2hP4V; N07ses_de6d66e34ffeUCgR75MN8Lp5Ot; N09ses_de6d5708dffecAS6pW5xkiX8ai; N14ses_de6d45efeffe60doqMl5BIZH8l; N15ses_de6d41cc7ffeR2WBbl8vEVroyA; N21ses_de6bd31a4ffe0uheGRd0XIih9m. Successful authenticatedCLI20:13:44UTC confirms **22ACTUALrunning:20workers+C00/C17**, exact machine evidenceC17-active-after-rolling-six.json. All19allowedN-workers plusC19 observed; NO capacity for any new ID. Wait for real completion notification, then reconcile before useful same-ID refill. Scope C17-rolling-completion.md. Current main14c7b27 includes N05all3/N07all3/N14generator/N09inspector tests, each inspected/cherry-picked/readback0. Earlier dated tables/projections below historical, not current capacity.
+
+Updated 2026-11-27; C17 owns this file. Hard22 global INCLUDING C00/C17/all workers at every level. No worker may spawn. Latest actual active endpoint exit0 saved evidence/C17-active-admission-next-wave.json:10running C00/C17/N03/N04/N05/N08/N09/N10/N18/N21. Reserve8existing-child concrete followups below to target18; refresh endpoint after dispatch and before additional launches. Returned completion means bounded assignment finished, NOT final-source signoff. All historical IDs/branches preserved.
 
 | Slot | Actual session | Assignment | State |
 |---|---|---|---|
-| C00 | ses_de6e9da62ffe4nQ5DMuAaht0xL | recovery docs only | active at initial check |
+| C00 | ses_de6e9da62ffe4nQ5DMuAaht0xL | recovery docs/canonical initial handoff only | actual running latest endpoint |
 | C17 | ses_de6ddc25affeMo5NjdAuqfub72 | exclusive candidate source/Git/GitHub writer and dispatcher | active |
 | C18 | ses_de6dc95eeffej0nH3Io6H3qwqU | recovery audit | completed; absent from actual endpoint, slot released |
-| N01 | ses_de6da09ecffeMwVLSxt0fA4s3K | tasks/N01-data-review.md / reports/N01-data-review.md | completed baseline review, changes required; preserve session for final recheck |
-| N02 | ses_de6d9dcf1ffe5D9TNNF3B2hP4V | tasks/N02-package-review.md | actually running |
-| N03 | ses_de6d75294ffeDUGYOhaHp1pgH3 | tasks/N03-ts-correctness.md | launched |
-| N04 | ses_de6d7146effeU4MmLKPiDmTAA1 | tasks/N04-python-data.md | launched |
-| N05 | ses_de6d6daa8fferyDF90guBdKcM1 | tasks/N05-python-render.md | launched |
-| N06 | ses_de6d6a352ffed1CW0Vmdytkx9w | tasks/N06-agent-tools.md | launched |
-| N07 | ses_de6d66e34ffeUCgR75MN8Lp5Ot | tasks/N07-build-ci.md | launched |
+| N01 | ses_de6da09ecffeMwVLSxt0fA4s3K | N01-data-review; followup-wave N01 schema/MCPreview | resumedactualIDreturned; running19:36endpoint |
+| N02 | ses_de6d9dcf1ffe5D9TNNF3B2hP4V | N02-package-review; followup-wave N02 CI/inspectorreview | resumedactualIDreturned; running19:36endpoint |
+| N03 | ses_de6d75294ffeDUGYOhaHp1pgH3 | tasks/N03-ts-correctness.md | actual running latest endpoint |
+| N04 | ses_de6d7146effeU4MmLKPiDmTAA1 | tasks/N04-python-data.md | completed3sourcecommits integratedf650964/3051823/235e7e3; nofinalscalepass |
+| N05 | ses_de6d6daa8fferyDF90guBdKcM1 | tasks/N05-python-render.md; C17-N05-asset-replay-findings | actual running latest endpoint |
+| N06 | ses_de6d6a352ffed1CW0Vmdytkx9w | tasks/N06-agent-tools.md | completed699d5cb integrated65b3fc4 |
+| N07 | ses_de6d66e34ffeUCgR75MN8Lp5Ot | N07-build-ci; followup-wave N07 marker/browser/evidence | resumedactualIDreturned; running19:36endpoint |
+| N08 | ses_de6d5a886ffeRm14K2JOMnTpSa | tasks/N08-docs.md | completed2docs/examplecommits integrated3be5614/8512fde; finalrefreshlater |
+| N09 | ses_de6d5708dffecAS6pW5xkiX8ai | C17-gallery-wave N09 acceptance/inspectorcontrols | RESERVED1/6 aftercompletedaa7b1b2→93c7d35 |
+| N10 | ses_de6d5314cffeQwROKOBO2BHCCQ | C17-gallery-wave N10 browsergallerycapture | RESERVED2/6 aftercompleted15da7cf→3f08a23 |
+| N11 | ses_de6d4ff6bffe8vUW9GONL49CgM | N11-scale; followup-wave N11 bytepolicyoracles | resumedactualIDreturned; running19:36endpoint |
+| N12 | ses_de6d4cdf2ffetpl2cqXB9EO1jQ | N12-parity; followup-wave N12 contractedgeQA | resumedactualIDreturned; running19:36endpoint |
+| N13 | ses_de6d497afffeA74IE17jywReN7 | N13-transport; followup-wave N13 strictMCP rerun | resumedactualIDreturned; running19:36endpoint |
+| N14 | ses_de6d45efeffe60doqMl5BIZH8l | C17-gallery-wave N14 realartifactgenerator | RESERVED3/6; baselineconsumers preserved |
+| N15 | ses_de6d41cc7ffeR2WBbl8vEVroyA | C17-gallery-wave N15 newdocsindependentreview | RESERVED4/6; originalauditpreserved |
+| N16 | ses_de6d3d9adffegm9hu8tHIsSqfQ | tasks/N16-remote-audit.md | completed baseline remoteaudit; no fake900closures |
+| N17 | ses_de6d39a86ffee58AlO2c44vVZy | C17-gallery-wave N17 observationpolicyupdates | RESERVED5/6; genuineDecimal/replayfailuresmustremain |
+| N18 | ses_de6d35898ffeRXd361GiG9aGSO | tasks/N18-ts-render.md | actual running latest endpoint |
+| N19 | ses_de6d31bccffePlhZK7dUXIRcXl | N19-formats; followup-wave N19 TStextoracles | resumedactualIDreturned; running19:36endpoint |
+| N20 | ses_de6d276b7ffebCKRKCWGI02iCv | N20-dependency-audit; followup-wave N20 artifactnotices | resumedactualIDreturned; running19:36endpoint |
+| N21 | ses_de6bd31a4ffe0uheGRd0XIih9m | C17-gallery-wave N21 TSbytepolicyoracles | RESERVED6/6; completedbaseline10M preserved |
 
-Next: integrate tested scoped source commits, resume final reviewer/tester checks on exact frozen candidate; refill only useful bounded remaining lanes after actual active admission. Candidate baseline b6abc8d complete. Twenty productive nested lanes plus C00/C17 reserve full22 capacity. Historical canceled sessions preserved, not restarted. Runtime may show C00 idle but its slot remains reserved; never launch22 additional children.
-| N08 | ses_de6d5a886ffeRm14K2JOMnTpSa | tasks/N08-docs.md | launched |
-| N09 | ses_de6d5708dffecAS6pW5xkiX8ai | tasks/N09-static-tester.md | launched |
-| N10 | ses_de6d5314cffeQwROKOBO2BHCCQ | tasks/N10-browser-tester.md | launched |
-| N11 | ses_de6d4ff6bffe8vUW9GONL49CgM | tasks/N11-scale.md | launched |
-| N12 | ses_de6d4cdf2ffetpl2cqXB9EO1jQ | tasks/N12-parity.md | launched |
-| N13 | ses_de6d497afffeA74IE17jywReN7 | tasks/N13-transport.md | launched |
-| N14 | ses_de6d45efeffe60doqMl5BIZH8l | tasks/N14-distributions.md | launched |
-| N15 | ses_de6d41cc7ffeR2WBbl8vEVroyA | tasks/N15-research-audit.md | launched |
-| N16 | ses_de6d3d9adffegm9hu8tHIsSqfQ | tasks/N16-remote-audit.md | launched |
-| N17 | ses_de6d39a86ffee58AlO2c44vVZy | tasks/N17-boundaries.md | launched |
-| N18 | ses_de6d35898ffeRXd361GiG9aGSO | tasks/N18-ts-render.md | launched |
-| N19 | ses_de6d31bccffePlhZK7dUXIRcXl | tasks/N19-formats.md | launched |
-| N20 | ses_de6d276b7ffebCKRKCWGI02iCv | tasks/N20-dependency-audit.md | launched; final reserved product slot |
+N21's old pending-ID reservation was historical and is consolidated into its actual returned-ID row, not a secondworker. Eightfollowup-wave toolreturnsactuallymatchedall8registeredIDs; endpoint19:36:52UTC12running confirms them. Sixnewconcretefollowups reserved12+6=18observedprojection, C00returnwould19, hard22. No newworkerlaunch/oldcanceledrestart. ReturnsrecordsameactualIDs immediately; reservationnotobservedactive. Nextfinalnormalizationverification/producerintegration/gallerythenfreeze-gates. Currentbaselinepassesalonearenotsignoff.
+
+Gallerywave6/6actualresume toolsreturnedexistingregisteredIDs N09ses_de6d5708dffecAS6pW5xkiX8ai,N10ses_de6d5314cffeQwROKOBO2BHCCQ,N14ses_de6d45efeffe60doqMl5BIZH8l,N15ses_de6d41cc7ffeR2WBbl8vEVroyA,N17ses_de6d39a86ffee58AlO2c44vVZy,N21ses_de6bd31a4ffe0uheGRd0XIih9m; all returnedIDs matched. Historical projections are not live headcounts.
+
+## Integrated wave reservation,19:56:54UTC
+
+Successful authenticated CLI endpoint observed8running: C17,N05,N09,N10,N14,N15,N17,N21. Saved evidence/C17-active-admission-integrated-wave.json. N09/N17 completionnotifications overlap this snapshot. RESERVE existing own-child N01,N03,N06,N08,N11,N12,N13,N17,N18,N19,N20 for exact scoped C17-integrated-wave.md assignments. At most18 projected inclusive (19 if C00 returns), hard22; no new/canceled/unrelated sessions. Returned actualIDs pending, not claimed dispatched. All prior baseline/producer completions remain nonfinal. N03six/N18one now integrated HEAD28878a6; own-source TS validation only. C00/N02/N04/N07/N16 currently unassigned/idle, not silently resumed. Refresh actual endpoint after returned IDs.
