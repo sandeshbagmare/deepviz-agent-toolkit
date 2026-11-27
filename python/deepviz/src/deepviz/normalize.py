@@ -334,6 +334,15 @@ def _expand(value: Any, counts: Counter[str], depth: int = 0, record: bool = Fal
         if len(value) > _MAX_FIELDS:
             raise ValueError(f"Input exceeds {_MAX_FIELDS} fields")
         _graphql_errors(value, counts)
+        # Inspect only existing arrays; never consume a caller's column iterator for inference.
+        scalar_columns = not record and all(
+            isinstance(column, (list, tuple)) and all(
+                not isinstance(item, Mapping) and not _iterable(item) for item in column
+            ) for column in value.values()
+        ) and not (
+            len(value) == 1 and next(iter(value)) in {"nodes", "edges"}
+            and all(item is None for item in next(iter(value.values())))
+        )
         if "node" in value and set(value).issubset({"node", "cursor"}):
             if value["node"] is None:
                 counts["null_nodes"] += 1
@@ -342,7 +351,7 @@ def _expand(value: Any, counts: Counter[str], depth: int = 0, record: bool = Fal
             return
         protocol = "data" in value or "edges" in value or "nodes" in value
         nested_wrapper = not record and all(isinstance(child, Mapping) for child in value.values())
-        connection = _connection(value) if protocol or nested_wrapper else None
+        connection = _connection(value) if not scalar_columns and (protocol or nested_wrapper) else None
         if connection is not None:
             if not protocol and not any(wrapper in value for wrapper in _WRAPPERS):
                 raise ValueError("Custom GraphQL wrapper requires an explicit data_path")
@@ -364,7 +373,7 @@ def _expand(value: Any, counts: Counter[str], depth: int = 0, record: bool = Fal
             yield value
             return
         for wrapper in _WRAPPERS:
-            if wrapper in value and set(value).difference({wrapper}).issubset(_METADATA):
+            if not scalar_columns and wrapper in value and set(value).difference({wrapper}).issubset(_METADATA):
                 wrapped = value[wrapper]
                 if isinstance(wrapped, Mapping) or _iterable(wrapped):
                     yield from _expand(wrapped, counts, depth + 1)

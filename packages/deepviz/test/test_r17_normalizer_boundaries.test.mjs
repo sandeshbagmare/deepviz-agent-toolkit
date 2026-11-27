@@ -40,3 +40,45 @@ test('other mean preserves tiny values and excludes booleans/null/numeric string
   assert.ok(result.warnings.some(message=>/non-numeric/i.test(message)));
   assert.ok(result.warnings.some(message=>/other/i.test(message)));
 });
+
+for(const name of ['rows','records','items','results','data','nodes','edges','pages'])for(const mapped of [false,true])for(const encoded of [false,true]) {
+  test(`scalar column ${name} ${mapped?'explicit-y':'inferred'} ${encoded?'encoded-json':'object'}`,()=>{
+    const data={[name]:[true,null,false]};
+    const result=normalize(encoded?JSON.stringify(data):data,{kind:'table',aggregation:'none',...(mapped?{y:name}:{})});
+    assert.equal(result.input_count,3);assert.equal(result.strategy,'none');assert.deepEqual(result.warnings,[]);
+    assert.deepEqual(result.records,[{[name]:true},{[name]:null},{[name]:false}]);
+  });
+}
+for(const stream of [false,true])test(`scalar sequence and nested flags survive ${stream?'async-one-pass':'records'}`,async()=>{
+  const rows=[true,null,false,{flags:[true,null,false]}];
+  async function* records(){yield* rows;}
+  const result=stream?await normalizeStream(records(),{kind:'table',aggregation:'none'}):normalize(rows,{kind:'table',aggregation:'none'});
+  assert.equal(result.input_count,4);assert.deepEqual(result.warnings,[]);
+  assert.deepEqual(result.records,[{index:0,value:true},{index:1,value:null},{index:2,value:false},{'flags.0':true,'flags.1':null,'flags.2':false}]);
+});
+for(const key of ['nodes','edges'])for(const [label,sibling] of [['scalar',{version:7}],['object',{audit:{source:'left'}}]])for(const mode of ['object','encoded-json','async-one-pass']) {
+  test(`connection ${key} rejects disappearing ${label} sibling ${mode}`,async()=>{
+    const source={[key]:key==='nodes'?[{id:1}]:[{node:{id:1}}],...sibling},spec={kind:'table',aggregation:'none'};
+    if(mode==='async-one-pass') {
+      async function* pages(){yield source;}
+      await assert.rejects(normalizeStream(pages(),spec),/ambiguous.*data_path/i);
+    } else assert.throws(()=>normalize(mode==='encoded-json'?JSON.stringify(source):source,spec),/ambiguous.*data_path/i);
+    assert.deepEqual(normalize(source,{...spec,data_path:key}).records,[{id:1}]);
+  });
+}
+test('custom connection wrapper requires explicit selection',()=>{
+  const source={payload:{nodes:[{id:1}]}};
+  assert.throws(()=>normalize(source,{kind:'table',aggregation:'none'}),/custom.*data_path/i);
+  assert.deepEqual(normalize(source,{kind:'table',aggregation:'none',data_path:'payload.nodes'}).records,[{id:1}]);
+});
+for(const key of ['nodes','edges'])test(`known nested ${key} connection preserves flags/nulls/metadata`,async()=>{
+  const node={id:1,flag:false,flags:[true,null,false]},nodes=key==='nodes'?[node,null]:[{node},{node:null}];
+  const source={data:{users:{[key]:nodes,totalCount:2}},errors:[{message:'partial'}]},spec={kind:'table',aggregation:'none'};
+  async function* pages(){yield source;}
+  for(const result of [normalize(source,spec),await normalizeStream(pages(),spec)]) {
+    assert.equal(result.input_count,1);
+    assert.deepEqual(result.records,[{id:1,flag:false,'flags.0':true,'flags.1':null,'flags.2':false}]);
+    assert.ok(result.warnings.some(message=>/errors/.test(message)));
+    assert.ok(result.warnings.some(message=>/null/i.test(message)));
+  }
+});

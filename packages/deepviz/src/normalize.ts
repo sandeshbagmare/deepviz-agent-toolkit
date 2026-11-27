@@ -83,7 +83,10 @@ function hasCollection(value: unknown, depth = 0): boolean {
 
 function graphqlConnection(value:Record<string,unknown>,depth=0):boolean {
   if(depth>MAX_DEPTH)throw new ValidationError('GraphQL response exceeds maximum depth');
-  if(Object.hasOwn(value,'edges') || Object.hasOwn(value,'nodes'))return true;
+  if(Object.hasOwn(value,'edges') || Object.hasOwn(value,'nodes')) {
+    if(Object.keys(value).some(key=>!['edges','nodes',...metadata].includes(key)))throw new ValidationError('Ambiguous GraphQL connection fields; select rows with data_path');
+    return true;
+  }
   const children=Object.entries(value).filter(([key])=>!metadata.includes(key)).map(([,child])=>child);
   if(children.length===1 && isObject(children[0]))return graphqlConnection(children[0],depth+1);
   if(children.length>1 && children.some(child=>isObject(child) && graphqlConnection(child,depth+1)))throw new ValidationError('Ambiguous GraphQL fields require an explicit data_path');
@@ -128,6 +131,7 @@ function* unpack(value: unknown, warn:Notice, depth = 0): Generator<unknown> {
       return;
     }
     const connection=graphqlConnection(value);
+    if(connection && depth===0 && !wrappers.some(key=>Object.hasOwn(value,key)))throw new ValidationError('Custom GraphQL wrapper requires an explicit data_path');
     if(Object.hasOwn(value,'edges') || Object.hasOwn(value,'nodes')) {
       if(Object.hasOwn(value,'edges') && Object.hasOwn(value,'nodes'))throw new ValidationError('GraphQL connection has both edges and nodes; choose data_path');
       const edges=Object.hasOwn(value,'edges');
