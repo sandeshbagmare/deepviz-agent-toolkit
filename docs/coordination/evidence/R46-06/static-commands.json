@@ -1,0 +1,46 @@
+[
+  {
+    "argv": [
+      "git",
+      "ls-tree",
+      "-r",
+      "--name-only",
+      "3eab699b61850a20e91132e16caf8c589085f9ee",
+      "--",
+      "python/deepviz/tests"
+    ],
+    "exit": 0,
+    "stdout_bytes": 1376,
+    "stdout_sha256": "5634036d2baeaff2c1fd6904f0c6a7999cef6f52fe88fdd21279c2be305c45c9"
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      "3eab699b61850a20e91132e16caf8c589085f9ee:python/deepviz/tests/test_backend_vega.py"
+    ],
+    "exit": 0,
+    "stdout_bytes": 19213,
+    "stdout_sha256": "7edd9b1d62419e182afb797edb63ae9ddd03cc1339a661aa13da68f73f034b62"
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      "3eab699b61850a20e91132e16caf8c589085f9ee:python/deepviz/src/deepviz/engines.py"
+    ],
+    "exit": 0,
+    "stdout_bytes": 44039,
+    "stdout_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225"
+  },
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "3eab699b61850a20e91132e16caf8c589085f9ee^"
+    ],
+    "exit": 0,
+    "stdout_bytes": 41,
+    "stdout_sha256": "ef56750c84ee5d7933a2983804ea8e2efbdfd60d317493c35327312b86f951a3"
+  }
+]

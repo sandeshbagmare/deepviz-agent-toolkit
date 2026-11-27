@@ -1,0 +1,114 @@
+[
+  {
+    "id": "ordinary-control",
+    "rows": [
+      {
+        "category": "A",
+        "value": 1.0
+      },
+      {
+        "category": "B",
+        "value": 1.0
+      }
+    ],
+    "input_count": 2,
+    "output_count": 2,
+    "original_values_and_rows_preserved": true,
+    "literal_expected_edges": [
+      [
+        0.0,
+        0.5
+      ],
+      [
+        0.5,
+        1.0
+      ]
+    ],
+    "actual_native_edges": [
+      [
+        0.0,
+        0.5
+      ],
+      [
+        0.5,
+        1.0
+      ]
+    ],
+    "literal_expected_widths": [
+      0.5,
+      0.5
+    ],
+    "actual_native_widths": [
+      0.5,
+      0.5
+    ],
+    "strict_literal_geometry_pass": true,
+    "warnings": [
+      "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred."
+    ],
+    "public_artifact_paths": [
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R46-06\\counterexample-20261127-r1\\ordinary-control\\deepviz-xhbdy4ob\\chart.svg",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R46-06\\counterexample-20261127-r1\\ordinary-control\\deepviz-xhbdy4ob\\chart.html",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R46-06\\counterexample-20261127-r1\\ordinary-control\\deepviz-xhbdy4ob\\manifest.json"
+    ],
+    "actual_public_svg_sha256": "4dbbc55cd725cee05bf8a104a3101b7f7a44282fa7e5ea7508f8aa508206fc07",
+    "actual_rasterized_svg_png": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R46-06\\counterexample-20261127-r1\\ordinary-control.png",
+    "PNG_sha256": "a71395d8409d46643f9145028eed168fbed208d2b7b13ab317cb30c0411a5c31"
+  },
+  {
+    "id": "finite-large-counterexample",
+    "rows": [
+      {
+        "category": "A",
+        "value": 1e+308
+      },
+      {
+        "category": "B",
+        "value": 1e+308
+      }
+    ],
+    "input_count": 2,
+    "output_count": 2,
+    "original_values_and_rows_preserved": true,
+    "literal_expected_edges": [
+      [
+        0.0,
+        0.5
+      ],
+      [
+        0.5,
+        1.0
+      ]
+    ],
+    "actual_native_edges": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "literal_expected_widths": [
+      0.5,
+      0.5
+    ],
+    "actual_native_widths": [
+      0.0,
+      0.0
+    ],
+    "strict_literal_geometry_pass": false,
+    "warnings": [
+      "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred."
+    ],
+    "public_artifact_paths": [
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R46-06\\counterexample-20261127-r1\\finite-large-counterexample\\deepviz-u_7b5q7i\\chart.svg",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R46-06\\counterexample-20261127-r1\\finite-large-counterexample\\deepviz-u_7b5q7i\\chart.html",
+      "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R46-06\\counterexample-20261127-r1\\finite-large-counterexample\\deepviz-u_7b5q7i\\manifest.json"
+    ],
+    "actual_public_svg_sha256": "6437a7d95638b85e3f6692679a6637cf592611275a4348be6faf6199e5dd9e4c",
+    "actual_rasterized_svg_png": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R46-06\\counterexample-20261127-r1\\finite-large-counterexample.png",
+    "PNG_sha256": "5477ff9044e18ef826795dcaa6663ff9de6b0ef8b9a163741376502fe57b794c"
+  }
+]

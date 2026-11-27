@@ -1,0 +1,230 @@
+{
+  "checked_at": "2026-11-27T18:15:45.840265+00:00",
+  "product_SHA": "3eab699b61850a20e91132e16caf8c589085f9ee",
+  "probe_SHA_unchanged_since_execution": "efd98139c9b2155baae78ba65ce5738a9cb790565dc8cb69f6465b7576755c59",
+  "all_original_artifacts_hash_match": true,
+  "two_actual_PNGs_OPENED": true,
+  "source_worktree_clean": true,
+  "protected_source_original_oracles_prior_probes_diff_exit": 0,
+  "own_probe_AST_all_JSON_parse_exit": 0,
+  "new_product_execution_or_browser_replay": 0,
+  "source_readback_commands": [
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:python/deepviz/src/deepviz/engines.py"
+      ],
+      "exit": 0,
+      "ranges_reviewed": [
+        [
+          1,
+          214
+        ],
+        [
+          447,
+          616
+        ],
+        [
+          715,
+          803
+        ]
+      ],
+      "Git_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:python/deepviz/src/deepviz/render.py"
+      ],
+      "exit": 0,
+      "ranges_reviewed": [
+        [
+          1,
+          234
+        ]
+      ],
+      "Git_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:python/deepviz/src/deepviz/models.py"
+      ],
+      "exit": 0,
+      "ranges_reviewed": [
+        [
+          1,
+          92
+        ]
+      ],
+      "Git_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:python/deepviz/src/deepviz/__init__.py"
+      ],
+      "exit": 0,
+      "ranges_reviewed": [
+        [
+          1,
+          27
+        ]
+      ],
+      "Git_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:python/deepviz/tests/test_backend_vega.py"
+      ],
+      "exit": 0,
+      "ranges_reviewed": [
+        [
+          1,
+          369
+        ]
+      ],
+      "Git_sha256": "7edd9b1d62419e182afb797edb63ae9ddd03cc1339a661aa13da68f73f034b62"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:python/deepviz/tests/test_render.py"
+      ],
+      "exit": 0,
+      "ranges_reviewed": [
+        [
+          1,
+          478
+        ]
+      ],
+      "Git_sha256": "385b6938046b6264f43d07b03085936f299b66fc4bd1ddb07aadbb25b8fdb452"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:python/deepviz/tests/test_n09_oracle_controls.py"
+      ],
+      "exit": 0,
+      "ranges_reviewed": [
+        [
+          1,
+          204
+        ]
+      ],
+      "Git_sha256": "e3801062ca3a2a552fe080620c7ec13b7f5c96c4c0a87e59fb693d0cd285bd0d"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:python/deepviz/tests/test_n09_dashboard_theme_regression.py"
+      ],
+      "exit": 0,
+      "ranges_reviewed": [
+        [
+          1,
+          55
+        ]
+      ],
+      "Git_sha256": "3c7f34c613ce37f93bca5da967341939abf01c386f0fc4b0daee257f08c6434f"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:python/deepviz/tests/test_n09_vega_area_regression.py"
+      ],
+      "exit": 0,
+      "ranges_reviewed": [
+        [
+          1,
+          42
+        ]
+      ],
+      "Git_sha256": "a3ff19717fdc112155fa0bf0fd7482db8441d7eee8699cb239fbbda33076694c"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:tests/test_acceptance_matrix.py"
+      ],
+      "exit": 0,
+      "ranges_reviewed": [
+        [
+          1,
+          621
+        ]
+      ],
+      "Git_sha256": "55e3100fb15f74aaf268680e6e4a68c9cf0aefe0a88dea45865c2465dbd31271"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:python/deepviz/src/deepviz/normalize.py"
+      ],
+      "exit": 0,
+      "ranges_reviewed": [
+        [
+          386,
+          405
+        ],
+        [
+          515,
+          563
+        ],
+        [
+          600,
+          636
+        ],
+        [
+          680,
+          769
+        ]
+      ],
+      "Git_sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:python/deepviz/src/deepviz/tools.py"
+      ],
+      "exit": 0,
+      "ranges_reviewed": [
+        [
+          1,
+          191
+        ]
+      ],
+      "Git_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "3eab699b61850a20e91132e16caf8c589085f9ee:python/deepviz/src/deepviz/cli.py"
+      ],
+      "exit": 0,
+      "ranges_reviewed": [
+        [
+          1,
+          60
+        ]
+      ],
+      "Git_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf"
+    }
+  ],
+  "source_verdict": "REQUEST CHANGES R46-06-F1",
+  "next_owner": "R04 five-engine/dashboard main-boundPRslice repair+newheadgates; separate ready model/data slices proceed independently"
+}

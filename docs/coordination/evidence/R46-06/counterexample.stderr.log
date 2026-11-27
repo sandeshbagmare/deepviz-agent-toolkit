@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\bagma\AppData\Local\Temp\opencode\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\tests\r46_probes\role06\treemap_finite.py", line 105, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Users\bagma\AppData\Local\Temp\opencode\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\tests\r46_probes\role06\treemap_finite.py", line 93, in main
+    assert results[1]["strict_literal_geometry_pass"], (
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Two equal finite positive weights must each retain half the native treemap width; successful zero-width geometry silently loses the entire mapped area

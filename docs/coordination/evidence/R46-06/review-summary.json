@@ -1,0 +1,158 @@
+{
+  "recorded_at": "2026-11-27T18:09:08.817521+00:00",
+  "product_SHA": "3eab699b61850a20e91132e16caf8c589085f9ee",
+  "full_private_functions_reviewed": [
+    "_vega:460-536",
+    "_echarts:539-616"
+  ],
+  "source_files": {
+    "python/deepviz/src/deepviz/engines.py": {
+      "lines": 803,
+      "Git_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225"
+    },
+    "python/deepviz/src/deepviz/render.py": {
+      "lines": 234,
+      "Git_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+    },
+    "python/deepviz/src/deepviz/normalize.py": {
+      "lines": 769,
+      "Git_sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2"
+    },
+    "python/deepviz/src/deepviz/tools.py": {
+      "lines": 191,
+      "Git_sha256": "ae2390e5616e2e455df6bfdb4471865bafa148eb2853ea5793d144f88a16e0cb"
+    },
+    "python/deepviz/src/deepviz/cli.py": {
+      "lines": 60,
+      "Git_sha256": "aabbf47d132c967eb738bacef57938ffae097d59779d9e08646fb01e508476bf"
+    },
+    "python/deepviz/tests/test_backend_vega.py": {
+      "lines": 369,
+      "Git_sha256": "7edd9b1d62419e182afb797edb63ae9ddd03cc1339a661aa13da68f73f034b62"
+    },
+    "python/deepviz/tests/test_render.py": {
+      "lines": 478,
+      "Git_sha256": "385b6938046b6264f43d07b03085936f299b66fc4bd1ddb07aadbb25b8fdb452"
+    },
+    "python/deepviz/tests/test_n09_oracle_controls.py": {
+      "lines": 204,
+      "Git_sha256": "e3801062ca3a2a552fe080620c7ec13b7f5c96c4c0a87e59fb693d0cd285bd0d"
+    },
+    "python/deepviz/tests/test_n09_dashboard_theme_regression.py": {
+      "lines": 55,
+      "Git_sha256": "3c7f34c613ce37f93bca5da967341939abf01c386f0fc4b0daee257f08c6434f"
+    },
+    "python/deepviz/tests/test_n09_vega_area_regression.py": {
+      "lines": 42,
+      "Git_sha256": "a3ff19717fdc112155fa0bf0fd7482db8441d7eee8699cb239fbbda33076694c"
+    },
+    "tests/test_acceptance_matrix.py": {
+      "lines": 621,
+      "Git_sha256": "55e3100fb15f74aaf268680e6e4a68c9cf0aefe0a88dea45865c2465dbd31271"
+    }
+  },
+  "historical7bc_engine_render_oracle_diff_exit": 0,
+  "historical_Vega_dashboard_failures": 10,
+  "historical_ECharts_line_area_coordinate_failures": 20,
+  "all_original_failure_oracles_unchanged": true,
+  "old_runtime_replays": 0,
+  "actual_new_counterexample_fixtures": 2,
+  "actual_ordinary_control_pass": 1,
+  "actual_strict_failure": 1,
+  "actual_probe_exit": 1,
+  "actual_product_render_calls": 2,
+  "local_vl_convert_version": "1.9.0",
+  "readonly_tooltip_source_reads": [
+    {
+      "package": "echarts",
+      "version": "6.1.0",
+      "file": "lib/component/tooltip/TooltipView.js",
+      "sha256": "06b21368cc62d04c7004ab6fb85746a7fda1e8934baada27bf8c0d4e1cc7e768",
+      "source_read_ranges": [
+        [
+          80,
+          95
+        ]
+      ]
+    },
+    {
+      "package": "echarts",
+      "version": "6.1.0",
+      "file": "lib/component/tooltip/TooltipRichContent.js",
+      "sha256": "b7aee3c71041495c9aa21ab1c1af0f3cce18c46762f5745150186e4995ca42d0",
+      "source_read_ranges": [
+        [
+          45,
+          144
+        ]
+      ]
+    }
+  ],
+  "browser_runs": 0,
+  "npm_or_package_builds": 0,
+  "source_original_oracle_edits": 0,
+  "API_calls": 0,
+  "new_source_verdict": "REQUEST CHANGES: R46-06-F1; old representationfailures not automaticallyproductbugs orwaived",
+  "actual_artifact_hashes": [
+    {
+      "file": "actual/ordinary-control/chart.svg",
+      "sha256": "4dbbc55cd725cee05bf8a104a3101b7f7a44282fa7e5ea7508f8aa508206fc07",
+      "bytes": 3565,
+      "raw_original_sha256": "4dbbc55cd725cee05bf8a104a3101b7f7a44282fa7e5ea7508f8aa508206fc07",
+      "newline_only_canonicalization": false
+    },
+    {
+      "file": "actual/ordinary-control/chart.html",
+      "sha256": "952d02504a8128ecb650d9cd2f7c299a4dab73a469185bed2f34ab81ea294b5d",
+      "bytes": 1647,
+      "raw_original_sha256": "952d02504a8128ecb650d9cd2f7c299a4dab73a469185bed2f34ab81ea294b5d",
+      "newline_only_canonicalization": false
+    },
+    {
+      "file": "actual/ordinary-control/manifest.json",
+      "sha256": "59ae3f5e143fa3102160337298d84cad4f2be2e9877622682dfb236cfb85b4dc",
+      "bytes": 3095,
+      "raw_original_sha256": "29cf4ac578aa7dbf427a68d1a343ad18d8b4e0088393f4787bb25631c830ecd1",
+      "published_bytes": 2962,
+      "newline_only_canonicalization": true
+    },
+    {
+      "file": "actual/ordinary-control/actual-svg-raster.png",
+      "sha256": "a71395d8409d46643f9145028eed168fbed208d2b7b13ab317cb30c0411a5c31",
+      "bytes": 27662,
+      "raw_original_sha256": "a71395d8409d46643f9145028eed168fbed208d2b7b13ab317cb30c0411a5c31",
+      "newline_only_canonicalization": false
+    },
+    {
+      "file": "actual/finite-large-counterexample/chart.svg",
+      "sha256": "6437a7d95638b85e3f6692679a6637cf592611275a4348be6faf6199e5dd9e4c",
+      "bytes": 3579,
+      "raw_original_sha256": "6437a7d95638b85e3f6692679a6637cf592611275a4348be6faf6199e5dd9e4c",
+      "newline_only_canonicalization": false
+    },
+    {
+      "file": "actual/finite-large-counterexample/chart.html",
+      "sha256": "d9e61f4f585042ba4ffd9427a54dccc75a0270758a18ea4cd74864ca6671fb01",
+      "bytes": 1708,
+      "raw_original_sha256": "d9e61f4f585042ba4ffd9427a54dccc75a0270758a18ea4cd74864ca6671fb01",
+      "newline_only_canonicalization": false
+    },
+    {
+      "file": "actual/finite-large-counterexample/manifest.json",
+      "sha256": "934466cdef213427db469594f0dbc1e47450b43bace48ae1f3306b161456b72e",
+      "bytes": 3135,
+      "raw_original_sha256": "e8ea40a2ad49d9bbef41c61c4c13abdee82bc270df30ae72044b9ae913b0243d",
+      "published_bytes": 3002,
+      "newline_only_canonicalization": true
+    },
+    {
+      "file": "actual/finite-large-counterexample/actual-svg-raster.png",
+      "sha256": "5477ff9044e18ef826795dcaa6663ff9de6b0ef8b9a163741376502fe57b794c",
+      "bytes": 25957,
+      "raw_original_sha256": "5477ff9044e18ef826795dcaa6663ff9de6b0ef8b9a163741376502fe57b794c",
+      "newline_only_canonicalization": false
+    }
+  ],
+  "next_owner": "R04 authorizedhelperrepair + strict new-headgate; five-engine/dashboard main-bound slice PR number UNKNOWN",
+  "artifact_hash_basis": "sha256 is actual canonical published compact bytes; raw_original_sha256 preserves original public artifact bytes. PNG/SVG/HTML unchanged; only manifestJSON CRLF->LF with parsed-data equality. Full originals remain in raw artifact paths."
+}

@@ -1,0 +1,169 @@
+{
+  "proof": {
+    "source_SHA": "3eab699b61850a20e91132e16caf8c589085f9ee",
+    "python": "3.12.16 (main, Nov 11 2026, 00:20:04) [MSC v.1944 64 bit (AMD64)]",
+    "isolated": 1,
+    "no_site": 1,
+    "raw_before_import": [
+      {
+        "file": "python/deepviz/src/deepviz/__init__.py",
+        "Git_raw_sha256": "f1068b4fc4108974bf494efacd9e9be2fa4b0df38a5a0ba8fa1f1cecc1d87671"
+      },
+      {
+        "file": "python/deepviz/src/deepviz/models.py",
+        "Git_raw_sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76"
+      },
+      {
+        "file": "python/deepviz/src/deepviz/normalize.py",
+        "Git_raw_sha256": "34e8ed94a479acb2d7360a79ba4f62897bb453928fc1eec97efceb052a5e76f2"
+      },
+      {
+        "file": "python/deepviz/src/deepviz/engines.py",
+        "Git_raw_sha256": "a5c39893b011623ea0813b448a988e59f767412d96d4af9b2c07b86b38cae225"
+      },
+      {
+        "file": "python/deepviz/src/deepviz/render.py",
+        "Git_raw_sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3"
+      }
+    ],
+    "actual_origins": [
+      {
+        "module": "deepviz",
+        "actual_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-06-src-3eab-ses_de56782fbffdVfBNQu0BxwziM4\\python\\deepviz\\src\\deepviz\\__init__.py"
+      },
+      {
+        "module": "deepviz.models",
+        "actual_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-06-src-3eab-ses_de56782fbffdVfBNQu0BxwziM4\\python\\deepviz\\src\\deepviz\\models.py"
+      },
+      {
+        "module": "deepviz.normalize",
+        "actual_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-06-src-3eab-ses_de56782fbffdVfBNQu0BxwziM4\\python\\deepviz\\src\\deepviz\\normalize.py"
+      },
+      {
+        "module": "deepviz.engines",
+        "actual_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-06-src-3eab-ses_de56782fbffdVfBNQu0BxwziM4\\python\\deepviz\\src\\deepviz\\engines.py"
+      },
+      {
+        "module": "deepviz.render",
+        "actual_file": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r46-06-src-3eab-ses_de56782fbffdVfBNQu0BxwziM4\\python\\deepviz\\src\\deepviz\\render.py"
+      }
+    ],
+    "probe_sha256_before_consumer": "efd98139c9b2155baae78ba65ce5738a9cb790565dc8cb69f6465b7576755c59",
+    "vl_convert_version": "1.9.0",
+    "vl_convert_origin": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Lib\\site-packages\\vl_convert\\__init__.py"
+  },
+  "results": [
+    {
+      "id": "ordinary-control",
+      "rows": [
+        {
+          "category": "A",
+          "value": 1.0
+        },
+        {
+          "category": "B",
+          "value": 1.0
+        }
+      ],
+      "input_count": 2,
+      "output_count": 2,
+      "original_values_and_rows_preserved": true,
+      "literal_expected_edges": [
+        [
+          0.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "actual_native_edges": [
+        [
+          0.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "literal_expected_widths": [
+        0.5,
+        0.5
+      ],
+      "actual_native_widths": [
+        0.5,
+        0.5
+      ],
+      "strict_literal_geometry_pass": true,
+      "warnings": [
+        "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred."
+      ],
+      "public_artifact_paths": [
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R46-06\\counterexample-20261127-r1\\ordinary-control\\deepviz-xhbdy4ob\\chart.svg",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R46-06\\counterexample-20261127-r1\\ordinary-control\\deepviz-xhbdy4ob\\chart.html",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R46-06\\counterexample-20261127-r1\\ordinary-control\\deepviz-xhbdy4ob\\manifest.json"
+      ],
+      "actual_public_svg_sha256": "4dbbc55cd725cee05bf8a104a3101b7f7a44282fa7e5ea7508f8aa508206fc07",
+      "actual_rasterized_svg_png": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R46-06\\counterexample-20261127-r1\\ordinary-control.png",
+      "PNG_sha256": "a71395d8409d46643f9145028eed168fbed208d2b7b13ab317cb30c0411a5c31"
+    },
+    {
+      "id": "finite-large-counterexample",
+      "rows": [
+        {
+          "category": "A",
+          "value": 1e+308
+        },
+        {
+          "category": "B",
+          "value": 1e+308
+        }
+      ],
+      "input_count": 2,
+      "output_count": 2,
+      "original_values_and_rows_preserved": true,
+      "literal_expected_edges": [
+        [
+          0.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "actual_native_edges": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "literal_expected_widths": [
+        0.5,
+        0.5
+      ],
+      "actual_native_widths": [
+        0.0,
+        0.0
+      ],
+      "strict_literal_geometry_pass": false,
+      "warnings": [
+        "Flat-record hierarchy: each x value is a first-level child; no parent hierarchy is inferred."
+      ],
+      "public_artifact_paths": [
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R46-06\\counterexample-20261127-r1\\finite-large-counterexample\\deepviz-u_7b5q7i\\chart.svg",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R46-06\\counterexample-20261127-r1\\finite-large-counterexample\\deepviz-u_7b5q7i\\chart.html",
+        "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R46-06\\counterexample-20261127-r1\\finite-large-counterexample\\deepviz-u_7b5q7i\\manifest.json"
+      ],
+      "actual_public_svg_sha256": "6437a7d95638b85e3f6692679a6637cf592611275a4348be6faf6199e5dd9e4c",
+      "actual_rasterized_svg_png": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r10-06-native-kind-browser-ses_de56782fbffdVfBNQu0BxwziM4\\artifacts\\local\\R46-06\\counterexample-20261127-r1\\finite-large-counterexample.png",
+      "PNG_sha256": "5477ff9044e18ef826795dcaa6663ff9de6b0ef8b9a163741376502fe57b794c"
+    }
+  ]
+}
