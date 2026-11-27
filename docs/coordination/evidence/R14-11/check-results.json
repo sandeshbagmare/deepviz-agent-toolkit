@@ -1,0 +1,201 @@
+{
+  "observed_utc": "2026-11-27T14:31:21.376504+00:00",
+  "owner_session": "ses_de567811cffdTBwcb8pF5nDi9v",
+  "branch": "agents/r10-11-python-scale-envelope",
+  "starting_commit": "0c2ce740b353cb87b52f690c365b21049326d3f7",
+  "raw_matrix": {
+    "bytes": 111022,
+    "sha256": "881df1c7313ba783b85263da100f6c22d97c54f593fdf33ef96d13ca9533ba7c",
+    "external_path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\opencode\\r14-11-promotion-ses_de567811cffdTBwcb8pF5nDi9v-artifacts\\matrix\\matrix.json",
+    "worker_count": 24,
+    "classifications": {
+      "match": 15,
+      "oracle_mismatch": 5,
+      "early_state_budget_rejection": 4
+    },
+    "full_exhausted_rows": 1224384,
+    "observed_pulls": 1403326
+  },
+  "compact_matrix": {
+    "definition": "Deduplicated identical source snapshots referenced by canonical JSON SHA256 before/after; all original timings/OS peaks/counts/values/warnings retained",
+    "bytes": 33080,
+    "sha256": "babe1cae3a7c74bb0f34613883b2d8f6e0a858c8eba370ea80c7bea4df6e0439",
+    "line_endings": "Explicit UTF-8 LF, exact Git/worktree bytes expected"
+  },
+  "commands": {
+    "measurement": "python tests/r14_probes/role11/promotion_probe.py --artifacts <NEW external directory>/matrix",
+    "tests": "python -m pytest tests/r14_probes/role11 -q -p no:cacheprovider --strict-markers --basetemp <NEW> --junitxml <NEW>",
+    "ruff": "python -m ruff check tests/r14_probes/role11",
+    "mypy": "python -m mypy tests/r14_probes/role11",
+    "portable_verify": "python tests/r14_probes/role11/verify_promotion_evidence.py <raw or compact matrix JSON>"
+  },
+  "exits": {
+    "measurement": 0,
+    "own_tests": 0,
+    "ruff": 0,
+    "mypy": 0,
+    "raw_and_compact_verification": 0
+  },
+  "tests": {
+    "passed": 46,
+    "failed": 0,
+    "skipped": 0,
+    "deselected": 0,
+    "elapsed_seconds": 0.22
+  },
+  "historical_harness_checks": [
+    {
+      "expected_red": "Missing own probe implementation",
+      "failed": 1,
+      "deselected": 31,
+      "seconds": 0.2,
+      "exit": 1
+    },
+    {
+      "typing": "4 own optional filename/heterogeneous dict errors, corrected without changing oracle",
+      "exit": 1
+    },
+    {
+      "expected_red": "Missing own evidence checker",
+      "failed": 1,
+      "deselected": 13,
+      "seconds": 0.27,
+      "exit": 1
+    }
+  ],
+  "observations": [
+    {
+      "label": "reference",
+      "case": "ordinary",
+      "normalization_100k_seconds": [
+        1.1057233000028646,
+        1.0744065000035334,
+        1.4447531000041636
+      ],
+      "median_100k_seconds": 1.1057233000028646,
+      "inclusive_100k_peak_bytes": [
+        41566208,
+        41525248,
+        41635840
+      ],
+      "max_inclusive_peak_minus_96_peak_bytes": 466944,
+      "full_stream_oracle_status": "match",
+      "full_stream_warnings": [],
+      "early_rejection": {
+        "consumed_count": 45715,
+        "source_exhausted": false,
+        "elapsed_seconds": 1.0725635999988299,
+        "inclusive_peak_bytes": 61112320,
+        "error": "ValueError: Normalized retained data exceeds 16777216 bytes"
+      }
+    },
+    {
+      "label": "reference",
+      "case": "promoted",
+      "normalization_100k_seconds": [
+        1.1679197999910684,
+        1.0405092000000877,
+        1.0180928999907337
+      ],
+      "median_100k_seconds": 1.0405092000000877,
+      "inclusive_100k_peak_bytes": [
+        41746432,
+        41766912,
+        41947136
+      ],
+      "max_inclusive_peak_minus_96_peak_bytes": 172032,
+      "full_stream_oracle_status": "oracle_mismatch",
+      "full_stream_warnings": [
+        "4 non-finite numeric values replaced by null."
+      ],
+      "early_rejection": {
+        "consumed_count": 45715,
+        "source_exhausted": false,
+        "elapsed_seconds": 1.0835143000003882,
+        "inclusive_peak_bytes": 61554688,
+        "error": "ValueError: Normalized retained data exceeds 16777216 bytes"
+      }
+    },
+    {
+      "label": "candidate",
+      "case": "ordinary",
+      "normalization_100k_seconds": [
+        1.1298168000066653,
+        1.1501816999953007,
+        1.2074330000032205
+      ],
+      "median_100k_seconds": 1.1501816999953007,
+      "inclusive_100k_peak_bytes": [
+        41713664,
+        41545728,
+        41811968
+      ],
+      "max_inclusive_peak_minus_96_peak_bytes": 90112,
+      "full_stream_oracle_status": "match",
+      "full_stream_warnings": [],
+      "early_rejection": {
+        "consumed_count": 45715,
+        "source_exhausted": false,
+        "elapsed_seconds": 1.0887519999960205,
+        "inclusive_peak_bytes": 61423616,
+        "error": "ValueError: Normalized retained data exceeds 16777216 bytes"
+      }
+    },
+    {
+      "label": "candidate",
+      "case": "promoted",
+      "normalization_100k_seconds": [
+        2.119443499992485,
+        2.0036915999953635,
+        2.04079620000266
+      ],
+      "median_100k_seconds": 2.04079620000266,
+      "inclusive_100k_peak_bytes": [
+        41615360,
+        41607168,
+        41717760
+      ],
+      "max_inclusive_peak_minus_96_peak_bytes": 266240,
+      "full_stream_oracle_status": "match",
+      "full_stream_warnings": [],
+      "early_rejection": {
+        "consumed_count": 41797,
+        "source_exhausted": false,
+        "elapsed_seconds": 1.533364499991876,
+        "inclusive_peak_bytes": 60395520,
+        "error": "ValueError: Normalized retained data exceeds 16777216 bytes"
+      }
+    }
+  ],
+  "memory_method": "GetProcessMemoryInfo.PeakWorkingSetSize: fresh-process inclusive lifetime high-water working set in bytes, including imports/native memory/validation; baseline difference is difference of high-water marks not operation allocation. No RSS ceiling inferred from 16MiB payload policy.",
+  "time_method": "perf_counter around normalize only, including lazy row generation; imports, module hashing and oracle checks excluded; fresh subprocess wall time separately retained. Three repeats at100K, one each96/6000. Concurrent22-agent Windows host, fixed job order; not randomized or universal regression bounds.",
+  "excluded": [
+    "No1M/10M or original20matrix replay",
+    "No TS runtime/build or producer fullsuite",
+    "No final candidate freeze/renderer/browser/package/remoteCI approval",
+    "No source/existing tests/schema/env edits",
+    "No independent author approval or issue/900closure claim"
+  ],
+  "measurement_harness_sha256": "061e53f7438565cce7670db28fd7e918f23333bc02f898e39b5a81b72fe9bfeb",
+  "own_probe_sha256": {
+    "promotion_probe.py": "061e53f7438565cce7670db28fd7e918f23333bc02f898e39b5a81b72fe9bfeb",
+    "test_evidence_guards.py": "b351dbecb9e5eda899fe74a812bc6438515797580518b4c1d0336ed47cdf01b5",
+    "test_promotion_probe.py": "3edf7218c76d01c08ebed217fa5b1b3ff3376e9ce2253a9c32b444e77b1a8e2c",
+    "verify_promotion_evidence.py": "9bf8c745e9d66b8562e91b1c156bee717b952e492be1073f5b5fe8156ac4ed4e"
+  },
+  "raw_log_sha256": {
+    "probe-red.log": "a78a269c41af0df4efdc43de446080e3dadbf20c59c151a10e386d0c0b0ed2a5",
+    "probe-green.log": "92f95c016c72d79d1af7e386dd27197cb9ea2a1248dfaafbe106537082b81b20",
+    "mypy.log": "6762798a001a5bedd49ee98197575ed0b98cc9bce548210d7f7905fc58f2dca4",
+    "probe-final.log": "451a6e413838e38151b34b59f4d4e3410459355843ed6867c3e104589ab98aea",
+    "probe-final.xml": "cd9ac0ce78c6d557d4330dcdf3be86b17b53f591d720ff0c913323919fe3beff",
+    "ruff-final.log": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+    "mypy-final.log": "07a5ca23e5d39b2565c0c1361f0556b8c3c75484bba05841f400436d190bb660",
+    "matrix.log": "980140f20c1789aa933a13c35cee4321a89a6c14c68eb827dc5993c917003a3b",
+    "verifier-red.log": "601ddc45e4b1e5818a8dcf8c4f9447104cf4328e8d887917e66195ecc9248b4c",
+    "all-controls.log": "7bfe0d61ae373506ae6336041214a6e182dd0c4c087971b1c80207a4d70b39cb",
+    "all-controls.xml": "7e7b5d85fb49279747b5f8770f3dd57b46da75274dbfe0259bfb895da414a05a",
+    "ruff-all.log": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+    "mypy-all.log": "9a7b872e16546a06ac5acc5ff3c02a07fe75b22d8102de9d27434123534c9400"
+  }
+}
