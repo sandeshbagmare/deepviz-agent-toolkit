@@ -1,4 +1,4 @@
-﻿# R52-21 AntV SOURCE2 and finite-scale deduplication
+# R52-21 AntV SOURCE2 and finite-scale deduplication
 
 ## Scope and exact source
 
@@ -42,3 +42,5 @@ Next owner: R04, sole integration/PR manager. Read this report/evidence; preserv
 - NOT RUN: product tests, public render, G2 runtime, browser, PNG, scale/10M benchmarks, build, CI, PR/API/issue/default queries. No tests counted as skipped or passed by this review.
 Exact machine-readable command inventory: evidence/R52-21/verification-results.json. Static and arithmetic command exits are recorded there; product tests=0, browser=0, build=0, CI=0; test skips=0 because no product tests were started.
 A first mirror check ran after creating verification-results.json and correctly found that one new file had not yet been copied to MAIN (verification harness exit failure, not product). The missing own evidence file was copied; a follow-up Python SHA-256 comparison verified all eight owned R52-21 evidence files byte-identical between the work branch and MAIN. No other path touched.
+
+OWN publication: commit 9fdf63a97ef6bf070513fe104d6da77362564dca on agents/r10-21-recovery-git-bootstrap; non-force push exit0 and immediate ls-remote exact readback exit0 at 2026-11-28T00:08:28.6346965Z. Exact receipt: evidence/R52-21/publication-receipt.json. Product source remains unmodified. No PR/CI/merge/default approval.
