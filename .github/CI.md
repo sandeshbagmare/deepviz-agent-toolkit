@@ -6,6 +6,12 @@ after its listed implementation, test, browser, scale and packaging files land.
 Missing commands or files fail the workflow. A green focused ChartSpec run does
 not satisfy the Python release gate.
 
+The first `release-inputs` job records which planned acceptance inputs are present
+on the exact checkout. Acceptance jobs defer when their input group is absent, and
+`release-readiness` remains failing until all planned package, test, smoke/browser,
+and scale inputs land. This keeps a dependency gap visible instead of treating a
+partial workflow as release evidence.
+
 The workflow runs on pushes and pull requests targeting `main`, plus manual
 dispatch. It checks out the exact PR head or push SHA and records the checked-out
 SHA in artifacts. Rebase and rerun after dependencies merge; approvals or test
@@ -44,8 +50,10 @@ input. The MCP consumer runs the actual CLI/MCP tests with zero skips, including
 the stdio client/server path. It excludes the two LangChain-only callback cases;
 the separate wheel consumer installs `[agents]` and runs all of `test_tools_api.py`
 with zero skips. Both installed consumers clear the test subprocess source-path
-override, and the MCP child-import probe asserts `deepviz.__file__` resolves inside
-the clean environment. The base install also verifies lazy imports.
+override. The installed agents probe resolves `deepviz.models` (the package uses a
+namespace layout) and asserts its origin is inside the clean environment; the MCP
+child-import probe makes the same check for the subprocess. The base install also
+verifies lazy imports.
 
 ## Local tool, safety and browser acceptance
 

@@ -20,8 +20,78 @@ env:
   PIP_DISABLE_PIP_VERSION_CHECK: '1'
 
 jobs:
+  release-inputs:
+    name: Inspect release acceptance inputs
+    runs-on: ubuntu-latest
+    outputs:
+      columnar: ${{ steps.scan.outputs.columnar }}
+      consumer: ${{ steps.scan.outputs.consumer }}
+      agents: ${{ steps.scan.outputs.agents }}
+      mcp: ${{ steps.scan.outputs.mcp }}
+      evidence: ${{ steps.scan.outputs.evidence }}
+      scale: ${{ steps.scan.outputs.scale }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - id: scan
+        name: Detect acceptance inputs that landed
+        shell: bash
+        run: |
+          set -euo pipefail
+          ready() {
+            local key="$1"
+            shift
+            local missing=()
+            for path in "$@"; do
+              if [ ! -f "$path" ]; then missing+=("$path"); fi
+            done
+            if [ "${#missing[@]}" -eq 0 ]; then
+              echo "$key=true" >> "$GITHUB_OUTPUT"
+              echo "$key: ready"
+            else
+              echo "$key=false" >> "$GITHUB_OUTPUT"
+              printf '%s deferred; missing: %s\n' "$key" "${missing[*]}"
+            fi
+          }
+          ready columnar python/deepviz/tests/test_normalize.py python/deepviz/tests/test_n19_formats.py
+          ready consumer python/deepviz/src/deepviz/__init__.py python/deepviz/src/deepviz/normalize.py python/deepviz/src/deepviz/render.py python/deepviz/src/deepviz/recommend.py python/deepviz/src/deepviz/cli.py python/deepviz/src/deepviz/mcp_server.py python/deepviz/src/deepviz/resources/chart-spec.schema.json python/deepviz/src/deepviz/py.typed
+          ready agents python/deepviz/src/deepviz/tools.py python/deepviz/tests/test_tools_api.py
+          ready mcp tests/test_mcp_cli.py tests/test_release_security.py
+          ready evidence examples/multi_tool_flow.py tests/test_mcp_cli.py tests/test_release_security.py python/deepviz/tests/test_tools_api.py python/deepviz/tests/test_browser_acceptance.py
+          ready scale scripts/verify_python_scale.py
+
+  release-readiness:
+    name: Release-input gate (must pass before acceptance)
+    needs: release-inputs
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Keep the release gate blocked until planned acceptance inputs exist
+        env:
+          COLUMNAR: ${{ needs.release-inputs.outputs.columnar }}
+          CONSUMER: ${{ needs.release-inputs.outputs.consumer }}
+          AGENTS: ${{ needs.release-inputs.outputs.agents }}
+          MCP: ${{ needs.release-inputs.outputs.mcp }}
+          EVIDENCE: ${{ needs.release-inputs.outputs.evidence }}
+          SCALE: ${{ needs.release-inputs.outputs.scale }}
+        run: |
+          missing=()
+          for input in COLUMNAR CONSUMER AGENTS MCP EVIDENCE SCALE; do
+            if [ "${!input:-false}" != true ]; then missing+=("${input,,}"); fi
+          done
+          if [ "${#missing[@]}" -gt 0 ]; then
+            printf 'Release acceptance is blocked; deferred input groups: %s\n' "${missing[*]}"
+            echo 'Land and review the planned package, tests, smoke/browser and scale inputs before treating this workflow as a release gate.'
+            exit 1
+          fi
+          echo 'All planned release acceptance inputs are present.'
+
   python:
     name: Python ${{ matrix.python }} tests, types and distributions
+    needs: release-inputs
+    if: always()
     runs-on: ubuntu-latest
     timeout-minutes: 45
     strategy:
@@ -52,6 +122,7 @@ jobs:
       - name: Full test suite
         run: python -m pytest -q --strict-markers --junitxml=artifacts/tests.xml
       - name: Require enabled Arrow and Parquet tests to run
+        if: needs.release-inputs.outputs.columnar == 'true'
         run: |
           python -c 'import pyarrow; import pyarrow.parquet'
           python -m pytest -q --strict-markers \
@@ -70,6 +141,7 @@ jobs:
           python -m build
           python -m twine check --strict dist/*
       - name: Clean-install wheel and sdist with base, columnar and MCP dependencies
+        if: needs.release-inputs.outputs.consumer == 'true' && needs.release-inputs.outputs.columnar == 'true' && needs.release-inputs.outputs.mcp == 'true'
         run: |
           for artifact in dist/*.whl dist/*.tar.gz; do
             artifact="$(realpath "$artifact")"
@@ -211,6 +283,8 @@ jobs:
 
   agents-consumer:
     name: Installed agents extra and lazy imports
+    needs: release-inputs
+    if: needs.release-inputs.outputs.agents == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -237,10 +311,12 @@ jobs:
           import importlib.util
           import sys
           from pathlib import Path
-          import deepviz
-          assert Path(deepviz.__file__).resolve().is_relative_to(Path(sys.prefix).resolve())
+          package = importlib.util.find_spec('deepviz.models')
+          assert package is not None and package.origin is not None, 'Installed deepviz.models was not found'
+          assert Path(package.origin).resolve().is_relative_to(Path(sys.prefix).resolve())
           assert importlib.util.find_spec('langchain_core') is not None
           assert importlib.util.find_spec('deepagents') is not None
+          import deepviz
           assert deepviz.normalize([{'x': 1}]).input_count == 1
           print('Installed [agents] tool dependencies and package imports passed')
           PY
@@ -267,6 +343,8 @@ jobs:
 
   release-evidence:
     name: Python smoke, safety and visual evidence
+    needs: release-inputs
+    if: needs.release-inputs.outputs.evidence == 'true' && needs.release-inputs.outputs.mcp == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
@@ -337,6 +415,8 @@ jobs:
 
   scale-evidence:
     name: One-pass normalization evidence through ten million rows
+    needs: release-inputs
+    if: needs.release-inputs.outputs.scale == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 360
     steps:
