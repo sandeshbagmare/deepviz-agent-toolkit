@@ -9,4 +9,4 @@ Every PR needs two distinct independent reviewer-agent reports and two distinct 
 
 Check correctness/acceptance, meaningful tests, bounds/overflow/failure handling, safe HTML/spec/path use, secrets, unrelated edits, API consistency, capability/fallback docs, performance, issue/plan link and size (target <=400, hard cap 1,000 except pure rename). Report exact head SHA, command/results, findings with paths, and residual risk. Round-robin by lane, excluding authors and same-lane sole reviewers. Target one business day; reassign after one day, narrow scope after two cycles. Rebase invalidates old review/test evidence.
 
-RM-approved coherent size exceptions are recorded in `05-merge-plan.md` for PLAN-CHANGE-01 and NEW-01; all exact-head independent review/test and merge gates still apply.
+RM-approved coherent size exceptions are recorded in `05-merge-plan.md` for PLAN-CHANGE-01, NEW-01, and the NEW-02-only <=1,300-line/seven-path exception; all exact-head independent review/test and merge gates still apply.

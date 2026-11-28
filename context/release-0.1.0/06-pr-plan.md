@@ -5,7 +5,7 @@
 - Date: 2026-11-28
 - Plan version: 1.1 (local renderer-split amendment pending)
 
-Local renderer-split amendment only, based on merged `main@54dd12e2d8d5d69e25426e92c313f0f79e00de81` (tree equal to plan `870c556d9aaf98e3a94c1ee17e2a77fc5daf83d3`). PR #39 is merged and remains untouched; this branch has no GitHub PR and grants no renderer replacement promotion or merge. Wave 1 is current, NEW-01/02 remain drafts, and INT-01 exclusively owns NEW-01 current-main integration. Result-main baseline QA is pending QA-01. Actual NEW-03A/B comparison bases must be the future verified dependency merges.
+Local scope/evidence and renderer-split amendment only, based on merged `main@54dd12e2d8d5d69e25426e92c313f0f79e00de81` (tree equal to plan `870c556d9aaf98e3a94c1ee17e2a77fc5daf83d3`). PR #39 and its checkout remain untouched; no new GitHub PR or merge is authorized. Wave 1 is current, NEW-01/02 remain drafts, and INT-01 exclusively owns NEW-01 current-main integration. QA-01 verified the existing ChartSpec baseline only; future feature/release acceptance stays unverified. Actual renderer child bases must be their future verified dependency merges.
 
 ## Existing PR actions
 
@@ -13,10 +13,10 @@ Local renderer-split amendment only, based on merged `main@54dd12e2d8d5d69e25426
 |---:|---|---|
 | #33 | V1-MERGE | Already merged; leave unchanged. |
 | #38 | V1-MERGE | Already merged; leave unchanged. |
-| #39 | MERGED baseline | Merged at `54dd12e2d8d5d69e25426e92c313f0f79e00de81`; leave its branch/checkout unchanged. Result-main baseline QA pending QA-01. |
+| #39 | MERGED baseline | Merged at `54dd12e2d8d5d69e25426e92c313f0f79e00de81`; leave its branch/checkout unchanged. QA-01 result-main baseline verification passed; full release remains unverified. |
 | #31 | CLOSE-SUPERSEDED (conditional) | Live state: open draft, stale base `0ae2cf26426822135fc10d337fcacf580b7ed833`, head `62344d85f5f471767b7aa3a2005a9e000ca06440`, 324 paths and +36,025/-3; Python 3.11-3.13 jobs fail. Preserve useful focused work before any superseding disposition; do not rebase/merge its broad diff. |
 
-RM-01 approves focused size exceptions for this coherent plan amendment (approximately 1,100 metadata/documentation changed lines) and NEW-01 (at most 2,750 changed lines across exactly the 10 claimed paths). PR #40 at `a94f85c47e9a18f01009484a6813738eb8259a03` against `main@f692014b9c7eb6a9fe0aa6f27b76b40426f053a7` measures 2,687 additions + 2 deletions = 2,689 changed lines. The 61-line tolerance is only for necessary review/rebase fixes and regenerated normalization evidence within this existing coherent task; additional paths or unrelated scope require a new plan-change ruling. Do not split arbitrarily or omit tests to reach a line count. Two independent exact-head reviewer reports, two tester reports, current-main rebase/checks, dependency order and sequential merge gates remain unchanged.
+RM-01 approves focused size exceptions for this coherent plan amendment (approximately 1,100 metadata/documentation changed lines) and NEW-01 (at most 2,750 changed lines across exactly the 10 claimed paths). PR #40 at `a94f85c47e9a18f01009484a6813738eb8259a03` against `main@f692014b9c7eb6a9fe0aa6f27b76b40426f053a7` measures 2,687 additions + 2 deletions = 2,689 changed lines. The 61-line tolerance is only for necessary review/rebase fixes and regenerated normalization evidence within this existing coherent task; additional paths or unrelated scope require a new plan-change ruling. Do not split arbitrarily or omit tests to reach a line count. Two independent exact-head reviewer reports, two tester reports, current-main rebase/checks, dependency order and sequential merge gates remain unchanged. NEW-02 has a separate RM-approved 1,300-line ceiling across its five audited regression/harness/test paths plus scale-output JSON/PNG only; the remaining 96 lines are solely for compact actual evidence and necessary fixes within those seven paths. All required tests remain mandatory.
 
 ## Preparation and promotion
 
@@ -28,7 +28,7 @@ Every PR requires two independent reviewer reports and two independent tester re
 
 ### PLAN-CHANGE-01 - merged baseline (#39)
 
-Merged at `54dd12e2d8d5d69e25426e92c313f0f79e00de81`. The following original PR template is historical; the current renderer-split amendment is separate and local only. Result-main baseline QA remains pending QA-01.
+Merged at `54dd12e2d8d5d69e25426e92c313f0f79e00de81`. The following original PR template is historical; the current renderer-split amendment is separate and local only. QA-01 result-main baseline verification passed; full release remains unverified.
 
 Create a plan-only PR from `plan/release-0.1.0-owner-decisions` against current `main`; keep the diff inside `context/release-0.1.0/`. It synchronizes canonical YAML with Markdown, adds Arrow/Parquet test ownership, records the caller's #28 revision, maps all 11 live P0s to their wave or deferral, and embeds the committed release-wave SVG. Require two exact-head reviewer reports, two exact-head tester reports, and successful `git diff --check`, YAML/JSON parse, cross-file scope checks and SVG XML validation. Merge before opening NEW-01.
 
@@ -80,7 +80,7 @@ Machine-readable companion: `docs/verification/normalization/normalization-outpu
 
 ### NEW-02 - [v1][W1][test] verify bounded reducer regressions and streaming scale
 
-- Action: prepare `release/v1/w1-python-reductions` in an isolated branch; promote to a PR only in Wave 1 after the approved dependencies. NEW-01 already includes the latest96 reducer fixes. Add reducer regression and scale acceptance; do not replay source hunks already present. Historical `ec9f669` precedes child `5ba8603`; use those refs for regression provenance only.
+- Action: prepare `release/v1/w1-python-scale` in an isolated branch; promote to a PR only in Wave 1 after the approved dependencies. NEW-01 already includes the latest96 reducer fixes. Add reducer regression and scale acceptance; do not replay source hunks already present. Historical `ec9f669` precedes child `5ba8603`; use those refs for regression provenance only.
 - Source branches: `feat/r34-python-data-foundation`, `fix/r17-normalizer-boundaries`, `agents/r10-16-finite-overflow-fix`, `agents/r45-04-private-numeric-accounting`.
 - Source selection: RM ruling: NEW-01 selects latest96 normalizer with reviewed reducer correctness fixes. NEW-02 does not replay those hunks; add reducer regression/scale acceptance and only newly demonstrated necessary fixes. Historical ec9f669 -> 5ba8603 order is provenance, not replay sequence.
 - Source commit references: `ec9f669eff28cd5351da142765b7755e3b2f484f`, `5ba860305dcc86ac2f95f01705b984d2b40f2799`, `c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19`, `a7363be273d7b3bbcb1b52ef79a58bb4e6d0e3be`, `7ab546251029df169604358448ecd462d8db5e6f`, `546c25ea75ee9d8a41b3832aa639664bc9a683b5`, `96b819aee5b01ba88b5a609b587331a528aaa070`.
@@ -99,9 +99,10 @@ feat/r34-python-data-foundation, fix/r17-normalizer-boundaries, agents/r10-16-fi
 ## Depends on (PRs that must merge first)
 NEW-01 merged; isolated preparation may run in parallel, with rebase and exact-head checks afterward.
 ## Files touched
-python/deepviz/src/deepviz/normalize.py, python/deepviz/tests/test_normalize.py, python/deepviz/tests/test_r07_finite_overflow.py, python/deepviz/tests/test_r17_normalizer_boundaries.py, python/deepviz/tests/test_r45_numeric_state_accounting.py, scripts/verify_python_scale.py, tests/test_release_scale.py
+python/deepviz/tests/test_r07_finite_overflow.py, python/deepviz/tests/test_r17_normalizer_boundaries.py, python/deepviz/tests/test_r45_numeric_state_accounting.py, scripts/verify_python_scale.py, tests/test_release_scale.py, docs/verification/scale/scale-output.json, docs/verification/scale/scale-output.png
 ## How tested (commands + results)
-Exact finite SUM/MEAN and transient-overflow controls; R07/R17/R45 numeric-state/owned-input tests; bounded Arrow streams; scripts/verify_python_scale.py and tests/test_release_scale.py at 10/1K/100K/1M/10M. Machine-readable normalizer evidence now; renderer-linked scale and independent replication before #22 closure. Do not reapply fixes already in NEW-01. Record actual exact-head commands/results; no unrun check is a pass.
+Exact finite SUM/MEAN and transient-overflow controls; R07/R17/R45 numeric-state/owned-input tests; bounded Arrow streams; scripts/verify_python_scale.py and tests/test_release_scale.py at 10/1K/100K/1M/10M. Machine-readable normalizer evidence now; renderer-linked scale and independent replication before #22 closure. Do not reapply fixes already in NEW-01. Record final exact base/head, full numstat and actual evidence; no template or old-head check is a pass.
+
 ## Risk & rollback
 RM ruling: NEW-01 selects latest96 normalizer with reviewed reducer correctness fixes. NEW-02 does not replay those hunks; add reducer regression/scale acceptance and only newly demonstrated necessary fixes. Historical ec9f669 -> 5ba8603 order is provenance, not replay sequence. Rollback: Revert this squash only; keep NEW-01.
 ## Visual evidence (committed repository paths; embed every image)
@@ -115,6 +116,8 @@ RM ruling: NEW-01 selects latest96 normalizer with reviewed reducer correctness 
 - [ ] Docs updated if behaviour changed
 ```
 
+
+RM exception: Audited PR #41@49431aced25f21f4543d00853623c7d2b5b23fc8: +1,204/-0 across five existing regression/harness/test paths. RM-01 authorizes a NEW-02-only ceiling of 1,300 changed lines across those five paths plus docs/verification/scale/scale-output.json and scale-output.png only. The remaining 96 lines cover compact measured evidence and necessary fixes within those seven paths only; do not drop tests. Actual final-head recount remains required.
 
 ### NEW-03 roll-up / existing PR #42 preservation
 
@@ -237,9 +240,10 @@ feat/integrations
 ## Depends on (PRs that must merge first)
 NEW-03A, NEW-03B, NEW-04
 ## Files touched
-python/deepviz/src/deepviz/recommend.py, python/deepviz/src/deepviz/tools.py, python/deepviz/src/deepviz/__init__.py, python/deepviz/tests/test_integrations.py
+python/deepviz/src/deepviz/recommend.py, python/deepviz/src/deepviz/tools.py, python/deepviz/src/deepviz/__init__.py, python/deepviz/tests/test_tools_api.py, evidence/new05/tools-output.png, evidence/new05/report.json
 ## How tested (commands + results)
-Fresh `.[agents]` environment: construct, inspect and invoke real LangChain `StructuredTool`, run normalize -> recommend -> render; zero skips. Separate base-only install without LangChain/Deep Agents verifies core imports and integrations stay lazy. Record exact commands and actual output; no pass may be claimed before execution.
+In a fresh `.[agents]` environment, construct, inspect and invoke the actual LangChain `StructuredTool` API, then run normalize -> recommend -> render through the real tool flow. These required tests must execute with zero skips. Separately, in a fresh base-only install without LangChain/Deep Agents, import core and prove optional integrations remain lazy without loading `langchain_core`; test_tools_api.py must construct/inspect/invoke actual StructuredTool and exercise the real API flow with installed [agents] and zero skips; full checks. Record final exact base/head, full numstat and actual evidence; no template or old-head check is a pass.
+
 ## Risk & rollback
 1,341-line integration source; stage recommendation/tool API before MCP. Rollback: Revert squash; preserve renderer APIs.
 ## Visual evidence (committed repository paths; embed every image)
@@ -271,9 +275,10 @@ feat/integrations, fix/r14-mcp-json-budget, fix/r41-callback-admission, agents/r
 ## Depends on (PRs that must merge first)
 NEW-05
 ## Files touched
-python/deepviz/src/deepviz/mcp_server.py, python/deepviz/src/deepviz/cli.py, python/deepviz/src/deepviz/tools.py, python/deepviz/tests/test_integrations.py, python/deepviz/tests/test_r14_tool_json_boundary.py, python/deepviz/tests/test_r41_callback_admission.py, examples/, prompts/v1/
+python/deepviz/src/deepviz/mcp_server.py, python/deepviz/src/deepviz/cli.py, python/deepviz/src/deepviz/tools.py, examples/, prompts/v1/, tests/test_mcp_cli.py, evidence/new06/mcp-output.png, evidence/new06/report.json
 ## How tested (commands + results)
-In a fresh `.[mcp]` environment, test stdio initialize/list/call, safe artifact, malformed JSON and callback admission. Exercise the real tool call in the fresh `[agents]` lane with zero skips for required integration tests. Separately run a base-only lazy-import control; report unrelated skips. Record exact commands/results; no pass may be claimed before execution.
+In a fresh `.[mcp]` environment, test stdio initialize/list/call, safe artifact retrieval, malformed JSON and callback admission. Exercise the real integration tool call in the fresh `[agents]` lane; required integration tests must not skip. Separately run the base-only lazy-import control without LangChain/Deep Agents; report any unrelated optional-test skips explicitly. Use actual tests/test_mcp_cli.py for delivered tests; port required JSON-budget, callback-admission and portability cases there as needed. Historical test_integrations/R14/R41 file names are source/acceptance provenance, not a claim those files are delivered by PR #44. Record final exact base/head, full numstat and actual evidence; no template or old-head check is a pass.
+
 ## Risk & rollback
 Shares package API/entrypoints; select Python MCP-only paths and fix callback order/capacity. Rollback: Revert squash; retain tools; stop MCP wave.
 ## Visual evidence (committed repository paths; embed every image)
@@ -341,7 +346,8 @@ NEW-01..NEW-07
 ## Files touched
 tests/, python/deepviz/tests/, .github/workflows/, README.md, docs/capabilities.md, docs/architecture.md, docs/research/, docs/process/, SECURITY.md, pyproject.toml, python/deepviz/src/deepviz/py.typed, python/deepviz/src/deepviz/schemas/, python/deepviz/src/deepviz/prompts/, schemas/, prompts/v1/, scripts/performance_suite.py, docs/verification/performance.md, tests/test_performance_contract.py
 ## How tested (commands + results)
-Full Python tests/Ruff/mypy/build; clean base/[columnar]/[mcp]/[agents] wheel and sdist installs; installed `[agents]` lane must construct/inspect/invoke real LangChain `StructuredTool` and run normalize -> recommend -> render with zero skips, with a separate base-only lazy-import control; package resource/type-marker and entrypoint checks; five-engine and renderer-linked scale evidence with independent replication (#22); dated primary-source research including licensing/runtime/scale/output trade-offs (#19); exact-main CI (#20); package acceptance (#24); every-PR report/visual audit (#26); labeled/milestoned/dependency-aware process issue map and primary GitHub constraints (#27); publicly retargeted genuine focused-PR report provenance and gallery (#29); public amendment to original #4 acceptance: defer npm #25 and TS #14/#15 from 0.1.0; explicitly waive the unmet historical 900-issue criterion for this release while reporting real counts only, with no fabricated tickets or closures; then release roll-up. Record actual commands/results.
+Full Python tests/Ruff/mypy/build; clean base/[columnar]/[mcp]/[agents] wheel and sdist installs; in the fresh installed [agents] lane, construct, inspect and invoke the real LangChain StructuredTool API and complete normalize -> recommend -> render with zero skips; in a separate fresh base-only install without LangChain/Deep Agents, import core and verify integrations remain unloaded; package resource/type-marker and entrypoint checks; five-engine and renderer-linked scale evidence with independent replication (#22); dated primary-source research including licensing/runtime/scale/output trade-offs (#19); exact-main CI (#20); package acceptance (#24); every-PR report/visual audit (#26); labeled/milestoned/dependency-aware process issue map and primary GitHub constraints (#27); publicly retargeted genuine focused-PR report provenance and gallery (#29); public #4 amendment deferring npm #25 and TS #14/#15 from 0.1.0 and explicitly waiving the unmet historical 900-issue criterion for this release with real counts only and no fabricated tickets/closures. Record final exact base/head, full numstat and actual evidence; no template or old-head check is a pass.
+
 ## Risk & rollback
 Consolidate acceptance after code; omit duplicate/RED tests until fixed; exclude agent-state/evidence dumps. Rollback: Revert acceptance/doc commit only; stop release and repair CI.
 ## Visual evidence (committed repository paths; embed every image)
@@ -364,7 +370,7 @@ Consolidate acceptance after code; omit duplicate/RED tests until fixed; exclude
 ## Source branches consolidated
 ## Depends on (PRs that must merge first)
 ## Files touched
-## How tested (commands + results)
+tests/, python/deepviz/tests/, .github/workflows/, README.md, docs/capabilities.md, docs/architecture.md, docs/research/, docs/process/, SECURITY.md, pyproject.toml, python/deepviz/src/deepviz/py.typed, python/deepviz/src/deepviz/schemas/, python/deepviz/src/deepviz/prompts/, schemas/, prompts/v1/, scripts/performance_suite.py, docs/verification/performance.md, tests/test_performance_contract.py
 ## Risk & rollback
 ## Visual evidence (committed repository paths; embed every image)
 <!-- Replace with the exact-head test output artifact and committed repository path. -->
@@ -378,3 +384,12 @@ Consolidate acceptance after code; omit duplicate/RED tests until fixed; exclude
 ```
 
 Do not close source branches during this planning run. Close only after the replacement PRs are merged and their source content is preserved.
+
+## NEW-08 mapped package and CI sub-PRs (local amendment)
+
+| Child / draft | Branch / owner | Dependencies | Reviewers / testers | Exact claimed paths / mandatory output |
+|---|---|---|---|---|
+| NEW-08-PACKAGE / #45 | `release/v1/w5-python-package` / IMP-08 | NEW-01..NEW-07, including both NEW-03A and NEW-03B, merged and verified on exact main. | REV-03 + REV-04; QA-02 + QA-03 independent non-author reports on this sub-PR exact head | `pyproject.toml`, `python/deepviz/src/deepviz/py.typed`, `tests/test_release_package.py`, `evidence/new08-package/installed-output.png`, `evidence/new08-package/report.json` |
+| NEW-08-CI / #46 | `release/v1/w5-python-ci` / CI-01 | NEW-08-PACKAGE plus NEW-01..NEW-07 (both renderer children) merged and verified on exact main. | REV-03 + REV-04; QA-02 + QA-03 independent non-author reports on this sub-PR exact head | `.github/CI.md`, `.github/workflows/python-release.yml`, `evidence/new08-ci/browser-output.png`, `evidence/new08-ci/report.json` |
+
+These are non-ready drafts: required actual PNG/JSON is absent at the audited heads. Use tested installed-package output for #45 and actual CI/browser output for #46; status diagrams do not satisfy the image requirement. Recount the complete fixed/evidence head under 1,000 lines and restart exact-head 2+2/CI after every change. Final NEW-08 acceptance/research/process/docs remains separately incomplete.

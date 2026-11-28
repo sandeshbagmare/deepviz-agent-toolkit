@@ -2168,7 +2168,7 @@ Git diff found 331 overlapping paths and 1818 pairs sharing paths across 65 non-
 
 ## Proposed dependency graph
 
-Local renderer-split amendment only, based on merged `main@54dd12e2d8d5d69e25426e92c313f0f79e00de81` (tree equal to plan `870c556d9aaf98e3a94c1ee17e2a77fc5daf83d3`). PR #39 is merged and remains untouched; this branch has no GitHub PR and grants no renderer replacement promotion or merge. Wave 1 is current, NEW-01/02 remain drafts, and INT-01 exclusively owns NEW-01 current-main integration. Result-main baseline QA is pending QA-01. Actual NEW-03A/B comparison bases must be the future verified dependency merges.
+Local scope/evidence and renderer-split amendment only, based on merged `main@54dd12e2d8d5d69e25426e92c313f0f79e00de81` (tree equal to plan `870c556d9aaf98e3a94c1ee17e2a77fc5daf83d3`). PR #39 and its checkout remain untouched; no new GitHub PR or merge is authorized. Wave 1 is current, NEW-01/02 remain drafts, and INT-01 exclusively owns NEW-01 current-main integration. QA-01 verified the existing ChartSpec baseline only; future feature/release acceptance stays unverified. Actual renderer child bases must be their future verified dependency merges.
 
 ```mermaid
 graph LR

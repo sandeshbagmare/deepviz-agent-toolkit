@@ -5,7 +5,7 @@
 - Date: 2026-11-28
 - Plan version: 1.1 (owner decisions recorded; plan-change PR pending)
 
-The plan baseline is merged on `main@54dd12e2d8d5d69e25426e92c313f0f79e00de81` as PR #39. Wave 1 is current; #40/#41 remain preparation drafts, and INT-01 exclusively owns NEW-01 integration onto current main. RM-01 reports 3/3 result-main CI checks green; baseline QA is still pending QA-01. The earlier `main@f692014b9c7eb6a9fe0aa6f27b76b40426f053a7` QA results remain historical evidence, not a new QA pass.
+The plan baseline is merged on `main@54dd12e2d8d5d69e25426e92c313f0f79e00de81` as PR #39. Wave 1 is current; #40/#41 remain preparation drafts, and INT-01 exclusively owns NEW-01 integration onto current main. RM-01 reports 3/3 result-main CI checks green; QA-01 baseline verification passed: fresh Python 3.12, 118 strict tests/0 skips, Ruff/mypy/build/Twine and 12 schema cases. This is existing ChartSpec/source baseline evidence only, not clean-install or future-feature acceptance. The earlier `main@f692014b9c7eb6a9fe0aa6f27b76b40426f053a7` QA results remain historical evidence, not a new QA pass.
 
 The captured inventory, adjusted for the known #39 merge, has 76 refs including main, 11 PR records (8 open/3 merged), 35 open issues and 11 open P0 issues. This local draft does not claim a fresh full inventory fetch. Product preparation drafts #40-46 and the stale #31 draft remain open/non-ready until their gates pass. The existing workflow and 22-file planning packet are unchanged.
 
@@ -36,7 +36,7 @@ The original branch and issue disposition tables remain a historical snapshot at
 
 ## Local renderer-split proposal
 
-Local renderer-split amendment only, based on merged `main@54dd12e2d8d5d69e25426e92c313f0f79e00de81` (tree equal to plan `870c556d9aaf98e3a94c1ee17e2a77fc5daf83d3`). PR #39 is merged and remains untouched; this branch has no GitHub PR and grants no renderer replacement promotion or merge. Wave 1 is current, NEW-01/02 remain drafts, and INT-01 exclusively owns NEW-01 current-main integration. Result-main baseline QA is pending QA-01. Actual NEW-03A/B comparison bases must be the future verified dependency merges. Proposed sequence: `NEW-02 -> NEW-03A -> NEW-03B -> NEW-04`. Nine product PR slices cover the same eight logical changes; actual GitHub counts are the captured baseline above. NEW-03 completes only after both child merges are verified on main. See `05-merge-plan.md` and canonical YAML; the existing wave-map SVG remains baseline evidence and is not a new amendment approval.
+Local scope/evidence and renderer-split amendment only, based on merged `main@54dd12e2d8d5d69e25426e92c313f0f79e00de81` (tree equal to plan `870c556d9aaf98e3a94c1ee17e2a77fc5daf83d3`). PR #39 and its checkout remain untouched; no new GitHub PR or merge is authorized. Wave 1 is current, NEW-01/02 remain drafts, and INT-01 exclusively owns NEW-01 current-main integration. QA-01 verified the existing ChartSpec baseline only; future feature/release acceptance stays unverified. Actual renderer child bases must be their future verified dependency merges. Proposed sequence: `NEW-02 -> NEW-03A -> NEW-03B -> NEW-04`. Nine top-level entries map ten currently declared product PR slices across eight logical changes, including NEW-08 package/CI children; actual GitHub counts are the captured baseline above. NEW-03 completes only after both child merges are verified on main. See `05-merge-plan.md` and canonical YAML; the existing wave-map SVG remains baseline evidence and is not a new amendment approval.
 
 ## Use and amendments
 
