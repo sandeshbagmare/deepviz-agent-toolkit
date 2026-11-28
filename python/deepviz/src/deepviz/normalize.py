@@ -4,6 +4,11 @@ Scalar sequences become ``index``/``value`` records. Nested object keys and
 array indices are dotted. Strings are content; only ``Path`` opts into files.
 JSONL, delimited files, generators and Arrow batches stream; an already encoded
 JSON document is decoded as a whole by the standard library.
+Connection inference and per-record flattening each allow 66,560 structural
+work units (mapping entries plus mappings, or visited record values). Aliases
+retain their distinct field paths; excessive work and cycles fail explicitly.
+Arrow unions, extensions and other uncosted types are rejected before Python
+row conversion; fixed-size scalar and explicitly costed container types remain supported.
 
 ``auto`` sums numeric measures for categorical charts (or counts rows when no
 measure is available); other charts use deterministic reservoir sampling once
@@ -50,6 +55,7 @@ from .models import (
 
 _MAX_FIELDS = 1024
 _MAX_DEPTH = 64
+_MAX_STRUCTURAL_WORK = _MAX_FIELDS * (_MAX_DEPTH + 1)
 _MAX_CELL_BYTES = 64 * 1024
 _MAX_FIELD_BYTES = 4 * 1024
 _MAX_DATA_PATH_BYTES = 4 * _MAX_DATA_PATH_LENGTH
@@ -209,6 +215,7 @@ def _arrow_rows(data: Any) -> Iterator[dict[str, Any]]:
 def _validate_arrow_fields(fields: Iterable[Any], depth: int = 0) -> None:
     if depth > _MAX_DEPTH:
         raise ValueError("Arrow schema is nested too deeply")
+    arrow = _arrow_module()
     names = set()
     for index, field in enumerate(fields):
         if index >= _MAX_FIELDS:
@@ -217,9 +224,11 @@ def _validate_arrow_fields(fields: Iterable[Any], depth: int = 0) -> None:
             raise ValueError("Duplicate Arrow schema field name")
         names.add(field.name)
         _utf8_size(field.name, _MAX_FIELD_BYTES, "field name")
-        dtype = getattr(field.type, "storage_type", field.type)
+        dtype = field.type
         if not dtype.num_fields and hasattr(dtype, "value_type"):
             dtype = dtype.value_type
+        if isinstance(dtype, arrow.BaseExtensionType) or arrow.types.is_union(dtype):
+            raise TypeError(f"Unsupported Arrow type for bounded conversion: {dtype}")
         if dtype.num_fields:
             _validate_arrow_fields((dtype.field(i) for i in range(dtype.num_fields)), depth + 1)
 
@@ -268,7 +277,7 @@ def _arrow_array_row_bytes(array: Any, arrow: Any, compute: Any) -> list[int]:
         offsets = array.offsets.to_pylist() if hasattr(array, "offsets") else None
         if offsets is None:
             size = data_type.list_size
-            offsets = [array.offset + index * size for index in range(len(array) + 1)]
+            offsets = [(array.offset + index) * size for index in range(len(array) + 1)]
         rows = []
         for row in range(len(array)):
             total = 32
@@ -287,7 +296,12 @@ def _arrow_array_row_bytes(array: Any, arrow: Any, compute: Any) -> list[int]:
                 total += sum(_arrow_array_row_bytes(child, arrow, compute))
             rows.append(total)
         return rows
-    return [32] * len(array)
+    elif any(check(data_type) for check in (
+        types.is_null, types.is_boolean, types.is_integer, types.is_floating,
+        types.is_decimal, types.is_temporal,
+    )):
+        return [32] * len(array)
+    raise TypeError(f"Unsupported Arrow type for bounded conversion: {data_type}")
 
 
 def _binary_rows(data: Any, format: str) -> Iterator[dict[str, Any]]:
@@ -390,25 +404,49 @@ def _select_path(value: Any, tokens: list[str], counts: Counter[str], depth: int
 def _connection(
     value: Mapping[str, Any], depth: int = 0, counts: Counter[str] | None = None,
 ) -> Mapping[str, Any] | None:
-    if depth > _MAX_DEPTH:
-        raise ValueError("GraphQL response is nested too deeply")
-    if "edges" in value or "nodes" in value:
-        if "edges" in value and "nodes" in value:
-            raise ValueError("GraphQL connection has both edges and nodes; select one with data_path")
-        if set(value).difference({"edges", "nodes"}, _METADATA):
-            raise ValueError("Ambiguous GraphQL connection fields; select rows with data_path")
-        return value
-    children = [child for key, child in value.items() if key not in _METADATA]
-    if len(children) == 1 and isinstance(children[0], Mapping):
-        connection = _connection(children[0], depth + 1, counts)
-        if connection is not None and counts is not None:
-            _graphql_errors(children[0], counts)
-        return connection
-    if len(children) > 1 and any(
-        _connection(child, depth + 1) is not None for child in children if isinstance(child, Mapping)
-    ):
-        raise ValueError("Multiple/ambiguous GraphQL fields require an explicit data_path")
-    return None
+    checked: set[int] = set()
+    active: set[int] = set()
+    remaining = _MAX_STRUCTURAL_WORK
+
+    def scan(
+        node: Mapping[str, Any], nesting: int, diagnostics: Counter[str] | None,
+    ) -> Mapping[str, Any] | None:
+        nonlocal remaining
+        if nesting > _MAX_DEPTH:
+            raise ValueError("GraphQL response is nested too deeply")
+        identity = id(node)
+        if identity in active:
+            raise ValueError("GraphQL response is cyclic")
+        if identity in checked:
+            return None
+        remaining -= len(node) + 1
+        if remaining < 0:
+            raise ValueError(f"GraphQL inference exceeds {_MAX_STRUCTURAL_WORK} structural work limit")
+        active.add(identity)
+        try:
+            if "edges" in node or "nodes" in node:
+                if "edges" in node and "nodes" in node:
+                    raise ValueError("GraphQL connection has both edges and nodes; select one with data_path")
+                if set(node).difference({"edges", "nodes"}, _METADATA):
+                    raise ValueError("Ambiguous GraphQL connection fields; select rows with data_path")
+                return node
+            children = [child for key, child in node.items() if key not in _METADATA]
+            connection = None
+            if len(children) == 1 and isinstance(children[0], Mapping):
+                connection = scan(children[0], nesting + 1, diagnostics)
+                if connection is not None and diagnostics is not None:
+                    _graphql_errors(children[0], diagnostics)
+            elif len(children) > 1 and any(
+                scan(child, nesting + 1, None) is not None for child in children if isinstance(child, Mapping)
+            ):
+                raise ValueError("Multiple/ambiguous GraphQL fields require an explicit data_path")
+            if connection is None:
+                checked.add(identity)
+            return connection
+        finally:
+            active.remove(identity)
+
+    return scan(value, depth, counts)
 
 
 def _graphql_errors(value: Mapping[str, Any], counts: Counter[str]) -> None:
@@ -562,8 +600,13 @@ def _join_field_name(parent: str, child: str) -> str:
 
 def _flatten(value: Mapping[str, Any], counts: Counter[str]) -> dict[str, Any]:
     output: dict[str, Any] = {}
+    remaining = _MAX_STRUCTURAL_WORK
 
     def add(key: str, item: Any, depth: int) -> None:
+        nonlocal remaining
+        remaining -= 1
+        if remaining < 0:
+            raise ValueError(f"Record exceeds {_MAX_STRUCTURAL_WORK} structural work limit")
         _utf8_size(key, _MAX_FIELD_BYTES, "field name")
         if depth > _MAX_DEPTH:
             raise ValueError("Record is nested too deeply or cyclic")

@@ -1,6 +1,7 @@
 """Ingestion contracts, including streaming reductions rather than head truncation."""
 from __future__ import annotations
 
+import inspect
 import io
 import json
 import math
@@ -13,6 +14,7 @@ from typing import Any
 import jsonschema
 import pytest
 from deepviz.models import ChartSpec, NormalizedData
+from deepviz.normalize import _connection
 from deepviz.normalize import normalize as normalize_impl
 
 
@@ -324,6 +326,81 @@ def test_cyclic_records_fail_with_bounded_depth() -> None:
         normalize([row])
 
 
+@pytest.mark.parametrize("depth", [8, 12, 16, 64])
+def test_connection_scan_visits_shared_mappings_once(depth: int) -> None:
+    scans = 0
+
+    class Observed(dict[str, Any]):
+        def items(self):
+            nonlocal scans
+            scans += 1
+            return super().items()
+
+    value = Observed(leaf=1)
+    for _ in range(depth):
+        value = Observed(left=value, right=value)
+    assert _connection(value) is None
+    assert scans <= depth + 1
+
+
+def test_connection_scan_has_a_total_work_limit_for_distinct_empty_subtrees() -> None:
+    value = {str(i): {str(j): {} for j in range(1024)} for i in range(65)}
+    with pytest.raises(ValueError, match="work limit"):
+        _connection(value)
+
+
+def test_connection_scan_rejects_cycles_explicitly() -> None:
+    value: dict[str, Any] = {}
+    value["self"] = value
+    with pytest.raises(ValueError, match="cyclic"):
+        _connection(value)
+
+
+@pytest.mark.parametrize("container", ["mapping", "list"])
+@pytest.mark.parametrize("depth", [16, 64])
+def test_flatten_empty_shared_dag_has_a_deterministic_work_limit(container: str, depth: int) -> None:
+    value: Any = {} if container == "mapping" else []
+    for _ in range(depth):
+        value = {"left": value, "right": value} if container == "mapping" else [value, value]
+    calls = 0
+
+    def observe(frame, event, _arg):
+        nonlocal calls
+        if event == "call" and frame.f_code.co_name == "add" and (
+            frame.f_code.co_filename == normalize_impl.__code__.co_filename
+        ):
+            calls += 1
+
+    previous = sys.getprofile()
+    sys.setprofile(observe)
+    try:
+        with pytest.raises(ValueError, match="work limit"):
+            normalize([{"payload": value}])
+    finally:
+        sys.setprofile(previous)
+    assert calls <= 1024 * 65 + 1
+
+
+@pytest.mark.parametrize("container", ["mapping", "list"])
+def test_shared_aliases_preserve_each_field_path(container: str) -> None:
+    shared = {"value": 3}
+    value = {"left": shared, "right": shared} if container == "mapping" else [shared, shared]
+    expected = {"payload.left.value": 3, "payload.right.value": 3} if container == "mapping" else {
+        "payload.0.value": 3, "payload.1.value": 3,
+    }
+    assert normalize([{"payload": value}]).records == [expected]
+    connection = {"nodes": [shared]}
+    with pytest.raises(ValueError, match="ambiguous"):
+        normalize({"data": {"left": connection, "right": connection}})
+
+
+def test_cyclic_list_fails_before_unbounded_flattening() -> None:
+    value: list[Any] = []
+    value.append(value)
+    with pytest.raises(ValueError, match="deeply|cyclic"):
+        normalize([{"payload": value}])
+
+
 def test_null_scalar_values_are_rows_not_lost_pages() -> None:
     assert normalize([None, 3]).records == [{"index": 0, "value": None}, {"index": 1, "value": 3}]
 
@@ -347,6 +424,91 @@ def test_optional_arrow_ipc_file_and_stream_bytes(tmp_path: Path) -> None:
         path = tmp_path / "table.arrow"
         path.write_bytes(content)
         assert normalize(path).input_count == 2
+
+
+@pytest.mark.parametrize("form", ["table", "batch", "reader", "ipc-stream-bytes"])
+@pytest.mark.parametrize("mode", ["dense", "sparse"])
+def test_arrow_union_is_rejected_before_any_python_conversion(form: str, mode: str) -> None:
+    arrow = pytest.importorskip("pyarrow")
+    ids = arrow.array([0] * 512, type=arrow.int8())
+    if mode == "dense":
+        values = arrow.UnionArray.from_dense(
+            ids, arrow.array([0] * 512, type=arrow.int32()),
+            [arrow.array(["x" * 65537])], field_names=["text"],
+        )
+    else:
+        values = arrow.UnionArray.from_sparse(ids, [arrow.array(["x"] * 512)], field_names=["text"])
+    table = arrow.table({"value": values})
+    source: Any = table
+    if form == "batch":
+        source = table.to_batches()[0]
+    elif form == "reader":
+        source = table.to_reader()
+    elif form == "ipc-stream-bytes":
+        sink = arrow.BufferOutputStream()
+        with arrow.ipc.new_stream(sink, table.schema) as writer:
+            writer.write_table(table)
+        source = sink.getvalue().to_pybytes()
+
+    rows = normalize_impl.__globals__["_arrow_rows"]
+    lines, first_line = inspect.getsourcelines(rows)
+    conversion_lines = [first_line + i for i, line in enumerate(lines) if ".to_pylist()" in line]
+    assert len(conversion_lines) == 1
+
+    def forbid_conversion(frame, event, _arg):
+        if frame.f_code is not rows.__code__:
+            return None
+        if event == "line" and frame.f_lineno == conversion_lines[0]:
+            raise AssertionError("Uncosted Arrow data reached Python conversion")
+        return forbid_conversion
+
+    previous = sys.gettrace()
+    sys.settrace(forbid_conversion)
+    try:
+        with pytest.raises(TypeError, match="Unsupported Arrow type"):
+            normalize(source, {"kind": "table", "aggregation": "none", "format": "arrow"})
+    finally:
+        sys.settrace(previous)
+
+
+@pytest.mark.parametrize("kind", ["extension", "string-view", "binary-view", "fixed-binary"])
+def test_uncosted_arrow_types_are_rejected_during_preflight(kind: str) -> None:
+    arrow = pytest.importorskip("pyarrow")
+
+    class Extension(arrow.ExtensionType):
+        def __init__(self):
+            super().__init__(arrow.string(), "deepviz.test-uncosted")
+
+        def __arrow_ext_serialize__(self):
+            return b""
+
+        @classmethod
+        def __arrow_ext_deserialize__(cls, _storage_type, _serialized):
+            return cls()
+
+    if kind == "extension":
+        column = arrow.ExtensionArray.from_storage(Extension(), arrow.array(["x"]))
+    elif kind == "string-view":
+        column = arrow.array(["x"], type=arrow.string_view())
+    elif kind == "binary-view":
+        column = arrow.array([b"x"], type=arrow.binary_view())
+    else:
+        column = arrow.array([b"x"], type=arrow.binary(1))
+    with pytest.raises(TypeError, match="Unsupported Arrow type"):
+        normalize(arrow.table({"value": column}))
+
+
+@pytest.mark.parametrize("selected", [0, 1])
+def test_sliced_fixed_size_arrow_lists_cost_only_selected_values(selected: int) -> None:
+    arrow = pytest.importorskip("pyarrow")
+    values = arrow.array(["unselected", "x" * 65537, "ok-0", "ok-1"])
+    source = arrow.FixedSizeListArray.from_arrays(values, 2).slice(selected, 1)
+    table = arrow.table({"v": source})
+    if selected == 0:
+        with pytest.raises(ValueError, match="cell.*65536"):
+            normalize(table)
+    else:
+        assert normalize(table).records == [{"v.0": "ok-0", "v.1": "ok-1"}]
 
 
 def test_scale_benchmark_measures_real_inputs_in_isolated_processes() -> None:
