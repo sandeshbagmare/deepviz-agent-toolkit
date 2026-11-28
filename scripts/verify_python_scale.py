@@ -153,13 +153,21 @@ def source_snapshot(root: Path) -> dict[str, Any]:
     git = subprocess.run(
         ["git", "-C", str(root), "rev-parse", "HEAD"], check=False, capture_output=True, text=True,
     )
+    status = subprocess.run(
+        ["git", "-C", str(root), "status", "--porcelain", "--untracked-files=all"],
+        check=False, capture_output=True, text=True,
+    )
     source = root / "python/deepviz/src/deepviz"
     hashes = {
         path.relative_to(root).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
         for path in sorted(source.rglob("*")) if path.is_file() and "__pycache__" not in path.parts
     }
-    return {"root": str(root.resolve()), "commit": git.stdout.strip() if git.returncode == 0 else None,
-            "source_sha256": hashes}
+    return {
+        "root": str(root.resolve()),
+        "commit": git.stdout.strip() if git.returncode == 0 else None,
+        "dirty_paths": status.stdout.splitlines() if status.returncode == 0 else None,
+        "source_sha256": hashes,
+    }
 
 
 def load_normalizer(root: Path) -> tuple[Any, Any]:
