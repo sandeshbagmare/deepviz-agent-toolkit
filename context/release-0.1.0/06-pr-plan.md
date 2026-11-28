@@ -5,7 +5,7 @@
 - Date: 2026-11-28
 - Plan version: 1.1 (local renderer-split amendment pending)
 
-Local scope/evidence and renderer-split amendment only, based on merged `main@54dd12e2d8d5d69e25426e92c313f0f79e00de81` (tree equal to plan `870c556d9aaf98e3a94c1ee17e2a77fc5daf83d3`). PR #39 and its checkout remain untouched; no new GitHub PR or merge is authorized. Wave 1 is current, NEW-01/02 remain drafts, and INT-01 exclusively owns NEW-01 current-main integration. QA-01 verified the existing ChartSpec baseline only; future feature/release acceptance stays unverified. Actual renderer child bases must be their future verified dependency merges.
+Local final draft PLAN-CHANGE-02 on main54dd; no new PR yet and no product promotion before this amendment merges. User forbids main-to-feature merges, force-push/history rewrite and branch deletion. fix_norm alone owns the UNPUBLISHED normalization-rebased replacement; old #40 is unaccepted/nonpromotable. Published #41-46 remain preserved preparation/source records; after dependency main QA, use fresh unpublished true-rebase/scoped-selection branches, publish once, and map full keeper paths/SHAs before superseding old PRs. All tests/exact2+2/CI/main-QA gates remain.
 
 ## Existing PR actions
 
@@ -20,7 +20,7 @@ RM-01 approves focused size exceptions for this coherent plan amendment (approxi
 
 ## Preparation and promotion
 
-Parallel preparation is authorized at the owner request: agents may prepare independent source selections, tests and code in isolated branches for upcoming tasks. Claim exact paths and never write overlapping files in a shared checkout. Shared-file tasks use isolated branches and serialized integration. Owner-approved draft PRs for planned waves may be opened for preparation; future-wave drafts stay non-ready until dependencies complete. Promote only after rebase onto current main, required checks, and fresh exact-head independent reports. Sequential INT-01/02 main merges and dependency order remain binding; preparation does not pass a wave or mark work complete.
+User policy is binding: no main-to-feature merge commits, no force-push/history rewrite, and no branch deletion. Preserve published #40-46 branches as preparation/source records. After each prerequisite is merged and verified on main, build a fresh UNPUBLISHED current-main branch by true rebase of a private copy or scoped product selection, with zero feature merge commits; publish it once, open only the necessary replacement PR, and map every retained/excluded path and source/keeper SHA before RM may supersede the old PR. No quota/duplicate tickets or PRs, no old-draft promotion, no dropped tests; all fresh exact-head 2+2/CI/dependency and non-author main-QA gates remain.
 
 ## New PRs
 
@@ -58,11 +58,12 @@ Owner-confirmed Python-only 0.1.0; issues #5, #6, #7, #8; plan NEW-01.
 ## Source branches consolidated
 feat/ingestion, feat/r34-python-data-foundation, test/graphql-contract, agents/r10-04-utf8-field-envelope, test/n19-formats, agents/r45-04-private-numeric-accounting
 ## Depends on (PRs that must merge first)
-Wave 0 G0 and approved PLAN-CHANGE-01; isolated preparation is allowed before merge.
+PLAN-CHANGE-02 merged FIRST, then true rebase of this unpublished branch onto resulting main before one publication; fresh exact-head checks/2+2/CI and exact-main QA mandatory.
 ## Files touched
 python/deepviz/src/deepviz/normalize.py, python/deepviz/tests/test_normalize.py, python/deepviz/tests/test_graphql_contract.py, python/deepviz/tests/test_n19_formats.py, python/deepviz/src/deepviz/__init__.py, python/deepviz/src/deepviz/models.py, schemas/chart-spec.schema.json, scripts/benchmark_scale.py, docs/verification/normalization/normalization-output.json, docs/verification/normalization/normalization-output.svg
 ## How tested (commands + results)
-Normalization, GraphQL, Arrow Table/RecordBatch/Reader, IPC file/stream, Parquet path/buffer, malformed/duplicate/oversized nested input, optional-extra error; install [columnar], verify zero skips, full pytest/Ruff/mypy. Verify selector model/runtime/checked-in-schema parity and no-read/no-open controls; run the existing benchmark smoke and validate the measured JSON/SVG evidence. Record actual exact-head commands/results; no unrun check is a pass.
+Normalization, GraphQL, Arrow Table/RecordBatch/Reader, IPC file/stream, Parquet path/buffer, malformed/duplicate/oversized nested input, optional-extra error; install [columnar], verify zero skips, full pytest/Ruff/mypy. Verify selector model/runtime/checked-in-schema parity and no-read/no-open controls; run the existing benchmark smoke and validate the measured JSON/SVG evidence. Correct both existing JSON/SVG artifact provenance records to the actual final tested source, and add/retest the newly found shared-_connection-DAG scan, empty-DAG _flatten scan, and ArrowUnion preconversion-amplification regressions in existing normalize.py/test_normalize.py paths. No main-to-feature merge, force-push, omitted test or extra path is authorized; recount against the existing NEW-01 ceiling. The remaining fifth Arrow-schema-DAG work-budget regression must be fixed and retested in the existing claimed paths; preserve every case. Old40/7296 gates invalid; plan2 FIRST, then true-rebase/rerun/recount on resulting main before one publication.
+
 ## Risk & rollback
 RM ruling: use latest96 normalizer provenance (R17/exact finite sum/mean/owned-input and R45 fixes), necessary input/GraphQL/Arrow tests, minimal __init__.py exports, and the focused reviewed PR #40 follow-ups. NEW-01 also owns selector-boundary changes in `python/deepviz/src/deepviz/models.py` and `schemas/chart-spec.schema.json`, its existing `scripts/benchmark_scale.py` smoke harness, and measured `docs/verification/normalization/normalization-output.json` plus `docs/verification/normalization/normalization-output.svg`. These five paths are part of the same bounded-normalization task, not permission for broad schema/package/docs work. Do not replay old patches or whole 9ce04fc/355637c commits; exclude TypeScript, coordination and unrelated evidence dumps. Rollback: Revert squash, rerun main suite, stop wave.
 ## Visual evidence (committed repository paths; embed every image)
@@ -80,7 +81,7 @@ Machine-readable companion: `docs/verification/normalization/normalization-outpu
 
 ### NEW-02 - [v1][W1][test] verify bounded reducer regressions and streaming scale
 
-- Action: prepare `release/v1/w1-python-scale` in an isolated branch; promote to a PR only in Wave 1 after the approved dependencies. NEW-01 already includes the latest96 reducer fixes. Add reducer regression and scale acceptance; do not replay source hunks already present. Historical `ec9f669` precedes child `5ba8603`; use those refs for regression provenance only.
+- Action: preserve published preparation/source `release/v1/w1-python-scale` unchanged. Only after dependency main QA, prepare a fresh UNPUBLISHED true-rebased/scoped-selection current-main replacement (branch/PR TBD), publish once, and map all keeper paths/SHAs before superseding old; never force-push or merge main into the feature.
 - Source branches: `feat/r34-python-data-foundation`, `fix/r17-normalizer-boundaries`, `agents/r10-16-finite-overflow-fix`, `agents/r45-04-private-numeric-accounting`.
 - Source selection: RM ruling: NEW-01 selects latest96 normalizer with reviewed reducer correctness fixes. NEW-02 does not replay those hunks; add reducer regression/scale acceptance and only newly demonstrated necessary fixes. Historical ec9f669 -> 5ba8603 order is provenance, not replay sequence.
 - Source commit references: `ec9f669eff28cd5351da142765b7755e3b2f484f`, `5ba860305dcc86ac2f95f01705b984d2b40f2799`, `c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19`, `a7363be273d7b3bbcb1b52ef79a58bb4e6d0e3be`, `7ab546251029df169604358448ecd462d8db5e6f`, `546c25ea75ee9d8a41b3832aa639664bc9a683b5`, `96b819aee5b01ba88b5a609b587331a528aaa070`.
@@ -125,9 +126,9 @@ Split proposal only: `NEW-02 -> NEW-03A -> NEW-03B -> NEW-04`; NEW-03 is not a s
 
 ### NEW-03A - [v1][W2][feature] add shared render boundary, Matplotlib and Vega-Lite
 
-- Local draft only: no replacement GitHub PR opened. Planned branch `release/v1/w2-python-renderers-static` is rebased from the exact verified dependency main, not this plan branch.
+- Local draft only: no replacement GitHub PR opened. Planned branch `release/v1/w2-python-renderers-static` must be prepared on a fresh UNPUBLISHED true-rebased/scoped-selection current-main branch after dependency main QA; the published preparation branch is preserved.
 - Source branches: feat/renderers, test/backend-vega. Ordered source references: `31acb2f6e58bc83f71c1736af9d4be37c56ad59c`, `420a956788c9b78529d3348650a32913090f5671`. Apply mixed commits with `--no-commit` and stage only scoped hunks; do not replay broad renderer ancestry.
-- Size: Planning estimate only: <=982 changed lines (877 shared/static implementation and tests +80 browser tests +25 compact evidence); not a measured diff. Actual full proposed diff must be <=1,000 changed lines including every required test and text evidence file.
+- Size: Earlier <=982 projection is historical. Prepared fdb7718050b9065ffcc6c770662268f392603980 measures 975 changed text lines plus three PNGs against its f692014 merge-base. Prepared only, not on main or final dependency base; retain all tests and actual <=1,000 final-head cap/recount after true rebase.
 - Evidence gates: each child requires its own exact-head two independent reviewer and two independent tester reports, observed green CI and non-author QA after merge. Every required test remains mandatory; an estimate does not pass the actual <=1,000-line gate.
 - Merge: squash. Preserve PR #42 until replacement coverage is fully accounted for; do not close or rewrite it through this draft.
 
@@ -158,7 +159,7 @@ Commit compact actual gallery output under `evidence/new03a/**` and embed each f
 
 ### NEW-03B - [v1][W2][feature] add Python Plotly renderer
 
-- Local draft only: no replacement GitHub PR opened. Planned branch `release/v1/w2-python-renderers-plotly` is rebased from the exact verified dependency main, not this plan branch.
+- Local draft only: no replacement GitHub PR opened. Planned branch `release/v1/w2-python-renderers-plotly` must be prepared on a fresh UNPUBLISHED true-rebased/scoped-selection current-main branch after dependency main QA; the published preparation branch is preserved.
 - Source branches: feat/renderers, test/backend-plotly. Ordered source references: `31acb2f6e58bc83f71c1736af9d4be37c56ad59c`, `420a956788c9b78529d3348650a32913090f5671`. Apply mixed commits with `--no-commit` and stage only scoped hunks; do not replay broad renderer ancestry.
 - Size: Planning estimate only: approximately 239 changed lines; not a measured diff. Actual full proposed diff must be <=1,000 changed lines including every required test and text evidence file.
 - Evidence gates: each child requires its own exact-head two independent reviewer and two independent tester reports, observed green CI and non-author QA after merge. Every required test remains mandatory; an estimate does not pass the actual <=1,000-line gate.
@@ -191,7 +192,7 @@ Commit compact actual gallery output under `evidence/new03b/**` and embed each f
 
 ### NEW-04 - [v1][W2][feature] add Python ECharts and AntV G2 renderers
 
-- Local draft only: no replacement GitHub PR opened. Planned branch `release/v1/w2-python-renderers-b` is rebased from the exact verified dependency main, not this plan branch.
+- Preserve published preparation/source `release/v1/w2-python-renderers-b` unchanged. After dependency main QA, prepare a fresh UNPUBLISHED true-rebased/scoped-selection current-main replacement branch/PR TBD, then one publication and full keeper mapping; no old-draft promotion.
 - Source branches: feat/renderers, fix/r20-antv-color-scale, fix/r23-count-channel, fix/r45-17-antv-subnormal, agents/r10-03-echarts-numeric-x, agents/r38-18-antv-source-review, review/r35-12-count-source. Ordered source references: `31acb2f6e58bc83f71c1736af9d4be37c56ad59c`, `420a956788c9b78529d3348650a32913090f5671`, `3185e0d9936c7d6f1a9d30b94089b804d75fe991`, `4429f0521612b97eee3790f0d8d0fbc3cad3f8be`, `85796dbe3360fb88686f2e7188122e2da80d54c2`. Apply mixed commits with `--no-commit` and stage only scoped hunks; do not replay broad renderer ancestry.
 - Size: 300-900 backend-specific lines anticipated; actual diff including all required tests and text evidence must remain <=1,000 changed lines after NEW-03B.
 - Evidence gates: each proposed slice requires its own exact-head two independent reviewer and two independent tester reports, observed green CI and non-author QA after merge. Every required test remains mandatory; an estimate does not pass the actual <=1,000-line gate.
@@ -207,9 +208,10 @@ feat/renderers, fix/r20-antv-color-scale, fix/r23-count-channel, fix/r45-17-antv
 ## Depends on (PRs that must merge first)
 NEW-03B merged and verified on exact main; NEW-03A remains verified as its prerequisite.
 ## Files touched
-python/deepviz/src/deepviz/engines.py, python/deepviz/src/deepviz/render.py, python/deepviz/tests/test_render.py, python/deepviz/tests/test_r20_antv_color_scale.py, python/deepviz/tests/test_r23_count_channel.py, tests/test_renderers_b.py, tests/test_browser_acceptance.py, evidence/new04/**
+python/deepviz/src/deepviz/engines.py, python/deepviz/tests/test_browser_acceptance.py, python/deepviz/tests/test_r23_count_channel.py, python/deepviz/tests/test_renderers_b.py, evidence/new04/**
 ## How tested (commands + results)
-Run tests/test_renderers_b.py, tests/test_browser_acceptance.py, affected test_render.py and targeted R20/R23 tests; inspect real native ECharts/AntV output, count/color/extreme-value behavior and browser/runtime/network/console evidence. Keep all required tests, full Python checks, observed exact-head green CI, two independent reviewer and two independent tester reports, and non-author verification on exact merged main. Commit only compact actual output under evidence/new04/**; no broad coordination/evidence dump. Record actual commands/results, exact base/head and the complete numstat; no execution pass is claimed by this template.
+Use actual python/deepviz/tests/test_renderers_b.py, test_browser_acceptance.py and test_r23_count_channel.py; preserve targeted R20 color/domain and R23 count/extreme native-source acceptance, plus shared static/Plotly regression checks. Historical root tests/ anticipated paths and absent R20 test filenames are not delivered-file claims. Inspect the real8-PNG/native/browser evidence, console/runtime/network behavior; retain all full checks, fresh exact-head2 reviewer+2 tester reports, green CI, final size recount and non-author exact-main QA after prerequisite main acceptance. Prepared4f59 versus14539 measures978 text/15paths/8PNG only; not main acceptance.
+
 ## Risk & rollback
 Shared renderer paths are serialized after NEW-03B; select existing ECharts/AntV and independent R20/R23/count/color/extreme-value source hunks only. Anticipated named test/evidence paths do not broaden source scope. Rollback: Revert squash; rerun renderer tests.
 ## Visual evidence (committed repository paths; embed every image)
@@ -224,7 +226,7 @@ Commit compact actual gallery output under `evidence/new04/**` and embed each fi
 
 ### NEW-05 - [v1][W3][feature] add recommendations and Deep Agents tools
 
-- Action: create fresh branch `release/v1/w3-python-tools` from latest main; apply only listed files/hunks. Source branches: feat/integrations.
+- Action: preserve published preparation/source `release/v1/w3-python-tools` unchanged. Only after dependency main QA, prepare a fresh UNPUBLISHED true-rebased/scoped-selection current-main replacement (branch/PR TBD), publish once, and map all keeper paths/SHAs before superseding old; never force-push or merge main into the feature.
 - Ordered cherry-pick source SHAs: `6731720cfc4c7b0a729c4958a7d2e2f4fe614107`. Apply mixed commits with `--no-commit`, stage only named hunks, and record paths. Never merge main into source branches.
 - Labels: `v1`, `wave-3`, `type:feature`, `P1`, `planned`; update lifecycle state label. Rebase before review and rerun checks.
 - Merge: squash.
@@ -259,7 +261,7 @@ In a fresh `.[agents]` environment, construct, inspect and invoke the actual Lan
 
 ### NEW-06 - [v1][W3][feature] add safe stdio MCP server and CLI
 
-- Action: create fresh branch `release/v1/w3-python-mcp-cli` from latest main; apply only listed files/hunks. Source branches: feat/integrations, fix/r14-mcp-json-budget, fix/r41-callback-admission, agents/r10-10-stdio-artifact-lifecycle, agents/r11-10-strict-mcp-boundaries.
+- Action: preserve published preparation/source `release/v1/w3-python-mcp-cli` unchanged. Only after dependency main QA, prepare a fresh UNPUBLISHED true-rebased/scoped-selection current-main replacement (branch/PR TBD), publish once, and map all keeper paths/SHAs before superseding old; never force-push or merge main into the feature.
 - Ordered cherry-pick source SHAs: `6731720cfc4c7b0a729c4958a7d2e2f4fe614107`, `d65dfc0fd807d0335b858476de8cdf7c6b958711`, `cd75c459ddba9f3d6bc0a5185b570af369fb4980`, `f48c72e26000560b48f3dfd137696fa9acf17637`, `91d62f4218302b3f3659a01611e76234398cdc98`, `6cba2d49eb4de82d5df64f790803e23c08f07b9d`. Apply mixed commits with `--no-commit`, stage only named hunks, and record paths. Never merge main into source branches.
 - Labels: `v1`, `wave-3`, `type:feature`, `P1`, `planned`; update lifecycle state label. Rebase before review and rerun checks.
 - Merge: squash.
@@ -328,7 +330,7 @@ Renderer paths were changed in earlier waves; rebase on their merged SHAs. Impor
 
 ### NEW-08 - [v1][W5][test] complete Python release acceptance and docs
 
-- Action: create fresh branch `release/v1/w5-python-acceptance` from latest main; apply only listed files/hunks. Source branches: test/acceptance, test/aggregation-semantics, test/backend-antv, test/mcp-transport, test/portability, perf/verification, agents/r10-07-python-clean-distribution, agents/r10-11-python-scale-envelope, agents/r10-13-ci-negative-controls, agents/r10-14-assets-offline-provenance, agents/r10-15-owned-input-cleanup.
+- Action: NEW-08 is a logical roll-up, not a broad omnibus PR. Preserve mapped published package/CI preparations; after prerequisites/main QA, use fresh UNPUBLISHED replacements with one publication and full keeper mapping. Remaining acceptance/docs needs focused claims before publication.
 - Ordered cherry-pick source SHAs: `12e7b6109e7fa6eebabf9a20912fcaf06f56f5a7`, `e6a8a8c2126dc90f10de8a3b0b16a9eaad829478`, `5f7ab4cf0e3e43075e781a20344c40c57d6fc7f7`, `c799dc5e3a9ffbdd522cab96419c466f86e04401`, `f1e71035b1818bd280037efaa1394adf500139fb`, `146f0276323918307b642bc86d1414dbb3b686d9`, `06c04900466f66d7919b68a5c3626d94df248ea6`, `2b4f0a8a2de7540a53d8399c2b87bbdd19b137e6`, `ccb0bf0856cde5c6a866b9418a7b6fca66f2c7cf`, `dedb41fa8df3fdb90b845eef7a10b5fa4032872c`, `9bcf27dd0888778a6826fbd1f3203bc4652cec40`, and `8a10108752567f6d0faac700240c4acf77b32556` (only `tests/r13_probes/role15/test_reducer_source_ownership.py`; exclude agent-state/evidence/report files). Apply mixed commits with `--no-commit`, stage only named hunks, and record paths. Never merge main into source branches.
 - Labels: `v1`, `wave-5`, `type:test`, `P1`, `planned`; update lifecycle state label. Rebase before review and rerun checks.
 - Merge: squash.
@@ -393,3 +395,7 @@ Do not close source branches during this planning run. Close only after the repl
 | NEW-08-CI / #46 | `release/v1/w5-python-ci` / CI-01 | NEW-08-PACKAGE plus NEW-01..NEW-07 (both renderer children) merged and verified on exact main. | REV-03 + REV-04; QA-02 + QA-03 independent non-author reports on this sub-PR exact head | `.github/CI.md`, `.github/workflows/python-release.yml`, `evidence/new08-ci/browser-output.png`, `evidence/new08-ci/report.json` |
 
 These are non-ready drafts: required actual PNG/JSON is absent at the audited heads. Use tested installed-package output for #45 and actual CI/browser output for #46; status diagrams do not satisfy the image requirement. Recount the complete fixed/evidence head under 1,000 lines and restart exact-head 2+2/CI after every change. Final NEW-08 acceptance/research/process/docs remains separately incomplete.
+
+PLAN-CHANGE-02-only budget: <=1,150 changed lines across the same11 context paths; ad540340 measured+737/-262=999 is historical, leaving151 lines solely for these coherent claim/policy/status corrections. Recount the final full diff; no product scope or gate waiver.
+
+NEW-01 replacement PR is TBD: plan2 FIRST, correct the two artifact provenance records and every discovered boundedness/work-budget regression, true-rebase the unpublished branch onto resulting main, verify zero feature merges and all fresh gates, then one publication. Rebase checklists refer only to unpublished replacements; never force-update old published drafts.
