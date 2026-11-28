@@ -1,15 +1,15 @@
 # DeepViz release 0.1.0 planning index
 
 - Default branch: `main`
-- Main SHA verified for this status update: `f692014b9c7eb6a9fe0aa6f27b76b40426f053a7`
+- Current main SHA: `54dd12e2d8d5d69e25426e92c313f0f79e00de81`
 - Date: 2026-11-28
 - Plan version: 1.1 (owner decisions recorded; plan-change PR pending)
 
-Live state is reconciled to default branch `main` at `f692014b9c7eb6a9fe0aa6f27b76b40426f053a7`. Owner decisions confirm Python-only 0.1.0, Arrow/Parquet support through the optional `[columnar]` extra, and version `0.1.0`; TypeScript issues #14/#15 and npm package issue #25 are deferred to v1.1. The caller explicitly revised #28 for 0.1.0; the plan-change PR must merge before the issue is updated/closed. Wave 0 checks are recorded in `18-current-state-audit.md`; Wave 1 remains queued until this plan change is approved and merged.
+The plan baseline is merged on `main@54dd12e2d8d5d69e25426e92c313f0f79e00de81` as PR #39. Wave 1 is current; #40/#41 remain preparation drafts, and INT-01 exclusively owns NEW-01 integration onto current main. RM-01 reports 3/3 result-main CI checks green; baseline QA is still pending QA-01. The earlier `main@f692014b9c7eb6a9fe0aa6f27b76b40426f053a7` QA results remain historical evidence, not a new QA pass.
 
-The repo currently has **76 remote branches** including `main` (75 non-default), **11 PR records** (9 open, 2 merged), **35 open issues**, and **11 open P0 issues**. Seven product PRs (#40-#46) are open drafts for planned Waves 1-5, with plan-change PR #39 and stale draft PR #31 also open. Product drafts are preparation only; future-wave drafts remain non-ready until dependencies complete. The only current-main workflow is the focused ChartSpec matrix. The planning packet contains 22 files: README, 00-18, canonical YAML, and the committed wave-map SVG evidence.
+The captured inventory, adjusted for the known #39 merge, has 76 refs including main, 11 PR records (8 open/3 merged), 35 open issues and 11 open P0 issues. This local draft does not claim a fresh full inventory fetch. Product preparation drafts #40-46 and the stale #31 draft remain open/non-ready until their gates pass. The existing workflow and 22-file planning packet are unchanged.
 
-The original branch and issue disposition tables remain a historical planning snapshot at main `484ff08...`; live counts and status at `f692014...` are in `18-current-state-audit.md` and the tracker below.
+The original branch and issue disposition tables remain a historical snapshot at `484ff08...`; the audit in `18-current-state-audit.md` records the pre-merge `f692014...` baseline. Current transition details are in the tracker and canonical YAML.
 
 ## Index
 
@@ -33,6 +33,10 @@ The original branch and issue disposition tables remain a historical planning sn
 - [`17-agent-onboarding.md`](17-agent-onboarding.md)
 - [`18-current-state-audit.md`](18-current-state-audit.md)
 - [`release-0.1.0.yaml`](release-0.1.0.yaml)
+
+## Local renderer-split proposal
+
+Local renderer-split amendment only, based on merged `main@54dd12e2d8d5d69e25426e92c313f0f79e00de81` (tree equal to plan `870c556d9aaf98e3a94c1ee17e2a77fc5daf83d3`). PR #39 is merged and remains untouched; this branch has no GitHub PR and grants no renderer replacement promotion or merge. Wave 1 is current, NEW-01/02 remain drafts, and INT-01 exclusively owns NEW-01 current-main integration. Result-main baseline QA is pending QA-01. Actual NEW-03A/B comparison bases must be the future verified dependency merges. Proposed sequence: `NEW-02 -> NEW-03A -> NEW-03B -> NEW-04`. Nine product PR slices cover the same eight logical changes; actual GitHub counts are the captured baseline above. NEW-03 completes only after both child merges are verified on main. See `05-merge-plan.md` and canonical YAML; the existing wave-map SVG remains baseline evidence and is not a new amendment approval.
 
 ## Use and amendments
 

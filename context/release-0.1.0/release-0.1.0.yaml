@@ -22,20 +22,21 @@
     }
   },
   "default_branch": "main",
-  "main_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+  "main_sha": "54dd12e2d8d5d69e25426e92c313f0f79e00de81",
   "source_of_truth": "release-0.1.0.yaml; structured plan synchronized with Markdown, with original branch-disposition inventory retained as a dated snapshot",
   "scope_status": "OWNER-CONFIRMED: Python-only 0.1.0; Arrow/Parquet via optional [columnar]; TypeScript #14/#15 and npm #25 deferred; #28 owner revision awaits public issue update after plan merge",
   "counts": {
     "remote_refs_including_main": 76,
     "non_default_branches": 75,
     "pull_requests": 11,
-    "open_pull_requests": 9,
-    "merged_pull_requests": 2,
+    "open_pull_requests": 8,
+    "merged_pull_requests": 3,
     "open_issues": 35,
     "closed_issues": 0,
     "open_p0_issues": 11,
     "waves": 6,
-    "planned_new_prs": 8
+    "planned_new_prs": 9,
+    "logical_changes": 8
   },
   "branch_disposition_counts": {
     "V1-FIX-FIRST": 11,
@@ -44320,12 +44321,13 @@
     {
       "wave": 2,
       "prs": [
-        "NEW-03",
+        "NEW-03A",
+        "NEW-03B",
         "NEW-04"
       ],
       "tag": "v0.1.0-wave-2",
       "entry": "Wave 1 product/#8/#30 acceptance recorded; #5 Artifact and #22 renderer criteria scheduled here; #28 superseded; checks green; #14/#15/#25 deferred.",
-      "exit": "Five renderers and #23 output/browser/dashboard acceptance verified; #5 Artifact API accepted; renderer-linked #22 scale proof independently replicated or remains explicitly pending through W5.",
+      "exit": "NEW-03A then NEW-03B then NEW-04 merged and independently verified on exact main; NEW-03 roll-up completes only when both children are verified-on-main. Five renderers and #23 output/browser/dashboard acceptance verified; #5 Artifact API accepted; renderer-linked #22 scale proof independently replicated or remains explicitly pending through W5.",
       "scheduled_p0s": [
         4,
         20,
@@ -44514,39 +44516,104 @@
       "visual_evidence_required": true
     },
     {
-      "id": "NEW-03",
+      "id": "NEW-03A",
       "wave": 2,
-      "title": "[v1][W2][feature] add Python Matplotlib, Plotly, and Vega renderers",
-      "branch": "release/v1/w2-python-renderers-a",
+      "title": "[v1][W2][feature] add shared render boundary, Matplotlib and Vega-Lite",
+      "branch": "release/v1/w2-python-renderers-static",
       "source_branches": [
         "feat/renderers",
-        "test/backend-plotly",
         "test/backend-vega"
       ],
       "files": [
         "python/deepviz/src/deepviz/engines.py",
         "python/deepviz/src/deepviz/render.py",
-        "python/deepviz/tests/test_render.py"
+        "python/deepviz/tests/test_render.py",
+        "python/deepviz/tests/test_static_browser.py",
+        "evidence/new03a/**"
       ],
-      "estimated_size": "300-900 backend-specific lines; split if >1,000",
-      "dependencies": "NEW-01, NEW-02",
-      "expected_conflicts": "Source commit 31acb2f6 adds five backends in 1,184 lines; stage only these three and their tests; NEW-04 follows.",
-      "reviewers": "REV-01 + REV-04; QA-01 + QA-02",
-      "required_tests": "backend semantics, real artifact/MIME/manifest, unsafe text; full checks",
-      "rollback": "Revert squash; normalized main remains.",
+      "estimated_size": "Planning estimate only: <=982 changed lines (877 shared/static implementation and tests +80 browser tests +25 compact evidence); not a measured diff. Actual full proposed diff must be <=1,000 changed lines including every required test and text evidence file.",
+      "dependencies": "NEW-02 merged and verified on exact main (NEW-01 is transitive); this renderer-split plan-change approved and merged.",
+      "expected_conflicts": "Shared engines.py/render.py/test_render.py paths are serialized: NEW-02 -> NEW-03A -> NEW-03B -> NEW-04. Stage only the shared render/artifact boundary plus Matplotlib and Vega-Lite hunks; exclude Plotly/ECharts/AntV implementation.",
+      "reviewers": "REV-01 + REV-04; QA-01 + QA-02 independent non-author reports on each child exact head",
+      "required_tests": "Run complete relevant tests in test_render.py and test_static_browser.py with real Matplotlib PNG/SVG and Vega-Lite SVG/HTML/fallback artifacts; inspect bar/table/dashboard semantics, titles/labels, MIME/manifest, safe text/paths and browser console/runtime/network behavior. Keep all required tests; no skipped required case. Run full Python regression, Ruff, mypy and applicable package/build checks; observed green CI and two independent reviewer plus two independent tester reports must target exact final head. Rebase onto exact post-NEW-02 main before final reports; non-author QA verifies the merge on exact main.",
+      "rollback": "Revert NEW-03A squash if required, rerun main checks and stop the dependent renderer queue; preserve normalized main.",
       "merge_method": "squash",
       "source_commits": [
         {
           "sha": "31acb2f6e58bc83f71c1736af9d4be37c56ad59c",
-          "source": "feat/renderers"
+          "source": "feat/renderers",
+          "selection": "shared render boundary, Matplotlib and Vega-Lite only; apply with --no-commit and stage only claimed paths/hunks."
         },
         {
           "sha": "420a956788c9b78529d3348650a32913090f5671",
-          "source": "feat/renderers"
+          "source": "feat/renderers",
+          "selection": "shared render boundary, Matplotlib and Vega-Lite only; apply with --no-commit and stage only claimed paths/hunks."
         }
       ],
-      "state": "planned",
-      "visual_evidence_required": true
+      "state": "planned; local split proposal only; no replacement PR opened",
+      "visual_evidence_required": true,
+      "logical_parent": "NEW-03",
+      "source_selection_note": "Select shared render boundary, Matplotlib and Vega-Lite only from existing NEW-03 source provenance. PR #42 at captured head 79bbb12a396d6d138c1ac54ea93b827aba5bb923 is a preserved preparation/source reference, not a merged prerequisite or an approved replacement. Do not close, rewrite or merge #42 until replacement coverage accounts for every retained or excluded hunk and evidence path. No new source branch or renderer scope is authorized.",
+      "size_gate": {
+        "max_changed_lines": 1000,
+        "estimated_changed_lines": 982,
+        "measurement_status": "estimate only; actual numstat not run for hypothetical replacement PR",
+        "actual_changed_lines": null,
+        "comparison_base": "Exact merged main after the named dependency; record base SHA and final head SHA",
+        "command": "git diff --numstat <exact-dependency-main-sha>...<exact-final-head-sha>; sum all numeric additions and deletions; report binary evidence separately",
+        "required_tests_mandatory": true,
+        "over_limit_action": "Block promotion and request a further focused plan amendment; do not omit tests or claim the projection as a pass."
+      }
+    },
+    {
+      "id": "NEW-03B",
+      "wave": 2,
+      "title": "[v1][W2][feature] add Python Plotly renderer",
+      "branch": "release/v1/w2-python-renderers-plotly",
+      "source_branches": [
+        "feat/renderers",
+        "test/backend-plotly"
+      ],
+      "files": [
+        "python/deepviz/src/deepviz/engines.py",
+        "python/deepviz/src/deepviz/render.py",
+        "python/deepviz/tests/test_render.py",
+        "python/deepviz/tests/test_plotly_browser.py",
+        "evidence/new03b/**"
+      ],
+      "estimated_size": "Planning estimate only: approximately 239 changed lines; not a measured diff. Actual full proposed diff must be <=1,000 changed lines including every required test and text evidence file.",
+      "dependencies": "NEW-03A merged and verified on exact main; this renderer-split plan-change approved and merged.",
+      "expected_conflicts": "Rebase onto the actual NEW-03A main merge, preserve the shared render boundary and static backends, and stage Plotly-only implementation/test hunks. No broad source commit or TypeScript replay.",
+      "reviewers": "REV-01 + REV-04; QA-01 + QA-02 independent non-author reports on each child exact head",
+      "required_tests": "Run Plotly-scoped test_render.py and test_plotly_browser.py cases with actual HTML and browser output, including hostile titles/labels, literal text, trace/axis semantics, artifact/MIME/manifest and browser console/runtime/network behavior. Rerun Matplotlib/Vega-Lite regression controls from NEW-03A. Keep all required tests; no skipped required case. Run full Python regression, Ruff, mypy and applicable package/build checks; observed green CI and two independent reviewer plus two independent tester reports must target exact final head. Non-author QA verifies the merge on exact main.",
+      "rollback": "Revert only NEW-03B squash; preserve NEW-03A shared boundary, Matplotlib and Vega-Lite, rerun static regression/main checks and stop NEW-04 promotion. After revert, mark NEW-03B and the NEW-03 roll-up unverified until the affected exact-main QA passes again.",
+      "merge_method": "squash",
+      "source_commits": [
+        {
+          "sha": "31acb2f6e58bc83f71c1736af9d4be37c56ad59c",
+          "source": "feat/renderers",
+          "selection": "Plotly only; apply with --no-commit and stage only claimed paths/hunks."
+        },
+        {
+          "sha": "420a956788c9b78529d3348650a32913090f5671",
+          "source": "feat/renderers",
+          "selection": "Plotly only; apply with --no-commit and stage only claimed paths/hunks."
+        }
+      ],
+      "state": "planned; local split proposal only; no replacement PR opened",
+      "visual_evidence_required": true,
+      "logical_parent": "NEW-03",
+      "source_selection_note": "Select Plotly only from existing NEW-03 source provenance. PR #42 at captured head 79bbb12a396d6d138c1ac54ea93b827aba5bb923 is a preserved preparation/source reference, not a merged prerequisite or an approved replacement. Do not close, rewrite or merge #42 until replacement coverage accounts for every retained or excluded hunk and evidence path. No new source branch or renderer scope is authorized.",
+      "size_gate": {
+        "max_changed_lines": 1000,
+        "estimated_changed_lines": 239,
+        "measurement_status": "estimate only; actual numstat not run for hypothetical replacement PR",
+        "actual_changed_lines": null,
+        "comparison_base": "Exact merged main after the named dependency; record base SHA and final head SHA",
+        "command": "git diff --numstat <exact-dependency-main-sha>...<exact-final-head-sha>; sum all numeric additions and deletions; report binary evidence separately",
+        "required_tests_mandatory": true,
+        "over_limit_action": "Block promotion and request a further focused plan amendment; do not omit tests or claim the projection as a pass."
+      }
     },
     {
       "id": "NEW-04",
@@ -44567,13 +44634,16 @@
         "python/deepviz/src/deepviz/render.py",
         "python/deepviz/tests/test_render.py",
         "python/deepviz/tests/test_r20_antv_color_scale.py",
-        "python/deepviz/tests/test_r23_count_channel.py"
+        "python/deepviz/tests/test_r23_count_channel.py",
+        "tests/test_renderers_b.py",
+        "tests/test_browser_acceptance.py",
+        "evidence/new04/**"
       ],
-      "estimated_size": "300-900 backend-specific lines; after NEW-03",
-      "dependencies": "NEW-03",
-      "expected_conflicts": "Shares renderer paths; rebase after NEW-03; select independent count/AntV hunks once.",
+      "estimated_size": "300-900 backend-specific lines anticipated; actual diff including all required tests and text evidence must remain <=1,000 changed lines after NEW-03B.",
+      "dependencies": "NEW-03B merged and verified on exact main; NEW-03A remains verified as its prerequisite.",
+      "expected_conflicts": "Shared renderer paths are serialized after NEW-03B; select existing ECharts/AntV and independent R20/R23/count/color/extreme-value source hunks only. Anticipated named test/evidence paths do not broaden source scope.",
       "reviewers": "REV-02 + REV-03; QA-02 + QA-03",
-      "required_tests": "native output, count/color/extreme-value tests and artifact inspection",
+      "required_tests": "Run tests/test_renderers_b.py, tests/test_browser_acceptance.py, affected test_render.py and targeted R20/R23 tests; inspect real native ECharts/AntV output, count/color/extreme-value behavior and browser/runtime/network/console evidence. Keep all required tests, full Python checks, observed exact-head green CI, two independent reviewer and two independent tester reports, and non-author verification on exact merged main. Commit only compact actual output under evidence/new04/**; no broad coordination/evidence dump.",
       "rollback": "Revert squash; rerun renderer tests.",
       "merge_method": "squash",
       "source_commits": [
@@ -44599,7 +44669,8 @@
         }
       ],
       "state": "planned",
-      "visual_evidence_required": true
+      "visual_evidence_required": true,
+      "source_selection_note": "Existing NEW-04 source branches and ordered source SHAs are unchanged. Explicit anticipated test paths and compact evidence claims only; no new renderer/backend or TypeScript source scope."
     },
     {
       "id": "NEW-05",
@@ -44616,7 +44687,7 @@
         "python/deepviz/tests/test_integrations.py"
       ],
       "estimated_size": "300-900; split API/tool bindings if needed",
-      "dependencies": "NEW-03, NEW-04",
+      "dependencies": "NEW-03A, NEW-03B, NEW-04 merged and verified on exact main",
       "expected_conflicts": "1,341-line integration source; stage recommendation/tool API before MCP.",
       "reviewers": "REV-01 + REV-03; QA-02 + QA-03",
       "required_tests": "In a fresh `.[agents]` environment, construct, inspect and invoke the actual LangChain `StructuredTool` API, then run normalize -> recommend -> render through the real tool flow. These required tests must execute with zero skips. Separately, in a fresh base-only install without LangChain/Deep Agents, import core and prove optional integrations remain lazy without loading `langchain_core`; full checks.",
@@ -44707,7 +44778,7 @@
         "tests/"
       ],
       "estimated_size": "300-900 lines; selected fixes only",
-      "dependencies": "NEW-03, NEW-04",
+      "dependencies": "NEW-03A, NEW-03B, NEW-04 merged and verified on exact main",
       "expected_conflicts": "Renderer paths were changed in earlier waves; rebase on their merged SHAs. Import only Python hardening/test hunks.",
       "reviewers": "REV-01 + REV-04 (security); QA-01 + QA-02",
       "required_tests": "dense table preflight, no execution/unsafe path, security regressions; full suite",
@@ -44841,9 +44912,9 @@
   ],
   "agent_assignments": {
     "RM-01": "Orchestration/status, plan-change review/publication, owner decisions and gates",
-    "INT-01": "Integration feasibility and later approved sequential merges",
+    "INT-01": "Exclusive NEW-01 integration onto main@54dd12e2, followed by approved sequential merge gates; no other writer in PR #40 integration checkout.",
     "INT-02": "Plan consistency/integration preflight and rebase queue",
-    "IMP-01": "Isolated NEW-01 latest96 normalizer + necessary tests + minimal package exports",
+    "IMP-01": "NEW-01 source author standby during INT-01 exclusive current-main integration; no concurrent product writes.",
     "IMP-02": "NEW-02 reducer regression/scale preparation; no replay of latest96 fixes",
     "IMP-03": "Renderer readiness/source preparation",
     "IMP-04": "Reducer source audit complete; renderer-B preparation queued",
@@ -44905,9 +44976,9 @@
     {
       "id": "NEW-01",
       "wave": 1,
-      "owner": "IMP-01",
-      "state": "planned; PR #40 open draft for isolated preparation only",
-      "blocked_by": "PLAN-CHANGE-01 must merge before PR #40 is promoted; draft remains non-ready.",
+      "owner": "INT-01",
+      "state": "current Wave 1; PR #40 draft; exclusive current-main integration assigned INT-01",
+      "blocked_by": "PLAN-CHANGE-01 merged at 54dd12e2; INT-01 integrates onto current main, then fresh exact-head checks/reviews/tests and non-author main QA; no concurrent author writes.",
       "claimed_files": [
         "python/deepviz/src/deepviz/normalize.py",
         "python/deepviz/tests/test_normalize.py",
@@ -44926,8 +44997,8 @@
       "id": "NEW-02",
       "wave": 1,
       "owner": "IMP-02",
-      "state": "planned; PR #41 open draft for isolated preparation only",
-      "blocked_by": "NEW-01 and serialized shared-file handoff; PR #41 remains non-ready until dependencies merge.",
+      "state": "current Wave 1; PR #41 preparation draft; non-ready",
+      "blocked_by": "NEW-01 verified on exact main; serialized shared-file handoff and fresh exact-head gates; no main-QA completion claimed.",
       "claimed_files": [
         "python/deepviz/src/deepviz/normalize.py",
         "python/deepviz/tests/test_normalize.py",
@@ -44943,12 +45014,38 @@
       "id": "NEW-03",
       "wave": 2,
       "owner": "IMP-03",
-      "state": "planned",
-      "blocked_by": "NEW-01, NEW-02",
+      "state": "planned logical roll-up; local split amendment pending",
+      "blocked_by": "Both NEW-03A and NEW-03B merged and independently verified-on-main; retain PR #42 until replacement scope is accounted for.",
+      "claimed_files": [],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "NEW-03A",
+      "wave": 2,
+      "owner": "IMP-03",
+      "state": "planned; local split proposal only; no replacement PR opened",
+      "blocked_by": "NEW-02 merged and verified on exact main (NEW-01 is transitive); this renderer-split plan-change approved and merged.",
       "claimed_files": [
         "python/deepviz/src/deepviz/engines.py",
         "python/deepviz/src/deepviz/render.py",
-        "python/deepviz/tests/test_render.py"
+        "python/deepviz/tests/test_render.py",
+        "python/deepviz/tests/test_static_browser.py",
+        "evidence/new03a/**"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "NEW-03B",
+      "wave": 2,
+      "owner": "IMP-03",
+      "state": "planned; local split proposal only; no replacement PR opened",
+      "blocked_by": "NEW-03A merged and verified on exact main; this renderer-split plan-change approved and merged.",
+      "claimed_files": [
+        "python/deepviz/src/deepviz/engines.py",
+        "python/deepviz/src/deepviz/render.py",
+        "python/deepviz/tests/test_render.py",
+        "python/deepviz/tests/test_plotly_browser.py",
+        "evidence/new03b/**"
       ],
       "last_update": "2026-11-28"
     },
@@ -44957,13 +45054,16 @@
       "wave": 2,
       "owner": "IMP-04",
       "state": "planned",
-      "blocked_by": "NEW-03",
+      "blocked_by": "NEW-03B merged and verified on exact main; NEW-03A remains verified as its prerequisite.",
       "claimed_files": [
         "python/deepviz/src/deepviz/engines.py",
         "python/deepviz/src/deepviz/render.py",
         "python/deepviz/tests/test_render.py",
         "python/deepviz/tests/test_r20_antv_color_scale.py",
-        "python/deepviz/tests/test_r23_count_channel.py"
+        "python/deepviz/tests/test_r23_count_channel.py",
+        "tests/test_renderers_b.py",
+        "tests/test_browser_acceptance.py",
+        "evidence/new04/**"
       ],
       "last_update": "2026-11-28"
     },
@@ -44972,7 +45072,7 @@
       "wave": 3,
       "owner": "IMP-05",
       "state": "planned",
-      "blocked_by": "NEW-03, NEW-04",
+      "blocked_by": "NEW-03A, NEW-03B, NEW-04 merged and verified on exact main",
       "claimed_files": [
         "python/deepviz/src/deepviz/recommend.py",
         "python/deepviz/src/deepviz/tools.py",
@@ -45004,7 +45104,7 @@
       "wave": 4,
       "owner": "IMP-07",
       "state": "planned",
-      "blocked_by": "NEW-03, NEW-04",
+      "blocked_by": "NEW-03A, NEW-03B, NEW-04 merged and verified on exact main",
       "claimed_files": [
         "python/deepviz/src/deepviz/engines.py",
         "python/deepviz/src/deepviz/render.py",
@@ -45085,8 +45185,8 @@
       "id": "PR-42",
       "wave": "Wave 2 prep",
       "owner": "IMP-03",
-      "state": "open draft; non-ready",
-      "blocked_by": "Dependencies, rebase, CI, and exact-head 2+2 evidence before promotion",
+      "state": "open draft; non-ready; preserved source for proposed NEW-03A/B",
+      "blocked_by": "Retain unchanged until replacement coverage accounts for retained/excluded hunks and evidence; do not promote/merge/close through this local amendment.",
       "claimed_files": [
         "release/v1/w2-python-renderers-a"
       ],
@@ -45329,10 +45429,28 @@
       "id": "PLAN-CHANGE-01",
       "wave": 0,
       "owner": "RM-01",
-      "state": "in progress; final exact-head review/testing pending",
-      "blocked_by": "2 independent reviews, 2 tester reports, committed SVG, checks and merge",
+      "state": "merged as PR #39 at 54dd12e2; result-main baseline QA pending QA-01",
+      "blocked_by": "Plan merge confirmed; retain post-merge baseline QA pending. No verified-on-main claim for the result-main yet.",
       "claimed_files": [
         "context/release-0.1.0/**"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "PLAN-CHANGE-02",
+      "wave": "before renderer replacement promotion",
+      "owner": "RM-01 + DOC-01",
+      "state": "local draft only; no GitHub PR opened",
+      "blocked_by": "RM review and instruction to submit separately; merged PR #39 remains untouched; no renderer replacement promotion until approved split plan and dependency gates.",
+      "claimed_files": [
+        "context/release-0.1.0/README.md",
+        "context/release-0.1.0/04-dependency-and-conflict-map.md",
+        "context/release-0.1.0/05-merge-plan.md",
+        "context/release-0.1.0/06-pr-plan.md",
+        "context/release-0.1.0/14-tracker.md",
+        "context/release-0.1.0/15-plan-changelog.md",
+        "context/release-0.1.0/16-feature-verification.md",
+        "context/release-0.1.0/release-0.1.0.yaml"
       ],
       "last_update": "2026-11-28"
     }
@@ -45361,7 +45479,7 @@
     },
     {
       "feature": "Bounded streaming scale",
-      "prs": "NEW-02, NEW-03/04, NEW-08",
+      "prs": "NEW-02, NEW-03A/NEW-03B/NEW-04, NEW-08",
       "tests": "python/deepviz/tests/test_normalize.py; scale harness",
       "smoke": "10/1K/100K/1M/10M streams: W1 normalizer proof; W2/W5 bounded renderer rows/bytes and independent replication. Record machine-readable environment, timing, memory method, counts, strategy, limits, failures and unrun scenarios.",
       "verified_on_main": false,
@@ -45382,10 +45500,21 @@
       "result": "Required through optional pyarrow>=19 extra; no implementation on current main. NEW-01 owns the format matrix; CI must install [columnar]."
     },
     {
+      "feature": "NEW-03 renderer roll-up",
+      "prs": "NEW-03A, NEW-03B",
+      "tests": "All required NEW-03A and NEW-03B tests and exact-main QA evidence",
+      "smoke": "Only complete after both children are merged and non-author verified on exact main, including real static/Plotly artifacts and preserved shared boundary. A-only success does not complete NEW-03.",
+      "verified_on_main": false,
+      "verified_by": null,
+      "main_sha": null,
+      "date": null,
+      "result": "Local draft split only; no execution, review, CI or main-QA pass claimed."
+    },
+    {
       "feature": "Matplotlib renderer",
-      "prs": "NEW-03",
-      "tests": "python/deepviz/tests/test_render.py",
-      "smoke": "Render bar/table; inspect real PNG/SVG and manifest.",
+      "prs": "NEW-03A",
+      "tests": "python/deepviz/tests/test_render.py; python/deepviz/tests/test_static_browser.py",
+      "smoke": "Real Matplotlib PNG/SVG/manifest and browser output; inspect supported bar/table/dashboard semantics, text and bounds; commit compact evidence/new03a/**.",
       "verified_on_main": false,
       "verified_by": null,
       "main_sha": null,
@@ -45393,9 +45522,9 @@
     },
     {
       "feature": "Plotly renderer",
-      "prs": "NEW-03",
-      "tests": "python/deepviz/tests/test_render.py",
-      "smoke": "Render hostile labels; verify literal text and artifact.",
+      "prs": "NEW-03B",
+      "tests": "python/deepviz/tests/test_render.py; python/deepviz/tests/test_plotly_browser.py",
+      "smoke": "Actual Plotly HTML/browser trace/axis and hostile literal-label controls; preserve NEW-03A static regression and commit compact evidence/new03b/**.",
       "verified_on_main": false,
       "verified_by": null,
       "main_sha": null,
@@ -45403,9 +45532,9 @@
     },
     {
       "feature": "Vega-Lite renderer",
-      "prs": "NEW-03",
-      "tests": "python/deepviz/tests/test_render.py",
-      "smoke": "Render and inspect SVG/fallback metadata.",
+      "prs": "NEW-03A",
+      "tests": "python/deepviz/tests/test_render.py; python/deepviz/tests/test_static_browser.py",
+      "smoke": "Real Vega-Lite SVG/HTML/fallback metadata and browser output; inspect text/semantics and commit compact evidence/new03a/**.",
       "verified_on_main": false,
       "verified_by": null,
       "main_sha": null,
@@ -45414,8 +45543,8 @@
     {
       "feature": "ECharts renderer",
       "prs": "NEW-04",
-      "tests": "python/deepviz/tests/test_render.py",
-      "smoke": "Render bar/heatmap and inspect output semantics.",
+      "tests": "tests/test_renderers_b.py; tests/test_browser_acceptance.py; python/deepviz/tests/test_render.py; targeted python/deepviz/tests/test_r20_antv_color_scale.py and test_r23_count_channel.py",
+      "smoke": "Render bar/heatmap and inspect output semantics. Run targeted R20/R23 and actual browser controls; commit compact evidence/new04/**; existing source scope unchanged.",
       "verified_on_main": false,
       "verified_by": null,
       "main_sha": null,
@@ -45424,8 +45553,8 @@
     {
       "feature": "AntV G2 renderer",
       "prs": "NEW-04",
-      "tests": "python/deepviz/tests/test_render.py",
-      "smoke": "Render bar/heatmap and inspect color/domain behavior.",
+      "tests": "tests/test_renderers_b.py; tests/test_browser_acceptance.py; python/deepviz/tests/test_render.py; targeted python/deepviz/tests/test_r20_antv_color_scale.py and test_r23_count_channel.py",
+      "smoke": "Render bar/heatmap and inspect color/domain behavior. Run targeted R20/R23 and actual browser controls; commit compact evidence/new04/**; existing source scope unchanged.",
       "verified_on_main": false,
       "verified_by": null,
       "main_sha": null,
@@ -45485,14 +45614,14 @@
     "note": "Original branch and pull-request inventories, overlap data and disposition counts are historical snapshots at inventory_snapshot.base_main_sha; current refs, PRs, issues and labels are listed under current_state and current_state.live_snapshot_note."
   },
   "current_state": {
-    "main_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+    "main_sha": "54dd12e2d8d5d69e25426e92c313f0f79e00de81",
     "date": "2026-11-28",
     "remote_refs_including_main": 76,
     "non_default_branches": 75,
     "pull_requests": {
       "total": 11,
-      "open": 9,
-      "merged": 2
+      "open": 8,
+      "merged": 3
     },
     "issues": {
       "open": 35,
@@ -45515,9 +45644,10 @@
     "github_workflow": "Focused ChartSpec Python 3.11-3.13 matrix; no full package/integration workflow exists yet.",
     "pr_merge_shas": {
       "33": "31cff73ab057c3fed69bd400ac005f2f11609027",
-      "38": "484ff08ddcae6c36d43ce61de774c00b6c422c88"
+      "38": "484ff08ddcae6c36d43ce61de774c00b6c422c88",
+      "39": "54dd12e2d8d5d69e25426e92c313f0f79e00de81"
     },
-    "planning_commit": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+    "planning_commit": "54dd12e2d8d5d69e25426e92c313f0f79e00de81",
     "agent_capacity": {
       "platform_limit": 101,
       "release_role_cap": 22,
@@ -45536,14 +45666,6 @@
         "wave": "legacy candidate",
         "draft": true,
         "head_sha": "62344d85f5f471767b7aa3a2005a9e000ca06440"
-      },
-      {
-        "number": 39,
-        "title": "[plan-change] reconcile 0.1.0 owner decisions and live release gates",
-        "head_branch": "plan/release-0.1.0-owner-decisions",
-        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
-        "wave": "plan change",
-        "draft": true
       },
       {
         "number": 40,
@@ -45609,7 +45731,19 @@
         "draft": true
       }
     ],
-    "live_snapshot_note": "Authenticated GitHub snapshot refreshed 2026-11-28 during PLAN-CHANGE-01 review; 76 refs, 11 PRs (9 open, 2 merged), 35 open issues, 11 open P0. Open PRs #31 and #39-#46 are drafts. Original branch and PR disposition tables remain historical inventory."
+    "live_snapshot_note": "Authenticated GitHub snapshot refreshed 2026-11-28 during PLAN-CHANGE-01 review; 76 refs, 11 PRs (9 open, 2 merged), 35 open issues, 11 open P0. Open PRs #31 and #39-#46 are drafts. Original branch and PR disposition tables remain historical inventory.",
+    "plan_merge_status": {
+      "pull_request": 39,
+      "merge_sha": "54dd12e2d8d5d69e25426e92c313f0f79e00de81",
+      "parent_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+      "tree_equals_plan_sha": "870c556d9aaf98e3a94c1ee17e2a77fc5daf83d3",
+      "reported_by": "RM-01/root on 2026-11-28",
+      "result_main_ci": "RM-01 reports 3/3 result-main checks green; no new check run is claimed by this amendment",
+      "baseline_qa": "pending QA-01; do not mark verified on this result-main yet",
+      "current_wave": 1,
+      "new01_current_main_integration_owner": "INT-01 exclusively",
+      "new01_new02_state": "Existing PRs #40/#41 remain preparation drafts; final promotion requires current-main integration and fresh exact-head gates."
+    }
   },
   "owner_decisions": {
     "scope": "Python-only 0.1.0",
@@ -45746,5 +45880,31 @@
       "skip_policy": "Report skips; required integration cases cannot use importorskip."
     }
   },
-  "counts_note": "Live authenticated GitHub counts as of current_state.date and current_state.live_snapshot_note. Original branch and pull_requests records plus disposition counts remain historical inventory snapshots at inventory_snapshot.base_main_sha."
+  "counts_note": "Captured authenticated GitHub inventory from the merged baseline, adjusted only for the RM-confirmed PR #39 merge: 76 refs, 11 PR records (8 open/3 merged), 35 open issues and 11 open P0. This local draft does not claim a fresh complete GitHub inventory fetch. Historical branch/PR disposition remains at inventory_snapshot.base_main_sha. Nine proposed product PR slices cover eight logical changes; no replacement GitHub PR has been created.",
+  "renderer_split_amendment": {
+    "id": "PLAN-CHANGE-02",
+    "status": "local draft only; not submitted or approved",
+    "date": "2026-11-28",
+    "plan_base_sha": "54dd12e2d8d5d69e25426e92c313f0f79e00de81",
+    "recorded_source_main_sha": "54dd12e2d8d5d69e25426e92c313f0f79e00de81",
+    "branch": "plan/release-0.1.0-renderer-split",
+    "frozen_prior_plan_pr": 39,
+    "logical_parent": "NEW-03",
+    "children": [
+      "NEW-03A",
+      "NEW-03B"
+    ],
+    "dependency_order": [
+      "NEW-02",
+      "NEW-03A",
+      "NEW-03B",
+      "NEW-04"
+    ],
+    "completion": "NEW-03 is a roll-up only, complete when NEW-03A and NEW-03B are both merged and non-author QA verified on exact main. Old NEW-03 references mean both children. No existing feature becomes verified through this amendment.",
+    "promotion": "No GitHub PR, merge or superseding action is authorized by this local draft. Submit a separate plan-change only when instructed; preserve merged PR #39 and open source PR #42. After approval, each product child needs actual <=1,000 changed lines, all required tests, exact-head 2 reviewer +2 tester reports, green CI and post-merge non-author main QA.",
+    "source_main_dependency": "Recorded main is a baseline, not the eventual renderer comparison base. NEW-03A must rebase onto the actual NEW-02 verified main merge; NEW-03B onto the verified NEW-03A main merge; NEW-04 onto the verified NEW-03B main merge. Record each future exact base/head and rerun all checks.",
+    "pr42_preservation": "Retain open draft/source PR #42 unchanged until replacement PRs account for every retained/excluded hunk and evidence path with keeper links; no close/rewrite/merge is claimed.",
+    "originating_plan_sha": "870c556d9aaf98e3a94c1ee17e2a77fc5daf83d3",
+    "prior_plan_status": "PR #39 merged at 54dd12e2; baseline QA remains pending QA-01. The merged plan and writer checkout remain untouched."
+  }
 }

@@ -2168,12 +2168,15 @@ Git diff found 331 overlapping paths and 1818 pairs sharing paths across 65 non-
 
 ## Proposed dependency graph
 
+Local renderer-split amendment only, based on merged `main@54dd12e2d8d5d69e25426e92c313f0f79e00de81` (tree equal to plan `870c556d9aaf98e3a94c1ee17e2a77fc5daf83d3`). PR #39 is merged and remains untouched; this branch has no GitHub PR and grants no renderer replacement promotion or merge. Wave 1 is current, NEW-01/02 remain drafts, and INT-01 exclusively owns NEW-01 current-main integration. Result-main baseline QA is pending QA-01. Actual NEW-03A/B comparison bases must be the future verified dependency merges.
+
 ```mermaid
 graph LR
  BASE[main: schema + green] --> N1[NEW-01 normalization]
  N1 --> N2[NEW-02 reductions]
- N2 --> R1[NEW-03 Matplotlib Plotly Vega]
- R1 --> R2[NEW-04 ECharts AntV]
+ N2 --> R1A[NEW-03A boundary Matplotlib Vega]
+ R1A --> R1B[NEW-03B Plotly]
+ R1B --> R2[NEW-04 ECharts AntV]
  R2 --> T1[NEW-05 recommendations and tools]
  T1 --> M1[NEW-06 MCP and CLI]
  M1 --> Q1[NEW-07 acceptance/docs]

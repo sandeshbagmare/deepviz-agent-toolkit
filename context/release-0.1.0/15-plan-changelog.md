@@ -1,7 +1,7 @@
 # Plan changelog
 
 - Default branch: `main`
-- Main SHA reconciled: `f692014b9c7eb6a9fe0aa6f27b76b40426f053a7`
+- Main SHA reconciled: `54dd12e2d8d5d69e25426e92c313f0f79e00de81`
 - Date: 2026-11-28
 - Plan version: 1.1
 
@@ -15,5 +15,7 @@
 | v1.1 | 2026-11-28 | Review follow-up: synchronize refreshed live counts, track published draft PRs, and allow owner-approved future-wave preparation drafts. | Exact-head reviewers found stale current counts and tracker state, open PRs across planned waves, and ambiguous #22 closure wording. | Refresh canonical live counts to 76 refs, 11 PRs (9 open/2 merged), 35 issues and 11 P0; list open drafts #31 and #39-#46 in current_state; explicitly keep future-wave PRs non-ready until dependencies/rebase/checks and exact-head 2+2 pass; block G3 when any required #22 size remains unrun; synchronize NEW-08 installed [agents] acceptance; publicly amend #4 to defer npm #25/TS #14/#15 and waive the unmet historical 900-issue criterion for 0.1.0 with no fabricated counts; distinguish 0.1.0 release scope from v1.1 plan version. The original branch/PR disposition remains labeled historical inventory. |
 
 | v1.1 | 2026-11-28 | RM-01 NEW-01 exact-scope/size amendment for draft PR #40. | Audit of `a94f85c47e9a18f01009484a6813738eb8259a03` found five unclaimed but coherent paths and a diff of 2,687 additions + 2 deletions = 2,689 changed lines across 10 paths. | Claim `python/deepviz/src/deepviz/models.py`, `schemas/chart-spec.schema.json`, `scripts/benchmark_scale.py`, `docs/verification/normalization/normalization-output.json`, `docs/verification/normalization/normalization-output.svg`; set the NEW-01-only ceiling to 2,750 changed lines with 61 lines reserved solely for necessary review/rebase fixes and regenerated evidence within those paths. Preserve plan-first promotion, dependency order, sequential merges and fresh exact-head two-reviewer/two-tester gates. No ready/merge action or formal GitHub review is claimed. |
+
+| v1.1 proposed | 2026-11-28 | Separate local renderer-split plan amendment on merged PR #39 baseline. | NEW-03 preparation requires independently reviewable <=1,000-line slices without omitting tests. | Split shared boundary/Matplotlib/Vega into NEW-03A (<=982 planning estimate: 877+80+25) then Plotly NEW-03B (~239 estimate), then NEW-04. Require actual complete numstat <=1,000 each, all mandatory tests, exact-head 2+2, green CI and exact-main QA; NEW-03 completes only after both children are verified. Preserve PR #42 until keeper mapping accounts for it; explicitly claim static/Plotly browser tests and compact evidence plus anticipated NEW-04 test/browser/R20/R23/evidence paths without expanding renderer source scope. Record PLAN-CHANGE-01 merged at `54dd12e2`, Wave 1 current, baseline QA pending QA-01 and INT-01 exclusive NEW-01 current-main integration. Local renderer draft only: no replacement PR/merge/approval or new test pass claimed. |
 
 Append future amendments; do not overwrite history. Require `plan-change` PR, RM-01 approval, and synchronized YAML/Markdown with impact on waves, agents and gates.

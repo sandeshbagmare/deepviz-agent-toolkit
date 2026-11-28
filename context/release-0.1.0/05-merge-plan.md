@@ -1,11 +1,13 @@
 # Merge plan and release waves
 
 - Default branch: `main`
-- Main SHA reconciled: `f692014b9c7eb6a9fe0aa6f27b76b40426f053a7`
+- Main SHA reconciled: `54dd12e2d8d5d69e25426e92c313f0f79e00de81`
 - Date: 2026-11-28
-- Plan version: 1.1
+- Plan version: 1.1 (local renderer-split amendment pending)
 
-Six waves (0-5), eight logical changes, split into focused PRs through plan-change if required. Wave 0 is the verified baseline. Owner-approved draft PRs for planned waves may be opened for preparation; only the current wave may be promoted to ready or merged, after dependencies, rebase, CI and exact-head review gates pass. Target <=400 changed lines and split before the usual 1,000-line cap, subject to the explicit RM exceptions below.
+Local renderer-split amendment only, based on merged `main@54dd12e2d8d5d69e25426e92c313f0f79e00de81` (tree equal to plan `870c556d9aaf98e3a94c1ee17e2a77fc5daf83d3`). PR #39 is merged and remains untouched; this branch has no GitHub PR and grants no renderer replacement promotion or merge. Wave 1 is current, NEW-01/02 remain drafts, and INT-01 exclusively owns NEW-01 current-main integration. Result-main baseline QA is pending QA-01. Actual NEW-03A/B comparison bases must be the future verified dependency merges.
+
+Six waves (0-5), eight logical changes; this local amendment proposes nine product PR slices by splitting NEW-03 into NEW-03A and NEW-03B. Wave 0 is the verified baseline. Owner-approved draft PRs for planned waves may be opened for preparation; only the current wave may be promoted to ready or merged, after dependencies, rebase, CI and exact-head review gates pass. Target <=400 changed lines and split before the usual 1,000-line cap, subject to the explicit RM exceptions below.
 
 Parallel preparation is authorized at the owner request: agents may prepare independent source selections, tests and code in isolated branches for upcoming tasks. Claim exact paths and never write overlapping files in a shared checkout. Shared-file tasks use isolated branches and serialized integration. Owner-approved draft PRs for any planned wave may be open as preparation, but drafts for future waves stay non-ready and cannot merge until dependencies complete and the branch is rebased onto current main. Dependency order, sequential INT-01/02 main merges, exact-head two-review/two-test evidence, and CI/rebase gates remain binding. Preparation does not pass a wave or mark work complete; independent drafts may be prepared and reviewed in parallel, while promotion and merges remain sequential.
 
@@ -41,22 +43,39 @@ RM source ruling: NEW-01 selects latest96 normalizer with reviewed reducer corre
 
 ## Wave 2 - Python renderers
 
-Entry: Wave 1 product, #1 roll-up evidence, #8/#30 acceptance and #5 NormalizedData evidence recorded on exact main; #5 Artifact API and #22 renderer-linked scale acceptance remain scheduled for Wave 2/5; #28 owner revision posted and issue superseded; full checks/smoke pass; no unrelated S1/S2 or main-gate regression. Work may continue with the scheduled P0s #20 (W5), #21 (W4), #23 (this wave), #26 (every PR through W5), and #4 (release umbrella through G3). #14, #15 and #25 remain explicitly deferred to v1.1 and outside 0.1.0. Exit: both renderer PRs merge and verify on exact main; #23 visual acceptance passes across all five Python engines and a dashboard; #5 Artifact API acceptance passes; renderer-linked #22 scale proof is independently replicated or stays explicitly pending through Wave 5. Rollback: revert offending squash commit, rerun full tests/smoke, stop next wave. Tag: `v0.1.0-wave-2`.
+Entry: Wave 1 product, #1 roll-up evidence, #8/#30 acceptance and #5 NormalizedData evidence recorded on exact main; #5 Artifact API and #22 renderer-linked scale acceptance remain scheduled for Wave 2/5; #28 owner revision posted and issue superseded; full checks/smoke pass; no unrelated S1/S2 or main-gate regression. Work may continue with the scheduled P0s #20 (W5), #21 (W4), #23 (this wave), #26 (every PR through W5), and #4 (release umbrella through G3). #14, #15 and #25 remain explicitly deferred to v1.1 and outside 0.1.0. Exit: NEW-03A, NEW-03B and NEW-04 merge in that order and verify on exact main; NEW-03 completes only after both children are verified-on-main; #23 visual acceptance passes across all five Python engines and a dashboard; #5 Artifact API acceptance passes; renderer-linked #22 scale proof is independently replicated or stays explicitly pending through Wave 5. Rollback: revert offending squash commit, rerun full tests/smoke, stop next wave. Tag: `v0.1.0-wave-2`.
 
-### NEW-03 - [v1][W2][feature] add Python Matplotlib, Plotly, and Vega renderers
+### NEW-03 logical roll-up and preserved PR #42
 
-- Source branches: `feat/renderers`, `test/backend-plotly`, `test/backend-vega`. Target: `main`; new branch `release/v1/w2-python-renderers-a`.
-- Files: `python/deepviz/src/deepviz/engines.py`, `python/deepviz/src/deepviz/render.py`, `python/deepviz/tests/test_render.py`. Estimated size: 300-900 backend-specific lines; split if >1,000.
-- Dependencies: NEW-01, NEW-02. Expected conflicts/resolution: Source commit 31acb2f6 adds five backends in 1,184 lines; stage only these three and their tests; NEW-04 follows.
-- Reviewers: REV-01 + REV-04; QA-01 + QA-02 non-authors. Required tests: backend semantics, real artifact/MIME/manifest, unsafe text; full checks.
-- Merge: squash. Rollback: Revert squash; normalized main remains.
+Proposed order is `NEW-02 -> NEW-03A -> NEW-03B -> NEW-04`. NEW-03 is complete only when both children are merged and independently verified on exact main. Each child has its own actual <=1,000 changed-line cap, complete mandatory tests, fresh exact-head two-reviewer/two-tester reports, green CI and non-author main QA. Estimates are not measurements; include all test and text-evidence additions/deletions in `git diff --numstat <exact-dependency-main-sha>...<exact-final-head-sha>`, record binary evidence separately, and block promotion if the actual cap cannot be met without dropping required coverage. This proposal creates no size exception.
+
+Keep PR #42 and its source branch unchanged until the replacement scopes account for every retained or intentionally excluded hunk and evidence path with keeper links. No replacement PR is opened by this local draft.
+
+### NEW-03A - [v1][W2][feature] add shared render boundary, Matplotlib and Vega-Lite
+
+- Source branches: `feat/renderers`, `test/backend-vega`. Target: `main`; planned branch `release/v1/w2-python-renderers-static`.
+- Files: `python/deepviz/src/deepviz/engines.py`, `python/deepviz/src/deepviz/render.py`, `python/deepviz/tests/test_render.py`, `python/deepviz/tests/test_static_browser.py`, `evidence/new03a/**`. Estimated size: Planning estimate only: <=982 changed lines (877 shared/static implementation and tests +80 browser tests +25 compact evidence); not a measured diff. Actual full proposed diff must be <=1,000 changed lines including every required test and text evidence file.
+- Dependencies: NEW-02 merged and verified on exact main (NEW-01 is transitive); this renderer-split plan-change approved and merged. Expected conflicts/resolution: Shared engines.py/render.py/test_render.py paths are serialized: NEW-02 -> NEW-03A -> NEW-03B -> NEW-04. Stage only the shared render/artifact boundary plus Matplotlib and Vega-Lite hunks; exclude Plotly/ECharts/AntV implementation.
+- Reviewers: REV-01 + REV-04; QA-01 + QA-02 independent non-author reports on each child exact head. Required tests: Run complete relevant tests in test_render.py and test_static_browser.py with real Matplotlib PNG/SVG and Vega-Lite SVG/HTML/fallback artifacts; inspect bar/table/dashboard semantics, titles/labels, MIME/manifest, safe text/paths and browser console/runtime/network behavior. Keep all required tests; no skipped required case. Run full Python regression, Ruff, mypy and applicable package/build checks; observed green CI and two independent reviewer plus two independent tester reports must target exact final head. Rebase onto exact post-NEW-02 main before final reports; non-author QA verifies the merge on exact main.
+- Source selection: Select shared render boundary, Matplotlib and Vega-Lite only from existing NEW-03 source provenance. PR #42 at captured head 79bbb12a396d6d138c1ac54ea93b827aba5bb923 is a preserved preparation/source reference, not a merged prerequisite or an approved replacement. Do not close, rewrite or merge #42 until replacement coverage accounts for every retained or excluded hunk and evidence path. No new source branch or renderer scope is authorized.
+- Merge: squash. Rollback: Revert NEW-03A squash if required, rerun main checks and stop the dependent renderer queue; preserve normalized main.
+
+### NEW-03B - [v1][W2][feature] add Python Plotly renderer
+
+- Source branches: `feat/renderers`, `test/backend-plotly`. Target: `main`; planned branch `release/v1/w2-python-renderers-plotly`.
+- Files: `python/deepviz/src/deepviz/engines.py`, `python/deepviz/src/deepviz/render.py`, `python/deepviz/tests/test_render.py`, `python/deepviz/tests/test_plotly_browser.py`, `evidence/new03b/**`. Estimated size: Planning estimate only: approximately 239 changed lines; not a measured diff. Actual full proposed diff must be <=1,000 changed lines including every required test and text evidence file.
+- Dependencies: NEW-03A merged and verified on exact main; this renderer-split plan-change approved and merged. Expected conflicts/resolution: Rebase onto the actual NEW-03A main merge, preserve the shared render boundary and static backends, and stage Plotly-only implementation/test hunks. No broad source commit or TypeScript replay.
+- Reviewers: REV-01 + REV-04; QA-01 + QA-02 independent non-author reports on each child exact head. Required tests: Run Plotly-scoped test_render.py and test_plotly_browser.py cases with actual HTML and browser output, including hostile titles/labels, literal text, trace/axis semantics, artifact/MIME/manifest and browser console/runtime/network behavior. Rerun Matplotlib/Vega-Lite regression controls from NEW-03A. Keep all required tests; no skipped required case. Run full Python regression, Ruff, mypy and applicable package/build checks; observed green CI and two independent reviewer plus two independent tester reports must target exact final head. Non-author QA verifies the merge on exact main.
+- Source selection: Select Plotly only from existing NEW-03 source provenance. PR #42 at captured head 79bbb12a396d6d138c1ac54ea93b827aba5bb923 is a preserved preparation/source reference, not a merged prerequisite or an approved replacement. Do not close, rewrite or merge #42 until replacement coverage accounts for every retained or excluded hunk and evidence path. No new source branch or renderer scope is authorized.
+- Merge: squash. Rollback: Revert only NEW-03B squash; preserve NEW-03A shared boundary, Matplotlib and Vega-Lite, rerun static regression/main checks and stop NEW-04 promotion. After revert, mark NEW-03B and the NEW-03 roll-up unverified until the affected exact-main QA passes again.
 
 ### NEW-04 - [v1][W2][feature] add Python ECharts and AntV G2 renderers
 
-- Source branches: `feat/renderers`, `fix/r20-antv-color-scale`, `fix/r23-count-channel`, `fix/r45-17-antv-subnormal`, `agents/r10-03-echarts-numeric-x`, `agents/r38-18-antv-source-review`, `review/r35-12-count-source`. Target: `main`; new branch `release/v1/w2-python-renderers-b`.
-- Files: `python/deepviz/src/deepviz/engines.py`, `python/deepviz/src/deepviz/render.py`, `python/deepviz/tests/test_render.py`, `python/deepviz/tests/test_r20_antv_color_scale.py`, `python/deepviz/tests/test_r23_count_channel.py`. Estimated size: 300-900 backend-specific lines; after NEW-03.
-- Dependencies: NEW-03. Expected conflicts/resolution: Shares renderer paths; rebase after NEW-03; select independent count/AntV hunks once.
-- Reviewers: REV-02 + REV-03; QA-02 + QA-03 non-authors. Required tests: native output, count/color/extreme-value tests and artifact inspection.
+- Source branches: `feat/renderers`, `fix/r20-antv-color-scale`, `fix/r23-count-channel`, `fix/r45-17-antv-subnormal`, `agents/r10-03-echarts-numeric-x`, `agents/r38-18-antv-source-review`, `review/r35-12-count-source`. Target: `main`; planned branch `release/v1/w2-python-renderers-b`.
+- Files: `python/deepviz/src/deepviz/engines.py`, `python/deepviz/src/deepviz/render.py`, `python/deepviz/tests/test_render.py`, `python/deepviz/tests/test_r20_antv_color_scale.py`, `python/deepviz/tests/test_r23_count_channel.py`, `tests/test_renderers_b.py`, `tests/test_browser_acceptance.py`, `evidence/new04/**`. Estimated size: 300-900 backend-specific lines anticipated; actual diff including all required tests and text evidence must remain <=1,000 changed lines after NEW-03B.
+- Dependencies: NEW-03B merged and verified on exact main; NEW-03A remains verified as its prerequisite. Expected conflicts/resolution: Shared renderer paths are serialized after NEW-03B; select existing ECharts/AntV and independent R20/R23/count/color/extreme-value source hunks only. Anticipated named test/evidence paths do not broaden source scope.
+- Reviewers: REV-02 + REV-03; QA-02 + QA-03. Required tests: Run tests/test_renderers_b.py, tests/test_browser_acceptance.py, affected test_render.py and targeted R20/R23 tests; inspect real native ECharts/AntV output, count/color/extreme-value behavior and browser/runtime/network/console evidence. Keep all required tests, full Python checks, observed exact-head green CI, two independent reviewer and two independent tester reports, and non-author verification on exact merged main. Commit only compact actual output under evidence/new04/**; no broad coordination/evidence dump.
+- Source selection: Existing NEW-04 source branches and ordered source SHAs are unchanged. Explicit anticipated test paths and compact evidence claims only; no new renderer/backend or TypeScript source scope.
 - Merge: squash. Rollback: Revert squash; rerun renderer tests.
 
 ## Wave 3 - Python integrations
@@ -67,7 +86,7 @@ Entry: Wave 2 and #23 visual acceptance verified on exact main; full checks/smok
 
 - Source branches: `feat/integrations`. Target: `main`; new branch `release/v1/w3-python-tools`.
 - Files: `python/deepviz/src/deepviz/recommend.py`, `python/deepviz/src/deepviz/tools.py`, `python/deepviz/src/deepviz/__init__.py`, `python/deepviz/tests/test_integrations.py`. Estimated size: 300-900; split API/tool bindings if needed.
-- Dependencies: NEW-03, NEW-04. Expected conflicts/resolution: 1,341-line integration source; stage recommendation/tool API before MCP.
+- Dependencies: NEW-03A, NEW-03B, NEW-04. Expected conflicts/resolution: 1,341-line integration source; stage recommendation/tool API before MCP.
 - Reviewers: REV-01 + REV-03; QA-02 + QA-03 non-authors. Required tests: in a fresh `.[agents]` environment, construct/inspect/invoke the actual LangChain `StructuredTool` API and run normalize -> recommend -> render with zero skips; separately, a fresh base-only install without LangChain/Deep Agents must import core while optional integrations stay unloaded; full checks.
 - Merge: squash. Rollback: Revert squash; preserve renderer APIs.
 
@@ -87,7 +106,7 @@ Entry: Wave 3 merged and verified on exact main; full checks/smoke pass; no unre
 
 - Source branches: `feat/hardening`, `fix/r12-dense-table-budget`, `agents/r10-01-correctness-regressions`, `agents/r10-02-security-boundaries`. Target: `main`; new branch `release/v1/w4-python-hardening`.
 - Files: `python/deepviz/src/deepviz/engines.py`, `python/deepviz/src/deepviz/render.py`, `python/deepviz/tests/test_r12_table_budget.py`, `tests/`. Estimated size: 300-900 lines; selected fixes only.
-- Dependencies: NEW-03, NEW-04. Expected conflicts/resolution: Renderer paths were changed in earlier waves; rebase on their merged SHAs. Import only Python hardening/test hunks.
+- Dependencies: NEW-03A, NEW-03B, NEW-04. Expected conflicts/resolution: Renderer paths were changed in earlier waves; rebase on their merged SHAs. Import only Python hardening/test hunks.
 - Reviewers: REV-01 + REV-04 (security); QA-01 + QA-02 non-authors. Required tests: dense table preflight, no execution/unsafe path, security regressions; full suite.
 - Merge: squash. Rollback: Revert squash; stop release if safety gate fails.
 
