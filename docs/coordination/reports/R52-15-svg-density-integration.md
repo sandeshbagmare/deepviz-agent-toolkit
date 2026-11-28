@@ -38,6 +38,6 @@
 
 ### Handoff / limits
 
-- Current worktree remains uncommitted at base `656f4f35e5e72d16cdb5ebf557b7d64607eaaa43` with only the authorized production function, focused package test, and own report/status/note/evidence/artifacts. The exact new head is not yet published.
+- Frozen producer head: `067e91cce094b13cc1f0ae6aa3da2e4adcdb1b35` (`fix: prevent dense native SVG category label collisions`), parent exact base `656f4f35e5e72d16cdb5ebf557b7d64607eaaa43`. Owned branch `agents/r52-15-svg-density` was pushed successfully, and post-push `git ls-remote origin refs/heads/agents/r52-15-svg-density` read back the same SHA. Only the authorized renderer function, focused regression, and role15 report/status/note/evidence/artifacts are in the commit.
 - No npm install, clean-install, Node22/24 run, exporter-order repair, independent source/test acceptance, CI, PR, merge, default-main write, or self-approval was performed or inferred. Role08 exporter-order/materialized-consumer/Node22-24 RED limits remain preserved for R04.
-- **Next executable action:** stage only the authorized production function, focused regression, and this role15 report/evidence paths; create one meaningful commit, non-force push the owned branch, read back the exact remote SHA, then hand that head to R04 for independent source/test/CI gates. Do not open or merge PR7 from this worker.
+- **Next executable action:** R04 accepts exact pushed head `067e91cce094b13cc1f0ae6aa3da2e4adcdb1b35` for genuinely independent source/test review and current exact-head CI/package gates; retain all listed red limits. Do not open or merge PR7 from this worker.
