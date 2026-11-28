@@ -5,7 +5,7 @@
 - Date: 2026-11-28
 - Plan version: 1.1
 
-This workflow incorporates the owner-confirmed v1.1 release policy. The lifecycle table and state diagram originated in the v1.0 snapshot; current wave, assignments, exact-head gates and approved preparation/promotion rules are maintained in `14-tracker.md`, `05-merge-plan.md` and `release-0.1.0.yaml`.
+This workflow describes the owner-confirmed 0.1.0 release scope under plan version 1.1. The lifecycle table and state diagram originated in the v1.0 snapshot; current wave, assignments, exact-head gates and approved preparation/promotion rules are maintained in `14-tracker.md`, `05-merge-plan.md` and `release-0.1.0.yaml`.
 
 | State | Entry/exit criteria | Owner |
 |---|---|---|

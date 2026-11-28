@@ -26,10 +26,10 @@
   "source_of_truth": "release-0.1.0.yaml; structured plan synchronized with Markdown, with original branch-disposition inventory retained as a dated snapshot",
   "scope_status": "OWNER-CONFIRMED: Python-only 0.1.0; Arrow/Parquet via optional [columnar]; TypeScript #14/#15 and npm #25 deferred; #28 owner revision awaits public issue update after plan merge",
   "counts": {
-    "remote_refs_including_main": 68,
-    "non_default_branches": 67,
-    "pull_requests": 3,
-    "open_pull_requests": 1,
+    "remote_refs_including_main": 76,
+    "non_default_branches": 75,
+    "pull_requests": 11,
+    "open_pull_requests": 9,
     "merged_pull_requests": 2,
     "open_issues": 35,
     "closed_issues": 0,
@@ -44372,7 +44372,7 @@
       ],
       "tag": "v0.1.0-wave-5",
       "entry": "Wave 4/#21 accepted; no unrelated S1/S2 or main-gate regression.",
-      "exit": "NEW-08 and #19/#20/#24/#26/#27/#29 verified; renderer-linked #22 scale evidence and independent replication at all five required sizes (or keep #22 open with explicit unrun limits); public #4 scope addendum excludes deferred npm #25 and TS #14/#15; applicable #4 roll-up and all in-scope P0s accepted before G3.",
+      "exit": "NEW-08 and #19/#20/#22/#24/#26/#27/#29 verified; renderer-linked #22 scale evidence and independent replication completed at all five required sizes; any unrun size keeps #22 open and blocks G3. Public #4 scope addendum excludes deferred npm #25 and TS #14/#15; applicable #4 roll-up and all in-scope P0s accepted before G3.",
       "scheduled_p0s": [
         4,
         20,
@@ -44763,7 +44763,7 @@
       "dependencies": "NEW-01..NEW-07",
       "expected_conflicts": "Consolidate acceptance after code; omit duplicate/RED tests until fixed; exclude agent-state/evidence dumps.",
       "reviewers": "REV-03 + REV-04; QA-02 + QA-03 independent non-author tester reports",
-      "required_tests": "Full Python tests/Ruff/mypy/build; clean base/[columnar]/[mcp]/[agents] wheel and sdist installs; package resource/type-marker and entrypoint checks; five-engine and renderer-linked scale evidence with independent replication (#22); dated primary-source research including licensing/runtime/scale/output trade-offs (#19); exact-main CI (#20); package acceptance (#24); every-PR report/visual audit (#26); labeled/milestoned/dependency-aware process issue map and primary GitHub constraints (#27); publicly retargeted genuine focused-PR report provenance and gallery (#29); public Python-only scope addendum to #4 excluding #14/#15/#25, then release roll-up.",
+      "required_tests": "Full Python tests/Ruff/mypy/build; clean base/[columnar]/[mcp]/[agents] wheel and sdist installs; in the fresh installed [agents] lane, construct, inspect and invoke the real LangChain StructuredTool API and complete normalize -> recommend -> render with zero skips; in a separate fresh base-only install without LangChain/Deep Agents, import core and verify integrations remain unloaded; package resource/type-marker and entrypoint checks; five-engine and renderer-linked scale evidence with independent replication (#22); dated primary-source research including licensing/runtime/scale/output trade-offs (#19); exact-main CI (#20); package acceptance (#24); every-PR report/visual audit (#26); labeled/milestoned/dependency-aware process issue map and primary GitHub constraints (#27); publicly retargeted genuine focused-PR report provenance and gallery (#29); public #4 amendment deferring npm #25 and TS #14/#15 from 0.1.0 and explicitly waiving the unmet historical 900-issue criterion for this release with real counts only and no fabricated tickets/closures.",
       "rollback": "Revert acceptance/doc commit only; stop release and repair CI.",
       "merge_method": "squash",
       "source_commits": [
@@ -44901,8 +44901,8 @@
       "id": "NEW-01",
       "wave": 1,
       "owner": "IMP-01",
-      "state": "planned",
-      "blocked_by": "PLAN-CHANGE-01 approved and merged before implementation PR; isolated preparation allowed",
+      "state": "planned; PR #40 open draft for isolated preparation only",
+      "blocked_by": "PLAN-CHANGE-01 must merge before PR #40 is promoted; draft remains non-ready.",
       "claimed_files": [
         "python/deepviz/src/deepviz/normalize.py",
         "python/deepviz/tests/test_normalize.py",
@@ -44916,8 +44916,8 @@
       "id": "NEW-02",
       "wave": 1,
       "owner": "IMP-02",
-      "state": "planned",
-      "blocked_by": "NEW-01; serialized shared-file handoff",
+      "state": "planned; PR #41 open draft for isolated preparation only",
+      "blocked_by": "NEW-01 and serialized shared-file handoff; PR #41 remains non-ready until dependencies merge.",
       "claimed_files": [
         "python/deepviz/src/deepviz/normalize.py",
         "python/deepviz/tests/test_normalize.py",
@@ -45039,6 +45039,94 @@
       "reason": "Preserve candidate work through focused reviewed PRs; do not merge/close yet."
     },
     {
+      "id": "PR-39",
+      "wave": "Wave 0 plan change",
+      "owner": "RM-01",
+      "state": "open plan-change draft; awaiting exact-head 2+2, CI, and merge",
+      "blocked_by": "Current main f692014; parent dependency for release preparation/promotion",
+      "claimed_files": [
+        "context/release-0.1.0/**"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "PR-40",
+      "wave": "Wave 1 prep",
+      "owner": "IMP-01",
+      "state": "open draft; non-ready",
+      "blocked_by": "Dependencies, rebase, CI, and exact-head 2+2 evidence before promotion",
+      "claimed_files": [
+        "release/v1/w1-python-normalization"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "PR-41",
+      "wave": "Wave 1 prep",
+      "owner": "IMP-02",
+      "state": "open draft; non-ready",
+      "blocked_by": "Dependencies, rebase, CI, and exact-head 2+2 evidence before promotion",
+      "claimed_files": [
+        "release/v1/w1-python-scale"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "PR-42",
+      "wave": "Wave 2 prep",
+      "owner": "IMP-03",
+      "state": "open draft; non-ready",
+      "blocked_by": "Dependencies, rebase, CI, and exact-head 2+2 evidence before promotion",
+      "claimed_files": [
+        "release/v1/w2-python-renderers-a"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "PR-43",
+      "wave": "Wave 3 prep",
+      "owner": "IMP-05",
+      "state": "open draft; non-ready",
+      "blocked_by": "Dependencies, rebase, CI, and exact-head 2+2 evidence before promotion",
+      "claimed_files": [
+        "release/v1/w3-python-tools"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "PR-44",
+      "wave": "Wave 3 prep",
+      "owner": "IMP-06",
+      "state": "open draft; non-ready",
+      "blocked_by": "Dependencies, rebase, CI, and exact-head 2+2 evidence before promotion",
+      "claimed_files": [
+        "release/v1/w3-python-mcp-cli"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "PR-45",
+      "wave": "Wave 5 prep",
+      "owner": "IMP-08",
+      "state": "open draft; non-ready",
+      "blocked_by": "Dependencies, rebase, CI, and exact-head 2+2 evidence before promotion",
+      "claimed_files": [
+        "release/v1/w5-python-package"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "PR-46",
+      "wave": "Wave 5 prep",
+      "owner": "CI-01",
+      "state": "open draft; non-ready",
+      "blocked_by": "NEW-01..NEW-07, plan approval, rebase, CI, and exact-head 2+2 evidence before promotion",
+      "claimed_files": [
+        "release/v1/w5-python-ci"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
       "id": "ISSUE-28",
       "wave": "before G3",
       "owner": "TRI-01 + RM-01",
@@ -45063,7 +45151,7 @@
       "wave": "G3 roll-up",
       "owner": "TRI-01 + RM-01",
       "state": "open P0 delivery epic; public scope addendum pending",
-      "blocked_by": "After plan merge, publicly add owner-confirmed Python-only scope excluding deferred #14/#15/#25; retain Python #19/#20/#21/#22/#23/#24/#26/#27/#29 acceptance; close only after applicable children and G3 evidence.",
+      "blocked_by": "After plan merge, publicly amend #4 to defer npm #25 and TypeScript #14/#15 from 0.1.0 and explicitly waive the historical 900-issue criterion for this release while recording that it remains unmet using current real counts only. Keep #28 open until publication; no fabricated tickets or closures. Preserve Python #19/#20/#21/#22/#23/#24/#26/#27/#29 acceptance; close #4 only after applicable children and G3 evidence.",
       "claimed_files": [
         "NEW-08",
         "public issue #4 scope addendum"
@@ -45176,7 +45264,7 @@
       "wave": "Wave 1 proof; Wave 2/5 closure",
       "owner": "IMP-02 + QA + renderer owners",
       "state": "open P1 scale evidence; renderer-linked acceptance pending",
-      "blocked_by": "Wave 1 records normalizer scale at 10/1K/100K/1M/10M. Keep issue open until bounded renderer payloads at every scale and independent replication on exact main in Wave 2/5; record unrun limits explicitly.",
+      "blocked_by": "Wave 1 records normalizer scale at 10/1K/100K/1M/10M. Keep issue open until bounded renderer payloads at every scale and independent replication on exact main in Wave 2/5. Any unrun required size keeps #22 open and blocks G3; record the unrun limits explicitly.",
       "claimed_files": [
         "NEW-02",
         "NEW-03/04",
@@ -45384,16 +45472,16 @@
       "DEFER": 25,
       "CLOSE-SUPERSEDED": 4
     },
-    "note": "branches, overlap_files, overlap_pairs, and disposition counts are the original inventory snapshot; current refs/counts and decisions are at main_sha and in current_state."
+    "note": "Original branch and pull-request inventories, overlap data and disposition counts are historical snapshots at inventory_snapshot.base_main_sha; current refs, PRs, issues and labels are listed under current_state and current_state.live_snapshot_note."
   },
   "current_state": {
     "main_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
     "date": "2026-11-28",
-    "remote_refs_including_main": 68,
-    "non_default_branches": 67,
+    "remote_refs_including_main": 76,
+    "non_default_branches": 75,
     "pull_requests": {
-      "total": 3,
-      "open": 1,
+      "total": 11,
+      "open": 9,
       "merged": 2
     },
     "issues": {
@@ -45428,7 +45516,90 @@
       "orchestrators": 1,
       "observed_running_sessions": 9,
       "observation": "2026-11-28 consolidation checkpoint; completed aliases are historical sessions, not extra staffed release roles; refresh before dispatch."
-    }
+    },
+    "open_draft_prs": [
+      {
+        "number": 31,
+        "title": "Integrate Python-first DeepViz toolkit and evidence-backed verification",
+        "head_branch": "release/candidate",
+        "base_sha": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+        "wave": "legacy candidate",
+        "draft": true,
+        "head_sha": "62344d85f5f471767b7aa3a2005a9e000ca06440"
+      },
+      {
+        "number": 39,
+        "title": "[plan-change] reconcile 0.1.0 owner decisions and live release gates",
+        "head_branch": "plan/release-0.1.0-owner-decisions",
+        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+        "wave": "plan change",
+        "draft": true
+      },
+      {
+        "number": 40,
+        "title": "[v1][W1] Add bounded Python normalization",
+        "head_branch": "release/v1/w1-python-normalization",
+        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+        "wave": 1,
+        "draft": true,
+        "head_sha": "740a16faeca502dfd15fe028e2b880895f7c687f"
+      },
+      {
+        "number": 41,
+        "title": "[v1][W1] Add bounded reducer and scale acceptance",
+        "head_branch": "release/v1/w1-python-scale",
+        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+        "wave": 1,
+        "draft": true,
+        "head_sha": "98f7d110cf23f1f4734b7e6d2e2d41955aa237ee"
+      },
+      {
+        "number": 42,
+        "title": "[v1][W2] Add Python Matplotlib, Plotly, and Vega renderers",
+        "head_branch": "release/v1/w2-python-renderers-a",
+        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+        "wave": 2,
+        "draft": true,
+        "head_sha": "79bbb12a396d6d138c1ac54ea93b827aba5bb923"
+      },
+      {
+        "number": 43,
+        "title": "[v1][W3] Add recommendations and bounded agent tools",
+        "head_branch": "release/v1/w3-python-tools",
+        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+        "wave": 3,
+        "draft": true,
+        "head_sha": "558f5616b70f19ee00145b53747e1646c2860613"
+      },
+      {
+        "number": 44,
+        "title": "[v1][W3] Add stdio MCP server and CLI",
+        "head_branch": "release/v1/w3-python-mcp-cli",
+        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+        "wave": 3,
+        "draft": true,
+        "head_sha": "71ea26eedd308d64e46dec5a5cb00e6bd815ed1e"
+      },
+      {
+        "number": 45,
+        "title": "[v1][W5] Package Python resources and typing metadata",
+        "head_branch": "release/v1/w5-python-package",
+        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+        "wave": 5,
+        "draft": true,
+        "head_sha": "8459f93d1bf3bf1d91ebbd395f2c92c36ac298ee"
+      },
+      {
+        "number": 46,
+        "title": "[v1][W5] Add full Python CI gates",
+        "head_branch": "release/v1/w5-python-ci",
+        "head_sha": "efbc7cb0c999470338975d50e2a78d5915e4f6bf",
+        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+        "wave": 5,
+        "draft": true
+      }
+    ],
+    "live_snapshot_note": "Authenticated GitHub snapshot refreshed 2026-11-28 during PLAN-CHANGE-01 review; 76 refs, 11 PRs (9 open, 2 merged), 35 open issues, 11 open P0. Open PRs #31 and #39-#46 are drafts. Original branch and PR disposition tables remain historical inventory."
   },
   "owner_decisions": {
     "scope": "Python-only 0.1.0",
@@ -45458,16 +45629,16 @@
   },
   "preparation_policy": {
     "parallel_preparation_allowed": true,
-    "scope": "At the owner request, independent source selection, test design and implementation preparation may proceed in isolated branches for upcoming tasks. No later-wave PR is opened, reviewed as final, merged or counted complete early.",
+    "scope": "At the owner request, independent source selection, test design, implementation preparation, and draft PRs may proceed for planned waves in isolated branches. Future-wave PRs remain draft and non-ready; they do not pass a wave or count as complete.",
     "file_claims": "Exact paths must be claimed; no parallel writes to shared checkout/files. Shared normalizer work uses isolated branches and serialized integration.",
-    "promotion_gate": "Rebase prepared work onto exact current main only after dependencies merge; rerun all required checks and obtain fresh exact-head reports. Open PRs only for current wave; main merges remain sequential by INT-01/02."
+    "promotion_gate": "Promote only after dependencies complete, rebase prepared work onto exact current main, rerun all required checks, and obtain fresh exact-head reports. Only the current wave may become ready for merge. Main merges remain dependency-ordered and sequential by INT-01/02."
   },
   "public_issue_actions": [
     {
       "issue": 4,
       "state": "pending after plan merge",
       "owner": "TRI-01 + RM-01",
-      "action": "Public owner-confirmed scope addendum: Python-only 0.1.0; npm #25 and TS #14/#15 deferred to v1.1. Keep Python acceptance and roll-up gate; no closure from scope statement alone."
+      "action": "After plan merge, publicly amend the original #4 acceptance criteria: remove npm #25 and TypeScript #14/#15 as 0.1.0 deliverables and defer them to v1.1; amend the original 900-issue criterion per the owner revision, state it remains unmet for this release using the live real counts, and do not fabricate tickets or closures. Keep the scoped Python acceptance and G3 roll-up. Keep #28 open until this public amendment is posted; close #28 as superseded only after publication. Do not close #4 from a scope statement alone."
     },
     {
       "issue": 29,
@@ -45479,7 +45650,7 @@
       "issue": 28,
       "state": "pending after plan merge",
       "owner": "TRI-01 + RM-01",
-      "action": "Publish exact owner revision and live real issue counts; close as superseded for 0.1.0 only after approved scope amendment. Historical 900 criterion remains unmet, not fabricated."
+      "action": "After plan merge, publish the owner revision and exact live issue counts, explicitly record that the historical 900-issue criterion is waived for 0.1.0 and remains unmet; do not pad or fabricate. Close #28 as superseded only after the public #4 amendment records this disposition."
     }
   ],
   "process_acceptance": {
@@ -45553,5 +45724,6 @@
       "actual_api": "Exercise stdio tool discovery and a real tool call; use the installed-extra API test lane for StructuredTool construction and invocation.",
       "skip_policy": "Report skips; required integration cases cannot use importorskip."
     }
-  }
+  },
+  "counts_note": "Live authenticated GitHub counts as of current_state.date and current_state.live_snapshot_note. Original branch and pull_requests records plus disposition counts remain historical inventory snapshots at inventory_snapshot.base_main_sha."
 }
