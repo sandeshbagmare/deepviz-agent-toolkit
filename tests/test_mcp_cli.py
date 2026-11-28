@@ -215,7 +215,7 @@ def test_real_stdio_roundtrip_errors_resource_reads_and_shutdown(tmp_path: Path,
                     assert not rendered.isError
                     info = metadata(rendered.content)
                     assert info["input_count"] == info["output_count"] == 2 and "paths" not in info
-                    assert len(json.dumps(rendered.model_dump()).encode("utf-8")) < 1_000_000
+                    assert len(json.dumps(rendered.model_dump(mode="json")).encode("utf-8")) < 1_000_000
                     preview = next(block for block in rendered.content if isinstance(block, types.ImageContent))
                     assert base64.b64decode(preview.data).startswith(b"\x89PNG\r\n\x1a\n")
                     manifest_uri = next(item["uri"] for item in info["resources"] if item["name"] == "manifest.json")
@@ -227,6 +227,39 @@ def test_real_stdio_roundtrip_errors_resource_reads_and_shutdown(tmp_path: Path,
                     assert sentinel.read_text(encoding="utf-8") == "preserve"
 
     asyncio.run(asyncio.wait_for(exercise(), timeout=120))
+
+
+@pytest.mark.parametrize("entrypoint", [["deepviz.mcp_server"], ["deepviz.cli", "mcp"]])
+def test_real_stdio_cold_render_returns_after_native_renderer_import(tmp_path: Path, entrypoint: list[str]) -> None:
+    """A first render must not block the MCP event loop during native imports."""
+    pytest.importorskip("mcp")
+    from mcp import ClientSession, StdioServerParameters, types
+    from mcp.client.stdio import stdio_client
+
+    async def exercise() -> None:
+        params = StdioServerParameters(
+            command=sys.executable,
+            args=["-m", *entrypoint, "--output-dir", str(tmp_path / "out")],
+            cwd=str(tmp_path),
+            env={
+                **os.environ,
+                "PYTHONPATH": os.environ.get("DEEPVIZ_TEST_PYTHONPATH", str(SOURCE)),
+                "PYTHONUTF8": "1",
+                "MPLBACKEND": "Agg",
+            },
+        )
+        async with stdio_client(params) as (read, write):
+            async with ClientSession(read, write, read_timeout_seconds=timedelta(seconds=20)) as client:
+                await client.initialize()
+                result = await client.call_tool(
+                    "render_matplotlib",
+                    {"data": ROWS, "spec": SPEC},
+                )
+                assert not result.isError
+                preview = next(block for block in result.content if isinstance(block, types.ImageContent))
+                assert base64.b64decode(preview.data).startswith(b"\x89PNG\r\n\x1a\n")
+
+    asyncio.run(asyncio.wait_for(exercise(), timeout=30))
 
 
 @pytest.mark.parametrize("method", ["run", "arun"])

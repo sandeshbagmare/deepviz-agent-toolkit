@@ -19,6 +19,10 @@ MAX_SESSION_RESOURCES = 128
 
 def create_server(output_dir: str | Path | None = None, *, data_dir: str | Path | None = None) -> Any:
     """Create a local official-SDK server; optional imports stay inside this factory."""
+    # Load native renderer dependencies before FastMCP starts its async loop.
+    # Their first import can block indefinitely when triggered inside a tool call.
+    from .render import render as _render  # noqa: F401
+
     try:
         from mcp.server.fastmcp import FastMCP
         from mcp.types import ContentBlock, ImageContent, ResourceLink, TextContent, ToolAnnotations
