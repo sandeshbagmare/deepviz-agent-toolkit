@@ -47,6 +47,7 @@ _MAX_FIELDS = 1024
 _MAX_DEPTH = 64
 _MAX_CELL_BYTES = 64 * 1024
 _MAX_FIELD_BYTES = 4 * 1024
+_MAX_DATA_PATH_BYTES = 4 * 1024
 _MAX_RECORD_BYTES = 256 * 1024
 _MAX_RETAINED_BYTES = 16 * 1024 * 1024
 _MAX_ARROW_BATCH_BYTES = 2 * 1024 * 1024
@@ -584,6 +585,9 @@ def _records(
     owned = source if source is not data else None
     try:
         if spec.data_path is not None:
+            _utf8_size(spec.data_path, _MAX_DATA_PATH_BYTES, "data_path")
+            if spec.data_path.count(".") + 1 > _MAX_DEPTH:
+                raise ValueError("data_path is nested too deeply")
             tokens = spec.data_path.split(".")
             if any(not token for token in tokens):
                 raise ValueError("data_path must contain non-empty dot-separated components")

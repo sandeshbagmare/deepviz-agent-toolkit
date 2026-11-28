@@ -378,6 +378,26 @@ def test_path_through_empty_connection_is_valid_and_empty() -> None:
     assert result.records == []
 
 
+@pytest.mark.parametrize("component", ["x", "xy"])
+def test_oversized_data_path_is_rejected_without_large_split_allocation(component: str) -> None:
+    data_path = ".".join([component] * 50_000)
+    assert len(data_path) == (99_999 if component == "x" else 149_999)
+    tracemalloc.start()
+    try:
+        with pytest.raises(ValueError, match="data_path"):
+            normalize({"x": 1}, {"data_path": data_path})
+        _, peak = tracemalloc.get_traced_memory()
+    finally:
+        tracemalloc.stop()
+    assert peak < 500_000
+
+
+def test_data_path_component_count_is_bounded_before_selection() -> None:
+    data_path = ".".join(["x"] * 65)
+    with pytest.raises(ValueError, match="data_path is nested too deeply"):
+        normalize({"x": 1}, {"data_path": data_path})
+
+
 def test_ambiguous_graphql_connections_require_an_explicit_path() -> None:
     data = {"data": {"users": {"nodes": [{"id": 1}]}, "posts": {"nodes": [{"id": 2}]}}}
     with pytest.raises(ValueError, match="data_path|ambiguous|Multiple"):
