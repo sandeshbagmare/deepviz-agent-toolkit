@@ -1,0 +1,449 @@
+name: Python release
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: python-release-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  MPLBACKEND: Agg
+  PYTHONHASHSEED: '0'
+  PIP_DISABLE_PIP_VERSION_CHECK: '1'
+
+jobs:
+  release-inputs:
+    name: Inspect release acceptance inputs
+    runs-on: ubuntu-latest
+    outputs:
+      columnar: ${{ steps.scan.outputs.columnar }}
+      consumer: ${{ steps.scan.outputs.consumer }}
+      agents: ${{ steps.scan.outputs.agents }}
+      mcp: ${{ steps.scan.outputs.mcp }}
+      evidence: ${{ steps.scan.outputs.evidence }}
+      scale: ${{ steps.scan.outputs.scale }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - id: scan
+        name: Detect acceptance inputs that landed
+        shell: bash
+        run: |
+          set -euo pipefail
+          ready() {
+            local key="$1"
+            shift
+            local missing=()
+            for path in "$@"; do
+              if [ ! -f "$path" ]; then missing+=("$path"); fi
+            done
+            if [ "${#missing[@]}" -eq 0 ]; then
+              echo "$key=true" >> "$GITHUB_OUTPUT"
+              echo "$key: ready"
+            else
+              echo "$key=false" >> "$GITHUB_OUTPUT"
+              printf '%s deferred; missing: %s\n' "$key" "${missing[*]}"
+            fi
+          }
+          ready columnar python/deepviz/tests/test_normalize.py python/deepviz/tests/test_n19_formats.py
+          ready consumer python/deepviz/src/deepviz/__init__.py python/deepviz/src/deepviz/normalize.py python/deepviz/src/deepviz/render.py python/deepviz/src/deepviz/recommend.py python/deepviz/src/deepviz/cli.py python/deepviz/src/deepviz/mcp_server.py python/deepviz/src/deepviz/resources/chart-spec.schema.json python/deepviz/src/deepviz/py.typed
+          ready agents python/deepviz/src/deepviz/tools.py python/deepviz/tests/test_tools_api.py
+          ready mcp tests/test_mcp_cli.py tests/test_release_security.py
+          ready evidence examples/multi_tool_flow.py tests/test_mcp_cli.py tests/test_release_security.py python/deepviz/tests/test_tools_api.py python/deepviz/tests/test_browser_acceptance.py
+          ready scale scripts/verify_python_scale.py
+
+  release-readiness:
+    name: Release-input gate (must pass before acceptance)
+    needs: release-inputs
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Keep the release gate blocked until planned acceptance inputs exist
+        env:
+          COLUMNAR: ${{ needs.release-inputs.outputs.columnar }}
+          CONSUMER: ${{ needs.release-inputs.outputs.consumer }}
+          AGENTS: ${{ needs.release-inputs.outputs.agents }}
+          MCP: ${{ needs.release-inputs.outputs.mcp }}
+          EVIDENCE: ${{ needs.release-inputs.outputs.evidence }}
+          SCALE: ${{ needs.release-inputs.outputs.scale }}
+        run: |
+          missing=()
+          for input in COLUMNAR CONSUMER AGENTS MCP EVIDENCE SCALE; do
+            if [ "${!input:-false}" != true ]; then missing+=("${input,,}"); fi
+          done
+          if [ "${#missing[@]}" -gt 0 ]; then
+            printf 'Release acceptance is blocked; deferred input groups: %s\n' "${missing[*]}"
+            echo 'Land and review the planned package, tests, smoke/browser and scale inputs before treating this workflow as a release gate.'
+            exit 1
+          fi
+          echo 'All planned release acceptance inputs are present.'
+
+  python:
+    name: Python ${{ matrix.python }} tests, types and distributions
+    needs: release-inputs
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - name: Record the tested source
+        run: |
+          mkdir -p artifacts
+          git rev-parse HEAD > artifacts/source-sha.txt
+          python --version > artifacts/python-version.txt
+      - name: Install test dependencies, including every supported extra
+        run: python -m pip install -e '.[dev,agents,columnar,mcp]'
+      - name: Lint
+        run: python -m ruff check .
+      - name: Type-check
+        run: python -m mypy
+      - name: Full test suite
+        run: python -m pytest -q --strict-markers --junitxml=artifacts/tests.xml
+      - name: Require enabled Arrow and Parquet tests to run
+        if: needs.release-inputs.outputs.columnar == 'true'
+        run: |
+          python -c 'import pyarrow; import pyarrow.parquet'
+          python -m pytest -q --strict-markers \
+            python/deepviz/tests/test_normalize.py python/deepviz/tests/test_n19_formats.py \
+            -k 'arrow or columnar or parquet' --junitxml=artifacts/columnar.xml
+          python - <<'PY'
+          import xml.etree.ElementTree as ET
+          cases = list(ET.parse('artifacts/columnar.xml').getroot().iter('testcase'))
+          assert cases, 'No Arrow/Parquet acceptance tests ran'
+          skipped = [case.attrib.get('name') for case in cases if case.find('skipped') is not None]
+          assert not skipped, f'Enabled Arrow/Parquet tests skipped: {skipped}'
+          print(f'Arrow/Parquet: {len(cases)} cases, zero skips')
+          PY
+      - name: Build wheel and sdist
+        run: |
+          python -m build
+          python -m twine check --strict dist/*
+      - name: Clean-install wheel and sdist with base, columnar and MCP dependencies
+        if: needs.release-inputs.outputs.consumer == 'true' && needs.release-inputs.outputs.columnar == 'true' && needs.release-inputs.outputs.mcp == 'true'
+        run: |
+          for artifact in dist/*.whl dist/*.tar.gz; do
+            artifact="$(realpath "$artifact")"
+            for extra in base columnar mcp; do
+              consumer="$(mktemp -d "$RUNNER_TEMP/deepviz-consumer.XXXXXX")"
+              python -m venv "$consumer"
+              requirement="$artifact"
+              if [ "$extra" != base ]; then requirement="$artifact[$extra]"; fi
+              "$consumer/bin/python" -m pip install "$requirement"
+              "$consumer/bin/python" -m pip check
+              pushd "$consumer"
+              "$consumer/bin/python" -I - "$extra" <<'PY'
+          import importlib.util
+          import json
+          import sys
+          import tempfile
+          from importlib.resources import files
+          from pathlib import Path
+
+          import deepviz
+
+          extra = sys.argv[1]
+          assert Path(deepviz.__file__).resolve().is_relative_to(Path(sys.prefix).resolve())
+          assert (importlib.util.find_spec('pyarrow') is not None) == (extra == 'columnar')
+          assert (importlib.util.find_spec('mcp') is not None) == (extra == 'mcp')
+          assert importlib.util.find_spec('deepagents') is None
+          for name in ('system', 'request'):
+              assert deepviz.read_prompt(name).strip(), f'Missing prompt: {name}'
+          schema = json.loads(files('deepviz').joinpath('resources/chart-spec.schema.json').read_text())
+          assert schema['$defs']['ChartSpec']['properties']['version']['const'] == 1
+          assert files('deepviz').joinpath('py.typed').is_file()
+          rows = [{'month': 'Jan', 'revenue': 12}, {'month': 'Feb', 'revenue': 18}]
+          spec = deepviz.ChartSpec(kind='bar', x='month', y='revenue', aggregation='none')
+          normalized = deepviz.normalize(rows, spec)
+          assert normalized.input_count == 2 and normalized.records == rows
+          with tempfile.TemporaryDirectory() as directory:
+              artifact = deepviz.render(rows, spec, engine='matplotlib', output_dir=directory)
+              assert artifact.input_count == 2 and artifact.output_count == 2
+              png = next(Path(path) for path in artifact.paths if path.endswith('.png'))
+              assert png.read_bytes().startswith(b'\x89PNG\r\n\x1a\n')
+              if extra == 'columnar':
+                  import pyarrow as pa
+                  import pyarrow.parquet as pq
+                  table = pa.Table.from_pylist(rows)
+                  assert deepviz.normalize(table, spec).records == rows
+                  path = Path(directory) / 'rows.parquet'
+                  pq.write_table(table, path)
+                  assert deepviz.normalize(path, spec).records == rows
+              elif extra == 'mcp':
+                  from deepviz.mcp_server import create_server
+                  assert create_server(Path(directory) / 'mcp') is not None
+              else:
+                  try:
+                      deepviz.normalize(b'not-an-arrow-file', {'format': 'arrow'})
+                  except ImportError as error:
+                      assert 'columnar' in str(error)
+                  else:
+                      raise AssertionError('Base install must explain the missing columnar extra')
+          print(json.dumps({'extra': extra, 'package': deepviz.__file__, 'result': 'passed'}))
+          PY
+              env -u PYTHONPATH -u PYTHONHOME "$consumer/bin/deepviz" --help
+              env -u PYTHONPATH -u PYTHONHOME "$consumer/bin/deepviz-mcp" --help
+              if [ "$extra" = base ]; then
+                "$consumer/bin/python" -m pip install pytest
+                "$consumer/bin/python" -m pytest -q --strict-markers \
+                  "$GITHUB_WORKSPACE/python/deepviz/tests/test_tools_api.py" \
+                  -k tools_import_and_local_session_do_not_require_optional_dependencies \
+                  --junitxml=base-imports.xml
+                "$consumer/bin/python" - base-imports.xml <<'PY'
+          import sys
+          import xml.etree.ElementTree as ET
+          cases = list(ET.parse(sys.argv[1]).getroot().iter('testcase'))
+          assert cases, 'The base-install lazy-import test did not run'
+          assert not any(case.find('skipped') is not None for case in cases), \
+              'The base-install lazy-import test skipped'
+          print('Base-install lazy-import control passed')
+          PY
+              elif [ "$extra" = columnar ]; then
+                "$consumer/bin/python" -m pip install pytest
+                "$consumer/bin/python" -m pytest -q --strict-markers \
+                  "$GITHUB_WORKSPACE/python/deepviz/tests/test_normalize.py" \
+                  "$GITHUB_WORKSPACE/python/deepviz/tests/test_n19_formats.py" \
+                  -k 'arrow or columnar or parquet' --junitxml=columnar-installed.xml
+                "$consumer/bin/python" - columnar-installed.xml <<'PY'
+          import sys
+          import xml.etree.ElementTree as ET
+          cases = list(ET.parse(sys.argv[1]).getroot().iter('testcase'))
+          assert cases, 'No clean-install Arrow/Parquet tests ran'
+          skipped = [case.attrib.get('name') for case in cases if case.find('skipped') is not None]
+          assert not skipped, f'Clean-install Arrow/Parquet tests skipped: {skipped}'
+          print(f'Clean-install Arrow/Parquet: {len(cases)} cases, zero skips')
+          PY
+              elif [ "$extra" = mcp ]; then
+                "$consumer/bin/python" -m pip install pytest
+                DEEPVIZ_TEST_PYTHONPATH='' "$consumer/bin/python" - <<'PY'
+          import os
+          import subprocess
+          import sys
+          import tempfile
+          from pathlib import Path
+
+          cwd = Path(tempfile.mkdtemp(prefix='deepviz-installed-child-', dir=os.environ['RUNNER_TEMP']))
+          env = {**os.environ, 'PYTHONPATH': os.environ.get('DEEPVIZ_TEST_PYTHONPATH', '')}
+          result = subprocess.run(
+              [sys.executable, '-c', 'import deepviz; print(deepviz.__file__)'],
+              cwd=cwd, env=env, check=True, capture_output=True, text=True,
+          )
+          package_path = Path(result.stdout.strip()).resolve()
+          assert package_path.is_relative_to(Path(sys.prefix).resolve()), package_path
+          print(f'MCP test child imported installed package: {package_path}')
+          PY
+                DEEPVIZ_TEST_PYTHONPATH='' "$consumer/bin/python" -m pytest -q --strict-markers \
+                  "$GITHUB_WORKSPACE/tests/test_mcp_cli.py" \
+                  -k 'not invalid_bare_json' \
+                  --junitxml=mcp-installed.xml
+                "$consumer/bin/python" - mcp-installed.xml <<'PY'
+          import sys
+          import xml.etree.ElementTree as ET
+          cases = list(ET.parse(sys.argv[1]).getroot().iter('testcase'))
+          assert cases, 'No clean-install MCP tests ran'
+          skipped = [case.attrib.get('name') for case in cases if case.find('skipped') is not None]
+          assert not skipped, f'Clean-install MCP tests skipped: {skipped}'
+          print(f'Clean-install MCP: {len(cases)} cases, zero skips')
+          PY
+              fi
+              popd
+            done
+          done
+      - name: Preserve reports and built distributions
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: python-${{ matrix.python }}-${{ github.run_attempt }}
+          path: |
+            artifacts/
+            dist/
+          if-no-files-found: error
+          retention-days: 14
+
+  agents-consumer:
+    name: Installed agents extra and lazy imports
+    needs: release-inputs
+    if: needs.release-inputs.outputs.agents == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - name: Build and install the wheel with the agents extra in a clean venv
+        run: |
+          python -m pip install build
+          python -m build --wheel
+          consumer="$RUNNER_TEMP/deepviz-agents-consumer"
+          python -m venv "$consumer"
+          wheel="$(realpath dist/*.whl)"
+          "$consumer/bin/python" -m pip install "$wheel[agents]" pytest
+          "$consumer/bin/python" -m pip check
+          pushd "$RUNNER_TEMP"
+          env -u PYTHONPATH -u PYTHONHOME "$consumer/bin/python" -I - <<'PY'
+          import importlib.util
+          import sys
+          from pathlib import Path
+          package = importlib.util.find_spec('deepviz.models')
+          assert package is not None and package.origin is not None, 'Installed deepviz.models was not found'
+          assert Path(package.origin).resolve().is_relative_to(Path(sys.prefix).resolve())
+          assert importlib.util.find_spec('langchain_core') is not None
+          assert importlib.util.find_spec('deepagents') is not None
+          import deepviz
+          assert deepviz.normalize([{'x': 1}]).input_count == 1
+          print('Installed [agents] tool dependencies and package imports passed')
+          PY
+          env -u PYTHONPATH -u PYTHONHOME "$consumer/bin/python" -m pytest -q --strict-markers \
+            "$GITHUB_WORKSPACE/python/deepviz/tests/test_tools_api.py" \
+            --junitxml="$RUNNER_TEMP/agents-tools.xml"
+          "$consumer/bin/python" - "$RUNNER_TEMP/agents-tools.xml" <<'PY'
+          import sys
+          import xml.etree.ElementTree as ET
+          cases = list(ET.parse(sys.argv[1]).getroot().iter('testcase'))
+          assert cases, 'No installed agents-tool tests ran'
+          skipped = [case.attrib.get('name') for case in cases if case.find('skipped') is not None]
+          assert not skipped, f'Installed agents-tool tests skipped: {skipped}'
+          print(f'Installed [agents] tests: {len(cases)} cases, zero skips')
+          PY
+      - name: Preserve installed tool API results
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: python-agents-consumer-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/agents-tools.xml
+          if-no-files-found: error
+          retention-days: 14
+
+  release-evidence:
+    name: Python smoke, safety and visual evidence
+    needs: release-inputs
+    if: needs.release-inputs.outputs.evidence == 'true' && needs.release-inputs.outputs.mcp == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - name: Record the tested source
+        run: |
+          mkdir -p artifacts
+          git rev-parse HEAD > artifacts/source-sha.txt
+      - name: Install local integration dependencies
+        run: python -m pip install -e '.[dev,agents,columnar,mcp]'
+      - name: Local normalize, recommend and five-renderer tool flow
+        run: python examples/multi_tool_flow.py --output-dir artifacts/tool-flow
+      - name: Real stdio MCP and artifact safety regressions
+        run: >-
+          python -m pytest -q --strict-markers
+          tests/test_mcp_cli.py
+          tests/test_release_security.py
+          python/deepviz/tests/test_tools_api.py
+          --junitxml=artifacts/safety.xml
+      - name: Install local Chromium and Playwright for offline runtime inspection
+        run: |
+          python -m pip install 'playwright==1.65.2'
+          python -m playwright install --with-deps chromium
+          runtime="$RUNNER_TEMP/deepviz-browser-deps"
+          mkdir -p "$runtime/node_modules/echarts/dist" "$runtime/node_modules/@antv/g2/dist"
+          printf '{"name":"echarts","version":"5.6.0"}\n' > "$runtime/node_modules/echarts/package.json"
+          printf '{"name":"@antv/g2","version":"5.4.8"}\n' > "$runtime/node_modules/@antv/g2/package.json"
+          curl --fail --location --silent --show-error \
+            https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.min.js \
+            --output "$runtime/node_modules/echarts/dist/echarts.min.js"
+          curl --fail --location --silent --show-error \
+            https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js \
+            --output "$runtime/node_modules/@antv/g2/dist/g2.min.js"
+          printf '%s  %s\n' 'bf4a223524e40b77c304bec67e1222cf551f14880cf42c69dc046558e11c07b1' "$runtime/node_modules/echarts/dist/echarts.min.js" | sha256sum --check --status
+          printf '%s  %s\n' '7e7d346cab68c002a889dc6145bfc1f9ae1391be82ce8d514fb106ef3a6e6412' "$runtime/node_modules/@antv/g2/dist/g2.min.js" | sha256sum --check --status
+      - name: Run local-runtime chart and dashboard browser acceptance
+        env:
+          DEEPVIZ_BROWSER_TESTS: '1'
+          DEEPVIZ_BROWSER_DEPS: ${{ runner.temp }}/deepviz-browser-deps
+        run: >-
+          python -m pytest -q --strict-markers
+          python/deepviz/tests/test_browser_acceptance.py
+          --basetemp="$RUNNER_TEMP/browser-results"
+          --junitxml=artifacts/browser.xml
+      - name: Preserve real browser screenshots and observations
+        if: always()
+        run: |
+          mkdir -p artifacts/browser-artifacts
+          if [ -d "$RUNNER_TEMP/browser-results" ]; then
+            cp -R "$RUNNER_TEMP/browser-results/." artifacts/browser-artifacts/
+          fi
+      - name: Preserve actual artifacts and measured evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: python-release-evidence-${{ github.run_attempt }}
+          path: artifacts/
+          if-no-files-found: error
+          retention-days: 14
+
+  scale-evidence:
+    name: One-pass normalization evidence through ten million rows
+    needs: release-inputs
+    if: needs.release-inputs.outputs.scale == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - name: Install the package and scale harness dependencies
+        run: python -m pip install -e '.[dev,columnar]'
+      - name: Measure all required counts and reducers in fresh worker processes
+        run: |
+          mkdir -p artifacts
+          python scripts/verify_python_scale.py \
+            --source-root "$GITHUB_WORKSPACE" \
+            --counts 10 1000 100000 1000000 10000000 \
+            --cases sample sum mean --max-points 2000 --timeout 900 \
+            --output artifacts/python-scale.json
+      - name: Preserve measured counts, elapsed time and actual memory method
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: python-scale-evidence-${{ github.run_attempt }}
+          path: artifacts/python-scale.json
+          if-no-files-found: error
+          retention-days: 14
