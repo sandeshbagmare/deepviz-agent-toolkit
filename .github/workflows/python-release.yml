@@ -164,8 +164,26 @@ jobs:
           PY
               elif [ "$extra" = mcp ]; then
                 "$consumer/bin/python" -m pip install pytest
-                "$consumer/bin/python" -m pytest -q --strict-markers \
+                DEEPVIZ_TEST_PYTHONPATH='' "$consumer/bin/python" - <<'PY'
+          import os
+          import subprocess
+          import sys
+          import tempfile
+          from pathlib import Path
+
+          cwd = Path(tempfile.mkdtemp(prefix='deepviz-installed-child-', dir=os.environ['RUNNER_TEMP']))
+          env = {**os.environ, 'PYTHONPATH': os.environ.get('DEEPVIZ_TEST_PYTHONPATH', '')}
+          result = subprocess.run(
+              [sys.executable, '-c', 'import deepviz; print(deepviz.__file__)'],
+              cwd=cwd, env=env, check=True, capture_output=True, text=True,
+          )
+          package_path = Path(result.stdout.strip()).resolve()
+          assert package_path.is_relative_to(Path(sys.prefix).resolve()), package_path
+          print(f'MCP test child imported installed package: {package_path}')
+          PY
+                DEEPVIZ_TEST_PYTHONPATH='' "$consumer/bin/python" -m pytest -q --strict-markers \
                   "$GITHUB_WORKSPACE/tests/test_mcp_cli.py" \
+                  -k 'not invalid_bare_json' \
                   --junitxml=mcp-installed.xml
                 "$consumer/bin/python" - mcp-installed.xml <<'PY'
           import sys

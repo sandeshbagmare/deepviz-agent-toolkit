@@ -41,9 +41,11 @@ base consumer verifies Arrow use gives an actionable extra-install error and tha
 optional packages are not installed. The columnar consumer runs the actual
 normalization/format tests with zero skips and exercises Arrow Table and Parquet
 input. The MCP consumer runs the actual CLI/MCP tests with zero skips, including
-the stdio client/server path. A separate wheel consumer installs `[agents]`,
-runs all of `test_tools_api.py` with zero skips, and verifies lazy imports in the
-base install.
+the stdio client/server path. It excludes the two LangChain-only callback cases;
+the separate wheel consumer installs `[agents]` and runs all of `test_tools_api.py`
+with zero skips. Both installed consumers clear the test subprocess source-path
+override, and the MCP child-import probe asserts `deepviz.__file__` resolves inside
+the clean environment. The base install also verifies lazy imports.
 
 ## Local tool, safety and browser acceptance
 
