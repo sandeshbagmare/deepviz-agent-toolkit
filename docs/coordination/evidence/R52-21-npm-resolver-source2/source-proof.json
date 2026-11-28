@@ -1,0 +1,174 @@
+{
+  "reviewer_actual_id": "ses_de5678018ffezK8JGDUaSzvcWn",
+  "source_base": "656f4f35e5e72d16cdb5ebf557b7d64607eaaa43",
+  "resolver_commit": "aa421822ea016b59cca674bdb547598c0c64d6d0",
+  "resolver_direct_parent": "c1e1f20e92d69f44fedd9c7d9d272234d8e7d697",
+  "published_tip": "ddd6ad527a7347cf0c601e88b71dec288206347c",
+  "published_tip_parent": "aa421822ea016b59cca674bdb547598c0c64d6d0",
+  "resolver_is_ancestor_of_tip": true,
+  "commits_after_resolver_to_tip": 1,
+  "resolver_commit_all_changed_paths": [
+    "M\tdocs/agent-state/ses_de56782e6ffeVWDIuY3v01kkBt.md",
+    "M\tdocs/coordination/reports/R40-08-npm-foundation-implementation.md",
+    "M\tdocs/coordination/status/role08.md",
+    "M\tpackages/deepviz/scripts/check-materialized-package.mjs",
+    "M\tpackages/deepviz/test/test_r40_foundation.test.mjs"
+  ],
+  "resolver_commit_product_paths": [
+    "M\tpackages/deepviz/scripts/check-materialized-package.mjs",
+    "M\tpackages/deepviz/test/test_r40_foundation.test.mjs"
+  ],
+  "resolver_commit_auxiliary_documentation_paths": [
+    "docs/agent-state/ses_de56782e6ffeVWDIuY3v01kkBt.md",
+    "docs/coordination/reports/R40-08-npm-foundation-implementation.md",
+    "docs/coordination/status/role08.md"
+  ],
+  "base_to_tip_reviewed_path_changes": [
+    "M\tpackages/deepviz/scripts/check-materialized-package.mjs",
+    "M\tpackages/deepviz/test/test_r40_foundation.test.mjs"
+  ],
+  "later_changes_to_reviewed_paths": [],
+  "requested_plural_test_path": "not present at resolver commit; actual changed regression path is packages/deepviz/test/test_r40_foundation.test.mjs (singular test)",
+  "paths": {
+    "packages/deepviz/scripts/check-materialized-package.mjs": {
+      "656f4f35e5e72d16cdb5ebf557b7d64607eaaa43": {
+        "blob": "4856e2775eedae531e5239550c99d8d025ad8f22",
+        "sha256": "92ab9ecef38835166cc30905aaa035cc29906318abfe1aad0f8cfec68db3474d",
+        "bytes": 10492
+      },
+      "c1e1f20e92d69f44fedd9c7d9d272234d8e7d697": {
+        "blob": "4856e2775eedae531e5239550c99d8d025ad8f22",
+        "sha256": "92ab9ecef38835166cc30905aaa035cc29906318abfe1aad0f8cfec68db3474d",
+        "bytes": 10492
+      },
+      "aa421822ea016b59cca674bdb547598c0c64d6d0": {
+        "blob": "891fe6771323af366ab4f4a41687470fd758e114",
+        "sha256": "df5f0290dbb791a2e07c592899572e43fe172dff2717656bf377c1f6ea1a13c1",
+        "bytes": 10630
+      },
+      "ddd6ad527a7347cf0c601e88b71dec288206347c": {
+        "blob": "891fe6771323af366ab4f4a41687470fd758e114",
+        "sha256": "df5f0290dbb791a2e07c592899572e43fe172dff2717656bf377c1f6ea1a13c1",
+        "bytes": 10630
+      }
+    },
+    "packages/deepviz/test/test_r40_foundation.test.mjs": {
+      "656f4f35e5e72d16cdb5ebf557b7d64607eaaa43": {
+        "blob": "8111ee56f6886310a9a1c2831fbb90e6520d3e9d",
+        "sha256": "696a4b7ba3b0a728440f144cd9df4eb2fe313f59379826a805f6d0f4011e08bb",
+        "bytes": 2917
+      },
+      "c1e1f20e92d69f44fedd9c7d9d272234d8e7d697": {
+        "blob": "8111ee56f6886310a9a1c2831fbb90e6520d3e9d",
+        "sha256": "696a4b7ba3b0a728440f144cd9df4eb2fe313f59379826a805f6d0f4011e08bb",
+        "bytes": 2917
+      },
+      "aa421822ea016b59cca674bdb547598c0c64d6d0": {
+        "blob": "04b46baae6727763e16b00455bc7fe8af8b0398d",
+        "sha256": "86d9c9536a488bb1425ff85dac993a215a65c5612abe2ea3d5e4b21b26ffabab",
+        "bytes": 3106
+      },
+      "ddd6ad527a7347cf0c601e88b71dec288206347c": {
+        "blob": "04b46baae6727763e16b00455bc7fe8af8b0398d",
+        "sha256": "86d9c9536a488bb1425ff85dac993a215a65c5612abe2ea3d5e4b21b26ffabab",
+        "bytes": 3106
+      }
+    }
+  },
+  "connected_source_blobs_at_tip": {
+    "package.json": {
+      "blob": "6d0d1981e966edb5d06ab93d7310c13106ef43ae",
+      "sha256": "58d0b0f880c95b956d5315767f7daf09bdeaf3a493bdfacd3a2558978128fa2e",
+      "bytes": 1305
+    },
+    "package-lock.json": {
+      "blob": "2a6175c207b0ed61272bf295813b2966d4c83c97",
+      "sha256": "1401922876f8b7d37e675ce044400fe5335682742dd9b30a1292243ad771d4c9",
+      "bytes": 81533
+    },
+    ".github/workflows/npm-foundation.yml": {
+      "blob": "2d5d201cbfc442da5213a4e9ca5466bb816d0576",
+      "sha256": "5ca16ec89557e48ef7541bb57294542ca5d4fc404da62dc795d777a4a2da512f",
+      "bytes": 1544
+    },
+    "packages/deepviz/scripts/check-package.mjs": {
+      "blob": "fb98c8f8ea14f23e136a73ed3ed7955f49130b61",
+      "sha256": "1f7e436182ccb6debf9a7f980c6a67c7aa27fa80bf23259cd6b527c08d27fd80",
+      "bytes": 3250
+    }
+  },
+  "line_references": {
+    "checker": "packages/deepviz/scripts/check-materialized-package.mjs:9-10,15-21,101-107",
+    "regression": "packages/deepviz/test/test_r40_foundation.test.mjs:19-26",
+    "package_script": "package.json:12",
+    "typescript_dev_dependency": "package.json:24",
+    "typescript_lock_entry": "package-lock.json:1572",
+    "workflow": ".github/workflows/npm-foundation.yml:18,25,35-36",
+    "sibling_package_check": "packages/deepviz/scripts/check-package.mjs:44"
+  },
+  "source_facts": {
+    "parent_resolves_hidden_cli_subpath": true,
+    "target_resolves_exported_package_json_then_bin_tsc": true,
+    "target_regression_assertion": true,
+    "package_materialized_script": "node packages/deepviz/scripts/check-materialized-package.mjs",
+    "workflow_node_matrix": [
+      "22",
+      "24"
+    ],
+    "workflow_invokes_materialized_gate": true,
+    "typescript_dev_dependency": "7.0.2",
+    "lock_typescript_version": "7.0.2",
+    "lock_integrity": "sha512-8FYau96o3NKOhbjKi/qNvG/W5jhzxkbdm5sj9AbZ/5T5sWqn3hJgLfGx27sRKZWTvyzCP8dLRBTf5tBTSRVUNA==",
+    "lock_bin": {
+      "tsc": "bin/tsc"
+    },
+    "sibling_package_check_uses_direct_filesystem_path": true,
+    "cached_MAIN_installed_package_metadata": {
+      "path": "C:\\Users\\bagma\\deepviz-agent-toolkit\\node_modules\\typescript\\package.json",
+      "available": true,
+      "sha256": "3722b30210616a13a3213ded11575ba6b2dbab10c32a5ef67afca8513e27017e",
+      "bytes": 3087,
+      "version": "7.0.2",
+      "exports_package_json": "./package.json",
+      "exports_keys": [
+        "./package.json",
+        ".",
+        "./unstable/sync",
+        "./unstable/async",
+        "./unstable/fs",
+        "./unstable/proto",
+        "./unstable/ast",
+        "./unstable/ast/is",
+        "./unstable/ast/factory",
+        "./unstable/ast/utils",
+        "./unstable/ast/scanner",
+        "./unstable/ast/visitor",
+        "./unstable/ast/clone"
+      ],
+      "bin_tsc": "./bin/tsc",
+      "bin_file_exists": true,
+      "bin_file_sha256": "2219f428a7e55aaf1f7ad85b9b0f0cf5078aeb76ccc9a7c6036c92d48f492ffd",
+      "bin_file_bytes": 44
+    }
+  },
+  "reviewed_behavior": {
+    "resolution_base": "ESM checker module URL; import.meta.resolve applies Node package exports from that module location, not process.cwd()",
+    "exact_locked_export": "TypeScript 7.0.2 package metadata explicitly maps ./package.json to ./package.json; bin metadata maps tsc to ./bin/tsc",
+    "compiler_override": "optional third CLI argument remains path.resolve(compilerArg); workflow supplies only archive/output, so default metadata branch is used there",
+    "failure": "resolution/file read failure enters existing catch, records passed=false/failure and rethrows; finally writes receipt; nonzero child status is asserted",
+    "bounds": "existing spawnSync timeout=120000 ms and maxBuffer=8 MiB unchanged",
+    "test_assertion": "strict source-string assertion guards the new resolver expression; actual materialized gate is invoked by Node 22/24 workflow, not exercised by this review"
+  },
+  "execution_limits": {
+    "product_imports": 0,
+    "test_suites_run": 0,
+    "tests_passed": 0,
+    "tests_failed": 0,
+    "tests_skipped": 0,
+    "builds": 0,
+    "Node_runtime_probes": 0,
+    "network_or_install": false
+  },
+  "static_proof_assert_statement_count": 24,
+  "scope": "static Git-blob/source review only; density implementation/tests intentionally excluded"
+}

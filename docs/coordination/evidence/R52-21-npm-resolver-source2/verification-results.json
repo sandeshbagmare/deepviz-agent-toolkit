@@ -1,0 +1,145 @@
+{
+  "source_base": "656f4f35e5e72d16cdb5ebf557b7d64607eaaa43",
+  "resolver_commit": "aa421822ea016b59cca674bdb547598c0c64d6d0",
+  "resolver_direct_parent": "c1e1f20e92d69f44fedd9c7d9d272234d8e7d697",
+  "published_package_tip": "ddd6ad527a7347cf0c601e88b71dec288206347c",
+  "checks": [
+    {
+      "label": "own working tree snapshot",
+      "command": "git status --short --branch",
+      "exit": 0,
+      "expected_exit": 0,
+      "expectation_met": true,
+      "stdout": "## agents/r10-21-recovery-git-bootstrap\n M docs/agent-state/ses_de5678018ffezK8JGDUaSzvcWn.md\n M docs/coordination/status/role21.md\n?? docs/coordination/evidence/R52-21-npm-resolver-source2/\n?? docs/coordination/reports/R52-21-npm-resolver-source2.md",
+      "stderr": ""
+    },
+    {
+      "label": "own HEAD",
+      "command": "git rev-parse HEAD",
+      "exit": 0,
+      "expected_exit": 0,
+      "expectation_met": true,
+      "stdout": "6782de5dfba06aeb35b5e1a969e154c8b5abf3e9",
+      "stderr": ""
+    },
+    {
+      "label": "resolver exact commit metadata",
+      "command": "git show -s --format=%H%n%P%n%s aa421822ea016b59cca674bdb547598c0c64d6d0",
+      "exit": 0,
+      "expected_exit": 0,
+      "expectation_met": true,
+      "stdout": "aa421822ea016b59cca674bdb547598c0c64d6d0\nc1e1f20e92d69f44fedd9c7d9d272234d8e7d697\nfix: resolve exported TypeScript compiler metadata",
+      "stderr": ""
+    },
+    {
+      "label": "published package tip metadata",
+      "command": "git show -s --format=%H%n%P%n%s ddd6ad527a7347cf0c601e88b71dec288206347c",
+      "exit": 0,
+      "expected_exit": 0,
+      "expectation_met": true,
+      "stdout": "ddd6ad527a7347cf0c601e88b71dec288206347c\naa421822ea016b59cca674bdb547598c0c64d6d0\ndocs: record npm resolver gate publication",
+      "stderr": ""
+    },
+    {
+      "label": "resolver is ancestor of ddd tip",
+      "command": "git merge-base --is-ancestor aa421822ea016b59cca674bdb547598c0c64d6d0 ddd6ad527a7347cf0c601e88b71dec288206347c",
+      "exit": 0,
+      "expected_exit": 0,
+      "expectation_met": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "resolver parent to commit name-status",
+      "command": "git diff --name-status aa421822ea016b59cca674bdb547598c0c64d6d0^ aa421822ea016b59cca674bdb547598c0c64d6d0",
+      "exit": 0,
+      "expected_exit": 0,
+      "expectation_met": true,
+      "stdout": "M\tdocs/agent-state/ses_de56782e6ffeVWDIuY3v01kkBt.md\nM\tdocs/coordination/reports/R40-08-npm-foundation-implementation.md\nM\tdocs/coordination/status/role08.md\nM\tpackages/deepviz/scripts/check-materialized-package.mjs\nM\tpackages/deepviz/test/test_r40_foundation.test.mjs",
+      "stderr": ""
+    },
+    {
+      "label": "package-base to published-tip target-path diff",
+      "command": "git diff --name-status 656f4f35e5e72d16cdb5ebf557b7d64607eaaa43 ddd6ad527a7347cf0c601e88b71dec288206347c -- packages/deepviz/scripts/check-materialized-package.mjs packages/deepviz/test/test_r40_foundation.test.mjs",
+      "exit": 0,
+      "expected_exit": 0,
+      "expectation_met": true,
+      "stdout": "M\tpackages/deepviz/scripts/check-materialized-package.mjs\nM\tpackages/deepviz/test/test_r40_foundation.test.mjs",
+      "stderr": ""
+    },
+    {
+      "label": "resolver to published-tip target-path diff",
+      "command": "git diff --name-status aa421822ea016b59cca674bdb547598c0c64d6d0 ddd6ad527a7347cf0c601e88b71dec288206347c -- packages/deepviz/scripts/check-materialized-package.mjs packages/deepviz/test/test_r40_foundation.test.mjs",
+      "exit": 0,
+      "expected_exit": 0,
+      "expectation_met": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "target-path diff whitespace check",
+      "command": "git diff --check 656f4f35e5e72d16cdb5ebf557b7d64607eaaa43 ddd6ad527a7347cf0c601e88b71dec288206347c -- packages/deepviz/scripts/check-materialized-package.mjs packages/deepviz/test/test_r40_foundation.test.mjs",
+      "exit": 0,
+      "expected_exit": 0,
+      "expectation_met": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "requested plural path absence",
+      "command": "git cat-file -e aa421822ea016b59cca674bdb547598c0c64d6d0:packages/deepviz/tests/test_r40_foundation.test.mjs",
+      "exit": 128,
+      "expected_exit": 128,
+      "expectation_met": true,
+      "stdout": "",
+      "stderr": "fatal: path 'packages/deepviz/tests/test_r40_foundation.test.mjs' does not exist in 'aa421822ea016b59cca674bdb547598c0c64d6d0'"
+    },
+    {
+      "label": "static source hash ancestry/export proof",
+      "command": "C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe -B docs/coordination/evidence/R52-21-npm-resolver-source2/source-proof.py",
+      "exit": 0,
+      "expected_exit": 0,
+      "expectation_met": true,
+      "stdout": "{\n  \"reviewer_actual_id\": \"ses_de5678018ffezK8JGDUaSzvcWn\",\n  \"source_base\": \"656f4f35e5e72d16cdb5ebf557b7d64607eaaa43\",\n  \"resolver_commit\": \"aa421822ea016b59cca674bdb547598c0c64d6d0\",\n  \"resolver_direct_parent\": \"c1e1f20e92d69f44fedd9c7d9d272234d8e7d697\",\n  \"published_tip\": \"ddd6ad527a7347cf0c601e88b71dec288206347c\",\n  \"published_tip_parent\": \"aa421822ea016b59cca674bdb547598c0c64d6d0\",\n  \"resolver_is_ancestor_of_tip\": true,\n  \"commits_after_resolver_to_tip\": 1,\n  \"resolver_commit_all_changed_paths\": [\n    \"M\\tdocs/agent-state/ses_de56782e6ffeVWDIuY3v01kkBt.md\",\n    \"M\\tdocs/coordination/reports/R40-08-npm-foundation-implementation.md\",\n    \"M\\tdocs/coordination/status/role08.md\",\n    \"M\\tpackages/deepviz/scripts/check-materialized-package.mjs\",\n    \"M\\tpackages/deepviz/test/test_r40_foundation.test.mjs\"\n  ],\n  \"resolver_commit_product_paths\": [\n    \"M\\tpackages/deepviz/scripts/check-materialized-package.mjs\",\n    \"M\\tpackages/deepviz/test/test_r40_foundation.test.mjs\"\n  ],\n  \"resolver_commit_auxiliary_documentation_paths\": [\n    \"docs/agent-state/ses_de56782e6ffeVWDIuY3v01kkBt.md\",\n    \"docs/coordination/reports/R40-08-npm-foundation-implementation.md\",\n    \"docs/coordination/status/role08.md\"\n  ],\n  \"base_to_tip_reviewed_path_changes\": [\n    \"M\\tpackages/deepviz/scripts/check-materialized-package.mjs\",\n    \"M\\tpackages/deepviz/test/test_r40_foundation.test.mjs\"\n  ],\n  \"later_changes_to_reviewed_paths\": [],\n  \"requested_plural_test_path\": \"not present at resolver commit; actual changed regression path is packages/deepviz/test/test_r40_foundation.test.mjs (singular test)\",\n  \"paths\": {\n    \"packages/deepviz/scripts/check-materialized-package.mjs\": {\n      \"656f4f35e5e72d16cdb5ebf557b7d64607eaaa43\": {\n        \"blob\": \"4856e2775eedae531e5239550c99d8d025ad8f22\",\n        \"sha256\": \"92ab9ecef38835166cc30905aaa035cc29906318abfe1aad0f8cfec68db3474d\",\n        \"bytes\": 10492\n      },\n      \"c1e1f20e92d69f44fedd9c7d9d272234d8e7d697\": {\n        \"blob\": \"4856e2775eedae531e5239550c99d8d025ad8f22\",\n        \"sha256\": \"92ab9ecef38835166cc30905aaa035cc29906318abfe1aad0f8cfec68db3474d\",\n        \"bytes\": 10492\n      },\n      \"aa421822ea016b59cca674bdb547598c0c64d6d0\": {\n        \"blob\": \"891fe6771323af366ab4f4a41687470fd758e114\",\n        \"sha256\": \"df5f0290dbb791a2e07c592899572e43fe172dff2717656bf377c1f6ea1a13c1\",\n        \"bytes\": 10630\n      },\n      \"ddd6ad527a7347cf0c601e88b71dec288206347c\": {\n        \"blob\": \"891fe6771323af366ab4f4a41687470fd758e114\",\n        \"sha256\": \"df5f0290dbb791a2e07c592899572e43fe172dff2717656bf377c1f6ea1a13c1\",\n        \"bytes\": 10630\n      }\n    },\n    \"packages/deepviz/test/test_r40_foundation.test.mjs\": {\n      \"656f4f35e5e72d16cdb5ebf557b7d64607eaaa43\": {\n        \"blob\": \"8111ee56f6886310a9a1c2831fbb90e6520d3e9d\",\n        \"sha256\": \"696a4b7ba3b0a728440f144cd9df4eb2fe313f59379826a805f6d0f4011e08bb\",\n        \"bytes\": 2917\n      },\n      \"c1e1f20e92d69f44fedd9c7d9d272234d8e7d697\": {\n        \"blob\": \"8111ee56f6886310a9a1c2831fbb90e6520d3e9d\",\n        \"sha256\": \"696a4b7ba3b0a728440f144cd9df4eb2fe313f59379826a805f6d0f4011e08bb\",\n        \"bytes\": 2917\n      },\n      \"aa421822ea016b59cca674bdb547598c0c64d6d0\": {\n        \"blob\": \"04b46baae6727763e16b00455bc7fe8af8b0398d\",\n        \"sha256\": \"86d9c9536a488bb1425ff85dac993a215a65c5612abe2ea3d5e4b21b26ffabab\",\n        \"bytes\": 3106\n      },\n      \"ddd6ad527a7347cf0c601e88b71dec288206347c\": {\n        \"blob\": \"04b46baae6727763e16b00455bc7fe8af8b0398d\",\n        \"sha256\": \"86d9c9536a488bb1425ff85dac993a215a65c5612abe2ea3d5e4b21b26ffabab\",\n        \"bytes\": 3106\n      }\n    }\n  },\n  \"connected_source_blobs_at_tip\": {\n    \"package.json\": {\n      \"blob\": \"6d0d1981e966edb5d06ab93d7310c13106ef43ae\",\n      \"sha256\": \"58d0b0f880c95b956d5315767f7daf09bdeaf3a493bdfacd3a2558978128fa2e\",\n      \"bytes\": 1305\n    },\n    \"package-lock.json\": {\n      \"blob\": \"2a6175c207b0ed61272bf295813b2966d4c83c97\",\n      \"sha256\": \"1401922876f8b7d37e675ce044400fe5335682742dd9b30a1292243ad771d4c9\",\n      \"bytes\": 81533\n    },\n    \".github/workflows/npm-foundation.yml\": {\n      \"blob\": \"2d5d201cbfc442da5213a4e9ca5466bb816d0576\",\n      \"sha256\": \"5ca16ec89557e48ef7541bb57294542ca5d4fc404da62dc795d777a4a2da512f\",\n      \"bytes\": 1544\n    },\n    \"packages/deepviz/scripts/check-package.mjs\": {\n      \"blob\": \"fb98c8f8ea14f23e136a73ed3ed7955f49130b61\",\n      \"sha256\": \"1f7e436182ccb6debf9a7f980c6a67c7aa27fa80bf23259cd6b527c08d27fd80\",\n      \"bytes\": 3250\n    }\n  },\n  \"line_references\": {\n    \"checker\": \"packages/deepviz/scripts/check-materialized-package.mjs:9-10,15-21,101-107\",\n    \"regression\": \"packages/deepviz/test/test_r40_foundation.test.mjs:19-26\",\n    \"package_script\": \"package.json:12\",\n    \"typescript_dev_dependency\": \"package.json:24\",\n    \"typescript_lock_entry\": \"package-lock.json:1572\",\n    \"workflow\": \".github/workflows/npm-foundation.yml:18,25,35-36\",\n    \"sibling_package_check\": \"packages/deepviz/scripts/check-package.mjs:44\"\n  },\n  \"source_facts\": {\n    \"parent_resolves_hidden_cli_subpath\": true,\n    \"target_resolves_exported_package_json_then_bin_tsc\": true,\n    \"target_regression_assertion\": true,\n    \"package_materialized_script\": \"node packages/deepviz/scripts/check-materialized-package.mjs\",\n    \"workflow_node_matrix\": [\n      \"22\",\n      \"24\"\n    ],\n    \"workflow_invokes_materialized_gate\": true,\n    \"typescript_dev_dependency\": \"7.0.2\",\n    \"lock_typescript_version\": \"7.0.2\",\n    \"lock_integrity\": \"sha512-8FYau96o3NKOhbjKi/qNvG/W5jhzxkbdm5sj9AbZ/5T5sWqn3hJgLfGx27sRKZWTvyzCP8dLRBTf5tBTSRVUNA==\",\n    \"lock_bin\": {\n      \"tsc\": \"bin/tsc\"\n    },\n    \"sibling_package_check_uses_direct_filesystem_path\": true,\n    \"cached_MAIN_installed_package_metadata\": {\n      \"path\": \"C:\\\\Users\\\\bagma\\\\deepviz-agent-toolkit\\\\node_modules\\\\typescript\\\\package.json\",\n      \"available\": true,\n      \"sha256\": \"3722b30210616a13a3213ded11575ba6b2dbab10c32a5ef67afca8513e27017e\",\n      \"bytes\": 3087,\n      \"version\": \"7.0.2\",\n      \"exports_package_json\": \"./package.json\",\n      \"exports_keys\": [\n        \"./package.json\",\n        \".\",\n        \"./unstable/sync\",\n        \"./unstable/async\",\n        \"./unstable/fs\",\n        \"./unstable/proto\",\n        \"./unstable/ast\",\n        \"./unstable/ast/is\",\n        \"./unstable/ast/factory\",\n        \"./unstable/ast/utils\",\n        \"./unstable/ast/scanner\",\n        \"./unstable/ast/visitor\",\n        \"./unstable/ast/clone\"\n      ],\n      \"bin_tsc\": \"./bin/tsc\",\n      \"bin_file_exists\": true,\n      \"bin_file_sha256\": \"2219f428a7e55aaf1f7ad85b9b0f0cf5078aeb76ccc9a7c6036c92d48f492ffd\",\n      \"bin_file_bytes\": 44\n    }\n  },\n  \"reviewed_behavior\": {\n    \"resolution_base\": \"ESM checker module URL; import.meta.resolve applies Node package exports from that module location, not process.cwd()\",\n    \"exact_locked_export\": \"TypeScript 7.0.2 package metadata explicitly maps ./package.json to ./package.json; bin metadata maps tsc to ./bin/tsc\",\n    \"compiler_override\": \"optional third CLI argument remains path.resolve(compilerArg); workflow supplies only archive/output, so default metadata branch is used there\",\n    \"failure\": \"resolution/file read failure enters existing catch, records passed=false/failure and rethrows; finally writes receipt; nonzero child status is asserted\",\n    \"bounds\": \"existing spawnSync timeout=120000 ms and maxBuffer=8 MiB unchanged\",\n    \"test_assertion\": \"strict source-string assertion guards the new resolver expression; actual materialized gate is invoked by Node 22/24 workflow, not exercised by this review\"\n  },\n  \"execution_limits\": {\n    \"product_imports\": 0,\n    \"test_suites_run\": 0,\n    \"tests_passed\": 0,\n    \"tests_failed\": 0,\n    \"tests_skipped\": 0,\n    \"builds\": 0,\n    \"Node_runtime_probes\": 0,\n    \"network_or_install\": false\n  },\n  \"static_proof_assert_statement_count\": 24,\n  \"scope\": \"static Git-blob/source review only; density implementation/tests intentionally excluded\"\n}",
+      "stderr": ""
+    }
+  ],
+  "source_assert_statements_passed": 24,
+  "product_tests_run": 0,
+  "product_tests_passed": 0,
+  "product_tests_failed": 0,
+  "product_tests_skipped": 0,
+  "product_imports": 0,
+  "Node_runtime_probes": 0,
+  "builds": 0,
+  "CI_runs": 0,
+  "installs_or_network": 0,
+  "density_review_or_tests": 0,
+  "failed_preliminary_review_harness_attempts": [
+    {
+      "command": "python -B docs/coordination/evidence/R52-21-npm-resolver-source2/source-proof.py",
+      "exit": 1,
+      "cause": "initial expectation incorrectly assumed aa421 direct parent was package base 656f; actual direct parent is c1e1f20 docs checkpoint. Corrected to compare base, direct parent, resolver and tip."
+    },
+    {
+      "command": "python -B docs/coordination/evidence/R52-21-npm-resolver-source2/source-proof.py",
+      "exit": 1,
+      "cause": "initial source-proof expectation assumed entire resolver commit had exactly two changed paths; Git showed three documentation receipt paths in addition to the two reviewed package paths. Corrected proof records all five and isolates product paths."
+    },
+    {
+      "command": "python -B docs/coordination/evidence/R52-21-npm-resolver-source2/source-proof.py",
+      "exit": 1,
+      "cause": "initial base-to-tip filtered-path assertion reused the all-commit path set; corrected expectation to the two package paths."
+    },
+    {
+      "command": "Copy-Item scope.json to MAIN evidence directory",
+      "exit": "PowerShell path error",
+      "cause": "MAIN evidence subdirectory did not yet exist; created owned directory and copied successfully."
+    },
+    {
+      "command": "verification-results.py (plural path absence expected exit1)",
+      "exit": 1,
+      "cause": "Git cat-file -e reports missing path with exit128, not1; inventory corrected to assert observed missing-path exit128."
+    }
+  ]
+}
