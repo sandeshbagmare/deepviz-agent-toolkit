@@ -20,8 +20,6 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 SCALES = (10, 1_000, 100_000, 1_000_000, 10_000_000)
 CASES = ("sample", "sum", "mean")
-NEW01_SOURCE_COMMIT = "740a16faeca502dfd15fe028e2b880895f7c687f"
-NEW01_NORMALIZER_SHA256 = "02cf164e21fccf0550b3ce9f4be874173c8f3dde3cd01adfdf28622043bcf6c6"
 HARNESS_FILES = ("scripts/verify_python_scale.py", "tests/test_release_scale.py")
 
 
@@ -228,12 +226,14 @@ def require_clean(snapshot: dict[str, Any], name: str) -> None:
         raise RuntimeError(f"{name} worktree is dirty; refusing release evidence")
 
 
-def require_pinned_source(snapshot: dict[str, Any]) -> None:
+def require_pinned_source(
+    snapshot: dict[str, Any], *, expected_commit: str, expected_normalizer_sha256: str,
+) -> None:
     require_clean(snapshot, "Source")
-    if snapshot["commit"] != NEW01_SOURCE_COMMIT:
-        raise RuntimeError(f"Source commit does not match pinned NEW-01 dependency {NEW01_SOURCE_COMMIT}")
-    if snapshot["source_sha256"].get("python/deepviz/src/deepviz/normalize.py") != NEW01_NORMALIZER_SHA256:
-        raise RuntimeError("Normalization source SHA-256 does not match the pinned NEW-01 dependency")
+    if snapshot["commit"] != expected_commit:
+        raise RuntimeError(f"Source commit does not match expected source commit {expected_commit}")
+    if snapshot["source_sha256"].get("python/deepviz/src/deepviz/normalize.py") != expected_normalizer_sha256:
+        raise RuntimeError("Normalization source SHA-256 does not match expected normalizer SHA-256")
 
 
 def load_normalizer(root: Path) -> tuple[Any, Any]:
@@ -254,9 +254,13 @@ def load_normalizer(root: Path) -> tuple[Any, Any]:
     return normalize_module.normalize, models_module.ChartSpec
 
 
-def run_worker(root: Path, count: int, case: str, bound: int) -> dict[str, Any]:
+def run_worker(
+    root: Path, count: int, case: str, bound: int, *, expected_commit: str, expected_normalizer_sha256: str,
+) -> dict[str, Any]:
     before = source_snapshot(root)
-    require_pinned_source(before)
+    require_pinned_source(
+        before, expected_commit=expected_commit, expected_normalizer_sha256=expected_normalizer_sha256,
+    )
     harness_before = harness_snapshot(ROOT)
     require_clean(harness_before, "Harness")
     normalize, ChartSpec = load_normalizer(root)
@@ -305,10 +309,15 @@ def run_worker(root: Path, count: int, case: str, bound: int) -> dict[str, Any]:
     return result
 
 
-def run_case(root: Path, count: int, case: str, bound: int, timeout: float) -> dict[str, Any]:
+def run_case(
+    root: Path, count: int, case: str, bound: int, timeout: float, *,
+    expected_commit: str, expected_normalizer_sha256: str,
+) -> dict[str, Any]:
     command = [
         sys.executable, str(Path(__file__).resolve()), "--worker", "--source-root", str(root),
         "--count", str(count), "--case", case, "--max-points", str(bound),
+        "--expected-source-commit", expected_commit,
+        "--expected-normalizer-sha256", expected_normalizer_sha256,
     ]
     started = time.perf_counter()
     try:
@@ -334,6 +343,8 @@ def run_case(root: Path, count: int, case: str, bound: int, timeout: float) -> d
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source-root", type=Path, default=ROOT)
+    parser.add_argument("--expected-source-commit", required=True, type=str.lower)
+    parser.add_argument("--expected-normalizer-sha256", required=True, type=str.lower)
     parser.add_argument("--counts", nargs="+", type=int, default=list(SCALES))
     parser.add_argument("--cases", nargs="+", choices=CASES, default=list(CASES))
     parser.add_argument("--max-points", type=int, default=2_000)
@@ -343,6 +354,12 @@ def main() -> int:
     parser.add_argument("--count", type=int, help=argparse.SUPPRESS)
     parser.add_argument("--case", choices=CASES, help=argparse.SUPPRESS)
     args = parser.parse_args()
+    for value, length, name in (
+        (args.expected_source_commit, 40, "expected-source-commit"),
+        (args.expected_normalizer_sha256, 64, "expected-normalizer-sha256"),
+    ):
+        if len(value) != length or any(character not in "0123456789abcdef" for character in value):
+            parser.error(f"{name} must be a full {length}-character hexadecimal value")
     if any(count < 1 for count in args.counts) or len(set(args.counts)) != len(args.counts):
         parser.error("counts must be positive and unique")
     if not 10 <= args.max_points <= 100_000 or args.timeout <= 0:
@@ -354,7 +371,11 @@ def main() -> int:
     if args.worker:
         if args.count is None or args.case is None:
             parser.error("worker mode requires --count and --case")
-        print(json.dumps(run_worker(root, args.count, args.case, args.max_points), allow_nan=False))
+        result = run_worker(
+            root, args.count, args.case, args.max_points,
+            expected_commit=args.expected_source_commit, expected_normalizer_sha256=args.expected_normalizer_sha256,
+        )
+        print(json.dumps(result, allow_nan=False))
         return 0
 
     results: list[dict[str, Any]] = []
@@ -364,7 +385,10 @@ def main() -> int:
     harness_initial: dict[str, Any] | None = None
     try:
         initial = source_snapshot(root)
-        require_pinned_source(initial)
+        require_pinned_source(
+            initial, expected_commit=args.expected_source_commit,
+            expected_normalizer_sha256=args.expected_normalizer_sha256,
+        )
         harness_initial = harness_snapshot(ROOT)
         require_clean(harness_initial, "Harness")
     except (OSError, RuntimeError) as error:
@@ -373,7 +397,10 @@ def main() -> int:
     else:
         for index, item in enumerate(work):
             print(f"{item['case']}: count={item['count']}", file=sys.stderr, flush=True)
-            result = run_case(root, item["count"], item["case"], args.max_points, args.timeout)
+            result = run_case(
+                root, item["count"], item["case"], args.max_points, args.timeout,
+                expected_commit=args.expected_source_commit, expected_normalizer_sha256=args.expected_normalizer_sha256,
+            )
             results.append(result)
             if result["status"] == "failed":
                 unrun = work[index + 1:]
@@ -394,8 +421,8 @@ def main() -> int:
         "status": status,
         "recorded_at_utc": datetime.now(UTC).isoformat(),
         "command": [sys.executable, str(Path(__file__).resolve()), *sys.argv[1:]],
-        "new01_source_dependency_commit": NEW01_SOURCE_COMMIT,
-        "new01_normalizer_dependency_sha256": NEW01_NORMALIZER_SHA256,
+        "expected_source_commit": args.expected_source_commit,
+        "expected_normalizer_sha256": args.expected_normalizer_sha256,
         "source": initial,
         "harness": harness_initial,
         "environment": {

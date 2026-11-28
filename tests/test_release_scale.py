@@ -13,6 +13,12 @@ import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "scripts" / "verify_python_scale.py"
+EXPECTED_COMMIT = "a" * 40
+EXPECTED_NORMALIZER_SHA256 = "b" * 64
+EXPECTED_ARGS = [
+    "--expected-source-commit", EXPECTED_COMMIT,
+    "--expected-normalizer-sha256", EXPECTED_NORMALIZER_SHA256,
+]
 
 
 @pytest.fixture
@@ -128,11 +134,56 @@ def test_source_stability_ignores_non_source_metadata_but_rejects_hash_changes(h
         )
 
 
-def test_release_scale_rejects_a_different_git_source_commit(harness: Any) -> None:
-    with pytest.raises(RuntimeError, match="pinned NEW-01 dependency"):
+@pytest.mark.parametrize("change,message", [
+    ({"commit": "c" * 40}, "expected source commit"),
+    ({"source_sha256": {"python/deepviz/src/deepviz/normalize.py": "c" * 64}}, "expected normalizer SHA-256"),
+    ({"dirty_paths": [" M python/deepviz/src/deepviz/normalize.py"]}, "dirty"),
+])
+def test_release_scale_rejects_mismatched_pins_or_dirty_source(
+    harness: Any, change: dict[str, Any], message: str,
+) -> None:
+    snapshot = {
+        "commit": EXPECTED_COMMIT,
+        "dirty_paths": [],
+        "source_sha256": {"python/deepviz/src/deepviz/normalize.py": EXPECTED_NORMALIZER_SHA256},
+    }
+    with pytest.raises(RuntimeError, match=message):
         harness.require_pinned_source(
-            {"commit": "a" * 40, "dirty_paths": [], "source_sha256": {"normalize.py": "verified"}}
+            snapshot | change,
+            expected_commit=EXPECTED_COMMIT,
+            expected_normalizer_sha256=EXPECTED_NORMALIZER_SHA256,
         )
+
+
+def test_release_scale_accepts_explicit_matching_pins(harness: Any) -> None:
+    harness.require_pinned_source(
+        {"commit": EXPECTED_COMMIT, "dirty_paths": [], "source_sha256": {
+            "python/deepviz/src/deepviz/normalize.py": EXPECTED_NORMALIZER_SHA256,
+        }},
+        expected_commit=EXPECTED_COMMIT,
+        expected_normalizer_sha256=EXPECTED_NORMALIZER_SHA256,
+    )
+
+
+@pytest.mark.parametrize("pins", [[], EXPECTED_ARGS[:2], EXPECTED_ARGS[2:]])
+def test_release_scale_requires_both_expected_source_pins(pins: list[str]) -> None:
+    process = subprocess.run(
+        [sys.executable, str(SCRIPT), "--counts", "10", "--cases", "sum", *pins],
+        capture_output=True, text=True, timeout=30,
+    )
+    assert process.returncode == 2 and "required" in process.stderr
+    assert not process.stdout
+
+
+@pytest.mark.parametrize("commit,normalizer_sha256", [("short", "b" * 64), ("a" * 40, "bad")])
+def test_release_scale_rejects_malformed_expected_source_pins(commit: str, normalizer_sha256: str) -> None:
+    process = subprocess.run(
+        [sys.executable, str(SCRIPT), "--expected-source-commit", commit,
+         "--expected-normalizer-sha256", normalizer_sha256, "--counts", "10", "--cases", "sum"],
+        capture_output=True, text=True, timeout=30,
+    )
+    assert process.returncode == 2 and "hexadecimal" in process.stderr
+    assert not process.stdout
 
 
 def test_non_git_source_root_fails_closed_without_a_fabricated_measurement(
@@ -165,13 +216,16 @@ def test_non_git_source_root_fails_closed_without_a_fabricated_measurement(
         encoding="utf-8",
     )
     process = subprocess.run(
-        [sys.executable, str(SCRIPT), "--source-root", str(tmp_path), "--counts", "10", "--cases", "sum"],
+        [sys.executable, str(SCRIPT), "--source-root", str(tmp_path), "--counts", "10", "--cases", "sum",
+         *EXPECTED_ARGS],
         capture_output=True, text=True, timeout=30,
     )
     assert process.returncode == 1
     report = json.loads(process.stdout)
     assert report["status"] == "failed" and len(report["results"]) == 1
     assert report["integration_status"] == "not_integrated"
+    assert report["expected_source_commit"] == EXPECTED_COMMIT
+    assert report["expected_normalizer_sha256"] == EXPECTED_NORMALIZER_SHA256
     result = report["results"][0]
     assert result["status"] == "failed"
     assert "Git" in result["error"]
@@ -198,7 +252,8 @@ def test_evidence_output_is_never_overwritten(tmp_path: Path) -> None:
     output = tmp_path / "evidence.json"
     output.write_text("preserve evidence", encoding="utf-8")
     process = subprocess.run(
-        [sys.executable, str(SCRIPT), "--counts", "10", "--cases", "sum", "--output", str(output)],
+        [sys.executable, str(SCRIPT), "--counts", "10", "--cases", "sum", "--output", str(output),
+         *EXPECTED_ARGS],
         capture_output=True, text=True, timeout=30,
     )
     assert process.returncode == 2 and "already exists" in process.stderr
