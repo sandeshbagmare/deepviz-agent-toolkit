@@ -1,4 +1,6 @@
-# Pull request and issue inventory
+# Pull request and issue inventory (initial snapshot)
+
+This is the original inventory snapshot at `484ff08...`; use `18-current-state-audit.md` and the synchronized YAML root fields for current PR/issue state. The original #28 criterion is superseded by the caller decision recorded in plan v1.1.
 
 - Default branch: `main`
 - Main SHA analyzed: `484ff08ddcae6c36d43ce61de774c00b6c422c88`

@@ -1,9 +1,9 @@
 # PR creation and consolidation plan
 
 - Default branch: `main`
-- Main SHA analyzed: `484ff08ddcae6c36d43ce61de774c00b6c422c88`
+- Main SHA reconciled: `f692014b9c7eb6a9fe0aa6f27b76b40426f053a7`
 - Date: 2026-11-28
-- Plan version: 1.0
+- Plan version: 1.1
 
 ## Existing PR actions
 
@@ -11,71 +11,105 @@
 |---:|---|---|
 | #33 | V1-MERGE | Already merged; leave unchanged. |
 | #38 | V1-MERGE | Already merged; leave unchanged. |
-| #31 | CLOSE-SUPERSEDED (conditional) | Keep the draft untouched until selected code is preserved in granular PRs; after NEW-01..NEW-08 land, close it with links. Do not rebase/merge its 324-path diff. |
+| #31 | CLOSE-SUPERSEDED (conditional) | Live state: open draft, stale base `0ae2cf26426822135fc10d337fcacf580b7ed833`, head `62344d85f5f471767b7aa3a2005a9e000ca06440`, 324 paths and +36,025/-3; Python 3.11-3.13 jobs fail. Preserve useful focused work before any superseding disposition; do not rebase/merge its broad diff. |
+
+RM-01 approves focused size exceptions for this coherent plan amendment (approximately 1,100 metadata/documentation changed lines) and NEW-01 (at most 2,750 changed lines across exactly the 10 claimed paths). PR #40 at `a94f85c47e9a18f01009484a6813738eb8259a03` against `main@f692014b9c7eb6a9fe0aa6f27b76b40426f053a7` measures 2,687 additions + 2 deletions = 2,689 changed lines. The 61-line tolerance is only for necessary review/rebase fixes and regenerated normalization evidence within this existing coherent task; additional paths or unrelated scope require a new plan-change ruling. Do not split arbitrarily or omit tests to reach a line count. Two independent exact-head reviewer reports, two tester reports, current-main rebase/checks, dependency order and sequential merge gates remain unchanged.
+
+## Preparation and promotion
+
+Parallel preparation is authorized at the owner request: agents may prepare independent source selections, tests and code in isolated branches for upcoming tasks. Claim exact paths and never write overlapping files in a shared checkout. Shared-file tasks use isolated branches and serialized integration. Owner-approved draft PRs for planned waves may be opened for preparation; future-wave drafts stay non-ready until dependencies complete. Promote only after rebase onto current main, required checks, and fresh exact-head independent reports. Sequential INT-01/02 main merges and dependency order remain binding; preparation does not pass a wave or mark work complete.
 
 ## New PRs
 
+Every PR requires two independent reviewer reports and two independent tester reports on the exact head. Each report records identity, scope, exact commit, findings, commands, results and limitations. Commit screenshot/SVG/PNG evidence and embed its repository path in the PR body, including for plan-only or non-rendering work; use an artifact derived from the actual tested input/output or release-plan state. New commits/rebases invalidate prior reports and evidence.
+
+### PLAN-CHANGE-01 - align confirmed scope and live gates
+
+Create a plan-only PR from `plan/release-0.1.0-owner-decisions` against current `main`; keep the diff inside `context/release-0.1.0/`. It synchronizes canonical YAML with Markdown, adds Arrow/Parquet test ownership, records the caller's #28 revision, maps all 11 live P0s to their wave or deferral, and embeds the committed release-wave SVG. Require two exact-head reviewer reports, two exact-head tester reports, and successful `git diff --check`, YAML/JSON parse, cross-file scope checks and SVG XML validation. Merge before opening NEW-01.
+
+The PR body must include the exact head SHA, test output, all four report summaries/links, and:
+
+```markdown
+## Visual evidence
+![DeepViz 0.1.0 release plan](context/release-0.1.0/evidence/plan-change-wave-map.svg)
+```
+
 ### NEW-01 - [v1][W1][feature] add bounded Python input normalization
 
-- Action: create fresh branch `release/v1/w1-python-normalization` from latest main; apply only listed files/hunks. Source branches: feat/ingestion, feat/r34-python-data-foundation, test/graphql-contract, agents/r10-04-utf8-field-envelope.
-- Ordered cherry-pick source SHAs: `a711ea5c9f4b97d53a80e1cac86c42e25c9d4dbc`, `9ce04fcc0e91c1896979e3efb9740294dae38240`, `9531dab2b4d629c6fffdff9b7dc7dfcebb3def03`, `355637ca3de44afb69b7ee0c80999affaf0816bd`, `6c412e0f6be7e96a24a7f6c5cbcfdba9a48ef2c5`, `429890b45bb1e85087507e07b95dcd382aa53ab4`. Apply mixed commits with `--no-commit`, stage only named hunks, and record paths. Never merge main into source branches.
-- Labels: `v1`, `wave-1`, `type:feature`, `P1`, `planned`; update lifecycle state label. Rebase before review and rerun checks.
-- Merge: squash.
-- Filled PR body:
+- Action: prepare `release/v1/w1-python-normalization` in an isolated branch; promote to a PR only in Wave 1 after the approved dependencies. Select the latest96 normalizer provenance with the focused PR #40 fixes, necessary input/GraphQL/Arrow tests, minimal public package exports, selector model/schema contract, existing normalization smoke harness and measured JSON/SVG evidence in the 10 claimed paths. Earlier refs are provenance/test sources, not a replay list.
+- Source branches: `feat/ingestion`, `feat/r34-python-data-foundation`, `test/graphql-contract`, `agents/r10-04-utf8-field-envelope`, `test/n19-formats`, `agents/r45-04-private-numeric-accounting`.
+- Source selection: RM ruling: use latest96 normalizer provenance (R17/exact finite sum/mean/owned-input and R45 fixes), necessary input/GraphQL/Arrow tests, minimal __init__.py exports, and the focused reviewed PR #40 follow-ups. NEW-01 also owns selector-boundary changes in `python/deepviz/src/deepviz/models.py` and `schemas/chart-spec.schema.json`, its existing `scripts/benchmark_scale.py` smoke harness, and measured `docs/verification/normalization/normalization-output.json` plus `docs/verification/normalization/normalization-output.svg`. These five paths are part of the same bounded-normalization task, not permission for broad schema/package/docs work. Do not replay old patches or whole 9ce04fc/355637c commits; exclude TypeScript, coordination and unrelated evidence dumps.
+- Source commit references: `a711ea5c9f4b97d53a80e1cac86c42e25c9d4dbc`, `9531dab2b4d629c6fffdff9b7dc7dfcebb3def03`, `6c412e0f6be7e96a24a7f6c5cbcfdba9a48ef2c5`, `429890b45bb1e85087507e07b95dcd382aa53ab4`, `0ea34db2217037c309ab5ce77361b9e2c3dadd50`, `96b819aee5b01ba88b5a609b587331a528aaa070`.
+- Files: `python/deepviz/src/deepviz/normalize.py`, `python/deepviz/tests/test_normalize.py`, `python/deepviz/tests/test_graphql_contract.py`, `python/deepviz/tests/test_n19_formats.py`, `python/deepviz/src/deepviz/__init__.py`, `python/deepviz/src/deepviz/models.py`, `schemas/chart-spec.schema.json`, `scripts/benchmark_scale.py`, `docs/verification/normalization/normalization-output.json`, `docs/verification/normalization/normalization-output.svg`.
+- Size: RM-approved coherent size exception: at most 2,750 changed lines across the 10 claimed paths; PR #40 at `a94f85c47e9a18f01009484a6813738eb8259a03` measures 2,687 additions + 2 deletions = 2,689 changed lines. The 61-line tolerance covers only necessary review/rebase fixes and regenerated normalization evidence within this existing task; additional paths or unrelated scope require a new ruling. Retain exact-head 2 reviewer + 2 tester gates.
+- Labels: `v1`, `wave-1`, `type:feature`, `P1`, `planned`; update lifecycle label. Rebase and rerun checks before review.
+- Merge: squash; Revert squash, rerun main suite, stop wave.
 
 ```markdown
 ## What
-Implement the focused change described by NEW-01 in `05-merge-plan.md`.
+[v1][W1][feature] add bounded Python input normalization.
 ## Why (links: issue #, plan item)
-Required by proposed Python 0.1.0 scope; issues #6, #7, #8; plan item NEW-01.
+Owner-confirmed Python-only 0.1.0; issues #5, #6, #7, #8; plan NEW-01.
 ## Source branches consolidated
-feat/ingestion, feat/r34-python-data-foundation, test/graphql-contract, agents/r10-04-utf8-field-envelope
+feat/ingestion, feat/r34-python-data-foundation, test/graphql-contract, agents/r10-04-utf8-field-envelope, test/n19-formats, agents/r45-04-private-numeric-accounting
 ## Depends on (PRs that must merge first)
-none
+Wave 0 G0 and approved PLAN-CHANGE-01; isolated preparation is allowed before merge.
 ## Files touched
-python/deepviz/src/deepviz/normalize.py, python/deepviz/tests/test_normalize.py, python/deepviz/tests/test_graphql_contract.py
+python/deepviz/src/deepviz/normalize.py, python/deepviz/tests/test_normalize.py, python/deepviz/tests/test_graphql_contract.py, python/deepviz/tests/test_n19_formats.py, python/deepviz/src/deepviz/__init__.py, python/deepviz/src/deepviz/models.py, schemas/chart-spec.schema.json, scripts/benchmark_scale.py, docs/verification/normalization/normalization-output.json, docs/verification/normalization/normalization-output.svg
 ## How tested (commands + results)
-Record exact commands and actual output after running; no pass may be claimed before execution.
+Normalization, GraphQL, Arrow Table/RecordBatch/Reader, IPC file/stream, Parquet path/buffer, malformed/duplicate/oversized nested input, optional-extra error; install [columnar], verify zero skips, full pytest/Ruff/mypy. Verify selector model/runtime/checked-in-schema parity and no-read/no-open controls; run the existing benchmark smoke and validate the measured JSON/SVG evidence. Record actual exact-head commands/results; no unrun check is a pass.
 ## Risk & rollback
-Ingestion and R34 share normalize.py; use reviewed R34 base and only unique format/GraphQL hunks. Rollback: Revert squash, rerun main suite, stop wave.
+RM ruling: use latest96 normalizer provenance (R17/exact finite sum/mean/owned-input and R45 fixes), necessary input/GraphQL/Arrow tests, minimal __init__.py exports, and the focused reviewed PR #40 follow-ups. NEW-01 also owns selector-boundary changes in `python/deepviz/src/deepviz/models.py` and `schemas/chart-spec.schema.json`, its existing `scripts/benchmark_scale.py` smoke harness, and measured `docs/verification/normalization/normalization-output.json` plus `docs/verification/normalization/normalization-output.svg`. These five paths are part of the same bounded-normalization task, not permission for broad schema/package/docs work. Do not replay old patches or whole 9ce04fc/355637c commits; exclude TypeScript, coordination and unrelated evidence dumps. Rollback: Revert squash, rerun main suite, stop wave.
+## Visual evidence (committed repository paths; embed every image)
+![Measured normalization output](docs/verification/normalization/normalization-output.svg)
+Machine-readable companion: `docs/verification/normalization/normalization-output.json`.
 ## Checklist
 - [ ] Rebased on latest main
+- [ ] Two independent reviewer and two tester reports on exact head
 - [ ] CI green
 - [ ] Tests added/updated
 - [ ] No unrelated changes
 - [ ] Docs updated if behaviour changed
 ```
 
-### NEW-02 - [v1][W1][feature] add bounded streaming reducers
 
-- Action: create fresh branch `release/v1/w1-python-reductions` from latest main; apply only listed files/hunks. Source branches: feat/ingestion, feat/r34-python-data-foundation, fix/r17-normalizer-boundaries, agents/r10-16-finite-overflow-fix, agents/r45-04-private-numeric-accounting.
-- Ordered cherry-pick source SHAs: `6c412e0f6be7e96a24a7f6c5cbcfdba9a48ef2c5`, `5ba860305dcc86ac2f95f01705b984d2b40f2799`, `ec9f669eff28cd5351da142765b7755e3b2f484f`, `c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19`, `a7363be273d7b3bbcb1b52ef79a58bb4e6d0e3be`, `7ab546251029df169604358448ecd462d8db5e6f`, `546c25ea75ee9d8a41b3832aa639664bc9a683b5`, `96b819aee5b01ba88b5a609b587331a528aaa070`. Apply mixed commits with `--no-commit`, stage only named hunks, and record paths. Never merge main into source branches.
-- Labels: `v1`, `wave-1`, `type:feature`, `P1`, `planned`; update lifecycle state label. Rebase before review and rerun checks.
-- Merge: squash.
-- Filled PR body:
+### NEW-02 - [v1][W1][test] verify bounded reducer regressions and streaming scale
+
+- Action: prepare `release/v1/w1-python-reductions` in an isolated branch; promote to a PR only in Wave 1 after the approved dependencies. NEW-01 already includes the latest96 reducer fixes. Add reducer regression and scale acceptance; do not replay source hunks already present. Historical `ec9f669` precedes child `5ba8603`; use those refs for regression provenance only.
+- Source branches: `feat/r34-python-data-foundation`, `fix/r17-normalizer-boundaries`, `agents/r10-16-finite-overflow-fix`, `agents/r45-04-private-numeric-accounting`.
+- Source selection: RM ruling: NEW-01 selects latest96 normalizer with reviewed reducer correctness fixes. NEW-02 does not replay those hunks; add reducer regression/scale acceptance and only newly demonstrated necessary fixes. Historical ec9f669 -> 5ba8603 order is provenance, not replay sequence.
+- Source commit references: `ec9f669eff28cd5351da142765b7755e3b2f484f`, `5ba860305dcc86ac2f95f01705b984d2b40f2799`, `c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19`, `a7363be273d7b3bbcb1b52ef79a58bb4e6d0e3be`, `7ab546251029df169604358448ecd462d8db5e6f`, `546c25ea75ee9d8a41b3832aa639664bc9a683b5`, `96b819aee5b01ba88b5a609b587331a528aaa070`.
+- Files: `python/deepviz/src/deepviz/normalize.py`, `python/deepviz/tests/test_normalize.py`, `python/deepviz/tests/test_r07_finite_overflow.py`, `python/deepviz/tests/test_r17_normalizer_boundaries.py`, `python/deepviz/tests/test_r45_numeric_state_accounting.py`, `scripts/verify_python_scale.py`, `tests/test_release_scale.py`.
+- Size: 300-900 lines; after NEW-01
+- Labels: `v1`, `wave-1`, `type:test`, `P1`, `planned`; update lifecycle label. Rebase and rerun checks before review.
+- Merge: squash; Revert this squash only; keep NEW-01.
 
 ```markdown
 ## What
-Implement the focused change described by NEW-02 in `05-merge-plan.md`.
+[v1][W1][test] verify bounded reducer regressions and streaming scale.
 ## Why (links: issue #, plan item)
-Required by proposed Python 0.1.0 scope; issues #6, #8, #22; plan item NEW-02.
+Owner-confirmed Python-only 0.1.0; issues #8, #22; plan NEW-02.
 ## Source branches consolidated
-feat/ingestion, feat/r34-python-data-foundation, fix/r17-normalizer-boundaries, agents/r10-16-finite-overflow-fix, agents/r45-04-private-numeric-accounting
+feat/r34-python-data-foundation, fix/r17-normalizer-boundaries, agents/r10-16-finite-overflow-fix, agents/r45-04-private-numeric-accounting
 ## Depends on (PRs that must merge first)
-NEW-01
+NEW-01 merged; isolated preparation may run in parallel, with rebase and exact-head checks afterward.
 ## Files touched
-python/deepviz/src/deepviz/normalize.py, python/deepviz/tests/test_normalize.py, python/deepviz/tests/test_r07_finite_overflow.py, python/deepviz/tests/test_r17_normalizer_boundaries.py
+python/deepviz/src/deepviz/normalize.py, python/deepviz/tests/test_normalize.py, python/deepviz/tests/test_r07_finite_overflow.py, python/deepviz/tests/test_r17_normalizer_boundaries.py, python/deepviz/tests/test_r45_numeric_state_accounting.py, scripts/verify_python_scale.py, tests/test_release_scale.py
 ## How tested (commands + results)
-Record exact commands and actual output after running; no pass may be claimed before execution.
+Exact finite SUM/MEAN and transient-overflow controls; R07/R17/R45 numeric-state/owned-input tests; bounded Arrow streams; scripts/verify_python_scale.py and tests/test_release_scale.py at 10/1K/100K/1M/10M. Machine-readable normalizer evidence now; renderer-linked scale and independent replication before #22 closure. Do not reapply fixes already in NEW-01. Record actual exact-head commands/results; no unrun check is a pass.
 ## Risk & rollback
-Shared normalize.py; apply Python-only fixes after NEW-01 and rebase/test. Rollback: Revert this squash only; keep NEW-01.
+RM ruling: NEW-01 selects latest96 normalizer with reviewed reducer correctness fixes. NEW-02 does not replay those hunks; add reducer regression/scale acceptance and only newly demonstrated necessary fixes. Historical ec9f669 -> 5ba8603 order is provenance, not replay sequence. Rollback: Revert this squash only; keep NEW-01.
+## Visual evidence (committed repository paths; embed every image)
+![Actual tested output](path/to/committed-artifact.svg)
 ## Checklist
 - [ ] Rebased on latest main
+- [ ] Two independent reviewer and two tester reports on exact head
 - [ ] CI green
 - [ ] Tests added/updated
 - [ ] No unrelated changes
 - [ ] Docs updated if behaviour changed
 ```
+
 
 ### NEW-03 - [v1][W2][feature] add Python Matplotlib, Plotly, and Vega renderers
 
@@ -89,7 +123,7 @@ Shared normalize.py; apply Python-only fixes after NEW-01 and rebase/test. Rollb
 ## What
 Implement the focused change described by NEW-03 in `05-merge-plan.md`.
 ## Why (links: issue #, plan item)
-Required by proposed Python 0.1.0 scope; issues #9, #10, #11; plan item NEW-03.
+Required by owner-confirmed Python-only 0.1.0 scope; issues #9, #10, #11; plan item NEW-03.
 ## Source branches consolidated
 feat/renderers, test/backend-plotly, test/backend-vega
 ## Depends on (PRs that must merge first)
@@ -100,6 +134,9 @@ python/deepviz/src/deepviz/engines.py, python/deepviz/src/deepviz/render.py, pyt
 Record exact commands and actual output after running; no pass may be claimed before execution.
 ## Risk & rollback
 Source commit 31acb2f6 adds five backends in 1,184 lines; stage only these three and their tests; NEW-04 follows. Rollback: Revert squash; normalized main remains.
+## Visual evidence (committed repository paths; embed every image)
+<!-- Replace with the exact-head test output artifact and committed repository path. -->
+![Actual tested output](path/to/committed-artifact.svg)
 ## Checklist
 - [ ] Rebased on latest main
 - [ ] CI green
@@ -120,7 +157,7 @@ Source commit 31acb2f6 adds five backends in 1,184 lines; stage only these three
 ## What
 Implement the focused change described by NEW-04 in `05-merge-plan.md`.
 ## Why (links: issue #, plan item)
-Required by proposed Python 0.1.0 scope; issues #12, #13; plan item NEW-04.
+Required by owner-confirmed Python-only 0.1.0 scope; issues #12, #13; plan item NEW-04.
 ## Source branches consolidated
 feat/renderers, fix/r20-antv-color-scale, fix/r23-count-channel, fix/r45-17-antv-subnormal, agents/r10-03-echarts-numeric-x, agents/r38-18-antv-source-review, review/r35-12-count-source
 ## Depends on (PRs that must merge first)
@@ -131,6 +168,9 @@ python/deepviz/src/deepviz/engines.py, python/deepviz/src/deepviz/render.py, pyt
 Record exact commands and actual output after running; no pass may be claimed before execution.
 ## Risk & rollback
 Shares renderer paths; rebase after NEW-03; select independent count/AntV hunks once. Rollback: Revert squash; rerun renderer tests.
+## Visual evidence (committed repository paths; embed every image)
+<!-- Replace with the exact-head test output artifact and committed repository path. -->
+![Actual tested output](path/to/committed-artifact.svg)
 ## Checklist
 - [ ] Rebased on latest main
 - [ ] CI green
@@ -151,7 +191,7 @@ Shares renderer paths; rebase after NEW-03; select independent count/AntV hunks 
 ## What
 Implement the focused change described by NEW-05 in `05-merge-plan.md`.
 ## Why (links: issue #, plan item)
-Required by proposed Python 0.1.0 scope; issue #16; plan item NEW-05.
+Required by owner-confirmed Python-only 0.1.0 scope; issue #16; plan item NEW-05.
 ## Source branches consolidated
 feat/integrations
 ## Depends on (PRs that must merge first)
@@ -159,9 +199,12 @@ NEW-03, NEW-04
 ## Files touched
 python/deepviz/src/deepviz/recommend.py, python/deepviz/src/deepviz/tools.py, python/deepviz/src/deepviz/__init__.py, python/deepviz/tests/test_integrations.py
 ## How tested (commands + results)
-Record exact commands and actual output after running; no pass may be claimed before execution.
+Fresh `.[agents]` environment: construct, inspect and invoke real LangChain `StructuredTool`, run normalize -> recommend -> render; zero skips. Separate base-only install without LangChain/Deep Agents verifies core imports and integrations stay lazy. Record exact commands and actual output; no pass may be claimed before execution.
 ## Risk & rollback
 1,341-line integration source; stage recommendation/tool API before MCP. Rollback: Revert squash; preserve renderer APIs.
+## Visual evidence (committed repository paths; embed every image)
+<!-- Replace with the exact-head test output artifact and committed repository path. -->
+![Actual tested output](path/to/committed-artifact.svg)
 ## Checklist
 - [ ] Rebased on latest main
 - [ ] CI green
@@ -182,7 +225,7 @@ Record exact commands and actual output after running; no pass may be claimed be
 ## What
 Implement the focused change described by NEW-06 in `05-merge-plan.md`.
 ## Why (links: issue #, plan item)
-Required by proposed Python 0.1.0 scope; issues #17, #21; plan item NEW-06.
+Required by owner-confirmed Python-only 0.1.0 scope; issues #17, #21; plan item NEW-06.
 ## Source branches consolidated
 feat/integrations, fix/r14-mcp-json-budget, fix/r41-callback-admission, agents/r10-10-stdio-artifact-lifecycle, agents/r11-10-strict-mcp-boundaries
 ## Depends on (PRs that must merge first)
@@ -190,9 +233,12 @@ NEW-05
 ## Files touched
 python/deepviz/src/deepviz/mcp_server.py, python/deepviz/src/deepviz/cli.py, python/deepviz/src/deepviz/tools.py, python/deepviz/tests/test_integrations.py, python/deepviz/tests/test_r14_tool_json_boundary.py, python/deepviz/tests/test_r41_callback_admission.py, examples/, prompts/v1/
 ## How tested (commands + results)
-Record exact commands and actual output after running; no pass may be claimed before execution.
+In a fresh `.[mcp]` environment, test stdio initialize/list/call, safe artifact, malformed JSON and callback admission. Exercise the real tool call in the fresh `[agents]` lane with zero skips for required integration tests. Separately run a base-only lazy-import control; report unrelated skips. Record exact commands/results; no pass may be claimed before execution.
 ## Risk & rollback
 Shares package API/entrypoints; select Python MCP-only paths and fix callback order/capacity. Rollback: Revert squash; retain tools; stop MCP wave.
+## Visual evidence (committed repository paths; embed every image)
+<!-- Replace with the exact-head test output artifact and committed repository path. -->
+![Actual tested output](path/to/committed-artifact.svg)
 ## Checklist
 - [ ] Rebased on latest main
 - [ ] CI green
@@ -213,7 +259,7 @@ Shares package API/entrypoints; select Python MCP-only paths and fix callback or
 ## What
 Implement the focused change described by NEW-07 in `05-merge-plan.md`.
 ## Why (links: issue #, plan item)
-Required by proposed Python 0.1.0 scope; issues #21, #23; plan item NEW-07.
+Required by owner-confirmed Python-only 0.1.0 scope; issues #21, #23; plan item NEW-07.
 ## Source branches consolidated
 feat/hardening, fix/r12-dense-table-budget, agents/r10-01-correctness-regressions, agents/r10-02-security-boundaries
 ## Depends on (PRs that must merge first)
@@ -224,6 +270,9 @@ python/deepviz/src/deepviz/engines.py, python/deepviz/src/deepviz/render.py, pyt
 Record exact commands and actual output after running; no pass may be claimed before execution.
 ## Risk & rollback
 Renderer paths were changed in earlier waves; rebase on their merged SHAs. Import only Python hardening/test hunks. Rollback: Revert squash; stop release if safety gate fails.
+## Visual evidence (committed repository paths; embed every image)
+<!-- Replace with the exact-head test output artifact and committed repository path. -->
+![Actual tested output](path/to/committed-artifact.svg)
 ## Checklist
 - [ ] Rebased on latest main
 - [ ] CI green
@@ -235,7 +284,7 @@ Renderer paths were changed in earlier waves; rebase on their merged SHAs. Impor
 ### NEW-08 - [v1][W5][test] complete Python release acceptance and docs
 
 - Action: create fresh branch `release/v1/w5-python-acceptance` from latest main; apply only listed files/hunks. Source branches: test/acceptance, test/aggregation-semantics, test/backend-antv, test/mcp-transport, test/portability, perf/verification, agents/r10-07-python-clean-distribution, agents/r10-11-python-scale-envelope, agents/r10-13-ci-negative-controls, agents/r10-14-assets-offline-provenance, agents/r10-15-owned-input-cleanup.
-- Ordered cherry-pick source SHAs: `12e7b6109e7fa6eebabf9a20912fcaf06f56f5a7`, `e6a8a8c2126dc90f10de8a3b0b16a9eaad829478`, `5f7ab4cf0e3e43075e781a20344c40c57d6fc7f7`, `c799dc5e3a9ffbdd522cab96419c466f86e04401`, `f1e71035b1818bd280037efaa1394adf500139fb`, `146f0276323918307b642bc86d1414dbb3b686d9`, `06c04900466f66d7919b68a5c3626d94df248ea6`, `2b4f0a8a2de7540a53d8399c2b87bbdd19b137e6`, `ccb0bf0856cde5c6a866b9418a7b6fca66f2c7cf`, `dedb41fa8df3fdb90b845eef7a10b5fa4032872c`, `9bcf27dd0888778a6826fbd1f3203bc4652cec40`. Apply mixed commits with `--no-commit`, stage only named hunks, and record paths. Never merge main into source branches.
+- Ordered cherry-pick source SHAs: `12e7b6109e7fa6eebabf9a20912fcaf06f56f5a7`, `e6a8a8c2126dc90f10de8a3b0b16a9eaad829478`, `5f7ab4cf0e3e43075e781a20344c40c57d6fc7f7`, `c799dc5e3a9ffbdd522cab96419c466f86e04401`, `f1e71035b1818bd280037efaa1394adf500139fb`, `146f0276323918307b642bc86d1414dbb3b686d9`, `06c04900466f66d7919b68a5c3626d94df248ea6`, `2b4f0a8a2de7540a53d8399c2b87bbdd19b137e6`, `ccb0bf0856cde5c6a866b9418a7b6fca66f2c7cf`, `dedb41fa8df3fdb90b845eef7a10b5fa4032872c`, `9bcf27dd0888778a6826fbd1f3203bc4652cec40`, and `8a10108752567f6d0faac700240c4acf77b32556` (only `tests/r13_probes/role15/test_reducer_source_ownership.py`; exclude agent-state/evidence/report files). Apply mixed commits with `--no-commit`, stage only named hunks, and record paths. Never merge main into source branches.
 - Labels: `v1`, `wave-5`, `type:test`, `P1`, `planned`; update lifecycle state label. Rebase before review and rerun checks.
 - Merge: squash.
 - Filled PR body:
@@ -244,17 +293,20 @@ Renderer paths were changed in earlier waves; rebase on their merged SHAs. Impor
 ## What
 Implement the focused change described by NEW-08 in `05-merge-plan.md`.
 ## Why (links: issue #, plan item)
-Required by proposed Python 0.1.0 scope; issues #23, #24, #26; plan item NEW-08.
+Required by owner-confirmed Python-only 0.1.0 scope; issues #19, #20, #22, #23, #24, #26, #27, #29 and #4; plan item NEW-08.
 ## Source branches consolidated
 test/acceptance, test/aggregation-semantics, test/backend-antv, test/mcp-transport, test/portability, perf/verification, agents/r10-07-python-clean-distribution, agents/r10-11-python-scale-envelope, agents/r10-13-ci-negative-controls, agents/r10-14-assets-offline-provenance, agents/r10-15-owned-input-cleanup
 ## Depends on (PRs that must merge first)
-NEW-01..NEW-08
+NEW-01..NEW-07
 ## Files touched
-tests/, python/deepviz/tests/, .github/workflows/, README.md, docs/capabilities.md, SECURITY.md
+tests/, python/deepviz/tests/, .github/workflows/, README.md, docs/capabilities.md, docs/architecture.md, docs/research/, docs/process/, SECURITY.md, pyproject.toml, python/deepviz/src/deepviz/py.typed, python/deepviz/src/deepviz/schemas/, python/deepviz/src/deepviz/prompts/, schemas/, prompts/v1/, scripts/performance_suite.py, docs/verification/performance.md, tests/test_performance_contract.py
 ## How tested (commands + results)
-Record exact commands and actual output after running; no pass may be claimed before execution.
+Full Python tests/Ruff/mypy/build; clean base/[columnar]/[mcp]/[agents] wheel and sdist installs; installed `[agents]` lane must construct/inspect/invoke real LangChain `StructuredTool` and run normalize -> recommend -> render with zero skips, with a separate base-only lazy-import control; package resource/type-marker and entrypoint checks; five-engine and renderer-linked scale evidence with independent replication (#22); dated primary-source research including licensing/runtime/scale/output trade-offs (#19); exact-main CI (#20); package acceptance (#24); every-PR report/visual audit (#26); labeled/milestoned/dependency-aware process issue map and primary GitHub constraints (#27); publicly retargeted genuine focused-PR report provenance and gallery (#29); public amendment to original #4 acceptance: defer npm #25 and TS #14/#15 from 0.1.0; explicitly waive the unmet historical 900-issue criterion for this release while reporting real counts only, with no fabricated tickets or closures; then release roll-up. Record actual commands/results.
 ## Risk & rollback
 Consolidate acceptance after code; omit duplicate/RED tests until fixed; exclude agent-state/evidence dumps. Rollback: Revert acceptance/doc commit only; stop release and repair CI.
+## Visual evidence (committed repository paths; embed every image)
+<!-- Replace with the exact-head test output artifact and committed repository path. -->
+![Actual tested output](path/to/committed-artifact.svg)
 ## Checklist
 - [ ] Rebased on latest main
 - [ ] CI green
@@ -274,6 +326,9 @@ Consolidate acceptance after code; omit duplicate/RED tests until fixed; exclude
 ## Files touched
 ## How tested (commands + results)
 ## Risk & rollback
+## Visual evidence (committed repository paths; embed every image)
+<!-- Replace with the exact-head test output artifact and committed repository path. -->
+![Actual tested output](path/to/committed-artifact.svg)
 ## Checklist
 - [ ] Rebased on latest main
 - [ ] CI green

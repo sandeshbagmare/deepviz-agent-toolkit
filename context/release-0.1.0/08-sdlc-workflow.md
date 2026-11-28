@@ -1,9 +1,11 @@
 # SDLC workflow and lifecycle
 
 - Default branch: `main`
-- Main SHA analyzed: `484ff08ddcae6c36d43ce61de774c00b6c422c88`
+- Main SHA reconciled: `f692014b9c7eb6a9fe0aa6f27b76b40426f053a7`
 - Date: 2026-11-28
-- Plan version: 1.0
+- Plan version: 1.1
+
+This workflow describes the owner-confirmed 0.1.0 release scope under plan version 1.1. The lifecycle table and state diagram originated in the v1.0 snapshot; current wave, assignments, exact-head gates and approved preparation/promotion rules are maintained in `14-tracker.md`, `05-merge-plan.md` and `release-0.1.0.yaml`.
 
 | State | Entry/exit criteria | Owner |
 |---|---|---|
@@ -50,3 +52,7 @@ For each transition, RM-01 updates both the YAML tracker entry and this Markdown
 Handoff note: `Done | Left | Verify (commands/results) | Source/PR/main SHA | Blocker + owner | Next owner/action | Links`. Post to RM-01 and the associated PR comment; RM-01 writes the durable tracker update and relays to the next owner. Review target one business day; RM reassigns if late. CI failures go to CI-01; two blocked cycles require RM to split or defer.
 
 Plan amendments require `plan-change` PR in this directory, RM-01 approval, synchronized YAML/Markdown, and a changelog row.
+
+RM-approved coherent size exceptions are recorded in `05-merge-plan.md` for PLAN-CHANGE-01 and NEW-01; all exact-head independent review/test and merge gates still apply.
+
+The owner authorized isolated parallel preparation as described in `05-merge-plan.md`; exact path claims and shared-file write isolation remain mandatory. Only current-wave PR promotion and sequential dependency-respecting merges are allowed.

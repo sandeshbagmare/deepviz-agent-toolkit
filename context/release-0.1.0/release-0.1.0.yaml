@@ -1,6 +1,6 @@
 {
   "title": "DeepViz release 0.1.0 planning data",
-  "plan_version": "1.0",
+  "plan_version": "1.1",
   "date": "2026-11-28",
   "repository": "sandeshbagmare/deepviz-agent-toolkit",
   "github_metadata": {
@@ -22,14 +22,18 @@
     }
   },
   "default_branch": "main",
-  "main_sha": "484ff08ddcae6c36d43ce61de774c00b6c422c88",
-  "source_of_truth": "release-0.1.0.yaml",
-  "scope_status": "PROPOSED - needs owner confirmation",
+  "main_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+  "source_of_truth": "release-0.1.0.yaml; structured plan synchronized with Markdown, with original branch-disposition inventory retained as a dated snapshot",
+  "scope_status": "OWNER-CONFIRMED: Python-only 0.1.0; Arrow/Parquet via optional [columnar]; TypeScript #14/#15 and npm #25 deferred; #28 owner revision awaits public issue update after plan merge",
   "counts": {
-    "remote_refs_including_main": 66,
-    "non_default_branches": 65,
-    "pull_requests": 3,
+    "remote_refs_including_main": 76,
+    "non_default_branches": 75,
+    "pull_requests": 11,
+    "open_pull_requests": 9,
+    "merged_pull_requests": 2,
     "open_issues": 35,
+    "closed_issues": 0,
+    "open_p0_issues": 11,
     "waves": 6,
     "planned_new_prs": 8
   },
@@ -20155,17 +20159,17 @@
       "reviewDecision": "",
       "checks": [
         {
-          "name": "Numeric contract / Python 3.11",
+          "name": "Python 3.11 dashboard schema",
           "status": "COMPLETED",
           "conclusion": "SUCCESS"
         },
         {
-          "name": "Numeric contract / Python 3.12",
+          "name": "Python 3.12 dashboard schema",
           "status": "COMPLETED",
           "conclusion": "SUCCESS"
         },
         {
-          "name": "Numeric contract / Python 3.13",
+          "name": "Python 3.13 dashboard schema",
           "status": "COMPLETED",
           "conclusion": "SUCCESS"
         }
@@ -20176,7 +20180,10 @@
         5
       ],
       "disposition": "V1-MERGE",
-      "justification": "Already merged; three Python 3.11–3.13 checks passed."
+      "justification": "Already merged; three Python 3.11–3.13 checks passed.",
+      "merge_commit_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+      "head_sha": "dd1c4080095c7e739582dc5c631bc419047c48d2",
+      "base_sha": "31cff73ab057c3fed69bd400ac005f2f11609027"
     },
     {
       "number": 33,
@@ -20203,32 +20210,17 @@
       "reviewDecision": "",
       "checks": [
         {
-          "name": "Numeric contract / Python 3.11",
+          "name": "Python 3.11 strict contract",
           "status": "COMPLETED",
           "conclusion": "SUCCESS"
         },
         {
-          "name": "Numeric contract / Python 3.11",
+          "name": "Python 3.12 strict contract",
           "status": "COMPLETED",
           "conclusion": "SUCCESS"
         },
         {
-          "name": "Numeric contract / Python 3.12",
-          "status": "COMPLETED",
-          "conclusion": "SUCCESS"
-        },
-        {
-          "name": "Numeric contract / Python 3.12",
-          "status": "COMPLETED",
-          "conclusion": "SUCCESS"
-        },
-        {
-          "name": "Numeric contract / Python 3.13",
-          "status": "COMPLETED",
-          "conclusion": "SUCCESS"
-        },
-        {
-          "name": "Numeric contract / Python 3.13",
+          "name": "Python 3.13 strict contract",
           "status": "COMPLETED",
           "conclusion": "SUCCESS"
         }
@@ -20239,7 +20231,10 @@
         30
       ],
       "disposition": "V1-MERGE",
-      "justification": "Already merged; six Python contract checks passed."
+      "justification": "Already merged; six Python contract checks passed.",
+      "merge_commit_sha": "31cff73ab057c3fed69bd400ac005f2f11609027",
+      "head_sha": "bff9384d1ebe5c8f6f8f0f994300264b32bb98d8",
+      "base_sha": "99841ffb80e0f2ea90c753c1bf0ceff718e0e180"
     },
     {
       "number": 31,
@@ -20262,68 +20257,32 @@
       "additions": 36025,
       "deletions": 3,
       "changedFiles": 324,
-      "mergeable": "UNKNOWN",
+      "mergeable": "DIRTY",
       "reviewDecision": "",
       "checks": [
         {
           "name": "Python 3.11 lint, types, unit and integration",
           "status": "COMPLETED",
-          "conclusion": "FAILURE"
-        },
-        {
-          "name": "evidence",
-          "status": "COMPLETED",
-          "conclusion": "SUCCESS"
+          "conclusion": "FAILURE",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46034054353/job/140624874830"
         },
         {
           "name": "Python 3.12 lint, types, unit and integration",
           "status": "COMPLETED",
-          "conclusion": "FAILURE"
+          "conclusion": "FAILURE",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46034054353/job/140624874667"
         },
         {
           "name": "Python 3.13 lint, types, unit and integration",
           "status": "COMPLETED",
-          "conclusion": "FAILURE"
+          "conclusion": "FAILURE",
+          "url": "https://github.com/sandeshbagmare/deepviz-agent-toolkit/actions/runs/46034054353/job/140624874754"
         },
         {
-          "name": "npm build, types and tests (Node 24)",
+          "name": "Other CI jobs",
           "status": "COMPLETED",
-          "conclusion": "SUCCESS"
-        },
-        {
-          "name": "Raster visual regression (semantic pixel comparison)",
-          "status": "COMPLETED",
-          "conclusion": "SUCCESS"
-        },
-        {
-          "name": "One-pass scale 10 records",
-          "status": "COMPLETED",
-          "conclusion": "SUCCESS"
-        },
-        {
-          "name": "One-pass scale 1000 records",
-          "status": "COMPLETED",
-          "conclusion": "SUCCESS"
-        },
-        {
-          "name": "One-pass scale 100000 records",
-          "status": "COMPLETED",
-          "conclusion": "SUCCESS"
-        },
-        {
-          "name": "One-pass scale 1000000 records",
-          "status": "COMPLETED",
-          "conclusion": "SUCCESS"
-        },
-        {
-          "name": "One-pass scale 10000000 records",
-          "status": "COMPLETED",
-          "conclusion": "SUCCESS"
-        },
-        {
-          "name": "Python and npm distribution checks (no publishing)",
-          "status": "COMPLETED",
-          "conclusion": "SUCCESS"
+          "conclusion": "SUCCESS",
+          "count": 9
         }
       ],
       "comments_count": 0,
@@ -20346,7 +20305,9 @@
         36
       ],
       "disposition": "CLOSE-SUPERSEDED",
-      "justification": "324 paths, +36,025/-3, three failing Python checks, no review; replace with focused PRs."
+      "justification": "Open draft; stale base 0ae2cf26426822135fc10d337fcacf580b7ed833; 324 paths, +36,025/-3; three Python matrix failures, nine successes, zero submitted reviews. Preserve useful content only through reviewed focused replacements; do not merge or close until preservation is complete.",
+      "head_sha": "62344d85f5f471767b7aa3a2005a9e000ca06440",
+      "base_sha": "0ae2cf26426822135fc10d337fcacf580b7ed833"
     }
   ],
   "issues": [
@@ -20430,7 +20391,8 @@
       "linked_to": [
         "PR #31",
         "PR #33"
-      ]
+      ],
+      "release_disposition": "Fix is on main; exact-main independent acceptance recorded; public issue update/closure remains pending."
     },
     {
       "assignees": [],
@@ -20461,7 +20423,8 @@
       "title": "[Constraint/workaround] Preserve independent agent-report provenance without GitHub self-approval",
       "linked_to": [
         "PR #31"
-      ]
+      ],
+      "release_disposition": "Wave 5 audit of exact-head report provenance across every focused PR."
     },
     {
       "assignees": [],
@@ -20498,7 +20461,8 @@
       "title": "[Blocker] 900 genuinely resolved issues are not presently evidenced; bulk API limits constrain seeding",
       "linked_to": [
         "PR #31"
-      ]
+      ],
+      "release_disposition": "Caller explicitly revised 900-issue criterion for 0.1.0; update issue after plan merge and close as superseded."
     },
     {
       "assignees": [],
@@ -20530,7 +20494,8 @@
       "linked_to": [
         "PR #31",
         "agents/r10-root-coordination"
-      ]
+      ],
+      "release_disposition": "Wave 5 process issue-map and evidence policy via docs/process."
     },
     {
       "assignees": [],
@@ -20561,7 +20526,8 @@
       "title": "Enforce evidence-bearing PRs with two reviewer and two tester reports",
       "linked_to": [
         "PR #31"
-      ]
+      ],
+      "release_disposition": "Applies to every PR; exact-head reports and committed visual paths; final audit by W5."
     },
     {
       "assignees": [],
@@ -20592,7 +20558,8 @@
       "title": "Build and clean-install the npm tarball with usable types and exports",
       "linked_to": [
         "PR #31"
-      ]
+      ],
+      "release_disposition": "TypeScript/npm package explicitly deferred to v1.1; leave issue open."
     },
     {
       "assignees": [],
@@ -20623,7 +20590,8 @@
       "title": "Build and clean-install Python wheel/sdist with real entrypoint smoke tests",
       "linked_to": [
         "PR #31"
-      ]
+      ],
+      "release_disposition": "Wave 5 Python wheel/sdist clean-install acceptance via NEW-08."
     },
     {
       "assignees": [],
@@ -20654,7 +20622,8 @@
       "title": "Inspect real renderer outputs and commit reproducible visual evidence",
       "linked_to": [
         "PR #31"
-      ]
+      ],
+      "release_disposition": "All five Python engines and dashboard visual acceptance by W2."
     },
     {
       "assignees": [
@@ -20692,7 +20661,8 @@
       "title": "Measure 10 through 10M input rows on the bounded streaming path",
       "linked_to": [
         "PR #31"
-      ]
+      ],
+      "release_disposition": "Wave 1 streamed scale evidence via NEW-02; record all required scales and actual measurements."
     },
     {
       "assignees": [
@@ -20730,7 +20700,8 @@
       "title": "Prove untrusted specs, HTML values and filesystem paths stay within safe boundaries",
       "linked_to": [
         "PR #31"
-      ]
+      ],
+      "release_disposition": "Python security acceptance at W4/W5."
     },
     {
       "assignees": [],
@@ -20761,7 +20732,8 @@
       "title": "Gate Python and TypeScript changes with real lint, type, test and build CI",
       "linked_to": [
         "PR #31"
-      ]
+      ],
+      "release_disposition": "Python CI portion required by W5; TS workflow requirements deferred."
     },
     {
       "assignees": [],
@@ -20790,7 +20762,8 @@
       "number": 19,
       "state": "OPEN",
       "title": "Ground architecture and competitor research in dated official sources",
-      "linked_to": []
+      "linked_to": [],
+      "release_disposition": "Wave 5 primary-source research; document dates, facts/inference/unknowns and capability limits."
     },
     {
       "assignees": [],
@@ -20935,7 +20908,8 @@
       "number": 14,
       "state": "OPEN",
       "title": "Validate shared schema fixtures and bounded normalization in TypeScript",
-      "linked_to": []
+      "linked_to": [],
+      "release_disposition": "Explicitly deferred TypeScript work for v1.1; remains open/out of this release gate."
     },
     {
       "assignees": [],
@@ -21111,7 +21085,8 @@
       "title": "Reduce large streams before bounded record materialization",
       "linked_to": [
         "PR #31"
-      ]
+      ],
+      "release_disposition": "Wave 1 bounded streaming reducer acceptance."
     },
     {
       "assignees": [],
@@ -21200,7 +21175,8 @@
       "title": "Version and validate the shared ChartSpec and artifact contracts",
       "linked_to": [
         "PR #38"
-      ]
+      ],
+      "release_disposition": "Wave 1 contract/API acceptance; ChartSpec part is on main, normalized/artifact contract remains."
     },
     {
       "assignees": [],
@@ -21231,7 +21207,8 @@
       "title": "[Epic] Secure, measurable and independently evidenced release readiness",
       "linked_to": [
         "PR #31"
-      ]
+      ],
+      "release_disposition": "In-scope delivery epic; close after applicable Python/readiness evidence at G3, with TS scope deferred."
     },
     {
       "assignees": [],
@@ -21318,7 +21295,8 @@
       "number": 1,
       "state": "OPEN",
       "title": "[Epic] Shared contracts and loss-aware bounded ingestion",
-      "linked_to": []
+      "linked_to": [],
+      "release_disposition": "In-scope Wave 1 roll-up; close after children #5/#8 and scale/API acceptance."
     }
   ],
   "overlap_files": {
@@ -44318,7 +44296,10 @@
     {
       "wave": 0,
       "prs": [],
-      "tag": "v0.1.0-wave-0"
+      "tag": "v0.1.0-wave-0",
+      "entry": "Exact current-main G0 evidence; approved plan-change merged before product work.",
+      "exit": "No product PR; preserve current main baseline.",
+      "scheduled_p0s": []
     },
     {
       "wave": 1,
@@ -44326,7 +44307,15 @@
         "NEW-01",
         "NEW-02"
       ],
-      "tag": "v0.1.0-wave-1"
+      "tag": "v0.1.0-wave-1",
+      "entry": "G0 verified; plan-change merged; #26 process active; no known current-main S1/S2 or safety/data-loss regression.",
+      "exit": "NEW-01/02 verified on main; #8 acceptance and #5 NormalizedData contract evidence recorded; normalizer scale evidence for #22 recorded without closing renderer-linked criteria; #1 roll-up and #30 acceptance recorded; #28 owner decision public.",
+      "scheduled_p0s": [
+        1,
+        5,
+        8,
+        30
+      ]
     },
     {
       "wave": 2,
@@ -44334,7 +44323,16 @@
         "NEW-03",
         "NEW-04"
       ],
-      "tag": "v0.1.0-wave-2"
+      "tag": "v0.1.0-wave-2",
+      "entry": "Wave 1 product/#8/#30 acceptance recorded; #5 Artifact and #22 renderer criteria scheduled here; #28 superseded; checks green; #14/#15/#25 deferred.",
+      "exit": "Five renderers and #23 output/browser/dashboard acceptance verified; #5 Artifact API accepted; renderer-linked #22 scale proof independently replicated or remains explicitly pending through W5.",
+      "scheduled_p0s": [
+        4,
+        20,
+        21,
+        23,
+        26
+      ]
     },
     {
       "wave": 3,
@@ -44342,21 +44340,45 @@
         "NEW-05",
         "NEW-06"
       ],
-      "tag": "v0.1.0-wave-3"
+      "tag": "v0.1.0-wave-3",
+      "entry": "Wave 2 and #23 accepted; exact-main checks pass.",
+      "exit": "Recommendations/tools/MCP/CLI verified end-to-end.",
+      "scheduled_p0s": [
+        4,
+        20,
+        21,
+        26
+      ]
     },
     {
       "wave": 4,
       "prs": [
         "NEW-07"
       ],
-      "tag": "v0.1.0-wave-4"
+      "tag": "v0.1.0-wave-4",
+      "entry": "Wave 3 merged and verified; #21 security work scheduled here.",
+      "exit": "#21 acceptance complete; #30 main regression remains verified.",
+      "scheduled_p0s": [
+        4,
+        20,
+        21,
+        26
+      ]
     },
     {
       "wave": 5,
       "prs": [
         "NEW-08"
       ],
-      "tag": "v0.1.0-wave-5"
+      "tag": "v0.1.0-wave-5",
+      "entry": "Wave 4/#21 accepted; no unrelated S1/S2 or main-gate regression.",
+      "exit": "NEW-08 and #19/#20/#22/#24/#26/#27/#29 verified; renderer-linked #22 scale evidence and independent replication completed at all five required sizes; any unrun size keeps #22 open and blocks G3. Public #4 scope addendum excludes deferred npm #25 and TS #14/#15; applicable #4 roll-up and all in-scope P0s accepted before G3.",
+      "scheduled_p0s": [
+        4,
+        20,
+        26,
+        28
+      ]
     }
   ],
   "planned_prs": [
@@ -44369,18 +44391,27 @@
         "feat/ingestion",
         "feat/r34-python-data-foundation",
         "test/graphql-contract",
-        "agents/r10-04-utf8-field-envelope"
+        "agents/r10-04-utf8-field-envelope",
+        "test/n19-formats",
+        "agents/r45-04-private-numeric-accounting"
       ],
       "files": [
         "python/deepviz/src/deepviz/normalize.py",
         "python/deepviz/tests/test_normalize.py",
-        "python/deepviz/tests/test_graphql_contract.py"
+        "python/deepviz/tests/test_graphql_contract.py",
+        "python/deepviz/tests/test_n19_formats.py",
+        "python/deepviz/src/deepviz/__init__.py",
+        "python/deepviz/src/deepviz/models.py",
+        "schemas/chart-spec.schema.json",
+        "scripts/benchmark_scale.py",
+        "docs/verification/normalization/normalization-output.json",
+        "docs/verification/normalization/normalization-output.svg"
       ],
-      "estimated_size": "300-900 lines; split input-format hunks",
-      "dependencies": "none",
-      "expected_conflicts": "Ingestion and R34 share normalize.py; use reviewed R34 base and only unique format/GraphQL hunks.",
-      "reviewers": "REV-01 + REV-02; QA-01 non-author",
-      "required_tests": "normalization, GraphQL and format tests; full pytest/Ruff/mypy",
+      "estimated_size": "RM-approved coherent size exception: at most 2,750 changed lines across the 10 claimed paths; PR #40 at `a94f85c47e9a18f01009484a6813738eb8259a03` measures 2,687 additions + 2 deletions = 2,689 changed lines. The 61-line tolerance covers only necessary review/rebase fixes and regenerated normalization evidence within this existing task; additional paths or unrelated scope require a new ruling. Retain exact-head 2 reviewer + 2 tester gates.",
+      "dependencies": "Wave 0 G0 and approved PLAN-CHANGE-01; isolated preparation is allowed before merge.",
+      "expected_conflicts": "Select reviewed Python input-format, GraphQL and Arrow/Parquet hunks on fresh main; do not merge broad R34 ancestry. NEW-02 is serialized after NEW-01 because normalize.py and test_normalize.py are shared.",
+      "reviewers": "REV-01 + REV-02; QA-01 + QA-02 independent non-author tester reports",
+      "required_tests": "Normalization, GraphQL, Arrow Table/RecordBatch/Reader, IPC file/stream, Parquet path/buffer, malformed/duplicate/oversized nested input, optional-extra error; install [columnar], verify zero skips, full pytest/Ruff/mypy. Verify selector model/runtime/checked-in-schema parity and no-read/no-open controls; run the existing benchmark smoke and validate the measured JSON/SVG evidence.",
       "rollback": "Revert squash, rerun main suite, stop wave.",
       "merge_method": "squash",
       "source_commits": [
@@ -44389,15 +44420,7 @@
           "source": "feat/r34-python-data-foundation"
         },
         {
-          "sha": "9ce04fcc0e91c1896979e3efb9740294dae38240",
-          "source": "feat/r34-python-data-foundation"
-        },
-        {
           "sha": "9531dab2b4d629c6fffdff9b7dc7dfcebb3def03",
-          "source": "feat/r34-python-data-foundation"
-        },
-        {
-          "sha": "355637ca3de44afb69b7ee0c80999affaf0816bd",
           "source": "feat/r34-python-data-foundation"
         },
         {
@@ -44407,17 +44430,27 @@
         {
           "sha": "429890b45bb1e85087507e07b95dcd382aa53ab4",
           "source": "test/graphql-contract"
+        },
+        {
+          "sha": "0ea34db2217037c309ab5ce77361b9e2c3dadd50",
+          "source": "test/n19-formats"
+        },
+        {
+          "sha": "96b819aee5b01ba88b5a609b587331a528aaa070",
+          "source": "agents/r45-04-private-numeric-accounting",
+          "selection": "Latest Python normalizer only; ancestry fixes are incorporated."
         }
       ],
-      "state": "planned"
+      "state": "planned",
+      "visual_evidence_required": true,
+      "source_selection_note": "RM ruling: use latest96 normalizer provenance (R17/exact finite sum/mean/owned-input and R45 fixes), necessary input/GraphQL/Arrow tests, minimal __init__.py exports, and the focused reviewed PR #40 follow-ups. NEW-01 also owns selector-boundary changes in `python/deepviz/src/deepviz/models.py` and `schemas/chart-spec.schema.json`, its existing `scripts/benchmark_scale.py` smoke harness, and measured `docs/verification/normalization/normalization-output.json` plus `docs/verification/normalization/normalization-output.svg`. These five paths are part of the same bounded-normalization task, not permission for broad schema/package/docs work. Do not replay old patches or whole 9ce04fc/355637c commits; exclude TypeScript, coordination and unrelated evidence dumps."
     },
     {
       "id": "NEW-02",
       "wave": 1,
-      "title": "[v1][W1][feature] add bounded streaming reducers",
+      "title": "[v1][W1][test] verify bounded reducer regressions and streaming scale",
       "branch": "release/v1/w1-python-reductions",
       "source_branches": [
-        "feat/ingestion",
         "feat/r34-python-data-foundation",
         "fix/r17-normalizer-boundaries",
         "agents/r10-16-finite-overflow-fix",
@@ -44427,50 +44460,58 @@
         "python/deepviz/src/deepviz/normalize.py",
         "python/deepviz/tests/test_normalize.py",
         "python/deepviz/tests/test_r07_finite_overflow.py",
-        "python/deepviz/tests/test_r17_normalizer_boundaries.py"
+        "python/deepviz/tests/test_r17_normalizer_boundaries.py",
+        "python/deepviz/tests/test_r45_numeric_state_accounting.py",
+        "scripts/verify_python_scale.py",
+        "tests/test_release_scale.py"
       ],
       "estimated_size": "300-900 lines; after NEW-01",
-      "dependencies": "NEW-01",
+      "dependencies": "NEW-01 merged; isolated preparation may run in parallel, with rebase and exact-head checks afterward.",
       "expected_conflicts": "Shared normalize.py; apply Python-only fixes after NEW-01 and rebase/test.",
-      "reviewers": "REV-02 + REV-03; QA-02 non-author",
-      "required_tests": "aggregation, GraphQL/scalar fidelity, finite overflow, 10/1K/100K/1M/10M smoke",
+      "reviewers": "REV-02 + REV-03; QA-01 + QA-02 independent non-author tester reports",
+      "required_tests": "Exact finite SUM/MEAN and transient-overflow controls; R07/R17/R45 numeric-state/owned-input tests; bounded Arrow streams; scripts/verify_python_scale.py and tests/test_release_scale.py at 10/1K/100K/1M/10M. Machine-readable normalizer evidence now; renderer-linked scale and independent replication before #22 closure. Do not reapply fixes already in NEW-01.",
       "rollback": "Revert this squash only; keep NEW-01.",
       "merge_method": "squash",
       "source_commits": [
         {
-          "sha": "6c412e0f6be7e96a24a7f6c5cbcfdba9a48ef2c5",
-          "source": "feat/ingestion"
+          "sha": "ec9f669eff28cd5351da142765b7755e3b2f484f",
+          "source": "agents/r10-16-finite-overflow-fix",
+          "selection": "Regression-test/provenance reference only; no replay of source hunks already in NEW-01."
         },
         {
           "sha": "5ba860305dcc86ac2f95f01705b984d2b40f2799",
-          "source": "fix/r17-normalizer-boundaries"
-        },
-        {
-          "sha": "ec9f669eff28cd5351da142765b7755e3b2f484f",
-          "source": "agents/r10-16-finite-overflow-fix"
+          "source": "fix/r17-normalizer-boundaries",
+          "selection": "Regression-test/provenance reference only; no replay of source hunks already in NEW-01."
         },
         {
           "sha": "c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19",
-          "source": "fix/r17-normalizer-boundaries"
+          "source": "fix/r17-normalizer-boundaries",
+          "selection": "Regression-test/provenance reference only; no replay of source hunks already in NEW-01."
         },
         {
           "sha": "a7363be273d7b3bbcb1b52ef79a58bb4e6d0e3be",
-          "source": "fix/r17-normalizer-boundaries"
+          "source": "fix/r17-normalizer-boundaries",
+          "selection": "Regression-test/provenance reference only; no replay of source hunks already in NEW-01."
         },
         {
           "sha": "7ab546251029df169604358448ecd462d8db5e6f",
-          "source": "fix/r17-normalizer-boundaries"
+          "source": "fix/r17-normalizer-boundaries",
+          "selection": "Regression-test/provenance reference only; no replay of source hunks already in NEW-01."
         },
         {
           "sha": "546c25ea75ee9d8a41b3832aa639664bc9a683b5",
-          "source": "fix/r17-normalizer-boundaries"
+          "source": "fix/r17-normalizer-boundaries",
+          "selection": "Regression-test/provenance reference only; no replay of source hunks already in NEW-01."
         },
         {
           "sha": "96b819aee5b01ba88b5a609b587331a528aaa070",
-          "source": "agents/r45-04-private-numeric-accounting"
+          "source": "agents/r45-04-private-numeric-accounting",
+          "selection": "Regression-test/provenance reference only; no replay of source hunks already in NEW-01."
         }
       ],
-      "state": "planned"
+      "state": "planned",
+      "source_selection_note": "RM ruling: NEW-01 selects latest96 normalizer with reviewed reducer correctness fixes. NEW-02 does not replay those hunks; add reducer regression/scale acceptance and only newly demonstrated necessary fixes. Historical ec9f669 -> 5ba8603 order is provenance, not replay sequence.",
+      "visual_evidence_required": true
     },
     {
       "id": "NEW-03",
@@ -44490,7 +44531,7 @@
       "estimated_size": "300-900 backend-specific lines; split if >1,000",
       "dependencies": "NEW-01, NEW-02",
       "expected_conflicts": "Source commit 31acb2f6 adds five backends in 1,184 lines; stage only these three and their tests; NEW-04 follows.",
-      "reviewers": "REV-01 + REV-04; QA-01",
+      "reviewers": "REV-01 + REV-04; QA-01 + QA-02",
       "required_tests": "backend semantics, real artifact/MIME/manifest, unsafe text; full checks",
       "rollback": "Revert squash; normalized main remains.",
       "merge_method": "squash",
@@ -44504,7 +44545,8 @@
           "source": "feat/renderers"
         }
       ],
-      "state": "planned"
+      "state": "planned",
+      "visual_evidence_required": true
     },
     {
       "id": "NEW-04",
@@ -44530,7 +44572,7 @@
       "estimated_size": "300-900 backend-specific lines; after NEW-03",
       "dependencies": "NEW-03",
       "expected_conflicts": "Shares renderer paths; rebase after NEW-03; select independent count/AntV hunks once.",
-      "reviewers": "REV-02 + REV-03; QA-02",
+      "reviewers": "REV-02 + REV-03; QA-02 + QA-03",
       "required_tests": "native output, count/color/extreme-value tests and artifact inspection",
       "rollback": "Revert squash; rerun renderer tests.",
       "merge_method": "squash",
@@ -44556,7 +44598,8 @@
           "source": "fix/r23-count-channel"
         }
       ],
-      "state": "planned"
+      "state": "planned",
+      "visual_evidence_required": true
     },
     {
       "id": "NEW-05",
@@ -44575,8 +44618,8 @@
       "estimated_size": "300-900; split API/tool bindings if needed",
       "dependencies": "NEW-03, NEW-04",
       "expected_conflicts": "1,341-line integration source; stage recommendation/tool API before MCP.",
-      "reviewers": "REV-01 + REV-03; QA-03",
-      "required_tests": "local normalize -> recommend -> render without model; full checks",
+      "reviewers": "REV-01 + REV-03; QA-02 + QA-03",
+      "required_tests": "In a fresh `.[agents]` environment, construct, inspect and invoke the actual LangChain `StructuredTool` API, then run normalize -> recommend -> render through the real tool flow. These required tests must execute with zero skips. Separately, in a fresh base-only install without LangChain/Deep Agents, import core and prove optional integrations remain lazy without loading `langchain_core`; full checks.",
       "rollback": "Revert squash; preserve renderer APIs.",
       "merge_method": "squash",
       "source_commits": [
@@ -44585,7 +44628,8 @@
           "source": "feat/integrations"
         }
       ],
-      "state": "planned"
+      "state": "planned",
+      "visual_evidence_required": true
     },
     {
       "id": "NEW-06",
@@ -44612,8 +44656,8 @@
       "estimated_size": "300-900; split docs if needed",
       "dependencies": "NEW-05",
       "expected_conflicts": "Shares package API/entrypoints; select Python MCP-only paths and fix callback order/capacity.",
-      "reviewers": "REV-02 + REV-04; QA-03",
-      "required_tests": "stdio initialize/list/call, safe artifact, malformed JSON, callback admission; install [mcp]",
+      "reviewers": "REV-02 + REV-04; QA-02 + QA-03",
+      "required_tests": "In a fresh `.[mcp]` environment, test stdio initialize/list/call, safe artifact retrieval, malformed JSON and callback admission. Exercise the real integration tool call in the fresh `[agents]` lane; required integration tests must not skip. Separately run the base-only lazy-import control without LangChain/Deep Agents; report any unrelated optional-test skips explicitly.",
       "rollback": "Revert squash; retain tools; stop MCP wave.",
       "merge_method": "squash",
       "source_commits": [
@@ -44642,7 +44686,8 @@
           "source": "agents/r11-10-strict-mcp-boundaries"
         }
       ],
-      "state": "planned"
+      "state": "planned",
+      "visual_evidence_required": true
     },
     {
       "id": "NEW-07",
@@ -44664,7 +44709,7 @@
       "estimated_size": "300-900 lines; selected fixes only",
       "dependencies": "NEW-03, NEW-04",
       "expected_conflicts": "Renderer paths were changed in earlier waves; rebase on their merged SHAs. Import only Python hardening/test hunks.",
-      "reviewers": "REV-01 + REV-04 (security); QA-01",
+      "reviewers": "REV-01 + REV-04 (security); QA-01 + QA-02",
       "required_tests": "dense table preflight, no execution/unsafe path, security regressions; full suite",
       "rollback": "Revert squash; stop release if safety gate fails.",
       "merge_method": "squash",
@@ -44678,7 +44723,8 @@
           "source": "feat/hardening"
         }
       ],
-      "state": "planned"
+      "state": "planned",
+      "visual_evidence_required": true
     },
     {
       "id": "NEW-08",
@@ -44704,13 +44750,25 @@
         ".github/workflows/",
         "README.md",
         "docs/capabilities.md",
-        "SECURITY.md"
+        "docs/architecture.md",
+        "docs/research/",
+        "docs/process/",
+        "SECURITY.md",
+        "pyproject.toml",
+        "python/deepviz/src/deepviz/py.typed",
+        "python/deepviz/src/deepviz/schemas/",
+        "python/deepviz/src/deepviz/prompts/",
+        "schemas/",
+        "prompts/v1/",
+        "scripts/performance_suite.py",
+        "docs/verification/performance.md",
+        "tests/test_performance_contract.py"
       ],
       "estimated_size": "<=1,000; split CI/docs if needed",
-      "dependencies": "NEW-01..NEW-08",
+      "dependencies": "NEW-01..NEW-07",
       "expected_conflicts": "Consolidate acceptance after code; omit duplicate/RED tests until fixed; exclude agent-state/evidence dumps.",
-      "reviewers": "REV-01 + REV-04; QA-01/02/03 non-authors",
-      "required_tests": "full pytest/Ruff/mypy/build, five-engine/integration smoke, clean wheel/sdist install",
+      "reviewers": "REV-03 + REV-04; QA-02 + QA-03 independent non-author tester reports",
+      "required_tests": "Full Python tests/Ruff/mypy/build; clean base/[columnar]/[mcp]/[agents] wheel and sdist installs; in the fresh installed [agents] lane, construct, inspect and invoke the real LangChain StructuredTool API and complete normalize -> recommend -> render with zero skips; in a separate fresh base-only install without LangChain/Deep Agents, import core and verify integrations remain unloaded; package resource/type-marker and entrypoint checks; five-engine and renderer-linked scale evidence with independent replication (#22); dated primary-source research including licensing/runtime/scale/output trade-offs (#19); exact-main CI (#20); package acceptance (#24); every-PR report/visual audit (#26); labeled/milestoned/dependency-aware process issue map and primary GitHub constraints (#27); publicly retargeted genuine focused-PR report provenance and gallery (#29); public #4 amendment deferring npm #25 and TS #14/#15 from 0.1.0 and explicitly waiving the unmet historical 900-issue criterion for this release with real counts only and no fabricated tickets/closures.",
       "rollback": "Revert acceptance/doc commit only; stop release and repair CI.",
       "merge_method": "squash",
       "source_commits": [
@@ -44740,7 +44798,12 @@
         },
         {
           "sha": "06c04900466f66d7919b68a5c3626d94df248ea6",
-          "source": "perf/verification"
+          "source": "perf/verification",
+          "selected_files": [
+            "scripts/performance_suite.py",
+            "docs/verification/performance.md",
+            "tests/test_performance_contract.py"
+          ]
         },
         {
           "sha": "2b4f0a8a2de7540a53d8399c2b87bbdd19b137e6",
@@ -44757,29 +44820,48 @@
         {
           "sha": "9bcf27dd0888778a6826fbd1f3203bc4652cec40",
           "source": "agents/r10-14-assets-offline-provenance"
+        },
+        {
+          "sha": "8a10108752567f6d0faac700240c4acf77b32556",
+          "source": "agents/r10-15-owned-input-cleanup",
+          "selected_files": [
+            "tests/r13_probes/role15/test_reducer_source_ownership.py"
+          ],
+          "excluded_files": [
+            "docs/agent-state/",
+            "docs/coordination/evidence/",
+            "docs/coordination/reports/"
+          ]
         }
       ],
-      "state": "planned"
+      "state": "planned",
+      "visual_evidence_required": true,
+      "source_selection_note": "Selected test/package hunks only; author current Python docs as needed. docs/research and docs/process historical branches remain unmerged. Confirm actual resource destinations from package metadata before claiming individual paths; split into focused <=1000-line PRs through plan-change if required. Performance acceptance files are selected from `06c04900466f66d7919b68a5c3626d94df248ea6`: `scripts/performance_suite.py`, `docs/verification/performance.md`, and `tests/test_performance_contract.py`. The Python owned-input regression is selected from `8a10108752567f6d0faac700240c4acf77b32556`, path `tests/r13_probes/role15/test_reducer_source_ownership.py` only; exclude its agent-state/evidence/report paths. The `agents/r10-15-owned-input-cleanup` branch head is not itself the provenance for this Python-only test selection."
     }
   ],
   "agent_assignments": {
-    "RM-01": "plan/scope/gates",
-    "INT-01": "integration/merge",
-    "INT-02": "conflicts/rebase queue",
-    "IMP-01": "NEW-01",
-    "IMP-02": "NEW-02",
-    "IMP-03": "NEW-03",
-    "IMP-04": "NEW-04",
-    "IMP-05": "NEW-05",
-    "IMP-06": "NEW-06",
-    "IMP-07": "NEW-07 security fixes",
-    "IMP-08": "NEW-08 acceptance",
-    "REV-01..04": "independent reviews",
-    "QA-01..03": "exact-main verification",
-    "TRI-01": "bug triage",
-    "CI-01": "CI/build",
-    "DOC-01": "docs/release notes",
-    "RES-01": "surge queue"
+    "RM-01": "Orchestration/status, plan-change review/publication, owner decisions and gates",
+    "INT-01": "Integration feasibility and later approved sequential merges",
+    "INT-02": "Plan consistency/integration preflight and rebase queue",
+    "IMP-01": "Isolated NEW-01 latest96 normalizer + necessary tests + minimal package exports",
+    "IMP-02": "NEW-02 reducer regression/scale preparation; no replay of latest96 fixes",
+    "IMP-03": "Renderer readiness/source preparation",
+    "IMP-04": "Reducer source audit complete; renderer-B preparation queued",
+    "IMP-05": "#28 evidence audited; public owner-revision preparation",
+    "IMP-06": "Package metadata audited; MCP preparation queued",
+    "IMP-07": "#30 reproduced; security regression preparation queued",
+    "IMP-08": "Package/NEW-08 acceptance preparation queued",
+    "REV-01": "Independent contract review; exact-head plan review standby",
+    "REV-02": "Independent source-selection review; final-head re-review standby",
+    "REV-03": "Scale-acceptance audit and final-head plan review",
+    "REV-04": "Security/source review and visual provenance audit",
+    "QA-01": "G0 verification complete; final-head plan test standby",
+    "QA-02": "Contract E2E complete; final-head plan test/visual evidence",
+    "QA-03": "Plan consistency audit and QA-owned SVG corrections",
+    "TRI-01": "Live P0/issue acceptance and public scope-action preparation",
+    "CI-01": "CI/G0 audit complete; final-head CI checks standby",
+    "DOC-01": "Sole release-plan writer/consolidation except QA-owned SVG",
+    "RES-01": "P0/wave-entry audit complete; surge standby"
   },
   "phase_allocations": {
     "wave0": {
@@ -44824,12 +44906,19 @@
       "id": "NEW-01",
       "wave": 1,
       "owner": "IMP-01",
-      "state": "planned",
-      "blocked_by": "none",
+      "state": "planned; PR #40 open draft for isolated preparation only",
+      "blocked_by": "PLAN-CHANGE-01 must merge before PR #40 is promoted; draft remains non-ready.",
       "claimed_files": [
         "python/deepviz/src/deepviz/normalize.py",
         "python/deepviz/tests/test_normalize.py",
-        "python/deepviz/tests/test_graphql_contract.py"
+        "python/deepviz/tests/test_graphql_contract.py",
+        "python/deepviz/tests/test_n19_formats.py",
+        "python/deepviz/src/deepviz/__init__.py",
+        "python/deepviz/src/deepviz/models.py",
+        "schemas/chart-spec.schema.json",
+        "scripts/benchmark_scale.py",
+        "docs/verification/normalization/normalization-output.json",
+        "docs/verification/normalization/normalization-output.svg"
       ],
       "last_update": "2026-11-28"
     },
@@ -44837,13 +44926,16 @@
       "id": "NEW-02",
       "wave": 1,
       "owner": "IMP-02",
-      "state": "planned",
-      "blocked_by": "NEW-01",
+      "state": "planned; PR #41 open draft for isolated preparation only",
+      "blocked_by": "NEW-01 and serialized shared-file handoff; PR #41 remains non-ready until dependencies merge.",
       "claimed_files": [
         "python/deepviz/src/deepviz/normalize.py",
         "python/deepviz/tests/test_normalize.py",
         "python/deepviz/tests/test_r07_finite_overflow.py",
-        "python/deepviz/tests/test_r17_normalizer_boundaries.py"
+        "python/deepviz/tests/test_r17_normalizer_boundaries.py",
+        "python/deepviz/tests/test_r45_numeric_state_accounting.py",
+        "scripts/verify_python_scale.py",
+        "tests/test_release_scale.py"
       ],
       "last_update": "2026-11-28"
     },
@@ -44926,14 +45018,26 @@
       "wave": 5,
       "owner": "IMP-08",
       "state": "planned",
-      "blocked_by": "NEW-01..NEW-08",
+      "blocked_by": "NEW-01..NEW-07",
       "claimed_files": [
         "tests/",
         "python/deepviz/tests/",
         ".github/workflows/",
         "README.md",
         "docs/capabilities.md",
-        "SECURITY.md"
+        "docs/architecture.md",
+        "docs/research/",
+        "docs/process/",
+        "SECURITY.md",
+        "pyproject.toml",
+        "python/deepviz/src/deepviz/py.typed",
+        "python/deepviz/src/deepviz/schemas/",
+        "python/deepviz/src/deepviz/prompts/",
+        "schemas/",
+        "prompts/v1/",
+        "scripts/performance_suite.py",
+        "docs/verification/performance.md",
+        "tests/test_performance_contract.py"
       ],
       "last_update": "2026-11-28"
     },
@@ -44941,15 +45045,296 @@
       "id": "PR-31",
       "wave": null,
       "owner": "RM-01",
-      "state": "blocked",
-      "reason": "failed CI; supersede after replacements"
+      "state": "open draft; stale base; 3 Python matrix failures; 9 other checks passed; 0 submitted reviews",
+      "reason": "Preserve candidate work through focused reviewed PRs; do not merge/close yet."
+    },
+    {
+      "id": "PR-39",
+      "wave": "Wave 0 plan change",
+      "owner": "RM-01",
+      "state": "open plan-change draft; awaiting exact-head 2+2, CI, and merge",
+      "blocked_by": "Current main f692014; parent dependency for release preparation/promotion",
+      "claimed_files": [
+        "context/release-0.1.0/**"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "PR-40",
+      "wave": "Wave 1 prep",
+      "owner": "IMP-01",
+      "state": "open draft; non-ready",
+      "blocked_by": "Dependencies, rebase, CI, and exact-head 2+2 evidence before promotion",
+      "claimed_files": [
+        "release/v1/w1-python-normalization"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "PR-41",
+      "wave": "Wave 1 prep",
+      "owner": "IMP-02",
+      "state": "open draft; non-ready",
+      "blocked_by": "Dependencies, rebase, CI, and exact-head 2+2 evidence before promotion",
+      "claimed_files": [
+        "release/v1/w1-python-scale"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "PR-42",
+      "wave": "Wave 2 prep",
+      "owner": "IMP-03",
+      "state": "open draft; non-ready",
+      "blocked_by": "Dependencies, rebase, CI, and exact-head 2+2 evidence before promotion",
+      "claimed_files": [
+        "release/v1/w2-python-renderers-a"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "PR-43",
+      "wave": "Wave 3 prep",
+      "owner": "IMP-05",
+      "state": "open draft; non-ready",
+      "blocked_by": "Dependencies, rebase, CI, and exact-head 2+2 evidence before promotion",
+      "claimed_files": [
+        "release/v1/w3-python-tools"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "PR-44",
+      "wave": "Wave 3 prep",
+      "owner": "IMP-06",
+      "state": "open draft; non-ready",
+      "blocked_by": "Dependencies, rebase, CI, and exact-head 2+2 evidence before promotion",
+      "claimed_files": [
+        "release/v1/w3-python-mcp-cli"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "PR-45",
+      "wave": "Wave 5 prep",
+      "owner": "IMP-08",
+      "state": "open draft; non-ready",
+      "blocked_by": "Dependencies, rebase, CI, and exact-head 2+2 evidence before promotion",
+      "claimed_files": [
+        "release/v1/w5-python-package"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "PR-46",
+      "wave": "Wave 5 prep",
+      "owner": "CI-01",
+      "state": "open draft; non-ready",
+      "blocked_by": "NEW-01..NEW-07, plan approval, rebase, CI, and exact-head 2+2 evidence before promotion",
+      "claimed_files": [
+        "release/v1/w5-python-ci"
+      ],
+      "last_update": "2026-11-28"
     },
     {
       "id": "ISSUE-28",
-      "wave": null,
-      "owner": "TRI-01 + owner",
-      "state": "blocked",
-      "reason": "P0 owner decision"
+      "wave": "before G3",
+      "owner": "TRI-01 + RM-01",
+      "state": "caller explicitly removed the 900-issue criterion for 0.1.0; issue still open P0",
+      "reason": "After plan merge, publish exact decision and authenticated issue counts, then close as superseded.",
+      "blocked_by": "Merge plan change, post exact owner decision and live issue counts, close as superseded",
+      "claimed_files": []
+    },
+    {
+      "id": "ISSUE-1",
+      "wave": "Wave 1/2 roll-up",
+      "owner": "TRI-01",
+      "state": "open P0 foundation epic",
+      "blocked_by": "Record W1 normalization/#8 proof; close only after #5 Artifact acceptance in W2 and applicable child evidence pass on exact main.",
+      "claimed_files": [
+        "NEW-01/02"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "ISSUE-4",
+      "wave": "G3 roll-up",
+      "owner": "TRI-01 + RM-01",
+      "state": "open P0 delivery epic; public scope addendum pending",
+      "blocked_by": "After plan merge, publicly amend #4 to defer npm #25 and TypeScript #14/#15 from 0.1.0 and explicitly waive the historical 900-issue criterion for this release while recording that it remains unmet using current real counts only. Keep #28 open until publication; no fabricated tickets or closures. Preserve Python #19/#20/#21/#22/#23/#24/#26/#27/#29 acceptance; close #4 only after applicable children and G3 evidence.",
+      "claimed_files": [
+        "NEW-08",
+        "public issue #4 scope addendum"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "ISSUE-5",
+      "wave": "Wave 1 contract + Wave 2 artifact acceptance",
+      "owner": "IMP-01 + QA + renderer owners",
+      "state": "open P0 contract issue; ChartSpec verified, NormalizedData and Artifact pending",
+      "blocked_by": "Wave 1 verifies NormalizedData counts/strategy/warnings; keep issue open until Wave 2 verifies real Artifact metadata, safe paths, MIME/output and schema/API parity on main.",
+      "claimed_files": [
+        "NEW-01/02",
+        "NEW-03/04"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "ISSUE-8",
+      "wave": "Wave 1",
+      "owner": "IMP-02 + QA",
+      "state": "open P0 streaming story",
+      "blocked_by": "Close after reducer-before-materialization, metadata, edge, and scale evidence on main",
+      "claimed_files": [
+        "NEW-02"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "ISSUE-14",
+      "wave": "deferred v1.1",
+      "owner": "DOC-01",
+      "state": "open P0 TypeScript issue, outside Python-only scope",
+      "blocked_by": "Keep open and unchanged; revisit in v1.1",
+      "claimed_files": [],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "ISSUE-20",
+      "wave": "Wave 5",
+      "owner": "CI-01",
+      "state": "open P0; Python CI in scope, TS CI deferred",
+      "blocked_by": "Full Python test/lint/type/build/package workflow and exact-main green run",
+      "claimed_files": [
+        "NEW-08"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "ISSUE-21",
+      "wave": "Wave 4/5",
+      "owner": "REV-04 + QA-01",
+      "state": "open P0 security acceptance",
+      "blocked_by": "Named negative tests: script/title/cell injection, script-closing and dangerous config; traversal/absolute path escape; arbitrary remote-URL/code execution; unrelated overwrite; document optional network runtimes; inspect dependencies/diagnostics/packaging for credential disclosure. Independent exact-commit security review and main QA.",
+      "claimed_files": [
+        "NEW-07/08"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "ISSUE-23",
+      "wave": "Wave 2",
+      "owner": "QA-02 + QA-03",
+      "state": "open P0 visual acceptance",
+      "blocked_by": "Inspected five-engine and dashboard outputs plus browser/runtime/network evidence",
+      "claimed_files": [
+        "NEW-03/04/08"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "ISSUE-26",
+      "wave": "every PR through Wave 5",
+      "owner": "RM-01 + REV/QA",
+      "state": "open P0 evidence process",
+      "blocked_by": "Two independent reports per class on exact head plus committed visual paths; close after final audit",
+      "claimed_files": [
+        "all PRs"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "ISSUE-30",
+      "wave": "before Wave 2",
+      "owner": "QA-02 + IMP-07",
+      "state": "open P0; strict numeric fix merged",
+      "blocked_by": "Record exact-main focused QA and green 3.11-3.13 checks; then update and close only when all criteria pass",
+      "claimed_files": [
+        "tests/test_models.py",
+        "tests/test_numeric_schema.py",
+        "tests/test_dashboard_schema.py"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "ISSUE-19",
+      "wave": "Wave 5",
+      "owner": "DOC-01",
+      "state": "open P1 research evidence",
+      "blocked_by": "Dated primary sources for five renderers, Deep Agents and MCP; distinguish facts/inference/unknowns; match claims to tested scope",
+      "claimed_files": [
+        "docs/research/",
+        "docs/architecture.md"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "ISSUE-22",
+      "wave": "Wave 1 proof; Wave 2/5 closure",
+      "owner": "IMP-02 + QA + renderer owners",
+      "state": "open P1 scale evidence; renderer-linked acceptance pending",
+      "blocked_by": "Wave 1 records normalizer scale at 10/1K/100K/1M/10M. Keep issue open until bounded renderer payloads at every scale and independent replication on exact main in Wave 2/5. Any unrun required size keeps #22 open and blocks G3; record the unrun limits explicitly.",
+      "claimed_files": [
+        "NEW-02",
+        "NEW-03/04",
+        "NEW-08"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "ISSUE-24",
+      "wave": "Wave 5",
+      "owner": "IMP-08 + QA",
+      "state": "open P1 package acceptance",
+      "blocked_by": "Build wheel/sdist; clean-install and smoke public API, render, CLI/MCP; no public publishing",
+      "claimed_files": [
+        "NEW-08"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "ISSUE-25",
+      "wave": "deferred v1.1",
+      "owner": "DOC-01",
+      "state": "open P1 npm package; outside Python-only scope",
+      "blocked_by": "Keep open unchanged; revisit with TypeScript/npm",
+      "claimed_files": [],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "ISSUE-27",
+      "wave": "Wave 5",
+      "owner": "DOC-01 + TRI-01",
+      "state": "open P1 process evidence",
+      "blocked_by": "Publish issue map under docs/process with real issue/milestone/label snapshot, dependencies, acceptance, status and evidence; primary GitHub secondary-limit and author self-approval docs with access dates; retain unmet historical 900 count plus explicit release waiver, no padding.",
+      "claimed_files": [
+        "docs/process/"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "ISSUE-29",
+      "wave": "Every PR; Wave 5 closure",
+      "owner": "RM-01 + REV/QA",
+      "state": "open P1 report provenance; public focused-PR retarget pending",
+      "blocked_by": "After plan merge, publicly retarget original #31 criteria to focused replacement PRs with source/keeper mapping. Require two genuine reviews and two tests with session identity/exact SHA/scope/findings/commands/results, actual committed gallery per rendering PR, and explicit separation from GitHub APPROVED states; no self-approval/rule bypass.",
+      "claimed_files": [
+        "all PRs",
+        "public issue #29 retarget"
+      ],
+      "last_update": "2026-11-28"
+    },
+    {
+      "id": "PLAN-CHANGE-01",
+      "wave": 0,
+      "owner": "RM-01",
+      "state": "in progress; final exact-head review/testing pending",
+      "blocked_by": "2 independent reviews, 2 tester reports, committed SVG, checks and merge",
+      "claimed_files": [
+        "context/release-0.1.0/**"
+      ],
+      "last_update": "2026-11-28"
     }
   ],
   "feature_verification": [
@@ -44958,20 +45343,43 @@
       "prs": "PR #33, #38",
       "tests": "tests/test_models.py; tests/test_numeric_schema.py; tests/test_dashboard_schema.py",
       "smoke": "Strict types, dashboard rules and schema parity.",
+      "verified_on_main": true,
+      "verified_by": "QA-02",
+      "main_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+      "date": "2026-11-28",
+      "result": "76 focused tests passed; direct model-versus-schema smoke covered valid bar, unknown field, strings/booleans, empty dashboard, and nested dashboard. Full release readiness remains unverified."
+    },
+    {
+      "feature": "Bounded normalization and supported formats",
+      "prs": "NEW-01, NEW-02",
+      "tests": "python/deepviz/tests/test_normalize.py; python/deepviz/tests/test_graphql_contract.py",
+      "smoke": "Records/columns/CSV/JSONL/GraphQL; assert counts, warnings and bounds.",
       "verified_on_main": false,
       "verified_by": null,
       "main_sha": null,
       "date": null
     },
     {
-      "feature": "Bounded normalization and supported formats",
-      "prs": "NEW-01, NEW-02",
-      "tests": "python/deepviz/tests/test_normalize.py; test_graphql_contract.py",
-      "smoke": "Records/columns/CSV/JSONL/GraphQL; check counts, warnings and bounds.",
+      "feature": "Bounded streaming scale",
+      "prs": "NEW-02, NEW-03/04, NEW-08",
+      "tests": "python/deepviz/tests/test_normalize.py; scale harness",
+      "smoke": "10/1K/100K/1M/10M streams: W1 normalizer proof; W2/W5 bounded renderer rows/bytes and independent replication. Record machine-readable environment, timing, memory method, counts, strategy, limits, failures and unrun scenarios.",
       "verified_on_main": false,
       "verified_by": null,
       "main_sha": null,
-      "date": null
+      "date": null,
+      "result": "Issue #22 acceptance; no release-scale result yet."
+    },
+    {
+      "feature": "Optional Arrow/Parquet inputs",
+      "prs": "NEW-01, NEW-02",
+      "tests": "python/deepviz/tests/test_normalize.py; python/deepviz/tests/test_n19_formats.py",
+      "smoke": "Base install gives actionable optional-extra error; [columnar] reads Table/Batch/Reader, IPC file/stream and Parquet with malformed/duplicate/oversized-nested controls; zero skips.",
+      "verified_on_main": false,
+      "verified_by": null,
+      "main_sha": null,
+      "date": null,
+      "result": "Required through optional pyarrow>=19 extra; no implementation on current main. NEW-01 owns the format matrix; CI must install [columnar]."
     },
     {
       "feature": "Matplotlib renderer",
@@ -45026,8 +45434,8 @@
     {
       "feature": "Recommendation and Deep Agents tools",
       "prs": "NEW-05",
-      "tests": "python/deepviz/tests/test_integrations.py; examples/multi_tool_flow.py",
-      "smoke": "Run local normalize→recommend→render without model.",
+      "tests": "python/deepviz/tests/test_integrations.py; examples/multi_tool_flow.py; fresh installed [agents] lane",
+      "smoke": "Actual LangChain StructuredTool construction/schema/invoke and normalize->recommend->render in [agents] with zero skips; separate base-only no-LangChain import proves lazy optional integrations.",
       "verified_on_main": false,
       "verified_by": null,
       "main_sha": null,
@@ -45036,8 +45444,8 @@
     {
       "feature": "Stdio MCP and CLI",
       "prs": "NEW-06",
-      "tests": "python/deepviz/tests/test_integrations.py; tests/test_mcp_transport.py",
-      "smoke": "Initialize/list/call and retrieve safe artifact.",
+      "tests": "python/deepviz/tests/test_integrations.py; tests/test_mcp_transport.py; fresh [mcp] and [agents] lanes",
+      "smoke": "stdio initialize/list/call and safe artifact with [mcp]; real tool call with [agents], required tests zero skips; separate base-only lazy-import control.",
       "verified_on_main": false,
       "verified_by": null,
       "main_sha": null,
@@ -45063,5 +45471,280 @@
       "main_sha": null,
       "date": null
     }
-  ]
+  ],
+  "inventory_snapshot": {
+    "base_main_sha": "484ff08ddcae6c36d43ce61de774c00b6c422c88",
+    "date": "2026-11-28",
+    "non_default_branches": 65,
+    "branch_disposition_counts": {
+      "V1-FIX-FIRST": 11,
+      "V1-CONSOLIDATE": 25,
+      "DEFER": 25,
+      "CLOSE-SUPERSEDED": 4
+    },
+    "note": "Original branch and pull-request inventories, overlap data and disposition counts are historical snapshots at inventory_snapshot.base_main_sha; current refs, PRs, issues and labels are listed under current_state and current_state.live_snapshot_note."
+  },
+  "current_state": {
+    "main_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+    "date": "2026-11-28",
+    "remote_refs_including_main": 76,
+    "non_default_branches": 75,
+    "pull_requests": {
+      "total": 11,
+      "open": 9,
+      "merged": 2
+    },
+    "issues": {
+      "open": 35,
+      "closed": 0,
+      "open_p0": 11
+    },
+    "open_p0_issue_numbers": [
+      1,
+      4,
+      5,
+      8,
+      14,
+      20,
+      21,
+      23,
+      26,
+      28,
+      30
+    ],
+    "github_workflow": "Focused ChartSpec Python 3.11-3.13 matrix; no full package/integration workflow exists yet.",
+    "pr_merge_shas": {
+      "33": "31cff73ab057c3fed69bd400ac005f2f11609027",
+      "38": "484ff08ddcae6c36d43ce61de774c00b6c422c88"
+    },
+    "planning_commit": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+    "agent_capacity": {
+      "platform_limit": 101,
+      "release_role_cap": 22,
+      "assigned_roles": 22,
+      "child_roles": 21,
+      "orchestrators": 1,
+      "observed_running_sessions": 9,
+      "observation": "2026-11-28 consolidation checkpoint; completed aliases are historical sessions, not extra staffed release roles; refresh before dispatch."
+    },
+    "open_draft_prs": [
+      {
+        "number": 31,
+        "title": "Integrate Python-first DeepViz toolkit and evidence-backed verification",
+        "head_branch": "release/candidate",
+        "base_sha": "0ae2cf26426822135fc10d337fcacf580b7ed833",
+        "wave": "legacy candidate",
+        "draft": true,
+        "head_sha": "62344d85f5f471767b7aa3a2005a9e000ca06440"
+      },
+      {
+        "number": 39,
+        "title": "[plan-change] reconcile 0.1.0 owner decisions and live release gates",
+        "head_branch": "plan/release-0.1.0-owner-decisions",
+        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+        "wave": "plan change",
+        "draft": true
+      },
+      {
+        "number": 40,
+        "title": "[v1][W1] Add bounded Python normalization",
+        "head_branch": "release/v1/w1-python-normalization",
+        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+        "wave": 1,
+        "draft": true,
+        "head_sha": "a94f85c47e9a18f01009484a6813738eb8259a03"
+      },
+      {
+        "number": 41,
+        "title": "[v1][W1] Add bounded reducer and scale acceptance",
+        "head_branch": "release/v1/w1-python-scale",
+        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+        "wave": 1,
+        "draft": true,
+        "head_sha": "98f7d110cf23f1f4734b7e6d2e2d41955aa237ee"
+      },
+      {
+        "number": 42,
+        "title": "[v1][W2] Add Python Matplotlib, Plotly, and Vega renderers",
+        "head_branch": "release/v1/w2-python-renderers-a",
+        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+        "wave": 2,
+        "draft": true,
+        "head_sha": "79bbb12a396d6d138c1ac54ea93b827aba5bb923"
+      },
+      {
+        "number": 43,
+        "title": "[v1][W3] Add recommendations and bounded agent tools",
+        "head_branch": "release/v1/w3-python-tools",
+        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+        "wave": 3,
+        "draft": true,
+        "head_sha": "558f5616b70f19ee00145b53747e1646c2860613"
+      },
+      {
+        "number": 44,
+        "title": "[v1][W3] Add stdio MCP server and CLI",
+        "head_branch": "release/v1/w3-python-mcp-cli",
+        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+        "wave": 3,
+        "draft": true,
+        "head_sha": "71ea26eedd308d64e46dec5a5cb00e6bd815ed1e"
+      },
+      {
+        "number": 45,
+        "title": "[v1][W5] Package Python resources and typing metadata",
+        "head_branch": "release/v1/w5-python-package",
+        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+        "wave": 5,
+        "draft": true,
+        "head_sha": "8459f93d1bf3bf1d91ebbd395f2c92c36ac298ee"
+      },
+      {
+        "number": 46,
+        "title": "[v1][W5] Add full Python CI gates",
+        "head_branch": "release/v1/w5-python-ci",
+        "head_sha": "efbc7cb0c999470338975d50e2a78d5915e4f6bf",
+        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+        "wave": 5,
+        "draft": true
+      }
+    ],
+    "live_snapshot_note": "Authenticated GitHub snapshot refreshed 2026-11-28 during PLAN-CHANGE-01 review; 76 refs, 11 PRs (9 open, 2 merged), 35 open issues, 11 open P0. Open PRs #31 and #39-#46 are drafts. Original branch and PR disposition tables remain historical inventory."
+  },
+  "owner_decisions": {
+    "scope": "Python-only 0.1.0",
+    "deferred_issues": [
+      14,
+      15,
+      25
+    ],
+    "arrow_parquet": "Required via existing optional [columnar] extra; base install remains PyArrow-free.",
+    "package_version": "0.1.0",
+    "issue_28": "Caller explicitly revised the 900-issue criterion for 0.1.0: \"as we dont have that many issues will not keep that as requirement\". Publish this decision and current real counts after plan merge, then close #28 as superseded for this release; never fabricate issues or closures."
+  },
+  "review_policy": {
+    "required_independent_review_reports": 2,
+    "required_independent_test_reports": 2,
+    "head_specific": true,
+    "report_fields": [
+      "agent/session identity",
+      "scope",
+      "exact commit",
+      "findings",
+      "commands",
+      "results",
+      "limitations"
+    ],
+    "visual_evidence": "Commit SVG/PNG/screenshots and embed repository paths in every PR body, including plan-only/non-rendering PRs; changes invalidate reports and artifacts."
+  },
+  "preparation_policy": {
+    "parallel_preparation_allowed": true,
+    "scope": "At the owner request, independent source selection, test design, implementation preparation, and draft PRs may proceed for planned waves in isolated branches. Future-wave PRs remain draft and non-ready; they do not pass a wave or count as complete.",
+    "file_claims": "Exact paths must be claimed; no parallel writes to shared checkout/files. Shared normalizer work uses isolated branches and serialized integration.",
+    "promotion_gate": "Promote only after dependencies complete, rebase prepared work onto exact current main, rerun all required checks, and obtain fresh exact-head reports. Only the current wave may become ready for merge. Main merges remain dependency-ordered and sequential by INT-01/02."
+  },
+  "public_issue_actions": [
+    {
+      "issue": 4,
+      "state": "pending after plan merge",
+      "owner": "TRI-01 + RM-01",
+      "action": "After plan merge, publicly amend the original #4 acceptance criteria: remove npm #25 and TypeScript #14/#15 as 0.1.0 deliverables and defer them to v1.1; amend the original 900-issue criterion per the owner revision, state it remains unmet for this release using the live real counts, and do not fabricate tickets or closures. Keep the scoped Python acceptance and G3 roll-up. Keep #28 open until this public amendment is posted; close #28 as superseded only after publication. Do not close #4 from a scope statement alone."
+    },
+    {
+      "issue": 29,
+      "state": "pending after plan merge",
+      "owner": "RM-01",
+      "action": "Publicly retarget integrated #31 acceptance to focused replacement PRs; preserve source/keeper links, four genuine exact-head reports and actual gallery evidence. Keep issue open until workflow is demonstrated."
+    },
+    {
+      "issue": 28,
+      "state": "pending after plan merge",
+      "owner": "TRI-01 + RM-01",
+      "action": "After plan merge, publish the owner revision and exact live issue counts, explicitly record that the historical 900-issue criterion is waived for 0.1.0 and remains unmet; do not pad or fabricate. Close #28 as superseded only after the public #4 amendment records this disposition."
+    }
+  ],
+  "process_acceptance": {
+    "issue_19": "Dated primary documentation for five renderers/Deep Agents/MCP; separate observed behavior, facts, inferences and unknown proprietary details; runtime/dependency/licensing/scale/output trade-offs; claim-to-source and tested-capability review.",
+    "issue_27": "docs/process issue/milestone/label snapshot with scoped epics/stories/tasks, dependencies, acceptance, states and evidence; current counts; document unmet historical 900 request and public owner release waiver; no invented completions.",
+    "primary_github_sources": [
+      "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits",
+      "https://docs.github.com/en/rest/using-the-rest-api/best-practices-for-using-the-rest-api",
+      "https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/approving-a-pull-request-with-required-reviews"
+    ],
+    "source_verification": "Fetch primary pages and record access dates/claim-to-source evidence before issue closure; source links in this plan are required work, not proof it has been done."
+  },
+  "scale_evidence": {
+    "issue": 22,
+    "sizes": [
+      10,
+      1000,
+      100000,
+      1000000,
+      10000000
+    ],
+    "phase": "W1 normalizer proof; W2/W5 renderer-linked and independent replication before closure",
+    "machine_readable_fields": [
+      "exact_main_sha",
+      "date",
+      "environment",
+      "python_version",
+      "dependency_versions",
+      "input_rows",
+      "normalized_rows",
+      "retained_rows",
+      "renderer_payload_rows",
+      "renderer_payload_bytes",
+      "strategy",
+      "warnings",
+      "limits",
+      "wall_seconds",
+      "memory_method",
+      "peak_memory",
+      "replicator_identity",
+      "commands",
+      "result",
+      "failures",
+      "unrun_limitations"
+    ],
+    "closure": "Before G3, require renderer-linked payload rows/bytes at all requested sizes and independent replication; otherwise keep issue #22 open and state every unrun limitation."
+  },
+  "size_exceptions": [
+    {
+      "id": "PLAN-CHANGE-01",
+      "approved_by": "RM-01",
+      "limit": "Approximately 1,100 metadata/documentation changed lines",
+      "reason": "Coherent synchronized owner-decision/live-gate amendment; exact-head 2+2 reports retained."
+    },
+    {
+      "id": "NEW-01",
+      "approved_by": "RM-01",
+      "limit": "At most 2,750 changed lines across exactly the 10 NEW-01 claimed paths",
+      "reason": "RM-01 approves the existing coherent bounded-normalization task, including selector model/schema contract, smoke harness and measured JSON/SVG evidence. The 61-line tolerance is solely for necessary review/rebase fixes and regenerated evidence within those paths; new paths or unrelated expansion require a new ruling. Keep complete tests, fresh exact-head 2 reviewer + 2 tester reports, current-main rebase/checks, dependency order and sequential merge gates.",
+      "max_changed_lines": 2750,
+      "max_changed_paths": 10,
+      "measured_diff": {
+        "pull_request": 40,
+        "head_sha": "a94f85c47e9a18f01009484a6813738eb8259a03",
+        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+        "additions": 2687,
+        "deletions": 2,
+        "changed_lines": 2689,
+        "changed_paths": 10
+      }
+    }
+  ],
+  "optional_dependency_acceptance": {
+    "NEW-05": {
+      "installed_extra": "[agents]",
+      "actual_api": "Construct, inspect and invoke the real LangChain StructuredTool API and complete normalize -> recommend -> render flow.",
+      "skip_policy": "Zero skips in the installed-extra lane.",
+      "base_control": "A separate fresh base-only install without langchain_core or Deep Agents imports the core package successfully and proves optional integrations remain lazily unloaded."
+    },
+    "NEW-06": {
+      "installed_extra": "[mcp] plus the declared [agents] integration lane",
+      "actual_api": "Exercise stdio tool discovery and a real tool call; use the installed-extra API test lane for StructuredTool construction and invocation.",
+      "skip_policy": "Report skips; required integration cases cannot use importorskip."
+    }
+  },
+  "counts_note": "Live authenticated GitHub counts as of current_state.date and current_state.live_snapshot_note. Original branch and pull_requests records plus disposition counts remain historical inventory snapshots at inventory_snapshot.base_main_sha."
 }
