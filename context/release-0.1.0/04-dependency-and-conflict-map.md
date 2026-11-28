@@ -2168,12 +2168,15 @@ Git diff found 331 overlapping paths and 1818 pairs sharing paths across 65 non-
 
 ## Proposed dependency graph
 
+Append-only correction of published PLAN-CHANGE-02@0f6 on baseline main54dd; unpublished until RM scope check, fresh4reports required on the new exact head; no product promotion before merge. User forbids main-to-feature merges, force-push/history rewrite and branch deletion. fix_norm alone owns the UNPUBLISHED normalization-rebased replacement; old #40 is unaccepted/nonpromotable. Published #41-46 remain preserved preparation/source records; after dependency main QA, use fresh unpublished true-rebase/scoped-selection branches, publish once, and map full keeper paths/SHAs before superseding old PRs. All tests/exact2+2/CI/main-QA gates remain.
+
 ```mermaid
 graph LR
  BASE[main: schema + green] --> N1[NEW-01 normalization]
  N1 --> N2[NEW-02 reductions]
- N2 --> R1[NEW-03 Matplotlib Plotly Vega]
- R1 --> R2[NEW-04 ECharts AntV]
+ N2 --> R1A[NEW-03A boundary Matplotlib Vega]
+ R1A --> R1B[NEW-03B Plotly]
+ R1B --> R2[NEW-04 ECharts AntV]
  R2 --> T1[NEW-05 recommendations and tools]
  T1 --> M1[NEW-06 MCP and CLI]
  M1 --> Q1[NEW-07 acceptance/docs]
