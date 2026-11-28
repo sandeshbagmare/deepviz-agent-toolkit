@@ -1,0 +1,14 @@
+﻿{
+  "feature": "NEW-03 Python Matplotlib, Plotly and Vega renderers",
+  "base_main_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+  "python": "3.12.16",
+  "scenario": "mapped grouped-bar records; Chromium rendering of each generated HTML companion",
+  "dependency_note": "Normalization was overlaid from feat/ingestion@6c412e0f for local testing only; not copied into this evidence folder or renderer changeset.",
+  "results": {
+    "matplotlib": "PNG, SVG and accessible HTML companion rendered; Chromium page errors: 0",
+    "plotly": "embedded JS rendered to SVG; Chromium page errors: 0; hostile HTML-like category shown as literal text; no anchors in DOM",
+    "vega": "Vega-Lite compiled to SVG and accessible HTML companion rendered; Chromium page errors: 0"
+  },
+  "runtime_failure_test": "failing converter created no stray output directory after fix",
+  "main_verification": "pending merge and independent QA"
+}

@@ -1,0 +1,54 @@
+{
+  "engine": "matplotlib",
+  "charts": [
+    {
+      "engine": "matplotlib",
+      "requested_kind": "bar",
+      "rendered_kind": "bar",
+      "spec": {
+        "version": 1,
+        "kind": "bar",
+        "title": "NEW-03 matplotlib",
+        "description": "",
+        "x": "month",
+        "y": "revenue",
+        "color": "region",
+        "size": null,
+        "data_path": null,
+        "format": "auto",
+        "aggregation": "auto",
+        "max_points": 2000,
+        "width": 900,
+        "height": 520,
+        "theme": "light",
+        "charts": [],
+        "columns": 2
+      },
+      "records": [
+        {
+          "month": "Jan",
+          "region": "North",
+          "revenue": 12
+        },
+        {
+          "month": "Feb",
+          "region": "South",
+          "revenue": 31
+        },
+        {
+          "month": "Mar",
+          "region": "North",
+          "revenue": 7
+        }
+      ],
+      "input_count": 3,
+      "output_count": 3,
+      "strategy": "sum",
+      "warnings": []
+    }
+  ],
+  "warnings": [],
+  "native_specs": [],
+  "strategy": "sum",
+  "accessible_path": "chart.html"
+}
