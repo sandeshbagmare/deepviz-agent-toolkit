@@ -5,9 +5,9 @@
 - Date: 2026-11-28
 - Plan version: 1.1 (owner decisions recorded; plan-change PR pending)
 
-Live state is reconciled to default branch `main` at `f692014b9c7eb6a9fe0aa6f27b76b40426f053a7`. Owner decisions confirm Python-only 0.1.0, Arrow/Parquet support through the optional `[columnar]` extra, and version `0.1.0`; TypeScript/npm issue #15 is deferred. The caller explicitly revised #28 for 0.1.0; the plan-change PR must merge before the issue is updated/closed. Wave 0 checks are recorded in `18-current-state-audit.md`; Wave 1 remains queued until this plan change is approved and merged.
+Live state is reconciled to default branch `main` at `f692014b9c7eb6a9fe0aa6f27b76b40426f053a7`. Owner decisions confirm Python-only 0.1.0, Arrow/Parquet support through the optional `[columnar]` extra, and version `0.1.0`; TypeScript issues #14/#15 and npm package issue #25 are deferred to v1.1. The caller explicitly revised #28 for 0.1.0; the plan-change PR must merge before the issue is updated/closed. Wave 0 checks are recorded in `18-current-state-audit.md`; Wave 1 remains queued until this plan change is approved and merged.
 
-The repo currently has **68 remote branches** including `main` (67 non-default), **3 PRs** (#33 and #38 merged, #31 open draft), and **35 open issues**. The only current-main workflow is the focused ChartSpec matrix. The planning packet contains 22 files: README, 00-18, canonical YAML, and the committed wave-map SVG evidence.
+The repo currently has **75 remote branches** including `main` (74 non-default), **10 PR records** (8 open, 2 merged), and **35 open issues**; six current-wave product PRs are open drafts alongside plan-change PR #39 and stale draft PR #31. The only current-main workflow is the focused ChartSpec matrix. The planning packet contains 22 files: README, 00-18, canonical YAML, and the committed wave-map SVG evidence.
 
 The original branch and issue disposition tables remain a historical planning snapshot at main `484ff08...`; live counts and status at `f692014...` are in `18-current-state-audit.md` and the tracker below.
 

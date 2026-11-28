@@ -1,9 +1,11 @@
 # SDLC workflow and lifecycle
 
 - Default branch: `main`
-- Main SHA analyzed: `484ff08ddcae6c36d43ce61de774c00b6c422c88`
+- Main SHA reconciled: `f692014b9c7eb6a9fe0aa6f27b76b40426f053a7`
 - Date: 2026-11-28
-- Plan version: 1.0
+- Plan version: 1.1
+
+This workflow incorporates the owner-confirmed v1.1 release policy. The lifecycle table and state diagram originated in the v1.0 snapshot; current wave, assignments, exact-head gates and approved preparation/promotion rules are maintained in `14-tracker.md`, `05-merge-plan.md` and `release-0.1.0.yaml`.
 
 | State | Entry/exit criteria | Owner |
 |---|---|---|

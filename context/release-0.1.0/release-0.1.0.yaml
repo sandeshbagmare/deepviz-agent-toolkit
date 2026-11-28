@@ -44372,7 +44372,7 @@
       ],
       "tag": "v0.1.0-wave-5",
       "entry": "Wave 4/#21 accepted; no unrelated S1/S2 or main-gate regression.",
-      "exit": "NEW-08 and #19/#20/#22/#24/#26/#27/#29 verified; public #4 scope addendum excludes deferred npm #25 and TS #14/#15; applicable #4 roll-up and all in-scope P0s accepted before G3.",
+      "exit": "NEW-08 and #19/#20/#24/#26/#27/#29 verified; renderer-linked #22 scale evidence and independent replication at all five required sizes (or keep #22 open with explicit unrun limits); public #4 scope addendum excludes deferred npm #25 and TS #14/#15; applicable #4 roll-up and all in-scope P0s accepted before G3.",
       "scheduled_p0s": [
         4,
         20,
@@ -44754,7 +44754,10 @@
         "python/deepviz/src/deepviz/schemas/",
         "python/deepviz/src/deepviz/prompts/",
         "schemas/",
-        "prompts/v1/"
+        "prompts/v1/",
+        "scripts/performance_suite.py",
+        "docs/verification/performance.md",
+        "tests/test_performance_contract.py"
       ],
       "estimated_size": "<=1,000; split CI/docs if needed",
       "dependencies": "NEW-01..NEW-07",
@@ -44790,7 +44793,12 @@
         },
         {
           "sha": "06c04900466f66d7919b68a5c3626d94df248ea6",
-          "source": "perf/verification"
+          "source": "perf/verification",
+          "selected_files": [
+            "scripts/performance_suite.py",
+            "docs/verification/performance.md",
+            "tests/test_performance_contract.py"
+          ]
         },
         {
           "sha": "2b4f0a8a2de7540a53d8399c2b87bbdd19b137e6",
@@ -44807,11 +44815,23 @@
         {
           "sha": "9bcf27dd0888778a6826fbd1f3203bc4652cec40",
           "source": "agents/r10-14-assets-offline-provenance"
+        },
+        {
+          "sha": "8a10108752567f6d0faac700240c4acf77b32556",
+          "source": "agents/r10-15-owned-input-cleanup",
+          "selected_files": [
+            "tests/r13_probes/role15/test_reducer_source_ownership.py"
+          ],
+          "excluded_files": [
+            "docs/agent-state/",
+            "docs/coordination/evidence/",
+            "docs/coordination/reports/"
+          ]
         }
       ],
       "state": "planned",
       "visual_evidence_required": true,
-      "source_selection_note": "Selected test/package hunks only; author current Python docs as needed. docs/research and docs/process historical branches remain unmerged. Confirm actual resource destinations from package metadata before claiming individual paths; split into focused <=1000-line PRs through plan-change if required."
+      "source_selection_note": "Selected test/package hunks only; author current Python docs as needed. docs/research and docs/process historical branches remain unmerged. Confirm actual resource destinations from package metadata before claiming individual paths; split into focused <=1000-line PRs through plan-change if required. Performance acceptance files are selected from `06c04900466f66d7919b68a5c3626d94df248ea6`: `scripts/performance_suite.py`, `docs/verification/performance.md`, and `tests/test_performance_contract.py`. The Python owned-input regression is selected from `8a10108752567f6d0faac700240c4acf77b32556`, path `tests/r13_probes/role15/test_reducer_source_ownership.py` only; exclude its agent-state/evidence/report paths. The `agents/r10-15-owned-input-cleanup` branch head is not itself the provenance for this Python-only test selection."
     }
   ],
   "agent_assignments": {
@@ -45004,7 +45024,10 @@
         "python/deepviz/src/deepviz/schemas/",
         "python/deepviz/src/deepviz/prompts/",
         "schemas/",
-        "prompts/v1/"
+        "prompts/v1/",
+        "scripts/performance_suite.py",
+        "docs/verification/performance.md",
+        "tests/test_performance_contract.py"
       ],
       "last_update": "2026-11-28"
     },
@@ -45502,7 +45525,7 @@
       "failures",
       "unrun_limitations"
     ],
-    "closure": "No closure on normalization-only measurements; require bounded renderer payloads at all scales and independent replication or leave issue open with explicit limitation."
+    "closure": "Before G3, require renderer-linked payload rows/bytes at all requested sizes and independent replication; otherwise keep issue #22 open and state every unrun limitation."
   },
   "size_exceptions": [
     {
