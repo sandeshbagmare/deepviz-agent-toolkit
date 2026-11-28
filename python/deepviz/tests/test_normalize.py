@@ -513,6 +513,103 @@ def test_sliced_fixed_size_arrow_lists_cost_only_selected_values(selected: int) 
         assert normalize(table).records == [{"v.0": "ok-0", "v.1": "ok-1"}]
 
 
+def _zero_width_arrow_table(arrow: Any, shape: str, count: int) -> Any:
+    if shape == "columns":
+        count //= 2
+    empty = arrow.Array.from_buffers(arrow.struct([]), count, [None], children=[])
+    offsets = arrow.array([0, count], type=arrow.int32())
+    values = arrow.ListArray.from_arrays(offsets, empty)
+    if shape == "large-list":
+        values = arrow.LargeListArray.from_arrays(arrow.array([0, count], type=arrow.int64()), empty)
+    elif shape == "fixed-size-list":
+        values = arrow.FixedSizeListArray.from_arrays(empty, count)
+    elif shape == "map":
+        values = arrow.MapArray.from_arrays(offsets, empty, empty)
+    elif shape == "nested":
+        inner = arrow.ListArray.from_arrays(arrow.array([0, count // 2, count]), empty)
+        values = arrow.ListArray.from_arrays(arrow.array([0, 2]), inner)
+    elif shape == "dictionary":
+        values = arrow.DictionaryArray.from_arrays(arrow.array([0], type=arrow.int8()), values)
+    elif shape == "columns":
+        return arrow.table({"left": values, "right": values})
+    elif shape == "null-list":
+        values = arrow.ListArray.from_arrays(offsets, empty, mask=arrow.array([True]))
+    elif shape == "null-struct":
+        values = arrow.StructArray.from_arrays([values], names=["child"], mask=arrow.array([True]))
+    return arrow.table({"payload": values})
+
+
+def _guard_arrow_conversion(max_rows: int):
+    rows = normalize_impl.__globals__["_arrow_rows"]
+    lines, first = inspect.getsourcelines(rows)
+    conversion = [first + i for i, line in enumerate(lines) if ".to_pylist()" in line]
+    assert len(conversion) == 1
+
+    def guard(frame, event, _arg):
+        if frame.f_code is rows.__code__:
+            if event == "line" and frame.f_lineno == conversion[0]:
+                assert frame.f_locals["end"] - frame.f_locals["start"] <= max_rows, (
+                    "Arrow conversion exceeded the preflight bound"
+                )
+            return guard
+        return None
+
+    return guard
+
+
+@pytest.mark.parametrize("shape", [
+    "list", "large-list", "fixed-size-list", "map", "nested", "dictionary", "columns",
+])
+@pytest.mark.parametrize("count", [2, 100000])
+def test_arrow_zero_width_work_is_bounded_before_conversion(shape: str, count: int) -> None:
+    arrow = pytest.importorskip("pyarrow")
+    source = _zero_width_arrow_table(arrow, shape, count)
+    if count == 2:
+        result = normalize(source)
+        assert result.records == [{}] and result.input_count == 1
+        return
+    previous = sys.gettrace()
+    sys.settrace(_guard_arrow_conversion(0))
+    try:
+        with pytest.raises(ValueError, match="work limit"):
+            normalize(source)
+    finally:
+        sys.settrace(previous)
+    recovered = normalize(_zero_width_arrow_table(arrow, shape, 2))
+    assert recovered.records == [{}] and recovered.input_count == 1
+
+
+@pytest.mark.parametrize("shape", ["null-list", "null-struct"])
+def test_arrow_null_parents_do_not_expand_zero_width_children(shape: str) -> None:
+    arrow = pytest.importorskip("pyarrow")
+    result = normalize(_zero_width_arrow_table(arrow, shape, 100000))
+    assert result.records == [{"payload": None}] and result.input_count == 1
+
+
+def test_arrow_empty_structs_contribute_to_conversion_batch_cost(monkeypatch) -> None:
+    arrow = pytest.importorskip("pyarrow")
+    empty = arrow.Array.from_buffers(arrow.struct([]), 100, [None], children=[])
+    source = arrow.table({f"v{i}": empty for i in range(16)})
+    monkeypatch.setitem(normalize_impl.__globals__, "_MAX_ARROW_BATCH_BYTES", 2048)
+    previous = sys.gettrace()
+    sys.settrace(_guard_arrow_conversion(1))
+    try:
+        result = normalize(source)
+        assert result.records == [{}] * 100 and result.input_count == 100
+    finally:
+        sys.settrace(previous)
+
+
+def test_arrow_work_budget_is_per_record_in_an_ordinary_wide_batch() -> None:
+    arrow = pytest.importorskip("pyarrow")
+    source = arrow.table({f"v{i}": range(4096) for i in range(32)})
+    result = normalize(source, {"kind": "table", "aggregation": "none", "max_points": 10000})
+    assert result.input_count == len(result.records) == 4096
+    assert result.records[0] == {f"v{i}": 0 for i in range(32)}
+    assert result.records[-1] == {f"v{i}": 4095 for i in range(32)}
+    assert result.warnings == []
+
+
 @pytest.mark.parametrize("depth", [8, 24])
 def test_zero_row_shared_arrow_schema_has_one_total_work_budget(monkeypatch, depth: int) -> None:
     arrow = pytest.importorskip("pyarrow")

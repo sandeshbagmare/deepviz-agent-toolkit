@@ -4,8 +4,8 @@ Scalar sequences become ``index``/``value`` records. Nested object keys and
 array indices are dotted. Strings are content; only ``Path`` opts into files.
 JSONL, delimited files, generators and Arrow batches stream; an already encoded
 JSON document is decoded as a whole by the standard library.
-Connection inference, Arrow schema validation and per-record flattening each
-allow 66,560 structural work units (mapping/schema items or visited values). Aliases
+Connection inference, Arrow schema validation, per-record Arrow preflight and
+flattening each allow 66,560 structural work units (mapping/schema items or values). Aliases
 retain their distinct field paths; excessive work and cycles fail explicitly.
 Arrow unions, extensions and other uncosted types are rejected before Python
 row conversion; fixed-size scalar and explicitly costed container types remain supported.
@@ -244,27 +244,55 @@ def _arrow_batch_row_bytes(batch: Any, arrow: Any) -> list[int]:
     import pyarrow.compute as compute
 
     rows = [128] * batch.num_rows
+    # Each record shares one work counter across all columns and descendants.
+    work = [[_MAX_STRUCTURAL_WORK] for _ in rows]
     for column in batch.columns:
-        for index, size in enumerate(_arrow_array_row_bytes(column, arrow, compute)):
+        for index, size in enumerate(_arrow_array_row_bytes(column, arrow, compute, work)):
             rows[index] += size
     if any(size > _MAX_RECORD_BYTES for size in rows):
         raise ValueError("Input record exceeds 256 KiB compact UTF-8 JSON bytes")
     return rows
 
 
-def _arrow_array_row_bytes(array: Any, arrow: Any, compute: Any) -> list[int]:
+def _arrow_charge_work(budget: list[int], count: int = 1) -> None:
+    budget[0] -= count
+    if budget[0] < 0:
+        raise ValueError(f"Arrow record exceeds {_MAX_STRUCTURAL_WORK} structural work limit")
+
+
+def _arrow_array_row_bytes(
+    array: Any, arrow: Any, compute: Any, work: list[list[int]],
+) -> list[int]:
     data_type = array.type
     types = arrow.types
     if types.is_dictionary(data_type):
         indices = array.indices
         grouped = indices.value_counts().to_pylist()
-        costs: dict[int, int] = {}
+        costs: dict[int, tuple[int, int]] = {}
         for group in grouped:
             index = group["values"]
             if index is not None:
-                costs[index] = _arrow_array_row_bytes(array.dictionary.slice(index, 1), arrow, compute)[0]
-        return [costs[index] if index is not None else 0 for index in indices.to_pylist()]
-    elif types.is_string(data_type) or types.is_large_string(data_type):
+                budget = [_MAX_STRUCTURAL_WORK]
+                size = _arrow_array_row_bytes(array.dictionary.slice(index, 1), arrow, compute, [budget])[0]
+                costs[index] = size, _MAX_STRUCTURAL_WORK - budget[0]
+        rows = []
+        for row, index in enumerate(indices.to_pylist()):
+            size, units = costs[index] if index is not None else (32, 1)
+            _arrow_charge_work(work[row], units)
+            rows.append(size)
+        return rows
+    if data_type.num_fields and array.null_count:
+        rows = []
+        for row in range(len(array)):
+            if array[row].is_valid:
+                rows.append(_arrow_array_row_bytes(array.slice(row, 1), arrow, compute, [work[row]])[0])
+            else:
+                _arrow_charge_work(work[row])
+                rows.append(32)
+        return rows
+    for budget in work:
+        _arrow_charge_work(budget)
+    if types.is_string(data_type) or types.is_large_string(data_type):
         lengths = compute.binary_length(array).fill_null(0).to_pylist()
         if any(size > _MAX_CELL_BYTES for size in lengths):
             raise ValueError(f"Input cell exceeds {_MAX_CELL_BYTES} UTF-8 bytes")
@@ -275,9 +303,9 @@ def _arrow_array_row_bytes(array: Any, arrow: Any, compute: Any) -> list[int]:
             raise ValueError(f"Input cell exceeds {_MAX_CELL_BYTES} bytes")
         return [size + 32 for size in lengths]
     elif types.is_struct(data_type):
-        rows = [0] * len(array)
+        rows = [64] * len(array)
         for index in range(data_type.num_fields):
-            for row, size in enumerate(_arrow_array_row_bytes(array.field(index), arrow, compute)):
+            for row, size in enumerate(_arrow_array_row_bytes(array.field(index), arrow, compute, work)):
                 rows[row] += size
         return rows
     elif types.is_list(data_type) or types.is_large_list(data_type) or types.is_fixed_size_list(data_type):
@@ -290,7 +318,7 @@ def _arrow_array_row_bytes(array: Any, arrow: Any, compute: Any) -> list[int]:
             total = 32
             for start in range(offsets[row], offsets[row + 1], _BATCH_SIZE):
                 child = array.values.slice(start, min(_BATCH_SIZE, offsets[row + 1] - start))
-                total += sum(_arrow_array_row_bytes(child, arrow, compute))
+                total += sum(_arrow_array_row_bytes(child, arrow, compute, [work[row]] * len(child)))
             rows.append(total)
         return rows
     elif types.is_map(data_type):
@@ -300,7 +328,7 @@ def _arrow_array_row_bytes(array: Any, arrow: Any, compute: Any) -> list[int]:
             total = 32
             for start in range(offsets[row], offsets[row + 1], _BATCH_SIZE):
                 child = array.values.slice(start, min(_BATCH_SIZE, offsets[row + 1] - start))
-                total += sum(_arrow_array_row_bytes(child, arrow, compute))
+                total += sum(_arrow_array_row_bytes(child, arrow, compute, [work[row]] * len(child)))
             rows.append(total)
         return rows
     elif any(check(data_type) for check in (
