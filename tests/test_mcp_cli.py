@@ -19,7 +19,9 @@ TOOL_NAMES = {
     "normalize_data", "recommend_chart", "render_matplotlib", "render_plotly",
     "render_vega", "render_echarts", "render_antv",
 }
-SOURCE = Path(os.environ.get("DEEPVIZ_SOURCE_ROOT", Path(__file__).resolve().parents[1] / "src"))
+SOURCE = Path(os.environ.get(
+    "DEEPVIZ_SOURCE_ROOT", Path(__file__).resolve().parents[1] / "python" / "deepviz" / "src",
+)).resolve()
 
 
 def metadata(result: Any) -> dict[str, Any]:
@@ -28,11 +30,20 @@ def metadata(result: Any) -> dict[str, Any]:
     return json.loads(next(block.text for block in result if block.type == "text"))
 
 
+def subprocess_env() -> dict[str, str]:
+    """Resolve checkout paths before changing CWD; an empty override keeps installed imports."""
+    pythonpath = os.environ.get("DEEPVIZ_TEST_PYTHONPATH", str(SOURCE))
+    return {
+        **os.environ,
+        "PYTHONPATH": os.pathsep.join(str(Path(entry).resolve()) for entry in pythonpath.split(os.pathsep) if entry),
+        "PYTHONUTF8": "1",
+    }
+
+
 def command(*args: str, cwd: Path) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
         [sys.executable, "-m", "deepviz.cli", *args], cwd=cwd,
-        env={**os.environ, "PYTHONPATH": os.environ.get("DEEPVIZ_TEST_PYTHONPATH", str(SOURCE)),
-             "PYTHONUTF8": "1"}, capture_output=True, text=True,
+        env=subprocess_env(), capture_output=True, text=True,
         encoding="utf-8", timeout=60, check=False,
     )
 
@@ -42,6 +53,23 @@ def test_cli_help_is_available_without_running_a_server(tmp_path: Path) -> None:
     assert response.returncode == 0, response.stderr
     assert all(name in response.stdout for name in ("render", "normalize", "recommend", "mcp"))
     assert list(tmp_path.iterdir()) == []
+
+
+def test_child_imports_the_same_cli_package_as_the_test_runner(tmp_path: Path) -> None:
+    import deepviz.cli
+
+    response = subprocess.run(
+        [sys.executable, "-c", "import deepviz.cli; print(deepviz.cli.__file__)"],
+        cwd=tmp_path,
+        env=subprocess_env(),
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        timeout=60,
+        check=False,
+    )
+    assert response.returncode == 0, response.stderr
+    assert Path(response.stdout.strip()).resolve() == Path(deepviz.cli.__file__).resolve()
 
 
 def test_cli_file_commands_return_json_and_preserve_the_source(tmp_path: Path) -> None:
@@ -118,12 +146,7 @@ if missing:
     result = subprocess.run(
         [sys.executable, "-c", script, str(tmp_path / "out")],
         cwd=tmp_path,
-        env={
-            **os.environ,
-            "PYTHONPATH": os.environ.get("DEEPVIZ_TEST_PYTHONPATH", str(SOURCE)),
-            "PYTHONUTF8": "1",
-            "MPLBACKEND": "Agg",
-        },
+        env={**subprocess_env(), "MPLBACKEND": "Agg"},
         capture_output=True,
         text=True,
         encoding="utf-8",
@@ -221,9 +244,7 @@ def test_real_stdio_roundtrip_errors_resource_reads_and_shutdown(tmp_path: Path,
         sentinel.write_text("preserve", encoding="utf-8")
         params = StdioServerParameters(
             command=sys.executable, args=["-m", *entrypoint, "--output-dir", str(output)],
-            cwd=str(tmp_path), env={**os.environ,
-                                    "PYTHONPATH": os.environ.get("DEEPVIZ_TEST_PYTHONPATH", str(SOURCE)),
-                                    "PYTHONUTF8": "1"},
+            cwd=str(tmp_path), env=subprocess_env(),
         )
         with (tmp_path / "stderr.txt").open("w", encoding="utf-8") as stderr:
             async with stdio_client(params, errlog=stderr) as (read, write):
@@ -277,12 +298,7 @@ def test_real_stdio_cold_render_returns_after_native_renderer_import(tmp_path: P
             command=sys.executable,
             args=["-m", *entrypoint, "--output-dir", str(tmp_path / "out")],
             cwd=str(tmp_path),
-            env={
-                **os.environ,
-                "PYTHONPATH": os.environ.get("DEEPVIZ_TEST_PYTHONPATH", str(SOURCE)),
-                "PYTHONUTF8": "1",
-                "MPLBACKEND": "Agg",
-            },
+            env={**subprocess_env(), "MPLBACKEND": "Agg"},
         )
         async with stdio_client(params) as (read, write):
             async with ClientSession(read, write, read_timeout_seconds=timedelta(seconds=20)) as client:
