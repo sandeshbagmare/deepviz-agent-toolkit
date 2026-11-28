@@ -20,6 +20,9 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 SCALES = (10, 1_000, 100_000, 1_000_000, 10_000_000)
 CASES = ("sample", "sum", "mean")
+NEW01_SOURCE_COMMIT = "740a16faeca502dfd15fe028e2b880895f7c687f"
+NEW01_NORMALIZER_SHA256 = "02cf164e21fccf0550b3ce9f4be874173c8f3dde3cd01adfdf28622043bcf6c6"
+HARNESS_FILES = ("scripts/verify_python_scale.py", "tests/test_release_scale.py")
 
 
 class CountedRows(Iterator[dict[str, Any]]):
@@ -153,26 +156,84 @@ def source_snapshot(root: Path) -> dict[str, Any]:
     git = subprocess.run(
         ["git", "-C", str(root), "rev-parse", "HEAD"], check=False, capture_output=True, text=True,
     )
+    git_root = subprocess.run(
+        ["git", "-C", str(root), "rev-parse", "--show-toplevel"], check=False, capture_output=True, text=True,
+    )
     status = subprocess.run(
         ["git", "-C", str(root), "status", "--porcelain", "--untracked-files=all"],
         check=False, capture_output=True, text=True,
     )
+    if git.returncode != 0 or git_root.returncode != 0 or status.returncode != 0:
+        raise RuntimeError(f"Cannot verify Git provenance for source root: {root}")
+    if Path(git_root.stdout.strip()).resolve() != root.resolve():
+        raise RuntimeError(f"Source root is not the root of its Git worktree: {root}")
     source = root / "python/deepviz/src/deepviz"
     hashes = {
         path.relative_to(root).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
         for path in sorted(source.rglob("*")) if path.is_file() and "__pycache__" not in path.parts
     }
+    if "python/deepviz/src/deepviz/normalize.py" not in hashes:
+        raise RuntimeError(f"Normalization source is unavailable under the verified Git root: {root}")
     return {
         "root": str(root.resolve()),
-        "commit": git.stdout.strip() if git.returncode == 0 else None,
-        "dirty_paths": status.stdout.splitlines() if status.returncode == 0 else None,
+        "commit": git.stdout.strip(),
+        "dirty_paths": status.stdout.splitlines(),
+        "source_sha256": hashes,
+    }
+
+
+def harness_snapshot(root: Path) -> dict[str, Any]:
+    git = subprocess.run(
+        ["git", "-C", str(root), "rev-parse", "HEAD"], check=False, capture_output=True, text=True,
+    )
+    git_root = subprocess.run(
+        ["git", "-C", str(root), "rev-parse", "--show-toplevel"], check=False, capture_output=True, text=True,
+    )
+    status = subprocess.run(
+        ["git", "-C", str(root), "status", "--porcelain", "--untracked-files=all"],
+        check=False, capture_output=True, text=True,
+    )
+    if git.returncode != 0 or git_root.returncode != 0 or status.returncode != 0:
+        raise RuntimeError(f"Cannot verify Git provenance for harness root: {root}")
+    if Path(git_root.stdout.strip()).resolve() != root.resolve():
+        raise RuntimeError(f"Harness root is not the root of its Git worktree: {root}")
+    hashes: dict[str, str] = {}
+    for relative in HARNESS_FILES:
+        path = root / relative
+        if not path.is_file():
+            raise RuntimeError(f"Harness provenance file is unavailable: {path}")
+        hashes[relative] = hashlib.sha256(path.read_bytes()).hexdigest()
+    return {
+        "root": str(root.resolve()),
+        "commit": git.stdout.strip(),
+        "dirty_paths": status.stdout.splitlines(),
         "source_sha256": hashes,
     }
 
 
 def require_same_source(before: dict[str, Any], after: dict[str, Any]) -> None:
+    if (
+        not before.get("commit")
+        or not after.get("commit")
+        or not before.get("source_sha256")
+        or not after.get("source_sha256")
+    ):
+        raise AssertionError("Git commit metadata and source hashes are required for benchmark evidence")
     if before["commit"] != after["commit"] or before["source_sha256"] != after["source_sha256"]:
         raise AssertionError("Source changed during benchmark; refusing mixed-source evidence")
+
+
+def require_clean(snapshot: dict[str, Any], name: str) -> None:
+    if snapshot["dirty_paths"]:
+        raise RuntimeError(f"{name} worktree is dirty; refusing release evidence")
+
+
+def require_pinned_source(snapshot: dict[str, Any]) -> None:
+    require_clean(snapshot, "Source")
+    if snapshot["commit"] != NEW01_SOURCE_COMMIT:
+        raise RuntimeError(f"Source commit does not match pinned NEW-01 dependency {NEW01_SOURCE_COMMIT}")
+    if snapshot["source_sha256"].get("python/deepviz/src/deepviz/normalize.py") != NEW01_NORMALIZER_SHA256:
+        raise RuntimeError("Normalization source SHA-256 does not match the pinned NEW-01 dependency")
 
 
 def load_normalizer(root: Path) -> tuple[Any, Any]:
@@ -195,6 +256,9 @@ def load_normalizer(root: Path) -> tuple[Any, Any]:
 
 def run_worker(root: Path, count: int, case: str, bound: int) -> dict[str, Any]:
     before = source_snapshot(root)
+    require_pinned_source(before)
+    harness_before = harness_snapshot(ROOT)
+    require_clean(harness_before, "Harness")
     normalize, ChartSpec = load_normalizer(root)
     source = CountedRows(count, case)
     spec = ChartSpec(
@@ -232,7 +296,12 @@ def run_worker(root: Path, count: int, case: str, bound: int) -> dict[str, Any]:
     ).hexdigest()
     after = source_snapshot(root)
     require_same_source(before, after)
+    harness_after = harness_snapshot(ROOT)
+    require_same_source(harness_before, harness_after)
+    require_clean(after, "Source")
+    require_clean(harness_after, "Harness")
     result["source"] = before
+    result["harness"] = harness_before
     return result
 
 
@@ -281,7 +350,6 @@ def main() -> int:
     if args.output and args.output.exists():
         parser.error("output already exists; choose a unique evidence path")
     root = args.source_root.resolve()
-    initial = source_snapshot(root)
 
     if args.worker:
         if args.count is None or args.case is None:
@@ -292,17 +360,32 @@ def main() -> int:
     results: list[dict[str, Any]] = []
     work = [{"count": count, "case": case} for count in args.counts for case in args.cases]
     unrun: list[dict[str, Any]] = []
-    for index, item in enumerate(work):
-        print(f"{item['case']}: count={item['count']}", file=sys.stderr, flush=True)
-        result = run_case(root, item["count"], item["case"], args.max_points, args.timeout)
-        results.append(result)
-        if result["status"] == "failed":
-            unrun = work[index + 1:]
-            break
-    if not unrun:
+    initial: dict[str, Any] | None = None
+    harness_initial: dict[str, Any] | None = None
+    try:
+        initial = source_snapshot(root)
+        require_pinned_source(initial)
+        harness_initial = harness_snapshot(ROOT)
+        require_clean(harness_initial, "Harness")
+    except (OSError, RuntimeError) as error:
+        results.append({"status": "failed", "error": str(error)})
+        unrun = work
+    else:
+        for index, item in enumerate(work):
+            print(f"{item['case']}: count={item['count']}", file=sys.stderr, flush=True)
+            result = run_case(root, item["count"], item["case"], args.max_points, args.timeout)
+            results.append(result)
+            if result["status"] == "failed":
+                unrun = work[index + 1:]
+                break
         try:
-            require_same_source(initial, source_snapshot(root))
-        except (AssertionError, OSError, subprocess.CalledProcessError, RuntimeError) as error:
+            source_final = source_snapshot(root)
+            harness_final = harness_snapshot(ROOT)
+            require_same_source(initial, source_final)
+            require_same_source(harness_initial, harness_final)
+            require_clean(source_final, "Source")
+            require_clean(harness_final, "Harness")
+        except (AssertionError, OSError, RuntimeError) as error:
             results.append({"status": "failed", "error": str(error)})
 
     status = "passed" if not unrun and all(row["status"] == "passed" for row in results) else "failed"
@@ -310,7 +393,10 @@ def main() -> int:
         "status": status,
         "recorded_at_utc": datetime.now(UTC).isoformat(),
         "command": [sys.executable, str(Path(__file__).resolve()), *sys.argv[1:]],
+        "new01_source_dependency_commit": NEW01_SOURCE_COMMIT,
+        "new01_normalizer_dependency_sha256": NEW01_NORMALIZER_SHA256,
         "source": initial,
+        "harness": harness_initial,
         "environment": {
             "python": sys.version,
             "implementation": platform.python_implementation(),

@@ -1,6 +1,7 @@
 """Independent controls for normalization-scale evidence, without renderer claims."""
 from __future__ import annotations
 
+import hashlib
 import importlib.util
 import json
 import subprocess
@@ -120,10 +121,49 @@ def test_source_stability_ignores_non_source_metadata_but_rejects_hash_changes(h
     changed_source = after | {"source_sha256": {"module.py": "two"}}
     with pytest.raises(AssertionError, match="Source changed"):
         harness.require_same_source(before, changed_source)
+    with pytest.raises(AssertionError, match="Git commit metadata"):
+        harness.require_same_source(
+            {"commit": None, "source_sha256": {"module.py": "same"}},
+            {"commit": None, "source_sha256": {"module.py": "same"}},
+        )
 
 
-def test_missing_source_records_a_failed_case_without_a_fabricated_measurement(tmp_path: Path) -> None:
-    (tmp_path / "python/deepviz/src/deepviz").mkdir(parents=True)
+def test_release_scale_rejects_a_different_git_source_commit(harness: Any) -> None:
+    with pytest.raises(RuntimeError, match="pinned NEW-01 dependency"):
+        harness.require_pinned_source(
+            {"commit": "a" * 40, "dirty_paths": [], "source_sha256": {"normalize.py": "verified"}}
+        )
+
+
+def test_non_git_source_root_fails_closed_without_a_fabricated_measurement(
+    tmp_path: Path,
+) -> None:
+    package = tmp_path / "python/deepviz/src/deepviz"
+    package.mkdir(parents=True)
+    (package / "__init__.py").write_text("", encoding="utf-8")
+    (package / "models.py").write_text(
+        "from dataclasses import dataclass\n"
+        "@dataclass\n"
+        "class ChartSpec:\n"
+        "    kind: str\n"
+        "    x: str\n"
+        "    y: str\n"
+        "    aggregation: str\n"
+        "    max_points: int\n",
+        encoding="utf-8",
+    )
+    (package / "normalize.py").write_text(
+        "from types import SimpleNamespace\n"
+        "def normalize(rows, spec):\n"
+        "    grouped = {}\n"
+        "    for row in rows:\n"
+        "        grouped.setdefault(row['category'], []).append(row['value'])\n"
+        "    records = [{'category': key, 'value': sum(items) if spec.aggregation == 'sum' "
+        "else sum(items) / len(items)} for key, items in sorted(grouped.items())]\n"
+        "    return SimpleNamespace(input_count=10, records=records, "
+        "strategy=spec.aggregation, warnings=[])\n",
+        encoding="utf-8",
+    )
     process = subprocess.run(
         [sys.executable, str(SCRIPT), "--source-root", str(tmp_path), "--counts", "10", "--cases", "sum"],
         capture_output=True, text=True, timeout=30,
@@ -132,11 +172,25 @@ def test_missing_source_records_a_failed_case_without_a_fabricated_measurement(t
     report = json.loads(process.stdout)
     assert report["status"] == "failed" and len(report["results"]) == 1
     result = report["results"][0]
-    assert result["status"] == "failed" and result["count"] == 10 and result["case"] == "sum"
-    assert "normalize.py" in result["error"]
+    assert result["status"] == "failed"
+    assert "Git" in result["error"]
+    assert report["source"] is None
     assert "elapsed_seconds" not in result and "output_count" not in result
     assert report["renderer_checks"]["status"] == "not_run"
     assert report["unrun_scales"] == [1000, 100000, 1000000, 10000000]
+    assert report["unrun_cases"] == [{"count": 10, "case": "sum"}]
+
+
+def test_harness_snapshot_records_commit_cleanliness_and_source_hashes(harness: Any) -> None:
+    snapshot = harness.harness_snapshot(ROOT)
+    assert snapshot["commit"]
+    assert isinstance(snapshot["dirty_paths"], list)
+    assert snapshot["source_sha256"]["scripts/verify_python_scale.py"] == hashlib.sha256(
+        SCRIPT.read_bytes()
+    ).hexdigest()
+    assert snapshot["source_sha256"]["tests/test_release_scale.py"] == hashlib.sha256(
+        Path(__file__).read_bytes()
+    ).hexdigest()
 
 
 def test_evidence_output_is_never_overwritten(tmp_path: Path) -> None:
