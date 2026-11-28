@@ -1,12 +1,13 @@
 # Plan changelog
 
 - Default branch: `main`
-- Main SHA analyzed: `484ff08ddcae6c36d43ce61de774c00b6c422c88`
+- Main SHA reconciled: `f692014b9c7eb6a9fe0aa6f27b76b40426f053a7`
 - Date: 2026-11-28
-- Plan version: 1.0
+- Plan version: 1.1
 
 | Version | Date | Change | Reason | Impact |
 |---|---|---|---|---|
-| v1.0 | 2026-11-28 | Initial plan | Inventory of 65 non-default refs, 3 PRs and 35 open issues; propose Python-first scope and 22-agent SDLC. | Five waves, seven PRs; npm/TS deferred pending owner; #28 P0 blocks G3. |
+| v1.0 | 2026-11-28 | Initial plan | Inventory of 65 non-default refs, 3 PRs and 35 open issues; proposed Python-first scope and 22-agent SDLC. | Six waves and eight planned PRs; npm/TS and #28 still pending owner decision in that snapshot. |
+| v1.1 | 2026-11-28 | Owner-confirmed Python-only 0.1.0 scope, live-state and P0 schedule reconciliation (plan-change PR pending). | Main `f692014...`, live GitHub audit, and caller response explicitly revising #28: "as we dont have that many issues will not keep that as requirement". | Add Arrow/Parquet test ownership; serialize shared normalizer work; correct source selection; map all live P0s to scoped waves; treat #28 as waived only after its public update; defer TypeScript/npm and #14 to v1.1; specify in-scope G3; correct #38 merge SHA, NEW-01 exclusions, NEW-02 patch order and NEW-08 dependencies/package/doc claims; require public #4 scope addendum and #29 retarget, full #21 negatives and #27 constraints evidence; split #5/#22 closure across renderer waves; authorize isolated parallel preparation while retaining merge and exact-head gates; record RM coherent size exceptions, latest96 NEW-01 selection/minimal exports and NEW-02 regression/scale-only scope; require exact-head reports and committed visual paths on every PR. |
 
 Append future amendments; do not overwrite history. Require `plan-change` PR, RM-01 approval, and synchronized YAML/Markdown with impact on waves, agents and gates.

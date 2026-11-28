@@ -50,3 +50,7 @@ For each transition, RM-01 updates both the YAML tracker entry and this Markdown
 Handoff note: `Done | Left | Verify (commands/results) | Source/PR/main SHA | Blocker + owner | Next owner/action | Links`. Post to RM-01 and the associated PR comment; RM-01 writes the durable tracker update and relays to the next owner. Review target one business day; RM reassigns if late. CI failures go to CI-01; two blocked cycles require RM to split or defer.
 
 Plan amendments require `plan-change` PR in this directory, RM-01 approval, synchronized YAML/Markdown, and a changelog row.
+
+RM-approved coherent size exceptions are recorded in `05-merge-plan.md` for PLAN-CHANGE-01 and NEW-01; all exact-head independent review/test and merge gates still apply.
+
+The owner authorized isolated parallel preparation as described in `05-merge-plan.md`; exact path claims and shared-file write isolation remain mandatory. Only current-wave PR promotion and sequential dependency-respecting merges are allowed.

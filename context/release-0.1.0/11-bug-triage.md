@@ -1,9 +1,9 @@
 # Bug intake and triage
 
 - Default branch: `main`
-- Main SHA analyzed: `484ff08ddcae6c36d43ce61de774c00b6c422c88`
+- Main SHA at initial issue-inventory snapshot: `484ff08ddcae6c36d43ce61de774c00b6c422c88`
 - Date: 2026-11-28
-- Plan version: 1.0
+- Plan version at initial issue-inventory snapshot: 1.0
 
 ## Issue template
 
@@ -31,3 +31,7 @@ QA reproduces on exact main, files `bug`, `found-on-main`, `wave-N`; TRI-01 dedu
 P0 blocks release; P1 required; P2 desirable; P3 post-release. Severity is impact, priority is timing. S1 fix path is `fix/v1/<issue#>-<short-desc>` with regression test. Fix PR follows review/CI/merge workflow; reproduce red before fix, green after, then QA exact main. Triage closes only with main proof.
 
 Current relevant open items: #28 P0 release process; #30 P0 numeric contract (fix #33 merged; issue still open); #32 SVG layout; #35-#37 browser/Plotly/SVG issues. Do not infer a fix from branch name; inspect diff and reproduce.
+
+Named #21 negative tests must cover script/title/cell injection, script-closing sequences, dangerous configuration values, traversal, absolute-path escape, arbitrary remote-URL/code execution and unrelated-file overwrite. Document optional network-loaded runtimes. Independently inspect dependencies, diagnostics and packaging for accidental credential disclosure; record exact-commit security review and actual-main test evidence.
+
+Issue #5 remains open after Wave 1 until its Artifact API is verified with real renderer outputs in Wave 2. Issue #22 remains open after normalizer-only scale checks until renderer payloads and independent replication are recorded in Wave 2/5.

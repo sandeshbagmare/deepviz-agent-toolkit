@@ -1,13 +1,15 @@
 # DeepViz release 0.1.0 planning index
 
 - Default branch: `main`
-- Main SHA analyzed: `484ff08ddcae6c36d43ce61de774c00b6c422c88`
+- Main SHA verified for this status update: `f692014b9c7eb6a9fe0aa6f27b76b40426f053a7`
 - Date: 2026-11-28
-- Plan version: 1.0
+- Plan version: 1.1 (owner decisions recorded; plan-change PR pending)
 
-This plan targets verified default branch `main` at `484ff08ddcae6c36d43ce61de774c00b6c422c88`. It is a proposed release plan, not approval to merge product work. Owner: RM-01. Live status is sourced from `release-0.1.0.yaml`; Markdown explains it. The requested names produce **20 files** (README, 00-17, YAML).
+Live state is reconciled to default branch `main` at `f692014b9c7eb6a9fe0aa6f27b76b40426f053a7`. Owner decisions confirm Python-only 0.1.0, Arrow/Parquet support through the optional `[columnar]` extra, and version `0.1.0`; TypeScript/npm issue #15 is deferred. The caller explicitly revised #28 for 0.1.0; the plan-change PR must merge before the issue is updated/closed. Wave 0 checks are recorded in `18-current-state-audit.md`; Wave 1 remains queued until this plan change is approved and merged.
 
-There are **65 non-default remote branches**, **3 PRs** (2 merged, 1 open draft), **35 open issues**, six proposed waves and eight focused new PRs. Branch dispositions: `CLOSE-SUPERSEDED` 4, `DEFER` 25, `V1-CONSOLIDATE` 25, `V1-FIX-FIRST` 11. PR dispositions: `CLOSE-SUPERSEDED` 1, `V1-MERGE` 2. Wave 0 is green; no product PR is ready to merge.
+The repo currently has **68 remote branches** including `main` (67 non-default), **3 PRs** (#33 and #38 merged, #31 open draft), and **35 open issues**. The only current-main workflow is the focused ChartSpec matrix. The planning packet contains 22 files: README, 00-18, canonical YAML, and the committed wave-map SVG evidence.
+
+The original branch and issue disposition tables remain a historical planning snapshot at main `484ff08...`; live counts and status at `f692014...` are in `18-current-state-audit.md` and the tracker below.
 
 ## Index
 
@@ -29,10 +31,11 @@ There are **65 non-default remote branches**, **3 PRs** (2 merged, 1 open draft)
 - [`15-plan-changelog.md`](15-plan-changelog.md)
 - [`16-feature-verification.md`](16-feature-verification.md)
 - [`17-agent-onboarding.md`](17-agent-onboarding.md)
+- [`18-current-state-audit.md`](18-current-state-audit.md)
 - [`release-0.1.0.yaml`](release-0.1.0.yaml)
 
 ## Use and amendments
 
-Read only the topic needed. Full paths, PR/issue facts, overlap matrix, assignments and states are in YAML. Scope is **PROPOSED - needs owner confirmation**: Python-first shared schema, bounded normalization, five Python renderers, Deep Agents tools and local stdio MCP. TypeScript/npm is deferred to v1.1 pending confirmation: main README says Python-first and the separate npm branch is +11,681/-1 over 86 paths with no main verification. Issue #28 is open P0 and blocks G3 under the supplied gate.
+Read only the topic needed. Full paths, PR/issue facts, overlap matrix, assignments and states are in YAML. Owner-confirmed scope is Python-only: shared schema, bounded normalization and reducers, optional Arrow/Parquet input via `[columnar]`, five Python renderers, Deep Agents tools and local stdio MCP. TypeScript/npm (including P0 issue #14) is deferred to v1.1. The caller explicitly revised #28; publish the decision and real issue counts after this plan change merges, then close #28 as superseded. All in-scope product, CI, review, QA and P0 gates still apply.
 
 Any agent may propose a `plan-change` PR limited to this directory. RM-01 reviews/approves; update YAML and matching Markdown together and append a dated row to `15-plan-changelog.md`.
