@@ -5,13 +5,16 @@ from collections.abc import Mapping
 from dataclasses import dataclass, field
 from typing import Any, Literal
 
-from pydantic import BaseModel, ConfigDict, Field, model_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 ChartKind = Literal[
     "bar", "line", "scatter", "area", "pie", "heatmap", "histogram", "box", "violin",
     "bubble", "radar", "treemap", "sunburst", "funnel", "gauge", "geo", "table", "dashboard",
 ]
 Engine = Literal["matplotlib", "plotly", "vega", "echarts", "antv"]
+_MAX_DATA_PATH_LENGTH = 1024
+_MAX_DATA_PATH_COMPONENTS = 64
+_DATA_PATH_PATTERN = r"^[^.]+(?:\.[^.]+){0,63}$"
 
 
 class ChartSpec(BaseModel):
@@ -38,7 +41,15 @@ class ChartSpec(BaseModel):
     y: str | None = None
     color: str | None = None
     size: str | None = None
-    data_path: str | None = None
+    data_path: str | None = Field(
+        default=None,
+        max_length=_MAX_DATA_PATH_LENGTH,
+        json_schema_extra={"pattern": _DATA_PATH_PATTERN},
+        description=(
+            "Dot-separated path with 1 to 64 non-empty components and at most "
+            "1,024 Unicode code points (1,024 ASCII characters or at most 4 KiB UTF-8)."
+        ),
+    )
     format: Literal["auto", "json", "jsonl", "csv", "tsv", "parquet", "arrow"] = "auto"
     aggregation: Literal["auto", "none", "sample", "sum", "mean", "count", "min", "max"] = "auto"
     max_points: int = Field(default=2000, ge=10, le=100000)
@@ -47,6 +58,17 @@ class ChartSpec(BaseModel):
     theme: Literal["light", "dark"] = "light"
     charts: list[ChartSpec] = Field(default_factory=list, max_length=24)
     columns: int = Field(default=2, ge=1, le=6)
+
+    @field_validator("data_path")
+    @classmethod
+    def validate_data_path(cls, value: str | None) -> str | None:
+        if value is None:
+            return None
+        if value.count(".") + 1 > _MAX_DATA_PATH_COMPONENTS:
+            raise ValueError("data_path is nested too deeply")
+        if any(not token for token in value.split(".")):
+            raise ValueError("data_path must contain non-empty dot-separated components")
+        return value
 
     @model_validator(mode="before")
     @classmethod

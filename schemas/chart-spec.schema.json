@@ -135,6 +135,7 @@
         "data_path": {
           "anyOf": [
             {
+              "maxLength": 1024,
               "type": "string"
             },
             {
@@ -142,6 +143,8 @@
             }
           ],
           "default": null,
+          "description": "Dot-separated path with 1 to 64 non-empty components and at most 1,024 Unicode code points (1,024 ASCII characters or at most 4 KiB UTF-8).",
+          "pattern": "^[^.]+(?:\\.[^.]+){0,63}$",
           "title": "Data Path"
         },
         "format": {
