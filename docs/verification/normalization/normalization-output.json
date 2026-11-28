@@ -1,288 +1,20 @@
 {
-  "generated_at": "2026-11-28T04:43:17.731586+00:00",
-  "base_main_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
-  "normalizer_blob": "68ce7d628df568f935ff5cdf467d2fbfbacbdd37",
-  "pyarrow_version": "26.0.0",
+  "generated_at": "2026-11-28T09:59:51.675439+00:00",
+  "executed_head_sha": "7e78287324b79f6cfcde3939f3c76c247cf52305",
+  "base_main_sha": "54dd12e2d8d5d69e25426e92c313f0f79e00de81",
+  "normalizer_blob": "30893ffa9a833790ef1c85f387fb6949997820e9",
+  "normalizer_sha256": "0e90d3aafbe9bb889584a262e7725d1bbfd43c8804623a8656e7b860221dc4c8",
+  "pyarrow_version": "26.0.1",
   "columnar": [
-    {
-      "form": "table",
-      "input_count": 4103,
-      "output_count": 4103,
-      "strategy": "none",
-      "warnings": [
-        "3 non-finite numeric values replaced by null."
-      ],
-      "boundary_rows": [
-        {
-          "id": 0,
-          "label": "row-0",
-          "value": null
-        },
-        {
-          "id": 4095,
-          "label": "row-4095",
-          "value": null
-        },
-        {
-          "id": 4096,
-          "label": "row-4096",
-          "value": null
-        },
-        {
-          "id": 4102,
-          "label": "row-4102",
-          "value": 1025.5
-        }
-      ]
-    },
-    {
-      "form": "batch",
-      "input_count": 4103,
-      "output_count": 4103,
-      "strategy": "none",
-      "warnings": [
-        "3 non-finite numeric values replaced by null."
-      ],
-      "boundary_rows": [
-        {
-          "id": 0,
-          "label": "row-0",
-          "value": null
-        },
-        {
-          "id": 4095,
-          "label": "row-4095",
-          "value": null
-        },
-        {
-          "id": 4096,
-          "label": "row-4096",
-          "value": null
-        },
-        {
-          "id": 4102,
-          "label": "row-4102",
-          "value": 1025.5
-        }
-      ]
-    },
-    {
-      "form": "reader",
-      "input_count": 4103,
-      "output_count": 4103,
-      "strategy": "none",
-      "warnings": [
-        "3 non-finite numeric values replaced by null."
-      ],
-      "boundary_rows": [
-        {
-          "id": 0,
-          "label": "row-0",
-          "value": null
-        },
-        {
-          "id": 4095,
-          "label": "row-4095",
-          "value": null
-        },
-        {
-          "id": 4096,
-          "label": "row-4096",
-          "value": null
-        },
-        {
-          "id": 4102,
-          "label": "row-4102",
-          "value": 1025.5
-        }
-      ]
-    },
-    {
-      "form": "ipc-file-bytes",
-      "input_count": 4103,
-      "output_count": 4103,
-      "strategy": "none",
-      "warnings": [
-        "3 non-finite numeric values replaced by null."
-      ],
-      "boundary_rows": [
-        {
-          "id": 0,
-          "label": "row-0",
-          "value": null
-        },
-        {
-          "id": 4095,
-          "label": "row-4095",
-          "value": null
-        },
-        {
-          "id": 4096,
-          "label": "row-4096",
-          "value": null
-        },
-        {
-          "id": 4102,
-          "label": "row-4102",
-          "value": 1025.5
-        }
-      ]
-    },
-    {
-      "form": "ipc-stream-bytes",
-      "input_count": 4103,
-      "output_count": 4103,
-      "strategy": "none",
-      "warnings": [
-        "3 non-finite numeric values replaced by null."
-      ],
-      "boundary_rows": [
-        {
-          "id": 0,
-          "label": "row-0",
-          "value": null
-        },
-        {
-          "id": 4095,
-          "label": "row-4095",
-          "value": null
-        },
-        {
-          "id": 4096,
-          "label": "row-4096",
-          "value": null
-        },
-        {
-          "id": 4102,
-          "label": "row-4102",
-          "value": 1025.5
-        }
-      ]
-    },
-    {
-      "form": "ipc-file-path",
-      "input_count": 4103,
-      "output_count": 4103,
-      "strategy": "none",
-      "warnings": [
-        "3 non-finite numeric values replaced by null."
-      ],
-      "boundary_rows": [
-        {
-          "id": 0,
-          "label": "row-0",
-          "value": null
-        },
-        {
-          "id": 4095,
-          "label": "row-4095",
-          "value": null
-        },
-        {
-          "id": 4096,
-          "label": "row-4096",
-          "value": null
-        },
-        {
-          "id": 4102,
-          "label": "row-4102",
-          "value": 1025.5
-        }
-      ]
-    },
-    {
-      "form": "ipc-stream-path",
-      "input_count": 4103,
-      "output_count": 4103,
-      "strategy": "none",
-      "warnings": [
-        "3 non-finite numeric values replaced by null."
-      ],
-      "boundary_rows": [
-        {
-          "id": 0,
-          "label": "row-0",
-          "value": null
-        },
-        {
-          "id": 4095,
-          "label": "row-4095",
-          "value": null
-        },
-        {
-          "id": 4096,
-          "label": "row-4096",
-          "value": null
-        },
-        {
-          "id": 4102,
-          "label": "row-4102",
-          "value": 1025.5
-        }
-      ]
-    },
-    {
-      "form": "parquet-bytes",
-      "input_count": 4103,
-      "output_count": 4103,
-      "strategy": "none",
-      "warnings": [
-        "3 non-finite numeric values replaced by null."
-      ],
-      "boundary_rows": [
-        {
-          "id": 0,
-          "label": "row-0",
-          "value": null
-        },
-        {
-          "id": 4095,
-          "label": "row-4095",
-          "value": null
-        },
-        {
-          "id": 4096,
-          "label": "row-4096",
-          "value": null
-        },
-        {
-          "id": 4102,
-          "label": "row-4102",
-          "value": 1025.5
-        }
-      ]
-    },
-    {
-      "form": "parquet-path",
-      "input_count": 4103,
-      "output_count": 4103,
-      "strategy": "none",
-      "warnings": [
-        "3 non-finite numeric values replaced by null."
-      ],
-      "boundary_rows": [
-        {
-          "id": 0,
-          "label": "row-0",
-          "value": null
-        },
-        {
-          "id": 4095,
-          "label": "row-4095",
-          "value": null
-        },
-        {
-          "id": 4096,
-          "label": "row-4096",
-          "value": null
-        },
-        {
-          "id": 4102,
-          "label": "row-4102",
-          "value": 1025.5
-        }
-      ]
-    }
+    {"form":"table","input_count":4103,"output_count":4103,"strategy":"none","warnings":["3 non-finite numeric values replaced by null."],"boundary_rows":[{"id":0,"label":"row-0","value":null},{"id":4095,"label":"row-4095","value":null},{"id":4096,"label":"row-4096","value":null},{"id":4102,"label":"row-4102","value":1025.5}]},
+    {"form":"batch","input_count":4103,"output_count":4103,"strategy":"none","warnings":["3 non-finite numeric values replaced by null."],"boundary_rows":[{"id":0,"label":"row-0","value":null},{"id":4095,"label":"row-4095","value":null},{"id":4096,"label":"row-4096","value":null},{"id":4102,"label":"row-4102","value":1025.5}]},
+    {"form":"reader","input_count":4103,"output_count":4103,"strategy":"none","warnings":["3 non-finite numeric values replaced by null."],"boundary_rows":[{"id":0,"label":"row-0","value":null},{"id":4095,"label":"row-4095","value":null},{"id":4096,"label":"row-4096","value":null},{"id":4102,"label":"row-4102","value":1025.5}]},
+    {"form":"ipc-file-bytes","input_count":4103,"output_count":4103,"strategy":"none","warnings":["3 non-finite numeric values replaced by null."],"boundary_rows":[{"id":0,"label":"row-0","value":null},{"id":4095,"label":"row-4095","value":null},{"id":4096,"label":"row-4096","value":null},{"id":4102,"label":"row-4102","value":1025.5}]},
+    {"form":"ipc-stream-bytes","input_count":4103,"output_count":4103,"strategy":"none","warnings":["3 non-finite numeric values replaced by null."],"boundary_rows":[{"id":0,"label":"row-0","value":null},{"id":4095,"label":"row-4095","value":null},{"id":4096,"label":"row-4096","value":null},{"id":4102,"label":"row-4102","value":1025.5}]},
+    {"form":"ipc-file-path","input_count":4103,"output_count":4103,"strategy":"none","warnings":["3 non-finite numeric values replaced by null."],"boundary_rows":[{"id":0,"label":"row-0","value":null},{"id":4095,"label":"row-4095","value":null},{"id":4096,"label":"row-4096","value":null},{"id":4102,"label":"row-4102","value":1025.5}]},
+    {"form":"ipc-stream-path","input_count":4103,"output_count":4103,"strategy":"none","warnings":["3 non-finite numeric values replaced by null."],"boundary_rows":[{"id":0,"label":"row-0","value":null},{"id":4095,"label":"row-4095","value":null},{"id":4096,"label":"row-4096","value":null},{"id":4102,"label":"row-4102","value":1025.5}]},
+    {"form":"parquet-bytes","input_count":4103,"output_count":4103,"strategy":"none","warnings":["3 non-finite numeric values replaced by null."],"boundary_rows":[{"id":0,"label":"row-0","value":null},{"id":4095,"label":"row-4095","value":null},{"id":4096,"label":"row-4096","value":null},{"id":4102,"label":"row-4102","value":1025.5}]},
+    {"form":"parquet-path","input_count":4103,"output_count":4103,"strategy":"none","warnings":["3 non-finite numeric values replaced by null."],"boundary_rows":[{"id":0,"label":"row-0","value":null},{"id":4095,"label":"row-4095","value":null},{"id":4096,"label":"row-4096","value":null},{"id":4102,"label":"row-4102","value":1025.5}]}
   ],
   "graphql": {
     "source": {
@@ -330,8 +62,62 @@
       "1 GraphQL responses contained errors alongside usable data."
     ]
   },
-  "verification": "python -m pytest -q --strict-markers: 343 passed, 0 skipped (2026-11-28)",
-  "arrow_dictionary_oversized_allocated_python_bytes": 18608954,
+  "arrow_dictionary_oversized_outcome": "Normalized retained data exceeds 16777216 bytes",
+  "arrow_dictionary_oversized_allocated_python_bytes": 18522533,
   "arrow_dictionary_oversized_limit_python_bytes": 48000000,
-  "arrow_dictionary_oversized_outcome": "ValueError before large Python row expansion; null dictionary indices covered"
+  "verification": "python -m pytest -q --strict-markers: 383 passed, 0 skipped (Python 3.12.16; 2026-11-28; executed head 7e78287324b79f6cfcde3939f3c76c247cf52305)",
+  "reproduction_command": "python -c \"import json; from pathlib import Path; exec('\\n'.join(json.loads(Path('docs/verification/normalization/normalization-output.json').read_text())['reproduction_python']))\"",
+  "reproduction_python": [
+    "import hashlib",
+    "import inspect",
+    "import json",
+    "import math",
+    "import runpy",
+    "import subprocess",
+    "import tracemalloc",
+    "from datetime import UTC, datetime",
+    "from pathlib import Path",
+    "from tempfile import TemporaryDirectory",
+    "",
+    "import pyarrow as arrow",
+    "from deepviz import normalize",
+    "",
+    "source = Path(\"python/deepviz/src/deepviz/normalize.py\")",
+    "assert Path(inspect.getsourcefile(normalize)).resolve() == source.resolve()",
+    "def git(*args):",
+    "    return subprocess.check_output([\"git\", *args], text=True).strip()",
+    "report = {\"generated_at\": datetime.now(UTC).isoformat(), \"executed_head_sha\": git(\"rev-parse\", \"HEAD\")}",
+    "report[\"base_main_sha\"] = \"54dd12e2d8d5d69e25426e92c313f0f79e00de81\"",
+    "report[\"normalizer_blob\"] = git(\"hash-object\", str(source))",
+    "report[\"normalizer_sha256\"] = hashlib.sha256(source.read_bytes()).hexdigest()",
+    "report[\"pyarrow_version\"] = arrow.__version__",
+    "fixtures = runpy.run_path(\"python/deepviz/tests/test_n19_formats.py\")",
+    "values = [math.inf if i in {0, 4095, 4096} else i / 4 for i in range(4103)]",
+    "table = arrow.table({\"id\": range(4103), \"label\": [f\"row-{i}\" for i in range(4103)], \"value\": values})",
+    "report[\"columnar\"] = []",
+    "with TemporaryDirectory() as directory:",
+    "    for form in fixtures[\"ARROW_FORMS\"]:",
+    "        data = fixtures[\"_columnar_source\"](arrow, table, form, Path(directory))",
+    "        result = normalize(data, dict(fixtures[\"RAW\"], format=\"parquet\" if form.startswith(\"parquet\") else \"arrow\"))",
+    "        report[\"columnar\"].append({\"form\": form, \"input_count\": result.input_count, \"output_count\": len(result.records), \"strategy\": result.strategy, \"warnings\": result.warnings, \"boundary_rows\": [result.records[i] for i in (0, 4095, 4096, 4102)]})",
+    "graphql = {\"items\": {\"data\": {\"feed\": {\"nodes\": [{\"group\": \"North\", \"value\": 2}, None, {\"group\": \"North\", \"value\": 8}, {\"group\": \"South\", \"value\": 3}]}}, \"errors\": [{\"message\": \"A sibling field failed\"}]}}",
+    "result = normalize(graphql, {\"kind\": \"bar\", \"x\": \"group\", \"y\": \"value\", \"aggregation\": \"mean\"})",
+    "report[\"graphql\"] = {\"source\": graphql, \"input_count\": result.input_count, \"output\": result.records, \"strategy\": result.strategy, \"warnings\": result.warnings}",
+    "dictionary = arrow.array([\"x\" * 65536]).dictionary_encode()",
+    "oversized = arrow.table({\"label\": arrow.concat_arrays([dictionary] * 4096)})",
+    "tracemalloc.start()",
+    "try:",
+    "    try:",
+    "        normalize(oversized, fixtures[\"RAW\"])",
+    "    except ValueError as error:",
+    "        assert \"retained data\" in str(error)",
+    "        report[\"arrow_dictionary_oversized_outcome\"] = str(error)",
+    "    else:",
+    "        raise AssertionError(\"Oversized dictionary input was not rejected\")",
+    "    report[\"arrow_dictionary_oversized_allocated_python_bytes\"] = tracemalloc.get_traced_memory()[1]",
+    "finally:",
+    "    tracemalloc.stop()",
+    "report[\"arrow_dictionary_oversized_limit_python_bytes\"] = 48_000_000",
+    "print(json.dumps(report, allow_nan=False))"
+  ]
 }
