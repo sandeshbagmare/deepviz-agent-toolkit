@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="770" viewBox="0 0 1040 770" role="img" aria-labelledby="title desc">
+<title id="title">Actual DeepViz normalization output</title>
+<desc id="desc">Nine Arrow and Parquet input forms preserve all 4103 rows. GraphQL nested partial responses produce two exact means and retain warnings.</desc>
+<metadata>Executed head 8339e4f91fa478d43453478eb7f870f3fb388346; base main b5aa5985a79b41fce86012be2e12a9ac05238e40; normalizer Git blob d1d4317abf5d7bf5137e3438a9b085d7cb65ce36; normalizer file SHA256 d781d73b81f1161db98e6588584f69fdb89bdfbf47b2bfbde2d51183c7dc36de; measurement payload SHA256 d1684879c27d02daff1a0fcf6cd47f9f8bd187bc987217ebf8882393c8bcbce1; generated 2026-11-28T12:39:01.291846+00:00</metadata>
+<rect width="1040" height="770" fill="#f5f7fb"/>
+<g font-family="Segoe UI,Arial,sans-serif" fill="#16243a">
+<text x="40" y="52" font-size="26" font-weight="700">DeepViz 0.1.0 &#183; actual normalization output</text>
+<text x="40" y="80" font-size="13">PyArrow 26.0.1 &#183; normalizer blob d1d4317abf5d &#183; executed source 8339e4f9</text>
+<rect x="32" y="105" width="976" height="394" rx="12" fill="white" stroke="#dce3ed"/>
+<text x="52" y="137" font-size="18" font-weight="700">Columnar transports: 4103 typed rows across the 4096-row batch boundary</text>
+<text x="54" y="171" font-size="13" font-weight="700">Input form</text><text x="360" y="171" font-size="13" font-weight="700">Input rows</text><text x="506" y="171" font-size="13" font-weight="700">Output rows</text><text x="682" y="171" font-size="13" font-weight="700">Final record id</text>
+<path d="M52 211H984" stroke="#edf0f5"/><text x="54" y="203" font-size="14">table</text><text x="360" y="203" font-size="14">4103</text><text x="506" y="203" font-size="14">4103</text><text x="682" y="203" font-size="14">4102</text>
+<path d="M52 239H984" stroke="#edf0f5"/><text x="54" y="231" font-size="14">batch</text><text x="360" y="231" font-size="14">4103</text><text x="506" y="231" font-size="14">4103</text><text x="682" y="231" font-size="14">4102</text>
+<path d="M52 267H984" stroke="#edf0f5"/><text x="54" y="259" font-size="14">reader</text><text x="360" y="259" font-size="14">4103</text><text x="506" y="259" font-size="14">4103</text><text x="682" y="259" font-size="14">4102</text>
+<path d="M52 295H984" stroke="#edf0f5"/><text x="54" y="287" font-size="14">ipc-file-bytes</text><text x="360" y="287" font-size="14">4103</text><text x="506" y="287" font-size="14">4103</text><text x="682" y="287" font-size="14">4102</text>
+<path d="M52 323H984" stroke="#edf0f5"/><text x="54" y="315" font-size="14">ipc-stream-bytes</text><text x="360" y="315" font-size="14">4103</text><text x="506" y="315" font-size="14">4103</text><text x="682" y="315" font-size="14">4102</text>
+<path d="M52 351H984" stroke="#edf0f5"/><text x="54" y="343" font-size="14">ipc-file-path</text><text x="360" y="343" font-size="14">4103</text><text x="506" y="343" font-size="14">4103</text><text x="682" y="343" font-size="14">4102</text>
+<path d="M52 379H984" stroke="#edf0f5"/><text x="54" y="371" font-size="14">ipc-stream-path</text><text x="360" y="371" font-size="14">4103</text><text x="506" y="371" font-size="14">4103</text><text x="682" y="371" font-size="14">4102</text>
+<path d="M52 407H984" stroke="#edf0f5"/><text x="54" y="399" font-size="14">parquet-bytes</text><text x="360" y="399" font-size="14">4103</text><text x="506" y="399" font-size="14">4103</text><text x="682" y="399" font-size="14">4102</text>
+<path d="M52 435H984" stroke="#edf0f5"/><text x="54" y="427" font-size="14">parquet-path</text><text x="360" y="427" font-size="14">4103</text><text x="506" y="427" font-size="14">4103</text><text x="682" y="427" font-size="14">4102</text>
+<text x="54" y="477" font-size="12" fill="#506175">Each result reports: 3 non-finite numeric values replaced by null. IDs 4095 and 4096 are retained.</text>
+<rect x="32" y="521" width="976" height="198" rx="12" fill="white" stroke="#dce3ed"/>
+<text x="52" y="553" font-size="18" font-weight="700">Wrapped GraphQL partial response: mean of 3 usable records</text>
+<text x="54" y="600" font-size="14">North</text><rect x="142" y="582" width="300.0" height="25" rx="4" fill="#2463ce"/><text x="453.0" y="600" font-size="14">5.0</text>
+<text x="54" y="635" font-size="14">South</text><rect x="142" y="617" width="180.0" height="25" rx="4" fill="#2463ce"/><text x="333.0" y="635" font-size="14">3.0</text>
+<text x="54" y="680" font-size="12" fill="#506175">1 null GraphQL/path nodes skipped.</text>
+<text x="54" y="700" font-size="12" fill="#506175">1 GraphQL responses contained errors alongside usable data.</text>
+<text x="40" y="734" font-size="12" fill="#506175">65,536-byte dictionary value &#215; 4096 rows: retained-data limit rejects before full-input expansion (18.5 MB peak Python allocation).</text>
+<text x="40" y="755" font-size="12" fill="#506175">Replay command, exact inputs, source hashes and raw measured results: normalization-output.json</text>
+</g></svg>
