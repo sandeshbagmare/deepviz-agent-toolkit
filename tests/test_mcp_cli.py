@@ -19,6 +19,7 @@ TOOL_NAMES = {
     "normalize_data", "recommend_chart", "render_matplotlib", "render_plotly",
     "render_vega", "render_echarts", "render_antv",
 }
+SOURCE = Path(__file__).resolve().parents[1] / "src"
 
 
 def metadata(result: Any) -> dict[str, Any]:
@@ -30,7 +31,7 @@ def metadata(result: Any) -> dict[str, Any]:
 def command(*args: str, cwd: Path) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
         [sys.executable, "-m", "deepviz.cli", *args], cwd=cwd,
-        env={**os.environ, "PYTHONUTF8": "1"}, capture_output=True, text=True,
+        env={**os.environ, "PYTHONPATH": str(SOURCE), "PYTHONUTF8": "1"}, capture_output=True, text=True,
         encoding="utf-8", timeout=60, check=False,
     )
 
@@ -183,7 +184,7 @@ def test_real_stdio_roundtrip_errors_resource_reads_and_shutdown(tmp_path: Path,
         sentinel.write_text("preserve", encoding="utf-8")
         params = StdioServerParameters(
             command=sys.executable, args=["-m", *entrypoint, "--output-dir", str(output)],
-            cwd=str(tmp_path), env={**os.environ, "PYTHONUTF8": "1"},
+            cwd=str(tmp_path), env={**os.environ, "PYTHONPATH": str(SOURCE), "PYTHONUTF8": "1"},
         )
         with (tmp_path / "stderr.txt").open("w", encoding="utf-8") as stderr:
             async with stdio_client(params, errlog=stderr) as (read, write):
