@@ -170,6 +170,11 @@ def source_snapshot(root: Path) -> dict[str, Any]:
     }
 
 
+def require_same_source(before: dict[str, Any], after: dict[str, Any]) -> None:
+    if before["commit"] != after["commit"] or before["source_sha256"] != after["source_sha256"]:
+        raise AssertionError("Source changed during benchmark; refusing mixed-source evidence")
+
+
 def load_normalizer(root: Path) -> tuple[Any, Any]:
     source = (root / "python/deepviz/src").resolve()
     normalizer = source / "deepviz/normalize.py"
@@ -226,8 +231,7 @@ def run_worker(root: Path, count: int, case: str, bound: int) -> dict[str, Any]:
         json.dumps(normalized.records, sort_keys=True, separators=(",", ":"), allow_nan=False).encode()
     ).hexdigest()
     after = source_snapshot(root)
-    if before != after:
-        raise RuntimeError("Source changed during benchmark; refusing mixed-source evidence")
+    require_same_source(before, after)
     result["source"] = before
     return result
 
@@ -297,9 +301,8 @@ def main() -> int:
             break
     if not unrun:
         try:
-            if source_snapshot(root) != initial:
-                raise RuntimeError("Source changed during benchmark; refusing mixed-source evidence")
-        except (OSError, subprocess.CalledProcessError, RuntimeError) as error:
+            require_same_source(initial, source_snapshot(root))
+        except (AssertionError, OSError, subprocess.CalledProcessError, RuntimeError) as error:
             results.append({"status": "failed", "error": str(error)})
 
     status = "passed" if not unrun and all(row["status"] == "passed" for row in results) else "failed"

@@ -113,6 +113,15 @@ def test_real_process_memory_has_a_named_method_or_explicit_unavailability(harne
         }
 
 
+def test_source_stability_ignores_non_source_metadata_but_rejects_hash_changes(harness: Any) -> None:
+    before = {"commit": "abc", "dirty_paths": [], "source_sha256": {"module.py": "one"}}
+    after = before | {"dirty_paths": ["?? generated.svg"]}
+    harness.require_same_source(before, after)
+    changed_source = after | {"source_sha256": {"module.py": "two"}}
+    with pytest.raises(AssertionError, match="Source changed"):
+        harness.require_same_source(before, changed_source)
+
+
 def test_missing_source_records_a_failed_case_without_a_fabricated_measurement(tmp_path: Path) -> None:
     (tmp_path / "python/deepviz/src/deepviz").mkdir(parents=True)
     process = subprocess.run(
