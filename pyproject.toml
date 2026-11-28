@@ -22,7 +22,28 @@ deepviz = "deepviz.cli:main"
 deepviz-mcp = "deepviz.mcp_server:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["python/deepviz/src/deepviz"]
+only-include = ["python/deepviz/src/deepviz", "prompts/v1"]
+exclude = [
+    "/python/deepviz/src/deepviz/resources/chart-spec.schema.json",
+    "/python/deepviz/src/deepviz/resources/prompts",
+]
+
+[tool.hatch.build.targets.wheel.sources]
+"python/deepviz/src" = ""
+"prompts/v1" = "deepviz/resources/prompts/v1"
+
+[tool.hatch.build.targets.wheel.force-include]
+"schemas/chart-spec.schema.json" = "deepviz/resources/chart-spec.schema.json"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/python/deepviz/src/deepviz",
+    "/schemas/chart-spec.schema.json",
+    "/prompts/v1",
+    "/pyproject.toml",
+    "/README.md",
+    "/LICENSE",
+]
 
 [tool.pytest.ini_options]
 testpaths = ["python/deepviz/tests", "tests"]
