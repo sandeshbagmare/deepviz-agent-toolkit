@@ -334,6 +334,7 @@ def test_connection_scan_visits_shared_mappings_once(depth: int) -> None:
         def items(self):
             nonlocal scans
             scans += 1
+            assert scans <= depth + 1, "Connection scan revisited a completed shared subtree"
             return super().items()
 
     value = Observed(leaf=1)
@@ -370,6 +371,7 @@ def test_flatten_empty_shared_dag_has_a_deterministic_work_limit(container: str,
             frame.f_code.co_filename == normalize_impl.__code__.co_filename
         ):
             calls += 1
+            assert calls <= 1024 * 65 + 1, "Flattening escaped its deterministic work ceiling"
 
     previous = sys.getprofile()
     sys.setprofile(observe)
