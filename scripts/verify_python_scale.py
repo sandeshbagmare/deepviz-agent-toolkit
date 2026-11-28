@@ -390,6 +390,7 @@ def main() -> int:
 
     status = "passed" if not unrun and all(row["status"] == "passed" for row in results) else "failed"
     report = {
+        "integration_status": "not_integrated",
         "status": status,
         "recorded_at_utc": datetime.now(UTC).isoformat(),
         "command": [sys.executable, str(Path(__file__).resolve()), *sys.argv[1:]],

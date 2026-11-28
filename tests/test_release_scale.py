@@ -171,6 +171,7 @@ def test_non_git_source_root_fails_closed_without_a_fabricated_measurement(
     assert process.returncode == 1
     report = json.loads(process.stdout)
     assert report["status"] == "failed" and len(report["results"]) == 1
+    assert report["integration_status"] == "not_integrated"
     result = report["results"][0]
     assert result["status"] == "failed"
     assert "Git" in result["error"]
