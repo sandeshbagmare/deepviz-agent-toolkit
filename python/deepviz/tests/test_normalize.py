@@ -513,6 +513,31 @@ def test_sliced_fixed_size_arrow_lists_cost_only_selected_values(selected: int) 
         assert normalize(table).records == [{"v.0": "ok-0", "v.1": "ok-1"}]
 
 
+@pytest.mark.parametrize("depth", [8, 24])
+def test_zero_row_shared_arrow_schema_has_one_total_work_budget(monkeypatch, depth: int) -> None:
+    arrow = pytest.importorskip("pyarrow")
+    dtype = arrow.int64()
+    for _ in range(depth):
+        dtype = arrow.struct([("left", dtype), ("right", dtype)])
+    source = arrow.Table.from_batches([], schema=arrow.schema([("payload", dtype)]))
+    original = normalize_impl.__globals__["_validate_arrow_fields"]
+    calls = 0
+
+    def observe(*args, **kwargs):
+        nonlocal calls
+        calls += 1
+        assert calls <= 1024 * 65 + 1, "Arrow schema scan escaped its deterministic ceiling"
+        return original(*args, **kwargs)
+
+    monkeypatch.setitem(normalize_impl.__globals__, "_validate_arrow_fields", observe)
+    if depth == 24:
+        with pytest.raises(ValueError, match="Arrow schema.*work limit"):
+            normalize(source, {"kind": "table", "aggregation": "none"})
+    else:
+        result = normalize(source)
+        assert result.records == [] and result.input_count == 0
+
+
 def test_scale_benchmark_measures_real_inputs_in_isolated_processes() -> None:
     script = Path(__file__).resolve().parents[3] / "scripts" / "benchmark_scale.py"
     completed = subprocess.run(

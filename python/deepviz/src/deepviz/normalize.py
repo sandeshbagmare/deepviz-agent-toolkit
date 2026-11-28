@@ -4,8 +4,8 @@ Scalar sequences become ``index``/``value`` records. Nested object keys and
 array indices are dotted. Strings are content; only ``Path`` opts into files.
 JSONL, delimited files, generators and Arrow batches stream; an already encoded
 JSON document is decoded as a whole by the standard library.
-Connection inference and per-record flattening each allow 66,560 structural
-work units (mapping entries plus mappings, or visited record values). Aliases
+Connection inference, Arrow schema validation and per-record flattening each
+allow 66,560 structural work units (mapping/schema items or visited values). Aliases
 retain their distinct field paths; excessive work and cycles fail explicitly.
 Arrow unions, extensions and other uncosted types are rejected before Python
 row conversion; fixed-size scalar and explicitly costed container types remain supported.
@@ -212,12 +212,19 @@ def _arrow_rows(data: Any) -> Iterator[dict[str, Any]]:
                 start = end
 
 
-def _validate_arrow_fields(fields: Iterable[Any], depth: int = 0) -> None:
+def _validate_arrow_fields(
+    fields: Iterable[Any], depth: int = 0, budget: list[int] | None = None,
+) -> None:
     if depth > _MAX_DEPTH:
         raise ValueError("Arrow schema is nested too deeply")
     arrow = _arrow_module()
+    if budget is None:
+        budget = [_MAX_STRUCTURAL_WORK]
     names = set()
     for index, field in enumerate(fields):
+        budget[0] -= 1
+        if budget[0] < 0:
+            raise ValueError(f"Arrow schema exceeds {_MAX_STRUCTURAL_WORK} structural work limit")
         if index >= _MAX_FIELDS:
             raise ValueError(f"Arrow schema exceeds {_MAX_FIELDS} fields")
         if field.name in names:
@@ -230,7 +237,7 @@ def _validate_arrow_fields(fields: Iterable[Any], depth: int = 0) -> None:
         if isinstance(dtype, arrow.BaseExtensionType) or arrow.types.is_union(dtype):
             raise TypeError(f"Unsupported Arrow type for bounded conversion: {dtype}")
         if dtype.num_fields:
-            _validate_arrow_fields((dtype.field(i) for i in range(dtype.num_fields)), depth + 1)
+            _validate_arrow_fields((dtype.field(i) for i in range(dtype.num_fields)), depth + 1, budget)
 
 
 def _arrow_batch_row_bytes(batch: Any, arrow: Any) -> list[int]:
