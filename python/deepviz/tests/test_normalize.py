@@ -10,6 +10,7 @@ import tracemalloc
 from pathlib import Path
 from typing import Any
 
+import jsonschema
 import pytest
 from deepviz.models import ChartSpec, NormalizedData
 from deepviz.normalize import normalize as normalize_impl
@@ -397,6 +398,60 @@ def test_data_path_component_count_is_bounded_before_selection() -> None:
     data_path = ".".join(["x"] * 65)
     with pytest.raises(ValueError, match="data_path is nested too deeply"):
         normalize({"x": 1}, {"data_path": data_path})
+
+
+def test_data_path_unicode_limit_matches_model_schema_and_runtime() -> None:
+    schema = ChartSpec.model_json_schema()
+    path = "x" * 1024
+    payload = {"data_path": path}
+    assert len(path.encode("utf-8")) == 1024
+    path_schema = schema["$defs"]["ChartSpec"]["properties"]["data_path"]
+    assert path_schema["anyOf"][0].get("maxLength") == 1024
+    assert path_schema.get("pattern")
+    jsonschema.validate(payload, schema)
+    ChartSpec.model_validate(payload)
+    assert normalize({path: 1}, payload).records == [{"index": 0, "value": 1}]
+
+    unicode_path = "😀" * 1024
+    assert len(unicode_path.encode("utf-8")) == 4096
+    jsonschema.validate({"data_path": unicode_path}, schema)
+    ChartSpec.model_validate({"data_path": unicode_path})
+    assert normalize({unicode_path: 1}, {"data_path": unicode_path}).records == [
+        {"index": 0, "value": 1},
+    ]
+
+    too_long = {"data_path": path + "x"}
+    with pytest.raises(jsonschema.ValidationError):
+        jsonschema.validate(too_long, schema)
+    with pytest.raises(ValueError, match="data_path"):
+        ChartSpec.model_validate(too_long)
+    with pytest.raises(ValueError, match="data_path"):
+        normalize({"x": 1}, too_long)
+
+
+@pytest.mark.parametrize("path", ["", ".x", "x.", "x..y", ".".join(["x"] * 65)])
+def test_data_path_syntax_and_depth_match_model_schema(path: str) -> None:
+    schema = ChartSpec.model_json_schema()
+    with pytest.raises(jsonschema.ValidationError):
+        jsonschema.validate({"data_path": path}, schema)
+    with pytest.raises(ValueError, match="data_path"):
+        ChartSpec.model_validate({"data_path": path})
+
+
+@pytest.mark.parametrize(("character", "repetitions"), [("x", 8 * 1024 * 1024), ("😀", 2 * 1024 * 1024)])
+def test_oversized_nested_field_name_is_rejected_before_join_allocation(
+    character: str, repetitions: int,
+) -> None:
+    oversized_key = character * repetitions
+    data = [{"outer": {oversized_key: 1}}]
+    tracemalloc.start()
+    try:
+        with pytest.raises(ValueError, match="field name"):
+            normalize(data)
+        _, peak = tracemalloc.get_traced_memory()
+    finally:
+        tracemalloc.stop()
+    assert peak < 500_000
 
 
 def test_invalid_data_path_is_rejected_before_reading_text_stream() -> None:

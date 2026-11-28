@@ -41,13 +41,18 @@ from numbers import Integral, Real
 from pathlib import Path
 from typing import Any
 
-from .models import ChartSpec, NormalizedData
+from .models import (
+    _MAX_DATA_PATH_COMPONENTS,
+    _MAX_DATA_PATH_LENGTH,
+    ChartSpec,
+    NormalizedData,
+)
 
 _MAX_FIELDS = 1024
 _MAX_DEPTH = 64
 _MAX_CELL_BYTES = 64 * 1024
 _MAX_FIELD_BYTES = 4 * 1024
-_MAX_DATA_PATH_BYTES = 4 * 1024
+_MAX_DATA_PATH_BYTES = 4 * _MAX_DATA_PATH_LENGTH
 _MAX_RECORD_BYTES = 256 * 1024
 _MAX_RETAINED_BYTES = 16 * 1024 * 1024
 _MAX_ARROW_BATCH_BYTES = 2 * 1024 * 1024
@@ -545,6 +550,16 @@ def _check_retained_bytes(size: int) -> None:
         raise ValueError(f"Normalized retained data exceeds {_MAX_RETAINED_BYTES} bytes")
 
 
+def _join_field_name(parent: str, child: str) -> str:
+    child_size = _utf8_size(child, _MAX_FIELD_BYTES, "field name")
+    if not parent:
+        return child
+    parent_size = _utf8_size(parent, _MAX_FIELD_BYTES, "field name")
+    if parent_size + 1 + child_size > _MAX_FIELD_BYTES:
+        raise ValueError(f"Input field name exceeds {_MAX_FIELD_BYTES} UTF-8 bytes")
+    return f"{parent}.{child}"
+
+
 def _flatten(value: Mapping[str, Any], counts: Counter[str]) -> dict[str, Any]:
     output: dict[str, Any] = {}
 
@@ -558,11 +573,11 @@ def _flatten(value: Mapping[str, Any], counts: Counter[str]) -> dict[str, Any]:
             for child, contents in item.items():
                 if not isinstance(child, str) or not child:
                     raise ValueError("Record field names must be non-empty strings")
-                add(f"{key}.{child}" if key else child, contents, depth + 1)
+                add(_join_field_name(key, child), contents, depth + 1)
             return
         elif isinstance(item, (list, tuple)):
             for index, contents in enumerate(item):
-                add(f"{key}.{index}", contents, depth + 1)
+                add(_join_field_name(key, str(index)), contents, depth + 1)
             return
         if key in output:
             raise ValueError(f"Flattened field collision: {key!r}")
@@ -583,7 +598,7 @@ def _records(
     tokens = None
     if spec.data_path is not None:
         _utf8_size(spec.data_path, _MAX_DATA_PATH_BYTES, "data_path")
-        if spec.data_path.count(".") + 1 > _MAX_DEPTH:
+        if spec.data_path.count(".") + 1 > _MAX_DATA_PATH_COMPONENTS:
             raise ValueError("data_path is nested too deeply")
         tokens = spec.data_path.split(".")
         if any(not token for token in tokens):
