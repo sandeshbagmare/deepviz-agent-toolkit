@@ -530,6 +530,11 @@ def _zero_width_arrow_table(arrow: Any, shape: str, count: int) -> Any:
         values = arrow.ListArray.from_arrays(arrow.array([0, 2]), inner)
     elif shape == "dictionary":
         values = arrow.DictionaryArray.from_arrays(arrow.array([0], type=arrow.int8()), values)
+    elif shape == "dictionary-many":
+        groups = min(count, 200)
+        values = arrow.ListArray.from_arrays(arrow.array(range(0, count + 1, count // groups)), empty)
+        values = arrow.DictionaryArray.from_arrays(arrow.array(range(groups), type=arrow.int16()), values)
+        values = arrow.ListArray.from_arrays(arrow.array([0, groups]), values)
     elif shape == "columns":
         return arrow.table({"left": values, "right": values})
     elif shape == "null-list":
@@ -541,11 +546,17 @@ def _zero_width_arrow_table(arrow: Any, shape: str, count: int) -> Any:
 
 def _guard_arrow_conversion(max_rows: int):
     rows = normalize_impl.__globals__["_arrow_rows"]
+    charge = normalize_impl.__globals__["_arrow_charge_work"]
+    calls = 0
     lines, first = inspect.getsourcelines(rows)
     conversion = [first + i for i, line in enumerate(lines) if ".to_pylist()" in line]
     assert len(conversion) == 1
 
     def guard(frame, event, _arg):
+        nonlocal calls
+        if max_rows == 0 and event == "call" and frame.f_code is charge.__code__:
+            calls += 1
+            assert calls <= 1024 * 65 + 1, "Arrow estimator escaped the record work bound"
         if frame.f_code is rows.__code__:
             if event == "line" and frame.f_lineno == conversion[0]:
                 assert frame.f_locals["end"] - frame.f_locals["start"] <= max_rows, (
@@ -558,7 +569,7 @@ def _guard_arrow_conversion(max_rows: int):
 
 
 @pytest.mark.parametrize("shape", [
-    "list", "large-list", "fixed-size-list", "map", "nested", "dictionary", "columns",
+    "list", "large-list", "fixed-size-list", "map", "nested", "dictionary", "dictionary-many", "columns",
 ])
 @pytest.mark.parametrize("count", [2, 100000])
 def test_arrow_zero_width_work_is_bounded_before_conversion(shape: str, count: int) -> None:
@@ -608,6 +619,25 @@ def test_arrow_work_budget_is_per_record_in_an_ordinary_wide_batch() -> None:
     assert result.records[0] == {f"v{i}": 0 for i in range(32)}
     assert result.records[-1] == {f"v{i}": 4095 for i in range(32)}
     assert result.warnings == []
+
+
+@pytest.mark.parametrize("records", [1, 2])
+def test_arrow_dictionary_cached_values_charge_each_record_once(monkeypatch, records: int) -> None:
+    arrow = pytest.importorskip("pyarrow")
+    source = _zero_width_arrow_table(arrow, "dictionary", 2)
+    source = arrow.concat_tables([source] * records).combine_chunks()
+    charge = normalize_impl.__globals__["_arrow_charge_work"]
+    units = 0
+
+    def observe(budget, count=1):
+        nonlocal units
+        units += count
+        return charge(budget, count)
+
+    monkeypatch.setitem(normalize_impl.__globals__, "_arrow_charge_work", observe)
+    result = normalize(source)
+    assert result.records == [{}] * records and result.input_count == records
+    assert units == 3 * records
 
 
 @pytest.mark.parametrize("depth", [8, 24])

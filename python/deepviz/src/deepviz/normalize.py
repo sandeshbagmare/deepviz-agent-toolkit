@@ -266,19 +266,16 @@ def _arrow_array_row_bytes(
     data_type = array.type
     types = arrow.types
     if types.is_dictionary(data_type):
-        indices = array.indices
-        grouped = indices.value_counts().to_pylist()
         costs: dict[int, tuple[int, int]] = {}
-        for group in grouped:
-            index = group["values"]
-            if index is not None:
-                budget = [_MAX_STRUCTURAL_WORK]
-                size = _arrow_array_row_bytes(array.dictionary.slice(index, 1), arrow, compute, [budget])[0]
-                costs[index] = size, _MAX_STRUCTURAL_WORK - budget[0]
         rows = []
-        for row, index in enumerate(indices.to_pylist()):
-            size, units = costs[index] if index is not None else (32, 1)
-            _arrow_charge_work(work[row], units)
+        for row, index in enumerate(array.indices.to_pylist()):
+            if index is not None and index not in costs:
+                remaining = work[row][0]
+                size = _arrow_array_row_bytes(array.dictionary.slice(index, 1), arrow, compute, [work[row]])[0]
+                costs[index] = size, remaining - work[row][0]
+            else:
+                size, units = costs[index] if index is not None else (32, 1)
+                _arrow_charge_work(work[row], units)
             rows.append(size)
         return rows
     if data_type.num_fields and array.null_count:
