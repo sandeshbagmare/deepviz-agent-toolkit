@@ -1,6 +1,7 @@
 """Ingestion contracts, including streaming reductions rather than head truncation."""
 from __future__ import annotations
 
+import io
 import json
 import math
 import subprocess
@@ -396,6 +397,41 @@ def test_data_path_component_count_is_bounded_before_selection() -> None:
     data_path = ".".join(["x"] * 65)
     with pytest.raises(ValueError, match="data_path is nested too deeply"):
         normalize({"x": 1}, {"data_path": data_path})
+
+
+def test_invalid_data_path_is_rejected_before_reading_text_stream() -> None:
+    class TrackingStream(io.StringIO):
+        read_calls = 0
+
+        def read(self, *args: Any, **kwargs: Any) -> str:
+            self.read_calls += 1
+            return super().read(*args, **kwargs)
+
+    source = TrackingStream('{"x": 1}')
+    data_path = ".".join(["x"] * 50_000)
+    with pytest.raises(ValueError, match="data_path"):
+        normalize(source, {"format": "json", "data_path": data_path})
+    assert source.read_calls == 0
+
+
+def test_invalid_data_path_is_rejected_before_opening_path(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    source = tmp_path / "source.json"
+    source.write_text('{"x": 1}', encoding="utf-8")
+    original_open = Path.open
+    opened: list[Path] = []
+
+    def tracked_open(path: Path, *args: Any, **kwargs: Any) -> Any:
+        if path == source:
+            opened.append(path)
+        return original_open(path, *args, **kwargs)
+
+    monkeypatch.setattr(Path, "open", tracked_open)
+    data_path = ".".join(["x"] * 50_000)
+    with pytest.raises(ValueError, match="data_path"):
+        normalize(source, {"data_path": data_path})
+    assert opened == []
 
 
 def test_ambiguous_graphql_connections_require_an_explicit_path() -> None:
