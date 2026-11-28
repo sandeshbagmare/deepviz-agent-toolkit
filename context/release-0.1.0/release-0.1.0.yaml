@@ -44400,13 +44400,18 @@
         "python/deepviz/tests/test_normalize.py",
         "python/deepviz/tests/test_graphql_contract.py",
         "python/deepviz/tests/test_n19_formats.py",
-        "python/deepviz/src/deepviz/__init__.py"
+        "python/deepviz/src/deepviz/__init__.py",
+        "python/deepviz/src/deepviz/models.py",
+        "schemas/chart-spec.schema.json",
+        "scripts/benchmark_scale.py",
+        "docs/verification/normalization/normalization-output.json",
+        "docs/verification/normalization/normalization-output.svg"
       ],
-      "estimated_size": "RM-approved coherent size exception: approximately 2,000 changed lines for existing normalizer and necessary tests; retain exact-head 2 reviewer + 2 tester gates.",
+      "estimated_size": "RM-approved coherent size exception: at most 2,750 changed lines across the 10 claimed paths; PR #40 at `a94f85c47e9a18f01009484a6813738eb8259a03` measures 2,687 additions + 2 deletions = 2,689 changed lines. The 61-line tolerance covers only necessary review/rebase fixes and regenerated normalization evidence within this existing task; additional paths or unrelated scope require a new ruling. Retain exact-head 2 reviewer + 2 tester gates.",
       "dependencies": "Wave 0 G0 and approved PLAN-CHANGE-01; isolated preparation is allowed before merge.",
       "expected_conflicts": "Select reviewed Python input-format, GraphQL and Arrow/Parquet hunks on fresh main; do not merge broad R34 ancestry. NEW-02 is serialized after NEW-01 because normalize.py and test_normalize.py are shared.",
       "reviewers": "REV-01 + REV-02; QA-01 + QA-02 independent non-author tester reports",
-      "required_tests": "Normalization, GraphQL, Arrow Table/RecordBatch/Reader, IPC file/stream, Parquet path/buffer, malformed/duplicate/oversized nested input, optional-extra error; install [columnar], verify zero skips, full pytest/Ruff/mypy.",
+      "required_tests": "Normalization, GraphQL, Arrow Table/RecordBatch/Reader, IPC file/stream, Parquet path/buffer, malformed/duplicate/oversized nested input, optional-extra error; install [columnar], verify zero skips, full pytest/Ruff/mypy. Verify selector model/runtime/checked-in-schema parity and no-read/no-open controls; run the existing benchmark smoke and validate the measured JSON/SVG evidence.",
       "rollback": "Revert squash, rerun main suite, stop wave.",
       "merge_method": "squash",
       "source_commits": [
@@ -44438,7 +44443,7 @@
       ],
       "state": "planned",
       "visual_evidence_required": true,
-      "source_selection_note": "RM ruling: select latest reviewed Python normalizer from 96b819a (already includes R17/exact finite sum/mean/owned-input and R45 fixes), necessary input/GraphQL/Arrow tests, and minimal __init__.py exports for public models/normalize API. Do not replay old patches. Exclude 9ce04fc package-only, 355637c schema/docs, TS/coordination/evidence."
+      "source_selection_note": "RM ruling: use latest96 normalizer provenance (R17/exact finite sum/mean/owned-input and R45 fixes), necessary input/GraphQL/Arrow tests, minimal __init__.py exports, and the focused reviewed PR #40 follow-ups. NEW-01 also owns selector-boundary changes in `python/deepviz/src/deepviz/models.py` and `schemas/chart-spec.schema.json`, its existing `scripts/benchmark_scale.py` smoke harness, and measured `docs/verification/normalization/normalization-output.json` plus `docs/verification/normalization/normalization-output.svg`. These five paths are part of the same bounded-normalization task, not permission for broad schema/package/docs work. Do not replay old patches or whole 9ce04fc/355637c commits; exclude TypeScript, coordination and unrelated evidence dumps."
     },
     {
       "id": "NEW-02",
@@ -44908,7 +44913,12 @@
         "python/deepviz/tests/test_normalize.py",
         "python/deepviz/tests/test_graphql_contract.py",
         "python/deepviz/tests/test_n19_formats.py",
-        "python/deepviz/src/deepviz/__init__.py"
+        "python/deepviz/src/deepviz/__init__.py",
+        "python/deepviz/src/deepviz/models.py",
+        "schemas/chart-spec.schema.json",
+        "scripts/benchmark_scale.py",
+        "docs/verification/normalization/normalization-output.json",
+        "docs/verification/normalization/normalization-output.svg"
       ],
       "last_update": "2026-11-28"
     },
@@ -45542,7 +45552,7 @@
         "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
         "wave": 1,
         "draft": true,
-        "head_sha": "740a16faeca502dfd15fe028e2b880895f7c687f"
+        "head_sha": "a94f85c47e9a18f01009484a6813738eb8259a03"
       },
       {
         "number": 41,
@@ -45708,8 +45718,19 @@
     {
       "id": "NEW-01",
       "approved_by": "RM-01",
-      "limit": "Approximately 2,000 changed lines",
-      "reason": "Coherent existing normalizer with necessary tests/public imports; do not drop tests; exact-head 2+2 gates retained."
+      "limit": "At most 2,750 changed lines across exactly the 10 NEW-01 claimed paths",
+      "reason": "RM-01 approves the existing coherent bounded-normalization task, including selector model/schema contract, smoke harness and measured JSON/SVG evidence. The 61-line tolerance is solely for necessary review/rebase fixes and regenerated evidence within those paths; new paths or unrelated expansion require a new ruling. Keep complete tests, fresh exact-head 2 reviewer + 2 tester reports, current-main rebase/checks, dependency order and sequential merge gates.",
+      "max_changed_lines": 2750,
+      "max_changed_paths": 10,
+      "measured_diff": {
+        "pull_request": 40,
+        "head_sha": "a94f85c47e9a18f01009484a6813738eb8259a03",
+        "base_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
+        "additions": 2687,
+        "deletions": 2,
+        "changed_lines": 2689,
+        "changed_paths": 10
+      }
     }
   ],
   "optional_dependency_acceptance": {
