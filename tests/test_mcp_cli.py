@@ -19,7 +19,7 @@ TOOL_NAMES = {
     "normalize_data", "recommend_chart", "render_matplotlib", "render_plotly",
     "render_vega", "render_echarts", "render_antv",
 }
-SOURCE = Path(__file__).resolve().parents[1] / "src"
+SOURCE = Path(os.environ.get("DEEPVIZ_SOURCE_ROOT", Path(__file__).resolve().parents[1] / "src"))
 
 
 def metadata(result: Any) -> dict[str, Any]:
@@ -31,7 +31,8 @@ def metadata(result: Any) -> dict[str, Any]:
 def command(*args: str, cwd: Path) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
         [sys.executable, "-m", "deepviz.cli", *args], cwd=cwd,
-        env={**os.environ, "PYTHONPATH": str(SOURCE), "PYTHONUTF8": "1"}, capture_output=True, text=True,
+        env={**os.environ, "PYTHONPATH": os.environ.get("DEEPVIZ_TEST_PYTHONPATH", str(SOURCE)),
+             "PYTHONUTF8": "1"}, capture_output=True, text=True,
         encoding="utf-8", timeout=60, check=False,
     )
 
@@ -84,8 +85,8 @@ def test_sdk_discovery_and_errors_share_a_strict_input_contract(tmp_path: Path) 
         assert set(tools) == TOOL_NAMES
         assert all(item.inputSchema["additionalProperties"] is False for item in tools.values())
         for arguments in (
-            {"data": ROWS, "extra": True}, {"data": '[{"value":1,"value":2}]'},
-            {"data": "[" * 1500 + "]" * 1500}, {"data": " " * 1_000_001 + json.dumps(ROWS)},
+            {"data": ROWS, "extra": True}, {"data": "[not-json"},
+            {"data": '[{"value":1,"value":2}]'}, {"data": " " * 1_000_001 + json.dumps(ROWS)},
         ):
             with pytest.raises(ValueError):
                 await server.call_tool("normalize_data", arguments)
@@ -184,7 +185,9 @@ def test_real_stdio_roundtrip_errors_resource_reads_and_shutdown(tmp_path: Path,
         sentinel.write_text("preserve", encoding="utf-8")
         params = StdioServerParameters(
             command=sys.executable, args=["-m", *entrypoint, "--output-dir", str(output)],
-            cwd=str(tmp_path), env={**os.environ, "PYTHONPATH": str(SOURCE), "PYTHONUTF8": "1"},
+            cwd=str(tmp_path), env={**os.environ,
+                                    "PYTHONPATH": os.environ.get("DEEPVIZ_TEST_PYTHONPATH", str(SOURCE)),
+                                    "PYTHONUTF8": "1"},
         )
         with (tmp_path / "stderr.txt").open("w", encoding="utf-8") as stderr:
             async with stdio_client(params, errlog=stderr) as (read, write):
