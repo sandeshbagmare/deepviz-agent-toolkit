@@ -580,17 +580,19 @@ def _flatten(value: Mapping[str, Any], counts: Counter[str]) -> dict[str, Any]:
 def _records(
     data: Any, spec: ChartSpec, counts: Counter[str], schema: dict[str, int],
 ) -> Generator[tuple[dict[str, Any], int], None, None]:
+    tokens = None
+    if spec.data_path is not None:
+        _utf8_size(spec.data_path, _MAX_DATA_PATH_BYTES, "data_path")
+        if spec.data_path.count(".") + 1 > _MAX_DEPTH:
+            raise ValueError("data_path is nested too deeply")
+        tokens = spec.data_path.split(".")
+        if any(not token for token in tokens):
+            raise ValueError("data_path must contain non-empty dot-separated components")
     source = _source(data, spec.format)
     # Retain the adapter root even when path selection wraps it; never own caller input.
     owned = source if source is not data else None
     try:
-        if spec.data_path is not None:
-            _utf8_size(spec.data_path, _MAX_DATA_PATH_BYTES, "data_path")
-            if spec.data_path.count(".") + 1 > _MAX_DEPTH:
-                raise ValueError("data_path is nested too deeply")
-            tokens = spec.data_path.split(".")
-            if any(not token for token in tokens):
-                raise ValueError("data_path must contain non-empty dot-separated components")
+        if tokens is not None:
             source = _select_path(source, tokens, counts)
         requested = tuple(dict.fromkeys(field for field in (spec.x, spec.y, spec.color, spec.size) if field))
         had_rows = False
