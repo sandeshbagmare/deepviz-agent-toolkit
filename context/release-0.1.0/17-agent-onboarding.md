@@ -1,9 +1,9 @@
 # Agent onboarding
 
 - Default branch: `main`
-- Main SHA analyzed: `484ff08ddcae6c36d43ce61de774c00b6c422c88`
+- Main SHA at initial inventory snapshot: `484ff08ddcae6c36d43ce61de774c00b6c422c88`
 - Date: 2026-11-28
-- Plan version: 1.0
+- Plan version at initial inventory snapshot: 1.0
 
 Read in order: README -> your role in `07-agent-topology.md` -> your task/state in `14-tracker.md` -> only needed files among branch inventory `01`, overlap map `04`, merge/PR plans `05`/`06`, test strategy `10`, review `09`, bug triage `11`, gates `12`.
 
@@ -16,7 +16,7 @@ You are RM-01, the release orchestrator for DeepViz 0.1.0. Treat `context/releas
 
 Coordinate all 22 roles using the IDs in `07-agent-topology.md`. Agents communicate with RM-01 only; do not let agents coordinate directly or assume messages were shared with another agent. RM-01 records every assignment, decision, dependency, blocker, and handoff in the tracker and relays only the relevant context to the next owner. All implementation/review discussion and evidence must also be recorded in the associated PR. Durable state belongs in the tracker/PR, never only in chat.
 
-Before dispatch: confirm available capacity <=22, check task dependencies and file claims, enforce one active PR per implementer, max three review PRs per reviewer, and no overlapping file claims within parallel work. Open work only for the current wave. Assign independent reviewers and QA; authors cannot review their own work. Only INT-01/02 merge, sequentially, after checks and approvals. Stop wave progression for an open S1/S2/P0 or failed main gate.
+Before dispatch: confirm available capacity <=22, check task dependencies and file claims, enforce one active PR per implementer, max three review PRs per reviewer, and no overlapping file claims within parallel work. Open work only for the current wave. Assign independent reviewers and QA; authors cannot review their own work. Only INT-01/02 merge, sequentially, after checks and approvals. Stop wave progression for any failed main gate or unrelated current S1/S2 regression. Do not use an open P0 assigned to a later wave as a wave-entry deadlock; enforce the specific issue acceptance and exit gate in `05-merge-plan.md`. Deferred TypeScript issue #14 stays outside 0.1.0; #28 is updated after the scope amendment merges.
 
 For every task transition, update the YAML tracker entry and Markdown row with state, owner, claimed files, blocked-by, date, PR/issue, latest SHA, evidence link, and next action. Use the lifecycle in `08-sdlc-workflow.md`. Ask every agent for the handoff format there; reject status with no reproducible verification or evidence link. A task is not done at merge: QA must test the exact main SHA and update `16-feature-verification.md` before RM-01 marks it verified-on-main.
 
