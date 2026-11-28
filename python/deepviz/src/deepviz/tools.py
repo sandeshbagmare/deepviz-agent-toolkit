@@ -18,6 +18,7 @@ from .recommend import Goal, profile, recommend
 ENGINES: tuple[Engine, ...] = ("matplotlib", "plotly", "vega", "echarts", "antv")
 MAX_INLINE_BYTES = 1_000_000
 MAX_ARTIFACT_BYTES = 16 * 1024 * 1024
+MAX_SESSION_ARTIFACTS = 32
 
 
 def _inline_data(data: Any) -> Any:
@@ -27,7 +28,12 @@ def _inline_data(data: Any) -> Any:
             raise ValueError("Inline data exceeds 1 MB; configure data_dir and use a file reference")
         from .normalize import _json
 
-        data = _json(data, "inline data")
+        try:
+            data = _json(data, "inline data")
+        except ValueError as error:
+            if "recursion" in str(error).lower():
+                raise ValueError("Inline JSON data is nested too deeply") from error
+            raise
     try:
         encoded = json.dumps(data, allow_nan=False)
     except RecursionError as error:
@@ -38,7 +44,10 @@ def _inline_data(data: Any) -> Any:
         raise ValueError("Inline data exceeds 1 MB; configure data_dir and use a file reference")
     if not isinstance(data, (list, dict)):
         raise ValueError("Inline data must be a JSON array or object, not a file path string")
-    return deepcopy(data)
+    try:
+        return deepcopy(data)
+    except RecursionError as error:
+        raise ValueError("Inline JSON data is nested too deeply") from error
 
 
 def _profile_spec() -> ChartSpec:
@@ -75,6 +84,13 @@ class ToolSession:
         if self.data_dir is not None and not self.data_dir.is_dir():
             raise ValueError("data_dir must be a directory")
         self.datasets: OrderedDict[str, dict[str, Any]] = OrderedDict()
+        self._artifact_dirs: OrderedDict[Path, None] = OrderedDict()
+
+    def cleanup(self) -> None:
+        """Remove this session's generated artifacts and clear their tracked paths."""
+        for directory in self._artifact_dirs:
+            shutil.rmtree(directory, ignore_errors=True)
+        self._artifact_dirs.clear()
 
     def _source(self, data: Any) -> Any:
         data = _inline_data(data)
@@ -151,15 +167,25 @@ class ToolSession:
             result = render(source, chart, engine=engine, output_dir=destination).to_dict()
             if not result["paths"]:
                 raise ValueError("Renderer returned no artifacts")
+            total_bytes = 0
             for value in result["paths"]:
                 path = Path(value).resolve(strict=True)
                 if not path.is_relative_to(destination) or not path.is_file():
                     raise ValueError("Renderer output escaped the allowed output directory")
-                if path.stat().st_size > MAX_ARTIFACT_BYTES:
-                    raise ValueError("Artifact exceeds the 16 MiB integration limit; reduce max_points or dimensions")
+                total_bytes += path.stat().st_size
+                if total_bytes > MAX_ARTIFACT_BYTES:
+                    raise ValueError("Artifacts exceed the 16 MiB per-request limit; reduce max_points or dimensions")
         except BaseException:
             shutil.rmtree(destination, ignore_errors=True)
             raise
+        self._artifact_dirs[destination] = None
+        if len(self._artifact_dirs) > MAX_SESSION_ARTIFACTS:
+            expired, _ = self._artifact_dirs.popitem(last=False)
+            shutil.rmtree(expired, ignore_errors=True)
+            result["warnings"].append(
+                f"Artifact retention is limited to {MAX_SESSION_ARTIFACTS} successful renders per tool session; "
+                "older paths may be removed. Call cleanup_tools(tools) when the session ends."
+            )
         return result
 
     def renderer(self, engine: Engine):
@@ -176,7 +202,7 @@ class ToolSession:
 
 
 def create_tools(output_dir: str | Path | None = None, *, data_dir: str | Path | None = None) -> list[Any]:
-    """Attach to a Deep Agent; imports optional LangChain only inside this factory."""
+    """Attach to a Deep Agent; call cleanup_tools when done; LangChain is optional."""
     try:
         from langchain_core.tools import StructuredTool
     except ImportError as error:
@@ -204,3 +230,20 @@ def create_tools(output_dir: str | Path | None = None, *, data_dir: str | Path |
         ValidatedTool.from_function(session.recommend_chart, args_schema=RecommendInput),
     ])
     return tools
+
+
+def cleanup_tools(tools: list[Any]) -> None:
+    """Remove artifacts owned by tools returned from one create_tools call.
+
+    Successful renders are retained up to 32 per session; older output folders
+    are removed automatically. Hosts should call this at the end of an agent
+    session when artifact paths are no longer needed.
+    """
+    for tool in tools:
+        callback = getattr(tool, "func", None)
+        session = getattr(callback, "__self__", None)
+        if session is None:
+            closure = getattr(callback, "__closure__", None) or ()
+            session = next((cell.cell_contents for cell in closure if isinstance(cell.cell_contents, ToolSession)), None)
+        if isinstance(session, ToolSession):
+            session.cleanup()

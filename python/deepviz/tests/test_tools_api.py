@@ -4,12 +4,14 @@ from __future__ import annotations
 import asyncio
 import importlib.util
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
+from types import ModuleType
 
 import pytest
-from deepviz.models import ChartSpec, NormalizedData
+from deepviz.models import Artifact, ChartSpec, NormalizedData
 
 ROWS = [{"month": "Jan", "revenue": 12}, {"month": "Feb", "revenue": 18}]
 SPEC = {"kind": "bar", "x": "month", "y": "revenue", "title": "Revenue"}
@@ -85,8 +87,9 @@ except ImportError as exc:
 else:
     raise AssertionError('Missing optional agents package must be actionable')
 """
+    env = {**os.environ, "PYTHONPATH": str(Path(__file__).parents[1] / "src")}
     result = subprocess.run([sys.executable, "-c", code, str(tmp_path)], capture_output=True,
-                            text=True, timeout=30)
+                            text=True, timeout=30, env=env)
     assert result.returncode == 0, result.stderr
 
 
@@ -128,6 +131,23 @@ def test_inline_size_limit_is_checked_in_utf8_bytes(tmp_path):
 
     with pytest.raises(ValueError, match="file reference"):
         ToolSession(tmp_path)._source('[{"x":"' + "\u00e9" * 510000 + '"}]')
+
+
+@pytest.mark.parametrize(
+    "source",
+    ["deep_json", "deep_python"],
+)
+def test_nested_inline_data_fails_with_bounded_value_error(tmp_path, source):
+    from deepviz.tools import ToolSession
+
+    if source == "deep_json":
+        value = "[" * 500 + "0" + "]" * 500
+    else:
+        value = 0
+        for _ in range(500):
+            value = [value]
+    with pytest.raises(ValueError, match="nested too deeply"):
+        ToolSession(tmp_path)._source(value)
 
 
 @pytest.mark.parametrize("method", ["run", "arun", "invoke", "ainvoke"])
@@ -220,6 +240,78 @@ def test_tools_preserve_original_input_count_after_bounded_profile(tmp_path):
     assert normalized["output_count"] == 10
     assert rendered["input_count"] == 150
     assert rendered["output_count"] == 10
+
+
+def test_artifact_retention_is_bounded_and_cleanup_removes_only_session_files(tmp_path, monkeypatch):
+    from deepviz.tools import ToolSession
+
+    output_dir = tmp_path / "out"
+    output_dir.mkdir()
+    sentinel = output_dir / "host-owned.txt"
+    sentinel.write_text("keep", encoding="utf-8")
+
+    def render(data, spec, *, engine, output_dir):
+        artifact = output_dir / "chart.svg"
+        artifact.write_text("<svg/>", encoding="utf-8")
+        return Artifact([str(artifact)], "image/svg+xml", engine, 1, 1, "none")
+
+    monkeypatch.setattr("deepviz.render.render", render)
+    session = ToolSession(output_dir)
+    outputs = [session.render_chart("matplotlib", [{"x": 1}], {"kind": "table"}) for _ in range(33)]
+
+    assert not Path(outputs[0]["paths"][0]).exists()
+    assert Path(outputs[-1]["paths"][0]).is_file()
+    assert "32" in outputs[-1]["warnings"][-1]
+
+    session.cleanup()
+
+    assert sentinel.read_text(encoding="utf-8") == "keep"
+    assert not Path(outputs[-1]["paths"][0]).exists()
+
+
+def test_artifact_limit_counts_all_files_in_one_request_and_removes_partials(tmp_path, monkeypatch):
+    from deepviz.tools import ToolSession
+
+    def render(data, spec, *, engine, output_dir):
+        paths = []
+        for name in ["chart.svg", "chart.png"]:
+            artifact = output_dir / name
+            with artifact.open("wb") as stream:
+                stream.truncate(9 * 1024 * 1024)
+            paths.append(str(artifact))
+        return Artifact(paths, "image/svg+xml", engine, 1, 1, "none")
+
+    monkeypatch.setattr("deepviz.render.render", render)
+    output_dir = tmp_path / "out"
+    output_dir.mkdir()
+    sentinel = output_dir / "host-owned.txt"
+    sentinel.write_text("keep", encoding="utf-8")
+    session = ToolSession(output_dir)
+
+    with pytest.raises(ValueError, match="per-request limit"):
+        session.render_chart("matplotlib", [{"x": 1}], {"kind": "table"})
+
+    assert list(output_dir.iterdir()) == [sentinel]
+
+
+def test_cleanup_tools_closes_session_artifacts(tmp_path, monkeypatch):
+    from deepviz.tools import cleanup_tools, create_tools
+
+    def render(data, spec, *, engine, output_dir):
+        artifact = output_dir / "chart.svg"
+        artifact.write_text("<svg/>", encoding="utf-8")
+        return Artifact([str(artifact)], "image/svg+xml", engine, 1, 1, "none")
+
+    renderer = ModuleType("deepviz.render")
+    renderer.render = render
+    monkeypatch.setitem(sys.modules, "deepviz.render", renderer)
+    tools = create_tools(tmp_path)
+    render_tool = next(tool for tool in tools if tool.name == "render_matplotlib")
+    result = render_tool.invoke({"data": [{"x": 1}], "spec": {"kind": "table"}})
+
+    assert Path(result["paths"][0]).exists()
+    cleanup_tools(tools)
+    assert not Path(result["paths"][0]).exists()
 
 
 def test_failed_render_cleans_only_its_request_directory(tmp_path):
