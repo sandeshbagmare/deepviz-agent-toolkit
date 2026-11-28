@@ -97,6 +97,42 @@ def test_sdk_discovery_and_errors_share_a_strict_input_contract(tmp_path: Path) 
     asyncio.run(exercise())
 
 
+def test_server_factory_preloads_matplotlib_backend_in_clean_process(tmp_path: Path) -> None:
+    """Import native Matplotlib backends before any MCP tool call can run."""
+    pytest.importorskip("mcp")
+    script = """
+import sys
+from deepviz.mcp_server import create_server
+create_server(sys.argv[1])
+required = {
+    "matplotlib.backends.backend_agg",
+    "matplotlib.dates",
+    "matplotlib.figure",
+    "matplotlib.patches",
+    "matplotlib.text",
+}
+missing = sorted(required - sys.modules.keys())
+if missing:
+    raise AssertionError(f"Matplotlib backend modules not preloaded: {missing}")
+"""
+    result = subprocess.run(
+        [sys.executable, "-c", script, str(tmp_path / "out")],
+        cwd=tmp_path,
+        env={
+            **os.environ,
+            "PYTHONPATH": os.environ.get("DEEPVIZ_TEST_PYTHONPATH", str(SOURCE)),
+            "PYTHONUTF8": "1",
+            "MPLBACKEND": "Agg",
+        },
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        timeout=60,
+        check=False,
+    )
+    assert result.returncode == 0, result.stderr
+
+
 def test_sdk_resource_capacity_preserves_issued_artifacts_and_recovers(tmp_path: Path) -> None:
     pytest.importorskip("mcp")
     from deepviz.mcp_server import create_server

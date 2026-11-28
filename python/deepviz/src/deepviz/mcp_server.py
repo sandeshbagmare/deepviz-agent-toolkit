@@ -19,10 +19,6 @@ MAX_SESSION_RESOURCES = 128
 
 def create_server(output_dir: str | Path | None = None, *, data_dir: str | Path | None = None) -> Any:
     """Create a local official-SDK server; optional imports stay inside this factory."""
-    # Load native renderer dependencies before FastMCP starts its async loop.
-    # Their first import can block indefinitely when triggered inside a tool call.
-    from .render import render as _render  # noqa: F401
-
     try:
         from mcp.server.fastmcp import FastMCP
         from mcp.types import ContentBlock, ImageContent, ResourceLink, TextContent, ToolAnnotations
@@ -30,6 +26,20 @@ def create_server(output_dir: str | Path | None = None, *, data_dir: str | Path 
     except ImportError as error:
         raise ImportError("Install the mcp extra: pip install 'deepviz-agent-toolkit[mcp]' (MCP SDK 1.x)") from error
 
+    # Import Matplotlib's lazy native backend components before FastMCP starts
+    # its event loop; the first render must not load them inside a tool call.
+    from importlib import import_module
+
+    for module in (
+        "matplotlib.backends.backend_agg",
+        "matplotlib.dates",
+        "matplotlib.figure",
+        "matplotlib.patches",
+        "matplotlib.text",
+    ):
+        import_module(module)
+
+    from .render import render as _render  # noqa: F401
     from .tools import (
         ENGINES,
         MAX_ARTIFACT_BYTES,
