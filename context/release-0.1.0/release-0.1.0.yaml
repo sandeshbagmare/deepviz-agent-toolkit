@@ -44412,7 +44412,7 @@
       "dependencies": "PLAN-CHANGE-02 merged FIRST, then true rebase of this unpublished branch onto resulting main before one publication; fresh exact-head checks/2+2/CI and exact-main QA mandatory.",
       "expected_conflicts": "Select reviewed Python input-format, GraphQL and Arrow/Parquet hunks on fresh main; do not merge broad R34 ancestry. NEW-02 is serialized after NEW-01 because normalize.py and test_normalize.py are shared.",
       "reviewers": "REV-01 + REV-02; QA-01 + QA-02 independent non-author tester reports",
-      "required_tests": "Normalization, GraphQL, Arrow Table/RecordBatch/Reader, IPC file/stream, Parquet path/buffer, malformed/duplicate/oversized nested input, optional-extra error; install [columnar], verify zero skips, full pytest/Ruff/mypy. Verify selector model/runtime/checked-in-schema parity and no-read/no-open controls; run the existing benchmark smoke and validate the measured JSON/SVG evidence. Correct both existing JSON/SVG artifact provenance records to the actual final tested source, and add/retest the newly found shared-_connection-DAG scan, empty-DAG _flatten scan, and ArrowUnion preconversion-amplification regressions in existing normalize.py/test_normalize.py paths. No main-to-feature merge, force-push, omitted test or extra path is authorized; recount against the existing NEW-01 ceiling. The remaining fifth Arrow-schema-DAG work-budget regression must be fixed and retested in the existing claimed paths; preserve every case.",
+      "required_tests": "Normalization, GraphQL, Arrow Table/RecordBatch/Reader, IPC file/stream, Parquet path/buffer, malformed/duplicate/oversized nested input, optional-extra error; install [columnar], verify zero skips, full pytest/Ruff/mypy. Verify selector model/runtime/checked-in-schema parity and no-read/no-open controls; run the existing benchmark smoke and validate the measured JSON/SVG evidence. Correct both existing JSON/SVG artifact provenance records to the actual final tested source, and add/retest the newly found shared-_connection-DAG scan, empty-DAG _flatten scan, and ArrowUnion preconversion-amplification regressions in existing normalize.py/test_normalize.py paths. No main-to-feature merge, force-push, omitted test or extra path is authorized; recount against the existing NEW-01 ceiling. The fifth Arrow-schema-DAG work-budget regression must remain covered in the final-main rerun within existing claimed paths; preserve all29 new regressions and every prior case.",
       "rollback": "Revert squash, rerun main suite, stop wave.",
       "merge_method": "squash",
       "source_commits": [
@@ -44445,7 +44445,7 @@
       "state": "UNPUBLISHED replacement preparation by fix_norm; old PR #40 nonpromotable; replacement PR TBD",
       "visual_evidence_required": true,
       "source_selection_note": "RM ruling: use latest96 normalizer provenance (R17/exact finite sum/mean/owned-input and R45 fixes), necessary input/GraphQL/Arrow tests, minimal __init__.py exports, and the focused reviewed PR #40 follow-ups. NEW-01 also owns selector-boundary changes in `python/deepviz/src/deepviz/models.py` and `schemas/chart-spec.schema.json`, its existing `scripts/benchmark_scale.py` smoke harness, and measured `docs/verification/normalization/normalization-output.json` plus `docs/verification/normalization/normalization-output.svg`. These five paths are part of the same bounded-normalization task, not permission for broad schema/package/docs work. Do not replay old patches or whole 9ce04fc/355637c commits; exclude TypeScript, coordination and unrelated evidence dumps. Preserved source is a94f85c47e9a18f01009484a6813738eb8259a03; 7296d672 is an unaccepted published merge and must not be promoted. Only fix_norm writes the unpublished true-rebased replacement; exact source/keeper mapping and final evidence are pending.",
-      "final_size_status": "Historical a94 audit2689 and earlier383 result at7e are not current acceptance. ACTUAL4199b4d source/artifact diff2683/10paths leaves67 under existing2750; fifth Arrow-schema-DAG work-budget fix is still PREPARING in existing paths. No new NEW-01 exception, guessed final fit or dropped tests. After plan2 FIRST, true-rebase onto resulting exact main, regenerate/rerun all evidence/checks, recount and publish once only if every fresh gate passes."
+      "final_size_status": "Historical a94 audit2689 and earlier383 result at7e are not current acceptance. Received RM preparation snapshot ACTUAL2715/10paths is within existing2750; no NEW-01 increase. Final source/artifact refresh deliberately waits plan2 FIRST, then true-rebase/rerun/regenerate/recount onto resulting exact main before one publication. Prepared385/127 zero-skip results and all29 new regressions are preparation only; no guessed final fit, dropped test or accepted product gate."
     },
     {
       "id": "NEW-02",
@@ -45022,7 +45022,7 @@
       "wave": 1,
       "owner": "fix_norm",
       "state": "old PR #40 draft/unaccepted/nonpromotable; unpublished replacement PR TBD",
-      "blocked_by": "PLAN-CHANGE-02 FIRST; fix_norm corrects provenance and bounded-DAG regression, truly rebases unpublished normalization-rebased onto resulting main, then one publication and all fresh gates.",
+      "blocked_by": "PLAN-CHANGE-02 FIRST. fix_norm alone owns UNPUBLISHED prepared fixes; after resulting exact main, true-rebase, refresh every artifact/case, rerun/recount, then one publication/replacement PR TBD and all fresh2+2/CI/main-QA. Old40/7296 gates invalid; branch preserved.",
       "claimed_files": [
         "python/deepviz/src/deepviz/normalize.py",
         "python/deepviz/tests/test_normalize.py",
@@ -45207,7 +45207,7 @@
       "wave": "Wave 1 prep",
       "owner": "fix_norm",
       "state": "old PR #40 draft/unaccepted/nonpromotable; unpublished replacement PR TBD",
-      "blocked_by": "PLAN-CHANGE-02 FIRST; fix_norm corrects provenance and bounded-DAG regression, truly rebases unpublished normalization-rebased onto resulting main, then one publication and all fresh gates.",
+      "blocked_by": "PLAN-CHANGE-02 FIRST. fix_norm alone owns UNPUBLISHED prepared fixes; after resulting exact main, true-rebase, refresh every artifact/case, rerun/recount, then one publication/replacement PR TBD and all fresh2+2/CI/main-QA. Old40/7296 gates invalid; branch preserved.",
       "claimed_files": [
         "release/v1/w1-python-normalization (preserved published source)",
         "release/v1/w1-python-normalization-rebased (unpublished fix_norm only)"
@@ -45834,10 +45834,9 @@
     "local_new01_integration": {
       "owner": "fix_norm exclusively",
       "branch": "release/v1/w1-python-normalization-rebased",
-      "observed_unpublished_checkpoint": "4199b4d578297132f8c341520ff841bfabcf836a",
-      "state": "UNPUBLISHED, observed zero feature merge commits after54dd; true rebase of a94 onto54dd; after PLAN-CHANGE-02 merges FIRST, true-rebase onto resulting exact main and rerun every check/evidence case before one publication/replacement PR TBD.",
+      "state": "UNPUBLISHED true-rebased preparation by fix_norm only. All five reported findings fixed in preparation; final source/artifact refresh is deliberately held until PLAN-CHANGE-02 merges FIRST, then true-rebase onto resulting exact main, rerun/recount every case and publish once/replacement PR TBD.",
       "correction": "The earlier local/unpushed7296 claim and authorization were wrong:7296 is a published two-parent main-to-feature merge on old PR #40; old40 is unaccepted/nonpromotable and its branch is preserved. All old40/7296 review/test/CI gates are invalid for the replacement.",
-      "root_reported_preparation": "ACTUAL4199b4d source/artifact diff2683/10paths after observer ceilings, leaving67 under existing2750. Source PREPARING: independently reported fifth Arrow-schema-DAG work-budget hole remains with fix_norm in existing paths. Earlier7e782873/blob30893ffa results383 strict/0skip+127formats/0skip,Ruff/mypy are HISTORICAL before fifth fix; no final/main acceptance."
+      "root_reported_preparation": "Received RM preparation snapshot: ACTUAL2715 changed lines/10paths,29 new regressions,385 strict/0skip+127 formats/0skip,Ruff/mypy pass. Within existing2750 only at this preparation snapshot; not main/final-head acceptance. Earlier383 result at7e is HISTORICAL before fifth fix; all product gates remain unverified until final-main refresh and fresh2+2/CI/main-QA."
     },
     "public_action_receipt": {
       "path": "C:\\Users\\bagma\\AppData\\Local\\Temp\\deepviz-v010-ops\\tri01-publish-20261128T093210Z\\final-action-summary.json",
