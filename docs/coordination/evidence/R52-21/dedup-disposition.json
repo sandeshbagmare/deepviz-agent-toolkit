@@ -1,0 +1,59 @@
+{
+  "product_head": "4429f0521612b97eee3790f0d8d0fbc3cad3f8be",
+  "product_parent": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+  "source2_decision": "CLEAR_NARROWLY",
+  "main_target": "AntV/renderer PR lane (planned PR4; PR number UNKNOWN)",
+  "blocker_removed": "second non-author SOURCE2 gate for exact 4429 producer",
+  "source_hashes": {
+    "head_engines_sha256": "2b83e10c82fbf2705db16c4a5e5fc6a28ef3c68fb86ab6add4dd5aa99bffe4ad",
+    "parent_engines_sha256": "d519700c20007009ffffb6e8343696c30335949b0df798aa4a83ac8b0025fc29",
+    "head_engines_git_blob": "05d2fc411333bf36e72cfd538aab1397f90c47c6",
+    "parent_engines_git_blob": "d3e437ee1688e4bdff86274a8f4fc6504777246a"
+  },
+  "deduplicated_native_scale_findings": [
+    {
+      "id": "R38-18-F1",
+      "source": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+      "input": "[-MAX,0,+MAX]",
+      "observed": "G2 native Linear span Infinity; upper mapped color NaN; browser_runs=0",
+      "classification": "same finite-span arithmetic mechanism"
+    },
+    {
+      "id": "R39-21-F1",
+      "source": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+      "input": "[-1e308,+1e308]",
+      "observed": "G2 factory normalized endpoint NaN; one negative control passed; no full paint claim",
+      "classification": "same finite-span arithmetic mechanism; corroborating evidence, not a second issue"
+    }
+  ],
+  "head_static_effect": {
+    "source": "4429",
+    "input": "opposite-sign finite extrema",
+    "native_domain": "[low, low/2 + high/2, high]",
+    "native_range": "3 finite colors",
+    "proof": "for +/-MAX and +/-1e308 midpoint=0 and both segment spans finite; raw _heat values remain in data"
+  },
+  "separate_painted_finding": {
+    "id": "R51-05-F1",
+    "source": "4429f0521612b97eee3790f0d8d0fbc3cad3f8be",
+    "input": "[-sys.float_info.max,+sys.float_info.max], width=240, height=520",
+    "observed": "real G2/Chromium output resolved with 2 marks and zero errors; endpoint labels overlap 98.98046875 px and right edge is 299.74609375 > canvas 240",
+    "classification": "distinct legend layout/paint defect; not native scale arithmetic and not waived by native static clearance"
+  },
+  "preserved_subnormal_finding": {
+    "id": "R38-17-F1",
+    "source": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+    "observed": "four finite subnormal heat values rendered zero G2 cells in published real output; internal cause remains unconfirmed",
+    "classification": "retained strict affected behavior; author 4429 results do not independently waive it"
+  },
+  "author_evidence_not_counted": {
+    "producer": "4429",
+    "reported": "10/10 plus original4/4 and role21 254 checks",
+    "use": "context only; no author acceptance borrowed"
+  },
+  "limits": [
+    "No product import/test/native G2/browser/output execution in this SOURCE2 review.",
+    "No source, test oracle, issue, PR, merge, CI or default-branch action.",
+    "R51-05 independent browser evidence is read, not replayed."
+  ]
+}

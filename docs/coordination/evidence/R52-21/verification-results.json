@@ -1,0 +1,62 @@
+{
+  "actual_id": "ses_de5678018ffezK8JGDUaSzvcWn",
+  "branch": "agents/r10-21-recovery-git-bootstrap",
+  "initial_head": "a3c972fd0525a980b1168a2b1dc613f52cc07758",
+  "reviewed_source": "4429f0521612b97eee3790f0d8d0fbc3cad3f8be",
+  "parent": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+  "product_tests_run": 0,
+  "product_tests_passed": 0,
+  "product_tests_failed": 0,
+  "product_tests_skipped": 0,
+  "browser_runs": 0,
+  "builds": 0,
+  "CI_runs": 0,
+  "checks": [
+    {
+      "command": "git status --short --branch; git rev-parse HEAD; git log -4 --oneline; git cat-file -t 4429f0521612b97eee3790f0d8d0fbc3cad3f8be; git cat-file -t 3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+      "exit": 0,
+      "result": "Own branch agents/r10-21-recovery-git-bootstrap at a3c972fd0525a980b1168a2b1dc613f52cc07758 before R52 edits; both exact source objects exist."
+    },
+    {
+      "command": "git diff --name-status 3185e0d9936c7d6f1a9d30b94089b804d75fe991 4429f0521612b97eee3790f0d8d0fbc3cad3f8be",
+      "exit": 0,
+      "result": "Exactly3 paths: engines.py modification; producer test and role17 native observer additions."
+    },
+    {
+      "command": "& 'C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe' -B docs/coordination/evidence/R52-21/source-proof.py",
+      "exit": 0,
+      "result": "Static Git blob and AST proof; 22 protected functions/module statements unchanged; 4 connected path blobs identical at both commits."
+    },
+    {
+      "command": "& 'C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe' -B docs/coordination/evidence/R52-21/build-evidence.py",
+      "exit": 0,
+      "result": "Built exact hash ledger and dedup disposition from Git objects."
+    },
+    {
+      "command": "& 'C:\\Users\\bagma\\deepviz-agent-toolkit\\.venv\\Scripts\\python.exe' -B docs/coordination/evidence/R52-21/prior-evidence-manifest.py",
+      "exit": 0,
+      "result": "Hashed9 exact prior report/evidence files read from MAIN."
+    },
+    {
+      "command": "python - (standalone float arithmetic, constant heat=5e-324; asserts padding fallback, symmetric domain, finite nonzero span, finite reciprocal)",
+      "exit": 0,
+      "result": "4/4 assertions; arithmetic only, no project imports or native/browser execution."
+    },
+    {
+      "command": "first standalone constant-subnormal expectation (incorrectly assumed padding remained subnormal)",
+      "exit": 1,
+      "result": "Own assertion disproved by inspection of `or 1` fallback; no product finding. Corrected bounded arithmetic check then passed."
+    },
+    {
+      "command": "first source-proof run with ROOT=Path(__file__).parents[3]",
+      "exit": 1,
+      "result": "Harness locator used docs root not repository root; corrected to parents[4], exact proof then exit0."
+    },
+    {
+      "command": "PowerShell Git show piped to Get-FileHash -InputStream",
+      "exit": 1,
+      "result": "PowerShell parameter-binding misuse; source hashes obtained through git rev-parse blobs and direct normal file hashes; no source change."
+    }
+  ],
+  "verdict": "SOURCE2 narrowly clear for finite-span source arithmetic; candidate REQUEST CHANGES due independent painted label-layout blocker; R04 next owner."
+}

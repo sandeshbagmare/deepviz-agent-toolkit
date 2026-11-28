@@ -1,0 +1,23 @@
+{
+  "kind": "standalone IEEE-754 arithmetic check only; no project module/import/native engine/browser/test suite executed",
+  "source_reference": "4429 engines.py lines 685-688 and 701",
+  "input": {
+    "constant_heat": 5e-324,
+    "decimal": "minimum positive binary64 subnormal"
+  },
+  "evaluated": {
+    "padding": 1,
+    "adjusted_low": -1.0,
+    "adjusted_high": 1.0,
+    "span": 2.0,
+    "span_is_finite": true,
+    "reciprocal": 0.5
+  },
+  "assertions": {
+    "padding_falls_back_to_one": true,
+    "adjusted_domain_is_symmetric": true,
+    "span_is_finite_nonzero": true,
+    "reciprocal_finite": true
+  },
+  "result": "NO_ZERO_DIVISION_FINDING; source fallback prevents reciprocal exception in this case"
+}

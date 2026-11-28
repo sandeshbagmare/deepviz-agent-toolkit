@@ -1,0 +1,200 @@
+{
+  "product_parent": "3185e0d9936c7d6f1a9d30b94089b804d75fe991",
+  "product_head": "4429f0521612b97eee3790f0d8d0fbc3cad3f8be",
+  "diff_name_status": [
+    "M\tpython/deepviz/src/deepviz/engines.py",
+    "A\tpython/deepviz/tests/test_r45_antv_subnormal_heatmap.py",
+    "A\ttests/r45_probes/role17/native.cjs"
+  ],
+  "engine_source": {
+    "parent": {
+      "git_blob": "d3e437ee1688e4bdff86274a8f4fc6504777246a",
+      "sha256": "d519700c20007009ffffb6e8343696c30335949b0df798aa4a83ac8b0025fc29",
+      "bytes": 44787
+    },
+    "head": {
+      "git_blob": "05d2fc411333bf36e72cfd538aab1397f90c47c6",
+      "sha256": "2b83e10c82fbf2705db16c4a5e5fc6a28ef3c68fb86ab6add4dd5aa99bffe4ad",
+      "bytes": 45877
+    }
+  },
+  "changed_product_path_hashes": {
+    "python/deepviz/src/deepviz/engines.py": {
+      "3185e0d9936c7d6f1a9d30b94089b804d75fe991": {
+        "git_blob": "d3e437ee1688e4bdff86274a8f4fc6504777246a",
+        "sha256": "d519700c20007009ffffb6e8343696c30335949b0df798aa4a83ac8b0025fc29",
+        "bytes": 44787
+      },
+      "4429f0521612b97eee3790f0d8d0fbc3cad3f8be": {
+        "git_blob": "05d2fc411333bf36e72cfd538aab1397f90c47c6",
+        "sha256": "2b83e10c82fbf2705db16c4a5e5fc6a28ef3c68fb86ab6add4dd5aa99bffe4ad",
+        "bytes": 45877
+      }
+    },
+    "python/deepviz/tests/test_r45_antv_subnormal_heatmap.py": {
+      "4429f0521612b97eee3790f0d8d0fbc3cad3f8be": {
+        "git_blob": "d64df79f9cc6284355561de0389c68cf59d3e34b",
+        "sha256": "b0f9e89723c66e59ce461cde1dd8c2d4b1908280055fd5ee092c8d4d0ec41d86",
+        "bytes": 4648
+      }
+    },
+    "tests/r45_probes/role17/native.cjs": {
+      "4429f0521612b97eee3790f0d8d0fbc3cad3f8be": {
+        "git_blob": "33b6706e9bfa3ac22ed4133edf020ac33ef0614d",
+        "sha256": "66a7eb85d8b196b31f9eb518cf7ce873b0ee9a4a40ed1859060a8f408710bd4b",
+        "bytes": 5286
+      }
+    }
+  },
+  "connected_unchanged_git_blobs": {
+    "python/deepviz/src/deepviz/render.py": {
+      "3185e0d9936c7d6f1a9d30b94089b804d75fe991": "64490a82f232e0c3c51a142bd898fd7f6c7c6dbf",
+      "4429f0521612b97eee3790f0d8d0fbc3cad3f8be": "64490a82f232e0c3c51a142bd898fd7f6c7c6dbf"
+    },
+    "python/deepviz/src/deepviz/models.py": {
+      "3185e0d9936c7d6f1a9d30b94089b804d75fe991": "17877904985d496f645cd7c66305efc8305bcb5f",
+      "4429f0521612b97eee3790f0d8d0fbc3cad3f8be": "17877904985d496f645cd7c66305efc8305bcb5f"
+    },
+    "python/deepviz/src/deepviz/normalize.py": {
+      "3185e0d9936c7d6f1a9d30b94089b804d75fe991": "04e15965934d37f4140f2dd6772b2e97747920ea",
+      "4429f0521612b97eee3790f0d8d0fbc3cad3f8be": "04e15965934d37f4140f2dd6772b2e97747920ea"
+    },
+    "python/deepviz/tests/test_backend_antv.py": {
+      "3185e0d9936c7d6f1a9d30b94089b804d75fe991": "8fd8242ab9f7e86ab01611fa2ca52ac166807dcc",
+      "4429f0521612b97eee3790f0d8d0fbc3cad3f8be": "8fd8242ab9f7e86ab01611fa2ca52ac166807dcc"
+    }
+  },
+  "static_ast": {
+    "all_top_level_except__antv_identical": true,
+    "protected_function_count": 22,
+    "changed_function": "_antv",
+    "imports_and_module_level_statements_unchanged": true
+  },
+  "scope": "read-only Git blob and AST proof; no product module import, tests, scale library, native engine, browser, or output executed",
+  "finite_scale_arithmetic_only": {
+    "cases": [
+      {
+        "input_domain": [
+          -1.7976931348623157e+308,
+          1.7976931348623157e+308
+        ],
+        "safe_midpoint": 0.0,
+        "adjacent_segment_spans": [
+          1.7976931348623157e+308,
+          1.7976931348623157e+308
+        ],
+        "all_finite": true
+      },
+      {
+        "input_domain": [
+          -1e+308,
+          1e+308
+        ],
+        "safe_midpoint": 0.0,
+        "adjacent_segment_spans": [
+          1e+308,
+          1e+308
+        ],
+        "all_finite": true
+      }
+    ],
+    "method": "arithmetic derivation only; raw source values remain the color data; this is not G2/browser paint evidence"
+  },
+  "exact_path_hashes": {
+    "python/deepviz/src/deepviz/engines.py": {
+      "3185e0d9936c7d6f1a9d30b94089b804d75fe991": {
+        "git_blob": "d3e437ee1688e4bdff86274a8f4fc6504777246a",
+        "sha256": "d519700c20007009ffffb6e8343696c30335949b0df798aa4a83ac8b0025fc29",
+        "bytes": 44787
+      },
+      "4429f0521612b97eee3790f0d8d0fbc3cad3f8be": {
+        "git_blob": "05d2fc411333bf36e72cfd538aab1397f90c47c6",
+        "sha256": "2b83e10c82fbf2705db16c4a5e5fc6a28ef3c68fb86ab6add4dd5aa99bffe4ad",
+        "bytes": 45877
+      }
+    },
+    "python/deepviz/src/deepviz/render.py": {
+      "3185e0d9936c7d6f1a9d30b94089b804d75fe991": {
+        "git_blob": "64490a82f232e0c3c51a142bd898fd7f6c7c6dbf",
+        "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+        "bytes": 11637
+      },
+      "4429f0521612b97eee3790f0d8d0fbc3cad3f8be": {
+        "git_blob": "64490a82f232e0c3c51a142bd898fd7f6c7c6dbf",
+        "sha256": "69357040b7f94da6b92b66a91e378645d3108a77d8c55dc7c60d950f174ab5a3",
+        "bytes": 11637
+      }
+    },
+    "python/deepviz/src/deepviz/models.py": {
+      "3185e0d9936c7d6f1a9d30b94089b804d75fe991": {
+        "git_blob": "17877904985d496f645cd7c66305efc8305bcb5f",
+        "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "bytes": 3493
+      },
+      "4429f0521612b97eee3790f0d8d0fbc3cad3f8be": {
+        "git_blob": "17877904985d496f645cd7c66305efc8305bcb5f",
+        "sha256": "890ecb0e29e1345364b2bf4840bdea7a542067003caf54d7b0855536ee2b6a76",
+        "bytes": 3493
+      }
+    },
+    "python/deepviz/src/deepviz/normalize.py": {
+      "3185e0d9936c7d6f1a9d30b94089b804d75fe991": {
+        "git_blob": "04e15965934d37f4140f2dd6772b2e97747920ea",
+        "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+        "bytes": 33895
+      },
+      "4429f0521612b97eee3790f0d8d0fbc3cad3f8be": {
+        "git_blob": "04e15965934d37f4140f2dd6772b2e97747920ea",
+        "sha256": "0473bce148e96d0095a46b95577ec43bf5bc70050cfed1de37e8ab24c377bb83",
+        "bytes": 33895
+      }
+    },
+    "python/deepviz/tests/test_backend_antv.py": {
+      "3185e0d9936c7d6f1a9d30b94089b804d75fe991": {
+        "git_blob": "8fd8242ab9f7e86ab01611fa2ca52ac166807dcc",
+        "sha256": "36bcd3a5a8b8e419ba6a98e2c3d80c7199c002becd40a708ad09f130b42dabc6",
+        "bytes": 12656
+      },
+      "4429f0521612b97eee3790f0d8d0fbc3cad3f8be": {
+        "git_blob": "8fd8242ab9f7e86ab01611fa2ca52ac166807dcc",
+        "sha256": "36bcd3a5a8b8e419ba6a98e2c3d80c7199c002becd40a708ad09f130b42dabc6",
+        "bytes": 12656
+      }
+    },
+    "python/deepviz/tests/test_r45_antv_subnormal_heatmap.py": {
+      "4429f0521612b97eee3790f0d8d0fbc3cad3f8be": {
+        "git_blob": "d64df79f9cc6284355561de0389c68cf59d3e34b",
+        "sha256": "b0f9e89723c66e59ce461cde1dd8c2d4b1908280055fd5ee092c8d4d0ec41d86",
+        "bytes": 4648
+      }
+    },
+    "tests/r45_probes/role17/native.cjs": {
+      "4429f0521612b97eee3790f0d8d0fbc3cad3f8be": {
+        "git_blob": "33b6706e9bfa3ac22ed4133edf020ac33ef0614d",
+        "sha256": "66a7eb85d8b196b31f9eb518cf7ce873b0ee9a4a40ed1859060a8f408710bd4b",
+        "bytes": 5286
+      }
+    }
+  },
+  "tree": {
+    "parent": "023866237d8f967867ddac713935b0da87923b0b",
+    "head": "f6c8d356d211d4ddc35b4c2435ee7215112d0579"
+  },
+  "production_change_lines": {
+    "engines.py": "694-712 target; 19 additions, no deletions; only _antv heatmap branch"
+  },
+  "line_level_static_points": [
+    {
+      "lines": "694-700",
+      "claim": "If high-low is non-finite, midpoint low/2 + high/2 and two adjacent segments replace one overflowing span; arithmetic proof for opposite finite extrema is finite."
+    },
+    {
+      "lines": "701-709",
+      "claim": "Unsafe native legend coordinate uses [0,1] while preserving original numeric labels and domainValue; this is native payload construction, not paint proof."
+    },
+    {
+      "lines": "710-712",
+      "claim": "Label length is capped by spec.width - 32; this source rule is not sufficient to guarantee two endpoint labels fit, and exact-head painted output independently found overlap at width 240."
+    }
+  ]
+}
