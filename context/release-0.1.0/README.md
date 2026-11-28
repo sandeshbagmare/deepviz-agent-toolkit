@@ -36,6 +36,6 @@ The original branch and issue disposition tables remain a historical planning sn
 
 ## Use and amendments
 
-Read only the topic needed. Full paths, PR/issue facts, overlap matrix, assignments and states are in YAML. Owner-confirmed scope is Python-only: shared schema, bounded normalization and reducers, optional Arrow/Parquet input via `[columnar]`, five Python renderers, Deep Agents tools and local stdio MCP. TypeScript/npm (including P0 issue #14) is deferred to v1.1. The caller explicitly revised #28; publish the decision and real issue counts after this plan change merges, then close #28 as superseded. All in-scope product, CI, review, QA and P0 gates still apply.
+Read only the topic needed. Full paths, PR/issue facts, overlap matrix, assignments and states are in YAML. Owner-confirmed scope is Python-only: shared schema, bounded normalization and reducers, optional Arrow/Parquet input via `[columnar]`, five Python renderers, Deep Agents tools and local stdio MCP. TypeScript #14/#15 and npm package #25 are deferred to v1.1. The caller explicitly revised #28; publish the decision and real issue counts after this plan change merges, then close #28 as superseded. All in-scope product, CI, review, QA and P0 gates still apply.
 
 Any agent may propose a `plan-change` PR limited to this directory. RM-01 reviews/approves; update YAML and matching Markdown together and append a dated row to `15-plan-changelog.md`.

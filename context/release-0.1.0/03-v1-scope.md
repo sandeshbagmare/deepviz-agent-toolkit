@@ -7,9 +7,9 @@
 
 ## Definition
 
-**OWNER-CONFIRMED (2026-11-28).** 0.1.0 is a Python-only, source-installable declarative visualization toolkit with strict ChartSpec, bounded data normalization and reductions, optional Arrow/Parquet input through the existing `[columnar]` extra, five Python renderers, recommendation/Deep Agents tools, and local stdio MCP. Package metadata already declares version `0.1.0`. TypeScript/npm, including issue #15, is deferred to v1.1. A feature is done only after merge, tests pass on exact main, and non-author QA records end-to-end evidence in file 16.
+**OWNER-CONFIRMED (2026-11-28).** 0.1.0 is a Python-only, source-installable declarative visualization toolkit with strict ChartSpec, bounded data normalization and reductions, optional Arrow/Parquet input through the existing `[columnar]` extra, five Python renderers, recommendation/Deep Agents tools, and local stdio MCP. Package metadata already declares version `0.1.0`. TypeScript/npm, including TypeScript issues #14/#15 and npm package issue #25, is deferred to v1.1. A feature is done only after merge, tests pass on exact main, and non-author QA records end-to-end evidence in file 16.
 
-The proposal follows main README, main design spec `docs/superpowers/specs/2026-11-26-deepviz-design.md`, and open story issues #6-#17. It keeps one coherent Python path; npm/TypeScript is deferred rather than included without main verification.
+The proposal follows main README, main design spec `docs/superpowers/specs/2026-11-26-deepviz-design.md`, and open story issues #6-#17. It keeps one coherent Python path; TypeScript #14/#15 and npm package #25 are explicitly deferred to v1.1.
 
 ## Scope
 
@@ -27,7 +27,7 @@ The proposal follows main README, main design spec `docs/superpowers/specs/2026-
 
 ## Out of scope
 
-- TypeScript/npm/browser artifacts and parity: DEFER to v1.1 by owner decision; issues #14 and #15 are outside the confirmed Python-only 0.1.0 scope. Keep the issues open for v1.1; main has no npm workspace and the candidate branches remain unmerged.
+- TypeScript/npm/browser artifacts and parity: DEFER to v1.1 by owner decision; TypeScript issues #14/#15 and npm package issue #25 are outside confirmed Python-only 0.1.0. Keep all three issues open for v1.1; main has no npm workspace and the candidate branches remain unmerged.
 - Hosted services, package publishing, model-provider dependency, arbitrary code or remote URL ingestion.
 - Do not merge historical research/process branches wholesale; publish only the scoped Python-specific release evidence required by #19, #27 and #29. Unsupported performance claims remain out of scope.
 

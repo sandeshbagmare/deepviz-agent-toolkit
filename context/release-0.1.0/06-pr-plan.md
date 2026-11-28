@@ -198,7 +198,7 @@ NEW-03, NEW-04
 ## Files touched
 python/deepviz/src/deepviz/recommend.py, python/deepviz/src/deepviz/tools.py, python/deepviz/src/deepviz/__init__.py, python/deepviz/tests/test_integrations.py
 ## How tested (commands + results)
-Record exact commands and actual output after running; no pass may be claimed before execution.
+Fresh `.[agents]` environment: construct, inspect and invoke real LangChain `StructuredTool`, run normalize -> recommend -> render; zero skips. Separate base-only install without LangChain/Deep Agents verifies core imports and integrations stay lazy. Record exact commands and actual output; no pass may be claimed before execution.
 ## Risk & rollback
 1,341-line integration source; stage recommendation/tool API before MCP. Rollback: Revert squash; preserve renderer APIs.
 ## Visual evidence (committed repository paths; embed every image)
@@ -232,7 +232,7 @@ NEW-05
 ## Files touched
 python/deepviz/src/deepviz/mcp_server.py, python/deepviz/src/deepviz/cli.py, python/deepviz/src/deepviz/tools.py, python/deepviz/tests/test_integrations.py, python/deepviz/tests/test_r14_tool_json_boundary.py, python/deepviz/tests/test_r41_callback_admission.py, examples/, prompts/v1/
 ## How tested (commands + results)
-Record exact commands and actual output after running; no pass may be claimed before execution.
+In a fresh `.[mcp]` environment, test stdio initialize/list/call, safe artifact, malformed JSON and callback admission. Exercise the real tool call in the fresh `[agents]` lane with zero skips for required integration tests. Separately run a base-only lazy-import control; report unrelated skips. Record exact commands/results; no pass may be claimed before execution.
 ## Risk & rollback
 Shares package API/entrypoints; select Python MCP-only paths and fix callback order/capacity. Rollback: Revert squash; retain tools; stop MCP wave.
 ## Visual evidence (committed repository paths; embed every image)

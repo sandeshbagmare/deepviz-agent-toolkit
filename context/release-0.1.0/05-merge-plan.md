@@ -41,7 +41,7 @@ RM source ruling: NEW-01 selects latest96 normalizer with reviewed reducer corre
 
 ## Wave 2 - Python renderers
 
-Entry: Wave 1 product, #1 roll-up evidence, #8/#30 acceptance and #5 NormalizedData evidence recorded on exact main; #5 Artifact API and #22 renderer-linked scale acceptance remain scheduled for Wave 2/5; #28 owner revision posted and issue superseded; full checks/smoke pass; no unrelated S1/S2 or main-gate regression. Work may continue with the scheduled P0s #20 (W5), #21 (W4), #23 (this wave), #26 (every PR through W5), and #4 (release umbrella through G3). #14 remains explicitly deferred and outside 0.1.0. Exit: both renderer PRs merge and verify on exact main; #23 visual acceptance passes across all five Python engines and a dashboard; #5 Artifact API acceptance passes; renderer-linked #22 scale proof is independently replicated or stays explicitly pending through Wave 5. Rollback: revert offending squash commit, rerun full tests/smoke, stop next wave. Tag: `v0.1.0-wave-2`.
+Entry: Wave 1 product, #1 roll-up evidence, #8/#30 acceptance and #5 NormalizedData evidence recorded on exact main; #5 Artifact API and #22 renderer-linked scale acceptance remain scheduled for Wave 2/5; #28 owner revision posted and issue superseded; full checks/smoke pass; no unrelated S1/S2 or main-gate regression. Work may continue with the scheduled P0s #20 (W5), #21 (W4), #23 (this wave), #26 (every PR through W5), and #4 (release umbrella through G3). #14, #15 and #25 remain explicitly deferred to v1.1 and outside 0.1.0. Exit: both renderer PRs merge and verify on exact main; #23 visual acceptance passes across all five Python engines and a dashboard; #5 Artifact API acceptance passes; renderer-linked #22 scale proof is independently replicated or stays explicitly pending through Wave 5. Rollback: revert offending squash commit, rerun full tests/smoke, stop next wave. Tag: `v0.1.0-wave-2`.
 
 ### NEW-03 - [v1][W2][feature] add Python Matplotlib, Plotly, and Vega renderers
 
@@ -68,7 +68,7 @@ Entry: Wave 2 and #23 visual acceptance verified on exact main; full checks/smok
 - Source branches: `feat/integrations`. Target: `main`; new branch `release/v1/w3-python-tools`.
 - Files: `python/deepviz/src/deepviz/recommend.py`, `python/deepviz/src/deepviz/tools.py`, `python/deepviz/src/deepviz/__init__.py`, `python/deepviz/tests/test_integrations.py`. Estimated size: 300-900; split API/tool bindings if needed.
 - Dependencies: NEW-03, NEW-04. Expected conflicts/resolution: 1,341-line integration source; stage recommendation/tool API before MCP.
-- Reviewers: REV-01 + REV-03; QA-02 + QA-03 non-authors. Required tests: local normalize -> recommend -> render without model; full checks.
+- Reviewers: REV-01 + REV-03; QA-02 + QA-03 non-authors. Required tests: in a fresh `.[agents]` environment, construct/inspect/invoke the actual LangChain `StructuredTool` API and run normalize -> recommend -> render with zero skips; separately, a fresh base-only install without LangChain/Deep Agents must import core while optional integrations stay unloaded; full checks.
 - Merge: squash. Rollback: Revert squash; preserve renderer APIs.
 
 ### NEW-06 - [v1][W3][feature] add safe stdio MCP server and CLI
@@ -76,7 +76,7 @@ Entry: Wave 2 and #23 visual acceptance verified on exact main; full checks/smok
 - Source branches: `feat/integrations`, `fix/r14-mcp-json-budget`, `fix/r41-callback-admission`, `agents/r10-10-stdio-artifact-lifecycle`, `agents/r11-10-strict-mcp-boundaries`. Target: `main`; new branch `release/v1/w3-python-mcp-cli`.
 - Files: `python/deepviz/src/deepviz/mcp_server.py`, `python/deepviz/src/deepviz/cli.py`, `python/deepviz/src/deepviz/tools.py`, `python/deepviz/tests/test_integrations.py`, `python/deepviz/tests/test_r14_tool_json_boundary.py`, `python/deepviz/tests/test_r41_callback_admission.py`, `examples/`, `prompts/v1/`. Estimated size: 300-900; split docs if needed.
 - Dependencies: NEW-05. Expected conflicts/resolution: Shares package API/entrypoints; select Python MCP-only paths and fix callback order/capacity.
-- Reviewers: REV-02 + REV-04; QA-02 + QA-03 non-authors. Required tests: stdio initialize/list/call, safe artifact, malformed JSON, callback admission; install [mcp].
+- Reviewers: REV-02 + REV-04; QA-02 + QA-03 non-authors. Required tests: stdio initialize/list/call, safe artifact, malformed JSON and callback admission with `.[mcp]`; exercise actual tool integration in the installed `[agents]` lane and keep the separate base-only lazy-import control; required tests cannot be skipped.
 - Merge: squash. Rollback: Revert squash; retain tools; stop MCP wave.
 
 ## Wave 4 - Python hardening and correctness fixes

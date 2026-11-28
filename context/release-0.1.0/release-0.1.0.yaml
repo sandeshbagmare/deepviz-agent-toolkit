@@ -24,7 +24,7 @@
   "default_branch": "main",
   "main_sha": "f692014b9c7eb6a9fe0aa6f27b76b40426f053a7",
   "source_of_truth": "release-0.1.0.yaml; structured plan synchronized with Markdown, with original branch-disposition inventory retained as a dated snapshot",
-  "scope_status": "OWNER-CONFIRMED: Python-only 0.1.0; Arrow/Parquet via optional [columnar]; TypeScript/npm deferred; #28 owner revision awaits public issue update after plan merge",
+  "scope_status": "OWNER-CONFIRMED: Python-only 0.1.0; Arrow/Parquet via optional [columnar]; TypeScript #14/#15 and npm #25 deferred; #28 owner revision awaits public issue update after plan merge",
   "counts": {
     "remote_refs_including_main": 68,
     "non_default_branches": 67,
@@ -44613,8 +44613,8 @@
       "estimated_size": "300-900; split API/tool bindings if needed",
       "dependencies": "NEW-03, NEW-04",
       "expected_conflicts": "1,341-line integration source; stage recommendation/tool API before MCP.",
-      "reviewers": "REV-01 + REV-03; QA-03 + QA-01",
-      "required_tests": "local normalize -> recommend -> render without model; full checks",
+      "reviewers": "REV-01 + REV-03; QA-02 + QA-03",
+      "required_tests": "In a fresh `.[agents]` environment, construct, inspect and invoke the actual LangChain `StructuredTool` API, then run normalize -> recommend -> render through the real tool flow. These required tests must execute with zero skips. Separately, in a fresh base-only install without LangChain/Deep Agents, import core and prove optional integrations remain lazy without loading `langchain_core`; full checks.",
       "rollback": "Revert squash; preserve renderer APIs.",
       "merge_method": "squash",
       "source_commits": [
@@ -44651,8 +44651,8 @@
       "estimated_size": "300-900; split docs if needed",
       "dependencies": "NEW-05",
       "expected_conflicts": "Shares package API/entrypoints; select Python MCP-only paths and fix callback order/capacity.",
-      "reviewers": "REV-02 + REV-04; QA-03 + QA-01",
-      "required_tests": "stdio initialize/list/call, safe artifact, malformed JSON, callback admission; install [mcp]",
+      "reviewers": "REV-02 + REV-04; QA-02 + QA-03",
+      "required_tests": "In a fresh `.[mcp]` environment, test stdio initialize/list/call, safe artifact retrieval, malformed JSON and callback admission. Exercise the real integration tool call in the fresh `[agents]` lane; required integration tests must not skip. Separately run the base-only lazy-import control without LangChain/Deep Agents; report any unrelated optional-test skips explicitly.",
       "rollback": "Revert squash; retain tools; stop MCP wave.",
       "merge_method": "squash",
       "source_commits": [
@@ -44760,7 +44760,7 @@
       "dependencies": "NEW-01..NEW-07",
       "expected_conflicts": "Consolidate acceptance after code; omit duplicate/RED tests until fixed; exclude agent-state/evidence dumps.",
       "reviewers": "REV-03 + REV-04; QA-02 + QA-03 independent non-author tester reports",
-      "required_tests": "Full Python tests/Ruff/mypy/build; clean base/[columnar]/[mcp] wheel and sdist installs; package resource/type-marker and entrypoint checks; five-engine and renderer-linked scale evidence with independent replication (#22); dated primary-source research including licensing/runtime/scale/output trade-offs (#19); exact-main CI (#20); package acceptance (#24); every-PR report/visual audit (#26); labeled/milestoned/dependency-aware process issue map and primary GitHub constraints (#27); publicly retargeted genuine focused-PR report provenance and gallery (#29); public Python-only scope addendum to #4 excluding #14/#15/#25, then release roll-up.",
+      "required_tests": "Full Python tests/Ruff/mypy/build; clean base/[columnar]/[mcp]/[agents] wheel and sdist installs; package resource/type-marker and entrypoint checks; five-engine and renderer-linked scale evidence with independent replication (#22); dated primary-source research including licensing/runtime/scale/output trade-offs (#19); exact-main CI (#20); package acceptance (#24); every-PR report/visual audit (#26); labeled/milestoned/dependency-aware process issue map and primary GitHub constraints (#27); publicly retargeted genuine focused-PR report provenance and gallery (#29); public Python-only scope addendum to #4 excluding #14/#15/#25, then release roll-up.",
       "rollback": "Revert acceptance/doc commit only; stop release and repair CI.",
       "merge_method": "squash",
       "source_commits": [
@@ -45313,8 +45313,8 @@
     {
       "feature": "Recommendation and Deep Agents tools",
       "prs": "NEW-05",
-      "tests": "python/deepviz/tests/test_integrations.py; examples/multi_tool_flow.py",
-      "smoke": "Run local normalize→recommend→render without model.",
+      "tests": "python/deepviz/tests/test_integrations.py; examples/multi_tool_flow.py; fresh installed [agents] lane",
+      "smoke": "Actual LangChain StructuredTool construction/schema/invoke and normalize->recommend->render in [agents] with zero skips; separate base-only no-LangChain import proves lazy optional integrations.",
       "verified_on_main": false,
       "verified_by": null,
       "main_sha": null,
@@ -45323,8 +45323,8 @@
     {
       "feature": "Stdio MCP and CLI",
       "prs": "NEW-06",
-      "tests": "python/deepviz/tests/test_integrations.py; tests/test_mcp_transport.py",
-      "smoke": "Initialize/list/call and retrieve safe artifact.",
+      "tests": "python/deepviz/tests/test_integrations.py; tests/test_mcp_transport.py; fresh [mcp] and [agents] lanes",
+      "smoke": "stdio initialize/list/call and safe artifact with [mcp]; real tool call with [agents], required tests zero skips; separate base-only lazy-import control.",
       "verified_on_main": false,
       "verified_by": null,
       "main_sha": null,
@@ -45411,7 +45411,8 @@
     "scope": "Python-only 0.1.0",
     "deferred_issues": [
       14,
-      15
+      15,
+      25
     ],
     "arrow_parquet": "Required via existing optional [columnar] extra; base install remains PyArrow-free.",
     "package_version": "0.1.0",
@@ -45516,5 +45517,18 @@
       "limit": "Approximately 2,000 changed lines",
       "reason": "Coherent existing normalizer with necessary tests/public imports; do not drop tests; exact-head 2+2 gates retained."
     }
-  ]
+  ],
+  "optional_dependency_acceptance": {
+    "NEW-05": {
+      "installed_extra": "[agents]",
+      "actual_api": "Construct, inspect and invoke the real LangChain StructuredTool API and complete normalize -> recommend -> render flow.",
+      "skip_policy": "Zero skips in the installed-extra lane.",
+      "base_control": "A separate fresh base-only install without langchain_core or Deep Agents imports the core package successfully and proves optional integrations remain lazily unloaded."
+    },
+    "NEW-06": {
+      "installed_extra": "[mcp] plus the declared [agents] integration lane",
+      "actual_api": "Exercise stdio tool discovery and a real tool call; use the installed-extra API test lane for StructuredTool construction and invocation.",
+      "skip_policy": "Report skips; required integration cases cannot use importorskip."
+    }
+  }
 }
