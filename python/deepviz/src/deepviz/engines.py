@@ -5,7 +5,7 @@ import json
 import math
 import textwrap
 from collections import defaultdict
-from datetime import datetime
+from datetime import UTC, datetime
 from html import escape
 from typing import Any, overload
 
@@ -13,7 +13,9 @@ import numpy as np
 
 from .models import ChartSpec
 
-ENGINES = ("matplotlib", "plotly", "vega")
+ENGINES = ("matplotlib", "plotly", "vega", "echarts", "antv")
+ECHARTS_URL = "https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.min.js"
+ANTV_URL = "https://cdn.jsdelivr.net/npm/@antv/g2@5.4.8/dist/g2.min.js"
 PALETTE = ["#386cb0", "#b85c00", "#2a9d73", "#c44964", "#8861a9", "#a67c42"]
 _PLOTLY_LICENSE = """MIT License
 
@@ -105,6 +107,8 @@ def channels(records: list[dict], spec: ChartSpec) -> list[dict]:
     )]
     x = spec.x or next((key for key in fields if key not in numeric), fields[0] if fields else None)
     y = spec.y or next((key for key in numeric if key != x), numeric[0] if numeric else None)
+    if spec.aggregation == "count" and spec.y is None and spec.kind != "heatmap":
+        y = "count"
     if spec.kind == "histogram" and spec.x is None:
         x = spec.y or next((key for key in numeric if key != "index"), x)
     heat = spec.color or ("count" if spec.kind == "heatmap" else y)
@@ -551,6 +555,222 @@ def _vega(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) -> 
 
 
 
+def _echarts(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) -> dict:
+    bg, fg = _colors(spec)
+    xs = list(dict.fromkeys(str(r["_x"]) for r in data))
+    option: dict = {"animation": False, "backgroundColor": bg, "color": PALETTE,
+                    "title": {"text": spec.title, "textStyle": {"color": fg}},
+                    "textStyle": {"color": fg}, "tooltip": {"trigger": "item", "renderMode": "richText"},
+                    "legend": {"show": bool(spec.color), "top": 30, "textStyle": {"color": fg}},
+                    "grid": {"containLabel": True, "left": 50, "right": 30, "top": 65, "bottom": 35},
+                    "xAxis": {"type": "category", "data": xs, "name": spec.x or ""},
+                    "yAxis": {"type": "value", "name": spec.y or ""}, "series": []}
+    series = option["series"]
+    if kind in {"bar", "line", "area"}:
+        temporal_x = kind != "bar" and _iso_dates([row["_x"] for row in data])
+        numeric_x = kind != "bar" and all(isinstance(row["_x"], (int, float)) for row in data)
+        if temporal_x or numeric_x:
+            option["xAxis"] = {"type": "time" if temporal_x else "value", "name": spec.x or ""}
+        for j, (name, group) in enumerate(_groups(data).items()):
+            item: dict = {"type": "bar" if kind == "bar" else "line", "name": name,
+                    "data": [[r["_x"] if temporal_x or numeric_x else str(r["_x"]), r["_y"]] for r in group]}
+            if kind == "area":
+                item["areaStyle"] = {}
+            if kind != "bar":
+                item.update(symbol=["circle", "rect", "triangle", "diamond", "pin", "roundRect", "arrow"][j % 7],
+                            symbolSize=7, showSymbol=True,
+                            lineStyle={"type": ["solid", "dashed", "dotted"][j % 3]})
+            series.append(item)
+    elif kind in {"scatter", "bubble", "geo"}:
+        option["xAxis"] = {"type": "value", "name": spec.x or ""}
+        for name, group in _groups(data).items():
+            series.append({"type": "scatter", "name": name, "data": [
+                {"value": [r["_x"], r["_y"], r["_size"]],
+                 "symbolSize": max(4, math.sqrt(r["_size"]) * 6) if kind == "bubble" else 9} for r in group]})
+        if kind == "geo":
+            option["xAxis"].update(min=-180, max=180, name="Longitude")
+            option["yAxis"].update(min=-90, max=90, name="Latitude")
+    elif kind in {"pie", "treemap", "sunburst", "funnel", "gauge"}:
+        values: list = [{"name": str(r["_x"]), "value": max(0, r["_y"])} for r in data]
+        item = {"type": kind, "data": values}
+        if kind == "gauge":
+            item.update(min=0, max=100, data=[{"value": data[0]["_y"] if data else 0}])
+        if kind == "funnel":
+            item["sort"] = "none"
+        series.append(item)
+        option.pop("xAxis")
+        option.pop("yAxis")
+    elif kind == "histogram":
+        hist = _histogram(data)
+        option["xAxis"]["data"] = [f'{r["_left"]:g}–{r["_right"]:g}' for r in hist]
+        series.append({"type": "bar", "barCategoryGap": "0%", "data": [r["_y"] for r in hist]})
+    elif kind == "box":
+        boxes = _boxes(data)
+        option["xAxis"]["data"] = [b["name"] for b in boxes]
+        series.append({"type": "boxplot", "data": [b["stats"] for b in boxes]})
+    elif kind == "radar":
+        option.pop("xAxis")
+        option.pop("yAxis")
+        option["radar"] = {"indicator": [{"name": str(r["_x"]), "max": max(1, max(v["_y"] for v in data))}
+                                          for r in data]}
+        series.append({"type": "radar", "data": [{"value": [r["_y"] for r in data]}]})
+    elif kind == "heatmap":
+        xs, ys, values = _heatmap(data)
+        option["xAxis"]["data"] = xs
+        option["yAxis"] = {"type": "category", "data": ys}
+        low = min((v[2] for v in values), default=0)
+        high = max((v[2] for v in values), default=1)
+        option["visualMap"] = {"min": low, "max": high, "show": False}
+        if not math.isfinite(high - low):
+            # ECharts' domain subtraction overflows; keep raw heat in dimension 2.
+            span = high / 2 - low / 2
+            values = [[*row, (row[2] / 2 - low / 2) / span] for row in values]
+            option["visualMap"].update(min=0, max=1, dimension=3, text=[str(high), str(low)])
+        series.append({"type": "heatmap", "data": values, "encode": {"tooltip": [2]}})
+    elif kind == "table":
+        columns = list(dict.fromkeys(key for row in records for key in row))
+        option.pop("xAxis")
+        option.pop("yAxis")
+        option["graphic"] = [{"type": "text", "left": 20 + j * (spec.width - 40) / max(1, len(columns)),
+                               "top": 60 + i * 20, "style": {"text": str(value), "fill": fg, "fontSize": 12}}
+                              for i, row in enumerate([dict(zip(columns, columns, strict=True)), *records])
+                               for j, value in enumerate(row.get(key, "") for key in columns)]
+    if "xAxis" in option:
+        option["xAxis"].update(nameLocation="middle", nameGap=30)
+        option["grid"]["bottom"] = 55
+    return option
+
+
+def _antv(data: list[dict], records: list[dict], spec: ChartSpec, kind: str) -> dict:
+    temporal_x = kind in {"line", "area", "scatter", "bubble"} and _iso_dates([row["_x"] for row in data])
+    if temporal_x:
+        times = [datetime.fromisoformat(row["_x"]) for row in data]
+        data = [{**row, "_x": (value if value.tzinfo else value.replace(tzinfo=UTC)).timestamp() * 1000}
+                for row, value in zip(data, times, strict=True)]
+    mark = {"bar": "interval", "line": "line", "area": "area", "scatter": "point", "bubble": "point",
+            "pie": "interval", "heatmap": "cell", "histogram": "interval", "box": "box",
+            "radar": "line", "treemap": "rect", "sunburst": "interval", "funnel": "interval",
+            "gauge": "interval", "geo": "point", "table": "text"}[kind]
+    result: dict = {"type": mark, "data": data, "encode": {"x": "_x", "y": "_y"},
+                    "animate": False, "theme": spec.theme, "title": spec.title, "tooltip": False,
+                    "interaction": {"tooltip": False},
+                    "axis": {"x": {"title": spec.x or "Category", "labelFill": _colors(spec)[1], "titleFill": _colors(spec)[1]},
+                             "y": {"title": spec.y or "Value", "labelFill": _colors(spec)[1], "titleFill": _colors(spec)[1]}}}
+    encode = result["encode"]
+    if spec.color:
+        encode["color"] = "_color"
+        result["scale"] = {"color": {"range": PALETTE}}
+    elif kind not in {"pie", "sunburst", "treemap", "gauge"}:
+        result["style"] = {"fill": PALETTE[0], "stroke": PALETTE[0]}
+    if temporal_x:
+        result.setdefault("scale", {})["x"] = {"type": "time"}
+    if kind == "line":
+        groups = _groups(data)
+        result["type"] = "view"
+        result.pop("encode")
+        result.pop("style", None)
+        shapes = ["point", "square", "triangle", "diamond", "hexagon", "bowtie", "cross"]
+        if spec.color:
+            result["scale"]["color"]["domain"] = list(groups)
+            result["scale"]["shape"] = {"domain": list(groups), "range": shapes}
+        children = []
+        for j, group in enumerate(groups.values()):
+            encode = {"x": "_x", "y": "_y"}
+            if spec.color:
+                encode["color"] = "_color"
+            line_style: dict = {"lineDash": DASHES[j % len(DASHES)], "lineWidth": 2}
+            point_style: dict = {"r": 3}
+            if not spec.color:
+                line_style["stroke"] = PALETTE[0]
+                point_style["fill"] = PALETTE[0]
+            children.append({"type": "line", "data": group, "encode": encode,
+                             "style": line_style, "animate": False})
+            children.append({"type": "point", "data": [row for row in group if row["_y"] is not None],
+                             "encode": {**encode, **({"shape": "_color"} if spec.color else {})},
+                             "style": point_style, "animate": False})
+        result["children"] = children
+    elif kind == "bar" and spec.color:
+        result["transform"] = [{"type": "dodgeX"}]
+    elif kind == "bubble":
+        encode["size"] = "_size"
+    elif kind in {"pie", "sunburst"}:
+        result["coordinate"] = {"type": "theta", "innerRadius": .45 if kind == "sunburst" else 0}
+        result["transform"] = [{"type": "stackY"}]
+        encode.pop("x")
+        encode["color"] = "_x"
+        result["legend"] = {"color": {"position": "right"}}
+    elif kind == "radar":
+        result["coordinate"] = {"type": "polar"}
+        result["data"] = data + data[:1]
+    elif kind == "histogram":
+        result["data"] = _histogram(data)
+    elif kind == "heatmap":
+        encode["color"] = "_heat"
+        low = min((row["_heat"] for row in data), default=0)
+        high = max((row["_heat"] for row in data), default=1)
+        if low == high:
+            padding = abs(low) * .05 or 1
+            low = low - padding if math.isfinite(low - padding) else low
+            high = high + padding if math.isfinite(high + padding) else high
+        # Avoid G2's inferred sequential domain, which loses negative extents.
+        result["scale"] = {"color": {"type": "linear", "domain": [low, high],
+                                     "range": ["#ffffd9", "#081d58"], "nice": False}}
+        result["legend"] = {"color": {"data": [{"value": low}, {"value": high}],
+                                       "labelTextAlign": "start"}}
+        span = high - low
+        if not math.isfinite(span):
+            # Keep raw values, but never interpolate across an infinite segment.
+            result["scale"]["color"].update(
+                domain=[low, low / 2 + high / 2, high],
+                range=["#ffffd9", "#848e99", "#081d58"],
+            )
+        if not math.isfinite(span) or not math.isfinite(1 / span):
+            # G2's legend layout/sampling needs a well-conditioned coordinate.
+            # Labels/domainValue remain the actual numeric domain endpoints.
+            # Its auto-size measurement has no ticks here; reserve the default size.
+            result["legend"]["color"].update(
+                domain=[0, 1], color=["#ffffd9", "#081d58"], size=60,
+                data=[{"value": 0, "label": str(low), "domainValue": low},
+                      {"value": 1, "label": str(high), "domainValue": high}],
+            )
+        label_length = 14 * max(len(str(low)), len(str(high))) + 20
+        if label_length > 200:
+            # Wrap complete numeric labels; start-aligned endpoints can clip even a bounded ribbon.
+            result["legend"]["color"].update(
+                length=min(spec.width - 32, label_length), size=80, labelTextAlign="center",
+                labelWordWrap=True, labelWordWrapWidth=(spec.width - 64) / 2,
+            )
+        result.pop("style", None)
+    elif kind == "box":
+        result["data"] = [{"_x": b["name"], "_y": b["stats"]} for b in _boxes(data)]
+    elif kind == "treemap":
+        result["data"] = _tiles(data)
+        result["encode"] = {"x": ["_left", "_right"], "y": ["_bottom", "_top"], "color": "_x"}
+        result["axis"] = False
+    elif kind == "funnel":
+        result["coordinate"] = {"transform": [{"type": "transpose"}]}
+        result["transform"] = [{"type": "symmetryY"}]
+    elif kind == "gauge":
+        value = min(100, max(0, data[0]["_y"])) if data else 0
+        result["data"] = [{"_x": "Value", "_y": value}, {"_x": "Remaining", "_y": 100 - value}]
+        result["coordinate"] = {"type": "theta", "innerRadius": .75, "startAngle": -math.pi,
+                                 "endAngle": 0}
+        result["encode"] = {"y": "_y", "color": "_x"}
+        result["transform"] = [{"type": "stackY"}]
+        result["axis"] = False
+    elif kind == "geo":
+        result["scale"] = {"x": {"domain": [-180, 180]}, "y": {"domain": [-90, 90]}}
+    elif kind == "table":
+        columns = list(dict.fromkeys(key for row in records for key in row))
+        result["data"] = [{"_x": key, "_y": str(i), "_text": str(row.get(key, ""))}
+                          for i, row in enumerate([dict(zip(columns, columns, strict=True)), *records])
+                          for key in columns]
+        result["encode"] = {"x": "_x", "y": "_y", "text": "_text"}
+        result["axis"] = False
+        result["style"] = {"fill": _colors(spec)[1], "stroke": _colors(spec)[1]}
+    return result
+
+
 def native_spec(engine: str, records: list[dict], spec: ChartSpec) -> tuple[dict, list[str], str]:
     """Build only the selected engine's native declarative payload."""
     spec = ChartSpec.model_validate(spec.model_dump(warnings=False))
@@ -567,8 +787,10 @@ def native_spec(engine: str, records: list[dict], spec: ChartSpec) -> tuple[dict
         native = _plotly(data, records, spec)
     elif engine == "vega":
         native = _vega(data, records, spec, kind)
+    elif engine == "echarts":
+        native = _echarts(data, records, spec, kind)
     else:
-        raise ValueError(f"No JSON spec for engine {engine!r}")
+        native = _antv(data, records, spec, kind)
     return native, warnings, kind
 
 
@@ -607,18 +829,26 @@ def browser_html(
                      f'<tbody>{body}</tbody></table></div></details></section>')
     scripts = ""
     if not image:
-        if engine != "plotly":
+        if engine == "plotly":
+            from plotly.offline import get_plotlyjs, get_plotlyjs_version
+            dependency = (f"<!-- Plotly.js runtime v{get_plotlyjs_version()}; MIT license.\n"
+                          f"{_PLOTLY_LICENSE}--><script>{get_plotlyjs()}</script>")
+            # Native API/manifest text stays raw; encode only Plotly's display boundary.
+            bootstrap = (
+                "const display=v=>typeof v==='string'?v.replaceAll('&','&amp;')"
+                ".replaceAll('<','&lt;').replaceAll('>','&gt;'):Array.isArray(v)?v.map(display):"
+                "v&&typeof v==='object'?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,display(x)])):v;"
+                "const q=display(p);return Plotly.newPlot(el,q.data,q.layout,{responsive:true,displaylogo:false});"
+            )
+        elif engine == "echarts":
+            dependency = f'<script src="{ECHARTS_URL}"></script>'
+            bootstrap = "const c=echarts.init(el,null,{renderer:'svg'});c.setOption(p);return c;"
+        elif engine == "antv":
+            dependency = f'<script src="{ANTV_URL}"></script>'
+            bootstrap = ("const c=new G2.Chart({container:el,width:el.clientWidth,height:el.clientHeight});"
+                         "c.options(p);return c.render();")
+        else:
             raise ValueError(f"No browser runtime for engine {engine!r}")
-        from plotly.offline import get_plotlyjs, get_plotlyjs_version
-        dependency = (f"<!-- Plotly.js runtime v{get_plotlyjs_version()}; MIT license.\n"
-                      f"{_PLOTLY_LICENSE}--><script>{get_plotlyjs()}</script>")
-        # Native API/manifest text stays raw; encode only Plotly's display boundary.
-        bootstrap = (
-            "const display=v=>typeof v==='string'?v.replaceAll('&','&amp;')"
-            ".replaceAll('<','&lt;').replaceAll('>','&gt;'):Array.isArray(v)?v.map(display):"
-            "v&&typeof v==='object'?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,display(x)])):v;"
-            "const q=display(p);return Plotly.newPlot(el,q.data,q.layout,{responsive:true,displaylogo:false});"
-        )
         scripts = (f'<script id="deepviz-data" type="application/json">{safe_json(payloads)}</script>{dependency}'
                    '<script>window.deepvizReady=Promise.resolve().then(()=>{'
                    'const payloads=JSON.parse(document.getElementById("deepviz-data").textContent);'
