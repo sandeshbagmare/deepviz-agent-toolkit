@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="940" viewBox="0 0 1440 940" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="940" viewBox="0 0 1440 940" role="img" aria-labelledby="title desc" data-plan-version="1.1" data-baseline-main-sha="54dd12e2d8d5d69e25426e92c313f0f79e00de81" data-baseline-state="Y" data-future-state="N" data-plan-state-sha256="bd0d556180789838d8947081ccaab4a5f64b25f6d54b8e994bbca791163962a6">
   <title id="title">DeepViz 0.1.0 Python release plan</title>
-  <desc id="desc">Six release waves from the verified ChartSpec baseline through Python normalization, renderers, integrations, hardening, and final acceptance. The diagram shows issue milestones, the owner-revised issue 28 criterion, and the final release gate.</desc>
+  <desc id="desc">Current canonical YAML plan state: baseline main54dd/118 verified tests is Y; Wave1 is preparing/N and all future features remain N. NEW-03A to NEW-03B to NEW-04 is serialized. Issue28 closed not_planned after the public issue4 amendment; issues4/29 stay open. G1-G4 pending; no product acceptance.</desc>
   <defs>
     <style>
       svg { font-family: "Segoe UI", Arial, sans-serif; fill: #182230; }
@@ -15,7 +15,7 @@
   </defs>
   <rect width="1440" height="940" fill="#f4f7fb"/>
   <text x="72" y="62" font-size="32" font-weight="700">DeepViz 0.1.0 | Python release path</text>
-  <text x="72" y="92" font-size="16" class="sub">Plan v1.1 | main f692014b | 28 November 2026 | Python-only; Arrow/Parquet via [columnar]</text>
+  <text x="72" y="92" font-size="16" class="sub">Plan v1.1 | baseline main 54dd12e2 | PLAN-CHANGE-02 under review | 28 November 2026 | Python-only; [columnar]</text>
   <rect x="72" y="119" width="1296" height="70" rx="12" fill="#e7eef8" stroke="#c7d4e5"/>
   <text x="96" y="148" font-size="17" font-weight="700">Release scope</text>
   <text x="96" y="173" font-size="15" class="sub">ChartSpec, bounded inputs/reductions, five Python renderers, agent tools, stdio MCP, safe package and release evidence</text>
@@ -35,42 +35,42 @@
     <rect x="164" y="301" width="1204" height="63" rx="10" fill="#ffffff" stroke="#cbd6e2"/>
     <text x="188" y="329" class="wave">Wave 1 - Python inputs and reducers</text>
     <text x="188" y="351" class="small sub">NEW-01: inputs and reductions; NEW-02: reducer regression/scale tests. #5 NormalizedData evidence; #1/#5 stay open.</text>
-    <rect x="1216" y="314" width="130" height="28" rx="14" fill="#e8eef8"/><text x="1238" y="333" class="pill" fill="#315d93">QUEUED</text>
+    <rect x="1216" y="314" width="130" height="28" rx="14" fill="#e8eef8"/><text x="1238" y="333" class="pill" fill="#315d93">PREPARING / N</text>
   </g>
   <g>
     <circle cx="122" cy="417" r="18" fill="#3769a5"/><text x="116" y="423" font-size="14" fill="#fff" font-weight="700">2</text>
     <rect x="164" y="386" width="1204" height="63" rx="10" fill="#ffffff" stroke="#cbd6e2"/>
     <text x="188" y="414" class="wave">Wave 2 - five Python renderers</text>
-    <text x="188" y="436" class="small sub">Five Python renderers; #23 visual acceptance, #5 Artifact API and #1 roll-up; renderer-linked #22 scale through Wave 5.</text>
-    <rect x="1216" y="399" width="130" height="28" rx="14" fill="#e8eef8"/><text x="1238" y="418" class="pill" fill="#315d93">PLANNED</text>
+    <text x="188" y="436" class="small sub">NEW-03A (Matplotlib/Vega) -> NEW-03B (Plotly) -> NEW-04 (ECharts/AntV); #5/#23 and renderer-linked #22 remain N.</text>
+    <rect x="1216" y="399" width="130" height="28" rx="14" fill="#e8eef8"/><text x="1238" y="418" class="pill" fill="#315d93">PLANNED / N</text>
   </g>
   <g>
     <circle cx="122" cy="502" r="18" fill="#3769a5"/><text x="116" y="508" font-size="14" fill="#fff" font-weight="700">3</text>
     <rect x="164" y="471" width="1204" height="63" rx="10" fill="#ffffff" stroke="#cbd6e2"/>
     <text x="188" y="499" class="wave">Wave 3 - tools and local MCP</text>
     <text x="188" y="521" class="small sub">Recommendations, Deep Agents tools, stdio server and CLI; exact-main local end-to-end and transport tests.</text>
-    <rect x="1216" y="484" width="130" height="28" rx="14" fill="#e8eef8"/><text x="1238" y="503" class="pill" fill="#315d93">PLANNED</text>
+    <rect x="1216" y="484" width="130" height="28" rx="14" fill="#e8eef8"/><text x="1238" y="503" class="pill" fill="#315d93">PLANNED / N</text>
   </g>
   <g>
     <circle cx="122" cy="587" r="18" fill="#3769a5"/><text x="116" y="593" font-size="14" fill="#fff" font-weight="700">4</text>
     <rect x="164" y="556" width="1204" height="63" rx="10" fill="#ffffff" stroke="#cbd6e2"/>
     <text x="188" y="584" class="wave">Wave 4 - safety and correctness</text>
     <text x="188" y="606" class="small sub">Bounded tables, hostile text and paths, artifact lifecycle, dependency review; complete #21 security acceptance.</text>
-    <rect x="1216" y="569" width="130" height="28" rx="14" fill="#e8eef8"/><text x="1238" y="588" class="pill" fill="#315d93">PLANNED</text>
+    <rect x="1216" y="569" width="130" height="28" rx="14" fill="#e8eef8"/><text x="1238" y="588" class="pill" fill="#315d93">PLANNED / N</text>
   </g>
   <g>
     <circle cx="122" cy="672" r="18" fill="#3769a5"/><text x="116" y="678" font-size="14" fill="#fff" font-weight="700">5</text>
     <rect x="164" y="641" width="1204" height="63" rx="10" fill="#ffffff" stroke="#cbd6e2"/>
     <text x="188" y="669" class="wave">Wave 5 - CI, packaging, final acceptance</text>
-    <text x="188" y="691" class="small sub">Full Python CI; base/[columnar]/[mcp] clean installs; #22 scale + independent replication; #26 audit; scoped #4 roll-up.</text>
-    <rect x="1216" y="654" width="130" height="28" rx="14" fill="#e8eef8"/><text x="1238" y="673" class="pill" fill="#315d93">PLANNED</text>
+    <text x="188" y="691" class="small sub">NEW-08 package + CI; base/[columnar]/[mcp]/[agents] clean installs; #22 replication, #26 audit and #4 roll-up remain N.</text>
+    <rect x="1216" y="654" width="130" height="28" rx="14" fill="#e8eef8"/><text x="1238" y="673" class="pill" fill="#315d93">PLANNED / N</text>
   </g>
 
   <rect x="72" y="730" width="634" height="116" rx="12" fill="#fff7e6" stroke="#edcf8d"/>
   <text x="96" y="761" class="head">Issue milestones</text>
   <text x="96" y="790" class="body">W2: #5 Artifact API and #1 roll-up | #30 acceptance before W2</text>
   <text x="96" y="816" class="body">#21 W4 | #20/#26 W5 | #22 renderer scale + replication by G3</text>
-  <text x="96" y="837" class="small sub">#28 public update after plan merge | #14 remains deferred to v1.1.</text>
+  <text x="96" y="837" class="small sub">#28 closed not_planned after #4 amendment; #4/#29 open; 900 remains unmet.</text>
 
   <rect x="730" y="730" width="638" height="116" rx="12" fill="#edf4ff" stroke="#b8cdea"/>
   <text x="754" y="761" class="head">Every PR gate</text>
@@ -79,6 +79,6 @@
   <text x="754" y="837" class="small sub">New commits invalidate earlier reports and artifacts.</text>
 
   <rect x="72" y="870" width="1296" height="42" rx="10" fill="#24364b"/>
-  <text x="96" y="897" font-size="16" fill="#ffffff" font-weight="700">G3: in-scope S1/S2/P0 resolved; exact-main features, clean installs, full regression and #22 scale replication green.</text>
-  <text x="1175" y="897" font-size="14" fill="#ffe29a" font-weight="700">#28 update required</text>
+  <text x="96" y="897" font-size="16" fill="#ffffff" font-weight="700">G3 NOT PASSED: exact-main feature QA, clean installs, full regression and #22 renderer scale/replication required.</text>
+  <text x="1175" y="897" font-size="14" fill="#ffe29a" font-weight="700">G1-G4 PENDING</text>
 </svg>

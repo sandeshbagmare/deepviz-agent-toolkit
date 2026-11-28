@@ -44630,7 +44630,7 @@
         "python/deepviz/tests/test_renderers_b.py",
         "evidence/new04/**"
       ],
-      "estimated_size": "Prepared overlay4f59c12ad2fb5a976ca6759477d1483eea597431 versus dependency14539a280ab1cb91f93b2c06f9105cd646f7c2a3 measures+964/-14=978 changed text lines across15 paths, with8 PNGs. Neither overlay nor dependency is main acceptance; fresh unpublished replacement/current-main rebase and final<=1000 recount remain mandatory. RM-reported tester alias9cc candidate23browser+34unit only, not a commit SHA or main/final-head approval.",
+      "estimated_size": "Prepared overlay4f59c12ad2fb5a976ca6759477d1483eea597431 versus dependency14539a280ab1cb91f93b2c06f9105cd646f7c2a3 measures+964/-14=978 changed text lines across15 paths, with8 PNGs. Neither overlay nor dependency is main acceptance; fresh unpublished replacement/current-main rebase and final<=1000 recount remain mandatory. Independent23-browser/34-unit receipt is for real product commit9cc5c9e802064d18f253e39795c832128c84afbe; author receipt stored at4f59 separately reports462 pytest/23 browser. Neither is final replacement-head or main acceptance.",
       "dependencies": "NEW-03B merged and verified on exact main; NEW-03A remains verified as its prerequisite.",
       "expected_conflicts": "Shared renderer paths are serialized after NEW-03B; select existing ECharts/AntV and independent R20/R23/count/color/extreme-value source hunks only. Anticipated named test/evidence paths do not broaden source scope.",
       "reviewers": "REV-02 + REV-03; QA-02 + QA-03",
@@ -44666,7 +44666,15 @@
         "head_sha": "4f59c12ad2fb5a976ca6759477d1483eea597431",
         "dependency_overlay_sha": "14539a280ab1cb91f93b2c06f9105cd646f7c2a3",
         "changed_text_lines": 978,
-        "png_files": 8
+        "png_files": 8,
+        "independent_evidence": {
+          "candidate_commit": "9cc5c9e802064d18f253e39795c832128c84afbe",
+          "summary_json": "C:\\Users\\bagma\\AppData\\Local\\Temp\\deepviz-new04-candidate-9cc5c9e-independent-summary.json",
+          "summary_sha256": "24adda18a5093ba00f8c0fa11c12775ab53c4bbf5e92458c33631a13caa705ca",
+          "browser_junit": "C:\\Users\\bagma\\AppData\\Local\\Temp\\deepviz-new04-candidate-9cc5c9e-browser-junit.xml",
+          "unit_junit": "C:\\Users\\bagma\\AppData\\Local\\Temp\\deepviz-new04-candidate-9cc5c9e-unit-junit.xml",
+          "results": "23 browser +34 unit,0 failures/errors/skips; independent candidate receipt, not author462/23 execution or final/main approval."
+        }
       }
     },
     {
@@ -45485,8 +45493,8 @@
       "id": "PLAN-CHANGE-02",
       "wave": "before renderer replacement promotion",
       "owner": "RM-01 + DOC-01",
-      "state": "local draft only; no GitHub PR opened",
-      "blocked_by": "RM review and instruction to submit separately; merged PR #39 remains untouched; no renderer replacement promotion until approved split plan and dependency gates.",
+      "state": "append-only correction of published0f6; fresh4reports pending on new head",
+      "blocked_by": "RM final scope/visual check before push; new exact-head2reviewer+2tester reports and CI before merge; old0f6 reports historical, all product promotion remains held.",
       "claimed_files": [
         "context/release-0.1.0/README.md",
         "context/release-0.1.0/04-dependency-and-conflict-map.md",
@@ -45498,7 +45506,8 @@
         "context/release-0.1.0/release-0.1.0.yaml",
         "context/release-0.1.0/09-review-checklist.md",
         "context/release-0.1.0/12-release-gates.md",
-        "context/release-0.1.0/18-current-state-audit.md"
+        "context/release-0.1.0/18-current-state-audit.md",
+        "context/release-0.1.0/evidence/plan-change-wave-map.svg"
       ],
       "last_update": "2026-11-28"
     },
@@ -45626,7 +45635,7 @@
       "verified_by": null,
       "main_sha": null,
       "date": null,
-      "result": "Prepared overlay4f59c12:978 text/15paths/8PNG; tester9cc candidate23browser+34unit only; not verified on main."
+      "result": "Prepared overlay4f59c12:978 text/15paths/8PNG; real product commit9cc5c9e independently tested23browser+34unit; separate author462/23 receipt. Neither is main/final-head acceptance."
     },
     {
       "feature": "AntV G2 renderer",
@@ -45637,7 +45646,7 @@
       "verified_by": null,
       "main_sha": null,
       "date": null,
-      "result": "Prepared overlay4f59c12:978 text/15paths/8PNG; tester9cc candidate23browser+34unit only; not verified on main."
+      "result": "Prepared overlay4f59c12:978 text/15paths/8PNG; real product commit9cc5c9e independently tested23browser+34unit; separate author462/23 receipt. Neither is main/final-head acceptance."
     },
     {
       "feature": "Recommendation and Deep Agents tools",
@@ -45981,12 +45990,12 @@
     {
       "id": "PLAN-CHANGE-02",
       "approved_by": "RM-01",
-      "max_changed_lines": 1150,
-      "max_changed_paths": 11,
-      "allowed_paths_ref": "tracker.PLAN-CHANGE-02.claimed_files (same11 context paths only)",
+      "max_changed_lines": 1200,
+      "max_changed_paths": 12,
+      "allowed_paths_ref": "tracker.PLAN-CHANGE-02.claimed_files: prior11 context paths plus EXACT existing evidence/plan-change-wave-map.svg only",
       "measured_intermediate": "HISTORICAL ad540340aab56d85397e2acdd13279bf57df7c5e versus main54dd12e2d8d5d69e25426e92c313f0f79e00de81: +737/-262=999 changed lines; not the current final size.",
-      "restricted_remaining_lines": 151,
-      "reason": "THIS-AMENDMENT-ONLY allowance from999 to1150 solely for coherent explicit claims, policy correction and status/public-evidence synchronization. No product scope, tests, dependencies,2+2,CI,main-QA or publication-policy waiver; actual final numstat required."
+      "restricted_remaining_lines": 201,
+      "reason": "THIS-AMENDMENT-ONLY201-line allowance from historical999 to1200, max12 exact paths, solely for consistency/policy/status and actual tested visual fixes. No product scope/test/dependency/2+2/CI/main-QA/publication-policy waiver; final actual numstat required."
     }
   ],
   "optional_dependency_acceptance": {
@@ -46005,7 +46014,7 @@
   "counts_note": "TRI-01 authenticated receipt at2026-11-28T09:43:16Z verifies35 genuine issue records:34 open/1 closed,11 PRs excluded,10 open P0 including deferred14. Captured Git refs/PR inventory remains76 refs and11 PRs(8open/3merged), not a fresh full ref census. Historical inventory remains dated. Nine top-level entries map ten declared product slices; no replacement PR exists yet.",
   "renderer_split_amendment": {
     "id": "PLAN-CHANGE-02",
-    "status": "local draft only; not submitted or approved",
+    "status": "append-only corrections to published0f6; unpublished until RM final scope check; earlier reports historical, fresh2reviewer+2tester reports required on new exact head",
     "plan_base_sha": "54dd12e2d8d5d69e25426e92c313f0f79e00de81",
     "branch": "plan/release-0.1.0-renderer-split",
     "logical_parent": "NEW-03",
@@ -46016,10 +46025,10 @@
       "NEW-04"
     ],
     "completion": "NEW-03 is a roll-up only, complete when NEW-03A and NEW-03B are both merged and non-author QA verified on exact main. Old NEW-03 references mean both children. No existing feature becomes verified through this amendment.",
-    "promotion": "No product promotion before PLAN-CHANGE-02 merges. Current output is local final draft for RM review; no new PR yet. Preserve old40-46 and merged39. Corrected NEW01 and every replacement follow the unpublished true-rebase/scoped-selection, single-publication policy with complete keeper mapping and fresh2+2/CI/main-QA.",
+    "promotion": "No product promotion before PLAN-CHANGE-02 merges. Published0f6 reports are historical after these corrections; obtain fresh2reviewer+2tester exact-head reports and CI. No push until RM final scope check. Preserve all old product branches and follow the unpublished true-rebase/scoped-selection, single-publication/keeper policy.",
     "source_main_dependency": "Recorded main is a baseline, not the eventual renderer comparison base. NEW-03A must rebase onto the actual NEW-02 verified main merge; NEW-03B onto the verified NEW-03A main merge; NEW-04 onto the verified NEW-03B main merge. Record each future exact base/head and rerun all checks.",
     "pr42_preservation": "Retain open draft/source PR #42 unchanged until replacement PRs account for every retained/excluded hunk and evidence path with keeper links; no close/rewrite/merge is claimed.",
-    "additional_scope": "Codify RM NEW-02-only 1,300-line/seven-path exception; exact NEW05/06 draft test paths; mapped NEW08 package/CI children; pending actual tested PNG/JSON evidence and baseline-only QA transition. No source/test/CI/QA gate is weakened. Recovered user policy forbids main-to-feature merges/force-push/deletion; reject7296 authorization, assign fix_norm exclusively, preserve old drafts and codify unpublished replacements. TRI receipt updates public scope status only. Static975 preparation is not main acceptance. This amendment alone has1150-line/11-path ceiling.",
+    "additional_scope": "Codify RM NEW-02-only 1,300-line/seven-path exception; exact NEW05/06 draft test paths; mapped NEW08 package/CI children; pending actual tested PNG/JSON evidence and baseline-only QA transition. No source/test/CI/QA gate is weakened. Recovered user policy forbids main-to-feature merges/force-push/deletion; reject7296 authorization, assign fix_norm exclusively, preserve old drafts and codify unpublished replacements. TRI receipt updates public scope status only. Static975 preparation is not main acceptance. This amendment alone has1200-line/12-path ceiling. Correct NEW02 summary and GraphQL path, real9cc receipt identity, and render the existing SVG from current validated plan state; no new product acceptance.",
     "shared_renderer_source_commits": {
       "31acb2f6e58bc83f71c1736af9d4be37c56ad59c": "feat/renderers",
       "420a956788c9b78529d3348650a32913090f5671": "feat/renderers"

@@ -5,7 +5,7 @@
 - Date: 2026-11-28
 - Plan version: 1.1 (local renderer-split amendment pending)
 
-Local final draft PLAN-CHANGE-02 on main54dd; no new PR yet and no product promotion before this amendment merges. User forbids main-to-feature merges, force-push/history rewrite and branch deletion. fix_norm alone owns the UNPUBLISHED normalization-rebased replacement; old #40 is unaccepted/nonpromotable. Published #41-46 remain preserved preparation/source records; after dependency main QA, use fresh unpublished true-rebase/scoped-selection branches, publish once, and map full keeper paths/SHAs before superseding old PRs. All tests/exact2+2/CI/main-QA gates remain.
+Append-only correction of published PLAN-CHANGE-02@0f6 on baseline main54dd; unpublished until RM scope check, fresh4reports required on the new exact head; no product promotion before merge. User forbids main-to-feature merges, force-push/history rewrite and branch deletion. fix_norm alone owns the UNPUBLISHED normalization-rebased replacement; old #40 is unaccepted/nonpromotable. Published #41-46 remain preserved preparation/source records; after dependency main QA, use fresh unpublished true-rebase/scoped-selection branches, publish once, and map full keeper paths/SHAs before superseding old PRs. All tests/exact2+2/CI/main-QA gates remain.
 
 ## Existing PR actions
 
@@ -85,8 +85,8 @@ Machine-readable companion: `docs/verification/normalization/normalization-outpu
 - Source branches: `feat/r34-python-data-foundation`, `fix/r17-normalizer-boundaries`, `agents/r10-16-finite-overflow-fix`, `agents/r45-04-private-numeric-accounting`.
 - Source selection: RM ruling: NEW-01 selects latest96 normalizer with reviewed reducer correctness fixes. NEW-02 does not replay those hunks; add reducer regression/scale acceptance and only newly demonstrated necessary fixes. Historical ec9f669 -> 5ba8603 order is provenance, not replay sequence.
 - Source commit references: `ec9f669eff28cd5351da142765b7755e3b2f484f`, `5ba860305dcc86ac2f95f01705b984d2b40f2799`, `c1b0b29a84c3f6cb69c6be9cc73cf0330043cf19`, `a7363be273d7b3bbcb1b52ef79a58bb4e6d0e3be`, `7ab546251029df169604358448ecd462d8db5e6f`, `546c25ea75ee9d8a41b3832aa639664bc9a683b5`, `96b819aee5b01ba88b5a609b587331a528aaa070`.
-- Files: `python/deepviz/src/deepviz/normalize.py`, `python/deepviz/tests/test_normalize.py`, `python/deepviz/tests/test_r07_finite_overflow.py`, `python/deepviz/tests/test_r17_normalizer_boundaries.py`, `python/deepviz/tests/test_r45_numeric_state_accounting.py`, `scripts/verify_python_scale.py`, `tests/test_release_scale.py`.
-- Size: 300-900 lines; after NEW-01
+- Files: `python/deepviz/tests/test_r07_finite_overflow.py`, `python/deepviz/tests/test_r17_normalizer_boundaries.py`, `python/deepviz/tests/test_r45_numeric_state_accounting.py`, `scripts/verify_python_scale.py`, `tests/test_release_scale.py`, `docs/verification/scale/scale-output.json`, `docs/verification/scale/scale-output.png`.
+- Size: <=1,300 changed lines across these seven paths only; audited+1,204/-0 leaves96 for compact actual evidence/necessary fixes in those paths. No omitted tests; fresh exact-head2+2/CI/dependencies/main-QA unchanged.
 - Labels: `v1`, `wave-1`, `type:test`, `P1`, `planned`; update lifecycle label. Rebase and rerun checks before review.
 - Merge: squash; Revert this squash only; keep NEW-01.
 
@@ -194,7 +194,7 @@ Commit compact actual gallery output under `evidence/new03b/**` and embed each f
 
 - Preserve published preparation/source `release/v1/w2-python-renderers-b` unchanged. After dependency main QA, prepare a fresh UNPUBLISHED true-rebased/scoped-selection current-main replacement branch/PR TBD, then one publication and full keeper mapping; no old-draft promotion.
 - Source branches: feat/renderers, fix/r20-antv-color-scale, fix/r23-count-channel, fix/r45-17-antv-subnormal, agents/r10-03-echarts-numeric-x, agents/r38-18-antv-source-review, review/r35-12-count-source. Ordered source references: `31acb2f6e58bc83f71c1736af9d4be37c56ad59c`, `420a956788c9b78529d3348650a32913090f5671`, `3185e0d9936c7d6f1a9d30b94089b804d75fe991`, `4429f0521612b97eee3790f0d8d0fbc3cad3f8be`, `85796dbe3360fb88686f2e7188122e2da80d54c2`. Apply mixed commits with `--no-commit` and stage only scoped hunks; do not replay broad renderer ancestry.
-- Size: 300-900 backend-specific lines anticipated; actual diff including all required tests and text evidence must remain <=1,000 changed lines after NEW-03B.
+- Size: Prepared overlay4f59c12ad2fb5a976ca6759477d1483eea597431 versus dependency14539a280ab1cb91f93b2c06f9105cd646f7c2a3 measures+964/-14=978 changed text lines across15 paths, with8 PNGs. Neither overlay nor dependency is main acceptance; fresh unpublished replacement/current-main rebase and final<=1000 recount remain mandatory. Independent23-browser/34-unit receipt is for real product commit9cc5c9e802064d18f253e39795c832128c84afbe; author receipt stored at4f59 separately reports462 pytest/23 browser. Neither is final replacement-head or main acceptance.
 - Evidence gates: each proposed slice requires its own exact-head two independent reviewer and two independent tester reports, observed green CI and non-author QA after merge. Every required test remains mandatory; an estimate does not pass the actual <=1,000-line gate.
 - Merge: squash. Preserve PR #42 until replacement coverage is fully accounted for; do not close or rewrite it through this draft.
 
@@ -396,6 +396,6 @@ Do not close source branches during this planning run. Close only after the repl
 
 These are non-ready drafts: required actual PNG/JSON is absent at the audited heads. Use tested installed-package output for #45 and actual CI/browser output for #46; status diagrams do not satisfy the image requirement. Recount the complete fixed/evidence head under 1,000 lines and restart exact-head 2+2/CI after every change. Final NEW-08 acceptance/research/process/docs remains separately incomplete.
 
-PLAN-CHANGE-02-only budget: <=1,150 changed lines across the same11 context paths; ad540340 measured+737/-262=999 is historical, leaving151 lines solely for these coherent claim/policy/status corrections. Recount the final full diff; no product scope or gate waiver.
+PLAN-CHANGE-02-only budget: <=1,200 changed lines across the prior11 context paths plus only the existing SVG; ad540340 measured+737/-262=999 is historical, leaving201 lines solely for coherent consistency/policy/status and actual tested visual corrections. Recount the final full diff; no product scope or gate waiver.
 
 NEW-01 replacement PR is TBD: plan2 FIRST, correct the two artifact provenance records and every discovered boundedness/work-budget regression, true-rebase the unpublished branch onto resulting main, verify zero feature merges and all fresh gates, then one publication. Rebase checklists refer only to unpublished replacements; never force-update old published drafts.

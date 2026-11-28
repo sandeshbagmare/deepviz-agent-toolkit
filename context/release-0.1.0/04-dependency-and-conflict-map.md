@@ -2168,7 +2168,7 @@ Git diff found 331 overlapping paths and 1818 pairs sharing paths across 65 non-
 
 ## Proposed dependency graph
 
-Local final draft PLAN-CHANGE-02 on main54dd; no new PR yet and no product promotion before this amendment merges. User forbids main-to-feature merges, force-push/history rewrite and branch deletion. fix_norm alone owns the UNPUBLISHED normalization-rebased replacement; old #40 is unaccepted/nonpromotable. Published #41-46 remain preserved preparation/source records; after dependency main QA, use fresh unpublished true-rebase/scoped-selection branches, publish once, and map full keeper paths/SHAs before superseding old PRs. All tests/exact2+2/CI/main-QA gates remain.
+Append-only correction of published PLAN-CHANGE-02@0f6 on baseline main54dd; unpublished until RM scope check, fresh4reports required on the new exact head; no product promotion before merge. User forbids main-to-feature merges, force-push/history rewrite and branch deletion. fix_norm alone owns the UNPUBLISHED normalization-rebased replacement; old #40 is unaccepted/nonpromotable. Published #41-46 remain preserved preparation/source records; after dependency main QA, use fresh unpublished true-rebase/scoped-selection branches, publish once, and map full keeper paths/SHAs before superseding old PRs. All tests/exact2+2/CI/main-QA gates remain.
 
 ```mermaid
 graph LR
