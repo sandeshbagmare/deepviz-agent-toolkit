@@ -1,0 +1,141 @@
+{
+  "engine": "vega",
+  "charts": [
+    {
+      "engine": "vega",
+      "requested_kind": "bar",
+      "rendered_kind": "bar",
+      "spec": {
+        "version": 1,
+        "kind": "bar",
+        "title": "NEW-03 vega",
+        "description": "",
+        "x": "month",
+        "y": "revenue",
+        "color": "region",
+        "size": null,
+        "data_path": null,
+        "format": "auto",
+        "aggregation": "auto",
+        "max_points": 2000,
+        "width": 900,
+        "height": 520,
+        "theme": "light",
+        "charts": [],
+        "columns": 2
+      },
+      "records": [
+        {
+          "month": "Jan",
+          "region": "North",
+          "revenue": 12
+        },
+        {
+          "month": "Feb",
+          "region": "South",
+          "revenue": 31
+        },
+        {
+          "month": "Mar",
+          "region": "North",
+          "revenue": 7
+        }
+      ],
+      "input_count": 3,
+      "output_count": 3,
+      "strategy": "sum",
+      "warnings": []
+    }
+  ],
+  "warnings": [],
+  "native_specs": [
+    {
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "data": {
+        "values": [
+          {
+            "_x": "Jan",
+            "_y": 12.0,
+            "_color": "North",
+            "_size": 8,
+            "_heat": null,
+            "_row": 0
+          },
+          {
+            "_x": "Feb",
+            "_y": 31.0,
+            "_color": "South",
+            "_size": 8,
+            "_heat": null,
+            "_row": 1
+          },
+          {
+            "_x": "Mar",
+            "_y": 7.0,
+            "_color": "North",
+            "_size": 8,
+            "_heat": null,
+            "_row": 2
+          }
+        ]
+      },
+      "mark": {
+        "type": "bar",
+        "color": "#386cb0"
+      },
+      "encoding": {
+        "x": {
+          "field": "_x",
+          "type": "nominal",
+          "title": "month"
+        },
+        "y": {
+          "field": "_y",
+          "type": "quantitative",
+          "title": "revenue",
+          "stack": null
+        },
+        "color": {
+          "field": "_color",
+          "type": "nominal",
+          "title": "region",
+          "scale": {
+            "range": [
+              "#386cb0",
+              "#b85c00",
+              "#2a9d73",
+              "#c44964",
+              "#8861a9",
+              "#a67c42"
+            ]
+          }
+        },
+        "xOffset": {
+          "field": "_color"
+        }
+      },
+      "width": 800,
+      "height": 420,
+      "title": "NEW-03 vega",
+      "background": "#ffffff",
+      "config": {
+        "axis": {
+          "labelColor": "#202938",
+          "titleColor": "#202938"
+        },
+        "title": {
+          "color": "#202938"
+        },
+        "text": {
+          "color": "#202938"
+        },
+        "legend": {
+          "labelColor": "#202938",
+          "titleColor": "#202938"
+        }
+      }
+    }
+  ],
+  "strategy": "sum",
+  "accessible_path": "chart.html"
+}
