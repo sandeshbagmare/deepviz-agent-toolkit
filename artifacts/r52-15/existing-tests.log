@@ -1,0 +1,37 @@
+Γ£ö five engines create real specs or SVG using identical mapped values (23.5095ms)
+Γ£ö rendering reports bounds, aggregation and metadata without double-normalization (3.0825ms)
+Γ£ö HTML escapes title, cells, script-breaking strings, SVG text and unsafe asset URLs (3.9641ms)
+Γ£ö dashboards create separate engine specs and metadata for every child (1.2908ms)
+Γ£ö missing fields, invalid numeric mappings and unsupported kinds fail explicitly (1.212ms)
+Γ£ö five tool helpers expose validation schemas and invoke the selected engine (3.7592ms)
+Γ£ö async rendering preserves original stream count in its artifact (3.5995ms)
+Γ£ö ECharts never drops duplicate category rows and refuses ambiguous grouped duplicates (0.7624ms)
+Γ£ö ECharts bubble sizes are encoded per datum without executable callbacks (0.615ms)
+Γ£ö untrusted numeric mappings reject null and missing measurements instead of inventing zeros (1.9609ms)
+Γ£ö a gauge refuses multiple rows instead of silently dropping measurements (1.0501ms)
+Γ£ö native SVG splits line series on a shared category domain and includes dash-cued legend (1.485ms)
+Γ£ö dark themes explicitly color SVG text and Vega legends for contrast (1.3181ms)
+Γ£ö native SVG thins long category axes and preserves full distinguishable labels (3.0288ms)
+Γ£ö AntV pie has a visible category key when tooltips are disabled (0.6897ms)
+Γ£ö categorical heatmaps map y as a coordinate and infer count as the default color measure (0.5215ms)
+Γ£ö R23 finite bar ┬▒1e+308 keeps two 35px bars and zero (22.0381ms)
+Γ£ö R23 finite bar ┬▒1.7976931348623157e+308 keeps two 35px bars and zero (1.3072ms)
+Γ£ö R23 asymmetric finite MAX magnitudes preserve 1:2 signed heights (0.8687ms)
+Γ£ö R23 line shares stable signed finite Y coordinates (1.2504ms)
+Γ£ö R23 area shares stable signed finite Y coordinates (0.9518ms)
+Γ£ö R23 scatter shares stable signed finite Y coordinates (1.1653ms)
+Γ£ö R23 bubble shares stable signed finite Y coordinates (0.9255ms)
+Γ£ö R23 numeric X marks and ticks share a finite extreme-range transform (2.1158ms)
+Γ£ö R23 adjacent same-sign MAX X values retain equal spacing (1.0155ms)
+Γ£ö R23 subnormal X intervals retain the 1:3 ratio (0.9772ms)
+Γ£ö R23 all-negative finite magnitudes retain sign, 2:1 heights and common zero (0.6878ms)
+Γ£ö R23 empty, zero and constant domains remain valid without invented marks (1.5439ms)
+Γ£ö R23 a nonzero Y that collapses onto emitted zero fails before successful artifact return (1.7319ms)
+Γä╣ tests 29
+Γä╣ suites 0
+Γä╣ pass 29
+Γä╣ fail 0
+Γä╣ cancelled 0
+Γä╣ skipped 0
+Γä╣ todo 0
+Γä╣ duration_ms 210.9087

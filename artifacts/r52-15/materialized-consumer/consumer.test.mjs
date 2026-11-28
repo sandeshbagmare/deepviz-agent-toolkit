@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {chartSpecSchema, normalize, render, validateSpec} from '@deepviz/agent-toolkit';
+import schema from '@deepviz/agent-toolkit/chart-spec.schema.json' with {type:'json'};
+assert.deepEqual(schema, chartSpecSchema);
+assert.equal(validateSpec({}).version, 1);
+assert.deepEqual(normalize([{x:'A', y:2}], {x:'x', y:'y'}).records, [{x:'A', y:2}]);
+const rows = Array.from({length: 40}, (_, i) => ({category: `Common long category name ${i}`, value: i + 1}));
+const chart = render(rows, {kind:'bar', x:'category', y:'value', aggregation:'none', width:240, height:200}, 'svg');
+assert.equal(chart.input_count, 40);
+assert.equal(chart.output_count, 40);
+assert.match(chart.html, /<svg/);
+assert.match(chart.html, /Common long category name 39: 40/);
+assert.equal((chart.renderer_spec.spec.svg.match(/class="category-tick"/g) ?? []).length, 5);
+console.log('R52 materialized public ESM/schema/SVG consumer PASS');

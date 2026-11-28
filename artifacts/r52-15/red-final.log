@@ -1,0 +1,40 @@
+Γ£û R52 svg keeps dense category label boxes separate (3296.9395ms)
+Γ£û R52 html keeps dense category label boxes separate (2187.9086ms)
+Γä╣ tests 2
+Γä╣ suites 0
+Γä╣ pass 0
+Γä╣ fail 2
+Γä╣ cancelled 0
+Γä╣ skipped 0
+Γä╣ todo 0
+Γä╣ duration_ms 6389.9175
+
+Γ£û failing tests:
+
+test at tests\r52_probes\role15\density-boxes.browser.mjs:29:40
+Γ£û R52 svg keeps dense category label boxes separate (3296.9395ms)
+  AssertionError [ERR_ASSERTION]: category boxes overlap for Common long category name 0 (Common loΓÇªy name 0) and Common long category name 4 (Common loΓÇªy name 4)
+      at TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r52-15-svg-density-ses_de56780c8ffe7LgwvwdfR5qFQD/tests/r52_probes/role15/density-boxes.browser.mjs:69:14)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\r52_probes\role15\density-boxes.browser.mjs:29:40
+Γ£û R52 html keeps dense category label boxes separate (2187.9086ms)
+  AssertionError [ERR_ASSERTION]: category boxes overlap for Common long category name 0 (Common loΓÇªy name 0) and Common long category name 4 (Common loΓÇªy name 4)
+      at TestContext.<anonymous> (file:///C:/Users/bagma/AppData/Local/Temp/opencode/r52-15-svg-density-ses_de56780c8ffe7LgwvwdfR5qFQD/tests/r52_probes/role15/density-boxes.browser.mjs:69:14)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

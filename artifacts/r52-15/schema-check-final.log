@@ -1,0 +1,13 @@
+
+> schema:check
+> npm run build && node packages/deepviz/scripts/check-schema.mjs
+
+
+> build
+> npm run build --workspace @deepviz/agent-toolkit
+
+
+> @deepviz/agent-toolkit@0.1.0 build
+> tsc -p tsconfig.json && node scripts/copy-prompts.mjs
+
+Canonical Python JSON Schema, kinds, fields, and runtime defaults: PASS
